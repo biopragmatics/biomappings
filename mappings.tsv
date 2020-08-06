@@ -1,4 +1,4 @@
-source prefix	source id	source name	relation	target prefix	target identifier	target name	type	source
+source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	source
 umls	C0001973	Alcoholic Intoxication, Chronic	skos:narrower	mesh	D000435	Alcoholic Intoxication	manual	orcid:0000-0003-4423-4370
 umls	C0004352	Autistic Disorder	skos:exactMatch	mesh	D001321	Autistic Disorder	manual	orcid:0000-0003-4423-4370
 umls	C0006118	Brain Neoplasms	skos:exactMatch	mesh	D001932	Brain Neoplasms	"manual
