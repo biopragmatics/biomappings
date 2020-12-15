@@ -44,7 +44,7 @@ miriam_validator = MiriamValidator()
 
 
 def test_valid_mappings():
-    for mapping in mappings:
+    for mapping in mappings + predictions:
         miriam_validator.check_valid_prefix_id(mapping['source prefix'],
                                                mapping['source identifier'])
         miriam_validator.check_valid_prefix_id(mapping['target prefix'],
