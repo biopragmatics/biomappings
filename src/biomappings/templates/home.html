@@ -9,28 +9,30 @@
         <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h2>Biomappings Curator</h2>
+                    <h2>Biomappings Curation Interface</h2>
                 </div>
                 <table class="table table-striped table-hover">
                     <thead>
                     <tr>
                         <th>Source</th>
+                        <th>Source Name</th>
                         <th>Target</th>
+                        <th>Target Name</th>
                         <th></th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
-                    {% for i, p in controller.predictions(top=15) %}
+                    {% for line, p in controller.predictions(top=15) %}
                         <tr>
                             <td>{{ p['source prefix'] }}:{{ p['source identifier'] }}</td>
+                            <td>{{ p['source name'] }}</td>
                             <td>{{ p['target prefix'] }}:{{ p['target identifier'] }}</td>
-                            <td>
-                                <a href="{{ url_for('mark', p1=p['source prefix'], i1=p['source identifier'], p2=p['target prefix'], i2=p['target identifier'], v='yup') }}">Yup</a>
-                            </td>
-                            <td>
-                                <a href="{{ url_for('mark', p1=p['source prefix'], i1=p['source identifier'], p2=p['target prefix'], i2=p['target identifier'], v='nope') }}">Nope</a>
-                            </td>
+                            <td>{{ p['target name'] }}</td>
+                            <td><a href="{{ url_for('mark', line=line, value='yup') }}"><span
+                                    class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></a></td>
+                            <td><a href="{{ url_for('mark', line=line, value='nope') }}"><span
+                                    class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span></a></td>
                         </tr>
                     {% endfor %}
                     </tbody>
