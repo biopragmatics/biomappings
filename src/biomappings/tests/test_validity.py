@@ -69,21 +69,11 @@ def test_redundancy():
     """Test the redundancy of manually curated mappings and predicted mappings."""
     cnt = []
     for mapping in itt.chain(mappings, predictions):
-        cnt.append(
-            (
-                mapping['source prefix'],
-                mapping['source identifier'],
-                mapping['target prefix'],
-                mapping['target identifier'],
-            )
-            if mapping['source prefix'] < mapping['target prefix'] else
-            (
-                mapping['target prefix'],
-                mapping['target identifier'],
-                mapping['source prefix'],
-                mapping['source identifier'],
-            )
-        )
+        source = mapping['source prefix'], mapping['source identifier']
+        target = mapping['target prefix'], mapping['target identifier']
+        if source > target:
+            source, target = target, source
+        cnt.append((*source, *target))
         redundant = [k for k, v in Counter(cnt).items() if v > 1]
         if redundant:
             raise ValueError(f'Redundant: {redundant}')
