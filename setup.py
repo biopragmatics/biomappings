@@ -9,7 +9,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as fh:
 
 
 setup(name='biomappings',
-      version=version,
+      version='0.0.1',
       description=('Curated and predicted mappings between biomedical '
                    'identifiers in different namespaces.'),
       long_description=long_description,
@@ -22,6 +22,6 @@ setup(name='biomappings',
       ],
       packages=find_packages(),
       install_requires=['requests'],
-      extras_require={'test': ['nose'},
+      extras_require={'tests': ['nose']},
       keywords=['biology']
       )
