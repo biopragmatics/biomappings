@@ -17,7 +17,7 @@ def _load_table(fname):
     with open(fname, 'r') as fh:
         reader = csv.reader(fh, delimiter='\t')
         header = next(reader)
-        return [{h: c for h, c in zip(header, row)} for row in reader]
+        return [dict(zip(header, row)) for row in reader]
 
 
 def load_mappings():
