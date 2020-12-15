@@ -8,7 +8,7 @@ import os
 from typing import Dict, Iterable, List, Mapping
 
 RESOURCE_PATH = os.path.dirname(os.path.abspath(__file__))
-PREDICTIONS_HEADER = [
+HEADER = [
     'source prefix',
     'source identifier',
     'source name',
@@ -40,11 +40,23 @@ def _write_table(lod: Iterable[Mapping[str, str]], header, path: str) -> None:
         for line in lod:
             try:
                 parts = [line[k] for k in header]
-            except KeyError:
+            except KeyError as e:
+                print(e)
                 print(line)
                 print(header)
+                print('\n\n\n\n')
             else:
                 print(*parts, sep='\t', file=file)
+
+
+def load_mappings() -> List[Dict[str, str]]:
+    """Load the mappings table."""
+    return _load_table(get_resource_file_path('mappings.tsv'))
+
+
+def write_mappings(m: Iterable[Mapping[str, str]]) -> None:
+    """Write new content to the mappings table."""
+    _write_table(m, HEADER, get_resource_file_path('mappings.tsv'))
 
 
 def append_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
@@ -52,14 +64,19 @@ def append_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
     write_mappings(itt.chain(load_mappings(), m))
 
 
-def write_mappings(m: Iterable[Mapping[str, str]]) -> None:
-    """Write new content to the mappings table."""
-    _write_table(m, PREDICTIONS_HEADER, get_resource_file_path('mappings.tsv'))
+def load_false_mappings() -> List[Dict[str, str]]:
+    """Load the false mappings table."""
+    return _load_table(get_resource_file_path('incorrect.tsv'))
 
 
-def load_mappings() -> List[Dict[str, str]]:
-    """Load the mappings table."""
-    return _load_table(get_resource_file_path('mappings.tsv'))
+def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
+    """Write new content to the false mappings table."""
+    _write_table(m, HEADER, get_resource_file_path('incorrect.tsv'))
+
+
+def append_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
+    """Append new lines to the false mappings table."""
+    write_false_mappings(itt.chain(load_false_mappings(), m))
 
 
 def load_predictions() -> List[Dict[str, str]]:
@@ -69,4 +86,4 @@ def load_predictions() -> List[Dict[str, str]]:
 
 def write_predictions(m: List[Mapping[str, str]]) -> None:
     """Write new content to the predictions table."""
-    _write_table(m, PREDICTIONS_HEADER, get_resource_file_path('predictions.tsv'))
+    _write_table(m, HEADER, get_resource_file_path('predictions.tsv'))
