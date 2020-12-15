@@ -4,7 +4,7 @@ Community curated and predicted equivalences and related mappings between named 
 that are not available from primary sources.
 
 Human-curated mappings are in `src/biomappings/resources/mappings.tsv`, and
-automatically predicated mappings are in `src/biomappings/resources/predictions.tsv`
+automatically predicted mappings are in `src/biomappings/resources/predictions.tsv`
 
 Equivalences and related mappings that are available from the OBO Foundry and other
 primary sources can be accessed through [Inspector Javert's Xref Database](https://zenodo.org/record/3757266)
