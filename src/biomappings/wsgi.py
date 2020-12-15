@@ -50,7 +50,7 @@ class Controller:
 
         for i, correct in self._marked.items():
             prediction = self._predictions.pop(i)
-            prediction['source'] = 'manual'
+            prediction['source'] = 'web-curation'
             if correct:
                 curated_positive_lines.append(prediction)
             else:
