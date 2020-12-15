@@ -3,7 +3,7 @@ from typing import Optional
 import flask
 import flask_bootstrap
 
-from biomappings.resources import append_true_mappings, load_predictions, write_predictions
+from biomappings.resources import append_false_mappings, append_true_mappings, load_predictions, write_predictions
 
 app = flask.Flask(__name__)
 flask_bootstrap.Bootstrap(app)
@@ -50,8 +50,8 @@ class Controller:
                 curated_false_entries.append(prediction)
 
         append_true_mappings(curated_true_entries)
+        append_false_mappings(curated_false_entries)
         write_predictions(self._predictions)
-        # TODO append false mappings
 
         self._marked.clear()
 
