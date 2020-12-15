@@ -2,12 +2,14 @@
 
 """Web curation interface for :mod:`biomappings`."""
 
+import getpass
 from typing import Optional
 
 import flask
 import flask_bootstrap
 
 from biomappings.resources import append_false_mappings, append_true_mappings, load_predictions, write_predictions
+from biomappings.utils import commit
 
 app = flask.Flask(__name__)
 flask_bootstrap.Bootstrap(app)
@@ -19,6 +21,7 @@ class Controller:
     def __init__(self):  # noqa: D107
         self._predictions = load_predictions()
         self._marked = {}
+        self.total = 0
 
     def predictions(self, top: Optional[int] = None):
         """Iterate over predictions.
@@ -40,6 +43,8 @@ class Controller:
 
     def mark(self, i: int, correct: bool):
         """Mark the given equivalency as correct."""
+        if i not in self._marked:
+            self.total += 1
         self._marked[i] = correct
 
     def persist(self):
@@ -69,6 +74,14 @@ controller = Controller()
 def home():
     """Serve the home page."""
     return flask.render_template('home.html', controller=controller)
+
+
+@app.route('/commit')
+def run_commit():
+    """Make a commit then redirect to the the home page."""
+    commit(f'Added mappings from {getpass.getuser()}')
+    controller.total = 0
+    return flask.redirect(flask.url_for('home'))
 
 
 @app.route('/mark/<int:line>/<value>')

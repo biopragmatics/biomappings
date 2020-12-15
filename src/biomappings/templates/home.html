@@ -10,6 +10,9 @@
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h2>Biomappings Curation Interface</h2>
+                    {% if controller.total %}
+                        <a href="{{ url_for('run_commit') }}">commit ({{ controller.total }})</a>
+                    {% endif %}
                 </div>
                 <table class="table table-striped table-hover">
                     <thead>
