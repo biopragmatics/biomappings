@@ -14,6 +14,11 @@ from biomappings.utils import commit
 app = flask.Flask(__name__)
 flask_bootstrap.Bootstrap(app)
 
+# A mapping from your computer's user, returned by getuser.getpass()
+KNOWN_USERS = {
+    'cthoyt': '0000-0003-4423-4370',
+}
+
 
 class Controller:
     """A module for interacting with the predictions and mappings."""
@@ -54,7 +59,7 @@ class Controller:
 
         for i, correct in self._marked.items():
             prediction = self._predictions.pop(i)
-            prediction['source'] = 'web-curation'
+            prediction['source'] = KNOWN_USERS.get(getpass.getuser(), 'web')
             if correct:
                 curated_true_entries.append(prediction)
             else:
