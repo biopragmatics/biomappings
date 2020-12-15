@@ -1,5 +1,6 @@
 import re
 import requests
+from collections import Counter
 from biomappings import load_mappings, load_predictions
 
 
@@ -49,3 +50,14 @@ def test_valid_mappings():
                                                mapping['source identifier'])
         miriam_validator.check_valid_prefix_id(mapping['target prefix'],
                                                mapping['target identifier'])
+
+
+def test_redundancy():
+    cnt = []
+    for mapping in mappings + predictions:
+        cnt.append((mapping['source prefix'],
+                    mapping['source identifier'],
+                    mapping['target prefix'],
+                    mapping['target identifier']))
+    redundant = [k for k, v in Counter(cnt).items() if v > 1]
+    assert not redundant, redundant
