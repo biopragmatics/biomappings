@@ -23,7 +23,7 @@ def get_mappings():
             hgnc_id = hgnc_client.get_hgnc_id(gene_name)
             if hgnc_id:
                 uniprot_id = hgnc_client.get_uniprot_id(hgnc_id)
-                if uniprot_id:
+                if uniprot_id and ',' not in uniprot_id:
                     yield ('mesh', mesh_id, mesh_name,
                            match_type,
                            'uniprot', uniprot_id, gene_name,

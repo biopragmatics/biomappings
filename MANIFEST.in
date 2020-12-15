@@ -1,0 +1,5 @@
+include README.md LICENSE
+exclude tox.ini .flake8 .bumpversion.cfg
+graft src
+prune scripts
+global-exclude *.py[cod] __pycache__ *.so *.dylib .DS_Store *.gpickle
