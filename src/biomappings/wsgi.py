@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+
+"""Web curation interface for :mod:`biomappings`."""
+
 from typing import Optional
 
 import flask
@@ -12,7 +16,7 @@ flask_bootstrap.Bootstrap(app)
 class Controller:
     """A module for interacting with the predictions and mappings."""
 
-    def __init__(self):
+    def __init__(self):  # noqa: D107
         self._predictions = load_predictions()
         self._marked = {}
 
@@ -35,9 +39,11 @@ class Controller:
                     break
 
     def mark(self, i: int, correct: bool):
+        """Mark the given equivalency as correct."""
         self._marked[i] = correct
 
     def persist(self):
+        """Save the current markings to the source files."""
         curated_true_entries = []
         curated_false_entries = []
 
@@ -67,10 +73,11 @@ def home():
 
 @app.route('/mark/<int:line>/<value>')
 def mark(line: int, value: str):
-    controller.mark(line, value.lower() == 'yup')
+    """Mark the given line as correct or not."""
+    controller.mark(line, value.lower() in {'yup', 'true', 't', 'correct', 'right', 'close enough', 'disco'})
     controller.persist()
     return flask.redirect(flask.url_for('home'))
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
