@@ -74,6 +74,6 @@ def test_redundancy():
         if source > target:
             source, target = target, source
         cnt.append((*source, *target))
-        redundant = [k for k, v in Counter(cnt).items() if v > 1]
-        if redundant:
-            raise ValueError(f'Redundant: {redundant}')
+    redundant = [k for k, v in Counter(cnt).items() if v > 1]
+    if redundant:
+        raise ValueError(f'Redundant: {redundant}')
