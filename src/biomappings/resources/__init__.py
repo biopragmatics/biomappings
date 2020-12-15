@@ -34,6 +34,7 @@ def _load_table(fname) -> List[Mapping[str, str]]:
 
 def _write_table(lod: List[Mapping[str, str]], path: str) -> None:
     with open(path, 'w') as file:
+        print(*HEADER, sep='\t', file=file)
         for line in lod:
             print(*[line[k] for k in HEADER], sep='\t', file=file)
 
