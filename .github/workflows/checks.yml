@@ -18,4 +18,5 @@ jobs:
         pip install requests nose
     - name: Run checks
       run: |
+        export PYTHONPATH=`pwd`
         nosetests biomappings/tests
