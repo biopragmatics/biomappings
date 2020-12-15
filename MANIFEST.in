@@ -1,2 +1,5 @@
-include README.md
-graft biomappings/resources
+include README.md LICENSE
+exclude tox.ini
+graft src
+prune scripts
+global-exclude *.py[cod] __pycache__ *.so *.dylib .DS_Store *.gpickle
