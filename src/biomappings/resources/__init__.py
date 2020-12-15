@@ -47,7 +47,7 @@ def _write_table(lod: Iterable[Mapping[str, str]], header, path: str) -> None:
                 print(*parts, sep='\t', file=file)
 
 
-def append_mappings(m: Iterable[Mapping[str, str]]) -> None:
+def append_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the mappings table."""
     write_mappings(itt.chain(load_mappings(), m))
 

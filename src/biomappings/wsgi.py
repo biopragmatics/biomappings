@@ -3,7 +3,7 @@ from typing import Optional
 import flask
 import flask_bootstrap
 
-from biomappings.resources import append_mappings, load_predictions, write_predictions
+from biomappings.resources import append_true_mappings, load_predictions, write_predictions
 
 app = flask.Flask(__name__)
 flask_bootstrap.Bootstrap(app)
@@ -14,10 +14,6 @@ class Controller:
 
     def __init__(self):
         self._predictions = load_predictions()
-        self._lookup = {
-            (p['source prefix'], p['source identifier'], p['target prefix'], p['target identifier']): i
-            for i, p in enumerate(self._predictions)
-        }
         self._marked = {}
 
     def predictions(self, top: Optional[int] = None):
@@ -38,26 +34,26 @@ class Controller:
                 if counter > top:
                     break
 
-    def lookup(self, p1, i1, p2, i2) -> Optional[int]:
-        return self._lookup.get((p1, i1, p2, i2))
-
     def mark(self, i: int, correct: bool):
         self._marked[i] = correct
 
     def persist(self):
-        curated_positive_lines = []
-        curated_negative_lines = []
+        curated_true_entries = []
+        curated_false_entries = []
 
         for i, correct in self._marked.items():
             prediction = self._predictions.pop(i)
             prediction['source'] = 'web-curation'
             if correct:
-                curated_positive_lines.append(prediction)
+                curated_true_entries.append(prediction)
             else:
-                curated_negative_lines.append(prediction)
+                curated_false_entries.append(prediction)
 
-        append_mappings(curated_positive_lines)
+        append_true_mappings(curated_true_entries)
         write_predictions(self._predictions)
+        # TODO append false mappings
+
+        self._marked.clear()
 
 
 controller = Controller()
