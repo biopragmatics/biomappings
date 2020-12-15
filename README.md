@@ -25,8 +25,15 @@ on Zenodo which was described in [this blog post](https://cthoyt.com/2020/04/19/
 
 ## ⬇️ Installation
 
-This code has yet to be released on PyPI. In the meantime, it can be installed with 
-the following from the main branch on GitHub:
+The most recent release can be installed from
+[PyPI](https://pypi.org/project/biomappings/) with:
+
+```bash
+$ pip install biomappings
+```
+
+The most recent code and data can be installed directly from
+GitHub with:
 
 ```bash
 $ pip install git+https://github.com/biomappings/biomappings.git
