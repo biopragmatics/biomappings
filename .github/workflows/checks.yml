@@ -18,6 +18,8 @@ jobs:
         run: tox -e manifest
       - name: Check package metadata with Pyroma
         run: tox -e pyroma
+      - name: Check code style with flake8
+        run: tox -e flake8
   build:
     runs-on: ubuntu-latest
     steps:
