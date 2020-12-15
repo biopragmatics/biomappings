@@ -1,4 +1,17 @@
-# biomappings ![GitHub](https://img.shields.io/github/license/biomappings/biomappings)
+# biomappings
+
+<a href="https://pypi.org/project/biomappings">
+    <img alt="PyPI" src="https://img.shields.io/pypi/v/biomappings" />
+</a>
+<a href="https://pypi.org/project/biomappings">
+    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/biomappings" />
+</a>
+<a href="https://github.com/biomappings/biomappings/blob/main/LICENSE">
+    <img alt="PyPI - License" src="https://img.shields.io/pypi/l/biomappings" />
+</a>
+<a href="https://zenodo.org/badge/latestdoi/285352907">
+    <img src="https://zenodo.org/badge/285352907.svg" alt="DOI">
+</a>
 
 Community curated and predicted equivalences and related mappings between named biological entities
 that are not available from primary sources.
