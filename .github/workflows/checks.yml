@@ -1,0 +1,21 @@
+name: Check mappings
+
+on: [push pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests nose
+    - name: Run checks
+      run: |
+        nosetests test_mappings.py
