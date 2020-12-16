@@ -38,6 +38,17 @@ def _git(*args: str) -> Optional[str]:
             return ret.strip().decode('utf-8')
 
 
+def get_script_url(fname: str) -> str:
+    """Get the source path for this script.
+
+    :param fname: Pass ``__file__`` as the argument to this function.
+    :return: The script's URL to GitHub
+    """
+    commit_hash = get_git_hash()
+    script_name = os.path.basename(fname)
+    return f'https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}'
+
+
 def iterate_canonical_mappings(m: Iterable[Mapping[str, Any]]) -> Iterable[Tuple[str, str, str, str]]:
     """Iterate over canonical mapping tuples."""
     for mapping in m:

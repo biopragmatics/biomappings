@@ -2,29 +2,20 @@
 
 """Append lexical mappings between MeSH and UniProt."""
 
-import os
 import re
 from typing import Iterable, Tuple
 
 from indra.databases import hgnc_client, mesh_client
 
 from biomappings.resources import append_prediction_tuples
-from biomappings.utils import get_git_hash
-
-
-def get_script_url() -> str:
-    """Get the source path for this script."""
-    commit_hash = get_git_hash()
-    script_name = os.path.basename(__file__)
-    return f'https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}'
-
+from biomappings.utils import get_script_url
 
 MESH_PROTEIN_RE = re.compile(r'^(.+) protein, human$')
 
 
 def get_mappings() -> Iterable[Tuple[str, ...]]:
     """Iterate high-confidence lexical mappings between MeSH and UniProt human proteins."""
-    url = get_script_url()
+    url = get_script_url(__file__)
     mapping_type = 'lexical'
     match_type = 'skos:exactMatch'
     for mesh_name, mesh_id in mesh_client.mesh_name_to_id.items():
