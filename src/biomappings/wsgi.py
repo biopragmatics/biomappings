@@ -55,6 +55,13 @@ class Controller:
             for line_prediction, _ in zip(it, range(limit)):
                 yield line_prediction
 
+    @staticmethod
+    def get_url(prefix: str, identifier: str) -> str:
+        if prefix in {'chebi', 'go', 'doid', 'pr'}:
+            return f'https://identifiers.org/{identifier}'
+        else:
+            return f'https://identifiers.org/{prefix}:{identifier}'
+
     def get_total(self) -> int:
         """Return the total number of yet unmarked predictions."""
         return len(self._predictions) - len(self._marked)

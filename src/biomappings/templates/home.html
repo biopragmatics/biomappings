@@ -33,13 +33,13 @@
                         <tr>
                             <td>{{ 1 + line }}</td>
                             <td>
-                                <a href="https://identifiers.org/{{ p['source prefix'] }}:{{ p['source identifier'] }}">
+                                <a href="{{ controller.get_url(p['source prefix'], p['source identifier']) }}">
                                     {{ p['source prefix'] }}:{{ p['source identifier'] }}
                                 </a>
                             </td>
                             <td>{{ p['source name'] }}</td>
                             <td>
-                                <a href="https://identifiers.org/{{ p['target prefix'] }}:{{ p['target identifier'] }}">
+                                <a href="{{ controller.get_url(p['target prefix'], p['target identifier']) }}">
                                     {{ p['target prefix'] }}:{{ p['target identifier'] }}
                                 </a>
                             </td>
