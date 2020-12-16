@@ -6,7 +6,7 @@ from collections import Counter
 
 import requests
 
-from biomappings import load_mappings, load_predictions, load_false_mappings
+from biomappings import load_false_mappings, load_mappings, load_predictions
 from biomappings.utils import iterate_canonical_mappings
 
 mappings = load_mappings()
