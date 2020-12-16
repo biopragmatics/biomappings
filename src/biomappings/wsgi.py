@@ -28,23 +28,24 @@ class Controller:
         self._marked = {}
         self.total = 0
 
-    def predictions(self, top: Optional[int] = None):
+    def predictions(self, *, offset: Optional[int] = None, limit: Optional[int] = None):
         """Iterate over predictions.
 
-        :param top: If given, only iterate this number of predictions.
+        :param limit: If given, only iterate this number of predictions.
         """
-        if top is None:
-            for i, p in enumerate(self._predictions):
-                if i not in self._marked:
-                    yield i, p
+        it = (
+            (i, p)
+            for i, p in enumerate(self._predictions)
+            if i not in self._marked
+        )
+        if offset is not None:
+            for _ in range(offset):
+                next(it)
+        if limit is None:
+            yield from it
         else:
-            counter = 0
-            for i, p in enumerate(self._predictions):
-                if i not in self._marked:
-                    counter += 1
-                    yield i, p
-                if counter > top:
-                    break
+            for x, _ in zip(it, range(limit)):
+                yield x
 
     def mark(self, i: int, correct: bool):
         """Mark the given equivalency as correct."""
@@ -80,7 +81,14 @@ controller = Controller()
 @app.route('/')
 def home():
     """Serve the home page."""
-    return flask.render_template('home.html', controller=controller)
+    limit = flask.request.args.get('limit', type=int, default=10)
+    offset = flask.request.args.get('offset', type=int, default=0)
+    return flask.render_template(
+        'home.html',
+        controller=controller,
+        limit=limit,
+        offset=offset,
+    )
 
 
 @app.route('/commit')
