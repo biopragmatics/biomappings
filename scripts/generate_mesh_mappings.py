@@ -39,9 +39,9 @@ MAP = {
     'Salmonella typhimurium': ...,  # 107 matches
     'Nicotiana tabacum': ...,  # 95 matches
     'Candida albicans': ...,  # 91 matches
-    # 'chicken': 'cgnc',  # 91 matches
+    'chicken': 'cgnc',  # 91 matches
     'Trypanosoma brucei': ...,  # 90 matches
-    # 'Gallus gallus': 'cgnc',  # 90 matches
+    'Gallus gallus': 'cgnc',  # 90 matches
     'Bos taurus': ...,  # 82 matches
     'Dictyostelium discoideum': ...,  # 82 matches
     'Oryza sativa': ...,  # 81 matches
@@ -55,6 +55,10 @@ UNIPROT_NAMES = {
     'mgi': ('database(MGI)', 'Mus musculus (Mouse) [10090]'),
     'rgd': ('database(RGD)', 'Rattus norvegicus (Rat) [10116]'),
     'sgd': ('database(SGD)', "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) [559292]"),
+    'fb': ('database(FlyBase)', "Drosophila melanogaster (Fruit fly) [7227]"),
+    'zfin': ('database(ZFIN)', "Danio rerio (Zebrafish) (Brachydanio rerio) [7955]"),
+    'wb': ('database(WormBase)', "..."),
+    # 'cgnc': ('database(CGNC)', "Gallus gallus (Chicken) [9031]"),
 }
 
 
