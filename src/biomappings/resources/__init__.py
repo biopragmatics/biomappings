@@ -4,7 +4,7 @@
 
 import csv
 import os
-from typing import Dict, Iterable, List, Mapping
+from typing import Dict, Iterable, List, Mapping, Tuple
 
 RESOURCE_PATH = os.path.dirname(os.path.abspath(__file__))
 HEADER = [
@@ -69,3 +69,17 @@ def load_predictions() -> List[Dict[str, str]]:
 def write_predictions(m: List[Mapping[str, str]]) -> None:
     """Write new content to the predictions table."""
     _write_helper(m, get_resource_file_path('predictions.tsv'), 'w')
+
+
+def append_prediction_tuples(m: Iterable[Tuple[str, ...]]) -> None:
+    """Append new lines to the predictions table that come as canonical tuples."""
+    append_predictions(
+        dict(zip(HEADER, p))
+        for p in m
+    )
+
+
+def append_predictions(m: Iterable[Mapping[str, str]]) -> None:
+    """Append new lines to the predictions table."""
+    # TODO automatically de-duplicate
+    _write_helper(m, get_resource_file_path('predictions.tsv'), 'a')

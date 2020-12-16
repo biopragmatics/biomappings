@@ -16,7 +16,7 @@ def get_git_hash() -> Optional[str]:
     """
     rv = _git('rev-parse', 'HEAD')
     if rv:
-        return rv[:8]
+        return rv[:6]
 
 
 def commit(message: str) -> Optional[str]:

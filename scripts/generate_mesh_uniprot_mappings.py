@@ -4,14 +4,17 @@
 
 import os
 import re
-from subprocess import check_output
+from typing import Iterable, Tuple
 
 from indra.databases import hgnc_client, mesh_client
+
+from biomappings.resources import append_prediction_tuples
+from biomappings.utils import get_git_hash
 
 
 def get_script_url() -> str:
     """Get the source path for this script."""
-    commit_hash = check_output('git rev-parse HEAD'.split()).decode('utf-8').strip()[:6]
+    commit_hash = get_git_hash()
     script_name = os.path.basename(__file__)
     return f'https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}'
 
@@ -19,7 +22,7 @@ def get_script_url() -> str:
 MESH_PROTEIN_RE = re.compile(r'^(.+) protein, human$')
 
 
-def get_mappings():
+def get_mappings() -> Iterable[Tuple[str, ...]]:
     """Iterate high-confidence lexical mappings between MeSH and UniProt human proteins."""
     url = get_script_url()
     mapping_type = 'lexical'
@@ -41,3 +44,7 @@ def get_mappings():
             'uniprot', uniprot_id, gene_name,
             mapping_type, url,
         )
+
+
+if __name__ == '__main__':
+    append_prediction_tuples(get_mappings())
