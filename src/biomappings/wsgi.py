@@ -55,6 +55,10 @@ class Controller:
             for line_prediction, _ in zip(it, range(limit)):
                 yield line_prediction
 
+    def get_total(self) -> int:
+        """Return the total number of yet unmarked predictions."""
+        return len(self._predictions) - len(self._marked)
+
     def mark(self, line: int, correct: bool) -> None:
         """Mark the given equivalency as correct.
 
@@ -100,6 +104,7 @@ def home():
         controller=controller,
         limit=limit,
         offset=offset,
+        total=controller.get_total()
     )
 
 

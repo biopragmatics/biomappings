@@ -59,10 +59,14 @@
                     </tbody>
                 </table>
                 <div class="panel-footer">
+                    <a href="{{ url_for('home', limit=limit, offset=0) }}">First</a> |
                     {% if 0 <= offset - limit %}
                         <a href="{{ url_for('home', limit=limit, offset=offset - limit) }}">Previous {{ limit }}</a> |
                     {% endif %}
-                    <a href="{{ url_for('home', limit=limit, offset=offset + limit) }}">Next {{ limit }}</a>
+                    {% if offset <= total - limit %}
+                        <a href="{{ url_for('home', limit=limit, offset=offset + limit) }}">Next {{ limit }}</a> |
+                    {% endif %}
+                    <a href="{{ url_for('home', limit=limit, offset=total - limit) }}">Last</a>
                 </div>
             </div>
         </div>
