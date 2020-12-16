@@ -2,10 +2,11 @@
 
 """Utilities."""
 
-import re
 import os
+import re
 from subprocess import CalledProcessError, check_output  # noqa: S404
 from typing import Any, Mapping, Optional, Tuple
+
 import requests
 
 
