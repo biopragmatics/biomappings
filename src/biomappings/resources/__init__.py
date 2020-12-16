@@ -3,8 +3,11 @@
 """Biomappings resources."""
 
 import csv
+import itertools as itt
 import os
-from typing import Dict, Iterable, List, Mapping, Sequence
+from typing import Dict, Iterable, List, Mapping, Sequence, Tuple
+
+from biomappings.utils import get_canonical_tuple
 
 RESOURCE_PATH = os.path.dirname(os.path.abspath(__file__))
 MAPPINGS_HEADER = [
@@ -80,3 +83,34 @@ def load_predictions() -> List[Dict[str, str]]:
 def write_predictions(m: List[Mapping[str, str]]) -> None:
     """Write new content to the predictions table."""
     _write_helper(PREDICTIONS_HEADER, m, get_resource_file_path('predictions.tsv'), 'w')
+
+
+def append_prediction_tuples(m: Iterable[Tuple[str, ...]], deduplicate: bool = True) -> None:
+    """Append new lines to the predictions table that come as canonical tuples."""
+    append_predictions(
+        (
+            dict(zip(PREDICTIONS_HEADER, p))
+            for p in m
+        ),
+        deduplicate=deduplicate,
+    )
+
+
+def append_predictions(mappings: Iterable[Mapping[str, str]], deduplicate: bool = True) -> None:
+    """Append new lines to the predictions table."""
+    if deduplicate:
+        existing_mappings = {
+            get_canonical_tuple(existing_mapping)
+            for existing_mapping in itt.chain(
+                load_mappings(),
+                load_false_mappings(),
+                load_predictions(),
+            )
+        }
+        mappings = (
+            mapping
+            for mapping in mappings
+            if get_canonical_tuple(mapping) not in existing_mappings
+        )
+
+    _write_helper(PREDICTIONS_HEADER, mappings, get_resource_file_path('predictions.tsv'), 'a')
