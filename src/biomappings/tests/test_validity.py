@@ -48,7 +48,7 @@ class MiriamValidator:
             raise InvalidPrefix(prefix)
         entry = self.entries[prefix]
         if not re.match(entry['pattern'], identifier):
-            raise InvalidIdentifier(identifier)
+            raise InvalidIdentifier(prefix, identifier)
 
 
 miriam_validator = MiriamValidator()
