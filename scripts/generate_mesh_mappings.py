@@ -23,7 +23,7 @@ MAP = {
     'Drosophila': 'fb',  # 3061 matches
     'C elegans': ...,  # 2040 matches
     'E coli': ...,  # 1984 matches
-    # 'zebrafish': 'zfa',  # 1940 matches
+    'zebrafish': 'zfin',  # 1940 matches
     'Xenopus': ...,  # 1305 matches
     'S pombe': ...,  # 1030 matches
     # 'Bacteria': ...,  # 259 matches
@@ -47,7 +47,6 @@ MAP = {
 
 NEED_PREFIX = {
     'mgi',
-    # 'zfa',
 }
 
 
