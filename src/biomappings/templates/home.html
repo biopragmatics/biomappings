@@ -10,8 +10,8 @@
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h2 class="text-center">Biomappings Curation Interface</h2>
-                    {% if controller.total %}
-                        <a href="{{ url_for('run_commit') }}">Commit ({{ controller.total }})
+                    {% if controller.total_curated %}
+                        <a href="{{ url_for('run_commit') }}">Commit ({{ controller.total_curated }})
                             <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
                         </a>
                     {% endif %}
@@ -63,10 +63,10 @@
                     {% if 0 <= offset - limit %}
                         <a href="{{ url_for('home', limit=limit, offset=offset - limit) }}">Previous {{ limit }}</a> |
                     {% endif %}
-                    {% if offset <= total - limit %}
+                    {% if offset <= controller.total_predictions - limit %}
                         <a href="{{ url_for('home', limit=limit, offset=offset + limit) }}">Next {{ limit }}</a> |
                     {% endif %}
-                    <a href="{{ url_for('home', limit=limit, offset=total - limit) }}">Last</a>
+                    <a href="{{ url_for('home', limit=limit, offset=controller.total_predictions - limit) }}">Last</a>
                 </div>
             </div>
         </div>

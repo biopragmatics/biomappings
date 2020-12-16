@@ -29,7 +29,7 @@ class Controller:
     def __init__(self):  # noqa: D107
         self._predictions = load_predictions()
         self._marked = {}
-        self.total = 0
+        self.total_curated = 0
 
     def predictions(
         self,
@@ -65,7 +65,8 @@ class Controller:
         else:
             return f'https://identifiers.org/{prefix}:{identifier}'
 
-    def get_total(self) -> int:
+    @property
+    def total_predictions(self) -> int:
         """Return the total number of yet unmarked predictions."""
         return len(self._predictions) - len(self._marked)
 
@@ -76,7 +77,7 @@ class Controller:
         :param correct: Value to mark the prediction with
         """
         if line not in self._marked:
-            self.total += 1
+            self.total_curated += 1
         self._marked[line] = correct
 
     def persist(self):
@@ -114,15 +115,14 @@ def home():
         controller=controller,
         limit=limit,
         offset=offset,
-        total=controller.get_total(),
     )
 
 
 @app.route('/commit')
 def run_commit():
     """Make a commit then redirect to the the home page."""
-    commit(f'Curated {controller.total} mappings ({getpass.getuser()})')
-    controller.total = 0
+    commit(f'Curated {controller.total_curated} mappings ({getpass.getuser()})')
+    controller.total_curated = 0
     return flask.redirect(flask.url_for('home'))
 
 
