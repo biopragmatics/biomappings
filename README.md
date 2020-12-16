@@ -105,6 +105,10 @@ $ biomappings web
 It has a button for creating commits, but you'll also have to make pushes from the repository yourself after reviewing
 the changes.
 
+**Note** if you've installed `biomappings` via PyPI, then running the web curation interface doesn't make much sense,
+since it's non-trivial for most users to find the location of the resources within your Python installation's
+`site-packages` folder, and you won't be able to contribute them back.
+
 ## ⚖️ License
 
 Code is licensed under the MIT License. Data is licensed under the CC0 1.0 Universal License.
