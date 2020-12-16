@@ -2,26 +2,62 @@
 
 """Append lexical mappings between MeSH and other gene/protein vocabularies."""
 
+import collections
 import re
 from typing import Iterable, Tuple
 
+import pyobo
 from indra.databases import mesh_client
 
-import pyobo
 from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
+#: This is a dictionary from MeSH suffix to PyOBO prefix
+#: Ellipses are left for unhandled organisms
 MAP = {
-    # 'human': 'hgnc',
-    'mouse': 'mgi',
-    'Arabidopsis': ...,
-    'rat': 'rgd',
-    'S cerevisiae': 'sgd',
-    'Drosophila': 'fb',
-    'C elegans': ...,
-    'E coli': ...,
-    'zebrafish': 'zfa',
+    # 'human': 'hgnc',  # 13168 matches
+    'mouse': 'mgi',  # 9822 matches
+    'Arabidopsis': ...,  # 5068 matches
+    'rat': 'rgd',  # 4681 matches
+    'S cerevisiae': 'sgd',  # 3536 matches
+    'Drosophila': 'fb',  # 3061 matches
+    'C elegans': ...,  # 2040 matches
+    'E coli': ...,  # 1984 matches
+    'zebrafish': 'zfa',  # 1940 matches
+    'Xenopus': ...,  # 1305 matches
+    'S pombe': ...,  # 1030 matches
+    # 'Bacteria': ...,  # 259 matches
+    # 'bacteria': ...,  # 233 matches
+    'Bacillus subtilis': ...,  # 226 matches
+    'Mycobacterium tuberculosis': ...,  # 199 matches
+    'Zea mays': ...,  # 152 matches
+    'Pseudomonas aeruginosa': ...,  # 149 matches
+    'Staphylococcus aureus': ...,  # 126 matches
+    'Plasmodium falciparum': ...,  # 110 matches
+    'Salmonella typhimurium': ...,  # 107 matches
+    'Nicotiana tabacum': ...,  # 95 matches
+    'Candida albicans': ...,  # 91 matches
+    'chicken': ...,  # 91 matches
+    'Trypanosoma brucei': ...,  # 90 matches
+    'Gallus gallus': ...,  # 90 matches
+    'Bos taurus': ...,  # 82 matches
+    'Dictyostelium discoideum': ...,  # 82 matches
+    'Oryza sativa': ...,  # 81 matches
 }
+
+
+def print_map(minimum: int = 80):
+    """Print the map dictionary."""
+    names = pyobo.get_name_id_mapping('mesh')
+    counter = collections.Counter()
+    for name in names:
+        if 'protein, ' in name:
+            counter[name.split('protein, ')[1]] += 1
+
+    for key, count in counter.most_common():
+        if count <= minimum:
+            continue
+        print(f"'{key}': ...,  # {count} matches")
 
 
 def get_mappings() -> Iterable[Tuple[str, ...]]:
@@ -48,9 +84,9 @@ def get_mappings() -> Iterable[Tuple[str, ...]]:
             identifier = name_to_id_mapping.get(gene_name)
             if not identifier:
                 continue
-            # uniprot_id = hgnc_client.get_uniprot_id(mgi_id)
-            # if not uniprot_id or ',' in uniprot_id:
-            #    continue
+
+            # TODO UniProt lookup step
+
             yield (
                 'mesh', mesh_id, mesh_name,
                 match_type,
