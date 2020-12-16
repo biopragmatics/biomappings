@@ -29,13 +29,14 @@ def get_mappings() -> Iterable[Tuple[str, ...]]:
     url = get_script_url(__file__)
     mapping_type = 'lexical'
     match_type = 'skos:exactMatch'
+    confidence = 0.95
     with open(GILDA_MAPPINGS, 'r') as fh:
         for _, mesh_id, mesh_name, db_ns, db_id, db_name in csv.reader(fh, delimiter='\t'):
             yield (
                 'mesh', mesh_id, mesh_name,
                 match_type,
                 db_ns_mappings[db_ns], db_id, db_name,
-                mapping_type, url,
+                mapping_type, confidence, url,
             )
 
 
