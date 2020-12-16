@@ -4,9 +4,11 @@
 
 import collections
 import re
-from typing import Iterable, Tuple
+from typing import Iterable, Mapping, Optional, Tuple
 
+import pandas as pd
 import pyobo
+import pystow
 from indra.databases import mesh_client
 
 from biomappings.resources import append_prediction_tuples
@@ -49,6 +51,44 @@ NEED_PREFIX = {
     'mgi',
 }
 
+UNIPROT_NAMES = {
+    'mgi': ('database(MGI)', 'Mus musculus (Mouse) [10090]'),
+    'rgd': ('database(RGD)', 'Rattus norvegicus (Rat) [10116]'),
+    'sgd': ('database(SGD)', "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) [559292]"),
+}
+
+
+def get_id_to_uniprot(prefix: str) -> Optional[Mapping[str, str]]:
+    if prefix not in UNIPROT_NAMES:
+        return
+
+    column, organism = UNIPROT_NAMES[prefix]
+    url = 'https://www.uniprot.org/uniprot/'
+    params = {
+        'format': 'tab',
+        'columns': f'{column},id',
+        'fil': f'organism:"{organism}"',
+    }
+    df = pystow.ensure_csv(
+        key='biomappings',
+        url=url,
+        name=f'{prefix}_uniprot.tsv.gz',
+        read_csv_kwargs=dict(
+            sep='\t',
+            compression='gzip',
+            dtype=str,
+        ),
+        download_kwargs=dict(
+            backend='requests',
+            params=params,
+        ),
+    )
+    return {
+        mgi_id.rstrip(';'): uniprot_id
+        for mgi_id, uniprot_id in df.values
+        if pd.notna(mgi_id) and pd.notna(uniprot_id)
+    }
+
 
 def print_map(minimum: int = 80):
     """Print the map dictionary."""
@@ -79,6 +119,12 @@ def get_mappings() -> Iterable[Tuple[str, ...]]:
         except ValueError:
             print('skipping', key)
             continue
+
+        id_to_uniprot = get_id_to_uniprot(key)
+        if id_to_uniprot is None:
+            print('no lookup for', key)
+            continue
+
         mesh_protein_re = re.compile(rf'^(.+) protein, {suffix}$')
         for mesh_name, mesh_id in mesh_client.mesh_name_to_id.items():
             match = mesh_protein_re.match(mesh_name)
@@ -88,13 +134,13 @@ def get_mappings() -> Iterable[Tuple[str, ...]]:
             identifier = name_to_id_mapping.get(gene_name)
             if not identifier:
                 continue
-
-            # TODO UniProt lookup step
-
+            uniprot_id = id_to_uniprot.get(identifier)
+            if uniprot_id is None:
+                continue
             yield (
                 'mesh', mesh_id, mesh_name,
                 match_type,
-                key, f'{key.upper()}:{identifier}' if key in NEED_PREFIX else identifier, gene_name,
+                'uniprot', uniprot_id, gene_name,
                 mapping_type, confidence, url,
             )
 
