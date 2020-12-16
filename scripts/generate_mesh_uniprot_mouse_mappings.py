@@ -5,13 +5,23 @@
 import re
 from typing import Iterable, Tuple
 
-import pyobo
 from indra.databases import mesh_client
 
+import pyobo
 from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
-mgi_name_to_id = pyobo.get_name_id_mapping('mgi')
+MAP = {
+    # 'human': 'hgnc',
+    'mouse': 'mgi',
+    'Arabidopsis': ...,
+    'rat': 'rgd',
+    'S cerevisiae': 'sgd',
+    'Drosophila': 'fb',
+    'C elegans': ...,
+    'E coli': ...,
+    'zebrafish': 'zfa',
+}
 
 
 def get_mappings() -> Iterable[Tuple[str, ...]]:
@@ -20,24 +30,33 @@ def get_mappings() -> Iterable[Tuple[str, ...]]:
     mapping_type = 'lexical'
     match_type = 'skos:exactMatch'
     confidence = 0.999
-    mesh_protein_re = re.compile(r'^(.+) protein, mouse$')
-    for mesh_name, mesh_id in mesh_client.mesh_name_to_id.items():
-        match = mesh_protein_re.match(mesh_name)
-        if not match:
+
+    for suffix, key in MAP.items():
+        if key is ...:
             continue
-        gene_name = match.groups()[0]
-        mgi_id = mgi_name_to_id.get(gene_name)
-        if not mgi_id:
+        try:
+            name_to_id_mapping = pyobo.get_name_id_mapping(key)
+        except ValueError:
+            print('skipping', key)
             continue
-        # uniprot_id = hgnc_client.get_uniprot_id(mgi_id)
-        # if not uniprot_id or ',' in uniprot_id:
-        #    continue
-        yield (
-            'mesh', mesh_id, mesh_name,
-            match_type,
-            'mgi', mgi_id, gene_name,
-            mapping_type, confidence, url,
-        )
+        mesh_protein_re = re.compile(rf'^(.+) protein, {suffix}$')
+        for mesh_name, mesh_id in mesh_client.mesh_name_to_id.items():
+            match = mesh_protein_re.match(mesh_name)
+            if not match:
+                continue
+            gene_name = match.groups()[0]
+            identifier = name_to_id_mapping.get(gene_name)
+            if not identifier:
+                continue
+            # uniprot_id = hgnc_client.get_uniprot_id(mgi_id)
+            # if not uniprot_id or ',' in uniprot_id:
+            #    continue
+            yield (
+                'mesh', mesh_id, mesh_name,
+                match_type,
+                key, identifier, gene_name,
+                mapping_type, confidence, url,
+            )
 
 
 if __name__ == '__main__':
