@@ -7,7 +7,7 @@ from collections import Counter
 import requests
 
 from biomappings import load_false_mappings, load_mappings, load_predictions
-from biomappings.utils import iterate_canonical_mappings
+from biomappings.utils import get_canonical_tuple
 
 mappings = load_mappings()
 predictions = load_predictions()
@@ -69,7 +69,10 @@ def test_valid_mappings():
 
 def test_redundancy():
     """Test the redundancy of manually curated mappings and predicted mappings."""
-    counter = Counter(iterate_canonical_mappings(itt.chain(mappings, incorrect, predictions)))
+    counter = Counter(
+        get_canonical_tuple(m)
+        for m in itt.chain(mappings, incorrect, predictions)
+    )
     redundant = [k for k, v in counter.items() if v > 1]
     if redundant:
         raise ValueError(f'Redundant: {redundant}')

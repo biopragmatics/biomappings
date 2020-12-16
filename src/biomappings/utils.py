@@ -4,7 +4,7 @@
 
 import os
 from subprocess import CalledProcessError, check_output  # noqa: S404
-from typing import Any, Iterable, Mapping, Optional, Tuple
+from typing import Any, Mapping, Optional, Tuple
 
 
 def get_git_hash() -> Optional[str]:
@@ -49,11 +49,10 @@ def get_script_url(fname: str) -> str:
     return f'https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}'
 
 
-def iterate_canonical_mappings(m: Iterable[Mapping[str, Any]]) -> Iterable[Tuple[str, str, str, str]]:
-    """Iterate over canonical mapping tuples."""
-    for mapping in m:
-        source = mapping['source prefix'], mapping['source identifier']
-        target = mapping['target prefix'], mapping['target identifier']
-        if source > target:
-            source, target = target, source
-        yield (*source, *target)
+def get_canonical_tuple(mapping: Mapping[str, Any]) -> Tuple[str, str, str, str]:
+    """Get the canonical tuple from a mapping entry."""
+    source = mapping['source prefix'], mapping['source identifier']
+    target = mapping['target prefix'], mapping['target identifier']
+    if source > target:
+        source, target = target, source
+    return (*source, *target)

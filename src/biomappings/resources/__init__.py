@@ -7,7 +7,7 @@ import itertools as itt
 import os
 from typing import Dict, Iterable, List, Mapping, Tuple
 
-from biomappings.utils import iterate_canonical_mappings
+from biomappings.utils import get_canonical_tuple
 
 RESOURCE_PATH = os.path.dirname(os.path.abspath(__file__))
 HEADER = [
@@ -85,24 +85,21 @@ def append_prediction_tuples(m: Iterable[Tuple[str, ...]], deduplicate: bool = T
     )
 
 
-def append_predictions(m: Iterable[Mapping[str, str]], deduplicate: bool = True) -> None:
+def append_predictions(mappings: Iterable[Mapping[str, str]], deduplicate: bool = True) -> None:
     """Append new lines to the predictions table."""
     if deduplicate:
-        existing = set(iterate_canonical_mappings(itt.chain(
-            load_mappings(),
-            load_false_mappings(),
-            load_predictions(),
-        )))
-
-        def _not_duplicate(d: Mapping[str, str]) -> bool:
-            source = d['source prefix'], d['source identifier']
-            target = d['target prefix'], d['target identifier']
-            return (*source, *target) not in existing and (*target, *source) not in existing
-
-        m = (
-            d
-            for d in m
-            if _not_duplicate(d)
+        existing_mappings = {
+            get_canonical_tuple(existing_mapping)
+            for existing_mapping in itt.chain(
+                load_mappings(),
+                load_false_mappings(),
+                load_predictions(),
+            )
+        }
+        mappings = (
+            mapping
+            for mapping in mappings
+            if get_canonical_tuple(mapping) not in existing_mappings
         )
 
-    _write_helper(m, get_resource_file_path('predictions.tsv'), 'a')
+    _write_helper(mappings, get_resource_file_path('predictions.tsv'), 'a')
