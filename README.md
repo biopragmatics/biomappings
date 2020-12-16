@@ -24,9 +24,13 @@
 Community curated and predicted equivalences and related mappings between named biological entities that are not
 available from primary sources.
 
-Human-curated true mappings are in [`src/biomappings/resources/mappings.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/mappings.tsv),
-and automatically predicted mappings are in [`src/biomappings/resources/predictions.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/predictions.tsv)
-Human-curated *false* (i.e., incorrect) mappings that are non-trivial are in [`src/biomappings/resources/incorrect.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/incorrect.tsv).
+Human-curated true mappings are
+in [`src/biomappings/resources/mappings.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/mappings.tsv)
+, and automatically predicted mappings are
+in [`src/biomappings/resources/predictions.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/predictions.tsv)
+Human-curated *false* (i.e., incorrect) mappings that are non-trivial are
+in [`src/biomappings/resources/incorrect.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/incorrect.tsv)
+.
 
 Equivalences and related mappings that are available from the OBO Foundry and other primary sources can be accessed
 through [Inspector Javert's Xref Database](https://zenodo.org/record/3757266)
@@ -63,6 +67,29 @@ Install with the `web` option as in `pip install biomappings[web]` or just insta
 ```bash
 $ biomappings web
 ```
+
+## 🙏 Contributing Curations
+
+### GitHub Web Interface
+
+GitHub has an interface for editing files directly in the browser. It will take care of creating a branch for you and
+creating a pull request. After logging into GitHub, click one of the following links to be brought to the editing
+interface:
+
+- [True Mappings](https://github.com/biomappings/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
+- [False Mappings](https://github.com/biomappings/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
+- [Predictions](https://github.com/biomappings/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
+
+This has the caveat that you can only edit one file at a time. It's possible to navigate to your own forked version of
+the repository after, to the correct branch (will not be the default one), then edit other files in the web interface as
+well. However, if you would like to do this, then it's probably better to see the following instructions on contributing
+locally.
+
+### Locally
+
+1. Fork the repository at https://github.com/biomappings/biomappings, clone locally, and make a new branch
+2. Edit one or more of the resource files (mappings.tsv, incorrect.tsv, predictions.tsv)
+3. Commit to your branch, push, and create a pull request back to the upstream repository.
 
 ## ⚖️ License
 
