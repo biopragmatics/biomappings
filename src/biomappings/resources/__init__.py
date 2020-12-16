@@ -88,7 +88,7 @@ def append_prediction_tuples(m: Iterable[Tuple[str, ...]], deduplicate: bool = T
 def append_predictions(m: Iterable[Mapping[str, str]], deduplicate: bool = True) -> None:
     """Append new lines to the predictions table."""
     if deduplicate:
-        predictions_counter = set(iterate_canonical_mappings(itt.chain(
+        existing = set(iterate_canonical_mappings(itt.chain(
             load_mappings(),
             load_false_mappings(),
             load_predictions(),
@@ -97,7 +97,7 @@ def append_predictions(m: Iterable[Mapping[str, str]], deduplicate: bool = True)
         def _not_duplicate(d: Mapping[str, str]) -> bool:
             source = d['source prefix'], d['source identifier']
             target = d['target prefix'], d['target identifier']
-            return (*source, *target) not in predictions_counter and (*target, *source) not in predictions_counter
+            return (*source, *target) not in existing and (*target, *source) not in existing
 
         m = (
             d
