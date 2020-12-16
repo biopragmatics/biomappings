@@ -121,7 +121,10 @@ def home():
 @app.route('/commit')
 def run_commit():
     """Make a commit then redirect to the the home page."""
-    commit(f'Curated {controller.total_curated} mappings ({getpass.getuser()})')
+    commit(
+        f'Curated {controller.total_curated} mapping{"s" if controller.total_curated > 1 else ""}'
+        f' ({getpass.getuser()})',
+    )
     controller.total_curated = 0
     return _go_home()
 
