@@ -9,7 +9,7 @@ import flask
 import flask_bootstrap
 
 from biomappings.resources import append_false_mappings, append_true_mappings, load_predictions, write_predictions
-from biomappings.utils import commit, MiriamValidator
+from biomappings.utils import MiriamValidator, commit
 
 app = flask.Flask(__name__)
 flask_bootstrap.Bootstrap(app)
