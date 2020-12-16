@@ -3,8 +3,11 @@
 """Biomappings resources."""
 
 import csv
+import itertools as itt
 import os
 from typing import Dict, Iterable, List, Mapping, Tuple
+
+from biomappings.utils import iterate_canonical_mappings
 
 RESOURCE_PATH = os.path.dirname(os.path.abspath(__file__))
 HEADER = [
@@ -79,7 +82,23 @@ def append_prediction_tuples(m: Iterable[Tuple[str, ...]]) -> None:
     )
 
 
-def append_predictions(m: Iterable[Mapping[str, str]]) -> None:
+def append_predictions(m: Iterable[Mapping[str, str]], deduplicate: bool = True) -> None:
     """Append new lines to the predictions table."""
-    # TODO automatically de-duplicate
+    if deduplicate:
+        predictions_counter = set(itt.chain(
+            iterate_canonical_mappings(load_mappings()),
+            iterate_canonical_mappings(load_predictions()),
+        ))
+
+        def _not_duplicate(d: Mapping[str, str]) -> bool:
+            source = d['source prefix'], d['source identifier']
+            target = d['target prefix'], d['target identifier']
+            return (*source, *target) not in predictions_counter and (*target, *source) not in predictions_counter
+
+        m = (
+            d
+            for d in m
+            if _not_duplicate(d)
+        )
+
     _write_helper(m, get_resource_file_path('predictions.tsv'), 'a')

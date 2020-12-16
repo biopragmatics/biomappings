@@ -7,6 +7,7 @@ from collections import Counter
 import requests
 
 from biomappings import load_mappings, load_predictions
+from biomappings.utils import iterate_canonical_mappings
 
 mappings = load_mappings()
 predictions = load_predictions()
@@ -67,13 +68,7 @@ def test_valid_mappings():
 
 def test_redundancy():
     """Test the redundancy of manually curated mappings and predicted mappings."""
-    cnt = []
-    for mapping in itt.chain(mappings, predictions):
-        source = mapping['source prefix'], mapping['source identifier']
-        target = mapping['target prefix'], mapping['target identifier']
-        if source > target:
-            source, target = target, source
-        cnt.append((*source, *target))
-    redundant = [k for k, v in Counter(cnt).items() if v > 1]
+    counter = Counter(iterate_canonical_mappings(itt.chain(mappings, predictions)))
+    redundant = [k for k, v in counter.items() if v > 1]
     if redundant:
         raise ValueError(f'Redundant: {redundant}')

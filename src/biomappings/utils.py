@@ -4,7 +4,7 @@
 
 import os
 from subprocess import CalledProcessError, check_output  # noqa: S404
-from typing import Optional
+from typing import Any, Iterable, Mapping, Optional, Tuple
 
 
 def get_git_hash() -> Optional[str]:
@@ -36,3 +36,13 @@ def _git(*args: str) -> Optional[str]:
             return
         else:
             return ret.strip().decode('utf-8')
+
+
+def iterate_canonical_mappings(m: Iterable[Mapping[str, Any]]) -> Iterable[Tuple[str, str, str, str]]:
+    """Iterate over canonical mapping tuples."""
+    for mapping in m:
+        source = mapping['source prefix'], mapping['source identifier']
+        target = mapping['target prefix'], mapping['target identifier']
+        if source > target:
+            source, target = target, source
+        yield (*source, *target)
