@@ -32,9 +32,17 @@
                     {% for line, p in controller.predictions(offset=offset, limit=limit) %}
                         <tr>
                             <td>{{ line }}</td>
-                            <td>{{ p['source prefix'] }}:{{ p['source identifier'] }}</td>
+                            <td>
+                                <a href="https://identifiers.org/{{ p['source prefix'] }}:{{ p['source identifier'] }}">
+                                    {{ p['source prefix'] }}:{{ p['source identifier'] }}
+                                </a>
+                            </td>
                             <td>{{ p['source name'] }}</td>
-                            <td>{{ p['target prefix'] }}:{{ p['target identifier'] }}</td>
+                            <td>
+                                <a href="https://identifiers.org/{{ p['target prefix'] }}:{{ p['target identifier'] }}">
+                                    {{ p['target prefix'] }}:{{ p['target identifier'] }}
+                                </a>
+                            </td>
                             <td>{{ p['target name'] }}</td>
                             <td><a href="{{ url_for('mark', line=line, value='yup') }}"><span
                                     class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></a></td>
