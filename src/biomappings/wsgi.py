@@ -9,7 +9,7 @@ import flask
 import flask_bootstrap
 
 from biomappings.resources import append_false_mappings, append_true_mappings, load_predictions, write_predictions
-from biomappings.utils import commit
+from biomappings.utils import commit, MiriamValidator
 
 app = flask.Flask(__name__)
 flask_bootstrap.Bootstrap(app)
@@ -19,6 +19,8 @@ KNOWN_USERS = {
     'cthoyt': '0000-0003-4423-4370',
     'ben': '0000-0001-9439-5346',
 }
+
+miriam_validator = MiriamValidator()
 
 
 class Controller:
@@ -57,7 +59,7 @@ class Controller:
 
     @staticmethod
     def get_url(prefix: str, identifier: str) -> str:
-        if prefix in {'chebi', 'go', 'doid', 'pr'}:
+        if miriam_validator.namespace_embedded(prefix):
             return f'https://identifiers.org/{identifier}'
         else:
             return f'https://identifiers.org/{prefix}:{identifier}'
