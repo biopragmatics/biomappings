@@ -62,15 +62,6 @@ $ cd biomappings
 $ pip install -e .
 ```
 
-## 🌐 Web Curation Interface
-
-Install with the `web` option as in `pip install biomappings[web]` or just install
-`flask` and `flask-bootstrap` then run the following:
-
-```bash
-$ biomappings web
-```
-
 ## 🙏 Contributing Curations
 
 ### GitHub Web Interface
@@ -93,6 +84,26 @@ locally.
 1. Fork the repository at https://github.com/biomappings/biomappings, clone locally, and make a new branch
 2. Edit one or more of the resource files (mappings.tsv, incorrect.tsv, predictions.tsv)
 3. Commit to your branch, push, and create a pull request back to the upstream repository.
+
+## 🌐 Web Curation Interface
+
+Rather than editing files locally, this repository also comes with a web-based curation interface. Install the code in
+development mode with the `web` option (which installs `flask` and `flask-bootstrap`) using:
+
+```bash
+$ git clone git+https://github.com/biomappings/biomappings.git
+$ cd biomappings
+$ pip install -e .[web]
+```
+
+The web application can be run with:
+
+```bash
+$ biomappings web
+```
+
+It has a button for creating commits, but you'll also have to make pushes from the repository yourself after reviewing
+the changes.
 
 ## ⚖️ License
 
