@@ -37,9 +37,9 @@ MAP = {
     'Salmonella typhimurium': ...,  # 107 matches
     'Nicotiana tabacum': ...,  # 95 matches
     'Candida albicans': ...,  # 91 matches
-    'chicken': ...,  # 91 matches
+    # 'chicken': 'cgnc',  # 91 matches
     'Trypanosoma brucei': ...,  # 90 matches
-    'Gallus gallus': ...,  # 90 matches
+    # 'Gallus gallus': 'cgnc',  # 90 matches
     'Bos taurus': ...,  # 82 matches
     'Dictyostelium discoideum': ...,  # 82 matches
     'Oryza sativa': ...,  # 81 matches
