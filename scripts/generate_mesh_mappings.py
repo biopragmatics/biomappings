@@ -23,7 +23,7 @@ MAP = {
     'Drosophila': 'fb',  # 3061 matches
     'C elegans': ...,  # 2040 matches
     'E coli': ...,  # 1984 matches
-    'zebrafish': 'zfa',  # 1940 matches
+    # 'zebrafish': 'zfa',  # 1940 matches
     'Xenopus': ...,  # 1305 matches
     'S pombe': ...,  # 1030 matches
     # 'Bacteria': ...,  # 259 matches
@@ -43,6 +43,11 @@ MAP = {
     'Bos taurus': ...,  # 82 matches
     'Dictyostelium discoideum': ...,  # 82 matches
     'Oryza sativa': ...,  # 81 matches
+}
+
+NEED_PREFIX = {
+    'mgi',
+    # 'zfa',
 }
 
 
@@ -90,7 +95,7 @@ def get_mappings() -> Iterable[Tuple[str, ...]]:
             yield (
                 'mesh', mesh_id, mesh_name,
                 match_type,
-                key, identifier, gene_name,
+                key, f'{key.upper()}:{identifier}' if key in NEED_PREFIX else identifier, gene_name,
                 mapping_type, confidence, url,
             )
 
