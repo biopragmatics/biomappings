@@ -74,11 +74,14 @@ def write_predictions(m: List[Mapping[str, str]]) -> None:
     _write_helper(m, get_resource_file_path('predictions.tsv'), 'w')
 
 
-def append_prediction_tuples(m: Iterable[Tuple[str, ...]]) -> None:
+def append_prediction_tuples(m: Iterable[Tuple[str, ...]], deduplicate: bool = True) -> None:
     """Append new lines to the predictions table that come as canonical tuples."""
     append_predictions(
-        dict(zip(HEADER, p))
-        for p in m
+        (
+            dict(zip(HEADER, p))
+            for p in m
+        ),
+        deduplicate=deduplicate,
     )
 
 
