@@ -84,7 +84,7 @@ def home():
 @app.route('/commit')
 def run_commit():
     """Make a commit then redirect to the the home page."""
-    commit(f'Added mappings from {getpass.getuser()}')
+    commit(f'Curated {controller.total} mappings ({getpass.getuser()})')
     controller.total = 0
     return flask.redirect(flask.url_for('home'))
 
