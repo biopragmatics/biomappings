@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Append lexical mappings between MeSH and UniProt for mouse genes."""
+"""Append lexical mappings between MeSH and other gene/protein vocabularies."""
 
 import re
 from typing import Iterable, Tuple
