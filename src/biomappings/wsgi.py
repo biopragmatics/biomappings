@@ -123,7 +123,7 @@ def run_commit():
     """Make a commit then redirect to the the home page."""
     commit(f'Curated {controller.total_curated} mappings ({getpass.getuser()})')
     controller.total_curated = 0
-    return flask.redirect(flask.url_for('home'))
+    return _go_home()
 
 
 @app.route('/mark/<int:line>/<value>')
@@ -131,6 +131,10 @@ def mark(line: int, value: str):
     """Mark the given line as correct or not."""
     controller.mark(line, value.lower() in {'yup', 'true', 't', 'correct', 'right', 'close enough', 'disco'})
     controller.persist()
+    return _go_home()
+
+
+def _go_home():
     return flask.redirect(flask.url_for(
         'home',
         limit=flask.request.args.get('limit', type=int),
