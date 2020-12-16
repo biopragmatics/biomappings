@@ -59,7 +59,10 @@ class Controller:
 
         for i, correct in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(i)
-            prediction['source'] = KNOWN_USERS.get(getpass.getuser(), 'web')
+            known_user = KNOWN_USERS.get(getpass.getuser())
+            prediction['source'] = f'orcid:{known_user}' if known_user else \
+                'web'
+            prediction['type'] = f'manually_reviewed'
             if correct:
                 curated_true_entries.append(prediction)
             else:
