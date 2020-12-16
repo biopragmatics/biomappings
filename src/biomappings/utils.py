@@ -89,7 +89,7 @@ class MiriamValidator:
         }
         return patterns
 
-    def namespace_embedded(self, prefix):
+    def namespace_embedded(self, prefix: str) -> bool:
         """Return True if the namespace is embedded for the given prefix."""
         return self.entries[prefix]['namespace_embedded']
 
