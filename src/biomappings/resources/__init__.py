@@ -87,6 +87,7 @@ def append_predictions(m: Iterable[Mapping[str, str]], deduplicate: bool = True)
     if deduplicate:
         predictions_counter = set(itt.chain(
             iterate_canonical_mappings(load_mappings()),
+            iterate_canonical_mappings(load_false_mappings()),
             iterate_canonical_mappings(load_predictions()),
         ))
 
