@@ -4,7 +4,7 @@
 
 import csv
 import os
-from typing import Dict, Iterable, List, Mapping
+from typing import Dict, Iterable, List, Mapping, Sequence
 
 RESOURCE_PATH = os.path.dirname(os.path.abspath(__file__))
 MAPPINGS_HEADER = [
@@ -44,7 +44,7 @@ def _load_table(fname) -> List[Dict[str, str]]:
         return [dict(zip(header, row)) for row in reader]
 
 
-def _write_helper(header: Iterable[str], lod: Iterable[Mapping[str, str]], path: str, mode: str) -> None:
+def _write_helper(header: Sequence[str], lod: Iterable[Mapping[str, str]], path: str, mode: str) -> None:
     with open(path, mode) as file:
         if mode == 'w':
             print(*header, sep='\t', file=file)
