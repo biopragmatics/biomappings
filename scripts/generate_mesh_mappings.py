@@ -63,6 +63,7 @@ UNIPROT_NAMES = {
 
 
 def get_id_to_uniprot(prefix: str) -> Optional[Mapping[str, str]]:
+    """Get identifier to UniProt mapping."""
     if prefix not in UNIPROT_NAMES:
         return
 
