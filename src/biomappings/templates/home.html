@@ -11,7 +11,8 @@
                 <div class="panel-heading">
                     <h2 class="text-center">Biomappings Curation Interface</h2>
                     {% if controller.total_curated %}
-                        <a href="{{ url_for('run_commit') }}">Commit ({{ controller.total_curated }})
+                        <a href="{{ url_for('run_commit', limit=limit, offset=offset) }}">
+                            Commit ({{ controller.total_curated }})
                             <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
                         </a>
                     {% endif %}
