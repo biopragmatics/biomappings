@@ -17,6 +17,7 @@ flask_bootstrap.Bootstrap(app)
 # A mapping from your computer's user, returned by getuser.getpass()
 KNOWN_USERS = {
     'cthoyt': '0000-0003-4423-4370',
+    'ben': '0000-0001-9439-5346',
 }
 
 
