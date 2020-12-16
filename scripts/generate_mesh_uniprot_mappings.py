@@ -18,7 +18,7 @@ def get_mappings() -> Iterable[Tuple[str, ...]]:
     url = get_script_url(__file__)
     mapping_type = 'lexical'
     match_type = 'skos:exactMatch'
-    confidence = 0.99
+    confidence = 0.999
     for mesh_name, mesh_id in mesh_client.mesh_name_to_id.items():
         match = MESH_PROTEIN_RE.match(mesh_name)
         if not match:
