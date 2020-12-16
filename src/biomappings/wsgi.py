@@ -3,7 +3,7 @@
 """Web curation interface for :mod:`biomappings`."""
 
 import getpass
-from typing import Optional
+from typing import Any, Iterable, Mapping, Optional, Tuple
 
 import flask
 import flask_bootstrap
@@ -29,15 +29,22 @@ class Controller:
         self._marked = {}
         self.total = 0
 
-    def predictions(self, *, offset: Optional[int] = None, limit: Optional[int] = None):
+    def predictions(
+        self,
+        *,
+        offset: Optional[int] = None,
+        limit: Optional[int] = None,
+    ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
+        :param offset: If given, offset the iteration by this number
         :param limit: If given, only iterate this number of predictions.
+        :yields: Pairs of positions and prediction dictionaries
         """
         it = (
-            (i, p)
-            for i, p in enumerate(self._predictions)
-            if i not in self._marked
+            (line, prediction)
+            for line, prediction in enumerate(self._predictions)
+            if line not in self._marked
         )
         if offset is not None:
             for _ in range(offset):
@@ -45,22 +52,26 @@ class Controller:
         if limit is None:
             yield from it
         else:
-            for x, _ in zip(it, range(limit)):
-                yield x
+            for line_prediction, _ in zip(it, range(limit)):
+                yield line_prediction
 
-    def mark(self, i: int, correct: bool):
-        """Mark the given equivalency as correct."""
-        if i not in self._marked:
+    def mark(self, line: int, correct: bool) -> None:
+        """Mark the given equivalency as correct.
+
+        :param line: Position of the prediction
+        :param correct: Value to mark the prediction with
+        """
+        if line not in self._marked:
             self.total += 1
-        self._marked[i] = correct
+        self._marked[line] = correct
 
     def persist(self):
         """Save the current markings to the source files."""
         curated_true_entries = []
         curated_false_entries = []
 
-        for i, correct in sorted(self._marked.items(), reverse=True):
-            prediction = self._predictions.pop(i)
+        for line, correct in sorted(self._marked.items(), reverse=True):
+            prediction = self._predictions.pop(line)
             known_user = KNOWN_USERS.get(getpass.getuser())
             prediction['source'] = f'orcid:{known_user}' if known_user else 'web'
             prediction['type'] = 'manually_reviewed'
