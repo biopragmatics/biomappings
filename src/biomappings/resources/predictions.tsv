@@ -1,11 +1,4 @@
 source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	source
-mesh	C497399	SMAD1 protein, human	skos:exactMatch	uniprot	Q15797	SMAD1	lexical	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py
-mesh	C497782	SMAD2 protein, human	skos:exactMatch	uniprot	Q15796	SMAD2	lexical	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py
-mesh	C497790	SMAD3 protein, human	skos:exactMatch	uniprot	P84022	SMAD3	lexical	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py
-mesh	C497796	SMAD4 protein, human	skos:exactMatch	uniprot	Q13485	SMAD4	lexical	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py
-mesh	C497797	SMAD5 protein, human	skos:exactMatch	uniprot	Q99717	SMAD5	lexical	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py
-mesh	C497802	SMAD6 protein, human	skos:exactMatch	uniprot	O43541	SMAD6	lexical	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py
-mesh	C497806	SMAD7 protein, human	skos:exactMatch	uniprot	O15105	SMAD7	lexical	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py
 mesh	C514899	PREP protein, human	skos:exactMatch	uniprot	P48147	PREP	lexical	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py
 mesh	C077914	BNC1 protein, human	skos:exactMatch	uniprot	Q01954	BNC1	lexical	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py
 mesh	C497562	RFC3 protein, human	skos:exactMatch	uniprot	P40938	RFC3	lexical	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py

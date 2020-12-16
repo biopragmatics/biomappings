@@ -47,6 +47,15 @@ $ cd biomappings
 $ pip install -e .
 ```
 
+## 🌐 Web Curation Interface
+
+Install with the `web` option as in `pip install biomappings[web]` or just install
+`flask` and `flask-bootstrap` then run the following:
+
+```bash
+$ biomappings web
+```
+
 ## License
 
 Code is licensed under the MIT License. Data is licensed under the CC0 1.0 Universal License.
