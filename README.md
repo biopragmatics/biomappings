@@ -7,6 +7,9 @@
 </h1>
 
 <p align="center">
+    <a href="https://github.com/biomappings/biomappings/actions?query=workflow%3A%22Check+mappings%22">
+        <img alt="Check mappings" src="https://github.com/biomappings/biomappings/workflows/Check%20mappings/badge.svg" />
+    </a>
     <a href="https://pypi.org/project/biomappings">
         <img alt="PyPI" src="https://img.shields.io/pypi/v/biomappings" />
     </a>
