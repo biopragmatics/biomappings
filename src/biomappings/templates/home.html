@@ -44,10 +44,16 @@
                                 </a>
                             </td>
                             <td>{{ p['target name'] }}</td>
-                            <td><a href="{{ url_for('mark', line=line, value='yup') }}"><span
-                                    class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></a></td>
-                            <td><a href="{{ url_for('mark', line=line, value='nope') }}"><span
-                                    class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span></a></td>
+                            <td>
+                                <a href="{{ url_for('mark', line=line, value='yup', limit=limit, offset=offset) }}">
+                                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ url_for('mark', line=line, value='nope', limit=limit, offset=offset) }}">
+                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                                </a>
+                            </td>
                         </tr>
                     {% endfor %}
                     </tbody>

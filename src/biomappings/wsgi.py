@@ -105,7 +105,11 @@ def mark(line: int, value: str):
     """Mark the given line as correct or not."""
     controller.mark(line, value.lower() in {'yup', 'true', 't', 'correct', 'right', 'close enough', 'disco'})
     controller.persist()
-    return flask.redirect(flask.url_for('home'))
+    return flask.redirect(flask.url_for(
+        'home',
+        limit=flask.request.args.get('limit', type=int),
+        offset=flask.request.args.get('offset', type=int),
+    ))
 
 
 if __name__ == '__main__':
