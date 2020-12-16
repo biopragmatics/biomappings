@@ -57,7 +57,7 @@ class Controller:
         curated_true_entries = []
         curated_false_entries = []
 
-        for i, correct in self._marked.items():
+        for i, correct in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(i)
             prediction['source'] = KNOWN_USERS.get(getpass.getuser(), 'web')
             if correct:
