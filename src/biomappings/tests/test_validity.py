@@ -1,13 +1,10 @@
 """Validation tests for :mod:`biomappings`."""
 
 import itertools as itt
-import re
 from collections import Counter
 
-import requests
-
 from biomappings import load_false_mappings, load_mappings, load_predictions
-from biomappings.utils import get_canonical_tuple, MiriamValidator
+from biomappings.utils import MiriamValidator, get_canonical_tuple
 
 mappings = load_mappings()
 predictions = load_predictions()

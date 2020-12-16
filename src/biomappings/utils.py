@@ -4,9 +4,9 @@
 
 import re
 import os
-import requests
 from subprocess import CalledProcessError, check_output  # noqa: S404
 from typing import Any, Mapping, Optional, Tuple
+import requests
 
 
 def get_git_hash() -> Optional[str]:

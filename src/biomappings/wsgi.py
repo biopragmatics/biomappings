@@ -59,6 +59,7 @@ class Controller:
 
     @staticmethod
     def get_url(prefix: str, identifier: str) -> str:
+        """Return URL for a given prefix and identifier."""
         if miriam_validator.namespace_embedded(prefix):
             return f'https://identifiers.org/{identifier}'
         else:
@@ -113,7 +114,7 @@ def home():
         controller=controller,
         limit=limit,
         offset=offset,
-        total=controller.get_total()
+        total=controller.get_total(),
     )
 
 
