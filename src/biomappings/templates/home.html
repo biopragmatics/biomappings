@@ -19,7 +19,7 @@
                 <table class="table table-striped table-hover">
                     <thead>
                     <tr>
-                        <th>Index</th>
+                        <th>Line</th>
                         <th>Source</th>
                         <th>Source Name</th>
                         <th>Target</th>
@@ -31,7 +31,7 @@
                     <tbody>
                     {% for line, p in controller.predictions(offset=offset, limit=limit) %}
                         <tr>
-                            <td>{{ line }}</td>
+                            <td>{{ 1 + line }}</td>
                             <td>
                                 <a href="https://identifiers.org/{{ p['source prefix'] }}:{{ p['source identifier'] }}">
                                     {{ p['source prefix'] }}:{{ p['source identifier'] }}
