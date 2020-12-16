@@ -1,4 +1,10 @@
-# biomappings
+<p align="center">
+  <img src="docs/source/logo.png" height="150">
+</p>
+
+<h1 align="center">
+  Biomappings
+</h1>
 
 <a href="https://pypi.org/project/biomappings">
     <img alt="PyPI" src="https://img.shields.io/pypi/v/biomappings" />
