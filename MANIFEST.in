@@ -1,5 +1,6 @@
 graft src
 prune scripts
+prune docs/_data
 
 recursive-include docs/source *.py
 recursive-include docs/source *.rst
@@ -8,4 +9,5 @@ recursive-include docs/source *.png
 global-exclude *.py[cod] __pycache__ *.so *.dylib .DS_Store *.gpickle
 
 include README.md LICENSE
-exclude tox.ini .flake8 .bumpversion.cfg
+exclude tox.ini .flake8 .bumpversion.cfg docs/index.md
+
