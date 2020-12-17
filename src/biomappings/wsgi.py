@@ -100,7 +100,7 @@ class Controller:
                 'type': 'manual',
             }
         )
-        self.total += 1
+        self.total_curated += 1
 
     def persist(self):
         """Save the current markings to the source files."""
