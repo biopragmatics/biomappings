@@ -167,7 +167,6 @@ def home():
 def add_mapping():
     """Add a new mapping manually."""
     form = MappingForm()
-    print(flask.request.args)
     controller.add_mapping(form.data['source_prefix'], form.data['source_id'], form.data['source_name'],
                            form.data['target_prefix'], form.data['target_id'], form.data['target_name'])
     controller.persist()
