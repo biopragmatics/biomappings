@@ -60,19 +60,21 @@
                     </tbody>
                 </table>
 
-                <table>
-                    <tr>
-                        <form class="form" method="POST" role="form" action="add_mapping">
-                        <td>{{ wtf.form_field(form.source_prefix) }}</td>
-                        <td>{{ wtf.form_field(form.source_id) }}</td>
-                        <td>{{ wtf.form_field(form.source_name) }}</td>
-                        <td>{{ wtf.form_field(form.target_prefix) }}</td>
-                        <td>{{ wtf.form_field(form.target_id) }}</td>
-                        <td>{{ wtf.form_field(form.target_name) }}</td>
-                        <td>{{ wtf.form_field(form.submit, class="btn btn-primary")}}</td>
-                        </form>
-                    </tr>
-                </table>
+                <form class="form" method="POST" role="form" action="{{ url_for('add_mapping') }}">
+                    <table class="table" style="margin-bottom: 0">
+                        <tr>
+                            <td>{{ wtf.form_field(form.source_prefix) }}</td>
+                            <td>{{ wtf.form_field(form.source_id) }}</td>
+                            <td>{{ wtf.form_field(form.source_name) }}</td>
+                            <td>{{ wtf.form_field(form.target_prefix) }}</td>
+                            <td>{{ wtf.form_field(form.target_id) }}</td>
+                            <td>{{ wtf.form_field(form.target_name) }}</td>
+                            <td style="padding-bottom: 24px; vertical-align: bottom">
+                                {{ wtf.form_field(form.submit, class="btn btn-primary") }}
+                            </td>
+                        </tr>
+                    </table>
+                </form>
 
                 <div class="panel-footer">
                     <a href="{{ url_for('home', limit=limit, offset=0) }}">First</a> |
