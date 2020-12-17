@@ -84,22 +84,28 @@ class Controller:
             self.total_curated += 1
         self._marked[line] = correct
 
-    def add_mapping(self, source_prefix, source_id, source_name, target_prefix, target_id, target_name):
+    def add_mapping(
+        self,
+        source_prefix: str,
+        source_id: str,
+        source_name: str,
+        target_prefix: str,
+        target_id: str,
+        target_name: str,
+    ) -> None:
         """Add manually curated new mappings."""
         known_user = KNOWN_USERS.get(getpass.getuser())
-        self._added_mappings.append(
-            {
-                'source prefix': source_prefix,
-                'source identifier': source_id,
-                'source name': source_name,
-                'relation': 'skos:exactMatch',
-                'target prefix': target_prefix,
-                'target identifier': target_id,
-                'target name': target_name,
-                'source': f'orcid:{known_user}' if known_user else 'web',
-                'type': 'manual',
-            },
-        )
+        self._added_mappings.append({
+            'source prefix': source_prefix,
+            'source identifier': source_id,
+            'source name': source_name,
+            'relation': 'skos:exactMatch',
+            'target prefix': target_prefix,
+            'target identifier': target_id,
+            'target name': target_name,
+            'source': f'orcid:{known_user}' if known_user else 'web',
+            'type': 'manual',
+        })
         self.total_curated += 1
 
     def persist(self):
