@@ -15,6 +15,7 @@ from biomappings.utils import MiriamValidator, commit
 
 app = flask.Flask(__name__)
 app.config['WTF_CSRF_ENABLED'] = False
+app.config['SECRET_KEY'] = 'salsa'
 flask_bootstrap.Bootstrap(app)
 
 # A mapping from your computer's user, returned by getuser.getpass()
@@ -95,6 +96,25 @@ class Controller:
     ) -> None:
         """Add manually curated new mappings."""
         known_user = KNOWN_USERS.get(getpass.getuser())
+
+        try:
+            miriam_validator.check_valid_prefix_id(source_prefix, source_id)
+        except ValueError as e:
+            flask.flash(
+                f'Problem with source CURIE {source_prefix}:{source_id}: {e.__class__.__name__}',
+                category='warning',
+            )
+            return
+
+        try:
+            miriam_validator.check_valid_prefix_id(target_prefix, target_id)
+        except ValueError as e:
+            flask.flash(
+                f'Problem with target CURIE {target_prefix}:{target_id}: {e.__class__.__name__}',
+                category='warning',
+            )
+            return
+
         self._added_mappings.append({
             'source prefix': source_prefix,
             'source identifier': source_id,

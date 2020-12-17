@@ -6,6 +6,7 @@
 
 {% block content %}
     <div class="container" style="margin-top: 50px">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
         <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
             <div class="panel panel-info">
                 <div class="panel-heading">
