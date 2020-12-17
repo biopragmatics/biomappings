@@ -3,6 +3,7 @@
 """Web curation interface for :mod:`biomappings`."""
 
 import getpass
+import os
 from typing import Any, Iterable, Mapping, Optional, Tuple
 
 import flask
@@ -15,7 +16,7 @@ from biomappings.utils import MiriamValidator, commit
 
 app = flask.Flask(__name__)
 app.config['WTF_CSRF_ENABLED'] = False
-app.config['SECRET_KEY'] = 'salsa'
+app.config['SECRET_KEY'] = os.urandom(8)
 flask_bootstrap.Bootstrap(app)
 
 # A mapping from your computer's user, returned by getuser.getpass()
