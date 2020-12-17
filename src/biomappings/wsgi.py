@@ -12,7 +12,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
 from biomappings.resources import append_false_mappings, append_true_mappings, load_predictions, write_predictions
-from biomappings.utils import MiriamValidator, commit
+from biomappings.utils import MiriamValidator, commit, not_main, push
 
 app = flask.Flask(__name__)
 app.config['WTF_CSRF_ENABLED'] = False
@@ -232,6 +232,8 @@ def run_commit():
         f'Curated {controller.total_curated} mapping{"s" if controller.total_curated > 1 else ""}'
         f' ({getpass.getuser()})',
     )
+    if not_main():
+        push()
     controller.total_curated = 0
     return _go_home()
 

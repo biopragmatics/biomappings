@@ -27,6 +27,16 @@ def commit(message: str) -> Optional[str]:
     return _git('commit', '-m', message, '-a')
 
 
+def push() -> Optional[str]:
+    """Push the git repo."""
+    return _git('push')
+
+
+def not_main() -> bool:
+    """Return if on the master branch."""
+    return 'master' != _git('git', 'rev-parse', '--abbrev-ref', 'HEAD')
+
+
 def _git(*args: str) -> Optional[str]:
     with open(os.devnull, 'w') as devnull:
         try:

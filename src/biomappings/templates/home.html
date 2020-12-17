@@ -13,7 +13,7 @@
                     <h2 class="text-center">Biomappings Curation Interface</h2>
                     {% if controller.total_curated %}
                         <a href="{{ url_for('run_commit', limit=limit, offset=offset) }}">
-                            <button class="btn btn-default">Commit ({{ controller.total_curated }})
+                            <button class="btn btn-default">Commit ({{ controller.total_curated }}) and Push
                                 <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
                             </button>
                         </a>
