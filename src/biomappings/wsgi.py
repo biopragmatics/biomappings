@@ -12,7 +12,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
 from biomappings.resources import append_false_mappings, append_true_mappings, load_predictions, write_predictions
-from biomappings.utils import MiriamValidator, commit
+from biomappings.utils import MiriamValidator, commit, not_main, push
 
 app = flask.Flask(__name__)
 app.config['WTF_CSRF_ENABLED'] = False
@@ -50,21 +50,40 @@ class Controller:
         *,
         offset: Optional[int] = None,
         limit: Optional[int] = None,
+        query: Optional[str] = None,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
         :param offset: If given, offset the iteration by this number
         :param limit: If given, only iterate this number of predictions.
+        :param query: If given, show only equivalences that have it appearing as a substring in one of the fields
         :yields: Pairs of positions and prediction dictionaries
         """
+        it = enumerate(self._predictions)
+        if query is not None:
+            query = query.casefold()
+            it = (
+                (line, prediction)
+                for line, prediction in it
+                if any(
+                    query in prediction[x].casefold()
+                    for x in ('source identifier', 'source name', 'target identifier', 'target name')
+                )
+            )
+
         it = (
             (line, prediction)
-            for line, prediction in enumerate(self._predictions)
+            for line, prediction in it
             if line not in self._marked
         )
         if offset is not None:
-            for _ in range(offset):
-                next(it)
+            try:
+                for _ in range(offset):
+                    next(it)
+            except StopIteration:
+                # if next() fails, then there are no remaining entries.
+                # do not pass go, do not collect 200 euro $
+                return
         if limit is None:
             yield from it
         else:
@@ -180,12 +199,14 @@ def home():
     form = MappingForm()
     limit = flask.request.args.get('limit', type=int, default=10)
     offset = flask.request.args.get('offset', type=int, default=0)
+    query = flask.request.args.get('query')
     return flask.render_template(
         'home.html',
         controller=controller,
         form=form,
         limit=limit,
         offset=offset,
+        query=query,
     )
 
 
@@ -211,6 +232,8 @@ def run_commit():
         f'Curated {controller.total_curated} mapping{"s" if controller.total_curated > 1 else ""}'
         f' ({getpass.getuser()})',
     )
+    if not_main():
+        push()
     controller.total_curated = 0
     return _go_home()
 
@@ -228,6 +251,7 @@ def _go_home():
         'home',
         limit=flask.request.args.get('limit', type=int),
         offset=flask.request.args.get('offset', type=int),
+        query=flask.request.args.get('query'),
     ))
 
 

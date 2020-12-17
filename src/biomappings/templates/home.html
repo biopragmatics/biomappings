@@ -13,9 +13,25 @@
                     <h2 class="text-center">Biomappings Curation Interface</h2>
                     {% if controller.total_curated %}
                         <a href="{{ url_for('run_commit', limit=limit, offset=offset) }}">
-                            Commit ({{ controller.total_curated }})
-                            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                            <button class="btn btn-default">Commit ({{ controller.total_curated }}) and Push
+                                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                            </button>
                         </a>
+                    {% endif %}
+                    {% if query %}
+                        <span class="btn btn-default">Query: <code>{{ query }}</code></span>
+                        <a href="{{ url_for('home', limit=limit, offset=offset) }}">
+                            <button class="btn btn-default">Clear</button>
+                        </a>
+                    {% else %}
+                        <form class="form" method="GET" role="form" action="{{ url_for('home') }}">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                   <button type="submit" class="btn btn-default">Go!</button>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Search for..." name="query">
+                            </div>
+                        </form>
                     {% endif %}
                 </div>
                 <table class="table table-striped table-hover">
@@ -31,7 +47,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    {% for line, p in controller.predictions(offset=offset, limit=limit) %}
+                    {% for line, p in controller.predictions(query=query, offset=offset, limit=limit) %}
                         <tr>
                             <td>{{ 1 + line }}</td>
                             <td>
@@ -47,12 +63,12 @@
                             </td>
                             <td>{{ p['target name'] }}</td>
                             <td>
-                                <a href="{{ url_for('mark', line=line, value='yup', limit=limit, offset=offset) }}">
+                                <a href="{{ url_for('mark', line=line, value='yup', limit=limit, offset=offset, query=query) }}">
                                     <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
                                 </a>
                             </td>
                             <td>
-                                <a href="{{ url_for('mark', line=line, value='nope', limit=limit, offset=offset) }}">
+                                <a href="{{ url_for('mark', line=line, value='nope', limit=limit, offset=offset, query=query) }}">
                                     <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
                                 </a>
                             </td>
@@ -78,14 +94,20 @@
                 </form>
 
                 <div class="panel-footer">
-                    <a href="{{ url_for('home', limit=limit, offset=0) }}">First</a> |
+                    <a href="{{ url_for('home', limit=limit, offset=0, query=query) }}">First</a> |
                     {% if 0 <= offset - limit %}
-                        <a href="{{ url_for('home', limit=limit, offset=offset - limit) }}">Previous {{ limit }}</a> |
+                        <a href="{{ url_for('home', limit=limit, offset=offset - limit, query=query) }}">
+                            Previous {{ limit }}
+                        </a> |
                     {% endif %}
                     {% if offset <= controller.total_predictions - limit %}
-                        <a href="{{ url_for('home', limit=limit, offset=offset + limit) }}">Next {{ limit }}</a> |
+                        <a href="{{ url_for('home', limit=limit, offset=offset + limit, query=query) }}">
+                            Next {{ limit }}
+                        </a> |
                     {% endif %}
-                    <a href="{{ url_for('home', limit=limit, offset=controller.total_predictions - limit) }}">Last</a>
+                    <a href="{{ url_for('home', limit=limit, offset=controller.total_predictions - limit, query=query) }}">
+                        Last
+                    </a>
                 </div>
             </div>
         </div>
