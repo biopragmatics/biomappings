@@ -59,6 +59,21 @@
                     {% endfor %}
                     </tbody>
                 </table>
+
+                <table>
+                    <tr>
+                        <form class="form" method="GET" role="form">
+                        <td>{{ wtf.form_field(form.source_prefix) }}</td>
+                        <td>{{ wtf.form_field(form.source_id) }}</td>
+                        <td>{{ wtf.form_field(form.source_name) }}</td>
+                        <td>{{ wtf.form_field(form.target_prefix) }}</td>
+                        <td>{{ wtf.form_field(form.target_id) }}</td>
+                        <td>{{ wtf.form_field(form.target_name) }}</td>
+                        <td>{{ wtf.form_field(form.submit, class="btn btn-primary")}}</td>
+                        </form>
+                    </tr>
+                </table>
+
                 <div class="panel-footer">
                     <a href="{{ url_for('home', limit=limit, offset=0) }}">First</a> |
                     {% if 0 <= offset - limit %}

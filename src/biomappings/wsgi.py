@@ -7,11 +7,14 @@ from typing import Any, Iterable, Mapping, Optional, Tuple
 
 import flask
 import flask_bootstrap
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
 
 from biomappings.resources import append_false_mappings, append_true_mappings, load_predictions, write_predictions
 from biomappings.utils import MiriamValidator, commit
 
 app = flask.Flask(__name__)
+app.config['WTF_CSRF_ENABLED'] = False
 flask_bootstrap.Bootstrap(app)
 
 # A mapping from your computer's user, returned by getuser.getpass()
@@ -30,6 +33,7 @@ class Controller:
         self._predictions = load_predictions()
         self._marked = {}
         self.total_curated = 0
+        self._added_mappings = []
 
     def predictions(
         self,
@@ -80,6 +84,23 @@ class Controller:
             self.total_curated += 1
         self._marked[line] = correct
 
+    def add_mapping(self, source_prefix, source_id, source_name, target_prefix, target_id, target_name):
+        """Add manually curated new mappings."""
+        known_user = KNOWN_USERS.get(getpass.getuser())
+        self._added_mappings.append(
+            {
+                'source prefix': source_prefix,
+                'source identifier': source_id,
+                'source name': source_name,
+                'relation': 'skos:exactMatch',
+                'target prefix': target_prefix,
+                'target identifier': target_id,
+                'target name': target_name,
+                'source': f'orcid:{known_user}' if known_user else 'web',
+                'type': 'manual',
+            }
+        )
+
     def persist(self):
         """Save the current markings to the source files."""
         curated_true_entries = []
@@ -98,21 +119,40 @@ class Controller:
         append_true_mappings(curated_true_entries)
         append_false_mappings(curated_false_entries)
         write_predictions(self._predictions)
-
         self._marked.clear()
+
+        # Now add manually curated mappings
+        append_true_mappings(self._added_mappings)
+        self._predictions = []
 
 
 controller = Controller()
 
 
+class MappingForm(FlaskForm):
+    source_prefix = StringField(None, id='source_prefix')
+    source_id = StringField(None, id='source_id')
+    source_name = StringField(None, id='source_name')
+    target_prefix = StringField(None, id='target_prefix')
+    target_id = StringField(None, id='target_id')
+    target_name = StringField(None, id='target_name')
+    submit = SubmitField('Add')
+
+
 @app.route('/')
 def home():
     """Serve the home page."""
+    form = MappingForm()
+    if form.validate_on_submit():
+        controller.add_mapping(form.source_prefix.data, form.source_id.data, form.source_name.data,
+                               form.target_prefix.data, form.target_id.data, form.target_name.data)
+
     limit = flask.request.args.get('limit', type=int, default=10)
     offset = flask.request.args.get('offset', type=int, default=0)
     return flask.render_template(
         'home.html',
         controller=controller,
+        form=form,
         limit=limit,
         offset=offset,
     )
