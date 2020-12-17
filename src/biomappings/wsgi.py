@@ -144,10 +144,6 @@ class MappingForm(FlaskForm):
 def home():
     """Serve the home page."""
     form = MappingForm()
-    if form.data:
-        controller.add_mapping(form.data['source_prefix'], form.data['source_id'], form.data['source_name'],
-                               form.data['target_prefix'], form.data['target_id'], form.data['target_name'])
-
     limit = flask.request.args.get('limit', type=int, default=10)
     offset = flask.request.args.get('offset', type=int, default=0)
     return flask.render_template(
@@ -157,6 +153,21 @@ def home():
         limit=limit,
         offset=offset,
     )
+
+
+@app.route('/add_mapping', methods=['POST'])
+def add_mapping():
+    """Add a new mapping manually."""
+    form = MappingForm()
+    print(flask.request.args)
+    controller.add_mapping(form.data['source_prefix'], form.data['source_id'], form.data['source_name'],
+                           form.data['target_prefix'], form.data['target_id'], form.data['target_name'])
+    controller.persist()
+    return flask.redirect(flask.url_for(
+        'home',
+        limit=flask.request.args.get('limit', type=int),
+        offset=flask.request.args.get('offset', type=int),
+    ))
 
 
 @app.route('/commit')
