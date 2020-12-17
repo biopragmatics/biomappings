@@ -98,7 +98,7 @@ class Controller:
                 'target name': target_name,
                 'source': f'orcid:{known_user}' if known_user else 'web',
                 'type': 'manual',
-            }
+            },
         )
         self.total_curated += 1
 
@@ -131,6 +131,7 @@ controller = Controller()
 
 
 class MappingForm(FlaskForm):
+    """Form for entering new mappings."""
     source_prefix = StringField('Source prefix', id='source_prefix')
     source_id = StringField('Source ID', id='source_id')
     source_name = StringField('Source name', id='source_name')
