@@ -10,8 +10,9 @@
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h2 class="text-center">Biomappings Curation Interface</h2>
-                    {% if controller.total %}
-                        <a href="{{ url_for('run_commit') }}">Commit ({{ controller.total }})
+                    {% if controller.total_curated %}
+                        <a href="{{ url_for('run_commit', limit=limit, offset=offset) }}">
+                            Commit ({{ controller.total_curated }})
                             <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
                         </a>
                     {% endif %}
@@ -33,13 +34,13 @@
                         <tr>
                             <td>{{ 1 + line }}</td>
                             <td>
-                                <a href="https://identifiers.org/{{ p['source prefix'] }}:{{ p['source identifier'] }}">
+                                <a href="{{ controller.get_url(p['source prefix'], p['source identifier']) }}">
                                     {{ p['source prefix'] }}:{{ p['source identifier'] }}
                                 </a>
                             </td>
                             <td>{{ p['source name'] }}</td>
                             <td>
-                                <a href="https://identifiers.org/{{ p['target prefix'] }}:{{ p['target identifier'] }}">
+                                <a href="{{ controller.get_url(p['target prefix'], p['target identifier']) }}">
                                     {{ p['target prefix'] }}:{{ p['target identifier'] }}
                                 </a>
                             </td>
@@ -59,10 +60,14 @@
                     </tbody>
                 </table>
                 <div class="panel-footer">
+                    <a href="{{ url_for('home', limit=limit, offset=0) }}">First</a> |
                     {% if 0 <= offset - limit %}
                         <a href="{{ url_for('home', limit=limit, offset=offset - limit) }}">Previous {{ limit }}</a> |
                     {% endif %}
-                    <a href="{{ url_for('home', limit=limit, offset=offset + limit) }}">Next {{ limit }}</a>
+                    {% if offset <= controller.total_predictions - limit %}
+                        <a href="{{ url_for('home', limit=limit, offset=offset + limit) }}">Next {{ limit }}</a> |
+                    {% endif %}
+                    <a href="{{ url_for('home', limit=limit, offset=controller.total_predictions - limit) }}">Last</a>
                 </div>
             </div>
         </div>

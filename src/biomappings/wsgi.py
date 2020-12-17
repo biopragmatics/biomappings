@@ -9,7 +9,7 @@ import flask
 import flask_bootstrap
 
 from biomappings.resources import append_false_mappings, append_true_mappings, load_predictions, write_predictions
-from biomappings.utils import commit
+from biomappings.utils import MiriamValidator, commit
 
 app = flask.Flask(__name__)
 flask_bootstrap.Bootstrap(app)
@@ -20,6 +20,8 @@ KNOWN_USERS = {
     'ben': '0000-0001-9439-5346',
 }
 
+miriam_validator = MiriamValidator()
+
 
 class Controller:
     """A module for interacting with the predictions and mappings."""
@@ -27,7 +29,7 @@ class Controller:
     def __init__(self):  # noqa: D107
         self._predictions = load_predictions()
         self._marked = {}
-        self.total = 0
+        self.total_curated = 0
 
     def predictions(
         self,
@@ -55,6 +57,19 @@ class Controller:
             for line_prediction, _ in zip(it, range(limit)):
                 yield line_prediction
 
+    @staticmethod
+    def get_url(prefix: str, identifier: str) -> str:
+        """Return URL for a given prefix and identifier."""
+        if miriam_validator.namespace_embedded(prefix):
+            return f'https://identifiers.org/{identifier}'
+        else:
+            return f'https://identifiers.org/{prefix}:{identifier}'
+
+    @property
+    def total_predictions(self) -> int:
+        """Return the total number of yet unmarked predictions."""
+        return len(self._predictions) - len(self._marked)
+
     def mark(self, line: int, correct: bool) -> None:
         """Mark the given equivalency as correct.
 
@@ -62,7 +77,7 @@ class Controller:
         :param correct: Value to mark the prediction with
         """
         if line not in self._marked:
-            self.total += 1
+            self.total_curated += 1
         self._marked[line] = correct
 
     def persist(self):
@@ -106,9 +121,12 @@ def home():
 @app.route('/commit')
 def run_commit():
     """Make a commit then redirect to the the home page."""
-    commit(f'Curated {controller.total} mappings ({getpass.getuser()})')
-    controller.total = 0
-    return flask.redirect(flask.url_for('home'))
+    commit(
+        f'Curated {controller.total_curated} mapping{"s" if controller.total_curated > 1 else ""}'
+        f' ({getpass.getuser()})',
+    )
+    controller.total_curated = 0
+    return _go_home()
 
 
 @app.route('/mark/<int:line>/<value>')
@@ -116,6 +134,10 @@ def mark(line: int, value: str):
     """Mark the given line as correct or not."""
     controller.mark(line, value.lower() in {'yup', 'true', 't', 'correct', 'right', 'close enough', 'disco'})
     controller.persist()
+    return _go_home()
+
+
+def _go_home():
     return flask.redirect(flask.url_for(
         'home',
         limit=flask.request.args.get('limit', type=int),
