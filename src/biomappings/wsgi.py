@@ -139,12 +139,12 @@ controller = Controller()
 class MappingForm(FlaskForm):
     """Form for entering new mappings."""
 
-    source_prefix = StringField('Source prefix', id='source_prefix')
+    source_prefix = StringField('Source Prefix', id='source_prefix')
     source_id = StringField('Source ID', id='source_id')
-    source_name = StringField('Source name', id='source_name')
-    target_prefix = StringField('Target prefix', id='target_prefix')
+    source_name = StringField('Source Name', id='source_name')
+    target_prefix = StringField('Target Prefix', id='target_prefix')
     target_id = StringField('Target ID', id='target_id')
-    target_name = StringField('Target name', id='target_name')
+    target_name = StringField('Target Name', id='target_name')
     submit = SubmitField('Add')
 
 
