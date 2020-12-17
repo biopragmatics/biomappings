@@ -100,6 +100,7 @@ class Controller:
                 'type': 'manual',
             }
         )
+        self.total += 1
 
     def persist(self):
         """Save the current markings to the source files."""
@@ -123,19 +124,19 @@ class Controller:
 
         # Now add manually curated mappings
         append_true_mappings(self._added_mappings)
-        self._predictions = []
+        self._added_mappings = []
 
 
 controller = Controller()
 
 
 class MappingForm(FlaskForm):
-    source_prefix = StringField(None, id='source_prefix')
-    source_id = StringField(None, id='source_id')
-    source_name = StringField(None, id='source_name')
-    target_prefix = StringField(None, id='target_prefix')
-    target_id = StringField(None, id='target_id')
-    target_name = StringField(None, id='target_name')
+    source_prefix = StringField('Source prefix', id='source_prefix')
+    source_id = StringField('Source ID', id='source_id')
+    source_name = StringField('Source name', id='source_name')
+    target_prefix = StringField('Target prefix', id='target_prefix')
+    target_id = StringField('Target ID', id='target_id')
+    target_name = StringField('Target name', id='target_name')
     submit = SubmitField('Add')
 
 
@@ -143,9 +144,9 @@ class MappingForm(FlaskForm):
 def home():
     """Serve the home page."""
     form = MappingForm()
-    if form.validate_on_submit():
-        controller.add_mapping(form.source_prefix.data, form.source_id.data, form.source_name.data,
-                               form.target_prefix.data, form.target_id.data, form.target_name.data)
+    if form.data:
+        controller.add_mapping(form.data['source_prefix'], form.data['source_id'], form.data['source_name'],
+                               form.data['target_prefix'], form.data['target_id'], form.data['target_name'])
 
     limit = flask.request.args.get('limit', type=int, default=10)
     offset = flask.request.args.get('offset', type=int, default=0)
