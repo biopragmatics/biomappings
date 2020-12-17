@@ -24,6 +24,14 @@ KNOWN_USERS = {
     'ben': '0000-0001-9439-5346',
 }
 
+
+def _manual_source():
+    known_user = KNOWN_USERS.get(getpass.getuser())
+    if known_user:
+        return f'orcid:{known_user}'
+    return 'web'
+
+
 miriam_validator = MiriamValidator()
 
 
@@ -95,8 +103,6 @@ class Controller:
         target_name: str,
     ) -> None:
         """Add manually curated new mappings."""
-        known_user = KNOWN_USERS.get(getpass.getuser())
-
         try:
             miriam_validator.check_valid_prefix_id(source_prefix, source_id)
         except ValueError as e:
@@ -123,7 +129,7 @@ class Controller:
             'target prefix': target_prefix,
             'target identifier': target_id,
             'target name': target_name,
-            'source': f'orcid:{known_user}' if known_user else 'web',
+            'source': _manual_source(),
             'type': 'manual',
         })
         self.total_curated += 1
@@ -135,8 +141,7 @@ class Controller:
 
         for line, correct in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(line)
-            known_user = KNOWN_USERS.get(getpass.getuser())
-            prediction['source'] = f'orcid:{known_user}' if known_user else 'web'
+            prediction['source'] = _manual_source()
             prediction['type'] = 'manually_reviewed'
             if correct:
                 curated_true_entries.append(prediction)
