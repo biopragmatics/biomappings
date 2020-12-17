@@ -187,11 +187,14 @@ def home():
 def add_mapping():
     """Add a new mapping manually."""
     form = MappingForm()
-    controller.add_mapping(
-        form.data['source_prefix'], form.data['source_id'], form.data['source_name'],
-        form.data['target_prefix'], form.data['target_id'], form.data['target_name'],
-    )
-    controller.persist()
+    if form.is_submitted():
+        controller.add_mapping(
+            form.data['source_prefix'], form.data['source_id'], form.data['source_name'],
+            form.data['target_prefix'], form.data['target_id'], form.data['target_name'],
+        )
+        controller.persist()
+    else:
+        flask.flash('missing form data', category='warning')
     return _go_home()
 
 
