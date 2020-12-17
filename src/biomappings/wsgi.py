@@ -171,11 +171,7 @@ def add_mapping():
     controller.add_mapping(form.data['source_prefix'], form.data['source_id'], form.data['source_name'],
                            form.data['target_prefix'], form.data['target_id'], form.data['target_name'])
     controller.persist()
-    return flask.redirect(flask.url_for(
-        'home',
-        limit=flask.request.args.get('limit', type=int),
-        offset=flask.request.args.get('offset', type=int),
-    ))
+    return _go_home()
 
 
 @app.route('/commit')
