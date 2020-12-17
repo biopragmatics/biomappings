@@ -6,6 +6,7 @@
 
 {% block content %}
     <div class="container" style="margin-top: 50px">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
         <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -59,6 +60,23 @@
                     {% endfor %}
                     </tbody>
                 </table>
+
+                <form class="form" method="POST" role="form" action="{{ url_for('add_mapping') }}">
+                    <table class="table" style="margin-bottom: 0">
+                        <tr>
+                            <td>{{ wtf.form_field(form.source_prefix) }}</td>
+                            <td>{{ wtf.form_field(form.source_id) }}</td>
+                            <td>{{ wtf.form_field(form.source_name) }}</td>
+                            <td>{{ wtf.form_field(form.target_prefix) }}</td>
+                            <td>{{ wtf.form_field(form.target_id) }}</td>
+                            <td>{{ wtf.form_field(form.target_name) }}</td>
+                            <td style="padding-bottom: 24px; vertical-align: bottom">
+                                {{ wtf.form_field(form.submit, class="btn btn-primary") }}
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
                 <div class="panel-footer">
                     <a href="{{ url_for('home', limit=limit, offset=0) }}">First</a> |
                     {% if 0 <= offset - limit %}

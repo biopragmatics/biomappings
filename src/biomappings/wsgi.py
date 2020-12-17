@@ -3,15 +3,20 @@
 """Web curation interface for :mod:`biomappings`."""
 
 import getpass
+import os
 from typing import Any, Iterable, Mapping, Optional, Tuple
 
 import flask
 import flask_bootstrap
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
 
 from biomappings.resources import append_false_mappings, append_true_mappings, load_predictions, write_predictions
 from biomappings.utils import MiriamValidator, commit
 
 app = flask.Flask(__name__)
+app.config['WTF_CSRF_ENABLED'] = False
+app.config['SECRET_KEY'] = os.urandom(8)
 flask_bootstrap.Bootstrap(app)
 
 # A mapping from your computer's user, returned by getuser.getpass()
@@ -19,6 +24,14 @@ KNOWN_USERS = {
     'cthoyt': '0000-0003-4423-4370',
     'ben': '0000-0001-9439-5346',
 }
+
+
+def _manual_source():
+    known_user = KNOWN_USERS.get(getpass.getuser())
+    if known_user:
+        return f'orcid:{known_user}'
+    return 'web'
+
 
 miriam_validator = MiriamValidator()
 
@@ -30,6 +43,7 @@ class Controller:
         self._predictions = load_predictions()
         self._marked = {}
         self.total_curated = 0
+        self._added_mappings = []
 
     def predictions(
         self,
@@ -80,6 +94,47 @@ class Controller:
             self.total_curated += 1
         self._marked[line] = correct
 
+    def add_mapping(
+        self,
+        source_prefix: str,
+        source_id: str,
+        source_name: str,
+        target_prefix: str,
+        target_id: str,
+        target_name: str,
+    ) -> None:
+        """Add manually curated new mappings."""
+        try:
+            miriam_validator.check_valid_prefix_id(source_prefix, source_id)
+        except ValueError as e:
+            flask.flash(
+                f'Problem with source CURIE {source_prefix}:{source_id}: {e.__class__.__name__}',
+                category='warning',
+            )
+            return
+
+        try:
+            miriam_validator.check_valid_prefix_id(target_prefix, target_id)
+        except ValueError as e:
+            flask.flash(
+                f'Problem with target CURIE {target_prefix}:{target_id}: {e.__class__.__name__}',
+                category='warning',
+            )
+            return
+
+        self._added_mappings.append({
+            'source prefix': source_prefix,
+            'source identifier': source_id,
+            'source name': source_name,
+            'relation': 'skos:exactMatch',
+            'target prefix': target_prefix,
+            'target identifier': target_id,
+            'target name': target_name,
+            'source': _manual_source(),
+            'type': 'manual',
+        })
+        self.total_curated += 1
+
     def persist(self):
         """Save the current markings to the source files."""
         curated_true_entries = []
@@ -87,8 +142,7 @@ class Controller:
 
         for line, correct in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(line)
-            known_user = KNOWN_USERS.get(getpass.getuser())
-            prediction['source'] = f'orcid:{known_user}' if known_user else 'web'
+            prediction['source'] = _manual_source()
             prediction['type'] = 'manually_reviewed'
             if correct:
                 curated_true_entries.append(prediction)
@@ -98,24 +152,56 @@ class Controller:
         append_true_mappings(curated_true_entries)
         append_false_mappings(curated_false_entries)
         write_predictions(self._predictions)
-
         self._marked.clear()
+
+        # Now add manually curated mappings
+        append_true_mappings(self._added_mappings)
+        self._added_mappings = []
 
 
 controller = Controller()
 
 
+class MappingForm(FlaskForm):
+    """Form for entering new mappings."""
+
+    source_prefix = StringField('Source Prefix', id='source_prefix')
+    source_id = StringField('Source ID', id='source_id')
+    source_name = StringField('Source Name', id='source_name')
+    target_prefix = StringField('Target Prefix', id='target_prefix')
+    target_id = StringField('Target ID', id='target_id')
+    target_name = StringField('Target Name', id='target_name')
+    submit = SubmitField('Add')
+
+
 @app.route('/')
 def home():
     """Serve the home page."""
+    form = MappingForm()
     limit = flask.request.args.get('limit', type=int, default=10)
     offset = flask.request.args.get('offset', type=int, default=0)
     return flask.render_template(
         'home.html',
         controller=controller,
+        form=form,
         limit=limit,
         offset=offset,
     )
+
+
+@app.route('/add_mapping', methods=['POST'])
+def add_mapping():
+    """Add a new mapping manually."""
+    form = MappingForm()
+    if form.is_submitted():
+        controller.add_mapping(
+            form.data['source_prefix'], form.data['source_id'], form.data['source_name'],
+            form.data['target_prefix'], form.data['target_id'], form.data['target_name'],
+        )
+        controller.persist()
+    else:
+        flask.flash('missing form data', category='warning')
+    return _go_home()
 
 
 @app.route('/commit')
