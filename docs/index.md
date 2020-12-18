@@ -1,7 +1,8 @@
 ---
 layout: home
 ---
-This site summarizes the `biomappings` resources.
+This site summarizes the `biomappings` resources. They can be downloaded under the CC0-1.0 License from the open-source
+repository on [GitHub](https://github.com/biomappings/biomappings).
 
 ## Positive Mappings ({{ site.data.summary.positive_mapping_count }})
 
