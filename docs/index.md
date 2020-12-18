@@ -65,3 +65,22 @@ This site summarizes the `biomappings` resources.
 {% endfor %}
 </tbody>
 </table>
+
+## Contributors
+
+<table>
+<thead>
+<tr>
+    <th>Contributor</th>
+    <th>Curation count</th>
+</tr>
+</thead>
+<tbody>
+{% for entry in site.data.summary['predictions'] %}
+    <tr>
+        <td>{{ entry.source }}</td>
+        <td align="right">{{ entry.count }}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
