@@ -1,28 +1,34 @@
 contributors:
-- count: 799
+- count: 1183
   orcid: 0000-0001-9439-5346
-- count: 82
+- count: 105
   orcid: 0000-0003-4423-4370
 negative:
+- count: 70
+  source: go
+  target: mesh
 - count: 7
   source: mesh
   target: ncit
+- count: 5
+  source: pr
+  target: uniprot.chain
+- count: 5
+  source: doid
+  target: mesh
 - count: 3
   source: hgnc
   target: mesh
-- count: 3
-  source: pr
-  target: uniprot.chain
-- count: 1
-  source: doid
-  target: mesh
-negative_mapping_count: 14
-negative_prefix_count: 6
+negative_mapping_count: 90
+negative_prefix_count: 7
 positive:
+- count: 335
+  source: go
+  target: mesh
 - count: 309
   source: mesh
   target: ncit
-- count: 239
+- count: 243
   source: chebi
   target: mesh
 - count: 97
@@ -34,10 +40,7 @@ positive:
 - count: 79
   source: pr
   target: uniprot.chain
-- count: 25
-  source: go
-  target: mesh
-- count: 13
+- count: 30
   source: doid
   target: mesh
 - count: 9
@@ -55,7 +58,7 @@ positive:
 - count: 1
   source: fplx
   target: mesh
-positive_mapping_count: 867
+positive_mapping_count: 1198
 positive_prefix_count: 14
 predictions:
 - count: 12341
@@ -64,17 +67,14 @@ predictions:
 - count: 11264
   source: mesh
   target: uniprot
-- count: 3066
+- count: 3062
   source: chebi
   target: mesh
-- count: 1427
+- count: 1406
   source: doid
   target: mesh
 - count: 1392
   source: hgnc
-  target: mesh
-- count: 512
-  source: go
   target: mesh
 - count: 366
   source: hp
@@ -85,8 +85,11 @@ predictions:
 - count: 158
   source: fplx
   target: mesh
-- count: 8
+- count: 132
+  source: go
+  target: mesh
+- count: 6
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 30827
+predictions_mapping_count: 30420
 predictions_prefix_count: 12
