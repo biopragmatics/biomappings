@@ -3,7 +3,7 @@ layout: home
 ---
 This site summarizes the `biomappings` resources.
 
-## Positive Mappings
+## Positive Mappings ({{ site.data.summary['positive_total'] }})
 
 <table>
 <thead>
@@ -24,7 +24,7 @@ This site summarizes the `biomappings` resources.
 </tbody>
 </table>
 
-## Negative Mappings
+## Negative Mappings ({{ site.data.summary['negative_total'] }})
 
 <table>
 <thead>
@@ -45,7 +45,7 @@ This site summarizes the `biomappings` resources.
 </tbody>
 </table>
 
-## Predictions
+## Predictions ({{ site.data.summary['predictions_total'] }})
 
 <table>
 <thead>
@@ -72,7 +72,7 @@ This site summarizes the `biomappings` resources.
 <thead>
 <tr>
     <th>Contributor</th>
-    <th>Curation count</th>
+    <th>Curation Count</th>
 </tr>
 </thead>
 <tbody>

@@ -31,6 +31,14 @@ def export():
         'predictions': _get_counter(load_predictions()),
         'contributors': _get_contributors(itt.chain(true_mappings, false_mappings)),
     }
+    rv.update({
+        f'{k}_mapping_count': sum(e['count'] for e in rv[k])
+        for k in ('positive', 'negative', 'predictions')
+    })
+    rv.update({
+        f'{k}_prefix_count': len(set(itt.chain.from_iterable((e['source'], e['target']) for e in rv[k])))
+        for k in ('positive', 'negative', 'predictions')
+    })
     with open(path, 'w') as file:
         yaml.safe_dump(rv, file, indent=2)
 

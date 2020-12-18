@@ -16,6 +16,8 @@ negative:
 - count: 1
   source: doid
   target: mesh
+negative_mapping_count: 14
+negative_prefix_count: 6
 positive:
 - count: 309
   source: mesh
@@ -53,6 +55,8 @@ positive:
 - count: 1
   source: fplx
   target: mesh
+positive_mapping_count: 867
+positive_prefix_count: 14
 predictions:
 - count: 12341
   source: mesh
@@ -84,3 +88,5 @@ predictions:
 - count: 8
   source: pr
   target: uniprot.chain
+predictions_mapping_count: 30827
+predictions_prefix_count: 12
