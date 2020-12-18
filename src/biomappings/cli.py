@@ -40,10 +40,12 @@ def export():
     here = os.path.abspath(os.path.dirname(__file__))
     x = os.path.join(here, os.pardir, os.pardir, 'docs', '_data', 'summary.yml')
 
+    mappings = load_mappings()
     rv = {
-        'positive': _get_counter(load_mappings()),
+        'positive': _get_counter(mappings),
         'negative': _get_counter(load_false_mappings()),
         'predictions': _get_counter(load_predictions()),
+        'contributors': _get_contributors(mappings),
     }
     with open(x, 'w') as file:
         yaml.safe_dump(rv, file, indent=2)
@@ -59,6 +61,19 @@ def _get_counter(mappings):
     return [
         dict(source=source, target=target, count=count)
         for (source, target), count in counter.most_common()
+    ]
+
+
+def _get_contributors(mappings):
+    def _get_source(source):
+        if source.startswith('orcid:'):
+            return f'https://orcid.org/{source[6:]}'
+        else:
+            return 'other'
+    counter = Counter([_get_source(mapping['source']) for mapping in mappings])
+    return [
+        dict(source=source, count=count)
+        for (source, count) in counter.most_common()
     ]
 
 
