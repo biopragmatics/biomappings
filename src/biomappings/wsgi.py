@@ -51,12 +51,14 @@ class Controller:
         offset: Optional[int] = None,
         limit: Optional[int] = None,
         query: Optional[str] = None,
+        prefix: Optional[str] = None,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
         :param offset: If given, offset the iteration by this number
         :param limit: If given, only iterate this number of predictions.
         :param query: If given, show only equivalences that have it appearing as a substring in one of the fields
+        :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes
         :yields: Pairs of positions and prediction dictionaries
         """
         it = enumerate(self._predictions)
@@ -68,6 +70,16 @@ class Controller:
                 if any(
                     query in prediction[x].casefold()
                     for x in ('source identifier', 'source name', 'target identifier', 'target name')
+                )
+            )
+        if prefix is not None:
+            prefix = prefix.casefold()
+            it = (
+                (line, prediction)
+                for line, prediction in it
+                if any(
+                    prefix in prediction[x].casefold()
+                    for x in ('source prefix', 'target prefix')
                 )
             )
 
@@ -200,6 +212,7 @@ def home():
     limit = flask.request.args.get('limit', type=int, default=10)
     offset = flask.request.args.get('offset', type=int, default=0)
     query = flask.request.args.get('query')
+    prefix = flask.request.args.get('prefix')
     return flask.render_template(
         'home.html',
         controller=controller,
@@ -207,6 +220,7 @@ def home():
         limit=limit,
         offset=offset,
         query=query,
+        prefix=prefix,
     )
 
 
@@ -252,6 +266,7 @@ def _go_home():
         limit=flask.request.args.get('limit', type=int),
         offset=flask.request.args.get('offset', type=int),
         query=flask.request.args.get('query'),
+        prefix=flask.request.args.get('prefix'),
     ))
 
 
