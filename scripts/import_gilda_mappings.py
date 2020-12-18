@@ -3,7 +3,6 @@
 """Append lexical mapping predictions from Gilda."""
 
 import csv
-import json
 import os
 from typing import Iterable, Tuple
 
@@ -26,7 +25,7 @@ db_ns_mappings = {
 
 
 def get_primary_mappings():
-    """Get mappings from primary sources"""
+    """Get mappings from primary sources."""
     from indra.resources import load_resource_json
     mappings = set()
     sources = ['efo', 'hp', 'doid']
