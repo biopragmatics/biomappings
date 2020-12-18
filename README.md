@@ -63,6 +63,23 @@ $ cd biomappings
 $ pip install -e .
 ```
 
+## Usage
+
+There are three main functions exposed from `biomappings`. Each loads a list of dictionaries with the mappings in each.
+
+```python
+import biomappings
+
+true_mappings = biomappings.load_mappings()
+
+false_mappings = biomappings.load_false_mappings()
+
+predictions = biomappings.load_predictions()
+```
+
+Alternatively, you can use the above links to the TSVs on GitHub in with the library or programming language of your
+choice.
+
 ## 🙏 Contributing Curations
 
 ### GitHub Web Interface
