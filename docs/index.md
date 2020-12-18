@@ -10,7 +10,7 @@ This site summarizes the `biomappings` resources.
 <tr>
     <th>Source Prefix</th>
     <th>Target Prefix</th>
-    <th>Count</th>
+    <th align="right">Count</th>
 </tr>
 </thead>
 <tbody>
@@ -31,7 +31,7 @@ This site summarizes the `biomappings` resources.
 <tr>
     <th>Source Prefix</th>
     <th>Target Prefix</th>
-    <th>Count</th>
+    <th align="right">Count</th>
 </tr>
 </thead>
 <tbody>
@@ -52,7 +52,7 @@ This site summarizes the `biomappings` resources.
 <tr>
     <th>Source Prefix</th>
     <th>Target Prefix</th>
-    <th>Count</th>
+    <th align="right">Count</th>
 </tr>
 </thead>
 <tbody>
