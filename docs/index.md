@@ -76,7 +76,7 @@ This site summarizes the `biomappings` resources.
 </tr>
 </thead>
 <tbody>
-{% for entry in site.data.summary['predictions'] %}
+{% for entry in site.data.summary['contributors'] %}
     <tr>
         <td>{{ entry.source }}</td>
         <td align="right">{{ entry.count }}</td>
