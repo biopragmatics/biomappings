@@ -103,12 +103,17 @@ class Controller:
                 yield line_prediction
 
     @staticmethod
-    def get_url(prefix: str, identifier: str) -> str:
-        """Return URL for a given prefix and identifier."""
+    def get_curie(prefix: str, identifier: str) -> str:
+        """Return CURIE for a given prefix and identifier."""
         if miriam_validator.namespace_embedded(prefix):
-            return f'https://identifiers.org/{identifier}'
+            return identifier
         else:
-            return f'https://identifiers.org/{prefix}:{identifier}'
+            return f'{prefix}:{identifier}'
+
+    @classmethod
+    def get_url(cls, prefix: str, identifier: str) -> str:
+        """Return URL for a given prefix and identifier."""
+        return f'https://identifiers.org/{cls.get_curie(prefix, identifier)}'
 
     @property
     def total_predictions(self) -> int:
