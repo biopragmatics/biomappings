@@ -78,7 +78,7 @@ This site summarizes the `biomappings` resources.
 <tbody>
 {% for entry in site.data.summary['contributors'] %}
     <tr>
-        <td>{% if entry.orcid %}<a href="https://orcid.org/{{ entry.orcid }}">{{ entry.orcid }}</a>{% else %}Unknown{% endif % }}</td>
+        <td>{% if entry.orcid %}<a href="https://orcid.org/{{ entry.orcid }}">{{ entry.orcid }}</a>{% else %}Unknown{% endif %}</td>
         <td align="right">{{ entry.count }}</td>
     </tr>
 {% endfor %}
