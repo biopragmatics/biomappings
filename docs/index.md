@@ -3,7 +3,7 @@ layout: home
 ---
 This site summarizes the `biomappings` resources.
 
-## Positive Mappings ({{ site.data.summary['positive_total'] }})
+## Positive Mappings ({{ site.data.summary.positive_mapping_count }})
 
 <table>
 <thead>
@@ -14,7 +14,7 @@ This site summarizes the `biomappings` resources.
 </tr>
 </thead>
 <tbody>
-{% for entry in site.data.summary['positive'] %}
+{% for entry in site.data.summary.positive %}
     <tr>
         <td>{{ entry.source }}</td>
         <td>{{ entry.target }}</td>
@@ -24,7 +24,7 @@ This site summarizes the `biomappings` resources.
 </tbody>
 </table>
 
-## Negative Mappings ({{ site.data.summary['negative_total'] }})
+## Negative Mappings ({{ site.data.summary.negative_mapping_count }})
 
 <table>
 <thead>
@@ -35,7 +35,7 @@ This site summarizes the `biomappings` resources.
 </tr>
 </thead>
 <tbody>
-{% for entry in site.data.summary['negative'] %}
+{% for entry in site.data.summary.negative %}
     <tr>
         <td>{{ entry.source }}</td>
         <td>{{ entry.target }}</td>
@@ -45,7 +45,7 @@ This site summarizes the `biomappings` resources.
 </tbody>
 </table>
 
-## Predictions ({{ site.data.summary['predictions_total'] }})
+## Predictions ({{ site.data.summary.predictions_mapping_count }})
 
 <table>
 <thead>
@@ -56,7 +56,7 @@ This site summarizes the `biomappings` resources.
 </tr>
 </thead>
 <tbody>
-{% for entry in site.data.summary['predictions'] %}
+{% for entry in site.data.summary.predictions %}
     <tr>
         <td>{{ entry.source }}</td>
         <td>{{ entry.target }}</td>
@@ -76,7 +76,7 @@ This site summarizes the `biomappings` resources.
 </tr>
 </thead>
 <tbody>
-{% for entry in site.data.summary['contributors'] %}
+{% for entry in site.data.summary.contributors %}
     <tr>
         <td>{% if entry.orcid %}<a href="https://orcid.org/{{ entry.orcid }}">{{ entry.orcid }}</a>{% else %}Unknown{% endif %}</td>
         <td align="right">{{ entry.count }}</td>
