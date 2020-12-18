@@ -34,7 +34,7 @@ def push() -> Optional[str]:
 
 def not_main() -> bool:
     """Return if on the master branch."""
-    return 'master' != _git('git', 'rev-parse', '--abbrev-ref', 'HEAD')
+    return 'master' != _git('rev-parse', '--abbrev-ref', 'HEAD')
 
 
 def _git(*args: str) -> Optional[str]:
