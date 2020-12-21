@@ -5,6 +5,16 @@
 
 {% block title %}Biomappings{% endblock %}
 
+{% macro progress_color(confidence) -%}
+    {% if confidence > 85 %}
+        bg-success
+    {% elif confidence > 60 %}
+        bg-warning
+    {% else %}
+        bg-danger
+    {% endif %}
+{%- endmacro %}
+
 {% block content %}
     <div class="container" style="margin-top: 50px; margin-bottom: 50px">
         {{ util.render_messages(dismissible=True, container=False) }}
@@ -69,12 +79,13 @@
                             <td>{{ p['target name'] }}</td>
                             <td>
                                 <div class="progress" style="margin-bottom: 0">
-                                    <div class="progress-bar progress-bar-striped"
+                                    {% set confidence = ((p['confidence'] | float) * 100) | int %}
+                                    <div class="progress-bar progress-bar-striped {{ progress_color(confidence) }}"
                                          role="progressbar"
-                                         aria-valuenow="{{ ((p['confidence'] | float) * 100) | int }}" aria-valuemin="0"
+                                         aria-valuenow="{{ confidence }}" aria-valuemin="0"
                                          aria-valuemax="100"
-                                         style="width: {{ ((p['confidence'] | float) * 100) | int }}%">
-                                        <span>{{ ((p['confidence'] | float) * 100) | int }}%</span>
+                                         style="width: {{ confidence }}%">
+                                        <span>{{ confidence }}%</span>
                                     </div>
                                 </div>
                             </td>
