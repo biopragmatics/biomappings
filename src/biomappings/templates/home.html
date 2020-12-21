@@ -1,34 +1,35 @@
-{% extends "bootstrap/base.html" %}
+{% extends "base.html" %}
 
-{% import "bootstrap/wtf.html" as wtf %}
-{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/form.html" as wtf %}
 {% import "bootstrap/utils.html" as util %}
 
+{% block title %}Biomappings{% endblock %}
+
 {% block content %}
-    <div class="container" style="margin-top: 50px">
-        {{ util.flashed_messages(dismissible=True, container=False) }}
-        <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h2 class="text-center">Biomappings Curation Interface</h2>
+    <div class="container" style="margin-top: 50px; margin-bottom: 50px">
+        {{ util.render_messages(dismissible=True, container=False) }}
+        <div class="row">
+            <div class="card">
+                <h5 class="card-header text-center">Biomappings Curation Interface</h5>
+                <div class="card-body">
                     {% if controller.total_curated %}
                         <a href="{{ url_for('run_commit', limit=limit, offset=offset, prefix=prefix) }}">
-                            <button class="btn btn-default">Commit ({{ controller.total_curated }}) and Push
+                            <button class="btn btn-sm btn-outline-dark">Commit ({{ controller.total_curated }}) and Push
                                 <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
                             </button>
                         </a>
                     {% endif %}
                     {% if query %}
-                        <span class="btn btn-default">Query: <code>{{ query }}</code></span>
+                        <span class="btn btn-sm btn-outline-dark">Query: <code>{{ query }}</code></span>
                         <a href="{{ url_for('home', limit=limit, offset=offset, prefix=prefix) }}">
-                            <button class="btn btn-default">Clear</button>
+                            <button class="btn btn-sm btn-outline-dark">Clear</button>
                         </a>
                     {% else %}
                         <form class="form" method="GET" role="form" action="{{ url_for('home', prefix=prefix) }}">
                             <div class="input-group">
-                                <span class="input-group-btn">
-                                   <button type="submit" class="btn btn-default">Go!</button>
-                                </span>
+                                <div class="input-group-prepend">
+                                    <button type="submit" class="btn btn-outline-secondary">Go!</button>
+                                </div>
                                 <input type="text" class="form-control" placeholder="Search for..." name="query">
                                 {% if prefix %}
                                     <input type="hidden" name="prefix" value="{{ prefix }}">
@@ -37,22 +38,23 @@
                         </form>
                     {% endif %}
                 </div>
-                <table class="table table-striped table-hover">
-                    <thead>
+                <table class="table table-striped table-hover table-sm">
+                    <thead class="thead-light">
                     <tr>
-                        <th>Line</th>
-                        <th>Source</th>
-                        <th>Source Name</th>
-                        <th>Target</th>
-                        <th>Target Name</th>
-                        <th></th>
-                        <th></th>
+                        <th class="text-right" scope="col">Line</th>
+                        <th scope="col">Source</th>
+                        <th scope="col">Source Name</th>
+                        <th scope="col">Target</th>
+                        <th scope="col">Target Name</th>
+                        <th scope="col">Confidence</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                     </thead>
                     <tbody>
                     {% for line, p in controller.predictions(query=query, offset=offset, limit=limit, prefix=prefix) %}
                         <tr>
-                            <td>{{ 1 + line }}</td>
+                            <td class="text-right">{{ 1 + line }}</td>
                             <td>
                                 <a href="{{ controller.get_url(p['source prefix'], p['source identifier']) }}">
                                     {{ controller.get_curie(p['source prefix'], p['source identifier']) }}
@@ -66,13 +68,24 @@
                             </td>
                             <td>{{ p['target name'] }}</td>
                             <td>
+                                <div class="progress" style="margin-bottom: 0">
+                                    <div class="progress-bar progress-bar-striped"
+                                         role="progressbar"
+                                         aria-valuenow="{{ ((p['confidence'] | float) * 100) | int }}" aria-valuemin="0"
+                                         aria-valuemax="100"
+                                         style="width: {{ ((p['confidence'] | float) * 100) | int }}%">
+                                        <span>{{ ((p['confidence'] | float) * 100) | int }}%</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
                                 <a href="{{ url_for('mark', line=line, value='yup', limit=limit, offset=offset, query=query, prefix=prefix) }}">
-                                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                    <i class="far fa-thumbs-up"></i>
                                 </a>
                             </td>
                             <td>
                                 <a href="{{ url_for('mark', line=line, value='nope', limit=limit, offset=offset, query=query, prefix=prefix) }}">
-                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                                    <i class="far fa-thumbs-down"></i>
                                 </a>
                             </td>
                         </tr>
@@ -83,33 +96,39 @@
                 <form class="form" method="POST" role="form" action="{{ url_for('add_mapping') }}">
                     <table class="table" style="margin-bottom: 0">
                         <tr>
-                            <td>{{ wtf.form_field(form.source_prefix) }}</td>
-                            <td>{{ wtf.form_field(form.source_id) }}</td>
-                            <td>{{ wtf.form_field(form.source_name) }}</td>
-                            <td>{{ wtf.form_field(form.target_prefix) }}</td>
-                            <td>{{ wtf.form_field(form.target_id) }}</td>
-                            <td>{{ wtf.form_field(form.target_name) }}</td>
-                            <td style="padding-bottom: 24px; vertical-align: bottom">
-                                {{ wtf.form_field(form.submit, class="btn btn-primary") }}
+                            <td>{{ wtf.render_field(form.source_prefix) }}</td>
+                            <td>{{ wtf.render_field(form.source_id) }}</td>
+                            <td>{{ wtf.render_field(form.source_name) }}</td>
+                            <td>{{ wtf.render_field(form.target_prefix) }}</td>
+                            <td>{{ wtf.render_field(form.target_id) }}</td>
+                            <td>{{ wtf.render_field(form.target_name) }}</td>
+                            <td style="vertical-align: middle">
+                                {{ wtf.render_field(form.submit, class="btn btn-primary") }}
                             </td>
                         </tr>
                     </table>
                 </form>
 
-                <div class="panel-footer">
-                    <a href="{{ url_for('home', limit=limit, offset=0, query=query, prefix=prefix) }}">First</a> |
+                <div class="card-footer text-center">
                     {% if 0 <= offset - limit %}
+                        <a href="{{ url_for('home', limit=limit, offset=0, query=query, prefix=prefix) }}">
+                            <i class="fas fa-angle-double-left"></i>
+                            First
+                        </a> &nbsp;|&nbsp;
                         <a href="{{ url_for('home', limit=limit, offset=offset - limit, query=query, prefix=prefix) }}">
+                            <i class="fas fa-angle-left"></i>
                             Previous {{ limit }}
-                        </a> |
+                        </a>  &nbsp;|&nbsp;
                     {% endif %}
                     {% if offset <= controller.total_predictions - limit %}
                         <a href="{{ url_for('home', limit=limit, offset=offset + limit, query=query, prefix=prefix) }}">
                             Next {{ limit }}
-                        </a> |
+                            <i class="fas fa-angle-right"></i>
+                        </a>  &nbsp;|&nbsp;
                     {% endif %}
                     <a href="{{ url_for('home', limit=limit, offset=controller.total_predictions - limit, query=query, prefix=prefix) }}">
                         Last
+                        <i class="fas fa-angle-double-right"></i>
                     </a>
                 </div>
             </div>
