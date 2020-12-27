@@ -1,11 +1,14 @@
 contributors:
-- count: 1282
+- count: 1287
   orcid: 0000-0001-9439-5346
-- count: 105
+- count: 202
   orcid: 0000-0003-4423-4370
 negative:
-- count: 70
+- count: 89
   source: go
+  target: mesh
+- count: 13
+  source: efo
   target: mesh
 - count: 7
   source: mesh
@@ -19,19 +22,19 @@ negative:
 - count: 3
   source: hgnc
   target: mesh
-negative_mapping_count: 90
-negative_prefix_count: 7
+negative_mapping_count: 122
+negative_prefix_count: 8
 positive:
+- count: 398
+  source: go
+  target: mesh
 - count: 342
   source: chebi
-  target: mesh
-- count: 335
-  source: go
   target: mesh
 - count: 309
   source: mesh
   target: ncit
-- count: 97
+- count: 102
   source: hgnc
   target: mesh
 - count: 84
@@ -43,7 +46,7 @@ positive:
 - count: 30
   source: doid
   target: mesh
-- count: 9
+- count: 11
   source: efo
   target: mesh
 - count: 6
@@ -58,7 +61,7 @@ positive:
 - count: 1
   source: fplx
   target: mesh
-positive_mapping_count: 1297
+positive_mapping_count: 1367
 positive_prefix_count: 14
 predictions:
 - count: 12341
@@ -73,23 +76,23 @@ predictions:
 - count: 1406
   source: doid
   target: mesh
-- count: 1392
+- count: 1387
   source: hgnc
   target: mesh
 - count: 366
   source: hp
   target: mesh
-- count: 292
+- count: 277
   source: efo
   target: mesh
 - count: 158
   source: fplx
   target: mesh
-- count: 132
+- count: 50
   source: go
   target: mesh
 - count: 6
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 30320
+predictions_mapping_count: 30218
 predictions_prefix_count: 12
