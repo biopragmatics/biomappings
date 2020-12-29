@@ -7,9 +7,8 @@ import itertools as itt
 import os
 from typing import Dict, Iterable, List, Mapping, Sequence, Tuple
 
-from biomappings.utils import get_canonical_tuple
+from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
-RESOURCE_PATH = os.path.dirname(os.path.abspath(__file__))
 MAPPINGS_HEADER = [
     'source prefix',
     'source identifier',
