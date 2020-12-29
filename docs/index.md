@@ -21,8 +21,8 @@ repository on [GitHub](https://github.com/biomappings/biomappings).
 <tbody>
 {% for entry in site.data.summary.positive %}
     <tr>
-        <td>{{ entry.source }}</td>
-        <td>{{ entry.target }}</td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.source }}">{{ entry.source }}</a></td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.target }}">{{ entry.target }}</a></td>
         <td align="right">{{ entry.count }}</td>
     </tr>
 {% endfor %}
@@ -42,8 +42,8 @@ repository on [GitHub](https://github.com/biomappings/biomappings).
 <tbody>
 {% for entry in site.data.summary.negative %}
     <tr>
-        <td>{{ entry.source }}</td>
-        <td>{{ entry.target }}</td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.source }}">{{ entry.source }}</a></td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.target }}">{{ entry.target }}</a></td>
         <td align="right">{{ entry.count }}</td>
     </tr>
 {% endfor %}
@@ -63,8 +63,8 @@ repository on [GitHub](https://github.com/biomappings/biomappings).
 <tbody>
 {% for entry in site.data.summary.predictions %}
     <tr>
-        <td>{{ entry.source }}</td>
-        <td>{{ entry.target }}</td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.source }}">{{ entry.source }}</a></td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.target }}">{{ entry.target }}</a></td>
         <td align="right">{{ entry.count }}</td>
     </tr>
 {% endfor %}
