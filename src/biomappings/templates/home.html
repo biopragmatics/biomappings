@@ -54,7 +54,7 @@
                         <th class="text-right" scope="col">Line</th>
                         <th scope="col">Source</th>
                         <th scope="col">Source Name</th>
-                        {% if true %}
+                        {% if show_relations %}
                             <th scope="col">Relation</th>
                         {% endif %}
                         <th scope="col">Target</th>
@@ -74,7 +74,7 @@
                                 </a>
                             </td>
                             <td>{{ p['source name'] }}</td>
-                            {% if true %}
+                            {% if show_relations %}
                                 <td>{{ p['relation'] }}</td>
                             {% endif %}
                             <td>
