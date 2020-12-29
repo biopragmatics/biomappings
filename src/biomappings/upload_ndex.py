@@ -41,13 +41,16 @@ def ndex(username, password):
     cx.add_network_attribute('description', 'Manually curated mappings (skos:exactMatch) between biological entities.')
     cx.add_network_attribute('reference', 'https://github.com/biomappings/biomappings')
     cx.add_network_attribute('rights', 'Waiver-No rights reserved (CC0)')
-    cx.set_context({
+
+    context = {
         prefix: f'https://identifiers.org/{prefix}:'
         for prefix in itt.chain.from_iterable(
             (mapping['source prefix'], mapping['target prefix'])
             for mapping in positive_mappings
         )
-    })
+    }
+    context['orcid'] = f'https://identifiers.org/orcid:'
+    cx.set_context(context)
 
     cx.add_network_attribute('version', get_git_hash())
     authors = sorted(set(
