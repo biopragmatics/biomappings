@@ -9,6 +9,10 @@ from typing import Any, Mapping, Optional, Tuple
 
 import requests
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+RESOURCE_PATH = os.path.abspath(os.path.join(HERE, 'resources'))
+IMG = os.path.abspath(os.path.join(HERE, os.pardir, os.pardir, 'docs', 'img'))
+
 
 def get_git_hash() -> Optional[str]:
     """Get the git hash.
