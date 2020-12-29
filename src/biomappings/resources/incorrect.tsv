@@ -121,3 +121,96 @@ mesh	D000203	Activities of Daily Living	skos:exactMatch	efo	0008451	activities o
 mesh	D001792	Blood Platelets	skos:exactMatch	efo	0009237	Estimated Platelets Measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D009504	Neutrophils	skos:exactMatch	efo	0009252	Segmented Neutrophils to Neutrophils Ratio Measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D053483	Eye Movement Measurements	skos:exactMatch	efo	0007699	eye movement measurement	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map07025	Quinolines	skos:exactMatch	mesh	C037219	quinoline	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map07057	Antiparkinsonian agents	skos:exactMatch	mesh	D000978	Antiparkinson Agents	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03050	Proteasome	skos:exactMatch	go	GO:0000502	proteasome complex	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map07044	Antiviral agents	skos:exactMatch	mesh	D000998	Antiviral Agents	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map07039	Opioid analgesics	skos:exactMatch	mesh	D000701	Analgesics, Opioid	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map07037	Antiarrhythmic drugs	skos:exactMatch	mesh	D000889	Anti-Arrhythmia Agents	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map07035	Prostaglandins	skos:exactMatch	mesh	D011453	Prostaglandins	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map07033	Anticonvulsants	skos:exactMatch	mesh	D000927	Anticonvulsants	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map07024	HMG-CoA reductase inhibitors	skos:exactMatch	mesh	D019161	Hydroxymethylglutaryl-CoA Reductase Inhibitors	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04145	Phagosome	skos:exactMatch	mesh	D010588	Phagosomes	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04514	Cell adhesion molecules	skos:exactMatch	mesh	D015815	Cell Adhesion Molecules	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03040	Spliceosome	skos:exactMatch	mesh	D017381	Spliceosomes	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03020	RNA polymerase	skos:exactMatch	mesh	D012321	DNA-Directed RNA Polymerases	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map02010	ABC transporters	skos:exactMatch	mesh	D018528	ATP-Binding Cassette Transporters	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03010	Ribosome	skos:exactMatch	go	GO:0005840	ribosome	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04142	Lysosome	skos:exactMatch	go	GO:0005764	lysosome	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04520	Adherens junction	skos:exactMatch	go	GO:0005912	adherens junction	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04724	Glutamatergic synapse	skos:exactMatch	go	GO:0098978	glutamatergic synapse	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04725	Cholinergic synapse	skos:exactMatch	go	GO:0098981	cholinergic synapse	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04530	Tight junction	skos:exactMatch	go	GO:0070160	tight junction	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04510	Focal adhesion	skos:exactMatch	go	GO:0005925	focal adhesion	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04146	Peroxisome	skos:exactMatch	go	GO:0005777	peroxisome	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04145	Phagosome	skos:exactMatch	go	GO:0045335	phagocytic vesicle	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04540	Gap junction	skos:exactMatch	go	GO:0005921	gap junction	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04728	Dopaminergic synapse	skos:exactMatch	go	GO:0098691	dopaminergic synapse	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04727	GABAergic synapse	skos:exactMatch	go	GO:0098982	GABA-ergic synapse	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04726	Serotonergic synapse	skos:exactMatch	go	GO:0099154	serotonergic synapse	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04514	Cell adhesion molecules	skos:exactMatch	go	GO:0098631	cell adhesion mediator activity	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04932	Non-alcoholic fatty liver disease	skos:exactMatch	mesh	D065626	Non-alcoholic Fatty Liver Disease	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05010	Alzheimer disease	skos:exactMatch	mesh	D000544	Alzheimer Disease	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05012	Parkinson disease	skos:exactMatch	mesh	D010300	Parkinson Disease	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05016	Huntington disease	skos:exactMatch	mesh	D006816	Huntington Disease	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05020	Prion disease	skos:exactMatch	mesh	D017096	Prion Diseases	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05142	Chagas disease	skos:exactMatch	mesh	D014355	Chagas Disease	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05320	Autoimmune thyroid disease	skos:exactMatch	mesh	D013967	Thyroiditis, Autoimmune	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05321	Inflammatory bowel disease	skos:exactMatch	mesh	D015212	Inflammatory Bowel Diseases	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05332	Graft-versus-host disease	skos:exactMatch	mesh	D006086	Graft vs Host Disease	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04930	Type II diabetes mellitus	skos:exactMatch	mesh	D003924	Diabetes Mellitus, Type 2	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04940	Type I diabetes mellitus	skos:exactMatch	mesh	D003922	Diabetes Mellitus, Type 1	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05014	Amyotrophic lateral sclerosis	skos:exactMatch	mesh	D000690	Amyotrophic Lateral Sclerosis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05152	Tuberculosis	skos:exactMatch	mesh	D014376	Tuberculosis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05226	Gastric cancer	skos:exactMatch	mesh	D013274	Stomach Neoplasms	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05160	Hepatitis C	skos:exactMatch	mesh	D006526	Hepatitis C	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05161	Hepatitis B	skos:exactMatch	mesh	D006509	Hepatitis B	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05162	Measles	skos:exactMatch	mesh	D008457	Measles	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05144	Malaria	skos:exactMatch	mesh	D008288	Malaria	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05218	Melanoma	skos:exactMatch	mesh	D008545	Melanoma	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05210	Colorectal cancer	skos:exactMatch	mesh	D015179	Colorectal Neoplasms	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05212	Pancreatic cancer	skos:exactMatch	mesh	D010190	Pancreatic Neoplasms	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05214	Glioma	skos:exactMatch	mesh	D016543	Central Nervous System Neoplasms	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05215	Prostate cancer	skos:exactMatch	mesh	D011471	Prostatic Neoplasms	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05219	Bladder cancer	skos:exactMatch	mesh	D001749	Urinary Bladder Neoplasms	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05224	Breast cancer	skos:exactMatch	mesh	D001943	Breast Neoplasms	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04934	Cushing syndrome	skos:exactMatch	mesh	D003480	Cushing Syndrome	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04934	Cushing syndrome	skos:exactMatch	mesh	D000308	Adrenocortical Hyperfunction	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04934	Cushing syndrome	skos:exactMatch	mesh	D006929	Hyperaldosteronism	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05017	Spinocerebellar ataxia	skos:exactMatch	mesh	D020754	Spinocerebellar Ataxias	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05034	Alcoholism	skos:exactMatch	mesh	D000437	Alcoholism	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05034	Alcoholism	skos:exactMatch	mesh	D020751	Alcohol-Induced Disorders	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05220	Chronic myeloid leukemia	skos:exactMatch	mesh	D015464	Leukemia, Myelogenous, Chronic, BCR-ABL Positive	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05220	Chronic myeloid leukemia	skos:exactMatch	mesh	D015466	Leukemia, Myeloid, Chronic-Phase	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05221	Acute myeloid leukemia	skos:exactMatch	mesh	D015470	Leukemia, Myeloid, Acute	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05211	Renal cell carcinoma	skos:exactMatch	mesh	D002292	Carcinoma, Renal Cell	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05217	Basal cell carcinoma	skos:exactMatch	mesh	D002280	Carcinoma, Basal Cell	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05222	Small cell lung cancer	skos:exactMatch	mesh	D055752	Small Cell Lung Carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05223	Non-small cell lung cancer	skos:exactMatch	mesh	D002289	Carcinoma, Non-Small-Cell Lung	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05225	Hepatocellular carcinoma	skos:exactMatch	mesh	D006528	Carcinoma, Hepatocellular	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03070	Bacterial secretion system	skos:exactMatch	mesh	D058947	Bacterial Secretion Systems	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04614	Renin-angiotensin system	skos:exactMatch	mesh	D012084	Renin-Angiotensin System	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05322	Systemic lupus erythematosus	skos:exactMatch	mesh	D008180	Lupus Erythematosus, Systemic	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05110	Vibrio cholerae infection	skos:exactMatch	mesh	D002771	Cholera	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05132	Salmonella infection	skos:exactMatch	mesh	D012480	Salmonella Infections	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05135	Yersinia infection	skos:exactMatch	mesh	D015009	Yersinia Infections	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05150	Staphylococcus aureus infection	skos:exactMatch	mesh	D013203	Staphylococcal Infections	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05165	Human papillomavirus infection	skos:exactMatch	mesh	D030361	Papillomavirus Infections	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05169	Epstein-Barr virus infection	skos:exactMatch	mesh	D020031	Epstein-Barr Virus Infections	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05032	Morphine addiction	skos:exactMatch	mesh	D009021	Morphine Dependence	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05033	Nicotine addiction	skos:exactMatch	mesh	D014029	Tobacco Use Disorder	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05131	Shigellosis	skos:exactMatch	mesh	D004405	Dysentery, Bacillary	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05133	Pertussis	skos:exactMatch	mesh	D014917	Whooping Cough	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05134	Legionellosis	skos:exactMatch	mesh	D007876	Legionellosis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05140	Leishmaniasis	skos:exactMatch	mesh	D007896	Leishmaniasis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05143	African trypanosomiasis	skos:exactMatch	mesh	D014353	Trypanosomiasis, African	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05214	Glioma	skos:exactMatch	mesh	D005910	Glioma	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05310	Asthma	skos:exactMatch	mesh	D001249	Asthma	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05323	Rheumatoid arthritis	skos:exactMatch	mesh	D001172	Arthritis, Rheumatoid	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05146	Amoebiasis	skos:exactMatch	mesh	D000562	Amebiasis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05213	Endometrial cancer	skos:exactMatch	mesh	D004030	Dientamoebiasis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05145	Toxoplasmosis	skos:exactMatch	mesh	D014123	Toxoplasmosis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05410	Hypertrophic cardiomyopathy	skos:exactMatch	mesh	D002312	Cardiomyopathy, Hypertrophic	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05412	Arrhythmogenic right ventricular cardiomyopathy	skos:exactMatch	mesh	D019571	Arrhythmogenic Right Ventricular Dysplasia	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map05414	Dilated cardiomyopathy	skos:exactMatch	mesh	D002311	Cardiomyopathy, Dilated	manually_reviewed	orcid:0000-0003-4423-4370
