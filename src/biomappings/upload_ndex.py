@@ -18,10 +18,10 @@ from biomappings.utils import get_git_hash
 BIOMAPPINGS_NDEX_UUID = '402d1fd6-49d6-11eb-9e72-0ac135e8bacf'
 
 
-def _normalize_curie(prefix, identifier) -> str:
-    from pyobo import normalize_curie
-    norm_prefix, norm_identifier = normalize_curie(f'{prefix}:{identifier}')
-    return f'{norm_prefix}:{norm_identifier}'
+def _normalize_curie(prefix: str, identifier: str) -> str:
+    if identifier.lower().startswith(f'{prefix.lower()}:'):
+        identifier = identifier[len(prefix) + 1:]
+    return f'{prefix}:{identifier}'
 
 
 @click.command()
