@@ -1,6 +1,10 @@
 ---
 layout: home
 ---
+<p align="center">
+  <img src="https://raw.githubusercontent.com/biomappings/biomappings/master/docs/source/logo.png" height="150">
+</p>
+
 This site summarizes the `biomappings` resources. They can be downloaded under the CC0-1.0 License from the open-source
 repository on [GitHub](https://github.com/biomappings/biomappings).
 
