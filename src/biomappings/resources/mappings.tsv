@@ -1366,3 +1366,118 @@ mesh	D055312	Cystatin A	skos:exactMatch	hgnc	2481	CSTA	manually_reviewed	orcid:0
 mesh	D055313	Cystatin B	skos:exactMatch	hgnc	2482	CSTB	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055316	Cystatin C	skos:exactMatch	hgnc	2475	CST3	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055332	Cystatin M	skos:exactMatch	hgnc	2478	CST6	manually_reviewed	orcid:0000-0001-9439-5346
+kegg.pathway	map00030	Pentose phosphate pathway	skos:exactMatch	go	GO:0006098	pentose-phosphate shunt	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00052	Galactose metabolism	skos:exactMatch	go	GO:0006012	galactose metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00061	Fatty acid biosynthesis	skos:exactMatch	go	GO:0006633	fatty acid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00062	Fatty acid elongation	skos:exactMatch	go	GO:0030497	fatty acid elongation	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00071	Fatty acid degradation	skos:exactMatch	go	GO:0009062	fatty acid catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00100	Steroid biosynthesis	skos:exactMatch	go	GO:0006694	steroid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00190	Oxidative phosphorylation	skos:exactMatch	go	GO:0006119	oxidative phosphorylation	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00195	Photosynthesis	skos:exactMatch	go	GO:0015979	photosynthesis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00220	Arginine biosynthesis	skos:exactMatch	go	GO:0006526	arginine biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00240	Pyrimidine metabolism	skos:exactMatch	go	GO:0006206	pyrimidine nucleobase metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00254	Aflatoxin biosynthesis	skos:exactMatch	go	GO:0045122	aflatoxin biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00281	Geraniol degradation	skos:exactMatch	go	GO:1903447	geraniol catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00300	Lysine biosynthesis	skos:exactMatch	go	GO:0009085	lysine biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00310	Lysine degradation	skos:exactMatch	go	GO:0006554	lysine catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00331	Clavulanic acid biosynthesis	skos:exactMatch	go	GO:0033050	clavulanic acid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00332	Carbapenem biosynthesis	skos:exactMatch	go	GO:1901769	carbapenem biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00340	Histidine metabolism	skos:exactMatch	go	GO:0006547	histidine metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00350	Tyrosine metabolism	skos:exactMatch	go	GO:0006570	tyrosine metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00362	Benzoate degradation	skos:exactMatch	go	GO:0043639	benzoate catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00380	Tryptophan metabolism	skos:exactMatch	go	GO:0006568	tryptophan metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00410	beta-Alanine metabolism	skos:exactMatch	go	GO:0019482	beta-alanine metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00460	Cyanoamino acid metabolism	skos:exactMatch	go	GO:0033052	cyanoamino acid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00473	D-Alanine metabolism	skos:exactMatch	go	GO:0046436	D-alanine metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00480	Glutathione metabolism	skos:exactMatch	go	GO:0006749	glutathione metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00510	N-Glycan biosynthesis	skos:exactMatch	go	GO:0006487	protein N-linked glycosylation	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00521	Streptomycin biosynthesis	skos:exactMatch	go	GO:0019872	streptomycin biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00531	Glycosaminoglycan degradation	skos:exactMatch	go	GO:0006027	glycosaminoglycan catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00540	Lipopolysaccharide biosynthesis	skos:exactMatch	go	GO:0009103	lipopolysaccharide biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00550	Peptidoglycan biosynthesis	skos:exactMatch	go	GO:0009252	peptidoglycan biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04110	Cell cycle	skos:exactMatch	go	GO:0007049	cell cycle	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04144	Endocytosis	skos:exactMatch	go	GO:0006897	endocytosis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00561	Glycerolipid metabolism	skos:exactMatch	go	GO:0046486	glycerolipid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00562	Inositol phosphate metabolism	skos:exactMatch	go	GO:0043647	inositol phosphate metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00564	Glycerophospholipid metabolism	skos:exactMatch	go	GO:0006650	glycerophospholipid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00565	Ether lipid metabolism	skos:exactMatch	go	GO:0046485	ether lipid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00590	Arachidonic acid metabolism	skos:exactMatch	go	GO:0019369	arachidonic acid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00591	Linoleic acid metabolism	skos:exactMatch	go	GO:0043651	linoleic acid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00592	alpha-Linolenic acid metabolism	skos:exactMatch	go	GO:0036109	alpha-linolenic acid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00600	Sphingolipid metabolism	skos:exactMatch	go	GO:0006665	sphingolipid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00620	Pyruvate metabolism	skos:exactMatch	go	GO:0006090	pyruvate metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00622	Xylene degradation	skos:exactMatch	go	GO:0042184	xylene catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00623	Toluene degradation	skos:exactMatch	go	GO:0042203	toluene catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00626	Naphthalene degradation	skos:exactMatch	go	GO:1901170	naphthalene catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00633	Nitrotoluene degradation	skos:exactMatch	go	GO:0046263	nitrotoluene catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00640	Propanoate metabolism	skos:exactMatch	go	GO:0019541	propionate metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00643	Styrene degradation	skos:exactMatch	go	GO:0042207	styrene catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00680	Methane metabolism	skos:exactMatch	go	GO:0015947	methane metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00730	Thiamine metabolism	skos:exactMatch	go	GO:0006772	thiamine metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00740	Riboflavin metabolism	skos:exactMatch	go	GO:0006771	riboflavin metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00750	Vitamin B6 metabolism	skos:exactMatch	go	GO:0042816	vitamin B6 metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00780	Biotin metabolism	skos:exactMatch	go	GO:0006768	biotin metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00785	Lipoic acid metabolism	skos:exactMatch	go	GO:0009106	lipoate metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00790	Folate biosynthesis	skos:exactMatch	go	GO:0046656	folic acid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00791	Atrazine degradation	skos:exactMatch	go	GO:0019381	atrazine catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00830	Retinol metabolism	skos:exactMatch	go	GO:0042572	retinol metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00901	Indole alkaloid biosynthesis	skos:exactMatch	go	GO:0035835	indole alkaloid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00902	Monoterpenoid biosynthesis	skos:exactMatch	go	GO:0016099	monoterpenoid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00904	Diterpenoid biosynthesis	skos:exactMatch	go	GO:0016102	diterpenoid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00905	Brassinosteroid biosynthesis	skos:exactMatch	go	GO:0016132	brassinosteroid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00906	Carotenoid biosynthesis	skos:exactMatch	go	GO:0016117	carotenoid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00908	Zeatin biosynthesis	skos:exactMatch	go	GO:0033398	zeatin biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00920	Sulfur metabolism	skos:exactMatch	go	GO:0006790	sulfur compound metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00930	Caprolactam degradation	skos:exactMatch	go	GO:0019384	caprolactam catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00940	Phenylpropanoid biosynthesis	skos:exactMatch	go	GO:0009699	phenylpropanoid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00941	Flavonoid biosynthesis	skos:exactMatch	go	GO:0009813	flavonoid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00942	Anthocyanin biosynthesis	skos:exactMatch	go	GO:0009718	anthocyanin-containing compound biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00943	Isoflavonoid biosynthesis	skos:exactMatch	go	GO:0009717	isoflavonoid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00950	Isoquinoline alkaloid biosynthesis	skos:exactMatch	go	GO:0033075	isoquinoline alkaloid biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00966	Glucosinolate biosynthesis	skos:exactMatch	go	GO:0019761	glucosinolate biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00984	Steroid degradation	skos:exactMatch	go	GO:0006706	steroid catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map01212	Fatty acid metabolism	skos:exactMatch	go	GO:0006631	fatty acid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04920	Adipocytokine signaling pathway	skos:exactMatch	go	GO:0033210	leptin-mediated signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map02024	Quorum sensing	skos:exactMatch	go	GO:0009372	quorum sensing	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03030	DNA replication	skos:exactMatch	go	GO:0006260	DNA replication	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03320	PPAR signaling pathway	skos:exactMatch	go	GO:0035357	peroxisome proliferator activated receptor signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04071	Sphingolipid signaling pathway	skos:exactMatch	go	GO:0090520	sphingolipid mediated signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04012	ErbB signaling pathway	skos:exactMatch	go	GO:0038127	ERBB signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04218	Cellular senescence	skos:exactMatch	go	GO:0090398	cellular senescence	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04917	Prolactin signaling pathway	skos:exactMatch	go	GO:0038161	prolactin signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04310	Wnt signaling pathway	skos:exactMatch	go	GO:0016055	Wnt signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03440	Homologous recombination	skos:exactMatch	go	GO:0035825	homologous recombination	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04390	Hippo signaling pathway	skos:exactMatch	go	GO:0035329	hippo signaling	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04210	Apoptosis	skos:exactMatch	go	GO:0006915	apoptotic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04217	Necroptosis	skos:exactMatch	go	GO:0070266	necroptotic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04217	Necroptosis	skos:exactMatch	mesh	D000079302	Necroptosis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04216	Ferroptosis	skos:exactMatch	mesh	D000079403	Ferroptosis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04216	Ferroptosis	skos:exactMatch	go	GO:0097707	ferroptosis	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map00970	Aminoacyl-tRNA biosynthesis	skos:exactMatch	go	GO:0043039	tRNA aminoacylation	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03013	RNA transport	skos:exactMatch	go	GO:0050658	RNA transport	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03018	RNA degradation	skos:exactMatch	go	GO:0006401	RNA catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04115	p53 signaling pathway	skos:exactMatch	go	GO:0030330	DNA damage response, signal transduction by p53 class mediator	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04260	Cardiac muscle contraction	skos:exactMatch	go	GO:0060048	cardiac muscle contraction	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04270	Vascular smooth muscle contraction	skos:exactMatch	go	GO:0014829	vascular smooth muscle contraction	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04330	Notch signaling pathway	skos:exactMatch	go	GO:0007219	Notch signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04340	Hedgehog signaling pathway	skos:exactMatch	go	GO:0007224	smoothened signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04360	Axon guidance	skos:exactMatch	go	GO:0007411	axon guidance	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04361	Axon regeneration	skos:exactMatch	go	GO:0031103	axon regeneration	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04380	Osteoclast differentiation	skos:exactMatch	go	GO:0030316	osteoclast differentiation	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04611	Platelet activation	skos:exactMatch	go	GO:0030168	platelet activation	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04612	Antigen processing and presentation	skos:exactMatch	go	GO:0019882	antigen processing and presentation	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map03430	Mismatch repair	skos:exactMatch	go	GO:0006298	mismatch repair	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04620	Toll-like receptor signaling pathway	skos:exactMatch	go	GO:0002224	toll-like receptor signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04621	NOD-like receptor signaling pathway	skos:exactMatch	go	GO:0035872	nucleotide-binding domain, leucine rich repeat containing receptor signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04650	Natural killer cell mediated cytotoxicity	skos:exactMatch	go	GO:0042267	natural killer cell mediated cytotoxicity	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04660	T cell receptor signaling pathway	skos:exactMatch	go	GO:0050852	T cell receptor signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04662	B cell receptor signaling pathway	skos:exactMatch	go	GO:0050853	B cell receptor signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04710	Circadian rhythm	skos:exactMatch	go	GO:0007623	circadian rhythm	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04721	Synaptic vesicle cycle	skos:exactMatch	go	GO:0099504	synaptic vesicle cycle	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04722	Neurotrophin signaling pathway	skos:exactMatch	go	GO:0038179	neurotrophin signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04744	Phototransduction	skos:exactMatch	go	GO:0007602	phototransduction	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04911	Insulin secretion	skos:exactMatch	go	GO:0030073	insulin secretion	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04920	Adipocytokine signaling pathway	skos:exactMatch	go	GO:0033209	tumor necrosis factor-mediated signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04920	Adipocytokine signaling pathway	skos:exactMatch	go	GO:0033211	adiponectin-activated signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04979	Cholesterol metabolism	skos:exactMatch	go	GO:0008203	cholesterol metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04971	Gastric acid secretion	skos:exactMatch	go	GO:0001696	gastric acid secretion	manually_reviewed	orcid:0000-0003-4423-4370
