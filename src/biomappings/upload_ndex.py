@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
-"""Upload the Biomappings to NDEx."""
+"""Upload the Biomappings to NDEx.
+
+.. seealso:: https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf
+"""
 
 import itertools as itt
 

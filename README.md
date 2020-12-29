@@ -34,7 +34,8 @@ in [`src/biomappings/resources/predictions.tsv`](https://github.com/biomappings/
 Human-curated *false* (i.e., incorrect) mappings that are non-trivial are
 in [`src/biomappings/resources/incorrect.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/incorrect.tsv)
 . A summary is automatically generated nightly with GitHub Actions and deployed to
-https://biomappings.github.io/biomappings/.
+https://biomappings.github.io/biomappings/. The equivalences are also available as a network through
+[NDEx](https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf).
 
 Equivalences and related mappings that are available from the OBO Foundry and other primary sources can be accessed
 through [Inspector Javert's Xref Database](https://zenodo.org/record/3757266)
