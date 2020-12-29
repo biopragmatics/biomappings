@@ -27,18 +27,31 @@
 Community curated and predicted equivalences and related mappings between named biological entities that are not
 available from primary sources.
 
-Human-curated true mappings are
-in [`src/biomappings/resources/mappings.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/mappings.tsv)
-, and automatically predicted mappings are
-in [`src/biomappings/resources/predictions.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/predictions.tsv)
-Human-curated *false* (i.e., incorrect) mappings that are non-trivial are
-in [`src/biomappings/resources/incorrect.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/incorrect.tsv)
-. A summary is automatically generated nightly with GitHub Actions and deployed to
-https://biomappings.github.io/biomappings/.
+## 💾 Data
+
+The data are available through the following three files on
+the [biomappings/biomappings](https://github.com/biomappings/biomappings) GitHub repository.
+
+| Curated | Description                      | Link |
+| ------- | -------------------------------- | ----------- |
+|  Yes    | Human-curated true mappings      | [`src/biomappings/resources/mappings.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/mappings.tsv) |
+|  Yes    | Human-curated *non-trivial* false (i.e., incorrect) mappings | [`src/biomappings/resources/incorrect.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/incorrect.tsv) |
+|  No     | Automatically predicted mappings | [`src/biomappings/resources/predictions.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/predictions.tsv) |
+
+These data are available under
+the [CC0 1.0 Universal License](https://github.com/biomappings/biomappings/blob/master/LICENSE).
 
 Equivalences and related mappings that are available from the OBO Foundry and other primary sources can be accessed
 through [Inspector Javert's Xref Database](https://zenodo.org/record/3757266)
 on Zenodo which was described in [this blog post](https://cthoyt.com/2020/04/19/inspector-javerts-xref-database.html).
+
+## 📊 Summary
+
+A summary is automatically generated nightly with GitHub Actions and deployed to
+https://biomappings.github.io/biomappings/.
+
+The equivalences are also available as a network through
+[NDEx](https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf).
 
 ## ⬇️ Installation
 
@@ -103,7 +116,7 @@ locally.
 2. Edit one or more of the resource files (mappings.tsv, incorrect.tsv, predictions.tsv)
 3. Commit to your branch, push, and create a pull request back to the upstream repository.
 
-## 🌐 Web Curation Interface
+### 🌐 Web Curation Interface
 
 Rather than editing files locally, this repository also comes with a web-based curation interface. Install the code in
 development mode with the `web` option (which installs `flask` and `flask-bootstrap`) using:
@@ -129,4 +142,4 @@ since it's non-trivial for most users to find the location of the resources with
 
 ## ⚖️ License
 
-Code is licensed under the MIT License. Data is licensed under the CC0 1.0 Universal License.
+Code is licensed under the MIT License.

@@ -1,6 +1,10 @@
 ---
 layout: home
 ---
+<p align="center">
+  <img src="https://raw.githubusercontent.com/biomappings/biomappings/master/docs/source/logo.png" height="150">
+</p>
+
 This site summarizes the `biomappings` resources. They can be downloaded under the CC0-1.0 License from the open-source
 repository on [GitHub](https://github.com/biomappings/biomappings).
 
@@ -17,8 +21,8 @@ repository on [GitHub](https://github.com/biomappings/biomappings).
 <tbody>
 {% for entry in site.data.summary.positive %}
     <tr>
-        <td>{{ entry.source }}</td>
-        <td>{{ entry.target }}</td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.source }}">{{ entry.source }}</a></td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.target }}">{{ entry.target }}</a></td>
         <td align="right">{{ entry.count }}</td>
     </tr>
 {% endfor %}
@@ -38,8 +42,8 @@ repository on [GitHub](https://github.com/biomappings/biomappings).
 <tbody>
 {% for entry in site.data.summary.negative %}
     <tr>
-        <td>{{ entry.source }}</td>
-        <td>{{ entry.target }}</td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.source }}">{{ entry.source }}</a></td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.target }}">{{ entry.target }}</a></td>
         <td align="right">{{ entry.count }}</td>
     </tr>
 {% endfor %}
@@ -59,8 +63,8 @@ repository on [GitHub](https://github.com/biomappings/biomappings).
 <tbody>
 {% for entry in site.data.summary.predictions %}
     <tr>
-        <td>{{ entry.source }}</td>
-        <td>{{ entry.target }}</td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.source }}">{{ entry.source }}</a></td>
+        <td><a href="https://registry.identifiers.org/registry/{{ entry.target }}">{{ entry.target }}</a></td>
         <td align="right">{{ entry.count }}</td>
     </tr>
 {% endfor %}
@@ -73,7 +77,7 @@ repository on [GitHub](https://github.com/biomappings/biomappings).
 <thead>
 <tr>
     <th>Contributor</th>
-    <th>Curation Count</th>
+    <th align="right">Curation Count</th>
 </tr>
 </thead>
 <tbody>

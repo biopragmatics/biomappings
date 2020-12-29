@@ -5,6 +5,7 @@
 import click
 
 from .summary import export
+from .upload_ndex import ndex
 
 
 @click.group()
@@ -31,6 +32,7 @@ def web():
 
 
 main.add_command(export)
+main.add_command(ndex)
 
 if __name__ == '__main__':
     main()

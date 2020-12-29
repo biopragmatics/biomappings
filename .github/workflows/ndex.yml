@@ -1,0 +1,22 @@
+name: Upload to NDEx
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Mona the Octocat'
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Upload to NDEx
+        run: |
+          pip install -e .[ndex]
+          biomappings ndex --username ${{ secrets.NDEX_USERNAME }} --password ${{ secrets.NDEX_PASSWORD }}
