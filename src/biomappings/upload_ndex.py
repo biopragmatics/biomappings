@@ -25,7 +25,9 @@ def _normalize_curie(prefix: str, identifier: str) -> str:
 
 
 @click.command()
-def ndex():
+@click.option('--username')
+@click.option('--password')
+def ndex(username, password):
     """Upload to NDEx."""
     try:
         from ndex2 import NiceCXBuilder
@@ -76,8 +78,8 @@ def ndex():
     nice_cx.update_to(
         uuid=BIOMAPPINGS_NDEX_UUID,
         server=pystow.get_config('ndex', 'server', 'http://public.ndexbio.org'),
-        username=pystow.get_config('ndex', 'username'),
-        password=pystow.get_config('ndex', 'password'),
+        username=pystow.get_config('ndex', 'username', username),
+        password=pystow.get_config('ndex', 'password', password),
     )
 
 

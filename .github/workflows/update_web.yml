@@ -1,5 +1,11 @@
 name: Update Website
 on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Mona the Octocat'
   schedule:
     - cron: "0 0 * * *"
 jobs:
@@ -29,4 +35,4 @@ jobs:
           branch: ${{ github.ref }}
       - name: Upload to NDEx
         run: |
-          biomappings ndex
+          biomappings ndex --username ${{ secrets.NDEX_USERNAME }} --password ${{ secrets.NDEX_PASSWORD }}
