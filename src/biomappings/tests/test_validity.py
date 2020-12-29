@@ -33,6 +33,7 @@ def test_redundancy():
         get_canonical_tuple(m)
         for m in itt.chain(mappings, incorrect, predictions)
     )
-    redundant = [k for k, v in counter.items() if v > 1]
+    redundant = [(k, v) for k, v in counter.items() if v > 1]
     if redundant:
-        raise ValueError(f'Redundant: {redundant}')
+        r = '\n'.join(f'  {r}: {count}' for r, count in redundant)
+        raise ValueError(f'Redundant: {r}')
