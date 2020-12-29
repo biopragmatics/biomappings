@@ -27,7 +27,10 @@
 Community curated and predicted equivalences and related mappings between named biological entities that are not
 available from primary sources.
 
-## Data
+## 💾 Data
+
+The data are available through the following three files on
+the [biomappings/biomappings](https://github.com/biomappings/biomappings) GitHub repository.
 
 | Curated | Description                      | Link |
 | ------- | -------------------------------- | ----------- |
@@ -41,7 +44,7 @@ Equivalences and related mappings that are available from the OBO Foundry and ot
 through [Inspector Javert's Xref Database](https://zenodo.org/record/3757266)
 on Zenodo which was described in [this blog post](https://cthoyt.com/2020/04/19/inspector-javerts-xref-database.html).
 
-## Summary
+## 📊 Summary
 
 A summary is automatically generated nightly with GitHub Actions and deployed to
 https://biomappings.github.io/biomappings/.
