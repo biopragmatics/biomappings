@@ -1,12 +1,18 @@
 contributors:
 - count: 1287
   orcid: 0000-0001-9439-5346
-- count: 202
+- count: 412
   orcid: 0000-0003-4423-4370
 negative:
 - count: 89
   source: go
   target: mesh
+- count: 77
+  source: kegg.pathway
+  target: mesh
+- count: 16
+  source: go
+  target: kegg.pathway
 - count: 13
   source: efo
   target: mesh
@@ -22,8 +28,8 @@ negative:
 - count: 3
   source: hgnc
   target: mesh
-negative_mapping_count: 122
-negative_prefix_count: 8
+negative_mapping_count: 215
+negative_prefix_count: 9
 positive:
 - count: 398
   source: go
@@ -34,6 +40,9 @@ positive:
 - count: 309
   source: mesh
   target: ncit
+- count: 113
+  source: go
+  target: kegg.pathway
 - count: 102
   source: hgnc
   target: mesh
@@ -55,14 +64,17 @@ positive:
 - count: 4
   source: mesh
   target: umls
+- count: 4
+  source: kegg.pathway
+  target: mesh
 - count: 1
   source: mesh
   target: pfam
 - count: 1
   source: fplx
   target: mesh
-positive_mapping_count: 1367
-positive_prefix_count: 14
+positive_mapping_count: 1484
+positive_prefix_count: 15
 predictions:
 - count: 12341
   source: mesh
@@ -94,5 +106,8 @@ predictions:
 - count: 6
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 30218
-predictions_prefix_count: 12
+- count: 3
+  source: kegg.pathway
+  target: mesh
+predictions_mapping_count: 30221
+predictions_prefix_count: 13
