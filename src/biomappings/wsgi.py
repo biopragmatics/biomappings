@@ -105,15 +105,12 @@ class Controller:
     @staticmethod
     def get_curie(prefix: str, identifier: str) -> str:
         """Return CURIE for a given prefix and identifier."""
-        if miriam_validator.namespace_embedded(prefix):
-            return identifier
-        else:
-            return f'{prefix}:{identifier}'
+        return miriam_validator.get_curie(prefix, identifier)
 
     @classmethod
     def get_url(cls, prefix: str, identifier: str) -> str:
         """Return URL for a given prefix and identifier."""
-        return f'https://identifiers.org/{cls.get_curie(prefix, identifier)}'
+        return miriam_validator.get_url(prefix, identifier)
 
     @property
     def total_predictions(self) -> int:

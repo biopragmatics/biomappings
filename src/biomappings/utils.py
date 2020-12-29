@@ -110,3 +110,14 @@ class MiriamValidator:
         entry = self.entries[prefix]
         if not re.match(entry['pattern'], identifier):
             raise InvalidIdentifier(identifier)
+
+    def get_curie(self, prefix: str, identifier: str) -> str:
+        """Return CURIE for a given prefix and identifier."""
+        if self.namespace_embedded(prefix):
+            return identifier
+        else:
+            return f'{prefix}:{identifier}'
+
+    def get_url(self, prefix: str, identifier: str) -> str:
+        """Return URL for a given prefix and identifier."""
+        return f'https://identifiers.org/{self.get_curie(prefix, identifier)}'
