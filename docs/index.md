@@ -77,7 +77,7 @@ repository on [GitHub](https://github.com/biomappings/biomappings).
 <thead>
 <tr>
     <th>Contributor</th>
-    <th>Curation Count</th>
+    <th align="right">Curation Count</th>
 </tr>
 </thead>
 <tbody>
