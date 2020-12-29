@@ -36,6 +36,6 @@ def iter_gilda_prediction_tuples(prefix: str, relation: str) -> Iterable[Tuple[s
 
 if __name__ == '__main__':
     append_prediction_tuples(itt.chain.from_iterable(
-        iter_gilda_prediction_tuples(prefix, 'speciesSpecific')
+        sorted(iter_gilda_prediction_tuples(prefix, 'speciesSpecific'), key=lambda t: (t[0], t[2]))
         for prefix in ['reactome', 'wikipathways']
     ))
