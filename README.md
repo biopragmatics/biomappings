@@ -38,7 +38,8 @@ the [biomappings/biomappings](https://github.com/biomappings/biomappings) GitHub
 |  Yes    | Human-curated *non-trivial* false (i.e., incorrect) mappings | [`src/biomappings/resources/incorrect.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/incorrect.tsv) |
 |  No     | Automatically predicted mappings | [`src/biomappings/resources/predictions.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/predictions.tsv) |
 
-These data are available under the CC0 1.0 Universal License.
+These data are available under
+the [CC0 1.0 Universal License](https://github.com/biomappings/biomappings/blob/master/LICENSE).
 
 Equivalences and related mappings that are available from the OBO Foundry and other primary sources can be accessed
 through [Inspector Javert's Xref Database](https://zenodo.org/record/3757266)
