@@ -33,7 +33,6 @@ def commit(message: str) -> Optional[str]:
 
 def push() -> Optional[str]:
     """Push the git repo."""
-    breakpoint()
     return _git('push')
 
 
