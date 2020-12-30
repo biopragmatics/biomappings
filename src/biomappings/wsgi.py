@@ -17,6 +17,7 @@ from biomappings.utils import MiriamValidator, commit, not_main, push
 app = flask.Flask(__name__)
 app.config['WTF_CSRF_ENABLED'] = False
 app.config['SECRET_KEY'] = os.urandom(8)
+app.config['SHOW_RELATIONS'] = True
 flask_bootstrap.Bootstrap(app)
 
 # A mapping from your computer's user, returned by getuser.getpass()
@@ -215,6 +216,7 @@ def home():
     offset = flask.request.args.get('offset', type=int, default=0)
     query = flask.request.args.get('query')
     prefix = flask.request.args.get('prefix')
+    show_relations = app.config['SHOW_RELATIONS']
     return flask.render_template(
         'home.html',
         controller=controller,
@@ -223,6 +225,7 @@ def home():
         offset=offset,
         query=query,
         prefix=prefix,
+        show_relations=show_relations,
     )
 
 
@@ -269,6 +272,7 @@ def _go_home():
         offset=flask.request.args.get('offset', type=int),
         query=flask.request.args.get('query'),
         prefix=flask.request.args.get('prefix'),
+        show_relations=app.config['SHOW_RELATIONS'],
     ))
 
 

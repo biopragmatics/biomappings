@@ -54,6 +54,9 @@
                         <th class="text-right" scope="col">Line</th>
                         <th scope="col">Source</th>
                         <th scope="col">Source Name</th>
+                        {% if show_relations %}
+                            <th scope="col">Relation</th>
+                        {% endif %}
                         <th scope="col">Target</th>
                         <th scope="col">Target Name</th>
                         <th scope="col">Confidence</th>
@@ -71,6 +74,9 @@
                                 </a>
                             </td>
                             <td>{{ p['source name'] }}</td>
+                            {% if show_relations %}
+                                <td>{{ p['relation'] }}</td>
+                            {% endif %}
                             <td>
                                 <a href="{{ controller.get_url(p['target prefix'], p['target identifier']) }}">
                                     {{ controller.get_curie(p['target prefix'], p['target identifier']) }}
