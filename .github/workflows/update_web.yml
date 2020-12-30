@@ -17,6 +17,7 @@ jobs:
         run: |
           pip install -e .
           biomappings export
+          biomappings charts
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"

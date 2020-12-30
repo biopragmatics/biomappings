@@ -4,6 +4,7 @@
 
 import click
 
+from .graph import charts
 from .summary import export
 from .upload_ndex import ndex
 
@@ -33,6 +34,7 @@ def web():
 
 main.add_command(export)
 main.add_command(ndex)
+main.add_command(charts)
 
 if __name__ == '__main__':
     main()

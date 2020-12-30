@@ -4,6 +4,7 @@
 
 import os
 
+import click
 import matplotlib.pyplot as plt
 import networkx as nx
 import seaborn as sns
@@ -40,26 +41,52 @@ def get_positive_graph() -> nx.Graph:
     return graph
 
 
-def _main():
-    fig, axes = plt.subplots(1, 3, figsize=(10, 3.5))
+@click.command()
+def charts():
+    """Make charts."""
     graph = get_positive_graph()
+    node_sizes, edge_sizes, densities, n_prefixes = [], [], [], []
+    n_duplicates = []
+    for c in nx.connected_components(graph):
+        node_sizes.append(len(c))
+        sg = graph.subgraph(c)
+        edge_sizes.append(sg.number_of_edges())
+        densities.append(nx.density(sg))
+        prefixes = [
+            graph.nodes[node]['prefix']
+            for node in c
+        ]
+        unique_prefixes = len(set(prefixes))
+        n_prefixes.append(unique_prefixes)
+        n_duplicates.append(len(prefixes) - unique_prefixes)
 
-    sizes = [len(c) for c in nx.connected_components(graph)]
-    sns.histplot(sizes, ax=axes[0])
-    axes[0].set_yscale('log')
-    axes[0].set_title('Component Node Sizes')
+    fig, axes = plt.subplots(2, 3, figsize=(10, 6.5))
 
-    sizes = [graph.subgraph(c).number_of_edges() for c in nx.connected_components(graph)]
-    sns.histplot(sizes, ax=axes[1])
-    axes[1].set_yscale('log')
-    axes[1].set_title('Component Edge Sizes')
-    axes[1].set_ylabel('')
+    sns.histplot(node_sizes, ax=axes[0][0])
+    axes[0][0].set_yscale('log')
+    axes[0][0].set_title('Component Node Sizes')
 
-    densities = [nx.density(graph.subgraph(c)) for c in nx.connected_components(graph)]
-    sns.histplot(densities, ax=axes[2], kde=True)
-    axes[2].set_xlim([0.0, 1.0])
-    axes[2].set_title('Component Densities')
-    axes[2].set_ylabel('')
+    sns.histplot(edge_sizes, ax=axes[0][1])
+    axes[0][1].set_yscale('log')
+    axes[0][1].set_title('Component Edge Sizes')
+    axes[0][1].set_ylabel('')
+
+    sns.kdeplot(densities, ax=axes[0][2], log_scale=True)
+    # axes[2].set_xlim([0.0, 1.0])
+    axes[0][2].set_title('Component Densities')
+    axes[0][2].set_ylabel('')
+
+    sns.histplot(n_prefixes, ax=axes[1][0])
+    axes[1][0].set_title('Number Prefixes')
+
+    # has duplicate prefix in component
+
+    sns.histplot(n_duplicates, ax=axes[1][1])
+    axes[1][1].set_yscale('log')
+    axes[0][2].set_ylabel('')
+    axes[1][1].set_title('Number Duplicate Prefixes')
+
+    axes[1][2].axis('off')
 
     path = os.path.join(IMG, 'components.png')
     print('saving to', path)
@@ -69,4 +96,4 @@ def _main():
 
 
 if __name__ == '__main__':
-    _main()
+    charts()
