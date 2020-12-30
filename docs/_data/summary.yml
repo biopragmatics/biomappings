@@ -1,24 +1,45 @@
 contributors:
+- count: 1523
+  orcid: 0000-0003-4423-4370
 - count: 1287
   orcid: 0000-0001-9439-5346
-- count: 412
-  orcid: 0000-0003-4423-4370
 negative:
+- count: 218
+  source: mesh
+  target: reactome
 - count: 89
   source: go
   target: mesh
+- count: 85
+  source: chebi
+  target: reactome
 - count: 77
   source: kegg.pathway
   target: mesh
+- count: 71
+  source: go
+  target: reactome
+- count: 49
+  source: fplx
+  target: reactome
+- count: 45
+  source: mesh
+  target: wikipathways
 - count: 16
   source: go
   target: kegg.pathway
 - count: 13
   source: efo
   target: mesh
+- count: 11
+  source: hgnc
+  target: reactome
 - count: 7
   source: mesh
   target: ncit
+- count: 7
+  source: fplx
+  target: wikipathways
 - count: 5
   source: pr
   target: uniprot.chain
@@ -28,18 +49,36 @@ negative:
 - count: 3
   source: hgnc
   target: mesh
-negative_mapping_count: 215
-negative_prefix_count: 9
+- count: 3
+  source: hgnc
+  target: wikipathways
+- count: 3
+  source: doid
+  target: reactome
+- count: 2
+  source: doid
+  target: wikipathways
+- count: 2
+  source: chebi
+  target: wikipathways
+negative_mapping_count: 711
+negative_prefix_count: 13
 positive:
 - count: 398
   source: go
   target: mesh
+- count: 366
+  source: go
+  target: wikipathways
 - count: 342
   source: chebi
   target: mesh
 - count: 309
   source: mesh
   target: ncit
+- count: 222
+  source: go
+  target: reactome
 - count: 113
   source: go
   target: kegg.pathway
@@ -55,9 +94,15 @@ positive:
 - count: 30
   source: doid
   target: mesh
+- count: 18
+  source: mesh
+  target: wikipathways
 - count: 11
   source: efo
   target: mesh
+- count: 8
+  source: mesh
+  target: reactome
 - count: 6
   source: hp
   target: mesh
@@ -73,8 +118,11 @@ positive:
 - count: 1
   source: fplx
   target: mesh
-positive_mapping_count: 1484
-positive_prefix_count: 15
+- count: 1
+  source: efo
+  target: wikipathways
+positive_mapping_count: 2099
+positive_prefix_count: 17
 predictions:
 - count: 12341
   source: mesh
@@ -103,11 +151,14 @@ predictions:
 - count: 50
   source: go
   target: mesh
+- count: 20
+  source: go
+  target: reactome
 - count: 6
   source: pr
   target: uniprot.chain
 - count: 3
   source: kegg.pathway
   target: mesh
-predictions_mapping_count: 30221
-predictions_prefix_count: 13
+predictions_mapping_count: 30241
+predictions_prefix_count: 14
