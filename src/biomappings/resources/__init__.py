@@ -34,6 +34,24 @@ PREDICTIONS_HEADER = [
 ]
 
 
+class MappingTuple(NamedTuple):
+    """A named tuple class for mappings."""
+
+    source_prefix: str
+    source_id: str
+    source_name: str
+    relation: str
+    target_prefix: str
+    target_identifier: str
+    target_name: str
+    type: str
+    source: str
+
+    def as_dict(self) -> Mapping[str, str]:
+        """Get the mapping tuple as a dictionary."""
+        return dict(zip(MAPPINGS_HEADER, self))
+
+
 class PredictionTuple(NamedTuple):
     """A named tuple class for predictions."""
 
@@ -81,6 +99,14 @@ def load_mappings() -> List[Dict[str, str]]:
 def append_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the mappings table."""
     _write_helper(MAPPINGS_HEADER, m, get_resource_file_path('mappings.tsv'), 'a')
+
+
+def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
+    """Append new lines to the mappings table."""
+    append_true_mappings(
+        mapping.as_dict()
+        for mapping in mappings
+    )
 
 
 def load_false_mappings() -> List[Dict[str, str]]:
