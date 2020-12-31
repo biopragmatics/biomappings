@@ -3,24 +3,24 @@
 """Generate mappings to Gilda from given PyOBO prefixes."""
 
 import itertools as itt
-from typing import Iterable, Tuple
+from typing import Iterable
 
 import gilda
 import gilda.grounder
 import pyobo
 from tqdm import tqdm
 
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import get_script_url
 
 
-def iter_gilda_prediction_tuples(prefix: str, relation: str) -> Iterable[Tuple[str, ...]]:
+def iter_gilda_prediction_tuples(prefix: str, relation: str) -> Iterable[PredictionTuple]:
     """Iterate over prediction tuples for a given prefix."""
     provenance = get_script_url(__file__)
     id_name_mapping = pyobo.get_id_name_mapping(prefix)
     for identifier, name in tqdm(id_name_mapping.items(), desc=f'Mapping {prefix}'):
         for scored_match in gilda.ground(name):
-            yield (
+            yield PredictionTuple(
                 prefix,
                 identifier,
                 name,

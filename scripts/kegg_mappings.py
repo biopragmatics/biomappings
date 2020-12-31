@@ -2,18 +2,18 @@
 
 """Generate mappings to Gilda from given PyOBO prefixes."""
 
-from typing import Iterable, Tuple
+from typing import Iterable
 
 import gilda
 import gilda.grounder
 from pyobo.sources.kegg.api import ensure_list_pathways
 from tqdm import tqdm
 
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import get_script_url
 
 
-def iterate_kegg_matches() -> Iterable[Tuple[str, ...]]:
+def iterate_kegg_matches() -> Iterable[PredictionTuple]:
     """Iterate over predictions from KEGG Pathways to GO and MeSH."""
     provenance = get_script_url(__file__)
     id_name_mapping = ensure_list_pathways()

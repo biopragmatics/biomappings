@@ -4,9 +4,9 @@
 
 import csv
 import os
-from typing import Iterable, Tuple
+from typing import Iterable
 
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import get_script_url
 
 GILDA_PATH = os.environ.get('GILDA_PATH')
@@ -39,7 +39,7 @@ def get_primary_mappings():
     return mappings
 
 
-def get_mappings() -> Iterable[Tuple[str, ...]]:
+def get_mappings() -> Iterable[PredictionTuple]:
     """Iterate lexical mappings from Gilda."""
     url = get_script_url(__file__)
     mapping_type = 'lexical'
@@ -50,7 +50,7 @@ def get_mappings() -> Iterable[Tuple[str, ...]]:
         for _, mesh_id, mesh_name, db_ns, db_id, db_name in csv.reader(fh, delimiter='\t'):
             if ('mesh', mesh_id, db_ns, db_id) in primary_mappings:
                 continue
-            yield (
+            yield PredictionTuple(
                 'mesh', mesh_id, mesh_name,
                 match_type,
                 db_ns_mappings[db_ns], db_id, db_name,

@@ -3,17 +3,17 @@
 """Append lexical mappings between MeSH and UniProt."""
 
 import re
-from typing import Iterable, Tuple
+from typing import Iterable
 
 from indra.databases import hgnc_client, mesh_client
 
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import get_script_url
 
 MESH_PROTEIN_RE = re.compile(r'^(.+) protein, human$')
 
 
-def get_mappings() -> Iterable[Tuple[str, ...]]:
+def get_mappings() -> Iterable[PredictionTuple]:
     """Iterate high-confidence lexical mappings between MeSH and UniProt human proteins."""
     url = get_script_url(__file__)
     mapping_type = 'lexical'
@@ -30,7 +30,7 @@ def get_mappings() -> Iterable[Tuple[str, ...]]:
         uniprot_id = hgnc_client.get_uniprot_id(hgnc_id)
         if not uniprot_id or ',' in uniprot_id:
             continue
-        yield (
+        yield PredictionTuple(
             'mesh', mesh_id, mesh_name,
             match_type,
             'uniprot', uniprot_id, gene_name,

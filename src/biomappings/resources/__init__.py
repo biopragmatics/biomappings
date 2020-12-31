@@ -5,7 +5,7 @@
 import csv
 import itertools as itt
 import os
-from typing import Dict, Iterable, List, Mapping, Sequence, Tuple
+from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Sequence
 
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
@@ -32,6 +32,25 @@ PREDICTIONS_HEADER = [
     'confidence',
     'source',
 ]
+
+
+class PredictionTuple(NamedTuple):
+    """A named tuple class for predictions."""
+
+    source_prefix: str
+    source_id: str
+    source_name: str
+    relation: str
+    target_prefix: str
+    target_identifier: str
+    target_name: str
+    type: str
+    confidence: float
+    source: str
+
+    def as_dict(self) -> Mapping[str, Any]:
+        """Get the prediction tuple as a dictionary."""
+        return dict(zip(PREDICTIONS_HEADER, self))
 
 
 def get_resource_file_path(fname) -> str:
@@ -84,12 +103,12 @@ def write_predictions(m: List[Mapping[str, str]]) -> None:
     _write_helper(PREDICTIONS_HEADER, m, get_resource_file_path('predictions.tsv'), 'w')
 
 
-def append_prediction_tuples(m: Iterable[Tuple[str, ...]], deduplicate: bool = True) -> None:
+def append_prediction_tuples(prediction_tuples: Iterable[PredictionTuple], deduplicate: bool = True) -> None:
     """Append new lines to the predictions table that come as canonical tuples."""
     append_predictions(
         (
-            dict(zip(PREDICTIONS_HEADER, p))
-            for p in m
+            prediction_tuple.as_dict()
+            for prediction_tuple in prediction_tuples
         ),
         deduplicate=deduplicate,
     )
