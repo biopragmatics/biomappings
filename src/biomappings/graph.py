@@ -3,11 +3,10 @@
 """Load Biomappings as a graph."""
 
 import os
+from typing import Iterable, Mapping
 
 import click
-import matplotlib.pyplot as plt
 import networkx as nx
-import seaborn as sns
 
 from biomappings.resources import load_mappings
 from biomappings.utils import IMG, MiriamValidator
@@ -15,9 +14,13 @@ from biomappings.utils import IMG, MiriamValidator
 
 def get_positive_graph() -> nx.Graph:
     """Get a graph of the positive mappings."""
+    return _graph_from_mappings(load_mappings())
+
+
+def _graph_from_mappings(mappings: Iterable[Mapping[str, str]]) -> nx.Graph:
     v = MiriamValidator()
     graph = nx.Graph()
-    for mapping in load_mappings():
+    for mapping in mappings:
         source_curie = v.get_curie(mapping['source prefix'], mapping['source identifier'])
         graph.add_node(
             source_curie,
@@ -44,6 +47,9 @@ def get_positive_graph() -> nx.Graph:
 @click.command()
 def charts():
     """Make charts."""
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+
     graph = get_positive_graph()
     node_sizes, edge_sizes, densities, n_prefixes = [], [], [], []
     n_duplicates = []
