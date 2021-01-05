@@ -53,47 +53,7 @@ https://biomappings.github.io/biomappings/.
 The equivalences are also available as a network through
 [NDEx](https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf).
 
-## ⬇️ Installation
-
-The most recent release can be installed from
-[PyPI](https://pypi.org/project/biomappings/) with:
-
-```bash
-$ pip install biomappings
-```
-
-The most recent code and data can be installed directly from GitHub with:
-
-```bash
-$ pip install git+https://github.com/biomappings/biomappings.git
-```
-
-To install in development mode, use the following:
-
-```bash
-$ git clone git+https://github.com/biomappings/biomappings.git
-$ cd biomappings
-$ pip install -e .
-```
-
-## Usage
-
-There are three main functions exposed from `biomappings`. Each loads a list of dictionaries with the mappings in each.
-
-```python
-import biomappings
-
-true_mappings = biomappings.load_mappings()
-
-false_mappings = biomappings.load_false_mappings()
-
-predictions = biomappings.load_predictions()
-```
-
-Alternatively, you can use the above links to the TSVs on GitHub in with the library or programming language of your
-choice.
-
-## 🙏 Contributing Curations
+## 🙏 Contributing
 
 ### GitHub Web Interface
 
@@ -112,8 +72,8 @@ locally.
 
 ### Locally
 
-1. Fork the repository at https://github.com/biomappings/biomappings, clone locally, and make a new branch
-2. Edit one or more of the resource files (mappings.tsv, incorrect.tsv, predictions.tsv)
+1. Fork the repository at https://github.com/biomappings/biomappings, clone locally, and make a new branch (see below)
+2. Edit one or more of the resource files (`mappings.tsv`, `incorrect.tsv`, `predictions.tsv`)
 3. Commit to your branch, push, and create a pull request back to the upstream repository.
 
 ### 🌐 Web Curation Interface
@@ -139,6 +99,59 @@ the changes.
 **Note** if you've installed `biomappings` via PyPI, then running the web curation interface doesn't make much sense,
 since it's non-trivial for most users to find the location of the resources within your Python installation's
 `site-packages` folder, and you won't be able to contribute them back.
+
+
+## ⬇️ Installation
+
+The most recent release can be installed from
+[PyPI](https://pypi.org/project/biomappings/) with:
+
+```bash
+$ pip install biomappings
+```
+
+The most recent code and data can be installed directly from GitHub with:
+
+```bash
+$ pip install git+https://github.com/biomappings/biomappings.git
+```
+
+To install in development mode, use the following:
+
+```bash
+$ git clone git+https://github.com/biomappings/biomappings.git
+$ cd biomappings
+$ pip install -e .
+```
+
+## 💪 Usage
+
+There are three main functions exposed from `biomappings`. Each loads a list of dictionaries with the mappings in each.
+
+```python
+import biomappings
+
+true_mappings = biomappings.load_mappings()
+
+false_mappings = biomappings.load_false_mappings()
+
+predictions = biomappings.load_predictions()
+```
+
+Alternatively, you can use the above links to the TSVs on GitHub in with the library or programming language of your
+choice.
+
+The data can also be loaded as [networkx](https://networkx.org/) graphs with the following functions:
+
+```python
+import biomappings
+
+true_graph = biomappings.get_true_graph()
+
+false_graph = biomappings.get_false_graph()
+
+predictions_graph = biomappings.get_predictions_graph()
+```
 
 ## ⚖️ License
 
