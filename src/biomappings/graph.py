@@ -8,13 +8,23 @@ from typing import Iterable, Mapping
 import click
 import networkx as nx
 
-from biomappings.resources import load_mappings
+from biomappings.resources import load_false_mappings, load_mappings
 from biomappings.utils import IMG, MiriamValidator
 
 
-def get_positive_graph() -> nx.Graph:
-    """Get a graph of the positive mappings."""
+def get_true_graph() -> nx.Graph:
+    """Get a graph of the true mappings."""
     return _graph_from_mappings(load_mappings())
+
+
+def get_false_graph() -> nx.Graph:
+    """Get a graph of the false mappings."""
+    return _graph_from_mappings(load_false_mappings())
+
+
+def get_predictions_graph() -> nx.Graph:
+    """Get a graph of the predicted mappings."""
+    return _graph_from_mappings(load_false_mappings())
 
 
 def _graph_from_mappings(mappings: Iterable[Mapping[str, str]]) -> nx.Graph:
@@ -50,7 +60,7 @@ def charts():
     import matplotlib.pyplot as plt
     import seaborn as sns
 
-    graph = get_positive_graph()
+    graph = get_true_graph()
     node_sizes, edge_sizes, densities, n_prefixes = [], [], [], []
     n_duplicates = []
     for c in nx.connected_components(graph):
