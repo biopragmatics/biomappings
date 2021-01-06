@@ -51,6 +51,11 @@ class MappingTuple(NamedTuple):
         """Get the mapping tuple as a dictionary."""
         return dict(zip(MAPPINGS_HEADER, self))
 
+    @classmethod
+    def from_dict(cls, mapping: Mapping[str, str]) -> 'MappingTuple':
+        """Get the mapping tuple from a dictionary."""
+        return cls(*[mapping[key] for key in MAPPINGS_HEADER])
+
 
 class PredictionTuple(NamedTuple):
     """A named tuple class for predictions."""
@@ -69,6 +74,11 @@ class PredictionTuple(NamedTuple):
     def as_dict(self) -> Mapping[str, Any]:
         """Get the prediction tuple as a dictionary."""
         return dict(zip(PREDICTIONS_HEADER, self))
+
+    @classmethod
+    def from_dict(cls, mapping: Mapping[str, str]) -> 'PredictionTuple':
+        """Get the prediction tuple from a dictionary."""
+        return cls(*[mapping[key] for key in PREDICTIONS_HEADER])
 
 
 def get_resource_file_path(fname) -> str:
