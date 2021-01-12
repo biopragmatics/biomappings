@@ -18,17 +18,19 @@ has been done. Higher density components means that they have been checked multi
 
 ### Duplicate Prefixes
 
-{% for entry in site.data.components_with_duplicate_prefixes %}
-    <p><ul>
-    {% for x in entry %}
-        <li>
-        {{ x.name }}
-        ({% if (x.identifier | lowercase) contains x.prefix %}
-        <a href="https://identifiers.org/{{x.identifier}}">{{x.identifier}}]</a>
-        {% else %}
-        <a href="https://identifiers.org/{{x.prefix}}:{{x.identifier}}">{{x.prefix}}:{{x.identifier}}</a>
-        {% endif %})
-        </li>
-    {% endfor %}
-    </ul></p>
+<div>
+{% for nodes in site.data.components_with_duplicate_prefixes %}
+<ul>
+{% for node in nodes %}
+<li>
+{{ node.name }}
+({% if (node.identifier | lowercase) contains node.prefix %}
+<a href="https://identifiers.org/{{node.identifier}}">{{node.identifier}}]</a>
+{% else %}
+<a href="https://identifiers.org/{{node.prefix}}:{{node.identifier}}">{{node.prefix}}:{{node.identifier}}</a>
+{% endif %})
+</li>
 {% endfor %}
+</ul>
+{% endfor %}
+</div>
