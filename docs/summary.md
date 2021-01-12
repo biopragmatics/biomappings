@@ -23,7 +23,7 @@ has been done. Higher density components means that they have been checked multi
     <li><ul>
     {% for x in entry %}
         <li>
-            {{ entry.name }} ({{entry.identifier}})
+            {{ x.name }} ({{x.prefix}}:{{x.identifier}})
         </li>
     {% endfor %}
     </ul></li>
