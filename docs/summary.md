@@ -59,8 +59,8 @@ opportunity to make the other relations much higher confidence.
 <ul>
 {% for edge in entry['edges'] %}
 <li>
-<a href="https://identifiers.org/{{ edge[0] }}">{{ edge[0] }}</a> -
-<a href="https://identifiers.org/{{ edge[1] }}">{{ edge[1] }}</a>
+{{ entry['nodes'][edge[0]].name }} (<a href="{{ entry['nodes'][edge[0]].link }}">{{ edge[0] }}</a>) skos:exactMatch
+{{ entry['nodes'][edge[1]].name }} (<a href="{{ entry['nodes'][edge[1]].link }}">{{ edge[1] }}</a>)
 </li>
 {% endfor %}
 </ul>
