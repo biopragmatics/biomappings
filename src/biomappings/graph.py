@@ -111,7 +111,13 @@ def charts():
         if node_size > 2 and edge_size < (node_size * (node_size - 1) / 2):
             incomplete_components.append({
                 'nodes': nodes_data,
-                'edges': list(nx.complement(component.copy()).edges()),
+                'edges': [
+                    {
+                        'source': {'curie': u, **nodes_data[u]},
+                        'target': {'curie': v, **nodes_data[v]},
+                    }
+                    for u, v in nx.complement(component.copy()).edges()
+                ],
             })
 
         prefixes = [

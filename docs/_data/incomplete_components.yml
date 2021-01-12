@@ -1,6 +1,16 @@
 - edges:
-  - - pfam:PF01391
-    - CHEBI:3815
+  - source:
+      curie: pfam:PF01391
+      identifier: PF01391
+      link: https://identifiers.org/pfam:PF01391
+      name: Collagen
+      prefix: pfam
+    target:
+      curie: CHEBI:3815
+      identifier: CHEBI:3815
+      link: https://identifiers.org/CHEBI:3815
+      name: Collagen
+      prefix: chebi
   nodes:
     CHEBI:3815:
       identifier: CHEBI:3815
@@ -18,8 +28,18 @@
       name: Collagen
       prefix: pfam
 - edges:
-  - - ncit:C1707
-    - CHEBI:10023
+  - source:
+      curie: ncit:C1707
+      identifier: C1707
+      link: https://identifiers.org/ncit:C1707
+      name: Voriconazole
+      prefix: ncit
+    target:
+      curie: CHEBI:10023
+      identifier: CHEBI:10023
+      link: https://identifiers.org/CHEBI:10023
+      name: voriconazole
+      prefix: chebi
   nodes:
     CHEBI:10023:
       identifier: CHEBI:10023
@@ -37,8 +57,18 @@
       name: Voriconazole
       prefix: ncit
 - edges:
-  - - ncit:C73192
-    - CHEBI:135931
+  - source:
+      curie: ncit:C73192
+      identifier: C73192
+      link: https://identifiers.org/ncit:C73192
+      name: Dexlansoprazole
+      prefix: ncit
+    target:
+      curie: CHEBI:135931
+      identifier: CHEBI:135931
+      link: https://identifiers.org/CHEBI:135931
+      name: dexlansoprazole
+      prefix: chebi
   nodes:
     CHEBI:135931:
       identifier: CHEBI:135931
@@ -56,8 +86,18 @@
       name: Dexlansoprazole
       prefix: ncit
 - edges:
-  - - CHEBI:6375
-    - ncit:C29150
+  - source:
+      curie: ncit:C29150
+      identifier: C29150
+      link: https://identifiers.org/ncit:C29150
+      name: Lansoprazole
+      prefix: ncit
+    target:
+      curie: CHEBI:6375
+      identifier: CHEBI:6375
+      link: https://identifiers.org/CHEBI:6375
+      name: lansoprazole
+      prefix: chebi
   nodes:
     CHEBI:6375:
       identifier: CHEBI:6375
@@ -75,8 +115,18 @@
       name: Lansoprazole
       prefix: ncit
 - edges:
-  - - CHEBI:63598
-    - ncit:C1586
+  - source:
+      curie: CHEBI:63598
+      identifier: CHEBI:63598
+      link: https://identifiers.org/CHEBI:63598
+      name: levofloxacin
+      prefix: chebi
+    target:
+      curie: ncit:C1586
+      identifier: C1586
+      link: https://identifiers.org/ncit:C1586
+      name: Levofloxacin
+      prefix: ncit
   nodes:
     CHEBI:63598:
       identifier: CHEBI:63598
@@ -94,8 +144,18 @@
       name: Levofloxacin
       prefix: ncit
 - edges:
-  - - ncit:C13365
-    - GO:0005816
+  - source:
+      curie: GO:0005816
+      identifier: GO:0005816
+      link: https://identifiers.org/GO:0005816
+      name: spindle pole body
+      prefix: go
+    target:
+      curie: ncit:C13365
+      identifier: C13365
+      link: https://identifiers.org/ncit:C13365
+      name: Spindle Pole Body
+      prefix: ncit
   nodes:
     GO:0005816:
       identifier: GO:0005816
@@ -113,8 +173,18 @@
       name: Spindle Pole Body
       prefix: ncit
 - edges:
-  - - ncit:C30006
-    - hgnc:11393
+  - source:
+      curie: hgnc:11393
+      identifier: '11393'
+      link: https://identifiers.org/hgnc:11393
+      name: AURKA
+      prefix: hgnc
+    target:
+      curie: ncit:C30006
+      identifier: C30006
+      link: https://identifiers.org/ncit:C30006
+      name: Aurora Kinase A
+      prefix: ncit
   nodes:
     hgnc:11393:
       identifier: '11393'
@@ -132,8 +202,18 @@
       name: Aurora Kinase A
       prefix: ncit
 - edges:
-  - - ncit:C65538
-    - CHEBI:50275
+  - source:
+      curie: ncit:C65538
+      identifier: C65538
+      link: https://identifiers.org/ncit:C65538
+      name: Esomeprazole
+      prefix: ncit
+    target:
+      curie: CHEBI:50275
+      identifier: CHEBI:50275
+      link: https://identifiers.org/CHEBI:50275
+      name: esomeprazole
+      prefix: chebi
   nodes:
     CHEBI:50275:
       identifier: CHEBI:50275
@@ -151,8 +231,18 @@
       name: Esomeprazole
       prefix: ncit
 - edges:
-  - - hgnc:11390
-    - ncit:C68596
+  - source:
+      curie: ncit:C68596
+      identifier: C68596
+      link: https://identifiers.org/ncit:C68596
+      name: Aurora Kinase B
+      prefix: ncit
+    target:
+      curie: hgnc:11390
+      identifier: '11390'
+      link: https://identifiers.org/hgnc:11390
+      name: AURKB
+      prefix: hgnc
   nodes:
     hgnc:11390:
       identifier: '11390'
@@ -170,8 +260,18 @@
       name: Aurora Kinase B
       prefix: ncit
 - edges:
-  - - ncit:C2160
-    - CHEBI:52726
+  - source:
+      curie: CHEBI:52726
+      identifier: CHEBI:52726
+      link: https://identifiers.org/CHEBI:52726
+      name: proteasome inhibitor
+      prefix: chebi
+    target:
+      curie: ncit:C2160
+      identifier: C2160
+      link: https://identifiers.org/ncit:C2160
+      name: Proteasome Inhibitor
+      prefix: ncit
   nodes:
     CHEBI:52726:
       identifier: CHEBI:52726
@@ -189,8 +289,18 @@
       name: Proteasome Inhibitor
       prefix: ncit
 - edges:
-  - - mesh:D059765
-    - kegg.pathway:map03440
+  - source:
+      curie: mesh:D059765
+      identifier: D059765
+      link: https://identifiers.org/mesh:D059765
+      name: Homologous Recombination
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map03440
+      identifier: map03440
+      link: https://identifiers.org/kegg.pathway:map03440
+      name: Homologous recombination
+      prefix: kegg.pathway
   nodes:
     GO:0035825:
       identifier: GO:0035825
@@ -208,8 +318,18 @@
       name: Homologous Recombination
       prefix: mesh
 - edges:
-  - - mesh:D000071437
-    - kegg.pathway:map04360
+  - source:
+      curie: mesh:D000071437
+      identifier: D000071437
+      link: https://identifiers.org/mesh:D000071437
+      name: Axon Guidance
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map04360
+      identifier: map04360
+      link: https://identifiers.org/kegg.pathway:map04360
+      name: Axon guidance
+      prefix: kegg.pathway
   nodes:
     GO:0007411:
       identifier: GO:0007411
@@ -227,8 +347,18 @@
       name: Axon Guidance
       prefix: mesh
 - edges:
-  - - mesh:D000078790
-    - kegg.pathway:map04911
+  - source:
+      curie: mesh:D000078790
+      identifier: D000078790
+      link: https://identifiers.org/mesh:D000078790
+      name: Insulin Secretion
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map04911
+      identifier: map04911
+      link: https://identifiers.org/kegg.pathway:map04911
+      name: Insulin secretion
+      prefix: kegg.pathway
   nodes:
     GO:0030073:
       identifier: GO:0030073
@@ -246,8 +376,18 @@
       name: Insulin Secretion
       prefix: mesh
 - edges:
-  - - mesh:D002453
-    - kegg.pathway:map04110
+  - source:
+      curie: kegg.pathway:map04110
+      identifier: map04110
+      link: https://identifiers.org/kegg.pathway:map04110
+      name: Cell cycle
+      prefix: kegg.pathway
+    target:
+      curie: mesh:D002453
+      identifier: D002453
+      link: https://identifiers.org/mesh:D002453
+      name: Cell Cycle
+      prefix: mesh
   nodes:
     GO:0007049:
       identifier: GO:0007049
@@ -265,8 +405,18 @@
       name: Cell Cycle
       prefix: mesh
 - edges:
-  - - kegg.pathway:map04144
-    - mesh:D004705
+  - source:
+      curie: mesh:D004705
+      identifier: D004705
+      link: https://identifiers.org/mesh:D004705
+      name: Endocytosis
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map04144
+      identifier: map04144
+      link: https://identifiers.org/kegg.pathway:map04144
+      name: Endocytosis
+      prefix: kegg.pathway
   nodes:
     GO:0006897:
       identifier: GO:0006897
@@ -284,8 +434,18 @@
       name: Endocytosis
       prefix: mesh
 - edges:
-  - - kegg.pathway:map00970
-    - mesh:D046249
+  - source:
+      curie: kegg.pathway:map00970
+      identifier: map00970
+      link: https://identifiers.org/kegg.pathway:map00970
+      name: Aminoacyl-tRNA biosynthesis
+      prefix: kegg.pathway
+    target:
+      curie: mesh:D046249
+      identifier: D046249
+      link: https://identifiers.org/mesh:D046249
+      name: Transfer RNA Aminoacylation
+      prefix: mesh
   nodes:
     GO:0043039:
       identifier: GO:0043039
@@ -303,8 +463,18 @@
       name: Transfer RNA Aminoacylation
       prefix: mesh
 - edges:
-  - - kegg.pathway:map04310
-    - mesh:D060449
+  - source:
+      curie: mesh:D060449
+      identifier: D060449
+      link: https://identifiers.org/mesh:D060449
+      name: Wnt Signaling Pathway
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map04310
+      identifier: map04310
+      link: https://identifiers.org/kegg.pathway:map04310
+      name: Wnt signaling pathway
+      prefix: kegg.pathway
   nodes:
     GO:0016055:
       identifier: GO:0016055
@@ -322,8 +492,18 @@
       name: Wnt Signaling Pathway
       prefix: mesh
 - edges:
-  - - mesh:D002940
-    - kegg.pathway:map04710
+  - source:
+      curie: mesh:D002940
+      identifier: D002940
+      link: https://identifiers.org/mesh:D002940
+      name: Circadian Rhythm
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map04710
+      identifier: map04710
+      link: https://identifiers.org/kegg.pathway:map04710
+      name: Circadian rhythm
+      prefix: kegg.pathway
   nodes:
     GO:0007623:
       identifier: GO:0007623
@@ -341,8 +521,18 @@
       name: Circadian Rhythm
       prefix: mesh
 - edges:
-  - - kegg.pathway:map03030
-    - mesh:D004261
+  - source:
+      curie: mesh:D004261
+      identifier: D004261
+      link: https://identifiers.org/mesh:D004261
+      name: DNA Replication
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map03030
+      identifier: map03030
+      link: https://identifiers.org/kegg.pathway:map03030
+      name: DNA replication
+      prefix: kegg.pathway
   nodes:
     GO:0006260:
       identifier: GO:0006260
@@ -360,8 +550,18 @@
       name: DNA Replication
       prefix: mesh
 - edges:
-  - - kegg.pathway:map00190
-    - mesh:D010085
+  - source:
+      curie: kegg.pathway:map00190
+      identifier: map00190
+      link: https://identifiers.org/kegg.pathway:map00190
+      name: Oxidative phosphorylation
+      prefix: kegg.pathway
+    target:
+      curie: mesh:D010085
+      identifier: D010085
+      link: https://identifiers.org/mesh:D010085
+      name: Oxidative Phosphorylation
+      prefix: mesh
   nodes:
     GO:0006119:
       identifier: GO:0006119
@@ -379,8 +579,18 @@
       name: Oxidative Phosphorylation
       prefix: mesh
 - edges:
-  - - kegg.pathway:map00195
-    - mesh:D010788
+  - source:
+      curie: mesh:D010788
+      identifier: D010788
+      link: https://identifiers.org/mesh:D010788
+      name: Photosynthesis
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map00195
+      identifier: map00195
+      link: https://identifiers.org/kegg.pathway:map00195
+      name: Photosynthesis
+      prefix: kegg.pathway
   nodes:
     GO:0015979:
       identifier: GO:0015979
@@ -398,8 +608,18 @@
       name: Photosynthesis
       prefix: mesh
 - edges:
-  - - kegg.pathway:map04611
-    - mesh:D015539
+  - source:
+      curie: mesh:D015539
+      identifier: D015539
+      link: https://identifiers.org/mesh:D015539
+      name: Platelet Activation
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map04611
+      identifier: map04611
+      link: https://identifiers.org/kegg.pathway:map04611
+      name: Platelet activation
+      prefix: kegg.pathway
   nodes:
     GO:0030168:
       identifier: GO:0030168
@@ -417,8 +637,18 @@
       name: Platelet Activation
       prefix: mesh
 - edges:
-  - - kegg.pathway:map04218
-    - mesh:D016922
+  - source:
+      curie: mesh:D016922
+      identifier: D016922
+      link: https://identifiers.org/mesh:D016922
+      name: Cellular Senescence
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map04218
+      identifier: map04218
+      link: https://identifiers.org/kegg.pathway:map04218
+      name: Cellular senescence
+      prefix: kegg.pathway
   nodes:
     GO:0090398:
       identifier: GO:0090398
@@ -436,8 +666,18 @@
       name: Cellular Senescence
       prefix: mesh
 - edges:
-  - - mesh:D017209
-    - kegg.pathway:map04210
+  - source:
+      curie: kegg.pathway:map04210
+      identifier: map04210
+      link: https://identifiers.org/kegg.pathway:map04210
+      name: Apoptosis
+      prefix: kegg.pathway
+    target:
+      curie: mesh:D017209
+      identifier: D017209
+      link: https://identifiers.org/mesh:D017209
+      name: Apoptosis
+      prefix: mesh
   nodes:
     GO:0006915:
       identifier: GO:0006915
@@ -455,8 +695,18 @@
       name: Apoptosis
       prefix: mesh
 - edges:
-  - - mesh:D034443
-    - kegg.pathway:map03013
+  - source:
+      curie: mesh:D034443
+      identifier: D034443
+      link: https://identifiers.org/mesh:D034443
+      name: RNA Transport
+      prefix: mesh
+    target:
+      curie: kegg.pathway:map03013
+      identifier: map03013
+      link: https://identifiers.org/kegg.pathway:map03013
+      name: RNA transport
+      prefix: kegg.pathway
   nodes:
     GO:0050658:
       identifier: GO:0050658
@@ -474,8 +724,18 @@
       name: RNA Transport
       prefix: mesh
 - edges:
-  - - mesh:D010427
-    - kegg.pathway:map00030
+  - source:
+      curie: kegg.pathway:map00030
+      identifier: map00030
+      link: https://identifiers.org/kegg.pathway:map00030
+      name: Pentose phosphate pathway
+      prefix: kegg.pathway
+    target:
+      curie: mesh:D010427
+      identifier: D010427
+      link: https://identifiers.org/mesh:D010427
+      name: Pentose Phosphate Pathway
+      prefix: mesh
   nodes:
     GO:0006098:
       identifier: GO:0006098
@@ -493,8 +753,18 @@
       name: Pentose Phosphate Pathway
       prefix: mesh
 - edges:
-  - - kegg.pathway:map02024
-    - mesh:D053038
+  - source:
+      curie: kegg.pathway:map02024
+      identifier: map02024
+      link: https://identifiers.org/kegg.pathway:map02024
+      name: Quorum sensing
+      prefix: kegg.pathway
+    target:
+      curie: mesh:D053038
+      identifier: D053038
+      link: https://identifiers.org/mesh:D053038
+      name: Quorum Sensing
+      prefix: mesh
   nodes:
     GO:0009372:
       identifier: GO:0009372
@@ -512,8 +782,18 @@
       name: Quorum Sensing
       prefix: mesh
 - edges:
-  - - kegg.pathway:map03430
-    - mesh:D053843
+  - source:
+      curie: kegg.pathway:map03430
+      identifier: map03430
+      link: https://identifiers.org/kegg.pathway:map03430
+      name: Mismatch repair
+      prefix: kegg.pathway
+    target:
+      curie: mesh:D053843
+      identifier: D053843
+      link: https://identifiers.org/mesh:D053843
+      name: DNA Mismatch Repair
+      prefix: mesh
   nodes:
     GO:0006298:
       identifier: GO:0006298
@@ -531,12 +811,42 @@
       name: DNA Mismatch Repair
       prefix: mesh
 - edges:
-  - - GO:0033209
-    - GO:0033211
-  - - GO:0033209
-    - GO:0033210
-  - - GO:0033211
-    - GO:0033210
+  - source:
+      curie: GO:0033209
+      identifier: GO:0033209
+      link: https://identifiers.org/GO:0033209
+      name: tumor necrosis factor-mediated signaling pathway
+      prefix: go
+    target:
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
+      prefix: go
+  - source:
+      curie: GO:0033209
+      identifier: GO:0033209
+      link: https://identifiers.org/GO:0033209
+      name: tumor necrosis factor-mediated signaling pathway
+      prefix: go
+    target:
+      curie: GO:0033211
+      identifier: GO:0033211
+      link: https://identifiers.org/GO:0033211
+      name: adiponectin-activated signaling pathway
+      prefix: go
+  - source:
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
+      prefix: go
+    target:
+      curie: GO:0033211
+      identifier: GO:0033211
+      link: https://identifiers.org/GO:0033211
+      name: adiponectin-activated signaling pathway
+      prefix: go
   nodes:
     GO:0033209:
       identifier: GO:0033209
@@ -559,8 +869,18 @@
       name: Adipocytokine signaling pathway
       prefix: kegg.pathway
 - edges:
-  - - mesh:D000079302
-    - GO:0070266
+  - source:
+      curie: GO:0070266
+      identifier: GO:0070266
+      link: https://identifiers.org/GO:0070266
+      name: necroptotic process
+      prefix: go
+    target:
+      curie: mesh:D000079302
+      identifier: D000079302
+      link: https://identifiers.org/mesh:D000079302
+      name: Necroptosis
+      prefix: mesh
   nodes:
     GO:0070266:
       identifier: GO:0070266
