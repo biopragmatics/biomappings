@@ -18,19 +18,34 @@ has been done. Higher density components means that they have been checked multi
 
 ### Duplicate Prefixes
 
-<div>
+If two concepts with the same prefix appear in the same equivalence component, there is typically an error in curation.
+
+<ol>
 {% for nodes in site.data.components_with_duplicate_prefixes %}
-<ul>
+<li><ul>
 {% for node in nodes %}
 <li>
-{{ node.name }}
-({% if (node.identifier | downcase) contains node.prefix %}
-<a href="https://identifiers.org/{{node.identifier}}">{{node.identifier}}</a>
-{% else %}
-<a href="https://identifiers.org/{{node.prefix}}:{{node.identifier}}">{{node.prefix}}:{{node.identifier}}</a>
-{% endif %})
+{{ node.name }} (<a href="{{ node.link }}">{{ node.curie }}</a>)
 </li>
 {% endfor %}
-</ul>
+</ul></li>
 {% endfor %}
-</div>
+</ol>
+
+### Incomplete Triangles
+
+Incomplete triangles are components within the graph such that `A skos:exactMatch B`, `B skos:exactMatch C`, but it is
+not explicitly curated that `A skos:exactMatch C`. Curating the relationship between `A` and `C` relation is an
+opportunity to make the other relations much higher confidence.
+
+<ol>
+{% for nodes in site.data.incomplete_components %}
+<li><ul>
+{% for node in nodes %}
+<li>
+{{ node.name }} (<a href="{{ node.link }}">{{ node.curie }}</a>)
+</li>
+{% endfor %}
+</ul></li>
+{% endfor %}
+</ol>

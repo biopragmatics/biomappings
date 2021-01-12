@@ -4,6 +4,7 @@
 
 import os
 from collections import Counter
+from operator import itemgetter
 from typing import Iterable, List, Mapping, Optional, Sequence
 
 import click
@@ -81,21 +82,33 @@ def charts():
     import matplotlib.pyplot as plt
     import seaborn as sns
 
+    v = MiriamValidator()
     graph = get_true_graph(include=['skos:exactMatch'])
     component_node_sizes, component_edge_sizes, component_densities, component_number_prefixes = [], [], [], []
     # prefix_list = []
     components_with_duplicate_prefixes = []
-
+    incomplete_components = []
     n_duplicates = []
     for component in nx.connected_components(graph):
         component = graph.subgraph(component)
-
         node_size = component.number_of_nodes()
-        component_node_sizes.append(node_size)
-        component_edge_sizes.append(component.number_of_edges())
+        edge_size = component.number_of_edges()
 
+        nodes_data = [
+            {
+                'curie': curie,
+                'link': v.get_url(data['prefix'], data['identifier']),
+                **data,
+            }
+            for curie, data in sorted(component.nodes(data=True), key=itemgetter(0))
+        ]
+
+        component_node_sizes.append(node_size)
+        component_edge_sizes.append(edge_size)
         if node_size > 2:
             component_densities.append(nx.density(component))
+        if node_size > 2 and edge_size < (node_size * (node_size - 1) / 2):
+            incomplete_components.append(nodes_data)
 
         prefixes = [
             graph.nodes[node]['prefix']
@@ -107,11 +120,10 @@ def charts():
         _n_duplicates = len(prefixes) - unique_prefixes
         n_duplicates.append(_n_duplicates)
         if _n_duplicates:
-            components_with_duplicate_prefixes.append([
-                data
-                for _node, data in component.nodes(data=True)
-            ])
+            components_with_duplicate_prefixes.append(nodes_data)
 
+    with open(os.path.join(DATA, 'incomplete_components.yml'), 'w') as file:
+        yaml.safe_dump(incomplete_components, file)
     with open(os.path.join(DATA, 'components_with_duplicate_prefixes.yml'), 'w') as file:
         yaml.safe_dump(components_with_duplicate_prefixes, file)
 
