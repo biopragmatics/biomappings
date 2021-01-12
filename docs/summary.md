@@ -25,7 +25,7 @@ has been done. Higher density components means that they have been checked multi
 <li>
 {{ node.name }}
 ({% if (node.identifier | lowercase) contains node.prefix %}
-<a href="https://identifiers.org/{{node.identifier}}">{{node.identifier}}]</a>
+<a href="https://identifiers.org/{{node.identifier}}">{{node.identifier}}</a>
 {% else %}
 <a href="https://identifiers.org/{{node.prefix}}:{{node.identifier}}">{{node.prefix}}:{{node.identifier}}</a>
 {% endif %})
