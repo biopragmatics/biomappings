@@ -1,0 +1,21 @@
+- - identifier: PR:000050135
+    name: complement C3 alpha chain (human)
+    prefix: pr
+  - identifier: PR:000050120
+    name: complement C3 alpha chain
+    prefix: pr
+  - identifier: PRO_0000005909
+    name: Complement C3 alpha chain
+    prefix: uniprot.chain
+- - identifier: map04920
+    name: Adipocytokine signaling pathway
+    prefix: kegg.pathway
+  - identifier: GO:0033211
+    name: adiponectin-activated signaling pathway
+    prefix: go
+  - identifier: GO:0033210
+    name: leptin-mediated signaling pathway
+    prefix: go
+  - identifier: GO:0033209
+    name: tumor necrosis factor-mediated signaling pathway
+    prefix: go

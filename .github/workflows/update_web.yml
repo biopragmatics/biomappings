@@ -15,7 +15,7 @@ jobs:
           python-version: 3.9
       - name: Create local changes
         run: |
-          pip install -e .
+          pip install -e .[charts]
           biomappings export
           biomappings charts
       - name: Commit files

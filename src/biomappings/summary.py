@@ -19,9 +19,9 @@ __all__ = [
 def export():
     """Create export data file."""
     from biomappings.resources import load_mappings, load_predictions, load_false_mappings
+    from biomappings.utils import DATA
 
-    here = os.path.abspath(os.path.dirname(__file__))
-    path = os.path.join(here, os.pardir, os.pardir, 'docs', '_data', 'summary.yml')
+    path = os.path.join(DATA, 'summary.yml')
 
     true_mappings = load_mappings()
     false_mappings = load_false_mappings()

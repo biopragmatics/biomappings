@@ -1,5 +1,5 @@
 graft src
-graft docs
+prune docs
 prune scripts
 prune docs/_data
 

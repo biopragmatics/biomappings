@@ -11,7 +11,9 @@ import requests
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESOURCE_PATH = os.path.abspath(os.path.join(HERE, 'resources'))
-IMG = os.path.abspath(os.path.join(HERE, os.pardir, os.pardir, 'docs', 'img'))
+DOCS = os.path.abspath(os.path.join(HERE, os.pardir, os.pardir, 'docs'))
+IMG = os.path.join(DOCS, 'img')
+DATA = os.path.join(DOCS, '_data')
 
 
 def get_git_hash() -> Optional[str]:
