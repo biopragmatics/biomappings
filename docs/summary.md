@@ -23,7 +23,11 @@ has been done. Higher density components means that they have been checked multi
     <li><ul>
     {% for x in entry %}
         <li>
-            {{ x.name }} ({{x.prefix}}:{{x.identifier}})
+            {% if (x.identifier | lowercase) contains x.prefix %}
+            {{ x.name }} ([{{x.identifier}}](https://identifiers.org/{{x.identifier}}))
+            {% else %}
+            {{ x.name }} ([{{x.prefix}}:{{x.identifier}}](https://identifiers.org/{{x.prefix}}:{{x.identifier}}))
+            {% endif %}
         </li>
     {% endfor %}
     </ul></li>
