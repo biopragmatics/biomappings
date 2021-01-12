@@ -4,6 +4,12 @@ title: Summary
 permalink: /summary/
 ---
 
+## Full Summary
+
+This chart shows the summary of positive mappings, as a shortened version of the home page.
+
+<img src="https://raw.githubusercontent.com/biomappings/biomappings/master/docs/img/summary.png" alt="Summary"/>
+
 ## Component Summaries
 
 An undirected graph can be generated from equivalences in which all entities in a component can be considered equivalent
@@ -12,7 +18,7 @@ due to the transitivity of the relationship.
 This chart shows various aspects of the positive mappings graph. Larger components means that more extensive curation
 has been done. Higher density components means that they have been checked multiple times.
 
-<img src="https://raw.githubusercontent.com/biomappings/biomappings/master/docs/img/components.png" alt="Comparison"/>
+<img src="https://raw.githubusercontent.com/biomappings/biomappings/master/docs/img/components.png" alt="Component Summary"/>
 
 ## Curation Warnings
 
@@ -25,7 +31,7 @@ If two concepts with the same prefix appear in the same equivalence component, t
 <li><ul>
 {% for node in nodes %}
 <li>
-{{ node.name }} (<a href="{{ node.link }}">{{ node.curie }}</a>)
+{{ node[1].name }} (<a href="{{ node[1].link }}">{{ node[0] }}</a>)
 </li>
 {% endfor %}
 </ul></li>
@@ -39,13 +45,25 @@ not explicitly curated that `A skos:exactMatch C`. Curating the relationship bet
 opportunity to make the other relations much higher confidence.
 
 <ol>
-{% for nodes in site.data.incomplete_components %}
-<li><ul>
-{% for node in nodes %}
+{% for entry in site.data.incomplete_components %}
 <li>
-{{ node.name }} (<a href="{{ node.link }}">{{ node.curie }}</a>)
+<p>Nodes</p>
+<ul>
+{% for node in entry['nodes'] %}
+<li>
+{{ node[1].name }} (<a href="{{ node[1].link }}">{{ node[0] }}</a>)
 </li>
 {% endfor %}
-</ul></li>
+</ul>
+<p>Missing Edges</p>
+<ul>
+{% for edge in entry['edges'] %}
+<li>
+<a href="https://identifiers.org/{{ edge[0] }}">{{ edge[0] }}</a> -
+<a href="https://identifiers.org/{{ edge[1] }}">{{ edge[1] }}</a>
+</li>
+{% endfor %}
+</ul>
+</li>
 {% endfor %}
 </ol>

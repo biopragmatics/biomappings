@@ -83,38 +83,42 @@ def charts():
     import seaborn as sns
 
     v = MiriamValidator()
-    graph = get_true_graph(include=['skos:exactMatch'])
+    true_mappings = load_mappings()
+    true_graph = _graph_from_mappings(true_mappings, include=['skos:exactMatch'])
+
     component_node_sizes, component_edge_sizes, component_densities, component_number_prefixes = [], [], [], []
-    # prefix_list = []
+    prefix_list = []
     components_with_duplicate_prefixes = []
     incomplete_components = []
     n_duplicates = []
-    for component in nx.connected_components(graph):
-        component = graph.subgraph(component)
+    for component in nx.connected_components(true_graph):
+        component = true_graph.subgraph(component)
         node_size = component.number_of_nodes()
         edge_size = component.number_of_edges()
 
-        nodes_data = [
-            {
-                'curie': curie,
+        nodes_data = {
+            curie: {
                 'link': v.get_url(data['prefix'], data['identifier']),
                 **data,
             }
             for curie, data in sorted(component.nodes(data=True), key=itemgetter(0))
-        ]
+        }
 
         component_node_sizes.append(node_size)
         component_edge_sizes.append(edge_size)
         if node_size > 2:
             component_densities.append(nx.density(component))
         if node_size > 2 and edge_size < (node_size * (node_size - 1) / 2):
-            incomplete_components.append(nodes_data)
+            incomplete_components.append({
+                'nodes': nodes_data,
+                'edges': list(nx.complement(component.copy()).edges()),
+            })
 
         prefixes = [
-            graph.nodes[node]['prefix']
+            true_graph.nodes[node]['prefix']
             for node in component
         ]
-        # prefix_list.extend(prefixes)
+        prefix_list.extend(prefixes)
         unique_prefixes = len(set(prefixes))
         component_number_prefixes.append(unique_prefixes)
         _n_duplicates = len(prefixes) - unique_prefixes
@@ -155,11 +159,24 @@ def charts():
     axes[1][1].set_title('Number Duplicate Prefixes')
 
     axes[1][2].axis('off')
-    # sns.countplot(y=prefix_list, ax=axes[1][2], order=[k for k, _ in Counter(prefix_list).most_common()])
-    # axes[1][2].set_xscale('log')
-    # axes[1][2].set_title('Prefix Frequency')
 
     path = os.path.join(IMG, 'components.png')
+    print('saving to', path)
+    plt.tight_layout()
+    plt.savefig(path, dpi=300)
+    plt.close(fig)
+
+    fig, axes = plt.subplots(1, 2, figsize=(8, 3.5))
+    sns.countplot(y=prefix_list, ax=axes[0], order=[k for k, _ in Counter(prefix_list).most_common()])
+    axes[0].set_xscale('log')
+    axes[0].set_title('Prefix Frequency')
+
+    relations = [m['relation'] for m in true_mappings]
+    sns.countplot(y=relations, ax=axes[1], order=[k for k, _ in Counter(relations).most_common()])
+    axes[1].set_xscale('log')
+    axes[1].set_title('Relation Frequency')
+
+    path = os.path.join(IMG, 'summary.png')
     print('saving to', path)
     plt.tight_layout()
     plt.savefig(path, dpi=300)
