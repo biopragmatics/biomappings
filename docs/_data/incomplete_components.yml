@@ -87,17 +87,17 @@
       prefix: ncit
 - edges:
   - source:
-      curie: ncit:C29150
-      identifier: C29150
-      link: https://identifiers.org/ncit:C29150
-      name: Lansoprazole
-      prefix: ncit
-    target:
       curie: CHEBI:6375
       identifier: CHEBI:6375
       link: https://identifiers.org/CHEBI:6375
       name: lansoprazole
       prefix: chebi
+    target:
+      curie: ncit:C29150
+      identifier: C29150
+      link: https://identifiers.org/ncit:C29150
+      name: Lansoprazole
+      prefix: ncit
   nodes:
     CHEBI:6375:
       identifier: CHEBI:6375
@@ -116,17 +116,17 @@
       prefix: ncit
 - edges:
   - source:
-      curie: CHEBI:63598
-      identifier: CHEBI:63598
-      link: https://identifiers.org/CHEBI:63598
-      name: levofloxacin
-      prefix: chebi
-    target:
       curie: ncit:C1586
       identifier: C1586
       link: https://identifiers.org/ncit:C1586
       name: Levofloxacin
       prefix: ncit
+    target:
+      curie: CHEBI:63598
+      identifier: CHEBI:63598
+      link: https://identifiers.org/CHEBI:63598
+      name: levofloxacin
+      prefix: chebi
   nodes:
     CHEBI:63598:
       identifier: CHEBI:63598
@@ -145,17 +145,17 @@
       prefix: ncit
 - edges:
   - source:
-      curie: GO:0005816
-      identifier: GO:0005816
-      link: https://identifiers.org/GO:0005816
-      name: spindle pole body
-      prefix: go
-    target:
       curie: ncit:C13365
       identifier: C13365
       link: https://identifiers.org/ncit:C13365
       name: Spindle Pole Body
       prefix: ncit
+    target:
+      curie: GO:0005816
+      identifier: GO:0005816
+      link: https://identifiers.org/GO:0005816
+      name: spindle pole body
+      prefix: go
   nodes:
     GO:0005816:
       identifier: GO:0005816
@@ -203,17 +203,17 @@
       prefix: ncit
 - edges:
   - source:
-      curie: ncit:C65538
-      identifier: C65538
-      link: https://identifiers.org/ncit:C65538
-      name: Esomeprazole
-      prefix: ncit
-    target:
       curie: CHEBI:50275
       identifier: CHEBI:50275
       link: https://identifiers.org/CHEBI:50275
       name: esomeprazole
       prefix: chebi
+    target:
+      curie: ncit:C65538
+      identifier: C65538
+      link: https://identifiers.org/ncit:C65538
+      name: Esomeprazole
+      prefix: ncit
   nodes:
     CHEBI:50275:
       identifier: CHEBI:50275
@@ -377,17 +377,17 @@
       prefix: mesh
 - edges:
   - source:
-      curie: kegg.pathway:map04110
-      identifier: map04110
-      link: https://identifiers.org/kegg.pathway:map04110
-      name: Cell cycle
-      prefix: kegg.pathway
-    target:
       curie: mesh:D002453
       identifier: D002453
       link: https://identifiers.org/mesh:D002453
       name: Cell Cycle
       prefix: mesh
+    target:
+      curie: kegg.pathway:map04110
+      identifier: map04110
+      link: https://identifiers.org/kegg.pathway:map04110
+      name: Cell cycle
+      prefix: kegg.pathway
   nodes:
     GO:0007049:
       identifier: GO:0007049
@@ -551,17 +551,17 @@
       prefix: mesh
 - edges:
   - source:
-      curie: kegg.pathway:map00190
-      identifier: map00190
-      link: https://identifiers.org/kegg.pathway:map00190
-      name: Oxidative phosphorylation
-      prefix: kegg.pathway
-    target:
       curie: mesh:D010085
       identifier: D010085
       link: https://identifiers.org/mesh:D010085
       name: Oxidative Phosphorylation
       prefix: mesh
+    target:
+      curie: kegg.pathway:map00190
+      identifier: map00190
+      link: https://identifiers.org/kegg.pathway:map00190
+      name: Oxidative phosphorylation
+      prefix: kegg.pathway
   nodes:
     GO:0006119:
       identifier: GO:0006119
@@ -580,17 +580,17 @@
       prefix: mesh
 - edges:
   - source:
-      curie: mesh:D010788
-      identifier: D010788
-      link: https://identifiers.org/mesh:D010788
-      name: Photosynthesis
-      prefix: mesh
-    target:
       curie: kegg.pathway:map00195
       identifier: map00195
       link: https://identifiers.org/kegg.pathway:map00195
       name: Photosynthesis
       prefix: kegg.pathway
+    target:
+      curie: mesh:D010788
+      identifier: D010788
+      link: https://identifiers.org/mesh:D010788
+      name: Photosynthesis
+      prefix: mesh
   nodes:
     GO:0015979:
       identifier: GO:0015979
@@ -638,17 +638,17 @@
       prefix: mesh
 - edges:
   - source:
-      curie: mesh:D016922
-      identifier: D016922
-      link: https://identifiers.org/mesh:D016922
-      name: Cellular Senescence
-      prefix: mesh
-    target:
       curie: kegg.pathway:map04218
       identifier: map04218
       link: https://identifiers.org/kegg.pathway:map04218
       name: Cellular senescence
       prefix: kegg.pathway
+    target:
+      curie: mesh:D016922
+      identifier: D016922
+      link: https://identifiers.org/mesh:D016922
+      name: Cellular Senescence
+      prefix: mesh
   nodes:
     GO:0090398:
       identifier: GO:0090398
