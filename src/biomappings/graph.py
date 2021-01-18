@@ -117,6 +117,7 @@ def charts():
                     'source': {'curie': u, **nodes_data[u]},
                     'target': {'curie': v, **nodes_data[v]},
                 })
+            incomplete_components_edges = sorted(incomplete_components, key=lambda d: d['source']['curie'])
             incomplete_components.append({
                 'nodes': nodes_data,
                 'edges': incomplete_components_edges,
