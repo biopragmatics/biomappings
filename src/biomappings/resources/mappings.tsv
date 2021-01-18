@@ -2197,3 +2197,15 @@ mesh	D003562	Cytidine	skos:exactMatch	chebi	CHEBI:17562	cytidine	manually_review
 mesh	D003571	Cytochalasin B	skos:exactMatch	chebi	CHEBI:23527	cytochalasin B	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D003596	Cytosine	skos:exactMatch	chebi	CHEBI:16040	cytosine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D003620	Dantrolene	skos:exactMatch	chebi	CHEBI:4317	dantrolene	manually_reviewed	orcid:0000-0001-9439-5346
+ncit	C1707	Voriconazole	skos:exactMatch	chebi	CHEBI:10023	voriconazole	manual	orcid:0000-0003-4423-4370
+chebi	CHEBI:135931	dexlansoprazole	skos:exactMatch	ncit	C73192	Dexlansoprazole	manual	orcid:0000-0003-4423-4370
+chebi	CHEBI:6375	lansoprazole	skos:exactMatch	ncit	C29150	Lansoprazole	manual	orcid:0000-0003-4423-4370
+chebi	CHEBI:63598	levofloxacin	skos:exactMatch	ncit	C1586	Levofloxacin	manual	orcid:0000-0003-4423-4370
+ncit	C65538	Esomeprazole	skos:exactMatch	chebi	CHEBI:50275	esomeprazole	manual	orcid:0000-0003-4423-4370
+ncit	C2160	Proteasome Inhibitor	skos:exactMatch	chebi	CHEBI:52726	proteasome inhibitor	manual	orcid:0000-0003-4423-4370
+mesh	D059765	Homologous Recombination	skos:exactMatch	kegg.pathway	map03440	Homologous recombination	manual	orcid:0000-0003-4423-4370
+kegg.pathway	map04360	Axon guidance	skos:exactMatch	mesh	D000071437	Axon Guidance	manual	orcid:0000-0003-4423-4370
+mesh	D000078790	Insulin Secretion	skos:exactMatch	kegg.pathway	map04911	Insulin secretion	manual	orcid:0000-0003-4423-4370
+mesh	D002453	Cell Cycle	skos:exactMatch	kegg.pathway	map04110	Cell cycle	manual	orcid:0000-0003-4423-4370
+mesh	D004705	Endocytosis	skos:exactMatch	kegg.pathway	map04144	Endocytosis	manual	orcid:0000-0003-4423-4370
+mesh	D060449	Wnt Signaling Pathway	skos:exactMatch	kegg.pathway	map04310	Wnt signaling pathway	manual	orcid:0000-0003-4423-4370

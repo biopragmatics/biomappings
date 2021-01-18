@@ -1,5 +1,5 @@
 contributors:
-- count: 1523
+- count: 1535
   orcid: 0000-0003-4423-4370
 - count: 1386
   orcid: 0000-0001-9439-5346
@@ -100,25 +100,28 @@ positive:
 - count: 11
   source: efo
   target: mesh
+- count: 10
+  source: kegg.pathway
+  target: mesh
 - count: 8
   source: mesh
   target: reactome
 - count: 6
   source: hp
   target: mesh
+- count: 6
+  source: chebi
+  target: ncit
 - count: 4
   source: mesh
   target: umls
-- count: 4
-  source: kegg.pathway
-  target: mesh
 - count: 1
   source: mesh
   target: pfam
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 2198
+positive_mapping_count: 2210
 positive_prefix_count: 16
 predictions:
 - count: 12341
