@@ -82,7 +82,7 @@ def charts():
     import matplotlib.pyplot as plt
     import seaborn as sns
 
-    v = MiriamValidator()
+    miriam_validator = MiriamValidator()
     true_mappings = load_mappings()
     true_graph = _graph_from_mappings(true_mappings, include=['skos:exactMatch'])
 
@@ -98,7 +98,7 @@ def charts():
 
         nodes_data = {
             curie: {
-                'link': v.get_url(data['prefix'], data['identifier']),
+                'link': miriam_validator.get_url(data['prefix'], data['identifier']),
                 **data,
             }
             for curie, data in sorted(component.nodes(data=True), key=itemgetter(0))
@@ -109,15 +109,17 @@ def charts():
         if node_size > 2:
             component_densities.append(nx.density(component))
         if node_size > 2 and edge_size < (node_size * (node_size - 1) / 2):
+            incomplete_components_edges = []
+            for u, v in nx.complement(component.copy()).edges():
+                if u > v:
+                    u, v = v, u
+                incomplete_components_edges.append({
+                    'source': {'curie': u, **nodes_data[u]},
+                    'target': {'curie': v, **nodes_data[v]},
+                })
             incomplete_components.append({
                 'nodes': nodes_data,
-                'edges': [
-                    {
-                        'source': {'curie': u, **nodes_data[u]},
-                        'target': {'curie': v, **nodes_data[v]},
-                    }
-                    for u, v in nx.complement(component.copy()).edges()
-                ],
+                'edges': incomplete_components_edges,
             })
 
         prefixes = [
