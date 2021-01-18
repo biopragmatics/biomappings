@@ -87,18 +87,6 @@
       prefix: ncit
 - edges:
   - source:
-      curie: GO:0033210
-      identifier: GO:0033210
-      link: https://identifiers.org/GO:0033210
-      name: leptin-mediated signaling pathway
-      prefix: go
-    target:
-      curie: GO:0033211
-      identifier: GO:0033211
-      link: https://identifiers.org/GO:0033211
-      name: adiponectin-activated signaling pathway
-      prefix: go
-  - source:
       curie: GO:0033209
       identifier: GO:0033209
       link: https://identifiers.org/GO:0033209
@@ -121,6 +109,18 @@
       identifier: GO:0033210
       link: https://identifiers.org/GO:0033210
       name: leptin-mediated signaling pathway
+      prefix: go
+  - source:
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
+      prefix: go
+    target:
+      curie: GO:0033211
+      identifier: GO:0033211
+      link: https://identifiers.org/GO:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   nodes:
     GO:0033209:
