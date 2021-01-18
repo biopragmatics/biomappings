@@ -1,5 +1,5 @@
 contributors:
-- count: 1548
+- count: 1549
   orcid: 0000-0003-4423-4370
 - count: 1386
   orcid: 0000-0001-9439-5346
@@ -94,7 +94,7 @@ positive:
 - count: 30
   source: doid
   target: mesh
-- count: 21
+- count: 22
   source: kegg.pathway
   target: mesh
 - count: 18
@@ -124,7 +124,7 @@ positive:
 - count: 1
   source: go
   target: ncit
-positive_mapping_count: 2223
+positive_mapping_count: 2224
 positive_prefix_count: 16
 predictions:
 - count: 12341

@@ -87,34 +87,17 @@
       prefix: ncit
 - edges:
   - source:
-      curie: kegg.pathway:map00970
-      identifier: map00970
-      link: https://identifiers.org/kegg.pathway:map00970
-      name: Aminoacyl-tRNA biosynthesis
-      prefix: kegg.pathway
-    target:
-      curie: mesh:D046249
-      identifier: D046249
-      link: https://identifiers.org/mesh:D046249
-      name: Transfer RNA Aminoacylation
-      prefix: mesh
-  nodes:
-    GO:0043039:
-      identifier: GO:0043039
-      link: https://identifiers.org/GO:0043039
-      name: tRNA aminoacylation
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
-    kegg.pathway:map00970:
-      identifier: map00970
-      link: https://identifiers.org/kegg.pathway:map00970
-      name: Aminoacyl-tRNA biosynthesis
-      prefix: kegg.pathway
-    mesh:D046249:
-      identifier: D046249
-      link: https://identifiers.org/mesh:D046249
-      name: Transfer RNA Aminoacylation
-      prefix: mesh
-- edges:
+    target:
+      curie: GO:0033211
+      identifier: GO:0033211
+      link: https://identifiers.org/GO:0033211
+      name: adiponectin-activated signaling pathway
+      prefix: go
   - source:
       curie: GO:0033209
       identifier: GO:0033209
@@ -138,18 +121,6 @@
       identifier: GO:0033210
       link: https://identifiers.org/GO:0033210
       name: leptin-mediated signaling pathway
-      prefix: go
-  - source:
-      curie: GO:0033210
-      identifier: GO:0033210
-      link: https://identifiers.org/GO:0033210
-      name: leptin-mediated signaling pathway
-      prefix: go
-    target:
-      curie: GO:0033211
-      identifier: GO:0033211
-      link: https://identifiers.org/GO:0033211
-      name: adiponectin-activated signaling pathway
       prefix: go
   nodes:
     GO:0033209:
