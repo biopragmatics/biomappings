@@ -110,7 +110,7 @@ def charts():
             component_densities.append(nx.density(component))
         if node_size > 2 and edge_size < (node_size * (node_size - 1) / 2):
             incomplete_components_edges = []
-            for u, v in nx.complement(component.copy()).edges():
+            for u, v in sorted(nx.complement(component.copy()).edges()):
                 if u > v:
                     u, v = v, u
                 incomplete_components_edges.append({
