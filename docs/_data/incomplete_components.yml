@@ -87,17 +87,469 @@
       prefix: ncit
 - edges:
   - source:
-      curie: GO:0033209
-      identifier: GO:0033209
-      link: https://identifiers.org/GO:0033209
-      name: tumor necrosis factor-mediated signaling pathway
-      prefix: go
+      curie: PR:000050278
+      identifier: PR:000050278
+      link: https://identifiers.org/PR:000050278
+      name: non-structural protein 9 (SARS-CoV-2)
+      prefix: pr
     target:
-      curie: GO:0033210
-      identifier: GO:0033210
-      link: https://identifiers.org/GO:0033210
-      name: leptin-mediated signaling pathway
-      prefix: go
+      curie: ncbiprotein:YP_009725305
+      identifier: YP_009725305
+      link: https://identifiers.org/ncbiprotein:YP_009725305
+      name: nsp9
+      prefix: ncbiprotein
+  nodes:
+    PR:000050278:
+      identifier: PR:000050278
+      link: https://identifiers.org/PR:000050278
+      name: non-structural protein 9 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725305:
+      identifier: YP_009725305
+      link: https://identifiers.org/ncbiprotein:YP_009725305
+      name: nsp9
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449627:
+      identifier: PRO_0000449627
+      link: https://identifiers.org/uniprot.chain:PRO_0000449627
+      name: Non-structural protein 9
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050277
+      identifier: PR:000050277
+      link: https://identifiers.org/PR:000050277
+      name: non-structural protein 8 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725304
+      identifier: YP_009725304
+      link: https://identifiers.org/ncbiprotein:YP_009725304
+      name: nsp8
+      prefix: ncbiprotein
+  nodes:
+    PR:000050277:
+      identifier: PR:000050277
+      link: https://identifiers.org/PR:000050277
+      name: non-structural protein 8 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725304:
+      identifier: YP_009725304
+      link: https://identifiers.org/ncbiprotein:YP_009725304
+      name: nsp8
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449626:
+      identifier: PRO_0000449626
+      link: https://identifiers.org/uniprot.chain:PRO_0000449626
+      name: Non-structural protein 8
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050276
+      identifier: PR:000050276
+      link: https://identifiers.org/PR:000050276
+      name: non-structural protein 7 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725303
+      identifier: YP_009725303
+      link: https://identifiers.org/ncbiprotein:YP_009725303
+      name: nsp7
+      prefix: ncbiprotein
+  nodes:
+    PR:000050276:
+      identifier: PR:000050276
+      link: https://identifiers.org/PR:000050276
+      name: non-structural protein 7 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725303:
+      identifier: YP_009725303
+      link: https://identifiers.org/ncbiprotein:YP_009725303
+      name: nsp7
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449625:
+      identifier: PRO_0000449625
+      link: https://identifiers.org/uniprot.chain:PRO_0000449625
+      name: Non-structural protein 7
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050275
+      identifier: PR:000050275
+      link: https://identifiers.org/PR:000050275
+      name: non-structural protein 6 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725302
+      identifier: YP_009725302
+      link: https://identifiers.org/ncbiprotein:YP_009725302
+      name: nsp6
+      prefix: ncbiprotein
+  nodes:
+    PR:000050275:
+      identifier: PR:000050275
+      link: https://identifiers.org/PR:000050275
+      name: non-structural protein 6 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725302:
+      identifier: YP_009725302
+      link: https://identifiers.org/ncbiprotein:YP_009725302
+      name: nsp6
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449624:
+      identifier: PRO_0000449624
+      link: https://identifiers.org/uniprot.chain:PRO_0000449624
+      name: Non-structural protein 6
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050273
+      identifier: PR:000050273
+      link: https://identifiers.org/PR:000050273
+      name: non-structural protein 4 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725300
+      identifier: YP_009725300
+      link: https://identifiers.org/ncbiprotein:YP_009725300
+      name: nsp4
+      prefix: ncbiprotein
+  nodes:
+    PR:000050273:
+      identifier: PR:000050273
+      link: https://identifiers.org/PR:000050273
+      name: non-structural protein 4 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725300:
+      identifier: YP_009725300
+      link: https://identifiers.org/ncbiprotein:YP_009725300
+      name: nsp4
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449622:
+      identifier: PRO_0000449622
+      link: https://identifiers.org/uniprot.chain:PRO_0000449622
+      name: Non-structural protein 4
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050272
+      identifier: PR:000050272
+      link: https://identifiers.org/PR:000050272
+      name: non-structural protein 3 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725299
+      identifier: YP_009725299
+      link: https://identifiers.org/ncbiprotein:YP_009725299
+      name: nsp3
+      prefix: ncbiprotein
+  nodes:
+    PR:000050272:
+      identifier: PR:000050272
+      link: https://identifiers.org/PR:000050272
+      name: non-structural protein 3 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725299:
+      identifier: YP_009725299
+      link: https://identifiers.org/ncbiprotein:YP_009725299
+      name: nsp3
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449621:
+      identifier: PRO_0000449621
+      link: https://identifiers.org/uniprot.chain:PRO_0000449621
+      name: Non-structural protein 3
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050271
+      identifier: PR:000050271
+      link: https://identifiers.org/PR:000050271
+      name: non-structural protein 2 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725298
+      identifier: YP_009725298
+      link: https://identifiers.org/ncbiprotein:YP_009725298
+      name: nsp2
+      prefix: ncbiprotein
+  nodes:
+    PR:000050271:
+      identifier: PR:000050271
+      link: https://identifiers.org/PR:000050271
+      name: non-structural protein 2 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725298:
+      identifier: YP_009725298
+      link: https://identifiers.org/ncbiprotein:YP_009725298
+      name: nsp2
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449620:
+      identifier: PRO_0000449620
+      link: https://identifiers.org/uniprot.chain:PRO_0000449620
+      name: Non-structural protein 2
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050280
+      identifier: PR:000050280
+      link: https://identifiers.org/PR:000050280
+      name: non-structural protein 11 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725312
+      identifier: YP_009725312
+      link: https://identifiers.org/ncbiprotein:YP_009725312
+      name: nsp11
+      prefix: ncbiprotein
+  nodes:
+    PR:000050280:
+      identifier: PR:000050280
+      link: https://identifiers.org/PR:000050280
+      name: non-structural protein 11 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725312:
+      identifier: YP_009725312
+      link: https://identifiers.org/ncbiprotein:YP_009725312
+      name: nsp11
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449645:
+      identifier: PRO_0000449645
+      link: https://identifiers.org/uniprot.chain:PRO_0000449645
+      name: Non-structural protein 11
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050279
+      identifier: PR:000050279
+      link: https://identifiers.org/PR:000050279
+      name: non-structural protein 10 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725306
+      identifier: YP_009725306
+      link: https://identifiers.org/ncbiprotein:YP_009725306
+      name: nsp10
+      prefix: ncbiprotein
+  nodes:
+    PR:000050279:
+      identifier: PR:000050279
+      link: https://identifiers.org/PR:000050279
+      name: non-structural protein 10 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725306:
+      identifier: YP_009725306
+      link: https://identifiers.org/ncbiprotein:YP_009725306
+      name: nsp10
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449628:
+      identifier: PRO_0000449628
+      link: https://identifiers.org/uniprot.chain:PRO_0000449628
+      name: Non-structural protein 10
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050270
+      identifier: PR:000050270
+      link: https://identifiers.org/PR:000050270
+      name: host translation inhibitor nsp1 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725297
+      identifier: YP_009725297
+      link: https://identifiers.org/ncbiprotein:YP_009725297
+      name: leader protein
+      prefix: ncbiprotein
+  nodes:
+    PR:000050270:
+      identifier: PR:000050270
+      link: https://identifiers.org/PR:000050270
+      name: host translation inhibitor nsp1 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725297:
+      identifier: YP_009725297
+      link: https://identifiers.org/ncbiprotein:YP_009725297
+      name: leader protein
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449619:
+      identifier: PRO_0000449619
+      link: https://identifiers.org/uniprot.chain:PRO_0000449619
+      name: Host translation inhibitor nsp1
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050285
+      identifier: PR:000050285
+      link: https://identifiers.org/PR:000050285
+      name: helicase (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725308
+      identifier: YP_009725308
+      link: https://identifiers.org/ncbiprotein:YP_009725308
+      name: helicase
+      prefix: ncbiprotein
+  nodes:
+    PR:000050285:
+      identifier: PR:000050285
+      link: https://identifiers.org/PR:000050285
+      name: helicase (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725308:
+      identifier: YP_009725308
+      link: https://identifiers.org/ncbiprotein:YP_009725308
+      name: helicase
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449630:
+      identifier: PRO_0000449630
+      link: https://identifiers.org/uniprot.chain:PRO_0000449630
+      name: Helicase
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050274
+      identifier: PR:000050274
+      link: https://identifiers.org/PR:000050274
+      name: 3C-like proteinase (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725301
+      identifier: YP_009725301
+      link: https://identifiers.org/ncbiprotein:YP_009725301
+      name: 3C-like proteinase
+      prefix: ncbiprotein
+  nodes:
+    PR:000050274:
+      identifier: PR:000050274
+      link: https://identifiers.org/PR:000050274
+      name: 3C-like proteinase (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725301:
+      identifier: YP_009725301
+      link: https://identifiers.org/ncbiprotein:YP_009725301
+      name: 3C-like proteinase
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449623:
+      identifier: PRO_0000449623
+      link: https://identifiers.org/uniprot.chain:PRO_0000449623
+      name: 3C-like proteinase
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050288
+      identifier: PR:000050288
+      link: https://identifiers.org/PR:000050288
+      name: 2'-O-methyltransferase (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725311
+      identifier: YP_009725311
+      link: https://identifiers.org/ncbiprotein:YP_009725311
+      name: 2'-O-ribose methyltransferase
+      prefix: ncbiprotein
+  nodes:
+    PR:000050288:
+      identifier: PR:000050288
+      link: https://identifiers.org/PR:000050288
+      name: 2'-O-methyltransferase (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725311:
+      identifier: YP_009725311
+      link: https://identifiers.org/ncbiprotein:YP_009725311
+      name: 2'-O-ribose methyltransferase
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449633:
+      identifier: PRO_0000449633
+      link: https://identifiers.org/uniprot.chain:PRO_0000449633
+      name: 2'-O-methyltransferase
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050284
+      identifier: PR:000050284
+      link: https://identifiers.org/PR:000050284
+      name: RNA-directed RNA polymerase (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725307
+      identifier: YP_009725307
+      link: https://identifiers.org/ncbiprotein:YP_009725307
+      name: RNA-dependent RNA polymerase
+      prefix: ncbiprotein
+  nodes:
+    PR:000050284:
+      identifier: PR:000050284
+      link: https://identifiers.org/PR:000050284
+      name: RNA-directed RNA polymerase (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725307:
+      identifier: YP_009725307
+      link: https://identifiers.org/ncbiprotein:YP_009725307
+      name: RNA-dependent RNA polymerase
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449629:
+      identifier: PRO_0000449629
+      link: https://identifiers.org/uniprot.chain:PRO_0000449629
+      name: RNA-directed RNA polymerase
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050287
+      identifier: PR:000050287
+      link: https://identifiers.org/PR:000050287
+      name: uridylate-specific endoribonuclease (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725310
+      identifier: YP_009725310
+      link: https://identifiers.org/ncbiprotein:YP_009725310
+      name: endoRNAse
+      prefix: ncbiprotein
+  nodes:
+    PR:000050287:
+      identifier: PR:000050287
+      link: https://identifiers.org/PR:000050287
+      name: uridylate-specific endoribonuclease (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725310:
+      identifier: YP_009725310
+      link: https://identifiers.org/ncbiprotein:YP_009725310
+      name: endoRNAse
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449632:
+      identifier: PRO_0000449632
+      link: https://identifiers.org/uniprot.chain:PRO_0000449632
+      name: Uridylate-specific endoribonuclease
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: mesh:C000657245
+      identifier: C000657245
+      link: https://identifiers.org/mesh:C000657245
+      name: COVID-19
+      prefix: mesh
+    target:
+      curie: mesh:D000086382
+      identifier: D000086382
+      link: https://identifiers.org/mesh:D000086382
+      name: COVID-19
+      prefix: mesh
+  nodes:
+    DOID:0080600:
+      identifier: DOID:0080600
+      link: https://identifiers.org/DOID:0080600
+      name: COVID-19
+      prefix: doid
+    mesh:C000657245:
+      identifier: C000657245
+      link: https://identifiers.org/mesh:C000657245
+      name: COVID-19
+      prefix: mesh
+    mesh:D000086382:
+      identifier: D000086382
+      link: https://identifiers.org/mesh:D000086382
+      name: COVID-19
+      prefix: mesh
+- edges:
   - source:
       curie: GO:0033209
       identifier: GO:0033209
@@ -109,6 +561,18 @@
       identifier: GO:0033211
       link: https://identifiers.org/GO:0033211
       name: adiponectin-activated signaling pathway
+      prefix: go
+  - source:
+      curie: GO:0033209
+      identifier: GO:0033209
+      link: https://identifiers.org/GO:0033209
+      name: tumor necrosis factor-mediated signaling pathway
+      prefix: go
+    target:
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: GO:0033210

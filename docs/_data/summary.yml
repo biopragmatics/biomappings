@@ -1,7 +1,7 @@
 contributors:
 - count: 1549
   orcid: 0000-0003-4423-4370
-- count: 1386
+- count: 1465
   orcid: 0000-0001-9439-5346
 negative:
 - count: 218
@@ -34,6 +34,9 @@ negative:
 - count: 11
   source: hgnc
   target: reactome
+- count: 9
+  source: pr
+  target: uniprot.chain
 - count: 7
   source: mesh
   target: ncit
@@ -41,12 +44,9 @@ negative:
   source: fplx
   target: wikipathways
 - count: 5
-  source: pr
-  target: uniprot.chain
-- count: 5
   source: doid
   target: mesh
-- count: 3
+- count: 4
   source: hgnc
   target: mesh
 - count: 3
@@ -61,7 +61,7 @@ negative:
 - count: 2
   source: chebi
   target: wikipathways
-negative_mapping_count: 711
+negative_mapping_count: 716
 negative_prefix_count: 13
 positive:
 - count: 442
@@ -79,21 +79,24 @@ positive:
 - count: 222
   source: go
   target: reactome
+- count: 130
+  source: mesh
+  target: uniprot
 - count: 113
   source: go
   target: kegg.pathway
 - count: 102
   source: hgnc
   target: mesh
-- count: 84
-  source: mesh
-  target: uniprot
-- count: 79
+- count: 80
   source: pr
   target: uniprot.chain
-- count: 30
+- count: 31
   source: doid
   target: mesh
+- count: 26
+  source: ncbiprotein
+  target: uniprot.chain
 - count: 22
   source: kegg.pathway
   target: mesh
@@ -124,13 +127,13 @@ positive:
 - count: 1
   source: go
   target: ncit
-positive_mapping_count: 2224
-positive_prefix_count: 16
+positive_mapping_count: 2298
+positive_prefix_count: 17
 predictions:
 - count: 12341
   source: mesh
   target: ncit
-- count: 11264
+- count: 11218
   source: mesh
   target: uniprot
 - count: 2863
@@ -139,7 +142,7 @@ predictions:
 - count: 1406
   source: doid
   target: mesh
-- count: 1387
+- count: 1386
   source: hgnc
   target: mesh
 - count: 366
@@ -154,11 +157,11 @@ predictions:
 - count: 20
   source: go
   target: reactome
-- count: 6
-  source: pr
-  target: uniprot.chain
 - count: 3
   source: kegg.pathway
   target: mesh
-predictions_mapping_count: 29983
+- count: 1
+  source: pr
+  target: uniprot.chain
+predictions_mapping_count: 29931
 predictions_prefix_count: 13
