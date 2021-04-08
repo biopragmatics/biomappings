@@ -1,7 +1,7 @@
 contributors:
 - count: 1549
   orcid: 0000-0003-4423-4370
-- count: 1465
+- count: 1474
   orcid: 0000-0001-9439-5346
 negative:
 - count: 218
@@ -29,6 +29,9 @@ negative:
   source: go
   target: kegg.pathway
 - count: 13
+  source: hgnc
+  target: mesh
+- count: 13
   source: efo
   target: mesh
 - count: 11
@@ -46,9 +49,6 @@ negative:
 - count: 5
   source: doid
   target: mesh
-- count: 4
-  source: hgnc
-  target: mesh
 - count: 3
   source: hgnc
   target: wikipathways
@@ -61,7 +61,7 @@ negative:
 - count: 2
   source: chebi
   target: wikipathways
-negative_mapping_count: 716
+negative_mapping_count: 725
 negative_prefix_count: 13
 positive:
 - count: 442
@@ -142,7 +142,7 @@ predictions:
 - count: 1406
   source: doid
   target: mesh
-- count: 1386
+- count: 1377
   source: hgnc
   target: mesh
 - count: 366
@@ -163,5 +163,5 @@ predictions:
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 29931
+predictions_mapping_count: 29922
 predictions_prefix_count: 13
