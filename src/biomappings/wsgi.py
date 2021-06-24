@@ -127,6 +127,7 @@ class Controller:
 
         :param line: Position of the prediction
         :param value: Value to mark the prediction with
+        :raises ValueError: if an invalid value is used
         """
         if line not in self._marked:
             self.total_curated += 1
