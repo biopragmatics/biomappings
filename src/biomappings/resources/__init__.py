@@ -129,6 +129,11 @@ def append_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
     _write_helper(MAPPINGS_HEADER, m, get_resource_file_path('incorrect.tsv'), 'a')
 
 
+def append_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
+    """Append new lines to the "unsure" mappings table."""
+    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path('unsure.tsv'), 'a')
+
+
 def load_predictions() -> List[Dict[str, str]]:
     """Load the predictions table."""
     return _load_table(get_resource_file_path('predictions.tsv'))
