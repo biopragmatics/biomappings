@@ -96,12 +96,14 @@
                                 </div>
                             </td>
                             <td>
-                                <a href="{{ url_for('mark', line=line, value='yup', limit=limit, offset=offset, query=query, prefix=prefix) }}">
+                                <a data-toggle="tooltip" title="The {{ p['relation'] }} relationship is correct."
+                                        href="{{ url_for('mark', line=line, value='yup', limit=limit, offset=offset, query=query, prefix=prefix) }}">
                                     <i class="far fa-thumbs-up"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="{{ url_for('mark', line=line, value='nope', limit=limit, offset=offset, query=query, prefix=prefix) }}">
+                                <a data-toggle="tooltip" title="These two entities do not have the {{ p['relation'] }} relationship. You should still click this even if you think there could be a different relationship."
+                                        href="{{ url_for('mark', line=line, value='nope', limit=limit, offset=offset, query=query, prefix=prefix) }}">
                                     <i class="far fa-thumbs-down"></i>
                                 </a>
                             </td>
