@@ -6,18 +6,29 @@ import os
 
 import click
 import pandas as pd
+import yaml
 
+import bioregistry
 from biomappings import load_mappings, load_predictions
 from biomappings.utils import DATA, MiriamValidator
 
 PATH = os.path.join(DATA, "biomappings.sssom.tsv")
-CC0_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
+META_PATH = os.path.join(DATA, "biomappings.sssom.yml")
+META = {
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "mapping_provider": "https://github.com/biomappings/biomappings",
+    "mapping_set_group": "biomappings",
+    "mapping_set_id": "biomappings",
+    "mapping_set_title": "Biomappings",
+}
+
 validator = MiriamValidator()
 
 
-def get_sssom_df() -> pd.DataFrame:
+def get_sssom_df():
     """Get an SSSOM dataframe."""
     rows = []
+    prefixes = set()
     columns = [
         "subject_id",
         "predicate_id",
@@ -26,11 +37,12 @@ def get_sssom_df() -> pd.DataFrame:
         "object_label",
         "match_type",
         "creator_id",
-        "license",
-        'confidence',
-        'mapping_tool',
+        "confidence",
+        "mapping_tool",
     ]
     for mapping in load_mappings():
+        prefixes.add(mapping["source prefix"])
+        prefixes.add(mapping["target prefix"])
         rows.append(
             (
                 validator.get_curie(mapping["source prefix"], mapping["source identifier"]),
@@ -40,12 +52,13 @@ def get_sssom_df() -> pd.DataFrame:
                 mapping["target name"],
                 "HumanCurated",  # match type
                 mapping["source"],  # curator CURIE
-                CC0_URL,
                 None,  # no confidence necessary
                 None,  # mapping tool: none necessary for manually curated
             )
         )
     for mapping in load_predictions():
+        prefixes.add(mapping["source prefix"])
+        prefixes.add(mapping["target prefix"])
         rows.append(
             (
                 validator.get_curie(mapping["source prefix"], mapping["source identifier"]),
@@ -55,22 +68,44 @@ def get_sssom_df() -> pd.DataFrame:
                 mapping["target name"],
                 "LexicalEquivalenceMatch",  # match type
                 None,  # no curator CURIE
-                CC0_URL,
-                mapping['confidence'],
-                mapping['source'],  # mapping tool: source script
+                mapping["confidence"],
+                mapping["source"],  # mapping tool: source script
             )
         )
     df = pd.DataFrame(rows, columns=columns)
-    del df['license']
-    return df
+    return prefixes, df
+
+
+def get_msdf():
+    """Get an SSSOM mapping set dataframe object."""
+    # FIXME there are bugs in the linkml and SSSOM code that make this not work
+    from sssom.datamodel_util import MappingSetDataFrame
+    from sssom.parsers import from_dataframe
+
+    _, df = get_sssom_df()
+    msdf: MappingSetDataFrame = from_dataframe(
+        df, curie_map=dict(bioregistry.get_format_urls()), meta=META
+    )
+    return msdf
 
 
 @click.command()
 @click.option("--path", default=PATH)
 def main(path):
     """Export SSSOM."""
-    df = get_sssom_df()
+    prefixes, df = get_sssom_df()
     df.to_csv(path, sep="\t", index=False)
+
+    # Get a CURIE map containing only the relevant prefixes
+    curie_map = {
+        prefix: formatter
+        for prefix, formatter in bioregistry.get_format_urls().items()
+        if prefix in prefixes
+    }
+    with open(META_PATH, "w") as file:
+        yaml.safe_dump({"curie_map": curie_map, **META}, file)
+
+    # TODO incorporate validation from sssom-py
 
 
 if __name__ == "__main__":
