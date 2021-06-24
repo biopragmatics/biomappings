@@ -4,11 +4,11 @@
 
 import os
 
+import bioregistry
 import click
 import pandas as pd
 import yaml
 
-import bioregistry
 from biomappings import load_mappings, load_predictions
 from biomappings.utils import DATA, MiriamValidator
 
