@@ -4,6 +4,7 @@
 
 import getpass
 import os
+from collections import defaultdict
 from typing import Any, Iterable, Mapping, Optional, Tuple
 
 import flask
@@ -11,7 +12,10 @@ import flask_bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
-from biomappings.resources import append_false_mappings, append_true_mappings, load_predictions, write_predictions
+from biomappings.resources import (
+    append_false_mappings, append_true_mappings, append_unsure_mappings, load_predictions,
+    write_predictions,
+)
 from biomappings.utils import MiriamValidator, commit, not_main, push
 
 app = flask.Flask(__name__)
@@ -119,15 +123,17 @@ class Controller:
         """Return the total number of yet unmarked predictions."""
         return len(self._predictions) - len(self._marked)
 
-    def mark(self, line: int, correct: bool) -> None:
+    def mark(self, line: int, value: str) -> None:
         """Mark the given equivalency as correct.
 
         :param line: Position of the prediction
-        :param correct: Value to mark the prediction with
+        :param value: Value to mark the prediction with
         """
         if line not in self._marked:
             self.total_curated += 1
-        self._marked[line] = correct
+        if value not in {'correct', 'incorrect', 'unsure'}:
+            raise ValueError
+        self._marked[line] = value
 
     def add_mapping(
         self,
@@ -172,20 +178,17 @@ class Controller:
 
     def persist(self):
         """Save the current markings to the source files."""
-        curated_true_entries = []
-        curated_false_entries = []
+        entries = defaultdict(list)
 
-        for line, correct in sorted(self._marked.items(), reverse=True):
+        for line, value in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(line)
             prediction['source'] = _manual_source()
             prediction['type'] = 'manually_reviewed'
-            if correct:
-                curated_true_entries.append(prediction)
-            else:
-                curated_false_entries.append(prediction)
+            entries[value].append(prediction)
 
-        append_true_mappings(curated_true_entries)
-        append_false_mappings(curated_false_entries)
+        append_true_mappings(entries['correct'])
+        append_false_mappings(entries['incorrect'])
+        append_unsure_mappings(entries['unsure'])
         write_predictions(self._predictions)
         self._marked.clear()
 
@@ -258,10 +261,27 @@ def run_commit():
     return _go_home()
 
 
+CORRECT = {'yup', 'true', 't', 'correct', 'right', 'close enough', 'disco'}
+INCORRECT = {'no', 'nope', 'false', 'f', 'nada', 'nein', 'incorrect', 'negative', 'negatory'}
+UNSURE = {'unsure', 'maybe', 'idk', 'idgaf', 'idgaff'}
+
+
+def _normalize_mark(value: str) -> str:
+    value = value.lower()
+    if value in CORRECT:
+        return 'correct'
+    elif value in INCORRECT:
+        return 'incorrect'
+    elif value in UNSURE:
+        return 'unsure'
+    else:
+        raise ValueError
+
+
 @app.route('/mark/<int:line>/<value>')
 def mark(line: int, value: str):
     """Mark the given line as correct or not."""
-    controller.mark(line, value.lower() in {'yup', 'true', 't', 'correct', 'right', 'close enough', 'disco'})
+    controller.mark(line, _normalize_mark(value))
     controller.persist()
     return _go_home()
 

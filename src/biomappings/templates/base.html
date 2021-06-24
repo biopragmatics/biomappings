@@ -23,6 +23,12 @@
 {% block scripts %}
     <!-- Optional JavaScript -->
     {{ bootstrap.load_js() }}
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 {% endblock %}
 </body>
 </html>
