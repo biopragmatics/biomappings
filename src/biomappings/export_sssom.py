@@ -11,7 +11,7 @@ from biomappings import load_mappings, load_predictions
 from biomappings.utils import DATA, MiriamValidator
 
 PATH = os.path.join(DATA, "biomappings.sssom.tsv")
-
+CC0_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
 validator = MiriamValidator()
 
 
@@ -40,7 +40,7 @@ def get_sssom_df() -> pd.DataFrame:
                 mapping["target name"],
                 "HumanCurated",  # match type
                 mapping["source"],  # curator CURIE
-                "https://creativecommons.org/publicdomain/zero/1.0/",
+                CC0_URL,
                 None,  # no confidence necessary
                 None,  # mapping tool: none necessary for manually curated
             )
@@ -55,12 +55,14 @@ def get_sssom_df() -> pd.DataFrame:
                 mapping["target name"],
                 "LexicalEquivalenceMatch",  # match type
                 None,  # no curator CURIE
-                "https://creativecommons.org/publicdomain/zero/1.0/",
+                CC0_URL,
                 mapping['confidence'],
                 mapping['source'],  # mapping tool: source script
             )
         )
-    return pd.DataFrame(rows, columns=columns)
+    df = pd.DataFrame(rows, columns=columns)
+    del df['license']
+    return df
 
 
 @click.command()
