@@ -24,6 +24,7 @@ flask_bootstrap.Bootstrap(app)
 KNOWN_USERS = {
     'cthoyt': '0000-0003-4423-4370',
     'ben': '0000-0001-9439-5346',
+    'hoytfamily': '0000-0003-1307-2508',  # Amelia
 }
 
 
