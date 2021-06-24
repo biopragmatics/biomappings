@@ -18,22 +18,19 @@ def test_valid_mappings():
     """Test the validity of the prefixes and identifiers in the mappings."""
     for mapping in itt.chain(mappings, incorrect, predictions):
         miriam_validator.check_valid_prefix_id(
-            mapping['source prefix'],
-            mapping['source identifier'],
+            mapping["source prefix"],
+            mapping["source identifier"],
         )
         miriam_validator.check_valid_prefix_id(
-            mapping['target prefix'],
-            mapping['target identifier'],
+            mapping["target prefix"],
+            mapping["target identifier"],
         )
 
 
 def test_redundancy():
     """Test the redundancy of manually curated mappings and predicted mappings."""
-    counter = Counter(
-        get_canonical_tuple(m)
-        for m in itt.chain(mappings, incorrect, predictions)
-    )
+    counter = Counter(get_canonical_tuple(m) for m in itt.chain(mappings, incorrect, predictions))
     redundant = [(k, v) for k, v in counter.items() if v > 1]
     if redundant:
-        r = '\n'.join(f'  {r}: {count}' for r, count in redundant)
-        raise ValueError(f'Redundant: {r}')
+        r = "\n".join(f"  {r}: {count}" for r, count in redundant)
+        raise ValueError(f"Redundant: {r}")
