@@ -7,9 +7,8 @@ import re
 from subprocess import CalledProcessError, check_output  # noqa: S404
 from typing import Any, Mapping, Optional, Tuple
 
-import requests
-
 import bioregistry
+import requests
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESOURCE_PATH = os.path.abspath(os.path.join(HERE, "resources"))
