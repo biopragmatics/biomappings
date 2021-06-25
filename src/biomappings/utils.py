@@ -9,6 +9,8 @@ from typing import Any, Mapping, Optional, Tuple
 
 import requests
 
+import bioregistry
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESOURCE_PATH = os.path.abspath(os.path.join(HERE, "resources"))
 DOCS = os.path.abspath(os.path.join(HERE, os.pardir, os.pardir, "docs"))
@@ -124,6 +126,7 @@ class MiriamValidator:
         else:
             return f"{prefix}:{identifier}"
 
-    def get_url(self, prefix: str, identifier: str) -> str:
+    @staticmethod
+    def get_url(prefix: str, identifier: str) -> str:
         """Return URL for a given prefix and identifier."""
-        return f"https://identifiers.org/{self.get_curie(prefix, identifier)}"
+        return bioregistry.get_link(prefix, identifier, use_bioregistry_io=False)
