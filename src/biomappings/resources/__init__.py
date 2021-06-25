@@ -10,27 +10,27 @@ from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Sequence
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
 MAPPINGS_HEADER = [
-    'source prefix',
-    'source identifier',
-    'source name',
-    'relation',
-    'target prefix',
-    'target identifier',
-    'target name',
-    'type',
-    'source',
+    "source prefix",
+    "source identifier",
+    "source name",
+    "relation",
+    "target prefix",
+    "target identifier",
+    "target name",
+    "type",
+    "source",
 ]
 PREDICTIONS_HEADER = [
-    'source prefix',
-    'source identifier',
-    'source name',
-    'relation',
-    'target prefix',
-    'target identifier',
-    'target name',
-    'type',
-    'confidence',
-    'source',
+    "source prefix",
+    "source identifier",
+    "source name",
+    "relation",
+    "target prefix",
+    "target identifier",
+    "target name",
+    "type",
+    "confidence",
+    "source",
 ]
 
 
@@ -52,7 +52,7 @@ class MappingTuple(NamedTuple):
         return dict(zip(MAPPINGS_HEADER, self))
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, str]) -> 'MappingTuple':
+    def from_dict(cls, mapping: Mapping[str, str]) -> "MappingTuple":
         """Get the mapping tuple from a dictionary."""
         return cls(*[mapping[key] for key in MAPPINGS_HEADER])
 
@@ -76,7 +76,7 @@ class PredictionTuple(NamedTuple):
         return dict(zip(PREDICTIONS_HEADER, self))
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, str]) -> 'PredictionTuple':
+    def from_dict(cls, mapping: Mapping[str, str]) -> "PredictionTuple":
         """Get the prediction tuple from a dictionary."""
         return cls(*[mapping[key] for key in PREDICTIONS_HEADER])
 
@@ -87,70 +87,68 @@ def get_resource_file_path(fname) -> str:
 
 
 def _load_table(fname) -> List[Dict[str, str]]:
-    with open(fname, 'r') as fh:
-        reader = csv.reader(fh, delimiter='\t')
+    with open(fname, "r") as fh:
+        reader = csv.reader(fh, delimiter="\t")
         header = next(reader)
         return [dict(zip(header, row)) for row in reader]
 
 
-def _write_helper(header: Sequence[str], lod: Iterable[Mapping[str, str]], path: str, mode: str) -> None:
+def _write_helper(
+    header: Sequence[str], lod: Iterable[Mapping[str, str]], path: str, mode: str
+) -> None:
     with open(path, mode) as file:
-        if mode == 'w':
-            print(*header, sep='\t', file=file)
+        if mode == "w":
+            print(*header, sep="\t", file=file)
         for line in lod:
-            print(*[line[k] for k in header], sep='\t', file=file)
+            print(*[line[k] for k in header], sep="\t", file=file)
 
 
 def load_mappings() -> List[Dict[str, str]]:
     """Load the mappings table."""
-    return _load_table(get_resource_file_path('mappings.tsv'))
+    return _load_table(get_resource_file_path("mappings.tsv"))
 
 
 def append_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path('mappings.tsv'), 'a')
+    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path("mappings.tsv"), "a")
 
 
 def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
     """Append new lines to the mappings table."""
-    append_true_mappings(
-        mapping.as_dict()
-        for mapping in mappings
-    )
+    append_true_mappings(mapping.as_dict() for mapping in mappings)
 
 
 def load_false_mappings() -> List[Dict[str, str]]:
     """Load the false mappings table."""
-    return _load_table(get_resource_file_path('incorrect.tsv'))
+    return _load_table(get_resource_file_path("incorrect.tsv"))
 
 
 def append_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the false mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path('incorrect.tsv'), 'a')
+    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path("incorrect.tsv"), "a")
 
 
 def append_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the "unsure" mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path('unsure.tsv'), 'a')
+    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path("unsure.tsv"), "a")
 
 
 def load_predictions() -> List[Dict[str, str]]:
     """Load the predictions table."""
-    return _load_table(get_resource_file_path('predictions.tsv'))
+    return _load_table(get_resource_file_path("predictions.tsv"))
 
 
 def write_predictions(m: List[Mapping[str, str]]) -> None:
     """Write new content to the predictions table."""
-    _write_helper(PREDICTIONS_HEADER, m, get_resource_file_path('predictions.tsv'), 'w')
+    _write_helper(PREDICTIONS_HEADER, m, get_resource_file_path("predictions.tsv"), "w")
 
 
-def append_prediction_tuples(prediction_tuples: Iterable[PredictionTuple], deduplicate: bool = True) -> None:
+def append_prediction_tuples(
+    prediction_tuples: Iterable[PredictionTuple], deduplicate: bool = True
+) -> None:
     """Append new lines to the predictions table that come as canonical tuples."""
     append_predictions(
-        (
-            prediction_tuple.as_dict()
-            for prediction_tuple in prediction_tuples
-        ),
+        (prediction_tuple.as_dict() for prediction_tuple in prediction_tuples),
         deduplicate=deduplicate,
     )
 
@@ -167,9 +165,7 @@ def append_predictions(mappings: Iterable[Mapping[str, str]], deduplicate: bool 
             )
         }
         mappings = (
-            mapping
-            for mapping in mappings
-            if get_canonical_tuple(mapping) not in existing_mappings
+            mapping for mapping in mappings if get_canonical_tuple(mapping) not in existing_mappings
         )
 
-    _write_helper(PREDICTIONS_HEADER, mappings, get_resource_file_path('predictions.tsv'), 'a')
+    _write_helper(PREDICTIONS_HEADER, mappings, get_resource_file_path("predictions.tsv"), "a")
