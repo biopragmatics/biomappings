@@ -2,7 +2,7 @@
   - source:
       curie: CHEBI:3815
       identifier: CHEBI:3815
-      link: https://identifiers.org/CHEBI:3815
+      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:3815
       name: Collagen
       prefix: chebi
     target:
@@ -14,12 +14,12 @@
   nodes:
     CHEBI:3815:
       identifier: CHEBI:3815
-      link: https://identifiers.org/CHEBI:3815
+      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:3815
       name: Collagen
       prefix: chebi
     mesh:D003094:
       identifier: D003094
-      link: https://identifiers.org/mesh:D003094
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D003094
       name: Collagen
       prefix: mesh
     pfam:PF01391:
@@ -48,7 +48,7 @@
       prefix: hgnc
     mesh:D064096:
       identifier: D064096
-      link: https://identifiers.org/mesh:D064096
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D064096
       name: Aurora Kinase A
       prefix: mesh
     ncit:C30006:
@@ -77,7 +77,7 @@
       prefix: hgnc
     mesh:D064107:
       identifier: D064107
-      link: https://identifiers.org/mesh:D064107
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D064107
       name: Aurora Kinase B
       prefix: mesh
     ncit:C68596:
@@ -524,13 +524,13 @@
   - source:
       curie: mesh:C000657245
       identifier: C000657245
-      link: https://identifiers.org/mesh:C000657245
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C000657245
       name: COVID-19
       prefix: mesh
     target:
       curie: mesh:D000086382
       identifier: D000086382
-      link: https://identifiers.org/mesh:D000086382
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D000086382
       name: COVID-19
       prefix: mesh
   nodes:
@@ -541,12 +541,12 @@
       prefix: doid
     mesh:C000657245:
       identifier: C000657245
-      link: https://identifiers.org/mesh:C000657245
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C000657245
       name: COVID-19
       prefix: mesh
     mesh:D000086382:
       identifier: D000086382
-      link: https://identifiers.org/mesh:D000086382
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D000086382
       name: COVID-19
       prefix: mesh
 - edges:
