@@ -70,6 +70,30 @@ class Controller:
         :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes
         :yields: Pairs of positions and prediction dictionaries
         """
+        it = self._help_it_predictions(query=query, prefix=prefix)
+        if offset is not None:
+            try:
+                for _ in range(offset):
+                    next(it)
+            except StopIteration:
+                # if next() fails, then there are no remaining entries.
+                # do not pass go, do not collect 200 euro $
+                return
+        if limit is None:
+            yield from it
+        else:
+            for line_prediction, _ in zip(it, range(limit)):
+                yield line_prediction
+
+    def count_predictions(
+        self,
+        query: Optional[str] = None,
+        prefix: Optional[str] = None,
+    ) -> int:
+        """Count the number of predictions to check for the given filters."""
+        return sum(1 for _ in self._help_it_predictions(query=query, prefix=prefix))
+
+    def _help_it_predictions(self, query: Optional[str] = None, prefix: Optional[str] = None):
         it = enumerate(self._predictions)
         if query is not None:
             query = query.casefold()
@@ -97,19 +121,7 @@ class Controller:
             )
 
         it = ((line, prediction) for line, prediction in it if line not in self._marked)
-        if offset is not None:
-            try:
-                for _ in range(offset):
-                    next(it)
-            except StopIteration:
-                # if next() fails, then there are no remaining entries.
-                # do not pass go, do not collect 200 euro $
-                return
-        if limit is None:
-            yield from it
-        else:
-            for line_prediction, _ in zip(it, range(limit)):
-                yield line_prediction
+        return it
 
     @staticmethod
     def get_curie(prefix: str, identifier: str) -> str:

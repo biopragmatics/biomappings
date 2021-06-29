@@ -8,7 +8,7 @@ from subprocess import CalledProcessError, check_output  # noqa: S404
 from typing import Any, Mapping, Optional, Tuple
 
 import bioregistry
-import requests
+from bioregistry.external import get_miriam
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESOURCE_PATH = os.path.abspath(os.path.join(HERE, "resources"))
@@ -89,22 +89,18 @@ class InvalidIdentifier(ValueError):
 class MiriamValidator:
     """Validate prefix/identifier pairs based on the MIRIAM database."""
 
-    def __init__(self):  # noqa: D107
-        self.entries = self._load_identifiers_entries()
+    def __init__(self, force_download: bool = False):  # noqa: D107
+        self.entries = self._load_identifiers_entries(force_download=force_download)
 
     @staticmethod
-    def _load_identifiers_entries():
-        url = "https://registry.api.identifiers.org/resolutionApi/getResolverDataset"
-        res = requests.get(url)
-        regj = res.json()
-        patterns = {
-            entry["prefix"]: {
+    def _load_identifiers_entries(force_download: bool = False):
+        return {
+            prefix: {
                 "pattern": re.compile(entry["pattern"]),
                 "namespace_embedded": entry["namespaceEmbeddedInLui"],
             }
-            for entry in sorted(regj["payload"]["namespaces"], key=lambda x: x["prefix"])
+            for prefix, entry in get_miriam(force_download=force_download).items()
         }
-        return patterns
 
     def namespace_embedded(self, prefix: str) -> bool:
         """Return True if the namespace is embedded for the given prefix."""
