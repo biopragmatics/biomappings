@@ -16,8 +16,8 @@ from biomappings.resources import (
     append_false_mappings,
     append_true_mappings,
     append_unsure_mappings,
-    load_predictions,
     load_curators,
+    load_predictions,
     write_predictions,
 )
 from biomappings.utils import MiriamValidator, commit, not_main, push
