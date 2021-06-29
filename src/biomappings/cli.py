@@ -3,6 +3,7 @@
 """The biomappings CLI."""
 
 import click
+from more_click import verbose_option
 
 from .graph import charts
 from .summary import export
@@ -15,6 +16,7 @@ def main():
 
 
 @main.command()
+@verbose_option
 def web():
     """Run the biomappings web curation interface."""
     from .wsgi import app
