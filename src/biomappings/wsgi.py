@@ -17,6 +17,7 @@ from biomappings.resources import (
     append_true_mappings,
     append_unsure_mappings,
     load_predictions,
+    load_curators,
     write_predictions,
 )
 from biomappings.utils import MiriamValidator, commit, not_main, push
@@ -28,11 +29,7 @@ app.config["SHOW_RELATIONS"] = True
 flask_bootstrap.Bootstrap(app)
 
 # A mapping from your computer's user, returned by getuser.getpass()
-KNOWN_USERS = {
-    "cthoyt": "0000-0003-4423-4370",
-    "ben": "0000-0001-9439-5346",
-    "hoytfamily": "0000-0003-1307-2508",  # Amelia
-}
+KNOWN_USERS = {record["user"]: record["orcid"] for record in load_curators()}
 
 
 def _manual_source():
