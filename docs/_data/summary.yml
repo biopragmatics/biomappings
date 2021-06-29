@@ -3,6 +3,8 @@ contributors:
   orcid: 0000-0003-4423-4370
 - count: 1474
   orcid: 0000-0001-9439-5346
+- count: 789
+  orcid: 0000-0003-1307-2508
 negative:
 - count: 218
   source: mesh
@@ -25,10 +27,13 @@ negative:
 - count: 45
   source: mesh
   target: wikipathways
+- count: 24
+  source: doid
+  target: mesh
 - count: 16
   source: go
   target: kegg.pathway
-- count: 13
+- count: 14
   source: hgnc
   target: mesh
 - count: 13
@@ -46,9 +51,6 @@ negative:
 - count: 7
   source: fplx
   target: wikipathways
-- count: 5
-  source: doid
-  target: mesh
 - count: 3
   source: hgnc
   target: wikipathways
@@ -61,10 +63,13 @@ negative:
 - count: 2
   source: chebi
   target: wikipathways
-negative_mapping_count: 725
+negative_mapping_count: 745
 negative_prefix_count: 13
 positive:
-- count: 442
+- count: 638
+  source: doid
+  target: mesh
+- count: 443
   source: chebi
   target: mesh
 - count: 399
@@ -73,15 +78,15 @@ positive:
 - count: 366
   source: go
   target: wikipathways
-- count: 309
+- count: 311
   source: mesh
   target: ncit
+- count: 288
+  source: mesh
+  target: uniprot
 - count: 222
   source: go
   target: reactome
-- count: 130
-  source: mesh
-  target: uniprot
 - count: 113
   source: go
   target: kegg.pathway
@@ -91,9 +96,6 @@ positive:
 - count: 80
   source: pr
   target: uniprot.chain
-- count: 31
-  source: doid
-  target: mesh
 - count: 26
   source: ncbiprotein
   target: uniprot.chain
@@ -109,7 +111,7 @@ positive:
 - count: 8
   source: mesh
   target: reactome
-- count: 6
+- count: 7
   source: hp
   target: mesh
 - count: 6
@@ -127,25 +129,25 @@ positive:
 - count: 1
   source: go
   target: ncit
-positive_mapping_count: 2298
+positive_mapping_count: 3067
 positive_prefix_count: 17
 predictions:
-- count: 12341
+- count: 12339
   source: mesh
   target: ncit
-- count: 11218
+- count: 11060
   source: mesh
   target: uniprot
-- count: 2863
+- count: 2862
   source: chebi
   target: mesh
-- count: 1406
-  source: doid
-  target: mesh
-- count: 1377
+- count: 1376
   source: hgnc
   target: mesh
-- count: 366
+- count: 774
+  source: doid
+  target: mesh
+- count: 365
   source: hp
   target: mesh
 - count: 277
@@ -163,5 +165,5 @@ predictions:
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 29922
+predictions_mapping_count: 29127
 predictions_prefix_count: 13

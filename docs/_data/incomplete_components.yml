@@ -29,6 +29,35 @@
       prefix: pfam
 - edges:
   - source:
+      curie: CHEBI:50223
+      identifier: CHEBI:50223
+      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:50223
+      name: (+)-dexrazoxane
+      prefix: chebi
+    target:
+      curie: ncit:C1333
+      identifier: C1333
+      link: https://identifiers.org/ncit:C1333
+      name: Dexrazoxane
+      prefix: ncit
+  nodes:
+    CHEBI:50223:
+      identifier: CHEBI:50223
+      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:50223
+      name: (+)-dexrazoxane
+      prefix: chebi
+    mesh:D064730:
+      identifier: D064730
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D064730
+      name: Dexrazoxane
+      prefix: mesh
+    ncit:C1333:
+      identifier: C1333
+      link: https://identifiers.org/ncit:C1333
+      name: Dexrazoxane
+      prefix: ncit
+- edges:
+  - source:
       curie: hgnc:11393
       identifier: '11393'
       link: https://identifiers.org/hgnc:11393
