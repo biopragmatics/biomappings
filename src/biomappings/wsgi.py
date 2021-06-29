@@ -33,6 +33,9 @@ KNOWN_USERS = {
     "ben": "0000-0001-9439-5346",
     "hoytfamily": "0000-0003-1307-2508",  # Amelia
 }
+USER_NAMES = {
+    "hoytfamily": "Amelia Hoyt",
+}
 
 
 def _manual_source():
