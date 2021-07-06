@@ -41,8 +41,15 @@ the [biomappings/biomappings](https://github.com/biomappings/biomappings) GitHub
 |  Yes    | Human-curated *non-trivial* false (i.e., incorrect) mappings | [`src/biomappings/resources/incorrect.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/incorrect.tsv) |
 |  No     | Automatically predicted mappings | [`src/biomappings/resources/predictions.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/predictions.tsv) |
 
-These data are available under
+The primary and derived data in this repository are both available under
 the [CC0 1.0 Universal License](https://github.com/biomappings/biomappings/blob/master/LICENSE).
+
+### Derived
+
+The mappings are distributed in the [Simple Standard for Sharing Ontology Mappings
+(SSSOM)](https://github.com/mapping-commons/sssom) format
+([tsv](https://github.com/biomappings/biomappings/blob/master/docs/_data/biomappings.sssom.tsv),
+[metadata](https://github.com/biomappings/biomappings/blob/master/docs/_data/biomappings.sssom.yml)).
 
 Equivalences and related mappings that are available from the OBO Foundry and other primary sources can be accessed
 through [Inspector Javert's Xref Database](https://zenodo.org/record/3757266)
