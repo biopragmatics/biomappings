@@ -1,0 +1,23 @@
+curie_map:
+  chebi: 'https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:'
+  doid: 'https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:'
+  efo: https://www.ebi.ac.uk/efo/EFO_
+  go: 'http://amigo.geneontology.org/amigo/term/GO:'
+  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
+  hp: 'https://hpo.jax.org/app/browse/term/HP:'
+  kegg.pathway: https://www.kegg.jp/entry/
+  mesh: http://id.nlm.nih.gov/mesh/
+  ncbiprotein: https://www.ncbi.nlm.nih.gov/protein/
+  ncit: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_
+  pfam: https://pfam.xfam.org/family/
+  pr: 'https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:'
+  reactome: https://reactome.org/content/detail/
+  umls: http://linkedlifedata.com/resource/umls/id/
+  uniprot: http://purl.uniprot.org/uniprot/
+  uniprot.chain: http://purl.uniprot.org/annotation/
+  wikipathways: http://www.wikipathways.org/instance/
+license: https://creativecommons.org/publicdomain/zero/1.0/
+mapping_provider: https://github.com/biomappings/biomappings
+mapping_set_group: biomappings
+mapping_set_id: biomappings
+mapping_set_title: Biomappings
