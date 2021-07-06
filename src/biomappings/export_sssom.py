@@ -2,7 +2,7 @@
 
 """Export Biomappings as SSSOM."""
 
-import os
+import pathlib
 
 import bioregistry
 import click
@@ -12,8 +12,10 @@ import yaml
 from biomappings import load_mappings, load_predictions
 from biomappings.utils import DATA, MiriamValidator
 
-PATH = os.path.join(DATA, "biomappings.sssom.tsv")
-META_PATH = os.path.join(DATA, "biomappings.sssom.yml")
+DIRECTORY = pathlib.Path(DATA).joinpath('sssom')
+DIRECTORY.mkdir(exist_ok=True, parents=True)
+PATH = DIRECTORY.joinpath("biomappings.sssom.tsv")
+META_PATH = DIRECTORY.joinpath("biomappings.sssom.yml")
 META = {
     "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "mapping_provider": "https://github.com/biomappings/biomappings",

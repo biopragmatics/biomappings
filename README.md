@@ -48,8 +48,7 @@ the [CC0 1.0 Universal License](https://github.com/biomappings/biomappings/blob/
 
 The mappings are distributed in the [Simple Standard for Sharing Ontology Mappings
 (SSSOM)](https://github.com/mapping-commons/sssom) format
-([tsv](https://github.com/biomappings/biomappings/blob/master/docs/_data/biomappings.sssom.tsv),
-[metadata](https://github.com/biomappings/biomappings/blob/master/docs/_data/biomappings.sssom.yml)).
+([here](https://github.com/biomappings/biomappings/blob/master/docs/_data/sssom)).
 
 Equivalences and related mappings that are available from the OBO Foundry and other primary sources can be accessed
 through [Inspector Javert's Xref Database](https://zenodo.org/record/3757266)
