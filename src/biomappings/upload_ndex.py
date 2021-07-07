@@ -74,9 +74,9 @@ def ndex(username, password):
     nice_cx = cx.get_nice_cx()
     nice_cx.update_to(
         uuid=BIOMAPPINGS_NDEX_UUID,
-        server=pystow.get_config("ndex", "server", "http://public.ndexbio.org"),
-        username=pystow.get_config("ndex", "username", username),
-        password=pystow.get_config("ndex", "password", password),
+        server=pystow.get_config("ndex", "server", default="http://public.ndexbio.org"),
+        username=pystow.get_config("ndex", "username", passthrough=username),
+        password=pystow.get_config("ndex", "password", passthrough=password),
     )
 
 
