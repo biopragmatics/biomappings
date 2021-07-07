@@ -169,3 +169,8 @@ def append_predictions(mappings: Iterable[Mapping[str, str]], deduplicate: bool 
         )
 
     _write_helper(PREDICTIONS_HEADER, mappings, get_resource_file_path("predictions.tsv"), "a")
+
+
+def load_curators():
+    """Load the curators table."""
+    return _load_table(get_resource_file_path("curators.tsv"))
