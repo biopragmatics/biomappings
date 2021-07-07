@@ -5,6 +5,7 @@
 import click
 from more_click import verbose_option
 
+from .export_sssom import sssom
 from .graph import charts
 from .summary import export
 from .upload_ndex import ndex
@@ -33,6 +34,20 @@ def web():
         )
     else:
         app.run()
+
+
+@main.command()
+@click.pass_context
+def update(ctx: click.Context):
+    """Run all update functions."""
+    click.secho('Building general exports', fg='green')
+    ctx.invoke(export)
+    click.secho('Building SSSOM export', fg='green')
+    ctx.invoke(sssom)
+    click.secho('Generating charts', fg='green')
+    ctx.invoke(charts)
+    click.secho('Uploading to NDEx', fg='green')
+    ctx.invoke(ndex)
 
 
 main.add_command(export)

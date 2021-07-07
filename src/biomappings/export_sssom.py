@@ -93,7 +93,7 @@ def get_msdf():
 
 @click.command()
 @click.option("--path", default=PATH)
-def main(path):
+def sssom(path):
     """Export SSSOM."""
     prefixes, df = get_sssom_df()
     df.to_csv(path, sep="\t", index=False)
@@ -111,4 +111,4 @@ def main(path):
 
 
 if __name__ == "__main__":
-    main()
+    sssom()

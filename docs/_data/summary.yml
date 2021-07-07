@@ -7,7 +7,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 789
+- count: 1329
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
   user: hoytfamily
@@ -28,14 +28,14 @@ negative:
   source: go
   target: reactome
 - count: 49
+  source: doid
+  target: mesh
+- count: 49
   source: fplx
   target: reactome
 - count: 45
   source: mesh
   target: wikipathways
-- count: 24
-  source: doid
-  target: mesh
 - count: 16
   source: go
   target: kegg.pathway
@@ -69,10 +69,10 @@ negative:
 - count: 2
   source: chebi
   target: wikipathways
-negative_mapping_count: 745
+negative_mapping_count: 770
 negative_prefix_count: 13
 positive:
-- count: 638
+- count: 1151
   source: doid
   target: mesh
 - count: 443
@@ -84,7 +84,7 @@ positive:
 - count: 366
   source: go
   target: wikipathways
-- count: 311
+- count: 313
   source: mesh
   target: ncit
 - count: 288
@@ -135,10 +135,10 @@ positive:
 - count: 1
   source: go
   target: ncit
-positive_mapping_count: 3067
+positive_mapping_count: 3582
 positive_prefix_count: 17
 predictions:
-- count: 12339
+- count: 12337
   source: mesh
   target: ncit
 - count: 11060
@@ -150,14 +150,14 @@ predictions:
 - count: 1376
   source: hgnc
   target: mesh
-- count: 774
-  source: doid
-  target: mesh
 - count: 365
   source: hp
   target: mesh
 - count: 277
   source: efo
+  target: mesh
+- count: 224
+  source: doid
   target: mesh
 - count: 50
   source: go
@@ -171,5 +171,5 @@ predictions:
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 29127
+predictions_mapping_count: 28575
 predictions_prefix_count: 13
