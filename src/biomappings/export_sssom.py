@@ -6,7 +6,6 @@ import pathlib
 
 import bioregistry
 import click
-import pandas as pd
 import yaml
 
 from biomappings import load_mappings, load_predictions
@@ -29,6 +28,8 @@ validator = MiriamValidator()
 
 def get_sssom_df():
     """Get an SSSOM dataframe."""
+    import pandas as pd
+
     rows = []
     prefixes = set()
     columns = [
