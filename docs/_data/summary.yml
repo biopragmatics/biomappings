@@ -1,4 +1,8 @@
 contributors:
+- count: 1551
+  name: Amelia Hoyt
+  orcid: 0000-0003-1307-2508
+  user: hoytfamily
 - count: 1549
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
@@ -7,14 +11,13 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 1329
-  name: Amelia Hoyt
-  orcid: 0000-0003-1307-2508
-  user: hoytfamily
 negative:
 - count: 218
   source: mesh
   target: reactome
+- count: 151
+  source: doid
+  target: mesh
 - count: 89
   source: go
   target: mesh
@@ -27,9 +30,6 @@ negative:
 - count: 71
   source: go
   target: reactome
-- count: 49
-  source: doid
-  target: mesh
 - count: 49
   source: fplx
   target: reactome
@@ -69,10 +69,10 @@ negative:
 - count: 2
   source: chebi
   target: wikipathways
-negative_mapping_count: 770
+negative_mapping_count: 872
 negative_prefix_count: 13
 positive:
-- count: 1151
+- count: 1271
   source: doid
   target: mesh
 - count: 443
@@ -135,7 +135,7 @@ positive:
 - count: 1
   source: go
   target: ncit
-positive_mapping_count: 3582
+positive_mapping_count: 3702
 positive_prefix_count: 17
 predictions:
 - count: 12337
@@ -156,9 +156,6 @@ predictions:
 - count: 277
   source: efo
   target: mesh
-- count: 224
-  source: doid
-  target: mesh
 - count: 50
   source: go
   target: mesh
@@ -171,5 +168,5 @@ predictions:
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 28575
-predictions_prefix_count: 13
+predictions_mapping_count: 28351
+predictions_prefix_count: 12

@@ -636,3 +636,61 @@
       link: https://identifiers.org/kegg.pathway:map04920
       name: Adipocytokine signaling pathway
       prefix: kegg.pathway
+- edges:
+  - source:
+      curie: mesh:C531763
+      identifier: C531763
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C531763
+      name: Irritable heart
+      prefix: mesh
+    target:
+      curie: mesh:D054972
+      identifier: D054972
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D054972
+      name: Postural Orthostatic Tachycardia Syndrome
+      prefix: mesh
+  nodes:
+    DOID:0111154:
+      identifier: DOID:0111154
+      link: https://identifiers.org/DOID:0111154
+      name: postural orthostatic tachycardia syndrome
+      prefix: doid
+    mesh:C531763:
+      identifier: C531763
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C531763
+      name: Irritable heart
+      prefix: mesh
+    mesh:D054972:
+      identifier: D054972
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D054972
+      name: Postural Orthostatic Tachycardia Syndrome
+      prefix: mesh
+- edges:
+  - source:
+      curie: mesh:C537027
+      identifier: C537027
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C537027
+      name: Lipoid congenital adrenal hyperplasia
+      prefix: mesh
+    target:
+      curie: mesh:D000312
+      identifier: D000312
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D000312
+      name: Adrenal Hyperplasia, Congenital
+      prefix: mesh
+  nodes:
+    DOID:0050811:
+      identifier: DOID:0050811
+      link: https://identifiers.org/DOID:0050811
+      name: congenital adrenal hyperplasia
+      prefix: doid
+    mesh:C537027:
+      identifier: C537027
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C537027
+      name: Lipoid congenital adrenal hyperplasia
+      prefix: mesh
+    mesh:D000312:
+      identifier: D000312
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D000312
+      name: Adrenal Hyperplasia, Congenital
+      prefix: mesh
