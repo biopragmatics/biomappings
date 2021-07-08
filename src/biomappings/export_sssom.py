@@ -11,7 +11,7 @@ import yaml
 from biomappings import load_mappings, load_predictions
 from biomappings.utils import DATA, MiriamValidator
 
-DIRECTORY = pathlib.Path(DATA).joinpath('sssom')
+DIRECTORY = pathlib.Path(DATA).joinpath("sssom")
 DIRECTORY.mkdir(exist_ok=True, parents=True)
 PATH = DIRECTORY.joinpath("biomappings.sssom.tsv")
 META_PATH = DIRECTORY.joinpath("biomappings.sssom.yml")

@@ -40,13 +40,13 @@ def web():
 @click.pass_context
 def update(ctx: click.Context):
     """Run all update functions."""
-    click.secho('Building general exports', fg='green')
+    click.secho("Building general exports", fg="green")
     ctx.invoke(export)
-    click.secho('Building SSSOM export', fg='green')
+    click.secho("Building SSSOM export", fg="green")
     ctx.invoke(sssom)
-    click.secho('Generating charts', fg='green')
+    click.secho("Generating charts", fg="green")
     ctx.invoke(charts)
-    click.secho('Uploading to NDEx', fg='green')
+    click.secho("Uploading to NDEx", fg="green")
     ctx.invoke(ndex)
 
 
