@@ -10,8 +10,11 @@ from biomappings.utils import get_script_url
 @click.command()
 @verbose_option
 def main():
-    fname = get_script_url(__file__)
-    append_gilda_predictions("mondo", ["doid", "efo"], provenance=fname, rel="skos:exactMatch")
+    """Generate MONDO mappings."""
+    provenance = get_script_url(__file__)
+    append_gilda_predictions(
+        "mondo", ["doid", "efo"], provenance=provenance, relation="skos:exactMatch"
+    )
 
 
 if __name__ == "__main__":
