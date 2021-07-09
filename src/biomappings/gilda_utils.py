@@ -23,6 +23,7 @@ def append_gilda_predictions(
     relation: str = "skos:exactMatch",
     custom_filter: Optional[CMapping] = None,
     unnamed: Optional[Iterable[str]] = None,
+    identifiers_are_names: bool = False,
 ) -> None:
     """Add gilda predictions to the Biomappings predictions.tsv file.
 
@@ -33,7 +34,11 @@ def append_gilda_predictions(
     """
     grounder = get_grounder(target_prefixes, unnamed=unnamed)
     predictions = iter_prediction_tuples(
-        prefix, relation=relation, grounder=grounder, provenance=provenance
+        prefix,
+        relation=relation,
+        grounder=grounder,
+        provenance=provenance,
+        identifiers_are_names=identifiers_are_names,
     )
     if custom_filter is not None:
         predictions = filter_custom(predictions, custom_filter)
@@ -47,9 +52,15 @@ def iter_prediction_tuples(
     relation: str,
     provenance: str,
     grounder: Optional[Grounder] = None,
+    identifiers_are_names: bool = False,
 ) -> Iterable[PredictionTuple]:
     """Iterate over prediction tuples for a given prefix."""
-    for t in iter_gilda_prediction_tuples(prefix=prefix, relation=relation, grounder=grounder):
+    for t in iter_gilda_prediction_tuples(
+        prefix=prefix,
+        relation=relation,
+        grounder=grounder,
+        identifiers_are_names=identifiers_are_names,
+    ):
         yield PredictionTuple(*t, provenance)
 
 
