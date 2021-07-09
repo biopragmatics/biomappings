@@ -1,10 +1,15 @@
+# -*- coding: utf-8 -*-
+
+"""Utilities for generating predictions with pyobo/gilda."""
+
 import logging
 from typing import Iterable, Optional, Tuple, Union
 
-from biomappings.resources import PredictionTuple, append_prediction_tuples
 from gilda.grounder import Grounder
 from pyobo import get_xref
 from pyobo.gilda_utils import get_grounder, iter_gilda_prediction_tuples
+
+from biomappings.resources import PredictionTuple, append_prediction_tuples
 
 logger = logging.getLogger(__name__)
 
