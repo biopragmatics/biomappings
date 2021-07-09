@@ -29,8 +29,12 @@ def filter_premapped(
     source_prefixes: Union[str, Iterable[str]],
     target_prefixes: Union[str, Iterable[str]],
 ) -> Iterable[PredictionTuple]:
-    source_prefixes = {source_prefixes} if isinstance(source_prefixes, str) else set(source_prefixes)
-    target_prefixes = {target_prefixes} if isinstance(target_prefixes, str) else set(target_prefixes)
+    source_prefixes = (
+        {source_prefixes} if isinstance(source_prefixes, str) else set(source_prefixes)
+    )
+    target_prefixes = (
+        {target_prefixes} if isinstance(target_prefixes, str) else set(target_prefixes)
+    )
     counter = 0
     for t in tups:
         if (
@@ -41,16 +45,14 @@ def filter_premapped(
             counter += 1
             continue
         yield t
-    logger.info('filtered out %d pre-mapped matches', counter)
+    logger.info("filtered out %d pre-mapped matches", counter)
 
 
 def append_gilda_predictions(
     prefix: str, target_prefixes: Union[str, Iterable[str]], provenance, rel="skos:exactMatch"
 ) -> None:
     grounder = get_grounder(target_prefixes)
-    it = iter_prediction_tuples(
-        prefix, relation=rel, grounder=grounder, provenance=provenance
-    )
+    it = iter_prediction_tuples(prefix, relation=rel, grounder=grounder, provenance=provenance)
     it = filter_premapped(it, prefix, target_prefixes)
     it = sorted(it, key=_key)
     append_prediction_tuples(it)
