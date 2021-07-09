@@ -3,7 +3,7 @@
 """Utilities for generating predictions with pyobo/gilda."""
 
 import logging
-from typing import Iterable, Mapping, Optional, Set, Tuple, Union
+from typing import Iterable, Mapping, Optional, Tuple, Union
 
 from gilda.grounder import Grounder
 from pyobo import get_xref
@@ -31,6 +31,10 @@ def append_gilda_predictions(
     :param target_prefixes: The target prefix or prefixes
     :param provenance: The provenance text. Typically generated with ``biomappings.utils.get_script_url(__file__)``.
     :param relation: The relationship. Defaults to ``skos:exactMatch``.
+    :param custom_filter: A triple nested dictionary from source prefix to target prefix to source id to target id.
+        Any source prefix, target prefix, source id combinations in this dictionary will be filtered.
+    :param unnamed: An optional list of prefixes whose identifiers should be considered as names (e.g., CCLE, FPLX)
+    :param identifiers_are_names: The source prefix's identifiers should be considered as names
     """
     grounder = get_grounder(target_prefixes, unnamed=unnamed)
     predictions = iter_prediction_tuples(

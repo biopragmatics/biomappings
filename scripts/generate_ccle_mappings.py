@@ -3,9 +3,9 @@
 """Generate mappings to Gilda from given PyOBO prefixes."""
 
 import click
+import pyobo
 from more_click import verbose_option
 
-import pyobo
 from biomappings.gilda_utils import CMapping, append_gilda_predictions
 from biomappings.utils import get_script_url
 
