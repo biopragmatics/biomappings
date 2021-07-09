@@ -104,15 +104,21 @@ class MiriamValidator:
 
     def namespace_embedded(self, prefix: str) -> bool:
         """Return True if the namespace is embedded for the given prefix."""
-        return self.entries[prefix]["namespace_embedded"]
+        if prefix in self.entries:
+            return self.entries[prefix]["namespace_embedded"]
+        return bioregistry.namespace_in_lui(prefix)
 
     def check_valid_prefix_id(self, prefix, identifier):
         """Check the prefix/identifier pair is valid."""
-        if prefix not in self.entries:
+        if prefix in self.entries:
+            entry = self.entries[prefix]
+            if not re.match(entry["pattern"], identifier):
+                raise InvalidIdentifier(prefix, identifier)
+        elif bioregistry.get(prefix) is None:
             raise InvalidPrefix(prefix)
-        entry = self.entries[prefix]
-        if not re.match(entry["pattern"], identifier):
-            raise InvalidIdentifier(identifier)
+        elif bioregistry.get_pattern(prefix) is None:
+            if bioregistry.validate(prefix, identifier):
+                raise InvalidIdentifier(prefix, identifier)
 
     def get_curie(self, prefix: str, identifier: str) -> str:
         """Return CURIE for a given prefix and identifier."""
