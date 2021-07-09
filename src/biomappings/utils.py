@@ -114,11 +114,11 @@ class MiriamValidator:
             entry = self.entries[prefix]
             if not re.match(entry["pattern"], identifier):
                 raise InvalidIdentifier(prefix, identifier)
+        elif bioregistry.get(prefix) is None:
+            raise InvalidPrefix(prefix)
         elif bioregistry.get_pattern(prefix) is None:
             if bioregistry.validate(prefix, identifier):
                 raise InvalidIdentifier(prefix, identifier)
-        else:
-            raise InvalidPrefix(prefix)
 
     def get_curie(self, prefix: str, identifier: str) -> str:
         """Return CURIE for a given prefix and identifier."""
