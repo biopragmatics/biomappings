@@ -3,7 +3,7 @@
 """Utilities for generating predictions with pyobo/gilda."""
 
 import logging
-from typing import Iterable, Optional, Tuple, Union
+from typing import Iterable, Mapping, Optional, Set, Tuple, Union
 
 from gilda.grounder import Grounder
 from pyobo import get_xref
@@ -13,12 +13,16 @@ from biomappings.resources import PredictionTuple, append_prediction_tuples
 
 logger = logging.getLogger(__name__)
 
+CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
+
 
 def append_gilda_predictions(
     prefix: str,
     target_prefixes: Union[str, Iterable[str]],
     provenance: str,
     relation: str = "skos:exactMatch",
+    custom_filter: Optional[CMapping] = None,
+    unnamed: Optional[Iterable[str]] = None,
 ) -> None:
     """Add gilda predictions to the Biomappings predictions.tsv file.
 
@@ -27,11 +31,15 @@ def append_gilda_predictions(
     :param provenance: The provenance text. Typically generated with ``biomappings.utils.get_script_url(__file__)``.
     :param relation: The relationship. Defaults to ``skos:exactMatch``.
     """
-    grounder = get_grounder(target_prefixes)
-    it = iter_prediction_tuples(prefix, relation=relation, grounder=grounder, provenance=provenance)
-    it = filter_premapped(it, prefix, target_prefixes)
-    it = sorted(it, key=_key)
-    append_prediction_tuples(it)
+    grounder = get_grounder(target_prefixes, unnamed=unnamed)
+    predictions = iter_prediction_tuples(
+        prefix, relation=relation, grounder=grounder, provenance=provenance
+    )
+    if custom_filter is not None:
+        predictions = filter_custom(predictions, custom_filter)
+    predictions = filter_pyobo(predictions, prefix, target_prefixes)
+    predictions = sorted(predictions, key=_key)
+    append_prediction_tuples(predictions)
 
 
 def iter_prediction_tuples(
@@ -45,12 +53,26 @@ def iter_prediction_tuples(
         yield PredictionTuple(*t, provenance)
 
 
-def filter_premapped(
+def filter_custom(
+    predictions: Iterable[PredictionTuple],
+    custom_filter: CMapping,
+) -> Iterable[PredictionTuple]:
+    """Filter out custom mappings."""
+    counter = 0
+    for p in predictions:
+        if custom_filter.get(p.source_prefix, {}).get(p.target_prefix, {}).get(p.source_id):
+            counter += 1
+            continue
+        yield p
+    logger.info("filtered out %d custom mapped matches", counter)
+
+
+def filter_pyobo(
     predictions: Iterable[PredictionTuple],
     source_prefixes: Union[str, Iterable[str]],
     target_prefixes: Union[str, Iterable[str]],
 ) -> Iterable[PredictionTuple]:
-    """Filter pre-mapped predictions."""
+    """Filter predictions that match xrefs already loaded through PyOBO."""
     source_prefixes = (
         {source_prefixes} if isinstance(source_prefixes, str) else set(source_prefixes)
     )
