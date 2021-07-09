@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/source/logo.png" height="150">
+  <img src="https://github.com/biomappings/biomappings/raw/master/docs/source/logo.png" height="150">
 </p>
 
 <h1 align="center">
