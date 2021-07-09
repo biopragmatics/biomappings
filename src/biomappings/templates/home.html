@@ -3,7 +3,7 @@
 {% import "bootstrap/form.html" as wtf %}
 {% import "bootstrap/utils.html" as util %}
 
-{% block title %}Biomappings{% endblock %}
+{% block title %}Biomappings ({{ remaining_rows }}){% endblock %}
 
 {% macro progress_color(confidence) -%}
     {% if confidence > 85 %}
