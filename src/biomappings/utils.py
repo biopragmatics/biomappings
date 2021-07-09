@@ -104,7 +104,9 @@ class MiriamValidator:
 
     def namespace_embedded(self, prefix: str) -> bool:
         """Return True if the namespace is embedded for the given prefix."""
-        return self.entries[prefix]["namespace_embedded"]
+        if prefix in self.entries:
+            return self.entries[prefix]["namespace_embedded"]
+        return bioregistry.namespace_in_lui(prefix)
 
     def check_valid_prefix_id(self, prefix, identifier):
         """Check the prefix/identifier pair is valid."""
