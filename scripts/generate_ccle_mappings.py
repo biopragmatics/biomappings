@@ -17,7 +17,7 @@ def main():
     provenance = get_script_url(__file__)
     custom_filter = generate_custom_filter()
     append_gilda_predictions(
-        "ccle",
+        "ccle.cell",
         ["depmap", "efo", "cellosaurus", "cl", "bto"],
         provenance=provenance,
         relation="skos:exactMatch",
