@@ -100,8 +100,10 @@ class Controller:
                 if any(
                     query in prediction[x].casefold()
                     for x in (
+                        "source prefix",
                         "source identifier",
                         "source name",
+                        "target prefix",
                         "target identifier",
                         "target name",
                     )
