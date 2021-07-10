@@ -586,10 +586,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: GO:0033211
-      identifier: GO:0033211
-      link: https://identifiers.org/GO:0033211
-      name: adiponectin-activated signaling pathway
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: GO:0033209
@@ -598,10 +598,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: GO:0033210
-      identifier: GO:0033210
-      link: https://identifiers.org/GO:0033210
-      name: leptin-mediated signaling pathway
+      curie: GO:0033211
+      identifier: GO:0033211
+      link: https://identifiers.org/GO:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: GO:0033210
@@ -694,3 +694,177 @@
       link: https://meshb.nlm.nih.gov/record/ui?ui=D000312
       name: Adrenal Hyperplasia, Congenital
       prefix: mesh
+- edges:
+  - source:
+      curie: BTO:0006459
+      identifier: BTO:0006459
+      link: https://identifiers.org/BTO:0006459
+      name: KMS-12-BM cell
+      prefix: bto
+    target:
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://identifiers.org/cellosaurus:CVCL_1334
+      name: KMS-12-BM
+      prefix: cellosaurus
+  - source:
+      curie: BTO:0006459
+      identifier: BTO:0006459
+      link: https://identifiers.org/BTO:0006459
+      name: KMS-12-BM cell
+      prefix: bto
+    target:
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://identifiers.org/efo:0006612
+      name: KMS-12-BM
+      prefix: efo
+  - source:
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://identifiers.org/cellosaurus:CVCL_1334
+      name: KMS-12-BM
+      prefix: cellosaurus
+    target:
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://identifiers.org/efo:0006612
+      name: KMS-12-BM
+      prefix: efo
+  nodes:
+    BTO:0006459:
+      identifier: BTO:0006459
+      link: https://identifiers.org/BTO:0006459
+      name: KMS-12-BM cell
+      prefix: bto
+    ccle.cell:KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+      identifier: KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      name: KMS-12-BM
+      prefix: ccle.cell
+    cellosaurus:CVCL_1334:
+      identifier: CVCL_1334
+      link: https://identifiers.org/cellosaurus:CVCL_1334
+      name: KMS-12-BM
+      prefix: cellosaurus
+    efo:0006612:
+      identifier: '0006612'
+      link: https://identifiers.org/efo:0006612
+      name: KMS-12-BM
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_2814
+      identifier: CVCL_2814
+      link: https://identifiers.org/cellosaurus:CVCL_2814
+      name: YMB-1
+      prefix: cellosaurus
+    target:
+      curie: efo:0006779
+      identifier: 0006779
+      link: https://identifiers.org/efo:0006779
+      name: YMB-1
+      prefix: efo
+  nodes:
+    ccle.cell:YMB1_BREAST:
+      identifier: YMB1_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=YMB1_BREAST
+      name: YMB-1
+      prefix: ccle.cell
+    cellosaurus:CVCL_2814:
+      identifier: CVCL_2814
+      link: https://identifiers.org/cellosaurus:CVCL_2814
+      name: YMB-1
+      prefix: cellosaurus
+    efo:0006779:
+      identifier: 0006779
+      link: https://identifiers.org/efo:0006779
+      name: YMB-1
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0588
+      identifier: CVCL_0588
+      link: https://identifiers.org/cellosaurus:CVCL_0588
+      name: ZR-75-1
+      prefix: cellosaurus
+    target:
+      curie: efo:0001262
+      identifier: '0001262'
+      link: https://identifiers.org/efo:0001262
+      name: ZR751
+      prefix: efo
+  nodes:
+    ccle.cell:ZR751_BREAST:
+      identifier: ZR751_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ZR751_BREAST
+      name: ZR-75-1
+      prefix: ccle.cell
+    cellosaurus:CVCL_0588:
+      identifier: CVCL_0588
+      link: https://identifiers.org/cellosaurus:CVCL_0588
+      name: ZR-75-1
+      prefix: cellosaurus
+    efo:0001262:
+      identifier: '0001262'
+      link: https://identifiers.org/efo:0001262
+      name: ZR751
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1661
+      identifier: CVCL_1661
+      link: https://identifiers.org/cellosaurus:CVCL_1661
+      name: ZR-75-30
+      prefix: cellosaurus
+    target:
+      curie: efo:0001263
+      identifier: '0001263'
+      link: https://identifiers.org/efo:0001263
+      name: ZR7530
+      prefix: efo
+  nodes:
+    ccle.cell:ZR7530_BREAST:
+      identifier: ZR7530_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ZR7530_BREAST
+      name: ZR-75-30
+      prefix: ccle.cell
+    cellosaurus:CVCL_1661:
+      identifier: CVCL_1661
+      link: https://identifiers.org/cellosaurus:CVCL_1661
+      name: ZR-75-30
+      prefix: cellosaurus
+    efo:0001263:
+      identifier: '0001263'
+      link: https://identifiers.org/efo:0001263
+      name: ZR7530
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_2956
+      identifier: CVCL_2956
+      link: https://identifiers.org/cellosaurus:CVCL_2956
+      name: HuH-1
+      prefix: cellosaurus
+    target:
+      curie: efo:0006445
+      identifier: '0006445'
+      link: https://identifiers.org/efo:0006445
+      name: huH-1
+      prefix: efo
+  nodes:
+    ccle.cell:HUH1_LIVER:
+      identifier: HUH1_LIVER
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=HUH1_LIVER
+      name: huH-1
+      prefix: ccle.cell
+    cellosaurus:CVCL_2956:
+      identifier: CVCL_2956
+      link: https://identifiers.org/cellosaurus:CVCL_2956
+      name: HuH-1
+      prefix: cellosaurus
+    efo:0006445:
+      identifier: '0006445'
+      link: https://identifiers.org/efo:0006445
+      name: huH-1
+      prefix: efo

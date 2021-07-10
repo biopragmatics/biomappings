@@ -1,12 +1,12 @@
 contributors:
+- count: 1563
+  name: Charles Tapley Hoyt
+  orcid: 0000-0003-4423-4370
+  user: cthoyt
 - count: 1551
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
   user: hoytfamily
-- count: 1549
-  name: Charles Tapley Hoyt
-  orcid: 0000-0003-4423-4370
-  user: cthoyt
 - count: 1474
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
@@ -120,12 +120,21 @@ positive:
 - count: 7
   source: hp
   target: mesh
+- count: 7
+  source: ccle.cell
+  target: cellosaurus
 - count: 6
   source: chebi
   target: ncit
+- count: 5
+  source: ccle.cell
+  target: efo
 - count: 4
   source: mesh
   target: umls
+- count: 2
+  source: bto
+  target: ccle.cell
 - count: 1
   source: mesh
   target: pfam
@@ -135,8 +144,8 @@ positive:
 - count: 1
   source: go
   target: ncit
-positive_mapping_count: 3702
-positive_prefix_count: 17
+positive_mapping_count: 3716
+positive_prefix_count: 20
 predictions:
 - count: 12337
   source: mesh
@@ -150,6 +159,12 @@ predictions:
 - count: 1376
   source: hgnc
   target: mesh
+- count: 1149
+  source: ccle.cell
+  target: cellosaurus
+- count: 594
+  source: ccle.cell
+  target: efo
 - count: 365
   source: hp
   target: mesh
@@ -162,11 +177,14 @@ predictions:
 - count: 20
   source: go
   target: reactome
+- count: 7
+  source: ccle.cell
+  target: depmap
 - count: 3
   source: kegg.pathway
   target: mesh
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 28351
-predictions_prefix_count: 12
+predictions_mapping_count: 30101
+predictions_prefix_count: 15
