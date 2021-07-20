@@ -1,12 +1,12 @@
 contributors:
+- count: 1673
+  name: Amelia Hoyt
+  orcid: 0000-0003-1307-2508
+  user: hoytfamily
 - count: 1563
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
-- count: 1551
-  name: Amelia Hoyt
-  orcid: 0000-0003-1307-2508
-  user: hoytfamily
 - count: 1474
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
@@ -51,6 +51,9 @@ negative:
 - count: 9
   source: pr
   target: uniprot.chain
+- count: 8
+  source: ccle.cell
+  target: cellosaurus
 - count: 7
   source: mesh
   target: ncit
@@ -69,8 +72,14 @@ negative:
 - count: 2
   source: chebi
   target: wikipathways
-negative_mapping_count: 872
-negative_prefix_count: 13
+- count: 1
+  source: ccle.cell
+  target: efo
+- count: 1
+  source: ccle.cell
+  target: depmap
+negative_mapping_count: 882
+negative_prefix_count: 16
 positive:
 - count: 1271
   source: doid
@@ -102,6 +111,12 @@ positive:
 - count: 80
   source: pr
   target: uniprot.chain
+- count: 77
+  source: ccle.cell
+  target: cellosaurus
+- count: 47
+  source: ccle.cell
+  target: efo
 - count: 26
   source: ncbiprotein
   target: uniprot.chain
@@ -120,15 +135,9 @@ positive:
 - count: 7
   source: hp
   target: mesh
-- count: 7
-  source: ccle.cell
-  target: cellosaurus
 - count: 6
   source: chebi
   target: ncit
-- count: 5
-  source: ccle.cell
-  target: efo
 - count: 4
   source: mesh
   target: umls
@@ -144,7 +153,7 @@ positive:
 - count: 1
   source: go
   target: ncit
-positive_mapping_count: 3716
+positive_mapping_count: 3828
 positive_prefix_count: 20
 predictions:
 - count: 12337
@@ -159,10 +168,10 @@ predictions:
 - count: 1376
   source: hgnc
   target: mesh
-- count: 1149
+- count: 1068
   source: ccle.cell
   target: cellosaurus
-- count: 594
+- count: 550
   source: ccle.cell
   target: efo
 - count: 365
@@ -177,7 +186,7 @@ predictions:
 - count: 20
   source: go
   target: reactome
-- count: 7
+- count: 5
   source: ccle.cell
   target: depmap
 - count: 3
@@ -186,5 +195,5 @@ predictions:
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 30101
+predictions_mapping_count: 29974
 predictions_prefix_count: 15

@@ -868,3 +868,1221 @@
       link: https://identifiers.org/efo:0006445
       name: huH-1
       prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_2270
+      identifier: CVCL_2270
+      link: https://identifiers.org/cellosaurus:CVCL_2270
+      name: 143B
+      prefix: cellosaurus
+    target:
+      curie: efo:0006355
+      identifier: '0006355'
+      link: https://identifiers.org/efo:0006355
+      name: 143B
+      prefix: efo
+  nodes:
+    ccle.cell:143B_BONE:
+      identifier: 143B_BONE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=143B_BONE
+      name: 143B
+      prefix: ccle.cell
+    cellosaurus:CVCL_2270:
+      identifier: CVCL_2270
+      link: https://identifiers.org/cellosaurus:CVCL_2270
+      name: 143B
+      prefix: cellosaurus
+    efo:0006355:
+      identifier: '0006355'
+      link: https://identifiers.org/efo:0006355
+      name: 143B
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1045
+      identifier: CVCL_1045
+      link: https://identifiers.org/cellosaurus:CVCL_1045
+      name: 22Rv1
+      prefix: cellosaurus
+    target:
+      curie: efo:0002095
+      identifier: 0002095
+      link: https://identifiers.org/efo:0002095
+      name: 22Rv1
+      prefix: efo
+  nodes:
+    ccle.cell:22RV1_PROSTATE:
+      identifier: 22RV1_PROSTATE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=22RV1_PROSTATE
+      name: 22Rv1
+      prefix: ccle.cell
+    cellosaurus:CVCL_1045:
+      identifier: CVCL_1045
+      link: https://identifiers.org/cellosaurus:CVCL_1045
+      name: 22Rv1
+      prefix: cellosaurus
+    efo:0002095:
+      identifier: 0002095
+      link: https://identifiers.org/efo:0002095
+      name: 22Rv1
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1046
+      identifier: CVCL_1046
+      link: https://identifiers.org/cellosaurus:CVCL_1046
+      name: 23132/87
+      prefix: cellosaurus
+    target:
+      curie: efo:0006528
+      identifier: 0006528
+      link: https://identifiers.org/efo:0006528
+      name: 23132/87
+      prefix: efo
+  nodes:
+    ccle.cell:2313287_STOMACH:
+      identifier: 2313287_STOMACH
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=2313287_STOMACH
+      name: 23132/87
+      prefix: ccle.cell
+    cellosaurus:CVCL_1046:
+      identifier: CVCL_1046
+      link: https://identifiers.org/cellosaurus:CVCL_1046
+      name: 23132/87
+      prefix: cellosaurus
+    efo:0006528:
+      identifier: 0006528
+      link: https://identifiers.org/efo:0006528
+      name: 23132/87
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0126
+      identifier: CVCL_0126
+      link: https://identifiers.org/cellosaurus:CVCL_0126
+      name: '5637'
+      prefix: cellosaurus
+    target:
+      curie: efo:0002096
+      identifier: 0002096
+      link: https://identifiers.org/efo:0002096
+      name: '5637'
+      prefix: efo
+  nodes:
+    ccle.cell:5637_URINARY_TRACT:
+      identifier: 5637_URINARY_TRACT
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=5637_URINARY_TRACT
+      name: '5637'
+      prefix: ccle.cell
+    cellosaurus:CVCL_0126:
+      identifier: CVCL_0126
+      link: https://identifiers.org/cellosaurus:CVCL_0126
+      name: '5637'
+      prefix: cellosaurus
+    efo:0002096:
+      identifier: 0002096
+      link: https://identifiers.org/efo:0002096
+      name: '5637'
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_2291
+      identifier: CVCL_2291
+      link: https://identifiers.org/cellosaurus:CVCL_2291
+      name: 59M
+      prefix: cellosaurus
+    target:
+      curie: efo:0006358
+      identifier: 0006358
+      link: https://identifiers.org/efo:0006358
+      name: 59M
+      prefix: efo
+  nodes:
+    ccle.cell:59M_OVARY:
+      identifier: 59M_OVARY
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=59M_OVARY
+      name: 59M
+      prefix: ccle.cell
+    cellosaurus:CVCL_2291:
+      identifier: CVCL_2291
+      link: https://identifiers.org/cellosaurus:CVCL_2291
+      name: 59M
+      prefix: cellosaurus
+    efo:0006358:
+      identifier: 0006358
+      link: https://identifiers.org/efo:0006358
+      name: 59M
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1048
+      identifier: CVCL_1048
+      link: https://identifiers.org/cellosaurus:CVCL_1048
+      name: 639V
+      prefix: cellosaurus
+    target:
+      curie: efo:0002097
+      identifier: 0002097
+      link: https://identifiers.org/efo:0002097
+      name: 639V
+      prefix: efo
+  nodes:
+    ccle.cell:639V_URINARY_TRACT:
+      identifier: 639V_URINARY_TRACT
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=639V_URINARY_TRACT
+      name: 639-V
+      prefix: ccle.cell
+    cellosaurus:CVCL_1048:
+      identifier: CVCL_1048
+      link: https://identifiers.org/cellosaurus:CVCL_1048
+      name: 639V
+      prefix: cellosaurus
+    efo:0002097:
+      identifier: 0002097
+      link: https://identifiers.org/efo:0002097
+      name: 639V
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1049
+      identifier: CVCL_1049
+      link: https://identifiers.org/cellosaurus:CVCL_1049
+      name: 647V
+      prefix: cellosaurus
+    target:
+      curie: efo:0002098
+      identifier: 0002098
+      link: https://identifiers.org/efo:0002098
+      name: 647V
+      prefix: efo
+  nodes:
+    ccle.cell:647V_URINARY_TRACT:
+      identifier: 647V_URINARY_TRACT
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=647V_URINARY_TRACT
+      name: 647-V
+      prefix: ccle.cell
+    cellosaurus:CVCL_1049:
+      identifier: CVCL_1049
+      link: https://identifiers.org/cellosaurus:CVCL_1049
+      name: 647V
+      prefix: cellosaurus
+    efo:0002098:
+      identifier: 0002098
+      link: https://identifiers.org/efo:0002098
+      name: 647V
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1050
+      identifier: CVCL_1050
+      link: https://identifiers.org/cellosaurus:CVCL_1050
+      name: 769-P
+      prefix: cellosaurus
+    target:
+      curie: efo:0002099
+      identifier: 0002099
+      link: https://identifiers.org/efo:0002099
+      name: 769P
+      prefix: efo
+  nodes:
+    ccle.cell:769P_KIDNEY:
+      identifier: 769P_KIDNEY
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=769P_KIDNEY
+      name: 769-P
+      prefix: ccle.cell
+    cellosaurus:CVCL_1050:
+      identifier: CVCL_1050
+      link: https://identifiers.org/cellosaurus:CVCL_1050
+      name: 769-P
+      prefix: cellosaurus
+    efo:0002099:
+      identifier: 0002099
+      link: https://identifiers.org/efo:0002099
+      name: 769P
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1058
+      identifier: CVCL_1058
+      link: https://identifiers.org/cellosaurus:CVCL_1058
+      name: A-204
+      prefix: cellosaurus
+    target:
+      curie: efo:0002102
+      identifier: '0002102'
+      link: https://identifiers.org/efo:0002102
+      name: A204
+      prefix: efo
+  nodes:
+    ccle.cell:A204_SOFT_TISSUE:
+      identifier: A204_SOFT_TISSUE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A204_SOFT_TISSUE
+      name: A-204
+      prefix: ccle.cell
+    cellosaurus:CVCL_1058:
+      identifier: CVCL_1058
+      link: https://identifiers.org/cellosaurus:CVCL_1058
+      name: A-204
+      prefix: cellosaurus
+    efo:0002102:
+      identifier: '0002102'
+      link: https://identifiers.org/efo:0002102
+      name: A204
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0132
+      identifier: CVCL_0132
+      link: https://identifiers.org/cellosaurus:CVCL_0132
+      name: A-375
+      prefix: cellosaurus
+    target:
+      curie: efo:0002103
+      identifier: '0002103'
+      link: https://identifiers.org/efo:0002103
+      name: A375
+      prefix: efo
+  nodes:
+    ccle.cell:A375_SKIN:
+      identifier: A375_SKIN
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A375_SKIN
+      name: A-375
+      prefix: ccle.cell
+    cellosaurus:CVCL_0132:
+      identifier: CVCL_0132
+      link: https://identifiers.org/cellosaurus:CVCL_0132
+      name: A-375
+      prefix: cellosaurus
+    efo:0002103:
+      identifier: '0002103'
+      link: https://identifiers.org/efo:0002103
+      name: A375
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1056
+      identifier: CVCL_1056
+      link: https://identifiers.org/cellosaurus:CVCL_1056
+      name: A-498
+      prefix: cellosaurus
+    target:
+      curie: efo:0002105
+      identifier: '0002105'
+      link: https://identifiers.org/efo:0002105
+      name: A498
+      prefix: efo
+  nodes:
+    ccle.cell:A498_KIDNEY:
+      identifier: A498_KIDNEY
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A498_KIDNEY
+      name: A-498
+      prefix: ccle.cell
+    cellosaurus:CVCL_1056:
+      identifier: CVCL_1056
+      link: https://identifiers.org/cellosaurus:CVCL_1056
+      name: A-498
+      prefix: cellosaurus
+    efo:0002105:
+      identifier: '0002105'
+      link: https://identifiers.org/efo:0002105
+      name: A498
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0080
+      identifier: CVCL_0080
+      link: https://identifiers.org/cellosaurus:CVCL_0080
+      name: A-673
+      prefix: cellosaurus
+    target:
+      curie: efo:0002106
+      identifier: '0002106'
+      link: https://identifiers.org/efo:0002106
+      name: A673
+      prefix: efo
+  nodes:
+    ccle.cell:A673_BONE:
+      identifier: A673_BONE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A673_BONE
+      name: A-673
+      prefix: ccle.cell
+    cellosaurus:CVCL_0080:
+      identifier: CVCL_0080
+      link: https://identifiers.org/cellosaurus:CVCL_0080
+      name: A-673
+      prefix: cellosaurus
+    efo:0002106:
+      identifier: '0002106'
+      link: https://identifiers.org/efo:0002106
+      name: A673
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1057
+      identifier: CVCL_1057
+      link: https://identifiers.org/cellosaurus:CVCL_1057
+      name: A101D
+      prefix: cellosaurus
+    target:
+      curie: efo:0002100
+      identifier: '0002100'
+      link: https://identifiers.org/efo:0002100
+      name: A101D
+      prefix: efo
+  nodes:
+    ccle.cell:A101D_SKIN:
+      identifier: A101D_SKIN
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A101D_SKIN
+      name: A101D
+      prefix: ccle.cell
+    cellosaurus:CVCL_1057:
+      identifier: CVCL_1057
+      link: https://identifiers.org/cellosaurus:CVCL_1057
+      name: A101D
+      prefix: cellosaurus
+    efo:0002100:
+      identifier: '0002100'
+      link: https://identifiers.org/efo:0002100
+      name: A101D
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0131
+      identifier: CVCL_0131
+      link: https://identifiers.org/cellosaurus:CVCL_0131
+      name: A-172
+      prefix: cellosaurus
+    target:
+      curie: efo:0002101
+      identifier: '0002101'
+      link: https://identifiers.org/efo:0002101
+      name: A172
+      prefix: efo
+  nodes:
+    ccle.cell:A172_CENTRAL_NERVOUS_SYSTEM:
+      identifier: A172_CENTRAL_NERVOUS_SYSTEM
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A172_CENTRAL_NERVOUS_SYSTEM
+      name: A172
+      prefix: ccle.cell
+    cellosaurus:CVCL_0131:
+      identifier: CVCL_0131
+      link: https://identifiers.org/cellosaurus:CVCL_0131
+      name: A-172
+      prefix: cellosaurus
+    efo:0002101:
+      identifier: '0002101'
+      link: https://identifiers.org/efo:0002101
+      name: A172
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1059
+      identifier: CVCL_1059
+      link: https://identifiers.org/cellosaurus:CVCL_1059
+      name: A2058
+      prefix: cellosaurus
+    target:
+      curie: efo:0006361
+      identifier: '0006361'
+      link: https://identifiers.org/efo:0006361
+      name: A2058
+      prefix: efo
+  nodes:
+    ccle.cell:A2058_SKIN:
+      identifier: A2058_SKIN
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A2058_SKIN
+      name: A2058
+      prefix: ccle.cell
+    cellosaurus:CVCL_1059:
+      identifier: CVCL_1059
+      link: https://identifiers.org/cellosaurus:CVCL_1059
+      name: A2058
+      prefix: cellosaurus
+    efo:0006361:
+      identifier: '0006361'
+      link: https://identifiers.org/efo:0006361
+      name: A2058
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0134
+      identifier: CVCL_0134
+      link: https://identifiers.org/cellosaurus:CVCL_0134
+      name: A2780
+      prefix: cellosaurus
+    target:
+      curie: efo:0006362
+      identifier: '0006362'
+      link: https://identifiers.org/efo:0006362
+      name: A2780
+      prefix: efo
+  nodes:
+    ccle.cell:A2780_OVARY:
+      identifier: A2780_OVARY
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A2780_OVARY
+      name: A2780
+      prefix: ccle.cell
+    cellosaurus:CVCL_0134:
+      identifier: CVCL_0134
+      link: https://identifiers.org/cellosaurus:CVCL_0134
+      name: A2780
+      prefix: cellosaurus
+    efo:0006362:
+      identifier: '0006362'
+      link: https://identifiers.org/efo:0006362
+      name: A2780
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1062
+      identifier: CVCL_1062
+      link: https://identifiers.org/cellosaurus:CVCL_1062
+      name: A3/Kawakami
+      prefix: cellosaurus
+    target:
+      curie: efo:0006532
+      identifier: '0006532'
+      link: https://identifiers.org/efo:0006532
+      name: A3/KAW
+      prefix: efo
+  nodes:
+    ccle.cell:A3KAW_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+      identifier: A3KAW_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A3KAW_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      name: A3/KAW
+      prefix: ccle.cell
+    cellosaurus:CVCL_1062:
+      identifier: CVCL_1062
+      link: https://identifiers.org/cellosaurus:CVCL_1062
+      name: A3/Kawakami
+      prefix: cellosaurus
+    efo:0006532:
+      identifier: '0006532'
+      link: https://identifiers.org/efo:0006532
+      name: A3/KAW
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1064
+      identifier: CVCL_1064
+      link: https://identifiers.org/cellosaurus:CVCL_1064
+      name: A4/Fukuda
+      prefix: cellosaurus
+    target:
+      curie: efo:0006533
+      identifier: '0006533'
+      link: https://identifiers.org/efo:0006533
+      name: A4/Fuk
+      prefix: efo
+  nodes:
+    ccle.cell:A4FUK_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+      identifier: A4FUK_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A4FUK_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      name: A4/Fuk
+      prefix: ccle.cell
+    cellosaurus:CVCL_1064:
+      identifier: CVCL_1064
+      link: https://identifiers.org/cellosaurus:CVCL_1064
+      name: A4/Fukuda
+      prefix: cellosaurus
+    efo:0006533:
+      identifier: '0006533'
+      link: https://identifiers.org/efo:0006533
+      name: A4/Fuk
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0023
+      identifier: CVCL_0023
+      link: https://identifiers.org/cellosaurus:CVCL_0023
+      name: A-549
+      prefix: cellosaurus
+    target:
+      curie: efo:0001086
+      identifier: 0001086
+      link: https://identifiers.org/efo:0001086
+      name: A549
+      prefix: efo
+  nodes:
+    ccle.cell:A549_LUNG:
+      identifier: A549_LUNG
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A549_LUNG
+      name: A549
+      prefix: ccle.cell
+    cellosaurus:CVCL_0023:
+      identifier: CVCL_0023
+      link: https://identifiers.org/cellosaurus:CVCL_0023
+      name: A-549
+      prefix: cellosaurus
+    efo:0001086:
+      identifier: 0001086
+      link: https://identifiers.org/efo:0001086
+      name: A549
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1066
+      identifier: CVCL_1066
+      link: https://identifiers.org/cellosaurus:CVCL_1066
+      name: ABC-1
+      prefix: cellosaurus
+    target:
+      curie: efo:0002813
+      identifier: 0002813
+      link: https://identifiers.org/efo:0002813
+      name: ABC-1
+      prefix: efo
+  nodes:
+    ccle.cell:ABC1_LUNG:
+      identifier: ABC1_LUNG
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ABC1_LUNG
+      name: ABC-1
+      prefix: ccle.cell
+    cellosaurus:CVCL_1066:
+      identifier: CVCL_1066
+      link: https://identifiers.org/cellosaurus:CVCL_1066
+      name: ABC-1
+      prefix: cellosaurus
+    efo:0002813:
+      identifier: 0002813
+      link: https://identifiers.org/efo:0002813
+      name: ABC-1
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1067
+      identifier: CVCL_1067
+      link: https://identifiers.org/cellosaurus:CVCL_1067
+      name: ACHN
+      prefix: cellosaurus
+    target:
+      curie: efo:0002108
+      identifier: 0002108
+      link: https://identifiers.org/efo:0002108
+      name: ACHN
+      prefix: efo
+  nodes:
+    ccle.cell:ACHN_KIDNEY:
+      identifier: ACHN_KIDNEY
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ACHN_KIDNEY
+      name: ACHN
+      prefix: ccle.cell
+    cellosaurus:CVCL_1067:
+      identifier: CVCL_1067
+      link: https://identifiers.org/cellosaurus:CVCL_1067
+      name: ACHN
+      prefix: cellosaurus
+    efo:0002108:
+      identifier: 0002108
+      link: https://identifiers.org/efo:0002108
+      name: ACHN
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0139
+      identifier: CVCL_0139
+      link: https://identifiers.org/cellosaurus:CVCL_0139
+      name: AGS
+      prefix: cellosaurus
+    target:
+      curie: efo:0002109
+      identifier: 0002109
+      link: https://identifiers.org/efo:0002109
+      name: AGS
+      prefix: efo
+  nodes:
+    ccle.cell:AGS_STOMACH:
+      identifier: AGS_STOMACH
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=AGS_STOMACH
+      name: AGS
+      prefix: ccle.cell
+    cellosaurus:CVCL_0139:
+      identifier: CVCL_0139
+      link: https://identifiers.org/cellosaurus:CVCL_0139
+      name: AGS
+      prefix: cellosaurus
+    efo:0002109:
+      identifier: 0002109
+      link: https://identifiers.org/efo:0002109
+      name: AGS
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1806
+      identifier: CVCL_1806
+      link: https://identifiers.org/cellosaurus:CVCL_1806
+      name: AMO1
+      prefix: cellosaurus
+    target:
+      curie: efo:0006534
+      identifier: '0006534'
+      link: https://identifiers.org/efo:0006534
+      name: AMO-1
+      prefix: efo
+  nodes:
+    ccle.cell:AMO1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+      identifier: AMO1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=AMO1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      name: AMO-1
+      prefix: ccle.cell
+    cellosaurus:CVCL_1806:
+      identifier: CVCL_1806
+      link: https://identifiers.org/cellosaurus:CVCL_1806
+      name: AMO1
+      prefix: cellosaurus
+    efo:0006534:
+      identifier: '0006534'
+      link: https://identifiers.org/efo:0006534
+      name: AMO-1
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1074
+      identifier: CVCL_1074
+      link: https://identifiers.org/cellosaurus:CVCL_1074
+      name: AU565
+      prefix: cellosaurus
+    target:
+      curie: efo:0001087
+      identifier: 0001087
+      link: https://identifiers.org/efo:0001087
+      name: AU565
+      prefix: efo
+  nodes:
+    ccle.cell:AU565_BREAST:
+      identifier: AU565_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=AU565_BREAST
+      name: AU565
+      prefix: ccle.cell
+    cellosaurus:CVCL_1074:
+      identifier: CVCL_1074
+      link: https://identifiers.org/cellosaurus:CVCL_1074
+      name: AU565
+      prefix: cellosaurus
+    efo:0001087:
+      identifier: 0001087
+      link: https://identifiers.org/efo:0001087
+      name: AU565
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_2862
+      identifier: CVCL_2862
+      link: https://identifiers.org/cellosaurus:CVCL_2862
+      name: AZ-521
+      prefix: cellosaurus
+    target:
+      curie: efo:0002814
+      identifier: 0002814
+      link: https://identifiers.org/efo:0002814
+      name: AZ-521
+      prefix: efo
+  nodes:
+    ccle.cell:AZ521_SMALL_INTESTINE:
+      identifier: AZ521_SMALL_INTESTINE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=AZ521_SMALL_INTESTINE
+      name: AZ-521
+      prefix: ccle.cell
+    cellosaurus:CVCL_2862:
+      identifier: CVCL_2862
+      link: https://identifiers.org/cellosaurus:CVCL_2862
+      name: AZ-521
+      prefix: cellosaurus
+    efo:0002814:
+      identifier: 0002814
+      link: https://identifiers.org/efo:0002814
+      name: AZ-521
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0152
+      identifier: CVCL_0152
+      link: https://identifiers.org/cellosaurus:CVCL_0152
+      name: AsPC-1
+      prefix: cellosaurus
+    target:
+      curie: efo:0002112
+      identifier: '0002112'
+      link: https://identifiers.org/efo:0002112
+      name: AsPC1
+      prefix: efo
+  nodes:
+    ccle.cell:ASPC1_PANCREAS:
+      identifier: ASPC1_PANCREAS
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ASPC1_PANCREAS
+      name: AsPC-1
+      prefix: ccle.cell
+    cellosaurus:CVCL_0152:
+      identifier: CVCL_0152
+      link: https://identifiers.org/cellosaurus:CVCL_0152
+      name: AsPC-1
+      prefix: cellosaurus
+    efo:0002112:
+      identifier: '0002112'
+      link: https://identifiers.org/efo:0002112
+      name: AsPC1
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1082
+      identifier: CVCL_1082
+      link: https://identifiers.org/cellosaurus:CVCL_1082
+      name: BEN
+      prefix: cellosaurus
+    target:
+      curie: efo:0006537
+      identifier: '0006537'
+      link: https://identifiers.org/efo:0006537
+      name: BEN
+      prefix: efo
+  nodes:
+    ccle.cell:BEN_LUNG:
+      identifier: BEN_LUNG
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BEN_LUNG
+      name: BEN
+      prefix: ccle.cell
+    cellosaurus:CVCL_1082:
+      identifier: CVCL_1082
+      link: https://identifiers.org/cellosaurus:CVCL_1082
+      name: BEN
+      prefix: cellosaurus
+    efo:0006537:
+      identifier: '0006537'
+      link: https://identifiers.org/efo:0006537
+      name: BEN
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1083
+      identifier: CVCL_1083
+      link: https://identifiers.org/cellosaurus:CVCL_1083
+      name: BFTC-905
+      prefix: cellosaurus
+    target:
+      curie: efo:0002115
+      identifier: '0002115'
+      link: https://identifiers.org/efo:0002115
+      name: BFTC905
+      prefix: efo
+  nodes:
+    ccle.cell:BFTC905_URINARY_TRACT:
+      identifier: BFTC905_URINARY_TRACT
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BFTC905_URINARY_TRACT
+      name: BFTC-905
+      prefix: ccle.cell
+    cellosaurus:CVCL_1083:
+      identifier: CVCL_1083
+      link: https://identifiers.org/cellosaurus:CVCL_1083
+      name: BFTC-905
+      prefix: cellosaurus
+    efo:0002115:
+      identifier: '0002115'
+      link: https://identifiers.org/efo:0002115
+      name: BFTC905
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1084
+      identifier: CVCL_1084
+      link: https://identifiers.org/cellosaurus:CVCL_1084
+      name: BFTC-909
+      prefix: cellosaurus
+    target:
+      curie: efo:0006538
+      identifier: 0006538
+      link: https://identifiers.org/efo:0006538
+      name: BFTC-909
+      prefix: efo
+  nodes:
+    ccle.cell:BFTC909_KIDNEY:
+      identifier: BFTC909_KIDNEY
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BFTC909_KIDNEY
+      name: BFTC-909
+      prefix: ccle.cell
+    cellosaurus:CVCL_1084:
+      identifier: CVCL_1084
+      link: https://identifiers.org/cellosaurus:CVCL_1084
+      name: BFTC-909
+      prefix: cellosaurus
+    efo:0006538:
+      identifier: 0006538
+      link: https://identifiers.org/efo:0006538
+      name: BFTC-909
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1085
+      identifier: CVCL_1085
+      link: https://identifiers.org/cellosaurus:CVCL_1085
+      name: BHT-101
+      prefix: cellosaurus
+    target:
+      curie: efo:0002116
+      identifier: '0002116'
+      link: https://identifiers.org/efo:0002116
+      name: BHT101
+      prefix: efo
+  nodes:
+    ccle.cell:BHT101_THYROID:
+      identifier: BHT101_THYROID
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BHT101_THYROID
+      name: BHT-101
+      prefix: ccle.cell
+    cellosaurus:CVCL_1085:
+      identifier: CVCL_1085
+      link: https://identifiers.org/cellosaurus:CVCL_1085
+      name: BHT-101
+      prefix: cellosaurus
+    efo:0002116:
+      identifier: '0002116'
+      link: https://identifiers.org/efo:0002116
+      name: BHT101
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1086
+      identifier: CVCL_1086
+      link: https://identifiers.org/cellosaurus:CVCL_1086
+      name: BHY
+      prefix: cellosaurus
+    target:
+      curie: efo:0006539
+      identifier: 0006539
+      link: https://identifiers.org/efo:0006539
+      name: BHY
+      prefix: efo
+  nodes:
+    ccle.cell:BHY_UPPER_AERODIGESTIVE_TRACT:
+      identifier: BHY_UPPER_AERODIGESTIVE_TRACT
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BHY_UPPER_AERODIGESTIVE_TRACT
+      name: BHY
+      prefix: ccle.cell
+    cellosaurus:CVCL_1086:
+      identifier: CVCL_1086
+      link: https://identifiers.org/cellosaurus:CVCL_1086
+      name: BHY
+      prefix: cellosaurus
+    efo:0006539:
+      identifier: 0006539
+      link: https://identifiers.org/efo:0006539
+      name: BHY
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_2310
+      identifier: CVCL_2310
+      link: https://identifiers.org/cellosaurus:CVCL_2310
+      name: BICR 22
+      prefix: cellosaurus
+    target:
+      curie: efo:0006541
+      identifier: '0006541'
+      link: https://identifiers.org/efo:0006541
+      name: BICR 22
+      prefix: efo
+  nodes:
+    ccle.cell:BICR22_UPPER_AERODIGESTIVE_TRACT:
+      identifier: BICR22_UPPER_AERODIGESTIVE_TRACT
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BICR22_UPPER_AERODIGESTIVE_TRACT
+      name: BICR 22
+      prefix: ccle.cell
+    cellosaurus:CVCL_2310:
+      identifier: CVCL_2310
+      link: https://identifiers.org/cellosaurus:CVCL_2310
+      name: BICR 22
+      prefix: cellosaurus
+    efo:0006541:
+      identifier: '0006541'
+      link: https://identifiers.org/efo:0006541
+      name: BICR 22
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_2312
+      identifier: CVCL_2312
+      link: https://identifiers.org/cellosaurus:CVCL_2312
+      name: BICR 31
+      prefix: cellosaurus
+    target:
+      curie: efo:0006542
+      identifier: '0006542'
+      link: https://identifiers.org/efo:0006542
+      name: BICR 31
+      prefix: efo
+  nodes:
+    ccle.cell:BICR31_UPPER_AERODIGESTIVE_TRACT:
+      identifier: BICR31_UPPER_AERODIGESTIVE_TRACT
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BICR31_UPPER_AERODIGESTIVE_TRACT
+      name: BICR 31
+      prefix: ccle.cell
+    cellosaurus:CVCL_2312:
+      identifier: CVCL_2312
+      link: https://identifiers.org/cellosaurus:CVCL_2312
+      name: BICR 31
+      prefix: cellosaurus
+    efo:0006542:
+      identifier: '0006542'
+      link: https://identifiers.org/efo:0006542
+      name: BICR 31
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0178
+      identifier: CVCL_0178
+      link: https://identifiers.org/cellosaurus:CVCL_0178
+      name: BT-20
+      prefix: cellosaurus
+    target:
+      curie: efo:0001092
+      identifier: 0001092
+      link: https://identifiers.org/efo:0001092
+      name: BT20
+      prefix: efo
+  nodes:
+    ccle.cell:BT20_BREAST:
+      identifier: BT20_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BT20_BREAST
+      name: BT-20
+      prefix: ccle.cell
+    cellosaurus:CVCL_0178:
+      identifier: CVCL_0178
+      link: https://identifiers.org/cellosaurus:CVCL_0178
+      name: BT-20
+      prefix: cellosaurus
+    efo:0001092:
+      identifier: 0001092
+      link: https://identifiers.org/efo:0001092
+      name: BT20
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0179
+      identifier: CVCL_0179
+      link: https://identifiers.org/cellosaurus:CVCL_0179
+      name: BT-474
+      prefix: cellosaurus
+    target:
+      curie: efo:0001093
+      identifier: 0001093
+      link: https://identifiers.org/efo:0001093
+      name: BT474
+      prefix: efo
+  nodes:
+    ccle.cell:BT474_BREAST:
+      identifier: BT474_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BT474_BREAST
+      name: BT-474
+      prefix: ccle.cell
+    cellosaurus:CVCL_0179:
+      identifier: CVCL_0179
+      link: https://identifiers.org/cellosaurus:CVCL_0179
+      name: BT-474
+      prefix: cellosaurus
+    efo:0001093:
+      identifier: 0001093
+      link: https://identifiers.org/efo:0001093
+      name: BT474
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_2319
+      identifier: CVCL_2319
+      link: https://identifiers.org/cellosaurus:CVCL_2319
+      name: BT-483
+      prefix: cellosaurus
+    target:
+      curie: efo:0001095
+      identifier: 0001095
+      link: https://identifiers.org/efo:0001095
+      name: BT483
+      prefix: efo
+  nodes:
+    ccle.cell:BT483_BREAST:
+      identifier: BT483_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BT483_BREAST
+      name: BT-483
+      prefix: ccle.cell
+    cellosaurus:CVCL_2319:
+      identifier: CVCL_2319
+      link: https://identifiers.org/cellosaurus:CVCL_2319
+      name: BT-483
+      prefix: cellosaurus
+    efo:0001095:
+      identifier: 0001095
+      link: https://identifiers.org/efo:0001095
+      name: BT483
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1092
+      identifier: CVCL_1092
+      link: https://identifiers.org/cellosaurus:CVCL_1092
+      name: BT-549
+      prefix: cellosaurus
+    target:
+      curie: efo:0001096
+      identifier: 0001096
+      link: https://identifiers.org/efo:0001096
+      name: BT549
+      prefix: efo
+  nodes:
+    ccle.cell:BT549_BREAST:
+      identifier: BT549_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BT549_BREAST
+      name: BT-549
+      prefix: ccle.cell
+    cellosaurus:CVCL_1092:
+      identifier: CVCL_1092
+      link: https://identifiers.org/cellosaurus:CVCL_1092
+      name: BT-549
+      prefix: cellosaurus
+    efo:0001096:
+      identifier: 0001096
+      link: https://identifiers.org/efo:0001096
+      name: BT549
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0181
+      identifier: CVCL_0181
+      link: https://identifiers.org/cellosaurus:CVCL_0181
+      name: BV-173
+      prefix: cellosaurus
+    target:
+      curie: efo:0002118
+      identifier: 0002118
+      link: https://identifiers.org/efo:0002118
+      name: BV173
+      prefix: efo
+  nodes:
+    ccle.cell:BV173_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+      identifier: BV173_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BV173_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      name: BV-173
+      prefix: ccle.cell
+    cellosaurus:CVCL_0181:
+      identifier: CVCL_0181
+      link: https://identifiers.org/cellosaurus:CVCL_0181
+      name: BV-173
+      prefix: cellosaurus
+    efo:0002118:
+      identifier: 0002118
+      link: https://identifiers.org/efo:0002118
+      name: BV173
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0186
+      identifier: CVCL_0186
+      link: https://identifiers.org/cellosaurus:CVCL_0186
+      name: BxPC-3
+      prefix: cellosaurus
+    target:
+      curie: efo:0002709
+      identifier: 0002709
+      link: https://identifiers.org/efo:0002709
+      name: BxPC-3
+      prefix: efo
+  nodes:
+    ccle.cell:BXPC3_PANCREAS:
+      identifier: BXPC3_PANCREAS
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BXPC3_PANCREAS
+      name: BxPC-3
+      prefix: ccle.cell
+    cellosaurus:CVCL_0186:
+      identifier: CVCL_0186
+      link: https://identifiers.org/cellosaurus:CVCL_0186
+      name: BxPC-3
+      prefix: cellosaurus
+    efo:0002709:
+      identifier: 0002709
+      link: https://identifiers.org/efo:0002709
+      name: BxPC-3
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1096
+      identifier: CVCL_1096
+      link: https://identifiers.org/cellosaurus:CVCL_1096
+      name: C2BBe1
+      prefix: cellosaurus
+    target:
+      curie: efo:0006546
+      identifier: '0006546'
+      link: https://identifiers.org/efo:0006546
+      name: C2BBe1
+      prefix: efo
+  nodes:
+    ccle.cell:C2BBE1_LARGE_INTESTINE:
+      identifier: C2BBE1_LARGE_INTESTINE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=C2BBE1_LARGE_INTESTINE
+      name: C2BBe1
+      prefix: ccle.cell
+    cellosaurus:CVCL_1096:
+      identifier: CVCL_1096
+      link: https://identifiers.org/cellosaurus:CVCL_1096
+      name: C2BBe1
+      prefix: cellosaurus
+    efo:0006546:
+      identifier: '0006546'
+      link: https://identifiers.org/efo:0006546
+      name: C2BBe1
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1097
+      identifier: CVCL_1097
+      link: https://identifiers.org/cellosaurus:CVCL_1097
+      name: C32 [Human melanoma]
+      prefix: cellosaurus
+    target:
+      curie: efo:0006364
+      identifier: '0006364'
+      link: https://identifiers.org/efo:0006364
+      name: C32
+      prefix: efo
+  nodes:
+    ccle.cell:C32_SKIN:
+      identifier: C32_SKIN
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=C32_SKIN
+      name: C32
+      prefix: ccle.cell
+    cellosaurus:CVCL_1097:
+      identifier: CVCL_1097
+      link: https://identifiers.org/cellosaurus:CVCL_1097
+      name: C32 [Human melanoma]
+      prefix: cellosaurus
+    efo:0006364:
+      identifier: '0006364'
+      link: https://identifiers.org/efo:0006364
+      name: C32
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1098
+      identifier: CVCL_1098
+      link: https://identifiers.org/cellosaurus:CVCL_1098
+      name: Hep-G2/C3A
+      prefix: cellosaurus
+    target:
+      curie: efo:0002121
+      identifier: '0002121'
+      link: https://identifiers.org/efo:0002121
+      name: C3A
+      prefix: efo
+  nodes:
+    ccle.cell:C3A_LIVER:
+      identifier: C3A_LIVER
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=C3A_LIVER
+      name: C3A
+      prefix: ccle.cell
+    cellosaurus:CVCL_1098:
+      identifier: CVCL_1098
+      link: https://identifiers.org/cellosaurus:CVCL_1098
+      name: Hep-G2/C3A
+      prefix: cellosaurus
+    efo:0002121:
+      identifier: '0002121'
+      link: https://identifiers.org/efo:0002121
+      name: C3A
+      prefix: efo
