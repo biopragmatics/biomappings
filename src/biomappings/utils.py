@@ -114,7 +114,7 @@ class MiriamValidator:
             entry = self.entries[prefix]
             if not re.match(entry["pattern"], identifier):
                 raise InvalidIdentifier(prefix, identifier)
-        elif bioregistry.get(prefix) is None:
+        elif bioregistry.get_resource(prefix) is None:
             raise InvalidPrefix(prefix)
         elif bioregistry.get_pattern(prefix) is None:
             if bioregistry.validate(prefix, identifier):
