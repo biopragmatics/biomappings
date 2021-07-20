@@ -33,7 +33,7 @@ def get_primary_mappings():
     for source in sources:
         entries = load_resource_json(f"{source}.json")
         for entry in entries:
-            for xref in entry.get("xrefs", []):
+            for xref in entry.get_resource("xrefs", []):
                 if xref["namespace"] != "MESH":
                     continue
                 mappings.add(("mesh", xref["id"], source, entry["id"]))
