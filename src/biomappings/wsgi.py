@@ -5,7 +5,7 @@
 import getpass
 import os
 from collections import defaultdict
-from typing import Any, Iterable, Mapping, Optional, Tuple
+from typing import Any, Iterable, Mapping, Optional, Set, Tuple
 
 import flask
 import flask_bootstrap
@@ -57,17 +57,26 @@ class Controller:
         offset: Optional[int] = None,
         limit: Optional[int] = None,
         query: Optional[str] = None,
+        source_query: Optional[str] = None,
+        target_query: Optional[str] = None,
         prefix: Optional[str] = None,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
         :param offset: If given, offset the iteration by this number
         :param limit: If given, only iterate this number of predictions.
-        :param query: If given, show only equivalences that have it appearing as a substring in one of the fields
-        :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes
+        :param query: If given, show only equivalences that have it appearing as a substring in one of the source
+            or target fields.
+        :param source_query: If given, show only equivalences that have it appearing as a substring in one of the source
+            fields.
+        :param target_query: If given, show only equivalences that have it appearing as a substring in one of the target
+            fields.
+        :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes.
         :yields: Pairs of positions and prediction dictionaries
         """
-        it = self._help_it_predictions(query=query, prefix=prefix)
+        it = self._help_it_predictions(
+            query=query, source=source_query, target=target_query, prefix=prefix
+        )
         if offset is not None:
             try:
                 for _ in range(offset):
@@ -85,42 +94,59 @@ class Controller:
     def count_predictions(
         self,
         query: Optional[str] = None,
+        source_query: Optional[str] = None,
+        target_query: Optional[str] = None,
         prefix: Optional[str] = None,
     ) -> int:
         """Count the number of predictions to check for the given filters."""
-        return sum(1 for _ in self._help_it_predictions(query=query, prefix=prefix))
+        it = self._help_it_predictions(
+            query=query, source=source_query, target=target_query, prefix=prefix
+        )
+        return sum(1 for _ in it)
 
-    def _help_it_predictions(self, query: Optional[str] = None, prefix: Optional[str] = None):
+    def _help_it_predictions(
+        self,
+        query: Optional[str] = None,
+        source: Optional[str] = None,
+        target: Optional[str] = None,
+        prefix: Optional[str] = None,
+    ):
         it = enumerate(self._predictions)
         if query is not None:
-            query = query.casefold()
-            it = (
-                (line, prediction)
-                for line, prediction in it
-                if any(
-                    query in prediction[x].casefold()
-                    for x in (
-                        "source prefix",
-                        "source identifier",
-                        "source name",
-                        "target prefix",
-                        "target identifier",
-                        "target name",
-                    )
-                )
+            it = self._help_filter(
+                query,
+                it,
+                {
+                    "source prefix",
+                    "source identifier",
+                    "source name",
+                    "target prefix",
+                    "target identifier",
+                    "target name",
+                },
+            )
+        if source is not None:
+            it = self._help_filter(
+                source, it, {"source prefix", "source identifier", "source name"}
+            )
+        if target is not None:
+            it = self._help_filter(
+                target, it, {"target prefix", "target identifier", "target name"}
             )
         if prefix is not None:
-            prefix = prefix.casefold()
-            it = (
-                (line, prediction)
-                for line, prediction in it
-                if any(
-                    prefix in prediction[x].casefold() for x in ("source prefix", "target prefix")
-                )
-            )
+            it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
 
         it = ((line, prediction) for line, prediction in it if line not in self._marked)
         return it
+
+    @staticmethod
+    def _help_filter(query: str, it, elements: Set[str]):
+        query = query.casefold()
+        return (
+            (line, prediction)
+            for line, prediction in it
+            if any(query in prediction[element].casefold() for element in elements)
+        )
 
     @staticmethod
     def get_curie(prefix: str, identifier: str) -> str:
@@ -236,6 +262,8 @@ def home():
     limit = flask.request.args.get("limit", type=int, default=10)
     offset = flask.request.args.get("offset", type=int, default=0)
     query = flask.request.args.get("query")
+    source_query = flask.request.args.get("source")
+    target_query = flask.request.args.get("target")
     prefix = flask.request.args.get("prefix")
     show_relations = app.config["SHOW_RELATIONS"]
     return flask.render_template(
@@ -245,6 +273,8 @@ def home():
         limit=limit,
         offset=offset,
         query=query,
+        source_query=source_query,
+        target_query=target_query,
         prefix=prefix,
         show_relations=show_relations,
     )
@@ -314,6 +344,8 @@ def _go_home():
             limit=flask.request.args.get("limit", type=int),
             offset=flask.request.args.get("offset", type=int),
             query=flask.request.args.get("query"),
+            source=flask.request.args.get("source"),
+            target=flask.request.args.get("target"),
             prefix=flask.request.args.get("prefix"),
             show_relations=app.config["SHOW_RELATIONS"],
         )
