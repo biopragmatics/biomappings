@@ -3,7 +3,7 @@ contributors:
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
   user: hoytfamily
-- count: 1563
+- count: 1573
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -108,13 +108,13 @@ positive:
 - count: 102
   source: hgnc
   target: mesh
+- count: 82
+  source: ccle.cell
+  target: cellosaurus
 - count: 80
   source: pr
   target: uniprot.chain
-- count: 77
-  source: ccle.cell
-  target: cellosaurus
-- count: 47
+- count: 52
   source: ccle.cell
   target: efo
 - count: 26
@@ -153,7 +153,7 @@ positive:
 - count: 1
   source: go
   target: ncit
-positive_mapping_count: 3828
+positive_mapping_count: 3838
 positive_prefix_count: 20
 predictions:
 - count: 12337
@@ -168,7 +168,7 @@ predictions:
 - count: 1376
   source: hgnc
   target: mesh
-- count: 1068
+- count: 1063
   source: ccle.cell
   target: cellosaurus
 - count: 550
@@ -195,5 +195,5 @@ predictions:
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 29974
+predictions_mapping_count: 29969
 predictions_prefix_count: 15
