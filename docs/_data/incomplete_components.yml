@@ -586,10 +586,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: GO:0033211
-      identifier: GO:0033211
-      link: https://identifiers.org/GO:0033211
-      name: adiponectin-activated signaling pathway
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: GO:0033209
@@ -598,10 +598,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: GO:0033210
-      identifier: GO:0033210
-      link: https://identifiers.org/GO:0033210
-      name: leptin-mediated signaling pathway
+      curie: GO:0033211
+      identifier: GO:0033211
+      link: https://identifiers.org/GO:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: GO:0033210
