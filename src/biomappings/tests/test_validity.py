@@ -11,7 +11,6 @@ mappings = load_mappings()
 predictions = load_predictions()
 incorrect = load_false_mappings()
 
-
 miriam_validator = MiriamValidator()
 
 
@@ -39,9 +38,9 @@ def test_redundancy():
 
 def test_predictions_sorted():
     """Test the predictions are in a canonical order."""
-    assert predictions == sorted(predictions, key=mapping_sort_key), 'Predictions are not sorted'
+    assert predictions == sorted(predictions, key=mapping_sort_key), 'Predictions are not sorted'  # noqa:S101
 
 
 def test_curations_sorted():
     """Test the curated mappings are in a canonical order."""
-    assert mappings == sorted(mappings, key=mapping_sort_key), 'Curations are not sorted'
+    assert mappings == sorted(mappings, key=mapping_sort_key), 'Curations are not sorted'  # noqa:S101
