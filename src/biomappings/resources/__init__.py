@@ -5,7 +5,7 @@
 import csv
 import itertools as itt
 import os
-from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Sequence
+from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Sequence, Tuple
 
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
@@ -86,6 +86,9 @@ def get_resource_file_path(fname) -> str:
     return os.path.join(RESOURCE_PATH, fname)
 
 
+TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
+
+
 def _load_table(fname) -> List[Dict[str, str]]:
     with open(fname, "r") as fh:
         reader = csv.reader(fh, delimiter="\t")
@@ -96,6 +99,7 @@ def _load_table(fname) -> List[Dict[str, str]]:
 def _write_helper(
     header: Sequence[str], lod: Iterable[Mapping[str, str]], path: str, mode: str
 ) -> None:
+    lod = sorted(lod, key=mapping_sort_key)
     with open(path, mode) as file:
         if mode == "w":
             print(*header, sep="\t", file=file)
@@ -103,19 +107,37 @@ def _write_helper(
             print(*[line[k] for k in header], sep="\t", file=file)
 
 
+def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
+    """Return a tuple for sorting mapping dictionaries."""
+    return (
+        prediction["source prefix"],
+        prediction["source identifier"],
+        prediction["relation"],
+        prediction["target prefix"],
+        prediction["target identifier"],
+        prediction["type"],
+        prediction["source"],
+    )
+
+
 def load_mappings() -> List[Dict[str, str]]:
     """Load the mappings table."""
-    return _load_table(get_resource_file_path("mappings.tsv"))
+    return _load_table(TRUE_MAPPINGS_PATH)
 
 
 def append_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path("mappings.tsv"), "a")
+    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "a")
 
 
 def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
     """Append new lines to the mappings table."""
     append_true_mappings(mapping.as_dict() for mapping in mappings)
+
+
+def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
+    """Write mappigns to the true mappings file."""
+    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "w")
 
 
 def load_false_mappings() -> List[Dict[str, str]]:

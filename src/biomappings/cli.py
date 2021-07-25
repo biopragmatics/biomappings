@@ -51,6 +51,14 @@ def update(ctx: click.Context):
 
 
 @main.command()
+def lint():
+    """Sort files and remove duplicates."""
+    from .resources import load_predictions, write_predictions, mapping_sort_key, write_true_mappings, load_mappings
+    write_predictions(sorted(load_predictions(), key=mapping_sort_key))
+    write_true_mappings(sorted(load_mappings(), key=mapping_sort_key))
+
+
+@main.command()
 @click.argument("prefixes", nargs=-1)
 def prune(prefixes):
     """Prune inferred mappings between the given prefixes from the predictions."""
