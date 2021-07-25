@@ -50,6 +50,17 @@ def update(ctx: click.Context):
     ctx.invoke(ndex)
 
 
+@main.command()
+@click.argument("prefixes", nargs=-1)
+def prune(prefixes):
+    """Prune inferred mappings between the given prefixes from the predictions."""
+    from .mapping_graph import get_custom_filter
+    from .resources import filter_predictions
+
+    cf = get_custom_filter(prefixes[0], prefixes[1:])
+    filter_predictions(cf)
+
+
 main.add_command(export)
 main.add_command(ndex)
 main.add_command(charts)

@@ -138,7 +138,7 @@ def load_predictions() -> List[Dict[str, str]]:
     return _load_table(get_resource_file_path("predictions.tsv"))
 
 
-def write_predictions(m: List[Mapping[str, str]]) -> None:
+def write_predictions(m: Iterable[Mapping[str, str]]) -> None:
     """Write new content to the predictions table."""
     _write_helper(PREDICTIONS_HEADER, m, get_resource_file_path("predictions.tsv"), "w")
 
@@ -174,3 +174,25 @@ def append_predictions(mappings: Iterable[Mapping[str, str]], deduplicate: bool 
 def load_curators():
     """Load the curators table."""
     return _load_table(get_resource_file_path("curators.tsv"))
+
+
+def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:
+    """Filter all of the predictions by removing what's in the custom filter then re-write.
+
+    :param custom_filter: A filter 3-dictionary of source prefix to target prefix
+        to source identifier to target identifier
+    """
+    predictions = load_predictions()
+    predictions = [
+        prediction for prediction in predictions if _check_filter(prediction, custom_filter)
+    ]
+    write_predictions(predictions)
+
+
+def _check_filter(
+    prediction: Mapping[str, str],
+    custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]],
+) -> bool:
+    source_prefix, target_prefix = prediction["source prefix"], prediction["target prefix"]
+    source_id, target_id = prediction["source identifier"], prediction["target identifier"]
+    return target_id != custom_filter.get(source_prefix, {}).get(target_prefix, {}).get(source_id)
