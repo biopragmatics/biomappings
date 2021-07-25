@@ -86,9 +86,6 @@ def get_resource_file_path(fname) -> str:
     return os.path.join(RESOURCE_PATH, fname)
 
 
-TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
-
-
 def _load_table(fname) -> List[Dict[str, str]]:
     with open(fname, "r") as fh:
         reader = csv.reader(fh, delimiter="\t")
@@ -120,6 +117,9 @@ def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
     )
 
 
+TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
+
+
 def load_mappings() -> List[Dict[str, str]]:
     """Load the mappings table."""
     return _load_table(TRUE_MAPPINGS_PATH)
@@ -140,29 +140,53 @@ def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
     _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "w")
 
 
+FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
+
+
 def load_false_mappings() -> List[Dict[str, str]]:
     """Load the false mappings table."""
-    return _load_table(get_resource_file_path("incorrect.tsv"))
+    return _load_table(FALSE_MAPPINGS_PATH)
 
 
 def append_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the false mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path("incorrect.tsv"), "a")
+    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "a")
+
+
+def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
+    """Write mappings to the false mappings file."""
+    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "w")
+
+
+UNSURE_PATH = get_resource_file_path("unsure.tsv")
+
+
+def load_unsure() -> List[Dict[str, str]]:
+    """Load the unsure table."""
+    return _load_table(UNSURE_PATH)
 
 
 def append_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the "unsure" mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path("unsure.tsv"), "a")
+    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "a")
+
+
+def write_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
+    """Write mappings to the unsure mappings file."""
+    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "w")
+
+
+PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
 
 
 def load_predictions() -> List[Dict[str, str]]:
     """Load the predictions table."""
-    return _load_table(get_resource_file_path("predictions.tsv"))
+    return _load_table(PREDICTIONS_PATH)
 
 
 def write_predictions(m: Iterable[Mapping[str, str]]) -> None:
     """Write new content to the predictions table."""
-    _write_helper(PREDICTIONS_HEADER, m, get_resource_file_path("predictions.tsv"), "w")
+    _write_helper(PREDICTIONS_HEADER, m, PREDICTIONS_PATH, "w")
 
 
 def append_prediction_tuples(
@@ -190,7 +214,7 @@ def append_predictions(mappings: Iterable[Mapping[str, str]], deduplicate: bool 
             mapping for mapping in mappings if get_canonical_tuple(mapping) not in existing_mappings
         )
 
-    _write_helper(PREDICTIONS_HEADER, mappings, get_resource_file_path("predictions.tsv"), "a")
+    _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, "a")
 
 
 def load_curators():

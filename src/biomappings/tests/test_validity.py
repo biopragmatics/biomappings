@@ -3,13 +3,14 @@
 import itertools as itt
 from collections import Counter
 
-from biomappings import load_false_mappings, load_mappings, load_predictions
+from biomappings import load_false_mappings, load_mappings, load_predictions, load_unsure
 from biomappings.resources import mapping_sort_key
 from biomappings.utils import MiriamValidator, get_canonical_tuple
 
 mappings = load_mappings()
 predictions = load_predictions()
 incorrect = load_false_mappings()
+unsure = load_unsure()
 
 miriam_validator = MiriamValidator()
 
@@ -38,9 +39,27 @@ def test_redundancy():
 
 def test_predictions_sorted():
     """Test the predictions are in a canonical order."""
-    assert predictions == sorted(predictions, key=mapping_sort_key), 'Predictions are not sorted'  # noqa:S101
+    assert predictions == sorted(  # noqa:S101
+        predictions, key=mapping_sort_key
+    ), "Predictions are not sorted"
 
 
 def test_curations_sorted():
-    """Test the curated mappings are in a canonical order."""
-    assert mappings == sorted(mappings, key=mapping_sort_key), 'Curations are not sorted'  # noqa:S101
+    """Test the true curated mappings are in a canonical order."""
+    assert mappings == sorted(  # noqa:S101
+        mappings, key=mapping_sort_key
+    ), "True curations are not sorted"
+
+
+def test_false_mappings_sorted():
+    """Test the false curated mappings are in a canonical order."""
+    assert incorrect == sorted(  # noqa:S101
+        incorrect, key=mapping_sort_key
+    ), "False curations are not sorted"
+
+
+def test_unsure_sorted():
+    """Test the unsure mappings are in a canonical order."""
+    assert unsure == sorted(  # noqa:S101
+        unsure, key=mapping_sort_key
+    ), "Unsure curations are not sorted"

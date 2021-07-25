@@ -53,9 +53,22 @@ def update(ctx: click.Context):
 @main.command()
 def lint():
     """Sort files and remove duplicates."""
-    from .resources import load_predictions, write_predictions, mapping_sort_key, write_true_mappings, load_mappings
+    from .resources import (
+        load_predictions,
+        write_predictions,
+        mapping_sort_key,
+        write_true_mappings,
+        load_mappings,
+        load_unsure,
+        load_false_mappings,
+        write_false_mappings,
+        write_unsure_mappings,
+    )
+
     write_predictions(sorted(load_predictions(), key=mapping_sort_key))
     write_true_mappings(sorted(load_mappings(), key=mapping_sort_key))
+    write_false_mappings(sorted(load_false_mappings(), key=mapping_sort_key))
+    write_unsure_mappings(sorted(load_unsure(), key=mapping_sort_key))
 
 
 @main.command()
