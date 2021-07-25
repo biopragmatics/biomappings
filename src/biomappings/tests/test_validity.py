@@ -4,6 +4,7 @@ import itertools as itt
 from collections import Counter
 
 from biomappings import load_false_mappings, load_mappings, load_predictions
+from biomappings.resources import mapping_sort_key
 from biomappings.utils import MiriamValidator, get_canonical_tuple
 
 mappings = load_mappings()
@@ -34,3 +35,13 @@ def test_redundancy():
     if redundant:
         r = "\n".join(f"  {r}: {count}" for r, count in redundant)
         raise ValueError(f"Redundant: {r}")
+
+
+def test_predictions_sorted():
+    """Test the predictions are in a canonical order."""
+    assert predictions == sorted(predictions, key=mapping_sort_key), 'Predictions are not sorted'
+
+
+def test_curations_sorted():
+    """Test the curated mappings are in a canonical order."""
+    assert mappings == sorted(mappings, key=mapping_sort_key), 'Curations are not sorted'
