@@ -5,7 +5,7 @@
 import csv
 import itertools as itt
 import os
-from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Sequence
+from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Sequence, Tuple
 
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
@@ -96,6 +96,7 @@ def _load_table(fname) -> List[Dict[str, str]]:
 def _write_helper(
     header: Sequence[str], lod: Iterable[Mapping[str, str]], path: str, mode: str
 ) -> None:
+    lod = sorted(lod, key=mapping_sort_key)
     with open(path, mode) as file:
         if mode == "w":
             print(*header, sep="\t", file=file)
@@ -103,14 +104,30 @@ def _write_helper(
             print(*[line[k] for k in header], sep="\t", file=file)
 
 
+def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
+    """Return a tuple for sorting mapping dictionaries."""
+    return (
+        prediction["source prefix"],
+        prediction["source identifier"],
+        prediction["relation"],
+        prediction["target prefix"],
+        prediction["target identifier"],
+        prediction["type"],
+        prediction["source"],
+    )
+
+
+TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
+
+
 def load_mappings() -> List[Dict[str, str]]:
     """Load the mappings table."""
-    return _load_table(get_resource_file_path("mappings.tsv"))
+    return _load_table(TRUE_MAPPINGS_PATH)
 
 
 def append_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path("mappings.tsv"), "a")
+    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "a")
 
 
 def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
@@ -118,29 +135,58 @@ def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
     append_true_mappings(mapping.as_dict() for mapping in mappings)
 
 
+def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
+    """Write mappigns to the true mappings file."""
+    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "w")
+
+
+FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
+
+
 def load_false_mappings() -> List[Dict[str, str]]:
     """Load the false mappings table."""
-    return _load_table(get_resource_file_path("incorrect.tsv"))
+    return _load_table(FALSE_MAPPINGS_PATH)
 
 
 def append_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the false mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path("incorrect.tsv"), "a")
+    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "a")
+
+
+def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
+    """Write mappings to the false mappings file."""
+    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "w")
+
+
+UNSURE_PATH = get_resource_file_path("unsure.tsv")
+
+
+def load_unsure() -> List[Dict[str, str]]:
+    """Load the unsure table."""
+    return _load_table(UNSURE_PATH)
 
 
 def append_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Append new lines to the "unsure" mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, get_resource_file_path("unsure.tsv"), "a")
+    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "a")
+
+
+def write_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
+    """Write mappings to the unsure mappings file."""
+    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "w")
+
+
+PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
 
 
 def load_predictions() -> List[Dict[str, str]]:
     """Load the predictions table."""
-    return _load_table(get_resource_file_path("predictions.tsv"))
+    return _load_table(PREDICTIONS_PATH)
 
 
-def write_predictions(m: List[Mapping[str, str]]) -> None:
+def write_predictions(m: Iterable[Mapping[str, str]]) -> None:
     """Write new content to the predictions table."""
-    _write_helper(PREDICTIONS_HEADER, m, get_resource_file_path("predictions.tsv"), "w")
+    _write_helper(PREDICTIONS_HEADER, m, PREDICTIONS_PATH, "w")
 
 
 def append_prediction_tuples(
@@ -168,9 +214,31 @@ def append_predictions(mappings: Iterable[Mapping[str, str]], deduplicate: bool 
             mapping for mapping in mappings if get_canonical_tuple(mapping) not in existing_mappings
         )
 
-    _write_helper(PREDICTIONS_HEADER, mappings, get_resource_file_path("predictions.tsv"), "a")
+    _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, "a")
 
 
 def load_curators():
     """Load the curators table."""
     return _load_table(get_resource_file_path("curators.tsv"))
+
+
+def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:
+    """Filter all of the predictions by removing what's in the custom filter then re-write.
+
+    :param custom_filter: A filter 3-dictionary of source prefix to target prefix
+        to source identifier to target identifier
+    """
+    predictions = load_predictions()
+    predictions = [
+        prediction for prediction in predictions if _check_filter(prediction, custom_filter)
+    ]
+    write_predictions(predictions)
+
+
+def _check_filter(
+    prediction: Mapping[str, str],
+    custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]],
+) -> bool:
+    source_prefix, target_prefix = prediction["source prefix"], prediction["target prefix"]
+    source_id, target_id = prediction["source identifier"], prediction["target identifier"]
+    return target_id != custom_filter.get(source_prefix, {}).get(target_prefix, {}).get(source_id)
