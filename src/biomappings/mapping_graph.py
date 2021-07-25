@@ -7,7 +7,6 @@ from collections import defaultdict
 from typing import Iterable, Mapping, Optional
 
 import networkx as nx
-
 import pyobo
 
 
