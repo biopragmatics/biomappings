@@ -20,7 +20,7 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import MiriamValidator, commit, not_main, push
+from biomappings.utils import MiriamValidator, commit, get_branch, not_main, push
 
 app = flask.Flask(__name__)
 app.config["WTF_CSRF_ENABLED"] = False
@@ -302,12 +302,17 @@ def add_mapping():
 @app.route("/commit")
 def run_commit():
     """Make a commit then redirect to the the home page."""
-    commit(
+    commit_info = commit(
         f'Curated {controller.total_curated} mapping{"s" if controller.total_curated > 1 else ""}'
         f" ({getpass.getuser()})",
     )
+    app.logger.warning('git commit res: %s', commit_info)
     if not_main():
-        push()
+        branch = get_branch()
+        push_output = push(branch_name=branch)
+        app.logger.warning('git push res: %s', push_output)
+    else:
+        app.logger.warning('did not push because on master branch')
     controller.total_curated = 0
     return _go_home()
 

@@ -34,14 +34,22 @@ def commit(message: str) -> Optional[str]:
     return _git("commit", "-m", message, "-a")
 
 
-def push() -> Optional[str]:
+def push(branch_name: str = None) -> Optional[str]:
     """Push the git repo."""
-    return _git("push")
+    if branch_name:
+        return _git("push", "origin", branch_name)
+    else:
+        return _git("push")
 
 
 def not_main() -> bool:
     """Return if on the master branch."""
     return "master" != _git("rev-parse", "--abbrev-ref", "HEAD")
+
+
+def get_branch() -> str:
+    """Return current git branch."""
+    return _git("branch", "--show-current")
 
 
 def _git(*args: str) -> Optional[str]:
@@ -52,7 +60,8 @@ def _git(*args: str) -> Optional[str]:
                 cwd=os.path.dirname(__file__),
                 stderr=devnull,
             )
-        except CalledProcessError:
+        except CalledProcessError as e:
+            print(e)
             return
         else:
             return ret.strip().decode("utf-8")
