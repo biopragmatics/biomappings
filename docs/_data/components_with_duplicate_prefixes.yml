@@ -1,18 +1,3 @@
-- DOID:0080600:
-    identifier: DOID:0080600
-    link: https://identifiers.org/DOID:0080600
-    name: COVID-19
-    prefix: doid
-  mesh:C000657245:
-    identifier: C000657245
-    link: https://meshb.nlm.nih.gov/record/ui?ui=C000657245
-    name: COVID-19
-    prefix: mesh
-  mesh:D000086382:
-    identifier: D000086382
-    link: https://meshb.nlm.nih.gov/record/ui?ui=D000086382
-    name: COVID-19
-    prefix: mesh
 - GO:0033209:
     identifier: GO:0033209
     link: https://identifiers.org/GO:0033209
@@ -33,6 +18,21 @@
     link: https://identifiers.org/kegg.pathway:map04920
     name: Adipocytokine signaling pathway
     prefix: kegg.pathway
+- DOID:0080600:
+    identifier: DOID:0080600
+    link: https://identifiers.org/DOID:0080600
+    name: COVID-19
+    prefix: doid
+  mesh:C000657245:
+    identifier: C000657245
+    link: https://meshb.nlm.nih.gov/record/ui?ui=C000657245
+    name: COVID-19
+    prefix: mesh
+  mesh:D000086382:
+    identifier: D000086382
+    link: https://meshb.nlm.nih.gov/record/ui?ui=D000086382
+    name: COVID-19
+    prefix: mesh
 - DOID:0111154:
     identifier: DOID:0111154
     link: https://identifiers.org/DOID:0111154
