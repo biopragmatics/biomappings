@@ -3,7 +3,7 @@ contributors:
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
   user: hoytfamily
-- count: 1573
+- count: 1579
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -49,11 +49,11 @@ negative:
   source: hgnc
   target: reactome
 - count: 9
-  source: pr
-  target: uniprot.chain
-- count: 8
   source: ccle.cell
   target: cellosaurus
+- count: 9
+  source: pr
+  target: uniprot.chain
 - count: 7
   source: mesh
   target: ncit
@@ -61,16 +61,16 @@ negative:
   source: fplx
   target: wikipathways
 - count: 3
-  source: hgnc
-  target: wikipathways
-- count: 3
   source: doid
   target: reactome
-- count: 2
-  source: doid
+- count: 3
+  source: hgnc
   target: wikipathways
 - count: 2
   source: chebi
+  target: wikipathways
+- count: 2
+  source: doid
   target: wikipathways
 - count: 1
   source: ccle.cell
@@ -78,7 +78,7 @@ negative:
 - count: 1
   source: ccle.cell
   target: depmap
-negative_mapping_count: 882
+negative_mapping_count: 883
 negative_prefix_count: 16
 positive:
 - count: 1271
@@ -108,13 +108,13 @@ positive:
 - count: 102
   source: hgnc
   target: mesh
-- count: 82
+- count: 92
   source: ccle.cell
   target: cellosaurus
 - count: 80
   source: pr
   target: uniprot.chain
-- count: 52
+- count: 47
   source: ccle.cell
   target: efo
 - count: 26
@@ -145,15 +145,15 @@ positive:
   source: bto
   target: ccle.cell
 - count: 1
+  source: go
+  target: ncit
+- count: 1
   source: mesh
   target: pfam
 - count: 1
   source: efo
   target: wikipathways
-- count: 1
-  source: go
-  target: ncit
-positive_mapping_count: 3838
+positive_mapping_count: 3843
 positive_prefix_count: 20
 predictions:
 - count: 12337
@@ -168,10 +168,7 @@ predictions:
 - count: 1376
   source: hgnc
   target: mesh
-- count: 1063
-  source: ccle.cell
-  target: cellosaurus
-- count: 550
+- count: 537
   source: ccle.cell
   target: efo
 - count: 365
@@ -180,6 +177,9 @@ predictions:
 - count: 277
   source: efo
   target: mesh
+- count: 81
+  source: ccle.cell
+  target: cellosaurus
 - count: 50
   source: go
   target: mesh
@@ -195,5 +195,5 @@ predictions:
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 29969
+predictions_mapping_count: 28974
 predictions_prefix_count: 15

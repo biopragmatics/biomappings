@@ -1,875 +1,5 @@
 - edges:
   - source:
-      curie: CHEBI:3815
-      identifier: CHEBI:3815
-      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:3815
-      name: Collagen
-      prefix: chebi
-    target:
-      curie: pfam:PF01391
-      identifier: PF01391
-      link: https://identifiers.org/pfam:PF01391
-      name: Collagen
-      prefix: pfam
-  nodes:
-    CHEBI:3815:
-      identifier: CHEBI:3815
-      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:3815
-      name: Collagen
-      prefix: chebi
-    mesh:D003094:
-      identifier: D003094
-      link: https://meshb.nlm.nih.gov/record/ui?ui=D003094
-      name: Collagen
-      prefix: mesh
-    pfam:PF01391:
-      identifier: PF01391
-      link: https://identifiers.org/pfam:PF01391
-      name: Collagen
-      prefix: pfam
-- edges:
-  - source:
-      curie: CHEBI:50223
-      identifier: CHEBI:50223
-      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:50223
-      name: (+)-dexrazoxane
-      prefix: chebi
-    target:
-      curie: ncit:C1333
-      identifier: C1333
-      link: https://identifiers.org/ncit:C1333
-      name: Dexrazoxane
-      prefix: ncit
-  nodes:
-    CHEBI:50223:
-      identifier: CHEBI:50223
-      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:50223
-      name: (+)-dexrazoxane
-      prefix: chebi
-    mesh:D064730:
-      identifier: D064730
-      link: https://meshb.nlm.nih.gov/record/ui?ui=D064730
-      name: Dexrazoxane
-      prefix: mesh
-    ncit:C1333:
-      identifier: C1333
-      link: https://identifiers.org/ncit:C1333
-      name: Dexrazoxane
-      prefix: ncit
-- edges:
-  - source:
-      curie: hgnc:11393
-      identifier: '11393'
-      link: https://identifiers.org/hgnc:11393
-      name: AURKA
-      prefix: hgnc
-    target:
-      curie: ncit:C30006
-      identifier: C30006
-      link: https://identifiers.org/ncit:C30006
-      name: Aurora Kinase A
-      prefix: ncit
-  nodes:
-    hgnc:11393:
-      identifier: '11393'
-      link: https://identifiers.org/hgnc:11393
-      name: AURKA
-      prefix: hgnc
-    mesh:D064096:
-      identifier: D064096
-      link: https://meshb.nlm.nih.gov/record/ui?ui=D064096
-      name: Aurora Kinase A
-      prefix: mesh
-    ncit:C30006:
-      identifier: C30006
-      link: https://identifiers.org/ncit:C30006
-      name: Aurora Kinase A
-      prefix: ncit
-- edges:
-  - source:
-      curie: hgnc:11390
-      identifier: '11390'
-      link: https://identifiers.org/hgnc:11390
-      name: AURKB
-      prefix: hgnc
-    target:
-      curie: ncit:C68596
-      identifier: C68596
-      link: https://identifiers.org/ncit:C68596
-      name: Aurora Kinase B
-      prefix: ncit
-  nodes:
-    hgnc:11390:
-      identifier: '11390'
-      link: https://identifiers.org/hgnc:11390
-      name: AURKB
-      prefix: hgnc
-    mesh:D064107:
-      identifier: D064107
-      link: https://meshb.nlm.nih.gov/record/ui?ui=D064107
-      name: Aurora Kinase B
-      prefix: mesh
-    ncit:C68596:
-      identifier: C68596
-      link: https://identifiers.org/ncit:C68596
-      name: Aurora Kinase B
-      prefix: ncit
-- edges:
-  - source:
-      curie: PR:000050278
-      identifier: PR:000050278
-      link: https://identifiers.org/PR:000050278
-      name: non-structural protein 9 (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725305
-      identifier: YP_009725305
-      link: https://identifiers.org/ncbiprotein:YP_009725305
-      name: nsp9
-      prefix: ncbiprotein
-  nodes:
-    PR:000050278:
-      identifier: PR:000050278
-      link: https://identifiers.org/PR:000050278
-      name: non-structural protein 9 (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725305:
-      identifier: YP_009725305
-      link: https://identifiers.org/ncbiprotein:YP_009725305
-      name: nsp9
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449627:
-      identifier: PRO_0000449627
-      link: https://identifiers.org/uniprot.chain:PRO_0000449627
-      name: Non-structural protein 9
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050277
-      identifier: PR:000050277
-      link: https://identifiers.org/PR:000050277
-      name: non-structural protein 8 (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725304
-      identifier: YP_009725304
-      link: https://identifiers.org/ncbiprotein:YP_009725304
-      name: nsp8
-      prefix: ncbiprotein
-  nodes:
-    PR:000050277:
-      identifier: PR:000050277
-      link: https://identifiers.org/PR:000050277
-      name: non-structural protein 8 (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725304:
-      identifier: YP_009725304
-      link: https://identifiers.org/ncbiprotein:YP_009725304
-      name: nsp8
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449626:
-      identifier: PRO_0000449626
-      link: https://identifiers.org/uniprot.chain:PRO_0000449626
-      name: Non-structural protein 8
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050276
-      identifier: PR:000050276
-      link: https://identifiers.org/PR:000050276
-      name: non-structural protein 7 (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725303
-      identifier: YP_009725303
-      link: https://identifiers.org/ncbiprotein:YP_009725303
-      name: nsp7
-      prefix: ncbiprotein
-  nodes:
-    PR:000050276:
-      identifier: PR:000050276
-      link: https://identifiers.org/PR:000050276
-      name: non-structural protein 7 (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725303:
-      identifier: YP_009725303
-      link: https://identifiers.org/ncbiprotein:YP_009725303
-      name: nsp7
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449625:
-      identifier: PRO_0000449625
-      link: https://identifiers.org/uniprot.chain:PRO_0000449625
-      name: Non-structural protein 7
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050275
-      identifier: PR:000050275
-      link: https://identifiers.org/PR:000050275
-      name: non-structural protein 6 (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725302
-      identifier: YP_009725302
-      link: https://identifiers.org/ncbiprotein:YP_009725302
-      name: nsp6
-      prefix: ncbiprotein
-  nodes:
-    PR:000050275:
-      identifier: PR:000050275
-      link: https://identifiers.org/PR:000050275
-      name: non-structural protein 6 (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725302:
-      identifier: YP_009725302
-      link: https://identifiers.org/ncbiprotein:YP_009725302
-      name: nsp6
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449624:
-      identifier: PRO_0000449624
-      link: https://identifiers.org/uniprot.chain:PRO_0000449624
-      name: Non-structural protein 6
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050273
-      identifier: PR:000050273
-      link: https://identifiers.org/PR:000050273
-      name: non-structural protein 4 (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725300
-      identifier: YP_009725300
-      link: https://identifiers.org/ncbiprotein:YP_009725300
-      name: nsp4
-      prefix: ncbiprotein
-  nodes:
-    PR:000050273:
-      identifier: PR:000050273
-      link: https://identifiers.org/PR:000050273
-      name: non-structural protein 4 (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725300:
-      identifier: YP_009725300
-      link: https://identifiers.org/ncbiprotein:YP_009725300
-      name: nsp4
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449622:
-      identifier: PRO_0000449622
-      link: https://identifiers.org/uniprot.chain:PRO_0000449622
-      name: Non-structural protein 4
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050272
-      identifier: PR:000050272
-      link: https://identifiers.org/PR:000050272
-      name: non-structural protein 3 (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725299
-      identifier: YP_009725299
-      link: https://identifiers.org/ncbiprotein:YP_009725299
-      name: nsp3
-      prefix: ncbiprotein
-  nodes:
-    PR:000050272:
-      identifier: PR:000050272
-      link: https://identifiers.org/PR:000050272
-      name: non-structural protein 3 (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725299:
-      identifier: YP_009725299
-      link: https://identifiers.org/ncbiprotein:YP_009725299
-      name: nsp3
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449621:
-      identifier: PRO_0000449621
-      link: https://identifiers.org/uniprot.chain:PRO_0000449621
-      name: Non-structural protein 3
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050271
-      identifier: PR:000050271
-      link: https://identifiers.org/PR:000050271
-      name: non-structural protein 2 (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725298
-      identifier: YP_009725298
-      link: https://identifiers.org/ncbiprotein:YP_009725298
-      name: nsp2
-      prefix: ncbiprotein
-  nodes:
-    PR:000050271:
-      identifier: PR:000050271
-      link: https://identifiers.org/PR:000050271
-      name: non-structural protein 2 (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725298:
-      identifier: YP_009725298
-      link: https://identifiers.org/ncbiprotein:YP_009725298
-      name: nsp2
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449620:
-      identifier: PRO_0000449620
-      link: https://identifiers.org/uniprot.chain:PRO_0000449620
-      name: Non-structural protein 2
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050280
-      identifier: PR:000050280
-      link: https://identifiers.org/PR:000050280
-      name: non-structural protein 11 (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725312
-      identifier: YP_009725312
-      link: https://identifiers.org/ncbiprotein:YP_009725312
-      name: nsp11
-      prefix: ncbiprotein
-  nodes:
-    PR:000050280:
-      identifier: PR:000050280
-      link: https://identifiers.org/PR:000050280
-      name: non-structural protein 11 (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725312:
-      identifier: YP_009725312
-      link: https://identifiers.org/ncbiprotein:YP_009725312
-      name: nsp11
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449645:
-      identifier: PRO_0000449645
-      link: https://identifiers.org/uniprot.chain:PRO_0000449645
-      name: Non-structural protein 11
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050279
-      identifier: PR:000050279
-      link: https://identifiers.org/PR:000050279
-      name: non-structural protein 10 (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725306
-      identifier: YP_009725306
-      link: https://identifiers.org/ncbiprotein:YP_009725306
-      name: nsp10
-      prefix: ncbiprotein
-  nodes:
-    PR:000050279:
-      identifier: PR:000050279
-      link: https://identifiers.org/PR:000050279
-      name: non-structural protein 10 (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725306:
-      identifier: YP_009725306
-      link: https://identifiers.org/ncbiprotein:YP_009725306
-      name: nsp10
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449628:
-      identifier: PRO_0000449628
-      link: https://identifiers.org/uniprot.chain:PRO_0000449628
-      name: Non-structural protein 10
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050270
-      identifier: PR:000050270
-      link: https://identifiers.org/PR:000050270
-      name: host translation inhibitor nsp1 (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725297
-      identifier: YP_009725297
-      link: https://identifiers.org/ncbiprotein:YP_009725297
-      name: leader protein
-      prefix: ncbiprotein
-  nodes:
-    PR:000050270:
-      identifier: PR:000050270
-      link: https://identifiers.org/PR:000050270
-      name: host translation inhibitor nsp1 (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725297:
-      identifier: YP_009725297
-      link: https://identifiers.org/ncbiprotein:YP_009725297
-      name: leader protein
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449619:
-      identifier: PRO_0000449619
-      link: https://identifiers.org/uniprot.chain:PRO_0000449619
-      name: Host translation inhibitor nsp1
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050285
-      identifier: PR:000050285
-      link: https://identifiers.org/PR:000050285
-      name: helicase (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725308
-      identifier: YP_009725308
-      link: https://identifiers.org/ncbiprotein:YP_009725308
-      name: helicase
-      prefix: ncbiprotein
-  nodes:
-    PR:000050285:
-      identifier: PR:000050285
-      link: https://identifiers.org/PR:000050285
-      name: helicase (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725308:
-      identifier: YP_009725308
-      link: https://identifiers.org/ncbiprotein:YP_009725308
-      name: helicase
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449630:
-      identifier: PRO_0000449630
-      link: https://identifiers.org/uniprot.chain:PRO_0000449630
-      name: Helicase
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050274
-      identifier: PR:000050274
-      link: https://identifiers.org/PR:000050274
-      name: 3C-like proteinase (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725301
-      identifier: YP_009725301
-      link: https://identifiers.org/ncbiprotein:YP_009725301
-      name: 3C-like proteinase
-      prefix: ncbiprotein
-  nodes:
-    PR:000050274:
-      identifier: PR:000050274
-      link: https://identifiers.org/PR:000050274
-      name: 3C-like proteinase (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725301:
-      identifier: YP_009725301
-      link: https://identifiers.org/ncbiprotein:YP_009725301
-      name: 3C-like proteinase
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449623:
-      identifier: PRO_0000449623
-      link: https://identifiers.org/uniprot.chain:PRO_0000449623
-      name: 3C-like proteinase
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050288
-      identifier: PR:000050288
-      link: https://identifiers.org/PR:000050288
-      name: 2'-O-methyltransferase (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725311
-      identifier: YP_009725311
-      link: https://identifiers.org/ncbiprotein:YP_009725311
-      name: 2'-O-ribose methyltransferase
-      prefix: ncbiprotein
-  nodes:
-    PR:000050288:
-      identifier: PR:000050288
-      link: https://identifiers.org/PR:000050288
-      name: 2'-O-methyltransferase (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725311:
-      identifier: YP_009725311
-      link: https://identifiers.org/ncbiprotein:YP_009725311
-      name: 2'-O-ribose methyltransferase
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449633:
-      identifier: PRO_0000449633
-      link: https://identifiers.org/uniprot.chain:PRO_0000449633
-      name: 2'-O-methyltransferase
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050284
-      identifier: PR:000050284
-      link: https://identifiers.org/PR:000050284
-      name: RNA-directed RNA polymerase (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725307
-      identifier: YP_009725307
-      link: https://identifiers.org/ncbiprotein:YP_009725307
-      name: RNA-dependent RNA polymerase
-      prefix: ncbiprotein
-  nodes:
-    PR:000050284:
-      identifier: PR:000050284
-      link: https://identifiers.org/PR:000050284
-      name: RNA-directed RNA polymerase (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725307:
-      identifier: YP_009725307
-      link: https://identifiers.org/ncbiprotein:YP_009725307
-      name: RNA-dependent RNA polymerase
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449629:
-      identifier: PRO_0000449629
-      link: https://identifiers.org/uniprot.chain:PRO_0000449629
-      name: RNA-directed RNA polymerase
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: PR:000050287
-      identifier: PR:000050287
-      link: https://identifiers.org/PR:000050287
-      name: uridylate-specific endoribonuclease (SARS-CoV-2)
-      prefix: pr
-    target:
-      curie: ncbiprotein:YP_009725310
-      identifier: YP_009725310
-      link: https://identifiers.org/ncbiprotein:YP_009725310
-      name: endoRNAse
-      prefix: ncbiprotein
-  nodes:
-    PR:000050287:
-      identifier: PR:000050287
-      link: https://identifiers.org/PR:000050287
-      name: uridylate-specific endoribonuclease (SARS-CoV-2)
-      prefix: pr
-    ncbiprotein:YP_009725310:
-      identifier: YP_009725310
-      link: https://identifiers.org/ncbiprotein:YP_009725310
-      name: endoRNAse
-      prefix: ncbiprotein
-    uniprot.chain:PRO_0000449632:
-      identifier: PRO_0000449632
-      link: https://identifiers.org/uniprot.chain:PRO_0000449632
-      name: Uridylate-specific endoribonuclease
-      prefix: uniprot.chain
-- edges:
-  - source:
-      curie: mesh:C000657245
-      identifier: C000657245
-      link: https://meshb.nlm.nih.gov/record/ui?ui=C000657245
-      name: COVID-19
-      prefix: mesh
-    target:
-      curie: mesh:D000086382
-      identifier: D000086382
-      link: https://meshb.nlm.nih.gov/record/ui?ui=D000086382
-      name: COVID-19
-      prefix: mesh
-  nodes:
-    DOID:0080600:
-      identifier: DOID:0080600
-      link: https://identifiers.org/DOID:0080600
-      name: COVID-19
-      prefix: doid
-    mesh:C000657245:
-      identifier: C000657245
-      link: https://meshb.nlm.nih.gov/record/ui?ui=C000657245
-      name: COVID-19
-      prefix: mesh
-    mesh:D000086382:
-      identifier: D000086382
-      link: https://meshb.nlm.nih.gov/record/ui?ui=D000086382
-      name: COVID-19
-      prefix: mesh
-- edges:
-  - source:
-      curie: GO:0033209
-      identifier: GO:0033209
-      link: https://identifiers.org/GO:0033209
-      name: tumor necrosis factor-mediated signaling pathway
-      prefix: go
-    target:
-      curie: GO:0033210
-      identifier: GO:0033210
-      link: https://identifiers.org/GO:0033210
-      name: leptin-mediated signaling pathway
-      prefix: go
-  - source:
-      curie: GO:0033209
-      identifier: GO:0033209
-      link: https://identifiers.org/GO:0033209
-      name: tumor necrosis factor-mediated signaling pathway
-      prefix: go
-    target:
-      curie: GO:0033211
-      identifier: GO:0033211
-      link: https://identifiers.org/GO:0033211
-      name: adiponectin-activated signaling pathway
-      prefix: go
-  - source:
-      curie: GO:0033210
-      identifier: GO:0033210
-      link: https://identifiers.org/GO:0033210
-      name: leptin-mediated signaling pathway
-      prefix: go
-    target:
-      curie: GO:0033211
-      identifier: GO:0033211
-      link: https://identifiers.org/GO:0033211
-      name: adiponectin-activated signaling pathway
-      prefix: go
-  nodes:
-    GO:0033209:
-      identifier: GO:0033209
-      link: https://identifiers.org/GO:0033209
-      name: tumor necrosis factor-mediated signaling pathway
-      prefix: go
-    GO:0033210:
-      identifier: GO:0033210
-      link: https://identifiers.org/GO:0033210
-      name: leptin-mediated signaling pathway
-      prefix: go
-    GO:0033211:
-      identifier: GO:0033211
-      link: https://identifiers.org/GO:0033211
-      name: adiponectin-activated signaling pathway
-      prefix: go
-    kegg.pathway:map04920:
-      identifier: map04920
-      link: https://identifiers.org/kegg.pathway:map04920
-      name: Adipocytokine signaling pathway
-      prefix: kegg.pathway
-- edges:
-  - source:
-      curie: mesh:C531763
-      identifier: C531763
-      link: https://meshb.nlm.nih.gov/record/ui?ui=C531763
-      name: Irritable heart
-      prefix: mesh
-    target:
-      curie: mesh:D054972
-      identifier: D054972
-      link: https://meshb.nlm.nih.gov/record/ui?ui=D054972
-      name: Postural Orthostatic Tachycardia Syndrome
-      prefix: mesh
-  nodes:
-    DOID:0111154:
-      identifier: DOID:0111154
-      link: https://identifiers.org/DOID:0111154
-      name: postural orthostatic tachycardia syndrome
-      prefix: doid
-    mesh:C531763:
-      identifier: C531763
-      link: https://meshb.nlm.nih.gov/record/ui?ui=C531763
-      name: Irritable heart
-      prefix: mesh
-    mesh:D054972:
-      identifier: D054972
-      link: https://meshb.nlm.nih.gov/record/ui?ui=D054972
-      name: Postural Orthostatic Tachycardia Syndrome
-      prefix: mesh
-- edges:
-  - source:
-      curie: mesh:C537027
-      identifier: C537027
-      link: https://meshb.nlm.nih.gov/record/ui?ui=C537027
-      name: Lipoid congenital adrenal hyperplasia
-      prefix: mesh
-    target:
-      curie: mesh:D000312
-      identifier: D000312
-      link: https://meshb.nlm.nih.gov/record/ui?ui=D000312
-      name: Adrenal Hyperplasia, Congenital
-      prefix: mesh
-  nodes:
-    DOID:0050811:
-      identifier: DOID:0050811
-      link: https://identifiers.org/DOID:0050811
-      name: congenital adrenal hyperplasia
-      prefix: doid
-    mesh:C537027:
-      identifier: C537027
-      link: https://meshb.nlm.nih.gov/record/ui?ui=C537027
-      name: Lipoid congenital adrenal hyperplasia
-      prefix: mesh
-    mesh:D000312:
-      identifier: D000312
-      link: https://meshb.nlm.nih.gov/record/ui?ui=D000312
-      name: Adrenal Hyperplasia, Congenital
-      prefix: mesh
-- edges:
-  - source:
-      curie: BTO:0006459
-      identifier: BTO:0006459
-      link: https://identifiers.org/BTO:0006459
-      name: KMS-12-BM cell
-      prefix: bto
-    target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://identifiers.org/cellosaurus:CVCL_1334
-      name: KMS-12-BM
-      prefix: cellosaurus
-  - source:
-      curie: BTO:0006459
-      identifier: BTO:0006459
-      link: https://identifiers.org/BTO:0006459
-      name: KMS-12-BM cell
-      prefix: bto
-    target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://identifiers.org/efo:0006612
-      name: KMS-12-BM
-      prefix: efo
-  - source:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://identifiers.org/cellosaurus:CVCL_1334
-      name: KMS-12-BM
-      prefix: cellosaurus
-    target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://identifiers.org/efo:0006612
-      name: KMS-12-BM
-      prefix: efo
-  nodes:
-    BTO:0006459:
-      identifier: BTO:0006459
-      link: https://identifiers.org/BTO:0006459
-      name: KMS-12-BM cell
-      prefix: bto
-    ccle.cell:KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
-      identifier: KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
-      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
-      name: KMS-12-BM
-      prefix: ccle.cell
-    cellosaurus:CVCL_1334:
-      identifier: CVCL_1334
-      link: https://identifiers.org/cellosaurus:CVCL_1334
-      name: KMS-12-BM
-      prefix: cellosaurus
-    efo:0006612:
-      identifier: '0006612'
-      link: https://identifiers.org/efo:0006612
-      name: KMS-12-BM
-      prefix: efo
-- edges:
-  - source:
-      curie: cellosaurus:CVCL_2814
-      identifier: CVCL_2814
-      link: https://identifiers.org/cellosaurus:CVCL_2814
-      name: YMB-1
-      prefix: cellosaurus
-    target:
-      curie: efo:0006779
-      identifier: 0006779
-      link: https://identifiers.org/efo:0006779
-      name: YMB-1
-      prefix: efo
-  nodes:
-    ccle.cell:YMB1_BREAST:
-      identifier: YMB1_BREAST
-      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=YMB1_BREAST
-      name: YMB-1
-      prefix: ccle.cell
-    cellosaurus:CVCL_2814:
-      identifier: CVCL_2814
-      link: https://identifiers.org/cellosaurus:CVCL_2814
-      name: YMB-1
-      prefix: cellosaurus
-    efo:0006779:
-      identifier: 0006779
-      link: https://identifiers.org/efo:0006779
-      name: YMB-1
-      prefix: efo
-- edges:
-  - source:
-      curie: cellosaurus:CVCL_0588
-      identifier: CVCL_0588
-      link: https://identifiers.org/cellosaurus:CVCL_0588
-      name: ZR-75-1
-      prefix: cellosaurus
-    target:
-      curie: efo:0001262
-      identifier: '0001262'
-      link: https://identifiers.org/efo:0001262
-      name: ZR751
-      prefix: efo
-  nodes:
-    ccle.cell:ZR751_BREAST:
-      identifier: ZR751_BREAST
-      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ZR751_BREAST
-      name: ZR-75-1
-      prefix: ccle.cell
-    cellosaurus:CVCL_0588:
-      identifier: CVCL_0588
-      link: https://identifiers.org/cellosaurus:CVCL_0588
-      name: ZR-75-1
-      prefix: cellosaurus
-    efo:0001262:
-      identifier: '0001262'
-      link: https://identifiers.org/efo:0001262
-      name: ZR751
-      prefix: efo
-- edges:
-  - source:
-      curie: cellosaurus:CVCL_1661
-      identifier: CVCL_1661
-      link: https://identifiers.org/cellosaurus:CVCL_1661
-      name: ZR-75-30
-      prefix: cellosaurus
-    target:
-      curie: efo:0001263
-      identifier: '0001263'
-      link: https://identifiers.org/efo:0001263
-      name: ZR7530
-      prefix: efo
-  nodes:
-    ccle.cell:ZR7530_BREAST:
-      identifier: ZR7530_BREAST
-      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ZR7530_BREAST
-      name: ZR-75-30
-      prefix: ccle.cell
-    cellosaurus:CVCL_1661:
-      identifier: CVCL_1661
-      link: https://identifiers.org/cellosaurus:CVCL_1661
-      name: ZR-75-30
-      prefix: cellosaurus
-    efo:0001263:
-      identifier: '0001263'
-      link: https://identifiers.org/efo:0001263
-      name: ZR7530
-      prefix: efo
-- edges:
-  - source:
-      curie: cellosaurus:CVCL_2956
-      identifier: CVCL_2956
-      link: https://identifiers.org/cellosaurus:CVCL_2956
-      name: HuH-1
-      prefix: cellosaurus
-    target:
-      curie: efo:0006445
-      identifier: '0006445'
-      link: https://identifiers.org/efo:0006445
-      name: huH-1
-      prefix: efo
-  nodes:
-    ccle.cell:HUH1_LIVER:
-      identifier: HUH1_LIVER
-      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=HUH1_LIVER
-      name: huH-1
-      prefix: ccle.cell
-    cellosaurus:CVCL_2956:
-      identifier: CVCL_2956
-      link: https://identifiers.org/cellosaurus:CVCL_2956
-      name: HuH-1
-      prefix: cellosaurus
-    efo:0006445:
-      identifier: '0006445'
-      link: https://identifiers.org/efo:0006445
-      name: huH-1
-      prefix: efo
-- edges:
-  - source:
       curie: cellosaurus:CVCL_2270
       identifier: CVCL_2270
       link: https://identifiers.org/cellosaurus:CVCL_2270
@@ -1102,122 +232,6 @@
       prefix: efo
 - edges:
   - source:
-      curie: cellosaurus:CVCL_1058
-      identifier: CVCL_1058
-      link: https://identifiers.org/cellosaurus:CVCL_1058
-      name: A-204
-      prefix: cellosaurus
-    target:
-      curie: efo:0002102
-      identifier: '0002102'
-      link: https://identifiers.org/efo:0002102
-      name: A204
-      prefix: efo
-  nodes:
-    ccle.cell:A204_SOFT_TISSUE:
-      identifier: A204_SOFT_TISSUE
-      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A204_SOFT_TISSUE
-      name: A-204
-      prefix: ccle.cell
-    cellosaurus:CVCL_1058:
-      identifier: CVCL_1058
-      link: https://identifiers.org/cellosaurus:CVCL_1058
-      name: A-204
-      prefix: cellosaurus
-    efo:0002102:
-      identifier: '0002102'
-      link: https://identifiers.org/efo:0002102
-      name: A204
-      prefix: efo
-- edges:
-  - source:
-      curie: cellosaurus:CVCL_0132
-      identifier: CVCL_0132
-      link: https://identifiers.org/cellosaurus:CVCL_0132
-      name: A-375
-      prefix: cellosaurus
-    target:
-      curie: efo:0002103
-      identifier: '0002103'
-      link: https://identifiers.org/efo:0002103
-      name: A375
-      prefix: efo
-  nodes:
-    ccle.cell:A375_SKIN:
-      identifier: A375_SKIN
-      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A375_SKIN
-      name: A-375
-      prefix: ccle.cell
-    cellosaurus:CVCL_0132:
-      identifier: CVCL_0132
-      link: https://identifiers.org/cellosaurus:CVCL_0132
-      name: A-375
-      prefix: cellosaurus
-    efo:0002103:
-      identifier: '0002103'
-      link: https://identifiers.org/efo:0002103
-      name: A375
-      prefix: efo
-- edges:
-  - source:
-      curie: cellosaurus:CVCL_1056
-      identifier: CVCL_1056
-      link: https://identifiers.org/cellosaurus:CVCL_1056
-      name: A-498
-      prefix: cellosaurus
-    target:
-      curie: efo:0002105
-      identifier: '0002105'
-      link: https://identifiers.org/efo:0002105
-      name: A498
-      prefix: efo
-  nodes:
-    ccle.cell:A498_KIDNEY:
-      identifier: A498_KIDNEY
-      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A498_KIDNEY
-      name: A-498
-      prefix: ccle.cell
-    cellosaurus:CVCL_1056:
-      identifier: CVCL_1056
-      link: https://identifiers.org/cellosaurus:CVCL_1056
-      name: A-498
-      prefix: cellosaurus
-    efo:0002105:
-      identifier: '0002105'
-      link: https://identifiers.org/efo:0002105
-      name: A498
-      prefix: efo
-- edges:
-  - source:
-      curie: cellosaurus:CVCL_0080
-      identifier: CVCL_0080
-      link: https://identifiers.org/cellosaurus:CVCL_0080
-      name: A-673
-      prefix: cellosaurus
-    target:
-      curie: efo:0002106
-      identifier: '0002106'
-      link: https://identifiers.org/efo:0002106
-      name: A673
-      prefix: efo
-  nodes:
-    ccle.cell:A673_BONE:
-      identifier: A673_BONE
-      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A673_BONE
-      name: A-673
-      prefix: ccle.cell
-    cellosaurus:CVCL_0080:
-      identifier: CVCL_0080
-      link: https://identifiers.org/cellosaurus:CVCL_0080
-      name: A-673
-      prefix: cellosaurus
-    efo:0002106:
-      identifier: '0002106'
-      link: https://identifiers.org/efo:0002106
-      name: A673
-      prefix: efo
-- edges:
-  - source:
       curie: cellosaurus:CVCL_1057
       identifier: CVCL_1057
       link: https://identifiers.org/cellosaurus:CVCL_1057
@@ -1273,6 +287,35 @@
       identifier: '0002101'
       link: https://identifiers.org/efo:0002101
       name: A172
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1058
+      identifier: CVCL_1058
+      link: https://identifiers.org/cellosaurus:CVCL_1058
+      name: A-204
+      prefix: cellosaurus
+    target:
+      curie: efo:0002102
+      identifier: '0002102'
+      link: https://identifiers.org/efo:0002102
+      name: A204
+      prefix: efo
+  nodes:
+    ccle.cell:A204_SOFT_TISSUE:
+      identifier: A204_SOFT_TISSUE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A204_SOFT_TISSUE
+      name: A-204
+      prefix: ccle.cell
+    cellosaurus:CVCL_1058:
+      identifier: CVCL_1058
+      link: https://identifiers.org/cellosaurus:CVCL_1058
+      name: A-204
+      prefix: cellosaurus
+    efo:0002102:
+      identifier: '0002102'
+      link: https://identifiers.org/efo:0002102
+      name: A204
       prefix: efo
 - edges:
   - source:
@@ -1334,6 +377,35 @@
       prefix: efo
 - edges:
   - source:
+      curie: cellosaurus:CVCL_0132
+      identifier: CVCL_0132
+      link: https://identifiers.org/cellosaurus:CVCL_0132
+      name: A-375
+      prefix: cellosaurus
+    target:
+      curie: efo:0002103
+      identifier: '0002103'
+      link: https://identifiers.org/efo:0002103
+      name: A375
+      prefix: efo
+  nodes:
+    ccle.cell:A375_SKIN:
+      identifier: A375_SKIN
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A375_SKIN
+      name: A-375
+      prefix: ccle.cell
+    cellosaurus:CVCL_0132:
+      identifier: CVCL_0132
+      link: https://identifiers.org/cellosaurus:CVCL_0132
+      name: A-375
+      prefix: cellosaurus
+    efo:0002103:
+      identifier: '0002103'
+      link: https://identifiers.org/efo:0002103
+      name: A375
+      prefix: efo
+- edges:
+  - source:
       curie: cellosaurus:CVCL_1062
       identifier: CVCL_1062
       link: https://identifiers.org/cellosaurus:CVCL_1062
@@ -1360,6 +432,35 @@
       identifier: '0006532'
       link: https://identifiers.org/efo:0006532
       name: A3/KAW
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1056
+      identifier: CVCL_1056
+      link: https://identifiers.org/cellosaurus:CVCL_1056
+      name: A-498
+      prefix: cellosaurus
+    target:
+      curie: efo:0002105
+      identifier: '0002105'
+      link: https://identifiers.org/efo:0002105
+      name: A498
+      prefix: efo
+  nodes:
+    ccle.cell:A498_KIDNEY:
+      identifier: A498_KIDNEY
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A498_KIDNEY
+      name: A-498
+      prefix: ccle.cell
+    cellosaurus:CVCL_1056:
+      identifier: CVCL_1056
+      link: https://identifiers.org/cellosaurus:CVCL_1056
+      name: A-498
+      prefix: cellosaurus
+    efo:0002105:
+      identifier: '0002105'
+      link: https://identifiers.org/efo:0002105
+      name: A498
       prefix: efo
 - edges:
   - source:
@@ -1418,6 +519,35 @@
       identifier: 0001086
       link: https://identifiers.org/efo:0001086
       name: A549
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0080
+      identifier: CVCL_0080
+      link: https://identifiers.org/cellosaurus:CVCL_0080
+      name: A-673
+      prefix: cellosaurus
+    target:
+      curie: efo:0002106
+      identifier: '0002106'
+      link: https://identifiers.org/efo:0002106
+      name: A673
+      prefix: efo
+  nodes:
+    ccle.cell:A673_BONE:
+      identifier: A673_BONE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A673_BONE
+      name: A-673
+      prefix: ccle.cell
+    cellosaurus:CVCL_0080:
+      identifier: CVCL_0080
+      link: https://identifiers.org/cellosaurus:CVCL_0080
+      name: A-673
+      prefix: cellosaurus
+    efo:0002106:
+      identifier: '0002106'
+      link: https://identifiers.org/efo:0002106
+      name: A673
       prefix: efo
 - edges:
   - source:
@@ -1537,6 +667,35 @@
       prefix: efo
 - edges:
   - source:
+      curie: cellosaurus:CVCL_0152
+      identifier: CVCL_0152
+      link: https://identifiers.org/cellosaurus:CVCL_0152
+      name: AsPC-1
+      prefix: cellosaurus
+    target:
+      curie: efo:0002112
+      identifier: '0002112'
+      link: https://identifiers.org/efo:0002112
+      name: AsPC1
+      prefix: efo
+  nodes:
+    ccle.cell:ASPC1_PANCREAS:
+      identifier: ASPC1_PANCREAS
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ASPC1_PANCREAS
+      name: AsPC-1
+      prefix: ccle.cell
+    cellosaurus:CVCL_0152:
+      identifier: CVCL_0152
+      link: https://identifiers.org/cellosaurus:CVCL_0152
+      name: AsPC-1
+      prefix: cellosaurus
+    efo:0002112:
+      identifier: '0002112'
+      link: https://identifiers.org/efo:0002112
+      name: AsPC1
+      prefix: efo
+- edges:
+  - source:
       curie: cellosaurus:CVCL_1074
       identifier: CVCL_1074
       link: https://identifiers.org/cellosaurus:CVCL_1074
@@ -1592,35 +751,6 @@
       identifier: 0002814
       link: https://identifiers.org/efo:0002814
       name: AZ-521
-      prefix: efo
-- edges:
-  - source:
-      curie: cellosaurus:CVCL_0152
-      identifier: CVCL_0152
-      link: https://identifiers.org/cellosaurus:CVCL_0152
-      name: AsPC-1
-      prefix: cellosaurus
-    target:
-      curie: efo:0002112
-      identifier: '0002112'
-      link: https://identifiers.org/efo:0002112
-      name: AsPC1
-      prefix: efo
-  nodes:
-    ccle.cell:ASPC1_PANCREAS:
-      identifier: ASPC1_PANCREAS
-      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ASPC1_PANCREAS
-      name: AsPC-1
-      prefix: ccle.cell
-    cellosaurus:CVCL_0152:
-      identifier: CVCL_0152
-      link: https://identifiers.org/cellosaurus:CVCL_0152
-      name: AsPC-1
-      prefix: cellosaurus
-    efo:0002112:
-      identifier: '0002112'
-      link: https://identifiers.org/efo:0002112
-      name: AsPC1
       prefix: efo
 - edges:
   - source:
@@ -2086,3 +1216,873 @@
       link: https://identifiers.org/efo:0002121
       name: C3A
       prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_2956
+      identifier: CVCL_2956
+      link: https://identifiers.org/cellosaurus:CVCL_2956
+      name: HuH-1
+      prefix: cellosaurus
+    target:
+      curie: efo:0006445
+      identifier: '0006445'
+      link: https://identifiers.org/efo:0006445
+      name: huH-1
+      prefix: efo
+  nodes:
+    ccle.cell:HUH1_LIVER:
+      identifier: HUH1_LIVER
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=HUH1_LIVER
+      name: huH-1
+      prefix: ccle.cell
+    cellosaurus:CVCL_2956:
+      identifier: CVCL_2956
+      link: https://identifiers.org/cellosaurus:CVCL_2956
+      name: HuH-1
+      prefix: cellosaurus
+    efo:0006445:
+      identifier: '0006445'
+      link: https://identifiers.org/efo:0006445
+      name: huH-1
+      prefix: efo
+- edges:
+  - source:
+      curie: BTO:0006459
+      identifier: BTO:0006459
+      link: https://identifiers.org/BTO:0006459
+      name: KMS-12-BM cell
+      prefix: bto
+    target:
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://identifiers.org/cellosaurus:CVCL_1334
+      name: KMS-12-BM
+      prefix: cellosaurus
+  - source:
+      curie: BTO:0006459
+      identifier: BTO:0006459
+      link: https://identifiers.org/BTO:0006459
+      name: KMS-12-BM cell
+      prefix: bto
+    target:
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://identifiers.org/efo:0006612
+      name: KMS-12-BM
+      prefix: efo
+  - source:
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://identifiers.org/cellosaurus:CVCL_1334
+      name: KMS-12-BM
+      prefix: cellosaurus
+    target:
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://identifiers.org/efo:0006612
+      name: KMS-12-BM
+      prefix: efo
+  nodes:
+    BTO:0006459:
+      identifier: BTO:0006459
+      link: https://identifiers.org/BTO:0006459
+      name: KMS-12-BM cell
+      prefix: bto
+    ccle.cell:KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+      identifier: KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      name: KMS-12-BM
+      prefix: ccle.cell
+    cellosaurus:CVCL_1334:
+      identifier: CVCL_1334
+      link: https://identifiers.org/cellosaurus:CVCL_1334
+      name: KMS-12-BM
+      prefix: cellosaurus
+    efo:0006612:
+      identifier: '0006612'
+      link: https://identifiers.org/efo:0006612
+      name: KMS-12-BM
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_2814
+      identifier: CVCL_2814
+      link: https://identifiers.org/cellosaurus:CVCL_2814
+      name: YMB-1
+      prefix: cellosaurus
+    target:
+      curie: efo:0006779
+      identifier: 0006779
+      link: https://identifiers.org/efo:0006779
+      name: YMB-1
+      prefix: efo
+  nodes:
+    ccle.cell:YMB1_BREAST:
+      identifier: YMB1_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=YMB1_BREAST
+      name: YMB-1
+      prefix: ccle.cell
+    cellosaurus:CVCL_2814:
+      identifier: CVCL_2814
+      link: https://identifiers.org/cellosaurus:CVCL_2814
+      name: YMB-1
+      prefix: cellosaurus
+    efo:0006779:
+      identifier: 0006779
+      link: https://identifiers.org/efo:0006779
+      name: YMB-1
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0588
+      identifier: CVCL_0588
+      link: https://identifiers.org/cellosaurus:CVCL_0588
+      name: ZR-75-1
+      prefix: cellosaurus
+    target:
+      curie: efo:0001262
+      identifier: '0001262'
+      link: https://identifiers.org/efo:0001262
+      name: ZR751
+      prefix: efo
+  nodes:
+    ccle.cell:ZR751_BREAST:
+      identifier: ZR751_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ZR751_BREAST
+      name: ZR-75-1
+      prefix: ccle.cell
+    cellosaurus:CVCL_0588:
+      identifier: CVCL_0588
+      link: https://identifiers.org/cellosaurus:CVCL_0588
+      name: ZR-75-1
+      prefix: cellosaurus
+    efo:0001262:
+      identifier: '0001262'
+      link: https://identifiers.org/efo:0001262
+      name: ZR751
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1661
+      identifier: CVCL_1661
+      link: https://identifiers.org/cellosaurus:CVCL_1661
+      name: ZR-75-30
+      prefix: cellosaurus
+    target:
+      curie: efo:0001263
+      identifier: '0001263'
+      link: https://identifiers.org/efo:0001263
+      name: ZR7530
+      prefix: efo
+  nodes:
+    ccle.cell:ZR7530_BREAST:
+      identifier: ZR7530_BREAST
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ZR7530_BREAST
+      name: ZR-75-30
+      prefix: ccle.cell
+    cellosaurus:CVCL_1661:
+      identifier: CVCL_1661
+      link: https://identifiers.org/cellosaurus:CVCL_1661
+      name: ZR-75-30
+      prefix: cellosaurus
+    efo:0001263:
+      identifier: '0001263'
+      link: https://identifiers.org/efo:0001263
+      name: ZR7530
+      prefix: efo
+- edges:
+  - source:
+      curie: GO:0033209
+      identifier: GO:0033209
+      link: https://identifiers.org/GO:0033209
+      name: tumor necrosis factor-mediated signaling pathway
+      prefix: go
+    target:
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
+      prefix: go
+  - source:
+      curie: GO:0033209
+      identifier: GO:0033209
+      link: https://identifiers.org/GO:0033209
+      name: tumor necrosis factor-mediated signaling pathway
+      prefix: go
+    target:
+      curie: GO:0033211
+      identifier: GO:0033211
+      link: https://identifiers.org/GO:0033211
+      name: adiponectin-activated signaling pathway
+      prefix: go
+  - source:
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
+      prefix: go
+    target:
+      curie: GO:0033211
+      identifier: GO:0033211
+      link: https://identifiers.org/GO:0033211
+      name: adiponectin-activated signaling pathway
+      prefix: go
+  nodes:
+    GO:0033209:
+      identifier: GO:0033209
+      link: https://identifiers.org/GO:0033209
+      name: tumor necrosis factor-mediated signaling pathway
+      prefix: go
+    GO:0033210:
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
+      prefix: go
+    GO:0033211:
+      identifier: GO:0033211
+      link: https://identifiers.org/GO:0033211
+      name: adiponectin-activated signaling pathway
+      prefix: go
+    kegg.pathway:map04920:
+      identifier: map04920
+      link: https://identifiers.org/kegg.pathway:map04920
+      name: Adipocytokine signaling pathway
+      prefix: kegg.pathway
+- edges:
+  - source:
+      curie: mesh:C000657245
+      identifier: C000657245
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C000657245
+      name: COVID-19
+      prefix: mesh
+    target:
+      curie: mesh:D000086382
+      identifier: D000086382
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D000086382
+      name: COVID-19
+      prefix: mesh
+  nodes:
+    DOID:0080600:
+      identifier: DOID:0080600
+      link: https://identifiers.org/DOID:0080600
+      name: COVID-19
+      prefix: doid
+    mesh:C000657245:
+      identifier: C000657245
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C000657245
+      name: COVID-19
+      prefix: mesh
+    mesh:D000086382:
+      identifier: D000086382
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D000086382
+      name: COVID-19
+      prefix: mesh
+- edges:
+  - source:
+      curie: mesh:C531763
+      identifier: C531763
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C531763
+      name: Irritable heart
+      prefix: mesh
+    target:
+      curie: mesh:D054972
+      identifier: D054972
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D054972
+      name: Postural Orthostatic Tachycardia Syndrome
+      prefix: mesh
+  nodes:
+    DOID:0111154:
+      identifier: DOID:0111154
+      link: https://identifiers.org/DOID:0111154
+      name: postural orthostatic tachycardia syndrome
+      prefix: doid
+    mesh:C531763:
+      identifier: C531763
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C531763
+      name: Irritable heart
+      prefix: mesh
+    mesh:D054972:
+      identifier: D054972
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D054972
+      name: Postural Orthostatic Tachycardia Syndrome
+      prefix: mesh
+- edges:
+  - source:
+      curie: mesh:C537027
+      identifier: C537027
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C537027
+      name: Lipoid congenital adrenal hyperplasia
+      prefix: mesh
+    target:
+      curie: mesh:D000312
+      identifier: D000312
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D000312
+      name: Adrenal Hyperplasia, Congenital
+      prefix: mesh
+  nodes:
+    DOID:0050811:
+      identifier: DOID:0050811
+      link: https://identifiers.org/DOID:0050811
+      name: congenital adrenal hyperplasia
+      prefix: doid
+    mesh:C537027:
+      identifier: C537027
+      link: https://meshb.nlm.nih.gov/record/ui?ui=C537027
+      name: Lipoid congenital adrenal hyperplasia
+      prefix: mesh
+    mesh:D000312:
+      identifier: D000312
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D000312
+      name: Adrenal Hyperplasia, Congenital
+      prefix: mesh
+- edges:
+  - source:
+      curie: CHEBI:3815
+      identifier: CHEBI:3815
+      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:3815
+      name: Collagen
+      prefix: chebi
+    target:
+      curie: pfam:PF01391
+      identifier: PF01391
+      link: https://identifiers.org/pfam:PF01391
+      name: Collagen
+      prefix: pfam
+  nodes:
+    CHEBI:3815:
+      identifier: CHEBI:3815
+      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:3815
+      name: Collagen
+      prefix: chebi
+    mesh:D003094:
+      identifier: D003094
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D003094
+      name: Collagen
+      prefix: mesh
+    pfam:PF01391:
+      identifier: PF01391
+      link: https://identifiers.org/pfam:PF01391
+      name: Collagen
+      prefix: pfam
+- edges:
+  - source:
+      curie: hgnc:11393
+      identifier: '11393'
+      link: https://identifiers.org/hgnc:11393
+      name: AURKA
+      prefix: hgnc
+    target:
+      curie: ncit:C30006
+      identifier: C30006
+      link: https://identifiers.org/ncit:C30006
+      name: Aurora Kinase A
+      prefix: ncit
+  nodes:
+    hgnc:11393:
+      identifier: '11393'
+      link: https://identifiers.org/hgnc:11393
+      name: AURKA
+      prefix: hgnc
+    mesh:D064096:
+      identifier: D064096
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D064096
+      name: Aurora Kinase A
+      prefix: mesh
+    ncit:C30006:
+      identifier: C30006
+      link: https://identifiers.org/ncit:C30006
+      name: Aurora Kinase A
+      prefix: ncit
+- edges:
+  - source:
+      curie: hgnc:11390
+      identifier: '11390'
+      link: https://identifiers.org/hgnc:11390
+      name: AURKB
+      prefix: hgnc
+    target:
+      curie: ncit:C68596
+      identifier: C68596
+      link: https://identifiers.org/ncit:C68596
+      name: Aurora Kinase B
+      prefix: ncit
+  nodes:
+    hgnc:11390:
+      identifier: '11390'
+      link: https://identifiers.org/hgnc:11390
+      name: AURKB
+      prefix: hgnc
+    mesh:D064107:
+      identifier: D064107
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D064107
+      name: Aurora Kinase B
+      prefix: mesh
+    ncit:C68596:
+      identifier: C68596
+      link: https://identifiers.org/ncit:C68596
+      name: Aurora Kinase B
+      prefix: ncit
+- edges:
+  - source:
+      curie: CHEBI:50223
+      identifier: CHEBI:50223
+      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:50223
+      name: (+)-dexrazoxane
+      prefix: chebi
+    target:
+      curie: ncit:C1333
+      identifier: C1333
+      link: https://identifiers.org/ncit:C1333
+      name: Dexrazoxane
+      prefix: ncit
+  nodes:
+    CHEBI:50223:
+      identifier: CHEBI:50223
+      link: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:CHEBI:50223
+      name: (+)-dexrazoxane
+      prefix: chebi
+    mesh:D064730:
+      identifier: D064730
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D064730
+      name: Dexrazoxane
+      prefix: mesh
+    ncit:C1333:
+      identifier: C1333
+      link: https://identifiers.org/ncit:C1333
+      name: Dexrazoxane
+      prefix: ncit
+- edges:
+  - source:
+      curie: PR:000050270
+      identifier: PR:000050270
+      link: https://identifiers.org/PR:000050270
+      name: host translation inhibitor nsp1 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725297
+      identifier: YP_009725297
+      link: https://identifiers.org/ncbiprotein:YP_009725297
+      name: leader protein
+      prefix: ncbiprotein
+  nodes:
+    PR:000050270:
+      identifier: PR:000050270
+      link: https://identifiers.org/PR:000050270
+      name: host translation inhibitor nsp1 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725297:
+      identifier: YP_009725297
+      link: https://identifiers.org/ncbiprotein:YP_009725297
+      name: leader protein
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449619:
+      identifier: PRO_0000449619
+      link: https://identifiers.org/uniprot.chain:PRO_0000449619
+      name: Host translation inhibitor nsp1
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050271
+      identifier: PR:000050271
+      link: https://identifiers.org/PR:000050271
+      name: non-structural protein 2 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725298
+      identifier: YP_009725298
+      link: https://identifiers.org/ncbiprotein:YP_009725298
+      name: nsp2
+      prefix: ncbiprotein
+  nodes:
+    PR:000050271:
+      identifier: PR:000050271
+      link: https://identifiers.org/PR:000050271
+      name: non-structural protein 2 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725298:
+      identifier: YP_009725298
+      link: https://identifiers.org/ncbiprotein:YP_009725298
+      name: nsp2
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449620:
+      identifier: PRO_0000449620
+      link: https://identifiers.org/uniprot.chain:PRO_0000449620
+      name: Non-structural protein 2
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050272
+      identifier: PR:000050272
+      link: https://identifiers.org/PR:000050272
+      name: non-structural protein 3 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725299
+      identifier: YP_009725299
+      link: https://identifiers.org/ncbiprotein:YP_009725299
+      name: nsp3
+      prefix: ncbiprotein
+  nodes:
+    PR:000050272:
+      identifier: PR:000050272
+      link: https://identifiers.org/PR:000050272
+      name: non-structural protein 3 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725299:
+      identifier: YP_009725299
+      link: https://identifiers.org/ncbiprotein:YP_009725299
+      name: nsp3
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449621:
+      identifier: PRO_0000449621
+      link: https://identifiers.org/uniprot.chain:PRO_0000449621
+      name: Non-structural protein 3
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050273
+      identifier: PR:000050273
+      link: https://identifiers.org/PR:000050273
+      name: non-structural protein 4 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725300
+      identifier: YP_009725300
+      link: https://identifiers.org/ncbiprotein:YP_009725300
+      name: nsp4
+      prefix: ncbiprotein
+  nodes:
+    PR:000050273:
+      identifier: PR:000050273
+      link: https://identifiers.org/PR:000050273
+      name: non-structural protein 4 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725300:
+      identifier: YP_009725300
+      link: https://identifiers.org/ncbiprotein:YP_009725300
+      name: nsp4
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449622:
+      identifier: PRO_0000449622
+      link: https://identifiers.org/uniprot.chain:PRO_0000449622
+      name: Non-structural protein 4
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050274
+      identifier: PR:000050274
+      link: https://identifiers.org/PR:000050274
+      name: 3C-like proteinase (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725301
+      identifier: YP_009725301
+      link: https://identifiers.org/ncbiprotein:YP_009725301
+      name: 3C-like proteinase
+      prefix: ncbiprotein
+  nodes:
+    PR:000050274:
+      identifier: PR:000050274
+      link: https://identifiers.org/PR:000050274
+      name: 3C-like proteinase (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725301:
+      identifier: YP_009725301
+      link: https://identifiers.org/ncbiprotein:YP_009725301
+      name: 3C-like proteinase
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449623:
+      identifier: PRO_0000449623
+      link: https://identifiers.org/uniprot.chain:PRO_0000449623
+      name: 3C-like proteinase
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050275
+      identifier: PR:000050275
+      link: https://identifiers.org/PR:000050275
+      name: non-structural protein 6 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725302
+      identifier: YP_009725302
+      link: https://identifiers.org/ncbiprotein:YP_009725302
+      name: nsp6
+      prefix: ncbiprotein
+  nodes:
+    PR:000050275:
+      identifier: PR:000050275
+      link: https://identifiers.org/PR:000050275
+      name: non-structural protein 6 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725302:
+      identifier: YP_009725302
+      link: https://identifiers.org/ncbiprotein:YP_009725302
+      name: nsp6
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449624:
+      identifier: PRO_0000449624
+      link: https://identifiers.org/uniprot.chain:PRO_0000449624
+      name: Non-structural protein 6
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050276
+      identifier: PR:000050276
+      link: https://identifiers.org/PR:000050276
+      name: non-structural protein 7 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725303
+      identifier: YP_009725303
+      link: https://identifiers.org/ncbiprotein:YP_009725303
+      name: nsp7
+      prefix: ncbiprotein
+  nodes:
+    PR:000050276:
+      identifier: PR:000050276
+      link: https://identifiers.org/PR:000050276
+      name: non-structural protein 7 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725303:
+      identifier: YP_009725303
+      link: https://identifiers.org/ncbiprotein:YP_009725303
+      name: nsp7
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449625:
+      identifier: PRO_0000449625
+      link: https://identifiers.org/uniprot.chain:PRO_0000449625
+      name: Non-structural protein 7
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050277
+      identifier: PR:000050277
+      link: https://identifiers.org/PR:000050277
+      name: non-structural protein 8 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725304
+      identifier: YP_009725304
+      link: https://identifiers.org/ncbiprotein:YP_009725304
+      name: nsp8
+      prefix: ncbiprotein
+  nodes:
+    PR:000050277:
+      identifier: PR:000050277
+      link: https://identifiers.org/PR:000050277
+      name: non-structural protein 8 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725304:
+      identifier: YP_009725304
+      link: https://identifiers.org/ncbiprotein:YP_009725304
+      name: nsp8
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449626:
+      identifier: PRO_0000449626
+      link: https://identifiers.org/uniprot.chain:PRO_0000449626
+      name: Non-structural protein 8
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050278
+      identifier: PR:000050278
+      link: https://identifiers.org/PR:000050278
+      name: non-structural protein 9 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725305
+      identifier: YP_009725305
+      link: https://identifiers.org/ncbiprotein:YP_009725305
+      name: nsp9
+      prefix: ncbiprotein
+  nodes:
+    PR:000050278:
+      identifier: PR:000050278
+      link: https://identifiers.org/PR:000050278
+      name: non-structural protein 9 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725305:
+      identifier: YP_009725305
+      link: https://identifiers.org/ncbiprotein:YP_009725305
+      name: nsp9
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449627:
+      identifier: PRO_0000449627
+      link: https://identifiers.org/uniprot.chain:PRO_0000449627
+      name: Non-structural protein 9
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050279
+      identifier: PR:000050279
+      link: https://identifiers.org/PR:000050279
+      name: non-structural protein 10 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725306
+      identifier: YP_009725306
+      link: https://identifiers.org/ncbiprotein:YP_009725306
+      name: nsp10
+      prefix: ncbiprotein
+  nodes:
+    PR:000050279:
+      identifier: PR:000050279
+      link: https://identifiers.org/PR:000050279
+      name: non-structural protein 10 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725306:
+      identifier: YP_009725306
+      link: https://identifiers.org/ncbiprotein:YP_009725306
+      name: nsp10
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449628:
+      identifier: PRO_0000449628
+      link: https://identifiers.org/uniprot.chain:PRO_0000449628
+      name: Non-structural protein 10
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050280
+      identifier: PR:000050280
+      link: https://identifiers.org/PR:000050280
+      name: non-structural protein 11 (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725312
+      identifier: YP_009725312
+      link: https://identifiers.org/ncbiprotein:YP_009725312
+      name: nsp11
+      prefix: ncbiprotein
+  nodes:
+    PR:000050280:
+      identifier: PR:000050280
+      link: https://identifiers.org/PR:000050280
+      name: non-structural protein 11 (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725312:
+      identifier: YP_009725312
+      link: https://identifiers.org/ncbiprotein:YP_009725312
+      name: nsp11
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449645:
+      identifier: PRO_0000449645
+      link: https://identifiers.org/uniprot.chain:PRO_0000449645
+      name: Non-structural protein 11
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050284
+      identifier: PR:000050284
+      link: https://identifiers.org/PR:000050284
+      name: RNA-directed RNA polymerase (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725307
+      identifier: YP_009725307
+      link: https://identifiers.org/ncbiprotein:YP_009725307
+      name: RNA-dependent RNA polymerase
+      prefix: ncbiprotein
+  nodes:
+    PR:000050284:
+      identifier: PR:000050284
+      link: https://identifiers.org/PR:000050284
+      name: RNA-directed RNA polymerase (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725307:
+      identifier: YP_009725307
+      link: https://identifiers.org/ncbiprotein:YP_009725307
+      name: RNA-dependent RNA polymerase
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449629:
+      identifier: PRO_0000449629
+      link: https://identifiers.org/uniprot.chain:PRO_0000449629
+      name: RNA-directed RNA polymerase
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050285
+      identifier: PR:000050285
+      link: https://identifiers.org/PR:000050285
+      name: helicase (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725308
+      identifier: YP_009725308
+      link: https://identifiers.org/ncbiprotein:YP_009725308
+      name: helicase
+      prefix: ncbiprotein
+  nodes:
+    PR:000050285:
+      identifier: PR:000050285
+      link: https://identifiers.org/PR:000050285
+      name: helicase (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725308:
+      identifier: YP_009725308
+      link: https://identifiers.org/ncbiprotein:YP_009725308
+      name: helicase
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449630:
+      identifier: PRO_0000449630
+      link: https://identifiers.org/uniprot.chain:PRO_0000449630
+      name: Helicase
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050287
+      identifier: PR:000050287
+      link: https://identifiers.org/PR:000050287
+      name: uridylate-specific endoribonuclease (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725310
+      identifier: YP_009725310
+      link: https://identifiers.org/ncbiprotein:YP_009725310
+      name: endoRNAse
+      prefix: ncbiprotein
+  nodes:
+    PR:000050287:
+      identifier: PR:000050287
+      link: https://identifiers.org/PR:000050287
+      name: uridylate-specific endoribonuclease (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725310:
+      identifier: YP_009725310
+      link: https://identifiers.org/ncbiprotein:YP_009725310
+      name: endoRNAse
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449632:
+      identifier: PRO_0000449632
+      link: https://identifiers.org/uniprot.chain:PRO_0000449632
+      name: Uridylate-specific endoribonuclease
+      prefix: uniprot.chain
+- edges:
+  - source:
+      curie: PR:000050288
+      identifier: PR:000050288
+      link: https://identifiers.org/PR:000050288
+      name: 2'-O-methyltransferase (SARS-CoV-2)
+      prefix: pr
+    target:
+      curie: ncbiprotein:YP_009725311
+      identifier: YP_009725311
+      link: https://identifiers.org/ncbiprotein:YP_009725311
+      name: 2'-O-ribose methyltransferase
+      prefix: ncbiprotein
+  nodes:
+    PR:000050288:
+      identifier: PR:000050288
+      link: https://identifiers.org/PR:000050288
+      name: 2'-O-methyltransferase (SARS-CoV-2)
+      prefix: pr
+    ncbiprotein:YP_009725311:
+      identifier: YP_009725311
+      link: https://identifiers.org/ncbiprotein:YP_009725311
+      name: 2'-O-ribose methyltransferase
+      prefix: ncbiprotein
+    uniprot.chain:PRO_0000449633:
+      identifier: PRO_0000449633
+      link: https://identifiers.org/uniprot.chain:PRO_0000449633
+      name: 2'-O-methyltransferase
+      prefix: uniprot.chain
