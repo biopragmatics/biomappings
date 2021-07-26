@@ -20,7 +20,7 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import MiriamValidator, commit, not_main, push
+from biomappings.utils import MiriamValidator, commit, get_branch, not_main, push
 
 app = flask.Flask(__name__)
 app.config["WTF_CSRF_ENABLED"] = False
@@ -308,7 +308,8 @@ def run_commit():
     )
     app.logger.warning('git commit res: %s', commit_info)
     if not_main():
-        push_output = push()
+        branch = get_branch()
+        push_output = push(branch_name=branch)
         app.logger.warning('git push res: %s', push_output)
     else:
         app.logger.warning('did not push because on master branch')
