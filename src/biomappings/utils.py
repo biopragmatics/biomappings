@@ -53,7 +53,8 @@ def _git(*args: str) -> Optional[str]:
                 cwd=os.path.dirname(__file__),
                 stderr=devnull,
             )
-        except CalledProcessError:
+        except CalledProcessError as e:
+            print(e)
             return
         else:
             return ret.strip().decode("utf-8")
