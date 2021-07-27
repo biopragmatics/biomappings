@@ -416,7 +416,6 @@ kegg.pathway	hsa00730	Thiamine metabolism - Homo sapiens (human)	skos:exactMatch
 kegg.pathway	hsa00730	Thiamine metabolism - Homo sapiens (human)	skos:exactMatch	wikipathways	WP4297	Thiamine metabolic pathways	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00740	Riboflavin metabolism - Homo sapiens (human)	skos:exactMatch	reactome	R-HSA-196843	Vitamin B2 (riboflavin) metabolism	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00740	Riboflavin metabolism - Homo sapiens (human)	skos:exactMatch	reactome	R-HSA-196843	Vitamin B2 (riboflavin) metabolism	manual	orcid:0000-0002-2046-6145
-kegg.pathway	hsa00790	Folate biosynthesis - Homo sapiens (human)	skos:exactMatch	pathbank	PW000024	Folate Metabolism	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00790	Folate biosynthesis - Homo sapiens (human)	skos:exactMatch	wikipathways	WP176	Folate metabolism	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa01100	Metabolic pathways - Homo sapiens (human)	skos:exactMatch	reactome	R-HSA-1430728	Metabolism	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa01100	Metabolic pathways - Homo sapiens (human)	skos:exactMatch	reactome	R-HSA-1430728	Metabolism	manual	orcid:0000-0002-2046-6145
@@ -3587,240 +3586,6 @@ mesh	D066293	Renshaw Cells	skos:exactMatch	ncit	C33463	Renshaw Cell	manually_rev
 ncit	C1707	Voriconazole	skos:exactMatch	chebi	CHEBI:10023	voriconazole	manual	orcid:0000-0003-4423-4370
 ncit	C2160	Proteasome Inhibitor	skos:exactMatch	chebi	CHEBI:52726	proteasome inhibitor	manual	orcid:0000-0003-4423-4370
 ncit	C65538	Esomeprazole	skos:exactMatch	chebi	CHEBI:50275	esomeprazole	manual	orcid:0000-0003-4423-4370
-pathbank	PW000004	Glutathione Metabolism	skos:exactMatch	kegg.pathway	hsa00480	Glutathione metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000004	Glutathione Metabolism	skos:exactMatch	kegg.pathway	hsa00480	Glutathione metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000004	Glutathione Metabolism	skos:exactMatch	reactome	R-HSA-174403	Glutathione synthesis and recycling	manual	orcid:0000-0002-2046-6145
-pathbank	PW000004	Glutathione Metabolism	skos:exactMatch	reactome	R-HSA-174403	Glutathione synthesis and recycling	manual	orcid:0000-0002-2046-6145
-pathbank	PW000004	Glutathione Metabolism	skos:exactMatch	reactome	R-HSA-174403	Glutathione synthesis and recycling	manual	orcid:0000-0002-2046-6145
-pathbank	PW000004	Glutathione Metabolism	skos:exactMatch	wikipathways	WP100	Glutathione metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000005	Citric Acid Cycle	skos:exactMatch	kegg.pathway	hsa00020	Citrate cycle (TCA cycle) - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000005	Citric Acid Cycle	skos:exactMatch	kegg.pathway	hsa00020	Citrate cycle (TCA cycle) - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000005	Citric Acid Cycle	skos:exactMatch	reactome	R-HSA-71403	Citric acid cycle (TCA cycle)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000005	Citric Acid Cycle	skos:exactMatch	reactome	R-HSA-71403	Citric acid cycle (TCA cycle)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000005	Citric Acid Cycle	skos:exactMatch	reactome	R-HSA-71403	Citric acid cycle (TCA cycle)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000005	Citric Acid Cycle	skos:exactMatch	wikipathways	WP78	TCA cycle (aka Krebs or citric acid cycle)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000007	Selenoamino Acid Metabolism	skos:exactMatch	reactome	R-HSA-2408522	Selenoamino acid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000007	Selenoamino Acid Metabolism	skos:exactMatch	reactome	R-HSA-2408522	Selenoamino acid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000010	Arginine and Proline Metabolism	skos:exactMatch	kegg.pathway	hsa00330	Arginine and proline metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000010	Arginine and Proline Metabolism	skos:exactMatch	kegg.pathway	hsa00330	Arginine and proline metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000011	beta-Alanine Metabolism	skos:exactMatch	kegg.pathway	hsa00410	beta-Alanine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000011	beta-Alanine Metabolism	skos:exactMatch	kegg.pathway	hsa00410	beta-Alanine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000013	Biotin Metabolism	skos:exactMatch	kegg.pathway	hsa00780	Biotin metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000013	Biotin Metabolism	skos:exactMatch	kegg.pathway	hsa00780	Biotin metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000015	Caffeine Metabolism	skos:exactMatch	kegg.pathway	hsa00232	Caffeine metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000015	Caffeine Metabolism	skos:exactMatch	kegg.pathway	hsa00232	Caffeine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000016	Carnitine Synthesis	skos:exactMatch	reactome	R-HSA-71262	Carnitine synthesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000016	Carnitine Synthesis	skos:exactMatch	reactome	R-HSA-71262	Carnitine synthesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000017	Catecholamine Biosynthesis	skos:exactMatch	reactome	R-HSA-209905	Catecholamine biosynthesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000017	Catecholamine Biosynthesis	skos:exactMatch	reactome	R-HSA-209905	Catecholamine biosynthesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000019	D-Arginine and D-Ornithine Metabolism	skos:exactMatch	kegg.pathway	hsa00472	D-Arginine and D-ornithine metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000019	D-Arginine and D-Ornithine Metabolism	skos:exactMatch	kegg.pathway	hsa00472	D-Arginine and D-ornithine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000023	Fatty Acid Metabolism	skos:exactMatch	kegg.pathway	hsa01212	Fatty acid metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000023	Fatty Acid Metabolism	skos:exactMatch	kegg.pathway	hsa01212	Fatty acid metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000023	Fatty Acid Metabolism	skos:exactMatch	reactome	R-HSA-8978868	Fatty acid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000023	Fatty Acid Metabolism	skos:exactMatch	reactome	R-HSA-8978868	Fatty acid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000023	Fatty Acid Metabolism	skos:exactMatch	reactome	R-HSA-8978868	Fatty acid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000024	Folate Metabolism	skos:exactMatch	wikipathways	WP176	Folate metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000028	Ketone Body Metabolism	skos:exactMatch	kegg.pathway	hsa00072	Synthesis and degradation of ketone bodies - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000028	Ketone Body Metabolism	skos:exactMatch	kegg.pathway	hsa00072	Synthesis and degradation of ketone bodies - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000028	Ketone Body Metabolism	skos:exactMatch	reactome	R-HSA-74182	Ketone body metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000028	Ketone Body Metabolism	skos:exactMatch	reactome	R-HSA-74182	Ketone body metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000028	Ketone Body Metabolism	skos:exactMatch	reactome	R-HSA-74182	Ketone body metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000028	Ketone Body Metabolism	skos:exactMatch	wikipathways	WP311	Ketone bodies synthesis and degradation	manual	orcid:0000-0002-2046-6145
-pathbank	PW000029	Lysine Degradation	skos:exactMatch	kegg.pathway	hsa00310	Lysine degradation - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000029	Lysine Degradation	skos:exactMatch	kegg.pathway	hsa00310	Lysine degradation - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000029	Lysine Degradation	skos:exactMatch	reactome	R-HSA-71064	Lysine catabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000029	Lysine Degradation	skos:exactMatch	reactome	R-HSA-71064	Lysine catabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000029	Lysine Degradation	skos:exactMatch	reactome	R-HSA-71064	Lysine catabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000032	Pantothenate and CoA Biosynthesis	skos:exactMatch	kegg.pathway	hsa00770	Pantothenate and CoA biosynthesis - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000032	Pantothenate and CoA Biosynthesis	skos:exactMatch	kegg.pathway	hsa00770	Pantothenate and CoA biosynthesis - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000035	Riboflavin Metabolism	skos:exactMatch	kegg.pathway	hsa00740	Riboflavin metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000035	Riboflavin Metabolism	skos:exactMatch	kegg.pathway	hsa00740	Riboflavin metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000035	Riboflavin Metabolism	skos:exactMatch	reactome	R-HSA-196843	Vitamin B2 (riboflavin) metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000035	Riboflavin Metabolism	skos:exactMatch	reactome	R-HSA-196843	Vitamin B2 (riboflavin) metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000035	Riboflavin Metabolism	skos:exactMatch	reactome	R-HSA-196843	Vitamin B2 (riboflavin) metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000036	Thiamine Metabolism	skos:exactMatch	kegg.pathway	hsa00730	Thiamine metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000036	Thiamine Metabolism	skos:exactMatch	kegg.pathway	hsa00730	Thiamine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000036	Thiamine Metabolism	skos:exactMatch	reactome	R-HSA-196819	Vitamin B1 (thiamin) metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000036	Thiamine Metabolism	skos:exactMatch	reactome	R-HSA-196819	Vitamin B1 (thiamin) metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000036	Thiamine Metabolism	skos:exactMatch	reactome	R-HSA-196819	Vitamin B1 (thiamin) metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000036	Thiamine Metabolism	skos:exactMatch	wikipathways	WP4297	Thiamine metabolic pathways	manual	orcid:0000-0002-2046-6145
-pathbank	PW000038	Taurine and Hypotaurine Metabolism	skos:exactMatch	kegg.pathway	hsa00430	Taurine and hypotaurine metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000038	Taurine and Hypotaurine Metabolism	skos:exactMatch	kegg.pathway	hsa00430	Taurine and hypotaurine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000040	Sulfate/Sulfite Metabolism	skos:exactMatch	kegg.pathway	hsa00920	Sulfur metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000040	Sulfate/Sulfite Metabolism	skos:exactMatch	kegg.pathway	hsa00920	Sulfur metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000040	Sulfate/Sulfite Metabolism	skos:exactMatch	reactome	R-HSA-1614635	Sulfur amino acid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000040	Sulfate/Sulfite Metabolism	skos:exactMatch	reactome	R-HSA-1614635	Sulfur amino acid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000043	Histidine Metabolism	skos:exactMatch	kegg.pathway	hsa00340	Histidine metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000043	Histidine Metabolism	skos:exactMatch	kegg.pathway	hsa00340	Histidine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000044	Arachidonic Acid Metabolism	skos:exactMatch	kegg.pathway	hsa00590	Arachidonic acid metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000044	Arachidonic Acid Metabolism	skos:exactMatch	kegg.pathway	hsa00590	Arachidonic acid metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000044	Arachidonic Acid Metabolism	skos:exactMatch	reactome	R-HSA-2142753	Arachidonic acid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000044	Arachidonic Acid Metabolism	skos:exactMatch	reactome	R-HSA-2142753	Arachidonic acid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000044	Arachidonic Acid Metabolism	skos:exactMatch	reactome	R-HSA-2142753	Arachidonic acid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000050	Steroid Biosynthesis	skos:exactMatch	kegg.pathway	hsa00100	Steroid biosynthesis - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000050	Steroid Biosynthesis	skos:exactMatch	kegg.pathway	hsa00100	Steroid biosynthesis - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000050	Steroid Biosynthesis	skos:exactMatch	kegg.pathway	hsa00140	Steroid hormone biosynthesis - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000050	Steroid Biosynthesis	skos:exactMatch	kegg.pathway	hsa00140	Steroid hormone biosynthesis - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000050	Steroid Biosynthesis	skos:exactMatch	wikipathways	WP496	Steroid biosynthesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000051	Valine, Leucine, and Isoleucine Degradation	skos:exactMatch	kegg.pathway	hsa00280	Valine,leucine and isoleucine degradation - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000051	Valine, Leucine, and Isoleucine Degradation	skos:exactMatch	kegg.pathway	hsa00280	Valine,leucine and isoleucine degradation - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000052	Purine Metabolism	skos:exactMatch	kegg.pathway	hsa00230	Purine metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000052	Purine Metabolism	skos:exactMatch	kegg.pathway	hsa00230	Purine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000053	Vitamin B6 Metabolism	skos:exactMatch	kegg.pathway	hsa00750	Vitamin B6 metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000053	Vitamin B6 Metabolism	skos:exactMatch	kegg.pathway	hsa00750	Vitamin B6 metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000054	Pyruvate Metabolism	skos:exactMatch	kegg.pathway	hsa00620	Pyruvate metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000054	Pyruvate Metabolism	skos:exactMatch	kegg.pathway	hsa00620	Pyruvate metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000054	Pyruvate Metabolism	skos:exactMatch	reactome	R-HSA-70268	Pyruvate metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000054	Pyruvate Metabolism	skos:exactMatch	reactome	R-HSA-70268	Pyruvate metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000054	Pyruvate Metabolism	skos:exactMatch	reactome	R-HSA-70268	Pyruvate metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000055	Pentose Phosphate Pathway	skos:exactMatch	kegg.pathway	hsa00030	Pentose phosphate pathway - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000055	Pentose Phosphate Pathway	skos:exactMatch	kegg.pathway	hsa00030	Pentose phosphate pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000055	Pentose Phosphate Pathway	skos:exactMatch	reactome	R-HSA-71336	Pentose phosphate pathway	manual	orcid:0000-0002-2046-6145
-pathbank	PW000055	Pentose Phosphate Pathway	skos:exactMatch	reactome	R-HSA-71336	Pentose phosphate pathway	manual	orcid:0000-0002-2046-6145
-pathbank	PW000055	Pentose Phosphate Pathway	skos:exactMatch	reactome	R-HSA-71336	Pentose phosphate pathway	manual	orcid:0000-0002-2046-6145
-pathbank	PW000055	Pentose Phosphate Pathway	skos:exactMatch	wikipathways	WP134	Pentose phosphate metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000142	Tyrosine Metabolism	skos:exactMatch	kegg.pathway	hsa00350	Tyrosine metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000142	Tyrosine Metabolism	skos:exactMatch	kegg.pathway	hsa00350	Tyrosine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000142	Tyrosine Metabolism	skos:exactMatch	wikipathways	WP4506	Tyrosine metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000144	Glycerolipid Metabolism	skos:exactMatch	kegg.pathway	hsa00561	Glycerolipid metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000144	Glycerolipid Metabolism	skos:exactMatch	kegg.pathway	hsa00561	Glycerolipid metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000145	Bile Acid Biosynthesis	skos:exactMatch	kegg.pathway	hsa00120	Primary bile acid biosynthesis - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000145	Bile Acid Biosynthesis	skos:exactMatch	kegg.pathway	hsa00120	Primary bile acid biosynthesis - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000146	Glycolysis	skos:exactMatch	reactome	R-HSA-70171	Glycolysis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000146	Glycolysis	skos:exactMatch	reactome	R-HSA-70171	Glycolysis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000148	Sphingolipid Metabolism	skos:exactMatch	kegg.pathway	hsa00600	Sphingolipid metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000148	Sphingolipid Metabolism	skos:exactMatch	kegg.pathway	hsa00600	Sphingolipid metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000148	Sphingolipid Metabolism	skos:exactMatch	reactome	R-HSA-428157	Sphingolipid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000148	Sphingolipid Metabolism	skos:exactMatch	reactome	R-HSA-428157	Sphingolipid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000148	Sphingolipid Metabolism	skos:exactMatch	reactome	R-HSA-428157	Sphingolipid metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000148	Sphingolipid Metabolism	skos:exactMatch	wikipathways	WP1422	Sphingolipid pathway	manual	orcid:0000-0002-2046-6145
-pathbank	PW000149	Propanoate Metabolism	skos:exactMatch	kegg.pathway	hsa00640	Propanoate metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000149	Propanoate Metabolism	skos:exactMatch	kegg.pathway	hsa00640	Propanoate metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000150	Starch and Sucrose Metabolism	skos:exactMatch	kegg.pathway	hsa00500	Starch and sucrose metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000150	Starch and Sucrose Metabolism	skos:exactMatch	kegg.pathway	hsa00500	Starch and sucrose metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000151	Nicotinate and Nicotinamide Metabolism	skos:exactMatch	kegg.pathway	hsa00760	Nicotinate and nicotinamide metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000151	Nicotinate and Nicotinamide Metabolism	skos:exactMatch	kegg.pathway	hsa00760	Nicotinate and nicotinamide metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000152	Gluconeogenesis	skos:exactMatch	reactome	R-HSA-70263	Gluconeogenesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000152	Gluconeogenesis	skos:exactMatch	reactome	R-HSA-70263	Gluconeogenesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000156	Inositol Phosphate Metabolism	skos:exactMatch	kegg.pathway	hsa00562	Inositol phosphate metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000156	Inositol Phosphate Metabolism	skos:exactMatch	kegg.pathway	hsa00562	Inositol phosphate metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000156	Inositol Phosphate Metabolism	skos:exactMatch	reactome	R-HSA-1483249	Inositol phosphate metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000156	Inositol Phosphate Metabolism	skos:exactMatch	reactome	R-HSA-1483249	Inositol phosphate metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000156	Inositol Phosphate Metabolism	skos:exactMatch	reactome	R-HSA-1483249	Inositol phosphate metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000158	Porphyrin Metabolism	skos:exactMatch	reactome	R-HSA-189445	Metabolism of porphyrins	manual	orcid:0000-0002-2046-6145
-pathbank	PW000158	Porphyrin Metabolism	skos:exactMatch	reactome	R-HSA-189445	Metabolism of porphyrins	manual	orcid:0000-0002-2046-6145
-pathbank	PW000159	Galactose Metabolism	skos:exactMatch	kegg.pathway	hsa00052	Galactose metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000159	Galactose Metabolism	skos:exactMatch	kegg.pathway	hsa00052	Galactose metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000160	Pyrimidine Metabolism	skos:exactMatch	kegg.pathway	hsa00240	Pyrimidine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000160	Pyrimidine Metabolism	skos:exactMatch	kegg.pathway	hsa00240	Pyrimidine metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000160	Pyrimidine Metabolism	skos:exactMatch	wikipathways	WP4022	Pyrimidine metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000161	Beta Oxidation of Very Long Chain Fatty Acids	skos:exactMatch	reactome	R-HSA-390247	Beta-oxidation of very long chain fatty acids	manual	orcid:0000-0002-2046-6145
-pathbank	PW000161	Beta Oxidation of Very Long Chain Fatty Acids	skos:exactMatch	reactome	R-HSA-390247	Beta-oxidation of very long chain fatty acids	manual	orcid:0000-0002-2046-6145
-pathbank	PW000162	Urea Cycle	skos:exactMatch	reactome	R-HSA-70635	Urea cycle	manual	orcid:0000-0002-2046-6145
-pathbank	PW000162	Urea Cycle	skos:exactMatch	reactome	R-HSA-70635	Urea cycle	manual	orcid:0000-0002-2046-6145
-pathbank	PW000163	Tryptophan Metabolism	skos:exactMatch	kegg.pathway	hsa00380	Tryptophan metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000163	Tryptophan Metabolism	skos:exactMatch	kegg.pathway	hsa00380	Tryptophan metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000163	Tryptophan Metabolism	skos:exactMatch	wikipathways	WP465	Tryptophan metabolism	manual	orcid:0000-0002-2046-6145
-pathbank	PW000164	Retinol Metabolism	skos:exactMatch	kegg.pathway	hsa00830	Retinol metabolism - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000164	Retinol Metabolism	skos:exactMatch	kegg.pathway	hsa00830	Retinol metabolism - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000165	Mitochondrial Electron Transport Chain	skos:exactMatch	reactome	R-HSA-611105	Respiratory electron transport	manual	orcid:0000-0002-2046-6145
-pathbank	PW000165	Mitochondrial Electron Transport Chain	skos:exactMatch	reactome	R-HSA-611105	Respiratory electron transport	manual	orcid:0000-0002-2046-6145
-pathbank	PW000165	Mitochondrial Electron Transport Chain	skos:exactMatch	wikipathways	WP111	Electron transport chain: OXPHOS system in mitochondria	manual	orcid:0000-0002-2046-6145
-pathbank	PW000167	Fatty Acid Biosynthesis	skos:exactMatch	kegg.pathway	hsa00061	Fatty acid biosynthesis - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000167	Fatty Acid Biosynthesis	skos:exactMatch	kegg.pathway	hsa00061	Fatty acid biosynthesis - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000167	Fatty Acid Biosynthesis	skos:exactMatch	wikipathways	WP357	Fatty acid biosynthesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000447	Vasopressin Regulation of Water Homeostasis	skos:exactMatch	kegg.pathway	hsa04962	Vasopressin-regulated water reabsorption - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000447	Vasopressin Regulation of Water Homeostasis	skos:exactMatch	kegg.pathway	hsa04962	Vasopressin-regulated water reabsorption - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000447	Vasopressin Regulation of Water Homeostasis	skos:exactMatch	reactome	R-HSA-432040	Vasopressin regulates renal water homeostasis via Aquaporins	manual	orcid:0000-0002-2046-6145
-pathbank	PW000447	Vasopressin Regulation of Water Homeostasis	skos:exactMatch	reactome	R-HSA-432040	Vasopressin regulates renal water homeostasis via Aquaporins	manual	orcid:0000-0002-2046-6145
-pathbank	PW000447	Vasopressin Regulation of Water Homeostasis	skos:exactMatch	reactome	R-HSA-432040	Vasopressin regulates renal water homeostasis via Aquaporins	manual	orcid:0000-0002-2046-6145
-pathbank	PW000453	Fc Epsilon Receptor I Signaling in Mast Cells	skos:exactMatch	kegg.pathway	hsa04664	Fc epsilon RI signaling pathway - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000453	Fc Epsilon Receptor I Signaling in Mast Cells	skos:exactMatch	kegg.pathway	hsa04664	Fc epsilon RI signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000453	Fc Epsilon Receptor I Signaling in Mast Cells	skos:exactMatch	reactome	R-HSA-2454202	Fc epsilon receptor (FCERI) signaling	manual	orcid:0000-0002-2046-6145
-pathbank	PW000453	Fc Epsilon Receptor I Signaling in Mast Cells	skos:exactMatch	reactome	R-HSA-2454202	Fc epsilon receptor (FCERI) signaling	manual	orcid:0000-0002-2046-6145
-pathbank	PW000453	Fc Epsilon Receptor I Signaling in Mast Cells	skos:exactMatch	reactome	R-HSA-2454202	Fc epsilon receptor (FCERI) signaling	manual	orcid:0000-0002-2046-6145
-pathbank	PW000454	Insulin Signalling	skos:exactMatch	kegg.pathway	hsa04910	Insulin signaling pathway - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000454	Insulin Signalling	skos:exactMatch	kegg.pathway	hsa04910	Insulin signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000454	Insulin Signalling	skos:exactMatch	wikipathways	WP3634	Insulin signaling in adipocytes (normal condition)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000457	Nucleotide Excision Repair 	skos:exactMatch	kegg.pathway	hsa03420	Nucleotide excision repair - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000457	Nucleotide Excision Repair 	skos:exactMatch	kegg.pathway	hsa03420	Nucleotide excision repair - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000457	Nucleotide Excision Repair 	skos:exactMatch	reactome	R-HSA-5696398	Nucleotide Excision Repair	manual	orcid:0000-0002-2046-6145
-pathbank	PW000457	Nucleotide Excision Repair 	skos:exactMatch	reactome	R-HSA-5696398	Nucleotide Excision Repair	manual	orcid:0000-0002-2046-6145
-pathbank	PW000457	Nucleotide Excision Repair 	skos:exactMatch	reactome	R-HSA-5696398	Nucleotide Excision Repair	manual	orcid:0000-0002-2046-6145
-pathbank	PW000562	Coagulation 	skos:exactMatch	reactome	R-HSA-140877	Formation of Fibrin Clot (Clotting Cascade)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000562	Coagulation 	skos:exactMatch	reactome	R-HSA-140877	Formation of Fibrin Clot (Clotting Cascade)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000564	Striated Muscle Contraction	skos:exactMatch	reactome	R-HSA-390522	Striated Muscle Contraction	manual	orcid:0000-0002-2046-6145
-pathbank	PW000564	Striated Muscle Contraction	skos:exactMatch	reactome	R-HSA-390522	Striated Muscle Contraction	manual	orcid:0000-0002-2046-6145
-pathbank	PW000564	Striated Muscle Contraction	skos:exactMatch	reactome	R-HSA-390522	Striated Muscle Contraction	manual	orcid:0000-0002-2046-6145
-pathbank	PW000564	Striated Muscle Contraction	skos:exactMatch	wikipathways	WP383	Striated muscle contraction pathway	manual	orcid:0000-0002-2046-6145
-pathbank	PW000693	Thyroid Hormone Synthesis	skos:exactMatch	kegg.pathway	hsa04918	Thyroid hormone synthesis - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW000693	Thyroid Hormone Synthesis	skos:exactMatch	kegg.pathway	hsa04918	Thyroid hormone synthesis - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW000693	Thyroid Hormone Synthesis	skos:exactMatch	reactome	R-HSA-209968	Thyroxine biosynthesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000693	Thyroid Hormone Synthesis	skos:exactMatch	reactome	R-HSA-209968	Thyroxine biosynthesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000693	Thyroid Hormone Synthesis	skos:exactMatch	reactome	R-HSA-209968	Thyroxine biosynthesis	manual	orcid:0000-0002-2046-6145
-pathbank	PW000693	Thyroid Hormone Synthesis	skos:exactMatch	wikipathways	WP1981	Thyroxine (thyroid hormone) production	manual	orcid:0000-0002-2046-6145
-pathbank	PW015076	Phosphatidylcholine Biosynthesis	skos:exactMatch	reactome	R-HSA-1483191	Synthesis of PC	manual	orcid:0000-0002-2046-6145
-pathbank	PW015076	Phosphatidylcholine Biosynthesis	skos:exactMatch	reactome	R-HSA-1483191	Synthesis of PC	manual	orcid:0000-0002-2046-6145
-pathbank	PW030608	Phosphatidylethanolamine Biosynthesis	skos:exactMatch	reactome	R-HSA-1483213	Synthesis of PE	manual	orcid:0000-0002-2046-6145
-pathbank	PW030608	Phosphatidylethanolamine Biosynthesis	skos:exactMatch	reactome	R-HSA-1483213	Synthesis of PE	manual	orcid:0000-0002-2046-6145
-pathbank	PW064763	Ahr Signal Transduction Pathway	skos:exactMatch	reactome	R-HSA-8937144	Aryl hydrocarbon receptor signalling	manual	orcid:0000-0002-2046-6145
-pathbank	PW064763	Ahr Signal Transduction Pathway	skos:exactMatch	reactome	R-HSA-8937144	Aryl hydrocarbon receptor signalling	manual	orcid:0000-0002-2046-6145
-pathbank	PW064763	Ahr Signal Transduction Pathway	skos:exactMatch	reactome	R-HSA-8937144	Aryl hydrocarbon receptor signalling	manual	orcid:0000-0002-2046-6145
-pathbank	PW064763	Ahr Signal Transduction Pathway	skos:exactMatch	reactome	R-HSA-8937144	Aryl hydrocarbon receptor signalling	manual	orcid:0000-0002-2046-6145
-pathbank	PW064763	Ahr Signal Transduction Pathway	skos:exactMatch	wikipathways	WP2586	Aryl hydrocarbon receptor Netpath	manual	orcid:0000-0002-2046-6145
-pathbank	PW064763	Ahr Signal Transduction Pathway	skos:exactMatch	wikipathways	WP2586	Aryl hydrocarbon receptor Netpath	manual	orcid:0000-0002-2046-6145
-pathbank	PW064763	Ahr Signal Transduction Pathway	skos:exactMatch	wikipathways	WP2873	Aryl hydrocarbon receptor pathway	manual	orcid:0000-0002-2046-6145
-pathbank	PW064774	P53 Signaling Pathway	skos:exactMatch	kegg.pathway	hsa04115	p53 signaling pathway - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW064774	P53 Signaling Pathway	skos:exactMatch	kegg.pathway	hsa04115	p53 signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW064776	Ras Signaling Pathway 	skos:exactMatch	kegg.pathway	hsa04014	Ras signaling pathway - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW064776	Ras Signaling Pathway 	skos:exactMatch	kegg.pathway	hsa04014	Ras signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW064784	TNF/Stress Related Signaling	skos:exactMatch	kegg.pathway	hsa04668	TNF signaling pathway - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW064784	TNF/Stress Related Signaling	skos:exactMatch	kegg.pathway	hsa04668	TNF signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW064784	TNF/Stress Related Signaling	skos:exactMatch	reactome	R-HSA-75893	TNF signaling	manual	orcid:0000-0002-2046-6145
-pathbank	PW064784	TNF/Stress Related Signaling	skos:exactMatch	reactome	R-HSA-75893	TNF signaling	manual	orcid:0000-0002-2046-6145
-pathbank	PW064784	TNF/Stress Related Signaling	skos:exactMatch	reactome	R-HSA-75893	TNF signaling	manual	orcid:0000-0002-2046-6145
-pathbank	PW064816	GnRH Signaling Pathway	skos:exactMatch	kegg.pathway	hsa04912	GnRH signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW064816	GnRH Signaling Pathway	skos:exactMatch	kegg.pathway	hsa04912	GnRH signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW064818	NF-kB Signaling Pathway	skos:exactMatch	kegg.pathway	hsa04064	NF-kappa B signaling pathway - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW064818	NF-kB Signaling Pathway	skos:exactMatch	kegg.pathway	hsa04064	NF-kappa B signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW064819	Complement Pathway	skos:exactMatch	reactome	R-HSA-166658	Complement cascade	manual	orcid:0000-0002-2046-6145
-pathbank	PW064819	Complement Pathway	skos:exactMatch	reactome	R-HSA-166658	Complement cascade	manual	orcid:0000-0002-2046-6145
-pathbank	PW064819	Complement Pathway	skos:exactMatch	reactome	R-HSA-166658	Complement cascade	manual	orcid:0000-0002-2046-6145
-pathbank	PW064819	Complement Pathway	skos:exactMatch	wikipathways	WP545	Complement activation	manual	orcid:0000-0002-2046-6145
-pathbank	PW064820	Alternative Complement Pathway	skos:exactMatch	reactome	R-HSA-173736	Alternative complement activation	manual	orcid:0000-0002-2046-6145
-pathbank	PW064820	Alternative Complement Pathway	skos:exactMatch	reactome	R-HSA-173736	Alternative complement activation	manual	orcid:0000-0002-2046-6145
-pathbank	PW064821	Ubiquitin–Proteasome Pathway	skos:exactMatch	kegg.pathway	hsa04120	Ubiquitin mediated proteolysis - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW064821	Ubiquitin–Proteasome Pathway	skos:exactMatch	kegg.pathway	hsa04120	Ubiquitin mediated proteolysis - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW064906	Lectin-Induced Complement Pathway 	skos:exactMatch	reactome	R-HSA-166662	Lectin pathway of complement activation	manual	orcid:0000-0002-2046-6145
-pathbank	PW064906	Lectin-Induced Complement Pathway 	skos:exactMatch	reactome	R-HSA-166662	Lectin pathway of complement activation	manual	orcid:0000-0002-2046-6145
-pathbank	PW065057	Classical Complement Pathway	skos:exactMatch	reactome	R-HSA-166658	Complement cascade	manual	orcid:0000-0002-2046-6145
-pathbank	PW065057	Classical Complement Pathway	skos:exactMatch	reactome	R-HSA-166658	Complement cascade	manual	orcid:0000-0002-2046-6145
-pathbank	PW067987	T Cell Receptor Signaling Pathway 	skos:exactMatch	kegg.pathway	hsa04660	T cell receptor signaling pathway - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW067987	T Cell Receptor Signaling Pathway 	skos:exactMatch	kegg.pathway	hsa04660	T cell receptor signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW067987	T Cell Receptor Signaling Pathway 	skos:exactMatch	wikipathways	WP69	T-cell receptor (TCR) signaling pathway	manual	orcid:0000-0002-2046-6145
-pathbank	PW070885	BCR Signaling Pathway	skos:exactMatch	kegg.pathway	hsa04662	B cell receptor signaling pathway - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW070885	BCR Signaling Pathway	skos:exactMatch	kegg.pathway	hsa04662	B cell receptor signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW070885	BCR Signaling Pathway	skos:exactMatch	reactome	R-HSA-983705	Signaling by the B Cell Receptor (BCR)	manual	orcid:0000-0002-2046-6145
-pathbank	PW070885	BCR Signaling Pathway	skos:exactMatch	reactome	R-HSA-983705	Signaling by the B Cell Receptor (BCR)	manual	orcid:0000-0002-2046-6145
-pathbank	PW070885	BCR Signaling Pathway	skos:exactMatch	wikipathways	WP23	B cell receptor signaling pathway	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	kegg.pathway	hsa04310	Wnt signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	kegg.pathway	hsa04310	Wnt signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	kegg.pathway	hsa04310	Wnt signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	reactome	R-HSA-195721	Signaling by WNT	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	reactome	R-HSA-195721	Signaling by WNT	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	reactome	R-HSA-195721	Signaling by WNT	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	reactome	R-HSA-195721	Signaling by WNT	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	wikipathways	WP363	Wnt signaling pathway	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	wikipathways	WP399	Wnt signaling pathway and pluripotency	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	wikipathways	WP428	Wnt signaling	manual	orcid:0000-0002-2046-6145
-pathbank	PW078607	None	skos:exactMatch	wikipathways	WP428	Wnt signaling	manual	orcid:0000-0002-2046-6145
-pathbank	PW091851	Circadian Rhythms	skos:exactMatch	kegg.pathway	hsa04710	Circadian rhythm - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW091851	Circadian Rhythms	skos:exactMatch	kegg.pathway	hsa04710	Circadian rhythm - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW112896	Protein Synthesis: Arginine	skos:exactMatch	kegg.pathway	hsa00220	Arginine biosynthesis - Homo sapiens (human) 	manual	orcid:0000-0002-2046-6145
-pathbank	PW112896	Protein Synthesis: Arginine	skos:exactMatch	kegg.pathway	hsa00220	Arginine biosynthesis - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-pathbank	PW122325	Bloch Pathway (Cholesterol Biosynthesis) 	skos:exactMatch	reactome	R-HSA-6807047	Cholesterol biosynthesis via desmosterol	manual	orcid:0000-0002-2046-6145
-pathbank	PW122325	Bloch Pathway (Cholesterol Biosynthesis) 	skos:exactMatch	reactome	R-HSA-6807047	Cholesterol biosynthesis via desmosterol	manual	orcid:0000-0002-2046-6145
 pfam	PF01391	Collagen	skos:exactMatch	mesh	D003094	Collagen	manual	orcid:0000-0001-9439-5346
 pr	PR:000001757	nuclear factor NF-kappa-B p50 subunit	skos:exactMatch	uniprot.chain	PRO_0000030311	Nuclear factor NF-kappa-B p50 subunit	manually_reviewed	orcid:0000-0001-9439-5346
 pr	PR:000002439	BH3-interacting domain death agonist isoform 1 cleaved 1	skos:exactMatch	uniprot.chain	PRO_0000223233	BH3-interacting domain death agonist p15	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4031,7 +3796,6 @@ reactome	R-HSA-5662702	Melanin biosynthesis	speciesSpecific	go	GO:0042438	melani
 reactome	R-HSA-5676934	Protein repair	speciesSpecific	go	GO:0030091	protein repair	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-HSA-5688426	Deubiquitination	speciesSpecific	go	GO:0016579	protein deubiquitination	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-HSA-597592	Post-translational protein modification	speciesSpecific	go	GO:0043687	post-translational protein modification	manually_reviewed	orcid:0000-0003-4423-4370
-reactome	R-HSA-611105	Respiratory electron transport	skos:exactMatch	pathbank	PW000165	Mitochondrial Electron Transport Chain	manual	orcid:0000-0002-2046-6145
 reactome	R-HSA-6783984	Glycine degradation	speciesSpecific	go	GO:0006546	glycine catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-HSA-6798163	Choline catabolism	speciesSpecific	go	GO:0042426	choline catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-HSA-6798695	Neutrophil degranulation	speciesSpecific	go	GO:0043312	neutrophil degranulation	manually_reviewed	orcid:0000-0003-4423-4370
@@ -4089,7 +3853,6 @@ reactome	R-HSA-74217	Purine salvage	speciesSpecific	go	GO:0043101	purine-contain
 reactome	R-HSA-75109	Triglyceride biosynthesis	speciesSpecific	go	GO:0019432	triglyceride biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-HSA-75944	Transcription from mitochondrial promoters	speciesSpecific	go	GO:0006390	mitochondrial transcription	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-HSA-77108	Utilization of Ketone Bodies	speciesSpecific	go	GO:0046952	ketone body catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
-reactome	R-HSA-77286	mitochondrial fatty acid beta-oxidation of saturated fatty acids	skos:exactMatch	pathbank	PW000173	Mitochondrial Beta-Oxidation of Long Chain Saturated Fatty Acids	manual	orcid:0000-0002-2046-6145
 reactome	R-HSA-77286	mitochondrial fatty acid beta-oxidation of saturated fatty acids	skos:exactMatch	wikipathways	WP368	Mitochondrial long chain fatty acid beta-oxidation	manual	orcid:0000-0002-2046-6145
 reactome	R-HSA-77387	Insulin receptor recycling	speciesSpecific	go	GO:0038020	insulin receptor recycling	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-HSA-774815	Nucleosome assembly	speciesSpecific	go	GO:0006334	nucleosome assembly	manually_reviewed	orcid:0000-0003-4423-4370
@@ -4133,7 +3896,6 @@ reactome	R-HSA-9664873	Pexophagy	speciesSpecific	go	GO:0000425	pexophagy	manuall
 reactome	R-HSA-9675108	Nervous system development	speciesSpecific	go	GO:0007399	nervous system development	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-HSA-977606	Regulation of Complement cascade	speciesSpecific	go	GO:0030449	regulation of complement activation	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-HSA-983705	Signaling by the B Cell Receptor (BCR)	skos:exactMatch	kegg.pathway	hsa04662	B cell receptor signaling pathway - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
-reactome	R-HSA-983705	Signaling by the B Cell Receptor (BCR)	skos:exactMatch	pathbank	PW070885	BCR Signaling Pathway	manual	orcid:0000-0002-2046-6145
 reactome	R-HSA-983705	Signaling by the B Cell Receptor (BCR)	skos:exactMatch	wikipathways	WP23	B cell receptor signaling pathway	manual	orcid:0000-0002-2046-6145
 reactome	R-MMU-73843	5-Phosphoribose 1-diphosphate biosynthesis	speciesSpecific	go	GO:0006015	5-phosphoribose 1-diphosphate biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-PFA-73843	5-Phosphoribose 1-diphosphate biosynthesis	speciesSpecific	go	GO:0006015	5-phosphoribose 1-diphosphate biosynthetic process	manually_reviewed	orcid:0000-0003-4423-4370
@@ -4483,7 +4245,6 @@ wikipathways	WP366	TGF-beta signaling pathway	skos:exactMatch	reactome	R-HSA-900
 wikipathways	WP366	TGF-beta signaling pathway	skos:exactMatch	reactome	R-HSA-9006936	Signaling by TGFB family members	manual	orcid:0000-0002-2046-6145
 wikipathways	WP366	TGF-beta signaling pathway	skos:exactMatch	wikipathways	WP560	TGF-beta receptor signaling	manual	orcid:0000-0002-2046-6145
 wikipathways	WP367	Programmed Cell Death	speciesSpecific	go	GO:0012501	programmed cell death	manually_reviewed	orcid:0000-0003-4423-4370
-wikipathways	WP368	Mitochondrial long chain fatty acid beta-oxidation	skos:exactMatch	pathbank	PW000173	Mitochondrial Beta-Oxidation of Long Chain Saturated Fatty Acids	manual	orcid:0000-0002-2046-6145
 wikipathways	WP369	Pentose Phosphate Pathway	speciesSpecific	go	GO:0006098	pentose-phosphate shunt	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP370	Sphingolipid Metabolism	speciesSpecific	go	GO:0006665	sphingolipid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP376	Renin - Angiotensin System	speciesSpecific	mesh	D012084	Renin-Angiotensin System	manually_reviewed	orcid:0000-0003-4423-4370
