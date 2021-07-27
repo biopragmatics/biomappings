@@ -125,9 +125,11 @@ def load_mappings() -> List[Dict[str, str]]:
     return _load_table(TRUE_MAPPINGS_PATH)
 
 
-def append_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
+def append_true_mappings(m: Iterable[Mapping[str, str]], sort: bool = False) -> None:
     """Append new lines to the mappings table."""
     _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "a")
+    if sort:
+        write_true_mappings(sorted(load_mappings(), key=mapping_sort_key))
 
 
 def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
@@ -148,9 +150,11 @@ def load_false_mappings() -> List[Dict[str, str]]:
     return _load_table(FALSE_MAPPINGS_PATH)
 
 
-def append_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
+def append_false_mappings(m: Iterable[Mapping[str, str]], sort: bool = False) -> None:
     """Append new lines to the false mappings table."""
     _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "a")
+    if sort:
+        write_false_mappings(sorted(load_false_mappings(), key=mapping_sort_key))
 
 
 def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
@@ -166,9 +170,11 @@ def load_unsure() -> List[Dict[str, str]]:
     return _load_table(UNSURE_PATH)
 
 
-def append_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
+def append_unsure_mappings(m: Iterable[Mapping[str, str]], sort: bool = False) -> None:
     """Append new lines to the "unsure" mappings table."""
     _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "a")
+    if sort:
+        write_unsure_mappings(sorted(load_unsure(), key=mapping_sort_key))
 
 
 def write_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
@@ -190,16 +196,19 @@ def write_predictions(m: Iterable[Mapping[str, str]]) -> None:
 
 
 def append_prediction_tuples(
-    prediction_tuples: Iterable[PredictionTuple], deduplicate: bool = True
+    prediction_tuples: Iterable[PredictionTuple], deduplicate: bool = True, sort: bool = False
 ) -> None:
     """Append new lines to the predictions table that come as canonical tuples."""
     append_predictions(
         (prediction_tuple.as_dict() for prediction_tuple in prediction_tuples),
         deduplicate=deduplicate,
+        sort=sort,
     )
 
 
-def append_predictions(mappings: Iterable[Mapping[str, str]], deduplicate: bool = True) -> None:
+def append_predictions(
+    mappings: Iterable[Mapping[str, str]], deduplicate: bool = True, sort: bool = False
+) -> None:
     """Append new lines to the predictions table."""
     if deduplicate:
         existing_mappings = {
@@ -215,6 +224,8 @@ def append_predictions(mappings: Iterable[Mapping[str, str]], deduplicate: bool 
         )
 
     _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, "a")
+    if sort:
+        write_predictions(sorted(load_predictions(), key=mapping_sort_key))
 
 
 def load_curators():
