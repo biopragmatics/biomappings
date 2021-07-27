@@ -1,5 +1,9 @@
 curie_map:
+  bto: 'http://purl.bioontology.org/ontology/BTO/BTO:'
+  ccle.cell: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
+  cellosaurus: https://web.expasy.org/cellosaurus/
   chebi: 'https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:'
+  depmap: https://depmap.org/portal/cell_line/
   doid: 'https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:'
   efo: https://www.ebi.ac.uk/efo/EFO_
   go: 'http://amigo.geneontology.org/amigo/term/GO:'
