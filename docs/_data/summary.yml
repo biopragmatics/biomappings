@@ -1,12 +1,23 @@
 contributors:
-- count: 1523
-  orcid: 0000-0003-4423-4370
-- count: 1287
+- count: 1694
+  name: Ben Gyori
   orcid: 0000-0001-9439-5346
+  user: ben
+- count: 1673
+  name: Amelia Hoyt
+  orcid: 0000-0003-1307-2508
+  user: hoytfamily
+- count: 1581
+  name: Charles Tapley Hoyt
+  orcid: 0000-0003-4423-4370
+  user: cthoyt
 negative:
 - count: 218
   source: mesh
   target: reactome
+- count: 151
+  source: doid
+  target: mesh
 - count: 89
   source: go
   target: mesh
@@ -28,12 +39,21 @@ negative:
 - count: 16
   source: go
   target: kegg.pathway
+- count: 15
+  source: ccle.cell
+  target: cellosaurus
+- count: 14
+  source: hgnc
+  target: mesh
 - count: 13
   source: efo
   target: mesh
 - count: 11
   source: hgnc
   target: reactome
+- count: 9
+  source: pr
+  target: uniprot.chain
 - count: 7
   source: mesh
   target: ncit
@@ -41,41 +61,47 @@ negative:
   source: fplx
   target: wikipathways
 - count: 5
-  source: pr
-  target: uniprot.chain
-- count: 5
-  source: doid
-  target: mesh
-- count: 3
-  source: hgnc
-  target: mesh
-- count: 3
-  source: hgnc
-  target: wikipathways
+  source: ccle.cell
+  target: efo
 - count: 3
   source: doid
   target: reactome
-- count: 2
-  source: doid
+- count: 3
+  source: hgnc
   target: wikipathways
 - count: 2
   source: chebi
   target: wikipathways
-negative_mapping_count: 711
-negative_prefix_count: 13
+- count: 2
+  source: doid
+  target: wikipathways
+- count: 1
+  source: ccle.cell
+  target: depmap
+negative_mapping_count: 893
+negative_prefix_count: 16
 positive:
-- count: 398
+- count: 1271
+  source: doid
+  target: mesh
+- count: 443
+  source: chebi
+  target: mesh
+- count: 399
   source: go
   target: mesh
 - count: 366
   source: go
   target: wikipathways
-- count: 342
-  source: chebi
-  target: mesh
-- count: 309
+- count: 313
   source: mesh
   target: ncit
+- count: 288
+  source: mesh
+  target: uniprot
+- count: 253
+  source: ccle.cell
+  target: efo
 - count: 222
   source: go
   target: reactome
@@ -85,14 +111,17 @@ positive:
 - count: 102
   source: hgnc
   target: mesh
-- count: 84
-  source: mesh
-  target: uniprot
-- count: 79
+- count: 97
+  source: ccle.cell
+  target: cellosaurus
+- count: 80
   source: pr
   target: uniprot.chain
-- count: 30
-  source: doid
+- count: 26
+  source: ncbiprotein
+  target: uniprot.chain
+- count: 22
+  source: kegg.pathway
   target: mesh
 - count: 18
   source: mesh
@@ -103,62 +132,71 @@ positive:
 - count: 8
   source: mesh
   target: reactome
-- count: 6
+- count: 7
   source: hp
   target: mesh
+- count: 6
+  source: chebi
+  target: ncit
 - count: 4
   source: mesh
   target: umls
-- count: 4
-  source: kegg.pathway
-  target: mesh
+- count: 2
+  source: bto
+  target: ccle.cell
+- count: 1
+  source: ccle.cell
+  target: depmap
+- count: 1
+  source: go
+  target: ncit
 - count: 1
   source: mesh
   target: pfam
 - count: 1
-  source: fplx
-  target: mesh
-- count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 2099
-positive_prefix_count: 17
+positive_mapping_count: 4055
+positive_prefix_count: 21
 predictions:
-- count: 12341
+- count: 12337
   source: mesh
   target: ncit
-- count: 11264
+- count: 11060
   source: mesh
   target: uniprot
-- count: 2963
+- count: 2862
   source: chebi
   target: mesh
-- count: 1406
-  source: doid
-  target: mesh
-- count: 1387
+- count: 1376
   source: hgnc
   target: mesh
-- count: 366
+- count: 365
   source: hp
   target: mesh
+- count: 325
+  source: ccle.cell
+  target: efo
 - count: 277
   source: efo
   target: mesh
-- count: 158
-  source: fplx
-  target: mesh
+- count: 69
+  source: ccle.cell
+  target: cellosaurus
 - count: 50
   source: go
   target: mesh
 - count: 20
   source: go
   target: reactome
-- count: 6
-  source: pr
-  target: uniprot.chain
+- count: 3
+  source: ccle.cell
+  target: depmap
 - count: 3
   source: kegg.pathway
   target: mesh
-predictions_mapping_count: 30241
-predictions_prefix_count: 14
+- count: 1
+  source: pr
+  target: uniprot.chain
+predictions_mapping_count: 28748
+predictions_prefix_count: 15
