@@ -1,16 +1,16 @@
 contributors:
+- count: 1694
+  name: Ben Gyori
+  orcid: 0000-0001-9439-5346
+  user: ben
 - count: 1673
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
   user: hoytfamily
-- count: 1579
+- count: 1581
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
-- count: 1474
-  name: Ben Gyori
-  orcid: 0000-0001-9439-5346
-  user: ben
 negative:
 - count: 218
   source: mesh
@@ -39,6 +39,9 @@ negative:
 - count: 16
   source: go
   target: kegg.pathway
+- count: 15
+  source: ccle.cell
+  target: cellosaurus
 - count: 14
   source: hgnc
   target: mesh
@@ -49,9 +52,6 @@ negative:
   source: hgnc
   target: reactome
 - count: 9
-  source: ccle.cell
-  target: cellosaurus
-- count: 9
   source: pr
   target: uniprot.chain
 - count: 7
@@ -60,6 +60,9 @@ negative:
 - count: 7
   source: fplx
   target: wikipathways
+- count: 5
+  source: ccle.cell
+  target: efo
 - count: 3
   source: doid
   target: reactome
@@ -74,11 +77,8 @@ negative:
   target: wikipathways
 - count: 1
   source: ccle.cell
-  target: efo
-- count: 1
-  source: ccle.cell
   target: depmap
-negative_mapping_count: 883
+negative_mapping_count: 893
 negative_prefix_count: 16
 positive:
 - count: 1271
@@ -99,6 +99,9 @@ positive:
 - count: 288
   source: mesh
   target: uniprot
+- count: 253
+  source: ccle.cell
+  target: efo
 - count: 222
   source: go
   target: reactome
@@ -108,15 +111,12 @@ positive:
 - count: 102
   source: hgnc
   target: mesh
-- count: 92
+- count: 97
   source: ccle.cell
   target: cellosaurus
 - count: 80
   source: pr
   target: uniprot.chain
-- count: 47
-  source: ccle.cell
-  target: efo
 - count: 26
   source: ncbiprotein
   target: uniprot.chain
@@ -145,6 +145,9 @@ positive:
   source: bto
   target: ccle.cell
 - count: 1
+  source: ccle.cell
+  target: depmap
+- count: 1
   source: go
   target: ncit
 - count: 1
@@ -153,8 +156,8 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 3843
-positive_prefix_count: 20
+positive_mapping_count: 4055
+positive_prefix_count: 21
 predictions:
 - count: 12337
   source: mesh
@@ -168,16 +171,16 @@ predictions:
 - count: 1376
   source: hgnc
   target: mesh
-- count: 537
-  source: ccle.cell
-  target: efo
 - count: 365
   source: hp
   target: mesh
+- count: 325
+  source: ccle.cell
+  target: efo
 - count: 277
   source: efo
   target: mesh
-- count: 81
+- count: 69
   source: ccle.cell
   target: cellosaurus
 - count: 50
@@ -186,7 +189,7 @@ predictions:
 - count: 20
   source: go
   target: reactome
-- count: 5
+- count: 3
   source: ccle.cell
   target: depmap
 - count: 3
@@ -195,5 +198,5 @@ predictions:
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 28974
+predictions_mapping_count: 28748
 predictions_prefix_count: 15

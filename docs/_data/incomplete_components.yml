@@ -1218,6 +1218,93 @@
       prefix: efo
 - edges:
   - source:
+      curie: cellosaurus:CVCL_0025
+      identifier: CVCL_0025
+      link: https://identifiers.org/cellosaurus:CVCL_0025
+      name: Caco-2
+      prefix: cellosaurus
+    target:
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://depmap.org/portal/cell_line/ACH-000003
+      name: CACO2
+      prefix: depmap
+  - source:
+      curie: cellosaurus:CVCL_0025
+      identifier: CVCL_0025
+      link: https://identifiers.org/cellosaurus:CVCL_0025
+      name: Caco-2
+      prefix: cellosaurus
+    target:
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://identifiers.org/efo:0001099
+      name: Caco-2
+      prefix: efo
+  - source:
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://depmap.org/portal/cell_line/ACH-000003
+      name: CACO2
+      prefix: depmap
+    target:
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://identifiers.org/efo:0001099
+      name: Caco-2
+      prefix: efo
+  nodes:
+    ccle.cell:CACO2:
+      identifier: CACO2
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=CACO2
+      name: CACO2
+      prefix: ccle.cell
+    cellosaurus:CVCL_0025:
+      identifier: CVCL_0025
+      link: https://identifiers.org/cellosaurus:CVCL_0025
+      name: Caco-2
+      prefix: cellosaurus
+    depmap:ACH-000003:
+      identifier: ACH-000003
+      link: https://depmap.org/portal/cell_line/ACH-000003
+      name: CACO2
+      prefix: depmap
+    efo:0001099:
+      identifier: 0001099
+      link: https://identifiers.org/efo:0001099
+      name: Caco-2
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_YK89
+      identifier: CVCL_YK89
+      link: https://identifiers.org/cellosaurus:CVCL_YK89
+      name: EB-1
+      prefix: cellosaurus
+    target:
+      curie: efo:0002172
+      identifier: '0002172'
+      link: https://identifiers.org/efo:0002172
+      name: EB1
+      prefix: efo
+  nodes:
+    ccle.cell:EB1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+      identifier: EB1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=EB1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
+      name: EB1
+      prefix: ccle.cell
+    cellosaurus:CVCL_YK89:
+      identifier: CVCL_YK89
+      link: https://identifiers.org/cellosaurus:CVCL_YK89
+      name: EB-1
+      prefix: cellosaurus
+    efo:0002172:
+      identifier: '0002172'
+      link: https://identifiers.org/efo:0002172
+      name: EB1
+      prefix: efo
+- edges:
+  - source:
       curie: cellosaurus:CVCL_2956
       identifier: CVCL_2956
       link: https://identifiers.org/cellosaurus:CVCL_2956
@@ -1302,6 +1389,64 @@
       identifier: '0006612'
       link: https://identifiers.org/efo:0006612
       name: KMS-12-BM
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1527
+      identifier: CVCL_1527
+      link: https://identifiers.org/cellosaurus:CVCL_1527
+      name: NCI-H2107
+      prefix: cellosaurus
+    target:
+      curie: efo:0002278
+      identifier: 0002278
+      link: https://identifiers.org/efo:0002278
+      name: NCI-H2107
+      prefix: efo
+  nodes:
+    ccle.cell:NCIH2107:
+      identifier: NCIH2107
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=NCIH2107
+      name: NCIH2107
+      prefix: ccle.cell
+    cellosaurus:CVCL_1527:
+      identifier: CVCL_1527
+      link: https://identifiers.org/cellosaurus:CVCL_1527
+      name: NCI-H2107
+      prefix: cellosaurus
+    efo:0002278:
+      identifier: 0002278
+      link: https://identifiers.org/efo:0002278
+      name: NCI-H2107
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_1794
+      identifier: CVCL_1794
+      link: https://identifiers.org/cellosaurus:CVCL_1794
+      name: YAPC
+      prefix: cellosaurus
+    target:
+      curie: efo:0006778
+      identifier: 0006778
+      link: https://identifiers.org/efo:0006778
+      name: YAPC
+      prefix: efo
+  nodes:
+    ccle.cell:YAPC_PANCREAS:
+      identifier: YAPC_PANCREAS
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=YAPC_PANCREAS
+      name: YAPC
+      prefix: ccle.cell
+    cellosaurus:CVCL_1794:
+      identifier: CVCL_1794
+      link: https://identifiers.org/cellosaurus:CVCL_1794
+      name: YAPC
+      prefix: cellosaurus
+    efo:0006778:
+      identifier: 0006778
+      link: https://identifiers.org/efo:0006778
+      name: YAPC
       prefix: efo
 - edges:
   - source:
@@ -1398,10 +1543,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: GO:0033210
-      identifier: GO:0033210
-      link: https://identifiers.org/GO:0033210
-      name: leptin-mediated signaling pathway
+      curie: GO:0033211
+      identifier: GO:0033211
+      link: https://identifiers.org/GO:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: GO:0033209
@@ -1410,10 +1555,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: GO:0033211
-      identifier: GO:0033211
-      link: https://identifiers.org/GO:0033211
-      name: adiponectin-activated signaling pathway
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: GO:0033210
