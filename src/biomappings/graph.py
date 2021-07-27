@@ -10,6 +10,7 @@ from typing import Iterable, List, Mapping, Optional, Sequence
 import click
 import networkx as nx
 import yaml
+from tqdm import tqdm
 
 from biomappings.resources import load_false_mappings, load_mappings
 from biomappings.utils import DATA, IMG, MiriamValidator
@@ -102,7 +103,7 @@ def charts():
     components_with_duplicate_prefixes = []
     incomplete_components = []
     n_duplicates = []
-    for component in nx.connected_components(true_graph):
+    for component in tqdm(nx.connected_components(true_graph), desc='Iterating components'):
         component = true_graph.subgraph(component)
         node_size = component.number_of_nodes()
         edge_size = component.number_of_edges()
