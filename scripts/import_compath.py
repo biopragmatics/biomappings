@@ -36,6 +36,7 @@ def main():
             df[["target prefix", "target identifier", "target name"]].values
         )
     ]
+    df = df.drop_duplicates()
     mappings = (mapping for _, mapping in df.iterrows())
     append_true_mappings(mappings, sort=True)
 
