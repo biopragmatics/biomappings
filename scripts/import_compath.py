@@ -3,9 +3,9 @@
 """Import mappings from ComPath."""
 
 import pandas as pd
+import pyobo
 from tqdm import tqdm
 
-import pyobo
 from biomappings.resources import append_true_mappings
 
 URL = 'https://github.com/ComPath/compath-resources/raw/master/docs/data/compath.tsv'
@@ -18,6 +18,7 @@ def main():
     df = df[df['relation'] == 'skos:exactMatch']
     df = df[~df['source prefix'].isin(BLACKLIST)]
     df = df[~df['target prefix'].isin(BLACKLIST)]
+    df = df.drop_duplicates()
     df['type'] = 'manual'
     df['source'] = 'orcid:0000-0002-2046-6145'  # ComPath is courtesy of Uncle Daniel
 
