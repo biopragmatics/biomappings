@@ -103,7 +103,7 @@ def charts():
     components_with_duplicate_prefixes = []
     incomplete_components = []
     n_duplicates = []
-    for component in tqdm(nx.connected_components(true_graph), desc='Iterating components'):
+    for component in tqdm(nx.connected_components(true_graph), desc="Iterating components"):
         component = true_graph.subgraph(component)
         node_size = component.number_of_nodes()
         edge_size = component.number_of_edges()
