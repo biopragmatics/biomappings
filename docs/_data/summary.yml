@@ -11,6 +11,10 @@ contributors:
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
+- count: 217
+  name: Daniel Domingo-Fernandez
+  orcid: 0000-0002-2046-6145
+  user: ddomingof
 negative:
 - count: 218
   source: mesh
@@ -117,6 +121,15 @@ positive:
 - count: 80
   source: pr
   target: uniprot.chain
+- count: 74
+  source: reactome
+  target: wikipathways
+- count: 70
+  source: kegg.pathway
+  target: wikipathways
+- count: 61
+  source: kegg.pathway
+  target: reactome
 - count: 26
   source: ncbiprotein
   target: uniprot.chain
@@ -129,6 +142,9 @@ positive:
 - count: 11
   source: efo
   target: mesh
+- count: 9
+  source: wikipathways
+  target: wikipathways
 - count: 8
   source: mesh
   target: reactome
@@ -141,6 +157,9 @@ positive:
 - count: 4
   source: mesh
   target: umls
+- count: 3
+  source: kegg.pathway
+  target: kegg.pathway
 - count: 2
   source: bto
   target: ccle.cell
@@ -156,7 +175,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 4055
+positive_mapping_count: 4272
 positive_prefix_count: 21
 predictions:
 - count: 12337

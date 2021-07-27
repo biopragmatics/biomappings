@@ -1340,11 +1340,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://identifiers.org/efo:0006612
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://identifiers.org/cellosaurus:CVCL_1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: BTO:0006459
       identifier: BTO:0006459
@@ -1352,11 +1352,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://identifiers.org/cellosaurus:CVCL_1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://identifiers.org/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: cellosaurus:CVCL_1334
       identifier: CVCL_1334
@@ -1537,17 +1537,143 @@
       prefix: efo
 - edges:
   - source:
-      curie: GO:0033209
-      identifier: GO:0033209
-      link: https://identifiers.org/GO:0033209
-      name: tumor necrosis factor-mediated signaling pathway
-      prefix: go
+      curie: kegg.pathway:hsa00350
+      identifier: hsa00350
+      link: https://identifiers.org/kegg.pathway:hsa00350
+      name: Tyrosine metabolism - Homo sapiens (human)
+      prefix: kegg.pathway
     target:
-      curie: GO:0033210
-      identifier: GO:0033210
-      link: https://identifiers.org/GO:0033210
-      name: leptin-mediated signaling pathway
-      prefix: go
+      curie: kegg.pathway:hsa01100
+      identifier: hsa01100
+      link: https://identifiers.org/kegg.pathway:hsa01100
+      name: Metabolic pathways - Homo sapiens (human)
+      prefix: kegg.pathway
+  - source:
+      curie: kegg.pathway:hsa00350
+      identifier: hsa00350
+      link: https://identifiers.org/kegg.pathway:hsa00350
+      name: Tyrosine metabolism - Homo sapiens (human)
+      prefix: kegg.pathway
+    target:
+      curie: reactome:R-HSA-1430728
+      identifier: R-HSA-1430728
+      link: https://identifiers.org/reactome:R-HSA-1430728
+      name: Metabolism
+      prefix: reactome
+  - source:
+      curie: kegg.pathway:hsa01100
+      identifier: hsa01100
+      link: https://identifiers.org/kegg.pathway:hsa01100
+      name: Metabolic pathways - Homo sapiens (human)
+      prefix: kegg.pathway
+    target:
+      curie: wikipathways:WP4506
+      identifier: WP4506
+      link: https://identifiers.org/wikipathways:WP4506
+      name: Tyrosine metabolism
+      prefix: wikipathways
+  nodes:
+    kegg.pathway:hsa00350:
+      identifier: hsa00350
+      link: https://identifiers.org/kegg.pathway:hsa00350
+      name: Tyrosine metabolism - Homo sapiens (human)
+      prefix: kegg.pathway
+    kegg.pathway:hsa01100:
+      identifier: hsa01100
+      link: https://identifiers.org/kegg.pathway:hsa01100
+      name: Metabolic pathways - Homo sapiens (human)
+      prefix: kegg.pathway
+    reactome:R-HSA-1430728:
+      identifier: R-HSA-1430728
+      link: https://identifiers.org/reactome:R-HSA-1430728
+      name: Metabolism
+      prefix: reactome
+    wikipathways:WP4506:
+      identifier: WP4506
+      link: https://identifiers.org/wikipathways:WP4506
+      name: Tyrosine metabolism
+      prefix: wikipathways
+- edges:
+  - source:
+      curie: reactome:R-HSA-1369007
+      identifier: R-HSA-1369007
+      link: https://identifiers.org/reactome:R-HSA-1369007
+      name: Mitochondrial ABC transporters
+      prefix: reactome
+    target:
+      curie: reactome:R-HSA-382556
+      identifier: R-HSA-382556
+      link: https://identifiers.org/reactome:R-HSA-382556
+      name: ABC-family proteins mediated transport
+      prefix: reactome
+  nodes:
+    kegg.pathway:hsa02010:
+      identifier: hsa02010
+      link: https://identifiers.org/kegg.pathway:hsa02010
+      name: ABC transporters - Homo sapiens (human)
+      prefix: kegg.pathway
+    reactome:R-HSA-1369007:
+      identifier: R-HSA-1369007
+      link: https://identifiers.org/reactome:R-HSA-1369007
+      name: Mitochondrial ABC transporters
+      prefix: reactome
+    reactome:R-HSA-382556:
+      identifier: R-HSA-382556
+      link: https://identifiers.org/reactome:R-HSA-382556
+      name: ABC-family proteins mediated transport
+      prefix: reactome
+- edges:
+  - source:
+      curie: wikipathways:WP268
+      identifier: WP268
+      link: https://identifiers.org/wikipathways:WP268
+      name: Notch signaling
+      prefix: wikipathways
+    target:
+      curie: wikipathways:WP3845
+      identifier: WP3845
+      link: https://identifiers.org/wikipathways:WP3845
+      name: Canonical and non-canonical Notch signaling
+      prefix: wikipathways
+  - source:
+      curie: wikipathways:WP268
+      identifier: WP268
+      link: https://identifiers.org/wikipathways:WP268
+      name: Notch signaling
+      prefix: wikipathways
+    target:
+      curie: wikipathways:WP61
+      identifier: WP61
+      link: https://identifiers.org/wikipathways:WP61
+      name: Notch signaling pathway (Netpath)
+      prefix: wikipathways
+  nodes:
+    kegg.pathway:hsa04330:
+      identifier: hsa04330
+      link: https://identifiers.org/kegg.pathway:hsa04330
+      name: Notch signaling pathway - Homo sapiens (human)
+      prefix: kegg.pathway
+    reactome:R-HSA-157118:
+      identifier: R-HSA-157118
+      link: https://identifiers.org/reactome:R-HSA-157118
+      name: Signaling by NOTCH
+      prefix: reactome
+    wikipathways:WP268:
+      identifier: WP268
+      link: https://identifiers.org/wikipathways:WP268
+      name: Notch signaling
+      prefix: wikipathways
+    wikipathways:WP3845:
+      identifier: WP3845
+      link: https://identifiers.org/wikipathways:WP3845
+      name: Canonical and non-canonical Notch signaling
+      prefix: wikipathways
+    wikipathways:WP61:
+      identifier: WP61
+      link: https://identifiers.org/wikipathways:WP61
+      name: Notch signaling pathway (Netpath)
+      prefix: wikipathways
+- edges:
   - source:
       curie: GO:0033209
       identifier: GO:0033209
@@ -1559,6 +1685,18 @@
       identifier: GO:0033211
       link: https://identifiers.org/GO:0033211
       name: adiponectin-activated signaling pathway
+      prefix: go
+  - source:
+      curie: GO:0033209
+      identifier: GO:0033209
+      link: https://identifiers.org/GO:0033209
+      name: tumor necrosis factor-mediated signaling pathway
+      prefix: go
+    target:
+      curie: GO:0033210
+      identifier: GO:0033210
+      link: https://identifiers.org/GO:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: GO:0033210
