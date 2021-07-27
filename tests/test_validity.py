@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """Validation tests for :mod:`biomappings`."""
 
 import itertools as itt
