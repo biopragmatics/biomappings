@@ -306,13 +306,13 @@ def run_commit():
         f'Curated {controller.total_curated} mapping{"s" if controller.total_curated > 1 else ""}'
         f" ({getpass.getuser()})",
     )
-    app.logger.warning('git commit res: %s', commit_info)
+    app.logger.warning("git commit res: %s", commit_info)
     if not_main():
         branch = get_branch()
         push_output = push(branch_name=branch)
-        app.logger.warning('git push res: %s', push_output)
+        app.logger.warning("git push res: %s", push_output)
     else:
-        app.logger.warning('did not push because on master branch')
+        app.logger.warning("did not push because on master branch")
     controller.total_curated = 0
     return _go_home()
 
