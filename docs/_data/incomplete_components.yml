@@ -1543,11 +1543,11 @@
       name: Tyrosine metabolism - Homo sapiens (human)
       prefix: kegg.pathway
     target:
-      curie: reactome:R-HSA-1430728
-      identifier: R-HSA-1430728
-      link: https://reactome.org/content/detail/R-HSA-1430728
-      name: Metabolism
-      prefix: reactome
+      curie: kegg.pathway:hsa01100
+      identifier: hsa01100
+      link: https://www.kegg.jp/entry/hsa01100
+      name: Metabolic pathways - Homo sapiens (human)
+      prefix: kegg.pathway
   - source:
       curie: kegg.pathway:hsa00350
       identifier: hsa00350
@@ -1555,11 +1555,11 @@
       name: Tyrosine metabolism - Homo sapiens (human)
       prefix: kegg.pathway
     target:
-      curie: kegg.pathway:hsa01100
-      identifier: hsa01100
-      link: https://www.kegg.jp/entry/hsa01100
-      name: Metabolic pathways - Homo sapiens (human)
-      prefix: kegg.pathway
+      curie: reactome:R-HSA-1430728
+      identifier: R-HSA-1430728
+      link: https://reactome.org/content/detail/R-HSA-1430728
+      name: Metabolism
+      prefix: reactome
   - source:
       curie: kegg.pathway:hsa01100
       identifier: hsa01100
@@ -1630,10 +1630,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP3845
-      identifier: WP3845
-      link: http://www.wikipathways.org/instance/WP3845
-      name: Canonical and non-canonical Notch signaling
+      curie: wikipathways:WP61
+      identifier: WP61
+      link: http://www.wikipathways.org/instance/WP61
+      name: Notch signaling pathway (Netpath)
       prefix: wikipathways
   - source:
       curie: wikipathways:WP268
@@ -1642,10 +1642,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP61
-      identifier: WP61
-      link: http://www.wikipathways.org/instance/WP61
-      name: Notch signaling pathway (Netpath)
+      curie: wikipathways:WP3845
+      identifier: WP3845
+      link: http://www.wikipathways.org/instance/WP3845
+      name: Canonical and non-canonical Notch signaling
       prefix: wikipathways
   nodes:
     kegg.pathway:hsa04330:
