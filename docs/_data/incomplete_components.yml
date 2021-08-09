@@ -1630,10 +1630,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP61
-      identifier: WP61
-      link: http://www.wikipathways.org/instance/WP61
-      name: Notch signaling pathway (Netpath)
+      curie: wikipathways:WP3845
+      identifier: WP3845
+      link: http://www.wikipathways.org/instance/WP3845
+      name: Canonical and non-canonical Notch signaling
       prefix: wikipathways
   - source:
       curie: wikipathways:WP268
@@ -1642,10 +1642,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP3845
-      identifier: WP3845
-      link: http://www.wikipathways.org/instance/WP3845
-      name: Canonical and non-canonical Notch signaling
+      curie: wikipathways:WP61
+      identifier: WP61
+      link: http://www.wikipathways.org/instance/WP61
+      name: Notch signaling pathway (Netpath)
       prefix: wikipathways
   nodes:
     kegg.pathway:hsa04330:
