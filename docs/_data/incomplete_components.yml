@@ -1224,11 +1224,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: efo:0001099
-      identifier: 0001099
-      link: https://www.ebi.ac.uk/efo/EFO_0001099
-      name: Caco-2
-      prefix: efo
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://depmap.org/portal/cell_line/ACH-000003
+      name: CACO2
+      prefix: depmap
   - source:
       curie: cellosaurus:CVCL_0025
       identifier: CVCL_0025
@@ -1236,11 +1236,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000003
-      identifier: ACH-000003
-      link: https://depmap.org/portal/cell_line/ACH-000003
-      name: CACO2
-      prefix: depmap
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://www.ebi.ac.uk/efo/EFO_0001099
+      name: Caco-2
+      prefix: efo
   - source:
       curie: depmap:ACH-000003
       identifier: ACH-000003
@@ -1340,11 +1340,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://www.ebi.ac.uk/efo/EFO_0006612
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://web.expasy.org/cellosaurus/CVCL_1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: BTO:0006459
       identifier: BTO:0006459
@@ -1352,11 +1352,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://web.expasy.org/cellosaurus/CVCL_1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://www.ebi.ac.uk/efo/EFO_0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: cellosaurus:CVCL_1334
       identifier: CVCL_1334
@@ -1543,11 +1543,11 @@
       name: Tyrosine metabolism - Homo sapiens (human)
       prefix: kegg.pathway
     target:
-      curie: reactome:R-HSA-1430728
-      identifier: R-HSA-1430728
-      link: https://reactome.org/content/detail/R-HSA-1430728
-      name: Metabolism
-      prefix: reactome
+      curie: kegg.pathway:hsa01100
+      identifier: hsa01100
+      link: https://www.kegg.jp/entry/hsa01100
+      name: Metabolic pathways - Homo sapiens (human)
+      prefix: kegg.pathway
   - source:
       curie: kegg.pathway:hsa00350
       identifier: hsa00350
@@ -1555,11 +1555,11 @@
       name: Tyrosine metabolism - Homo sapiens (human)
       prefix: kegg.pathway
     target:
-      curie: kegg.pathway:hsa01100
-      identifier: hsa01100
-      link: https://www.kegg.jp/entry/hsa01100
-      name: Metabolic pathways - Homo sapiens (human)
-      prefix: kegg.pathway
+      curie: reactome:R-HSA-1430728
+      identifier: R-HSA-1430728
+      link: https://reactome.org/content/detail/R-HSA-1430728
+      name: Metabolism
+      prefix: reactome
   - source:
       curie: kegg.pathway:hsa01100
       identifier: hsa01100
