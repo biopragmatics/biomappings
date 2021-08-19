@@ -142,6 +142,11 @@ def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
     _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "w")
 
 
+def lint_true_mappings() -> None:
+    """Lint the true mappings file"""
+    write_true_mappings(sorted(load_mappings(), key=mapping_sort_key))
+
+
 FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
 
 
@@ -162,6 +167,11 @@ def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
     _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "w")
 
 
+def lint_false_mappings() -> None:
+    """Lint the false mappings file."""
+    write_false_mappings(sorted(load_false_mappings(), key=mapping_sort_key))
+
+
 UNSURE_PATH = get_resource_file_path("unsure.tsv")
 
 
@@ -180,6 +190,11 @@ def append_unsure_mappings(m: Iterable[Mapping[str, str]], sort: bool = False) -
 def write_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Write mappings to the unsure mappings file."""
     _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "w")
+
+
+def lint_unsure_mappings() -> None:
+    """Lint the unsure mappings file."""
+    write_unsure_mappings(sorted(load_unsure(), key=mapping_sort_key))
 
 
 PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
@@ -226,6 +241,11 @@ def append_predictions(
     _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, "a")
     if sort:
         write_predictions(sorted(load_predictions(), key=mapping_sort_key))
+
+
+def lint_predictions() -> None:
+    """Lint the predictions file."""
+    write_predictions(sorted(load_predictions(), key=mapping_sort_key))
 
 
 def load_curators():
