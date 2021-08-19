@@ -13,7 +13,7 @@ from .resources import MappingTuple
 from .utils import get_script_url
 
 __all__ = [
-    'iterate_orthologs',
+    "iterate_orthologs",
 ]
 
 logger = logging.getLogger(__name__)
@@ -37,11 +37,11 @@ def iterate_orthologs(
                 prefix,
                 source_id,
                 names[source_id],
-                'orthologous',
+                "orthologous",
                 prefix,
                 target_id,
                 names[target_id],
-                'calculated',
+                "calculated",
                 provenance,
             )
-    logger.info(f'[{prefix}] Identified {count} orthologs')
+    logger.info(f"[{prefix}] Identified {count} orthologs")
