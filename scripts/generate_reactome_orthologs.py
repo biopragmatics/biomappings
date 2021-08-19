@@ -18,8 +18,7 @@ def _get_species_to_identifiers(names: Mapping[str, str]) -> Mapping[str, List[s
 
 def iterate_orthologous_lexical_matches() -> Iterable[MappingTuple]:
     """Generate orthologous relations between Reactome pathways."""
-    prefix = "reactome"
-    yield from iterate_orthologs(prefix, _get_species_to_identifiers)
+    yield from iterate_orthologs("reactome", _get_species_to_identifiers)
 
 
 if __name__ == "__main__":
