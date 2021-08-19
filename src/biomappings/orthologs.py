@@ -29,7 +29,7 @@ def iterate_orthologs(
     species_to_identifiers = f(names)
     count = 0
     for identifiers in tqdm(species_to_identifiers.values()):
-        for source_id, target_id in itt.product(identifiers, identifiers):
+        for source_id, target_id in itt.product(identifiers, repeat=2):
             if source_id >= target_id:
                 continue
             count += 1
@@ -37,7 +37,7 @@ def iterate_orthologs(
                 prefix,
                 source_id,
                 names[source_id],
-                "orthologous",
+                "RO:HOM0000017",
                 prefix,
                 target_id,
                 names[target_id],
