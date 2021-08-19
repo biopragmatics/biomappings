@@ -143,7 +143,7 @@ def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
 
 
 def lint_true_mappings() -> None:
-    """Lint the true mappings file"""
+    """Lint the true mappings file."""
     write_true_mappings(sorted(load_mappings(), key=mapping_sort_key))
 
 
