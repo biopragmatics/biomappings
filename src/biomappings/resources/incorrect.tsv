@@ -19,6 +19,12 @@ ccle.cell	DM3_FIBROBLAST	DM-3	skos:exactMatch	cellosaurus	CVCL_Z233	Schneider 3	
 ccle.cell	EBC1_LUNG	EBC-1	skos:exactMatch	cellosaurus	CVCL_E218	NB-EbC1	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	F5_CENTRAL_NERVOUS_SYSTEM	F5	skos:exactMatch	cellosaurus	CVCL_L876	TS/A clone F5	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HCC2279_LUNG	HCC-2279	skos:exactMatch	efo	0005374	HCC227	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HT_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HT	skos:exactMatch	efo	0003779	Hashimoto's thyroiditis	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HT_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HT	skos:exactMatch	efo	0004348	hematocrit	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	ML1_THYROID	ML-1	skos:exactMatch	cellosaurus	CVCL_0436	ML-1 [Human leukemia]	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NB1_AUTONOMIC_GANGLIA	NB-1	skos:exactMatch	cellosaurus	CVCL_ZT00	NB1 [Human skin fibroblast]	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	PC3_PROSTATE	PC-3	skos:exactMatch	cellosaurus	CVCL_S982	PC-3 [Human lung carcinoma]	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	PL21_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	PL-21	skos:exactMatch	cellosaurus	CVCL_E295	TS 0129	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	WM239A	WM239A	skos:exactMatch	cellosaurus	CVCL_RN56	WM239B	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	mesh	D018528	ATP-Binding Cassette Transporters	manually_reviewed	orcid:0000-0003-4423-4370
@@ -214,6 +220,7 @@ mesh	C567738	Neuropathy, Hereditary Sensory And Autonomic, Type IIB	skos:exactMa
 mesh	C579934	Autosomal Recessive Cerebellar Ataxia Type 1	skos:exactMatch	doid	DOID:0111618	autosomal recessive spinocerebellar ataxia 8	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C580012	Congenital Fibrosis of the Extraocular Muscles	skos:exactMatch	doid	DOID:0080143	congenital fibrosis of the extraocular muscles	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C580473	Succinate-Coa Ligase Deficiency	skos:exactMatch	doid	DOID:0080124	mitochondrial DNA depletion syndrome 5	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C584135	endotrophin	skos:exactMatch	ncit	C165979	Pro-C6 Measurement	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000071636	Protein Phosphatase 2C	skos:exactMatch	hgnc	9279	PDP1	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000203	Activities of Daily Living	skos:exactMatch	efo	0008451	activities of daily living score measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000309	Adrenal Insufficiency	skos:exactMatch	doid	DOID:10493	adrenal cortical hypofunction	manually_reviewed	orcid:0000-0003-1307-2508
@@ -892,10 +899,3 @@ wikipathways	WP890	Osteoclast	speciesSpecific	mesh	D010010	Osteoclasts	manually_
 wikipathways	WP914	NLR Proteins	speciesSpecific	mesh	D000070576	NLR Proteins	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP942	Matrix Metalloproteinases	speciesSpecific	fplx	MMP	MMP	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP956	Osteoblast	speciesSpecific	mesh	D010006	Osteoblasts	manually_reviewed	orcid:0000-0003-4423-4370
-ccle.cell	HT_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HT	skos:exactMatch	efo	0003779	Hashimoto's thyroiditis	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	HT_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HT	skos:exactMatch	efo	0004348	hematocrit	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	ML1_THYROID	ML-1	skos:exactMatch	cellosaurus	CVCL_0436	ML-1 [Human leukemia]	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	NB1_AUTONOMIC_GANGLIA	NB-1	skos:exactMatch	cellosaurus	CVCL_ZT00	NB1 [Human skin fibroblast]	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	PC3_PROSTATE	PC-3	skos:exactMatch	cellosaurus	CVCL_S982	PC-3 [Human lung carcinoma]	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	PL21_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	PL-21	skos:exactMatch	cellosaurus	CVCL_E295	TS 0129	manually_reviewed	orcid:0000-0001-9439-5346
-mesh	C584135	endotrophin	skos:exactMatch	ncit	C165979	Pro-C6 Measurement	manually_reviewed	orcid:0000-0001-9439-5346
