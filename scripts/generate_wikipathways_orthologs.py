@@ -2,15 +2,15 @@
 
 """Generate orthologous relations between WikiPathways."""
 
+import itertools as itt
 from typing import Iterable
 
-import itertools as itt
+import pyobo
+from gilda.process import normalize
 from tqdm import tqdm
 
-import pyobo
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import get_script_url
-from gilda.process import normalize
 
 
 def _lexical_exact_match(name1: str, name2: str) -> bool:
