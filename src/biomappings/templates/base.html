@@ -9,6 +9,24 @@
         {% block styles %}
             <!-- Bootstrap CSS -->
             {{ bootstrap.load_css() }}
+
+            <!-- default footer CSS -->
+            <style>
+                html, body {
+                    height: 100%;
+                }
+
+                body {
+                    display: flex;
+                    flex-flow: column;
+                }
+
+                .footer {
+                    margin-top: auto;
+                    padding-top: 1em;
+                    background-color: #f5f5f5;
+                }
+            </style>
         {% endblock %}
 
         <script src="https://kit.fontawesome.com/4c86883252.js" crossorigin="anonymous"></script>
@@ -20,9 +38,25 @@
 <!-- Your page content -->
 {% block content %}{% endblock %}
 
+<footer class="footer">
+    <p class="small text-center text-muted">
+        Developed with ❤️ in 🇩🇪 and 🇺🇸 by the <a href="https://indralab.github.io">INDRA Lab</a> in the
+        <a href="https://hits.harvard.edu">Harvard Program in Therapeutic Science (HiTS)</a>.<br/>
+        Funded by the DARPA Young Faculty Award W911NF2010255 (PI: Benjamin M. Gyori).<br/>
+        Point of contact: <a href="https://github.com/cthoyt">@cthoyt</a>.
+        (<a href="https://github.com/bioregistry/bioregistry">Source code</a>)
+    </p>
+</footer>
+
 {% block scripts %}
     <!-- Optional JavaScript -->
     {{ bootstrap.load_js() }}
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 {% endblock %}
 </body>
 </html>

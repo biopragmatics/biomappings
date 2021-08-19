@@ -77,12 +77,14 @@ repository on [GitHub](https://github.com/biomappings/biomappings).
 <thead>
 <tr>
     <th>Contributor</th>
+    <th>ORCID</th>
     <th align="right">Curation Count</th>
 </tr>
 </thead>
 <tbody>
 {% for entry in site.data.summary.contributors %}
     <tr>
+        <td>{{ entry.name }}</td>
         <td>{% if entry.orcid %}<a href="https://orcid.org/{{ entry.orcid }}">{{ entry.orcid }}</a>{% else %}Unknown{% endif %}</td>
         <td align="right">{{ entry.count }}</td>
     </tr>

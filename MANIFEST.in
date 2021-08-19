@@ -1,5 +1,6 @@
 graft src
-graft docs
+graft tests
+prune docs
 prune scripts
 prune docs/_data
 
