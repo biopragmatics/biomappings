@@ -5,8 +5,8 @@
 from collections import defaultdict
 from typing import Iterable, List, Mapping
 
+from biomappings.orthologs import iterate_orthologs
 from biomappings.resources import MappingTuple, append_true_mapping_tuples
-from scripts.generate_kegg_orthologs import iterate_orthologs
 
 
 def _get_species_to_identifiers(names: Mapping[str, str]) -> Mapping[str, List[str]]:
