@@ -225,7 +225,9 @@ ccle.cell	HCC78_LUNG	HCC-78	skos:exactMatch	efo	0003136	HCC78	manually_reviewed	
 ccle.cell	HCC827_LUNG	HCC827	skos:exactMatch	efo	0003137	HCC827	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HCC95_LUNG	HCC-95	skos:exactMatch	efo	0003138	HCC95	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HCT8_LARGE_INTESTINE	HCT-8	skos:exactMatch	efo	0002189	HCT8	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HEC1A_ENDOMETRIUM	HEC-1-A	skos:exactMatch	efo	0002191	HEC1A	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	HEC1B_ENDOMETRIUM	HEC-1-B	skos:exactMatch	efo	0002192	HEC1B	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HK2_KIDNEY	HK-2	skos:exactMatch	cellosaurus	CVCL_YE28	HK2	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	HMCB_SKIN	HMCB	skos:exactMatch	efo	0002195	HMCB	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HOP62_LUNG	HOP-62	skos:exactMatch	efo	0006439	HOP62	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HOP92_LUNG	HOP-92	skos:exactMatch	efo	0006440	HOP92	manually_reviewed	orcid:0000-0001-9439-5346
@@ -717,6 +719,7 @@ mesh	C000592900	FJX1 protein, human	skos:exactMatch	uniprot	Q86VR8	FJX1	manually
 mesh	C000596385	Jalili syndrome	skos:exactMatch	doid	DOID:0111404	Jalili syndrome	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000598645	Spheroid body myopathy	skos:exactMatch	doid	DOID:0080091	spheroid body myopathy	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000606551	remdesivir	skos:exactMatch	ncit	C152185	Remdesivir	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000620255	GOT1 protein, human	skos:exactMatch	uniprot	P17174	GOT1	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000621508	F2RL1 protein, human	skos:exactMatch	uniprot	P55085	F2RL1	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000622468	TMEM65 protein, human	skos:exactMatch	uniprot	Q6PI78	TMEM65	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000623728	Rhinovirus C	skos:exactMatch	ncit	C112409	Rhinovirus C	manually_reviewed	orcid:0000-0001-9439-5346
@@ -725,8 +728,12 @@ mesh	C000623787	Rhinovirus A	skos:exactMatch	ncit	C112407	Rhinovirus A	manually_
 mesh	C000626007	MAGEB4 protein, human	skos:exactMatch	uniprot	O15481	MAGEB4	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000626124	NGLY1 deficiency	skos:exactMatch	doid	DOID:0060728	NGLY1-deficiency	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000626466	ENDOD1 protein, human	skos:exactMatch	uniprot	O94919	ENDOD1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000627234	OBE2109	skos:exactMatch	ncit	C148479	Linzagolix	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000627735	FGF22 protein, human	skos:exactMatch	uniprot	Q9HCT0	FGF22	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000631478	LINGO2 protein, human	skos:exactMatch	uniprot	Q7L985	LINGO2	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000631507	CNTD2 protein, human	skos:exactMatch	uniprot	Q9H8S5	CNTD2	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000635800	Salmonella bongori	skos:exactMatch	ncit	C91842	Salmonella bongori	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000639838	Sphingomonas paucimobilis	skos:exactMatch	ncit	C86749	Sphingomonas paucimobilis	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000656407	MSANTD3 protein, human	skos:exactMatch	uniprot	Q96H12	MSANTD3	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000656449	FAM114A2 protein, human	skos:exactMatch	uniprot	Q9NRY5	FAM114A2	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000656484	severe acute respiratory syndrome coronavirus 2	skos:exactMatch	ncit	C169076	SARS Coronavirus 2	manually_reviewed	orcid:0000-0001-9439-5346
@@ -2861,9 +2868,12 @@ mesh	D006833	Hydrarthrosis	skos:exactMatch	doid	DOID:528	hydrarthrosis	manually_
 mesh	D006848	Testicular Hydrocele	skos:exactMatch	doid	DOID:9912	hydrocele	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006871	Hydrophthalmos	skos:exactMatch	doid	DOID:11211	buphthalmos	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006967	Hypersensitivity	skos:exactMatch	go	GO:0002524	hypersensitivity	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D006968	Hypersensitivity, Delayed	skos:exactMatch	go	GO:0001806	type IV hypersensitivity	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D006969	Hypersensitivity, Immediate	skos:exactMatch	go	GO:0016068	type I hypersensitivity	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D007007	Hypohidrosis	skos:exactMatch	doid	DOID:11156	anhidrosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007008	Hypokalemia	skos:exactMatch	doid	DOID:4500	hypokalemia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007078	Ileal Neoplasms	skos:exactMatch	doid	DOID:10153	ileum cancer	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D007105	Immune Complex Diseases	skos:exactMatch	go	GO:0001802	type III hypersensitivity	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D007113	Immunity, Innate	skos:exactMatch	go	GO:0045087	innate immune response	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D007154	Immune System Diseases	skos:exactMatch	doid	DOID:2914	immune system disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007169	Impetigo	skos:exactMatch	doid	DOID:8504	impetigo	manually_reviewed	orcid:0000-0003-1307-2508
