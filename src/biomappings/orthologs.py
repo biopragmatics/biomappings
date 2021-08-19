@@ -26,9 +26,9 @@ def iterate_orthologs(
     """Iterate over orthologs based on identifier matching."""
     provenance = get_script_url(__file__)
     names = pyobo.get_id_name_mapping(prefix)
-    species_to_identifiers = f(names)
+    parent_identifier_to_species_identifier = f(names)
     count = 0
-    for identifiers in tqdm(species_to_identifiers.values()):
+    for identifiers in tqdm(parent_identifier_to_species_identifier.values()):
         for source_id, target_id in itt.product(identifiers, repeat=2):
             if source_id >= target_id:
                 continue
