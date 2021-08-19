@@ -134,7 +134,7 @@ def append_true_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> N
 
 def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
     """Append new lines to the mappings table."""
-    append_true_mappings(mapping.as_dict() for mapping in mappings)
+    append_true_mappings(mapping.as_dict() for mapping in set(mappings))
 
 
 def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
@@ -215,7 +215,7 @@ def append_prediction_tuples(
 ) -> None:
     """Append new lines to the predictions table that come as canonical tuples."""
     append_predictions(
-        (prediction_tuple.as_dict() for prediction_tuple in prediction_tuples),
+        (prediction_tuple.as_dict() for prediction_tuple in set(prediction_tuples)),
         deduplicate=deduplicate,
         sort=sort,
     )
