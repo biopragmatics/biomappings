@@ -226,9 +226,30 @@ ccle.cell	HCC827_LUNG	HCC827	skos:exactMatch	efo	0003137	HCC827	manually_reviewe
 ccle.cell	HCC95_LUNG	HCC-95	skos:exactMatch	efo	0003138	HCC95	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HCT8_LARGE_INTESTINE	HCT-8	skos:exactMatch	efo	0002189	HCT8	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HEC1B_ENDOMETRIUM	HEC-1-B	skos:exactMatch	efo	0002192	HEC1B	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HMCB_SKIN	HMCB	skos:exactMatch	efo	0002195	HMCB	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HOP62_LUNG	HOP-62	skos:exactMatch	efo	0006439	HOP62	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HOP92_LUNG	HOP-92	skos:exactMatch	efo	0006440	HOP92	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HOS_BONE	HOS	skos:exactMatch	efo	0002196	HOS	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HPAC_PANCREAS	HPAC	skos:exactMatch	efo	0002197	HPAC	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HS255T_FIBROBLAST	Hs 255.T	skos:exactMatch	efo	0006584	Hs 255.T	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HS294T_SKIN	Hs 294T	skos:exactMatch	efo	0006585	Hs 294T	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HS675T_FIBROBLAST	Hs 675.T	skos:exactMatch	efo	0006587	Hs 675.T	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HS683_CENTRAL_NERVOUS_SYSTEM	Hs 683	skos:exactMatch	efo	0006441	Hs 683	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HS695T_SKIN	Hs 695T	skos:exactMatch	efo	0006588	Hs 695T	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HS746T_STOMACH	Hs 746T	skos:exactMatch	efo	0006589	Hs 746T	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HS766T_PANCREAS	Hs 766T	skos:exactMatch	efo	0006590	Hs 766T	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HS839T_FIBROBLAST	Hs 839.T	skos:exactMatch	efo	0006591	Hs 839.T	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HS852T_SKIN	Hs 852.T	skos:exactMatch	efo	0006592	Hs 852.T	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HUH1_LIVER	huH-1	skos:exactMatch	cellosaurus	CVCL_2956	HuH-1	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	HUH1_LIVER	huH-1	skos:exactMatch	efo	0006445	huH-1	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	IGROV1_OVARY	IGROV1	skos:exactMatch	efo	0005385	IGROV-1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	KARPAS620_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	KARPAS-620	skos:exactMatch	efo	0006449	KARPAS-620	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	KASUMI1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	KASUMI-1	skos:exactMatch	efo	0006607	Kasumi-1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	KASUMI2_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	KASUMI-2	skos:exactMatch	efo	0002224	Kasumi2	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	KASUMI3	KASUMI3	skos:exactMatch	cellosaurus	CVCL_0612	Kasumi-3	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	KCIMOH1_PANCREAS	KCI-MOH1	skos:exactMatch	efo	0006608	KCI-MOH1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	KELLY_AUTONOMIC_GANGLIA	KELLY	skos:exactMatch	efo	0002069	KELLY	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	KG1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	KG-1	skos:exactMatch	efo	0002218	KG1	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	KMS-12-BM	skos:exactMatch	bto	BTO:0006459	KMS-12-BM cell	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	KMS-12-BM	skos:exactMatch	cellosaurus	CVCL_1334	KMS-12-BM	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	KMS-12-BM	skos:exactMatch	efo	0006612	KMS-12-BM	manually_reviewed	orcid:0000-0003-4423-4370
@@ -236,8 +257,16 @@ ccle.cell	LNCAPCLONEFGC_PROSTATE	LNCaP clone FGC	skos:exactMatch	bto	BTO:0006095
 ccle.cell	NCIH1092_LUNG	NCI-H1092	skos:exactMatch	efo	0002249	NCI-H1092	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1155_LUNG	NCI-H1155	skos:exactMatch	efo	0002250	NCI-H1155	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1299_LUNG	NCI-H1299	skos:exactMatch	efo	0003043	NCI-H1299	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH1355_LUNG	NCI-H1355	skos:exactMatch	efo	0002251	NCI-H1355	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1373_LUNG	NCI-H1373	skos:exactMatch	efo	0006657	NCI-H1373	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1395_LUNG	NCI-H1395	skos:exactMatch	efo	0002252	NCI-H1395	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH1404	NCIH1404	skos:exactMatch	cellosaurus	CVCL_1468	NCI-H1404	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH1435_LUNG	NCI-H1435	skos:exactMatch	efo	0006658	NCI-H1435	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH1436_LUNG	NCI-H1436	skos:exactMatch	efo	0002253	NCI-H1436	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH1437_LUNG	NCI-H1437	skos:exactMatch	efo	0002254	NCI-H1437	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH146_LUNG	NCI-H146	skos:exactMatch	efo	0006659	NCI-H146	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH1522	NCIH1522	skos:exactMatch	cellosaurus	CVCL_1474	NCI-H1522	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH1563_LUNG	NCI-H1563	skos:exactMatch	efo	0002255	NCI-H1563	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1568_LUNG	NCI-H1568	skos:exactMatch	efo	0006660	NCI-H1568	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1573_LUNG	NCI-H1573	skos:exactMatch	efo	0002256	NCI-H1573	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1581_LUNG	NCI-H1581	skos:exactMatch	efo	0002257	NCI-H1581	manually_reviewed	orcid:0000-0001-9439-5346
@@ -257,6 +286,7 @@ ccle.cell	NCIH1793_LUNG	NCI-H1793	skos:exactMatch	efo	0002267	NCI-H1793	manually
 ccle.cell	NCIH1838_LUNG	NCI-H1838	skos:exactMatch	efo	0002268	NCI-H1838	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1869_LUNG	NCI-H1869	skos:exactMatch	efo	0006664	NCI-H1869	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1915_LUNG	NCI-H1915	skos:exactMatch	efo	0006666	NCI-H1915	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH1926	NCIH1926	skos:exactMatch	cellosaurus	CVCL_1506	NCI-H1926	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1930_LUNG	NCI-H1930	skos:exactMatch	efo	0002270	NCI-H1930	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1944_LUNG	NCI-H1944	skos:exactMatch	efo	0006667	NCI-H1944	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH196_LUNG	NCI-H196	skos:exactMatch	efo	0006668	NCI-H196	manually_reviewed	orcid:0000-0001-9439-5346
@@ -288,6 +318,7 @@ ccle.cell	NCIH2405_LUNG	NCI-H2405	skos:exactMatch	efo	0002288	NCI-H2405	manually
 ccle.cell	NCIH2452_PLEURA	NCI-H2452	skos:exactMatch	efo	0006680	NCI-H2452	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH28_PLEURA	NCI-H28	skos:exactMatch	efo	0006686	NCI-H28	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH292_LUNG	NCI-H292	skos:exactMatch	efo	0006690	NCI-H292	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH3255_LUNG	NCI-H3255	skos:exactMatch	efo	0003123	NCI-H3255	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH358_LUNG	NCI-H358	skos:exactMatch	efo	0002291	NCI-H358	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH441_LUNG	NCI-H441	skos:exactMatch	efo	0002292	NCI-H441	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH446_LUNG	NCI-H446	skos:exactMatch	efo	0002293	NCI-H446	manually_reviewed	orcid:0000-0001-9439-5346
@@ -303,25 +334,56 @@ ccle.cell	NCIH69_LUNG	NCI-H69	skos:exactMatch	efo	0002300	NCI-H69	manually_revie
 ccle.cell	NCIH716_LARGE_INTESTINE	NCI-H716	skos:exactMatch	efo	0002301	NCI-H716	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH719	NCIH719	skos:exactMatch	cellosaurus	CVCL_1582	NCI-H719	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH727_LUNG	NCI-H727	skos:exactMatch	efo	0006695	NCI-H727	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH735	NCIH735	skos:exactMatch	cellosaurus	CVCL_1585	NCI-H735	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH747_LARGE_INTESTINE	NCI-H747	skos:exactMatch	efo	0002303	NCI-H747	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH810_LUNG	NCI-H810	skos:exactMatch	efo	0002305	NCI-H810	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH82_LUNG	NCI-H82	skos:exactMatch	efo	0002306	NCI-H82	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH838_LUNG	NCI-H838	skos:exactMatch	efo	0002307	NCI-H838	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NCIH865	NCIH865	skos:exactMatch	cellosaurus	CVCL_1597	NCI-H865	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH889_LUNG	NCI-H889	skos:exactMatch	efo	0006697	NCI-H889	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH929_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	NCI-H929	skos:exactMatch	efo	0001221	NCI-H929	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIN87_STOMACH	NCI-N87	skos:exactMatch	efo	0002841	NCI-N87	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NUDUL1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	NU-DUL-1	skos:exactMatch	efo	0006700	NU-DUL-1	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NUGC2_STOMACH	NUGC-2	skos:exactMatch	efo	0006701	NUGC-2	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NUGC3_STOMACH	NUGC-3	skos:exactMatch	efo	0006702	NUGC-3	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NUGC4_STOMACH	NUGC-4	skos:exactMatch	efo	0006703	NUGC-4	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	OAW28_OVARY	OAW28	skos:exactMatch	efo	0006704	OAW28	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	OAW42_OVARY	OAW42	skos:exactMatch	efo	0006705	OAW42	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OCIAML2_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	OCI-AML2	skos:exactMatch	efo	0006706	OCI-AML2	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OCIAML3_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	OCI-AML3	skos:exactMatch	efo	0006289	OCI-AML3	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OCIAML5_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	OCI-AML5	skos:exactMatch	efo	0006707	OCI-AML5	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OCILY10_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	OCI-LY10	skos:exactMatch	efo	0006708	OCI-LY10	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OCILY19_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	OCI-LY-19	skos:exactMatch	efo	0006709	OCI-LY19	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OCILY3_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	OCI-LY3	skos:exactMatch	efo	0006710	OCI-LY3	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OCIM1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	OCI-M1	skos:exactMatch	efo	0006712	OCI-M1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OCUM1_STOMACH	OCUM-1	skos:exactMatch	efo	0006714	OCUM-1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OE19_OESOPHAGUS	OE19	skos:exactMatch	efo	0002308	OE19	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OE21_OESOPHAGUS	OE21	skos:exactMatch	efo	0002309	OE21	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OE33_OESOPHAGUS	OE33	skos:exactMatch	efo	0002310	OE33	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OPM2_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	OPM-2	skos:exactMatch	efo	0006716	OPM-2	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	OV56_OVARY	OV56	skos:exactMatch	efo	0006458	OV56	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OV7_OVARY	OV7	skos:exactMatch	efo	0006459	OV7	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OVCA432	OVCA432	skos:exactMatch	efo	0006722	OVCA432	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OVCAR4_OVARY	OVCAR-4	skos:exactMatch	efo	0005442	OVCAR4	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OVCAR5_OVARY	OVCAR-5	skos:exactMatch	efo	0005443	OVCAR5	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OVCAR8_OVARY	OVCAR-8	skos:exactMatch	efo	0005444	OVCAR8	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OVISE_OVARY	OVISE	skos:exactMatch	efo	0006724	OVISE	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	OVKATE_OVARY	OVKATE	skos:exactMatch	efo	0006725	OVKATE	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OVMANA_OVARY	OVMANA	skos:exactMatch	efo	0006726	OVMANA	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OVSAHO_OVARY	OVSAHO	skos:exactMatch	efo	0006727	OVSAHO	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OVTOKO_OVARY	OVTOKO	skos:exactMatch	efo	0006728	OVTOKO	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PANC0203_PANCREAS	Panc 02.03	skos:exactMatch	efo	0006466	Panc 02.03	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PANC0327_PANCREAS	Panc 03.27	skos:exactMatch	efo	0006467	Panc 03.27	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PANC0403_PANCREAS	Panc 04.03	skos:exactMatch	efo	0006468	Panc 04.03	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PANC0504_PANCREAS	Panc 05.04	skos:exactMatch	efo	0006469	Panc 05.04	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PANC0813_PANCREAS	Panc 08.13	skos:exactMatch	efo	0006470	Panc 08.13	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	PATU8988T_PANCREAS	PA-TU-8988T	skos:exactMatch	efo	0005713	8988T	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	PL21_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	PL-21	skos:exactMatch	efo	0006473	PL-21	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	PL45_PANCREAS	PL45	skos:exactMatch	efo	0006474	PL45	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	PLCPRF5_LIVER	PLC/PRF/5	skos:exactMatch	efo	0006291	PLC/PRF/5	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	PSN1_PANCREAS	PSN1	skos:exactMatch	efo	0006739	PSN1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	QGP1_PANCREAS	QGP-1	skos:exactMatch	efo	0006741	QGP-1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	RAJI_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	Raji	skos:exactMatch	efo	0002324	Raji	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SCC25_UPPER_AERODIGESTIVE_TRACT	SCC-25	skos:exactMatch	efo	0006483	SCC-25	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SCC9_UPPER_AERODIGESTIVE_TRACT	SCC-9	skos:exactMatch	efo	0006485	SCC-9	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SF126_CENTRAL_NERVOUS_SYSTEM	SF126	skos:exactMatch	efo	0005450	SF126	manually_reviewed	orcid:0000-0001-9439-5346
@@ -330,6 +392,38 @@ ccle.cell	SF295_CENTRAL_NERVOUS_SYSTEM	SF-295	skos:exactMatch	efo	0005452	SF295	
 ccle.cell	SF539_CENTRAL_NERVOUS_SYSTEM	SF539	skos:exactMatch	efo	0005453	SF539	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SIHA	SIHA	skos:exactMatch	cellosaurus	CVCL_0032	SiHa	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	SJRH30_SOFT_TISSUE	SJRH30	skos:exactMatch	cellosaurus	CVCL_0041	Rh30	manually_reviewed	orcid:0000-0003-4423-4370
+ccle.cell	SJRH30_SOFT_TISSUE	SJRH30	skos:exactMatch	efo	0002329	SJRH30	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SJSA1_BONE	SJSA-1	skos:exactMatch	efo	0002330	SJSA1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKBR3_BREAST	SK-BR-3	skos:exactMatch	efo	0001236	SKBR3	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKCO1_LARGE_INTESTINE	SK-CO-1	skos:exactMatch	efo	0006752	SK-CO-1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKES1_BONE	SK-ES-1	skos:exactMatch	efo	0002858	SK-ES-1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKLMS1_SOFT_TISSUE	SK-LMS-1	skos:exactMatch	efo	0002331	SKLMS1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKMEL1_SKIN	SK-MEL-1	skos:exactMatch	efo	0002332	SKMEL1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKMEL24_SKIN	SK-MEL-24	skos:exactMatch	efo	0006487	SK-MEL-24	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKMEL28_SKIN	SK-MEL-28	skos:exactMatch	efo	0003081	SK-MEL-28	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKMEL2_SKIN	SK-MEL-2	skos:exactMatch	efo	0002079	SK-MEL-2	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKMEL30_SKIN	SK-MEL-30	skos:exactMatch	efo	0006488	SK-MEL-30	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKMEL31_SKIN	SK-MEL-31	skos:exactMatch	efo	0006489	SK-MEL-31	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKMEL3_SKIN	SK-MEL-3	skos:exactMatch	efo	0002333	SKMEL3	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKMEL5_SKIN	SK-MEL-5	skos:exactMatch	efo	0005720	SK-MEL-5	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKMES1_LUNG	SK-MES-1	skos:exactMatch	efo	0002334	SKMES1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKMM2_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SK-MM-2	skos:exactMatch	efo	0005458	SK-MM-2	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKNAS_AUTONOMIC_GANGLIA	SK-N-AS	skos:exactMatch	efo	0002859	SK-N-AS	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKNDZ_AUTONOMIC_GANGLIA	SK-N-DZ	skos:exactMatch	efo	0005721	SK-N-DZ	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKOV3_OVARY	SK-OV-3	skos:exactMatch	efo	0002340	SKOV3	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKUT1_SOFT_TISSUE	SK-UT-1	skos:exactMatch	efo	0002341	SKUT1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNB19_CENTRAL_NERVOUS_SYSTEM	SNB-19	skos:exactMatch	efo	0002342	SNB19	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU16_STOMACH	SNU-16	skos:exactMatch	efo	0002344	SNU16	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU182_LIVER	SNU-182	skos:exactMatch	efo	0002345	SNU182	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU216_STOMACH	SNU-216	skos:exactMatch	efo	0006754	SNU-216	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU387_LIVER	SNU-387	skos:exactMatch	efo	0002346	SNU387	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU398_LIVER	SNU-398	skos:exactMatch	efo	0002347	SNU398	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU423_LIVER	SNU-423	skos:exactMatch	efo	0002348	SNU423	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU449_LIVER	SNU-449	skos:exactMatch	efo	0002349	SNU449	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU475_LIVER	SNU-475	skos:exactMatch	efo	0002350	SNU475	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SU8686_PANCREAS	SU.86.86	skos:exactMatch	efo	0006494	SU.86.86	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SUDHL10_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SU-DHL-10	skos:exactMatch	efo	0002354	SUDHL10	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SUIT2_PANCREAS	SUIT-2	skos:exactMatch	efo	0006495	SUIT-2	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	TE8_OESOPHAGUS	TE-8	skos:exactMatch	cellosaurus	CVCL_F786	TE8	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	TERA1	TERA1	skos:exactMatch	cellosaurus	CVCL_2776	Tera-1	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	TT_THYROID	TT	skos:exactMatch	cellosaurus	CVCL_3174	T.T	manually_reviewed	orcid:0000-0003-4423-4370
@@ -2044,8 +2138,91 @@ mesh	C580533	X-Linked Chondrodysplasia Punctata 1	skos:exactMatch	doid	DOID:0060
 mesh	C580922	SMC4 protein, human	skos:exactMatch	uniprot	Q9NTJ3	SMC4	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C580923	RASAL1 protein, human	skos:exactMatch	uniprot	O95294	RASAL1	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C581575	MTG1 protein, human	skos:exactMatch	uniprot	Q9BT17	MTG1	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C581901	ATG10 protein, human	skos:exactMatch	uniprot	Q9H0Y0	ATG10	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C581941	ARSB protein, human	skos:exactMatch	uniprot	P15848	ARSB	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C581956	AZD8330	skos:exactMatch	ncit	C69143	MEK Inhibitor AZD8330	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C581960	UBE2F protein, human	skos:exactMatch	uniprot	Q969M7	UBE2F	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C581992	ATP11B protein, human	skos:exactMatch	uniprot	Q9Y2G3	ATP11B	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C581993	COMMD8 protein, human	skos:exactMatch	uniprot	Q9NX08	COMMD8	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582014	NRROS protein, human	skos:exactMatch	uniprot	Q86YC3	NRROS	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582067	SRGAP1 protein, human	skos:exactMatch	uniprot	Q7Z6B7	SRGAP1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582075	ZC4H2 protein, human	skos:exactMatch	uniprot	Q9NQZ6	ZC4H2	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582076	TUBB4A protein, human	skos:exactMatch	uniprot	P04350	TUBB4A	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582095	SDR9C7 protein, human	skos:exactMatch	uniprot	Q8NEX9	SDR9C7	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582104	EMC6 protein, human	skos:exactMatch	uniprot	Q9BV81	EMC6	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582173	DENND2D protein, human	skos:exactMatch	uniprot	Q9H6A0	DENND2D	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582178	CEP83 protein, human	skos:exactMatch	uniprot	Q9Y592	CEP83	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582288	TSC22D4 protein, human	skos:exactMatch	uniprot	Q9Y3Q8	TSC22D4	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582297	ALKBH7 protein, human	skos:exactMatch	uniprot	Q9BT30	ALKBH7	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582329	MRPL14 protein, human	skos:exactMatch	uniprot	Q6P1L8	MRPL14	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582334	SFMBT2 protein, human	skos:exactMatch	uniprot	Q5VUG0	SFMBT2	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582423	SPATS2L protein, human	skos:exactMatch	uniprot	Q9NUQ6	SPATS2L	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582424	KCTD18 protein, human	skos:exactMatch	uniprot	Q6PI47	KCTD18	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582577	TMEM170A protein, human	skos:exactMatch	uniprot	Q8WVE7	TMEM170A	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582624	SUSD4 protein, human	skos:exactMatch	uniprot	Q5VX71	SUSD4	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C582625	TUBG1 protein, human	skos:exactMatch	uniprot	P23258	TUBG1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C582626	SUSD2 protein, human	skos:exactMatch	uniprot	Q9UGT4	SUSD2	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C582627	MAP3K21 protein, human	skos:exactMatch	uniprot	Q5TCX8	MAP3K21	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582650	MICU2 protein, human	skos:exactMatch	uniprot	Q8IYU8	MICU2	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582675	ABCA8 protein, human	skos:exactMatch	uniprot	O94911	ABCA8	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582733	RNF187 protein, human	skos:exactMatch	uniprot	Q5TA31	RNF187	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582754	TMEM131L protein, human	skos:exactMatch	uniprot	A2VDJ0	TMEM131L	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582833	SPIDR protein, human	skos:exactMatch	uniprot	Q14159	SPIDR	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582834	PRODH protein, human	skos:exactMatch	uniprot	O43272	PRODH	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582953	DNAJB8 protein, human	skos:exactMatch	uniprot	Q8NHS0	DNAJB8	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582970	TMEM25 protein, human	skos:exactMatch	uniprot	Q86YD3	TMEM25	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582974	ZNF408 protein, human	skos:exactMatch	uniprot	Q9H9D4	ZNF408	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582979	ZSCAN4 protein, human	skos:exactMatch	uniprot	Q8NAM6	ZSCAN4	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582981	TBC1D10B protein, human	skos:exactMatch	uniprot	Q4KMP7	TBC1D10B	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583058	COQ5 protein, human	skos:exactMatch	uniprot	Q5HYK3	COQ5	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583132	ESYT1 protein, human	skos:exactMatch	uniprot	Q9BSJ8	ESYT1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583162	TRIM62 protein, human	skos:exactMatch	uniprot	Q9BVG3	TRIM62	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583212	ALOX5 protein, human	skos:exactMatch	uniprot	P09917	ALOX5	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583238	CEACAM20 protein, human	skos:exactMatch	uniprot	Q6UY09	CEACAM20	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583259	VRK3 protein, human	skos:exactMatch	uniprot	Q8IV63	VRK3	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583260	DRD1 protein, human	skos:exactMatch	uniprot	P21728	DRD1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583279	FIGNL1 protein, human	skos:exactMatch	uniprot	Q6PIW4	FIGNL1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583307	TAAR5 protein, human	skos:exactMatch	uniprot	O14804	TAAR5	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583398	GOLPH3L protein, human	skos:exactMatch	uniprot	Q9H4A5	GOLPH3L	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583401	FAM102A protein, human	skos:exactMatch	uniprot	Q5T9C2	FAM102A	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583410	DTX1 protein, human	skos:exactMatch	uniprot	Q86Y01	DTX1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583414	ACSL1 protein, human	skos:exactMatch	uniprot	P33121	ACSL1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583417	CYB5R3 protein, human	skos:exactMatch	uniprot	P00387	CYB5R3	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583518	HTR1A protein, human	skos:exactMatch	uniprot	P08908	HTR1A	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583541	EIF2AK1 protein, human	skos:exactMatch	uniprot	Q9BQI3	EIF2AK1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583557	IGF1 protein, human	skos:exactMatch	uniprot	P05019	IGF1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583627	SPATA22 protein, human	skos:exactMatch	uniprot	Q8NHS9	SPATA22	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583630	ANKRD26 protein, human	skos:exactMatch	uniprot	Q9UPS8	ANKRD26	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583656	AZD3514	skos:exactMatch	ncit	C116726	Androgen Receptor Downregulator AZD3514	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583727	SIMC1 protein, human	skos:exactMatch	uniprot	Q8NDZ2	SIMC1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583730	ZBTB12 protein, human	skos:exactMatch	uniprot	Q9Y330	ZBTB12	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583751	WT1 protein, human	skos:exactMatch	uniprot	P19544	WT1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583818	TTC7A protein, human	skos:exactMatch	uniprot	Q9ULT0	TTC7A	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583826	WFIKKN1 protein, human	skos:exactMatch	uniprot	Q96NZ8	WFIKKN1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583839	KIF26B protein, human	skos:exactMatch	uniprot	Q2KJY2	KIF26B	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583850	CCDC86 protein, human	skos:exactMatch	uniprot	Q9H6F5	CCDC86	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583854	TAK-901	skos:exactMatch	ncit	C82674	Aurora B Serine/Threonine Kinase Inhibitor TAK-901	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583889	ALG13 protein, human	skos:exactMatch	uniprot	Q9NP73	ALG13	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583943	CCSER1 protein, human	skos:exactMatch	uniprot	Q9C0I3	CCSER1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583979	CHD6 protein, human	skos:exactMatch	uniprot	Q8TD26	CHD6	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584002	FBXO28 protein, human	skos:exactMatch	uniprot	Q9NVF7	FBXO28	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584036	REEP4 protein, human	skos:exactMatch	uniprot	Q9H6H4	REEP4	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584038	VCX3A protein, human	skos:exactMatch	uniprot	Q9NNX9	VCX3A	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584039	STS protein, human	skos:exactMatch	uniprot	P08842	STS	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584050	MGA protein, human	skos:exactMatch	uniprot	Q8IWI9	MGA	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584052	SMIM1 protein, human	skos:exactMatch	uniprot	B2RUZ4	SMIM1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584062	PCMTD1 protein, human	skos:exactMatch	uniprot	Q96MG8	PCMTD1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584083	PARP14 protein, human	skos:exactMatch	uniprot	Q460N5	PARP14	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584090	TRIM61 protein, human	skos:exactMatch	uniprot	Q5EBN2	TRIM61	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584091	ZNF558 protein, human	skos:exactMatch	uniprot	Q96NG5	ZNF558	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584110	BECN2 protein, human	skos:exactMatch	uniprot	A8MW95	BECN2	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584114	GNAI1 protein, human	skos:exactMatch	uniprot	P63096	GNAI1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584142	TRIM71 protein, human	skos:exactMatch	uniprot	Q2Q1W2	TRIM71	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584143	GNAO1 protein, human	skos:exactMatch	uniprot	P09471	GNAO1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584144	WDR60 protein, human	skos:exactMatch	uniprot	Q8WVS4	WDR60	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584145	SZT2 protein, human	skos:exactMatch	uniprot	Q5T011	SZT2	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584146	DDX59 protein, human	skos:exactMatch	uniprot	Q5T1V6	DDX59	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C584155	EIF3F protein, human	skos:exactMatch	uniprot	O00303	EIF3F	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000001	Calcimycin	skos:exactMatch	chebi	CHEBI:3305	Calcimycin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000002	Temefos	skos:exactMatch	ncit	C80606	Temefos	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D000019	Abortifacient Agents	skos:exactMatch	chebi	CHEBI:50691	abortifacient	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3262,39 +3439,196 @@ mesh	D056833	Central Serous Chorioretinopathy	skos:exactMatch	hp	HP:0025567	Cent
 mesh	D056849	Cyclin-Dependent Kinase 3	skos:exactMatch	hgnc	1772	CDK3	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D056850	Cyclin-Dependent Kinase 8	skos:exactMatch	hgnc	1779	CDK8	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D056892	Mediator Complex	skos:exactMatch	go	GO:0016592	mediator complex	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057089	Pathology, Molecular	skos:exactMatch	ncit	C18098	Molecular Pathology	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057112	Corneal Perforation	skos:exactMatch	ncit	C50692	Perforation of Cornea	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D057131	Immune Evasion	skos:exactMatch	go	GO:0042783	evasion of host immune response	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D057139	Nanofibers	skos:exactMatch	ncit	C62385	Nanofiber	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057145	Nanoshells	skos:exactMatch	ncit	C62375	Nanoshell	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057146	Multivesicular Bodies	skos:exactMatch	ncit	C33144	Multivesicular Body	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057173	Recreation Therapy	skos:exactMatch	ncit	C93348	Recreational Therapy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057178	Primary Progressive Nonfluent Aphasia	skos:exactMatch	ncit	C85025	Primary Progressive Nonfluent Aphasia	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057180	Frontotemporal Dementia	skos:exactMatch	ncit	C84719	Frontotemporal Dementia	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057181	Pleasure	skos:exactMatch	ncit	C86580	Pleasure	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057188	Workflow	skos:exactMatch	ncit	C42753	Workflow	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057189	Checklist	skos:exactMatch	ncit	C49073	Checklist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057208	Health Level Seven	skos:exactMatch	ncit	C80485	Health Level Seven	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D057215	Body Dysmorphic Disorders	skos:exactMatch	doid	DOID:0060163	body dysmorphic disorder	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D057230	Limit of Detection	skos:exactMatch	ncit	C105701	Detection Limit	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057238	Growth Charts	skos:exactMatch	ncit	C121663	Growth Chart	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057386	Search Engine	skos:exactMatch	ncit	C68817	Search Engine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D057465	Catabolite Repression	skos:exactMatch	go	GO:0061984	catabolite repression	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057487	Enzyme Therapy	skos:exactMatch	ncit	C71592	Enzyme Therapy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057565	Apathy	skos:exactMatch	ncit	C117197	Apathy	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D057646	Virus Uncoating	skos:exactMatch	go	GO:0019061	uncoating of virus	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057687	Emperipolesis	skos:exactMatch	ncit	C35987	Emperipolesis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057765	Eosinophilic Esophagitis	skos:exactMatch	ncit	C27105	Eosinophilic Esophagitis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057766	Policy	skos:exactMatch	ncit	C17735	Policy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057786	Peptidomimetics	skos:exactMatch	chebi	CHEBI:63175	peptidomimetic	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057885	Triploidy	skos:exactMatch	ncit	C8324	Triploidy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057890	Epigenomics	skos:exactMatch	ncit	C153190	Epigenomics	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057891	Tetraploidy	skos:exactMatch	ncit	C28450	Tetraploidy	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D057897	Reflex, Righting	skos:exactMatch	go	GO:0060013	righting reflex	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D057900	Transcytosis	skos:exactMatch	go	GO:0045056	transcytosis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057905	Stem Cell Research	skos:exactMatch	ncit	C16200	Stem Cell Research	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D057907	Post-Synaptic Density	skos:exactMatch	go	GO:0014069	postsynaptic density	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057911	Angiotensin Receptor Antagonists	skos:exactMatch	chebi	CHEBI:61016	angiotensin receptor antagonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057918	Fiducial Markers	skos:exactMatch	ncit	C82602	Fiducial Marker	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057973	Dent Disease	skos:exactMatch	ncit	C123260	Dent Disease	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058008	Xenotropic murine leukemia virus-related virus	skos:exactMatch	ncit	C84344	Xenotropic Murine Leukemia Virus-related Virus	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058015	Health Communication	skos:exactMatch	ncit	C19355	Health Communication	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058105	Polymerization	skos:exactMatch	ncit	C34072	Polymerization	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058117	Neural Prostheses	skos:exactMatch	ncit	C18130	Neural Prosthesis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058128	Compression Bandages	skos:exactMatch	ncit	C18204	Compression Bandage	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058185	Magnetite Nanoparticles	skos:exactMatch	chebi	CHEBI:50823	magnetite nanoparticle	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058207	Sumoylation	skos:exactMatch	go	GO:0016925	protein sumoylation	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D058365	Candidiasis, Invasive	skos:exactMatch	ncit	C116813	Invasive Candidiasis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058405	Desmoplastic Small Round Cell Tumor	skos:exactMatch	ncit	C8300	Desmoplastic Small Round Cell Tumor	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058406	Cardiac Resynchronization Therapy	skos:exactMatch	ncit	C80436	Cardiac Resynchronization Therapy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058429	Gnathostomiasis	skos:exactMatch	ncit	C128395	Gnathostomiasis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058437	Hypertensive Retinopathy	skos:exactMatch	ncit	C3514	Hypertensive Retinopathy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058494	Walker-Warburg Syndrome	skos:exactMatch	ncit	C99109	Walker-Warburg Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058495	Sotos Syndrome	skos:exactMatch	ncit	C75019	Sotos Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058496	Smith-Magenis Syndrome	skos:exactMatch	ncit	C75469	Smith-Magenis Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058497	Fraser Syndrome	skos:exactMatch	ncit	C118436	Fraser Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058498	Kyphoplasty	skos:exactMatch	ncit	C62742	Kyphoplasty	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058499	Retinal Dystrophies	skos:exactMatch	ncit	C35625	Retinal Dystrophy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058502	Pentalogy of Cantrell	skos:exactMatch	ncit	C99011	Pentalogy of Cantrell	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058608	Nanopores	skos:exactMatch	ncit	C62343	Nanopore	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058617	Composite Lymphoma	skos:exactMatch	ncit	C38661	Composite Lymphoma	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058625	End Stage Liver Disease	skos:exactMatch	ncit	C84428	End Stage Liver Disease	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058628	Myofibroblasts	skos:exactMatch	ncit	C33153	Myofibroblast	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058631	Pycnodysostosis	skos:exactMatch	ncit	C131187	Pycnodysostosis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058641	Planococcaceae	skos:exactMatch	ncit	C85954	Planococcaceae	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058670	Tetrasomy	skos:exactMatch	ncit	C36601	Tetrasomy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058674	Chromosome Duplication	skos:exactMatch	ncit	C6829	Chromosomal Duplication	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058675	Brevibacillus	skos:exactMatch	ncit	C86207	Brevibacillus	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058678	Halobacillus	skos:exactMatch	ncit	C86436	Halobacillus	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058729	Peripheral Arterial Disease	skos:exactMatch	ncit	C84496	Peripheral Arterial Disorder	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058733	Hand-Assisted Laparoscopy	skos:exactMatch	ncit	C103268	Hand Assisted Laparoscopy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058734	Exsanguination	skos:exactMatch	ncit	C50856	Exsanguination	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058746	Gestational Sac	skos:exactMatch	ncit	C82951	Gestational Sac	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058747	CHARGE Syndrome	skos:exactMatch	ncit	C75100	CHARGE Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058750	Epithelial-Mesenchymal Transition	skos:exactMatch	go	GO:0001837	epithelial to mesenchymal transition	manual	orcid:0000-0001-9439-5346
+mesh	D058750	Epithelial-Mesenchymal Transition	skos:exactMatch	ncit	C97304	Epithelial-to-Mesenchymal Transition	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058765	Neurofeedback	skos:exactMatch	ncit	C93302	Neurofeedback	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058766	Levoleucovorin	skos:exactMatch	ncit	C1559	Levoleucovorin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058767	Protein Unfolding	skos:exactMatch	go	GO:0043335	protein unfolding	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058785	GABA-A Receptor Agonists	skos:exactMatch	chebi	CHEBI:91016	GABAA receptor agonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058786	GABA-B Receptor Agonists	skos:exactMatch	chebi	CHEBI:143001	GABAB receptor agonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058787	GABA-A Receptor Antagonists	skos:exactMatch	chebi	CHEBI:145515	GABAA receptor antagonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058834	Gemella	skos:exactMatch	ncit	C86889	Gemella	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058835	Abiotrophia	skos:exactMatch	ncit	C86077	Abiotrophia	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058849	Protein Refolding	skos:exactMatch	go	GO:0042026	protein refolding	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058866	Osteoporotic Fractures	skos:exactMatch	ncit	C80097	Osteoporotic Fracture	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058869	Gynecological Examination	skos:exactMatch	ncit	C137854	Gynecological Examination	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058870	Food, Organic	skos:exactMatch	ncit	C94310	Organic Food	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058872	Epidemics	skos:exactMatch	ncit	C171452	Epidemic Disorder	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058873	Pandemics	skos:exactMatch	ncit	C171519	Pandemic Disorder	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058892	Adenosine Deaminase Inhibitors	skos:exactMatch	chebi	CHEBI:50445	EC 3.5.4.4 (adenosine deaminase) inhibitor	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058894	Nematocyst	skos:exactMatch	go	GO:0042151	nematocyst	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058907	Adenosine A1 Receptor Agonists	skos:exactMatch	chebi	CHEBI:65057	adenosine A1 receptor agonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058909	Adenosine A3 Receptor Agonists	skos:exactMatch	chebi	CHEBI:73319	adenosine A3 receptor agonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058916	Adenosine A1 Receptor Antagonists	skos:exactMatch	chebi	CHEBI:63957	adenosine A1 receptor antagonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058918	Adenosine A3 Receptor Antagonists	skos:exactMatch	chebi	CHEBI:70725	adenosine A3 receptor antagonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058924	Thienopyridines	skos:exactMatch	chebi	CHEBI:37942	thienopyridine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058952	Human papillomavirus 31	skos:exactMatch	ncit	C102904	Human Papillomavirus-31	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058953	Neural Stem Cells	skos:exactMatch	ncit	C12985	Neural Stem Cell	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058954	Pancreatic Stellate Cells	skos:exactMatch	ncit	C107531	Pancreatic Stellate Cell	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058979	Proton-Coupled Folate Transporter	skos:exactMatch	ncit	C107468	Proton-Coupled Folate Transporter	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058988	Phosphodiesterase 4 Inhibitors	skos:exactMatch	chebi	CHEBI:68844	phosphodiesterase IV inhibitor	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059007	Polytene Chromosomes	skos:exactMatch	go	GO:0005700	polytene chromosome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059016	Tumor Microenvironment	skos:exactMatch	ncit	C94498	Tumor Microenvironment	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059020	Suicidal Ideation	skos:exactMatch	hp	HP:0031589	Suicidal ideation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059022	Food Safety	skos:exactMatch	ncit	C26037	Food Safety	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059126	Cronobacter	skos:exactMatch	ncit	C85974	Cronobacter	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059145	Total Disc Replacement	skos:exactMatch	ncit	C158016	Total Disc Replacement	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059146	Metastasectomy	skos:exactMatch	ncit	C94461	Metastasectomy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059206	Natural Gas	skos:exactMatch	ncit	C156874	Natural Gas	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059225	Nociception	skos:exactMatch	ncit	C21075	Nociception	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059245	Transient Tachypnea of the Newborn	skos:exactMatch	ncit	C101037	Transient Tachypnea of the Newborn	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059246	Tachypnea	skos:exactMatch	efo	0009840	tachypnea	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059246	Tachypnea	skos:exactMatch	ncit	C50767	Tachypnea	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059247	Fertility Preservation	skos:exactMatch	ncit	C71326	Fertility Preservation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059248	Chemoradiotherapy	skos:exactMatch	ncit	C94626	Chemoradiotherapy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059285	Pregnancy, Twin	skos:exactMatch	ncit	C112852	Twin Pregnancy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059286	Pregnancy, Triplet	skos:exactMatch	ncit	C111957	Triplet Pregnancy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059287	Pregnancy, Quadruplet	skos:exactMatch	ncit	C111959	Quadruplet Pregnancy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059305	Diet, High-Fat	skos:exactMatch	efo	0002757	high fat diet	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059327	Brachydactyly	skos:exactMatch	doid	DOID:0050581	brachydactyly	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D059345	Cerebral Small Vessel Diseases	skos:exactMatch	efo	0008493	cerebral small vessel disease	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059347	Cardio-Renal Syndrome	skos:exactMatch	ncit	C123225	Cardiorenal Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059348	Peripheral Nerve Injuries	skos:exactMatch	ncit	C101250	Peripheral Nerve Injury	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059349	Urine Specimen Collection	skos:exactMatch	efo	0009123	urine collection	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059350	Chronic Pain	skos:exactMatch	ncit	C26940	Chronic Pain	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059352	Musculoskeletal Pain	skos:exactMatch	ncit	C3244	Musculoskeletal Pain	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059370	RNA Folding	skos:exactMatch	go	GO:0034337	RNA folding	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059370	RNA Folding	skos:exactMatch	ncit	C19017	RNA Folding	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059390	Breakthrough Pain	skos:exactMatch	hp	HP:0032149	Breakthrough pain	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059390	Breakthrough Pain	skos:exactMatch	ncit	C9203	Breakthrough Pain	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059405	Sun Protection Factor	skos:exactMatch	ncit	C18317	Sun Protection Factor	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059409	Stroke, Lacunar	skos:exactMatch	hp	HP:0032325	Lacunar stroke	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059411	Lower Urinary Tract Symptoms	skos:exactMatch	ncit	C94773	Lower Urinary Tract Symptoms	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059445	Anhedonia	skos:exactMatch	ncit	C3673	Anhedonia	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059446	Heterotaxy Syndrome	skos:exactMatch	ncit	C117273	Heterotaxy Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059447	Cell Cycle Checkpoints	skos:exactMatch	go	GO:0000075	cell cycle checkpoint	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059447	Cell Cycle Checkpoints	skos:exactMatch	ncit	C18689	Cell Cycle Checkpoint	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059467	Transcriptome	skos:exactMatch	ncit	C153194	Transcriptome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059506	Telomere Shortening	skos:exactMatch	ncit	C21548	Telomere Shortening	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059547	Stereocilia	skos:exactMatch	go	GO:0032420	stereocilium	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059606	Polydipsia	skos:exactMatch	ncit	C50700	Polydipsia	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059608	Laryngocele	skos:exactMatch	ncit	C97062	Laryngocele	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059611	Balamuthia mandrillaris	skos:exactMatch	ncit	C122184	Balamuthia mandrillaris	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059629	Signal-To-Noise Ratio	skos:exactMatch	ncit	C94983	Signal to Noise Ratio	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059630	Mesenchymal Stem Cells	skos:exactMatch	efo	0000586	mesenchymal stem cell	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059630	Mesenchymal Stem Cells	skos:exactMatch	ncit	C43423	Mesenchymal Stem Cell	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059645	Mutation Rate	skos:exactMatch	ncit	C167282	Mutation Rate	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059647	Gene-Environment Interaction	skos:exactMatch	ncit	C18092	Gene-Environment Interaction	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059685	Herniorrhaphy	skos:exactMatch	ncit	C168249	Herniorrhaphy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059747	Nasal Surgical Procedures	skos:exactMatch	ncit	C157931	Nasal Surgery	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059748	Proteolysis	skos:exactMatch	go	GO:0006508	proteolysis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059748	Proteolysis	skos:exactMatch	ncit	C18105	Proteolysis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059765	Homologous Recombination	skos:exactMatch	go	GO:0035825	homologous recombination	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059765	Homologous Recombination	skos:exactMatch	kegg.pathway	map03440	Homologous recombination	manual	orcid:0000-0003-4423-4370
+mesh	D059765	Homologous Recombination	skos:exactMatch	ncit	C18144	Homologous Recombination	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059767	Recombinational DNA Repair	skos:exactMatch	go	GO:0000725	recombinational repair	manual	orcid:0000-0001-9439-5346
+mesh	D059786	Abnormal Karyotype	skos:exactMatch	ncit	C168875	Abnormal Karyotype	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059787	Acute Pain	skos:exactMatch	ncit	C27003	Acute Pain	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059808	Polyphenols	skos:exactMatch	chebi	CHEBI:26195	polyphenol	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D059825	Physical Therapists	skos:exactMatch	ncit	C53422	Physical Therapist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D059905	Endocarditis, Non-Infective	skos:exactMatch	doid	DOID:0060068	marantic endocarditis	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D059965	Merkel cell polyomavirus	skos:exactMatch	ncit	C73535	Merkel Cell Polyomavirus	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060048	Slipped Capital Femoral Epiphyses	skos:exactMatch	ncit	C118384	Slipped Capital Femoral Epiphysis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D060049	Asymmetric Cell Division	skos:exactMatch	go	GO:0008356	asymmetric cell division	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060050	Angina, Stable	skos:exactMatch	ncit	C66914	Stable Angina	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060054	Agrobacterium	skos:exactMatch	ncit	C86011	Agrobacterium	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060148	HapMap Project	skos:exactMatch	ncit	C70979	International HapMap Project	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D060152	V(D)J Recombination	skos:exactMatch	go	GO:0033151	V(D)J recombination	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060168	Thymocytes	skos:exactMatch	ncit	C12994	Thymocyte	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060388	Support Vector Machine	skos:exactMatch	ncit	C78542	Support Vector Machine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060406	Brassinosteroids	skos:exactMatch	chebi	CHEBI:22921	brassinosteroid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D060449	Wnt Signaling Pathway	skos:exactMatch	go	GO:0016055	Wnt signaling pathway	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D060449	Wnt Signaling Pathway	skos:exactMatch	kegg.pathway	map04310	Wnt signaling pathway	manual	orcid:0000-0003-4423-4370
+mesh	D060705	Dyscalculia	skos:exactMatch	hp	HP:0002442	Dyscalculia	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060733	Electromagnetic Radiation	skos:exactMatch	ncit	C17050	Electromagnetic Radiation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060735	Pharmacovigilance	skos:exactMatch	ncit	C142637	Pharmacovigilance	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D060746	Endoplasmic Reticulum-Associated Degradation	skos:exactMatch	go	GO:0036503	ERAD pathway	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D060756	Social Networking	skos:exactMatch	ncit	C19035	Social Networking	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060766	Drinking Water	skos:exactMatch	ncit	C90377	Drinking Water	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060825	Cognitive Dysfunction	skos:exactMatch	ncit	C46083	Cognitive Dysfunction	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060833	Cellular Microenvironment	skos:exactMatch	ncit	C48199	Cell Microenvironment	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D060888	Real-Time Polymerase Chain Reaction	skos:exactMatch	ncit	C51962	Real Time PCR	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D061065	Polyketides	skos:exactMatch	chebi	CHEBI:26188	polyketide	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D061330	Multidetector Computed Tomography	skos:exactMatch	ncit	C157337	Multi-detector Computed Tomography	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D061346	Laser Capture Microdissection	skos:exactMatch	efo	0009111	laser capture microdissection	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D061346	Laser Capture Microdissection	skos:exactMatch	ncit	C19263	Laser Capture Microdissection	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D061354	Acinar Cells	skos:exactMatch	ncit	C23979	Acinar Cells	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D061405	Insulin, Lente	skos:exactMatch	ncit	C29122	Insulin, Lente	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D061406	Insulin, Ultralente	skos:exactMatch	ncit	C29126	Insulin, Ultralente	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D061466	Lopinavir	skos:exactMatch	chebi	CHEBI:31781	lopinavir	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D061686	Premature Ejaculation	skos:exactMatch	ncit	C94349	Premature Ejaculation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D061705	Image-Guided Biopsy	skos:exactMatch	ncit	C15652	Image-Guided Biopsy	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D061809	Human Papillomavirus DNA Tests	skos:exactMatch	ncit	C93141	Human Papillomavirus DNA Test	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D061888	Craniospinal Irradiation	skos:exactMatch	ncit	C116437	Craniospinal Irradiation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D061965	Matrix Metalloproteinase Inhibitors	skos:exactMatch	chebi	CHEBI:50664	matrix metalloproteinase inhibitor	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D061986	MCF-7 Cells	skos:exactMatch	ncit	C18096	MCF7	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D061988	Proteasome Inhibitors	skos:exactMatch	chebi	CHEBI:52726	proteasome inhibitor	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3367,6 +3701,7 @@ mesh	D064346	Sagittal Abdominal Diameter	skos:exactMatch	ncit	C87054	Sagittal Ab
 mesh	D064386	Ankle Fractures	skos:exactMatch	efo	0009615	ankle fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D064424	Tobacco Use	skos:exactMatch	ncit	C18059	Tobacco Use	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D064527	Etiolation	skos:exactMatch	go	GO:0009647	skotomorphogenesis	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D064529	Receptor, Metabotropic Glutamate 5	skos:exactMatch	ncit	C26241	Metabotropic Glutamate Receptor 5	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D064546	Protein Kinase C beta	skos:exactMatch	hgnc	9395	PRKCB	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D064591	Allografts	skos:exactMatch	ncit	C60701	Allograft	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D064648	Critical Care Nursing	skos:exactMatch	ncit	C17602	Critical Care Nursing	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3414,14 +3749,20 @@ mesh	D065290	Acute-On-Chronic Liver Failure	skos:exactMatch	efo	0007949	acute-on
 mesh	D065306	Corneal Injuries	skos:exactMatch	ncit	C35392	Corneal Injury	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065326	Children's Health Insurance Program	skos:exactMatch	ncit	C157359	Children's Health Insurance Program	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065426	Cytoreduction Surgical Procedures	skos:exactMatch	ncit	C132068	Cytoreductive Surgery	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D065427	Factor Xa Inhibitors	skos:exactMatch	chebi	CHEBI:68581	EC 3.4.21.6 (coagulation factor Xa) inhibitor	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D065467	Transcatheter Aortic Valve Replacement	skos:exactMatch	ncit	C158018	Transcatheter Aortic Valve Replacement	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065527	Brachial Plexus Block	skos:exactMatch	ncit	C157799	Brachial Plexus Block	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D065607	Cytochrome P-450 Enzyme Inhibitors	skos:exactMatch	chebi	CHEBI:50183	P450 inhibitor	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065608	Renal Reabsorption	skos:exactMatch	go	GO:0070293	renal absorption	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065626	Non-alcoholic Fatty Liver Disease	skos:exactMatch	doid	DOID:0080208	non-alcoholic fatty liver disease	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D065630	Hernias, Diaphragmatic, Congenital	skos:exactMatch	ncit	C98893	Congenital Diaphragmatic Hernia	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065631	Rhinitis, Allergic	skos:exactMatch	doid	DOID:4481	allergic rhinitis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065632	Chikungunya Fever	skos:exactMatch	doid	DOID:0050012	chikungunya	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D065646	Thyroid Carcinoma, Anaplastic	skos:exactMatch	doid	DOID:0080522	thyroid gland anaplastic carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D065706	Polymicrogyria	skos:exactMatch	ncit	C116936	Polymicrogyria	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065707	Schizencephaly	skos:exactMatch	ncit	C99056	Schizencephaly	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065766	Atypical Hemolytic Uremic Syndrome	skos:exactMatch	doid	DOID:0080301	atypical hemolytic-uremic syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D065766	Atypical Hemolytic Uremic Syndrome	skos:exactMatch	ncit	C123223	Atypical Hemolytic Uremic Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065808	Prepulse Inhibition	skos:exactMatch	go	GO:0060134	prepulse inhibition	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065819	Voriconazole	skos:exactMatch	chebi	CHEBI:10023	voriconazole	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065819	Voriconazole	skos:exactMatch	ncit	C1707	Voriconazole	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3430,7 +3771,9 @@ mesh	D065843	Cerebral Crus	skos:exactMatch	ncit	C32409	Crus Cerebri	manually_rev
 mesh	D065850	Cerebral Peduncle	skos:exactMatch	ncit	C32291	Cerebral Peduncle	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065866	Optic Tract	skos:exactMatch	ncit	C33218	Optic Tract	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065886	Neurodevelopmental Disorders	skos:exactMatch	efo	0010642	Neurodevelopmental disorder	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D065908	Transcranial Direct Current Stimulation	skos:exactMatch	ncit	C129862	Transcranial Direct Current Stimulation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065927	Waist-Height Ratio	skos:exactMatch	efo	0005191	waist height ratio	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D065986	Citrullus colocynthis	skos:exactMatch	ncit	C74322	Citrullus colocynthis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D066007	Toxicokinetics	skos:exactMatch	ncit	C90478	Toxicokinetics	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D066027	Transplant Recipients	skos:exactMatch	ncit	C159659	Transplant Recipient	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D066066	Response Evaluation Criteria in Solid Tumors	skos:exactMatch	ncit	C49164	Response Evaluation Criteria in Solid Tumors	manually_reviewed	orcid:0000-0001-9439-5346
