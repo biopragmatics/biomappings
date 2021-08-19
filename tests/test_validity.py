@@ -36,7 +36,7 @@ def test_redundancy():
     redundant = [(k, v) for k, v in counter.items() if v > 1]
     if redundant:
         r = "\n".join(f"  {r}: {count}" for r, count in redundant)
-        raise ValueError(f"Redundant: {r}")
+        raise ValueError(f"{len(r)} are redundant: {r}")
 
 
 def test_predictions_sorted():
