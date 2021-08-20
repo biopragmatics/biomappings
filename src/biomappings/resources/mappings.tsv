@@ -237,6 +237,7 @@ ccle.cell	HCT8_LARGE_INTESTINE	HCT-8	skos:exactMatch	efo	0002189	HCT8	manually_r
 ccle.cell	HDMYZ_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HD-MY-Z	skos:exactMatch	efo	0002190	HDMYZ	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HEC1A_ENDOMETRIUM	HEC-1-A	skos:exactMatch	efo	0002191	HEC1A	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	HEC1B_ENDOMETRIUM	HEC-1-B	skos:exactMatch	efo	0002192	HEC1B	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	HGC27_STOMACH	HGC-27	skos:exactMatch	efo	0006581	HGC-27	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HK2_KIDNEY	HK-2	skos:exactMatch	cellosaurus	CVCL_YE28	HK2	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	HMCB_SKIN	HMCB	skos:exactMatch	efo	0002195	HMCB	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	HOP62_LUNG	HOP-62	skos:exactMatch	efo	0006439	HOP62	manually_reviewed	orcid:0000-0001-9439-5346
@@ -349,6 +350,15 @@ ccle.cell	ME1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	ME-1	skos:exactMatch	efo	000664
 ccle.cell	MEC1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MEC-1	skos:exactMatch	efo	0002231	MEC1	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	MOLM16_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MOLM-16	skos:exactMatch	efo	0006652	MOLM-16	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	MOLP2_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MOLP-2	skos:exactMatch	efo	0006653	MOLP-2	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	MOLP8_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MOLP-8	skos:exactMatch	efo	0006654	MOLP-8	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	MOLT16_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MOLT-16	skos:exactMatch	efo	0002239	MOLT16	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	MOLT3_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MOLT-3	skos:exactMatch	efo	0005265	MOLT-3	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	MOLT4_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MOLT-4	skos:exactMatch	efo	0001220	MOLT-4	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	MONOMAC6_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MONO-MAC-6	skos:exactMatch	efo	0006287	Mono Mac 6	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	MUTZ3_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MUTZ-3	skos:exactMatch	efo	0005395	MUTZ-3	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NALM1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	NALM-1	skos:exactMatch	efo	0002244	NALM1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NALM6_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	NALM-6	skos:exactMatch	efo	0002245	NALM6	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	NAMALWA_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	NAMALWA	skos:exactMatch	efo	0002246	NAMALWA	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1092_LUNG	NCI-H1092	skos:exactMatch	efo	0002249	NCI-H1092	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1155_LUNG	NCI-H1155	skos:exactMatch	efo	0002250	NCI-H1155	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	NCIH1299_LUNG	NCI-H1299	skos:exactMatch	efo	0003043	NCI-H1299	manually_reviewed	orcid:0000-0001-9439-5346
@@ -458,6 +468,7 @@ ccle.cell	OE33_OESOPHAGUS	OE33	skos:exactMatch	efo	0002310	OE33	manually_reviewe
 ccle.cell	OPM2_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	OPM-2	skos:exactMatch	efo	0006716	OPM-2	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	OV56_OVARY	OV56	skos:exactMatch	efo	0006458	OV56	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	OV7_OVARY	OV7	skos:exactMatch	efo	0006459	OV7	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	OVCA432	OVCA432	skos:exactMatch	cellosaurus	CVCL_3769	OVCA432	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	OVCA432	OVCA432	skos:exactMatch	efo	0006722	OVCA432	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	OVCAR4_OVARY	OVCAR-4	skos:exactMatch	efo	0005442	OVCAR4	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	OVCAR5_OVARY	OVCAR-5	skos:exactMatch	efo	0005443	OVCAR5	manually_reviewed	orcid:0000-0001-9439-5346
@@ -472,13 +483,24 @@ ccle.cell	PANC0327_PANCREAS	Panc 03.27	skos:exactMatch	efo	0006467	Panc 03.27	ma
 ccle.cell	PANC0403_PANCREAS	Panc 04.03	skos:exactMatch	efo	0006468	Panc 04.03	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PANC0504_PANCREAS	Panc 05.04	skos:exactMatch	efo	0006469	Panc 05.04	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PANC0813_PANCREAS	Panc 08.13	skos:exactMatch	efo	0006470	Panc 08.13	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	PANC1_PANCREAS	PANC-1	skos:exactMatch	efo	0002713	Panc1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	PATU8988S_PANCREAS	PA-TU-8988S	skos:exactMatch	efo	0006730	PA-TU-8988S	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PATU8988T_PANCREAS	PA-TU-8988T	skos:exactMatch	efo	0005713	8988T	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PL21_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	PL-21	skos:exactMatch	efo	0006473	PL-21	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PL45_PANCREAS	PL45	skos:exactMatch	efo	0006474	PL45	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	PLB985_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	PLB-985	skos:exactMatch	efo	0002313	PLB985	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PLCPRF5_LIVER	PLC/PRF/5	skos:exactMatch	efo	0006291	PLC/PRF/5	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	PSN1_PANCREAS	PSN1	skos:exactMatch	efo	0006739	PSN1	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	QGP1_PANCREAS	QGP-1	skos:exactMatch	efo	0006741	QGP-1	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	RAJI_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	Raji	skos:exactMatch	efo	0002324	Raji	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	RERFGC1B_STOMACH	RERF-GC-1B	skos:exactMatch	efo	0006743	RERF-GC-1B	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	RERFLCAI_LUNG	RERF-LC-AI	skos:exactMatch	efo	0002850	RERF-LC-AI	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	RERFLCKJ_LUNG	RERF-LC-KJ	skos:exactMatch	efo	0002851	RERF-LC-KJ	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	RERFLCMS_LUNG	RERF-LC-MS	skos:exactMatch	efo	0002852	RERF-LC-MS	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	RL952_ENDOMETRIUM	RL95-2	skos:exactMatch	efo	0002320	RL952	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	RMUGS_OVARY	RMUG-S	skos:exactMatch	efo	0006747	RMUG-S	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	RT112_URINARY_TRACT	RT-112	skos:exactMatch	efo	0006479	RT-112	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SCABER_URINARY_TRACT	SCaBER	skos:exactMatch	efo	0002325	SCaBER	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SCC25_UPPER_AERODIGESTIVE_TRACT	SCC-25	skos:exactMatch	efo	0006483	SCC-25	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SCC9_UPPER_AERODIGESTIVE_TRACT	SCC-9	skos:exactMatch	efo	0006485	SCC-9	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SF126_CENTRAL_NERVOUS_SYSTEM	SF126	skos:exactMatch	efo	0005450	SF126	manually_reviewed	orcid:0000-0001-9439-5346
@@ -505,6 +527,8 @@ ccle.cell	SKMES1_LUNG	SK-MES-1	skos:exactMatch	efo	0002334	SKMES1	manually_revie
 ccle.cell	SKMM2_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SK-MM-2	skos:exactMatch	efo	0005458	SK-MM-2	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SKNAS_AUTONOMIC_GANGLIA	SK-N-AS	skos:exactMatch	efo	0002859	SK-N-AS	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SKNDZ_AUTONOMIC_GANGLIA	SK-N-DZ	skos:exactMatch	efo	0005721	SK-N-DZ	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKNMC_BONE	SK-N-MC	skos:exactMatch	efo	0002860	SK-N-MC	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SKNSH_AUTONOMIC_GANGLIA	SK-N-SH	skos:exactMatch	efo	0003072	SK-N-SH	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SKOV3_OVARY	SK-OV-3	skos:exactMatch	efo	0002340	SKOV3	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SKUT1_SOFT_TISSUE	SK-UT-1	skos:exactMatch	efo	0002341	SKUT1	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SNB19_CENTRAL_NERVOUS_SYSTEM	SNB-19	skos:exactMatch	efo	0002342	SNB19	manually_reviewed	orcid:0000-0001-9439-5346
@@ -516,17 +540,57 @@ ccle.cell	SNU398_LIVER	SNU-398	skos:exactMatch	efo	0002347	SNU398	manually_revie
 ccle.cell	SNU423_LIVER	SNU-423	skos:exactMatch	efo	0002348	SNU423	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SNU449_LIVER	SNU-449	skos:exactMatch	efo	0002349	SNU449	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SNU475_LIVER	SNU-475	skos:exactMatch	efo	0002350	SNU475	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU601_STOMACH	SNU-601	skos:exactMatch	efo	0006756	SNU-601	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU620_STOMACH	SNU-620	skos:exactMatch	efo	0006757	SNU-620	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU668_STOMACH	SNU-668	skos:exactMatch	efo	0006759	SNU-668	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SNU719_STOMACH	SNU-719	skos:exactMatch	efo	0006760	SNU-719	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SR786_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SR-786	skos:exactMatch	efo	0006491	SR-786	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	ST486_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	ST486	skos:exactMatch	efo	0002353	ST486	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SU8686_PANCREAS	SU.86.86	skos:exactMatch	efo	0006494	SU.86.86	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SUDHL10_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SU-DHL-10	skos:exactMatch	efo	0002354	SUDHL10	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SUDHL1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SU-DHL-1	skos:exactMatch	efo	0005461	SUDHL1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SUDHL4_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SU-DHL-4	skos:exactMatch	efo	0006492	SU-DHL-4	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SUDHL5_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SU-DHL-5	skos:exactMatch	efo	0002356	SUDHL5	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SUDHL6_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SU-DHL-6	skos:exactMatch	efo	0002357	SUDHL6	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SUDHL8_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SU-DHL-8	skos:exactMatch	efo	0006493	SU-DHL-8	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	SUIT2_PANCREAS	SUIT-2	skos:exactMatch	efo	0006495	SUIT-2	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SUPB15_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	SUP-B15	skos:exactMatch	efo	0006763	SUP-B15	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SW1116_LARGE_INTESTINE	SW1116	skos:exactMatch	efo	0002359	SW1116	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SW1417_LARGE_INTESTINE	SW1417	skos:exactMatch	efo	0002361	SW1417	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SW1463_LARGE_INTESTINE	SW1463	skos:exactMatch	efo	0002362	SW1463	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SW403_LARGE_INTESTINE	SW403	skos:exactMatch	efo	0002366	SW403	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SW480_LARGE_INTESTINE	SW480	skos:exactMatch	efo	0002083	SW480	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SW48_LARGE_INTESTINE	SW48	skos:exactMatch	efo	0002367	SW48	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SW620_LARGE_INTESTINE	SW620	skos:exactMatch	efo	0002368	SW620	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SW837_LARGE_INTESTINE	SW837	skos:exactMatch	efo	0002372	SW837	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	SW948_LARGE_INTESTINE	SW948	skos:exactMatch	efo	0002375	SW948	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	TCCPAN2_PANCREAS	TCC-PAN2	skos:exactMatch	efo	0006764	TCC-PAN2	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	TE8_OESOPHAGUS	TE-8	skos:exactMatch	cellosaurus	CVCL_F786	TE8	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	TERA1	TERA1	skos:exactMatch	cellosaurus	CVCL_2776	Tera-1	manually_reviewed	orcid:0000-0003-4423-4370
+ccle.cell	THP1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	THP-1	skos:exactMatch	efo	0001253	THP-1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	TOLEDO_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	Toledo	skos:exactMatch	efo	0002383	Toledo	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	TOV112D_OVARY	TOV-112D	skos:exactMatch	efo	0005263	TOV-112D	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	TT_THYROID	TT	skos:exactMatch	cellosaurus	CVCL_3174	T.T	manually_reviewed	orcid:0000-0003-4423-4370
+ccle.cell	TYKNU_OVARY	TYK-nu	skos:exactMatch	efo	0006766	TYK-nu	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	U251MG_CENTRAL_NERVOUS_SYSTEM	U-251 MG	skos:exactMatch	efo	0006498	U-251 MG	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	U343_CENTRAL_NERVOUS_SYSTEM	U343	skos:exactMatch	cellosaurus	CVCL_S471	U-343MG	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	U87MG_CENTRAL_NERVOUS_SYSTEM	U-87 MG	skos:exactMatch	cellosaurus	CVCL_GP63	U-87MG Uppsala	manually_reviewed	orcid:0000-0003-4423-4370
+ccle.cell	U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	U-937	skos:exactMatch	efo	0001257	U937	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	UACC257_SKIN	UACC-257	skos:exactMatch	efo	0005376	UACC-257	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	UACC62_SKIN	UACC-62	skos:exactMatch	efo	0005377	UACC-62	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	UACC812_BREAST	UACC-812	skos:exactMatch	efo	0001258	UACC812	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	UACC893_BREAST	UACC-893	skos:exactMatch	efo	0002385	UACC893	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	UISOMCC1	UISOMCC1	skos:exactMatch	cellosaurus	CVCL_E996	UISO-MCC-1	manually_reviewed	orcid:0000-0003-4423-4370
+ccle.cell	UMUC1_URINARY_TRACT	UM-UC-1	skos:exactMatch	efo	0006770	UM-UC-1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	UMUC3_URINARY_TRACT	UM-UC-3	skos:exactMatch	efo	0006771	UM-UC-3	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	VCAP_PROSTATE	VCaP	skos:exactMatch	efo	0007752	VCaP	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	VMRCLCD_LUNG	VMRC-LCD	skos:exactMatch	efo	0006773	VMRC-LCD	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	WM115_SKIN	WM-115	skos:exactMatch	efo	0002390	WM115	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	WM239A	WM239A	skos:exactMatch	cellosaurus	CVCL_6795	WM239A	manually_reviewed	orcid:0000-0003-4423-4370
+ccle.cell	WM2664_SKIN	WM-266-4	skos:exactMatch	efo	0006774	WM-266-4	manually_reviewed	orcid:0000-0001-9439-5346
+ccle.cell	WM793_SKIN	WM-793	skos:exactMatch	efo	0002873	WM793	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	WM902B	WM902B	skos:exactMatch	cellosaurus	CVCL_6807	WM902B	manually_reviewed	orcid:0000-0003-4423-4370
+ccle.cell	WSUDLCL2_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	WSU-DLCL2	skos:exactMatch	efo	0006775	WSU-DLCL2	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	YAPC_PANCREAS	YAPC	skos:exactMatch	cellosaurus	CVCL_1794	YAPC	manually_reviewed	orcid:0000-0003-4423-4370
 ccle.cell	YAPC_PANCREAS	YAPC	skos:exactMatch	efo	0006778	YAPC	manually_reviewed	orcid:0000-0001-9439-5346
 ccle.cell	YD10B_UPPER_AERODIGESTIVE_TRACT	YD-10B	skos:exactMatch	cellosaurus	CVCL_8929	YD-10B	manually_reviewed	orcid:0000-0003-4423-4370
@@ -750,6 +814,8 @@ kegg.pathway	map00970	Aminoacyl-tRNA biosynthesis	skos:exactMatch	go	GO:0043039	
 kegg.pathway	map00970	Aminoacyl-tRNA biosynthesis	skos:exactMatch	mesh	D046249	Transfer RNA Aminoacylation	manual	orcid:0000-0003-4423-4370
 kegg.pathway	map00984	Steroid degradation	skos:exactMatch	go	GO:0006706	steroid catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map01212	Fatty acid metabolism	skos:exactMatch	go	GO:0006631	fatty acid metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map01501	beta-Lactam resistance	skos:exactMatch	mesh	D018440	beta-Lactam Resistance	manually_reviewed	orcid:0000-0001-9439-5346
+kegg.pathway	map01502	Vancomycin resistance	skos:exactMatch	mesh	D020713	Vancomycin Resistance	manually_reviewed	orcid:0000-0001-9439-5346
 kegg.pathway	map02024	Quorum sensing	skos:exactMatch	go	GO:0009372	quorum sensing	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02024	Quorum sensing	skos:exactMatch	mesh	D053038	Quorum Sensing	manual	orcid:0000-0003-4423-4370
 kegg.pathway	map03013	RNA transport	skos:exactMatch	go	GO:0050658	RNA transport	manually_reviewed	orcid:0000-0003-4423-4370
@@ -804,8 +870,14 @@ kegg.pathway	map04917	Prolactin signaling pathway	skos:exactMatch	go	GO:0038161	
 kegg.pathway	map04920	Adipocytokine signaling pathway	skos:exactMatch	go	GO:0033209	tumor necrosis factor-mediated signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map04920	Adipocytokine signaling pathway	skos:exactMatch	go	GO:0033210	leptin-mediated signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map04920	Adipocytokine signaling pathway	skos:exactMatch	go	GO:0033211	adiponectin-activated signaling pathway	manually_reviewed	orcid:0000-0003-4423-4370
+kegg.pathway	map04931	Insulin resistance	skos:exactMatch	mesh	D007333	Insulin Resistance	manually_reviewed	orcid:0000-0001-9439-5346
 kegg.pathway	map04971	Gastric acid secretion	skos:exactMatch	go	GO:0001696	gastric acid secretion	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map04979	Cholesterol metabolism	skos:exactMatch	go	GO:0008203	cholesterol metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000082	alanosine	skos:exactMatch	ncit	C994	Alanosine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000170	ferric ferrocyanide	skos:exactMatch	ncit	C47532	Ferric Ferrocyanide	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000179	N-acetylaspartate	skos:exactMatch	ncit	C118887	N-Acetylaspartate	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000203	deoxyaminopteroic acid	skos:exactMatch	ncit	C157133	Deoxyaminopteroic Acid	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000288	ritrosulfan	skos:exactMatch	ncit	C75294	Ritrosulfan	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000590398	DEPDC5 protein, human	skos:exactMatch	uniprot	O75140	DEPDC5	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C000592662	DORAVIRINE	skos:exactMatch	ncit	C171848	Doravirine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000592900	FJX1 protein, human	skos:exactMatch	uniprot	Q86VR8	FJX1	manually_reviewed	orcid:0000-0003-4423-4370
