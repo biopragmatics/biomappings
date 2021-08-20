@@ -1,5 +1,5 @@
 contributors:
-- count: 1694
+- count: 2044
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
@@ -7,7 +7,7 @@ contributors:
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
   user: hoytfamily
-- count: 1581
+- count: 1592
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -40,12 +40,12 @@ negative:
 - count: 45
   source: mesh
   target: wikipathways
+- count: 20
+  source: ccle.cell
+  target: cellosaurus
 - count: 16
   source: go
   target: kegg.pathway
-- count: 15
-  source: ccle.cell
-  target: cellosaurus
 - count: 14
   source: hgnc
   target: mesh
@@ -58,15 +58,15 @@ negative:
 - count: 9
   source: pr
   target: uniprot.chain
-- count: 7
+- count: 8
   source: mesh
   target: ncit
 - count: 7
-  source: fplx
-  target: wikipathways
-- count: 5
   source: ccle.cell
   target: efo
+- count: 7
+  source: fplx
+  target: wikipathways
 - count: 3
   source: doid
   target: reactome
@@ -82,28 +82,28 @@ negative:
 - count: 1
   source: ccle.cell
   target: depmap
-negative_mapping_count: 893
+negative_mapping_count: 901
 negative_prefix_count: 16
 positive:
 - count: 1271
   source: doid
   target: mesh
-- count: 443
+- count: 462
+  source: mesh
+  target: ncit
+- count: 460
   source: chebi
   target: mesh
-- count: 399
+- count: 402
   source: go
   target: mesh
+- count: 370
+  source: mesh
+  target: uniprot
 - count: 366
   source: go
   target: wikipathways
-- count: 313
-  source: mesh
-  target: ncit
-- count: 288
-  source: mesh
-  target: uniprot
-- count: 253
+- count: 342
   source: ccle.cell
   target: efo
 - count: 222
@@ -112,12 +112,12 @@ positive:
 - count: 113
   source: go
   target: kegg.pathway
+- count: 104
+  source: ccle.cell
+  target: cellosaurus
 - count: 102
   source: hgnc
   target: mesh
-- count: 97
-  source: ccle.cell
-  target: cellosaurus
 - count: 80
   source: pr
   target: uniprot.chain
@@ -139,8 +139,11 @@ positive:
 - count: 18
   source: mesh
   target: wikipathways
-- count: 11
+- count: 14
   source: efo
+  target: mesh
+- count: 10
+  source: hp
   target: mesh
 - count: 9
   source: wikipathways
@@ -148,9 +151,6 @@ positive:
 - count: 8
   source: mesh
   target: reactome
-- count: 7
-  source: hp
-  target: mesh
 - count: 6
   source: chebi
   target: ncit
@@ -175,34 +175,34 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 4272
+positive_mapping_count: 4625
 positive_prefix_count: 21
 predictions:
-- count: 12337
+- count: 12187
   source: mesh
   target: ncit
-- count: 11060
+- count: 10978
   source: mesh
   target: uniprot
-- count: 2862
+- count: 2845
   source: chebi
   target: mesh
 - count: 1376
   source: hgnc
   target: mesh
-- count: 365
+- count: 362
   source: hp
   target: mesh
-- count: 325
-  source: ccle.cell
-  target: efo
-- count: 277
+- count: 274
   source: efo
   target: mesh
-- count: 69
+- count: 234
+  source: ccle.cell
+  target: efo
+- count: 57
   source: ccle.cell
   target: cellosaurus
-- count: 50
+- count: 47
   source: go
   target: mesh
 - count: 20
@@ -217,5 +217,5 @@ predictions:
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 28748
+predictions_mapping_count: 28387
 predictions_prefix_count: 15

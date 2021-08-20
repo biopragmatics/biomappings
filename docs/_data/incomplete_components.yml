@@ -1340,11 +1340,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://web.expasy.org/cellosaurus/CVCL_1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://www.ebi.ac.uk/efo/EFO_0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: BTO:0006459
       identifier: BTO:0006459
@@ -1352,11 +1352,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://www.ebi.ac.uk/efo/EFO_0006612
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://web.expasy.org/cellosaurus/CVCL_1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: cellosaurus:CVCL_1334
       identifier: CVCL_1334
@@ -1418,6 +1418,35 @@
       identifier: 0002278
       link: https://www.ebi.ac.uk/efo/EFO_0002278
       name: NCI-H2107
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_0041
+      identifier: CVCL_0041
+      link: https://web.expasy.org/cellosaurus/CVCL_0041
+      name: Rh30
+      prefix: cellosaurus
+    target:
+      curie: efo:0002329
+      identifier: 0002329
+      link: https://www.ebi.ac.uk/efo/EFO_0002329
+      name: SJRH30
+      prefix: efo
+  nodes:
+    ccle.cell:SJRH30_SOFT_TISSUE:
+      identifier: SJRH30_SOFT_TISSUE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=SJRH30_SOFT_TISSUE
+      name: SJRH30
+      prefix: ccle.cell
+    cellosaurus:CVCL_0041:
+      identifier: CVCL_0041
+      link: https://web.expasy.org/cellosaurus/CVCL_0041
+      name: Rh30
+      prefix: cellosaurus
+    efo:0002329:
+      identifier: 0002329
+      link: https://www.ebi.ac.uk/efo/EFO_0002329
+      name: SJRH30
       prefix: efo
 - edges:
   - source:
@@ -1675,6 +1704,52 @@
       prefix: wikipathways
 - edges:
   - source:
+      curie: GO:0035825
+      identifier: GO:0035825
+      link: http://amigo.geneontology.org/amigo/term/GO:GO:0035825
+      name: homologous recombination
+      prefix: go
+    target:
+      curie: ncit:C18144
+      identifier: C18144
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18144
+      name: Homologous Recombination
+      prefix: ncit
+  - source:
+      curie: kegg.pathway:map03440
+      identifier: map03440
+      link: https://www.kegg.jp/entry/map03440
+      name: Homologous recombination
+      prefix: kegg.pathway
+    target:
+      curie: ncit:C18144
+      identifier: C18144
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18144
+      name: Homologous Recombination
+      prefix: ncit
+  nodes:
+    GO:0035825:
+      identifier: GO:0035825
+      link: http://amigo.geneontology.org/amigo/term/GO:GO:0035825
+      name: homologous recombination
+      prefix: go
+    kegg.pathway:map03440:
+      identifier: map03440
+      link: https://www.kegg.jp/entry/map03440
+      name: Homologous recombination
+      prefix: kegg.pathway
+    mesh:D059765:
+      identifier: D059765
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D059765
+      name: Homologous Recombination
+      prefix: mesh
+    ncit:C18144:
+      identifier: C18144
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18144
+      name: Homologous Recombination
+      prefix: ncit
+- edges:
+  - source:
       curie: GO:0033209
       identifier: GO:0033209
       link: http://amigo.geneontology.org/amigo/term/GO:GO:0033209
@@ -1849,6 +1924,238 @@
       prefix: pfam
 - edges:
   - source:
+      curie: GO:0001837
+      identifier: GO:0001837
+      link: http://amigo.geneontology.org/amigo/term/GO:GO:0001837
+      name: epithelial to mesenchymal transition
+      prefix: go
+    target:
+      curie: ncit:C97304
+      identifier: C97304
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C97304
+      name: Epithelial-to-Mesenchymal Transition
+      prefix: ncit
+  nodes:
+    GO:0001837:
+      identifier: GO:0001837
+      link: http://amigo.geneontology.org/amigo/term/GO:GO:0001837
+      name: epithelial to mesenchymal transition
+      prefix: go
+    mesh:D058750:
+      identifier: D058750
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D058750
+      name: Epithelial-Mesenchymal Transition
+      prefix: mesh
+    ncit:C97304:
+      identifier: C97304
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C97304
+      name: Epithelial-to-Mesenchymal Transition
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009840
+      identifier: 0009840
+      link: https://www.ebi.ac.uk/efo/EFO_0009840
+      name: tachypnea
+      prefix: efo
+    target:
+      curie: ncit:C50767
+      identifier: C50767
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C50767
+      name: Tachypnea
+      prefix: ncit
+  nodes:
+    efo:0009840:
+      identifier: 0009840
+      link: https://www.ebi.ac.uk/efo/EFO_0009840
+      name: tachypnea
+      prefix: efo
+    mesh:D059246:
+      identifier: D059246
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D059246
+      name: Tachypnea
+      prefix: mesh
+    ncit:C50767:
+      identifier: C50767
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C50767
+      name: Tachypnea
+      prefix: ncit
+- edges:
+  - source:
+      curie: GO:0034337
+      identifier: GO:0034337
+      link: http://amigo.geneontology.org/amigo/term/GO:GO:0034337
+      name: RNA folding
+      prefix: go
+    target:
+      curie: ncit:C19017
+      identifier: C19017
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C19017
+      name: RNA Folding
+      prefix: ncit
+  nodes:
+    GO:0034337:
+      identifier: GO:0034337
+      link: http://amigo.geneontology.org/amigo/term/GO:GO:0034337
+      name: RNA folding
+      prefix: go
+    mesh:D059370:
+      identifier: D059370
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D059370
+      name: RNA Folding
+      prefix: mesh
+    ncit:C19017:
+      identifier: C19017
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C19017
+      name: RNA Folding
+      prefix: ncit
+- edges:
+  - source:
+      curie: HP:0032149
+      identifier: HP:0032149
+      link: https://hpo.jax.org/app/browse/term/HP:HP:0032149
+      name: Breakthrough pain
+      prefix: hp
+    target:
+      curie: ncit:C9203
+      identifier: C9203
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C9203
+      name: Breakthrough Pain
+      prefix: ncit
+  nodes:
+    HP:0032149:
+      identifier: HP:0032149
+      link: https://hpo.jax.org/app/browse/term/HP:HP:0032149
+      name: Breakthrough pain
+      prefix: hp
+    mesh:D059390:
+      identifier: D059390
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D059390
+      name: Breakthrough Pain
+      prefix: mesh
+    ncit:C9203:
+      identifier: C9203
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C9203
+      name: Breakthrough Pain
+      prefix: ncit
+- edges:
+  - source:
+      curie: GO:0000075
+      identifier: GO:0000075
+      link: http://amigo.geneontology.org/amigo/term/GO:GO:0000075
+      name: cell cycle checkpoint
+      prefix: go
+    target:
+      curie: ncit:C18689
+      identifier: C18689
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18689
+      name: Cell Cycle Checkpoint
+      prefix: ncit
+  nodes:
+    GO:0000075:
+      identifier: GO:0000075
+      link: http://amigo.geneontology.org/amigo/term/GO:GO:0000075
+      name: cell cycle checkpoint
+      prefix: go
+    mesh:D059447:
+      identifier: D059447
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D059447
+      name: Cell Cycle Checkpoints
+      prefix: mesh
+    ncit:C18689:
+      identifier: C18689
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18689
+      name: Cell Cycle Checkpoint
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0000586
+      identifier: 0000586
+      link: https://www.ebi.ac.uk/efo/EFO_0000586
+      name: mesenchymal stem cell
+      prefix: efo
+    target:
+      curie: ncit:C43423
+      identifier: C43423
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C43423
+      name: Mesenchymal Stem Cell
+      prefix: ncit
+  nodes:
+    efo:0000586:
+      identifier: 0000586
+      link: https://www.ebi.ac.uk/efo/EFO_0000586
+      name: mesenchymal stem cell
+      prefix: efo
+    mesh:D059630:
+      identifier: D059630
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D059630
+      name: Mesenchymal Stem Cells
+      prefix: mesh
+    ncit:C43423:
+      identifier: C43423
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C43423
+      name: Mesenchymal Stem Cell
+      prefix: ncit
+- edges:
+  - source:
+      curie: GO:0006508
+      identifier: GO:0006508
+      link: http://amigo.geneontology.org/amigo/term/GO:GO:0006508
+      name: proteolysis
+      prefix: go
+    target:
+      curie: ncit:C18105
+      identifier: C18105
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18105
+      name: Proteolysis
+      prefix: ncit
+  nodes:
+    GO:0006508:
+      identifier: GO:0006508
+      link: http://amigo.geneontology.org/amigo/term/GO:GO:0006508
+      name: proteolysis
+      prefix: go
+    mesh:D059748:
+      identifier: D059748
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D059748
+      name: Proteolysis
+      prefix: mesh
+    ncit:C18105:
+      identifier: C18105
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18105
+      name: Proteolysis
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009111
+      identifier: 0009111
+      link: https://www.ebi.ac.uk/efo/EFO_0009111
+      name: laser capture microdissection
+      prefix: efo
+    target:
+      curie: ncit:C19263
+      identifier: C19263
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C19263
+      name: Laser Capture Microdissection
+      prefix: ncit
+  nodes:
+    efo:0009111:
+      identifier: 0009111
+      link: https://www.ebi.ac.uk/efo/EFO_0009111
+      name: laser capture microdissection
+      prefix: efo
+    mesh:D061346:
+      identifier: D061346
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D061346
+      name: Laser Capture Microdissection
+      prefix: mesh
+    ncit:C19263:
+      identifier: C19263
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C19263
+      name: Laser Capture Microdissection
+      prefix: ncit
+- edges:
+  - source:
       curie: hgnc:11393
       identifier: '11393'
       link: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/11393
@@ -1933,6 +2240,35 @@
       identifier: C1333
       link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C1333
       name: Dexrazoxane
+      prefix: ncit
+- edges:
+  - source:
+      curie: DOID:0080301
+      identifier: DOID:0080301
+      link: https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:DOID:0080301
+      name: atypical hemolytic-uremic syndrome
+      prefix: doid
+    target:
+      curie: ncit:C123223
+      identifier: C123223
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C123223
+      name: Atypical Hemolytic Uremic Syndrome
+      prefix: ncit
+  nodes:
+    DOID:0080301:
+      identifier: DOID:0080301
+      link: https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:DOID:0080301
+      name: atypical hemolytic-uremic syndrome
+      prefix: doid
+    mesh:D065766:
+      identifier: D065766
+      link: https://meshb.nlm.nih.gov/record/ui?ui=D065766
+      name: Atypical Hemolytic Uremic Syndrome
+      prefix: mesh
+    ncit:C123223:
+      identifier: C123223
+      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C123223
+      name: Atypical Hemolytic Uremic Syndrome
       prefix: ncit
 - edges:
   - source:
