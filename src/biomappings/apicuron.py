@@ -1,6 +1,15 @@
 # -*- coding: utf-8 -*-
 
-"""Upload curation statistics to APICURON."""
+"""Upload curation statistics to APICURON.
+
+Run this with:
+
+.. code-block:: sh
+
+    $ pip install -e .
+    $ pip install apicuron-client
+    $ python -m biomappings.apicuron
+"""
 
 import datetime
 from typing import Iterable
