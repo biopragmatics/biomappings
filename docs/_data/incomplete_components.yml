@@ -1340,11 +1340,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://www.ebi.ac.uk/efo/EFO_0006612
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://web.expasy.org/cellosaurus/CVCL_1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: BTO:0006459
       identifier: BTO:0006459
@@ -1352,11 +1352,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://web.expasy.org/cellosaurus/CVCL_1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://www.ebi.ac.uk/efo/EFO_0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: cellosaurus:CVCL_1334
       identifier: CVCL_1334
@@ -1572,11 +1572,11 @@
       name: Tyrosine metabolism - Homo sapiens (human)
       prefix: kegg.pathway
     target:
-      curie: kegg.pathway:hsa01100
-      identifier: hsa01100
-      link: https://www.kegg.jp/entry/hsa01100
-      name: Metabolic pathways - Homo sapiens (human)
-      prefix: kegg.pathway
+      curie: reactome:R-HSA-1430728
+      identifier: R-HSA-1430728
+      link: https://reactome.org/content/detail/R-HSA-1430728
+      name: Metabolism
+      prefix: reactome
   - source:
       curie: kegg.pathway:hsa00350
       identifier: hsa00350
@@ -1584,11 +1584,11 @@
       name: Tyrosine metabolism - Homo sapiens (human)
       prefix: kegg.pathway
     target:
-      curie: reactome:R-HSA-1430728
-      identifier: R-HSA-1430728
-      link: https://reactome.org/content/detail/R-HSA-1430728
-      name: Metabolism
-      prefix: reactome
+      curie: kegg.pathway:hsa01100
+      identifier: hsa01100
+      link: https://www.kegg.jp/entry/hsa01100
+      name: Metabolic pathways - Homo sapiens (human)
+      prefix: kegg.pathway
   - source:
       curie: kegg.pathway:hsa01100
       identifier: hsa01100
