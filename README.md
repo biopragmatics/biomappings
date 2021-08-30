@@ -62,6 +62,9 @@ https://biomappings.github.io/biomappings/.
 The equivalences are also available as a network through
 [NDEx](https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf).
 
+A curation leaderboard is automatically maintained on
+[APICURON](https://apicuron.org/database?resource_uri=https:%2F%2Fbiomappings.github.io%2Fbiomappings%2F).
+
 ## 🙏 Contributing
 
 ### GitHub Web Interface
