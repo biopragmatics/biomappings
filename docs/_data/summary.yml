@@ -1,5 +1,5 @@
 contributors:
-- count: 2044
+- count: 2216
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
@@ -40,7 +40,7 @@ negative:
 - count: 45
   source: mesh
   target: wikipathways
-- count: 20
+- count: 26
   source: ccle.cell
   target: cellosaurus
 - count: 16
@@ -59,11 +59,11 @@ negative:
   source: pr
   target: uniprot.chain
 - count: 8
-  source: mesh
-  target: ncit
-- count: 7
   source: ccle.cell
   target: efo
+- count: 8
+  source: mesh
+  target: ncit
 - count: 7
   source: fplx
   target: wikipathways
@@ -82,13 +82,16 @@ negative:
 - count: 1
   source: ccle.cell
   target: depmap
-negative_mapping_count: 901
+negative_mapping_count: 908
 negative_prefix_count: 16
 positive:
 - count: 1271
   source: doid
   target: mesh
-- count: 462
+- count: 497
+  source: ccle.cell
+  target: efo
+- count: 467
   source: mesh
   target: ncit
 - count: 460
@@ -103,16 +106,13 @@ positive:
 - count: 366
   source: go
   target: wikipathways
-- count: 342
-  source: ccle.cell
-  target: efo
 - count: 222
   source: go
   target: reactome
 - count: 113
   source: go
   target: kegg.pathway
-- count: 104
+- count: 106
   source: ccle.cell
   target: cellosaurus
 - count: 102
@@ -133,7 +133,7 @@ positive:
 - count: 26
   source: ncbiprotein
   target: uniprot.chain
-- count: 22
+- count: 25
   source: kegg.pathway
   target: mesh
 - count: 18
@@ -175,10 +175,10 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 4625
+positive_mapping_count: 4790
 positive_prefix_count: 21
 predictions:
-- count: 12187
+- count: 12182
   source: mesh
   target: ncit
 - count: 10978
@@ -196,10 +196,10 @@ predictions:
 - count: 274
   source: efo
   target: mesh
-- count: 234
+- count: 78
   source: ccle.cell
   target: efo
-- count: 57
+- count: 49
   source: ccle.cell
   target: cellosaurus
 - count: 47
@@ -211,11 +211,8 @@ predictions:
 - count: 3
   source: ccle.cell
   target: depmap
-- count: 3
-  source: kegg.pathway
-  target: mesh
 - count: 1
   source: pr
   target: uniprot.chain
-predictions_mapping_count: 28387
-predictions_prefix_count: 15
+predictions_mapping_count: 28215
+predictions_prefix_count: 14

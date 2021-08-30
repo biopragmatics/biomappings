@@ -1305,6 +1305,35 @@
       prefix: efo
 - edges:
   - source:
+      curie: cellosaurus:CVCL_A8EZ
+      identifier: CVCL_A8EZ
+      link: https://web.expasy.org/cellosaurus/CVCL_A8EZ
+      name: HT29
+      prefix: cellosaurus
+    target:
+      curie: efo:0001193
+      identifier: 0001193
+      link: https://www.ebi.ac.uk/efo/EFO_0001193
+      name: HT-29
+      prefix: efo
+  nodes:
+    ccle.cell:HT29_LARGE_INTESTINE:
+      identifier: HT29_LARGE_INTESTINE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=HT29_LARGE_INTESTINE
+      name: HT-29
+      prefix: ccle.cell
+    cellosaurus:CVCL_A8EZ:
+      identifier: CVCL_A8EZ
+      link: https://web.expasy.org/cellosaurus/CVCL_A8EZ
+      name: HT29
+      prefix: cellosaurus
+    efo:0001193:
+      identifier: 0001193
+      link: https://www.ebi.ac.uk/efo/EFO_0001193
+      name: HT-29
+      prefix: efo
+- edges:
+  - source:
       curie: cellosaurus:CVCL_2956
       identifier: CVCL_2956
       link: https://web.expasy.org/cellosaurus/CVCL_2956
@@ -1340,11 +1369,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://web.expasy.org/cellosaurus/CVCL_1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://www.ebi.ac.uk/efo/EFO_0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: BTO:0006459
       identifier: BTO:0006459
@@ -1352,11 +1381,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://www.ebi.ac.uk/efo/EFO_0006612
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://web.expasy.org/cellosaurus/CVCL_1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: cellosaurus:CVCL_1334
       identifier: CVCL_1334
@@ -1392,6 +1421,35 @@
       prefix: efo
 - edges:
   - source:
+      curie: BTO:0006095
+      identifier: BTO:0006095
+      link: http://purl.bioontology.org/ontology/BTO/BTO:BTO:0006095
+      name: LNCaP clone FGC
+      prefix: bto
+    target:
+      curie: efo:0005726
+      identifier: '0005726'
+      link: https://www.ebi.ac.uk/efo/EFO_0005726
+      name: LNCaP clone FGC
+      prefix: efo
+  nodes:
+    BTO:0006095:
+      identifier: BTO:0006095
+      link: http://purl.bioontology.org/ontology/BTO/BTO:BTO:0006095
+      name: LNCaP clone FGC
+      prefix: bto
+    ccle.cell:LNCAPCLONEFGC_PROSTATE:
+      identifier: LNCAPCLONEFGC_PROSTATE
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=LNCAPCLONEFGC_PROSTATE
+      name: LNCaP clone FGC
+      prefix: ccle.cell
+    efo:0005726:
+      identifier: '0005726'
+      link: https://www.ebi.ac.uk/efo/EFO_0005726
+      name: LNCaP clone FGC
+      prefix: efo
+- edges:
+  - source:
       curie: cellosaurus:CVCL_1527
       identifier: CVCL_1527
       link: https://web.expasy.org/cellosaurus/CVCL_1527
@@ -1418,6 +1476,35 @@
       identifier: 0002278
       link: https://www.ebi.ac.uk/efo/EFO_0002278
       name: NCI-H2107
+      prefix: efo
+- edges:
+  - source:
+      curie: cellosaurus:CVCL_3769
+      identifier: CVCL_3769
+      link: https://web.expasy.org/cellosaurus/CVCL_3769
+      name: OVCA432
+      prefix: cellosaurus
+    target:
+      curie: efo:0006722
+      identifier: '0006722'
+      link: https://www.ebi.ac.uk/efo/EFO_0006722
+      name: OVCA432
+      prefix: efo
+  nodes:
+    ccle.cell:OVCA432:
+      identifier: OVCA432
+      link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=OVCA432
+      name: OVCA432
+      prefix: ccle.cell
+    cellosaurus:CVCL_3769:
+      identifier: CVCL_3769
+      link: https://web.expasy.org/cellosaurus/CVCL_3769
+      name: OVCA432
+      prefix: cellosaurus
+    efo:0006722:
+      identifier: '0006722'
+      link: https://www.ebi.ac.uk/efo/EFO_0006722
+      name: OVCA432
       prefix: efo
 - edges:
   - source:
@@ -1572,11 +1659,11 @@
       name: Tyrosine metabolism - Homo sapiens (human)
       prefix: kegg.pathway
     target:
-      curie: reactome:R-HSA-1430728
-      identifier: R-HSA-1430728
-      link: https://reactome.org/content/detail/R-HSA-1430728
-      name: Metabolism
-      prefix: reactome
+      curie: kegg.pathway:hsa01100
+      identifier: hsa01100
+      link: https://www.kegg.jp/entry/hsa01100
+      name: Metabolic pathways - Homo sapiens (human)
+      prefix: kegg.pathway
   - source:
       curie: kegg.pathway:hsa00350
       identifier: hsa00350
@@ -1584,11 +1671,11 @@
       name: Tyrosine metabolism - Homo sapiens (human)
       prefix: kegg.pathway
     target:
-      curie: kegg.pathway:hsa01100
-      identifier: hsa01100
-      link: https://www.kegg.jp/entry/hsa01100
-      name: Metabolic pathways - Homo sapiens (human)
-      prefix: kegg.pathway
+      curie: reactome:R-HSA-1430728
+      identifier: R-HSA-1430728
+      link: https://reactome.org/content/detail/R-HSA-1430728
+      name: Metabolism
+      prefix: reactome
   - source:
       curie: kegg.pathway:hsa01100
       identifier: hsa01100
