@@ -2,10 +2,10 @@ name: Update Website
 on:
   push:
     paths:
-      - 'src/biomappings/mappings.tsv'
-      - 'src/biomappings/incorrect.tsv'
-      - 'src/biomappings/predictions.tsv'
-      - 'src/biomappings/unsure.tsv'
+      - 'src/biomappings/resources/mappings.tsv'
+      - 'src/biomappings/resources/incorrect.tsv'
+      - 'src/biomappings/resources/predictions.tsv'
+      - 'src/biomappings/resources/unsure.tsv'
 
 jobs:
   build:
