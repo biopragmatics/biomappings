@@ -312,6 +312,7 @@ def run_commit():
         push_output = push(branch_name=branch)
         app.logger.warning("git push res: %s", push_output)
     else:
+        flask.flash("did not push because on master branch")
         app.logger.warning("did not push because on master branch")
     controller.total_curated = 0
     return _go_home()
