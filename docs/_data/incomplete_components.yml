@@ -1224,11 +1224,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000003
-      identifier: ACH-000003
-      link: https://depmap.org/portal/cell_line/ACH-000003
-      name: CACO2
-      prefix: depmap
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://www.ebi.ac.uk/efo/EFO_0001099
+      name: Caco-2
+      prefix: efo
   - source:
       curie: cellosaurus:CVCL_0025
       identifier: CVCL_0025
@@ -1236,11 +1236,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: efo:0001099
-      identifier: 0001099
-      link: https://www.ebi.ac.uk/efo/EFO_0001099
-      name: Caco-2
-      prefix: efo
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://depmap.org/portal/cell_line/ACH-000003
+      name: CACO2
+      prefix: depmap
   - source:
       curie: depmap:ACH-000003
       identifier: ACH-000003
