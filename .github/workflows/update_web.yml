@@ -1,8 +1,12 @@
 name: Update Website
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *"
+  push:
+    paths:
+      - 'src/biomappings/mappings.tsv'
+      - 'src/biomappings/incorrect.tsv'
+      - 'src/biomappings/predictions.tsv'
+      - 'src/biomappings/unsure.tsv'
+
 jobs:
   build:
     runs-on: ubuntu-latest
