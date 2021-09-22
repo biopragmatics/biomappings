@@ -91,3 +91,6 @@ repository on [GitHub](https://github.com/biomappings/biomappings).
 {% endfor %}
 </tbody>
 </table>
+
+<apicuron-widget database="biomappings"></apicuron-widget>
+<script type="text/javascript" src="https://apicuron.org/assets/apicuron-widget.js"></script>
