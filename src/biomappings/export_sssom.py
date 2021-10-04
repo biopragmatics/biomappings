@@ -87,7 +87,7 @@ def get_msdf():
 
     _, df = get_sssom_df()
     msdf: MappingSetDataFrame = from_dataframe(
-        df, curie_map=dict(bioregistry.get_format_urls()), meta=META
+        df, curie_map=dict(bioregistry.get_prefix_map()), meta=META
     )
     return msdf
 
@@ -100,13 +100,13 @@ def sssom(path):
     df.to_csv(path, sep="\t", index=False)
 
     # Get a CURIE map containing only the relevant prefixes
-    curie_map = {
+    prefix_max = {
         prefix: formatter
-        for prefix, formatter in bioregistry.get_format_urls().items()
+        for prefix, formatter in bioregistry.get_prefix_map().items()
         if prefix in prefixes
     }
     with open(META_PATH, "w") as file:
-        yaml.safe_dump({"curie_map": curie_map, **META}, file)
+        yaml.safe_dump({"curie_map": prefix_max, **META}, file)
 
     # TODO incorporate validation from sssom-py
 
