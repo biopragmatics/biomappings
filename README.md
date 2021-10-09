@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/biomappings/biomappings/raw/master/docs/source/logo.png" height="150">
+  <img src="https://github.com/biopragmatics/biomappings/raw/master/docs/source/logo.png" height="150">
 </p>
 
 <h1 align="center">
@@ -7,8 +7,8 @@
 </h1>
 
 <p align="center">
-    <a href="https://github.com/biomappings/biomappings/actions?query=workflow%3A%22Check+mappings%22">
-        <img alt="Check mappings" src="https://github.com/biomappings/biomappings/workflows/Check%20mappings/badge.svg" />
+    <a href="https://github.com/biopragmatics/biomappings/actions?query=workflow%3A%22Check+mappings%22">
+        <img alt="Check mappings" src="https://github.com/biopragmatics/biomappings/workflows/Check%20mappings/badge.svg" />
     </a>
     <a href="https://pypi.org/project/biomappings">
         <img alt="PyPI" src="https://img.shields.io/pypi/v/biomappings" />
@@ -16,7 +16,7 @@
     <a href="https://pypi.org/project/biomappings">
         <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/biomappings" />
     </a>
-    <a href="https://github.com/biomappings/biomappings/blob/main/LICENSE">
+    <a href="https://github.com/biopragmatics/biomappings/blob/main/LICENSE">
         <img alt="PyPI - License" src="https://img.shields.io/pypi/l/biomappings" />
     </a>
     <a href="https://zenodo.org/badge/latestdoi/285352907">
@@ -36,22 +36,22 @@ available from primary sources.
 ## 💾 Data
 
 The data are available through the following three files on
-the [biomappings/biomappings](https://github.com/biomappings/biomappings) GitHub repository.
+the [biopragmatics/biomappings](https://github.com/biopragmatics/biomappings) GitHub repository.
 
 | Curated | Description                      | Link |
 | ------- | -------------------------------- | ----------- |
-|  Yes    | Human-curated true mappings      | [`src/biomappings/resources/mappings.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/mappings.tsv) |
-|  Yes    | Human-curated *non-trivial* false (i.e., incorrect) mappings | [`src/biomappings/resources/incorrect.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/incorrect.tsv) |
-|  No     | Automatically predicted mappings | [`src/biomappings/resources/predictions.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/predictions.tsv) |
+|  Yes    | Human-curated true mappings      | [`src/biomappings/resources/mappings.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/mappings.tsv) |
+|  Yes    | Human-curated *non-trivial* false (i.e., incorrect) mappings | [`src/biomappings/resources/incorrect.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/incorrect.tsv) |
+|  No     | Automatically predicted mappings | [`src/biomappings/resources/predictions.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/predictions.tsv) |
 
 The primary and derived data in this repository are both available under
-the [CC0 1.0 Universal License](https://github.com/biomappings/biomappings/blob/master/LICENSE).
+the [CC0 1.0 Universal License](https://github.com/biopragmatics/biomappings/blob/master/LICENSE).
 
 ### Derived
 
 The mappings are distributed in the [Simple Standard for Sharing Ontology Mappings
 (SSSOM)](https://github.com/mapping-commons/sssom) format
-([here](https://github.com/biomappings/biomappings/blob/master/docs/_data/sssom)).
+([here](https://github.com/biopragmatics/biomappings/blob/master/docs/_data/sssom)).
 
 Equivalences and related mappings that are available from the OBO Foundry and other primary sources can be accessed
 through [Inspector Javert's Xref Database](https://zenodo.org/record/3757266)
@@ -76,9 +76,9 @@ GitHub has an interface for editing files directly in the browser. It will take 
 creating a pull request. After logging into GitHub, click one of the following links to be brought to the editing
 interface:
 
-- [True Mappings](https://github.com/biomappings/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
-- [False Mappings](https://github.com/biomappings/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
-- [Predictions](https://github.com/biomappings/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
+- [True Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
+- [False Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
+- [Predictions](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
 
 This has the caveat that you can only edit one file at a time. It's possible to navigate to your own forked version of
 the repository after, to the correct branch (will not be the default one), then edit other files in the web interface as
@@ -87,7 +87,7 @@ locally.
 
 ### Locally
 
-1. Fork the repository at https://github.com/biomappings/biomappings, clone locally, and make a new branch (see below)
+1. Fork the repository at https://github.com/biopragmatics/biomappings, clone locally, and make a new branch (see below)
 2. Edit one or more of the resource files (`mappings.tsv`, `incorrect.tsv`, `predictions.tsv`)
 3. Commit to your branch, push, and create a pull request back to the upstream repository.
 
@@ -97,7 +97,7 @@ Rather than editing files locally, this repository also comes with a web-based c
 development mode with the `web` option (which installs `flask` and `flask-bootstrap`) using:
 
 ```bash
-$ git clone git+https://github.com/biomappings/biomappings.git
+$ git clone git+https://github.com/biopragmatics/biomappings.git
 $ cd biomappings
 $ pip install -e .[web]
 ```
@@ -128,13 +128,13 @@ $ pip install biomappings
 The most recent code and data can be installed directly from GitHub with:
 
 ```bash
-$ pip install git+https://github.com/biomappings/biomappings.git
+$ pip install git+https://github.com/biopragmatics/biomappings.git
 ```
 
 To install in development mode, use the following:
 
 ```bash
-$ git clone git+https://github.com/biomappings/biomappings.git
+$ git clone git+https://github.com/biopragmatics/biomappings.git
 $ cd biomappings
 $ pip install -e .
 ```

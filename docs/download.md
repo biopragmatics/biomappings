@@ -4,12 +4,12 @@ title: Download
 permalink: /download/
 ---
 The biomappings database can be downloaded directly
-from [GitHub](https://github.com/biomappings/biomappings/tree/master/src/biomappings/resources).
+from [GitHub](https://github.com/biopragmatics/biomappings/tree/master/src/biomappings/resources).
 
 ## License
 
 The manually curated portions of these data are available under the
-[CC0 1.0 Universal License](https://github.com/biomappings/biomappings/blob/master/LICENSE).
+[CC0 1.0 Universal License](https://github.com/biopragmatics/biomappings/blob/master/LICENSE).
 
 ## Programmatic Access
 
@@ -42,5 +42,5 @@ predictions_graph = biomappings.get_predictions_graph()
 ```
 
 The source code can be found at
-[https://github.com/biomappings/biomappings](https://github.com/biomappings/biomappings).
+[https://github.com/biopragmatics/biomappings](https://github.com/biopragmatics/biomappings).
 It is licensed under the MIT License.
