@@ -140,3 +140,11 @@ class MiriamValidator:
     def get_url(prefix: str, identifier: str) -> str:
         """Return URL for a given prefix and identifier."""
         return bioregistry.get_link(prefix, identifier, use_bioregistry_io=False)
+
+
+def get_curie(prefix: str, identifier: str) -> str:
+    """Get a normalized curie from a pre-parsed prefix/identifier pair."""
+    p, i = bioregistry.normalize_parsed_curie(prefix, identifier)
+    if p is None or i is None:
+        raise ValueError
+    return f"{p}:{i}"
