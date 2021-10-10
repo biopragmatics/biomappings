@@ -24,8 +24,8 @@ START = datetime.datetime(year=2020, month=12, day=15)
 DESCRIPTION_PAYLOAD = {
     "resource_id": "Biomappings",
     "resource_name": "Biomappings",
-    "resource_uri": "https://biomappings.github.io/biomappings/",
-    "resource_url": "https://biomappings.github.io/biomappings/",
+    "resource_uri": "https://biopragmatics.github.io/biomappings/",
+    "resource_url": "https://biopragmatics.github.io/biomappings/",
     "resource_long_name": "Biomappings",
     "resource_description": "Community curated and predicted equivalences and related "
     "mappings between named biological entities that are not "
@@ -99,7 +99,6 @@ def iter_reports() -> Iterable[Report]:
 def main():
     """Submit the payload."""
     sub = get_curation_payload()
-    print(sub)
     res = resubmit_curations(sub)
     print(res.text)
 
