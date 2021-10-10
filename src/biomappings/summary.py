@@ -43,7 +43,7 @@ def export():
     rv.update(
         {
             f"{k}_mapping_count": sum(e["count"] for e in rv[k])
-            for k in ("positive", "negative", "predictions")
+            for k in ("positive", "negative", "unsure", "predictions")
         }
     )
     rv.update(
