@@ -3,8 +3,10 @@
 """Validation tests for :mod:`biomappings`."""
 
 import itertools as itt
+import unittest
 from collections import Counter
 
+import bioregistry
 from biomappings import load_false_mappings, load_mappings, load_predictions, load_unsure
 from biomappings.resources import load_curators, mapping_sort_key
 from biomappings.utils import MiriamValidator, get_canonical_tuple
@@ -15,6 +17,41 @@ incorrect = load_false_mappings()
 unsure = load_unsure()
 
 miriam_validator = MiriamValidator()
+
+
+class TestIntegrity(unittest.TestCase):
+    """Data integrity tests."""
+
+    def test_canonical_prefixes(self):
+        """Test that all mappings use canonical bioregistry prefixes."""
+        valid_prefixes = set(bioregistry.read_registry())
+        for mapping in itt.chain(mappings, incorrect, predictions, unsure):
+            source_prefix, target_prefix = mapping["source prefix"], mapping["target prefix"]
+            self.assertIn(source_prefix, valid_prefixes, msg=f"Invalid prefix: {source_prefix}")
+            self.assertIn(target_prefix, valid_prefixes, msg=f"Invalid prefix: {target_prefix}")
+
+    def test_normalized_identifiers(self):
+        """Test that all identifiers have been normalized (based on bioregistry definition)."""
+        for mapping in itt.chain(mappings, incorrect, predictions, unsure):
+            self.assert_canonical_identifier(mapping["source prefix"], mapping["source identifier"])
+            self.assert_canonical_identifier(mapping["target prefix"], mapping["target identifier"])
+
+    def assert_canonical_identifier(self, prefix: str, identifier: str) -> None:
+        """Assert a given identifier is canonical.
+
+        .. warning::
+
+            NCIT is skipped for now, since it has an OBO Foundry definition but explicitly
+            does not have namespace embedded in LUI. See also:
+            https://github.com/biopragmatics/bioregistry/issues/208
+        """
+        if prefix in {"ncit"}:
+            return
+        resource = bioregistry.get_resource(prefix)
+        self.assertIsNotNone(resource)
+        norm_id = resource.normalize_identifier(identifier)
+        self.assertIsNotNone(norm_id)
+        self.assertEqual(identifier, norm_id)
 
 
 def test_valid_mappings():
