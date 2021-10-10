@@ -7,16 +7,15 @@ import unittest
 from collections import Counter
 
 import bioregistry
+
 from biomappings import load_false_mappings, load_mappings, load_predictions, load_unsure
 from biomappings.resources import load_curators, mapping_sort_key
-from biomappings.utils import MiriamValidator, get_canonical_tuple
+from biomappings.utils import get_canonical_tuple, check_valid_prefix_id
 
 mappings = load_mappings()
 predictions = load_predictions()
 incorrect = load_false_mappings()
 unsure = load_unsure()
-
-miriam_validator = MiriamValidator()
 
 
 class TestIntegrity(unittest.TestCase):
@@ -57,11 +56,11 @@ class TestIntegrity(unittest.TestCase):
 def test_valid_mappings():
     """Test the validity of the prefixes and identifiers in the mappings."""
     for mapping in itt.chain(mappings, incorrect, predictions):
-        miriam_validator.check_valid_prefix_id(
+        check_valid_prefix_id(
             mapping["source prefix"],
             mapping["source identifier"],
         )
-        miriam_validator.check_valid_prefix_id(
+        check_valid_prefix_id(
             mapping["target prefix"],
             mapping["target identifier"],
         )

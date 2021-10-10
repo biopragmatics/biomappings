@@ -9,6 +9,7 @@ from typing import Any, Iterable, Mapping, Optional, Set, Tuple
 
 import flask
 import flask_bootstrap
+from bioregistry.resolve_identifier import get_bioregistry_iri
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
@@ -20,7 +21,7 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import MiriamValidator, commit, get_branch, not_main, push
+from biomappings.utils import check_valid_prefix_id, commit, get_branch, get_curie, not_main, push
 
 app = flask.Flask(__name__)
 app.config["WTF_CSRF_ENABLED"] = False
@@ -37,9 +38,6 @@ def _manual_source():
     if known_user:
         return f"orcid:{known_user}"
     return "web"
-
-
-miriam_validator = MiriamValidator()
 
 
 class Controller:
@@ -151,12 +149,12 @@ class Controller:
     @staticmethod
     def get_curie(prefix: str, identifier: str) -> str:
         """Return CURIE for a given prefix and identifier."""
-        return miriam_validator.get_curie(prefix, identifier)
+        return get_curie(prefix, identifier)
 
     @classmethod
     def get_url(cls, prefix: str, identifier: str) -> str:
         """Return URL for a given prefix and identifier."""
-        return miriam_validator.get_url(prefix, identifier)
+        return get_bioregistry_iri(prefix, identifier)
 
     @property
     def total_predictions(self) -> int:
@@ -187,7 +185,7 @@ class Controller:
     ) -> None:
         """Add manually curated new mappings."""
         try:
-            miriam_validator.check_valid_prefix_id(source_prefix, source_id)
+            check_valid_prefix_id(source_prefix, source_id)
         except ValueError as e:
             flask.flash(
                 f"Problem with source CURIE {source_prefix}:{source_id}: {e.__class__.__name__}",
@@ -196,7 +194,7 @@ class Controller:
             return
 
         try:
-            miriam_validator.check_valid_prefix_id(target_prefix, target_id)
+            check_valid_prefix_id(target_prefix, target_id)
         except ValueError as e:
             flask.flash(
                 f"Problem with target CURIE {target_prefix}:{target_id}: {e.__class__.__name__}",

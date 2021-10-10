@@ -9,7 +9,7 @@ import click
 import yaml
 
 from biomappings import load_mappings, load_predictions
-from biomappings.utils import DATA, MiriamValidator
+from biomappings.utils import DATA, get_curie
 
 DIRECTORY = pathlib.Path(DATA).joinpath("sssom")
 DIRECTORY.mkdir(exist_ok=True, parents=True)
@@ -22,8 +22,6 @@ META = {
     "mapping_set_id": "biomappings",
     "mapping_set_title": "Biomappings",
 }
-
-validator = MiriamValidator()
 
 
 def get_sssom_df():
@@ -48,9 +46,9 @@ def get_sssom_df():
         prefixes.add(mapping["target prefix"])
         rows.append(
             (
-                validator.get_curie(mapping["source prefix"], mapping["source identifier"]),
+                get_curie(mapping["source prefix"], mapping["source identifier"]),
                 f'{mapping["relation"]}',
-                validator.get_curie(mapping["target prefix"], mapping["target identifier"]),
+                get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["source name"],
                 mapping["target name"],
                 "HumanCurated",  # match type
@@ -64,9 +62,9 @@ def get_sssom_df():
         prefixes.add(mapping["target prefix"])
         rows.append(
             (
-                validator.get_curie(mapping["source prefix"], mapping["source identifier"]),
+                get_curie(mapping["source prefix"], mapping["source identifier"]),
                 f'{mapping["relation"]}',
-                validator.get_curie(mapping["target prefix"], mapping["target identifier"]),
+                get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["source name"],
                 mapping["target name"],
                 "LexicalEquivalenceMatch",  # match type

@@ -3,12 +3,10 @@
 """Utilities."""
 
 import os
-import re
 from subprocess import CalledProcessError, check_output  # noqa: S404
 from typing import Any, Mapping, Optional, Tuple
 
 import bioregistry
-from bioregistry.external import get_miriam
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESOURCE_PATH = os.path.abspath(os.path.join(HERE, "resources"))
@@ -95,51 +93,18 @@ class InvalidIdentifier(ValueError):
     """Raised for an invalid identifier."""
 
 
-class MiriamValidator:
-    """Validate prefix/identifier pairs based on the MIRIAM database."""
-
-    def __init__(self, force_download: bool = False):  # noqa: D107
-        self.entries = self._load_identifiers_entries(force_download=force_download)
-
-    @staticmethod
-    def _load_identifiers_entries(force_download: bool = False):
-        return {
-            prefix: {
-                "pattern": re.compile(entry["pattern"]),
-                "namespace_embedded": entry["namespaceEmbeddedInLui"],
-            }
-            for prefix, entry in get_miriam(force_download=force_download).items()
-        }
-
-    def namespace_embedded(self, prefix: str) -> bool:
-        """Return True if the namespace is embedded for the given prefix."""
-        if prefix in self.entries:
-            return self.entries[prefix]["namespace_embedded"]
-        return bioregistry.namespace_in_lui(prefix)
-
-    def check_valid_prefix_id(self, prefix, identifier):
-        """Check the prefix/identifier pair is valid."""
-        if prefix in self.entries:
-            entry = self.entries[prefix]
-            if not re.match(entry["pattern"], identifier):
-                raise InvalidIdentifier(prefix, identifier)
-        elif bioregistry.get_resource(prefix) is None:
-            raise InvalidPrefix(prefix)
-        elif bioregistry.get_pattern(prefix) is None:
-            if bioregistry.validate(prefix, identifier):
-                raise InvalidIdentifier(prefix, identifier)
-
-    def get_curie(self, prefix: str, identifier: str) -> str:
-        """Return CURIE for a given prefix and identifier."""
-        if self.namespace_embedded(prefix):
-            return identifier
-        else:
-            return f"{prefix}:{identifier}"
-
-    @staticmethod
-    def get_url(prefix: str, identifier: str) -> str:
-        """Return URL for a given prefix and identifier."""
-        return bioregistry.get_link(prefix, identifier, use_bioregistry_io=False)
+def check_valid_prefix_id(prefix, identifier):
+    """Check the prefix/identifier pair is valid."""
+    resource = bioregistry.get_resource(prefix)
+    if resource is None:
+        raise InvalidPrefix(prefix)
+    if prefix not in {"ncit"}:
+        norm_identifier = resource.normalize_identifier(identifier)
+        if norm_identifier != identifier:
+            raise InvalidIdentifier(prefix, identifier)
+    pattern = resource.get_pattern_re()
+    if pattern is not None and not pattern.match(identifier):
+        raise InvalidIdentifier(prefix, identifier)
 
 
 def get_curie(prefix: str, identifier: str) -> str:
