@@ -7,7 +7,7 @@ contributors:
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
   user: hoytfamily
-- count: 1596
+- count: 1595
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -15,6 +15,10 @@ contributors:
   name: Daniel Domingo-Fernandez
   orcid: 0000-0002-2046-6145
   user: ddomingof
+- count: 1
+  name: Christopher Mungall
+  orcid: 0000-0002-6601-2165
+  user: cmungall
 negative:
 - count: 218
   source: mesh
@@ -41,7 +45,7 @@ negative:
   source: mesh
   target: wikipathways
 - count: 26
-  source: ccle.cell
+  source: ccle
   target: cellosaurus
 - count: 16
   source: go
@@ -59,7 +63,7 @@ negative:
   source: pr
   target: uniprot.chain
 - count: 8
-  source: ccle.cell
+  source: ccle
   target: efo
 - count: 8
   source: mesh
@@ -80,16 +84,19 @@ negative:
   source: doid
   target: wikipathways
 - count: 1
-  source: ccle.cell
+  source: ccle
   target: depmap
-negative_mapping_count: 910
-negative_prefix_count: 16
+- count: 1
+  source: mesh
+  target: umls
+negative_mapping_count: 911
+negative_prefix_count: 17
 positive:
 - count: 1271
   source: doid
   target: mesh
 - count: 497
-  source: ccle.cell
+  source: ccle
   target: efo
 - count: 467
   source: mesh
@@ -113,7 +120,7 @@ positive:
   source: go
   target: kegg.pathway
 - count: 106
-  source: ccle.cell
+  source: ccle
   target: cellosaurus
 - count: 102
   source: hgnc
@@ -154,17 +161,17 @@ positive:
 - count: 6
   source: chebi
   target: ncit
-- count: 4
-  source: mesh
-  target: umls
 - count: 3
   source: kegg.pathway
   target: kegg.pathway
+- count: 3
+  source: mesh
+  target: umls
 - count: 2
   source: bto
-  target: ccle.cell
+  target: ccle
 - count: 1
-  source: ccle.cell
+  source: ccle
   target: depmap
 - count: 1
   source: go
@@ -175,7 +182,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 4792
+positive_mapping_count: 4791
 positive_prefix_count: 21
 predictions:
 - count: 12182
@@ -197,10 +204,10 @@ predictions:
   source: efo
   target: mesh
 - count: 78
-  source: ccle.cell
+  source: ccle
   target: efo
 - count: 49
-  source: ccle.cell
+  source: ccle
   target: cellosaurus
 - count: 44
   source: go
@@ -209,7 +216,7 @@ predictions:
   source: go
   target: reactome
 - count: 3
-  source: ccle.cell
+  source: ccle
   target: depmap
 predictions_mapping_count: 28211
 predictions_prefix_count: 12
