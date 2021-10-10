@@ -35,13 +35,14 @@ available from primary sources.
 
 ## 💾 Data
 
-The data are available through the following three files on
+The data are available through the following four files on
 the [biopragmatics/biomappings](https://github.com/biopragmatics/biomappings) GitHub repository.
 
 | Curated | Description                      | Link |
 | ------- | -------------------------------- | ----------- |
 |  Yes    | Human-curated true mappings      | [`src/biomappings/resources/mappings.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/mappings.tsv) |
 |  Yes    | Human-curated *non-trivial* false (i.e., incorrect) mappings | [`src/biomappings/resources/incorrect.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/incorrect.tsv) |
+|  Yes    | Mappings that have been checked but not yet decided | [`src/biomappings/resources/unsure.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/unsure.tsv) |
 |  No     | Automatically predicted mappings | [`src/biomappings/resources/predictions.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/predictions.tsv) |
 
 The primary and derived data in this repository are both available under
@@ -52,6 +53,8 @@ the [CC0 1.0 Universal License](https://github.com/biopragmatics/biomappings/blo
 The mappings are distributed in the [Simple Standard for Sharing Ontology Mappings
 (SSSOM)](https://github.com/mapping-commons/sssom) format
 ([here](https://github.com/biopragmatics/biomappings/blob/master/docs/_data/sssom)).
+The positive mappings are also available as a network through
+[NDEx](https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf).
 
 Equivalences and related mappings that are available from the OBO Foundry and other primary sources can be accessed
 through [Inspector Javert's Xref Database](https://zenodo.org/record/3757266)
@@ -60,15 +63,12 @@ on Zenodo which was described in [this blog post](https://cthoyt.com/2020/04/19/
 ## 📊 Summary
 
 A summary is automatically generated nightly with GitHub Actions and deployed to
-https://biomappings.github.io/biomappings/.
+https://biopragmatics.github.io/biomappings/.
 
-The equivalences are also available as a network through
-[NDEx](https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf).
+## 🙏 Contributing
 
 A curation leaderboard is automatically maintained on
 [APICURON](https://apicuron.org/database?resource_uri=https:%2F%2Fbiomappings.github.io%2Fbiomappings%2F).
-
-## 🙏 Contributing
 
 ### GitHub Web Interface
 
@@ -77,8 +77,9 @@ creating a pull request. After logging into GitHub, click one of the following l
 interface:
 
 - [True Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
-- [False Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
-- [Predictions](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
+- [False Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/incorrect.tsv)
+- [Unsure Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/unsure.tsv)
+- [Predictions](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/predictions.tsv)
 
 This has the caveat that you can only edit one file at a time. It's possible to navigate to your own forked version of
 the repository after, to the correct branch (will not be the default one), then edit other files in the web interface as
@@ -88,7 +89,7 @@ locally.
 ### Locally
 
 1. Fork the repository at https://github.com/biopragmatics/biomappings, clone locally, and make a new branch (see below)
-2. Edit one or more of the resource files (`mappings.tsv`, `incorrect.tsv`, `predictions.tsv`)
+2. Edit one or more of the resource files (`mappings.tsv`, `incorrect.tsv`, `unsure.tsv`, `predictions.tsv`)
 3. Commit to your branch, push, and create a pull request back to the upstream repository.
 
 ### 🌐 Web Curation Interface
@@ -172,11 +173,11 @@ predictions_graph = biomappings.get_predictions_graph()
 
 ### ⚖️ License
 
-Code is licensed under the MIT License.
+Code is licensed under the MIT License. Data are licensed under the CC0 License.
 
 ### 🎁 Support
 
-The Bioregistry was developed by the [INDRA Lab](https://indralab.github.io), a part of the
+Biomappings was developed by the [INDRA Lab](https://indralab.github.io), a part of the
 [Laboratory of Systems Pharmacology](https://hits.harvard.edu/the-program/laboratory-of-systems-pharmacology/about/)
 and the [Harvard Program in Therapeutic Science (HiTS)](https://hits.harvard.edu)
 at [Harvard Medical School](https://hms.harvard.edu/).
