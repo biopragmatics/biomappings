@@ -1,13 +1,13 @@
 contributors:
-- count: 2216
+- count: 2220
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 1673
+- count: 1698
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
   user: hoytfamily
-- count: 1595
+- count: 1596
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -220,3 +220,17 @@ predictions:
   target: depmap
 predictions_mapping_count: 28211
 predictions_prefix_count: 12
+unsure:
+- count: 20
+  source: doid
+  target: mesh
+- count: 5
+  source: ccle
+  target: cellosaurus
+- count: 3
+  source: ccle
+  target: efo
+- count: 2
+  source: ccle
+  target: depmap
+unsure_prefix_count: 6

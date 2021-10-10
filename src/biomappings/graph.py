@@ -10,10 +10,11 @@ from typing import Iterable, List, Mapping, Optional, Sequence
 import click
 import networkx as nx
 import yaml
+from bioregistry.resolve_identifier import get_bioregistry_iri
 from tqdm import tqdm
 
 from biomappings.resources import load_false_mappings, load_mappings
-from biomappings.utils import DATA, IMG, MiriamValidator
+from biomappings.utils import DATA, IMG, get_curie
 
 
 def get_true_graph(
@@ -42,7 +43,6 @@ def _graph_from_mappings(
     include: Optional[Sequence[str]] = None,
     exclude: Optional[Sequence[str]] = None,
 ) -> nx.Graph:
-    v = MiriamValidator()
     graph = nx.Graph()
 
     if include is not None:
@@ -59,14 +59,14 @@ def _graph_from_mappings(
         if include and (relation not in include):
             continue
 
-        source_curie = v.get_curie(mapping["source prefix"], mapping["source identifier"])
+        source_curie = get_curie(mapping["source prefix"], mapping["source identifier"])
         graph.add_node(
             source_curie,
             prefix=mapping["source prefix"],
             identifier=mapping["source identifier"],
             name=mapping["source name"],
         )
-        target_curie = v.get_curie(mapping["target prefix"], mapping["target identifier"])
+        target_curie = get_curie(mapping["target prefix"], mapping["target identifier"])
         graph.add_node(
             target_curie,
             prefix=mapping["target prefix"],
@@ -89,7 +89,6 @@ def charts():
     import matplotlib.pyplot as plt
     import seaborn as sns
 
-    miriam_validator = MiriamValidator()
     true_mappings = load_mappings()
     true_graph = _graph_from_mappings(true_mappings, include=["skos:exactMatch"])
 
@@ -103,14 +102,16 @@ def charts():
     components_with_duplicate_prefixes = []
     incomplete_components = []
     n_duplicates = []
-    for component in tqdm(nx.connected_components(true_graph), desc="Iterating components"):
+    for component in tqdm(
+        nx.connected_components(true_graph), desc="Positive SCCs", unit="component"
+    ):
         component = true_graph.subgraph(component)
         node_size = component.number_of_nodes()
         edge_size = component.number_of_edges()
 
         nodes_data = {
             curie: {
-                "link": miriam_validator.get_url(data["prefix"], data["identifier"]),
+                "link": get_bioregistry_iri(data["prefix"], data["identifier"]),
                 **data,
             }
             for curie, data in sorted(component.nodes(data=True), key=itemgetter(0))

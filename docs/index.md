@@ -21,8 +21,8 @@ repository on [GitHub](https://github.com/biopragmatics/biomappings).
 <tbody>
 {% for entry in site.data.summary.positive %}
     <tr>
-        <td><a href="https://registry.identifiers.org/registry/{{ entry.source }}">{{ entry.source }}</a></td>
-        <td><a href="https://registry.identifiers.org/registry/{{ entry.target }}">{{ entry.target }}</a></td>
+        <td><a href="https://bioregistry.io/{{ entry.source }}">{{ entry.source }}</a></td>
+        <td><a href="https://bioregistry.io/{{ entry.target }}">{{ entry.target }}</a></td>
         <td align="right">{{ entry.count }}</td>
     </tr>
 {% endfor %}
@@ -42,8 +42,29 @@ repository on [GitHub](https://github.com/biopragmatics/biomappings).
 <tbody>
 {% for entry in site.data.summary.negative %}
     <tr>
-        <td><a href="https://registry.identifiers.org/registry/{{ entry.source }}">{{ entry.source }}</a></td>
-        <td><a href="https://registry.identifiers.org/registry/{{ entry.target }}">{{ entry.target }}</a></td>
+        <td><a href="https://bioregistry.io/{{ entry.source }}">{{ entry.source }}</a></td>
+        <td><a href="https://bioregistry.io/{{ entry.target }}">{{ entry.target }}</a></td>
+        <td align="right">{{ entry.count }}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+
+## Unsure Mappings ({{ site.data.summary.unsure_mapping_count }})
+
+<table>
+<thead>
+<tr>
+    <th>Source Prefix</th>
+    <th>Target Prefix</th>
+    <th align="right">Count</th>
+</tr>
+</thead>
+<tbody>
+{% for entry in site.data.summary.unsure %}
+    <tr>
+        <td><a href="https://bioregistry.io/{{ entry.source }}">{{ entry.source }}</a></td>
+        <td><a href="https://bioregistry.io/{{ entry.target }}">{{ entry.target }}</a></td>
         <td align="right">{{ entry.count }}</td>
     </tr>
 {% endfor %}
@@ -63,8 +84,8 @@ repository on [GitHub](https://github.com/biopragmatics/biomappings).
 <tbody>
 {% for entry in site.data.summary.predictions %}
     <tr>
-        <td><a href="https://registry.identifiers.org/registry/{{ entry.source }}">{{ entry.source }}</a></td>
-        <td><a href="https://registry.identifiers.org/registry/{{ entry.target }}">{{ entry.target }}</a></td>
+        <td><a href="https://bioregistry.io/{{ entry.source }}">{{ entry.source }}</a></td>
+        <td><a href="https://bioregistry.io/{{ entry.target }}">{{ entry.target }}</a></td>
         <td align="right">{{ entry.count }}</td>
     </tr>
 {% endfor %}
