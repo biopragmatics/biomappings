@@ -8,15 +8,15 @@
     target:
       curie: efo:0006355
       identifier: '0006355'
-      link: https://www.ebi.ac.uk/efo/EFO_0006355
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006355
       name: 143B
       prefix: efo
   nodes:
-    ccle.cell:143B_BONE:
+    ccle:143B_BONE:
       identifier: 143B_BONE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=143B_BONE
       name: 143B
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_2270:
       identifier: CVCL_2270
       link: https://web.expasy.org/cellosaurus/CVCL_2270
@@ -24,7 +24,7 @@
       prefix: cellosaurus
     efo:0006355:
       identifier: '0006355'
-      link: https://www.ebi.ac.uk/efo/EFO_0006355
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006355
       name: 143B
       prefix: efo
 - edges:
@@ -37,15 +37,15 @@
     target:
       curie: efo:0002095
       identifier: 0002095
-      link: https://www.ebi.ac.uk/efo/EFO_0002095
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002095
       name: 22Rv1
       prefix: efo
   nodes:
-    ccle.cell:22RV1_PROSTATE:
+    ccle:22RV1_PROSTATE:
       identifier: 22RV1_PROSTATE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=22RV1_PROSTATE
       name: 22Rv1
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1045:
       identifier: CVCL_1045
       link: https://web.expasy.org/cellosaurus/CVCL_1045
@@ -53,7 +53,7 @@
       prefix: cellosaurus
     efo:0002095:
       identifier: 0002095
-      link: https://www.ebi.ac.uk/efo/EFO_0002095
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002095
       name: 22Rv1
       prefix: efo
 - edges:
@@ -66,15 +66,15 @@
     target:
       curie: efo:0006528
       identifier: 0006528
-      link: https://www.ebi.ac.uk/efo/EFO_0006528
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006528
       name: 23132/87
       prefix: efo
   nodes:
-    ccle.cell:2313287_STOMACH:
+    ccle:2313287_STOMACH:
       identifier: 2313287_STOMACH
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=2313287_STOMACH
       name: 23132/87
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1046:
       identifier: CVCL_1046
       link: https://web.expasy.org/cellosaurus/CVCL_1046
@@ -82,7 +82,7 @@
       prefix: cellosaurus
     efo:0006528:
       identifier: 0006528
-      link: https://www.ebi.ac.uk/efo/EFO_0006528
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006528
       name: 23132/87
       prefix: efo
 - edges:
@@ -95,15 +95,15 @@
     target:
       curie: efo:0002096
       identifier: 0002096
-      link: https://www.ebi.ac.uk/efo/EFO_0002096
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002096
       name: '5637'
       prefix: efo
   nodes:
-    ccle.cell:5637_URINARY_TRACT:
+    ccle:5637_URINARY_TRACT:
       identifier: 5637_URINARY_TRACT
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=5637_URINARY_TRACT
       name: '5637'
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0126:
       identifier: CVCL_0126
       link: https://web.expasy.org/cellosaurus/CVCL_0126
@@ -111,7 +111,7 @@
       prefix: cellosaurus
     efo:0002096:
       identifier: 0002096
-      link: https://www.ebi.ac.uk/efo/EFO_0002096
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002096
       name: '5637'
       prefix: efo
 - edges:
@@ -124,15 +124,15 @@
     target:
       curie: efo:0006358
       identifier: 0006358
-      link: https://www.ebi.ac.uk/efo/EFO_0006358
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006358
       name: 59M
       prefix: efo
   nodes:
-    ccle.cell:59M_OVARY:
+    ccle:59M_OVARY:
       identifier: 59M_OVARY
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=59M_OVARY
       name: 59M
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_2291:
       identifier: CVCL_2291
       link: https://web.expasy.org/cellosaurus/CVCL_2291
@@ -140,7 +140,7 @@
       prefix: cellosaurus
     efo:0006358:
       identifier: 0006358
-      link: https://www.ebi.ac.uk/efo/EFO_0006358
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006358
       name: 59M
       prefix: efo
 - edges:
@@ -153,15 +153,15 @@
     target:
       curie: efo:0002097
       identifier: 0002097
-      link: https://www.ebi.ac.uk/efo/EFO_0002097
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002097
       name: 639V
       prefix: efo
   nodes:
-    ccle.cell:639V_URINARY_TRACT:
+    ccle:639V_URINARY_TRACT:
       identifier: 639V_URINARY_TRACT
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=639V_URINARY_TRACT
       name: 639-V
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1048:
       identifier: CVCL_1048
       link: https://web.expasy.org/cellosaurus/CVCL_1048
@@ -169,7 +169,7 @@
       prefix: cellosaurus
     efo:0002097:
       identifier: 0002097
-      link: https://www.ebi.ac.uk/efo/EFO_0002097
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002097
       name: 639V
       prefix: efo
 - edges:
@@ -182,15 +182,15 @@
     target:
       curie: efo:0002098
       identifier: 0002098
-      link: https://www.ebi.ac.uk/efo/EFO_0002098
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002098
       name: 647V
       prefix: efo
   nodes:
-    ccle.cell:647V_URINARY_TRACT:
+    ccle:647V_URINARY_TRACT:
       identifier: 647V_URINARY_TRACT
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=647V_URINARY_TRACT
       name: 647-V
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1049:
       identifier: CVCL_1049
       link: https://web.expasy.org/cellosaurus/CVCL_1049
@@ -198,7 +198,7 @@
       prefix: cellosaurus
     efo:0002098:
       identifier: 0002098
-      link: https://www.ebi.ac.uk/efo/EFO_0002098
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002098
       name: 647V
       prefix: efo
 - edges:
@@ -211,15 +211,15 @@
     target:
       curie: efo:0002099
       identifier: 0002099
-      link: https://www.ebi.ac.uk/efo/EFO_0002099
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002099
       name: 769P
       prefix: efo
   nodes:
-    ccle.cell:769P_KIDNEY:
+    ccle:769P_KIDNEY:
       identifier: 769P_KIDNEY
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=769P_KIDNEY
       name: 769-P
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1050:
       identifier: CVCL_1050
       link: https://web.expasy.org/cellosaurus/CVCL_1050
@@ -227,7 +227,7 @@
       prefix: cellosaurus
     efo:0002099:
       identifier: 0002099
-      link: https://www.ebi.ac.uk/efo/EFO_0002099
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002099
       name: 769P
       prefix: efo
 - edges:
@@ -240,15 +240,15 @@
     target:
       curie: efo:0002100
       identifier: '0002100'
-      link: https://www.ebi.ac.uk/efo/EFO_0002100
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002100
       name: A101D
       prefix: efo
   nodes:
-    ccle.cell:A101D_SKIN:
+    ccle:A101D_SKIN:
       identifier: A101D_SKIN
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A101D_SKIN
       name: A101D
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1057:
       identifier: CVCL_1057
       link: https://web.expasy.org/cellosaurus/CVCL_1057
@@ -256,7 +256,7 @@
       prefix: cellosaurus
     efo:0002100:
       identifier: '0002100'
-      link: https://www.ebi.ac.uk/efo/EFO_0002100
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002100
       name: A101D
       prefix: efo
 - edges:
@@ -269,15 +269,15 @@
     target:
       curie: efo:0002101
       identifier: '0002101'
-      link: https://www.ebi.ac.uk/efo/EFO_0002101
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002101
       name: A172
       prefix: efo
   nodes:
-    ccle.cell:A172_CENTRAL_NERVOUS_SYSTEM:
+    ccle:A172_CENTRAL_NERVOUS_SYSTEM:
       identifier: A172_CENTRAL_NERVOUS_SYSTEM
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A172_CENTRAL_NERVOUS_SYSTEM
       name: A172
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0131:
       identifier: CVCL_0131
       link: https://web.expasy.org/cellosaurus/CVCL_0131
@@ -285,7 +285,7 @@
       prefix: cellosaurus
     efo:0002101:
       identifier: '0002101'
-      link: https://www.ebi.ac.uk/efo/EFO_0002101
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002101
       name: A172
       prefix: efo
 - edges:
@@ -298,15 +298,15 @@
     target:
       curie: efo:0002102
       identifier: '0002102'
-      link: https://www.ebi.ac.uk/efo/EFO_0002102
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002102
       name: A204
       prefix: efo
   nodes:
-    ccle.cell:A204_SOFT_TISSUE:
+    ccle:A204_SOFT_TISSUE:
       identifier: A204_SOFT_TISSUE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A204_SOFT_TISSUE
       name: A-204
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1058:
       identifier: CVCL_1058
       link: https://web.expasy.org/cellosaurus/CVCL_1058
@@ -314,7 +314,7 @@
       prefix: cellosaurus
     efo:0002102:
       identifier: '0002102'
-      link: https://www.ebi.ac.uk/efo/EFO_0002102
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002102
       name: A204
       prefix: efo
 - edges:
@@ -327,15 +327,15 @@
     target:
       curie: efo:0006361
       identifier: '0006361'
-      link: https://www.ebi.ac.uk/efo/EFO_0006361
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006361
       name: A2058
       prefix: efo
   nodes:
-    ccle.cell:A2058_SKIN:
+    ccle:A2058_SKIN:
       identifier: A2058_SKIN
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A2058_SKIN
       name: A2058
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1059:
       identifier: CVCL_1059
       link: https://web.expasy.org/cellosaurus/CVCL_1059
@@ -343,7 +343,7 @@
       prefix: cellosaurus
     efo:0006361:
       identifier: '0006361'
-      link: https://www.ebi.ac.uk/efo/EFO_0006361
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006361
       name: A2058
       prefix: efo
 - edges:
@@ -356,15 +356,15 @@
     target:
       curie: efo:0006362
       identifier: '0006362'
-      link: https://www.ebi.ac.uk/efo/EFO_0006362
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006362
       name: A2780
       prefix: efo
   nodes:
-    ccle.cell:A2780_OVARY:
+    ccle:A2780_OVARY:
       identifier: A2780_OVARY
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A2780_OVARY
       name: A2780
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0134:
       identifier: CVCL_0134
       link: https://web.expasy.org/cellosaurus/CVCL_0134
@@ -372,7 +372,7 @@
       prefix: cellosaurus
     efo:0006362:
       identifier: '0006362'
-      link: https://www.ebi.ac.uk/efo/EFO_0006362
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006362
       name: A2780
       prefix: efo
 - edges:
@@ -385,15 +385,15 @@
     target:
       curie: efo:0002103
       identifier: '0002103'
-      link: https://www.ebi.ac.uk/efo/EFO_0002103
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002103
       name: A375
       prefix: efo
   nodes:
-    ccle.cell:A375_SKIN:
+    ccle:A375_SKIN:
       identifier: A375_SKIN
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A375_SKIN
       name: A-375
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0132:
       identifier: CVCL_0132
       link: https://web.expasy.org/cellosaurus/CVCL_0132
@@ -401,7 +401,7 @@
       prefix: cellosaurus
     efo:0002103:
       identifier: '0002103'
-      link: https://www.ebi.ac.uk/efo/EFO_0002103
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002103
       name: A375
       prefix: efo
 - edges:
@@ -414,15 +414,15 @@
     target:
       curie: efo:0006532
       identifier: '0006532'
-      link: https://www.ebi.ac.uk/efo/EFO_0006532
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006532
       name: A3/KAW
       prefix: efo
   nodes:
-    ccle.cell:A3KAW_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+    ccle:A3KAW_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
       identifier: A3KAW_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A3KAW_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       name: A3/KAW
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1062:
       identifier: CVCL_1062
       link: https://web.expasy.org/cellosaurus/CVCL_1062
@@ -430,7 +430,7 @@
       prefix: cellosaurus
     efo:0006532:
       identifier: '0006532'
-      link: https://www.ebi.ac.uk/efo/EFO_0006532
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006532
       name: A3/KAW
       prefix: efo
 - edges:
@@ -443,15 +443,15 @@
     target:
       curie: efo:0002105
       identifier: '0002105'
-      link: https://www.ebi.ac.uk/efo/EFO_0002105
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002105
       name: A498
       prefix: efo
   nodes:
-    ccle.cell:A498_KIDNEY:
+    ccle:A498_KIDNEY:
       identifier: A498_KIDNEY
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A498_KIDNEY
       name: A-498
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1056:
       identifier: CVCL_1056
       link: https://web.expasy.org/cellosaurus/CVCL_1056
@@ -459,7 +459,7 @@
       prefix: cellosaurus
     efo:0002105:
       identifier: '0002105'
-      link: https://www.ebi.ac.uk/efo/EFO_0002105
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002105
       name: A498
       prefix: efo
 - edges:
@@ -472,15 +472,15 @@
     target:
       curie: efo:0006533
       identifier: '0006533'
-      link: https://www.ebi.ac.uk/efo/EFO_0006533
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006533
       name: A4/Fuk
       prefix: efo
   nodes:
-    ccle.cell:A4FUK_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+    ccle:A4FUK_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
       identifier: A4FUK_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A4FUK_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       name: A4/Fuk
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1064:
       identifier: CVCL_1064
       link: https://web.expasy.org/cellosaurus/CVCL_1064
@@ -488,7 +488,7 @@
       prefix: cellosaurus
     efo:0006533:
       identifier: '0006533'
-      link: https://www.ebi.ac.uk/efo/EFO_0006533
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006533
       name: A4/Fuk
       prefix: efo
 - edges:
@@ -501,15 +501,15 @@
     target:
       curie: efo:0001086
       identifier: 0001086
-      link: https://www.ebi.ac.uk/efo/EFO_0001086
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001086
       name: A549
       prefix: efo
   nodes:
-    ccle.cell:A549_LUNG:
+    ccle:A549_LUNG:
       identifier: A549_LUNG
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A549_LUNG
       name: A549
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0023:
       identifier: CVCL_0023
       link: https://web.expasy.org/cellosaurus/CVCL_0023
@@ -517,7 +517,7 @@
       prefix: cellosaurus
     efo:0001086:
       identifier: 0001086
-      link: https://www.ebi.ac.uk/efo/EFO_0001086
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001086
       name: A549
       prefix: efo
 - edges:
@@ -530,15 +530,15 @@
     target:
       curie: efo:0002106
       identifier: '0002106'
-      link: https://www.ebi.ac.uk/efo/EFO_0002106
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002106
       name: A673
       prefix: efo
   nodes:
-    ccle.cell:A673_BONE:
+    ccle:A673_BONE:
       identifier: A673_BONE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=A673_BONE
       name: A-673
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0080:
       identifier: CVCL_0080
       link: https://web.expasy.org/cellosaurus/CVCL_0080
@@ -546,7 +546,7 @@
       prefix: cellosaurus
     efo:0002106:
       identifier: '0002106'
-      link: https://www.ebi.ac.uk/efo/EFO_0002106
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002106
       name: A673
       prefix: efo
 - edges:
@@ -559,15 +559,15 @@
     target:
       curie: efo:0002813
       identifier: 0002813
-      link: https://www.ebi.ac.uk/efo/EFO_0002813
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002813
       name: ABC-1
       prefix: efo
   nodes:
-    ccle.cell:ABC1_LUNG:
+    ccle:ABC1_LUNG:
       identifier: ABC1_LUNG
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ABC1_LUNG
       name: ABC-1
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1066:
       identifier: CVCL_1066
       link: https://web.expasy.org/cellosaurus/CVCL_1066
@@ -575,7 +575,7 @@
       prefix: cellosaurus
     efo:0002813:
       identifier: 0002813
-      link: https://www.ebi.ac.uk/efo/EFO_0002813
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002813
       name: ABC-1
       prefix: efo
 - edges:
@@ -588,15 +588,15 @@
     target:
       curie: efo:0002108
       identifier: 0002108
-      link: https://www.ebi.ac.uk/efo/EFO_0002108
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002108
       name: ACHN
       prefix: efo
   nodes:
-    ccle.cell:ACHN_KIDNEY:
+    ccle:ACHN_KIDNEY:
       identifier: ACHN_KIDNEY
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ACHN_KIDNEY
       name: ACHN
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1067:
       identifier: CVCL_1067
       link: https://web.expasy.org/cellosaurus/CVCL_1067
@@ -604,7 +604,7 @@
       prefix: cellosaurus
     efo:0002108:
       identifier: 0002108
-      link: https://www.ebi.ac.uk/efo/EFO_0002108
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002108
       name: ACHN
       prefix: efo
 - edges:
@@ -617,15 +617,15 @@
     target:
       curie: efo:0002109
       identifier: 0002109
-      link: https://www.ebi.ac.uk/efo/EFO_0002109
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002109
       name: AGS
       prefix: efo
   nodes:
-    ccle.cell:AGS_STOMACH:
+    ccle:AGS_STOMACH:
       identifier: AGS_STOMACH
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=AGS_STOMACH
       name: AGS
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0139:
       identifier: CVCL_0139
       link: https://web.expasy.org/cellosaurus/CVCL_0139
@@ -633,7 +633,7 @@
       prefix: cellosaurus
     efo:0002109:
       identifier: 0002109
-      link: https://www.ebi.ac.uk/efo/EFO_0002109
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002109
       name: AGS
       prefix: efo
 - edges:
@@ -646,15 +646,15 @@
     target:
       curie: efo:0006534
       identifier: '0006534'
-      link: https://www.ebi.ac.uk/efo/EFO_0006534
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006534
       name: AMO-1
       prefix: efo
   nodes:
-    ccle.cell:AMO1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+    ccle:AMO1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
       identifier: AMO1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=AMO1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       name: AMO-1
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1806:
       identifier: CVCL_1806
       link: https://web.expasy.org/cellosaurus/CVCL_1806
@@ -662,7 +662,7 @@
       prefix: cellosaurus
     efo:0006534:
       identifier: '0006534'
-      link: https://www.ebi.ac.uk/efo/EFO_0006534
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006534
       name: AMO-1
       prefix: efo
 - edges:
@@ -675,15 +675,15 @@
     target:
       curie: efo:0002112
       identifier: '0002112'
-      link: https://www.ebi.ac.uk/efo/EFO_0002112
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002112
       name: AsPC1
       prefix: efo
   nodes:
-    ccle.cell:ASPC1_PANCREAS:
+    ccle:ASPC1_PANCREAS:
       identifier: ASPC1_PANCREAS
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ASPC1_PANCREAS
       name: AsPC-1
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0152:
       identifier: CVCL_0152
       link: https://web.expasy.org/cellosaurus/CVCL_0152
@@ -691,7 +691,7 @@
       prefix: cellosaurus
     efo:0002112:
       identifier: '0002112'
-      link: https://www.ebi.ac.uk/efo/EFO_0002112
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002112
       name: AsPC1
       prefix: efo
 - edges:
@@ -704,15 +704,15 @@
     target:
       curie: efo:0001087
       identifier: 0001087
-      link: https://www.ebi.ac.uk/efo/EFO_0001087
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001087
       name: AU565
       prefix: efo
   nodes:
-    ccle.cell:AU565_BREAST:
+    ccle:AU565_BREAST:
       identifier: AU565_BREAST
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=AU565_BREAST
       name: AU565
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1074:
       identifier: CVCL_1074
       link: https://web.expasy.org/cellosaurus/CVCL_1074
@@ -720,7 +720,7 @@
       prefix: cellosaurus
     efo:0001087:
       identifier: 0001087
-      link: https://www.ebi.ac.uk/efo/EFO_0001087
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001087
       name: AU565
       prefix: efo
 - edges:
@@ -733,15 +733,15 @@
     target:
       curie: efo:0002814
       identifier: 0002814
-      link: https://www.ebi.ac.uk/efo/EFO_0002814
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002814
       name: AZ-521
       prefix: efo
   nodes:
-    ccle.cell:AZ521_SMALL_INTESTINE:
+    ccle:AZ521_SMALL_INTESTINE:
       identifier: AZ521_SMALL_INTESTINE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=AZ521_SMALL_INTESTINE
       name: AZ-521
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_2862:
       identifier: CVCL_2862
       link: https://web.expasy.org/cellosaurus/CVCL_2862
@@ -749,7 +749,7 @@
       prefix: cellosaurus
     efo:0002814:
       identifier: 0002814
-      link: https://www.ebi.ac.uk/efo/EFO_0002814
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002814
       name: AZ-521
       prefix: efo
 - edges:
@@ -762,15 +762,15 @@
     target:
       curie: efo:0006537
       identifier: '0006537'
-      link: https://www.ebi.ac.uk/efo/EFO_0006537
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006537
       name: BEN
       prefix: efo
   nodes:
-    ccle.cell:BEN_LUNG:
+    ccle:BEN_LUNG:
       identifier: BEN_LUNG
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BEN_LUNG
       name: BEN
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1082:
       identifier: CVCL_1082
       link: https://web.expasy.org/cellosaurus/CVCL_1082
@@ -778,7 +778,7 @@
       prefix: cellosaurus
     efo:0006537:
       identifier: '0006537'
-      link: https://www.ebi.ac.uk/efo/EFO_0006537
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006537
       name: BEN
       prefix: efo
 - edges:
@@ -791,15 +791,15 @@
     target:
       curie: efo:0002115
       identifier: '0002115'
-      link: https://www.ebi.ac.uk/efo/EFO_0002115
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002115
       name: BFTC905
       prefix: efo
   nodes:
-    ccle.cell:BFTC905_URINARY_TRACT:
+    ccle:BFTC905_URINARY_TRACT:
       identifier: BFTC905_URINARY_TRACT
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BFTC905_URINARY_TRACT
       name: BFTC-905
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1083:
       identifier: CVCL_1083
       link: https://web.expasy.org/cellosaurus/CVCL_1083
@@ -807,7 +807,7 @@
       prefix: cellosaurus
     efo:0002115:
       identifier: '0002115'
-      link: https://www.ebi.ac.uk/efo/EFO_0002115
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002115
       name: BFTC905
       prefix: efo
 - edges:
@@ -820,15 +820,15 @@
     target:
       curie: efo:0006538
       identifier: 0006538
-      link: https://www.ebi.ac.uk/efo/EFO_0006538
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006538
       name: BFTC-909
       prefix: efo
   nodes:
-    ccle.cell:BFTC909_KIDNEY:
+    ccle:BFTC909_KIDNEY:
       identifier: BFTC909_KIDNEY
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BFTC909_KIDNEY
       name: BFTC-909
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1084:
       identifier: CVCL_1084
       link: https://web.expasy.org/cellosaurus/CVCL_1084
@@ -836,7 +836,7 @@
       prefix: cellosaurus
     efo:0006538:
       identifier: 0006538
-      link: https://www.ebi.ac.uk/efo/EFO_0006538
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006538
       name: BFTC-909
       prefix: efo
 - edges:
@@ -849,15 +849,15 @@
     target:
       curie: efo:0002116
       identifier: '0002116'
-      link: https://www.ebi.ac.uk/efo/EFO_0002116
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002116
       name: BHT101
       prefix: efo
   nodes:
-    ccle.cell:BHT101_THYROID:
+    ccle:BHT101_THYROID:
       identifier: BHT101_THYROID
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BHT101_THYROID
       name: BHT-101
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1085:
       identifier: CVCL_1085
       link: https://web.expasy.org/cellosaurus/CVCL_1085
@@ -865,7 +865,7 @@
       prefix: cellosaurus
     efo:0002116:
       identifier: '0002116'
-      link: https://www.ebi.ac.uk/efo/EFO_0002116
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002116
       name: BHT101
       prefix: efo
 - edges:
@@ -878,15 +878,15 @@
     target:
       curie: efo:0006539
       identifier: 0006539
-      link: https://www.ebi.ac.uk/efo/EFO_0006539
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006539
       name: BHY
       prefix: efo
   nodes:
-    ccle.cell:BHY_UPPER_AERODIGESTIVE_TRACT:
+    ccle:BHY_UPPER_AERODIGESTIVE_TRACT:
       identifier: BHY_UPPER_AERODIGESTIVE_TRACT
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BHY_UPPER_AERODIGESTIVE_TRACT
       name: BHY
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1086:
       identifier: CVCL_1086
       link: https://web.expasy.org/cellosaurus/CVCL_1086
@@ -894,7 +894,7 @@
       prefix: cellosaurus
     efo:0006539:
       identifier: 0006539
-      link: https://www.ebi.ac.uk/efo/EFO_0006539
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006539
       name: BHY
       prefix: efo
 - edges:
@@ -907,15 +907,15 @@
     target:
       curie: efo:0006541
       identifier: '0006541'
-      link: https://www.ebi.ac.uk/efo/EFO_0006541
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006541
       name: BICR 22
       prefix: efo
   nodes:
-    ccle.cell:BICR22_UPPER_AERODIGESTIVE_TRACT:
+    ccle:BICR22_UPPER_AERODIGESTIVE_TRACT:
       identifier: BICR22_UPPER_AERODIGESTIVE_TRACT
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BICR22_UPPER_AERODIGESTIVE_TRACT
       name: BICR 22
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_2310:
       identifier: CVCL_2310
       link: https://web.expasy.org/cellosaurus/CVCL_2310
@@ -923,7 +923,7 @@
       prefix: cellosaurus
     efo:0006541:
       identifier: '0006541'
-      link: https://www.ebi.ac.uk/efo/EFO_0006541
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006541
       name: BICR 22
       prefix: efo
 - edges:
@@ -936,15 +936,15 @@
     target:
       curie: efo:0006542
       identifier: '0006542'
-      link: https://www.ebi.ac.uk/efo/EFO_0006542
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006542
       name: BICR 31
       prefix: efo
   nodes:
-    ccle.cell:BICR31_UPPER_AERODIGESTIVE_TRACT:
+    ccle:BICR31_UPPER_AERODIGESTIVE_TRACT:
       identifier: BICR31_UPPER_AERODIGESTIVE_TRACT
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BICR31_UPPER_AERODIGESTIVE_TRACT
       name: BICR 31
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_2312:
       identifier: CVCL_2312
       link: https://web.expasy.org/cellosaurus/CVCL_2312
@@ -952,7 +952,7 @@
       prefix: cellosaurus
     efo:0006542:
       identifier: '0006542'
-      link: https://www.ebi.ac.uk/efo/EFO_0006542
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006542
       name: BICR 31
       prefix: efo
 - edges:
@@ -965,15 +965,15 @@
     target:
       curie: efo:0001092
       identifier: 0001092
-      link: https://www.ebi.ac.uk/efo/EFO_0001092
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001092
       name: BT20
       prefix: efo
   nodes:
-    ccle.cell:BT20_BREAST:
+    ccle:BT20_BREAST:
       identifier: BT20_BREAST
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BT20_BREAST
       name: BT-20
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0178:
       identifier: CVCL_0178
       link: https://web.expasy.org/cellosaurus/CVCL_0178
@@ -981,7 +981,7 @@
       prefix: cellosaurus
     efo:0001092:
       identifier: 0001092
-      link: https://www.ebi.ac.uk/efo/EFO_0001092
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001092
       name: BT20
       prefix: efo
 - edges:
@@ -994,15 +994,15 @@
     target:
       curie: efo:0001093
       identifier: 0001093
-      link: https://www.ebi.ac.uk/efo/EFO_0001093
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001093
       name: BT474
       prefix: efo
   nodes:
-    ccle.cell:BT474_BREAST:
+    ccle:BT474_BREAST:
       identifier: BT474_BREAST
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BT474_BREAST
       name: BT-474
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0179:
       identifier: CVCL_0179
       link: https://web.expasy.org/cellosaurus/CVCL_0179
@@ -1010,7 +1010,7 @@
       prefix: cellosaurus
     efo:0001093:
       identifier: 0001093
-      link: https://www.ebi.ac.uk/efo/EFO_0001093
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001093
       name: BT474
       prefix: efo
 - edges:
@@ -1023,15 +1023,15 @@
     target:
       curie: efo:0001095
       identifier: 0001095
-      link: https://www.ebi.ac.uk/efo/EFO_0001095
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001095
       name: BT483
       prefix: efo
   nodes:
-    ccle.cell:BT483_BREAST:
+    ccle:BT483_BREAST:
       identifier: BT483_BREAST
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BT483_BREAST
       name: BT-483
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_2319:
       identifier: CVCL_2319
       link: https://web.expasy.org/cellosaurus/CVCL_2319
@@ -1039,7 +1039,7 @@
       prefix: cellosaurus
     efo:0001095:
       identifier: 0001095
-      link: https://www.ebi.ac.uk/efo/EFO_0001095
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001095
       name: BT483
       prefix: efo
 - edges:
@@ -1052,15 +1052,15 @@
     target:
       curie: efo:0001096
       identifier: 0001096
-      link: https://www.ebi.ac.uk/efo/EFO_0001096
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001096
       name: BT549
       prefix: efo
   nodes:
-    ccle.cell:BT549_BREAST:
+    ccle:BT549_BREAST:
       identifier: BT549_BREAST
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BT549_BREAST
       name: BT-549
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1092:
       identifier: CVCL_1092
       link: https://web.expasy.org/cellosaurus/CVCL_1092
@@ -1068,7 +1068,7 @@
       prefix: cellosaurus
     efo:0001096:
       identifier: 0001096
-      link: https://www.ebi.ac.uk/efo/EFO_0001096
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001096
       name: BT549
       prefix: efo
 - edges:
@@ -1081,15 +1081,15 @@
     target:
       curie: efo:0002118
       identifier: 0002118
-      link: https://www.ebi.ac.uk/efo/EFO_0002118
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002118
       name: BV173
       prefix: efo
   nodes:
-    ccle.cell:BV173_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+    ccle:BV173_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
       identifier: BV173_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BV173_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       name: BV-173
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0181:
       identifier: CVCL_0181
       link: https://web.expasy.org/cellosaurus/CVCL_0181
@@ -1097,7 +1097,7 @@
       prefix: cellosaurus
     efo:0002118:
       identifier: 0002118
-      link: https://www.ebi.ac.uk/efo/EFO_0002118
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002118
       name: BV173
       prefix: efo
 - edges:
@@ -1110,15 +1110,15 @@
     target:
       curie: efo:0002709
       identifier: 0002709
-      link: https://www.ebi.ac.uk/efo/EFO_0002709
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002709
       name: BxPC-3
       prefix: efo
   nodes:
-    ccle.cell:BXPC3_PANCREAS:
+    ccle:BXPC3_PANCREAS:
       identifier: BXPC3_PANCREAS
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=BXPC3_PANCREAS
       name: BxPC-3
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0186:
       identifier: CVCL_0186
       link: https://web.expasy.org/cellosaurus/CVCL_0186
@@ -1126,7 +1126,7 @@
       prefix: cellosaurus
     efo:0002709:
       identifier: 0002709
-      link: https://www.ebi.ac.uk/efo/EFO_0002709
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002709
       name: BxPC-3
       prefix: efo
 - edges:
@@ -1139,15 +1139,15 @@
     target:
       curie: efo:0006546
       identifier: '0006546'
-      link: https://www.ebi.ac.uk/efo/EFO_0006546
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006546
       name: C2BBe1
       prefix: efo
   nodes:
-    ccle.cell:C2BBE1_LARGE_INTESTINE:
+    ccle:C2BBE1_LARGE_INTESTINE:
       identifier: C2BBE1_LARGE_INTESTINE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=C2BBE1_LARGE_INTESTINE
       name: C2BBe1
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1096:
       identifier: CVCL_1096
       link: https://web.expasy.org/cellosaurus/CVCL_1096
@@ -1155,7 +1155,7 @@
       prefix: cellosaurus
     efo:0006546:
       identifier: '0006546'
-      link: https://www.ebi.ac.uk/efo/EFO_0006546
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006546
       name: C2BBe1
       prefix: efo
 - edges:
@@ -1168,15 +1168,15 @@
     target:
       curie: efo:0006364
       identifier: '0006364'
-      link: https://www.ebi.ac.uk/efo/EFO_0006364
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006364
       name: C32
       prefix: efo
   nodes:
-    ccle.cell:C32_SKIN:
+    ccle:C32_SKIN:
       identifier: C32_SKIN
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=C32_SKIN
       name: C32
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1097:
       identifier: CVCL_1097
       link: https://web.expasy.org/cellosaurus/CVCL_1097
@@ -1184,7 +1184,7 @@
       prefix: cellosaurus
     efo:0006364:
       identifier: '0006364'
-      link: https://www.ebi.ac.uk/efo/EFO_0006364
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006364
       name: C32
       prefix: efo
 - edges:
@@ -1197,15 +1197,15 @@
     target:
       curie: efo:0002121
       identifier: '0002121'
-      link: https://www.ebi.ac.uk/efo/EFO_0002121
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002121
       name: C3A
       prefix: efo
   nodes:
-    ccle.cell:C3A_LIVER:
+    ccle:C3A_LIVER:
       identifier: C3A_LIVER
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=C3A_LIVER
       name: C3A
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1098:
       identifier: CVCL_1098
       link: https://web.expasy.org/cellosaurus/CVCL_1098
@@ -1213,7 +1213,7 @@
       prefix: cellosaurus
     efo:0002121:
       identifier: '0002121'
-      link: https://www.ebi.ac.uk/efo/EFO_0002121
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002121
       name: C3A
       prefix: efo
 - edges:
@@ -1224,11 +1224,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: efo:0001099
-      identifier: 0001099
-      link: https://www.ebi.ac.uk/efo/EFO_0001099
-      name: Caco-2
-      prefix: efo
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://depmap.org/portal/cell_line/ACH-000003
+      name: CACO2
+      prefix: depmap
   - source:
       curie: cellosaurus:CVCL_0025
       identifier: CVCL_0025
@@ -1236,11 +1236,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000003
-      identifier: ACH-000003
-      link: https://depmap.org/portal/cell_line/ACH-000003
-      name: CACO2
-      prefix: depmap
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001099
+      name: Caco-2
+      prefix: efo
   - source:
       curie: depmap:ACH-000003
       identifier: ACH-000003
@@ -1250,15 +1250,15 @@
     target:
       curie: efo:0001099
       identifier: 0001099
-      link: https://www.ebi.ac.uk/efo/EFO_0001099
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001099
       name: Caco-2
       prefix: efo
   nodes:
-    ccle.cell:CACO2:
+    ccle:CACO2:
       identifier: CACO2
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=CACO2
       name: CACO2
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0025:
       identifier: CVCL_0025
       link: https://web.expasy.org/cellosaurus/CVCL_0025
@@ -1271,7 +1271,7 @@
       prefix: depmap
     efo:0001099:
       identifier: 0001099
-      link: https://www.ebi.ac.uk/efo/EFO_0001099
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001099
       name: Caco-2
       prefix: efo
 - edges:
@@ -1284,15 +1284,15 @@
     target:
       curie: efo:0002172
       identifier: '0002172'
-      link: https://www.ebi.ac.uk/efo/EFO_0002172
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002172
       name: EB1
       prefix: efo
   nodes:
-    ccle.cell:EB1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+    ccle:EB1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
       identifier: EB1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=EB1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       name: EB1
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_YK89:
       identifier: CVCL_YK89
       link: https://web.expasy.org/cellosaurus/CVCL_YK89
@@ -1300,7 +1300,7 @@
       prefix: cellosaurus
     efo:0002172:
       identifier: '0002172'
-      link: https://www.ebi.ac.uk/efo/EFO_0002172
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002172
       name: EB1
       prefix: efo
 - edges:
@@ -1313,15 +1313,15 @@
     target:
       curie: efo:0001193
       identifier: 0001193
-      link: https://www.ebi.ac.uk/efo/EFO_0001193
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001193
       name: HT-29
       prefix: efo
   nodes:
-    ccle.cell:HT29_LARGE_INTESTINE:
+    ccle:HT29_LARGE_INTESTINE:
       identifier: HT29_LARGE_INTESTINE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=HT29_LARGE_INTESTINE
       name: HT-29
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_A8EZ:
       identifier: CVCL_A8EZ
       link: https://web.expasy.org/cellosaurus/CVCL_A8EZ
@@ -1329,7 +1329,7 @@
       prefix: cellosaurus
     efo:0001193:
       identifier: 0001193
-      link: https://www.ebi.ac.uk/efo/EFO_0001193
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001193
       name: HT-29
       prefix: efo
 - edges:
@@ -1342,15 +1342,15 @@
     target:
       curie: efo:0006445
       identifier: '0006445'
-      link: https://www.ebi.ac.uk/efo/EFO_0006445
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006445
       name: huH-1
       prefix: efo
   nodes:
-    ccle.cell:HUH1_LIVER:
+    ccle:HUH1_LIVER:
       identifier: HUH1_LIVER
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=HUH1_LIVER
       name: huH-1
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_2956:
       identifier: CVCL_2956
       link: https://web.expasy.org/cellosaurus/CVCL_2956
@@ -1358,35 +1358,35 @@
       prefix: cellosaurus
     efo:0006445:
       identifier: '0006445'
-      link: https://www.ebi.ac.uk/efo/EFO_0006445
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006445
       name: huH-1
       prefix: efo
 - edges:
   - source:
       curie: BTO:0006459
       identifier: BTO:0006459
-      link: http://purl.bioontology.org/ontology/BTO/BTO:BTO:0006459
-      name: KMS-12-BM cell
-      prefix: bto
-    target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://web.expasy.org/cellosaurus/CVCL_1334
-      name: KMS-12-BM
-      prefix: cellosaurus
-  - source:
-      curie: BTO:0006459
-      identifier: BTO:0006459
-      link: http://purl.bioontology.org/ontology/BTO/BTO:BTO:0006459
+      link: https://www.ebi.ac.uk/ols/ontologies/bto/terms?obo_id=BTO:BTO:0006459
       name: KMS-12-BM cell
       prefix: bto
     target:
       curie: efo:0006612
       identifier: '0006612'
-      link: https://www.ebi.ac.uk/efo/EFO_0006612
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006612
       name: KMS-12-BM
       prefix: efo
   - source:
+      curie: BTO:0006459
+      identifier: BTO:0006459
+      link: https://www.ebi.ac.uk/ols/ontologies/bto/terms?obo_id=BTO:BTO:0006459
+      name: KMS-12-BM cell
+      prefix: bto
+    target:
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://web.expasy.org/cellosaurus/CVCL_1334
+      name: KMS-12-BM
+      prefix: cellosaurus
+  - source:
       curie: cellosaurus:CVCL_1334
       identifier: CVCL_1334
       link: https://web.expasy.org/cellosaurus/CVCL_1334
@@ -1395,20 +1395,20 @@
     target:
       curie: efo:0006612
       identifier: '0006612'
-      link: https://www.ebi.ac.uk/efo/EFO_0006612
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006612
       name: KMS-12-BM
       prefix: efo
   nodes:
     BTO:0006459:
       identifier: BTO:0006459
-      link: http://purl.bioontology.org/ontology/BTO/BTO:BTO:0006459
+      link: https://www.ebi.ac.uk/ols/ontologies/bto/terms?obo_id=BTO:BTO:0006459
       name: KMS-12-BM cell
       prefix: bto
-    ccle.cell:KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
+    ccle:KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE:
       identifier: KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=KMS12BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE
       name: KMS-12-BM
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1334:
       identifier: CVCL_1334
       link: https://web.expasy.org/cellosaurus/CVCL_1334
@@ -1416,36 +1416,36 @@
       prefix: cellosaurus
     efo:0006612:
       identifier: '0006612'
-      link: https://www.ebi.ac.uk/efo/EFO_0006612
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006612
       name: KMS-12-BM
       prefix: efo
 - edges:
   - source:
       curie: BTO:0006095
       identifier: BTO:0006095
-      link: http://purl.bioontology.org/ontology/BTO/BTO:BTO:0006095
+      link: https://www.ebi.ac.uk/ols/ontologies/bto/terms?obo_id=BTO:BTO:0006095
       name: LNCaP clone FGC
       prefix: bto
     target:
       curie: efo:0005726
       identifier: '0005726'
-      link: https://www.ebi.ac.uk/efo/EFO_0005726
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0005726
       name: LNCaP clone FGC
       prefix: efo
   nodes:
     BTO:0006095:
       identifier: BTO:0006095
-      link: http://purl.bioontology.org/ontology/BTO/BTO:BTO:0006095
+      link: https://www.ebi.ac.uk/ols/ontologies/bto/terms?obo_id=BTO:BTO:0006095
       name: LNCaP clone FGC
       prefix: bto
-    ccle.cell:LNCAPCLONEFGC_PROSTATE:
+    ccle:LNCAPCLONEFGC_PROSTATE:
       identifier: LNCAPCLONEFGC_PROSTATE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=LNCAPCLONEFGC_PROSTATE
       name: LNCaP clone FGC
-      prefix: ccle.cell
+      prefix: ccle
     efo:0005726:
       identifier: '0005726'
-      link: https://www.ebi.ac.uk/efo/EFO_0005726
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0005726
       name: LNCaP clone FGC
       prefix: efo
 - edges:
@@ -1458,15 +1458,15 @@
     target:
       curie: efo:0002278
       identifier: 0002278
-      link: https://www.ebi.ac.uk/efo/EFO_0002278
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002278
       name: NCI-H2107
       prefix: efo
   nodes:
-    ccle.cell:NCIH2107:
+    ccle:NCIH2107:
       identifier: NCIH2107
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=NCIH2107
       name: NCIH2107
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1527:
       identifier: CVCL_1527
       link: https://web.expasy.org/cellosaurus/CVCL_1527
@@ -1474,7 +1474,7 @@
       prefix: cellosaurus
     efo:0002278:
       identifier: 0002278
-      link: https://www.ebi.ac.uk/efo/EFO_0002278
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002278
       name: NCI-H2107
       prefix: efo
 - edges:
@@ -1487,15 +1487,15 @@
     target:
       curie: efo:0006722
       identifier: '0006722'
-      link: https://www.ebi.ac.uk/efo/EFO_0006722
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006722
       name: OVCA432
       prefix: efo
   nodes:
-    ccle.cell:OVCA432:
+    ccle:OVCA432:
       identifier: OVCA432
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=OVCA432
       name: OVCA432
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_3769:
       identifier: CVCL_3769
       link: https://web.expasy.org/cellosaurus/CVCL_3769
@@ -1503,7 +1503,7 @@
       prefix: cellosaurus
     efo:0006722:
       identifier: '0006722'
-      link: https://www.ebi.ac.uk/efo/EFO_0006722
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006722
       name: OVCA432
       prefix: efo
 - edges:
@@ -1516,15 +1516,15 @@
     target:
       curie: efo:0002329
       identifier: 0002329
-      link: https://www.ebi.ac.uk/efo/EFO_0002329
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002329
       name: SJRH30
       prefix: efo
   nodes:
-    ccle.cell:SJRH30_SOFT_TISSUE:
+    ccle:SJRH30_SOFT_TISSUE:
       identifier: SJRH30_SOFT_TISSUE
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=SJRH30_SOFT_TISSUE
       name: SJRH30
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0041:
       identifier: CVCL_0041
       link: https://web.expasy.org/cellosaurus/CVCL_0041
@@ -1532,7 +1532,7 @@
       prefix: cellosaurus
     efo:0002329:
       identifier: 0002329
-      link: https://www.ebi.ac.uk/efo/EFO_0002329
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0002329
       name: SJRH30
       prefix: efo
 - edges:
@@ -1545,15 +1545,15 @@
     target:
       curie: efo:0006778
       identifier: 0006778
-      link: https://www.ebi.ac.uk/efo/EFO_0006778
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006778
       name: YAPC
       prefix: efo
   nodes:
-    ccle.cell:YAPC_PANCREAS:
+    ccle:YAPC_PANCREAS:
       identifier: YAPC_PANCREAS
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=YAPC_PANCREAS
       name: YAPC
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1794:
       identifier: CVCL_1794
       link: https://web.expasy.org/cellosaurus/CVCL_1794
@@ -1561,7 +1561,7 @@
       prefix: cellosaurus
     efo:0006778:
       identifier: 0006778
-      link: https://www.ebi.ac.uk/efo/EFO_0006778
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006778
       name: YAPC
       prefix: efo
 - edges:
@@ -1574,15 +1574,15 @@
     target:
       curie: efo:0006779
       identifier: 0006779
-      link: https://www.ebi.ac.uk/efo/EFO_0006779
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006779
       name: YMB-1
       prefix: efo
   nodes:
-    ccle.cell:YMB1_BREAST:
+    ccle:YMB1_BREAST:
       identifier: YMB1_BREAST
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=YMB1_BREAST
       name: YMB-1
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_2814:
       identifier: CVCL_2814
       link: https://web.expasy.org/cellosaurus/CVCL_2814
@@ -1590,7 +1590,7 @@
       prefix: cellosaurus
     efo:0006779:
       identifier: 0006779
-      link: https://www.ebi.ac.uk/efo/EFO_0006779
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0006779
       name: YMB-1
       prefix: efo
 - edges:
@@ -1603,15 +1603,15 @@
     target:
       curie: efo:0001262
       identifier: '0001262'
-      link: https://www.ebi.ac.uk/efo/EFO_0001262
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001262
       name: ZR751
       prefix: efo
   nodes:
-    ccle.cell:ZR751_BREAST:
+    ccle:ZR751_BREAST:
       identifier: ZR751_BREAST
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ZR751_BREAST
       name: ZR-75-1
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_0588:
       identifier: CVCL_0588
       link: https://web.expasy.org/cellosaurus/CVCL_0588
@@ -1619,7 +1619,7 @@
       prefix: cellosaurus
     efo:0001262:
       identifier: '0001262'
-      link: https://www.ebi.ac.uk/efo/EFO_0001262
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001262
       name: ZR751
       prefix: efo
 - edges:
@@ -1632,15 +1632,15 @@
     target:
       curie: efo:0001263
       identifier: '0001263'
-      link: https://www.ebi.ac.uk/efo/EFO_0001263
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001263
       name: ZR7530
       prefix: efo
   nodes:
-    ccle.cell:ZR7530_BREAST:
+    ccle:ZR7530_BREAST:
       identifier: ZR7530_BREAST
       link: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=ZR7530_BREAST
       name: ZR-75-30
-      prefix: ccle.cell
+      prefix: ccle
     cellosaurus:CVCL_1661:
       identifier: CVCL_1661
       link: https://web.expasy.org/cellosaurus/CVCL_1661
@@ -1648,7 +1648,7 @@
       prefix: cellosaurus
     efo:0001263:
       identifier: '0001263'
-      link: https://www.ebi.ac.uk/efo/EFO_0001263
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0001263
       name: ZR7530
       prefix: efo
 - edges:
@@ -1799,7 +1799,7 @@
     target:
       curie: ncit:C18144
       identifier: C18144
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18144
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C18144
       name: Homologous Recombination
       prefix: ncit
   - source:
@@ -1811,7 +1811,7 @@
     target:
       curie: ncit:C18144
       identifier: C18144
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18144
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C18144
       name: Homologous Recombination
       prefix: ncit
   nodes:
@@ -1832,7 +1832,7 @@
       prefix: mesh
     ncit:C18144:
       identifier: C18144
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18144
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C18144
       name: Homologous Recombination
       prefix: ncit
 - edges:
@@ -2019,7 +2019,7 @@
     target:
       curie: ncit:C97304
       identifier: C97304
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C97304
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C97304
       name: Epithelial-to-Mesenchymal Transition
       prefix: ncit
   nodes:
@@ -2035,26 +2035,26 @@
       prefix: mesh
     ncit:C97304:
       identifier: C97304
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C97304
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C97304
       name: Epithelial-to-Mesenchymal Transition
       prefix: ncit
 - edges:
   - source:
       curie: efo:0009840
       identifier: 0009840
-      link: https://www.ebi.ac.uk/efo/EFO_0009840
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0009840
       name: tachypnea
       prefix: efo
     target:
       curie: ncit:C50767
       identifier: C50767
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C50767
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C50767
       name: Tachypnea
       prefix: ncit
   nodes:
     efo:0009840:
       identifier: 0009840
-      link: https://www.ebi.ac.uk/efo/EFO_0009840
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0009840
       name: tachypnea
       prefix: efo
     mesh:D059246:
@@ -2064,7 +2064,7 @@
       prefix: mesh
     ncit:C50767:
       identifier: C50767
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C50767
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C50767
       name: Tachypnea
       prefix: ncit
 - edges:
@@ -2077,7 +2077,7 @@
     target:
       curie: ncit:C19017
       identifier: C19017
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C19017
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C19017
       name: RNA Folding
       prefix: ncit
   nodes:
@@ -2093,7 +2093,7 @@
       prefix: mesh
     ncit:C19017:
       identifier: C19017
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C19017
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C19017
       name: RNA Folding
       prefix: ncit
 - edges:
@@ -2106,7 +2106,7 @@
     target:
       curie: ncit:C9203
       identifier: C9203
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C9203
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C9203
       name: Breakthrough Pain
       prefix: ncit
   nodes:
@@ -2122,7 +2122,7 @@
       prefix: mesh
     ncit:C9203:
       identifier: C9203
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C9203
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C9203
       name: Breakthrough Pain
       prefix: ncit
 - edges:
@@ -2135,7 +2135,7 @@
     target:
       curie: ncit:C18689
       identifier: C18689
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18689
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C18689
       name: Cell Cycle Checkpoint
       prefix: ncit
   nodes:
@@ -2151,26 +2151,26 @@
       prefix: mesh
     ncit:C18689:
       identifier: C18689
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18689
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C18689
       name: Cell Cycle Checkpoint
       prefix: ncit
 - edges:
   - source:
       curie: efo:0000586
       identifier: 0000586
-      link: https://www.ebi.ac.uk/efo/EFO_0000586
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0000586
       name: mesenchymal stem cell
       prefix: efo
     target:
       curie: ncit:C43423
       identifier: C43423
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C43423
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C43423
       name: Mesenchymal Stem Cell
       prefix: ncit
   nodes:
     efo:0000586:
       identifier: 0000586
-      link: https://www.ebi.ac.uk/efo/EFO_0000586
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0000586
       name: mesenchymal stem cell
       prefix: efo
     mesh:D059630:
@@ -2180,7 +2180,7 @@
       prefix: mesh
     ncit:C43423:
       identifier: C43423
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C43423
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C43423
       name: Mesenchymal Stem Cell
       prefix: ncit
 - edges:
@@ -2193,7 +2193,7 @@
     target:
       curie: ncit:C18105
       identifier: C18105
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18105
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C18105
       name: Proteolysis
       prefix: ncit
   nodes:
@@ -2209,26 +2209,26 @@
       prefix: mesh
     ncit:C18105:
       identifier: C18105
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C18105
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C18105
       name: Proteolysis
       prefix: ncit
 - edges:
   - source:
       curie: efo:0009111
       identifier: 0009111
-      link: https://www.ebi.ac.uk/efo/EFO_0009111
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0009111
       name: laser capture microdissection
       prefix: efo
     target:
       curie: ncit:C19263
       identifier: C19263
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C19263
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C19263
       name: Laser Capture Microdissection
       prefix: ncit
   nodes:
     efo:0009111:
       identifier: 0009111
-      link: https://www.ebi.ac.uk/efo/EFO_0009111
+      link: https://www.ebi.ac.uk/ols/ontologies/efo/terms?obo_id=EFO:0009111
       name: laser capture microdissection
       prefix: efo
     mesh:D061346:
@@ -2238,7 +2238,7 @@
       prefix: mesh
     ncit:C19263:
       identifier: C19263
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C19263
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C19263
       name: Laser Capture Microdissection
       prefix: ncit
 - edges:
@@ -2251,7 +2251,7 @@
     target:
       curie: ncit:C30006
       identifier: C30006
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C30006
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C30006
       name: Aurora Kinase A
       prefix: ncit
   nodes:
@@ -2267,7 +2267,7 @@
       prefix: mesh
     ncit:C30006:
       identifier: C30006
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C30006
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C30006
       name: Aurora Kinase A
       prefix: ncit
 - edges:
@@ -2280,7 +2280,7 @@
     target:
       curie: ncit:C68596
       identifier: C68596
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C68596
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C68596
       name: Aurora Kinase B
       prefix: ncit
   nodes:
@@ -2296,7 +2296,7 @@
       prefix: mesh
     ncit:C68596:
       identifier: C68596
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C68596
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C68596
       name: Aurora Kinase B
       prefix: ncit
 - edges:
@@ -2309,7 +2309,7 @@
     target:
       curie: ncit:C1333
       identifier: C1333
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C1333
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C1333
       name: Dexrazoxane
       prefix: ncit
   nodes:
@@ -2325,7 +2325,7 @@
       prefix: mesh
     ncit:C1333:
       identifier: C1333
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C1333
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C1333
       name: Dexrazoxane
       prefix: ncit
 - edges:
@@ -2338,7 +2338,7 @@
     target:
       curie: ncit:C123223
       identifier: C123223
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C123223
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C123223
       name: Atypical Hemolytic Uremic Syndrome
       prefix: ncit
   nodes:
@@ -2354,14 +2354,14 @@
       prefix: mesh
     ncit:C123223:
       identifier: C123223
-      link: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_C123223
+      link: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C123223
       name: Atypical Hemolytic Uremic Syndrome
       prefix: ncit
 - edges:
   - source:
       curie: PR:000050270
       identifier: PR:000050270
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050270
+      link: https://proconsortium.org/app/entry/PR:PR:000050270
       name: host translation inhibitor nsp1 (SARS-CoV-2)
       prefix: pr
     target:
@@ -2373,7 +2373,7 @@
   nodes:
     PR:000050270:
       identifier: PR:000050270
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050270
+      link: https://proconsortium.org/app/entry/PR:PR:000050270
       name: host translation inhibitor nsp1 (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725297:
@@ -2390,7 +2390,7 @@
   - source:
       curie: PR:000050271
       identifier: PR:000050271
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050271
+      link: https://proconsortium.org/app/entry/PR:PR:000050271
       name: non-structural protein 2 (SARS-CoV-2)
       prefix: pr
     target:
@@ -2402,7 +2402,7 @@
   nodes:
     PR:000050271:
       identifier: PR:000050271
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050271
+      link: https://proconsortium.org/app/entry/PR:PR:000050271
       name: non-structural protein 2 (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725298:
@@ -2419,7 +2419,7 @@
   - source:
       curie: PR:000050272
       identifier: PR:000050272
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050272
+      link: https://proconsortium.org/app/entry/PR:PR:000050272
       name: non-structural protein 3 (SARS-CoV-2)
       prefix: pr
     target:
@@ -2431,7 +2431,7 @@
   nodes:
     PR:000050272:
       identifier: PR:000050272
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050272
+      link: https://proconsortium.org/app/entry/PR:PR:000050272
       name: non-structural protein 3 (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725299:
@@ -2448,7 +2448,7 @@
   - source:
       curie: PR:000050273
       identifier: PR:000050273
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050273
+      link: https://proconsortium.org/app/entry/PR:PR:000050273
       name: non-structural protein 4 (SARS-CoV-2)
       prefix: pr
     target:
@@ -2460,7 +2460,7 @@
   nodes:
     PR:000050273:
       identifier: PR:000050273
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050273
+      link: https://proconsortium.org/app/entry/PR:PR:000050273
       name: non-structural protein 4 (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725300:
@@ -2477,7 +2477,7 @@
   - source:
       curie: PR:000050274
       identifier: PR:000050274
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050274
+      link: https://proconsortium.org/app/entry/PR:PR:000050274
       name: 3C-like proteinase (SARS-CoV-2)
       prefix: pr
     target:
@@ -2489,7 +2489,7 @@
   nodes:
     PR:000050274:
       identifier: PR:000050274
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050274
+      link: https://proconsortium.org/app/entry/PR:PR:000050274
       name: 3C-like proteinase (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725301:
@@ -2506,7 +2506,7 @@
   - source:
       curie: PR:000050275
       identifier: PR:000050275
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050275
+      link: https://proconsortium.org/app/entry/PR:PR:000050275
       name: non-structural protein 6 (SARS-CoV-2)
       prefix: pr
     target:
@@ -2518,7 +2518,7 @@
   nodes:
     PR:000050275:
       identifier: PR:000050275
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050275
+      link: https://proconsortium.org/app/entry/PR:PR:000050275
       name: non-structural protein 6 (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725302:
@@ -2535,7 +2535,7 @@
   - source:
       curie: PR:000050276
       identifier: PR:000050276
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050276
+      link: https://proconsortium.org/app/entry/PR:PR:000050276
       name: non-structural protein 7 (SARS-CoV-2)
       prefix: pr
     target:
@@ -2547,7 +2547,7 @@
   nodes:
     PR:000050276:
       identifier: PR:000050276
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050276
+      link: https://proconsortium.org/app/entry/PR:PR:000050276
       name: non-structural protein 7 (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725303:
@@ -2564,7 +2564,7 @@
   - source:
       curie: PR:000050277
       identifier: PR:000050277
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050277
+      link: https://proconsortium.org/app/entry/PR:PR:000050277
       name: non-structural protein 8 (SARS-CoV-2)
       prefix: pr
     target:
@@ -2576,7 +2576,7 @@
   nodes:
     PR:000050277:
       identifier: PR:000050277
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050277
+      link: https://proconsortium.org/app/entry/PR:PR:000050277
       name: non-structural protein 8 (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725304:
@@ -2593,7 +2593,7 @@
   - source:
       curie: PR:000050278
       identifier: PR:000050278
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050278
+      link: https://proconsortium.org/app/entry/PR:PR:000050278
       name: non-structural protein 9 (SARS-CoV-2)
       prefix: pr
     target:
@@ -2605,7 +2605,7 @@
   nodes:
     PR:000050278:
       identifier: PR:000050278
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050278
+      link: https://proconsortium.org/app/entry/PR:PR:000050278
       name: non-structural protein 9 (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725305:
@@ -2622,7 +2622,7 @@
   - source:
       curie: PR:000050279
       identifier: PR:000050279
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050279
+      link: https://proconsortium.org/app/entry/PR:PR:000050279
       name: non-structural protein 10 (SARS-CoV-2)
       prefix: pr
     target:
@@ -2634,7 +2634,7 @@
   nodes:
     PR:000050279:
       identifier: PR:000050279
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050279
+      link: https://proconsortium.org/app/entry/PR:PR:000050279
       name: non-structural protein 10 (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725306:
@@ -2651,7 +2651,7 @@
   - source:
       curie: PR:000050280
       identifier: PR:000050280
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050280
+      link: https://proconsortium.org/app/entry/PR:PR:000050280
       name: non-structural protein 11 (SARS-CoV-2)
       prefix: pr
     target:
@@ -2663,7 +2663,7 @@
   nodes:
     PR:000050280:
       identifier: PR:000050280
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050280
+      link: https://proconsortium.org/app/entry/PR:PR:000050280
       name: non-structural protein 11 (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725312:
@@ -2680,7 +2680,7 @@
   - source:
       curie: PR:000050284
       identifier: PR:000050284
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050284
+      link: https://proconsortium.org/app/entry/PR:PR:000050284
       name: RNA-directed RNA polymerase (SARS-CoV-2)
       prefix: pr
     target:
@@ -2692,7 +2692,7 @@
   nodes:
     PR:000050284:
       identifier: PR:000050284
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050284
+      link: https://proconsortium.org/app/entry/PR:PR:000050284
       name: RNA-directed RNA polymerase (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725307:
@@ -2709,7 +2709,7 @@
   - source:
       curie: PR:000050285
       identifier: PR:000050285
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050285
+      link: https://proconsortium.org/app/entry/PR:PR:000050285
       name: helicase (SARS-CoV-2)
       prefix: pr
     target:
@@ -2721,7 +2721,7 @@
   nodes:
     PR:000050285:
       identifier: PR:000050285
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050285
+      link: https://proconsortium.org/app/entry/PR:PR:000050285
       name: helicase (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725308:
@@ -2738,7 +2738,7 @@
   - source:
       curie: PR:000050287
       identifier: PR:000050287
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050287
+      link: https://proconsortium.org/app/entry/PR:PR:000050287
       name: uridylate-specific endoribonuclease (SARS-CoV-2)
       prefix: pr
     target:
@@ -2750,7 +2750,7 @@
   nodes:
     PR:000050287:
       identifier: PR:000050287
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050287
+      link: https://proconsortium.org/app/entry/PR:PR:000050287
       name: uridylate-specific endoribonuclease (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725310:
@@ -2767,7 +2767,7 @@
   - source:
       curie: PR:000050288
       identifier: PR:000050288
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050288
+      link: https://proconsortium.org/app/entry/PR:PR:000050288
       name: 2'-O-methyltransferase (SARS-CoV-2)
       prefix: pr
     target:
@@ -2779,7 +2779,7 @@
   nodes:
     PR:000050288:
       identifier: PR:000050288
-      link: https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:PR:000050288
+      link: https://proconsortium.org/app/entry/PR:PR:000050288
       name: 2'-O-methyltransferase (SARS-CoV-2)
       prefix: pr
     ncbiprotein:YP_009725311:

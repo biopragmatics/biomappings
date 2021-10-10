@@ -1,39 +1,39 @@
 source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	source
-ccle.cell	697_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	697	skos:exactMatch	cellosaurus	CVCL_8056	697-mel	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	A204_SOFT_TISSUE	A-204	skos:exactMatch	cellosaurus	CVCL_1N55	Urd-B	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	ABC1_LUNG	ABC-1	skos:exactMatch	cellosaurus	CVCL_ZB62	AbC1	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	BC2	BC2	skos:exactMatch	cellosaurus	CVCL_1856	BC-2	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	BC2	BC2	skos:exactMatch	cellosaurus	CVCL_IW93	HBG BC2	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	BC2	BC2	skos:exactMatch	efo	0002045	BC-2	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	BGC823_STOMACH	BGC-823	skos:exactMatch	cellosaurus	CVCL_3360	BGC-823	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	BOKU	BOKU	skos:exactMatch	cellosaurus	CVCL_1089	BOKU	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	BOKU	BOKU	skos:exactMatch	depmap	ACH-001451	BOKU	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	C32_SKIN	C32	skos:exactMatch	cellosaurus	CVCL_ZA06	WT2-iPS	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	CL11_LARGE_INTESTINE	CL-11	skos:exactMatch	cellosaurus	CVCL_D517	CL1-1	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	CL14_LARGE_INTESTINE	CL-14	skos:exactMatch	cellosaurus	CVCL_D520	CL1-4	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	CL14_LARGE_INTESTINE	CL-14	skos:exactMatch	cellosaurus	CVCL_ZP40	XPCS2BASV Cl-14	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	COLO783_SKIN	COLO-783	skos:exactMatch	efo	0006375	COLO 741	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	COLO818_SKIN	COLO-818	skos:exactMatch	efo	0006378	COLO 800	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	DEL_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	DEL	skos:exactMatch	efo	0004014	deletion	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	DM3_FIBROBLAST	DM-3	skos:exactMatch	cellosaurus	CVCL_Z233	Schneider 3	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	EBC1_LUNG	EBC-1	skos:exactMatch	cellosaurus	CVCL_E218	NB-EbC1	manually_reviewed	orcid:0000-0003-4423-4370
-ccle.cell	F5_CENTRAL_NERVOUS_SYSTEM	F5	skos:exactMatch	cellosaurus	CVCL_L876	TS/A clone F5	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	GRM_SKIN	GR-M	skos:exactMatch	cellosaurus	CVCL_WL69	GR [Mouse mammary tumor]	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	H4_CENTRAL_NERVOUS_SYSTEM	H4	skos:exactMatch	cellosaurus	CVCL_6C19	H-4	manually_reviewed	orcid:0000-0003-4423-4370
-ccle.cell	H4_CENTRAL_NERVOUS_SYSTEM	H4	skos:exactMatch	cellosaurus	CVCL_HA56	Hutt60	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	H4_CENTRAL_NERVOUS_SYSTEM	H4	skos:exactMatch	cellosaurus	CVCL_JF98	cyfH-4	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	HCC2279_LUNG	HCC-2279	skos:exactMatch	efo	0005374	HCC227	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	HT_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HT	skos:exactMatch	efo	0003779	Hashimoto's thyroiditis	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	HT_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HT	skos:exactMatch	efo	0004348	hematocrit	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	MCAS_OVARY	MCAS	skos:exactMatch	efo	0009001	Mastocytosis	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	MEC1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MEC-1	skos:exactMatch	cellosaurus	CVCL_F939	GM-20	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	MEC1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MEC-1	skos:exactMatch	cellosaurus	CVCL_VR92	MEC1	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	MEC2_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MEC-2	skos:exactMatch	cellosaurus	CVCL_F940	GM-70	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	ML1_THYROID	ML-1	skos:exactMatch	cellosaurus	CVCL_0436	ML-1 [Human leukemia]	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	NB1_AUTONOMIC_GANGLIA	NB-1	skos:exactMatch	cellosaurus	CVCL_ZT00	NB1 [Human skin fibroblast]	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	PC3_PROSTATE	PC-3	skos:exactMatch	cellosaurus	CVCL_S982	PC-3 [Human lung carcinoma]	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	PL21_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	PL-21	skos:exactMatch	cellosaurus	CVCL_E295	TS 0129	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	WM239A	WM239A	skos:exactMatch	cellosaurus	CVCL_RN56	WM239B	manually_reviewed	orcid:0000-0003-4423-4370
+ccle	697_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	697	skos:exactMatch	cellosaurus	CVCL_8056	697-mel	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	A204_SOFT_TISSUE	A-204	skos:exactMatch	cellosaurus	CVCL_1N55	Urd-B	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	ABC1_LUNG	ABC-1	skos:exactMatch	cellosaurus	CVCL_ZB62	AbC1	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	BC2	BC2	skos:exactMatch	cellosaurus	CVCL_1856	BC-2	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	BC2	BC2	skos:exactMatch	cellosaurus	CVCL_IW93	HBG BC2	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	BC2	BC2	skos:exactMatch	efo	0002045	BC-2	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	BGC823_STOMACH	BGC-823	skos:exactMatch	cellosaurus	CVCL_3360	BGC-823	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	BOKU	BOKU	skos:exactMatch	cellosaurus	CVCL_1089	BOKU	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	BOKU	BOKU	skos:exactMatch	depmap	ACH-001451	BOKU	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	C32_SKIN	C32	skos:exactMatch	cellosaurus	CVCL_ZA06	WT2-iPS	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	CL11_LARGE_INTESTINE	CL-11	skos:exactMatch	cellosaurus	CVCL_D517	CL1-1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	CL14_LARGE_INTESTINE	CL-14	skos:exactMatch	cellosaurus	CVCL_D520	CL1-4	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	CL14_LARGE_INTESTINE	CL-14	skos:exactMatch	cellosaurus	CVCL_ZP40	XPCS2BASV Cl-14	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	COLO783_SKIN	COLO-783	skos:exactMatch	efo	0006375	COLO 741	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	COLO818_SKIN	COLO-818	skos:exactMatch	efo	0006378	COLO 800	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	DEL_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	DEL	skos:exactMatch	efo	0004014	deletion	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	DM3_FIBROBLAST	DM-3	skos:exactMatch	cellosaurus	CVCL_Z233	Schneider 3	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	EBC1_LUNG	EBC-1	skos:exactMatch	cellosaurus	CVCL_E218	NB-EbC1	manually_reviewed	orcid:0000-0003-4423-4370
+ccle	F5_CENTRAL_NERVOUS_SYSTEM	F5	skos:exactMatch	cellosaurus	CVCL_L876	TS/A clone F5	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	GRM_SKIN	GR-M	skos:exactMatch	cellosaurus	CVCL_WL69	GR [Mouse mammary tumor]	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	H4_CENTRAL_NERVOUS_SYSTEM	H4	skos:exactMatch	cellosaurus	CVCL_6C19	H-4	manually_reviewed	orcid:0000-0003-4423-4370
+ccle	H4_CENTRAL_NERVOUS_SYSTEM	H4	skos:exactMatch	cellosaurus	CVCL_HA56	Hutt60	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	H4_CENTRAL_NERVOUS_SYSTEM	H4	skos:exactMatch	cellosaurus	CVCL_JF98	cyfH-4	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	HCC2279_LUNG	HCC-2279	skos:exactMatch	efo	0005374	HCC227	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	HT_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HT	skos:exactMatch	efo	0003779	Hashimoto's thyroiditis	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	HT_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HT	skos:exactMatch	efo	0004348	hematocrit	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	MCAS_OVARY	MCAS	skos:exactMatch	efo	0009001	Mastocytosis	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	MEC1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MEC-1	skos:exactMatch	cellosaurus	CVCL_F939	GM-20	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	MEC1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MEC-1	skos:exactMatch	cellosaurus	CVCL_VR92	MEC1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	MEC2_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MEC-2	skos:exactMatch	cellosaurus	CVCL_F940	GM-70	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	ML1_THYROID	ML-1	skos:exactMatch	cellosaurus	CVCL_0436	ML-1 [Human leukemia]	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	NB1_AUTONOMIC_GANGLIA	NB-1	skos:exactMatch	cellosaurus	CVCL_ZT00	NB1 [Human skin fibroblast]	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	PC3_PROSTATE	PC-3	skos:exactMatch	cellosaurus	CVCL_S982	PC-3 [Human lung carcinoma]	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	PL21_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	PL-21	skos:exactMatch	cellosaurus	CVCL_E295	TS 0129	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	WM239A	WM239A	skos:exactMatch	cellosaurus	CVCL_RN56	WM239B	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	mesh	D018528	ATP-Binding Cassette Transporters	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map03010	Ribosome	skos:exactMatch	go	GO:0005840	ribosome	manually_reviewed	orcid:0000-0003-4423-4370
