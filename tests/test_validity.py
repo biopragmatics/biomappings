@@ -6,7 +6,7 @@ import itertools as itt
 from collections import Counter
 
 from biomappings import load_false_mappings, load_mappings, load_predictions, load_unsure
-from biomappings.resources import mapping_sort_key
+from biomappings.resources import load_curators, mapping_sort_key
 from biomappings.utils import MiriamValidator, get_canonical_tuple
 
 mappings = load_mappings()
@@ -65,3 +65,13 @@ def test_unsure_sorted():
     assert unsure == sorted(  # noqa:S101
         unsure, key=mapping_sort_key
     ), "Unsure curations are not sorted"
+
+
+def test_contributors():
+    """Test all contributors have an entry in the curators.tsv file."""
+    contributor_orcids = {row["orcid"] for row in load_curators()}
+    for mapping in itt.chain(mappings, incorrect, unsure):
+        source = mapping["source"]
+        if not source.startswith("orcid:"):
+            continue
+        assert source[len("orcid:"):] in contributor_orcids
