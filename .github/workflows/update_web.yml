@@ -21,8 +21,7 @@ jobs:
       - name: Create local changes
         run: |
           pip install -e .[charts]
-          biomappings export
-          biomappings charts
+          biomappings update
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
