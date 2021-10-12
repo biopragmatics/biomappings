@@ -10,7 +10,12 @@ from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import get_script_url
 
 GILDA_PATH = os.environ.get("GILDA_PATH")
-GILDA_MAPPINGS = os.path.join(GILDA_PATH, "gilda", "resources", "mesh_mappings.tsv")
+if GILDA_PATH:
+    GILDA_MAPPINGS = os.path.join(GILDA_PATH, "gilda", "resources", "mesh_mappings.tsv")
+else:
+    from gilda.resources import MESH_MAPPINGS_PATH
+
+    GILDA_MAPPINGS = MESH_MAPPINGS_PATH
 
 db_ns_mappings = {
     "CHEBI": "chebi",
@@ -33,7 +38,7 @@ def get_primary_mappings():
     for source in sources:
         entries = load_resource_json(f"{source}.json")
         for entry in entries:
-            for xref in entry.get_resource("xrefs", []):
+            for xref in entry.get("xrefs", []):
                 if xref["namespace"] != "MESH":
                     continue
                 mappings.add(("mesh", xref["id"], source, entry["id"]))
