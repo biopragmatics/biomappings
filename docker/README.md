@@ -40,3 +40,10 @@ the `curation` branch of https://github.com/GITHUBUSER/biomappings.
 To contribute curations back to the main Biomappings repository,
 go to https://github.com/biopragmatics/biomappings, and open a
 pull request from the GITHUBUSER/curation branch.
+
+# Building the docker image
+
+To build the image, run the following
+```
+docker build --tag biomappings:latest .
+```
