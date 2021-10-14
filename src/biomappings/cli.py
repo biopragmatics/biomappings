@@ -13,6 +13,7 @@ from .utils import get_git_hash
 
 
 @click.group()
+@click.version_option()
 def main():
     """Run the biomappings CLI."""
 
