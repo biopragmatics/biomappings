@@ -7,4 +7,5 @@ RUN git   clone --branch dockerize https://github.com/biopragmatics/biomappings.
     sed -i 's/https:\/\/github.com\//git@github.com:/g' .git/config && \
     pip install -e .[web]
 
-ENTRYPOINT ["biomappings", "web"]
+COPY startup.sh /startup.sh
+ENTRYPOINT ["/startup.sh"]
