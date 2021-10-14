@@ -32,8 +32,10 @@ Further, the `GITHUBUSER` value described above has to be provided as an
 environment variable.
 
 ```shell
-docker run -d -it -p 5000:5000 -v ~/.ssh:/root/.ssh:ro -v ~/.gitconfig:/root/.gitconfig:ro -e GITHUBUSER=<GITHUBUSER> biomappings:latest
+docker run -it -p 5000:5000 -v ~/.ssh:/root/.ssh:ro -v ~/.gitconfig:/root/.gitconfig:ro -e GITHUBUSER=<GITHUBUSER> biomappings:latest
 ```
+
+Add `-d` to detach.
 
 ## 3. Launch the website and curate
 
