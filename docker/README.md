@@ -8,10 +8,11 @@ follows:
 
 1. Go to https://github.com/biopragmatics/biomappings
 2. Click on the Fork button in the right upper corner of the page. Assuming your
-   username is GITHUBUSER, this will create a forked repository at
+   username is `GITHUBUSER`, this will create a forked repository at
    https://github.com/GITHUBUSER/biomappings.
 
-See also the GitHub [Fork a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+See also the
+GitHub [Fork a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 tutorial.
 
 ## 2. Run the Biomappings Docker
@@ -22,7 +23,9 @@ Docker needs to have (read only) access to:
 - The host machine's git configuration (which contains the name and email of the
   contributor) and is typically stored in `~/.gitconfig`
 - The host machine's SSH key which provides push access to GITHUBUSER's fork of
-  the Biomappings repo. This is typically stored in the `~/.ssh` folder.
+  the Biomappings repo. This is typically stored in the `~/.ssh` folder. If you
+  don't have one already, follow GitHub's guide
+  to [making an SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 In the run command below, these two paths are mounted into the container.
 Further, the `GITHUBUSER` value described above has to be provided as an
