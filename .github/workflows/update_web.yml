@@ -21,6 +21,7 @@ jobs:
       - name: Create local changes
         run: |
           pip install -e .[charts,exports]
+          pip install -U git+https://github.com/mapping-commons/sssom-py.git
           biomappings update
       - name: Commit files
         run: |
