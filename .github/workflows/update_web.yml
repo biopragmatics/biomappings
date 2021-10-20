@@ -20,7 +20,7 @@ jobs:
           python-version: 3.9
       - name: Create local changes
         run: |
-          pip install -e .[charts]
+          pip install -e .[charts,exports]
           biomappings update
       - name: Commit files
         run: |
