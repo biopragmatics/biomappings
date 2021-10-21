@@ -92,6 +92,49 @@ class InvalidPrefix(ValueError):
 class InvalidIdentifier(ValueError):
     """Raised for an invalid identifier."""
 
+    def __init__(self, prefix: str, identifier: str):
+        """Initialize the error.
+
+        :param prefix: A CURIE's prefix
+        :param identifier: A CURIE's identifier
+        """
+        self.prefix = prefix
+        self.identifier = identifier
+
+
+class InvalidIdentifierPattern(InvalidIdentifier):
+    """Raised for an identifier that doesn't match the pattern."""
+
+    def __init__(self, prefix: str, identifier: str, pattern):
+        """Initialize the error.
+
+        :param prefix: A CURIE's prefix
+        :param identifier: A CURIE's identifier
+        :param pattern: A regular expression pattern
+        """
+        super().__init__(prefix, identifier)
+        self.pattern = pattern
+
+    def __str__(self) -> str:  # noqa:D105
+        return f"{self.prefix}:{self.identifier} does not match pattern {self.pattern}"
+
+
+class InvalidNormIdentifier(InvalidIdentifier):
+    """Raised for an invalid normalized identifier."""
+
+    def __init__(self, prefix: str, identifier: str, norm_identifier: str):
+        """Initialize the error.
+
+        :param prefix: A CURIE's prefix
+        :param identifier: A CURIE's identifier
+        :param norm_identifier: The normalized version of the identifier
+        """
+        super().__init__(prefix, identifier)
+        self.norm_identifier = norm_identifier
+
+    def __str__(self) -> str:  # noqa:D105
+        return f"{self.prefix}:{self.identifier} does not match normalized CURIE {self.prefix}:{self.norm_identifier}"
+
 
 def check_valid_prefix_id(prefix, identifier):
     """Check the prefix/identifier pair is valid."""
@@ -101,10 +144,10 @@ def check_valid_prefix_id(prefix, identifier):
     if prefix not in {"ncit"}:
         norm_identifier = resource.normalize_identifier(identifier)
         if norm_identifier != identifier:
-            raise InvalidIdentifier(prefix, identifier)
+            raise InvalidNormIdentifier(prefix, identifier, norm_identifier)
     pattern = resource.get_pattern_re()
     if pattern is not None and not pattern.match(identifier):
-        raise InvalidIdentifier(prefix, identifier)
+        raise InvalidIdentifierPattern(prefix, identifier, pattern)
 
 
 def get_curie(prefix: str, identifier: str) -> str:
