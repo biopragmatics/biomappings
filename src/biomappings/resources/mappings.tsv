@@ -1423,6 +1423,7 @@ mesh	C000592662	DORAVIRINE	skos:exactMatch	ncit	C171848	Doravirine	manually_revi
 mesh	C000592900	FJX1 protein, human	skos:exactMatch	uniprot	Q86VR8	FJX1	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000596385	Jalili syndrome	skos:exactMatch	doid	DOID:0111404	Jalili syndrome	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000598645	Spheroid body myopathy	skos:exactMatch	doid	DOID:0080091	spheroid body myopathy	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000603632	sodium glycididazole	skos:exactMatch	ncit	C77889	Sodium Glycididazole	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000606551	remdesivir	skos:exactMatch	ncit	C152185	Remdesivir	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000620255	GOT1 protein, human	skos:exactMatch	uniprot	P17174	GOT1	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000621508	F2RL1 protein, human	skos:exactMatch	uniprot	P55085	F2RL1	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1449,12 +1450,18 @@ mesh	C000656865	talaromycosis	skos:exactMatch	doid	DOID:0050288	penicilliosis	ma
 mesh	C000656904	tinea nigra	skos:exactMatch	doid	DOID:8912	tinea nigra	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000657245	COVID-19	skos:exactMatch	doid	DOID:0080600	COVID-19	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000706947	FGF21 protein, human	skos:exactMatch	uniprot	Q9NSA1	FGF21	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C009285	sodium polymetaphosphate	skos:exactMatch	ncit	C84166	Sodium Polymetaphosphate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C012036	sodium sulfate	skos:exactMatch	ncit	C47727	Sodium Sulfate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C012566	taurolidine	skos:exactMatch	ncit	C2639	Taurolidine	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C012814	cephoxazole	skos:exactMatch	ncit	C76171	Cefoxazole	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C017717	sodium thiosulfate	skos:exactMatch	ncit	C1230	Sodium Thiosulfate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C018851	borax	skos:exactMatch	ncit	C77496	Sodium Borate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C019919	CoA-synthesizing protein complex	skos:exactMatch	go	GO:1990143	CoA-synthesizing protein complex	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C025026	sodium sulfite	skos:exactMatch	ncit	C28205	Sodium Sulfite	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C033246	prostaglandin E3	skos:exactMatch	ncit	C121971	Prostaglandin E3	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C033727	fumarate reductase complex	skos:exactMatch	go	GO:0045283	fumarate reductase complex	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C035492	haptoglobin-hemoglobin complex	skos:exactMatch	go	GO:0031838	haptoglobin-hemoglobin complex	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C036901	defibrotide	skos:exactMatch	ncit	C1064	Defibrotide Sodium	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C048844	anti-IgG	skos:exactMatch	efo	0005030	anti-IgG	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C053001	adefovir	skos:exactMatch	ncit	C61526	Adefovir	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C054369	MAPT protein, human	skos:exactMatch	uniprot	P10636	MAPT	manually_reviewed	orcid:0000-0003-4423-4370
@@ -3134,6 +3141,7 @@ mesh	D000077549	Artemether	skos:exactMatch	chebi	CHEBI:195280	artemether	manuall
 mesh	D000077551	Micafungin	skos:exactMatch	chebi	CHEBI:600520	micafungin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000077553	Edaravone	skos:exactMatch	chebi	CHEBI:31530	edaravone	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000077554	Levobupivacaine	skos:exactMatch	chebi	CHEBI:6149	levobupivacaine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000077559	Sodium Citrate	skos:exactMatch	ncit	C62075	Sodium Citrate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000077560	Enfuvirtide	skos:exactMatch	chebi	CHEBI:608828	enfuvirtide	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000077560	Enfuvirtide	skos:exactMatch	ncit	C2105	Enfuvirtide	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000077562	Valganciclovir	skos:exactMatch	chebi	CHEBI:63635	valganciclovir	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3366,6 +3374,7 @@ mesh	D000940	Antigenic Variation	skos:exactMatch	go	GO:0020033	antigenic variati
 mesh	D000941	Antigens	skos:exactMatch	chebi	CHEBI:59132	antigen	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000963	Antimetabolites	skos:exactMatch	chebi	CHEBI:35221	antimetabolite	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000967	Antimony Sodium Gluconate	skos:exactMatch	chebi	CHEBI:28148	sodium stibogluconate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D000967	Antimony Sodium Gluconate	skos:exactMatch	ncit	C61083	Sodium Stibogluconate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000968	Antimycin A	skos:exactMatch	chebi	CHEBI:2762	antimycin A	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000970	Antineoplastic Agents	skos:exactMatch	chebi	CHEBI:35610	antineoplastic agent	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000977	Antiparasitic Agents	skos:exactMatch	chebi	CHEBI:35442	antiparasitic agent	manually_reviewed	orcid:0000-0003-4423-4370
@@ -3680,6 +3689,7 @@ mesh	D003865	Depressive Disorder, Major	skos:exactMatch	doid	DOID:1470	major dep
 mesh	D003896	Desmosomes	skos:exactMatch	go	GO:0030057	desmosome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D004031	Diestrus	skos:exactMatch	go	GO:0060207	diestrus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D004063	Digestion	skos:exactMatch	go	GO:0007586	digestion	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D004205	Cromolyn Sodium	skos:exactMatch	ncit	C28946	Cromolyn Sodium	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D004260	DNA Repair	skos:exactMatch	go	GO:0006281	DNA repair	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D004261	DNA Replication	skos:exactMatch	go	GO:0006260	DNA replication	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D004263	DNA Tumor Viruses	skos:exactMatch	ncit	C14199	DNA Tumor Virus	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3769,6 +3779,7 @@ mesh	D005910	Glioma	skos:exactMatch	doid	DOID:0060108	brain glioma	manually_revi
 mesh	D005943	Gluconeogenesis	skos:exactMatch	go	GO:0006094	gluconeogenesis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006019	Glycolysis	skos:exactMatch	go	GO:0006096	glycolytic process	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006031	Glycosylation	skos:exactMatch	go	GO:0070085	glycosylation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D006052	Gold Sodium Thiomalate	skos:exactMatch	ncit	C74037	Gold Sodium Thiomalate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006056	Golgi Apparatus	skos:exactMatch	go	GO:0005794	Golgi apparatus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006111	Graves Disease	skos:exactMatch	doid	DOID:10719	toxic diffuse goiter	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006258	Head and Neck Neoplasms	skos:exactMatch	doid	DOID:11934	head and neck cancer	manually_reviewed	orcid:0000-0003-1307-2508
@@ -3955,6 +3966,28 @@ mesh	D012852	Sinusitis	skos:exactMatch	doid	DOID:0050127	sinusitis	manually_revi
 mesh	D012893	Sleep Wake Disorders	skos:exactMatch	doid	DOID:535	sleep disorder	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D012901	Variola virus	skos:exactMatch	ncit	C96527	Variola Virus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012919	Social Behavior	skos:exactMatch	go	GO:0035176	social behavior	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D012965	Sodium Chloride	skos:exactMatch	chebi	CHEBI:26710	sodium chloride	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012965	Sodium Chloride	skos:exactMatch	ncit	C29974	Sodium Chloride	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012966	Sodium Cyanide	skos:exactMatch	chebi	CHEBI:33192	sodium cyanide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012966	Sodium Cyanide	skos:exactMatch	ncit	C163699	Sodium Cyanide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012967	Sodium Dodecyl Sulfate	skos:exactMatch	chebi	CHEBI:8984	sodium dodecyl sulfate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012967	Sodium Dodecyl Sulfate	skos:exactMatch	ncit	C76733	Sodium Lauryl Sulfate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012969	Sodium Fluoride	skos:exactMatch	ncit	C832	Sodium Fluoride	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012971	Gold Sodium Thiosulfate	skos:exactMatch	chebi	CHEBI:53622	sodium aurothiosulfate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012971	Gold Sodium Thiosulfate	skos:exactMatch	ncit	C152109	Gold Sodium Thiosulfate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012972	Sodium Hydroxide	skos:exactMatch	chebi	CHEBI:32145	sodium hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012972	Sodium Hydroxide	skos:exactMatch	ncit	C74373	Sodium Hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012973	Sodium Hypochlorite	skos:exactMatch	chebi	CHEBI:32146	sodium hypochlorite	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012973	Sodium Hypochlorite	skos:exactMatch	ncit	C80658	Sodium Hypochlorite	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012974	Sodium Iodide	skos:exactMatch	chebi	CHEBI:33167	sodium iodide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012974	Sodium Iodide	skos:exactMatch	ncit	C80943	Sodium Iodide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012977	Sodium Nitrite	skos:exactMatch	chebi	CHEBI:78870	sodium nitrite	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012978	Sodium Oxybate	skos:exactMatch	ncit	C61870	Sodium Oxybate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012980	Sodium Salicylate	skos:exactMatch	chebi	CHEBI:9180	Sodium salicylate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012980	Sodium Salicylate	skos:exactMatch	ncit	C834	Sodium Salicylate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012981	Sodium Tetradecyl Sulfate	skos:exactMatch	chebi	CHEBI:75273	sodium tetradecyl sulfate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012981	Sodium Tetradecyl Sulfate	skos:exactMatch	ncit	C66555	Sodium Tetradecyl Sulfate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D012982	Sodium, Dietary	skos:exactMatch	ncit	C68287	Dietary Sodium	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D013014	SOS Response (Genetics)	skos:exactMatch	go	GO:0009432	SOS response	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D013036	Spasms, Infantile	skos:exactMatch	doid	DOID:0050562	West syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D013049	Spectrin	skos:exactMatch	go	GO:0008091	spectrin	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4013,6 +4046,7 @@ mesh	D014903	West Virginia	skos:exactMatch	ncit	C43473	West Virginia	manually_re
 mesh	D014945	Wound Healing	skos:exactMatch	go	GO:0042060	wound healing	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D014960	X Chromosome	skos:exactMatch	go	GO:0000805	X chromosome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D014998	Y Chromosome	skos:exactMatch	go	GO:0000806	Y chromosome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D015222	Sodium Channels	skos:exactMatch	ncit	C17145	Sodium Channel	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D015230	Prostaglandin D2	skos:exactMatch	chebi	CHEBI:15555	prostaglandin D2	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D015266	Carcinoma, Merkel Cell	skos:exactMatch	doid	DOID:3965	Merkel cell carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D015388	Organelles	skos:exactMatch	go	GO:0043226	organelle	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4132,7 +4166,10 @@ mesh	D017368	Protein Prenylation	skos:exactMatch	go	GO:0018342	protein prenylati
 mesh	D017499	Porokeratosis	skos:exactMatch	doid	DOID:3805	porokeratosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D017510	Protein Folding	skos:exactMatch	go	GO:0006457	protein folding	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017629	Gap Junctions	skos:exactMatch	go	GO:0005921	gap junction	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D017673	Sodium Chloride, Dietary	skos:exactMatch	ncit	C72068	Table Salt	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D017681	Hypereosinophilic Syndrome	skos:exactMatch	doid	DOID:396	Loeffler endocarditis	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D017693	Sodium Bicarbonate	skos:exactMatch	chebi	CHEBI:32139	sodium hydrogencarbonate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D017693	Sodium Bicarbonate	skos:exactMatch	ncit	C29457	Sodium Bicarbonate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D017728	Lymphoma, Large-Cell, Anaplastic	skos:exactMatch	doid	DOID:0050744	anaplastic large cell lymphoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D017735	Virus Latency	skos:exactMatch	go	GO:0019042	viral latency	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D018087	Plastids	skos:exactMatch	go	GO:0009536	plastid	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4162,21 +4199,28 @@ mesh	D019154	Protein Splicing	skos:exactMatch	go	GO:0030908	protein splicing	man
 mesh	D019175	DNA Methylation	skos:exactMatch	go	GO:0006306	DNA methylation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019213	Rubulavirus	skos:exactMatch	ncit	C14326	Rubulavirus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019276	Glycocalyx	skos:exactMatch	go	GO:0030112	glycocalyx	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D019346	Sodium Acetate	skos:exactMatch	chebi	CHEBI:32954	sodium acetate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D019346	Sodium Acetate	skos:exactMatch	ncit	C47720	Sodium Acetate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D019354	Sodium Lactate	skos:exactMatch	chebi	CHEBI:75228	sodium lactate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D019354	Sodium Lactate	skos:exactMatch	ncit	C47726	Sodium Lactate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D019457	Chromosome Breakage	skos:exactMatch	go	GO:0031052	chromosome breakage	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019595	Severe Dengue	skos:exactMatch	doid	DOID:12206	dengue hemorrhagic fever	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D019599	Mossy Fibers, Hippocampal	skos:exactMatch	go	GO:0097457	hippocampal mossy fiber	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019706	Excitatory Postsynaptic Potentials	skos:exactMatch	go	GO:0060079	excitatory postsynaptic potential	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D019810	Sodium Azide	skos:exactMatch	chebi	CHEBI:278547	sodium azide	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D019897	Periplasm	skos:exactMatch	go	GO:0042597	periplasmic space	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D019898	Autocrine Communication	skos:exactMatch	go	GO:0035425	autocrine signaling	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019899	Paracrine Communication	skos:exactMatch	go	GO:0038001	paracrine signaling	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020018	Sexual Dysfunctions, Psychological	skos:exactMatch	doid	DOID:10132	psychosexual disorder	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D020090	Chromosome Segregation	skos:exactMatch	go	GO:0007059	chromosome segregation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020101	Acrosome Reaction	skos:exactMatch	go	GO:0007340	acrosome reaction	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D020160	Sodium Benzoate	skos:exactMatch	ncit	C66541	Sodium Benzoate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020169	Caspases	skos:exactMatch	ncit	C18153	Caspase	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020170	Caspase 1	skos:exactMatch	hgnc	1499	CASP1	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020219	Chondrogenesis	skos:exactMatch	go	GO:0051216	cartilage development	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020237	Alexia, Pure	skos:exactMatch	doid	DOID:0060156	visual verbal agnosia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D020315	Latex Hypersensitivity	skos:exactMatch	doid	DOID:0060532	latex allergy	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D020358	Sodium Cholate	skos:exactMatch	chebi	CHEBI:26711	sodium cholate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020423	Median Neuropathy	skos:exactMatch	doid	DOID:571	median neuropathy	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D020433	Trigeminal Nerve Diseases	skos:exactMatch	doid	DOID:561	trigeminal nerve disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D020435	Glossopharyngeal Nerve Diseases	skos:exactMatch	doid	DOID:3418	glossopharyngeal nerve disease	manually_reviewed	orcid:0000-0003-1307-2508
@@ -4210,6 +4254,7 @@ mesh	D022542	Measles-Mumps-Rubella Vaccine	skos:exactMatch	ncit	C96403	Measles/M
 mesh	D023102	Anoikis	skos:exactMatch	go	GO:0043276	anoikis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D023902	Chromosome Pairing	skos:exactMatch	go	GO:0007129	synapsis	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D026721	RNA 3' End Processing	skos:exactMatch	go	GO:0031123	RNA 3'-end processing	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D026941	Sodium Channel Blockers	skos:exactMatch	chebi	CHEBI:38633	sodium channel blocker	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D029322	Norovirus	skos:exactMatch	ncit	C112362	Norovirus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D029597	Romano-Ward Syndrome	skos:exactMatch	doid	DOID:0110644	long QT syndrome 1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D030762	Estrous Cycle	skos:exactMatch	go	GO:0044849	estrous cycle	manually_reviewed	orcid:0000-0001-9439-5346
