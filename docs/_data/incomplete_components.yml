@@ -1653,6 +1653,180 @@
       prefix: efo
 - edges:
   - source:
+      curie: chebi:119486
+      identifier: CHEBI:119486
+      link: https://bioregistry.io/chebi:119486
+      name: efavirenz
+      prefix: chebi
+    target:
+      curie: ncit:C29027
+      identifier: C29027
+      link: https://bioregistry.io/ncit:C29027
+      name: Efavirenz
+      prefix: ncit
+  nodes:
+    chebi:119486:
+      identifier: CHEBI:119486
+      link: https://bioregistry.io/chebi:119486
+      name: efavirenz
+      prefix: chebi
+    mesh:C098320:
+      identifier: C098320
+      link: https://bioregistry.io/mesh:C098320
+      name: efavirenz
+      prefix: mesh
+    ncit:C29027:
+      identifier: C29027
+      link: https://bioregistry.io/ncit:C29027
+      name: Efavirenz
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:145994
+      identifier: CHEBI:145994
+      link: https://bioregistry.io/chebi:145994
+      name: remdesivir
+      prefix: chebi
+    target:
+      curie: ncit:C152185
+      identifier: C152185
+      link: https://bioregistry.io/ncit:C152185
+      name: Remdesivir
+      prefix: ncit
+  nodes:
+    chebi:145994:
+      identifier: CHEBI:145994
+      link: https://bioregistry.io/chebi:145994
+      name: remdesivir
+      prefix: chebi
+    mesh:C000606551:
+      identifier: C000606551
+      link: https://bioregistry.io/mesh:C000606551
+      name: remdesivir
+      prefix: mesh
+    ncit:C152185:
+      identifier: C152185
+      link: https://bioregistry.io/ncit:C152185
+      name: Remdesivir
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:22587
+      identifier: CHEBI:22587
+      link: https://bioregistry.io/chebi:22587
+      name: antiviral agent
+      prefix: chebi
+    target:
+      curie: ncit:C281
+      identifier: C281
+      link: https://bioregistry.io/ncit:C281
+      name: Antiviral Agent
+      prefix: ncit
+  nodes:
+    chebi:22587:
+      identifier: CHEBI:22587
+      link: https://bioregistry.io/chebi:22587
+      name: antiviral agent
+      prefix: chebi
+    mesh:D000998:
+      identifier: D000998
+      link: https://bioregistry.io/mesh:D000998
+      name: Antiviral Agents
+      prefix: mesh
+    ncit:C281:
+      identifier: C281
+      link: https://bioregistry.io/ncit:C281
+      name: Antiviral Agent
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:26333
+      identifier: CHEBI:26333
+      link: https://bioregistry.io/chebi:26333
+      name: prostaglandin
+      prefix: chebi
+    target:
+      curie: ncit:C782
+      identifier: C782
+      link: https://bioregistry.io/ncit:C782
+      name: Prostaglandin
+      prefix: ncit
+  nodes:
+    chebi:26333:
+      identifier: CHEBI:26333
+      link: https://bioregistry.io/chebi:26333
+      name: prostaglandin
+      prefix: chebi
+    mesh:D011453:
+      identifier: D011453
+      link: https://bioregistry.io/mesh:D011453
+      name: Prostaglandins
+      prefix: mesh
+    ncit:C782:
+      identifier: C782
+      link: https://bioregistry.io/ncit:C782
+      name: Prostaglandin
+      prefix: ncit
+- edges:
+  - source:
+      curie: mesh:D000077145
+      identifier: D000077145
+      link: https://bioregistry.io/mesh:D000077145
+      name: Sulfanilamide
+      prefix: mesh
+    target:
+      curie: mesh:D013424
+      identifier: D013424
+      link: https://bioregistry.io/mesh:D013424
+      name: Sulfanilamides
+      prefix: mesh
+  nodes:
+    chebi:45373:
+      identifier: CHEBI:45373
+      link: https://bioregistry.io/chebi:45373
+      name: sulfanilamide
+      prefix: chebi
+    mesh:D000077145:
+      identifier: D000077145
+      link: https://bioregistry.io/mesh:D000077145
+      name: Sulfanilamide
+      prefix: mesh
+    mesh:D013424:
+      identifier: D013424
+      link: https://bioregistry.io/mesh:D013424
+      name: Sulfanilamides
+      prefix: mesh
+- edges:
+  - source:
+      curie: chebi:82977
+      identifier: CHEBI:82977
+      link: https://bioregistry.io/chebi:82977
+      name: daclatasvir
+      prefix: chebi
+    target:
+      curie: ncit:C114981
+      identifier: C114981
+      link: https://bioregistry.io/ncit:C114981
+      name: Daclatasvir
+      prefix: ncit
+  nodes:
+    chebi:82977:
+      identifier: CHEBI:82977
+      link: https://bioregistry.io/chebi:82977
+      name: daclatasvir
+      prefix: chebi
+    mesh:C549273:
+      identifier: C549273
+      link: https://bioregistry.io/mesh:C549273
+      name: daclatasvir
+      prefix: mesh
+    ncit:C114981:
+      identifier: C114981
+      link: https://bioregistry.io/ncit:C114981
+      name: Daclatasvir
+      prefix: ncit
+- edges:
+  - source:
       curie: kegg.pathway:hsa00350
       identifier: hsa00350
       link: https://bioregistry.io/kegg.pathway:hsa00350
@@ -1980,6 +2154,296 @@
       link: https://bioregistry.io/mesh:D000312
       name: Adrenal Hyperplasia, Congenital
       prefix: mesh
+- edges:
+  - source:
+      curie: chebi:38954
+      identifier: CHEBI:38954
+      link: https://bioregistry.io/chebi:38954
+      name: temephos
+      prefix: chebi
+    target:
+      curie: ncit:C80606
+      identifier: C80606
+      link: https://bioregistry.io/ncit:C80606
+      name: Temefos
+      prefix: ncit
+  nodes:
+    chebi:38954:
+      identifier: CHEBI:38954
+      link: https://bioregistry.io/chebi:38954
+      name: temephos
+      prefix: chebi
+    mesh:D000002:
+      identifier: D000002
+      link: https://bioregistry.io/mesh:D000002
+      name: Temefos
+      prefix: mesh
+    ncit:C80606:
+      identifier: C80606
+      link: https://bioregistry.io/ncit:C80606
+      name: Temefos
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:68606
+      identifier: CHEBI:68606
+      link: https://bioregistry.io/chebi:68606
+      name: rilpivirine
+      prefix: chebi
+    target:
+      curie: ncit:C76929
+      identifier: C76929
+      link: https://bioregistry.io/ncit:C76929
+      name: Rilpivirine
+      prefix: ncit
+  nodes:
+    chebi:68606:
+      identifier: CHEBI:68606
+      link: https://bioregistry.io/chebi:68606
+      name: rilpivirine
+      prefix: chebi
+    mesh:D000068696:
+      identifier: D000068696
+      link: https://bioregistry.io/mesh:D000068696
+      name: Rilpivirine
+      prefix: mesh
+    ncit:C76929:
+      identifier: C76929
+      link: https://bioregistry.io/ncit:C76929
+      name: Rilpivirine
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:31243
+      identifier: CHEBI:31243
+      link: https://bioregistry.io/chebi:31243
+      name: atazanavir sulfate
+      prefix: chebi
+    target:
+      curie: ncit:C28835
+      identifier: C28835
+      link: https://bioregistry.io/ncit:C28835
+      name: Atazanavir Sulfate
+      prefix: ncit
+  nodes:
+    chebi:31243:
+      identifier: CHEBI:31243
+      link: https://bioregistry.io/chebi:31243
+      name: atazanavir sulfate
+      prefix: chebi
+    mesh:D000069446:
+      identifier: D000069446
+      link: https://bioregistry.io/mesh:D000069446
+      name: Atazanavir Sulfate
+      prefix: mesh
+    ncit:C28835:
+      identifier: C28835
+      link: https://bioregistry.io/ncit:C28835
+      name: Atazanavir Sulfate
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:85083
+      identifier: CHEBI:85083
+      link: https://bioregistry.io/chebi:85083
+      name: sofosbuvir
+      prefix: chebi
+    target:
+      curie: ncit:C101263
+      identifier: C101263
+      link: https://bioregistry.io/ncit:C101263
+      name: Sofosbuvir
+      prefix: ncit
+  nodes:
+    chebi:85083:
+      identifier: CHEBI:85083
+      link: https://bioregistry.io/chebi:85083
+      name: sofosbuvir
+      prefix: chebi
+    mesh:D000069474:
+      identifier: D000069474
+      link: https://bioregistry.io/mesh:D000069474
+      name: Sofosbuvir
+      prefix: mesh
+    ncit:C101263:
+      identifier: C101263
+      link: https://bioregistry.io/ncit:C101263
+      name: Sofosbuvir
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:134743
+      identifier: CHEBI:134743
+      link: https://bioregistry.io/chebi:134743
+      name: simeprevir
+      prefix: chebi
+    target:
+      curie: ncit:C129015
+      identifier: C129015
+      link: https://bioregistry.io/ncit:C129015
+      name: Simeprevir
+      prefix: ncit
+  nodes:
+    chebi:134743:
+      identifier: CHEBI:134743
+      link: https://bioregistry.io/chebi:134743
+      name: simeprevir
+      prefix: chebi
+    mesh:D000069616:
+      identifier: D000069616
+      link: https://bioregistry.io/mesh:D000069616
+      name: Simeprevir
+      prefix: mesh
+    ncit:C129015:
+      identifier: C129015
+      link: https://bioregistry.io/ncit:C129015
+      name: Simeprevir
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:35854
+      identifier: CHEBI:35854
+      link: https://bioregistry.io/chebi:35854
+      name: valacyclovir
+      prefix: chebi
+    target:
+      curie: ncit:C28235
+      identifier: C28235
+      link: https://bioregistry.io/ncit:C28235
+      name: Valacyclovir
+      prefix: ncit
+  nodes:
+    chebi:35854:
+      identifier: CHEBI:35854
+      link: https://bioregistry.io/chebi:35854
+      name: valacyclovir
+      prefix: chebi
+    mesh:D000077483:
+      identifier: D000077483
+      link: https://bioregistry.io/mesh:D000077483
+      name: Valacyclovir
+      prefix: mesh
+    ncit:C28235:
+      identifier: C28235
+      link: https://bioregistry.io/ncit:C28235
+      name: Valacyclovir
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:608828
+      identifier: CHEBI:608828
+      link: https://bioregistry.io/chebi:608828
+      name: enfuvirtide
+      prefix: chebi
+    target:
+      curie: ncit:C2105
+      identifier: C2105
+      link: https://bioregistry.io/ncit:C2105
+      name: Enfuvirtide
+      prefix: ncit
+  nodes:
+    chebi:608828:
+      identifier: CHEBI:608828
+      link: https://bioregistry.io/chebi:608828
+      name: enfuvirtide
+      prefix: chebi
+    mesh:D000077560:
+      identifier: D000077560
+      link: https://bioregistry.io/mesh:D000077560
+      name: Enfuvirtide
+      prefix: mesh
+    ncit:C2105:
+      identifier: C2105
+      link: https://bioregistry.io/ncit:C2105
+      name: Enfuvirtide
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:63635
+      identifier: CHEBI:63635
+      link: https://bioregistry.io/chebi:63635
+      name: valganciclovir
+      prefix: chebi
+    target:
+      curie: ncit:C2629
+      identifier: C2629
+      link: https://bioregistry.io/ncit:C2629
+      name: Valganciclovir
+      prefix: ncit
+  nodes:
+    chebi:63635:
+      identifier: CHEBI:63635
+      link: https://bioregistry.io/chebi:63635
+      name: valganciclovir
+      prefix: chebi
+    mesh:D000077562:
+      identifier: D000077562
+      link: https://bioregistry.io/mesh:D000077562
+      name: Valganciclovir
+      prefix: mesh
+    ncit:C2629:
+      identifier: C2629
+      link: https://bioregistry.io/ncit:C2629
+      name: Valganciclovir
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:63608
+      identifier: CHEBI:63608
+      link: https://bioregistry.io/chebi:63608
+      name: maraviroc
+      prefix: chebi
+    target:
+      curie: ncit:C73144
+      identifier: C73144
+      link: https://bioregistry.io/ncit:C73144
+      name: Maraviroc
+      prefix: ncit
+  nodes:
+    chebi:63608:
+      identifier: CHEBI:63608
+      link: https://bioregistry.io/chebi:63608
+      name: maraviroc
+      prefix: chebi
+    mesh:D000077592:
+      identifier: D000077592
+      link: https://bioregistry.io/mesh:D000077592
+      name: Maraviroc
+      prefix: mesh
+    ncit:C73144:
+      identifier: C73144
+      link: https://bioregistry.io/ncit:C73144
+      name: Maraviroc
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:2453
+      identifier: CHEBI:2453
+      link: https://bioregistry.io/chebi:2453
+      name: acyclovir
+      prefix: chebi
+    target:
+      curie: ncit:C205
+      identifier: C205
+      link: https://bioregistry.io/ncit:C205
+      name: Acyclovir
+      prefix: ncit
+  nodes:
+    chebi:2453:
+      identifier: CHEBI:2453
+      link: https://bioregistry.io/chebi:2453
+      name: acyclovir
+      prefix: chebi
+    mesh:D000212:
+      identifier: D000212
+      link: https://bioregistry.io/mesh:D000212
+      name: Acyclovir
+      prefix: mesh
+    ncit:C205:
+      identifier: C205
+      link: https://bioregistry.io/ncit:C205
+      name: Acyclovir
+      prefix: ncit
 - edges:
   - source:
       curie: chebi:3815
