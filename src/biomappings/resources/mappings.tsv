@@ -1455,14 +1455,19 @@ mesh	C012036	sodium sulfate	skos:exactMatch	ncit	C47727	Sodium Sulfate	manually_
 mesh	C012566	taurolidine	skos:exactMatch	ncit	C2639	Taurolidine	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C012814	cephoxazole	skos:exactMatch	ncit	C76171	Cefoxazole	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C017717	sodium thiosulfate	skos:exactMatch	ncit	C1230	Sodium Thiosulfate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C017959	choline magnesium trisalicylate	skos:exactMatch	ncit	C29244	Choline Magnesium Trisalicylate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C018851	borax	skos:exactMatch	ncit	C77496	Sodium Borate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C019919	CoA-synthesizing protein complex	skos:exactMatch	go	GO:1990143	CoA-synthesizing protein complex	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C025026	sodium sulfite	skos:exactMatch	ncit	C28205	Sodium Sulfite	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C029943	potassium hydroxide	skos:exactMatch	ncit	C28204	Potassium Hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C033065	aluminum magnesium silicate	skos:exactMatch	ncit	C83898	Magnesium Aluminum Silicate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C033246	prostaglandin E3	skos:exactMatch	ncit	C121971	Prostaglandin E3	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C033727	fumarate reductase complex	skos:exactMatch	go	GO:0045283	fumarate reductase complex	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C035492	haptoglobin-hemoglobin complex	skos:exactMatch	go	GO:0031838	haptoglobin-hemoglobin complex	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C036901	defibrotide	skos:exactMatch	ncit	C1064	Defibrotide Sodium	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C042156	beryllium hydroxide	skos:exactMatch	ncit	C45878	Beryllium Hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C048844	anti-IgG	skos:exactMatch	efo	0005030	anti-IgG	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C051397	pyrazine-2-diazohydroxide	skos:exactMatch	ncit	C1207	Pyrazine Diazohydroxide	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C053001	adefovir	skos:exactMatch	ncit	C61526	Adefovir	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C054369	MAPT protein, human	skos:exactMatch	uniprot	P10636	MAPT	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C056900	neuromedin U	skos:exactMatch	efo	0003266	neuromedin U	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1484,6 +1489,7 @@ mesh	C087098	virulizin	skos:exactMatch	ncit	C26677	Virulizin	manually_reviewed	o
 mesh	C089768	TAF10 protein, human	skos:exactMatch	uniprot	Q12962	TAF10	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C089821	MS4A3 protein, human	skos:exactMatch	uniprot	Q96HJ5	MS4A3	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C090656	TRAF3 protein, human	skos:exactMatch	uniprot	Q13114	TRAF3	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C091418	magnesium diglycinate	skos:exactMatch	ncit	C76082	Magnesium Glycinate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C091671	XCR1 protein, human	skos:exactMatch	uniprot	P46094	XCR1	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C093745	BPHL protein, human	skos:exactMatch	uniprot	Q86WA6	BPHL	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C094154	MFAP3 protein, human	skos:exactMatch	uniprot	P55082	MFAP3	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1669,6 +1675,7 @@ mesh	C496590	MRPL19 protein, human	skos:exactMatch	uniprot	P49406	MRPL19	manuall
 mesh	C496701	RIC3 protein, human	skos:exactMatch	uniprot	Q7Z5B4	RIC3	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C496709	MCTP1 protein, human	skos:exactMatch	uniprot	Q6DN14	MCTP1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C496711	MCTP2 protein, human	skos:exactMatch	uniprot	Q6DN12	MCTP2	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C496892	Magnesium Salicylate	skos:exactMatch	ncit	C66050	Magnesium Salicylate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C497121	SP3 protein, human	skos:exactMatch	uniprot	Q02447	SP3	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C497139	DGKD protein, human	skos:exactMatch	uniprot	Q16760	DGKD	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C497318	PAX2 protein, human	skos:exactMatch	uniprot	Q02962	PAX2	manually_reviewed	orcid:0000-0003-1307-2508
@@ -3294,6 +3301,7 @@ mesh	D000524	Alphavirus	skos:exactMatch	ncit	C112030	Alphavirus	manually_reviewe
 mesh	D000525	Alprazolam	skos:exactMatch	chebi	CHEBI:2611	alprazolam	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000526	Alprenolol	skos:exactMatch	chebi	CHEBI:51211	alprenolol	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000536	Aluminum Hydroxide	skos:exactMatch	chebi	CHEBI:33130	aluminium hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D000536	Aluminum Hydroxide	skos:exactMatch	ncit	C39707	Aluminum Hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000537	Aluminum Oxide	skos:exactMatch	chebi	CHEBI:30187	aluminium oxide	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000547	Amantadine	skos:exactMatch	chebi	CHEBI:2618	amantadine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000549	Ambenonium Chloride	skos:exactMatch	chebi	CHEBI:2628	ambenonium chloride	manually_reviewed	orcid:0000-0003-4423-4370
@@ -3508,6 +3516,7 @@ mesh	D002110	Caffeine	skos:exactMatch	chebi	CHEBI:27732	caffeine	manually_review
 mesh	D002118	Calcium	skos:exactMatch	chebi	CHEBI:22984	calcium atom	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002120	Calcium Channel Agonists	skos:exactMatch	chebi	CHEBI:38807	calcium channel agonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002125	Calcium Gluconate	skos:exactMatch	chebi	CHEBI:3309	Calcium Gluconate	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002126	Calcium Hydroxide	skos:exactMatch	ncit	C77032	Calcium Hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D002129	Calcium Oxalate	skos:exactMatch	chebi	CHEBI:60579	calcium oxalate	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002139	Caliciviridae	skos:exactMatch	ncit	C14304	Caliciviridae	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002142	Californium	skos:exactMatch	chebi	CHEBI:33392	californium atom	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3792,6 +3801,7 @@ mesh	D006689	Hodgkin Disease	skos:exactMatch	doid	DOID:8654	Hodgkin's lymphoma, 
 mesh	D006833	Hydrarthrosis	skos:exactMatch	doid	DOID:528	hydrarthrosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006848	Testicular Hydrocele	skos:exactMatch	doid	DOID:9912	hydrocele	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006871	Hydrophthalmos	skos:exactMatch	doid	DOID:11211	buphthalmos	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D006878	Hydroxides	skos:exactMatch	chebi	CHEBI:24651	hydroxides	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006967	Hypersensitivity	skos:exactMatch	go	GO:0002524	hypersensitivity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006968	Hypersensitivity, Delayed	skos:exactMatch	go	GO:0001806	type IV hypersensitivity	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006969	Hypersensitivity, Immediate	skos:exactMatch	go	GO:0016068	type I hypersensitivity	manually_reviewed	orcid:0000-0003-4423-4370
@@ -3826,6 +3836,12 @@ mesh	D008247	Lysosomes	skos:exactMatch	go	GO:0005764	lysosome	manually_reviewed	
 mesh	D008258	Waldenstrom Macroglobulinemia	skos:exactMatch	doid	DOID:9080	macroglobulinemia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D008262	Macrophage Activation	skos:exactMatch	go	GO:0042116	macrophage activation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D008268	Macular Degeneration	skos:exactMatch	doid	DOID:4448	macular degeneration	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D008276	Magnesium Hydroxide	skos:exactMatch	chebi	CHEBI:6637	magnesium dihydroxide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D008276	Magnesium Hydroxide	skos:exactMatch	ncit	C29262	Magnesium Hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D008277	Magnesium Oxide	skos:exactMatch	chebi	CHEBI:31794	magnesium oxide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D008277	Magnesium Oxide	skos:exactMatch	ncit	C29242	Magnesium Oxide	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D008278	Magnesium Sulfate	skos:exactMatch	chebi	CHEBI:32599	magnesium sulfate	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D008278	Magnesium Sulfate	skos:exactMatch	ncit	C623	Magnesium Sulfate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D008409	Mastication	skos:exactMatch	go	GO:0071626	mastication	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D008425	Maternal Behavior	skos:exactMatch	go	GO:0042711	maternal behavior	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D008527	Medulloblastoma	skos:exactMatch	doid	DOID:0060104	cerebellar medulloblastoma	manually_reviewed	orcid:0000-0003-1307-2508
@@ -4054,6 +4070,8 @@ mesh	D015398	Signal Transduction	skos:exactMatch	go	GO:0007165	signal transducti
 mesh	D015467	Leukemia, Neutrophilic, Chronic	skos:exactMatch	doid	DOID:0080187	chronic neutrophilic leukemia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D015530	Nuclear Matrix	skos:exactMatch	go	GO:0016363	nuclear matrix	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D015539	Platelet Activation	skos:exactMatch	go	GO:0030168	platelet activation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D015636	Magnesium Chloride	skos:exactMatch	chebi	CHEBI:6636	magnesium dichloride	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D015636	Magnesium Chloride	skos:exactMatch	ncit	C29240	Magnesium Chloride	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D015774	Ganciclovir	skos:exactMatch	chebi	CHEBI:465284	ganciclovir	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D015840	Oculomotor Nerve Diseases	skos:exactMatch	doid	DOID:562	third cranial nerve disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D015870	Gene Expression	skos:exactMatch	go	GO:0010467	gene expression	manually_reviewed	orcid:0000-0001-9439-5346
