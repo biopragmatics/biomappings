@@ -19,11 +19,14 @@ def main():
     prefix = "doid"
     targets = [
         "umls",
-        # "ordo",
         "efo",
-        "mondo",
         "mesh",
-        "ido",
+        # MONDO and IDO both have the issue of
+        # mismatch of regex/banana
+        # "mondo",
+        # "ido",
+        # ORDO and CIDO can't be parsed
+        # "ordo",
         # "cido"
     ]
 
