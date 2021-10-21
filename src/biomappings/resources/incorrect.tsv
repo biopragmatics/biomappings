@@ -35,7 +35,37 @@ ccle	PC3_PROSTATE	PC-3	skos:exactMatch	cellosaurus	CVCL_S982	PC-3 [Human lung ca
 ccle	PL21_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	PL-21	skos:exactMatch	cellosaurus	CVCL_E295	TS 0129	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	TC71_BONE	TC-71	skos:exactMatch	cellosaurus	CVCL_S882	TC71	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	WM239A	WM239A	skos:exactMatch	cellosaurus	CVCL_RN56	WM239B	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:17544	hydrogencarbonate	skos:exactMatch	mesh	D001639	Bicarbonates	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:29806	fumarate(2-)	skos:exactMatch	mesh	D005650	Fumarates	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:33224	chromane	skos:exactMatch	mesh	D002839	Chromans	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:6456	lidocaine	skos:exactMatch	mesh	C511998	Lidoderm	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0001816	angiosarcoma	skos:exactMatch	mesh	D006394	Hemangiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0018923	Hemangiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0278592	Adult Angiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0279988	Childhood Angiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0050052	Rocky Mountain spotted fever	skos:exactMatch	umls	C0035795	Rocky mountain spotted fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0050175	tick-borne encephalitis	skos:exactMatch	umls	C0593408	Tick-borne encephalitis vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:1024	leprosy	skos:exactMatch	umls	C0051981	leprosy vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:10264	mumps	skos:exactMatch	umls	C0026782	Mumps Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:10844	Japanese encephalitis	skos:exactMatch	umls	C0771080	Japanese Encephalitis Vaccines	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:11100	Q fever	skos:exactMatch	umls	C0872996	Q fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:1116	pertussis	skos:exactMatch	umls	C0031237	pertussis vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:11338	tetanus	skos:exactMatch	umls	C0305062	tetanus toxoid vaccine, inactivated	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:11729	Lyme disease	skos:exactMatch	umls	C0717360	Lyme Disease Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:12365	malaria	skos:exactMatch	umls	C0206255	Malaria Vaccines	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:12549	hepatitis A	skos:exactMatch	umls	C0795623	hepatitis A vaccine, inactivated	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:1328	Rift Valley fever	skos:exactMatch	umls	C1548485	Rift Valley fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:1498	cholera	skos:exactMatch	umls	C0008359	cholera vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:1586	rheumatic fever	skos:exactMatch	umls	C1548484	rheumatic fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:1909	melanoma	skos:exactMatch	umls	C0796561	Melanoma vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:2043	hepatitis B	skos:exactMatch	umls	C0062527	hepatitis B surface antigen vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:3482	plague	skos:exactMatch	umls	C0032066	Plague Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:8469	influenza	skos:exactMatch	umls	C0021403	Influenza virus vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:8622	measles	skos:exactMatch	umls	C0025010	Measles Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:8736	smallpox	skos:exactMatch	umls	C0037355	smallpox vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:8781	rubella	skos:exactMatch	umls	C0035923	Rubella virus vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:9065	leishmaniasis	skos:exactMatch	umls	C1548483	Leishmaniasis Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:9682	yellow fever	skos:exactMatch	umls	C0301508	yellow fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	mesh	D018528	ATP-Binding Cassette Transporters	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map03010	Ribosome	skos:exactMatch	go	GO:0005840	ribosome	manually_reviewed	orcid:0000-0003-4423-4370
