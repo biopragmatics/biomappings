@@ -23,6 +23,7 @@ jobs:
           python-version: 3.9
       - name: Create local changes
         run: |
+          pip install --upgrade pip setuptools wheel
           pip install -e .[charts,exports]
           biomappings update
       - name: Commit files
