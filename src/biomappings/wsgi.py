@@ -108,7 +108,6 @@ class Controller:
         source: Optional[str] = None,
         target: Optional[str] = None,
         prefix: Optional[str] = None,
-        sort: Optional[str] = None,
     ):
         it = enumerate(self._predictions)
         if query is not None:
@@ -136,9 +135,6 @@ class Controller:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
 
         it = ((line, prediction) for line, prediction in it if line not in self._marked)
-
-        if sort is not None:
-            it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=sort == "desc"))
         return it
 
     @staticmethod
