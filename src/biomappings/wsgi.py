@@ -58,6 +58,7 @@ class Controller:
         source_query: Optional[str] = None,
         target_query: Optional[str] = None,
         prefix: Optional[str] = None,
+        sort: Optional[str] = None,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
@@ -73,7 +74,11 @@ class Controller:
         :yields: Pairs of positions and prediction dictionaries
         """
         it = self._help_it_predictions(
-            query=query, source=source_query, target=target_query, prefix=prefix
+            query=query,
+            source=source_query,
+            target=target_query,
+            prefix=prefix,
+            sort=sort,
         )
         if offset is not None:
             try:
@@ -95,10 +100,15 @@ class Controller:
         source_query: Optional[str] = None,
         target_query: Optional[str] = None,
         prefix: Optional[str] = None,
+        sort: Optional[str] = None,
     ) -> int:
         """Count the number of predictions to check for the given filters."""
         it = self._help_it_predictions(
-            query=query, source=source_query, target=target_query, prefix=prefix
+            query=query,
+            source=source_query,
+            target=target_query,
+            prefix=prefix,
+            sort=sort,
         )
         return sum(1 for _ in it)
 
@@ -108,6 +118,7 @@ class Controller:
         source: Optional[str] = None,
         target: Optional[str] = None,
         prefix: Optional[str] = None,
+        sort: Optional[str] = None,
     ):
         it = enumerate(self._predictions)
         if query is not None:
@@ -135,6 +146,9 @@ class Controller:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
 
         it = ((line, prediction) for line, prediction in it if line not in self._marked)
+
+        if sort is not None:
+            it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=sort == "desc"))
         return it
 
     @staticmethod
@@ -263,6 +277,7 @@ def home():
     source_query = flask.request.args.get("source")
     target_query = flask.request.args.get("target")
     prefix = flask.request.args.get("prefix")
+    sort = flask.request.args.get("sort")
     show_relations = app.config["SHOW_RELATIONS"]
     return flask.render_template(
         "home.html",
@@ -274,6 +289,7 @@ def home():
         source_query=source_query,
         target_query=target_query,
         prefix=prefix,
+        sort=sort,
         show_relations=show_relations,
     )
 

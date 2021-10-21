@@ -15,7 +15,7 @@
     {% endif %}
 {%- endmacro %}
 
-{% set remaining_rows = controller.count_predictions(query=query, source_query=source_query, target_query=target_query, prefix=prefix) %}
+{% set remaining_rows = controller.count_predictions(query=query, source_query=source_query, target_query=target_query, prefix=prefix, sort=sort) %}
 
 {% block content %}
     <div class="container" style="margin-top: 50px; margin-bottom: 50px">
@@ -70,7 +70,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    {% for line, p in controller.predictions(query=query, source_query=source_query, target_query=target_query, offset=offset, limit=limit, prefix=prefix) %}
+                    {% for line, p in controller.predictions(query=query, source_query=source_query, target_query=target_query, offset=offset, limit=limit, prefix=prefix, sort=sort) %}
                         <tr>
                             <td class="text-right">{{ 1 + line }}</td>
                             <td>
