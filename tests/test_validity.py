@@ -9,7 +9,7 @@ from collections import defaultdict
 import bioregistry
 
 from biomappings import load_false_mappings, load_mappings, load_predictions, load_unsure
-from biomappings.resources import load_curators, mapping_sort_key
+from biomappings.resources import MappingTuple, PredictionTuple, load_curators, mapping_sort_key
 from biomappings.utils import check_valid_prefix_id, get_canonical_tuple
 
 mappings = load_mappings()
@@ -109,15 +109,17 @@ def test_valid_mappings():
         )
 
 
-def test_redundancy():
+def _extract_redundant(counter):
+    return [(key, values) for key, values in counter.items() if len(values) > 1]
+
+
+def test_cross_redundancy():
     """Test the redundancy of manually curated mappings and predicted mappings."""
     counter = defaultdict(list)
     for label, line, mapping in _iter_groups():
         counter[get_canonical_tuple(mapping)].append((label, line))
 
-    redundant = [
-        (mapping, locations) for mapping, locations in counter.items() if len(locations) > 1
-    ]
+    redundant = _extract_redundant(counter)
     if redundant:
         msg = "".join(
             f"\n  {mapping}: {_locations_str(locations)}" for mapping, locations in redundant
@@ -129,11 +131,25 @@ def _locations_str(locations):
     return ", ".join(f"{label}:{line}" for label, line in locations)
 
 
+def _assert_no_internal_redundancies(m, tuple_cls):
+    counter = defaultdict(list)
+    for line, mapping in enumerate(m, start=1):
+        counter[tuple_cls.from_dict(mapping)].append(line)
+    redundant = _extract_redundant(counter)
+    if redundant:
+        msg = "".join(
+            f"\n  {mapping.source_curie}/{mapping.target_curie}: {locations}"
+            for mapping, locations in redundant
+        )
+        raise ValueError(f"{len(redundant)} are redundant: {msg}")
+
+
 def test_predictions_sorted():
     """Test the predictions are in a canonical order."""
     assert predictions == sorted(  # noqa:S101
         predictions, key=mapping_sort_key
     ), "Predictions are not sorted"
+    _assert_no_internal_redundancies(predictions, PredictionTuple)
 
 
 def test_curations_sorted():
@@ -141,6 +157,7 @@ def test_curations_sorted():
     assert mappings == sorted(  # noqa:S101
         mappings, key=mapping_sort_key
     ), "True curations are not sorted"
+    _assert_no_internal_redundancies(mappings, MappingTuple)
 
 
 def test_false_mappings_sorted():
@@ -148,6 +165,7 @@ def test_false_mappings_sorted():
     assert incorrect == sorted(  # noqa:S101
         incorrect, key=mapping_sort_key
     ), "False curations are not sorted"
+    _assert_no_internal_redundancies(incorrect, MappingTuple)
 
 
 def test_unsure_sorted():
@@ -155,3 +173,4 @@ def test_unsure_sorted():
     assert unsure == sorted(  # noqa:S101
         unsure, key=mapping_sort_key
     ), "Unsure curations are not sorted"
+    _assert_no_internal_redundancies(unsure, MappingTuple)

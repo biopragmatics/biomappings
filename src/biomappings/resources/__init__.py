@@ -56,6 +56,16 @@ class MappingTuple(NamedTuple):
         """Get the mapping tuple from a dictionary."""
         return cls(*[mapping[key] for key in MAPPINGS_HEADER])
 
+    @property
+    def source_curie(self) -> str:
+        """Concatenate the source prefix and ID to a CURIE."""
+        return f"{self.source_prefix}:{self.source_id}"
+
+    @property
+    def target_curie(self) -> str:
+        """Concatenate the target prefix and ID to a CURIE."""
+        return f"{self.target_prefix}:{self.target_identifier}"
+
 
 class PredictionTuple(NamedTuple):
     """A named tuple class for predictions."""
@@ -79,6 +89,16 @@ class PredictionTuple(NamedTuple):
     def from_dict(cls, mapping: Mapping[str, str]) -> "PredictionTuple":
         """Get the prediction tuple from a dictionary."""
         return cls(*[mapping[key] for key in PREDICTIONS_HEADER])
+
+    @property
+    def source_curie(self) -> str:
+        """Concatenate the source prefix and ID to a CURIE."""
+        return f"{self.source_prefix}:{self.source_id}"
+
+    @property
+    def target_curie(self) -> str:
+        """Concatenate the target prefix and ID to a CURIE."""
+        return f"{self.target_prefix}:{self.target_identifier}"
 
 
 def get_resource_file_path(fname) -> str:
@@ -144,7 +164,9 @@ def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
 
 def lint_true_mappings() -> None:
     """Lint the true mappings file."""
-    write_true_mappings(sorted(load_mappings(), key=mapping_sort_key))
+    mappings = load_mappings()
+    mappings = _remove_redundant(mappings, MappingTuple)
+    write_true_mappings(sorted(mappings, key=mapping_sort_key))
 
 
 FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
@@ -169,7 +191,9 @@ def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
 
 def lint_false_mappings() -> None:
     """Lint the false mappings file."""
-    write_false_mappings(sorted(load_false_mappings(), key=mapping_sort_key))
+    mappings = load_false_mappings()
+    mappings = _remove_redundant(mappings, MappingTuple)
+    write_false_mappings(sorted(mappings, key=mapping_sort_key))
 
 
 UNSURE_PATH = get_resource_file_path("unsure.tsv")
@@ -194,7 +218,9 @@ def write_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
 
 def lint_unsure_mappings() -> None:
     """Lint the unsure mappings file."""
-    write_unsure_mappings(sorted(load_unsure(), key=mapping_sort_key))
+    mappings = load_unsure()
+    mappings = _remove_redundant(mappings, MappingTuple)
+    write_unsure_mappings(sorted(mappings, key=mapping_sort_key))
 
 
 PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
@@ -264,7 +290,12 @@ def lint_predictions() -> None:
         for mapping in load_predictions()
         if get_canonical_tuple(mapping) not in curated_mappings
     )
+    mappings = _remove_redundant(mappings, PredictionTuple)
     write_predictions(sorted(mappings, key=mapping_sort_key))
+
+
+def _remove_redundant(mappings, tuple_cls):
+    return (mapping.as_dict() for mapping in {tuple_cls.from_dict(mapping) for mapping in mappings})
 
 
 def load_curators():
