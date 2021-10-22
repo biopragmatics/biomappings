@@ -231,6 +231,7 @@ def append_predictions(
             for existing_mapping in itt.chain(
                 load_mappings(),
                 load_false_mappings(),
+                load_unsure(),
                 load_predictions(),
             )
         }
@@ -244,8 +245,26 @@ def append_predictions(
 
 
 def lint_predictions() -> None:
-    """Lint the predictions file."""
-    write_predictions(sorted(load_predictions(), key=mapping_sort_key))
+    """Lint the predictions file.
+
+    1. Make sure there are no redundant rows
+    2. Make sure no rows in predictions match a row in the curated files
+    3. Make sure it's sorted
+    """
+    curated_mappings = {
+        get_canonical_tuple(mapping)
+        for mapping in itt.chain(
+            load_mappings(),
+            load_false_mappings(),
+            load_unsure(),
+        )
+    }
+    mappings = (
+        mapping
+        for mapping in load_predictions()
+        if get_canonical_tuple(mapping) not in curated_mappings
+    )
+    write_predictions(sorted(mappings, key=mapping_sort_key))
 
 
 def load_curators():
