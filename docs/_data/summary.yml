@@ -197,7 +197,7 @@ predictions:
 - count: 8905
   source: doid
   target: umls
-- count: 2942
+- count: 2936
   source: doid
   target: mesh
 - count: 2818
@@ -230,7 +230,7 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 42315
+predictions_mapping_count: 42309
 predictions_prefix_count: 14
 unsure:
 - count: 20
