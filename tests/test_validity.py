@@ -4,7 +4,7 @@
 
 import itertools as itt
 import unittest
-from collections import Counter
+from collections import defaultdict
 
 import bioregistry
 
@@ -98,7 +98,7 @@ class TestIntegrity(unittest.TestCase):
 
 def test_valid_mappings():
     """Test the validity of the prefixes and identifiers in the mappings."""
-    for mapping in itt.chain(mappings, incorrect, predictions):
+    for _label, _line, mapping in _iter_groups():
         check_valid_prefix_id(
             mapping["source prefix"],
             mapping["source identifier"],
@@ -111,11 +111,22 @@ def test_valid_mappings():
 
 def test_redundancy():
     """Test the redundancy of manually curated mappings and predicted mappings."""
-    counter = Counter(get_canonical_tuple(m) for m in itt.chain(mappings, incorrect, predictions))
-    redundant = [(k, v) for k, v in counter.items() if v > 1]
+    counter = defaultdict(list)
+    for label, line, mapping in _iter_groups():
+        counter[get_canonical_tuple(mapping)].append((label, line))
+
+    redundant = [
+        (mapping, locations) for mapping, locations in counter.items() if len(locations) > 1
+    ]
     if redundant:
-        r = "\n".join(f"  {r}: {count}" for r, count in redundant)
-        raise ValueError(f"{len(r)} are redundant: {r}")
+        msg = "".join(
+            f"\n  {mapping}: {_locations_str(locations)}" for mapping, locations in redundant
+        )
+        raise ValueError(f"{len(redundant)} are redundant: {msg}")
+
+
+def _locations_str(locations):
+    return ", ".join(f"{label}:{line}" for label, line in locations)
 
 
 def test_predictions_sorted():
