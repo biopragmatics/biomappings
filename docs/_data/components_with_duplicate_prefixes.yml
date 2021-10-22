@@ -13,6 +13,26 @@
     link: https://bioregistry.io/mesh:D013424
     name: Sulfanilamides
     prefix: mesh
+- doid:4552:
+    identifier: DOID:4552
+    link: https://bioregistry.io/doid:4552
+    name: large cell carcinoma
+    prefix: doid
+  doid:4556:
+    identifier: DOID:4556
+    link: https://bioregistry.io/doid:4556
+    name: lung large cell carcinoma
+    prefix: doid
+  efo:0003050:
+    identifier: '0003050'
+    link: https://bioregistry.io/efo:0003050
+    name: large cell lung carcinoma
+    prefix: efo
+  umls:C0345958:
+    identifier: C0345958
+    link: https://bioregistry.io/umls:C0345958
+    name: Large cell carcinoma of lung
+    prefix: umls
 - kegg.pathway:hsa00100:
     identifier: hsa00100
     link: https://bioregistry.io/kegg.pathway:hsa00100

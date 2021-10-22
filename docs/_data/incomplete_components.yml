@@ -1369,11 +1369,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://bioregistry.io/cellosaurus:CVCL_1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://bioregistry.io/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: bto:0006459
       identifier: BTO:0006459
@@ -1381,11 +1381,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://bioregistry.io/efo:0006612
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://bioregistry.io/cellosaurus:CVCL_1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: cellosaurus:CVCL_1334
       identifier: CVCL_1334
@@ -1827,17 +1827,887 @@
       prefix: ncit
 - edges:
   - source:
-      curie: kegg.pathway:hsa00350
-      identifier: hsa00350
-      link: https://bioregistry.io/kegg.pathway:hsa00350
-      name: Tyrosine metabolism - Homo sapiens (human)
-      prefix: kegg.pathway
+      curie: efo:0007499
+      identifier: 0007499
+      link: https://bioregistry.io/efo:0007499
+      name: streptococcal pneumonia
+      prefix: efo
     target:
-      curie: reactome:R-HSA-1430728
-      identifier: R-HSA-1430728
-      link: https://bioregistry.io/reactome:R-HSA-1430728
-      name: Metabolism
-      prefix: reactome
+      curie: mesh:D011018
+      identifier: D011018
+      link: https://bioregistry.io/mesh:D011018
+      name: Pneumonia, Pneumococcal
+      prefix: mesh
+  - source:
+      curie: efo:0007499
+      identifier: 0007499
+      link: https://bioregistry.io/efo:0007499
+      name: streptococcal pneumonia
+      prefix: efo
+    target:
+      curie: umls:C0155862
+      identifier: C0155862
+      link: https://bioregistry.io/umls:C0155862
+      name: Streptococcal pneumonia
+      prefix: umls
+  - source:
+      curie: mesh:D011018
+      identifier: D011018
+      link: https://bioregistry.io/mesh:D011018
+      name: Pneumonia, Pneumococcal
+      prefix: mesh
+    target:
+      curie: umls:C0155862
+      identifier: C0155862
+      link: https://bioregistry.io/umls:C0155862
+      name: Streptococcal pneumonia
+      prefix: umls
+  nodes:
+    doid:0040084:
+      identifier: DOID:0040084
+      link: https://bioregistry.io/doid:0040084
+      name: Streptococcus pneumonia
+      prefix: doid
+    efo:0007499:
+      identifier: 0007499
+      link: https://bioregistry.io/efo:0007499
+      name: streptococcal pneumonia
+      prefix: efo
+    mesh:D011018:
+      identifier: D011018
+      link: https://bioregistry.io/mesh:D011018
+      name: Pneumonia, Pneumococcal
+      prefix: mesh
+    umls:C0155862:
+      identifier: C0155862
+      link: https://bioregistry.io/umls:C0155862
+      name: Streptococcal pneumonia
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:D000081012
+      identifier: D000081012
+      link: https://bioregistry.io/mesh:D000081012
+      name: Autoimmune Pancreatitis
+      prefix: mesh
+    target:
+      curie: umls:C2609129
+      identifier: C2609129
+      link: https://bioregistry.io/umls:C2609129
+      name: Autoimmune Pancreatitis
+      prefix: umls
+  nodes:
+    doid:0040091:
+      identifier: DOID:0040091
+      link: https://bioregistry.io/doid:0040091
+      name: autoimmune pancreatitis
+      prefix: doid
+    mesh:D000081012:
+      identifier: D000081012
+      link: https://bioregistry.io/mesh:D000081012
+      name: Autoimmune Pancreatitis
+      prefix: mesh
+    umls:C2609129:
+      identifier: C2609129
+      link: https://bioregistry.io/umls:C2609129
+      name: Autoimmune Pancreatitis
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:D065632
+      identifier: D065632
+      link: https://bioregistry.io/mesh:D065632
+      name: Chikungunya Fever
+      prefix: mesh
+    target:
+      curie: umls:C0008055
+      identifier: C0008055
+      link: https://bioregistry.io/umls:C0008055
+      name: Chikungunya Fever
+      prefix: umls
+  nodes:
+    doid:0050012:
+      identifier: DOID:0050012
+      link: https://bioregistry.io/doid:0050012
+      name: chikungunya
+      prefix: doid
+    mesh:D065632:
+      identifier: D065632
+      link: https://bioregistry.io/mesh:D065632
+      name: Chikungunya Fever
+      prefix: mesh
+    umls:C0008055:
+      identifier: C0008055
+      link: https://bioregistry.io/umls:C0008055
+      name: Chikungunya Fever
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0000777
+      identifier: '0000777'
+      link: https://bioregistry.io/efo:0000777
+      name: human granulocytic anaplasmosis
+      prefix: efo
+    target:
+      curie: umls:C4476477
+      identifier: C4476477
+      link: https://bioregistry.io/umls:C4476477
+      name: Human Granulocytic Anaplasmosis
+      prefix: umls
+  nodes:
+    doid:0050025:
+      identifier: DOID:0050025
+      link: https://bioregistry.io/doid:0050025
+      name: human granulocytic anaplasmosis
+      prefix: doid
+    efo:0000777:
+      identifier: '0000777'
+      link: https://bioregistry.io/efo:0000777
+      name: human granulocytic anaplasmosis
+      prefix: efo
+    umls:C4476477:
+      identifier: C4476477
+      link: https://bioregistry.io/umls:C4476477
+      name: Human Granulocytic Anaplasmosis
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:D012373
+      identifier: D012373
+      link: https://bioregistry.io/mesh:D012373
+      name: Rocky Mountain Spotted Fever
+      prefix: mesh
+    target:
+      curie: umls:C0035793
+      identifier: C0035793
+      link: https://bioregistry.io/umls:C0035793
+      name: Rocky Mountain Spotted Fever
+      prefix: umls
+  nodes:
+    doid:0050052:
+      identifier: DOID:0050052
+      link: https://bioregistry.io/doid:0050052
+      name: Rocky Mountain spotted fever
+      prefix: doid
+    mesh:D012373:
+      identifier: D012373
+      link: https://bioregistry.io/mesh:D012373
+      name: Rocky Mountain Spotted Fever
+      prefix: mesh
+    umls:C0035793:
+      identifier: C0035793
+      link: https://bioregistry.io/umls:C0035793
+      name: Rocky Mountain Spotted Fever
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:1001362
+      identifier: '1001362'
+      link: https://bioregistry.io/efo:1001362
+      name: Lung Abscess
+      prefix: efo
+    target:
+      curie: mesh:D008169
+      identifier: D008169
+      link: https://bioregistry.io/mesh:D008169
+      name: Lung Abscess
+      prefix: mesh
+  - source:
+      curie: efo:1001362
+      identifier: '1001362'
+      link: https://bioregistry.io/efo:1001362
+      name: Lung Abscess
+      prefix: efo
+    target:
+      curie: umls:C0024110
+      identifier: C0024110
+      link: https://bioregistry.io/umls:C0024110
+      name: Lung Abscess
+      prefix: umls
+  - source:
+      curie: mesh:D008169
+      identifier: D008169
+      link: https://bioregistry.io/mesh:D008169
+      name: Lung Abscess
+      prefix: mesh
+    target:
+      curie: umls:C0024110
+      identifier: C0024110
+      link: https://bioregistry.io/umls:C0024110
+      name: Lung Abscess
+      prefix: umls
+  nodes:
+    doid:0060317:
+      identifier: DOID:0060317
+      link: https://bioregistry.io/doid:0060317
+      name: lung abscess
+      prefix: doid
+    efo:1001362:
+      identifier: '1001362'
+      link: https://bioregistry.io/efo:1001362
+      name: Lung Abscess
+      prefix: efo
+    mesh:D008169:
+      identifier: D008169
+      link: https://bioregistry.io/mesh:D008169
+      name: Lung Abscess
+      prefix: mesh
+    umls:C0024110:
+      identifier: C0024110
+      link: https://bioregistry.io/umls:C0024110
+      name: Lung Abscess
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:D000080365
+      identifier: D000080365
+      link: https://bioregistry.io/mesh:D000080365
+      name: Birdshot Chorioretinopathy
+      prefix: mesh
+    target:
+      curie: umls:C1853959
+      identifier: C1853959
+      link: https://bioregistry.io/umls:C1853959
+      name: Birdshot Chorioretinopathy
+      prefix: umls
+  nodes:
+    doid:0111079:
+      identifier: DOID:0111079
+      link: https://bioregistry.io/doid:0111079
+      name: birdshot chorioretinopathy
+      prefix: doid
+    mesh:D000080365:
+      identifier: D000080365
+      link: https://bioregistry.io/mesh:D000080365
+      name: Birdshot Chorioretinopathy
+      prefix: mesh
+    umls:C1853959:
+      identifier: C1853959
+      link: https://bioregistry.io/umls:C1853959
+      name: Birdshot Chorioretinopathy
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:D019568
+      identifier: D019568
+      link: https://bioregistry.io/mesh:D019568
+      name: Lung, Hyperlucent
+      prefix: mesh
+    target:
+      curie: umls:C0524799
+      identifier: C0524799
+      link: https://bioregistry.io/umls:C0524799
+      name: Lung, Hyperlucent
+      prefix: umls
+  nodes:
+    doid:10032:
+      identifier: DOID:10032
+      link: https://bioregistry.io/doid:10032
+      name: hyperlucent lung
+      prefix: doid
+    mesh:D019568:
+      identifier: D019568
+      link: https://bioregistry.io/mesh:D019568
+      name: Lung, Hyperlucent
+      prefix: mesh
+    umls:C0524799:
+      identifier: C0524799
+      link: https://bioregistry.io/umls:C0524799
+      name: Lung, Hyperlucent
+      prefix: umls
+- edges:
+  - source:
+      curie: doid:13891
+      identifier: DOID:13891
+      link: https://bioregistry.io/doid:13891
+      name: bird fancier's lung
+      prefix: doid
+    target:
+      curie: ncit:C34425
+      identifier: C34425
+      link: https://bioregistry.io/ncit:C34425
+      name: Bird Fancier's Lung
+      prefix: ncit
+  - source:
+      curie: efo:0007170
+      identifier: '0007170'
+      link: https://bioregistry.io/efo:0007170
+      name: bird fancier's lung
+      prefix: efo
+    target:
+      curie: mesh:D001716
+      identifier: D001716
+      link: https://bioregistry.io/mesh:D001716
+      name: Bird Fancier's Lung
+      prefix: mesh
+  - source:
+      curie: efo:0007170
+      identifier: '0007170'
+      link: https://bioregistry.io/efo:0007170
+      name: bird fancier's lung
+      prefix: efo
+    target:
+      curie: umls:C0005592
+      identifier: C0005592
+      link: https://bioregistry.io/umls:C0005592
+      name: Bird Fancier's Lung
+      prefix: umls
+  - source:
+      curie: efo:0007170
+      identifier: '0007170'
+      link: https://bioregistry.io/efo:0007170
+      name: bird fancier's lung
+      prefix: efo
+    target:
+      curie: ncit:C34425
+      identifier: C34425
+      link: https://bioregistry.io/ncit:C34425
+      name: Bird Fancier's Lung
+      prefix: ncit
+  - source:
+      curie: mesh:D001716
+      identifier: D001716
+      link: https://bioregistry.io/mesh:D001716
+      name: Bird Fancier's Lung
+      prefix: mesh
+    target:
+      curie: umls:C0005592
+      identifier: C0005592
+      link: https://bioregistry.io/umls:C0005592
+      name: Bird Fancier's Lung
+      prefix: umls
+  - source:
+      curie: ncit:C34425
+      identifier: C34425
+      link: https://bioregistry.io/ncit:C34425
+      name: Bird Fancier's Lung
+      prefix: ncit
+    target:
+      curie: umls:C0005592
+      identifier: C0005592
+      link: https://bioregistry.io/umls:C0005592
+      name: Bird Fancier's Lung
+      prefix: umls
+  nodes:
+    doid:13891:
+      identifier: DOID:13891
+      link: https://bioregistry.io/doid:13891
+      name: bird fancier's lung
+      prefix: doid
+    efo:0007170:
+      identifier: '0007170'
+      link: https://bioregistry.io/efo:0007170
+      name: bird fancier's lung
+      prefix: efo
+    mesh:D001716:
+      identifier: D001716
+      link: https://bioregistry.io/mesh:D001716
+      name: Bird Fancier's Lung
+      prefix: mesh
+    ncit:C34425:
+      identifier: C34425
+      link: https://bioregistry.io/ncit:C34425
+      name: Bird Fancier's Lung
+      prefix: ncit
+    umls:C0005592:
+      identifier: C0005592
+      link: https://bioregistry.io/umls:C0005592
+      name: Bird Fancier's Lung
+      prefix: umls
+- edges:
+  - source:
+      curie: doid:14453
+      identifier: DOID:14453
+      link: https://bioregistry.io/doid:14453
+      name: farmer's lung
+      prefix: doid
+    target:
+      curie: ncit:C34605
+      identifier: C34605
+      link: https://bioregistry.io/ncit:C34605
+      name: Farmer's Lung
+      prefix: ncit
+  - source:
+      curie: mesh:D005203
+      identifier: D005203
+      link: https://bioregistry.io/mesh:D005203
+      name: Farmer's Lung
+      prefix: mesh
+    target:
+      curie: umls:C0015634
+      identifier: C0015634
+      link: https://bioregistry.io/umls:C0015634
+      name: Farmer's Lung
+      prefix: umls
+  - source:
+      curie: ncit:C34605
+      identifier: C34605
+      link: https://bioregistry.io/ncit:C34605
+      name: Farmer's Lung
+      prefix: ncit
+    target:
+      curie: umls:C0015634
+      identifier: C0015634
+      link: https://bioregistry.io/umls:C0015634
+      name: Farmer's Lung
+      prefix: umls
+  nodes:
+    doid:14453:
+      identifier: DOID:14453
+      link: https://bioregistry.io/doid:14453
+      name: farmer's lung
+      prefix: doid
+    mesh:D005203:
+      identifier: D005203
+      link: https://bioregistry.io/mesh:D005203
+      name: Farmer's Lung
+      prefix: mesh
+    ncit:C34605:
+      identifier: C34605
+      link: https://bioregistry.io/ncit:C34605
+      name: Farmer's Lung
+      prefix: ncit
+    umls:C0015634:
+      identifier: C0015634
+      link: https://bioregistry.io/umls:C0015634
+      name: Farmer's Lung
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0007385
+      identifier: 0007385
+      link: https://bioregistry.io/efo:0007385
+      name: mushroom workers' lung
+      prefix: efo
+    target:
+      curie: umls:C0155889
+      identifier: C0155889
+      link: https://bioregistry.io/umls:C0155889
+      name: Mushroom Worker's Lung
+      prefix: umls
+  nodes:
+    doid:2708:
+      identifier: DOID:2708
+      link: https://bioregistry.io/doid:2708
+      name: mushroom workers' lung
+      prefix: doid
+    efo:0007385:
+      identifier: 0007385
+      link: https://bioregistry.io/efo:0007385
+      name: mushroom workers' lung
+      prefix: efo
+    umls:C0155889:
+      identifier: C0155889
+      link: https://bioregistry.io/umls:C0155889
+      name: Mushroom Worker's Lung
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0001071
+      identifier: '0001071'
+      link: https://bioregistry.io/efo:0001071
+      name: lung carcinoma
+      prefix: efo
+    target:
+      curie: umls:C0684249
+      identifier: C0684249
+      link: https://bioregistry.io/umls:C0684249
+      name: Carcinoma of lung
+      prefix: umls
+  nodes:
+    doid:3905:
+      identifier: DOID:3905
+      link: https://bioregistry.io/doid:3905
+      name: lung carcinoma
+      prefix: doid
+    efo:0001071:
+      identifier: '0001071'
+      link: https://bioregistry.io/efo:0001071
+      name: lung carcinoma
+      prefix: efo
+    umls:C0684249:
+      identifier: C0684249
+      link: https://bioregistry.io/umls:C0684249
+      name: Carcinoma of lung
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0000708
+      identifier: 0000708
+      link: https://bioregistry.io/efo:0000708
+      name: squamous cell lung carcinoma
+      prefix: efo
+    target:
+      curie: umls:C0149782
+      identifier: C0149782
+      link: https://bioregistry.io/umls:C0149782
+      name: Squamous cell carcinoma of lung
+      prefix: umls
+  nodes:
+    doid:3907:
+      identifier: DOID:3907
+      link: https://bioregistry.io/doid:3907
+      name: lung squamous cell carcinoma
+      prefix: doid
+    efo:0000708:
+      identifier: 0000708
+      link: https://bioregistry.io/efo:0000708
+      name: squamous cell lung carcinoma
+      prefix: efo
+    umls:C0149782:
+      identifier: C0149782
+      link: https://bioregistry.io/umls:C0149782
+      name: Squamous cell carcinoma of lung
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0000571
+      identifier: '0000571'
+      link: https://bioregistry.io/efo:0000571
+      name: lung adenocarcinoma
+      prefix: efo
+    target:
+      curie: umls:C0152013
+      identifier: C0152013
+      link: https://bioregistry.io/umls:C0152013
+      name: Adenocarcinoma of lung (disorder)
+      prefix: umls
+  - source:
+      curie: efo:0000571
+      identifier: '0000571'
+      link: https://bioregistry.io/efo:0000571
+      name: lung adenocarcinoma
+      prefix: efo
+    target:
+      curie: mesh:D000077192
+      identifier: D000077192
+      link: https://bioregistry.io/mesh:D000077192
+      name: Adenocarcinoma of Lung
+      prefix: mesh
+  - source:
+      curie: mesh:D000077192
+      identifier: D000077192
+      link: https://bioregistry.io/mesh:D000077192
+      name: Adenocarcinoma of Lung
+      prefix: mesh
+    target:
+      curie: umls:C0152013
+      identifier: C0152013
+      link: https://bioregistry.io/umls:C0152013
+      name: Adenocarcinoma of lung (disorder)
+      prefix: umls
+  nodes:
+    doid:3910:
+      identifier: DOID:3910
+      link: https://bioregistry.io/doid:3910
+      name: lung adenocarcinoma
+      prefix: doid
+    efo:0000571:
+      identifier: '0000571'
+      link: https://bioregistry.io/efo:0000571
+      name: lung adenocarcinoma
+      prefix: efo
+    mesh:D000077192:
+      identifier: D000077192
+      link: https://bioregistry.io/mesh:D000077192
+      name: Adenocarcinoma of Lung
+      prefix: mesh
+    umls:C0152013:
+      identifier: C0152013
+      link: https://bioregistry.io/umls:C0152013
+      name: Adenocarcinoma of lung (disorder)
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0001075
+      identifier: '0001075'
+      link: https://bioregistry.io/efo:0001075
+      name: ovarian carcinoma
+      prefix: efo
+    target:
+      curie: umls:C0029925
+      identifier: C0029925
+      link: https://bioregistry.io/umls:C0029925
+      name: Ovarian Carcinoma
+      prefix: umls
+  nodes:
+    doid:4001:
+      identifier: DOID:4001
+      link: https://bioregistry.io/doid:4001
+      name: ovarian carcinoma
+      prefix: doid
+    efo:0001075:
+      identifier: '0001075'
+      link: https://bioregistry.io/efo:0001075
+      name: ovarian carcinoma
+      prefix: efo
+    umls:C0029925:
+      identifier: C0029925
+      link: https://bioregistry.io/umls:C0029925
+      name: Ovarian Carcinoma
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:D005585
+      identifier: D005585
+      link: https://bioregistry.io/mesh:D005585
+      name: Influenza in Birds
+      prefix: mesh
+    target:
+      curie: umls:C0016627
+      identifier: C0016627
+      link: https://bioregistry.io/umls:C0016627
+      name: Influenza in Birds
+      prefix: umls
+  nodes:
+    doid:4492:
+      identifier: DOID:4492
+      link: https://bioregistry.io/doid:4492
+      name: avian influenza
+      prefix: doid
+    mesh:D005585:
+      identifier: D005585
+      link: https://bioregistry.io/mesh:D005585
+      name: Influenza in Birds
+      prefix: mesh
+    umls:C0016627:
+      identifier: C0016627
+      link: https://bioregistry.io/umls:C0016627
+      name: Influenza in Birds
+      prefix: umls
+- edges:
+  - source:
+      curie: doid:4552
+      identifier: DOID:4552
+      link: https://bioregistry.io/doid:4552
+      name: large cell carcinoma
+      prefix: doid
+    target:
+      curie: doid:4556
+      identifier: DOID:4556
+      link: https://bioregistry.io/doid:4556
+      name: lung large cell carcinoma
+      prefix: doid
+  - source:
+      curie: doid:4552
+      identifier: DOID:4552
+      link: https://bioregistry.io/doid:4552
+      name: large cell carcinoma
+      prefix: doid
+    target:
+      curie: umls:C0345958
+      identifier: C0345958
+      link: https://bioregistry.io/umls:C0345958
+      name: Large cell carcinoma of lung
+      prefix: umls
+  - source:
+      curie: efo:0003050
+      identifier: '0003050'
+      link: https://bioregistry.io/efo:0003050
+      name: large cell lung carcinoma
+      prefix: efo
+    target:
+      curie: umls:C0345958
+      identifier: C0345958
+      link: https://bioregistry.io/umls:C0345958
+      name: Large cell carcinoma of lung
+      prefix: umls
+  nodes:
+    doid:4552:
+      identifier: DOID:4552
+      link: https://bioregistry.io/doid:4552
+      name: large cell carcinoma
+      prefix: doid
+    doid:4556:
+      identifier: DOID:4556
+      link: https://bioregistry.io/doid:4556
+      name: lung large cell carcinoma
+      prefix: doid
+    efo:0003050:
+      identifier: '0003050'
+      link: https://bioregistry.io/efo:0003050
+      name: large cell lung carcinoma
+      prefix: efo
+    umls:C0345958:
+      identifier: C0345958
+      link: https://bioregistry.io/umls:C0345958
+      name: Large cell carcinoma of lung
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0000233
+      identifier: '0000233'
+      link: https://bioregistry.io/efo:0000233
+      name: adenosquamous lung carcinoma
+      prefix: efo
+    target:
+      curie: umls:C0279557
+      identifier: C0279557
+      link: https://bioregistry.io/umls:C0279557
+      name: Adenosquamous cell lung cancer
+      prefix: umls
+  nodes:
+    doid:4829:
+      identifier: DOID:4829
+      link: https://bioregistry.io/doid:4829
+      name: adenosquamous lung carcinoma
+      prefix: doid
+    efo:0000233:
+      identifier: '0000233'
+      link: https://bioregistry.io/efo:0000233
+      name: adenosquamous lung carcinoma
+      prefix: efo
+    umls:C0279557:
+      identifier: C0279557
+      link: https://bioregistry.io/umls:C0279557
+      name: Adenosquamous cell lung cancer
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0000702
+      identifier: '0000702'
+      link: https://bioregistry.io/efo:0000702
+      name: small cell lung carcinoma
+      prefix: efo
+    target:
+      curie: umls:C0149925
+      identifier: C0149925
+      link: https://bioregistry.io/umls:C0149925
+      name: Small cell carcinoma of lung
+      prefix: umls
+  nodes:
+    doid:5409:
+      identifier: DOID:5409
+      link: https://bioregistry.io/doid:5409
+      name: lung small cell carcinoma
+      prefix: doid
+    efo:0000702:
+      identifier: '0000702'
+      link: https://bioregistry.io/efo:0000702
+      name: small cell lung carcinoma
+      prefix: efo
+    umls:C0149925:
+      identifier: C0149925
+      link: https://bioregistry.io/umls:C0149925
+      name: Small cell carcinoma of lung
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:1000332
+      identifier: '1000332'
+      link: https://bioregistry.io/efo:1000332
+      name: Lung Giant Cell Carcinoma
+      prefix: efo
+    target:
+      curie: umls:C0345960
+      identifier: C0345960
+      link: https://bioregistry.io/umls:C0345960
+      name: Giant cell carcinoma of lung
+      prefix: umls
+  nodes:
+    doid:5583:
+      identifier: DOID:5583
+      link: https://bioregistry.io/doid:5583
+      name: lung giant cell carcinoma
+      prefix: doid
+    efo:1000332:
+      identifier: '1000332'
+      link: https://bioregistry.io/efo:1000332
+      name: Lung Giant Cell Carcinoma
+      prefix: efo
+    umls:C0345960:
+      identifier: C0345960
+      link: https://bioregistry.io/umls:C0345960
+      name: Giant cell carcinoma of lung
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:1000046
+      identifier: '1000046'
+      link: https://bioregistry.io/efo:1000046
+      name: papillary lung adenocarcinoma
+      prefix: efo
+    target:
+      curie: umls:C1335325
+      identifier: C1335325
+      link: https://bioregistry.io/umls:C1335325
+      name: Papillary Lung Adenocarcinoma
+      prefix: umls
+  nodes:
+    doid:5588:
+      identifier: DOID:5588
+      link: https://bioregistry.io/doid:5588
+      name: lung papillary adenocarcinoma
+      prefix: doid
+    efo:1000046:
+      identifier: '1000046'
+      link: https://bioregistry.io/efo:1000046
+      name: papillary lung adenocarcinoma
+      prefix: efo
+    umls:C1335325:
+      identifier: C1335325
+      link: https://bioregistry.io/umls:C1335325
+      name: Papillary Lung Adenocarcinoma
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0003818
+      identifier: 0003818
+      link: https://bioregistry.io/efo:0003818
+      name: lung disease
+      prefix: efo
+    target:
+      curie: mesh:D008171
+      identifier: D008171
+      link: https://bioregistry.io/mesh:D008171
+      name: Lung Diseases
+      prefix: mesh
+  - source:
+      curie: efo:0003818
+      identifier: 0003818
+      link: https://bioregistry.io/efo:0003818
+      name: lung disease
+      prefix: efo
+    target:
+      curie: umls:C0024115
+      identifier: C0024115
+      link: https://bioregistry.io/umls:C0024115
+      name: Lung diseases
+      prefix: umls
+  - source:
+      curie: mesh:D008171
+      identifier: D008171
+      link: https://bioregistry.io/mesh:D008171
+      name: Lung Diseases
+      prefix: mesh
+    target:
+      curie: umls:C0024115
+      identifier: C0024115
+      link: https://bioregistry.io/umls:C0024115
+      name: Lung diseases
+      prefix: umls
+  nodes:
+    doid:850:
+      identifier: DOID:850
+      link: https://bioregistry.io/doid:850
+      name: lung disease
+      prefix: doid
+    efo:0003818:
+      identifier: 0003818
+      link: https://bioregistry.io/efo:0003818
+      name: lung disease
+      prefix: efo
+    mesh:D008171:
+      identifier: D008171
+      link: https://bioregistry.io/mesh:D008171
+      name: Lung Diseases
+      prefix: mesh
+    umls:C0024115:
+      identifier: C0024115
+      link: https://bioregistry.io/umls:C0024115
+      name: Lung diseases
+      prefix: umls
+- edges:
   - source:
       curie: kegg.pathway:hsa00350
       identifier: hsa00350
@@ -1850,6 +2720,18 @@
       link: https://bioregistry.io/kegg.pathway:hsa01100
       name: Metabolic pathways - Homo sapiens (human)
       prefix: kegg.pathway
+  - source:
+      curie: kegg.pathway:hsa00350
+      identifier: hsa00350
+      link: https://bioregistry.io/kegg.pathway:hsa00350
+      name: Tyrosine metabolism - Homo sapiens (human)
+      prefix: kegg.pathway
+    target:
+      curie: reactome:R-HSA-1430728
+      identifier: R-HSA-1430728
+      link: https://bioregistry.io/reactome:R-HSA-1430728
+      name: Metabolism
+      prefix: reactome
   - source:
       curie: kegg.pathway:hsa01100
       identifier: hsa01100
@@ -2446,6 +3328,64 @@
       prefix: ncit
 - edges:
   - source:
+      curie: chebi:33130
+      identifier: CHEBI:33130
+      link: https://bioregistry.io/chebi:33130
+      name: aluminium hydroxide
+      prefix: chebi
+    target:
+      curie: ncit:C39707
+      identifier: C39707
+      link: https://bioregistry.io/ncit:C39707
+      name: Aluminum Hydroxide
+      prefix: ncit
+  nodes:
+    chebi:33130:
+      identifier: CHEBI:33130
+      link: https://bioregistry.io/chebi:33130
+      name: aluminium hydroxide
+      prefix: chebi
+    mesh:D000536:
+      identifier: D000536
+      link: https://bioregistry.io/mesh:D000536
+      name: Aluminum Hydroxide
+      prefix: mesh
+    ncit:C39707:
+      identifier: C39707
+      link: https://bioregistry.io/ncit:C39707
+      name: Aluminum Hydroxide
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:28148
+      identifier: CHEBI:28148
+      link: https://bioregistry.io/chebi:28148
+      name: sodium stibogluconate
+      prefix: chebi
+    target:
+      curie: ncit:C61083
+      identifier: C61083
+      link: https://bioregistry.io/ncit:C61083
+      name: Sodium Stibogluconate
+      prefix: ncit
+  nodes:
+    chebi:28148:
+      identifier: CHEBI:28148
+      link: https://bioregistry.io/chebi:28148
+      name: sodium stibogluconate
+      prefix: chebi
+    mesh:D000967:
+      identifier: D000967
+      link: https://bioregistry.io/mesh:D000967
+      name: Antimony Sodium Gluconate
+      prefix: mesh
+    ncit:C61083:
+      identifier: C61083
+      link: https://bioregistry.io/ncit:C61083
+      name: Sodium Stibogluconate
+      prefix: ncit
+- edges:
+  - source:
       curie: chebi:3815
       identifier: CHEBI:3815
       link: https://bioregistry.io/chebi:3815
@@ -2473,6 +3413,470 @@
       link: https://bioregistry.io/pfam:PF01391
       name: Collagen
       prefix: pfam
+- edges:
+  - source:
+      curie: chebi:6637
+      identifier: CHEBI:6637
+      link: https://bioregistry.io/chebi:6637
+      name: magnesium dihydroxide
+      prefix: chebi
+    target:
+      curie: ncit:C29262
+      identifier: C29262
+      link: https://bioregistry.io/ncit:C29262
+      name: Magnesium Hydroxide
+      prefix: ncit
+  nodes:
+    chebi:6637:
+      identifier: CHEBI:6637
+      link: https://bioregistry.io/chebi:6637
+      name: magnesium dihydroxide
+      prefix: chebi
+    mesh:D008276:
+      identifier: D008276
+      link: https://bioregistry.io/mesh:D008276
+      name: Magnesium Hydroxide
+      prefix: mesh
+    ncit:C29262:
+      identifier: C29262
+      link: https://bioregistry.io/ncit:C29262
+      name: Magnesium Hydroxide
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:31794
+      identifier: CHEBI:31794
+      link: https://bioregistry.io/chebi:31794
+      name: magnesium oxide
+      prefix: chebi
+    target:
+      curie: ncit:C29242
+      identifier: C29242
+      link: https://bioregistry.io/ncit:C29242
+      name: Magnesium Oxide
+      prefix: ncit
+  nodes:
+    chebi:31794:
+      identifier: CHEBI:31794
+      link: https://bioregistry.io/chebi:31794
+      name: magnesium oxide
+      prefix: chebi
+    mesh:D008277:
+      identifier: D008277
+      link: https://bioregistry.io/mesh:D008277
+      name: Magnesium Oxide
+      prefix: mesh
+    ncit:C29242:
+      identifier: C29242
+      link: https://bioregistry.io/ncit:C29242
+      name: Magnesium Oxide
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:32599
+      identifier: CHEBI:32599
+      link: https://bioregistry.io/chebi:32599
+      name: magnesium sulfate
+      prefix: chebi
+    target:
+      curie: ncit:C623
+      identifier: C623
+      link: https://bioregistry.io/ncit:C623
+      name: Magnesium Sulfate
+      prefix: ncit
+  nodes:
+    chebi:32599:
+      identifier: CHEBI:32599
+      link: https://bioregistry.io/chebi:32599
+      name: magnesium sulfate
+      prefix: chebi
+    mesh:D008278:
+      identifier: D008278
+      link: https://bioregistry.io/mesh:D008278
+      name: Magnesium Sulfate
+      prefix: mesh
+    ncit:C623:
+      identifier: C623
+      link: https://bioregistry.io/ncit:C623
+      name: Magnesium Sulfate
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:26710
+      identifier: CHEBI:26710
+      link: https://bioregistry.io/chebi:26710
+      name: sodium chloride
+      prefix: chebi
+    target:
+      curie: ncit:C29974
+      identifier: C29974
+      link: https://bioregistry.io/ncit:C29974
+      name: Sodium Chloride
+      prefix: ncit
+  nodes:
+    chebi:26710:
+      identifier: CHEBI:26710
+      link: https://bioregistry.io/chebi:26710
+      name: sodium chloride
+      prefix: chebi
+    mesh:D012965:
+      identifier: D012965
+      link: https://bioregistry.io/mesh:D012965
+      name: Sodium Chloride
+      prefix: mesh
+    ncit:C29974:
+      identifier: C29974
+      link: https://bioregistry.io/ncit:C29974
+      name: Sodium Chloride
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:33192
+      identifier: CHEBI:33192
+      link: https://bioregistry.io/chebi:33192
+      name: sodium cyanide
+      prefix: chebi
+    target:
+      curie: ncit:C163699
+      identifier: C163699
+      link: https://bioregistry.io/ncit:C163699
+      name: Sodium Cyanide
+      prefix: ncit
+  nodes:
+    chebi:33192:
+      identifier: CHEBI:33192
+      link: https://bioregistry.io/chebi:33192
+      name: sodium cyanide
+      prefix: chebi
+    mesh:D012966:
+      identifier: D012966
+      link: https://bioregistry.io/mesh:D012966
+      name: Sodium Cyanide
+      prefix: mesh
+    ncit:C163699:
+      identifier: C163699
+      link: https://bioregistry.io/ncit:C163699
+      name: Sodium Cyanide
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:8984
+      identifier: CHEBI:8984
+      link: https://bioregistry.io/chebi:8984
+      name: sodium dodecyl sulfate
+      prefix: chebi
+    target:
+      curie: ncit:C76733
+      identifier: C76733
+      link: https://bioregistry.io/ncit:C76733
+      name: Sodium Lauryl Sulfate
+      prefix: ncit
+  nodes:
+    chebi:8984:
+      identifier: CHEBI:8984
+      link: https://bioregistry.io/chebi:8984
+      name: sodium dodecyl sulfate
+      prefix: chebi
+    mesh:D012967:
+      identifier: D012967
+      link: https://bioregistry.io/mesh:D012967
+      name: Sodium Dodecyl Sulfate
+      prefix: mesh
+    ncit:C76733:
+      identifier: C76733
+      link: https://bioregistry.io/ncit:C76733
+      name: Sodium Lauryl Sulfate
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:53622
+      identifier: CHEBI:53622
+      link: https://bioregistry.io/chebi:53622
+      name: sodium aurothiosulfate
+      prefix: chebi
+    target:
+      curie: ncit:C152109
+      identifier: C152109
+      link: https://bioregistry.io/ncit:C152109
+      name: Gold Sodium Thiosulfate
+      prefix: ncit
+  nodes:
+    chebi:53622:
+      identifier: CHEBI:53622
+      link: https://bioregistry.io/chebi:53622
+      name: sodium aurothiosulfate
+      prefix: chebi
+    mesh:D012971:
+      identifier: D012971
+      link: https://bioregistry.io/mesh:D012971
+      name: Gold Sodium Thiosulfate
+      prefix: mesh
+    ncit:C152109:
+      identifier: C152109
+      link: https://bioregistry.io/ncit:C152109
+      name: Gold Sodium Thiosulfate
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:32145
+      identifier: CHEBI:32145
+      link: https://bioregistry.io/chebi:32145
+      name: sodium hydroxide
+      prefix: chebi
+    target:
+      curie: ncit:C74373
+      identifier: C74373
+      link: https://bioregistry.io/ncit:C74373
+      name: Sodium Hydroxide
+      prefix: ncit
+  nodes:
+    chebi:32145:
+      identifier: CHEBI:32145
+      link: https://bioregistry.io/chebi:32145
+      name: sodium hydroxide
+      prefix: chebi
+    mesh:D012972:
+      identifier: D012972
+      link: https://bioregistry.io/mesh:D012972
+      name: Sodium Hydroxide
+      prefix: mesh
+    ncit:C74373:
+      identifier: C74373
+      link: https://bioregistry.io/ncit:C74373
+      name: Sodium Hydroxide
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:32146
+      identifier: CHEBI:32146
+      link: https://bioregistry.io/chebi:32146
+      name: sodium hypochlorite
+      prefix: chebi
+    target:
+      curie: ncit:C80658
+      identifier: C80658
+      link: https://bioregistry.io/ncit:C80658
+      name: Sodium Hypochlorite
+      prefix: ncit
+  nodes:
+    chebi:32146:
+      identifier: CHEBI:32146
+      link: https://bioregistry.io/chebi:32146
+      name: sodium hypochlorite
+      prefix: chebi
+    mesh:D012973:
+      identifier: D012973
+      link: https://bioregistry.io/mesh:D012973
+      name: Sodium Hypochlorite
+      prefix: mesh
+    ncit:C80658:
+      identifier: C80658
+      link: https://bioregistry.io/ncit:C80658
+      name: Sodium Hypochlorite
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:33167
+      identifier: CHEBI:33167
+      link: https://bioregistry.io/chebi:33167
+      name: sodium iodide
+      prefix: chebi
+    target:
+      curie: ncit:C80943
+      identifier: C80943
+      link: https://bioregistry.io/ncit:C80943
+      name: Sodium Iodide
+      prefix: ncit
+  nodes:
+    chebi:33167:
+      identifier: CHEBI:33167
+      link: https://bioregistry.io/chebi:33167
+      name: sodium iodide
+      prefix: chebi
+    mesh:D012974:
+      identifier: D012974
+      link: https://bioregistry.io/mesh:D012974
+      name: Sodium Iodide
+      prefix: mesh
+    ncit:C80943:
+      identifier: C80943
+      link: https://bioregistry.io/ncit:C80943
+      name: Sodium Iodide
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:9180
+      identifier: CHEBI:9180
+      link: https://bioregistry.io/chebi:9180
+      name: Sodium salicylate
+      prefix: chebi
+    target:
+      curie: ncit:C834
+      identifier: C834
+      link: https://bioregistry.io/ncit:C834
+      name: Sodium Salicylate
+      prefix: ncit
+  nodes:
+    chebi:9180:
+      identifier: CHEBI:9180
+      link: https://bioregistry.io/chebi:9180
+      name: Sodium salicylate
+      prefix: chebi
+    mesh:D012980:
+      identifier: D012980
+      link: https://bioregistry.io/mesh:D012980
+      name: Sodium Salicylate
+      prefix: mesh
+    ncit:C834:
+      identifier: C834
+      link: https://bioregistry.io/ncit:C834
+      name: Sodium Salicylate
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:75273
+      identifier: CHEBI:75273
+      link: https://bioregistry.io/chebi:75273
+      name: sodium tetradecyl sulfate
+      prefix: chebi
+    target:
+      curie: ncit:C66555
+      identifier: C66555
+      link: https://bioregistry.io/ncit:C66555
+      name: Sodium Tetradecyl Sulfate
+      prefix: ncit
+  nodes:
+    chebi:75273:
+      identifier: CHEBI:75273
+      link: https://bioregistry.io/chebi:75273
+      name: sodium tetradecyl sulfate
+      prefix: chebi
+    mesh:D012981:
+      identifier: D012981
+      link: https://bioregistry.io/mesh:D012981
+      name: Sodium Tetradecyl Sulfate
+      prefix: mesh
+    ncit:C66555:
+      identifier: C66555
+      link: https://bioregistry.io/ncit:C66555
+      name: Sodium Tetradecyl Sulfate
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:6636
+      identifier: CHEBI:6636
+      link: https://bioregistry.io/chebi:6636
+      name: magnesium dichloride
+      prefix: chebi
+    target:
+      curie: ncit:C29240
+      identifier: C29240
+      link: https://bioregistry.io/ncit:C29240
+      name: Magnesium Chloride
+      prefix: ncit
+  nodes:
+    chebi:6636:
+      identifier: CHEBI:6636
+      link: https://bioregistry.io/chebi:6636
+      name: magnesium dichloride
+      prefix: chebi
+    mesh:D015636:
+      identifier: D015636
+      link: https://bioregistry.io/mesh:D015636
+      name: Magnesium Chloride
+      prefix: mesh
+    ncit:C29240:
+      identifier: C29240
+      link: https://bioregistry.io/ncit:C29240
+      name: Magnesium Chloride
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:32139
+      identifier: CHEBI:32139
+      link: https://bioregistry.io/chebi:32139
+      name: sodium hydrogencarbonate
+      prefix: chebi
+    target:
+      curie: ncit:C29457
+      identifier: C29457
+      link: https://bioregistry.io/ncit:C29457
+      name: Sodium Bicarbonate
+      prefix: ncit
+  nodes:
+    chebi:32139:
+      identifier: CHEBI:32139
+      link: https://bioregistry.io/chebi:32139
+      name: sodium hydrogencarbonate
+      prefix: chebi
+    mesh:D017693:
+      identifier: D017693
+      link: https://bioregistry.io/mesh:D017693
+      name: Sodium Bicarbonate
+      prefix: mesh
+    ncit:C29457:
+      identifier: C29457
+      link: https://bioregistry.io/ncit:C29457
+      name: Sodium Bicarbonate
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:32954
+      identifier: CHEBI:32954
+      link: https://bioregistry.io/chebi:32954
+      name: sodium acetate
+      prefix: chebi
+    target:
+      curie: ncit:C47720
+      identifier: C47720
+      link: https://bioregistry.io/ncit:C47720
+      name: Sodium Acetate
+      prefix: ncit
+  nodes:
+    chebi:32954:
+      identifier: CHEBI:32954
+      link: https://bioregistry.io/chebi:32954
+      name: sodium acetate
+      prefix: chebi
+    mesh:D019346:
+      identifier: D019346
+      link: https://bioregistry.io/mesh:D019346
+      name: Sodium Acetate
+      prefix: mesh
+    ncit:C47720:
+      identifier: C47720
+      link: https://bioregistry.io/ncit:C47720
+      name: Sodium Acetate
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:75228
+      identifier: CHEBI:75228
+      link: https://bioregistry.io/chebi:75228
+      name: sodium lactate
+      prefix: chebi
+    target:
+      curie: ncit:C47726
+      identifier: C47726
+      link: https://bioregistry.io/ncit:C47726
+      name: Sodium Lactate
+      prefix: ncit
+  nodes:
+    chebi:75228:
+      identifier: CHEBI:75228
+      link: https://bioregistry.io/chebi:75228
+      name: sodium lactate
+      prefix: chebi
+    mesh:D019354:
+      identifier: D019354
+      link: https://bioregistry.io/mesh:D019354
+      name: Sodium Lactate
+      prefix: mesh
+    ncit:C47726:
+      identifier: C47726
+      link: https://bioregistry.io/ncit:C47726
+      name: Sodium Lactate
+      prefix: ncit
 - edges:
   - source:
       curie: go:0001837
