@@ -1,17 +1,17 @@
 contributors:
-- count: 2856
+- count: 2855
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 1879
+- count: 1881
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
-- count: 1698
+- count: 1697
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
   user: hoytfamily
-- count: 217
+- count: 216
   name: Daniel Domingo-Fernandez
   orcid: 0000-0002-2046-6145
   user: ddomingof
@@ -23,7 +23,7 @@ negative:
 - count: 218
   source: mesh
   target: reactome
-- count: 152
+- count: 153
   source: doid
   target: mesh
 - count: 91
@@ -72,12 +72,12 @@ negative:
   source: mesh
   target: ncit
 - count: 7
-  source: fplx
-  target: wikipathways
-- count: 6
   source: chebi
   target: mesh
-- count: 3
+- count: 7
+  source: fplx
+  target: wikipathways
+- count: 4
   source: doid
   target: efo
 - count: 3
@@ -98,13 +98,16 @@ negative:
 - count: 1
   source: mesh
   target: umls
-negative_mapping_count: 950
+- count: 1
+  source: reactome
+  target: wikipathways
+negative_mapping_count: 954
 negative_prefix_count: 17
 positive:
-- count: 1280
+- count: 1278
   source: doid
   target: mesh
-- count: 1175
+- count: 1174
   source: chebi
   target: mesh
 - count: 525
@@ -137,7 +140,7 @@ positive:
 - count: 81
   source: pr
   target: uniprot.chain
-- count: 74
+- count: 73
   source: reactome
   target: wikipathways
 - count: 72
@@ -155,7 +158,7 @@ positive:
 - count: 25
   source: kegg.pathway
   target: mesh
-- count: 21
+- count: 20
   source: doid
   target: efo
 - count: 18
@@ -197,7 +200,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 5667
+positive_mapping_count: 5662
 positive_prefix_count: 21
 predictions:
 - count: 12122

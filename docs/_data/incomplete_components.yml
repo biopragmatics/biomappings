@@ -1369,11 +1369,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://bioregistry.io/efo:0006612
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://bioregistry.io/cellosaurus:CVCL_1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: bto:0006459
       identifier: BTO:0006459
@@ -1381,11 +1381,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://bioregistry.io/cellosaurus:CVCL_1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://bioregistry.io/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: cellosaurus:CVCL_1334
       identifier: CVCL_1334
@@ -1769,35 +1769,6 @@
       prefix: ncit
 - edges:
   - source:
-      curie: mesh:D000077145
-      identifier: D000077145
-      link: https://bioregistry.io/mesh:D000077145
-      name: Sulfanilamide
-      prefix: mesh
-    target:
-      curie: mesh:D013424
-      identifier: D013424
-      link: https://bioregistry.io/mesh:D013424
-      name: Sulfanilamides
-      prefix: mesh
-  nodes:
-    chebi:45373:
-      identifier: CHEBI:45373
-      link: https://bioregistry.io/chebi:45373
-      name: sulfanilamide
-      prefix: chebi
-    mesh:D000077145:
-      identifier: D000077145
-      link: https://bioregistry.io/mesh:D000077145
-      name: Sulfanilamide
-      prefix: mesh
-    mesh:D013424:
-      identifier: D013424
-      link: https://bioregistry.io/mesh:D013424
-      name: Sulfanilamides
-      prefix: mesh
-- edges:
-  - source:
       curie: chebi:82977
       identifier: CHEBI:82977
       link: https://bioregistry.io/chebi:82977
@@ -2147,11 +2118,11 @@
       name: bird fancier's lung
       prefix: efo
     target:
-      curie: umls:C0005592
-      identifier: C0005592
-      link: https://bioregistry.io/umls:C0005592
+      curie: ncit:C34425
+      identifier: C34425
+      link: https://bioregistry.io/ncit:C34425
       name: Bird Fancier's Lung
-      prefix: umls
+      prefix: ncit
   - source:
       curie: efo:0007170
       identifier: '0007170'
@@ -2159,11 +2130,11 @@
       name: bird fancier's lung
       prefix: efo
     target:
-      curie: ncit:C34425
-      identifier: C34425
-      link: https://bioregistry.io/ncit:C34425
+      curie: umls:C0005592
+      identifier: C0005592
+      link: https://bioregistry.io/umls:C0005592
       name: Bird Fancier's Lung
-      prefix: ncit
+      prefix: umls
   - source:
       curie: mesh:D001716
       identifier: D001716
@@ -2367,11 +2338,11 @@
       name: lung adenocarcinoma
       prefix: efo
     target:
-      curie: umls:C0152013
-      identifier: C0152013
-      link: https://bioregistry.io/umls:C0152013
-      name: Adenocarcinoma of lung (disorder)
-      prefix: umls
+      curie: mesh:D000077192
+      identifier: D000077192
+      link: https://bioregistry.io/mesh:D000077192
+      name: Adenocarcinoma of Lung
+      prefix: mesh
   - source:
       curie: efo:0000571
       identifier: '0000571'
@@ -2379,11 +2350,11 @@
       name: lung adenocarcinoma
       prefix: efo
     target:
-      curie: mesh:D000077192
-      identifier: D000077192
-      link: https://bioregistry.io/mesh:D000077192
-      name: Adenocarcinoma of Lung
-      prefix: mesh
+      curie: umls:C0152013
+      identifier: C0152013
+      link: https://bioregistry.io/umls:C0152013
+      name: Adenocarcinoma of lung (disorder)
+      prefix: umls
   - source:
       curie: mesh:D000077192
       identifier: D000077192
@@ -2477,30 +2448,6 @@
       prefix: umls
 - edges:
   - source:
-      curie: doid:4552
-      identifier: DOID:4552
-      link: https://bioregistry.io/doid:4552
-      name: large cell carcinoma
-      prefix: doid
-    target:
-      curie: doid:4556
-      identifier: DOID:4556
-      link: https://bioregistry.io/doid:4556
-      name: lung large cell carcinoma
-      prefix: doid
-  - source:
-      curie: doid:4552
-      identifier: DOID:4552
-      link: https://bioregistry.io/doid:4552
-      name: large cell carcinoma
-      prefix: doid
-    target:
-      curie: umls:C0345958
-      identifier: C0345958
-      link: https://bioregistry.io/umls:C0345958
-      name: Large cell carcinoma of lung
-      prefix: umls
-  - source:
       curie: efo:0003050
       identifier: '0003050'
       link: https://bioregistry.io/efo:0003050
@@ -2513,11 +2460,6 @@
       name: Large cell carcinoma of lung
       prefix: umls
   nodes:
-    doid:4552:
-      identifier: DOID:4552
-      link: https://bioregistry.io/doid:4552
-      name: large cell carcinoma
-      prefix: doid
     doid:4556:
       identifier: DOID:4556
       link: https://bioregistry.io/doid:4556
@@ -2709,61 +2651,32 @@
       prefix: umls
 - edges:
   - source:
-      curie: kegg.pathway:hsa00350
-      identifier: hsa00350
-      link: https://bioregistry.io/kegg.pathway:hsa00350
-      name: Tyrosine metabolism - Homo sapiens (human)
+      curie: kegg.pathway:hsa00140
+      identifier: hsa00140
+      link: https://bioregistry.io/kegg.pathway:hsa00140
+      name: Steroid hormone biosynthesis - Homo sapiens (human)
       prefix: kegg.pathway
     target:
-      curie: kegg.pathway:hsa01100
-      identifier: hsa01100
-      link: https://bioregistry.io/kegg.pathway:hsa01100
-      name: Metabolic pathways - Homo sapiens (human)
-      prefix: kegg.pathway
-  - source:
-      curie: kegg.pathway:hsa00350
-      identifier: hsa00350
-      link: https://bioregistry.io/kegg.pathway:hsa00350
-      name: Tyrosine metabolism - Homo sapiens (human)
-      prefix: kegg.pathway
-    target:
-      curie: reactome:R-HSA-1430728
-      identifier: R-HSA-1430728
-      link: https://bioregistry.io/reactome:R-HSA-1430728
-      name: Metabolism
-      prefix: reactome
-  - source:
-      curie: kegg.pathway:hsa01100
-      identifier: hsa01100
-      link: https://bioregistry.io/kegg.pathway:hsa01100
-      name: Metabolic pathways - Homo sapiens (human)
-      prefix: kegg.pathway
-    target:
-      curie: wikipathways:WP4506
-      identifier: WP4506
-      link: https://bioregistry.io/wikipathways:WP4506
-      name: Tyrosine metabolism
+      curie: wikipathways:WP496
+      identifier: WP496
+      link: https://bioregistry.io/wikipathways:WP496
+      name: Steroid biosynthesis
       prefix: wikipathways
   nodes:
-    kegg.pathway:hsa00350:
-      identifier: hsa00350
-      link: https://bioregistry.io/kegg.pathway:hsa00350
-      name: Tyrosine metabolism - Homo sapiens (human)
+    kegg.pathway:hsa00100:
+      identifier: hsa00100
+      link: https://bioregistry.io/kegg.pathway:hsa00100
+      name: Steroid biosynthesis - Homo sapiens (human)
       prefix: kegg.pathway
-    kegg.pathway:hsa01100:
-      identifier: hsa01100
-      link: https://bioregistry.io/kegg.pathway:hsa01100
-      name: Metabolic pathways - Homo sapiens (human)
+    kegg.pathway:hsa00140:
+      identifier: hsa00140
+      link: https://bioregistry.io/kegg.pathway:hsa00140
+      name: Steroid hormone biosynthesis - Homo sapiens (human)
       prefix: kegg.pathway
-    reactome:R-HSA-1430728:
-      identifier: R-HSA-1430728
-      link: https://bioregistry.io/reactome:R-HSA-1430728
-      name: Metabolism
-      prefix: reactome
-    wikipathways:WP4506:
-      identifier: WP4506
-      link: https://bioregistry.io/wikipathways:WP4506
-      name: Tyrosine metabolism
+    wikipathways:WP496:
+      identifier: WP496
+      link: https://bioregistry.io/wikipathways:WP496
+      name: Steroid biosynthesis
       prefix: wikipathways
 - edges:
   - source:
@@ -2949,64 +2862,6 @@
       link: https://bioregistry.io/kegg.pathway:map04920
       name: Adipocytokine signaling pathway
       prefix: kegg.pathway
-- edges:
-  - source:
-      curie: mesh:C000657245
-      identifier: C000657245
-      link: https://bioregistry.io/mesh:C000657245
-      name: COVID-19
-      prefix: mesh
-    target:
-      curie: mesh:D000086382
-      identifier: D000086382
-      link: https://bioregistry.io/mesh:D000086382
-      name: COVID-19
-      prefix: mesh
-  nodes:
-    doid:0080600:
-      identifier: DOID:0080600
-      link: https://bioregistry.io/doid:0080600
-      name: COVID-19
-      prefix: doid
-    mesh:C000657245:
-      identifier: C000657245
-      link: https://bioregistry.io/mesh:C000657245
-      name: COVID-19
-      prefix: mesh
-    mesh:D000086382:
-      identifier: D000086382
-      link: https://bioregistry.io/mesh:D000086382
-      name: COVID-19
-      prefix: mesh
-- edges:
-  - source:
-      curie: mesh:C531763
-      identifier: C531763
-      link: https://bioregistry.io/mesh:C531763
-      name: Irritable heart
-      prefix: mesh
-    target:
-      curie: mesh:D054972
-      identifier: D054972
-      link: https://bioregistry.io/mesh:D054972
-      name: Postural Orthostatic Tachycardia Syndrome
-      prefix: mesh
-  nodes:
-    doid:0111154:
-      identifier: DOID:0111154
-      link: https://bioregistry.io/doid:0111154
-      name: postural orthostatic tachycardia syndrome
-      prefix: doid
-    mesh:C531763:
-      identifier: C531763
-      link: https://bioregistry.io/mesh:C531763
-      name: Irritable heart
-      prefix: mesh
-    mesh:D054972:
-      identifier: D054972
-      link: https://bioregistry.io/mesh:D054972
-      name: Postural Orthostatic Tachycardia Syndrome
-      prefix: mesh
 - edges:
   - source:
       curie: mesh:C537027

@@ -1,38 +1,3 @@
-- chebi:45373:
-    identifier: CHEBI:45373
-    link: https://bioregistry.io/chebi:45373
-    name: sulfanilamide
-    prefix: chebi
-  mesh:D000077145:
-    identifier: D000077145
-    link: https://bioregistry.io/mesh:D000077145
-    name: Sulfanilamide
-    prefix: mesh
-  mesh:D013424:
-    identifier: D013424
-    link: https://bioregistry.io/mesh:D013424
-    name: Sulfanilamides
-    prefix: mesh
-- doid:4552:
-    identifier: DOID:4552
-    link: https://bioregistry.io/doid:4552
-    name: large cell carcinoma
-    prefix: doid
-  doid:4556:
-    identifier: DOID:4556
-    link: https://bioregistry.io/doid:4556
-    name: lung large cell carcinoma
-    prefix: doid
-  efo:0003050:
-    identifier: '0003050'
-    link: https://bioregistry.io/efo:0003050
-    name: large cell lung carcinoma
-    prefix: efo
-  umls:C0345958:
-    identifier: C0345958
-    link: https://bioregistry.io/umls:C0345958
-    name: Large cell carcinoma of lung
-    prefix: umls
 - kegg.pathway:hsa00100:
     identifier: hsa00100
     link: https://bioregistry.io/kegg.pathway:hsa00100
@@ -47,26 +12,6 @@
     identifier: WP496
     link: https://bioregistry.io/wikipathways:WP496
     name: Steroid biosynthesis
-    prefix: wikipathways
-- kegg.pathway:hsa00350:
-    identifier: hsa00350
-    link: https://bioregistry.io/kegg.pathway:hsa00350
-    name: Tyrosine metabolism - Homo sapiens (human)
-    prefix: kegg.pathway
-  kegg.pathway:hsa01100:
-    identifier: hsa01100
-    link: https://bioregistry.io/kegg.pathway:hsa01100
-    name: Metabolic pathways - Homo sapiens (human)
-    prefix: kegg.pathway
-  reactome:R-HSA-1430728:
-    identifier: R-HSA-1430728
-    link: https://bioregistry.io/reactome:R-HSA-1430728
-    name: Metabolism
-    prefix: reactome
-  wikipathways:WP4506:
-    identifier: WP4506
-    link: https://bioregistry.io/wikipathways:WP4506
-    name: Tyrosine metabolism
     prefix: wikipathways
 - kegg.pathway:hsa02010:
     identifier: hsa02010
@@ -268,36 +213,6 @@
     link: https://bioregistry.io/kegg.pathway:map04920
     name: Adipocytokine signaling pathway
     prefix: kegg.pathway
-- doid:0080600:
-    identifier: DOID:0080600
-    link: https://bioregistry.io/doid:0080600
-    name: COVID-19
-    prefix: doid
-  mesh:C000657245:
-    identifier: C000657245
-    link: https://bioregistry.io/mesh:C000657245
-    name: COVID-19
-    prefix: mesh
-  mesh:D000086382:
-    identifier: D000086382
-    link: https://bioregistry.io/mesh:D000086382
-    name: COVID-19
-    prefix: mesh
-- doid:0111154:
-    identifier: DOID:0111154
-    link: https://bioregistry.io/doid:0111154
-    name: postural orthostatic tachycardia syndrome
-    prefix: doid
-  mesh:C531763:
-    identifier: C531763
-    link: https://bioregistry.io/mesh:C531763
-    name: Irritable heart
-    prefix: mesh
-  mesh:D054972:
-    identifier: D054972
-    link: https://bioregistry.io/mesh:D054972
-    name: Postural Orthostatic Tachycardia Syndrome
-    prefix: mesh
 - doid:0050811:
     identifier: DOID:0050811
     link: https://bioregistry.io/doid:0050811
