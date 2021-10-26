@@ -38,6 +38,7 @@ ccle	WM239A	WM239A	skos:exactMatch	cellosaurus	CVCL_RN56	WM239B	manually_reviewe
 chebi	CHEBI:17544	hydrogencarbonate	skos:exactMatch	mesh	D001639	Bicarbonates	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:29806	fumarate(2-)	skos:exactMatch	mesh	D005650	Fumarates	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:33224	chromane	skos:exactMatch	mesh	D002839	Chromans	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:45373	sulfanilamide	skos:exactMatch	mesh	D013424	Sulfanilamides	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:6456	lidocaine	skos:exactMatch	mesh	C511998	Lidoderm	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	mesh	D006394	Hemangiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0018923	Hemangiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
@@ -63,6 +64,7 @@ doid	DOID:1909	melanoma	skos:exactMatch	umls	C0796561	Melanoma vaccine	manually_
 doid	DOID:2043	hepatitis B	skos:exactMatch	umls	C0062527	hepatitis B surface antigen vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:3482	plague	skos:exactMatch	umls	C0032066	Plague Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:3910	lung adenocarcinoma	skos:exactMatch	efo	0005288	non-small cell lung adenocarcinoma	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:4552	large cell carcinoma	skos:exactMatch	efo	0003050	large cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5411	lung oat cell carcinoma	skos:exactMatch	efo	0000702	small cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5411	lung oat cell carcinoma	skos:exactMatch	umls	C0149925	Small cell carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:8469	influenza	skos:exactMatch	umls	C0021403	Influenza virus vaccine	manually_reviewed	orcid:0000-0003-4423-4370
@@ -238,6 +240,7 @@ mesh	C473195	(-)-alpha-pinene synthase	skos:exactMatch	go	GO:0050550	pinene synt
 mesh	C477269	3 beta-hydroxy-delta 5-steroid dehydrogenase, rat	skos:exactMatch	go	GO:0003854	3-beta-hydroxy-delta5-steroid dehydrogenase activity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C509674	marinocine protein, Marinomonas mediterranea	skos:exactMatch	go	GO:0033736	L-lysine 6-oxidase activity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C531673	Familial ependymoma	skos:exactMatch	doid	DOID:5509	pediatric ependymoma	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C531763	Irritable heart	skos:exactMatch	doid	DOID:0111154	postural orthostatic tachycardia syndrome	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C535442	Bile acid synthesis defect, congenital, 1	skos:exactMatch	doid	DOID:0050674	congenital bile acid synthesis defect	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C535536	Iridogoniodysgenesis, dominant type	skos:exactMatch	doid	DOID:0050786	iridogoniodysgenesis syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C535837	Pancreatic carcinoma, familial	skos:exactMatch	doid	DOID:4905	pancreatic carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
@@ -931,6 +934,7 @@ wikipathways	WP4255	Non-small cell lung cancer	speciesSpecific	mesh	D002289	Carc
 wikipathways	WP4288	MTHFR deficiency	speciesSpecific	mesh	C537357	Methylenetetrahydrofolate reductase deficiency	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP4396	Nonalcoholic fatty liver disease	speciesSpecific	mesh	D065626	Non-alcoholic Fatty Liver Disease	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP441	Matrix Metalloproteinases	speciesSpecific	fplx	MMP	MMP	manually_reviewed	orcid:0000-0003-4423-4370
+wikipathways	WP4506	Tyrosine metabolism	skos:exactMatch	reactome	R-HSA-1430728	Metabolism	manual	orcid:0000-0003-4423-4370
 wikipathways	WP454	Osteoclast	speciesSpecific	mesh	D010010	Osteoclasts	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP4549	Fragile X Syndrome	speciesSpecific	mesh	D005600	Fragile X Syndrome	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP4656	Joubert Syndrome	speciesSpecific	doid	DOID:0050777	Joubert syndrome	manually_reviewed	orcid:0000-0003-4423-4370

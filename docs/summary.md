@@ -22,22 +22,6 @@ has been done. Higher density components means that they have been checked multi
 
 ## Curation Warnings
 
-### Duplicate Prefixes
-
-If two concepts with the same prefix appear in the same equivalence component, there is typically an error in curation.
-
-<ol>
-{% for nodes in site.data.components_with_duplicate_prefixes %}
-<li><ul>
-{% for node in nodes %}
-<li>
-{{ node[1].name }} (<a href="{{ node[1].link }}">{{ node[0] }}</a>)
-</li>
-{% endfor %}
-</ul></li>
-{% endfor %}
-</ol>
-
 ### Incomplete Triangles
 
 Incomplete triangles are components within the graph such that `A skos:exactMatch B`, `B skos:exactMatch C`, but it is

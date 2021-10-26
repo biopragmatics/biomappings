@@ -845,7 +845,6 @@ chebi	CHEBI:43602	obeticholic acid	skos:exactMatch	mesh	C464660	obeticholic acid
 chebi	CHEBI:4388	deltamethrin	skos:exactMatch	mesh	C017180	decamethrin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:43931	methyllycaconitine	skos:exactMatch	mesh	C054634	methyllycaconitine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:4429	deoxypodophyllotoxin	skos:exactMatch	mesh	C014451	deoxypodophyllotoxin	manually_reviewed	orcid:0000-0001-9439-5346
-chebi	CHEBI:45373	sulfanilamide	skos:exactMatch	mesh	D013424	Sulfanilamides	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:46245	coenzyme Q10	skos:exactMatch	mesh	C024989	coenzyme Q10	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:46557	zoledronic acid	skos:exactMatch	mesh	D000077211	Zoledronic Acid	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:46742	Nutlin-3	skos:exactMatch	mesh	C482205	nutlin 3	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1176,7 +1175,6 @@ doid	DOID:4001	ovarian carcinoma	skos:exactMatch	efo	0001075	ovarian carcinoma	m
 doid	DOID:4001	ovarian carcinoma	skos:exactMatch	umls	C0029925	Ovarian Carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4492	avian influenza	skos:exactMatch	mesh	D005585	Influenza in Birds	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4492	avian influenza	skos:exactMatch	umls	C0016627	Influenza in Birds	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:4552	large cell carcinoma	skos:exactMatch	efo	0003050	large cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4556	lung large cell carcinoma	skos:exactMatch	efo	0003050	large cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4556	lung large cell carcinoma	skos:exactMatch	umls	C0345958	Large cell carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4829	adenosquamous lung carcinoma	skos:exactMatch	efo	0000233	adenosquamous lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1211,7 +1209,7 @@ kegg.pathway	hsa00072	Synthesis and degradation of ketone bodies - Homo sapiens 
 kegg.pathway	hsa00072	Synthesis and degradation of ketone bodies - Homo sapiens (human)	skos:exactMatch	wikipathways	WP311	Ketone bodies synthesis and degradation	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00100	Steroid biosynthesis - Homo sapiens (human)	skos:exactMatch	kegg.pathway	hsa00140	Steroid hormone biosynthesis - Homo sapiens (human)	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00100	Steroid biosynthesis - Homo sapiens (human)	skos:exactMatch	wikipathways	WP496	Steroid biosynthesis	manual	orcid:0000-0002-2046-6145
-kegg.pathway	hsa00140	Steroid hormone biosynthesis - Homo sapiens (human)	skos:exactMatch	wikipathways	WP496	Steroid biosynthesis	manual	orcid:0000-0002-2046-6145
+kegg.pathway	hsa00140	Steroid hormone biosynthesis - Homo sapiens (human)	skos:broadMatch	wikipathways	WP496	Steroid biosynthesis	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00190	Oxidative phosphorylation - Homo sapiens (human)	skos:exactMatch	reactome	R-HSA-163210	Formation of ATP by chemiosmotic coupling	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00190	Oxidative phosphorylation - Homo sapiens (human)	skos:exactMatch	wikipathways	WP623	Oxidative phosphorylation	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00240	Pyrimidine metabolism - Homo sapiens (human)	skos:exactMatch	wikipathways	WP4022	Pyrimidine metabolism	manual	orcid:0000-0002-2046-6145
@@ -1500,7 +1498,6 @@ mesh	C000656824	tinea manus	skos:exactMatch	doid	DOID:13369	tinea manuum	manuall
 mesh	C000656825	tinea barbae	skos:exactMatch	doid	DOID:0050096	tinea barbae	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000656865	talaromycosis	skos:exactMatch	doid	DOID:0050288	penicilliosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C000656904	tinea nigra	skos:exactMatch	doid	DOID:8912	tinea nigra	manually_reviewed	orcid:0000-0003-4423-4370
-mesh	C000657245	COVID-19	skos:exactMatch	doid	DOID:0080600	COVID-19	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000706947	FGF21 protein, human	skos:exactMatch	uniprot	Q9NSA1	FGF21	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C009285	sodium polymetaphosphate	skos:exactMatch	ncit	C84166	Sodium Polymetaphosphate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C012036	sodium sulfate	skos:exactMatch	ncit	C47727	Sodium Sulfate	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1807,7 +1804,6 @@ mesh	C530662	BEX2 protein, human	skos:exactMatch	uniprot	Q9BXY8	BEX2	manually_re
 mesh	C531617	Amyotrophic lateral sclerosis 1	skos:exactMatch	doid	DOID:0060193	amyotrophic lateral sclerosis type 1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C531621	Cutaneous anthrax	skos:exactMatch	doid	DOID:7426	cutaneous anthrax	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C531633	Biotin deficiency	skos:exactMatch	doid	DOID:0050810	biotin deficiency	manually_reviewed	orcid:0000-0003-1307-2508
-mesh	C531763	Irritable heart	skos:exactMatch	doid	DOID:0111154	postural orthostatic tachycardia syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C535274	Prieto X-linked mental retardation syndrome	skos:exactMatch	doid	DOID:0060805	Prieto syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C535288	Rapadilino syndrome	skos:exactMatch	doid	DOID:0050774	rapadilino syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C535289	Rapp-Hodgkin syndrome	skos:exactMatch	doid	DOID:0060330	Rapp-Hodgkin syndrome	manually_reviewed	orcid:0000-0003-1307-2508
@@ -5532,7 +5528,6 @@ wikipathways	WP435	One Carbon Metabolism	speciesSpecific	go	GO:0006730	one-carbo
 wikipathways	WP436	Glycogen Metabolism	speciesSpecific	go	GO:0005977	glycogen metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP438	Non-homologous end joining	skos:exactMatch	reactome	R-HSA-5693571	Nonhomologous End-Joining (NHEJ)	manual	orcid:0000-0002-2046-6145
 wikipathways	WP446	MAPK Cascade	speciesSpecific	go	GO:0000165	MAPK cascade	manually_reviewed	orcid:0000-0003-4423-4370
-wikipathways	WP4506	Tyrosine metabolism	skos:exactMatch	reactome	R-HSA-1430728	Metabolism	manual	orcid:0000-0002-2046-6145
 wikipathways	WP4506	Tyrosine Metabolism	speciesSpecific	go	GO:0006570	tyrosine metabolic process	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP4507	Molybdenum cofactor (Moco) biosynthesis	skos:exactMatch	reactome	R-HSA-947581	Molybdenum cofactor biosynthesis	manual	orcid:0000-0002-2046-6145
 wikipathways	WP451	DNA Replication	speciesSpecific	go	GO:0006260	DNA replication	manually_reviewed	orcid:0000-0003-4423-4370
