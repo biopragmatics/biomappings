@@ -1,17 +1,17 @@
 contributors:
-- count: 2856
+- count: 2855
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 1698
-  name: Amelia Hoyt
-  orcid: 0000-0003-1307-2508
-  user: hoytfamily
-- count: 1598
+- count: 1881
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
-- count: 217
+- count: 1697
+  name: Amelia Hoyt
+  orcid: 0000-0003-1307-2508
+  user: hoytfamily
+- count: 216
   name: Daniel Domingo-Fernandez
   orcid: 0000-0002-2046-6145
   user: ddomingof
@@ -23,7 +23,7 @@ negative:
 - count: 218
   source: mesh
   target: reactome
-- count: 151
+- count: 153
   source: doid
   target: mesh
 - count: 91
@@ -44,6 +44,9 @@ negative:
 - count: 45
   source: mesh
   target: wikipathways
+- count: 28
+  source: doid
+  target: umls
 - count: 27
   source: ccle
   target: cellosaurus
@@ -69,8 +72,14 @@ negative:
   source: mesh
   target: ncit
 - count: 7
+  source: chebi
+  target: mesh
+- count: 7
   source: fplx
   target: wikipathways
+- count: 4
+  source: doid
+  target: efo
 - count: 3
   source: doid
   target: reactome
@@ -87,26 +96,26 @@ negative:
   source: ccle
   target: depmap
 - count: 1
-  source: chebi
-  target: mesh
-- count: 1
   source: mesh
   target: umls
-negative_mapping_count: 913
+- count: 1
+  source: reactome
+  target: wikipathways
+negative_mapping_count: 954
 negative_prefix_count: 17
 positive:
-- count: 1271
+- count: 1278
   source: doid
   target: mesh
-- count: 1095
+- count: 1174
   source: chebi
   target: mesh
+- count: 525
+  source: mesh
+  target: ncit
 - count: 498
   source: ccle
   target: efo
-- count: 467
-  source: mesh
-  target: ncit
 - count: 403
   source: go
   target: mesh
@@ -131,9 +140,12 @@ positive:
 - count: 81
   source: pr
   target: uniprot.chain
-- count: 74
+- count: 73
   source: reactome
   target: wikipathways
+- count: 72
+  source: doid
+  target: umls
 - count: 70
   source: kegg.pathway
   target: wikipathways
@@ -146,6 +158,9 @@ positive:
 - count: 25
   source: kegg.pathway
   target: mesh
+- count: 20
+  source: doid
+  target: efo
 - count: 18
   source: mesh
   target: wikipathways
@@ -185,25 +200,25 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 5427
+positive_mapping_count: 5662
 positive_prefix_count: 21
 predictions:
-- count: 12182
+- count: 12122
   source: mesh
   target: ncit
 - count: 10978
   source: mesh
   target: uniprot
-- count: 8905
+- count: 8805
   source: doid
   target: umls
-- count: 2942
+- count: 2924
   source: doid
   target: mesh
-- count: 2818
+- count: 2733
   source: chebi
   target: mesh
-- count: 2286
+- count: 2262
   source: doid
   target: efo
 - count: 1376
@@ -230,10 +245,10 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 42315
+predictions_mapping_count: 42028
 predictions_prefix_count: 14
 unsure:
-- count: 20
+- count: 22
   source: doid
   target: mesh
 - count: 5
@@ -245,5 +260,8 @@ unsure:
 - count: 2
   source: ccle
   target: depmap
-unsure_mapping_count: 30
-unsure_prefix_count: 6
+- count: 2
+  source: mesh
+  target: ncit
+unsure_mapping_count: 34
+unsure_prefix_count: 7
