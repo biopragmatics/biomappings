@@ -78,7 +78,7 @@ class TestIntegrity(unittest.TestCase):
             return
         resource = bioregistry.get_resource(prefix)
         self.assertIsNotNone(resource)
-        norm_id = resource.normalize_identifier(identifier)
+        norm_id = resource.miriam_standardize_identifier(identifier)
         self.assertIsNotNone(norm_id)
         self.assertEqual(
             identifier,

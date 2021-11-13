@@ -142,7 +142,7 @@ def check_valid_prefix_id(prefix, identifier):
     if resource is None:
         raise InvalidPrefix(prefix)
     if prefix not in {"ncit"}:
-        norm_identifier = resource.normalize_identifier(identifier)
+        norm_identifier = resource.miriam_standardize_identifier(identifier)
         if norm_identifier != identifier:
             raise InvalidNormIdentifier(prefix, identifier, norm_identifier)
     pattern = resource.get_pattern_re()
