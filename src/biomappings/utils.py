@@ -3,6 +3,7 @@
 """Utilities."""
 
 import os
+import re
 from subprocess import CalledProcessError, check_output  # noqa: S404
 from typing import Any, Mapping, Optional, Tuple
 
@@ -142,10 +143,14 @@ def check_valid_prefix_id(prefix, identifier):
     if resource is None:
         raise InvalidPrefix(prefix)
     if prefix not in {"ncit"}:
-        norm_identifier = resource.normalize_identifier(identifier)
+        norm_identifier = resource.miriam_standardize_identifier(identifier)
         if norm_identifier != identifier:
             raise InvalidNormIdentifier(prefix, identifier, norm_identifier)
-    pattern = resource.get_pattern_re()
+    miriam_pattern = resource.miriam.get("pattern") if resource.miriam else None
+    if not miriam_pattern:
+        pattern = resource.get_pattern_re()
+    else:
+        pattern = re.compile(miriam_pattern)
     if pattern is not None and not pattern.match(identifier):
         raise InvalidIdentifierPattern(prefix, identifier, pattern)
 
