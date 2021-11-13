@@ -1804,11 +1804,11 @@
       name: streptococcal pneumonia
       prefix: efo
     target:
-      curie: mesh:D011018
-      identifier: D011018
-      link: https://bioregistry.io/mesh:D011018
-      name: Pneumonia, Pneumococcal
-      prefix: mesh
+      curie: umls:C0155862
+      identifier: C0155862
+      link: https://bioregistry.io/umls:C0155862
+      name: Streptococcal pneumonia
+      prefix: umls
   - source:
       curie: efo:0007499
       identifier: 0007499
@@ -1816,11 +1816,11 @@
       name: streptococcal pneumonia
       prefix: efo
     target:
-      curie: umls:C0155862
-      identifier: C0155862
-      link: https://bioregistry.io/umls:C0155862
-      name: Streptococcal pneumonia
-      prefix: umls
+      curie: mesh:D011018
+      identifier: D011018
+      link: https://bioregistry.io/mesh:D011018
+      name: Pneumonia, Pneumococcal
+      prefix: mesh
   - source:
       curie: mesh:D011018
       identifier: D011018
@@ -2118,11 +2118,11 @@
       name: bird fancier's lung
       prefix: efo
     target:
-      curie: ncit:C34425
-      identifier: C34425
-      link: https://bioregistry.io/ncit:C34425
+      curie: umls:C0005592
+      identifier: C0005592
+      link: https://bioregistry.io/umls:C0005592
       name: Bird Fancier's Lung
-      prefix: ncit
+      prefix: umls
   - source:
       curie: efo:0007170
       identifier: '0007170'
@@ -2130,11 +2130,11 @@
       name: bird fancier's lung
       prefix: efo
     target:
-      curie: umls:C0005592
-      identifier: C0005592
-      link: https://bioregistry.io/umls:C0005592
+      curie: ncit:C34425
+      identifier: C34425
+      link: https://bioregistry.io/ncit:C34425
       name: Bird Fancier's Lung
-      prefix: umls
+      prefix: ncit
   - source:
       curie: mesh:D001716
       identifier: D001716

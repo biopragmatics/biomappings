@@ -1,5 +1,5 @@
 contributors:
-- count: 2855
+- count: 2872
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
@@ -164,6 +164,9 @@ positive:
 - count: 18
   source: mesh
   target: wikipathways
+- count: 17
+  source: mesh
+  target: pubchem.compound
 - count: 14
   source: efo
   target: mesh
@@ -200,8 +203,8 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 5662
-positive_prefix_count: 21
+positive_mapping_count: 5679
+positive_prefix_count: 22
 predictions:
 - count: 12122
   source: mesh
