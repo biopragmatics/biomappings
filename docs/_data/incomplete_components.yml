@@ -1224,11 +1224,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: efo:0001099
-      identifier: 0001099
-      link: https://bioregistry.io/efo:0001099
-      name: Caco-2
-      prefix: efo
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://bioregistry.io/depmap:ACH-000003
+      name: CACO2
+      prefix: depmap
   - source:
       curie: cellosaurus:CVCL_0025
       identifier: CVCL_0025
@@ -1236,11 +1236,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000003
-      identifier: ACH-000003
-      link: https://bioregistry.io/depmap:ACH-000003
-      name: CACO2
-      prefix: depmap
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://bioregistry.io/efo:0001099
+      name: Caco-2
+      prefix: efo
   - source:
       curie: depmap:ACH-000003
       identifier: ACH-000003
@@ -1798,30 +1798,6 @@
       prefix: ncit
 - edges:
   - source:
-      curie: efo:0007499
-      identifier: 0007499
-      link: https://bioregistry.io/efo:0007499
-      name: streptococcal pneumonia
-      prefix: efo
-    target:
-      curie: umls:C0155862
-      identifier: C0155862
-      link: https://bioregistry.io/umls:C0155862
-      name: Streptococcal pneumonia
-      prefix: umls
-  - source:
-      curie: efo:0007499
-      identifier: 0007499
-      link: https://bioregistry.io/efo:0007499
-      name: streptococcal pneumonia
-      prefix: efo
-    target:
-      curie: mesh:D011018
-      identifier: D011018
-      link: https://bioregistry.io/mesh:D011018
-      name: Pneumonia, Pneumococcal
-      prefix: mesh
-  - source:
       curie: mesh:D011018
       identifier: D011018
       link: https://bioregistry.io/mesh:D011018
@@ -1839,11 +1815,6 @@
       link: https://bioregistry.io/doid:0040084
       name: Streptococcus pneumonia
       prefix: doid
-    efo:0007499:
-      identifier: 0007499
-      link: https://bioregistry.io/efo:0007499
-      name: streptococcal pneumonia
-      prefix: efo
     mesh:D011018:
       identifier: D011018
       link: https://bioregistry.io/mesh:D011018
@@ -1914,35 +1885,6 @@
       prefix: umls
 - edges:
   - source:
-      curie: efo:0000777
-      identifier: '0000777'
-      link: https://bioregistry.io/efo:0000777
-      name: human granulocytic anaplasmosis
-      prefix: efo
-    target:
-      curie: umls:C4476477
-      identifier: C4476477
-      link: https://bioregistry.io/umls:C4476477
-      name: Human Granulocytic Anaplasmosis
-      prefix: umls
-  nodes:
-    doid:0050025:
-      identifier: DOID:0050025
-      link: https://bioregistry.io/doid:0050025
-      name: human granulocytic anaplasmosis
-      prefix: doid
-    efo:0000777:
-      identifier: '0000777'
-      link: https://bioregistry.io/efo:0000777
-      name: human granulocytic anaplasmosis
-      prefix: efo
-    umls:C4476477:
-      identifier: C4476477
-      link: https://bioregistry.io/umls:C4476477
-      name: Human Granulocytic Anaplasmosis
-      prefix: umls
-- edges:
-  - source:
       curie: mesh:D012373
       identifier: D012373
       link: https://bioregistry.io/mesh:D012373
@@ -1972,29 +1914,266 @@
       prefix: umls
 - edges:
   - source:
-      curie: efo:1001362
-      identifier: '1001362'
-      link: https://bioregistry.io/efo:1001362
-      name: Lung Abscess
-      prefix: efo
-    target:
-      curie: mesh:D008169
-      identifier: D008169
-      link: https://bioregistry.io/mesh:D008169
-      name: Lung Abscess
+      curie: mesh:C000656784
+      identifier: C000656784
+      link: https://bioregistry.io/mesh:C000656784
+      name: adiaspiromycosis
       prefix: mesh
-  - source:
-      curie: efo:1001362
-      identifier: '1001362'
-      link: https://bioregistry.io/efo:1001362
-      name: Lung Abscess
-      prefix: efo
     target:
-      curie: umls:C0024110
-      identifier: C0024110
-      link: https://bioregistry.io/umls:C0024110
-      name: Lung Abscess
+      curie: umls:C0259737
+      identifier: C0259737
+      link: https://bioregistry.io/umls:C0259737
+      name: adiaspiromycosis
       prefix: umls
+  nodes:
+    doid:0050072:
+      identifier: DOID:0050072
+      link: https://bioregistry.io/doid:0050072
+      name: adiaspiromycosis
+      prefix: doid
+    mesh:C000656784:
+      identifier: C000656784
+      link: https://bioregistry.io/mesh:C000656784
+      name: adiaspiromycosis
+      prefix: mesh
+    umls:C0259737:
+      identifier: C0259737
+      link: https://bioregistry.io/umls:C0259737
+      name: adiaspiromycosis
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C536166
+      identifier: C536166
+      link: https://bioregistry.io/mesh:C536166
+      name: Keshan disease
+      prefix: mesh
+    target:
+      curie: umls:C0268095
+      identifier: C0268095
+      link: https://bioregistry.io/umls:C0268095
+      name: Keshan disease
+      prefix: umls
+  nodes:
+    doid:0050083:
+      identifier: DOID:0050083
+      link: https://bioregistry.io/doid:0050083
+      name: Keshan disease
+      prefix: doid
+    mesh:C536166:
+      identifier: C536166
+      link: https://bioregistry.io/mesh:C536166
+      name: Keshan disease
+      prefix: mesh
+    umls:C0268095:
+      identifier: C0268095
+      link: https://bioregistry.io/umls:C0268095
+      name: Keshan disease
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C000656825
+      identifier: C000656825
+      link: https://bioregistry.io/mesh:C000656825
+      name: tinea barbae
+      prefix: mesh
+    target:
+      curie: umls:C2349994
+      identifier: C2349994
+      link: https://bioregistry.io/umls:C2349994
+      name: Tinea barbae
+      prefix: umls
+  nodes:
+    doid:0050096:
+      identifier: DOID:0050096
+      link: https://bioregistry.io/doid:0050096
+      name: tinea barbae
+      prefix: doid
+    mesh:C000656825:
+      identifier: C000656825
+      link: https://bioregistry.io/mesh:C000656825
+      name: tinea barbae
+      prefix: mesh
+    umls:C2349994:
+      identifier: C2349994
+      link: https://bioregistry.io/umls:C2349994
+      name: Tinea barbae
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C536369
+      identifier: C536369
+      link: https://bioregistry.io/mesh:C536369
+      name: Angiostrongyliasis
+      prefix: mesh
+    target:
+      curie: umls:C0392662
+      identifier: C0392662
+      link: https://bioregistry.io/umls:C0392662
+      name: Angiostrongyliasis
+      prefix: umls
+  nodes:
+    doid:0050256:
+      identifier: DOID:0050256
+      link: https://bioregistry.io/doid:0050256
+      name: angiostrongyliasis
+      prefix: doid
+    mesh:C536369:
+      identifier: C536369
+      link: https://bioregistry.io/mesh:C536369
+      name: Angiostrongyliasis
+      prefix: mesh
+    umls:C0392662:
+      identifier: C0392662
+      link: https://bioregistry.io/umls:C0392662
+      name: Angiostrongyliasis
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C564683
+      identifier: C564683
+      link: https://bioregistry.io/mesh:C564683
+      name: Hypermethioninemia
+      prefix: mesh
+    target:
+      curie: umls:C4048705
+      identifier: C4048705
+      link: https://bioregistry.io/umls:C4048705
+      name: Hypermethioninemia
+      prefix: umls
+  nodes:
+    doid:0050544:
+      identifier: DOID:0050544
+      link: https://bioregistry.io/doid:0050544
+      name: hypermethioninemia
+      prefix: doid
+    mesh:C564683:
+      identifier: C564683
+      link: https://bioregistry.io/mesh:C564683
+      name: Hypermethioninemia
+      prefix: mesh
+    umls:C4048705:
+      identifier: C4048705
+      link: https://bioregistry.io/umls:C4048705
+      name: Hypermethioninemia
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:D065768
+      identifier: D065768
+      link: https://bioregistry.io/mesh:D065768
+      name: Lennox Gastaut Syndrome
+      prefix: mesh
+    target:
+      curie: umls:C0238111
+      identifier: C0238111
+      link: https://bioregistry.io/umls:C0238111
+      name: Lennox-Gastaut syndrome
+      prefix: umls
+  nodes:
+    doid:0050561:
+      identifier: DOID:0050561
+      link: https://bioregistry.io/doid:0050561
+      name: Lennox-Gastaut syndrome
+      prefix: doid
+    mesh:D065768:
+      identifier: D065768
+      link: https://bioregistry.io/mesh:D065768
+      name: Lennox Gastaut Syndrome
+      prefix: mesh
+    umls:C0238111:
+      identifier: C0238111
+      link: https://bioregistry.io/umls:C0238111
+      name: Lennox-Gastaut syndrome
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:D013036
+      identifier: D013036
+      link: https://bioregistry.io/mesh:D013036
+      name: Spasms, Infantile
+      prefix: mesh
+    target:
+      curie: umls:C0037769
+      identifier: C0037769
+      link: https://bioregistry.io/umls:C0037769
+      name: West Syndrome
+      prefix: umls
+  nodes:
+    doid:0050562:
+      identifier: DOID:0050562
+      link: https://bioregistry.io/doid:0050562
+      name: West syndrome
+      prefix: doid
+    mesh:D013036:
+      identifier: D013036
+      link: https://bioregistry.io/mesh:D013036
+      name: Spasms, Infantile
+      prefix: mesh
+    umls:C0037769:
+      identifier: C0037769
+      link: https://bioregistry.io/umls:C0037769
+      name: West Syndrome
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C580334
+      identifier: C580334
+      link: https://bioregistry.io/mesh:C580334
+      name: Nonsyndromic Deafness
+      prefix: mesh
+    target:
+      curie: umls:C3711374
+      identifier: C3711374
+      link: https://bioregistry.io/umls:C3711374
+      name: Nonsyndromic Deafness
+      prefix: umls
+  nodes:
+    doid:0050563:
+      identifier: DOID:0050563
+      link: https://bioregistry.io/doid:0050563
+      name: nonsyndromic deafness
+      prefix: doid
+    mesh:C580334:
+      identifier: C580334
+      link: https://bioregistry.io/mesh:C580334
+      name: Nonsyndromic Deafness
+      prefix: mesh
+    umls:C3711374:
+      identifier: C3711374
+      link: https://bioregistry.io/umls:C3711374
+      name: Nonsyndromic Deafness
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C562966
+      identifier: C562966
+      link: https://bioregistry.io/mesh:C562966
+      name: Cranioectodermal Dysplasia
+      prefix: mesh
+    target:
+      curie: umls:C4551571
+      identifier: C4551571
+      link: https://bioregistry.io/umls:C4551571
+      name: Cranioectodermal dysplasia
+      prefix: umls
+  nodes:
+    doid:0050577:
+      identifier: DOID:0050577
+      link: https://bioregistry.io/doid:0050577
+      name: cranioectodermal dysplasia
+      prefix: doid
+    mesh:C562966:
+      identifier: C562966
+      link: https://bioregistry.io/mesh:C562966
+      name: Cranioectodermal Dysplasia
+      prefix: mesh
+    umls:C4551571:
+      identifier: C4551571
+      link: https://bioregistry.io/umls:C4551571
+      name: Cranioectodermal dysplasia
+      prefix: umls
+- edges:
   - source:
       curie: mesh:D008169
       identifier: D008169
@@ -2013,11 +2192,6 @@
       link: https://bioregistry.io/doid:0060317
       name: lung abscess
       prefix: doid
-    efo:1001362:
-      identifier: '1001362'
-      link: https://bioregistry.io/efo:1001362
-      name: Lung Abscess
-      prefix: efo
     mesh:D008169:
       identifier: D008169
       link: https://bioregistry.io/mesh:D008169
@@ -2100,42 +2274,6 @@
       name: Bird Fancier's Lung
       prefix: ncit
   - source:
-      curie: efo:0007170
-      identifier: '0007170'
-      link: https://bioregistry.io/efo:0007170
-      name: bird fancier's lung
-      prefix: efo
-    target:
-      curie: mesh:D001716
-      identifier: D001716
-      link: https://bioregistry.io/mesh:D001716
-      name: Bird Fancier's Lung
-      prefix: mesh
-  - source:
-      curie: efo:0007170
-      identifier: '0007170'
-      link: https://bioregistry.io/efo:0007170
-      name: bird fancier's lung
-      prefix: efo
-    target:
-      curie: ncit:C34425
-      identifier: C34425
-      link: https://bioregistry.io/ncit:C34425
-      name: Bird Fancier's Lung
-      prefix: ncit
-  - source:
-      curie: efo:0007170
-      identifier: '0007170'
-      link: https://bioregistry.io/efo:0007170
-      name: bird fancier's lung
-      prefix: efo
-    target:
-      curie: umls:C0005592
-      identifier: C0005592
-      link: https://bioregistry.io/umls:C0005592
-      name: Bird Fancier's Lung
-      prefix: umls
-  - source:
       curie: mesh:D001716
       identifier: D001716
       link: https://bioregistry.io/mesh:D001716
@@ -2165,11 +2303,6 @@
       link: https://bioregistry.io/doid:13891
       name: bird fancier's lung
       prefix: doid
-    efo:0007170:
-      identifier: '0007170'
-      link: https://bioregistry.io/efo:0007170
-      name: bird fancier's lung
-      prefix: efo
     mesh:D001716:
       identifier: D001716
       link: https://bioregistry.io/mesh:D001716
@@ -2245,117 +2378,6 @@
       prefix: umls
 - edges:
   - source:
-      curie: efo:0007385
-      identifier: 0007385
-      link: https://bioregistry.io/efo:0007385
-      name: mushroom workers' lung
-      prefix: efo
-    target:
-      curie: umls:C0155889
-      identifier: C0155889
-      link: https://bioregistry.io/umls:C0155889
-      name: Mushroom Worker's Lung
-      prefix: umls
-  nodes:
-    doid:2708:
-      identifier: DOID:2708
-      link: https://bioregistry.io/doid:2708
-      name: mushroom workers' lung
-      prefix: doid
-    efo:0007385:
-      identifier: 0007385
-      link: https://bioregistry.io/efo:0007385
-      name: mushroom workers' lung
-      prefix: efo
-    umls:C0155889:
-      identifier: C0155889
-      link: https://bioregistry.io/umls:C0155889
-      name: Mushroom Worker's Lung
-      prefix: umls
-- edges:
-  - source:
-      curie: efo:0001071
-      identifier: '0001071'
-      link: https://bioregistry.io/efo:0001071
-      name: lung carcinoma
-      prefix: efo
-    target:
-      curie: umls:C0684249
-      identifier: C0684249
-      link: https://bioregistry.io/umls:C0684249
-      name: Carcinoma of lung
-      prefix: umls
-  nodes:
-    doid:3905:
-      identifier: DOID:3905
-      link: https://bioregistry.io/doid:3905
-      name: lung carcinoma
-      prefix: doid
-    efo:0001071:
-      identifier: '0001071'
-      link: https://bioregistry.io/efo:0001071
-      name: lung carcinoma
-      prefix: efo
-    umls:C0684249:
-      identifier: C0684249
-      link: https://bioregistry.io/umls:C0684249
-      name: Carcinoma of lung
-      prefix: umls
-- edges:
-  - source:
-      curie: efo:0000708
-      identifier: 0000708
-      link: https://bioregistry.io/efo:0000708
-      name: squamous cell lung carcinoma
-      prefix: efo
-    target:
-      curie: umls:C0149782
-      identifier: C0149782
-      link: https://bioregistry.io/umls:C0149782
-      name: Squamous cell carcinoma of lung
-      prefix: umls
-  nodes:
-    doid:3907:
-      identifier: DOID:3907
-      link: https://bioregistry.io/doid:3907
-      name: lung squamous cell carcinoma
-      prefix: doid
-    efo:0000708:
-      identifier: 0000708
-      link: https://bioregistry.io/efo:0000708
-      name: squamous cell lung carcinoma
-      prefix: efo
-    umls:C0149782:
-      identifier: C0149782
-      link: https://bioregistry.io/umls:C0149782
-      name: Squamous cell carcinoma of lung
-      prefix: umls
-- edges:
-  - source:
-      curie: efo:0000571
-      identifier: '0000571'
-      link: https://bioregistry.io/efo:0000571
-      name: lung adenocarcinoma
-      prefix: efo
-    target:
-      curie: mesh:D000077192
-      identifier: D000077192
-      link: https://bioregistry.io/mesh:D000077192
-      name: Adenocarcinoma of Lung
-      prefix: mesh
-  - source:
-      curie: efo:0000571
-      identifier: '0000571'
-      link: https://bioregistry.io/efo:0000571
-      name: lung adenocarcinoma
-      prefix: efo
-    target:
-      curie: umls:C0152013
-      identifier: C0152013
-      link: https://bioregistry.io/umls:C0152013
-      name: Adenocarcinoma of lung (disorder)
-      prefix: umls
-  - source:
       curie: mesh:D000077192
       identifier: D000077192
       link: https://bioregistry.io/mesh:D000077192
@@ -2373,11 +2395,6 @@
       link: https://bioregistry.io/doid:3910
       name: lung adenocarcinoma
       prefix: doid
-    efo:0000571:
-      identifier: '0000571'
-      link: https://bioregistry.io/efo:0000571
-      name: lung adenocarcinoma
-      prefix: efo
     mesh:D000077192:
       identifier: D000077192
       link: https://bioregistry.io/mesh:D000077192
@@ -2387,35 +2404,6 @@
       identifier: C0152013
       link: https://bioregistry.io/umls:C0152013
       name: Adenocarcinoma of lung (disorder)
-      prefix: umls
-- edges:
-  - source:
-      curie: efo:0001075
-      identifier: '0001075'
-      link: https://bioregistry.io/efo:0001075
-      name: ovarian carcinoma
-      prefix: efo
-    target:
-      curie: umls:C0029925
-      identifier: C0029925
-      link: https://bioregistry.io/umls:C0029925
-      name: Ovarian Carcinoma
-      prefix: umls
-  nodes:
-    doid:4001:
-      identifier: DOID:4001
-      link: https://bioregistry.io/doid:4001
-      name: ovarian carcinoma
-      prefix: doid
-    efo:0001075:
-      identifier: '0001075'
-      link: https://bioregistry.io/efo:0001075
-      name: ovarian carcinoma
-      prefix: efo
-    umls:C0029925:
-      identifier: C0029925
-      link: https://bioregistry.io/umls:C0029925
-      name: Ovarian Carcinoma
       prefix: umls
 - edges:
   - source:
@@ -2448,174 +2436,34 @@
       prefix: umls
 - edges:
   - source:
-      curie: efo:0003050
-      identifier: '0003050'
-      link: https://bioregistry.io/efo:0003050
-      name: large cell lung carcinoma
-      prefix: efo
-    target:
-      curie: umls:C0345958
-      identifier: C0345958
-      link: https://bioregistry.io/umls:C0345958
-      name: Large cell carcinoma of lung
-      prefix: umls
-  nodes:
-    doid:4556:
-      identifier: DOID:4556
-      link: https://bioregistry.io/doid:4556
-      name: lung large cell carcinoma
-      prefix: doid
-    efo:0003050:
-      identifier: '0003050'
-      link: https://bioregistry.io/efo:0003050
-      name: large cell lung carcinoma
-      prefix: efo
-    umls:C0345958:
-      identifier: C0345958
-      link: https://bioregistry.io/umls:C0345958
-      name: Large cell carcinoma of lung
-      prefix: umls
-- edges:
-  - source:
-      curie: efo:0000233
-      identifier: '0000233'
-      link: https://bioregistry.io/efo:0000233
-      name: adenosquamous lung carcinoma
-      prefix: efo
-    target:
-      curie: umls:C0279557
-      identifier: C0279557
-      link: https://bioregistry.io/umls:C0279557
-      name: Adenosquamous cell lung cancer
-      prefix: umls
-  nodes:
-    doid:4829:
-      identifier: DOID:4829
-      link: https://bioregistry.io/doid:4829
-      name: adenosquamous lung carcinoma
-      prefix: doid
-    efo:0000233:
-      identifier: '0000233'
-      link: https://bioregistry.io/efo:0000233
-      name: adenosquamous lung carcinoma
-      prefix: efo
-    umls:C0279557:
-      identifier: C0279557
-      link: https://bioregistry.io/umls:C0279557
-      name: Adenosquamous cell lung cancer
-      prefix: umls
-- edges:
-  - source:
-      curie: efo:0000702
-      identifier: '0000702'
-      link: https://bioregistry.io/efo:0000702
-      name: small cell lung carcinoma
-      prefix: efo
-    target:
-      curie: umls:C0149925
-      identifier: C0149925
-      link: https://bioregistry.io/umls:C0149925
-      name: Small cell carcinoma of lung
-      prefix: umls
-  nodes:
-    doid:5409:
-      identifier: DOID:5409
-      link: https://bioregistry.io/doid:5409
-      name: lung small cell carcinoma
-      prefix: doid
-    efo:0000702:
-      identifier: '0000702'
-      link: https://bioregistry.io/efo:0000702
-      name: small cell lung carcinoma
-      prefix: efo
-    umls:C0149925:
-      identifier: C0149925
-      link: https://bioregistry.io/umls:C0149925
-      name: Small cell carcinoma of lung
-      prefix: umls
-- edges:
-  - source:
-      curie: efo:1000332
-      identifier: '1000332'
-      link: https://bioregistry.io/efo:1000332
-      name: Lung Giant Cell Carcinoma
-      prefix: efo
-    target:
-      curie: umls:C0345960
-      identifier: C0345960
-      link: https://bioregistry.io/umls:C0345960
-      name: Giant cell carcinoma of lung
-      prefix: umls
-  nodes:
-    doid:5583:
-      identifier: DOID:5583
-      link: https://bioregistry.io/doid:5583
-      name: lung giant cell carcinoma
-      prefix: doid
-    efo:1000332:
-      identifier: '1000332'
-      link: https://bioregistry.io/efo:1000332
-      name: Lung Giant Cell Carcinoma
-      prefix: efo
-    umls:C0345960:
-      identifier: C0345960
-      link: https://bioregistry.io/umls:C0345960
-      name: Giant cell carcinoma of lung
-      prefix: umls
-- edges:
-  - source:
-      curie: efo:1000046
-      identifier: '1000046'
-      link: https://bioregistry.io/efo:1000046
-      name: papillary lung adenocarcinoma
-      prefix: efo
-    target:
-      curie: umls:C1335325
-      identifier: C1335325
-      link: https://bioregistry.io/umls:C1335325
-      name: Papillary Lung Adenocarcinoma
-      prefix: umls
-  nodes:
-    doid:5588:
-      identifier: DOID:5588
-      link: https://bioregistry.io/doid:5588
-      name: lung papillary adenocarcinoma
-      prefix: doid
-    efo:1000046:
-      identifier: '1000046'
-      link: https://bioregistry.io/efo:1000046
-      name: papillary lung adenocarcinoma
-      prefix: efo
-    umls:C1335325:
-      identifier: C1335325
-      link: https://bioregistry.io/umls:C1335325
-      name: Papillary Lung Adenocarcinoma
-      prefix: umls
-- edges:
-  - source:
-      curie: efo:0003818
-      identifier: 0003818
-      link: https://bioregistry.io/efo:0003818
-      name: lung disease
-      prefix: efo
-    target:
-      curie: mesh:D008171
-      identifier: D008171
-      link: https://bioregistry.io/mesh:D008171
-      name: Lung Diseases
+      curie: mesh:D009091
+      identifier: D009091
+      link: https://bioregistry.io/mesh:D009091
+      name: Mucormycosis
       prefix: mesh
-  - source:
-      curie: efo:0003818
-      identifier: 0003818
-      link: https://bioregistry.io/efo:0003818
-      name: lung disease
-      prefix: efo
     target:
-      curie: umls:C0024115
-      identifier: C0024115
-      link: https://bioregistry.io/umls:C0024115
-      name: Lung diseases
+      curie: umls:C0026718
+      identifier: C0026718
+      link: https://bioregistry.io/umls:C0026718
+      name: Mucormycosis
       prefix: umls
+  nodes:
+    doid:8485:
+      identifier: DOID:8485
+      link: https://bioregistry.io/doid:8485
+      name: mucormycosis
+      prefix: doid
+    mesh:D009091:
+      identifier: D009091
+      link: https://bioregistry.io/mesh:D009091
+      name: Mucormycosis
+      prefix: mesh
+    umls:C0026718:
+      identifier: C0026718
+      link: https://bioregistry.io/umls:C0026718
+      name: Mucormycosis
+      prefix: umls
+- edges:
   - source:
       curie: mesh:D008171
       identifier: D008171
@@ -2634,11 +2482,6 @@
       link: https://bioregistry.io/doid:850
       name: lung disease
       prefix: doid
-    efo:0003818:
-      identifier: 0003818
-      link: https://bioregistry.io/efo:0003818
-      name: lung disease
-      prefix: efo
     mesh:D008171:
       identifier: D008171
       link: https://bioregistry.io/mesh:D008171

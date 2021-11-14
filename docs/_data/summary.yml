@@ -1,9 +1,9 @@
 contributors:
-- count: 2872
+- count: 2953
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 1881
+- count: 1862
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -23,7 +23,7 @@ negative:
 - count: 218
   source: mesh
   target: reactome
-- count: 153
+- count: 165
   source: doid
   target: mesh
 - count: 91
@@ -44,7 +44,7 @@ negative:
 - count: 45
   source: mesh
   target: wikipathways
-- count: 28
+- count: 35
   source: doid
   target: umls
 - count: 27
@@ -75,11 +75,11 @@ negative:
   source: chebi
   target: mesh
 - count: 7
-  source: fplx
-  target: wikipathways
-- count: 4
   source: doid
   target: efo
+- count: 7
+  source: fplx
+  target: wikipathways
 - count: 3
   source: doid
   target: reactome
@@ -101,10 +101,10 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 954
+negative_mapping_count: 976
 negative_prefix_count: 17
 positive:
-- count: 1278
+- count: 1295
   source: doid
   target: mesh
 - count: 1174
@@ -131,6 +131,9 @@ positive:
 - count: 113
   source: go
   target: kegg.pathway
+- count: 111
+  source: doid
+  target: umls
 - count: 106
   source: ccle
   target: cellosaurus
@@ -143,9 +146,6 @@ positive:
 - count: 73
   source: reactome
   target: wikipathways
-- count: 72
-  source: doid
-  target: umls
 - count: 70
   source: kegg.pathway
   target: wikipathways
@@ -158,9 +158,6 @@ positive:
 - count: 25
   source: kegg.pathway
   target: mesh
-- count: 20
-  source: doid
-  target: efo
 - count: 18
   source: mesh
   target: wikipathways
@@ -195,6 +192,9 @@ positive:
   source: ccle
   target: depmap
 - count: 1
+  source: doid
+  target: efo
+- count: 1
   source: go
   target: ncit
 - count: 1
@@ -203,7 +203,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 5679
+positive_mapping_count: 5716
 positive_prefix_count: 22
 predictions:
 - count: 12122
@@ -215,16 +215,13 @@ predictions:
 - count: 2733
   source: chebi
   target: mesh
-- count: 2467
+- count: 2421
   source: doid
   target: umls
-- count: 2139
-  source: doid
-  target: efo
 - count: 1376
   source: hgnc
   target: mesh
-- count: 451
+- count: 419
   source: doid
   target: mesh
 - count: 362
@@ -233,6 +230,9 @@ predictions:
 - count: 274
   source: efo
   target: mesh
+- count: 134
+  source: doid
+  target: efo
 - count: 77
   source: ccle
   target: efo
@@ -248,10 +248,10 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 33094
+predictions_mapping_count: 31011
 predictions_prefix_count: 14
 unsure:
-- count: 22
+- count: 25
   source: doid
   target: mesh
 - count: 5
@@ -266,5 +266,5 @@ unsure:
 - count: 2
   source: mesh
   target: ncit
-unsure_mapping_count: 34
+unsure_mapping_count: 37
 unsure_prefix_count: 7
