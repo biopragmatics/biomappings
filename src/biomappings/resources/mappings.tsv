@@ -1096,8 +1096,6 @@ chebi	CHEBI:94575	Nifekalant	skos:exactMatch	mesh	C076259	nifekalant	manually_re
 chebi	CHEBI:9464	testosterone enanthate	skos:exactMatch	mesh	C004648	testosterone enanthate	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:9649	trandolapril	skos:exactMatch	mesh	C052035	trandolapril	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:9763	trovafloxacin	skos:exactMatch	mesh	C080163	trovafloxacin	manually_reviewed	orcid:0000-0001-9439-5346
-doid	DOID:0001816	angiosarcoma	skos:exactMatch	efo	0003968	angiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:0014667	disease of metabolism	skos:exactMatch	efo	0000589	metabolic disease	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040002	aspirin allergy	skos:exactMatch	umls	C0004058	Allergy to aspirin	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040004	amoxicillin allergy	skos:exactMatch	umls	C0571417	Allergy to amoxicillin	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040005	ceftriaxone allergy	skos:exactMatch	umls	C0571463	Allergy to ceftriaxone	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1130,7 +1128,6 @@ doid	DOID:0040066	melphalan allergy	skos:exactMatch	umls	C0570673	Allergy to mel
 doid	DOID:0040070	co-trimoxazole allergy	skos:exactMatch	umls	C0571504	Co-trimoxazole allergy	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040071	sodium aurothiomalate allergy	skos:exactMatch	umls	C0571155	Allergy to gold sodium thiomalate	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040078	gallamine allergy	skos:exactMatch	umls	C0571145	Allergy to gallamine	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:0040084	Streptococcus pneumonia	skos:exactMatch	efo	0007499	streptococcal pneumonia	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040084	Streptococcus pneumonia	skos:exactMatch	umls	C0155862	Streptococcal pneumonia	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040085	bacterial sepsis	skos:exactMatch	umls	C0684256	Bacterial sepsis	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040086	Polyomavirus-associated nephropathy	skos:exactMatch	umls	C1696946	Polyomavirus-associated nephropathy	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1140,14 +1137,56 @@ doid	DOID:0040091	autoimmune pancreatitis	skos:exactMatch	mesh	D000081012	Autoim
 doid	DOID:0040091	autoimmune pancreatitis	skos:exactMatch	umls	C2609129	Autoimmune Pancreatitis	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040092	juvenile ankylosing spondylitis	skos:exactMatch	umls	C0409675	Juvenile ankylosing spondylitis	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040093	drug-induced lupus erythematosus	skos:exactMatch	umls	C0263591	Drug-induced lupus erythematosus	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:0040098	pemphigus gestationis	skos:exactMatch	efo	1000709	pemphigoid gestationis	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040099	livedoid vasculitis	skos:exactMatch	umls	C0343081	Livedoid vasculitis	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0050012	chikungunya	skos:exactMatch	umls	C0008055	Chikungunya Fever	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:0050025	human granulocytic anaplasmosis	skos:exactMatch	efo	0000777	human granulocytic anaplasmosis	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0050025	human granulocytic anaplasmosis	skos:exactMatch	umls	C4476477	Human Granulocytic Anaplasmosis	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0050032	mineral metabolism disease	skos:exactMatch	efo	0009556	mineral metabolism disease	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0050035	African tick-bite fever	skos:exactMatch	umls	C1320317	African Tick-Bite Fever	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050046	Far Eastern spotted fever	skos:exactMatch	umls	C3532354	Far Eastern Spotted Fever	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050047	Flinders Island spotted fever	skos:exactMatch	umls	C4505102	Flinders Island Spotted Fever	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050050	Japanese spotted fever	skos:exactMatch	umls	C2108396	Japanese Spotted Fever	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050052	Rocky Mountain spotted fever	skos:exactMatch	umls	C0035793	Rocky Mountain Spotted Fever	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:0060317	lung abscess	skos:exactMatch	efo	1001362	Lung Abscess	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0050072	adiaspiromycosis	skos:exactMatch	umls	C0259737	adiaspiromycosis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050073	invasive aspergillosis	skos:exactMatch	umls	C0238013	Invasive aspergillosis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050083	Keshan disease	skos:exactMatch	umls	C0268095	Keshan disease	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050096	tinea barbae	skos:exactMatch	umls	C2349994	Tinea barbae	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050116	tinea imbricata	skos:exactMatch	umls	C0040255	Tinea imbricata	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050125	dengue shock syndrome	skos:exactMatch	umls	C0376300	Dengue Shock Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050179	Powassan encephalitis	skos:exactMatch	umls	C0032858	Powassan Encephalitis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050185	erythema multiforme	skos:exactMatch	umls	C0014742	Erythema Multiforme	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050194	Argentine hemorrhagic fever	skos:exactMatch	umls	C0019097	Hemorrhagic Fever, Argentinian	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050195	Bolivian hemorrhagic fever	skos:exactMatch	umls	C0282192	Hemorrhagic Fever, Bolivian	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050196	Venezuelan hemorrhagic fever	skos:exactMatch	umls	C0042470	Venezuelan hemorrhagic fever	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050197	Brazilian hemorrhagic fever	skos:exactMatch	umls	C0343633	Brazilian hemorrhagic fever	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050198	Chapare hemorrhagic fever	skos:exactMatch	umls	C4274434	Chapare hemorrhagic fever	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050254	acanthocephaliasis	skos:exactMatch	umls	C1385938	acanthocephaliasis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050256	angiostrongyliasis	skos:exactMatch	mesh	C536369	Angiostrongyliasis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050256	angiostrongyliasis	skos:exactMatch	umls	C0392662	Angiostrongyliasis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050289	fusariosis	skos:exactMatch	umls	C0276758	Fusariosis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050290	trichosporonosis	skos:exactMatch	umls	C0343939	Trichosporonosis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050304	aniseikonia	skos:exactMatch	umls	C0003078	Aniseikonia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050353	wound botulism	skos:exactMatch	umls	C1306794	Wound Botulism	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050354	infant botulism	skos:exactMatch	umls	C0238027	Botulism, Infantile	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050382	glandular tularemia	skos:exactMatch	umls	C0275974	Glandular tularemia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050383	typhoidal tularemia	skos:exactMatch	umls	C0473876	Typhoidal tularemia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050537	posterior polar cataract	skos:exactMatch	umls	C1850191	Posterior polar cataract	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050541	Charcot-Marie-Tooth disease type 4	skos:exactMatch	umls	C4082197	Charcot-Marie-Tooth disease type 4	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050544	hypermethioninemia	skos:exactMatch	mesh	C564683	Hypermethioninemia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050544	hypermethioninemia	skos:exactMatch	umls	C4048705	Hypermethioninemia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050561	Lennox-Gastaut syndrome	skos:exactMatch	mesh	D065768	Lennox Gastaut Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050561	Lennox-Gastaut syndrome	skos:exactMatch	umls	C0238111	Lennox-Gastaut syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050562	West syndrome	skos:exactMatch	umls	C0037769	West Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050563	nonsyndromic deafness	skos:exactMatch	umls	C3711374	Nonsyndromic Deafness	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050573	2-hydroxyglutaric aciduria	skos:exactMatch	mesh	C535306	2-Hydroxyglutaricaciduria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050574	L-2-hydroxyglutaric aciduria	skos:exactMatch	umls	C1855995	L-2-HYDROXYGLUTARIC ACIDURIA	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050575	D-2-hydroxyglutaric aciduria	skos:exactMatch	umls	C1833429	D-2-hydroxyglutaric aciduria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050576	Senior-Loken syndrome	skos:exactMatch	mesh	C537580	Senior Loken Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050577	cranioectodermal dysplasia	skos:exactMatch	mesh	C562966	Cranioectodermal Dysplasia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050577	cranioectodermal dysplasia	skos:exactMatch	umls	C4551571	Cranioectodermal dysplasia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050578	occult macular dystrophy	skos:exactMatch	umls	C3150833	OCCULT MACULAR DYSTROPHY	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050579	glycogen storage disease XV	skos:exactMatch	umls	C3150754	GLYCOGEN STORAGE DISEASE XV	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050585	congenital generalized lipodystrophy	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050608	Askin's tumor	skos:exactMatch	umls	C0877849	Askin's tumor	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0060317	lung abscess	skos:exactMatch	mesh	D008169	Lung Abscess	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0060317	lung abscess	skos:exactMatch	umls	C0024110	Lung Abscess	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0080899	lung pleomorphic carcinoma	skos:exactMatch	umls	C1711397	Lung Pleomorphic Carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1155,48 +1194,46 @@ doid	DOID:0111079	birdshot chorioretinopathy	skos:exactMatch	mesh	D000080365	Bir
 doid	DOID:0111079	birdshot chorioretinopathy	skos:exactMatch	umls	C1853959	Birdshot Chorioretinopathy	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:10032	hyperlucent lung	skos:exactMatch	mesh	D019568	Lung, Hyperlucent	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:10032	hyperlucent lung	skos:exactMatch	umls	C0524799	Lung, Hyperlucent	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:13891	bird fancier's lung	skos:exactMatch	efo	0007170	bird fancier's lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:13891	bird fancier's lung	skos:exactMatch	mesh	D001716	Bird Fancier's Lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:13891	bird fancier's lung	skos:exactMatch	umls	C0005592	Bird Fancier's Lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:14453	farmer's lung	skos:exactMatch	mesh	D005203	Farmer's Lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:14453	farmer's lung	skos:exactMatch	umls	C0015634	Farmer's Lung	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:2708	mushroom workers' lung	skos:exactMatch	efo	0007385	mushroom workers' lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:2708	mushroom workers' lung	skos:exactMatch	umls	C0155889	Mushroom Worker's Lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:2784	lung sarcoma	skos:exactMatch	umls	C0598790	Sarcoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:3905	lung carcinoma	skos:exactMatch	efo	0001071	lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:3905	lung carcinoma	skos:exactMatch	umls	C0684249	Carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:3907	lung squamous cell carcinoma	skos:exactMatch	efo	0000708	squamous cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:3907	lung squamous cell carcinoma	skos:exactMatch	umls	C0149782	Squamous cell carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:3908	lung non-small cell carcinoma	skos:exactMatch	umls	C0007131	Non-Small Cell Lung Carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:3910	lung adenocarcinoma	skos:exactMatch	efo	0000571	lung adenocarcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:3910	lung adenocarcinoma	skos:exactMatch	mesh	D000077192	Adenocarcinoma of Lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:3910	lung adenocarcinoma	skos:exactMatch	umls	C0152013	Adenocarcinoma of lung (disorder)	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:4001	ovarian carcinoma	skos:exactMatch	efo	0001075	ovarian carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4001	ovarian carcinoma	skos:exactMatch	umls	C0029925	Ovarian Carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4492	avian influenza	skos:exactMatch	mesh	D005585	Influenza in Birds	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4492	avian influenza	skos:exactMatch	umls	C0016627	Influenza in Birds	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:4556	lung large cell carcinoma	skos:exactMatch	efo	0003050	large cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4556	lung large cell carcinoma	skos:exactMatch	umls	C0345958	Large cell carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:4829	adenosquamous lung carcinoma	skos:exactMatch	efo	0000233	adenosquamous lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4829	adenosquamous lung carcinoma	skos:exactMatch	umls	C0279557	Adenosquamous cell lung cancer	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4872	lung adenoid cystic carcinoma	skos:exactMatch	umls	C1334439	adenoid cystic carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:490	hemangioma of lung	skos:exactMatch	umls	C0241983	hemangioma of lung	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:495	sclerosing hemangioma	skos:exactMatch	efo	1000337	Lung Sclerosing Hemangioma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5136	lung leiomyoma	skos:exactMatch	umls	C1334447	Leiomyoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5265	lung leiomyosarcoma	skos:exactMatch	umls	C1334448	leiomyosarcoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5386	lung adenoma	skos:exactMatch	umls	C0345964	Adenoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:5409	lung small cell carcinoma	skos:exactMatch	efo	0000702	small cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5409	lung small cell carcinoma	skos:exactMatch	umls	C0149925	Small cell carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:5583	lung giant cell carcinoma	skos:exactMatch	efo	1000332	Lung Giant Cell Carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5583	lung giant cell carcinoma	skos:exactMatch	umls	C0345960	Giant cell carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:5588	lung papillary adenocarcinoma	skos:exactMatch	efo	1000046	papillary lung adenocarcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5588	lung papillary adenocarcinoma	skos:exactMatch	umls	C1335325	Papillary Lung Adenocarcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5764	lung meningioma	skos:exactMatch	umls	C1334450	Lung Meningioma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5767	hilar lung neoplasm	skos:exactMatch	umls	C1290358	Neoplasm of hilus of lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:6482	lung acinar adenocarcinoma	skos:exactMatch	umls	C1332137	Lung Acinar Adenocarcinoma	manually_reviewed	orcid:0000-0003-4423-4370
-doid	DOID:850	lung disease	skos:exactMatch	efo	0003818	lung disease	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:6590	spondylitis	skos:exactMatch	mesh	D013166	Spondylitis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:7880	luteoma	skos:exactMatch	mesh	D018311	Luteoma	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:8283	peritonitis	skos:exactMatch	mesh	D010538	Peritonitis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:83	cataract	skos:exactMatch	mesh	D002386	Cataract	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:8398	osteoarthritis	skos:exactMatch	mesh	D010003	Osteoarthritis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:8485	mucormycosis	skos:exactMatch	mesh	D009091	Mucormycosis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:8485	mucormycosis	skos:exactMatch	umls	C0026718	Mucormycosis	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:850	lung disease	skos:exactMatch	mesh	D008171	Lung Diseases	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:850	lung disease	skos:exactMatch	umls	C0024115	Lung diseases	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:8850	salivary gland cancer	skos:exactMatch	mesh	D012468	Salivary Gland Neoplasms	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:9335	scotoma	skos:exactMatch	mesh	D012607	Scotoma	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:9383	iridocyclitis	skos:exactMatch	mesh	D015863	Iridocyclitis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:9675	pulmonary emphysema	skos:exactMatch	mesh	D011656	Pulmonary Emphysema	manually_reviewed	orcid:0000-0001-9439-5346
 go	GO:0005816	spindle pole body	skos:exactMatch	ncit	C13365	Spindle Pole Body	manual	orcid:0000-0003-4423-4370
 go	GO:0070266	necroptotic process	skos:exactMatch	mesh	D000079302	Necroptosis	manual	orcid:0000-0003-4423-4370
 kegg.pathway	hsa00010	Glycolysis / Gluconeogenesis - Homo sapiens (human)	skos:exactMatch	wikipathways	WP534	Glycolysis and gluconeogenesis	manual	orcid:0000-0002-2046-6145
