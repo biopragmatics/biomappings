@@ -1187,8 +1187,15 @@ doid	DOID:0050578	occult macular dystrophy	skos:exactMatch	umls	C3150833	OCCULT 
 doid	DOID:0050579	glycogen storage disease XV	skos:exactMatch	umls	C3150754	GLYCOGEN STORAGE DISEASE XV	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050585	congenital generalized lipodystrophy	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050608	Askin's tumor	skos:exactMatch	umls	C0877849	Askin's tumor	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050696	fetal alcohol spectrum disorder	skos:exactMatch	mesh	D063647	Fetal Alcohol Spectrum Disorders	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0060317	lung abscess	skos:exactMatch	mesh	D008169	Lung Abscess	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0060317	lung abscess	skos:exactMatch	umls	C0024110	Lung Abscess	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0080332	bicuspid aortic valve disease	skos:exactMatch	mesh	D000082882	Bicuspid Aortic Valve Disease	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080711	multisystem inflammatory syndrome in children	skos:exactMatch	mesh	C000705967	pediatric multisystem inflammatory disease, COVID-19 related	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080747	chronic urticaria	skos:exactMatch	mesh	D000080223	Chronic Urticaria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080820	occupational asthma	skos:exactMatch	mesh	D059366	Asthma, Occupational	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080833	laryngomalacia	skos:exactMatch	mesh	D055092	Laryngomalacia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080848	long COVID	skos:exactMatch	mesh	C000711409	post-acute COVID-19 syndrome	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0080899	lung pleomorphic carcinoma	skos:exactMatch	umls	C1711397	Lung Pleomorphic Carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0111079	birdshot chorioretinopathy	skos:exactMatch	mesh	D000080365	Birdshot Chorioretinopathy	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0111079	birdshot chorioretinopathy	skos:exactMatch	umls	C1853959	Birdshot Chorioretinopathy	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1220,6 +1227,7 @@ doid	DOID:5583	lung giant cell carcinoma	skos:exactMatch	umls	C0345960	Giant cel
 doid	DOID:5588	lung papillary adenocarcinoma	skos:exactMatch	umls	C1335325	Papillary Lung Adenocarcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5764	lung meningioma	skos:exactMatch	umls	C1334450	Lung Meningioma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5767	hilar lung neoplasm	skos:exactMatch	umls	C1290358	Neoplasm of hilus of lung	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:62	aortic valve disease	skos:exactMatch	mesh	D000082862	Aortic Valve Disease	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:6482	lung acinar adenocarcinoma	skos:exactMatch	umls	C1332137	Lung Acinar Adenocarcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:6590	spondylitis	skos:exactMatch	mesh	D013166	Spondylitis	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:7880	luteoma	skos:exactMatch	mesh	D018311	Luteoma	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3358,6 +3366,7 @@ mesh	D000345	Affinity Labels	skos:exactMatch	chebi	CHEBI:60788	affinity label	ma
 mesh	D000348	Aflatoxins	skos:exactMatch	chebi	CHEBI:22271	aflatoxin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000374	Aggression	skos:exactMatch	go	GO:0002118	aggressive behavior	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000376	Agmatine	skos:exactMatch	chebi	CHEBI:17431	agmatine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000377	Agnosia	skos:exactMatch	ncit	C84542	Agnosia	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000381	Agraphia	skos:exactMatch	doid	DOID:0060223	agraphia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D000404	Ajmaline	skos:exactMatch	chebi	CHEBI:28462	ajmaline	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000409	Alanine	skos:exactMatch	chebi	CHEBI:16449	alanine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3917,6 +3926,7 @@ mesh	D007858	Learning	skos:exactMatch	go	GO:0007612	learning	manually_reviewed	o
 mesh	D007865	Leeches	skos:exactMatch	doid	DOID:11079	leech infestation	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D008066	Lipolysis	skos:exactMatch	go	GO:0016042	lipid catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D008115	Liver Regeneration	skos:exactMatch	go	GO:0097421	liver regeneration	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D008169	Lung Abscess	skos:exactMatch	ncit	C99090	Lung Abscess	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D008178	Lupus Erythematosus, Cutaneous	skos:exactMatch	doid	DOID:0050169	cutaneous lupus erythematosus	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D008213	Lymphocyte Activation	skos:exactMatch	go	GO:0046649	lymphocyte activation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D008247	Lysosomes	skos:exactMatch	go	GO:0005764	lysosome	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3959,6 +3969,7 @@ mesh	D009135	Muscular Diseases	skos:exactMatch	doid	DOID:0080000	muscular diseas
 mesh	D009186	Myelin Sheath	skos:exactMatch	go	GO:0043209	myelin sheath	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009210	Myofibrils	skos:exactMatch	go	GO:0030016	myofibril	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009336	Necrosis	skos:exactMatch	go	GO:0070265	necrotic cell death	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D009369	Neoplasms	skos:exactMatch	ncit	C23988	Neoplasms	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009373	Neoplasms, Germ Cell and Embryonal	skos:exactMatch	doid	DOID:688	embryonal cancer	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D009411	Nerve Endings	skos:exactMatch	go	GO:0043679	axon terminus	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D009436	Neural Tube Defects	skos:exactMatch	doid	DOID:0080074	neural tube defect	manually_reviewed	orcid:0000-0003-1307-2508
@@ -4480,6 +4491,7 @@ mesh	D054876	Prenylation	skos:exactMatch	go	GO:0097354	prenylation	manually_revi
 mesh	D054972	Postural Orthostatic Tachycardia Syndrome	skos:exactMatch	doid	DOID:0111154	postural orthostatic tachycardia syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D054974	Costameres	skos:exactMatch	go	GO:0043034	costamere	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D054992	Immunological Synapses	skos:exactMatch	go	GO:0001772	immunological synapse	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D055092	Laryngomalacia	skos:exactMatch	ncit	C98971	Laryngomalacia	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055212	Photoreceptor Connecting Cilium	skos:exactMatch	go	GO:0032391	photoreceptor connecting cilium	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055257	Mucin-5B	skos:exactMatch	hgnc	7516	MUC5B	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055262	Mucin-2	skos:exactMatch	hgnc	7512	MUC2	manually_reviewed	orcid:0000-0001-9439-5346
