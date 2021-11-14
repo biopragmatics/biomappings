@@ -1369,11 +1369,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://bioregistry.io/cellosaurus:CVCL_1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://bioregistry.io/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: bto:0006459
       identifier: BTO:0006459
@@ -1381,11 +1381,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://bioregistry.io/efo:0006612
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://bioregistry.io/cellosaurus:CVCL_1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: cellosaurus:CVCL_1334
       identifier: CVCL_1334
@@ -2175,11 +2175,35 @@
       prefix: umls
 - edges:
   - source:
+      curie: doid:0060317
+      identifier: DOID:0060317
+      link: https://bioregistry.io/doid:0060317
+      name: lung abscess
+      prefix: doid
+    target:
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
+      name: Lung Abscess
+      prefix: ncit
+  - source:
       curie: mesh:D008169
       identifier: D008169
       link: https://bioregistry.io/mesh:D008169
       name: Lung Abscess
       prefix: mesh
+    target:
+      curie: umls:C0024110
+      identifier: C0024110
+      link: https://bioregistry.io/umls:C0024110
+      name: Lung Abscess
+      prefix: umls
+  - source:
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
+      name: Lung Abscess
+      prefix: ncit
     target:
       curie: umls:C0024110
       identifier: C0024110
@@ -2197,11 +2221,45 @@
       link: https://bioregistry.io/mesh:D008169
       name: Lung Abscess
       prefix: mesh
+    ncit:C99090:
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
+      name: Lung Abscess
+      prefix: ncit
     umls:C0024110:
       identifier: C0024110
       link: https://bioregistry.io/umls:C0024110
       name: Lung Abscess
       prefix: umls
+- edges:
+  - source:
+      curie: doid:0080833
+      identifier: DOID:0080833
+      link: https://bioregistry.io/doid:0080833
+      name: laryngomalacia
+      prefix: doid
+    target:
+      curie: ncit:C98971
+      identifier: C98971
+      link: https://bioregistry.io/ncit:C98971
+      name: Laryngomalacia
+      prefix: ncit
+  nodes:
+    doid:0080833:
+      identifier: DOID:0080833
+      link: https://bioregistry.io/doid:0080833
+      name: laryngomalacia
+      prefix: doid
+    mesh:D055092:
+      identifier: D055092
+      link: https://bioregistry.io/mesh:D055092
+      name: Laryngomalacia
+      prefix: mesh
+    ncit:C98971:
+      identifier: C98971
+      link: https://bioregistry.io/ncit:C98971
+      name: Laryngomalacia
+      prefix: ncit
 - edges:
   - source:
       curie: mesh:D000080365
