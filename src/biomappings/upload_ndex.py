@@ -42,7 +42,7 @@ def ndex(username, password):
         for prefix in (mapping["source prefix"], mapping["target prefix"])
     }
     prefixes.add("orcid")
-    cx.set_context({prefix: bioregistry.get_format_url(prefix) for prefix in prefixes})
+    cx.set_context({prefix: bioregistry.get_uri_prefix(prefix) for prefix in prefixes})
 
     cx.add_network_attribute("version", get_git_hash())
     authors = sorted(
