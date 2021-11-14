@@ -212,20 +212,20 @@ predictions:
 - count: 10978
   source: mesh
   target: uniprot
-- count: 8805
-  source: doid
-  target: umls
-- count: 2924
-  source: doid
-  target: mesh
 - count: 2733
   source: chebi
   target: mesh
-- count: 2262
+- count: 2467
+  source: doid
+  target: umls
+- count: 2139
   source: doid
   target: efo
 - count: 1376
   source: hgnc
+  target: mesh
+- count: 451
+  source: doid
   target: mesh
 - count: 362
   source: hp
@@ -248,7 +248,7 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 42028
+predictions_mapping_count: 33094
 predictions_prefix_count: 14
 unsure:
 - count: 22

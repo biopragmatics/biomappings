@@ -1224,11 +1224,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000003
-      identifier: ACH-000003
-      link: https://bioregistry.io/depmap:ACH-000003
-      name: CACO2
-      prefix: depmap
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://bioregistry.io/efo:0001099
+      name: Caco-2
+      prefix: efo
   - source:
       curie: cellosaurus:CVCL_0025
       identifier: CVCL_0025
@@ -1236,11 +1236,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: efo:0001099
-      identifier: 0001099
-      link: https://bioregistry.io/efo:0001099
-      name: Caco-2
-      prefix: efo
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://bioregistry.io/depmap:ACH-000003
+      name: CACO2
+      prefix: depmap
   - source:
       curie: depmap:ACH-000003
       identifier: ACH-000003
@@ -2118,11 +2118,11 @@
       name: bird fancier's lung
       prefix: efo
     target:
-      curie: umls:C0005592
-      identifier: C0005592
-      link: https://bioregistry.io/umls:C0005592
+      curie: ncit:C34425
+      identifier: C34425
+      link: https://bioregistry.io/ncit:C34425
       name: Bird Fancier's Lung
-      prefix: umls
+      prefix: ncit
   - source:
       curie: efo:0007170
       identifier: '0007170'
@@ -2130,11 +2130,11 @@
       name: bird fancier's lung
       prefix: efo
     target:
-      curie: ncit:C34425
-      identifier: C34425
-      link: https://bioregistry.io/ncit:C34425
+      curie: umls:C0005592
+      identifier: C0005592
+      link: https://bioregistry.io/umls:C0005592
       name: Bird Fancier's Lung
-      prefix: ncit
+      prefix: umls
   - source:
       curie: mesh:D001716
       identifier: D001716
