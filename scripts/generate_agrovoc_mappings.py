@@ -1,11 +1,16 @@
+# -*- coding: utf-8 -*-
+
+"""Generate mappings from AGRO to AGROVOC."""
+
 import time
+
+from pyobo.gilda_utils import get_grounder
+from pyobo.sources.agrovoc import ensure_agrovoc_graph
 from tqdm import tqdm
 
 from biomappings import PredictionTuple
 from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
-from pyobo.gilda_utils import get_grounder
-from pyobo.sources.agrovoc import ensure_agrovoc_graph
 
 AGROVOC_VERSION = "2021-12-02"
 QUERY = """
@@ -20,7 +25,7 @@ SELECT ?id ?label {
 
 
 def main():
-    """"""
+    """Generate mappings from AGRO to AGROVOC."""
     provenance = get_script_url(__file__)
     grounder = get_grounder("AGRO")
     print("got grounder for AGRO", grounder)
