@@ -1,4 +1,146 @@
 source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	source
+agrovoc	0619dd9e	chain harrows	skos:exactMatch	agro	00000137	chain harrow	manually_reviewed	web
+agrovoc	0a9fbc47	scythes	skos:exactMatch	agro	00000456	scythe	manually_reviewed	web
+agrovoc	1012	border irrigation	skos:exactMatch	agro	00000066	border irrigation process	manually_reviewed	web
+agrovoc	10457	draught animals	skos:exactMatch	agro	00000116	draft animal	manually_reviewed	web
+agrovoc	1101	broadcasting	skos:exactMatch	agro	00000040	broadcast application method	manually_reviewed	web
+agrovoc	12679	mowing	skos:exactMatch	agro	00000220	mowing process	manually_reviewed	web
+agrovoc	13452	plastic mulches	skos:exactMatch	agro	00000093	plastic mulch	manually_reviewed	web
+agrovoc	13811	replanting	skos:exactMatch	agro	00000229	plant transplanting process	manually_reviewed	web
+agrovoc	1410249722990	split plot design	skos:exactMatch	agro	00000329	split plot design	manually_reviewed	web
+agrovoc	155	aerial application	skos:exactMatch	agro	00000037	aerial application	manually_reviewed	web
+agrovoc	15970	fertigation	skos:exactMatch	agro	00000047	fertigation	manually_reviewed	web
+agrovoc	16097	silvopastoral systems	skos:exactMatch	agro	00000580	silvopasture	manually_reviewed	web
+agrovoc	16118	crop residues	skos:exactMatch	agro	00000154	crop residue	manually_reviewed	web
+agrovoc	16650	stubble	skos:exactMatch	agro	00002009	stubble	manually_reviewed	web
+agrovoc	1775	combine harvesters	skos:exactMatch	agro	00000473	combine harvester	manually_reviewed	web
+agrovoc	17857	replication	skos:exactMatch	agro	00000321	replication	manually_reviewed	web
+agrovoc	1882e93f	private forests	skos:exactMatch	agro	00000365	private forest	manually_reviewed	web
+agrovoc	1972	crops	skos:exactMatch	agro	00000325	crop	manually_reviewed	web
+agrovoc	200	liming materials	skos:exactMatch	agro	00000197	liming material	manually_reviewed	web
+agrovoc	2019	cultivators	skos:exactMatch	agro	00000393	cultivator	manually_reviewed	web
+agrovoc	207	agroforestry	skos:exactMatch	agro	00000584	agroforestry	manually_reviewed	web
+agrovoc	2151	deep placement	skos:exactMatch	agro	00000046	deep placement	manually_reviewed	web
+agrovoc	2386	seed drills	skos:exactMatch	agro	00000396	seed drill	manually_reviewed	web
+agrovoc	24001	choppers	skos:exactMatch	agro	00000540	forage harvester	manually_reviewed	web
+agrovoc	24065	planting date	skos:exactMatch	agro	00010132	planting date	manually_reviewed	web
+agrovoc	24262	vermiculture	skos:exactMatch	agro	00002042	vermicompost	manually_reviewed	web
+agrovoc	24947	heat treatment	skos:exactMatch	agro	00000204	heat treatment	manually_reviewed	web
+agrovoc	24975	biofertilizers	skos:exactMatch	agro	00020001	biofertilizer	manually_reviewed	web
+agrovoc	25021	Kjeldahl method	skos:exactMatch	agro	00000272	kjeldahl method	manually_reviewed	web
+agrovoc	2502372e	factorial design	skos:exactMatch	agro	00000331	factorial design	manually_reviewed	web
+agrovoc	25206	liming	skos:exactMatch	agro	00000112	liming process	manually_reviewed	web
+agrovoc	25243	grazing	skos:exactMatch	agro	00000426	regulation of grazing	manually_reviewed	web
+agrovoc	25265	relay cropping	skos:exactMatch	agro	00000520	relay cropping	manually_reviewed	web
+agrovoc	25305	water harvesting	skos:exactMatch	agro	00000589	water harvesting	manually_reviewed	web
+agrovoc	25354	supplemental irrigation	skos:exactMatch	agro	00000588	supplemental irrigation	manually_reviewed	web
+agrovoc	25356	localized irrigation	skos:exactMatch	agro	00000055	localized irrigation process	manually_reviewed	web
+agrovoc	25674	windrowing	skos:exactMatch	agro	00000463	windrowing	manually_reviewed	web
+agrovoc	25695	mouldboard ploughs	skos:exactMatch	agro	00000129	mouldboard plough	manually_reviewed	web
+agrovoc	25720	dibbling	skos:exactMatch	agro	00000412	dibbling	manually_reviewed	web
+agrovoc	25763	forage harvesters	skos:exactMatch	agro	00000540	forage harvester	manually_reviewed	web
+agrovoc	25779	walking tractors	skos:exactMatch	agro	00000125	single-axle tractor	manually_reviewed	web
+agrovoc	25791	land levelling	skos:exactMatch	agro	00000004	land levelling process	manually_reviewed	web
+agrovoc	25794	disc harrows	skos:exactMatch	agro	00000128	disc harrow	manually_reviewed	web
+agrovoc	25808	subsoilers	skos:exactMatch	agro	00000130	subsoiler	manually_reviewed	web
+agrovoc	25812	water tanks	skos:exactMatch	agro	00000590	water tank	manually_reviewed	web
+agrovoc	25818	ridge tillage	skos:exactMatch	agro	00000030	ridge-till	manually_reviewed	web
+agrovoc	25990	manure spreaders	skos:exactMatch	agro	00000139	manure spreader	manually_reviewed	web
+agrovoc	26820	seed dressing	skos:exactMatch	agro	00000051	seed dressing	manually_reviewed	web
+agrovoc	26af733b	single cycle experiments	skos:exactMatch	agro	00000482	single cycle experiment	manually_reviewed	web
+agrovoc	26f679e5	deficit irrigation	skos:exactMatch	agro	00000586	deficit irrigation process	manually_reviewed	web
+agrovoc	27870	inorganic fertilizers	skos:exactMatch	agro	00002040	inorganic fertilizer	manually_reviewed	web
+agrovoc	27896	fish manure	skos:exactMatch	agro	00000081	fish manure	manually_reviewed	web
+agrovoc	27921	treatment date	skos:exactMatch	agro	00010133	treatment date	manually_reviewed	web
+agrovoc	2794	farm area	skos:exactMatch	agro	00000299	farm area	manually_reviewed	web
+agrovoc	2805	farmers	skos:exactMatch	agro	00000372	farmer	manually_reviewed	web
+agrovoc	2810	farmyard manure	skos:exactMatch	agro	00000076	farmyard manure	manually_reviewed	web
+agrovoc	29464	harvesting date	skos:exactMatch	agro	00010128	harvesting date	manually_reviewed	web
+agrovoc	3008	foliar application	skos:exactMatch	agro	00000048	foliar application	manually_reviewed	web
+agrovoc	3154	furrow irrigation	skos:exactMatch	agro	00000067	furrow irrigation process	manually_reviewed	web
+agrovoc	32823ce3	short-term experiments	skos:exactMatch	agro	00000477	short-term experiment	manually_reviewed	web
+agrovoc	330635	biological pest control	skos:exactMatch	agro	00000022	biological pest control process	manually_reviewed	web
+agrovoc	330677	chemical pest control	skos:exactMatch	agro	00000024	chemical pest control process	manually_reviewed	web
+agrovoc	330772	sickles	skos:exactMatch	agro	00000453	sickle	manually_reviewed	web
+agrovoc	330794	irrigation sources	skos:exactMatch	agro	00000009	irrigation source	manually_reviewed	web
+agrovoc	33445	conservation tillage	skos:exactMatch	agro	00000017	conservation tillage process	manually_reviewed	web
+agrovoc	33452	alley cropping	skos:exactMatch	agro	00000579	alley cropping	manually_reviewed	web
+agrovoc	3375	green manures	skos:exactMatch	agro	00000075	green manure	manually_reviewed	web
+agrovoc	34250	conventional tillage	skos:exactMatch	agro	00000015	conventional tillage process	manually_reviewed	web
+agrovoc	3500	harvesting	skos:exactMatch	agro	00000025	plant harvesting process	manually_reviewed	web
+agrovoc	35282	puddling	skos:exactMatch	agro	00000028	puddling process	manually_reviewed	web
+agrovoc	35678	cottonseed meal	skos:exactMatch	agro	00000089	cottonseed meal	manually_reviewed	web
+agrovoc	36542	continuous grazing	skos:exactMatch	agro	00000431	continuous grazing	manually_reviewed	web
+agrovoc	36704	deep tillage	skos:exactMatch	agro	00020004	deep tillage	manually_reviewed	web
+agrovoc	37405	pots	skos:exactMatch	agro	00000309	pot	manually_reviewed	web
+agrovoc	37743	husks	skos:exactMatch	agro	00002010	husk	manually_reviewed	web
+agrovoc	3910	intercropping	skos:exactMatch	agro	00000516	intercropping	manually_reviewed	web
+agrovoc	3954	irrigation	skos:exactMatch	agro	00000006	irrigation process	manually_reviewed	web
+agrovoc	3955	irrigation equipment	skos:exactMatch	agro	00000241	irrigation equipment	manually_reviewed	web
+agrovoc	3957	irrigation methods	skos:exactMatch	agro	00000054	irrigation method	manually_reviewed	web
+agrovoc	397044c5	flails	skos:exactMatch	agro	00000455	flail	manually_reviewed	web
+agrovoc	4373	liquid manures	skos:exactMatch	agro	00000078	liquid manure	manually_reviewed	web
+agrovoc	4592	organic fertilizers	skos:exactMatch	agro	00002039	organic fertilizer	manually_reviewed	web
+agrovoc	4915	monoculture	skos:exactMatch	agro	00000481	monoculture	manually_reviewed	web
+agrovoc	4963	mowers	skos:exactMatch	agro	00002008	mower	manually_reviewed	web
+agrovoc	4977	mulches	skos:exactMatch	agro	00000092	mulch	manually_reviewed	web
+agrovoc	4978	mulching	skos:exactMatch	agro	00000111	mulching process	manually_reviewed	web
+agrovoc	4f8733aa	long-term experiments	skos:exactMatch	agro	00000476	long-term experiment	manually_reviewed	web
+agrovoc	5195	nitrogen fertilizers	skos:exactMatch	agro	00020007	nitrogen fertilizer	manually_reviewed	web
+agrovoc	5250	NPK fertilizers	skos:exactMatch	agro	00002046	NPK fertilizer	manually_reviewed	web
+agrovoc	542	application methods	skos:exactMatch	agro	00000036	application method	manually_reviewed	web
+agrovoc	5497	controlled grazing	skos:exactMatch	agro	00000434	controlled grazing	manually_reviewed	web
+agrovoc	5726	pest control	skos:exactMatch	agro	00000023	pest control process	manually_reviewed	web
+agrovoc	60a629e9	spent mushroom composts	skos:exactMatch	agro	00000091	spent mushroom compost	manually_reviewed	web
+agrovoc	6274	pruning	skos:exactMatch	agro	00000566	pruning	manually_reviewed	web
+agrovoc	6463	ratoons	skos:exactMatch	agro	00000115	ratoon	manually_reviewed	web
+agrovoc	6636	rollers	skos:exactMatch	agro	00002030	roller	manually_reviewed	web
+agrovoc	6662	crop rotation	skos:exactMatch	agro	00000469	crop rotation process	manually_reviewed	web
+agrovoc	6663	rotational grazing	skos:exactMatch	agro	00000430	rotational grazing	manually_reviewed	web
+agrovoc	6855	scientists	skos:exactMatch	agro	00000373	researcher	manually_reviewed	web
+agrovoc	6940	seed treatment	skos:exactMatch	agro	00000051	seed dressing	manually_reviewed	web
+agrovoc	6944	sowing rates	skos:exactMatch	agro	00000202	seeding rate	manually_reviewed	web
+agrovoc	6945	seedlings	skos:exactMatch	agro	00000548	seedling	manually_reviewed	web
+agrovoc	7175	soil injection	skos:exactMatch	agro	00000052	soil injection	manually_reviewed	web
+agrovoc	7198	soil analysis	skos:exactMatch	agro	00000349	soil analysis process	manually_reviewed	web
+agrovoc	722	automatic irrigation	skos:exactMatch	agro	00000409	automatic irrigation	manually_reviewed	web
+agrovoc	7268	sowing	skos:exactMatch	agro	00000142	seeding process	manually_reviewed	web
+agrovoc	7333	sprayers	skos:exactMatch	agro	00000537	sprayer	manually_reviewed	web
+agrovoc	7442	straw mulches	skos:exactMatch	agro	00000098	straw mulch	manually_reviewed	web
+agrovoc	7456	strip grazing	skos:exactMatch	agro	00000432	strip grazing	manually_reviewed	web
+agrovoc	7473	students	skos:exactMatch	agro	00000374	student	manually_reviewed	web
+agrovoc	7487	subsurface irrigation	skos:exactMatch	agro	00000062	sub-irrigation process	manually_reviewed	web
+agrovoc	7530	surface irrigation	skos:exactMatch	agro	00000063	surface irrigation process	manually_reviewed	web
+agrovoc	7649	tedders	skos:exactMatch	agro	00000472	tedder	manually_reviewed	web
+agrovoc	7729	thinning	skos:exactMatch	agro	00000027	thinning	manually_reviewed	web
+agrovoc	7771	tillage	skos:exactMatch	agro	01000015	tillage	manually_reviewed	web
+agrovoc	77edfe55	field area	skos:exactMatch	agro	00000300	field area	manually_reviewed	web
+agrovoc	7813	top-dressing	skos:exactMatch	agro	00000042	top dressing	manually_reviewed	web
+agrovoc	7847	tractors	skos:exactMatch	agro	00000124	tractor	manually_reviewed	web
+agrovoc	7873	transplanting	skos:exactMatch	agro	00000229	plant transplanting process	manually_reviewed	web
+agrovoc	7878	trapping	skos:exactMatch	agro	00000215	trapping process	manually_reviewed	web
+agrovoc	7885	tree injection	skos:exactMatch	agro	00000053	tree injection	manually_reviewed	web
+agrovoc	7909	trickle irrigation	skos:exactMatch	agro	00000056	drip irrigation process	manually_reviewed	web
+agrovoc	793	balers	skos:exactMatch	agro	00002027	baler	manually_reviewed	web
+agrovoc	8446	working animals	skos:exactMatch	agro	00000116	draft animal	manually_reviewed	web
+agrovoc	8511	zero tillage	skos:exactMatch	agro	00000026	no-till	manually_reviewed	web
+agrovoc	918	biological control	skos:exactMatch	agro	00000022	biological pest control process	manually_reviewed	web
+agrovoc	932275ef	poultry manure	skos:exactMatch	agro	00000080	poultry litter	manually_reviewed	web
+agrovoc	966	blood meal	skos:exactMatch	agro	00000086	blood meal	manually_reviewed	web
+agrovoc	99dd11f2	chisel ploughs	skos:exactMatch	agro	00000131	chisel plough	manually_reviewed	web
+agrovoc	9a431541	strip plot design	skos:exactMatch	agro	00000330	strip plot design	manually_reviewed	web
+agrovoc	a1d2d6f2	desuckering	skos:exactMatch	agro	00000007	desuckering	manually_reviewed	web
+agrovoc	b6875485	wood chips mulches	skos:exactMatch	agro	00000103	wood chips mulch	manually_reviewed	web
+agrovoc	b95256aa	tandem disc harrows	skos:exactMatch	agro	00000394	tandem disc harrow	manually_reviewed	web
+agrovoc	bc5f6400	bark mulches	skos:exactMatch	agro	00000104	bark mulch	manually_reviewed	web
+agrovoc	c10fe7cb	square lattice design	skos:exactMatch	agro	00000336	square lattice design	manually_reviewed	web
+agrovoc	c319a4d3	vermicomposts	skos:exactMatch	agro	00002042	vermicompost	manually_reviewed	web
+agrovoc	c74e9c9f	offset disc harrows	skos:exactMatch	agro	00000395	offset disc harrow	manually_reviewed	web
+agrovoc	d0acd43f	lattice design	skos:exactMatch	agro	00000333	lattice design	manually_reviewed	web
+agrovoc	d2c183d0	compost mulches	skos:exactMatch	agro	00000102	compost mulch	manually_reviewed	web
+agrovoc	e7505488	tine harrows	skos:exactMatch	agro	00000138	tine harrow	manually_reviewed	web
+agrovoc	ea23424c	alpha lattice design	skos:exactMatch	agro	00000337	alpha lattice design	manually_reviewed	web
+agrovoc	eb7af602	raised beds	skos:exactMatch	agro	00002021	raised seedbed	manually_reviewed	web
 ccle	1321N1_CENTRAL_NERVOUS_SYSTEM	1321N1	skos:exactMatch	cellosaurus	CVCL_0110	1321N1	manually_reviewed	orcid:0000-0003-1307-2508
 ccle	143B_BONE	143B	skos:exactMatch	cellosaurus	CVCL_2270	143B	manually_reviewed	orcid:0000-0003-1307-2508
 ccle	143B_BONE	143B	skos:exactMatch	efo	0006355	143B	manually_reviewed	orcid:0000-0003-1307-2508

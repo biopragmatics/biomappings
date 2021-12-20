@@ -1,4 +1,24 @@
 source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	source
+agrovoc	10457	draught animals	skos:exactMatch	agro	00002004	draft animal role	manually_reviewed	web
+agrovoc	15662	Mus	skos:exactMatch	agro	00002067	methylene urea	manually_reviewed	web
+agrovoc	1797	compound fertilizers	skos:exactMatch	agro	00002046	NPK fertilizer	manually_reviewed	web
+agrovoc	1972	crops	skos:exactMatch	agro	00002001	crop role	manually_reviewed	web
+agrovoc	25694	disc ploughs	skos:exactMatch	agro	00000128	disc harrow	manually_reviewed	web
+agrovoc	25698	mole ploughs	skos:exactMatch	agro	00000130	subsoiler	manually_reviewed	web
+agrovoc	25716	topping	skos:exactMatch	agro	00000220	mowing process	manually_reviewed	web
+agrovoc	2863	fertilization	skos:exactMatch	agro	01000000	agronomic fertilization process	manually_reviewed	web
+agrovoc	3414	guano	skos:exactMatch	agro	00020003	bird guano	manually_reviewed	web
+agrovoc	3498	harrows	skos:exactMatch	agro	00000137	chain harrow	manually_reviewed	web
+agrovoc	3498	harrows	skos:exactMatch	agro	00000138	tine harrow	manually_reviewed	web
+agrovoc	3510	heading	skos:exactMatch	agro	00000458	tree topping process	manually_reviewed	web
+agrovoc	35362	monocalcium phosphate	skos:exactMatch	agro	00002065	triple superphosphate	manually_reviewed	web
+agrovoc	5e57cd77	broiler litter	skos:exactMatch	agro	00000080	poultry litter	manually_reviewed	web
+agrovoc	6274	pruning	skos:exactMatch	agro	00000027	thinning	manually_reviewed	web
+agrovoc	6891	SDI	skos:exactMatch	agro	00000058	subsurface drip irrigation process	manually_reviewed	web
+agrovoc	7771	tillage	skos:exactMatch	agro	00000002	tillage process	manually_reviewed	web
+agrovoc	7b960f69	rainwater harvesting	skos:exactMatch	agro	00000589	water harvesting	manually_reviewed	web
+agrovoc	8446	working animals	skos:exactMatch	agro	00002004	draft animal role	manually_reviewed	web
+agrovoc	fdfbb37f	parcels	skos:exactMatch	agro	00000301	agricultural experimental plot	manually_reviewed	web
 ccle	697_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	697	skos:exactMatch	cellosaurus	CVCL_8056	697-mel	manually_reviewed	orcid:0000-0003-1307-2508
 ccle	A204_SOFT_TISSUE	A-204	skos:exactMatch	cellosaurus	CVCL_1N55	Urd-B	manually_reviewed	orcid:0000-0003-1307-2508
 ccle	ABC1_LUNG	ABC-1	skos:exactMatch	cellosaurus	CVCL_ZB62	AbC1	manually_reviewed	orcid:0000-0003-1307-2508
