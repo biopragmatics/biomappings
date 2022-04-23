@@ -1,6 +1,9 @@
+"""Generate mappings using Gilda from UBERON to MeSH."""
+
 import gilda
 import obonet
 from indra.databases import mesh_client
+
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
 g = obonet.read_obo("/Users/ben/src/uberon/src/ontology/uberon-edit.obo")
