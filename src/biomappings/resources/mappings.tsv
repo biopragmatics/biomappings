@@ -4260,12 +4260,17 @@ mesh	D001414	Bacitracin	skos:exactMatch	chebi	CHEBI:28669	bacitracin	manually_re
 mesh	D001429	Bacteriochlorophylls	skos:exactMatch	chebi	CHEBI:38201	bacteriochlorophyll	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001430	Bacteriocins	skos:exactMatch	chebi	CHEBI:48081	bacteriocin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001455	Bambermycins	skos:exactMatch	chebi	CHEBI:28908	bambermycin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001463	Barbiturates	skos:exactMatch	chebi	CHEBI:22693	barbiturates	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001466	Barium Sulfate	skos:exactMatch	chebi	CHEBI:133326	barium sulfate	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001485	Basement Membrane	skos:exactMatch	go	GO:0005604	basement membrane	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001500	BCG Vaccine	skos:exactMatch	ncit	C298	BCG Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D001507	Beclomethasone	skos:exactMatch	chebi	CHEBI:3001	beclomethasone	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001519	Behavior	skos:exactMatch	go	GO:0007610	behavior	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001537	Bencyclane	skos:exactMatch	chebi	CHEBI:135205	bencyclane	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001539	Bendroflumethiazide	skos:exactMatch	chebi	CHEBI:3013	bendroflumethiazide	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001542	Benomyl	skos:exactMatch	chebi	CHEBI:3015	benomyl	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001545	Benserazide	skos:exactMatch	chebi	CHEBI:64187	benserazide	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001546	Bentonite	skos:exactMatch	chebi	CHEBI:133354	bentonite	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001547	Benzaldehydes	skos:exactMatch	chebi	CHEBI:22698	benzaldehydes	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001549	Benzamides	skos:exactMatch	chebi	CHEBI:22702	benzamides	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001552	Benzazepines	skos:exactMatch	chebi	CHEBI:35676	benzazepine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4303,6 +4308,7 @@ mesh	D001737	Biuret	skos:exactMatch	chebi	CHEBI:18138	biuret	manually_reviewed	o
 mesh	D001739	BK Virus	skos:exactMatch	ncit	C89820	BK Virus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001775	Blood Circulation	skos:exactMatch	go	GO:0008015	blood circulation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001777	Blood Coagulation	skos:exactMatch	go	GO:0007596	blood coagulation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001802	Blood Substitutes	skos:exactMatch	chebi	CHEBI:38849	blood substitute	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001839	Bombesin	skos:exactMatch	chebi	CHEBI:80229	Bombesin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001846	Bone Development	skos:exactMatch	go	GO:0060348	bone development	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001861	Bone Regeneration	skos:exactMatch	go	GO:1990523	bone regeneration	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4315,27 +4321,42 @@ mesh	D001889	Borinic Acids	skos:exactMatch	chebi	CHEBI:38270	borinic acids	manua
 mesh	D001895	Boron	skos:exactMatch	chebi	CHEBI:27560	boron atom	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001897	Boronic Acids	skos:exactMatch	chebi	CHEBI:38269	boronic acids	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001906	Botulism	skos:exactMatch	doid	DOID:0050352	foodborne botulism	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D001920	Bradykinin	skos:exactMatch	chebi	CHEBI:3165	bradykinin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001960	Bromazepam	skos:exactMatch	chebi	CHEBI:31302	Bromazepam	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001964	Bromhexine	skos:exactMatch	chebi	CHEBI:77032	bromhexine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001969	Bromobenzenes	skos:exactMatch	chebi	CHEBI:37149	bromobenzenes	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001971	Bromocriptine	skos:exactMatch	chebi	CHEBI:3181	bromocriptine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001977	Brompheniramine	skos:exactMatch	chebi	CHEBI:3183	brompheniramine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001978	Bromphenol Blue	skos:exactMatch	chebi	CHEBI:59424	bromophenol blue	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001979	Bromthymol Blue	skos:exactMatch	chebi	CHEBI:86155	bromothymol blue	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001993	Bronchodilator Agents	skos:exactMatch	chebi	CHEBI:35523	bronchodilator agent	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002019	Bufexamac	skos:exactMatch	chebi	CHEBI:31317	bufexamac	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002026	Buformin	skos:exactMatch	chebi	CHEBI:3209	Buformin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002027	Bufotenin	skos:exactMatch	chebi	CHEBI:3210	bufotenin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002034	Bumetanide	skos:exactMatch	chebi	CHEBI:3213	bumetanide	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002035	Bunaftine	skos:exactMatch	chebi	CHEBI:135392	bunaftine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002040	Levobunolol	skos:exactMatch	chebi	CHEBI:6438	levobunolol	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002043	Bunyaviridae	skos:exactMatch	ncit	C112028	Bunyaviridae	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002045	Bupivacaine	skos:exactMatch	chebi	CHEBI:3215	bupivacaine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002046	Bupranolol	skos:exactMatch	chebi	CHEBI:135123	bupranolol	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002047	Buprenorphine	skos:exactMatch	chebi	CHEBI:3216	buprenorphine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002049	Burimamide	skos:exactMatch	chebi	CHEBI:3221	Burimamide	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002064	Buserelin	skos:exactMatch	chebi	CHEBI:135907	buserelin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002065	Buspirone	skos:exactMatch	chebi	CHEBI:3223	buspirone	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002066	Busulfan	skos:exactMatch	chebi	CHEBI:28901	busulfan	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002074	Butanones	skos:exactMatch	chebi	CHEBI:22951	butanone	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002077	Butorphanol	skos:exactMatch	chebi	CHEBI:3242	butorphanol	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002083	Butylated Hydroxyanisole	skos:exactMatch	chebi	CHEBI:76359	butylated hydroxyanisole	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002092	Butyrylthiocholine	skos:exactMatch	chebi	CHEBI:41055	butyrylthiocholine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002096	C-Peptide	skos:exactMatch	chebi	CHEBI:80332	C-peptide	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002103	Cadaverine	skos:exactMatch	chebi	CHEBI:18127	cadaverine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002104	Cadmium	skos:exactMatch	chebi	CHEBI:22977	cadmium atom	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002108	Ceruletide	skos:exactMatch	chebi	CHEBI:59219	ceruletide	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002110	Caffeine	skos:exactMatch	chebi	CHEBI:27732	caffeine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002117	Calcitriol	skos:exactMatch	chebi	CHEBI:17823	calcitriol	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002118	Calcium	skos:exactMatch	chebi	CHEBI:22984	calcium atom	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002120	Calcium Channel Agonists	skos:exactMatch	chebi	CHEBI:38807	calcium channel agonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002121	Calcium Channel Blockers	skos:exactMatch	chebi	CHEBI:38215	calcium channel blocker	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002125	Calcium Gluconate	skos:exactMatch	chebi	CHEBI:3309	Calcium Gluconate	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002126	Calcium Hydroxide	skos:exactMatch	ncit	C77032	Calcium Hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D002129	Calcium Oxalate	skos:exactMatch	chebi	CHEBI:60579	calcium oxalate	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4344,13 +4365,22 @@ mesh	D002142	Californium	skos:exactMatch	chebi	CHEBI:33392	californium atom	manu
 mesh	D002164	Camphor	skos:exactMatch	chebi	CHEBI:36773	camphor	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002166	Camptothecin	skos:exactMatch	chebi	CHEBI:27656	camptothecin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002174	Candicidin	skos:exactMatch	chebi	CHEBI:354984	candicidin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002185	Cannabidiol	skos:exactMatch	chebi	CHEBI:69478	cannabidiol	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002186	Cannabinoids	skos:exactMatch	chebi	CHEBI:67194	cannabinoid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002187	Cannabinol	skos:exactMatch	chebi	CHEBI:3360	Cannabinol	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002191	Canrenoic Acid	skos:exactMatch	chebi	CHEBI:50156	canrenoic acid	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002192	Canrenone	skos:exactMatch	chebi	CHEBI:135445	canrenone	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002193	Cantharidin	skos:exactMatch	chebi	CHEBI:64213	cantharidin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002207	Capreomycin	skos:exactMatch	chebi	CHEBI:3371	capreomycin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002211	Capsaicin	skos:exactMatch	chebi	CHEBI:3374	capsaicin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002216	Captopril	skos:exactMatch	chebi	CHEBI:3380	captopril	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002217	Carbachol	skos:exactMatch	chebi	CHEBI:3385	carbachol	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002220	Carbamazepine	skos:exactMatch	chebi	CHEBI:3387	carbamazepine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002227	Carbazoles	skos:exactMatch	chebi	CHEBI:48513	carbazoles	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002230	Carbidopa	skos:exactMatch	chebi	CHEBI:3395	carbidopa	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002231	Carbimazole	skos:exactMatch	chebi	CHEBI:617099	carbimazole	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002235	Carbofuran	skos:exactMatch	chebi	CHEBI:34611	carbofuran	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002241	Carbohydrates	skos:exactMatch	chebi	CHEBI:16646	carbohydrate	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002244	Carbon	skos:exactMatch	chebi	CHEBI:27594	carbon atom	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002245	Carbon Dioxide	skos:exactMatch	chebi	CHEBI:16526	carbon dioxide	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002254	Carbonates	skos:exactMatch	chebi	CHEBI:23016	carbonates	manually_reviewed	orcid:0000-0001-9439-5346
