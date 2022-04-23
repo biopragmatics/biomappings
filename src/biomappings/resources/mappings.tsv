@@ -1776,11 +1776,27 @@ chebi	CHEBI:88902	O-Desmethylangolensin	skos:exactMatch	mesh	C050052	O-desmethyl
 chebi	CHEBI:8977	SB 206553	skos:exactMatch	mesh	C094868	SB 206553	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:8979	SB 228357	skos:exactMatch	mesh	C118947	SB 228357	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:8980	SB 243213	skos:exactMatch	mesh	C406343	SB 243213	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90075	rose oxide	skos:exactMatch	mesh	C581370	rose-oxide	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90127	scytonemin	skos:exactMatch	mesh	C083368	scytonemin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9013	Salonitenolide	skos:exactMatch	mesh	C011103	salonitenolide	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:9017	Salvianolic acid A	skos:exactMatch	mesh	C066201	salvianolic acid A	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:90205	plitidepsin	skos:exactMatch	mesh	C098980	plitidepsin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:90209	didemnin	skos:exactMatch	mesh	C030051	didemnins	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:90217	quizartinib	skos:exactMatch	mesh	C544967	quizartinib	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:90225	rubitecan	skos:exactMatch	mesh	C079905	rubitecan	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90227	selumetinib	skos:exactMatch	mesh	C517975	AZD 6244	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9023	santamarin	skos:exactMatch	mesh	C016722	santamarine	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90237	tandutinib	skos:exactMatch	mesh	C464670	tandutinib	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9024	santin	skos:exactMatch	mesh	C104803	santin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90241	vinflunine	skos:exactMatch	mesh	C111217	vinflunine	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90295	PLX-4720	skos:exactMatch	mesh	C528407	PLX 4720	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9031	Sarisan	skos:exactMatch	mesh	C056048	sarisan	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90319	Ponceau S	skos:exactMatch	mesh	C032756	ponceau S	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90324	homocysteic acid	skos:exactMatch	mesh	C007956	homocysteic acid	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90344	N-methylproline	skos:exactMatch	mesh	C509449	N-methylproline	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9037	Sarracine	skos:exactMatch	mesh	C011104	sarracine	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90388	AH23848	skos:exactMatch	mesh	C046926	AH 23848	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:90399	primuline	skos:exactMatch	mesh	C035646	primuline	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:90524	PI-103	skos:exactMatch	mesh	C522973	PI103	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:90531	sotrastaurin	skos:exactMatch	mesh	C543528	sotrastaurin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:90620	vatalanib	skos:exactMatch	mesh	C404768	vatalanib	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4622,16 +4638,59 @@ mesh	D007172	Erectile Dysfunction	skos:exactMatch	doid	DOID:1875	impotence	manua
 mesh	D007249	Inflammation	skos:exactMatch	go	GO:0006954	inflammatory response	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007251	Influenza, Human	skos:exactMatch	doid	DOID:8469	influenza	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007314	Insemination	skos:exactMatch	go	GO:0007320	insemination	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007378	Interleukins	skos:exactMatch	chebi	CHEBI:52998	interleukins	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007382	Intermediate Filaments	skos:exactMatch	go	GO:0005882	intermediate filament	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007399	Interphase	skos:exactMatch	go	GO:0051325	interphase	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007401	Interrenal Gland	skos:exactMatch	go	GO:0030325	adrenal gland development	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D007408	Intestinal Absorption	skos:exactMatch	go	GO:0050892	intestinal absorption	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007444	Inulin	skos:exactMatch	chebi	CHEBI:15443	inulin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007451	Iodamide	skos:exactMatch	chebi	CHEBI:31703	iodamide	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007472	Iohexol	skos:exactMatch	chebi	CHEBI:31709	iohexol	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007476	Ionophores	skos:exactMatch	chebi	CHEBI:24869	ionophore	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007479	Iopamidol	skos:exactMatch	chebi	CHEBI:31711	iopamidol	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007480	Iopanoic Acid	skos:exactMatch	chebi	CHEBI:5951	Iopanoic acid	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007482	Iothalamate Meglumine	skos:exactMatch	chebi	CHEBI:31714	Iothalamate meglumine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007485	Ioxaglic Acid	skos:exactMatch	chebi	CHEBI:31718	ioxaglic acid	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007488	Iprindole	skos:exactMatch	chebi	CHEBI:135177	iprindole	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007490	Iproniazid	skos:exactMatch	chebi	CHEBI:5958	Iproniazid	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007502	Iron Chelating Agents	skos:exactMatch	chebi	CHEBI:38157	iron chelator	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007506	Iron-Sulfur Proteins	skos:exactMatch	chebi	CHEBI:35135	iron-sulfur protein	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007510	Isatin	skos:exactMatch	chebi	CHEBI:27539	isatin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007516	Adenoma, Islet Cell	skos:exactMatch	doid	DOID:1799	islet cell tumor	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D007524	Isodesmosine	skos:exactMatch	chebi	CHEBI:64366	isodesmosine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007528	Isoetharine	skos:exactMatch	chebi	CHEBI:6005	Isoetharine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007529	Isoflavones	skos:exactMatch	chebi	CHEBI:38757	isoflavones	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007530	Isoflurane	skos:exactMatch	chebi	CHEBI:6015	isoflurane	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007546	Isoquinolines	skos:exactMatch	chebi	CHEBI:24922	isoquinolines	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007547	Isosorbide	skos:exactMatch	chebi	CHEBI:6060	Isosorbide	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007555	Isoxazoles	skos:exactMatch	chebi	CHEBI:55373	isoxazoles	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007559	Ivermectin	skos:exactMatch	chebi	CHEBI:6078	ivermectin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007608	Kainic Acid	skos:exactMatch	chebi	CHEBI:31746	kainic acid	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007609	Kallidin	skos:exactMatch	chebi	CHEBI:6102	Kallidin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007612	Kanamycin	skos:exactMatch	chebi	CHEBI:6104	kanamycin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007631	Chlordecone	skos:exactMatch	chebi	CHEBI:16548	chlordecone	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007632	Keratan Sulfate	skos:exactMatch	chebi	CHEBI:60924	keratan sulfate	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007645	Keratoderma, Palmoplantar	skos:exactMatch	doid	DOID:3390	palmoplantar keratosis	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D007649	Ketamine	skos:exactMatch	chebi	CHEBI:6121	ketamine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007650	Ketanserin	skos:exactMatch	chebi	CHEBI:6123	ketanserin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007654	Ketoconazole	skos:exactMatch	chebi	CHEBI:47519	ketoconazole	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007657	Ketone Bodies	skos:exactMatch	chebi	CHEBI:73693	ketone body	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007659	Ketones	skos:exactMatch	chebi	CHEBI:17087	ketone	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007660	Ketoprofen	skos:exactMatch	chebi	CHEBI:6128	ketoprofen	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007661	Ketoses	skos:exactMatch	chebi	CHEBI:24978	ketose	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007665	Ketotifen	skos:exactMatch	chebi	CHEBI:92511	ketotifen	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007666	Khellin	skos:exactMatch	chebi	CHEBI:6133	khellin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007692	Diatomaceous Earth	skos:exactMatch	chebi	CHEBI:82661	diatomaceous earth	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007698	Kinesis	skos:exactMatch	go	GO:0042465	kinesis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007701	Kinetin	skos:exactMatch	chebi	CHEBI:27407	kinetin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007735	Kynuramine	skos:exactMatch	chebi	CHEBI:73472	kynuramine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007741	Labetalol	skos:exactMatch	chebi	CHEBI:6343	labetalol	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007766	Lacrimal Apparatus Diseases	skos:exactMatch	doid	DOID:1400	lacrimal apparatus disease	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D007769	Lactams	skos:exactMatch	chebi	CHEBI:24995	lactam	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007774	Lactation	skos:exactMatch	go	GO:0007595	lactation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007787	Lactose Intolerance	skos:exactMatch	doid	DOID:10604	lactose intolerance	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D007792	Lactulose	skos:exactMatch	chebi	CHEBI:6359	lactulose	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007810	Lanosterol	skos:exactMatch	chebi	CHEBI:16521	lanosterol	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007858	Learning	skos:exactMatch	go	GO:0007612	learning	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007865	Leeches	skos:exactMatch	doid	DOID:11079	leech infestation	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D008066	Lipolysis	skos:exactMatch	go	GO:0016042	lipid catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
