@@ -1,6 +1,7 @@
 from collections import Counter
 
 from gilda.api import grounder
+from indra.ontology.bio import bio_ontology
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
@@ -25,9 +26,15 @@ if __name__ == '__main__':
     print("Found %d CHEBI-MESH mappings." % len(mesh_chebi_simple))
 
     predictions = []
+    n_redundant = 0
     for pair in mesh_chebi_simple:
         chebi_term = [term for term in pair if term.db == 'CHEBI'][0]
         mesh_term = [term for term in pair if term.db == 'MESH'][0]
+
+        mappings = bio_ontology.get_mappings('MESH', mesh_term.id)
+        if ('CHEBI', chebi_term.id) in mappings:
+            n_redundant += 1
+
         pred = PredictionTuple(
             source_prefix="chebi",
             source_id=chebi_term.id,
@@ -42,4 +49,4 @@ if __name__ == '__main__':
         )
         predictions.append(pred)
 
-    append_prediction_tuples(predictions, deduplicate=True, sort=True)
+    #append_prediction_tuples(predictions, deduplicate=True, sort=True)
