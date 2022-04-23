@@ -1820,6 +1820,17 @@ chebi	CHEBI:94575	Nifekalant	skos:exactMatch	mesh	C076259	nifekalant	manually_re
 chebi	CHEBI:9464	testosterone enanthate	skos:exactMatch	mesh	C004648	testosterone enanthate	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:9649	trandolapril	skos:exactMatch	mesh	C052035	trandolapril	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:9763	trovafloxacin	skos:exactMatch	mesh	C080163	trovafloxacin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9956	Vermeerin	skos:exactMatch	mesh	C053303	vermeerin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9957	Vermelone	skos:exactMatch	mesh	C012601	vermelone	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9959	Vernodalin	skos:exactMatch	mesh	C465365	vernodalin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9960	Vernodalol	skos:exactMatch	mesh	C000602211	vernodalol	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9963	Vernolepin	skos:exactMatch	mesh	C036639	vernolepin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9965	Vernolide	skos:exactMatch	mesh	C465363	vernolide	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9966	Vernomenin	skos:exactMatch	mesh	C009651	vernomenin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9969	Verruculotoxin	skos:exactMatch	mesh	C011563	verruculotoxin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9970	Verticine	skos:exactMatch	mesh	C014242	verticine	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9973	vibriobactin	skos:exactMatch	mesh	C040227	vibriobactin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:9976	Vicine	skos:exactMatch	mesh	C009661	vicine	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0040002	aspirin allergy	skos:exactMatch	umls	C0004058	Allergy to aspirin	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040004	amoxicillin allergy	skos:exactMatch	umls	C0571417	Allergy to amoxicillin	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040005	ceftriaxone allergy	skos:exactMatch	umls	C0571463	Allergy to ceftriaxone	manually_reviewed	orcid:0000-0003-4423-4370
@@ -4251,11 +4262,17 @@ mesh	D001342	Autonomic Nervous System Diseases	skos:exactMatch	doid	DOID:11465	a
 mesh	D001343	Autophagy	skos:exactMatch	go	GO:0006914	autophagy	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001355	Alpharetrovirus	skos:exactMatch	ncit	C14186	Alpharetrovirus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001370	Axonal Transport	skos:exactMatch	go	GO:0098930	axonal transport	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001376	Azaperone	skos:exactMatch	chebi	CHEBI:88301	azaperone	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001377	Azaserine	skos:exactMatch	chebi	CHEBI:74846	azaserine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001378	Azasteroids	skos:exactMatch	chebi	CHEBI:35726	aza-steroid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001381	Azepines	skos:exactMatch	chebi	CHEBI:48105	azepine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001384	Azetidines	skos:exactMatch	chebi	CHEBI:38777	azetidines	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001388	Aziridines	skos:exactMatch	chebi	CHEBI:22681	aziridines	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001390	Azlocillin	skos:exactMatch	chebi	CHEBI:2956	azlocillin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001391	Azo Compounds	skos:exactMatch	chebi	CHEBI:37533	azo compound	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001398	Aztreonam	skos:exactMatch	chebi	CHEBI:161680	aztreonam	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001414	Bacitracin	skos:exactMatch	chebi	CHEBI:28669	bacitracin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001418	Baclofen	skos:exactMatch	chebi	CHEBI:2972	baclofen	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001429	Bacteriochlorophylls	skos:exactMatch	chebi	CHEBI:38201	bacteriochlorophyll	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001430	Bacteriocins	skos:exactMatch	chebi	CHEBI:48081	bacteriocin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001455	Bambermycins	skos:exactMatch	chebi	CHEBI:28908	bambermycin	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4287,8 +4304,10 @@ mesh	D001573	Benzoin	skos:exactMatch	chebi	CHEBI:17682	benzoin	manually_reviewed
 mesh	D001577	Benzophenones	skos:exactMatch	chebi	CHEBI:22726	benzophenones	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001581	Benzothiadiazines	skos:exactMatch	chebi	CHEBI:50265	benzothiadiazine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001583	Benzoxazoles	skos:exactMatch	chebi	CHEBI:46700	benzoxazole	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001585	Benzoyl Peroxide	skos:exactMatch	chebi	CHEBI:82405	Benzoyl peroxide	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001589	Benzphetamine	skos:exactMatch	chebi	CHEBI:3044	benzphetamine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001590	Benztropine	skos:exactMatch	chebi	CHEBI:3048	benzatropine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001591	Benzydamine	skos:exactMatch	chebi	CHEBI:94563	benzydamine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001592	Benzyl Alcohols	skos:exactMatch	chebi	CHEBI:22743	benzyl alcohols	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001594	Benzyl Viologen	skos:exactMatch	chebi	CHEBI:3056	Benzyl viologen	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001599	Berberine	skos:exactMatch	chebi	CHEBI:16118	berberine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4296,8 +4315,14 @@ mesh	D001600	Berberine Alkaloids	skos:exactMatch	chebi	CHEBI:22754	berberine alk
 mesh	D001603	Berkelium	skos:exactMatch	chebi	CHEBI:33391	berkelium atom	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001608	Beryllium	skos:exactMatch	chebi	CHEBI:30501	beryllium atom	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001615	beta-Endorphin	skos:exactMatch	chebi	CHEBI:10415	beta-endorphin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001621	Betahistine	skos:exactMatch	chebi	CHEBI:35677	betahistine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001623	Betamethasone	skos:exactMatch	chebi	CHEBI:3077	betamethasone	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001624	Betamethasone Valerate	skos:exactMatch	chebi	CHEBI:31277	betamethasone valerate	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001625	Betazole	skos:exactMatch	chebi	CHEBI:59170	betazole	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001627	Bethanidine	skos:exactMatch	chebi	CHEBI:37937	bethanidine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001640	Bicuculline	skos:exactMatch	chebi	CHEBI:3092	bicuculline	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001645	Biguanides	skos:exactMatch	chebi	CHEBI:53662	biguanides	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001664	Biliverdine	skos:exactMatch	chebi	CHEBI:17033	biliverdin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001708	Biopterin	skos:exactMatch	chebi	CHEBI:15373	biopterin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001710	Biotin	skos:exactMatch	chebi	CHEBI:15956	biotin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001716	Bird Fancier's Lung	skos:exactMatch	ncit	C34425	Bird Fancier's Lung	manually_reviewed	orcid:0000-0003-4423-4370
