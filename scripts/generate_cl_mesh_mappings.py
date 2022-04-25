@@ -20,7 +20,7 @@ for node, data in g.nodes(data=True):
     has_mesh_id = False
     for value in [data.get('def', '')] + data.get('synonym', []) + data.get(
             'xref', []):
-        if re.match(mesh_tree_pattern, value) or re.match(mesh_id_pattern, value):
+        if re.findall(mesh_tree_pattern, value) or re.findall(mesh_id_pattern, value):
             has_mesh_id = True
             break
 
@@ -52,7 +52,7 @@ print("Found %d CL->MESH mappings." % len(mappings))
 predictions = []
 for cl_id, mesh_id in mappings.items():
     pred = PredictionTuple(
-        source_prefix="uberon",
+        source_prefix="cl",
         source_id=cl_id,
         source_name=g.nodes[cl_id]["name"],
         relation="skos:exactMatch",
