@@ -54,10 +54,10 @@ def update(ctx: click.Context):
 def lint():
     """Sort files and remove duplicates."""
     from .resources import (
+        lint_false_mappings,
         lint_predictions,
         lint_true_mappings,
         lint_unsure_mappings,
-        lint_false_mappings,
     )
 
     lint_true_mappings()

@@ -7,7 +7,6 @@ from indra.ontology.bio import bio_ontology
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
-
 if __name__ == "__main__":
     grounder.ground("x")
     ambigs = {
