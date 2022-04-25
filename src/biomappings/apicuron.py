@@ -102,7 +102,7 @@ def iter_reports() -> Iterable[Report]:
 def main(token):
     """Submit the payload."""
     sub = get_curation_payload()
-    res = resubmit_curations(sub)
+    res = resubmit_curations(sub, token=token)
     print(res.text)
 
 
