@@ -7,19 +7,20 @@ from indra.databases import mesh_client
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
-g = obonet.read_obo("https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-basic.obo")
+g = obonet.read_obo(
+    "https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-basic.obo"
+)
 
-mesh_tree_pattern = re.compile(r'MESH:[A-Z][0-9]+\.[0-9.]+')
-mesh_id_pattern = re.compile(r'MESH:[CD][0-9]+')
+mesh_tree_pattern = re.compile(r"MESH:[A-Z][0-9]+\.[0-9.]+")
+mesh_id_pattern = re.compile(r"MESH:[CD][0-9]+")
 
 mappings = {}
 for node, data in g.nodes(data=True):
-    if not node.startswith('CL:'):
+    if not node.startswith("CL:"):
         continue
 
     has_mesh_id = False
-    for value in [data.get('def', '')] + data.get('synonym', []) + data.get(
-            'xref', []):
+    for value in [data.get("def", "")] + data.get("synonym", []) + data.get("xref", []):
         if re.findall(mesh_tree_pattern, value) or re.findall(mesh_id_pattern, value):
             has_mesh_id = True
             break
@@ -27,21 +28,21 @@ for node, data in g.nodes(data=True):
     if has_mesh_id:
         continue
 
-    matches = gilda.ground(data['name'])
+    matches = gilda.ground(data["name"])
     if not matches:
-        if data['name'].endswith(' cells'):
-            matches = gilda.ground(data['name'].replace(' cells', ''))
-        elif data['name'].endswith(' cell'):
-            matches = gilda.ground(data['name'].replace(' cell', ''))
+        if data["name"].endswith(" cells"):
+            matches = gilda.ground(data["name"].replace(" cells", ""))
+        elif data["name"].endswith(" cell"):
+            matches = gilda.ground(data["name"].replace(" cell", ""))
     if not matches:
         continue
 
     mesh_ids = set()
     for match in matches:
         groundings = match.get_groundings()
-        mesh_ids |= {id for ns, id in groundings if ns == 'MESH'}
+        mesh_ids |= {id for ns, id in groundings if ns == "MESH"}
     if len(mesh_ids) > 1:
-        print('Multiple MESH IDs for %s' % node)
+        print("Multiple MESH IDs for %s" % node)
     elif len(mesh_ids) == 1:
         mesh_id = list(mesh_ids)[0]
         mappings[node] = mesh_id
@@ -66,4 +67,3 @@ for cl_id, mesh_id in mappings.items():
     predictions.append(pred)
 
 append_prediction_tuples(predictions, deduplicate=True, sort=True)
-
