@@ -1,5 +1,7 @@
-"""This script adds newly inferred xross-references for UBERON directly
-to the version controlled UBERON OBO file."""
+"""This script adds newly inferred cross-references for UBERON.
+
+These are added directly to the version controlled UBERON OBO file.
+"""
 
 from biomappings import load_mappings
 
@@ -7,6 +9,7 @@ EDITABLE_OBO_PATH = "/Users/ben/src/uberon/src/ontology/uberon-edit.obo"
 
 
 def add_xref(lines, node, xref):
+    """Add xref to OBO file lines in the appropriate place."""
     look_for_xref = False
     start_xref_idx = None
     def_idx = None
