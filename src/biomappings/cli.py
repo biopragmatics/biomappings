@@ -80,6 +80,7 @@ def prune(prefixes):
 main.add_command(export)
 main.add_command(ndex)
 main.add_command(charts)
+main.add_command(sssom)
 
 if __name__ == "__main__":
     main()

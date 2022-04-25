@@ -18,5 +18,8 @@ jobs:
       - name: Upload to NDEx
         run: |
           pip install --upgrade pip setuptools wheel
-          pip install -e .[ndex]
-          biomappings ndex --username ${{ secrets.NDEX_USERNAME }} --password ${{ secrets.NDEX_PASSWORD }}
+          pip install tox
+          tox -e upload-ndex
+        env:
+          NDEX_USERNAME: ${{ secrets.NDEX_USERNAME }}
+          NDEX_PASSWORD: ${{ secrets.NDEX_PASSWORD }}
