@@ -3,6 +3,7 @@ curie_map:
   ccle: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
   cellosaurus: https://web.expasy.org/cellosaurus/
   chebi: 'https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:'
+  cl: 'https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:'
   depmap: https://depmap.org/portal/cell_line/
   doid: 'https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:'
   efo: http://www.ebi.ac.uk/efo/EFO_
@@ -17,6 +18,7 @@ curie_map:
   pr: 'https://proconsortium.org/app/entry/PR:'
   pubchem.compound: https://pubchem.ncbi.nlm.nih.gov/compound/
   reactome: https://reactome.org/content/detail/
+  uberon: http://purl.obolibrary.org/obo/UBERON_
   umls: http://linkedlifedata.com/resource/umls/id/
   uniprot: http://purl.uniprot.org/uniprot/
   uniprot.chain: http://purl.uniprot.org/annotation/

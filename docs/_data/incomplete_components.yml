@@ -1224,11 +1224,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000003
-      identifier: ACH-000003
-      link: https://bioregistry.io/depmap:ACH-000003
-      name: CACO2
-      prefix: depmap
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://bioregistry.io/efo:0001099
+      name: Caco-2
+      prefix: efo
   - source:
       curie: cellosaurus:CVCL_0025
       identifier: CVCL_0025
@@ -1236,11 +1236,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: efo:0001099
-      identifier: 0001099
-      link: https://bioregistry.io/efo:0001099
-      name: Caco-2
-      prefix: efo
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://bioregistry.io/depmap:ACH-000003
+      name: CACO2
+      prefix: depmap
   - source:
       curie: depmap:ACH-000003
       identifier: ACH-000003
@@ -1369,11 +1369,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://bioregistry.io/efo:0006612
+      curie: cellosaurus:CVCL_1334
+      identifier: CVCL_1334
+      link: https://bioregistry.io/cellosaurus:CVCL_1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: bto:0006459
       identifier: BTO:0006459
@@ -1381,11 +1381,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:CVCL_1334
-      identifier: CVCL_1334
-      link: https://bioregistry.io/cellosaurus:CVCL_1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://bioregistry.io/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: cellosaurus:CVCL_1334
       identifier: CVCL_1334
@@ -1682,6 +1682,64 @@
       prefix: ncit
 - edges:
   - source:
+      curie: chebi:132112
+      identifier: CHEBI:132112
+      link: https://bioregistry.io/chebi:132112
+      name: sodium thiosulfate
+      prefix: chebi
+    target:
+      curie: ncit:C1230
+      identifier: C1230
+      link: https://bioregistry.io/ncit:C1230
+      name: Sodium Thiosulfate
+      prefix: ncit
+  nodes:
+    chebi:132112:
+      identifier: CHEBI:132112
+      link: https://bioregistry.io/chebi:132112
+      name: sodium thiosulfate
+      prefix: chebi
+    mesh:C017717:
+      identifier: C017717
+      link: https://bioregistry.io/mesh:C017717
+      name: sodium thiosulfate
+      prefix: mesh
+    ncit:C1230:
+      identifier: C1230
+      link: https://bioregistry.io/ncit:C1230
+      name: Sodium Thiosulfate
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:135173
+      identifier: CHEBI:135173
+      link: https://bioregistry.io/chebi:135173
+      name: taurolidine
+      prefix: chebi
+    target:
+      curie: ncit:C2639
+      identifier: C2639
+      link: https://bioregistry.io/ncit:C2639
+      name: Taurolidine
+      prefix: ncit
+  nodes:
+    chebi:135173:
+      identifier: CHEBI:135173
+      link: https://bioregistry.io/chebi:135173
+      name: taurolidine
+      prefix: chebi
+    mesh:C012566:
+      identifier: C012566
+      link: https://bioregistry.io/mesh:C012566
+      name: taurolidine
+      prefix: mesh
+    ncit:C2639:
+      identifier: C2639
+      link: https://bioregistry.io/ncit:C2639
+      name: Taurolidine
+      prefix: ncit
+- edges:
+  - source:
       curie: chebi:145994
       identifier: CHEBI:145994
       link: https://bioregistry.io/chebi:145994
@@ -1740,6 +1798,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: mesh:C013221
+      identifier: C013221
+      link: https://bioregistry.io/mesh:C013221
+      name: proanthocyanidin
+      prefix: mesh
+    target:
+      curie: mesh:D044945
+      identifier: D044945
+      link: https://bioregistry.io/mesh:D044945
+      name: Proanthocyanidins
+      prefix: mesh
+  nodes:
+    chebi:26267:
+      identifier: CHEBI:26267
+      link: https://bioregistry.io/chebi:26267
+      name: proanthocyanidin
+      prefix: chebi
+    mesh:C013221:
+      identifier: C013221
+      link: https://bioregistry.io/mesh:C013221
+      name: proanthocyanidin
+      prefix: mesh
+    mesh:D044945:
+      identifier: D044945
+      link: https://bioregistry.io/mesh:D044945
+      name: Proanthocyanidins
+      prefix: mesh
+- edges:
+  - source:
       curie: chebi:26333
       identifier: CHEBI:26333
       link: https://bioregistry.io/chebi:26333
@@ -1795,6 +1882,122 @@
       identifier: C114981
       link: https://bioregistry.io/ncit:C114981
       name: Daclatasvir
+      prefix: ncit
+- edges:
+  - source:
+      curie: cl:0000101
+      identifier: CL:0000101
+      link: https://bioregistry.io/cl:0000101
+      name: sensory neuron
+      prefix: cl
+    target:
+      curie: cl:0000197
+      identifier: CL:0000197
+      link: https://bioregistry.io/cl:0000197
+      name: sensory receptor cell
+      prefix: cl
+  nodes:
+    cl:0000101:
+      identifier: CL:0000101
+      link: https://bioregistry.io/cl:0000101
+      name: sensory neuron
+      prefix: cl
+    cl:0000197:
+      identifier: CL:0000197
+      link: https://bioregistry.io/cl:0000197
+      name: sensory receptor cell
+      prefix: cl
+    mesh:D011984:
+      identifier: D011984
+      link: https://bioregistry.io/mesh:D011984
+      name: Sensory Receptor Cells
+      prefix: mesh
+- edges:
+  - source:
+      curie: cl:0000622
+      identifier: CL:0000622
+      link: https://bioregistry.io/cl:0000622
+      name: acinar cell
+      prefix: cl
+    target:
+      curie: ncit:C23979
+      identifier: C23979
+      link: https://bioregistry.io/ncit:C23979
+      name: Acinar Cells
+      prefix: ncit
+  nodes:
+    cl:0000622:
+      identifier: CL:0000622
+      link: https://bioregistry.io/cl:0000622
+      name: acinar cell
+      prefix: cl
+    mesh:D061354:
+      identifier: D061354
+      link: https://bioregistry.io/mesh:D061354
+      name: Acinar Cells
+      prefix: mesh
+    ncit:C23979:
+      identifier: C23979
+      link: https://bioregistry.io/ncit:C23979
+      name: Acinar Cells
+      prefix: ncit
+- edges:
+  - source:
+      curie: cl:0000893
+      identifier: CL:0000893
+      link: https://bioregistry.io/cl:0000893
+      name: thymocyte
+      prefix: cl
+    target:
+      curie: ncit:C12994
+      identifier: C12994
+      link: https://bioregistry.io/ncit:C12994
+      name: Thymocyte
+      prefix: ncit
+  nodes:
+    cl:0000893:
+      identifier: CL:0000893
+      link: https://bioregistry.io/cl:0000893
+      name: thymocyte
+      prefix: cl
+    mesh:D060168:
+      identifier: D060168
+      link: https://bioregistry.io/mesh:D060168
+      name: Thymocytes
+      prefix: mesh
+    ncit:C12994:
+      identifier: C12994
+      link: https://bioregistry.io/ncit:C12994
+      name: Thymocyte
+      prefix: ncit
+- edges:
+  - source:
+      curie: cl:0002410
+      identifier: CL:0002410
+      link: https://bioregistry.io/cl:0002410
+      name: pancreatic stellate cell
+      prefix: cl
+    target:
+      curie: ncit:C107531
+      identifier: C107531
+      link: https://bioregistry.io/ncit:C107531
+      name: Pancreatic Stellate Cell
+      prefix: ncit
+  nodes:
+    cl:0002410:
+      identifier: CL:0002410
+      link: https://bioregistry.io/cl:0002410
+      name: pancreatic stellate cell
+      prefix: cl
+    mesh:D058954:
+      identifier: D058954
+      link: https://bioregistry.io/mesh:D058954
+      name: Pancreatic Stellate Cells
+      prefix: mesh
+    ncit:C107531:
+      identifier: C107531
+      link: https://bioregistry.io/ncit:C107531
+      name: Pancreatic Stellate Cell
       prefix: ncit
 - edges:
   - source:
@@ -2713,10 +2916,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: GO:0033210
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: GO:0033211
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -2725,10 +2928,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: GO:0033211
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: GO:0033210
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033210
@@ -3169,6 +3372,35 @@
       link: https://bioregistry.io/pfam:PF01391
       name: Collagen
       prefix: pfam
+- edges:
+  - source:
+      curie: ncit:C12467
+      identifier: C12467
+      link: https://bioregistry.io/ncit:C12467
+      name: Sympathetic Ganglion
+      prefix: ncit
+    target:
+      curie: uberon:0001806
+      identifier: UBERON:0001806
+      link: https://bioregistry.io/uberon:0001806
+      name: sympathetic ganglion
+      prefix: uberon
+  nodes:
+    mesh:D005728:
+      identifier: D005728
+      link: https://bioregistry.io/mesh:D005728
+      name: Ganglia, Sympathetic
+      prefix: mesh
+    ncit:C12467:
+      identifier: C12467
+      link: https://bioregistry.io/ncit:C12467
+      name: Sympathetic Ganglion
+      prefix: ncit
+    uberon:0001806:
+      identifier: UBERON:0001806
+      link: https://bioregistry.io/uberon:0001806
+      name: sympathetic ganglion
+      prefix: uberon
 - edges:
   - source:
       curie: chebi:6637
@@ -3981,6 +4213,151 @@
       link: https://bioregistry.io/ncit:C123223
       name: Atypical Hemolytic Uremic Syndrome
       prefix: ncit
+- edges:
+  - source:
+      curie: ncit:C32409
+      identifier: C32409
+      link: https://bioregistry.io/ncit:C32409
+      name: Crus Cerebri
+      prefix: ncit
+    target:
+      curie: uberon:0002631
+      identifier: UBERON:0002631
+      link: https://bioregistry.io/uberon:0002631
+      name: cerebral crus
+      prefix: uberon
+  nodes:
+    mesh:D065843:
+      identifier: D065843
+      link: https://bioregistry.io/mesh:D065843
+      name: Cerebral Crus
+      prefix: mesh
+    ncit:C32409:
+      identifier: C32409
+      link: https://bioregistry.io/ncit:C32409
+      name: Crus Cerebri
+      prefix: ncit
+    uberon:0002631:
+      identifier: UBERON:0002631
+      link: https://bioregistry.io/uberon:0002631
+      name: cerebral crus
+      prefix: uberon
+- edges:
+  - source:
+      curie: ncit:C32291
+      identifier: C32291
+      link: https://bioregistry.io/ncit:C32291
+      name: Cerebral Peduncle
+      prefix: ncit
+    target:
+      curie: uberon:0002623
+      identifier: UBERON:0002623
+      link: https://bioregistry.io/uberon:0002623
+      name: cerebral peduncle
+      prefix: uberon
+  nodes:
+    mesh:D065850:
+      identifier: D065850
+      link: https://bioregistry.io/mesh:D065850
+      name: Cerebral Peduncle
+      prefix: mesh
+    ncit:C32291:
+      identifier: C32291
+      link: https://bioregistry.io/ncit:C32291
+      name: Cerebral Peduncle
+      prefix: ncit
+    uberon:0002623:
+      identifier: UBERON:0002623
+      link: https://bioregistry.io/uberon:0002623
+      name: cerebral peduncle
+      prefix: uberon
+- edges:
+  - source:
+      curie: ncit:C33892
+      identifier: C33892
+      link: https://bioregistry.io/ncit:C33892
+      name: White Matter
+      prefix: ncit
+    target:
+      curie: uberon:0002316
+      identifier: UBERON:0002316
+      link: https://bioregistry.io/uberon:0002316
+      name: white matter
+      prefix: uberon
+  nodes:
+    mesh:D066127:
+      identifier: D066127
+      link: https://bioregistry.io/mesh:D066127
+      name: White Matter
+      prefix: mesh
+    ncit:C33892:
+      identifier: C33892
+      link: https://bioregistry.io/ncit:C33892
+      name: White Matter
+      prefix: ncit
+    uberon:0002316:
+      identifier: UBERON:0002316
+      link: https://bioregistry.io/uberon:0002316
+      name: white matter
+      prefix: uberon
+- edges:
+  - source:
+      curie: ncit:C32695
+      identifier: C32695
+      link: https://bioregistry.io/ncit:C32695
+      name: Gray Matter
+      prefix: ncit
+    target:
+      curie: uberon:0002020
+      identifier: UBERON:0002020
+      link: https://bioregistry.io/uberon:0002020
+      name: gray matter
+      prefix: uberon
+  nodes:
+    mesh:D066128:
+      identifier: D066128
+      link: https://bioregistry.io/mesh:D066128
+      name: Gray Matter
+      prefix: mesh
+    ncit:C32695:
+      identifier: C32695
+      link: https://bioregistry.io/ncit:C32695
+      name: Gray Matter
+      prefix: ncit
+    uberon:0002020:
+      identifier: UBERON:0002020
+      link: https://bioregistry.io/uberon:0002020
+      name: gray matter
+      prefix: uberon
+- edges:
+  - source:
+      curie: ncit:C32391
+      identifier: C32391
+      link: https://bioregistry.io/ncit:C32391
+      name: Costal Cartilage
+      prefix: ncit
+    target:
+      curie: uberon:0002236
+      identifier: UBERON:0002236
+      link: https://bioregistry.io/uberon:0002236
+      name: costal cartilage
+      prefix: uberon
+  nodes:
+    mesh:D066186:
+      identifier: D066186
+      link: https://bioregistry.io/mesh:D066186
+      name: Costal Cartilage
+      prefix: mesh
+    ncit:C32391:
+      identifier: C32391
+      link: https://bioregistry.io/ncit:C32391
+      name: Costal Cartilage
+      prefix: ncit
+    uberon:0002236:
+      identifier: UBERON:0002236
+      link: https://bioregistry.io/uberon:0002236
+      name: costal cartilage
+      prefix: uberon
 - edges:
   - source:
       curie: ncbiprotein:YP_009725297

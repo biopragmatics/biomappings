@@ -1,3 +1,33 @@
+- chebi:26267:
+    identifier: CHEBI:26267
+    link: https://bioregistry.io/chebi:26267
+    name: proanthocyanidin
+    prefix: chebi
+  mesh:C013221:
+    identifier: C013221
+    link: https://bioregistry.io/mesh:C013221
+    name: proanthocyanidin
+    prefix: mesh
+  mesh:D044945:
+    identifier: D044945
+    link: https://bioregistry.io/mesh:D044945
+    name: Proanthocyanidins
+    prefix: mesh
+- cl:0000101:
+    identifier: CL:0000101
+    link: https://bioregistry.io/cl:0000101
+    name: sensory neuron
+    prefix: cl
+  cl:0000197:
+    identifier: CL:0000197
+    link: https://bioregistry.io/cl:0000197
+    name: sensory receptor cell
+    prefix: cl
+  mesh:D011984:
+    identifier: D011984
+    link: https://bioregistry.io/mesh:D011984
+    name: Sensory Receptor Cells
+    prefix: mesh
 - kegg.pathway:hsa00100:
     identifier: hsa00100
     link: https://bioregistry.io/kegg.pathway:hsa00100
