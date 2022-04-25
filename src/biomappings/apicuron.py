@@ -6,7 +6,7 @@ Run this with:
 
 .. code-block:: sh
 
-    $ pip install -e .
+    $ pip install -e .[apicuron]
     $ pip install apicuron-client
     $ python -m biomappings.apicuron
 """
