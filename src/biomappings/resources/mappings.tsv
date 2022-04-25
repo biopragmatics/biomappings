@@ -1909,6 +1909,87 @@ chebi	CHEBI:9969	Verruculotoxin	skos:exactMatch	mesh	C011563	verruculotoxin	manu
 chebi	CHEBI:9970	Verticine	skos:exactMatch	mesh	C014242	verticine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:9973	vibriobactin	skos:exactMatch	mesh	C040227	vibriobactin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:9976	Vicine	skos:exactMatch	mesh	C009661	vicine	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000000	cell	skos:exactMatch	mesh	D002477	Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000010	cultured cell	skos:exactMatch	mesh	D002478	Cells, Cultured	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000023	oocyte	skos:exactMatch	mesh	D009865	Oocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000025	egg cell	skos:exactMatch	mesh	D010063	Ovum	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000037	hematopoietic stem cell	skos:exactMatch	mesh	D006412	Hematopoietic Stem Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000052	totipotent stem cell	skos:exactMatch	mesh	D039901	Totipotent Stem Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000060	odontoblast	skos:exactMatch	mesh	D009804	Odontoblasts	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000081	blood cell	skos:exactMatch	mesh	D001773	Blood Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000084	T cell	skos:exactMatch	mesh	D013601	T-Lymphocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000092	osteoclast	skos:exactMatch	mesh	D010010	Osteoclasts	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000101	sensory neuron	skos:exactMatch	mesh	D011984	Sensory Receptor Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000108	cholinergic neuron	skos:exactMatch	mesh	D059329	Cholinergic Neurons	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000109	adrenergic neuron	skos:exactMatch	mesh	D059331	Adrenergic Neurons	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000119	cerebellar Golgi cell	skos:exactMatch	mesh	D000080906	Cerebellar Golgi Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000148	melanocyte	skos:exactMatch	mesh	D008544	Melanocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000164	enteroendocrine cell	skos:exactMatch	mesh	D019858	Enteroendocrine Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000171	pancreatic A cell	skos:exactMatch	mesh	D050416	Glucagon-Secreting Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000178	Leydig cell	skos:exactMatch	mesh	D007985	Leydig Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000197	sensory receptor cell	skos:exactMatch	mesh	D011984	Sensory Receptor Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000207	olfactory receptor cell	skos:exactMatch	mesh	D018034	Olfactory Receptor Neurons	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000234	phagocyte	skos:exactMatch	mesh	D010586	Phagocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000235	macrophage	skos:exactMatch	mesh	D008264	Macrophages	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000236	B cell	skos:exactMatch	mesh	D001402	B-Lymphocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000255	eukaryotic cell	skos:exactMatch	mesh	D005057	Eukaryotic Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000362	epidermal cell	skos:exactMatch	mesh	D000078404	Epidermal Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000371	protoplast	skos:exactMatch	mesh	D011523	Protoplasts	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000442	follicular dendritic cell	skos:exactMatch	mesh	D020566	Dendritic Cells, Follicular	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000451	dendritic cell	skos:exactMatch	mesh	D003713	Dendritic Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000453	Langerhans cell	skos:exactMatch	mesh	D007801	Langerhans Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000476	thyrotroph	skos:exactMatch	mesh	D052684	Thyrotrophs	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000520	prokaryotic cell	skos:exactMatch	mesh	D011387	Prokaryotic Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000542	lymphocyte	skos:exactMatch	mesh	D008214	Lymphocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000546	T-helper 2 cell	skos:exactMatch	mesh	D018418	Th2 Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000553	megakaryocyte progenitor cell	skos:exactMatch	mesh	D055016	Megakaryocyte Progenitor Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000558	reticulocyte	skos:exactMatch	mesh	D012156	Reticulocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000584	enterocyte	skos:exactMatch	mesh	D020895	Enterocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000617	GABAergic neuron	skos:exactMatch	mesh	D059330	GABAergic Neurons	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000622	acinar cell	skos:exactMatch	mesh	D061354	Acinar Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000623	natural killer cell	skos:exactMatch	mesh	D007694	Killer Cells, Natural	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000647	multinucleated giant cell	skos:exactMatch	mesh	D015726	Giant Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000650	mesangial cell	skos:exactMatch	mesh	D050527	Mesangial Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000683	ependymoglial cell	skos:exactMatch	mesh	D063928	Ependymoglial Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000700	dopaminergic neuron	skos:exactMatch	mesh	D059290	Dopaminergic Neurons	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000711	cumulus cell	skos:exactMatch	mesh	D054885	Cumulus Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000723	somatic stem cell	skos:exactMatch	mesh	D053687	Adult Stem Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000738	leukocyte	skos:exactMatch	mesh	D007962	Leukocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000740	retinal ganglion cell	skos:exactMatch	mesh	D012165	Retinal Ganglion Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000746	cardiac muscle cell	skos:exactMatch	mesh	D032383	Myocytes, Cardiac	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000763	myeloid cell	skos:exactMatch	mesh	D022423	Myeloid Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000765	erythroblast	skos:exactMatch	mesh	D004900	Erythroblasts	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000771	eosinophil	skos:exactMatch	mesh	D004804	Eosinophils	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000775	neutrophil	skos:exactMatch	mesh	D009504	Neutrophils	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000786	plasma cell	skos:exactMatch	mesh	D010950	Plasma Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000815	regulatory T cell	skos:exactMatch	mesh	D050378	T-Lymphocytes, Regulatory	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000850	serotonergic neuron	skos:exactMatch	mesh	D059326	Serotonergic Neurons	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000891	foam cell	skos:exactMatch	mesh	D005487	Foam Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000893	thymocyte	skos:exactMatch	mesh	D060168	Thymocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000899	T-helper 17 cell	skos:exactMatch	mesh	D058504	Th17 Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000912	helper T cell	skos:exactMatch	mesh	D006377	T-Lymphocytes, Helper-Inducer	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0001070	beige adipocyte	skos:exactMatch	mesh	D000069797	Adipocytes, Beige	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002090	polar body	skos:exactMatch	mesh	D059705	Polar Bodies	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002092	bone marrow cell	skos:exactMatch	mesh	D001854	Bone Marrow Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002198	oncocyte	skos:exactMatch	mesh	D024862	Oxyphil Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002246	peripheral blood stem cell	skos:exactMatch	mesh	D000072916	Peripheral Blood Stem Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002248	pluripotent stem cell	skos:exactMatch	mesh	D039904	Pluripotent Stem Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002257	epithelial cell of thyroid gland	skos:exactMatch	mesh	D000072637	Thyroid Epithelial Cells	manual	orcid:0000-0001-9439-5346
+cl	CL:0002275	pancreatic PP cell	skos:exactMatch	mesh	D050418	Pancreatic Polypeptide-Secreting Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002309	corticotroph	skos:exactMatch	mesh	D052680	Corticotrophs	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002312	somatotroph	skos:exactMatch	mesh	D052683	Somatotrophs	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002320	connective tissue cell	skos:exactMatch	mesh	D003239	Connective Tissue Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002322	embryonic stem cell	skos:exactMatch	mesh	D053595	Embryonic Stem Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002369	fungal spore	skos:exactMatch	mesh	D013172	Spores, Fungal	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002410	pancreatic stellate cell	skos:exactMatch	mesh	D058954	Pancreatic Stellate Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002418	hemangioblast	skos:exactMatch	mesh	D055018	Hemangioblasts	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002453	oligodendrocyte precursor cell	skos:exactMatch	mesh	D000073637	Oligodendrocyte Precursor Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002496	intraepithelial lymphocyte	skos:exactMatch	mesh	D000075942	Intraepithelial Lymphocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002573	Schwann cell	skos:exactMatch	mesh	D012583	Schwann Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0008002	skeletal muscle fiber	skos:exactMatch	mesh	D018485	Muscle Fibers, Skeletal	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0010003	epithelial cell of alveolus of lung	skos:exactMatch	mesh	D056809	Alveolar Epithelial Cells	manual	orcid:0000-0001-9439-5346
+cl	CL:0010017	zygote	skos:exactMatch	mesh	D015053	Zygote	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0010021	cardiac myoblast	skos:exactMatch	mesh	D032386	Myoblasts, Cardiac	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0040002	aspirin allergy	skos:exactMatch	umls	C0004058	Allergy to aspirin	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040004	amoxicillin allergy	skos:exactMatch	umls	C0571417	Allergy to amoxicillin	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0040005	ceftriaxone allergy	skos:exactMatch	umls	C0571463	Allergy to ceftriaxone	manually_reviewed	orcid:0000-0003-4423-4370
