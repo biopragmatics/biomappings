@@ -1224,11 +1224,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: efo:0001099
-      identifier: 0001099
-      link: https://bioregistry.io/efo:0001099
-      name: Caco-2
-      prefix: efo
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://bioregistry.io/depmap:ACH-000003
+      name: CACO2
+      prefix: depmap
   - source:
       curie: cellosaurus:CVCL_0025
       identifier: CVCL_0025
@@ -1236,11 +1236,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000003
-      identifier: ACH-000003
-      link: https://bioregistry.io/depmap:ACH-000003
-      name: CACO2
-      prefix: depmap
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://bioregistry.io/efo:0001099
+      name: Caco-2
+      prefix: efo
   - source:
       curie: depmap:ACH-000003
       identifier: ACH-000003
@@ -1798,6 +1798,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: chebi:2469
+      identifier: CHEBI:2469
+      link: https://bioregistry.io/chebi:2469
+      name: adefovir
+      prefix: chebi
+    target:
+      curie: ncit:C61526
+      identifier: C61526
+      link: https://bioregistry.io/ncit:C61526
+      name: Adefovir
+      prefix: ncit
+  nodes:
+    chebi:2469:
+      identifier: CHEBI:2469
+      link: https://bioregistry.io/chebi:2469
+      name: adefovir
+      prefix: chebi
+    mesh:C053001:
+      identifier: C053001
+      link: https://bioregistry.io/mesh:C053001
+      name: adefovir
+      prefix: mesh
+    ncit:C61526:
+      identifier: C61526
+      link: https://bioregistry.io/ncit:C61526
+      name: Adefovir
+      prefix: ncit
+- edges:
+  - source:
       curie: mesh:C013221
       identifier: C013221
       link: https://bioregistry.io/mesh:C013221
@@ -1853,6 +1882,35 @@
       identifier: C782
       link: https://bioregistry.io/ncit:C782
       name: Prostaglandin
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:44143
+      identifier: CHEBI:44143
+      link: https://bioregistry.io/chebi:44143
+      name: emivirine
+      prefix: chebi
+    target:
+      curie: ncit:C73147
+      identifier: C73147
+      link: https://bioregistry.io/ncit:C73147
+      name: Emivirine
+      prefix: ncit
+  nodes:
+    chebi:44143:
+      identifier: CHEBI:44143
+      link: https://bioregistry.io/chebi:44143
+      name: emivirine
+      prefix: chebi
+    mesh:C083858:
+      identifier: C083858
+      link: https://bioregistry.io/mesh:C083858
+      name: emivirine
+      prefix: mesh
+    ncit:C73147:
+      identifier: C73147
+      link: https://bioregistry.io/ncit:C73147
+      name: Emivirine
       prefix: ncit
 - edges:
   - source:
@@ -2819,10 +2877,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP3845
-      identifier: WP3845
-      link: https://bioregistry.io/wikipathways:WP3845
-      name: Canonical and non-canonical Notch signaling
+      curie: wikipathways:WP61
+      identifier: WP61
+      link: https://bioregistry.io/wikipathways:WP61
+      name: Notch signaling pathway (Netpath)
       prefix: wikipathways
   - source:
       curie: wikipathways:WP268
@@ -2831,10 +2889,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP61
-      identifier: WP61
-      link: https://bioregistry.io/wikipathways:WP61
-      name: Notch signaling pathway (Netpath)
+      curie: wikipathways:WP3845
+      identifier: WP3845
+      link: https://bioregistry.io/wikipathways:WP3845
+      name: Canonical and non-canonical Notch signaling
       prefix: wikipathways
   nodes:
     kegg.pathway:hsa04330:
@@ -2916,10 +2974,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: GO:0033211
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: GO:0033210
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -2928,10 +2986,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: GO:0033210
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: GO:0033211
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033210

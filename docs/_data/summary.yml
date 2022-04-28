@@ -1,5 +1,5 @@
 contributors:
-- count: 4248
+- count: 4481
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
@@ -68,15 +68,15 @@ negative:
 - count: 11
   source: hgnc
   target: reactome
+- count: 10
+  source: mesh
+  target: ncit
 - count: 9
   source: pr
   target: uniprot.chain
 - count: 8
   source: ccle
   target: efo
-- count: 8
-  source: mesh
-  target: ncit
 - count: 7
   source: doid
   target: efo
@@ -107,22 +107,22 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1045
+negative_mapping_count: 1047
 negative_prefix_count: 19
 positive:
-- count: 2173
+- count: 2307
   source: chebi
   target: mesh
 - count: 1303
   source: doid
   target: mesh
-- count: 530
+- count: 625
   source: mesh
   target: ncit
 - count: 498
   source: ccle
   target: efo
-- count: 403
+- count: 404
   source: go
   target: mesh
 - count: 370
@@ -179,7 +179,7 @@ positive:
 - count: 14
   source: efo
   target: mesh
-- count: 10
+- count: 11
   source: hp
   target: mesh
 - count: 9
@@ -215,13 +215,13 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 6939
+positive_mapping_count: 7170
 positive_prefix_count: 24
 predictions:
-- count: 12596
+- count: 12462
   source: chebi
   target: mesh
-- count: 12117
+- count: 12020
   source: mesh
   target: ncit
 - count: 10978
@@ -236,7 +236,7 @@ predictions:
 - count: 386
   source: doid
   target: mesh
-- count: 362
+- count: 361
   source: hp
   target: mesh
 - count: 274
@@ -263,7 +263,7 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 40905
+predictions_mapping_count: 40673
 predictions_prefix_count: 15
 unsure:
 - count: 26
