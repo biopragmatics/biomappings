@@ -493,6 +493,30 @@
       prefix: efo
 - edges:
   - source:
+      curie: ccle:A549_LUNG
+      identifier: A549_LUNG
+      link: https://bioregistry.io/ccle:A549_LUNG
+      name: A549
+      prefix: ccle
+    target:
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
+  - source:
+      curie: cellosaurus:CVCL_0023
+      identifier: CVCL_0023
+      link: https://bioregistry.io/cellosaurus:CVCL_0023
+      name: A-549
+      prefix: cellosaurus
+    target:
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
+  - source:
       curie: cellosaurus:CVCL_0023
       identifier: CVCL_0023
       link: https://bioregistry.io/cellosaurus:CVCL_0023
@@ -520,6 +544,11 @@
       link: https://bioregistry.io/efo:0001086
       name: A549
       prefix: efo
+    mesh:D000072283:
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
 - edges:
   - source:
       curie: cellosaurus:CVCL_0080
@@ -1914,6 +1943,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: chebi:75283
+      identifier: CHEBI:75283
+      link: https://bioregistry.io/chebi:75283
+      name: miltefosine
+      prefix: chebi
+    target:
+      curie: ncit:C1170
+      identifier: C1170
+      link: https://bioregistry.io/ncit:C1170
+      name: Miltefosine
+      prefix: ncit
+  nodes:
+    chebi:75283:
+      identifier: CHEBI:75283
+      link: https://bioregistry.io/chebi:75283
+      name: miltefosine
+      prefix: chebi
+    mesh:C039128:
+      identifier: C039128
+      link: https://bioregistry.io/mesh:C039128
+      name: miltefosine
+      prefix: mesh
+    ncit:C1170:
+      identifier: C1170
+      link: https://bioregistry.io/ncit:C1170
+      name: Miltefosine
+      prefix: ncit
+- edges:
+  - source:
       curie: chebi:82977
       identifier: CHEBI:82977
       link: https://bioregistry.io/chebi:82977
@@ -2494,6 +2552,221 @@
       prefix: umls
 - edges:
   - source:
+      curie: mesh:C535554
+      identifier: C535554
+      link: https://bioregistry.io/mesh:C535554
+      name: Abdominal obesity metabolic syndrome
+      prefix: mesh
+    target:
+      curie: umls:C2930930
+      identifier: C2930930
+      link: https://bioregistry.io/umls:C2930930
+      name: Abdominal obesity metabolic syndrome
+      prefix: umls
+  nodes:
+    doid:0060611:
+      identifier: DOID:0060611
+      link: https://bioregistry.io/doid:0060611
+      name: abdominal obesity-metabolic syndrome
+      prefix: doid
+    mesh:C535554:
+      identifier: C535554
+      link: https://bioregistry.io/mesh:C535554
+      name: Abdominal obesity metabolic syndrome
+      prefix: mesh
+    umls:C2930930:
+      identifier: C2930930
+      link: https://bioregistry.io/umls:C2930930
+      name: Abdominal obesity metabolic syndrome
+      prefix: umls
+- edges:
+  - source:
+      curie: doid:0060743
+      identifier: DOID:0060743
+      link: https://bioregistry.io/doid:0060743
+      name: methylmalonic acidemia cblB type
+      prefix: doid
+    target:
+      curie: efo:0009074
+      identifier: 0009074
+      link: https://bioregistry.io/efo:0009074
+      name: methylmalonic aciduria cblb type
+      prefix: efo
+  - source:
+      curie: efo:0009074
+      identifier: 0009074
+      link: https://bioregistry.io/efo:0009074
+      name: methylmalonic aciduria cblb type
+      prefix: efo
+    target:
+      curie: umls:C1855102
+      identifier: C1855102
+      link: https://bioregistry.io/umls:C1855102
+      name: Methylmalonic aciduria cblB type
+      prefix: umls
+  - source:
+      curie: mesh:C537361
+      identifier: C537361
+      link: https://bioregistry.io/mesh:C537361
+      name: Methylmalonic aciduria cblB type
+      prefix: mesh
+    target:
+      curie: umls:C1855102
+      identifier: C1855102
+      link: https://bioregistry.io/umls:C1855102
+      name: Methylmalonic aciduria cblB type
+      prefix: umls
+  nodes:
+    doid:0060743:
+      identifier: DOID:0060743
+      link: https://bioregistry.io/doid:0060743
+      name: methylmalonic acidemia cblB type
+      prefix: doid
+    efo:0009074:
+      identifier: 0009074
+      link: https://bioregistry.io/efo:0009074
+      name: methylmalonic aciduria cblb type
+      prefix: efo
+    mesh:C537361:
+      identifier: C537361
+      link: https://bioregistry.io/mesh:C537361
+      name: Methylmalonic aciduria cblB type
+      prefix: mesh
+    umls:C1855102:
+      identifier: C1855102
+      link: https://bioregistry.io/umls:C1855102
+      name: Methylmalonic aciduria cblB type
+      prefix: umls
+- edges:
+  - source:
+      curie: doid:0060887
+      identifier: DOID:0060887
+      link: https://bioregistry.io/doid:0060887
+      name: ossification of the posterior longitudinal ligament of spine
+      prefix: doid
+    target:
+      curie: efo:0005895
+      identifier: 0005895
+      link: https://bioregistry.io/efo:0005895
+      name: ossification of the posterior longitudinal ligament of the spine
+      prefix: efo
+  - source:
+      curie: doid:0060887
+      identifier: DOID:0060887
+      link: https://bioregistry.io/doid:0060887
+      name: ossification of the posterior longitudinal ligament of spine
+      prefix: doid
+    target:
+      curie: mesh:D017887
+      identifier: D017887
+      link: https://bioregistry.io/mesh:D017887
+      name: Ossification of Posterior Longitudinal Ligament
+      prefix: mesh
+  - source:
+      curie: efo:0005895
+      identifier: 0005895
+      link: https://bioregistry.io/efo:0005895
+      name: ossification of the posterior longitudinal ligament of the spine
+      prefix: efo
+    target:
+      curie: umls:C1865343
+      identifier: C1865343
+      link: https://bioregistry.io/umls:C1865343
+      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
+      prefix: umls
+  - source:
+      curie: mesh:C537143
+      identifier: C537143
+      link: https://bioregistry.io/mesh:C537143
+      name: Ossification of the posterior longitudinal ligament of the spine
+      prefix: mesh
+    target:
+      curie: mesh:D017887
+      identifier: D017887
+      link: https://bioregistry.io/mesh:D017887
+      name: Ossification of Posterior Longitudinal Ligament
+      prefix: mesh
+  - source:
+      curie: mesh:C537143
+      identifier: C537143
+      link: https://bioregistry.io/mesh:C537143
+      name: Ossification of the posterior longitudinal ligament of the spine
+      prefix: mesh
+    target:
+      curie: umls:C1865343
+      identifier: C1865343
+      link: https://bioregistry.io/umls:C1865343
+      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
+      prefix: umls
+  - source:
+      curie: mesh:D017887
+      identifier: D017887
+      link: https://bioregistry.io/mesh:D017887
+      name: Ossification of Posterior Longitudinal Ligament
+      prefix: mesh
+    target:
+      curie: umls:C1865343
+      identifier: C1865343
+      link: https://bioregistry.io/umls:C1865343
+      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
+      prefix: umls
+  nodes:
+    doid:0060887:
+      identifier: DOID:0060887
+      link: https://bioregistry.io/doid:0060887
+      name: ossification of the posterior longitudinal ligament of spine
+      prefix: doid
+    efo:0005895:
+      identifier: 0005895
+      link: https://bioregistry.io/efo:0005895
+      name: ossification of the posterior longitudinal ligament of the spine
+      prefix: efo
+    mesh:C537143:
+      identifier: C537143
+      link: https://bioregistry.io/mesh:C537143
+      name: Ossification of the posterior longitudinal ligament of the spine
+      prefix: mesh
+    mesh:D017887:
+      identifier: D017887
+      link: https://bioregistry.io/mesh:D017887
+      name: Ossification of Posterior Longitudinal Ligament
+      prefix: mesh
+    umls:C1865343:
+      identifier: C1865343
+      link: https://bioregistry.io/umls:C1865343
+      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
+      prefix: umls
+- edges:
+  - source:
+      curie: doid:0070227
+      identifier: DOID:0070227
+      link: https://bioregistry.io/doid:0070227
+      name: intrahepatic cholestasis of pregnancy
+      prefix: doid
+    target:
+      curie: mesh:C535932
+      identifier: C535932
+      link: https://bioregistry.io/mesh:C535932
+      name: Intrahepatic Cholestasis of Pregnancy
+      prefix: mesh
+  nodes:
+    doid:0070227:
+      identifier: DOID:0070227
+      link: https://bioregistry.io/doid:0070227
+      name: intrahepatic cholestasis of pregnancy
+      prefix: doid
+    efo:0009048:
+      identifier: 0009048
+      link: https://bioregistry.io/efo:0009048
+      name: Intrahepatic cholestasis of pregnancy
+      prefix: efo
+    mesh:C535932:
+      identifier: C535932
+      link: https://bioregistry.io/mesh:C535932
+      name: Intrahepatic Cholestasis of Pregnancy
+      prefix: mesh
+- edges:
+  - source:
       curie: doid:0080833
       identifier: DOID:0080833
       link: https://bioregistry.io/doid:0080833
@@ -2521,6 +2794,284 @@
       link: https://bioregistry.io/ncit:C98971
       name: Laryngomalacia
       prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009706
+      identifier: 0009706
+      link: https://bioregistry.io/efo:0009706
+      name: latent autoimmune diabetes in adults
+      prefix: efo
+    target:
+      curie: umls:C1739108
+      identifier: C1739108
+      link: https://bioregistry.io/umls:C1739108
+      name: Latent Autoimmune Diabetes in Adults
+      prefix: umls
+  - source:
+      curie: mesh:D000071698
+      identifier: D000071698
+      link: https://bioregistry.io/mesh:D000071698
+      name: Latent Autoimmune Diabetes in Adults
+      prefix: mesh
+    target:
+      curie: umls:C1739108
+      identifier: C1739108
+      link: https://bioregistry.io/umls:C1739108
+      name: Latent Autoimmune Diabetes in Adults
+      prefix: umls
+  nodes:
+    doid:0080846:
+      identifier: DOID:0080846
+      link: https://bioregistry.io/doid:0080846
+      name: latent autoimmune diabetes in adults
+      prefix: doid
+    efo:0009706:
+      identifier: 0009706
+      link: https://bioregistry.io/efo:0009706
+      name: latent autoimmune diabetes in adults
+      prefix: efo
+    mesh:D000071698:
+      identifier: D000071698
+      link: https://bioregistry.io/mesh:D000071698
+      name: Latent Autoimmune Diabetes in Adults
+      prefix: mesh
+    umls:C1739108:
+      identifier: C1739108
+      link: https://bioregistry.io/umls:C1739108
+      name: Latent Autoimmune Diabetes in Adults
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0009055
+      identifier: 0009055
+      link: https://bioregistry.io/efo:0009055
+      name: RIDDLE syndrome
+      prefix: efo
+    target:
+      curie: mesh:C567453
+      identifier: C567453
+      link: https://bioregistry.io/mesh:C567453
+      name: Riddle Syndrome
+      prefix: mesh
+  nodes:
+    doid:0090113:
+      identifier: DOID:0090113
+      link: https://bioregistry.io/doid:0090113
+      name: RIDDLE syndrome
+      prefix: doid
+    efo:0009055:
+      identifier: 0009055
+      link: https://bioregistry.io/efo:0009055
+      name: RIDDLE syndrome
+      prefix: efo
+    mesh:C567453:
+      identifier: C567453
+      link: https://bioregistry.io/mesh:C567453
+      name: Riddle Syndrome
+      prefix: mesh
+- edges:
+  - source:
+      curie: mesh:C566982
+      identifier: C566982
+      link: https://bioregistry.io/mesh:C566982
+      name: Asphyxiating Thoracic Dystrophy 2
+      prefix: mesh
+    target:
+      curie: umls:C1970005
+      identifier: C1970005
+      link: https://bioregistry.io/umls:C1970005
+      name: Asphyxiating Thoracic Dystrophy 2
+      prefix: umls
+  nodes:
+    doid:0110086:
+      identifier: DOID:0110086
+      link: https://bioregistry.io/doid:0110086
+      name: asphyxiating thoracic dystrophy 2
+      prefix: doid
+    mesh:C566982:
+      identifier: C566982
+      link: https://bioregistry.io/mesh:C566982
+      name: Asphyxiating Thoracic Dystrophy 2
+      prefix: mesh
+    umls:C1970005:
+      identifier: C1970005
+      link: https://bioregistry.io/umls:C1970005
+      name: Asphyxiating Thoracic Dystrophy 2
+      prefix: umls
+- edges:
+  - source:
+      curie: efo:0009021
+      identifier: 0009021
+      link: https://bioregistry.io/efo:0009021
+      name: Bardet-Biedl syndrome 1
+      prefix: efo
+    target:
+      curie: mesh:C537909
+      identifier: C537909
+      link: https://bioregistry.io/mesh:C537909
+      name: Bardet-Biedl syndrome 1
+      prefix: mesh
+  nodes:
+    doid:0110123:
+      identifier: DOID:0110123
+      link: https://bioregistry.io/doid:0110123
+      name: Bardet-Biedl syndrome 1
+      prefix: doid
+    efo:0009021:
+      identifier: 0009021
+      link: https://bioregistry.io/efo:0009021
+      name: Bardet-Biedl syndrome 1
+      prefix: efo
+    mesh:C537909:
+      identifier: C537909
+      link: https://bioregistry.io/mesh:C537909
+      name: Bardet-Biedl syndrome 1
+      prefix: mesh
+- edges:
+  - source:
+      curie: efo:0009024
+      identifier: 0009024
+      link: https://bioregistry.io/efo:0009024
+      name: Bardet-Biedl syndrome 4
+      prefix: efo
+    target:
+      curie: mesh:C537912
+      identifier: C537912
+      link: https://bioregistry.io/mesh:C537912
+      name: Bardet-Biedl syndrome 4
+      prefix: mesh
+  nodes:
+    doid:0110126:
+      identifier: DOID:0110126
+      link: https://bioregistry.io/doid:0110126
+      name: Bardet-Biedl syndrome 4
+      prefix: doid
+    efo:0009024:
+      identifier: 0009024
+      link: https://bioregistry.io/efo:0009024
+      name: Bardet-Biedl syndrome 4
+      prefix: efo
+    mesh:C537912:
+      identifier: C537912
+      link: https://bioregistry.io/mesh:C537912
+      name: Bardet-Biedl syndrome 4
+      prefix: mesh
+- edges:
+  - source:
+      curie: efo:0009026
+      identifier: 0009026
+      link: https://bioregistry.io/efo:0009026
+      name: Bardet-Biedl syndrome 7
+      prefix: efo
+    target:
+      curie: mesh:C565916
+      identifier: C565916
+      link: https://bioregistry.io/mesh:C565916
+      name: Bardet-Biedl Syndrome 7
+      prefix: mesh
+  nodes:
+    doid:0110129:
+      identifier: DOID:0110129
+      link: https://bioregistry.io/doid:0110129
+      name: Bardet-Biedl syndrome 7
+      prefix: doid
+    efo:0009026:
+      identifier: 0009026
+      link: https://bioregistry.io/efo:0009026
+      name: Bardet-Biedl syndrome 7
+      prefix: efo
+    mesh:C565916:
+      identifier: C565916
+      link: https://bioregistry.io/mesh:C565916
+      name: Bardet-Biedl Syndrome 7
+      prefix: mesh
+- edges:
+  - source:
+      curie: efo:0009027
+      identifier: 0009027
+      link: https://bioregistry.io/efo:0009027
+      name: Bardet-Biedl syndrome 9
+      prefix: efo
+    target:
+      curie: mesh:C565918
+      identifier: C565918
+      link: https://bioregistry.io/mesh:C565918
+      name: Bardet-Biedl Syndrome 9
+      prefix: mesh
+  nodes:
+    doid:0110131:
+      identifier: DOID:0110131
+      link: https://bioregistry.io/doid:0110131
+      name: Bardet-Biedl syndrome 9
+      prefix: doid
+    efo:0009027:
+      identifier: 0009027
+      link: https://bioregistry.io/efo:0009027
+      name: Bardet-Biedl syndrome 9
+      prefix: efo
+    mesh:C565918:
+      identifier: C565918
+      link: https://bioregistry.io/mesh:C565918
+      name: Bardet-Biedl Syndrome 9
+      prefix: mesh
+- edges:
+  - source:
+      curie: efo:0009022
+      identifier: 0009022
+      link: https://bioregistry.io/efo:0009022
+      name: Bardet-Biedl syndrome 10
+      prefix: efo
+    target:
+      curie: mesh:C565919
+      identifier: C565919
+      link: https://bioregistry.io/mesh:C565919
+      name: Bardet-Biedl Syndrome 10
+      prefix: mesh
+  nodes:
+    doid:0110132:
+      identifier: DOID:0110132
+      link: https://bioregistry.io/doid:0110132
+      name: Bardet-Biedl syndrome 10
+      prefix: doid
+    efo:0009022:
+      identifier: 0009022
+      link: https://bioregistry.io/efo:0009022
+      name: Bardet-Biedl syndrome 10
+      prefix: efo
+    mesh:C565919:
+      identifier: C565919
+      link: https://bioregistry.io/mesh:C565919
+      name: Bardet-Biedl Syndrome 10
+      prefix: mesh
+- edges:
+  - source:
+      curie: efo:0009023
+      identifier: 0009023
+      link: https://bioregistry.io/efo:0009023
+      name: Bardet-Biedl syndrome 12
+      prefix: efo
+    target:
+      curie: mesh:C565921
+      identifier: C565921
+      link: https://bioregistry.io/mesh:C565921
+      name: Bardet-Biedl Syndrome 12
+      prefix: mesh
+  nodes:
+    doid:0110134:
+      identifier: DOID:0110134
+      link: https://bioregistry.io/doid:0110134
+      name: Bardet-Biedl syndrome 12
+      prefix: doid
+    efo:0009023:
+      identifier: 0009023
+      link: https://bioregistry.io/efo:0009023
+      name: Bardet-Biedl syndrome 12
+      prefix: efo
+    mesh:C565921:
+      identifier: C565921
+      link: https://bioregistry.io/mesh:C565921
+      name: Bardet-Biedl Syndrome 12
+      prefix: mesh
 - edges:
   - source:
       curie: mesh:D000080365
@@ -2579,6 +3130,35 @@
       link: https://bioregistry.io/umls:C0524799
       name: Lung, Hyperlucent
       prefix: umls
+- edges:
+  - source:
+      curie: doid:11613
+      identifier: DOID:11613
+      link: https://bioregistry.io/doid:11613
+      name: hyperandrogenism
+      prefix: doid
+    target:
+      curie: mesh:D017588
+      identifier: D017588
+      link: https://bioregistry.io/mesh:D017588
+      name: Hyperandrogenism
+      prefix: mesh
+  nodes:
+    doid:11613:
+      identifier: DOID:11613
+      link: https://bioregistry.io/doid:11613
+      name: hyperandrogenism
+      prefix: doid
+    efo:0009006:
+      identifier: 0009006
+      link: https://bioregistry.io/efo:0009006
+      name: hyperandrogenism
+      prefix: efo
+    mesh:D017588:
+      identifier: D017588
+      link: https://bioregistry.io/mesh:D017588
+      name: Hyperandrogenism
+      prefix: mesh
 - edges:
   - source:
       curie: doid:13891
@@ -2695,6 +3275,180 @@
       link: https://bioregistry.io/umls:C0015634
       name: Farmer's Lung
       prefix: umls
+- edges:
+  - source:
+      curie: doid:1920
+      identifier: DOID:1920
+      link: https://bioregistry.io/doid:1920
+      name: hyperuricemia
+      prefix: doid
+    target:
+      curie: mesh:D033461
+      identifier: D033461
+      link: https://bioregistry.io/mesh:D033461
+      name: Hyperuricemia
+      prefix: mesh
+  nodes:
+    doid:1920:
+      identifier: DOID:1920
+      link: https://bioregistry.io/doid:1920
+      name: hyperuricemia
+      prefix: doid
+    efo:0009104:
+      identifier: 0009104
+      link: https://bioregistry.io/efo:0009104
+      name: hyperuricemia
+      prefix: efo
+    mesh:D033461:
+      identifier: D033461
+      link: https://bioregistry.io/mesh:D033461
+      name: Hyperuricemia
+      prefix: mesh
+- edges:
+  - source:
+      curie: doid:2001
+      identifier: DOID:2001
+      link: https://bioregistry.io/doid:2001
+      name: neuroma
+      prefix: doid
+    target:
+      curie: mesh:D009463
+      identifier: D009463
+      link: https://bioregistry.io/mesh:D009463
+      name: Neuroma
+      prefix: mesh
+  - source:
+      curie: doid:2001
+      identifier: DOID:2001
+      link: https://bioregistry.io/doid:2001
+      name: neuroma
+      prefix: doid
+    target:
+      curie: ncit:C3275
+      identifier: C3275
+      link: https://bioregistry.io/ncit:C3275
+      name: Neuroma
+      prefix: ncit
+  - source:
+      curie: efo:0009619
+      identifier: 0009619
+      link: https://bioregistry.io/efo:0009619
+      name: neuroma
+      prefix: efo
+    target:
+      curie: ncit:C3275
+      identifier: C3275
+      link: https://bioregistry.io/ncit:C3275
+      name: Neuroma
+      prefix: ncit
+  nodes:
+    doid:2001:
+      identifier: DOID:2001
+      link: https://bioregistry.io/doid:2001
+      name: neuroma
+      prefix: doid
+    efo:0009619:
+      identifier: 0009619
+      link: https://bioregistry.io/efo:0009619
+      name: neuroma
+      prefix: efo
+    mesh:D009463:
+      identifier: D009463
+      link: https://bioregistry.io/mesh:D009463
+      name: Neuroma
+      prefix: mesh
+    ncit:C3275:
+      identifier: C3275
+      link: https://bioregistry.io/ncit:C3275
+      name: Neuroma
+      prefix: ncit
+- edges:
+  - source:
+      curie: doid:2951
+      identifier: DOID:2951
+      link: https://bioregistry.io/doid:2951
+      name: motion sickness
+      prefix: doid
+    target:
+      curie: mesh:D009041
+      identifier: D009041
+      link: https://bioregistry.io/mesh:D009041
+      name: Motion Sickness
+      prefix: mesh
+  - source:
+      curie: doid:2951
+      identifier: DOID:2951
+      link: https://bioregistry.io/doid:2951
+      name: motion sickness
+      prefix: doid
+    target:
+      curie: ncit:C34824
+      identifier: C34824
+      link: https://bioregistry.io/ncit:C34824
+      name: Motion Sickness
+      prefix: ncit
+  - source:
+      curie: efo:0006928
+      identifier: 0006928
+      link: https://bioregistry.io/efo:0006928
+      name: motion sickness
+      prefix: efo
+    target:
+      curie: ncit:C34824
+      identifier: C34824
+      link: https://bioregistry.io/ncit:C34824
+      name: Motion Sickness
+      prefix: ncit
+  nodes:
+    doid:2951:
+      identifier: DOID:2951
+      link: https://bioregistry.io/doid:2951
+      name: motion sickness
+      prefix: doid
+    efo:0006928:
+      identifier: 0006928
+      link: https://bioregistry.io/efo:0006928
+      name: motion sickness
+      prefix: efo
+    mesh:D009041:
+      identifier: D009041
+      link: https://bioregistry.io/mesh:D009041
+      name: Motion Sickness
+      prefix: mesh
+    ncit:C34824:
+      identifier: C34824
+      link: https://bioregistry.io/ncit:C34824
+      name: Motion Sickness
+      prefix: ncit
+- edges:
+  - source:
+      curie: doid:3767
+      identifier: DOID:3767
+      link: https://bioregistry.io/doid:3767
+      name: vaginal discharge
+      prefix: doid
+    target:
+      curie: mesh:D019522
+      identifier: D019522
+      link: https://bioregistry.io/mesh:D019522
+      name: Vaginal Discharge
+      prefix: mesh
+  nodes:
+    doid:3767:
+      identifier: DOID:3767
+      link: https://bioregistry.io/doid:3767
+      name: vaginal discharge
+      prefix: doid
+    efo:0009365:
+      identifier: 0009365
+      link: https://bioregistry.io/efo:0009365
+      name: vaginal discharge
+      prefix: efo
+    mesh:D019522:
+      identifier: D019522
+      link: https://bioregistry.io/mesh:D019522
+      name: Vaginal Discharge
+      prefix: mesh
 - edges:
   - source:
       curie: mesh:D000077192
@@ -2877,10 +3631,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP61
-      identifier: WP61
-      link: https://bioregistry.io/wikipathways:WP61
-      name: Notch signaling pathway (Netpath)
+      curie: wikipathways:WP3845
+      identifier: WP3845
+      link: https://bioregistry.io/wikipathways:WP3845
+      name: Canonical and non-canonical Notch signaling
       prefix: wikipathways
   - source:
       curie: wikipathways:WP268
@@ -2889,10 +3643,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP3845
-      identifier: WP3845
-      link: https://bioregistry.io/wikipathways:WP3845
-      name: Canonical and non-canonical Notch signaling
+      curie: wikipathways:WP61
+      identifier: WP61
+      link: https://bioregistry.io/wikipathways:WP61
+      name: Notch signaling pathway (Netpath)
       prefix: wikipathways
   nodes:
     kegg.pathway:hsa04330:
@@ -3084,6 +3838,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: efo:0009502
+      identifier: 0009502
+      link: https://bioregistry.io/efo:0009502
+      name: abdominal injury
+      prefix: efo
+    target:
+      curie: ncit:C34332
+      identifier: C34332
+      link: https://bioregistry.io/ncit:C34332
+      name: Abdominal Injury
+      prefix: ncit
+  nodes:
+    efo:0009502:
+      identifier: 0009502
+      link: https://bioregistry.io/efo:0009502
+      name: abdominal injury
+      prefix: efo
+    mesh:D000007:
+      identifier: D000007
+      link: https://bioregistry.io/mesh:D000007
+      name: Abdominal Injuries
+      prefix: mesh
+    ncit:C34332:
+      identifier: C34332
+      link: https://bioregistry.io/ncit:C34332
+      name: Abdominal Injury
+      prefix: ncit
+- edges:
+  - source:
       curie: chebi:68606
       identifier: CHEBI:68606
       link: https://bioregistry.io/chebi:68606
@@ -3197,6 +3980,35 @@
       identifier: C129015
       link: https://bioregistry.io/ncit:C129015
       name: Simeprevir
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0005922
+      identifier: 0005922
+      link: https://bioregistry.io/efo:0005922
+      name: esophageal squamous cell carcinoma
+      prefix: efo
+    target:
+      curie: ncit:C4024
+      identifier: C4024
+      link: https://bioregistry.io/ncit:C4024
+      name: Esophageal Squamous Cell Carcinoma
+      prefix: ncit
+  nodes:
+    efo:0005922:
+      identifier: 0005922
+      link: https://bioregistry.io/efo:0005922
+      name: esophageal squamous cell carcinoma
+      prefix: efo
+    mesh:D000077277:
+      identifier: D000077277
+      link: https://bioregistry.io/mesh:D000077277
+      name: Esophageal Squamous Cell Carcinoma
+      prefix: mesh
+    ncit:C4024:
+      identifier: C4024
+      link: https://bioregistry.io/ncit:C4024
+      name: Esophageal Squamous Cell Carcinoma
       prefix: ncit
 - edges:
   - source:
@@ -3374,6 +4186,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: efo:0009659
+      identifier: 0009659
+      link: https://bioregistry.io/efo:0009659
+      name: aneurysm
+      prefix: efo
+    target:
+      curie: ncit:C26693
+      identifier: C26693
+      link: https://bioregistry.io/ncit:C26693
+      name: Aneurysm
+      prefix: ncit
+  nodes:
+    efo:0009659:
+      identifier: 0009659
+      link: https://bioregistry.io/efo:0009659
+      name: aneurysm
+      prefix: efo
+    mesh:D000783:
+      identifier: D000783
+      link: https://bioregistry.io/mesh:D000783
+      name: Aneurysm
+      prefix: mesh
+    ncit:C26693:
+      identifier: C26693
+      link: https://bioregistry.io/ncit:C26693
+      name: Aneurysm
+      prefix: ncit
+- edges:
+  - source:
       curie: chebi:28148
       identifier: CHEBI:28148
       link: https://bioregistry.io/chebi:28148
@@ -3400,6 +4241,122 @@
       identifier: C61083
       link: https://bioregistry.io/ncit:C61083
       name: Sodium Stibogluconate
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009446
+      identifier: 0009446
+      link: https://bioregistry.io/efo:0009446
+      name: asphyxia
+      prefix: efo
+    target:
+      curie: ncit:C50465
+      identifier: C50465
+      link: https://bioregistry.io/ncit:C50465
+      name: Asphyxia
+      prefix: ncit
+  nodes:
+    efo:0009446:
+      identifier: 0009446
+      link: https://bioregistry.io/efo:0009446
+      name: asphyxia
+      prefix: efo
+    mesh:D001237:
+      identifier: D001237
+      link: https://bioregistry.io/mesh:D001237
+      name: Asphyxia
+      prefix: mesh
+    ncit:C50465:
+      identifier: C50465
+      link: https://bioregistry.io/ncit:C50465
+      name: Asphyxia
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009845
+      identifier: 0009845
+      link: https://bioregistry.io/efo:0009845
+      name: catalepsy
+      prefix: efo
+    target:
+      curie: ncit:C34452
+      identifier: C34452
+      link: https://bioregistry.io/ncit:C34452
+      name: Catalepsy
+      prefix: ncit
+  nodes:
+    efo:0009845:
+      identifier: 0009845
+      link: https://bioregistry.io/efo:0009845
+      name: catalepsy
+      prefix: efo
+    mesh:D002375:
+      identifier: D002375
+      link: https://bioregistry.io/mesh:D002375
+      name: Catalepsy
+      prefix: mesh
+    ncit:C34452:
+      identifier: C34452
+      link: https://bioregistry.io/ncit:C34452
+      name: Catalepsy
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009636
+      identifier: 0009636
+      link: https://bioregistry.io/efo:0009636
+      name: cesarean section
+      prefix: efo
+    target:
+      curie: ncit:C46088
+      identifier: C46088
+      link: https://bioregistry.io/ncit:C46088
+      name: Cesarean Section
+      prefix: ncit
+  nodes:
+    efo:0009636:
+      identifier: 0009636
+      link: https://bioregistry.io/efo:0009636
+      name: cesarean section
+      prefix: efo
+    mesh:D002585:
+      identifier: D002585
+      link: https://bioregistry.io/mesh:D002585
+      name: Cesarean Section
+      prefix: mesh
+    ncit:C46088:
+      identifier: C46088
+      link: https://bioregistry.io/ncit:C46088
+      name: Cesarean Section
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009714
+      identifier: 0009714
+      link: https://bioregistry.io/efo:0009714
+      name: chronic disease
+      prefix: efo
+    target:
+      curie: ncit:C165593
+      identifier: C165593
+      link: https://bioregistry.io/ncit:C165593
+      name: Chronic Disease
+      prefix: ncit
+  nodes:
+    efo:0009714:
+      identifier: 0009714
+      link: https://bioregistry.io/efo:0009714
+      name: chronic disease
+      prefix: efo
+    mesh:D002908:
+      identifier: D002908
+      link: https://bioregistry.io/mesh:D002908
+      name: Chronic Disease
+      prefix: mesh
+    ncit:C165593:
+      identifier: C165593
+      link: https://bioregistry.io/ncit:C165593
+      name: Chronic Disease
       prefix: ncit
 - edges:
   - source:
@@ -3432,6 +4389,64 @@
       prefix: pfam
 - edges:
   - source:
+      curie: efo:0009520
+      identifier: 0009520
+      link: https://bioregistry.io/efo:0009520
+      name: contraception
+      prefix: efo
+    target:
+      curie: ncit:C37932
+      identifier: C37932
+      link: https://bioregistry.io/ncit:C37932
+      name: Contraception
+      prefix: ncit
+  nodes:
+    efo:0009520:
+      identifier: 0009520
+      link: https://bioregistry.io/efo:0009520
+      name: contraception
+      prefix: efo
+    mesh:D003267:
+      identifier: D003267
+      link: https://bioregistry.io/mesh:D003267
+      name: Contraception
+      prefix: mesh
+    ncit:C37932:
+      identifier: C37932
+      link: https://bioregistry.io/ncit:C37932
+      name: Contraception
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009527
+      identifier: 0009527
+      link: https://bioregistry.io/efo:0009527
+      name: frostbite
+      prefix: efo
+    target:
+      curie: ncit:C34627
+      identifier: C34627
+      link: https://bioregistry.io/ncit:C34627
+      name: Frostbite
+      prefix: ncit
+  nodes:
+    efo:0009527:
+      identifier: 0009527
+      link: https://bioregistry.io/efo:0009527
+      name: frostbite
+      prefix: efo
+    mesh:D005627:
+      identifier: D005627
+      link: https://bioregistry.io/mesh:D005627
+      name: Frostbite
+      prefix: mesh
+    ncit:C34627:
+      identifier: C34627
+      link: https://bioregistry.io/ncit:C34627
+      name: Frostbite
+      prefix: ncit
+- edges:
+  - source:
       curie: ncit:C12467
       identifier: C12467
       link: https://bioregistry.io/ncit:C12467
@@ -3459,6 +4474,122 @@
       link: https://bioregistry.io/uberon:0001806
       name: sympathetic ganglion
       prefix: uberon
+- edges:
+  - source:
+      curie: efo:0009579
+      identifier: 0009579
+      link: https://bioregistry.io/efo:0009579
+      name: postpartum hemorrhage
+      prefix: efo
+    target:
+      curie: ncit:C92853
+      identifier: C92853
+      link: https://bioregistry.io/ncit:C92853
+      name: Postpartum Hemorrhage
+      prefix: ncit
+  nodes:
+    efo:0009579:
+      identifier: 0009579
+      link: https://bioregistry.io/efo:0009579
+      name: postpartum hemorrhage
+      prefix: efo
+    mesh:D006473:
+      identifier: D006473
+      link: https://bioregistry.io/mesh:D006473
+      name: Postpartum Hemorrhage
+      prefix: mesh
+    ncit:C92853:
+      identifier: C92853
+      link: https://bioregistry.io/ncit:C92853
+      name: Postpartum Hemorrhage
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0008485
+      identifier: 0008485
+      link: https://bioregistry.io/efo:0008485
+      name: homosexuality
+      prefix: efo
+    target:
+      curie: ncit:C84363
+      identifier: C84363
+      link: https://bioregistry.io/ncit:C84363
+      name: Homosexuality
+      prefix: ncit
+  nodes:
+    efo:0008485:
+      identifier: 0008485
+      link: https://bioregistry.io/efo:0008485
+      name: homosexuality
+      prefix: efo
+    mesh:D006716:
+      identifier: D006716
+      link: https://bioregistry.io/mesh:D006716
+      name: Homosexuality
+      prefix: mesh
+    ncit:C84363:
+      identifier: C84363
+      link: https://bioregistry.io/ncit:C84363
+      name: Homosexuality
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009612
+      identifier: 0009612
+      link: https://bioregistry.io/efo:0009612
+      name: jaw fracture
+      prefix: efo
+    target:
+      curie: ncit:C26803
+      identifier: C26803
+      link: https://bioregistry.io/ncit:C26803
+      name: Jaw Fracture
+      prefix: ncit
+  nodes:
+    efo:0009612:
+      identifier: 0009612
+      link: https://bioregistry.io/efo:0009612
+      name: jaw fracture
+      prefix: efo
+    mesh:D007572:
+      identifier: D007572
+      link: https://bioregistry.io/mesh:D007572
+      name: Jaw Fractures
+      prefix: mesh
+    ncit:C26803:
+      identifier: C26803
+      link: https://bioregistry.io/ncit:C26803
+      name: Jaw Fracture
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009126
+      identifier: 0009126
+      link: https://bioregistry.io/efo:0009126
+      name: leukapheresis
+      prefix: efo
+    target:
+      curie: ncit:C15269
+      identifier: C15269
+      link: https://bioregistry.io/ncit:C15269
+      name: Leukapheresis
+      prefix: ncit
+  nodes:
+    efo:0009126:
+      identifier: 0009126
+      link: https://bioregistry.io/efo:0009126
+      name: leukapheresis
+      prefix: efo
+    mesh:D007937:
+      identifier: D007937
+      link: https://bioregistry.io/mesh:D007937
+      name: Leukapheresis
+      prefix: mesh
+    ncit:C15269:
+      identifier: C15269
+      link: https://bioregistry.io/ncit:C15269
+      name: Leukapheresis
+      prefix: ncit
 - edges:
   - source:
       curie: chebi:6637
@@ -3545,6 +4676,209 @@
       identifier: C623
       link: https://bioregistry.io/ncit:C623
       name: Magnesium Sulfate
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0004352
+      identifier: '0004352'
+      link: https://bioregistry.io/efo:0004352
+      name: mortality
+      prefix: efo
+    target:
+      curie: ncit:C16880
+      identifier: C16880
+      link: https://bioregistry.io/ncit:C16880
+      name: Mortality
+      prefix: ncit
+  nodes:
+    efo:0004352:
+      identifier: '0004352'
+      link: https://bioregistry.io/efo:0004352
+      name: mortality
+      prefix: efo
+    mesh:D009026:
+      identifier: D009026
+      link: https://bioregistry.io/mesh:D009026
+      name: Mortality
+      prefix: mesh
+    ncit:C16880:
+      identifier: C16880
+      link: https://bioregistry.io/ncit:C16880
+      name: Mortality
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009426
+      identifier: 0009426
+      link: https://bioregistry.io/efo:0009426
+      name: necrosis
+      prefix: efo
+    target:
+      curie: go:0070265
+      identifier: GO:0070265
+      link: https://bioregistry.io/go:0070265
+      name: necrotic cell death
+      prefix: go
+  nodes:
+    efo:0009426:
+      identifier: 0009426
+      link: https://bioregistry.io/efo:0009426
+      name: necrosis
+      prefix: efo
+    go:0070265:
+      identifier: GO:0070265
+      link: https://bioregistry.io/go:0070265
+      name: necrotic cell death
+      prefix: go
+    mesh:D009336:
+      identifier: D009336
+      link: https://bioregistry.io/mesh:D009336
+      name: Necrosis
+      prefix: mesh
+- edges:
+  - source:
+      curie: efo:0009611
+      identifier: 0009611
+      link: https://bioregistry.io/efo:0009611
+      name: orbital fracture
+      prefix: efo
+    target:
+      curie: ncit:C118744
+      identifier: C118744
+      link: https://bioregistry.io/ncit:C118744
+      name: Orbital Fracture
+      prefix: ncit
+  nodes:
+    efo:0009611:
+      identifier: 0009611
+      link: https://bioregistry.io/efo:0009611
+      name: orbital fracture
+      prefix: efo
+    mesh:D009917:
+      identifier: D009917
+      link: https://bioregistry.io/mesh:D009917
+      name: Orbital Fractures
+      prefix: mesh
+    ncit:C118744:
+      identifier: C118744
+      link: https://bioregistry.io/ncit:C118744
+      name: Orbital Fracture
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009637
+      identifier: 0009637
+      link: https://bioregistry.io/efo:0009637
+      name: pleural effusion
+      prefix: efo
+    target:
+      curie: uberon:0000175
+      identifier: UBERON:0000175
+      link: https://bioregistry.io/uberon:0000175
+      name: pleural effusion
+      prefix: uberon
+  nodes:
+    efo:0009637:
+      identifier: 0009637
+      link: https://bioregistry.io/efo:0009637
+      name: pleural effusion
+      prefix: efo
+    mesh:D010996:
+      identifier: D010996
+      link: https://bioregistry.io/mesh:D010996
+      name: Pleural Effusion
+      prefix: mesh
+    uberon:0000175:
+      identifier: UBERON:0000175
+      link: https://bioregistry.io/uberon:0000175
+      name: pleural effusion
+      prefix: uberon
+- edges:
+  - source:
+      curie: efo:0009581
+      identifier: 0009581
+      link: https://bioregistry.io/efo:0009581
+      name: rehabilitation
+      prefix: efo
+    target:
+      curie: ncit:C15315
+      identifier: C15315
+      link: https://bioregistry.io/ncit:C15315
+      name: Rehabilitation
+      prefix: ncit
+  nodes:
+    efo:0009581:
+      identifier: 0009581
+      link: https://bioregistry.io/efo:0009581
+      name: rehabilitation
+      prefix: efo
+    mesh:D012046:
+      identifier: D012046
+      link: https://bioregistry.io/mesh:D012046
+      name: Rehabilitation
+      prefix: mesh
+    ncit:C15315:
+      identifier: C15315
+      link: https://bioregistry.io/ncit:C15315
+      name: Rehabilitation
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009620
+      identifier: 0009620
+      link: https://bioregistry.io/efo:0009620
+      name: rib fracture
+      prefix: efo
+    target:
+      curie: ncit:C34990
+      identifier: C34990
+      link: https://bioregistry.io/ncit:C34990
+      name: Rib Fracture
+      prefix: ncit
+  nodes:
+    efo:0009620:
+      identifier: 0009620
+      link: https://bioregistry.io/efo:0009620
+      name: rib fracture
+      prefix: efo
+    mesh:D012253:
+      identifier: D012253
+      link: https://bioregistry.io/mesh:D012253
+      name: Rib Fractures
+      prefix: mesh
+    ncit:C34990:
+      identifier: C34990
+      link: https://bioregistry.io/ncit:C34990
+      name: Rib Fracture
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009621
+      identifier: 0009621
+      link: https://bioregistry.io/efo:0009621
+      name: shoulder fracture
+      prefix: efo
+    target:
+      curie: ncit:C35021
+      identifier: C35021
+      link: https://bioregistry.io/ncit:C35021
+      name: Shoulder Fracture
+      prefix: ncit
+  nodes:
+    efo:0009621:
+      identifier: 0009621
+      link: https://bioregistry.io/efo:0009621
+      name: shoulder fracture
+      prefix: efo
+    mesh:D012784:
+      identifier: D012784
+      link: https://bioregistry.io/mesh:D012784
+      name: Shoulder Fractures
+      prefix: mesh
+    ncit:C35021:
+      identifier: C35021
+      link: https://bioregistry.io/ncit:C35021
+      name: Shoulder Fracture
       prefix: ncit
 - edges:
   - source:
@@ -3809,6 +5143,64 @@
       prefix: ncit
 - edges:
   - source:
+      curie: efo:0007624
+      identifier: '0007624'
+      link: https://bioregistry.io/efo:0007624
+      name: suicide
+      prefix: efo
+    target:
+      curie: ncit:C3394
+      identifier: C3394
+      link: https://bioregistry.io/ncit:C3394
+      name: Suicide
+      prefix: ncit
+  nodes:
+    efo:0007624:
+      identifier: '0007624'
+      link: https://bioregistry.io/efo:0007624
+      name: suicide
+      prefix: efo
+    mesh:D013405:
+      identifier: D013405
+      link: https://bioregistry.io/mesh:D013405
+      name: Suicide
+      prefix: mesh
+    ncit:C3394:
+      identifier: C3394
+      link: https://bioregistry.io/ncit:C3394
+      name: Suicide
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009869
+      identifier: 0009869
+      link: https://bioregistry.io/efo:0009869
+      name: xerostomia
+      prefix: efo
+    target:
+      curie: ncit:C26917
+      identifier: C26917
+      link: https://bioregistry.io/ncit:C26917
+      name: Xerostomia
+      prefix: ncit
+  nodes:
+    efo:0009869:
+      identifier: 0009869
+      link: https://bioregistry.io/efo:0009869
+      name: xerostomia
+      prefix: efo
+    mesh:D014987:
+      identifier: D014987
+      link: https://bioregistry.io/mesh:D014987
+      name: Xerostomia
+      prefix: mesh
+    ncit:C26917:
+      identifier: C26917
+      link: https://bioregistry.io/ncit:C26917
+      name: Xerostomia
+      prefix: ncit
+- edges:
+  - source:
       curie: chebi:6636
       identifier: CHEBI:6636
       link: https://bioregistry.io/chebi:6636
@@ -3838,6 +5230,64 @@
       prefix: ncit
 - edges:
   - source:
+      curie: efo:0009836
+      identifier: 0009836
+      link: https://bioregistry.io/efo:0009836
+      name: bronchoconstriction
+      prefix: efo
+    target:
+      curie: ncit:C40942
+      identifier: C40942
+      link: https://bioregistry.io/ncit:C40942
+      name: Bronchoconstriction
+      prefix: ncit
+  nodes:
+    efo:0009836:
+      identifier: 0009836
+      link: https://bioregistry.io/efo:0009836
+      name: bronchoconstriction
+      prefix: efo
+    mesh:D016084:
+      identifier: D016084
+      link: https://bioregistry.io/mesh:D016084
+      name: Bronchoconstriction
+      prefix: mesh
+    ncit:C40942:
+      identifier: C40942
+      link: https://bioregistry.io/ncit:C40942
+      name: Bronchoconstriction
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0009577
+      identifier: 0009577
+      link: https://bioregistry.io/efo:0009577
+      name: orthopedic nursing
+      prefix: efo
+    target:
+      curie: ncit:C20875
+      identifier: C20875
+      link: https://bioregistry.io/ncit:C20875
+      name: Orthopedic Nursing
+      prefix: ncit
+  nodes:
+    efo:0009577:
+      identifier: 0009577
+      link: https://bioregistry.io/efo:0009577
+      name: orthopedic nursing
+      prefix: efo
+    mesh:D016530:
+      identifier: D016530
+      link: https://bioregistry.io/mesh:D016530
+      name: Orthopedic Nursing
+      prefix: mesh
+    ncit:C20875:
+      identifier: C20875
+      link: https://bioregistry.io/ncit:C20875
+      name: Orthopedic Nursing
+      prefix: ncit
+- edges:
+  - source:
       curie: chebi:32139
       identifier: CHEBI:32139
       link: https://bioregistry.io/chebi:32139
@@ -3864,6 +5314,35 @@
       identifier: C29457
       link: https://bioregistry.io/ncit:C29457
       name: Sodium Bicarbonate
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0007986
+      identifier: 0007986
+      link: https://bioregistry.io/efo:0007986
+      name: reticulocyte count
+      prefix: efo
+    target:
+      curie: ncit:C51947
+      identifier: C51947
+      link: https://bioregistry.io/ncit:C51947
+      name: Reticulocyte Count
+      prefix: ncit
+  nodes:
+    efo:0007986:
+      identifier: 0007986
+      link: https://bioregistry.io/efo:0007986
+      name: reticulocyte count
+      prefix: efo
+    mesh:D017701:
+      identifier: D017701
+      link: https://bioregistry.io/mesh:D017701
+      name: Reticulocyte Count
+      prefix: mesh
+    ncit:C51947:
+      identifier: C51947
+      link: https://bioregistry.io/ncit:C51947
+      name: Reticulocyte Count
       prefix: ncit
 - edges:
   - source:
@@ -3922,6 +5401,35 @@
       identifier: C47726
       link: https://bioregistry.io/ncit:C47726
       name: Sodium Lactate
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0007046
+      identifier: '0007046'
+      link: https://bioregistry.io/efo:0007046
+      name: executive function
+      prefix: efo
+    target:
+      curie: ncit:C88419
+      identifier: C88419
+      link: https://bioregistry.io/ncit:C88419
+      name: Executive Function
+      prefix: ncit
+  nodes:
+    efo:0007046:
+      identifier: '0007046'
+      link: https://bioregistry.io/efo:0007046
+      name: executive function
+      prefix: efo
+    mesh:D056344:
+      identifier: D056344
+      link: https://bioregistry.io/mesh:D056344
+      name: Executive Function
+      prefix: mesh
+    ncit:C88419:
+      identifier: C88419
+      link: https://bioregistry.io/ncit:C88419
+      name: Executive Function
       prefix: ncit
 - edges:
   - source:
@@ -4213,6 +5721,35 @@
       link: https://bioregistry.io/ncit:C68596
       name: Aurora Kinase B
       prefix: ncit
+- edges:
+  - source:
+      curie: efo:0007589
+      identifier: 0007589
+      link: https://bioregistry.io/efo:0007589
+      name: etiolation
+      prefix: efo
+    target:
+      curie: go:0009647
+      identifier: GO:0009647
+      link: https://bioregistry.io/go:0009647
+      name: skotomorphogenesis
+      prefix: go
+  nodes:
+    efo:0007589:
+      identifier: 0007589
+      link: https://bioregistry.io/efo:0007589
+      name: etiolation
+      prefix: efo
+    go:0009647:
+      identifier: GO:0009647
+      link: https://bioregistry.io/go:0009647
+      name: skotomorphogenesis
+      prefix: go
+    mesh:D064527:
+      identifier: D064527
+      link: https://bioregistry.io/mesh:D064527
+      name: Etiolation
+      prefix: mesh
 - edges:
   - source:
       curie: chebi:50223
