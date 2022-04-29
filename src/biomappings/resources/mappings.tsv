@@ -2229,6 +2229,7 @@ doid	DOID:0050577	cranioectodermal dysplasia	skos:exactMatch	umls	C4551571	Crani
 doid	DOID:0050578	occult macular dystrophy	skos:exactMatch	umls	C3150833	OCCULT MACULAR DYSTROPHY	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050579	glycogen storage disease XV	skos:exactMatch	umls	C3150754	GLYCOGEN STORAGE DISEASE XV	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050585	congenital generalized lipodystrophy	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050599	abdominal tuberculosis	skos:exactMatch	umls	C4087490	Abdominal tuberculosis	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050608	Askin's tumor	skos:exactMatch	umls	C0877849	Askin's tumor	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050696	fetal alcohol spectrum disorder	skos:exactMatch	mesh	D063647	Fetal Alcohol Spectrum Disorders	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050853	chronic venous insufficiency	skos:exactMatch	efo	0007940	chronic venous insufficiency	manually_reviewed	orcid:0000-0001-9439-5346
@@ -2243,6 +2244,8 @@ doid	DOID:0060317	lung abscess	skos:exactMatch	umls	C0024110	Lung Abscess	manual
 doid	DOID:0060319	cardiac arrest	skos:exactMatch	efo	0009492	cardiac arrest	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0060325	cervical polyp	skos:exactMatch	efo	0009475	cervical polyp	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0060538	purpura fulminans	skos:exactMatch	efo	1001913	Purpura Fulminans	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0060611	abdominal obesity-metabolic syndrome	skos:exactMatch	umls	C2930930	Abdominal obesity metabolic syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0060612	abdominal obesity-metabolic syndrome 3	skos:exactMatch	umls	C4014361	ABDOMINAL OBESITY-METABOLIC SYNDROME 3	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0060743	methylmalonic acidemia cblB type	skos:exactMatch	mesh	C537361	Methylmalonic aciduria cblB type	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0060743	methylmalonic acidemia cblB type	skos:exactMatch	umls	C1855102	Methylmalonic aciduria cblB type	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0060887	ossification of the posterior longitudinal ligament of spine	skos:exactMatch	mesh	C537143	Ossification of the posterior longitudinal ligament of the spine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4232,6 +4235,9 @@ mesh	C584155	EIF3F protein, human	skos:exactMatch	uniprot	O00303	EIF3F	manually_
 mesh	D000001	Calcimycin	skos:exactMatch	chebi	CHEBI:3305	Calcimycin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000002	Temefos	skos:exactMatch	chebi	CHEBI:38954	temephos	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000002	Temefos	skos:exactMatch	ncit	C80606	Temefos	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D000007	Abdominal Injuries	skos:exactMatch	efo	0009502	abdominal injury	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000007	Abdominal Injuries	skos:exactMatch	ncit	C34332	Abdominal Injury	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000009	Abdominal Muscles	skos:exactMatch	ncit	C32040	Abdominal Muscle	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000019	Abortifacient Agents	skos:exactMatch	chebi	CHEBI:50691	abortifacient	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000066450	Mouse Embryonic Stem Cells	skos:exactMatch	efo	0004038	mouse embryonic stem cell	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000066530	Neurological Rehabilitation	skos:exactMatch	ncit	C157934	Neurological Rehabilitation	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4705,6 +4711,7 @@ mesh	D000995	Antitubercular Agents	skos:exactMatch	chebi	CHEBI:33231	antitubercu
 mesh	D000996	Antitussive Agents	skos:exactMatch	chebi	CHEBI:51177	antitussive	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000998	Antiviral Agents	skos:exactMatch	ncit	C281	Antiviral Agent	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001010	Anxiety, Separation	skos:exactMatch	doid	DOID:10685	separation anxiety disorder	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D001012	Aorta, Abdominal	skos:exactMatch	ncit	C32038	Abdominal Aorta	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001032	Apazone	skos:exactMatch	chebi	CHEBI:38010	apazone	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D001052	Apoferritins	skos:exactMatch	chebi	CHEBI:2784	Apoferritin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001058	Apomorphine	skos:exactMatch	chebi	CHEBI:48538	apomorphine	manually_reviewed	orcid:0000-0003-4423-4370
@@ -5416,6 +5423,7 @@ mesh	D011654	Pulmonary Edema	skos:exactMatch	ncit	C26868	Pulmonary Edema	manuall
 mesh	D011658	Pulmonary Fibrosis	skos:exactMatch	ncit	C26869	Pulmonary Fibrosis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D011768	Pyruvate Dehydrogenase Complex	skos:exactMatch	go	GO:0045254	pyruvate dehydrogenase complex	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D011839	Radiation, Ionizing	skos:exactMatch	ncit	C17052	Ionizing Radiation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D011860	Radiography, Abdominal	skos:exactMatch	ncit	C38102	Abdominal Radiography	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D011885	Radius Fractures	skos:exactMatch	ncit	C99039	Radius Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D011900	Ranula	skos:exactMatch	doid	DOID:12904	mucocele of salivary gland	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D011906	Rat-Bite Fever	skos:exactMatch	doid	DOID:13238	Haverhill fever	manually_reviewed	orcid:0000-0003-1307-2508
@@ -5689,6 +5697,7 @@ mesh	D017325	Hepatitis B Vaccines	skos:exactMatch	ncit	C29091	Hepatitis B Vaccin
 mesh	D017368	Protein Prenylation	skos:exactMatch	go	GO:0018342	protein prenylation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017499	Porokeratosis	skos:exactMatch	doid	DOID:3805	porokeratosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D017510	Protein Folding	skos:exactMatch	go	GO:0006457	protein folding	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D017544	Aortic Aneurysm, Abdominal	skos:exactMatch	ncit	C27000	Abdominal Aortic Aneurysm	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017588	Hyperandrogenism	skos:exactMatch	efo	0009006	hyperandrogenism	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017629	Gap Junctions	skos:exactMatch	go	GO:0005921	gap junction	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017673	Sodium Chloride, Dietary	skos:exactMatch	ncit	C72068	Table Salt	manually_reviewed	orcid:0000-0003-4423-4370
@@ -5822,6 +5831,7 @@ mesh	D034443	RNA Transport	skos:exactMatch	go	GO:0050658	RNA transport	manually_
 mesh	D034461	Luteinization	skos:exactMatch	go	GO:0001553	luteinization	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D034622	RNA Interference	skos:exactMatch	go	GO:0016246	RNA interference	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D034801	Mastocytoma	skos:exactMatch	doid	DOID:3664	mast cell neoplasm	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D034861	Abdominal Wall	skos:exactMatch	ncit	C77608	Abdominal Wall	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D034881	Nuclear Lamina	skos:exactMatch	go	GO:0005652	nuclear lamina	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D036801	Parturition	skos:exactMatch	go	GO:0007567	parturition	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D036881	Long-Term Synaptic Depression	skos:exactMatch	go	GO:0060292	long-term synaptic depression	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5857,6 +5867,7 @@ mesh	D045728	Corrinoids	skos:exactMatch	chebi	CHEBI:33913	corrinoid	manually_rev
 mesh	D045782	Hemiterpenes	skos:exactMatch	chebi	CHEBI:35188	hemiterpene	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D046148	Donor Selection	skos:exactMatch	go	GO:0007535	donor selection	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D046249	Transfer RNA Aminoacylation	skos:exactMatch	go	GO:0043039	tRNA aminoacylation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D046449	Hernia, Abdominal	skos:exactMatch	ncit	C98700	Abdominal Hernia	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D046934	Ginkgolides	skos:exactMatch	chebi	CHEBI:136909	ginkgolide	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D047069	Pyrazolones	skos:exactMatch	chebi	CHEBI:83328	pyrazolone	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D047090	beta-Lactams	skos:exactMatch	chebi	CHEBI:35627	beta-lactam	manually_reviewed	orcid:0000-0001-9439-5346
