@@ -2313,6 +2313,7 @@ doid	DOID:13957	uterine corpus lipoleiomyoma	skos:exactMatch	efo	1000614	Uterine
 doid	DOID:14453	farmer's lung	skos:exactMatch	mesh	D005203	Farmer's Lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:14453	farmer's lung	skos:exactMatch	umls	C0015634	Farmer's Lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:1788	peritoneal mesothelioma	skos:exactMatch	efo	1000467	Peritoneal Mesothelioma	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:2001	neuroma	skos:exactMatch	efo	0009619	neuroma	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:2626	choroid plexus papilloma	skos:exactMatch	efo	1000177	Choroid Plexus Papilloma	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:2708	mushroom workers' lung	skos:exactMatch	umls	C0155889	Mushroom Worker's Lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:2784	lung sarcoma	skos:exactMatch	umls	C0598790	Sarcoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
@@ -5091,6 +5092,7 @@ mesh	D005110	Extracellular Space	skos:exactMatch	go	GO:0005615	extracellular spa
 mesh	D005157	Facial Pain	skos:exactMatch	efo	0009625	facial pain	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005185	Fallopian Tube Neoplasms	skos:exactMatch	doid	DOID:1963	fallopian tube carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D005203	Farmer's Lung	skos:exactMatch	ncit	C34605	Farmer's Lung	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D005218	Fat Necrosis	skos:exactMatch	ncit	C26772	Fat Necrosis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005247	Feeding Behavior	skos:exactMatch	go	GO:0007631	feeding behavior	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005285	Fermentation	skos:exactMatch	go	GO:0006113	fermentation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005306	Fertilization	skos:exactMatch	go	GO:0009566	fertilization	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5202,6 +5204,7 @@ mesh	D007113	Immunity, Innate	skos:exactMatch	go	GO:0045087	innate immune respon
 mesh	D007154	Immune System Diseases	skos:exactMatch	doid	DOID:2914	immune system disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007169	Impetigo	skos:exactMatch	doid	DOID:8504	impetigo	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007172	Erectile Dysfunction	skos:exactMatch	doid	DOID:1875	impotence	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D007226	Infant Mortality	skos:exactMatch	ncit	C16729	Infant Mortality	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007249	Inflammation	skos:exactMatch	go	GO:0006954	inflammatory response	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007251	Influenza, Human	skos:exactMatch	doid	DOID:8469	influenza	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007314	Insemination	skos:exactMatch	go	GO:0007320	insemination	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5258,10 +5261,13 @@ mesh	D007766	Lacrimal Apparatus Diseases	skos:exactMatch	doid	DOID:1400	lacrimal
 mesh	D007769	Lactams	skos:exactMatch	chebi	CHEBI:24995	lactam	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007774	Lactation	skos:exactMatch	go	GO:0007595	lactation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007787	Lactose Intolerance	skos:exactMatch	doid	DOID:10604	lactose intolerance	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D007789	Lactose Tolerance Test	skos:exactMatch	efo	0010557	lactose tolerance test	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007792	Lactulose	skos:exactMatch	chebi	CHEBI:6359	lactulose	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007810	Lanosterol	skos:exactMatch	chebi	CHEBI:16521	lanosterol	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007858	Learning	skos:exactMatch	go	GO:0007612	learning	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007865	Leeches	skos:exactMatch	doid	DOID:11079	leech infestation	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D007937	Leukapheresis	skos:exactMatch	efo	0009126	leukapheresis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007937	Leukapheresis	skos:exactMatch	ncit	C15269	Leukapheresis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D008066	Lipolysis	skos:exactMatch	go	GO:0016042	lipid catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D008115	Liver Regeneration	skos:exactMatch	go	GO:0097421	liver regeneration	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D008169	Lung Abscess	skos:exactMatch	ncit	C99090	Lung Abscess	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5279,6 +5285,8 @@ mesh	D008278	Magnesium Sulfate	skos:exactMatch	chebi	CHEBI:32599	magnesium sulfa
 mesh	D008278	Magnesium Sulfate	skos:exactMatch	ncit	C623	Magnesium Sulfate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D008409	Mastication	skos:exactMatch	go	GO:0071626	mastication	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D008425	Maternal Behavior	skos:exactMatch	go	GO:0042711	maternal behavior	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D008428	Maternal Mortality	skos:exactMatch	ncit	C111860	Maternal Mortality	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D008451	Maximal Voluntary Ventilation	skos:exactMatch	efo	0008431	maximal voluntary ventilation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D008527	Medulloblastoma	skos:exactMatch	doid	DOID:0060104	cerebellar medulloblastoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D008561	Membrane Fusion	skos:exactMatch	go	GO:0061025	membrane fusion	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D008566	Membranes	skos:exactMatch	go	GO:0016020	membrane	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5299,20 +5307,28 @@ mesh	D008871	Microvilli	skos:exactMatch	go	GO:0005902	microvillus	manually_revie
 mesh	D008883	Miliaria	skos:exactMatch	doid	DOID:11153	miliaria rubra	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D008893	Milk Ejection	skos:exactMatch	go	GO:0060156	milk ejection reflex	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D008928	Mitochondria	skos:exactMatch	go	GO:0005739	mitochondrion	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D009026	Mortality	skos:exactMatch	efo	0004352	mortality	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D009026	Mortality	skos:exactMatch	ncit	C16880	Mortality	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D009041	Motion Sickness	skos:exactMatch	efo	0006928	motion sickness	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D009041	Motion Sickness	skos:exactMatch	ncit	C34824	Motion Sickness	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009043	Motor Activity	skos:exactMatch	go	GO:0003774	motor activity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009079	Mucociliary Clearance	skos:exactMatch	go	GO:0120197	mucociliary clearance	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009081	Mucolipidoses	skos:exactMatch	doid	DOID:0080488	mucolipidosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D009110	Munchausen Syndrome	skos:exactMatch	doid	DOID:1766	factitious disorder	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D009119	Muscle Contraction	skos:exactMatch	go	GO:0006936	muscle contraction	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D009120	Muscle Cramp	skos:exactMatch	efo	0009846	muscle cramp	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009135	Muscular Diseases	skos:exactMatch	doid	DOID:0080000	muscular disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D009186	Myelin Sheath	skos:exactMatch	go	GO:0043209	myelin sheath	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009210	Myofibrils	skos:exactMatch	go	GO:0030016	myofibril	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D009336	Necrosis	skos:exactMatch	efo	0009426	necrosis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009336	Necrosis	skos:exactMatch	go	GO:0070265	necrotic cell death	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009369	Neoplasms	skos:exactMatch	ncit	C23988	Neoplasms	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009373	Neoplasms, Germ Cell and Embryonal	skos:exactMatch	doid	DOID:688	embryonal cancer	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D009411	Nerve Endings	skos:exactMatch	go	GO:0043679	axon terminus	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D009436	Neural Tube Defects	skos:exactMatch	doid	DOID:0080074	neural tube defect	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D009456	Neurofibromatosis 1	skos:exactMatch	doid	DOID:0111253	neurofibromatosis 1	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D009463	Neuroma	skos:exactMatch	efo	0009619	neuroma	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D009463	Neuroma	skos:exactMatch	ncit	C3275	Neuroma	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009469	Neuromuscular Junction	skos:exactMatch	go	GO:0031594	neuromuscular junction	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009586	Nitrogen Fixation	skos:exactMatch	go	GO:0009399	nitrogen fixation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009681	Nuclear Fusion	skos:exactMatch	go	GO:0000741	karyogamy	manually_reviewed	orcid:0000-0003-4423-4370
@@ -5327,6 +5343,7 @@ mesh	D009917	Orbital Fractures	skos:exactMatch	efo	0009611	orbital fracture	manu
 mesh	D009917	Orbital Fractures	skos:exactMatch	ncit	C118744	Orbital Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009975	Orthomyxoviridae	skos:exactMatch	ncit	C53453	Orthomyxoviridae	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D010012	Osteogenesis	skos:exactMatch	go	GO:0001503	ossification	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D010025	Osteoradionecrosis	skos:exactMatch	ncit	C63707	Osteoradionecrosis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D010032	Otitis Externa	skos:exactMatch	doid	DOID:9463	otitis externa	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D010040	Otosclerosis	skos:exactMatch	doid	DOID:12185	otosclerosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D010058	Oviposition	skos:exactMatch	go	GO:0018991	oviposition	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5359,6 +5376,7 @@ mesh	D010873	Pinocytosis	skos:exactMatch	go	GO:0006907	pinocytosis	manually_revi
 mesh	D010900	Pituitary Diseases	skos:exactMatch	doid	DOID:53	pituitary gland disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D010942	Plant Viruses	skos:exactMatch	ncit	C14257	Plant Virus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D010974	Platelet Aggregation	skos:exactMatch	go	GO:0070527	platelet aggregation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D010996	Pleural Effusion	skos:exactMatch	efo	0009637	pleural effusion	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D010998	Pleurisy	skos:exactMatch	doid	DOID:10247	pleurisy	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D011018	Pneumonia, Pneumococcal	skos:exactMatch	doid	DOID:0040084	Streptococcus pneumonia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D011019	Pneumonia, Mycoplasma	skos:exactMatch	ncit	C122526	Mycoplasmal Pneumonia	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5543,6 +5561,7 @@ mesh	D015874	Yukon Territory	skos:exactMatch	ncit	C89818	Yukon	manually_reviewed
 mesh	D015894	Genome, Human	skos:exactMatch	ncit	C16630	Human Genome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D015922	Complement C1q	skos:exactMatch	go	GO:0062167	complement component C1q complex	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D016040	Lung Transplantation	skos:exactMatch	ncit	C15274	Lung Transplantation	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D016066	Pleural Effusion, Malignant	skos:exactMatch	ncit	C9432	Malignant Pleural Effusion	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D016193	G1 Phase	skos:exactMatch	go	GO:0051318	G1 phase	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D016195	G2 Phase	skos:exactMatch	go	GO:0051319	G2 phase	manual	orcid:0000-0001-9439-5346
 mesh	D016196	S Phase	skos:exactMatch	go	GO:0051320	S phase	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5919,6 +5938,7 @@ mesh	D053959	Alpha-Amanitin	skos:exactMatch	chebi	CHEBI:37415	alpha-amanitin	man
 mesh	D054079	Vascular Malformations	skos:exactMatch	efo	0006888	vascular malformation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D054179	Angioedemas, Hereditary	skos:exactMatch	ncit	C84758	Hereditary Angioedema	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D054199	Pseudoephedrine	skos:exactMatch	chebi	CHEBI:51209	pseudoephedrine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D054238	Perinatal Mortality	skos:exactMatch	ncit	C118676	Perinatal Mortality	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D054261	Neurulation	skos:exactMatch	go	GO:0001841	neural tube formation	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D054262	Gastrulation	skos:exactMatch	go	GO:0007369	gastrulation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D054337	Cell Dedifferentiation	skos:exactMatch	go	GO:0043697	cell dedifferentiation	manually_reviewed	orcid:0000-0001-9439-5346
