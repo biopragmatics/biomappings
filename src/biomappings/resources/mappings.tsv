@@ -4265,6 +4265,7 @@ mesh	D000068882	Paliperidone Palmitate	skos:exactMatch	chebi	CHEBI:83807	paliper
 mesh	D000068898	Raltegravir Potassium	skos:exactMatch	ncit	C73823	Raltegravir Potassium	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000069056	Lurasidone Hydrochloride	skos:exactMatch	chebi	CHEBI:70732	lurasidone hydrochloride	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000069059	Atorvastatin	skos:exactMatch	chebi	CHEBI:39548	atorvastatin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000069076	Fractures, Multiple	skos:exactMatch	ncit	C26778	Multiple Fractures	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000069078	Seroconversion	skos:exactMatch	efo	0007851	seroconversion	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000069283	Rituximab	skos:exactMatch	chebi	CHEBI:64357	rituximab	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000069286	Bortezomib	skos:exactMatch	chebi	CHEBI:52717	bortezomib	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5102,6 +5103,7 @@ mesh	D005416	Flavivirus	skos:exactMatch	ncit	C14208	Flavivirus	manually_reviewed
 mesh	D005427	Flocculation	skos:exactMatch	go	GO:0000128	flocculation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005498	Follicular Phase	skos:exactMatch	go	GO:0001541	ovarian follicle development	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D005596	Fractures, Closed	skos:exactMatch	ncit	C34623	Closed Fracture	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D005597	Fractures, Open	skos:exactMatch	ncit	C34624	Open Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005599	Fractures, Ununited	skos:exactMatch	efo	0009707	fractures, ununited	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005602	France	skos:exactMatch	ncit	C16592	France	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005609	Free Radicals	skos:exactMatch	ncit	C512	Free Radical	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5181,6 +5183,9 @@ mesh	D006561	Herpes Simplex	skos:exactMatch	doid	DOID:8566	herpes simplex	manual
 mesh	D006570	Heterochromatin	skos:exactMatch	go	GO:0000792	heterochromatin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006605	Hibernation	skos:exactMatch	go	GO:0042750	hibernation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006689	Hodgkin Disease	skos:exactMatch	doid	DOID:8654	Hodgkin's lymphoma, mixed cellularity	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D006716	Homosexuality	skos:exactMatch	efo	0008485	homosexuality	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D006716	Homosexuality	skos:exactMatch	ncit	C84363	Homosexuality	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D006810	Humeral Fractures	skos:exactMatch	ncit	C26795	Humerus Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006833	Hydrarthrosis	skos:exactMatch	doid	DOID:528	hydrarthrosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006848	Testicular Hydrocele	skos:exactMatch	doid	DOID:9912	hydrocele	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006871	Hydrophthalmos	skos:exactMatch	doid	DOID:11211	buphthalmos	manually_reviewed	orcid:0000-0003-1307-2508
@@ -5227,6 +5232,8 @@ mesh	D007546	Isoquinolines	skos:exactMatch	chebi	CHEBI:24922	isoquinolines	manua
 mesh	D007547	Isosorbide	skos:exactMatch	chebi	CHEBI:6060	Isosorbide	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007555	Isoxazoles	skos:exactMatch	chebi	CHEBI:55373	isoxazoles	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007559	Ivermectin	skos:exactMatch	chebi	CHEBI:6078	ivermectin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007572	Jaw Fractures	skos:exactMatch	efo	0009612	jaw fracture	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D007572	Jaw Fractures	skos:exactMatch	ncit	C26803	Jaw Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007608	Kainic Acid	skos:exactMatch	chebi	CHEBI:31746	kainic acid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007609	Kallidin	skos:exactMatch	chebi	CHEBI:6102	Kallidin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007612	Kanamycin	skos:exactMatch	chebi	CHEBI:6104	kanamycin	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5316,6 +5323,8 @@ mesh	D009805	Odontogenesis	skos:exactMatch	go	GO:0042476	odontogenesis	manually_
 mesh	D009837	Oligodendroglioma	skos:exactMatch	doid	DOID:7912	mixed oligodendroglioma-astrocytoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D009866	Oogenesis	skos:exactMatch	go	GO:0048477	oogenesis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009878	Ophthalmia Neonatorum	skos:exactMatch	doid	DOID:9699	ophthalmia neonatorum	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D009917	Orbital Fractures	skos:exactMatch	efo	0009611	orbital fracture	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D009917	Orbital Fractures	skos:exactMatch	ncit	C118744	Orbital Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D009975	Orthomyxoviridae	skos:exactMatch	ncit	C53453	Orthomyxoviridae	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D010012	Osteogenesis	skos:exactMatch	go	GO:0001503	ossification	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D010032	Otitis Externa	skos:exactMatch	doid	DOID:9463	otitis externa	manually_reviewed	orcid:0000-0003-1307-2508
@@ -5383,6 +5392,7 @@ mesh	D011654	Pulmonary Edema	skos:exactMatch	ncit	C26868	Pulmonary Edema	manuall
 mesh	D011658	Pulmonary Fibrosis	skos:exactMatch	ncit	C26869	Pulmonary Fibrosis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D011768	Pyruvate Dehydrogenase Complex	skos:exactMatch	go	GO:0045254	pyruvate dehydrogenase complex	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D011839	Radiation, Ionizing	skos:exactMatch	ncit	C17052	Ionizing Radiation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D011885	Radius Fractures	skos:exactMatch	ncit	C99039	Radius Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D011900	Ranula	skos:exactMatch	doid	DOID:12904	mucocele of salivary gland	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D011906	Rat-Bite Fever	skos:exactMatch	doid	DOID:13238	Haverhill fever	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D011941	Receptors, Adrenergic	skos:exactMatch	ncit	C105824	Adrenergic Receptor	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5400,6 +5410,8 @@ mesh	D012209	Rhabdoviridae	skos:exactMatch	ncit	C112027	Rhabdoviridae	manually_r
 mesh	D012214	Rheumatic Heart Disease	skos:exactMatch	doid	DOID:0050827	rheumatic heart disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D012223	Rhinitis, Vasomotor	skos:exactMatch	ncit	C34988	Vasomotor Rhinitis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012229	Rhinovirus	skos:exactMatch	ncit	C77200	Rhinovirus	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D012253	Rib Fractures	skos:exactMatch	efo	0009620	rib fracture	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D012253	Rib Fractures	skos:exactMatch	ncit	C34990	Rib Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012254	Ribavirin	skos:exactMatch	ncit	C807	Ribavirin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012270	Ribosomes	skos:exactMatch	go	GO:0005840	ribosome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012313	RNA	skos:exactMatch	chebi	CHEBI:33697	ribonucleic acid	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5421,7 +5433,10 @@ mesh	D012728	Sex Chromatin	skos:exactMatch	go	GO:0001739	sex chromatin	manually_
 mesh	D012730	Sex Chromosomes	skos:exactMatch	go	GO:0000803	sex chromosome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012733	Sex Differentiation	skos:exactMatch	go	GO:0007548	sex differentiation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012772	Shock, Septic	skos:exactMatch	ncit	C35018	Septic Shock	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D012784	Shoulder Fractures	skos:exactMatch	efo	0009621	shoulder fracture	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D012784	Shoulder Fractures	skos:exactMatch	ncit	C35021	Shoulder Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012852	Sinusitis	skos:exactMatch	doid	DOID:0050127	sinusitis	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D012887	Skull Fractures	skos:exactMatch	ncit	C50745	Skull Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012893	Sleep Wake Disorders	skos:exactMatch	doid	DOID:535	sleep disorder	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D012901	Variola virus	skos:exactMatch	ncit	C96527	Variola Virus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012919	Social Behavior	skos:exactMatch	go	GO:0035176	social behavior	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5474,12 +5489,14 @@ mesh	D013658	Taurolithocholic Acid	skos:exactMatch	chebi	CHEBI:36259	taurolithoc
 mesh	D013692	Telophase	skos:exactMatch	go	GO:0051326	telophase	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D013896	Thoracic Diseases	skos:exactMatch	doid	DOID:0060118	thoracic disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D013945	Thymoma	skos:exactMatch	doid	DOID:3275	thymoma	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D013978	Tibial Fractures	skos:exactMatch	ncit	C99083	Tibia Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D014005	Tinea	skos:exactMatch	doid	DOID:8913	dermatophytosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D014006	Tinea Capitis	skos:exactMatch	doid	DOID:4337	tinea capitis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D014035	Togaviridae	skos:exactMatch	ncit	C77197	Togaviridae	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D014036	Togaviridae Infections	skos:exactMatch	ncit	C85192	Togaviridae Infection	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D014074	Tooth Calcification	skos:exactMatch	go	GO:0034505	tooth mineralization	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D014078	Tooth Eruption	skos:exactMatch	go	GO:0044691	tooth eruption	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D014082	Tooth Fractures	skos:exactMatch	ncit	C50777	Tooth Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D014103	Torticollis	skos:exactMatch	doid	DOID:0050840	cervical dystonia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D014109	Total Lung Capacity	skos:exactMatch	ncit	C111325	Total Lung Capacity	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D014158	Transcription, Genetic	skos:exactMatch	go	GO:0006351	transcription, DNA-templated	manual	orcid:0000-0001-9439-5346
@@ -5519,6 +5536,7 @@ mesh	D015636	Magnesium Chloride	skos:exactMatch	chebi	CHEBI:6636	magnesium dichl
 mesh	D015636	Magnesium Chloride	skos:exactMatch	ncit	C29240	Magnesium Chloride	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D015715	Corneal Edema	skos:exactMatch	ncit	C50508	Corneal Edema	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D015774	Ganciclovir	skos:exactMatch	chebi	CHEBI:465284	ganciclovir	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D015775	Fractures, Stress	skos:exactMatch	ncit	C26779	Stress Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D015840	Oculomotor Nerve Diseases	skos:exactMatch	doid	DOID:562	third cranial nerve disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D015870	Gene Expression	skos:exactMatch	go	GO:0010467	gene expression	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D015874	Yukon Territory	skos:exactMatch	ncit	C89818	Yukon	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5660,6 +5678,7 @@ mesh	D018385	Centrosome	skos:exactMatch	go	GO:0005813	centrosome	manually_review
 mesh	D018386	Kinetochores	skos:exactMatch	go	GO:0000776	kinetochore	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018392	Genomic Imprinting	skos:exactMatch	go	GO:0071514	genetic imprinting	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018442	Lymphoma, B-Cell, Marginal Zone	skos:exactMatch	doid	DOID:0050909	MALT lymphoma	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D018451	Homosexuality, Male	skos:exactMatch	efo	0008486	male homosexuality	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018522	Gravitropism	skos:exactMatch	go	GO:0009630	gravitropism	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018523	Tropism	skos:exactMatch	go	GO:0009606	tropism	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018524	Phototropism	skos:exactMatch	go	GO:0009638	phototropism	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5833,6 +5852,7 @@ mesh	D050261	Glycogenolysis	skos:exactMatch	go	GO:0005980	glycogen catabolic pro
 mesh	D050299	Fibrin Modulating Agents	skos:exactMatch	chebi	CHEBI:48676	fibrin modulating drug	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D050356	Lipid Metabolism	skos:exactMatch	go	GO:0006629	lipid metabolic process	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D050607	Organogold Compounds	skos:exactMatch	chebi	CHEBI:51184	organogold compound	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D050815	Fractures, Compression	skos:exactMatch	ncit	C27170	Compression Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D050858	Betalains	skos:exactMatch	chebi	CHEBI:22861	betalain	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D051336	Mitochondrial Membranes	skos:exactMatch	go	GO:0031966	mitochondrial membrane	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D051357	Cyclin-Dependent Kinase 2	skos:exactMatch	hgnc	1771	CDK2	manually_reviewed	orcid:0000-0001-9439-5346
