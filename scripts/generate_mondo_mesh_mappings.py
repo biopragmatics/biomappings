@@ -14,26 +14,24 @@ existing_refs_to_mesh = set()
 for node, data in g.nodes(data=True):
     if not node.startswith("MONDO"):
         continue
-    if 'name' not in data:
+    if "name" not in data:
         continue
     mesh_refs = [xref[5:] for xref in data.get("xref", []) if xref.startswith("MESH")]
     if mesh_refs:
         existing_refs_to_mesh |= set(mesh_refs)
-    matches = gilda.ground(data["name"], namespaces=['MESH'])
+    matches = gilda.ground(data["name"], namespaces=["MESH"])
     if matches:
         for grounding in matches[0].get_groundings():
-            if grounding[0] == 'MESH':
+            if grounding[0] == "MESH":
                 mappings[node] = matches[0].term.id
 
 print("Found %d MONDO->MESH mappings." % len(mappings))
 
-mappings = {k: v for k, v in mappings.items()
-            if v not in existing_refs_to_mesh}
+mappings = {k: v for k, v in mappings.items() if v not in existing_refs_to_mesh}
 
 cnt = Counter(mappings.values())
 
-mappings = {k: v for k, v in mappings.items()
-            if cnt[v] == 1}
+mappings = {k: v for k, v in mappings.items() if cnt[v] == 1}
 
 print("Found %d MONDO->MESH mappings." % len(mappings))
 
@@ -41,7 +39,7 @@ predictions = []
 for mondo_id, mesh_id in mappings.items():
     pred = PredictionTuple(
         source_prefix="mondo",
-        source_id=mondo_id,
+        source_id=mondo_id[6:],
         source_name=g.nodes[mondo_id]["name"],
         relation="skos:exactMatch",
         target_prefix="mesh",
