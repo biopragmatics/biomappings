@@ -6,9 +6,14 @@ import obonet
 from indra.databases import mesh_client
 from indra.ontology.standardize import standardize_db_refs
 
+from biomappings import load_mappings
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
 g = obonet.read_obo("http://purl.obolibrary.org/obo/mondo.obo")
+
+
+curated_mappings = {m['source identifier'] for m in load_mappings()
+                    if m['source prefix'] == 'mondo'}
 
 mappings = {}
 existing_refs_to_mesh = set()
@@ -17,6 +22,9 @@ for node, data in g.nodes(data=True):
     if not node.startswith("MONDO"):
         continue
     if "name" not in data:
+        continue
+    mondo_id = node.split(':', maxsplit=1)[1]
+    if mondo_id in curated_mappings:
         continue
     xrefs = [xref.split(':', maxsplit=1) for xref in data.get("xref", [])]
     xrefs_dict = dict(xrefs)
@@ -29,6 +37,7 @@ for node, data in g.nodes(data=True):
         for grounding in matches[0].get_groundings():
             if grounding[0] == "MESH":
                 mappings[node] = matches[0].term.id
+
 
 print("Found %d MONDO->MESH mappings." % len(mappings))
 
