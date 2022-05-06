@@ -139,6 +139,8 @@ class InvalidNormIdentifier(InvalidIdentifier):
 
 def check_valid_prefix_id(prefix, identifier):
     """Check the prefix/identifier pair is valid."""
+    if prefix == 'mondo':
+        breakpoint()
     resource = bioregistry.get_resource(prefix)
     if resource is None:
         raise InvalidPrefix(prefix)
