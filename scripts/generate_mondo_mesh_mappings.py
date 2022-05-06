@@ -13,8 +13,9 @@ from biomappings.resources import PredictionTuple, append_prediction_tuples
 g = obonet.read_obo("http://purl.obolibrary.org/obo/mondo.obo")
 
 
-curated_mappings = {m['source identifier'] for m in load_mappings()
-                    if m['source prefix'] == 'mondo'}
+curated_mappings = {
+    m["source identifier"] for m in load_mappings() if m["source prefix"] == "mondo"
+}
 
 mappings = {}
 existing_refs_to_mesh = set()
@@ -24,15 +25,15 @@ for node, data in g.nodes(data=True):
         continue
     if "name" not in data:
         continue
-    mondo_id = node.split(':', maxsplit=1)[1]
+    mondo_id = node.split(":", maxsplit=1)[1]
     if mondo_id in curated_mappings:
         continue
-    xrefs = [xref.split(':', maxsplit=1) for xref in data.get("xref", [])]
+    xrefs = [xref.split(":", maxsplit=1) for xref in data.get("xref", [])]
     xrefs_dict = fix_invalidities_db_refs(dict(xrefs))
     standard_refs = standardize_db_refs(xrefs_dict)
-    if 'MESH' in standard_refs:
+    if "MESH" in standard_refs:
         already_mappable.add(node)
-    existing_refs_to_mesh |= {id for ns, id in standard_refs.items() if ns == 'MESH'}
+    existing_refs_to_mesh |= {id for ns, id in standard_refs.items() if ns == "MESH"}
     matches = gilda.ground(data["name"], namespaces=["MESH"])
     if matches:
         for grounding in matches[0].get_groundings():
@@ -42,8 +43,11 @@ for node, data in g.nodes(data=True):
 
 print("Found %d MONDO->MESH mappings." % len(mappings))
 
-mappings = {k: v for k, v in mappings.items() if v not in existing_refs_to_mesh
-            and k not in already_mappable}
+mappings = {
+    k: v
+    for k, v in mappings.items()
+    if v not in existing_refs_to_mesh and k not in already_mappable
+}
 
 cnt = Counter(mappings.values())
 
