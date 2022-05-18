@@ -1,0 +1,300 @@
+- chebi:26267:
+    identifier: CHEBI:26267
+    link: https://bioregistry.io/chebi:26267
+    name: proanthocyanidin
+    prefix: chebi
+  mesh:C013221:
+    identifier: C013221
+    link: https://bioregistry.io/mesh:C013221
+    name: proanthocyanidin
+    prefix: mesh
+  mesh:D044945:
+    identifier: D044945
+    link: https://bioregistry.io/mesh:D044945
+    name: Proanthocyanidins
+    prefix: mesh
+- cl:0000101:
+    identifier: CL:0000101
+    link: https://bioregistry.io/cl:0000101
+    name: sensory neuron
+    prefix: cl
+  cl:0000197:
+    identifier: CL:0000197
+    link: https://bioregistry.io/cl:0000197
+    name: sensory receptor cell
+    prefix: cl
+  mesh:D011984:
+    identifier: D011984
+    link: https://bioregistry.io/mesh:D011984
+    name: Sensory Receptor Cells
+    prefix: mesh
+- doid:0060887:
+    identifier: DOID:0060887
+    link: https://bioregistry.io/doid:0060887
+    name: ossification of the posterior longitudinal ligament of spine
+    prefix: doid
+  efo:0005895:
+    identifier: 0005895
+    link: https://bioregistry.io/efo:0005895
+    name: ossification of the posterior longitudinal ligament of the spine
+    prefix: efo
+  mesh:C537143:
+    identifier: C537143
+    link: https://bioregistry.io/mesh:C537143
+    name: Ossification of the posterior longitudinal ligament of the spine
+    prefix: mesh
+  mesh:D017887:
+    identifier: D017887
+    link: https://bioregistry.io/mesh:D017887
+    name: Ossification of Posterior Longitudinal Ligament
+    prefix: mesh
+  umls:C1865343:
+    identifier: C1865343
+    link: https://bioregistry.io/umls:C1865343
+    name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
+    prefix: umls
+- kegg.pathway:hsa00100:
+    identifier: hsa00100
+    link: https://bioregistry.io/kegg.pathway:hsa00100
+    name: Steroid biosynthesis - Homo sapiens (human)
+    prefix: kegg.pathway
+  kegg.pathway:hsa00140:
+    identifier: hsa00140
+    link: https://bioregistry.io/kegg.pathway:hsa00140
+    name: Steroid hormone biosynthesis - Homo sapiens (human)
+    prefix: kegg.pathway
+  wikipathways:WP496:
+    identifier: WP496
+    link: https://bioregistry.io/wikipathways:WP496
+    name: Steroid biosynthesis
+    prefix: wikipathways
+- kegg.pathway:hsa02010:
+    identifier: hsa02010
+    link: https://bioregistry.io/kegg.pathway:hsa02010
+    name: ABC transporters - Homo sapiens (human)
+    prefix: kegg.pathway
+  reactome:R-HSA-1369007:
+    identifier: R-HSA-1369007
+    link: https://bioregistry.io/reactome:R-HSA-1369007
+    name: Mitochondrial ABC transporters
+    prefix: reactome
+  reactome:R-HSA-382556:
+    identifier: R-HSA-382556
+    link: https://bioregistry.io/reactome:R-HSA-382556
+    name: ABC-family proteins mediated transport
+    prefix: reactome
+- kegg.pathway:hsa04010:
+    identifier: hsa04010
+    link: https://bioregistry.io/kegg.pathway:hsa04010
+    name: MAPK signaling pathway - Homo sapiens (human)
+    prefix: kegg.pathway
+  reactome:R-HSA-5683057:
+    identifier: R-HSA-5683057
+    link: https://bioregistry.io/reactome:R-HSA-5683057
+    name: MAPK family signaling cascades
+    prefix: reactome
+  wikipathways:WP382:
+    identifier: WP382
+    link: https://bioregistry.io/wikipathways:WP382
+    name: MAPK signaling pathway
+    prefix: wikipathways
+  wikipathways:WP422:
+    identifier: WP422
+    link: https://bioregistry.io/wikipathways:WP422
+    name: MAPK cascade
+    prefix: wikipathways
+- kegg.pathway:hsa04210:
+    identifier: hsa04210
+    link: https://bioregistry.io/kegg.pathway:hsa04210
+    name: Apoptosis - Homo sapiens (human)
+    prefix: kegg.pathway
+  kegg.pathway:hsa04215:
+    identifier: hsa04215
+    link: https://bioregistry.io/kegg.pathway:hsa04215
+    name: Apoptosis - multiple species - Homo sapiens (human)
+    prefix: kegg.pathway
+  reactome:R-HSA-109581:
+    identifier: R-HSA-109581
+    link: https://bioregistry.io/reactome:R-HSA-109581
+    name: Apoptosis
+    prefix: reactome
+  wikipathways:WP254:
+    identifier: WP254
+    link: https://bioregistry.io/wikipathways:WP254
+    name: Apoptosis
+    prefix: wikipathways
+- kegg.pathway:hsa04310:
+    identifier: hsa04310
+    link: https://bioregistry.io/kegg.pathway:hsa04310
+    name: Wnt signaling pathway - Homo sapiens (human)
+    prefix: kegg.pathway
+  reactome:R-HSA-195721:
+    identifier: R-HSA-195721
+    link: https://bioregistry.io/reactome:R-HSA-195721
+    name: Signaling by WNT
+    prefix: reactome
+  wikipathways:WP363:
+    identifier: WP363
+    link: https://bioregistry.io/wikipathways:WP363
+    name: Wnt signaling pathway
+    prefix: wikipathways
+  wikipathways:WP399:
+    identifier: WP399
+    link: https://bioregistry.io/wikipathways:WP399
+    name: Wnt signaling pathway and pluripotency
+    prefix: wikipathways
+  wikipathways:WP428:
+    identifier: WP428
+    link: https://bioregistry.io/wikipathways:WP428
+    name: Wnt signaling
+    prefix: wikipathways
+- kegg.pathway:hsa04330:
+    identifier: hsa04330
+    link: https://bioregistry.io/kegg.pathway:hsa04330
+    name: Notch signaling pathway - Homo sapiens (human)
+    prefix: kegg.pathway
+  reactome:R-HSA-157118:
+    identifier: R-HSA-157118
+    link: https://bioregistry.io/reactome:R-HSA-157118
+    name: Signaling by NOTCH
+    prefix: reactome
+  wikipathways:WP268:
+    identifier: WP268
+    link: https://bioregistry.io/wikipathways:WP268
+    name: Notch signaling
+    prefix: wikipathways
+  wikipathways:WP3845:
+    identifier: WP3845
+    link: https://bioregistry.io/wikipathways:WP3845
+    name: Canonical and non-canonical Notch signaling
+    prefix: wikipathways
+  wikipathways:WP61:
+    identifier: WP61
+    link: https://bioregistry.io/wikipathways:WP61
+    name: Notch signaling pathway (Netpath)
+    prefix: wikipathways
+- kegg.pathway:hsa04340:
+    identifier: hsa04340
+    link: https://bioregistry.io/kegg.pathway:hsa04340
+    name: Hedgehog signaling pathway - Homo sapiens (human)
+    prefix: kegg.pathway
+  reactome:R-HSA-5358351:
+    identifier: R-HSA-5358351
+    link: https://bioregistry.io/reactome:R-HSA-5358351
+    name: Signaling by Hedgehog
+    prefix: reactome
+  wikipathways:WP4249:
+    identifier: WP4249
+    link: https://bioregistry.io/wikipathways:WP4249
+    name: Hedgehog signaling pathway
+    prefix: wikipathways
+  wikipathways:WP47:
+    identifier: WP47
+    link: https://bioregistry.io/wikipathways:WP47
+    name: Hedgehog signaling pathway Netpath
+    prefix: wikipathways
+- kegg.pathway:hsa04350:
+    identifier: hsa04350
+    link: https://bioregistry.io/kegg.pathway:hsa04350
+    name: TGF-beta signaling pathway - Homo sapiens (human)
+    prefix: kegg.pathway
+  reactome:R-HSA-9006936:
+    identifier: R-HSA-9006936
+    link: https://bioregistry.io/reactome:R-HSA-9006936
+    name: Signaling by TGFB family members
+    prefix: reactome
+  wikipathways:WP366:
+    identifier: WP366
+    link: https://bioregistry.io/wikipathways:WP366
+    name: TGF-beta signaling pathway
+    prefix: wikipathways
+  wikipathways:WP560:
+    identifier: WP560
+    link: https://bioregistry.io/wikipathways:WP560
+    name: TGF-beta receptor signaling
+    prefix: wikipathways
+- kegg.pathway:hsa04390:
+    identifier: hsa04390
+    link: https://bioregistry.io/kegg.pathway:hsa04390
+    name: Hippo signaling pathway - Homo sapiens (human)
+    prefix: kegg.pathway
+  kegg.pathway:hsa04392:
+    identifier: hsa04392
+    link: https://bioregistry.io/kegg.pathway:hsa04392
+    name: Hippo signaling pathway - multiple species - Homo sapiens (human)
+    prefix: kegg.pathway
+  reactome:R-HSA-2028269:
+    identifier: R-HSA-2028269
+    link: https://bioregistry.io/reactome:R-HSA-2028269
+    name: Signaling by Hippo
+    prefix: reactome
+- kegg.pathway:hsa04620:
+    identifier: hsa04620
+    link: https://bioregistry.io/kegg.pathway:hsa04620
+    name: Toll-like receptor signaling pathway - Homo sapiens (human)
+    prefix: kegg.pathway
+  reactome:R-HSA-168898:
+    identifier: R-HSA-168898
+    link: https://bioregistry.io/reactome:R-HSA-168898
+    name: Toll-like Receptor Cascades
+    prefix: reactome
+  wikipathways:WP3858:
+    identifier: WP3858
+    link: https://bioregistry.io/wikipathways:WP3858
+    name: Toll-like receptor signaling related to MyD88
+    prefix: wikipathways
+  wikipathways:WP75:
+    identifier: WP75
+    link: https://bioregistry.io/wikipathways:WP75
+    name: Toll-like receptor signaling pathway
+    prefix: wikipathways
+- go:0033209:
+    identifier: GO:0033209
+    link: https://bioregistry.io/go:0033209
+    name: tumor necrosis factor-mediated signaling pathway
+    prefix: go
+  go:0033210:
+    identifier: GO:0033210
+    link: https://bioregistry.io/go:0033210
+    name: leptin-mediated signaling pathway
+    prefix: go
+  go:0033211:
+    identifier: GO:0033211
+    link: https://bioregistry.io/go:0033211
+    name: adiponectin-activated signaling pathway
+    prefix: go
+  kegg.pathway:map04920:
+    identifier: map04920
+    link: https://bioregistry.io/kegg.pathway:map04920
+    name: Adipocytokine signaling pathway
+    prefix: kegg.pathway
+- doid:0050811:
+    identifier: DOID:0050811
+    link: https://bioregistry.io/doid:0050811
+    name: congenital adrenal hyperplasia
+    prefix: doid
+  mesh:C537027:
+    identifier: C537027
+    link: https://bioregistry.io/mesh:C537027
+    name: Lipoid congenital adrenal hyperplasia
+    prefix: mesh
+  mesh:D000312:
+    identifier: D000312
+    link: https://bioregistry.io/mesh:D000312
+    name: Adrenal Hyperplasia, Congenital
+    prefix: mesh
+- reactome:R-HSA-8937144:
+    identifier: R-HSA-8937144
+    link: https://bioregistry.io/reactome:R-HSA-8937144
+    name: Aryl hydrocarbon receptor signalling
+    prefix: reactome
+  wikipathways:WP2586:
+    identifier: WP2586
+    link: https://bioregistry.io/wikipathways:WP2586
+    name: Aryl hydrocarbon receptor Netpath
+    prefix: wikipathways
+  wikipathways:WP2873:
+    identifier: WP2873
+    link: https://bioregistry.io/wikipathways:WP2873
+    name: Aryl hydrocarbon receptor pathway
+    prefix: wikipathways

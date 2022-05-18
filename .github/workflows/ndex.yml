@@ -1,0 +1,25 @@
+name: Upload to NDEx
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - 'src/biomappings/resources/mappings.tsv'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          pip install tox
+      - name: Upload to NDEx
+        run: tox -e upload-ndex
+        env:
+          NDEX_USERNAME: ${{ secrets.NDEX_USERNAME }}
+          NDEX_PASSWORD: ${{ secrets.NDEX_PASSWORD }}
