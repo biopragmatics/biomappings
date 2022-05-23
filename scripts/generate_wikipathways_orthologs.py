@@ -6,10 +6,8 @@ import itertools as itt
 from typing import Iterable
 
 import pyobo
-import bioversions
 from gilda.process import normalize
 from tqdm import tqdm
-import bioregistry
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import get_script_url
@@ -21,18 +19,17 @@ def _lexical_exact_match(name1: str, name2: str) -> bool:
 
 def iterate_orthologous_lexical_matches(prefix: str = "wikipathways") -> Iterable[PredictionTuple]:
     """Generate orthologous relations between lexical matches from different species."""
-    version = bioversions.get_version(prefix)
-    names = pyobo.get_id_name_mapping(prefix, version=version)
-    species = pyobo.get_id_species_mapping(prefix, version=version)
+    names = pyobo.get_id_name_mapping(prefix)
+    species = pyobo.get_id_species_mapping(prefix)
     provenance = get_script_url(__file__)
 
     count = 0
     it = itt.combinations(sorted(names.items()), 2)
     it = tqdm(
-        it, unit_scale=True,
+        it,
+        unit_scale=True,
         unit="pair",
         total=len(names) * (len(names) - 1) / 2,
-        desc=f"{bioregistry.get_name(prefix)} v{version}",
     )
     for (source_id, source_name), (target_id, target_name) in sorted(it):
         source_species = species[source_id]
