@@ -78,6 +78,7 @@ def ndex(username, password):
         username=pystow.get_config("ndex", "username", passthrough=username),
         password=pystow.get_config("ndex", "password", passthrough=password),
     )
+    click.echo(f"Uploaded to https://bioregistry.io/ndex:{BIOMAPPINGS_NDEX_UUID}")
 
 
 if __name__ == "__main__":

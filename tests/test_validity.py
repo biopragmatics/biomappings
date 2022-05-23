@@ -8,8 +8,18 @@ from collections import defaultdict
 
 import bioregistry
 
-from biomappings import load_false_mappings, load_mappings, load_predictions, load_unsure
-from biomappings.resources import MappingTuple, PredictionTuple, load_curators, mapping_sort_key
+from biomappings import (
+    load_false_mappings,
+    load_mappings,
+    load_predictions,
+    load_unsure,
+)
+from biomappings.resources import (
+    MappingTuple,
+    PredictionTuple,
+    load_curators,
+    mapping_sort_key,
+)
 from biomappings.utils import check_valid_prefix_id, get_canonical_tuple
 
 mappings = load_mappings()

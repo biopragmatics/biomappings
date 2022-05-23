@@ -146,6 +146,7 @@ def check_valid_prefix_id(prefix, identifier):
         norm_identifier = resource.miriam_standardize_identifier(identifier)
         if norm_identifier != identifier:
             raise InvalidNormIdentifier(prefix, identifier, norm_identifier)
+        return
     miriam_pattern = resource.miriam.get("pattern") if resource.miriam else None
     if not miriam_pattern:
         pattern = resource.get_pattern_re()

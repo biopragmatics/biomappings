@@ -1,3 +1,58 @@
+- chebi:26267:
+    identifier: CHEBI:26267
+    link: https://bioregistry.io/chebi:26267
+    name: proanthocyanidin
+    prefix: chebi
+  mesh:C013221:
+    identifier: C013221
+    link: https://bioregistry.io/mesh:C013221
+    name: proanthocyanidin
+    prefix: mesh
+  mesh:D044945:
+    identifier: D044945
+    link: https://bioregistry.io/mesh:D044945
+    name: Proanthocyanidins
+    prefix: mesh
+- cl:0000101:
+    identifier: CL:0000101
+    link: https://bioregistry.io/cl:0000101
+    name: sensory neuron
+    prefix: cl
+  cl:0000197:
+    identifier: CL:0000197
+    link: https://bioregistry.io/cl:0000197
+    name: sensory receptor cell
+    prefix: cl
+  mesh:D011984:
+    identifier: D011984
+    link: https://bioregistry.io/mesh:D011984
+    name: Sensory Receptor Cells
+    prefix: mesh
+- doid:0060887:
+    identifier: DOID:0060887
+    link: https://bioregistry.io/doid:0060887
+    name: ossification of the posterior longitudinal ligament of spine
+    prefix: doid
+  efo:0005895:
+    identifier: 0005895
+    link: https://bioregistry.io/efo:0005895
+    name: ossification of the posterior longitudinal ligament of the spine
+    prefix: efo
+  mesh:C537143:
+    identifier: C537143
+    link: https://bioregistry.io/mesh:C537143
+    name: Ossification of the posterior longitudinal ligament of the spine
+    prefix: mesh
+  mesh:D017887:
+    identifier: D017887
+    link: https://bioregistry.io/mesh:D017887
+    name: Ossification of Posterior Longitudinal Ligament
+    prefix: mesh
+  umls:C1865343:
+    identifier: C1865343
+    link: https://bioregistry.io/umls:C1865343
+    name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
+    prefix: umls
 - kegg.pathway:hsa00100:
     identifier: hsa00100
     link: https://bioregistry.io/kegg.pathway:hsa00100
