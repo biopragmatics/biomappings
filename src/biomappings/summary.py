@@ -19,9 +19,9 @@ __all__ = [
 def export():
     """Create export data file."""
     from biomappings.resources import (
+        load_false_mappings,
         load_mappings,
         load_predictions,
-        load_false_mappings,
         load_unsure,
     )
     from biomappings.utils import DATA

@@ -1,5 +1,5 @@
 contributors:
-- count: 2990
+- count: 4931
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
@@ -44,6 +44,9 @@ negative:
 - count: 45
   source: mesh
   target: wikipathways
+- count: 38
+  source: cl
+  target: mesh
 - count: 35
   source: doid
   target: umls
@@ -53,12 +56,18 @@ negative:
 - count: 16
   source: go
   target: kegg.pathway
+- count: 16
+  source: efo
+  target: mesh
 - count: 14
   source: hgnc
   target: mesh
-- count: 13
-  source: efo
+- count: 11
+  source: chebi
   target: mesh
+- count: 11
+  source: mesh
+  target: ncit
 - count: 11
   source: hgnc
   target: reactome
@@ -68,21 +77,21 @@ negative:
 - count: 8
   source: ccle
   target: efo
-- count: 8
-  source: mesh
-  target: ncit
-- count: 7
-  source: chebi
-  target: mesh
 - count: 7
   source: doid
   target: efo
 - count: 7
   source: fplx
   target: wikipathways
+- count: 5
+  source: mesh
+  target: mondo
 - count: 3
   source: doid
   target: reactome
+- count: 3
+  source: mesh
+  target: uberon
 - count: 3
   source: hgnc
   target: wikipathways
@@ -101,22 +110,22 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1000
-negative_prefix_count: 17
+negative_mapping_count: 1056
+negative_prefix_count: 20
 positive:
-- count: 1303
-  source: doid
-  target: mesh
-- count: 1174
+- count: 2307
   source: chebi
   target: mesh
-- count: 529
+- count: 1306
+  source: doid
+  target: mesh
+- count: 692
   source: mesh
   target: ncit
-- count: 498
+- count: 515
   source: ccle
   target: efo
-- count: 403
+- count: 404
   source: go
   target: mesh
 - count: 370
@@ -128,17 +137,29 @@ positive:
 - count: 222
   source: go
   target: reactome
+- count: 201
+  source: mesh
+  target: mondo
+- count: 130
+  source: mesh
+  target: uberon
+- count: 121
+  source: doid
+  target: umls
 - count: 113
   source: go
   target: kegg.pathway
-- count: 111
-  source: doid
-  target: umls
 - count: 106
   source: ccle
   target: cellosaurus
 - count: 102
   source: hgnc
+  target: mesh
+- count: 97
+  source: efo
+  target: mesh
+- count: 81
+  source: cl
   target: mesh
 - count: 81
   source: pr
@@ -149,6 +170,9 @@ positive:
 - count: 70
   source: kegg.pathway
   target: wikipathways
+- count: 61
+  source: doid
+  target: efo
 - count: 61
   source: kegg.pathway
   target: reactome
@@ -164,10 +188,7 @@ positive:
 - count: 17
   source: mesh
   target: pubchem.compound
-- count: 14
-  source: efo
-  target: mesh
-- count: 10
+- count: 11
   source: hp
   target: mesh
 - count: 9
@@ -192,9 +213,6 @@ positive:
   source: ccle
   target: depmap
 - count: 1
-  source: doid
-  target: efo
-- count: 1
   source: go
   target: ncit
 - count: 1
@@ -203,37 +221,46 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 5728
-positive_prefix_count: 22
+positive_mapping_count: 7611
+positive_prefix_count: 25
 predictions:
-- count: 12118
+- count: 12462
+  source: chebi
+  target: mesh
+- count: 11952
   source: mesh
   target: ncit
 - count: 10978
   source: mesh
   target: uniprot
-- count: 2733
-  source: chebi
-  target: mesh
-- count: 2421
+- count: 2411
   source: doid
   target: umls
 - count: 1376
   source: hgnc
   target: mesh
-- count: 386
+- count: 383
   source: doid
   target: mesh
-- count: 362
+- count: 361
   source: hp
   target: mesh
-- count: 274
+- count: 188
   source: efo
   target: mesh
-- count: 134
+- count: 162
+  source: agro
+  target: agrovoc
+- count: 86
+  source: mesh
+  target: mondo
+- count: 74
   source: doid
   target: efo
-- count: 77
+- count: 69
+  source: mesh
+  target: uberon
+- count: 60
   source: ccle
   target: efo
 - count: 48
@@ -248,8 +275,8 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 30974
-predictions_prefix_count: 14
+predictions_mapping_count: 40677
+predictions_prefix_count: 18
 unsure:
 - count: 26
   source: doid
@@ -264,7 +291,10 @@ unsure:
   source: ccle
   target: depmap
 - count: 2
+  source: cl
+  target: mesh
+- count: 2
   source: mesh
   target: ncit
-unsure_mapping_count: 38
-unsure_prefix_count: 7
+unsure_mapping_count: 40
+unsure_prefix_count: 8

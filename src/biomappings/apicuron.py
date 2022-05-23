@@ -6,7 +6,7 @@ Run this with:
 
 .. code-block:: sh
 
-    $ pip install -e .
+    $ pip install -e .[apicuron]
     $ pip install apicuron-client
     $ python -m biomappings.apicuron
 """
@@ -14,6 +14,7 @@ Run this with:
 import datetime
 from typing import Iterable
 
+import click
 from apicuron_client import Description, Report, Submission, resubmit_curations
 
 from biomappings import load_mappings
@@ -96,10 +97,12 @@ def iter_reports() -> Iterable[Report]:
         )
 
 
-def main():
+@click.command()
+@click.option("--token")
+def main(token):
     """Submit the payload."""
     sub = get_curation_payload()
-    res = resubmit_curations(sub)
+    res = resubmit_curations(sub, token=token)
     print(res.text)
 
 

@@ -137,15 +137,19 @@ class InvalidNormIdentifier(InvalidIdentifier):
         return f"{self.prefix}:{self.identifier} does not match normalized CURIE {self.prefix}:{self.norm_identifier}"
 
 
+SKIP_BANANA = {"ncit", "agro"}
+
+
 def check_valid_prefix_id(prefix, identifier):
     """Check the prefix/identifier pair is valid."""
     resource = bioregistry.get_resource(prefix)
     if resource is None:
         raise InvalidPrefix(prefix)
-    if prefix not in {"ncit"}:
+    if prefix not in SKIP_BANANA:
         norm_identifier = resource.miriam_standardize_identifier(identifier)
         if norm_identifier != identifier:
             raise InvalidNormIdentifier(prefix, identifier, norm_identifier)
+        return
     miriam_pattern = resource.miriam.get("pattern") if resource.miriam else None
     if not miriam_pattern:
         pattern = resource.get_pattern_re()

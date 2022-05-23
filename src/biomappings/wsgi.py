@@ -21,7 +21,14 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import check_valid_prefix_id, commit, get_branch, get_curie, not_main, push
+from biomappings.utils import (
+    check_valid_prefix_id,
+    commit,
+    get_branch,
+    get_curie,
+    not_main,
+    push,
+)
 
 app = flask.Flask(__name__)
 app.config["WTF_CSRF_ENABLED"] = False

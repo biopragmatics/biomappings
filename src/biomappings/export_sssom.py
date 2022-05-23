@@ -68,7 +68,7 @@ def get_sssom_df():
                 f'{mapping["relation"]}',
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
-                "LexicalEquivalenceMatch",  # match type
+                "Lexical",  # match type
                 None,  # no curator CURIE
                 mapping["confidence"],
                 mapping["source"],  # mapping tool: source script

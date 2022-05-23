@@ -8,9 +8,19 @@ from collections import defaultdict
 
 import bioregistry
 
-from biomappings import load_false_mappings, load_mappings, load_predictions, load_unsure
-from biomappings.resources import MappingTuple, PredictionTuple, load_curators, mapping_sort_key
-from biomappings.utils import check_valid_prefix_id, get_canonical_tuple
+from biomappings import (
+    load_false_mappings,
+    load_mappings,
+    load_predictions,
+    load_unsure,
+)
+from biomappings.resources import (
+    MappingTuple,
+    PredictionTuple,
+    load_curators,
+    mapping_sort_key,
+)
+from biomappings.utils import SKIP_BANANA, check_valid_prefix_id, get_canonical_tuple
 
 mappings = load_mappings()
 predictions = load_predictions()
@@ -74,7 +84,7 @@ class TestIntegrity(unittest.TestCase):
             does not have namespace embedded in LUI. See also:
             https://github.com/biopragmatics/bioregistry/issues/208
         """
-        if prefix in {"ncit"}:
+        if prefix in SKIP_BANANA:
             return
         resource = bioregistry.get_resource(prefix)
         self.assertIsNotNone(resource)
