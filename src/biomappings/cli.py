@@ -3,27 +3,29 @@
 """The biomappings CLI."""
 
 import click
-from more_click import verbose_option
+from more_click import make_web_command
 
 from .export_sssom import sssom
 from .graph import charts
 from .summary import export
 from .upload_ndex import ndex
+from .utils import get_git_hash
 
 
 @click.group()
+@click.version_option()
 def main():
     """Run the biomappings CLI."""
 
 
-@main.command()
-@verbose_option
-def web():
-    """Run the biomappings web curation interface."""
-    from .wsgi import app
-    from .utils import get_git_hash
+if get_git_hash() is not None:
+    # This command is called "web" by default
+    main.add_command(make_web_command("biomappings.wsgi:app"))
+else:
 
-    if get_git_hash() is None:
+    @main.command()
+    def web():
+        """Show an error for the web interface."""
         click.secho(
             "You are not running biomappings from a development installation.\n"
             "Please run the following to install in development mode:\n"
@@ -32,8 +34,6 @@ def web():
             "  $ pip install -e .",
             fg="red",
         )
-    else:
-        app.run()
 
 
 @main.command()
@@ -54,10 +54,10 @@ def update(ctx: click.Context):
 def lint():
     """Sort files and remove duplicates."""
     from .resources import (
+        lint_false_mappings,
         lint_predictions,
         lint_true_mappings,
         lint_unsure_mappings,
-        lint_false_mappings,
     )
 
     lint_true_mappings()
@@ -80,6 +80,7 @@ def prune(prefixes):
 main.add_command(export)
 main.add_command(ndex)
 main.add_command(charts)
+main.add_command(sssom)
 
 if __name__ == "__main__":
     main()

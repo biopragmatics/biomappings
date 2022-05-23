@@ -8,7 +8,6 @@ from subprocess import CalledProcessError, check_output  # noqa: S404
 from typing import Any, Mapping, Optional, Tuple
 
 import bioregistry
-from bioregistry.external import get_miriam
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESOURCE_PATH = os.path.abspath(os.path.join(HERE, "resources"))
@@ -94,49 +93,75 @@ class InvalidPrefix(ValueError):
 class InvalidIdentifier(ValueError):
     """Raised for an invalid identifier."""
 
+    def __init__(self, prefix: str, identifier: str):
+        """Initialize the error.
 
-class MiriamValidator:
-    """Validate prefix/identifier pairs based on the MIRIAM database."""
+        :param prefix: A CURIE's prefix
+        :param identifier: A CURIE's identifier
+        """
+        self.prefix = prefix
+        self.identifier = identifier
 
-    def __init__(self, force_download: bool = False):  # noqa: D107
-        self.entries = self._load_identifiers_entries(force_download=force_download)
 
-    @staticmethod
-    def _load_identifiers_entries(force_download: bool = False):
-        return {
-            prefix: {
-                "pattern": re.compile(entry["pattern"]),
-                "namespace_embedded": entry["namespaceEmbeddedInLui"],
-            }
-            for prefix, entry in get_miriam(force_download=force_download).items()
-        }
+class InvalidIdentifierPattern(InvalidIdentifier):
+    """Raised for an identifier that doesn't match the pattern."""
 
-    def namespace_embedded(self, prefix: str) -> bool:
-        """Return True if the namespace is embedded for the given prefix."""
-        if prefix in self.entries:
-            return self.entries[prefix]["namespace_embedded"]
-        return bioregistry.namespace_in_lui(prefix)
+    def __init__(self, prefix: str, identifier: str, pattern):
+        """Initialize the error.
 
-    def check_valid_prefix_id(self, prefix, identifier):
-        """Check the prefix/identifier pair is valid."""
-        if prefix in self.entries:
-            entry = self.entries[prefix]
-            if not re.match(entry["pattern"], identifier):
-                raise InvalidIdentifier(prefix, identifier)
-        elif bioregistry.get_resource(prefix) is None:
-            raise InvalidPrefix(prefix)
-        elif bioregistry.get_pattern(prefix) is None:
-            if bioregistry.validate(prefix, identifier):
-                raise InvalidIdentifier(prefix, identifier)
+        :param prefix: A CURIE's prefix
+        :param identifier: A CURIE's identifier
+        :param pattern: A regular expression pattern
+        """
+        super().__init__(prefix, identifier)
+        self.pattern = pattern
 
-    def get_curie(self, prefix: str, identifier: str) -> str:
-        """Return CURIE for a given prefix and identifier."""
-        if self.namespace_embedded(prefix):
-            return identifier
-        else:
-            return f"{prefix}:{identifier}"
+    def __str__(self) -> str:  # noqa:D105
+        return f"{self.prefix}:{self.identifier} does not match pattern {self.pattern}"
 
-    @staticmethod
-    def get_url(prefix: str, identifier: str) -> str:
-        """Return URL for a given prefix and identifier."""
-        return bioregistry.get_link(prefix, identifier, use_bioregistry_io=False)
+
+class InvalidNormIdentifier(InvalidIdentifier):
+    """Raised for an invalid normalized identifier."""
+
+    def __init__(self, prefix: str, identifier: str, norm_identifier: str):
+        """Initialize the error.
+
+        :param prefix: A CURIE's prefix
+        :param identifier: A CURIE's identifier
+        :param norm_identifier: The normalized version of the identifier
+        """
+        super().__init__(prefix, identifier)
+        self.norm_identifier = norm_identifier
+
+    def __str__(self) -> str:  # noqa:D105
+        return f"{self.prefix}:{self.identifier} does not match normalized CURIE {self.prefix}:{self.norm_identifier}"
+
+
+SKIP_BANANA = {"ncit", "agro"}
+
+
+def check_valid_prefix_id(prefix, identifier):
+    """Check the prefix/identifier pair is valid."""
+    resource = bioregistry.get_resource(prefix)
+    if resource is None:
+        raise InvalidPrefix(prefix)
+    if prefix not in SKIP_BANANA:
+        norm_identifier = resource.miriam_standardize_identifier(identifier)
+        if norm_identifier != identifier:
+            raise InvalidNormIdentifier(prefix, identifier, norm_identifier)
+        return
+    miriam_pattern = resource.miriam.get("pattern") if resource.miriam else None
+    if not miriam_pattern:
+        pattern = resource.get_pattern_re()
+    else:
+        pattern = re.compile(miriam_pattern)
+    if pattern is not None and not pattern.match(identifier):
+        raise InvalidIdentifierPattern(prefix, identifier, pattern)
+
+
+def get_curie(prefix: str, identifier: str) -> str:
+    """Get a normalized curie from a pre-parsed prefix/identifier pair."""
+    p, i = bioregistry.normalize_parsed_curie(prefix, identifier)
+    if p is None or i is None:
+        raise ValueError
+    return f"{p}:{i}"

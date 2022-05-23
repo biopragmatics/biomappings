@@ -3,40 +3,155 @@
 """Validation tests for :mod:`biomappings`."""
 
 import itertools as itt
-from collections import Counter
+import unittest
+from collections import defaultdict
 
-from biomappings import load_false_mappings, load_mappings, load_predictions, load_unsure
-from biomappings.resources import mapping_sort_key
-from biomappings.utils import MiriamValidator, get_canonical_tuple
+import bioregistry
+
+from biomappings import (
+    load_false_mappings,
+    load_mappings,
+    load_predictions,
+    load_unsure,
+)
+from biomappings.resources import (
+    MappingTuple,
+    PredictionTuple,
+    load_curators,
+    mapping_sort_key,
+)
+from biomappings.utils import SKIP_BANANA, check_valid_prefix_id, get_canonical_tuple
 
 mappings = load_mappings()
 predictions = load_predictions()
 incorrect = load_false_mappings()
 unsure = load_unsure()
 
-miriam_validator = MiriamValidator()
+
+def _iter_groups():
+    for group, label in [
+        (mappings, "positive"),
+        (incorrect, "negative"),
+        (predictions, "predictions"),
+        (unsure, "unsure"),
+    ]:
+        for i, mapping in enumerate(group, start=2):
+            yield label, i, mapping
+
+
+class TestIntegrity(unittest.TestCase):
+    """Data integrity tests."""
+
+    def test_canonical_prefixes(self):
+        """Test that all mappings use canonical bioregistry prefixes."""
+        valid_prefixes = set(bioregistry.read_registry())
+        for label, line, mapping in _iter_groups():
+            source_prefix, target_prefix = mapping["source prefix"], mapping["target prefix"]
+            self.assertIn(
+                source_prefix,
+                valid_prefixes,
+                msg=f"Invalid prefix: {source_prefix} on {label}:{line}",
+            )
+            self.assertIn(
+                target_prefix,
+                valid_prefixes,
+                msg=f"Invalid prefix: {target_prefix} on {label}:{line}",
+            )
+
+    def test_normalized_identifiers(self):
+        """Test that all identifiers have been normalized (based on bioregistry definition)."""
+        for label, line, mapping in _iter_groups():
+            self.assert_canonical_identifier(
+                mapping["source prefix"], mapping["source identifier"], label, line
+            )
+            self.assert_canonical_identifier(
+                mapping["target prefix"], mapping["target identifier"], label, line
+            )
+
+    def assert_canonical_identifier(
+        self, prefix: str, identifier: str, label: str, line: int
+    ) -> None:
+        """Assert a given identifier is canonical.
+
+        :param prefix: The prefix to check
+        :param identifier: The identifier in the semantic space for the prefix
+        :param label: The label of the mapping file
+        :param line: The line number of the mapping
+
+        .. warning::
+
+            NCIT is skipped for now, since it has an OBO Foundry definition but explicitly
+            does not have namespace embedded in LUI. See also:
+            https://github.com/biopragmatics/bioregistry/issues/208
+        """
+        if prefix in SKIP_BANANA:
+            return
+        resource = bioregistry.get_resource(prefix)
+        self.assertIsNotNone(resource)
+        norm_id = resource.miriam_standardize_identifier(identifier)
+        self.assertIsNotNone(norm_id)
+        self.assertEqual(
+            identifier,
+            norm_id,
+            msg=f"Normalization of {prefix}:{identifier} failed on {label}:{line}",
+        )
+
+    def test_contributors(self):
+        """Test all contributors have an entry in the curators.tsv file."""
+        contributor_orcids = {row["orcid"] for row in load_curators()}
+        for mapping in itt.chain(mappings, incorrect, unsure):
+            source = mapping["source"]
+            if not source.startswith("orcid:"):
+                continue
+            self.assertIn(source[len("orcid:") :], contributor_orcids)
 
 
 def test_valid_mappings():
     """Test the validity of the prefixes and identifiers in the mappings."""
-    for mapping in itt.chain(mappings, incorrect, predictions):
-        miriam_validator.check_valid_prefix_id(
+    for _label, _line, mapping in _iter_groups():
+        check_valid_prefix_id(
             mapping["source prefix"],
             mapping["source identifier"],
         )
-        miriam_validator.check_valid_prefix_id(
+        check_valid_prefix_id(
             mapping["target prefix"],
             mapping["target identifier"],
         )
 
 
-def test_redundancy():
+def _extract_redundant(counter):
+    return [(key, values) for key, values in counter.items() if len(values) > 1]
+
+
+def test_cross_redundancy():
     """Test the redundancy of manually curated mappings and predicted mappings."""
-    counter = Counter(get_canonical_tuple(m) for m in itt.chain(mappings, incorrect, predictions))
-    redundant = [(k, v) for k, v in counter.items() if v > 1]
+    counter = defaultdict(list)
+    for label, line, mapping in _iter_groups():
+        counter[get_canonical_tuple(mapping)].append((label, line))
+
+    redundant = _extract_redundant(counter)
     if redundant:
-        r = "\n".join(f"  {r}: {count}" for r, count in redundant)
-        raise ValueError(f"{len(r)} are redundant: {r}")
+        msg = "".join(
+            f"\n  {mapping}: {_locations_str(locations)}" for mapping, locations in redundant
+        )
+        raise ValueError(f"{len(redundant)} are redundant: {msg}")
+
+
+def _locations_str(locations):
+    return ", ".join(f"{label}:{line}" for label, line in locations)
+
+
+def _assert_no_internal_redundancies(m, tuple_cls):
+    counter = defaultdict(list)
+    for line, mapping in enumerate(m, start=1):
+        counter[tuple_cls.from_dict(mapping)].append(line)
+    redundant = _extract_redundant(counter)
+    if redundant:
+        msg = "".join(
+            f"\n  {mapping.source_curie}/{mapping.target_curie}: {locations}"
+            for mapping, locations in redundant
+        )
+        raise ValueError(f"{len(redundant)} are redundant: {msg}")
 
 
 def test_predictions_sorted():
@@ -44,6 +159,7 @@ def test_predictions_sorted():
     assert predictions == sorted(  # noqa:S101
         predictions, key=mapping_sort_key
     ), "Predictions are not sorted"
+    _assert_no_internal_redundancies(predictions, PredictionTuple)
 
 
 def test_curations_sorted():
@@ -51,6 +167,7 @@ def test_curations_sorted():
     assert mappings == sorted(  # noqa:S101
         mappings, key=mapping_sort_key
     ), "True curations are not sorted"
+    _assert_no_internal_redundancies(mappings, MappingTuple)
 
 
 def test_false_mappings_sorted():
@@ -58,6 +175,7 @@ def test_false_mappings_sorted():
     assert incorrect == sorted(  # noqa:S101
         incorrect, key=mapping_sort_key
     ), "False curations are not sorted"
+    _assert_no_internal_redundancies(incorrect, MappingTuple)
 
 
 def test_unsure_sorted():
@@ -65,3 +183,4 @@ def test_unsure_sorted():
     assert unsure == sorted(  # noqa:S101
         unsure, key=mapping_sort_key
     ), "Unsure curations are not sorted"
+    _assert_no_internal_redundancies(unsure, MappingTuple)

@@ -1,14 +1,24 @@
 source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	source
-ccle.cell	BCP1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BCP-1	skos:exactMatch	cellosaurus	CVCL_0107	BCP-1	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	cellosaurus	CVCL_4613	BDCM	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	efo	0002113	BDCM	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	C8166	C8166	skos:exactMatch	cellosaurus	CVCL_1099	C8166	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	C8166	C8166	skos:exactMatch	depmap	ACH-000206	nan	manually_reviewed	orcid:0000-0003-1307-2508
-ccle.cell	DETROIT562_UPPER_AERODIGESTIVE_TRACT	Detroit 562	skos:exactMatch	efo	0002170	Detroit562	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	ECC4	ECC4	skos:exactMatch	cellosaurus	CVCL_1190	ECC4	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	ECC4	ECC4	skos:exactMatch	depmap	ACH-002024	ECC4	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	NCIH1048_LUNG	NCI-H1048	skos:exactMatch	efo	0002248	NCI-H1048	manually_reviewed	orcid:0000-0001-9439-5346
-ccle.cell	TE4_OESOPHAGUS	TE-4	skos:exactMatch	cellosaurus	CVCL_F784	TE4 [Mouse hybridoma]	manually_reviewed	orcid:0000-0003-4423-4370
+ccle	BCP1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BCP-1	skos:exactMatch	cellosaurus	CVCL_0107	BCP-1	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	cellosaurus	CVCL_4613	BDCM	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	efo	0002113	BDCM	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	C8166	C8166	skos:exactMatch	cellosaurus	CVCL_1099	C8166	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	C8166	C8166	skos:exactMatch	depmap	ACH-000206	nan	manually_reviewed	orcid:0000-0003-1307-2508
+ccle	DETROIT562_UPPER_AERODIGESTIVE_TRACT	Detroit 562	skos:exactMatch	efo	0002170	Detroit562	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	ECC4	ECC4	skos:exactMatch	cellosaurus	CVCL_1190	ECC4	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	ECC4	ECC4	skos:exactMatch	depmap	ACH-002024	ECC4	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	NCIH1048_LUNG	NCI-H1048	skos:exactMatch	efo	0002248	NCI-H1048	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	TE4_OESOPHAGUS	TE-4	skos:exactMatch	cellosaurus	CVCL_F784	TE4 [Mouse hybridoma]	manually_reviewed	orcid:0000-0003-4423-4370
+cl	CL:0000798	gamma-delta T cell	skos:exactMatch	mesh	D000075942	Intraepithelial Lymphocytes	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000816	immature B cell	skos:exactMatch	mesh	D054448	Precursor Cells, B-Lymphoid	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050025	human granulocytic anaplasmosis	skos:exactMatch	mesh	D000712	Anaplasmosis	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0050035	African tick-bite fever	skos:exactMatch	mesh	D000073605	Spotted Fever Group Rickettsiosis	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0050201	nephropathia epidemica	skos:exactMatch	mesh	D006480	Hemorrhagic Fever with Renal Syndrome	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080832	mild cognitive impairment	skos:exactMatch	mesh	D060825	Cognitive Dysfunction	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:7173	cloacogenic carcinoma	skos:exactMatch	mesh	C563020	Anal Canal Carcinoma	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:7474	malignant pleural mesothelioma	skos:exactMatch	mesh	D000086002	Mesothelioma, Malignant	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000613429	FluMist	skos:exactMatch	ncit	C101094	Trivalent Live-Attenuated Influenza Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000624615	IMX-101	skos:exactMatch	ncit	C153374	Helicobacter pylori Therapeutic Vaccine IMX101	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C535896	Limb-girdle muscular dystrophy type 2F	skos:exactMatch	doid	DOID:0110280	autosomal recessive limb-girdle muscular dystrophy type 2F	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C537464	Microphthalmia, syndromic 1	skos:exactMatch	doid	DOID:0111799	syndromic microphthalmia 1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C537602	Short rib-polydactyly syndrome, Verma-Naumoff type	skos:exactMatch	doid	DOID:0110087	asphyxiating thoracic dystrophy 3	manually_reviewed	orcid:0000-0003-1307-2508

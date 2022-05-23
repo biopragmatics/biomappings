@@ -5,12 +5,13 @@
 .. seealso:: https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf
 """
 
+import bioregistry
 import click
 import pystow
 from tqdm import tqdm
 
 from biomappings import load_mappings
-from biomappings.utils import MiriamValidator, get_git_hash
+from biomappings.utils import get_curie, get_git_hash
 
 BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
 
@@ -26,7 +27,6 @@ def ndex(username, password):
         click.secho("Need to `pip install ndex2` before uploading to NDEx", fg="red")
         return
 
-    miriam_validator = MiriamValidator()
     positive_mappings = load_mappings()
     cx = NiceCXBuilder()
     cx.set_name("Biomappings")
@@ -36,13 +36,13 @@ def ndex(username, password):
     cx.add_network_attribute("reference", "https://github.com/biomappings/biomappings")
     cx.add_network_attribute("rights", "Waiver-No rights reserved (CC0)")
 
-    context = {"orcid": "https://identifiers.org/orcid:"}
-    for mapping in positive_mappings:
-        for prefix in (mapping["source prefix"], mapping["target prefix"]):
-            if miriam_validator.namespace_embedded(prefix):
-                prefix = prefix.upper()
-            context[prefix] = f"https://identifiers.org/{prefix}:"
-    cx.set_context(context)
+    prefixes = {
+        prefix
+        for mapping in positive_mappings
+        for prefix in (mapping["source prefix"], mapping["target prefix"])
+    }
+    prefixes.add("orcid")
+    cx.set_context({prefix: bioregistry.get_uri_prefix(prefix) for prefix in prefixes})
 
     cx.add_network_attribute("version", get_git_hash())
     authors = sorted(
@@ -57,11 +57,11 @@ def ndex(username, password):
     for mapping in tqdm(positive_mappings, desc="Loading NiceCXBuilder"):
         source = cx.add_node(
             represents=mapping["source name"],
-            name=miriam_validator.get_curie(mapping["source prefix"], mapping["source identifier"]),
+            name=get_curie(mapping["source prefix"], mapping["source identifier"]),
         )
         target = cx.add_node(
             represents=mapping["target name"],
-            name=miriam_validator.get_curie(mapping["target prefix"], mapping["target identifier"]),
+            name=get_curie(mapping["target prefix"], mapping["target identifier"]),
         )
         edge = cx.add_edge(
             source=source,
@@ -78,6 +78,7 @@ def ndex(username, password):
         username=pystow.get_config("ndex", "username", passthrough=username),
         password=pystow.get_config("ndex", "password", passthrough=password),
     )
+    click.echo(f"Uploaded to https://bioregistry.io/ndex:{BIOMAPPINGS_NDEX_UUID}")
 
 
 if __name__ == "__main__":

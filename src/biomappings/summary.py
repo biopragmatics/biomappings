@@ -18,23 +18,32 @@ __all__ = [
 @click.command()
 def export():
     """Create export data file."""
-    from biomappings.resources import load_mappings, load_predictions, load_false_mappings
+    from biomappings.resources import (
+        load_false_mappings,
+        load_mappings,
+        load_predictions,
+        load_unsure,
+    )
     from biomappings.utils import DATA
 
     path = os.path.join(DATA, "summary.yml")
 
     true_mappings = load_mappings()
     false_mappings = load_false_mappings()
+    unsure_mappings = load_unsure()
     rv = {
         "positive": _get_counter(true_mappings),
         "negative": _get_counter(false_mappings),
+        "unsure": _get_counter(unsure_mappings),
         "predictions": _get_counter(load_predictions()),
-        "contributors": _get_contributors(itt.chain(true_mappings, false_mappings)),
+        "contributors": _get_contributors(
+            itt.chain(true_mappings, false_mappings, unsure_mappings)
+        ),
     }
     rv.update(
         {
             f"{k}_mapping_count": sum(e["count"] for e in rv[k])
-            for k in ("positive", "negative", "predictions")
+            for k in ("positive", "negative", "unsure", "predictions")
         }
     )
     rv.update(
@@ -42,7 +51,7 @@ def export():
             f"{k}_prefix_count": len(
                 set(itt.chain.from_iterable((e["source"], e["target"]) for e in rv[k]))
             )
-            for k in ("positive", "negative", "predictions")
+            for k in ("positive", "negative", "unsure", "predictions")
         }
     )
     with open(path, "w") as file:
