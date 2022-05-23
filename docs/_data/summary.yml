@@ -248,6 +248,9 @@ predictions:
 - count: 188
   source: efo
   target: mesh
+- count: 162
+  source: agro
+  target: agrovoc
 - count: 86
   source: mesh
   target: mondo
@@ -272,8 +275,8 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 40515
-predictions_prefix_count: 16
+predictions_mapping_count: 40677
+predictions_prefix_count: 18
 unsure:
 - count: 26
   source: doid
