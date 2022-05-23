@@ -246,6 +246,9 @@ predictions:
 - count: 2411
   source: doid
   target: umls
+- count: 1686
+  source: wikipathways
+  target: wikipathways
 - count: 1376
   source: hgnc
   target: mesh
@@ -282,8 +285,8 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 40515
-predictions_prefix_count: 16
+predictions_mapping_count: 42201
+predictions_prefix_count: 17
 unsure:
 - count: 26
   source: doid

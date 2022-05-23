@@ -3544,11 +3544,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: mesh:D009463
-      identifier: D009463
-      link: https://bioregistry.io/mesh:D009463
+      curie: ncit:C3275
+      identifier: C3275
+      link: https://bioregistry.io/ncit:C3275
       name: Neuroma
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: doid:2001
       identifier: DOID:2001
@@ -3556,11 +3556,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: ncit:C3275
-      identifier: C3275
-      link: https://bioregistry.io/ncit:C3275
+      curie: mesh:D009463
+      identifier: D009463
+      link: https://bioregistry.io/mesh:D009463
       name: Neuroma
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: efo:0009619
       identifier: 0009619
@@ -5207,11 +5207,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: mondo:0100075
-      identifier: MONDO:0100075
-      link: https://bioregistry.io/mondo:0100075
-      name: jaw fracture
-      prefix: mondo
+      curie: ncit:C26803
+      identifier: C26803
+      link: https://bioregistry.io/ncit:C26803
+      name: Jaw Fracture
+      prefix: ncit
   - source:
       curie: efo:0009612
       identifier: 0009612
@@ -5219,11 +5219,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: ncit:C26803
-      identifier: C26803
-      link: https://bioregistry.io/ncit:C26803
-      name: Jaw Fracture
-      prefix: ncit
+      curie: mondo:0100075
+      identifier: MONDO:0100075
+      link: https://bioregistry.io/mondo:0100075
+      name: jaw fracture
+      prefix: mondo
   - source:
       curie: mondo:0100075
       identifier: MONDO:0100075
