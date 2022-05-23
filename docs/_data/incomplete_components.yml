@@ -1,5 +1,179 @@
 - edges:
   - source:
+      curie: agrovoc:10457
+      identifier: '10457'
+      link: https://bioregistry.io/agrovoc:10457
+      name: draught animals
+      prefix: agrovoc
+    target:
+      curie: agrovoc:8446
+      identifier: '8446'
+      link: https://bioregistry.io/agrovoc:8446
+      name: working animals
+      prefix: agrovoc
+  nodes:
+    agro:00000116:
+      identifier: '00000116'
+      link: https://bioregistry.io/agro:00000116
+      name: draft animal
+      prefix: agro
+    agrovoc:10457:
+      identifier: '10457'
+      link: https://bioregistry.io/agrovoc:10457
+      name: draught animals
+      prefix: agrovoc
+    agrovoc:8446:
+      identifier: '8446'
+      link: https://bioregistry.io/agrovoc:8446
+      name: working animals
+      prefix: agrovoc
+- edges:
+  - source:
+      curie: agrovoc:13811
+      identifier: '13811'
+      link: https://bioregistry.io/agrovoc:13811
+      name: replanting
+      prefix: agrovoc
+    target:
+      curie: agrovoc:7873
+      identifier: '7873'
+      link: https://bioregistry.io/agrovoc:7873
+      name: transplanting
+      prefix: agrovoc
+  nodes:
+    agro:00000229:
+      identifier: 00000229
+      link: https://bioregistry.io/agro:00000229
+      name: plant transplanting process
+      prefix: agro
+    agrovoc:13811:
+      identifier: '13811'
+      link: https://bioregistry.io/agrovoc:13811
+      name: replanting
+      prefix: agrovoc
+    agrovoc:7873:
+      identifier: '7873'
+      link: https://bioregistry.io/agrovoc:7873
+      name: transplanting
+      prefix: agrovoc
+- edges:
+  - source:
+      curie: agrovoc:24001
+      identifier: '24001'
+      link: https://bioregistry.io/agrovoc:24001
+      name: choppers
+      prefix: agrovoc
+    target:
+      curie: agrovoc:25763
+      identifier: '25763'
+      link: https://bioregistry.io/agrovoc:25763
+      name: forage harvesters
+      prefix: agrovoc
+  nodes:
+    agro:00000540:
+      identifier: '00000540'
+      link: https://bioregistry.io/agro:00000540
+      name: forage harvester
+      prefix: agro
+    agrovoc:24001:
+      identifier: '24001'
+      link: https://bioregistry.io/agrovoc:24001
+      name: choppers
+      prefix: agrovoc
+    agrovoc:25763:
+      identifier: '25763'
+      link: https://bioregistry.io/agrovoc:25763
+      name: forage harvesters
+      prefix: agrovoc
+- edges:
+  - source:
+      curie: agrovoc:24262
+      identifier: '24262'
+      link: https://bioregistry.io/agrovoc:24262
+      name: vermiculture
+      prefix: agrovoc
+    target:
+      curie: agrovoc:c319a4d3
+      identifier: c319a4d3
+      link: https://bioregistry.io/agrovoc:c319a4d3
+      name: vermicomposts
+      prefix: agrovoc
+  nodes:
+    agro:00002042:
+      identifier: '00002042'
+      link: https://bioregistry.io/agro:00002042
+      name: vermicompost
+      prefix: agro
+    agrovoc:24262:
+      identifier: '24262'
+      link: https://bioregistry.io/agrovoc:24262
+      name: vermiculture
+      prefix: agrovoc
+    agrovoc:c319a4d3:
+      identifier: c319a4d3
+      link: https://bioregistry.io/agrovoc:c319a4d3
+      name: vermicomposts
+      prefix: agrovoc
+- edges:
+  - source:
+      curie: agrovoc:26820
+      identifier: '26820'
+      link: https://bioregistry.io/agrovoc:26820
+      name: seed dressing
+      prefix: agrovoc
+    target:
+      curie: agrovoc:6940
+      identifier: '6940'
+      link: https://bioregistry.io/agrovoc:6940
+      name: seed treatment
+      prefix: agrovoc
+  nodes:
+    agro:00000051:
+      identifier: '00000051'
+      link: https://bioregistry.io/agro:00000051
+      name: seed dressing
+      prefix: agro
+    agrovoc:26820:
+      identifier: '26820'
+      link: https://bioregistry.io/agrovoc:26820
+      name: seed dressing
+      prefix: agrovoc
+    agrovoc:6940:
+      identifier: '6940'
+      link: https://bioregistry.io/agrovoc:6940
+      name: seed treatment
+      prefix: agrovoc
+- edges:
+  - source:
+      curie: agrovoc:330635
+      identifier: '330635'
+      link: https://bioregistry.io/agrovoc:330635
+      name: biological pest control
+      prefix: agrovoc
+    target:
+      curie: agrovoc:918
+      identifier: '918'
+      link: https://bioregistry.io/agrovoc:918
+      name: biological control
+      prefix: agrovoc
+  nodes:
+    agro:00000022:
+      identifier: '00000022'
+      link: https://bioregistry.io/agro:00000022
+      name: biological pest control process
+      prefix: agro
+    agrovoc:330635:
+      identifier: '330635'
+      link: https://bioregistry.io/agrovoc:330635
+      name: biological pest control
+      prefix: agrovoc
+    agrovoc:918:
+      identifier: '918'
+      link: https://bioregistry.io/agrovoc:918
+      name: biological control
+      prefix: agrovoc
+- edges:
+  - source:
       curie: cellosaurus:CVCL_2270
       identifier: CVCL_2270
       link: https://bioregistry.io/cellosaurus:CVCL_2270
@@ -2703,11 +2877,11 @@
       name: ossification of the posterior longitudinal ligament of spine
       prefix: doid
     target:
-      curie: efo:0005895
-      identifier: 0005895
-      link: https://bioregistry.io/efo:0005895
-      name: ossification of the posterior longitudinal ligament of the spine
-      prefix: efo
+      curie: mesh:D017887
+      identifier: D017887
+      link: https://bioregistry.io/mesh:D017887
+      name: Ossification of Posterior Longitudinal Ligament
+      prefix: mesh
   - source:
       curie: doid:0060887
       identifier: DOID:0060887
@@ -2715,11 +2889,11 @@
       name: ossification of the posterior longitudinal ligament of spine
       prefix: doid
     target:
-      curie: mesh:D017887
-      identifier: D017887
-      link: https://bioregistry.io/mesh:D017887
-      name: Ossification of Posterior Longitudinal Ligament
-      prefix: mesh
+      curie: efo:0005895
+      identifier: 0005895
+      link: https://bioregistry.io/efo:0005895
+      name: ossification of the posterior longitudinal ligament of the spine
+      prefix: efo
   - source:
       curie: efo:0005895
       identifier: 0005895
@@ -3370,11 +3544,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: ncit:C3275
-      identifier: C3275
-      link: https://bioregistry.io/ncit:C3275
+      curie: mesh:D009463
+      identifier: D009463
+      link: https://bioregistry.io/mesh:D009463
       name: Neuroma
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: doid:2001
       identifier: DOID:2001
@@ -3382,11 +3556,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: mesh:D009463
-      identifier: D009463
-      link: https://bioregistry.io/mesh:D009463
+      curie: ncit:C3275
+      identifier: C3275
+      link: https://bioregistry.io/ncit:C3275
       name: Neuroma
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: efo:0009619
       identifier: 0009619
@@ -5033,11 +5207,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: ncit:C26803
-      identifier: C26803
-      link: https://bioregistry.io/ncit:C26803
-      name: Jaw Fracture
-      prefix: ncit
+      curie: mondo:0100075
+      identifier: MONDO:0100075
+      link: https://bioregistry.io/mondo:0100075
+      name: jaw fracture
+      prefix: mondo
   - source:
       curie: efo:0009612
       identifier: 0009612
@@ -5045,11 +5219,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: mondo:0100075
-      identifier: MONDO:0100075
-      link: https://bioregistry.io/mondo:0100075
-      name: jaw fracture
-      prefix: mondo
+      curie: ncit:C26803
+      identifier: C26803
+      link: https://bioregistry.io/ncit:C26803
+      name: Jaw Fracture
+      prefix: ncit
   - source:
       curie: mondo:0100075
       identifier: MONDO:0100075

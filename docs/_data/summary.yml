@@ -15,6 +15,10 @@ contributors:
   name: Daniel Domingo-Fernandez
   orcid: 0000-0002-2046-6145
   user: ddomingof
+- count: 162
+  name: Krishna Udaiwal
+  orcid: 0000-0002-2627-0696
+  user: KrishnaTO
 - count: 1
   name: Christopher Mungall
   orcid: 0000-0002-6601-2165
@@ -53,6 +57,9 @@ negative:
 - count: 27
   source: ccle
   target: cellosaurus
+- count: 20
+  source: agro
+  target: agrovoc
 - count: 16
   source: go
   target: kegg.pathway
@@ -110,8 +117,8 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1056
-negative_prefix_count: 20
+negative_mapping_count: 1076
+negative_prefix_count: 22
 positive:
 - count: 2307
   source: chebi
@@ -140,6 +147,9 @@ positive:
 - count: 201
   source: mesh
   target: mondo
+- count: 142
+  source: agro
+  target: agrovoc
 - count: 130
   source: mesh
   target: uberon
@@ -221,8 +231,8 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 7611
-positive_prefix_count: 25
+positive_mapping_count: 7753
+positive_prefix_count: 27
 predictions:
 - count: 12462
   source: chebi
@@ -248,9 +258,6 @@ predictions:
 - count: 188
   source: efo
   target: mesh
-- count: 162
-  source: agro
-  target: agrovoc
 - count: 86
   source: mesh
   target: mondo
@@ -275,8 +282,8 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 40677
-predictions_prefix_count: 18
+predictions_mapping_count: 40515
+predictions_prefix_count: 16
 unsure:
 - count: 26
   source: doid
