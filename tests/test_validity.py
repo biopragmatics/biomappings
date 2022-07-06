@@ -90,7 +90,10 @@ class TestIntegrity(unittest.TestCase):
         self.assertIsNotNone(resource)
         if resource.get_miriam_prefix():
             norm_id = resource.miriam_standardize_identifier(identifier)
-            self.assertIsNotNone(norm_id, msg=f"Normalization of {prefix}:{identifier} failed on {label}:{line}",)
+            self.assertIsNotNone(
+                norm_id,
+                msg=f"Normalization of {prefix}:{identifier} failed on {label}:{line}",
+            )
             self.assertEqual(
                 identifier,
                 norm_id,
