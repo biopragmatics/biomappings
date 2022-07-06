@@ -141,8 +141,8 @@ class Controller:
         if prefix is not None:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
 
-        it = ((line, prediction) for line, prediction in it if line not in self._marked)
-        return it
+        rv = ((line, prediction) for line, prediction in it if line not in self._marked)
+        return rv
 
     @staticmethod
     def _help_filter(query: str, it, elements: Set[str]):

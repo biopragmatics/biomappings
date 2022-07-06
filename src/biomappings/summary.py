@@ -4,6 +4,7 @@
 
 import itertools as itt
 import os
+import typing
 from collections import Counter
 from typing import Iterable, Mapping, Optional
 
@@ -59,7 +60,7 @@ def export():
 
 
 def _get_counter(mappings: Iterable[Mapping[str, str]]):
-    counter = Counter()
+    counter: typing.Counter[typing.Tuple[str, str]] = Counter()
     for mapping in mappings:
         source, target = mapping["source prefix"], mapping["target prefix"]
         if source > target:
@@ -85,6 +86,7 @@ def _get_contributors(mappings: Iterable[Mapping[str, str]]):
 def _get_source(source: str) -> Optional[str]:
     if source.startswith("orcid:"):
         return source[len("orcid:") :]
+    return None
 
 
 if __name__ == "__main__":

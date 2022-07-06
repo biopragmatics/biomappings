@@ -65,7 +65,7 @@ def iter_prediction_tuples(
         grounder=grounder,
         identifiers_are_names=identifiers_are_names,
     ):
-        yield PredictionTuple(*t, provenance)
+        yield PredictionTuple(*t, provenance)  # type: ignore
 
 
 def filter_custom(
