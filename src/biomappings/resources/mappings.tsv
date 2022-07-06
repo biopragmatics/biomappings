@@ -772,6 +772,7 @@ chebi	CHEBI:10025	Vulgaxanthin-I	skos:exactMatch	mesh	C018416	vulgaxanthin-I	man
 chebi	CHEBI:10029	WIN54954	skos:exactMatch	mesh	C062554	Win 54954	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:10032	Warburganal	skos:exactMatch	mesh	C037080	warburganal	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:10042	Withasomnine	skos:exactMatch	mesh	C568582	withasomnine	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:10044	Wuweizisu C	skos:exactMatch	mesh	C031409	schizandrin C	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:10056	xanomeline	skos:exactMatch	mesh	C075257	xanomeline	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:10058	Xanthatin	skos:exactMatch	mesh	C022186	xanthatin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:10070	Xanthoxylin	skos:exactMatch	mesh	C064382	xanthoxyline	manually_reviewed	orcid:0000-0001-9439-5346
@@ -799,6 +800,7 @@ chebi	CHEBI:101279	GGTI-2133	skos:exactMatch	mesh	C547856	GGTI-2133	manually_rev
 chebi	CHEBI:10129	Zwittergent 3-14	skos:exactMatch	mesh	C048256	zwittergent 3-14	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:10136	gingerol	skos:exactMatch	mesh	C007845	gingerol	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:1014	2-Aminoadenosine	skos:exactMatch	mesh	C033854	2-aminoadenosine	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:101854	talarozole	skos:exactMatch	mesh	C406527	R 115866	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:102029	sorbinil	skos:exactMatch	mesh	C026411	sorbinil	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:10213	alpha-amyrin	skos:exactMatch	mesh	C000654244	alpha-amyrin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:10219	alpha-Chaconine	skos:exactMatch	mesh	C011860	alpha-chaconine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -824,7 +826,9 @@ chebi	CHEBI:10586	3-carboxyphenyl phenylacetamidomethylphosphonate	skos:exactMat
 chebi	CHEBI:10588	1-(3-chlorophenyl)piperazine	skos:exactMatch	mesh	C015068	1-(3-chlorophenyl)piperazine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:108597	4,5-dimethoxy-2-nitrobenzaldehyde	skos:exactMatch	mesh	C559746	4,5-dimethoxy-2-nitrobenzaldehyde	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:109540	3,4-dichloroisocoumarin	skos:exactMatch	mesh	C046235	3,4-dichloroisocoumarin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:109543	5,7-dibromo-8-quinolinol	skos:exactMatch	mesh	C002276	broxyquinoline	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:111163	4-phenyl-1,2,3,4-tetrahydroisoquinoline	skos:exactMatch	mesh	C074266	4-phenyl-1,2,3,4-tetrahydroisoquinoline	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:111517	dimethylmalonic acid	skos:exactMatch	mesh	C087784	2,2-dimethylmalonic acid	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:11152	1,2-didecanoylglycerol	skos:exactMatch	mesh	C044297	1,2-didecanoylglycerol	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:111521	valienone	skos:exactMatch	mesh	C586497	valienone	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:113532	thymoquinone	skos:exactMatch	mesh	C003466	thymoquinone	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1934,9 +1938,12 @@ chebi	CHEBI:50114	estrogen	skos:exactMatch	mesh	D004967	Estrogens	manually_revie
 chebi	CHEBI:50199	pefloxacin	skos:exactMatch	mesh	C077130	perfloxacin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:50378	nitisinone	skos:exactMatch	mesh	C077073	nitisinone	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:50381	miglustat	skos:exactMatch	mesh	C059896	miglustat	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:50469	EC 3.1.1.4 (phospholipase A2) inhibitor	skos:exactMatch	mesh	C400481	PLIalpha	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:5050	fexofenadine	skos:exactMatch	mesh	C093230	fexofenadine	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:50509	potassium channel blocker	skos:exactMatch	mesh	D026902	Potassium Channel Blockers	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:50629	cyclooxygenase 2 inhibitor	skos:exactMatch	mesh	D052246	Cyclooxygenase 2 Inhibitors	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:50777	etonogestrel	skos:exactMatch	mesh	C044815	etonogestrel	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:50846	immunomodulator	skos:exactMatch	mesh	D007155	Immunologic Factors	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:50861	treprostinil	skos:exactMatch	mesh	C427248	treprostinil	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:50862	azinomycin B	skos:exactMatch	mesh	C051055	azinomycin B	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:50922	eletriptan	skos:exactMatch	mesh	C115647	eletriptan	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1944,6 +1951,7 @@ chebi	CHEBI:50949	serotonin uptake inhibitor	skos:exactMatch	mesh	D017367	Seroto
 chebi	CHEBI:51038	minaprine	skos:exactMatch	mesh	C006149	minaprine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:5106	flunisolide	skos:exactMatch	mesh	C007734	flunisolide	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:51141	alfuzosin	skos:exactMatch	mesh	C047638	alfuzosin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:51451	endothelin receptor antagonist	skos:exactMatch	mesh	D065128	Endothelin Receptor Antagonists	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:52221	isothiocyanate	skos:exactMatch	mesh	D017879	Isothiocyanates	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:5355	Ginkgolide A	skos:exactMatch	mesh	C477042	ginkgolide A	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:5356	ginkgolide B	skos:exactMatch	mesh	C045856	ginkgolide B	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1972,6 +1980,7 @@ chebi	CHEBI:63612	nelarabine	skos:exactMatch	mesh	C104457	nelarabine	manually_re
 chebi	CHEBI:63620	rasagiline	skos:exactMatch	mesh	C031967	rasagiline	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:63629	tizanidine	skos:exactMatch	mesh	C023754	tizanidine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:63634	valdecoxib	skos:exactMatch	mesh	C406224	valdecoxib	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:63673	chemokine receptor 5 antagonist	skos:exactMatch	mesh	D065100	CCR5 Receptor Antagonists	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:6375	lansoprazole	skos:exactMatch	ncit	C29150	Lansoprazole	manual	orcid:0000-0003-4423-4370
 chebi	CHEBI:64042	3-aminobenzamide	skos:exactMatch	mesh	C025160	3-aminobenzamide	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:64089	vanoxerine	skos:exactMatch	mesh	C043425	vanoxerine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -2061,7 +2070,9 @@ chebi	CHEBI:75998	trametinib	skos:exactMatch	mesh	C560077	trametinib	manually_re
 chebi	CHEBI:76114	benoxaprofen	skos:exactMatch	mesh	C011677	benoxaprofen	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:76274	SC560	skos:exactMatch	mesh	C115461	SC 560	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:76607	macitentan	skos:exactMatch	mesh	C533860	macitentan	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:76617	EC 2.7.10.2 (non-specific protein-tyrosine kinase) inhibitor	skos:exactMatch	mesh	D000075242	Janus Kinase Inhibitors	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:76749	bopindolol	skos:exactMatch	mesh	C036007	bopindolol	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:76822	EC 3.2.1.31 (beta-glucuronidase) inhibitor	skos:exactMatch	mesh	C011473	beta-glucuronidase inhibitor	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:77149	notoginsenoside R1	skos:exactMatch	mesh	C072936	notoginsenoside R1	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:77573	tosufloxacin	skos:exactMatch	mesh	C055185	tosufloxacin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:77596	Ranitidine bismuth citrate	skos:exactMatch	mesh	C073340	ranitidine bismuth citrate	manually_reviewed	orcid:0000-0001-9439-5346
@@ -2096,6 +2107,8 @@ chebi	CHEBI:82699	oritavancin	skos:exactMatch	mesh	C100708	oritavancin	manually_
 chebi	CHEBI:82701	idelalisib	skos:exactMatch	mesh	C552946	idelalisib	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:82715	PH 797804	skos:exactMatch	mesh	C542398	PH 797804	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:82721	dalbavancin	skos:exactMatch	mesh	C469289	dalbavancin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:82818	Z-Val-Phe-H	skos:exactMatch	mesh	C058076	calpain inhibitor III	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:82824	calpain inhibitor	skos:exactMatch	mesh	C039304	calpain inhibitors	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:82941	fosamprenavir	skos:exactMatch	mesh	C426859	fosamprenavir	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:82977	daclatasvir	skos:exactMatch	mesh	C549273	daclatasvir	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:83168	acrivastine	skos:exactMatch	mesh	C043648	acrivastine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -2770,28 +2783,40 @@ mesh	C000170	ferric ferrocyanide	skos:exactMatch	ncit	C47532	Ferric Ferrocyanide
 mesh	C000179	N-acetylaspartate	skos:exactMatch	ncit	C118887	N-Acetylaspartate	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000203	deoxyaminopteroic acid	skos:exactMatch	ncit	C157133	Deoxyaminopteroic Acid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000288	ritrosulfan	skos:exactMatch	ncit	C75294	Ritrosulfan	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000589263	AZD7451	skos:exactMatch	ncit	C99161	Tropomyosin Receptor Kinase Inhibitor AZD7451	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000589490	Omaveloxolone	skos:exactMatch	ncit	C113443	Omaveloxolone	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000590398	DEPDC5 protein, human	skos:exactMatch	uniprot	O75140	DEPDC5	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C000590915	Aticaprant	skos:exactMatch	ncit	C170144	Aticaprant	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000592351	AZD3965	skos:exactMatch	ncit	C105399	Monocarboxylate Transporter 1 Inhibitor AZD3965	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000592662	DORAVIRINE	skos:exactMatch	ncit	C171848	Doravirine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000592900	FJX1 protein, human	skos:exactMatch	uniprot	Q86VR8	FJX1	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000592911	Abituzumab	skos:exactMatch	ncit	C82422	Abituzumab	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000594804	Tovetumab	skos:exactMatch	ncit	C82684	Tovetumab	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000595153	ASP3026	skos:exactMatch	ncit	C116727	ALK Inhibitor ASP3026	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000595215	Polyethylene Glycol 6000	skos:exactMatch	ncit	C84085	Polyethylene Glycol 6000	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000595455	LY2510924	skos:exactMatch	ncit	C106253	CXCR4 Peptide Antagonist LY2510924	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000595972	AZD8186	skos:exactMatch	ncit	C107684	PI3Kbeta Inhibitor AZD8186	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000596385	Jalili syndrome	skos:exactMatch	doid	DOID:0111404	Jalili syndrome	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000596910	ABX196	skos:exactMatch	ncit	C172187	iNKT Cell Agonist ABX196	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000597117	LB-100	skos:exactMatch	ncit	C106430	Protein Phosphatase 2A Inhibitor LB-100	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000597312	Gefapixant	skos:exactMatch	ncit	C166945	Gefapixant	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000597465	CEP-9722	skos:exactMatch	ncit	C84880	PARP Inhibitor CEP-9722	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000598645	Spheroid body myopathy	skos:exactMatch	doid	DOID:0080091	spheroid body myopathy	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000599766	Otilimab	skos:exactMatch	ncit	C170271	Otilimab	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000600094	Fletikumab	skos:exactMatch	ncit	C171836	Fletikumab	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000602642	PLX8394	skos:exactMatch	ncit	C113330	BRAF Inhibitor PLX8394	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000603632	sodium glycididazole	skos:exactMatch	ncit	C77889	Sodium Glycididazole	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000604573	AZD9496	skos:exactMatch	ncit	C122834	Selective Estrogen Receptor Degrader AZD9496	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000606551	remdesivir	skos:exactMatch	ncit	C152185	Remdesivir	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000607229	Solitomab	skos:exactMatch	ncit	C77854	Solitomab	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000608559	Miransertib	skos:exactMatch	ncit	C99172	Miransertib	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000608854	Bilateral Optic Nerve Meningioma	skos:exactMatch	ncit	C5304	Bilateral Optic Nerve Meningioma	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000609611	AZD2461	skos:exactMatch	ncit	C95201	PARP Inhibitor AZD2461	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000612647	GLPG0187	skos:exactMatch	ncit	C96223	Integrin Receptor Antagonist GLPG0187	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000613032	IRX4204	skos:exactMatch	ncit	C140551	Retinoid X Receptor Agonist IRX4204	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000615187	Plutonium-239	skos:exactMatch	ncit	C29774	Plutonium-239	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000615784	ASP5878	skos:exactMatch	ncit	C122719	FGFR Inhibitor ASP5878	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000620181	PF-04136309	skos:exactMatch	ncit	C97507	CCR2 Antagonist PF-04136309	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000620255	GOT1 protein, human	skos:exactMatch	uniprot	P17174	GOT1	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000621508	F2RL1 protein, human	skos:exactMatch	uniprot	P55085	F2RL1	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000622468	TMEM65 protein, human	skos:exactMatch	uniprot	Q6PI78	TMEM65	manually_reviewed	orcid:0000-0001-9439-5346
@@ -2803,8 +2828,10 @@ mesh	C000626007	MAGEB4 protein, human	skos:exactMatch	uniprot	O15481	MAGEB4	manu
 mesh	C000626124	NGLY1 deficiency	skos:exactMatch	doid	DOID:0060728	NGLY1-deficiency	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000626257	Icrucumab	skos:exactMatch	ncit	C79808	Icrucumab	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000626466	ENDOD1 protein, human	skos:exactMatch	uniprot	O94919	ENDOD1	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000626597	DS-8273a	skos:exactMatch	ncit	C121158	Anti-DR5 Agonistic Antibody DS-8273a	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000627234	OBE2109	skos:exactMatch	ncit	C148479	Linzagolix	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000627735	FGF22 protein, human	skos:exactMatch	uniprot	Q9HCT0	FGF22	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000627946	PUL-042	skos:exactMatch	ncit	C135091	TLR 2/6/9 Agonist PUL-042	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000629536	Inotersen	skos:exactMatch	ncit	C121667	Inotersen	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000629634	Rezafungin	skos:exactMatch	ncit	C152205	Rezafungin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000629807	Dorzagliatin	skos:exactMatch	ncit	C169919	Dorzagliatin	manually_reviewed	orcid:0000-0001-9439-5346
@@ -2846,14 +2873,25 @@ mesh	C000637964	Streptococcus cristatus	skos:exactMatch	ncit	C86788	Streptococcu
 mesh	C000637995	Ruminococcus gnavus	skos:exactMatch	ncit	C124373	Ruminococcus gnavus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C000639838	Sphingomonas paucimobilis	skos:exactMatch	ncit	C86749	Sphingomonas paucimobilis	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000650035	Citrobacter farmeri	skos:exactMatch	ncit	C86264	Citrobacter farmeri	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000654629	H3B-6545	skos:exactMatch	ncit	C142980	Selective Estrogen Receptor Covalent Antagonist H3B-6545	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000655246	ACT-774312	skos:exactMatch	ncit	C161834	CRTH2 Antagonist ACT-774312	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000656407	MSANTD3 protein, human	skos:exactMatch	uniprot	Q96H12	MSANTD3	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000656449	FAM114A2 protein, human	skos:exactMatch	uniprot	Q9NRY5	FAM114A2	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000656484	severe acute respiratory syndrome coronavirus 2	skos:exactMatch	ncit	C169076	SARS Coronavirus 2	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C000656535	ODM-204	skos:exactMatch	ncit	C120304	CYP17/Androgen Receptor Inhibitor ODM 204	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000656537	RXDX-106	skos:exactMatch	ncit	C150585	TAM/c-Met Inhibitor RXDX-106	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000656703	EIDD-2801	skos:exactMatch	ncit	C172633	RNA Polymerase Inhibitor EIDD-2801	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000656784	adiaspiromycosis	skos:exactMatch	doid	DOID:0050072	adiaspiromycosis	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000656824	tinea manus	skos:exactMatch	doid	DOID:13369	tinea manuum	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C000656825	tinea barbae	skos:exactMatch	doid	DOID:0050096	tinea barbae	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000656865	talaromycosis	skos:exactMatch	doid	DOID:0050288	penicilliosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C000656904	tinea nigra	skos:exactMatch	doid	DOID:8912	tinea nigra	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000657265	CLR457	skos:exactMatch	ncit	C117230	pan-PI3K Inhibitor CLR457	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000657359	TAS-114	skos:exactMatch	ncit	C116885	dUTPase/DPD Inhibitor TAS-114	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000705750	AZD7648	skos:exactMatch	ncit	C168692	DNA-PK inhibitor AZD7648	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000706013	PLX51107	skos:exactMatch	ncit	C125739	BRD4 Inhibitor PLX51107	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000706408	onvansertib	skos:exactMatch	ncit	C143162	Onvansertib|PLK1 Inhibitor PCM-075	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C000706695	ABBV-744	skos:exactMatch	ncit	C148415	BET Inhibitor ABBV-744	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C000706947	FGF21 protein, human	skos:exactMatch	uniprot	Q9NSA1	FGF21	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C001803	tempol	skos:exactMatch	efo	0002678	tempol	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C009285	sodium polymetaphosphate	skos:exactMatch	ncit	C84166	Sodium Polymetaphosphate	manually_reviewed	orcid:0000-0003-4423-4370
@@ -2865,6 +2903,8 @@ mesh	C017717	sodium thiosulfate	skos:exactMatch	ncit	C1230	Sodium Thiosulfate	ma
 mesh	C017959	choline magnesium trisalicylate	skos:exactMatch	ncit	C29244	Choline Magnesium Trisalicylate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C018851	borax	skos:exactMatch	ncit	C77496	Sodium Borate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C019919	CoA-synthesizing protein complex	skos:exactMatch	go	GO:1990143	CoA-synthesizing protein complex	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C021240	tissue-factor-pathway inhibitor 2	skos:exactMatch	ncit	C111846	Tissue Factor Pathway Inhibitor 2	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C022052	placental ribonuclease inhibitor	skos:exactMatch	ncit	C101604	Ribonuclease Inhibitor	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C025026	sodium sulfite	skos:exactMatch	ncit	C28205	Sodium Sulfite	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C029943	potassium hydroxide	skos:exactMatch	ncit	C28204	Potassium Hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C033065	aluminum magnesium silicate	skos:exactMatch	ncit	C83898	Magnesium Aluminum Silicate	manually_reviewed	orcid:0000-0003-4423-4370
@@ -3046,6 +3086,7 @@ mesh	C491178	NKX3-1 protein, human	skos:exactMatch	uniprot	Q99801	NKX3-1	manuall
 mesh	C491326	RCE1 protein, human	skos:exactMatch	uniprot	Q9Y256	RCE1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C491904	AP3D1 protein, human	skos:exactMatch	uniprot	O14617	AP3D1	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C492198	RALA protein, human	skos:exactMatch	uniprot	P11233	RALA	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C492393	AGN 195183	skos:exactMatch	ncit	C77899	RARalpha Agonist IRX5183	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C492511	ANKIB1 protein, human	skos:exactMatch	uniprot	Q9P2G1	ANKIB1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C492515	ANKRD11 protein, human	skos:exactMatch	uniprot	Q6UB99	ANKRD11	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C492526	TP53I13 protein, human	skos:exactMatch	uniprot	Q8NBR0	TP53I13	manually_reviewed	orcid:0000-0003-1307-2508
@@ -3065,6 +3106,7 @@ mesh	C494881	DGAT1 protein, human	skos:exactMatch	uniprot	O75907	DGAT1	manually_
 mesh	C495270	CTNNB1 protein, human	skos:exactMatch	uniprot	P35222	CTNNB1	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C495374	CPAMD8 protein, human	skos:exactMatch	uniprot	Q8IZJ3	CPAMD8	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C495815	CFL2 protein, human	skos:exactMatch	uniprot	Q9Y281	CFL2	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C495817	CC-8490	skos:exactMatch	ncit	C38711	Selective Estrogen Receptor Modulator CC-8490	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C495868	CTTN protein, human	skos:exactMatch	uniprot	Q14247	CTTN	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C496061	PXN protein, human	skos:exactMatch	uniprot	P49023	PXN	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C496348	FGFR1 protein, human	skos:exactMatch	uniprot	P11362	FGFR1	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3115,6 +3157,7 @@ mesh	C500151	SYBU protein, human	skos:exactMatch	uniprot	Q9NX95	SYBU	manually_re
 mesh	C500818	NENF protein, human	skos:exactMatch	uniprot	Q9UMX5	NENF	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C500982	MYO18B protein, human	skos:exactMatch	uniprot	Q8IUG5	MYO18B	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C501064	MRGPRX3 protein, human	skos:exactMatch	uniprot	Q96LB0	MRGPRX3	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C501899	KRP-203	skos:exactMatch	ncit	C106368	S1P Receptor Agonist KRP203	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C502025	MRPL37 protein, human	skos:exactMatch	uniprot	Q9BZE1	MRPL37	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C502188	IL31RA protein, human	skos:exactMatch	uniprot	Q8NI17	IL31RA	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C502654	MRPL41 protein, human	skos:exactMatch	uniprot	Q8IXM3	MRPL41	manually_reviewed	orcid:0000-0003-4423-4370
@@ -3665,6 +3708,8 @@ mesh	C538459	Ovarian gynandroblastoma	skos:exactMatch	efo	1000422	Ovarian Gynand
 mesh	C538603	Ichthyosiform erythroderma, Brocq congenital, nonbullous form	skos:exactMatch	doid	DOID:0060710	autosomal recessive congenital ichthyosis 2	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C538639	Sarcoma family syndrome of Li and Fraumeni	skos:exactMatch	doid	DOID:0111503	Li-Fraumeni syndrome 1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C538682	Hyperkeratosis of the palms and soles and esophageal papillomas	skos:exactMatch	doid	DOID:0111708	focal nonepidermolytic palmoplantar keratoderma	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C540323	CTCE-9908	skos:exactMatch	ncit	C170746	SDF-1 Receptor Antagonist PTX-9908	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C543412	BMS 641988	skos:exactMatch	ncit	C62522	AR Antagonist BMS-641988	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C543805	MIPOL1 protein, human	skos:exactMatch	uniprot	Q8TD10	MIPOL1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C547406	TICRR protein, human	skos:exactMatch	uniprot	Q7Z2Z1	TICRR	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C547590	GINS1 protein, human	skos:exactMatch	uniprot	Q14691	GINS1	manually_reviewed	orcid:0000-0003-1307-2508
@@ -3677,6 +3722,8 @@ mesh	C548082	Noonan Syndrome 4	skos:exactMatch	doid	DOID:0060582	Noonan syndrome
 mesh	C548083	Noonan Syndrome 5	skos:exactMatch	doid	DOID:0060583	Noonan syndrome 5	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C548084	Noonan Syndrome 6	skos:exactMatch	doid	DOID:0060584	Noonan syndrome 6	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C549273	daclatasvir	skos:exactMatch	ncit	C114981	Daclatasvir	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C551428	KW-2478	skos:exactMatch	ncit	C69139	Hsp90 Antagonist KW-2478	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C552302	EZN 3042	skos:exactMatch	ncit	C92578	Survivin mRNA Antagonist EZN-3042	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C556354	AHSG protein, human	skos:exactMatch	uniprot	P02765	AHSG	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C556406	GINS2 protein, human	skos:exactMatch	uniprot	Q9Y248	GINS2	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C557674	SeSAME syndrome	skos:exactMatch	doid	DOID:0060484	EAST syndrome	manually_reviewed	orcid:0000-0003-1307-2508
@@ -3685,6 +3732,7 @@ mesh	C557818	Orofaciodigital syndrome 9	skos:exactMatch	doid	DOID:0060382	orofac
 mesh	C557819	Orofaciodigital syndrome 5	skos:exactMatch	doid	DOID:0060375	orofaciodigital syndrome V	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C557820	Orofaciodigital syndrome 8	skos:exactMatch	doid	DOID:0060378	orofaciodigital syndrome VIII	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C557821	Orofaciodigital syndrome 11	skos:exactMatch	doid	DOID:0060381	orofaciodigital syndrome XI	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C559041	FP-1039	skos:exactMatch	ncit	C77970	FGF Receptor Antagonist HGS1036	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C562378	Hepatic Fibrosis, Congenital	skos:exactMatch	ncit	C97071	Congenital Hepatic Fibrosis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C562398	Madelung Deformity	skos:exactMatch	hp	HP:0003067	Madelung deformity	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C562405	Pulmonary Alveolar Microlithiasis	skos:exactMatch	doid	DOID:12117	pulmonary alveolar microlithiasis	manually_reviewed	orcid:0000-0003-1307-2508
@@ -4257,6 +4305,7 @@ mesh	C567863	Congenital Lipomatous Overgrowth, Vascular Malformations, and Epide
 mesh	C567877	Cardiomyopathy, Dilated, 1BB	skos:exactMatch	doid	DOID:0110458	dilated cardiomyopathy 1BB	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C569686	Alexa Fluor 647	skos:exactMatch	efo	0004967	Alexa Fluor 647	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C570377	Benign Pseudohypertrophic Muscular Dystrophy	skos:exactMatch	doid	DOID:9883	Becker muscular dystrophy	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C570874	BMS-813160	skos:exactMatch	ncit	C139550	CCR2/CCR5 Antagonist BMS-813160	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C571911	Gastrointestinal anthrax	skos:exactMatch	doid	DOID:13386	gastrointestinal anthrax	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C571912	Inhalation anthrax	skos:exactMatch	doid	DOID:0050160	inhalation anthrax	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C572568	Complement Factor I Deficiency	skos:exactMatch	doid	DOID:0050419	complement factor I deficiency	manually_reviewed	orcid:0000-0003-1307-2508
@@ -4314,6 +4363,7 @@ mesh	C582624	SUSD4 protein, human	skos:exactMatch	uniprot	Q5VX71	SUSD4	manually_
 mesh	C582625	TUBG1 protein, human	skos:exactMatch	uniprot	P23258	TUBG1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C582626	SUSD2 protein, human	skos:exactMatch	uniprot	Q9UGT4	SUSD2	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C582627	MAP3K21 protein, human	skos:exactMatch	uniprot	Q5TCX8	MAP3K21	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C582633	LY2452473	skos:exactMatch	ncit	C123792	Selective Androgen Receptor Modulator LY2452473	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C582650	MICU2 protein, human	skos:exactMatch	uniprot	Q8IYU8	MICU2	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C582675	ABCA8 protein, human	skos:exactMatch	uniprot	O94911	ABCA8	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C582733	RNF187 protein, human	skos:exactMatch	uniprot	Q5TA31	RNF187	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4325,6 +4375,7 @@ mesh	C582970	TMEM25 protein, human	skos:exactMatch	uniprot	Q86YD3	TMEM25	manuall
 mesh	C582974	ZNF408 protein, human	skos:exactMatch	uniprot	Q9H9D4	ZNF408	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C582979	ZSCAN4 protein, human	skos:exactMatch	uniprot	Q8NAM6	ZSCAN4	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C582981	TBC1D10B protein, human	skos:exactMatch	uniprot	Q4KMP7	TBC1D10B	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C583051	BMS-833923	skos:exactMatch	ncit	C77861	Smoothened Antagonist BMS-833923	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C583058	COQ5 protein, human	skos:exactMatch	uniprot	Q5HYK3	COQ5	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C583132	ESYT1 protein, human	skos:exactMatch	uniprot	Q9BSJ8	ESYT1	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C583162	TRIM62 protein, human	skos:exactMatch	uniprot	Q9BVG3	TRIM62	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4720,6 +4771,7 @@ mesh	D000317	Adrenergic alpha-Antagonists	skos:exactMatch	chebi	CHEBI:37890	alph
 mesh	D000318	Adrenergic beta-Agonists	skos:exactMatch	chebi	CHEBI:35522	beta-adrenergic agonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000319	Adrenergic beta-Antagonists	skos:exactMatch	chebi	CHEBI:35530	beta-adrenergic antagonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000322	Adrenergic Agonists	skos:exactMatch	chebi	CHEBI:37886	adrenergic agonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D000322	Adrenergic Agonists	skos:exactMatch	ncit	C87053	Adrenergic Agonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000325	Adrenodoxin	skos:exactMatch	chebi	CHEBI:48962	adrenodoxin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000345	Affinity Labels	skos:exactMatch	chebi	CHEBI:60788	affinity label	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000348	Aflatoxins	skos:exactMatch	chebi	CHEBI:22271	aflatoxin	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4799,6 +4851,7 @@ mesh	D000690	Amyotrophic Lateral Sclerosis	skos:exactMatch	doid	DOID:0111246	amy
 mesh	D000698	Analgesia	skos:exactMatch	doid	DOID:0060145	pain agnosia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D000701	Analgesics, Opioid	skos:exactMatch	chebi	CHEBI:35482	opioid analgesic	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000705	Anaphase	skos:exactMatch	go	GO:0051322	anaphase	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000726	Androgen Antagonists	skos:exactMatch	ncit	C242	Anti-Androgen	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000728	Androgens	skos:exactMatch	chebi	CHEBI:50113	androgen	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000738	Androsterone	skos:exactMatch	chebi	CHEBI:16032	androsterone	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000743	Anemia, Hemolytic	skos:exactMatch	doid	DOID:583	hemolytic anemia	manually_reviewed	orcid:0000-0003-1307-2508
@@ -5013,6 +5066,7 @@ mesh	D002117	Calcitriol	skos:exactMatch	chebi	CHEBI:17823	calcitriol	manually_re
 mesh	D002118	Calcium	skos:exactMatch	chebi	CHEBI:22984	calcium atom	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002120	Calcium Channel Agonists	skos:exactMatch	chebi	CHEBI:38807	calcium channel agonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002121	Calcium Channel Blockers	skos:exactMatch	chebi	CHEBI:38215	calcium channel blocker	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002121	Calcium Channel Blockers	skos:exactMatch	ncit	C333	Calcium Channel Blocker	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D002125	Calcium Gluconate	skos:exactMatch	chebi	CHEBI:3309	Calcium Gluconate	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002126	Calcium Hydroxide	skos:exactMatch	ncit	C77032	Calcium Hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D002129	Calcium Oxalate	skos:exactMatch	chebi	CHEBI:60579	calcium oxalate	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5093,6 +5147,7 @@ mesh	D002585	Cesarean Section	skos:exactMatch	efo	0009636	cesarean section	manua
 mesh	D002585	Cesarean Section	skos:exactMatch	ncit	C46088	Cesarean Section	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002599	Chalcone	skos:exactMatch	chebi	CHEBI:27618	chalcone	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002606	Charcoal	skos:exactMatch	chebi	CHEBI:91090	charcoal	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002614	Chelating Agents	skos:exactMatch	chebi	CHEBI:38161	chelator	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D002629	Chemosterilants	skos:exactMatch	chebi	CHEBI:23092	chemosterilant	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002633	Chemotaxis	skos:exactMatch	go	GO:0006935	chemotaxis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002634	Chemotaxis, Leukocyte	skos:exactMatch	go	GO:0030595	leukocyte chemotaxis	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5235,6 +5290,7 @@ mesh	D004719	Endomyocardial Fibrosis	skos:exactMatch	ncit	C34585	Endomyocardial 
 mesh	D004721	Endoplasmic Reticulum	skos:exactMatch	go	GO:0005783	endoplasmic reticulum	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D004777	Environment	skos:exactMatch	ncit	C16551	Environment	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D004781	Environmental Exposure	skos:exactMatch	ncit	C16552	Environmental Exposure	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D004793	Enzyme Reactivators	skos:exactMatch	chebi	CHEBI:50242	enzyme reactivator	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D004860	Infectious Anemia Virus, Equine	skos:exactMatch	ncit	C14205	Equine Infectious Anemia Virus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D004894	Erythrasma	skos:exactMatch	doid	DOID:4131	erythrasma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D004903	Erythrocyte Aggregation	skos:exactMatch	go	GO:0034117	erythrocyte aggregation	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5258,6 +5314,7 @@ mesh	D005407	Flagella	skos:exactMatch	go	GO:0005929	cilium	manually_reviewed	orc
 mesh	D005414	Flatulence	skos:exactMatch	efo	0009669	flatulence	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005416	Flavivirus	skos:exactMatch	ncit	C14208	Flavivirus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005427	Flocculation	skos:exactMatch	go	GO:0000128	flocculation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D005493	Folic Acid Antagonists	skos:exactMatch	ncit	C511	Folate Antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D005498	Follicular Phase	skos:exactMatch	go	GO:0001541	ovarian follicle development	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D005596	Fractures, Closed	skos:exactMatch	ncit	C34623	Closed Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005597	Fractures, Open	skos:exactMatch	ncit	C34624	Open Fracture	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5339,9 +5396,13 @@ mesh	D006555	Hernia, Ventral	skos:exactMatch	ncit	C118313	Ventral Hernia	manuall
 mesh	D006561	Herpes Simplex	skos:exactMatch	doid	DOID:8566	herpes simplex	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006570	Heterochromatin	skos:exactMatch	go	GO:0000792	heterochromatin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006605	Hibernation	skos:exactMatch	go	GO:0042750	hibernation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D006633	Histamine Antagonists	skos:exactMatch	chebi	CHEBI:37956	histamine antagonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D006634	Histamine H1 Antagonists	skos:exactMatch	chebi	CHEBI:37955	H1-receptor antagonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D006635	Histamine H2 Antagonists	skos:exactMatch	chebi	CHEBI:37961	H2-receptor antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006689	Hodgkin Disease	skos:exactMatch	doid	DOID:8654	Hodgkin's lymphoma, mixed cellularity	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006716	Homosexuality	skos:exactMatch	efo	0008485	homosexuality	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006716	Homosexuality	skos:exactMatch	ncit	C84363	Homosexuality	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D006727	Hormone Antagonists	skos:exactMatch	chebi	CHEBI:49020	hormone antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006810	Humeral Fractures	skos:exactMatch	ncit	C26795	Humerus Fracture	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006833	Hydrarthrosis	skos:exactMatch	doid	DOID:528	hydrarthrosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006848	Testicular Hydrocele	skos:exactMatch	doid	DOID:9912	hydrocele	manually_reviewed	orcid:0000-0003-1307-2508
@@ -5530,6 +5591,7 @@ mesh	D010863	Piloerection	skos:exactMatch	go	GO:0097195	pilomotor reflex	manuall
 mesh	D010873	Pinocytosis	skos:exactMatch	go	GO:0006907	pinocytosis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D010900	Pituitary Diseases	skos:exactMatch	doid	DOID:53	pituitary gland disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D010942	Plant Viruses	skos:exactMatch	ncit	C14257	Plant Virus	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D010960	Plasminogen Activators	skos:exactMatch	ncit	C16996	Plasminogen Activator	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D010974	Platelet Aggregation	skos:exactMatch	go	GO:0070527	platelet aggregation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D010996	Pleural Effusion	skos:exactMatch	efo	0009637	pleural effusion	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D010998	Pleurisy	skos:exactMatch	doid	DOID:10247	pleurisy	manually_reviewed	orcid:0000-0003-1307-2508
@@ -5606,6 +5668,7 @@ mesh	D012518	Sarcomeres	skos:exactMatch	go	GO:0030017	sarcomere	manually_reviewe
 mesh	D012519	Sarcoplasmic Reticulum	skos:exactMatch	go	GO:0016529	sarcoplasmic reticulum	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012592	Scleredema Adultorum	skos:exactMatch	ncit	C85057	Scleredema Adultorum	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012625	Sebaceous Gland Diseases	skos:exactMatch	doid	DOID:9098	sebaceous gland disease	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D012702	Serotonin Antagonists	skos:exactMatch	chebi	CHEBI:48279	serotonergic antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D012728	Sex Chromatin	skos:exactMatch	go	GO:0001739	sex chromatin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012730	Sex Chromosomes	skos:exactMatch	go	GO:0000803	sex chromosome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012733	Sex Differentiation	skos:exactMatch	go	GO:0007548	sex differentiation	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5836,7 +5899,10 @@ mesh	D017275	Isradipine	skos:exactMatch	chebi	CHEBI:6073	Isradipine	manually_rev
 mesh	D017279	Selenocysteine	skos:exactMatch	ncit	C1223	Selenocysteine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017280	Condoms	skos:exactMatch	ncit	C28258	Condom	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017325	Hepatitis B Vaccines	skos:exactMatch	ncit	C29091	Hepatitis B Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D017366	Serotonin Receptor Agonists	skos:exactMatch	chebi	CHEBI:35941	serotonergic agonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D017366	Serotonin Receptor Agonists	skos:exactMatch	ncit	C47794	Serotonin Agonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D017368	Protein Prenylation	skos:exactMatch	go	GO:0018342	protein prenylation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D017442	Histamine Agonists	skos:exactMatch	chebi	CHEBI:35678	histamine agonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D017499	Porokeratosis	skos:exactMatch	doid	DOID:3805	porokeratosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D017510	Protein Folding	skos:exactMatch	go	GO:0006457	protein folding	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017544	Aortic Aneurysm, Abdominal	skos:exactMatch	ncit	C27000	Abdominal Aortic Aneurysm	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5872,10 +5938,28 @@ mesh	D018386	Kinetochores	skos:exactMatch	go	GO:0000776	kinetochore	manually_rev
 mesh	D018392	Genomic Imprinting	skos:exactMatch	go	GO:0071514	genetic imprinting	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018442	Lymphoma, B-Cell, Marginal Zone	skos:exactMatch	doid	DOID:0050909	MALT lymphoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D018451	Homosexuality, Male	skos:exactMatch	efo	0008486	male homosexuality	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D018491	Dopamine Agonists	skos:exactMatch	chebi	CHEBI:51065	dopamine agonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018491	Dopamine Agonists	skos:exactMatch	ncit	C66884	Dopamine Agonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018492	Dopamine Antagonists	skos:exactMatch	chebi	CHEBI:48561	dopaminergic antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D018522	Gravitropism	skos:exactMatch	go	GO:0009630	gravitropism	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018523	Tropism	skos:exactMatch	go	GO:0009606	tropism	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018524	Phototropism	skos:exactMatch	go	GO:0009638	phototropism	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D018674	Adrenergic Antagonists	skos:exactMatch	chebi	CHEBI:37887	adrenergic antagonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018674	Adrenergic Antagonists	skos:exactMatch	ncit	C72900	Adrenergic Antagonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018679	Cholinergic Agonists	skos:exactMatch	chebi	CHEBI:38324	cholinergic agonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018679	Cholinergic Agonists	skos:exactMatch	ncit	C47796	Cholinergic Agonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018680	Cholinergic Antagonists	skos:exactMatch	chebi	CHEBI:48873	cholinergic antagonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018680	Cholinergic Antagonists	skos:exactMatch	ncit	C66880	Anticholinergic Agent	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018690	Excitatory Amino Acid Agonists	skos:exactMatch	chebi	CHEBI:50103	excitatory amino acid agonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018691	Excitatory Amino Acid Antagonists	skos:exactMatch	chebi	CHEBI:60798	excitatory amino acid antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D018699	Coated Vesicles	skos:exactMatch	go	GO:0030135	coated vesicle	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D018721	Muscarinic Agonists	skos:exactMatch	chebi	CHEBI:38325	muscarinic agonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018722	Nicotinic Agonists	skos:exactMatch	ncit	C73579	Nicotinic Agonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018727	Muscarinic Antagonists	skos:exactMatch	chebi	CHEBI:48876	muscarinic antagonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018733	Nicotinic Antagonists	skos:exactMatch	chebi	CHEBI:48878	nicotinic antagonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018755	GABA Agonists	skos:exactMatch	chebi	CHEBI:51373	GABA agonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018756	GABA Antagonists	skos:exactMatch	chebi	CHEBI:65259	GABA antagonist	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D018757	GABA Modulators	skos:exactMatch	chebi	CHEBI:50268	GABA modulator	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D018798	Anemia, Iron-Deficiency	skos:exactMatch	doid	DOID:11758	iron deficiency anemia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D018870	Endoplasmic Reticulum, Rough	skos:exactMatch	go	GO:0005791	rough endoplasmic reticulum	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018871	Endoplasmic Reticulum, Smooth	skos:exactMatch	go	GO:0005790	smooth endoplasmic reticulum	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5899,6 +5983,7 @@ mesh	D019457	Chromosome Breakage	skos:exactMatch	go	GO:0031052	chromosome breaka
 mesh	D019522	Vaginal Discharge	skos:exactMatch	efo	0009365	vaginal discharge	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019595	Severe Dengue	skos:exactMatch	doid	DOID:12206	dengue hemorrhagic fever	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D019599	Mossy Fibers, Hippocampal	skos:exactMatch	go	GO:0097457	hippocampal mossy fiber	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D019653	Myeloablative Agonists	skos:exactMatch	ncit	C1711	Myeloablative Agonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D019706	Excitatory Postsynaptic Potentials	skos:exactMatch	go	GO:0060079	excitatory postsynaptic potential	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019793	Fluorescein	skos:exactMatch	chebi	CHEBI:31624	fluorescein	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019798	Neopterin	skos:exactMatch	chebi	CHEBI:28670	neopterin	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5919,6 +6004,7 @@ mesh	D019898	Autocrine Communication	skos:exactMatch	go	GO:0035425	autocrine sig
 mesh	D019899	Paracrine Communication	skos:exactMatch	go	GO:0038001	paracrine signaling	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019905	Benzyl Alcohol	skos:exactMatch	chebi	CHEBI:17987	benzyl alcohol	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020018	Sexual Dysfunctions, Psychological	skos:exactMatch	doid	DOID:10132	psychosexual disorder	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D020024	Leukotriene Antagonists	skos:exactMatch	chebi	CHEBI:49159	leukotriene antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020090	Chromosome Segregation	skos:exactMatch	go	GO:0007059	chromosome segregation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020101	Acrosome Reaction	skos:exactMatch	go	GO:0007340	acrosome reaction	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020160	Sodium Benzoate	skos:exactMatch	ncit	C66541	Sodium Benzoate	manually_reviewed	orcid:0000-0003-4423-4370
@@ -5937,6 +6023,8 @@ mesh	D020524	Thylakoids	skos:exactMatch	go	GO:0009579	thylakoid	manually_reviewe
 mesh	D020541	Coiled Bodies	skos:exactMatch	go	GO:0015030	Cajal body	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020675	Peroxisomes	skos:exactMatch	go	GO:0005777	peroxisome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020676	Glyoxysomes	skos:exactMatch	go	GO:0009514	glyoxysome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D020845	Selective Estrogen Receptor Modulators	skos:exactMatch	ncit	C1821	Selective Estrogen Receptor Modulator	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D020847	Estrogen Receptor Modulators	skos:exactMatch	chebi	CHEBI:50739	estrogen receptor modulator	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020868	Gene Silencing	skos:exactMatch	go	GO:0016458	gene silencing	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020894	Microfibrils	skos:exactMatch	go	GO:0001527	microfibril	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020942	Shiitake Mushrooms	skos:exactMatch	ncit	C72008	Shiitake Mushroom	manually_reviewed	orcid:0000-0003-4423-4370
@@ -6064,6 +6152,7 @@ mesh	D051526	Fibroblast Growth Factor 10	skos:exactMatch	hgnc	3666	FGF10	manuall
 mesh	D051538	Hepatocyte Nuclear Factor 1-alpha	skos:exactMatch	hgnc	11621	HNF1A	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D051539	Hepatocyte Nuclear Factor 1-beta	skos:exactMatch	hgnc	11630	HNF1B	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D051738	Origin Recognition Complex	skos:exactMatch	go	GO:0000808	origin recognition complex	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D051786	Cyclic AMP Response Element Modulator	skos:exactMatch	ncit	C162405	cAMP-Responsive Element Modulator	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D052117	Benzodioxoles	skos:exactMatch	chebi	CHEBI:38298	benzodioxoles	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D052158	Aptamers, Peptide	skos:exactMatch	chebi	CHEBI:140491	peptide aptamer	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D052160	Benzothiazoles	skos:exactMatch	chebi	CHEBI:37947	benzothiazoles	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6209,6 +6298,7 @@ mesh	D055959	Intervertebral Disc Degeneration	skos:exactMatch	doid	DOID:90	degen
 mesh	D056245	Mi-2 Nucleosome Remodeling and Deacetylase Complex	skos:exactMatch	go	GO:0016581	NuRD complex	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D056344	Executive Function	skos:exactMatch	efo	0007046	executive function	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D056344	Executive Function	skos:exactMatch	ncit	C88419	Executive Function	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D056572	Histone Deacetylase Inhibitors	skos:exactMatch	chebi	CHEBI:61115	EC 3.5.1.98 (histone deacetylase) inhibitor	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D056655	Cathepsin H	skos:exactMatch	hgnc	2535	CTSH	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D056743	Cyclin D3	skos:exactMatch	hgnc	1585	CCND3	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D056744	Cyclin B1	skos:exactMatch	hgnc	1579	CCNB1	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6257,6 +6347,7 @@ mesh	D057900	Transcytosis	skos:exactMatch	go	GO:0045056	transcytosis	manually_re
 mesh	D057905	Stem Cell Research	skos:exactMatch	ncit	C16200	Stem Cell Research	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D057907	Post-Synaptic Density	skos:exactMatch	go	GO:0014069	postsynaptic density	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D057911	Angiotensin Receptor Antagonists	skos:exactMatch	chebi	CHEBI:61016	angiotensin receptor antagonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D057911	Angiotensin Receptor Antagonists	skos:exactMatch	ncit	C66930	Angiotensin II Receptor Antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D057918	Fiducial Markers	skos:exactMatch	ncit	C82602	Fiducial Marker	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D057973	Dent Disease	skos:exactMatch	ncit	C123260	Dent Disease	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058008	Xenotropic murine leukemia virus-related virus	skos:exactMatch	ncit	C84344	Xenotropic Murine Leukemia Virus-related Virus	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6301,6 +6392,7 @@ mesh	D058767	Protein Unfolding	skos:exactMatch	go	GO:0043335	protein unfolding	m
 mesh	D058785	GABA-A Receptor Agonists	skos:exactMatch	chebi	CHEBI:91016	GABAA receptor agonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058786	GABA-B Receptor Agonists	skos:exactMatch	chebi	CHEBI:143001	GABAB receptor agonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058787	GABA-A Receptor Antagonists	skos:exactMatch	chebi	CHEBI:145515	GABAA receptor antagonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058831	Serotonin 5-HT3 Receptor Antagonists	skos:exactMatch	ncit	C94726	5-HT3 Receptor Antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D058834	Gemella	skos:exactMatch	ncit	C86889	Gemella	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058835	Abiotrophia	skos:exactMatch	ncit	C86077	Abiotrophia	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058849	Protein Refolding	skos:exactMatch	go	GO:0042026	protein refolding	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6313,6 +6405,7 @@ mesh	D058892	Adenosine Deaminase Inhibitors	skos:exactMatch	chebi	CHEBI:50445	EC
 mesh	D058894	Nematocyst	skos:exactMatch	go	GO:0042151	nematocyst	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058907	Adenosine A1 Receptor Agonists	skos:exactMatch	chebi	CHEBI:65057	adenosine A1 receptor agonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058909	Adenosine A3 Receptor Agonists	skos:exactMatch	chebi	CHEBI:73319	adenosine A3 receptor agonist	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D058915	Purinergic P1 Receptor Antagonists	skos:exactMatch	chebi	CHEBI:71232	adenosine receptor antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D058916	Adenosine A1 Receptor Antagonists	skos:exactMatch	chebi	CHEBI:63957	adenosine A1 receptor antagonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058918	Adenosine A3 Receptor Antagonists	skos:exactMatch	chebi	CHEBI:70725	adenosine A3 receptor antagonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D058924	Thienopyridines	skos:exactMatch	chebi	CHEBI:37942	thienopyridine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6518,6 +6611,7 @@ mesh	D064750	Rabeprazole	skos:exactMatch	chebi	CHEBI:8768	rabeprazole	manually_r
 mesh	D064751	Ammonium Compounds	skos:exactMatch	chebi	CHEBI:35276	ammonium compound	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D064791	Desoxycorticosterone Acetate	skos:exactMatch	ncit	C65369	Desoxycorticosterone Acetate	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D064794	Lorajmine	skos:exactMatch	chebi	CHEBI:135646	lorajmine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D064800	Prolyl-Hydroxylase Inhibitors	skos:exactMatch	chebi	CHEBI:132365	EC 1.14.11.2 (procollagen-proline dioxygenase) inhibitor	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D064801	Phospholipase A2 Inhibitors	skos:exactMatch	chebi	CHEBI:50469	EC 3.1.1.4 (phospholipase A2) inhibitor	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D064847	Multimodal Imaging	skos:exactMatch	ncit	C19341	Multimodal Imaging	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D064878	Web Browser	skos:exactMatch	ncit	C142748	Web Browser	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6527,6 +6621,8 @@ mesh	D064890	Social Determinants of Health	skos:exactMatch	ncit	C171586	Social D
 mesh	D064906	Qigong	skos:exactMatch	ncit	C93098	Qigong	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D064966	British Virgin Islands	skos:exactMatch	ncit	C17653	Virgin Islands, British	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065026	Hope	skos:exactMatch	ncit	C77962	Hope	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D065089	Glycoside Hydrolase Inhibitors	skos:exactMatch	chebi	CHEBI:52424	EC 3.2.1.* (glycosidase) inhibitor	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D065092	Antidiuretic Hormone Receptor Antagonists	skos:exactMatch	chebi	CHEBI:59680	vasopressin receptor antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D065093	beta-Lactamase Inhibitors	skos:exactMatch	chebi	CHEBI:35625	EC 3.5.2.6 (beta-lactamase) inhibitor	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065098	Catechol O-Methyltransferase Inhibitors	skos:exactMatch	chebi	CHEBI:48406	EC 2.1.1.6 (catechol O-methyltransferase) inhibitor	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065102	Licensed Practical Nurses	skos:exactMatch	ncit	C20822	Licensed Practical Nurse	manually_reviewed	orcid:0000-0001-9439-5346
