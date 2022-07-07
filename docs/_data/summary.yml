@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 1862
+- count: 1963
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -67,10 +67,10 @@ negative:
   source: efo
   target: mesh
 - count: 14
-  source: hgnc
-  target: mesh
-- count: 11
   source: chebi
+  target: mesh
+- count: 14
+  source: hgnc
   target: mesh
 - count: 11
   source: mesh
@@ -117,16 +117,16 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1076
+negative_mapping_count: 1079
 negative_prefix_count: 22
 positive:
-- count: 2307
+- count: 2349
   source: chebi
   target: mesh
 - count: 1306
   source: doid
   target: mesh
-- count: 692
+- count: 746
   source: mesh
   target: ncit
 - count: 515
@@ -231,13 +231,13 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 7753
+positive_mapping_count: 7849
 positive_prefix_count: 27
 predictions:
-- count: 12462
+- count: 12417
   source: chebi
   target: mesh
-- count: 11952
+- count: 11897
   source: mesh
   target: ncit
 - count: 10978
@@ -249,7 +249,7 @@ predictions:
 - count: 1686
   source: wikipathways
   target: wikipathways
-- count: 1376
+- count: 1375
   source: hgnc
   target: mesh
 - count: 383
@@ -285,7 +285,7 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 42201
+predictions_mapping_count: 42100
 predictions_prefix_count: 17
 unsure:
 - count: 26
@@ -297,14 +297,17 @@ unsure:
 - count: 3
   source: ccle
   target: efo
+- count: 3
+  source: mesh
+  target: ncit
 - count: 2
   source: ccle
   target: depmap
 - count: 2
   source: cl
   target: mesh
-- count: 2
-  source: mesh
-  target: ncit
-unsure_mapping_count: 40
-unsure_prefix_count: 8
+- count: 1
+  source: hgnc
+  target: mesh
+unsure_mapping_count: 42
+unsure_prefix_count: 9

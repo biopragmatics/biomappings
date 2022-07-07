@@ -103,6 +103,21 @@
     link: https://bioregistry.io/mesh:D044945
     name: Proanthocyanidins
     prefix: mesh
+- chebi:50469:
+    identifier: CHEBI:50469
+    link: https://bioregistry.io/chebi:50469
+    name: EC 3.1.1.4 (phospholipase A2) inhibitor
+    prefix: chebi
+  mesh:C400481:
+    identifier: C400481
+    link: https://bioregistry.io/mesh:C400481
+    name: PLIalpha
+    prefix: mesh
+  mesh:D064801:
+    identifier: D064801
+    link: https://bioregistry.io/mesh:D064801
+    name: Phospholipase A2 Inhibitors
+    prefix: mesh
 - cl:0000101:
     identifier: CL:0000101
     link: https://bioregistry.io/cl:0000101
