@@ -61,6 +61,8 @@ chebi	CHEBI:17544	hydrogencarbonate	skos:exactMatch	mesh	D001639	Bicarbonates	ma
 chebi	CHEBI:29806	fumarate(2-)	skos:exactMatch	mesh	D005650	Fumarates	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:33224	chromane	skos:exactMatch	mesh	D002839	Chromans	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:45373	sulfanilamide	skos:exactMatch	mesh	D013424	Sulfanilamides	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:50183	P450 inhibitor	skos:exactMatch	mesh	D065690	Cytochrome P-450 CYP2D6 Inhibitors	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:50664	matrix metalloproteinase inhibitor	skos:exactMatch	mesh	D008950	MMPI	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:6456	lidocaine	skos:exactMatch	mesh	C511998	Lidoderm	manually_reviewed	orcid:0000-0001-9439-5346
 cl	CL:0000149	visual pigment cell	skos:exactMatch	mesh	D012168	Retinal Pigments	manually_reviewed	orcid:0000-0001-9439-5346
 cl	CL:0000322	pneumocyte	skos:exactMatch	mesh	D056809	Alveolar Epithelial Cells	manually_reviewed	orcid:0000-0001-9439-5346
@@ -556,6 +558,7 @@ mesh	D058570	TOR Serine-Threonine Kinases	skos:exactMatch	hgnc	3942	MTOR	manuall
 mesh	D063807	Dandruff	skos:exactMatch	doid	DOID:8941	seborrheic infantile dermatitis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D063847	Mean Platelet Volume	skos:exactMatch	ncit	C74730	Mean Platelet Volume Measurement	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D063948	Enslaved Persons	skos:exactMatch	ncit	C153898	Slavey Language	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D064697	Racemethionine	skos:exactMatch	chebi	CHEBI:16811	methionine	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D065627	Familial Primary Pulmonary Hypertension	skos:exactMatch	doid	DOID:14557	primary pulmonary hypertension	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D065637	Cytochrome P-450 CYP2A6	skos:exactMatch	hgnc	2610	CYP2A6	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D066167	Slit Lamp	skos:exactMatch	ncit	C75583	Slit-lamp Examination	manually_reviewed	orcid:0000-0001-9439-5346

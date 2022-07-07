@@ -24,8 +24,9 @@ def get_git_hash() -> Optional[str]:
         code is not installed in development mode.
     """
     rv = _git("rev-parse", "HEAD")
-    if rv:
-        return rv[:6]
+    if not rv:
+        return None
+    return rv[:6]
 
 
 def commit(message: str) -> Optional[str]:
@@ -48,7 +49,10 @@ def not_main() -> bool:
 
 def get_branch() -> str:
     """Return current git branch."""
-    return _git("branch", "--show-current")
+    rv = _git("branch", "--show-current")
+    if rv is None:
+        raise RuntimeError
+    return rv
 
 
 def _git(*args: str) -> Optional[str]:
@@ -61,7 +65,7 @@ def _git(*args: str) -> Optional[str]:
             )
         except CalledProcessError as e:
             print(e)
-            return
+            return None
         else:
             return ret.strip().decode("utf-8")
 

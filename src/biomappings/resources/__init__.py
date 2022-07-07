@@ -88,7 +88,12 @@ class PredictionTuple(NamedTuple):
     @classmethod
     def from_dict(cls, mapping: Mapping[str, str]) -> "PredictionTuple":
         """Get the prediction tuple from a dictionary."""
-        return cls(*[mapping[key] for key in PREDICTIONS_HEADER])
+        return cls(
+            *[  # type: ignore
+                float(mapping[key]) if key == "confidence" else mapping[key]
+                for key in PREDICTIONS_HEADER
+            ]
+        )
 
     @property
     def source_curie(self) -> str:

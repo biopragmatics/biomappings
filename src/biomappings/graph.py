@@ -5,7 +5,7 @@
 import os
 from collections import Counter
 from operator import itemgetter
-from typing import Iterable, List, Mapping, Optional, Sequence
+from typing import Collection, Iterable, List, Mapping, Optional, Sequence
 
 import click
 import networkx as nx
@@ -32,7 +32,7 @@ def get_false_graph(
 
 
 def get_predictions_graph(
-    include: Optional[Sequence[str]] = None, exclude: Optional[Sequence[str]] = None
+    include: Optional[Collection[str]] = None, exclude: Optional[Collection[str]] = None
 ) -> nx.Graph:
     """Get a graph of the predicted mappings."""
     return _graph_from_mappings(load_false_mappings(), include=include, exclude=exclude)
@@ -40,8 +40,8 @@ def get_predictions_graph(
 
 def _graph_from_mappings(
     mappings: Iterable[Mapping[str, str]],
-    include: Optional[Sequence[str]] = None,
-    exclude: Optional[Sequence[str]] = None,
+    include: Optional[Collection[str]] = None,
+    exclude: Optional[Collection[str]] = None,
 ) -> nx.Graph:
     graph = nx.Graph()
 

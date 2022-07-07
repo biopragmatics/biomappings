@@ -3,6 +3,7 @@ graft tests
 prune docs
 prune scripts
 prune docs/_data
+prune tests/.pytest_cache
 
 global-exclude *.py[cod] __pycache__ *.so *.dylib .DS_Store *.gpickle
 

@@ -88,13 +88,25 @@ class TestIntegrity(unittest.TestCase):
             return
         resource = bioregistry.get_resource(prefix)
         self.assertIsNotNone(resource)
-        norm_id = resource.miriam_standardize_identifier(identifier)
-        self.assertIsNotNone(norm_id)
-        self.assertEqual(
-            identifier,
-            norm_id,
-            msg=f"Normalization of {prefix}:{identifier} failed on {label}:{line}",
-        )
+        if resource.get_miriam_prefix():
+            norm_id = resource.miriam_standardize_identifier(identifier)
+            self.assertIsNotNone(
+                norm_id,
+                msg=f"Normalization of {prefix}:{identifier} failed on {label}:{line}",
+            )
+            self.assertEqual(
+                identifier,
+                norm_id,
+                msg=f"Normalization (via MIRIAM) of {prefix}:{identifier} failed on {label}:{line}",
+            )
+        else:
+            norm_id = resource.standardize_identifier(identifier)
+            self.assertIsNotNone(norm_id)
+            self.assertEqual(
+                identifier,
+                norm_id,
+                msg=f"Normalization of {prefix}:{identifier} failed on {label}:{line}",
+            )
 
     def test_contributors(self):
         """Test all contributors have an entry in the curators.tsv file."""
