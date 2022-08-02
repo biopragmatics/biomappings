@@ -34,6 +34,7 @@ app = flask.Flask(__name__)
 app.config["WTF_CSRF_ENABLED"] = False
 app.config["SECRET_KEY"] = os.urandom(8)
 app.config["SHOW_RELATIONS"] = True
+app.config["SHOW_LINES"] = False
 flask_bootstrap.Bootstrap(app)
 
 # A mapping from your computer's user, returned by getuser.getpass()
@@ -65,6 +66,7 @@ class Controller:
         source_query: Optional[str] = None,
         target_query: Optional[str] = None,
         prefix: Optional[str] = None,
+        same_text: bool = False,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
@@ -77,10 +79,15 @@ class Controller:
         :param target_query: If given, show only equivalences that have it appearing as a substring in one of the target
             fields.
         :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes.
+        :param same_text: If true, filter to predictions with the same label
         :yields: Pairs of positions and prediction dictionaries
         """
         it = self._help_it_predictions(
-            query=query, source=source_query, target=target_query, prefix=prefix
+            query=query,
+            source=source_query,
+            target=target_query,
+            prefix=prefix,
+            same_text=same_text,
         )
         if offset is not None:
             try:
@@ -102,10 +109,15 @@ class Controller:
         source_query: Optional[str] = None,
         target_query: Optional[str] = None,
         prefix: Optional[str] = None,
+        same_text: bool = False,
     ) -> int:
         """Count the number of predictions to check for the given filters."""
         it = self._help_it_predictions(
-            query=query, source=source_query, target=target_query, prefix=prefix
+            query=query,
+            source=source_query,
+            target=target_query,
+            prefix=prefix,
+            same_text=same_text,
         )
         return sum(1 for _ in it)
 
@@ -115,6 +127,7 @@ class Controller:
         source: Optional[str] = None,
         target: Optional[str] = None,
         prefix: Optional[str] = None,
+        same_text: bool = False,
     ):
         it = enumerate(self._predictions)
         if query is not None:
@@ -140,6 +153,13 @@ class Controller:
             )
         if prefix is not None:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
+
+        if same_text:
+            it = (
+                (line, prediction)
+                for line, prediction in it
+                if prediction["source name"].casefold() == prediction["target name"].casefold()
+            )
 
         rv = ((line, prediction) for line, prediction in it if line not in self._marked)
         return rv
@@ -270,7 +290,9 @@ def home():
     source_query = flask.request.args.get("source")
     target_query = flask.request.args.get("target")
     prefix = flask.request.args.get("prefix")
+    same_text = flask.request.args.get("same_text", default="false").lower() in {"true", "t"}
     show_relations = app.config["SHOW_RELATIONS"]
+    show_lines = app.config["SHOW_LINES"]
     return flask.render_template(
         "home.html",
         controller=controller,
@@ -281,7 +303,10 @@ def home():
         source_query=source_query,
         target_query=target_query,
         prefix=prefix,
+        same_text=same_text,
+        # configured
         show_relations=show_relations,
+        show_lines=show_lines,
     )
 
 
@@ -358,7 +383,10 @@ def _go_home():
             source=flask.request.args.get("source"),
             target=flask.request.args.get("target"),
             prefix=flask.request.args.get("prefix"),
+            same_text=flask.request.args.get("same_text", default="false").lower() in {"true", "t"},
+            # config
             show_relations=app.config["SHOW_RELATIONS"],
+            show_lines=app.config["SHOW_LINES"],
         )
     )
 
