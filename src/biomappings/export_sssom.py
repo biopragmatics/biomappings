@@ -15,6 +15,7 @@ DIRECTORY = pathlib.Path(DATA).joinpath("sssom")
 DIRECTORY.mkdir(exist_ok=True, parents=True)
 TSV_PATH = DIRECTORY.joinpath("biomappings.sssom.tsv")
 JSON_PATH = DIRECTORY.joinpath("biomappings.sssom.json")
+RDF_PATH = DIRECTORY.joinpath("biomappings.sssom.rdf")
 META_PATH = DIRECTORY.joinpath("biomappings.sssom.yml")
 
 CC0_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
@@ -114,14 +115,13 @@ def sssom():
         yaml.safe_dump({"curie_map": prefix_map, "creator_id": creators, **META}, file)
 
     from sssom.parsers import from_sssom_dataframe
-    from sssom.writers import write_json
+    from sssom.writers import write_json, write_rdf
 
     msdf = from_sssom_dataframe(df, prefix_map=prefix_map, meta=META)
     with JSON_PATH.open("w") as file:
         write_json(msdf, file)
-
-    # TODO add RDF export, but it's currently broken in SSSOM-py
-    #  and in general the LinkML one is completely unusable (too slow)
+    with RDF_PATH.open("w") as file:
+        write_rdf(msdf, file)
 
 
 if __name__ == "__main__":
