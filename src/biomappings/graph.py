@@ -197,12 +197,14 @@ def charts():
         y=prefix_list, ax=axes[0], order=[k for k, _ in Counter(prefix_list).most_common()]
     )
     axes[0].set_xscale("log")
-    axes[0].set_title("Prefix Frequency")
+    axes[0].set_xlabel("Count")
+    axes[0].set_title(f"Prefixes ({len(prefix_list)})")
 
     relations = [m["relation"] for m in true_mappings]
     sns.countplot(y=relations, ax=axes[1], order=[k for k, _ in Counter(relations).most_common()])
     axes[1].set_xscale("log")
-    axes[1].set_title("Relation Frequency")
+    axes[1].set_xlabel("Count")
+    axes[1].set_title(f"Relations ({len(relations)})")
 
     path = os.path.join(IMG, "summary.png")
     print("saving to", path)
