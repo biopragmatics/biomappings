@@ -24,7 +24,7 @@ def bulk_accept_same_text(source: str, target: str) -> None:
     leave = []
     for p in load_predictions():
         if _accept_same_name(source, target, p):
-            p["source"] = "bulk_curation.py"
+            p["source"] = provenance
             p["type"] = "semapv:LexicalSimilarityThresholdMatching"
             accept.append(p)
         else:
