@@ -159,6 +159,7 @@ class Controller:
                 (line, prediction)
                 for line, prediction in it
                 if prediction["source name"].casefold() == prediction["target name"].casefold()
+                and prediction["relation"] == "skos:exactMatch"
             )
 
         rv = ((line, prediction) for line, prediction in it if line not in self._marked)
