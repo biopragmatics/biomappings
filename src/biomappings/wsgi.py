@@ -129,7 +129,7 @@ class Controller:
         prefix: Optional[str] = None,
         same_text: bool = False,
     ):
-        it = enumerate(self._predictions)
+        it: Iterable[Tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
         if query is not None:
             it = self._help_filter(
                 query,
