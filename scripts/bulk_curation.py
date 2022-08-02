@@ -10,8 +10,11 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
+from biomappings.utils import get_script_url
 
 logger = logging.getLogger(__name__)
+
+provenance = get_script_url(__file__)
 
 
 def bulk_accept_same_text(source: str, target: str) -> None:
@@ -21,7 +24,7 @@ def bulk_accept_same_text(source: str, target: str) -> None:
     for p in load_predictions():
         if _accept_same_name(source, target, p):
             p["source"] = "bulk_curation.py"
-            p["type"] = "rule_based"
+            p["type"] = "semapv:LexicalSimilarityThresholdMatching"
             accept.append(p)
         else:
             leave.append(p)

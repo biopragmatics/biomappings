@@ -33,6 +33,13 @@ TYPE_TO_JUSTIFICATION = {
 }
 
 
+def _get_justification(mapping):
+    t = mapping["type"]
+    if t.startswith("semapv:"):
+        return t
+    return TYPE_TO_JUSTIFICATION[t]
+
+
 def get_sssom_df():
     """Get an SSSOM dataframe."""
     import pandas as pd
@@ -51,13 +58,13 @@ def get_sssom_df():
         "author_id",
         "confidence",
         "mapping_tool",
-        "license",
     ]
     for mapping in load_mappings():
         prefixes.add(mapping["source prefix"])
         prefixes.add(mapping["target prefix"])
         source = mapping["source"]
-        creators.add(source)
+        if any(source.startswith(x) for x in ["orcid:", "wikidata:"]):
+            creators.add(source)
         rows.append(
             (
                 get_curie(mapping["source prefix"], mapping["source identifier"]),
@@ -65,11 +72,10 @@ def get_sssom_df():
                 f'{mapping["relation"]}',
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
-                TYPE_TO_JUSTIFICATION[mapping["type"]],  # match justification
+                _get_justification(mapping),  # match justification
                 source,  # curator CURIE
                 None,  # no confidence necessary
                 None,  # mapping tool: none necessary for manually curated
-                CC0_URL,
             )
         )
     for mapping in load_predictions():
@@ -82,11 +88,10 @@ def get_sssom_df():
                 f'{mapping["relation"]}',
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
-                TYPE_TO_JUSTIFICATION[mapping["type"]],
+                _get_justification(mapping),  # match justification
                 None,  # no curator CURIE
                 mapping["confidence"],
                 mapping["source"],  # mapping tool: source script
-                CC0_URL,
             )
         )
     df = pd.DataFrame(rows, columns=columns)
