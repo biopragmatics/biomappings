@@ -5,7 +5,6 @@
 import logging
 from typing import Mapping
 
-from biomappings import export_sssom
 from biomappings.resources import (
     append_true_mappings,
     load_predictions,
@@ -55,8 +54,6 @@ def _main():
     bulk_accept_same_text("doid", "umls")
     bulk_accept_same_text("doid", "mesh")
     bulk_accept_same_text("doid", "efo")
-
-    export_sssom.sssom()
 
 
 if __name__ == "__main__":
