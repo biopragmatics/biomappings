@@ -1572,11 +1572,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:1334
-      identifier: CVCL_1334
-      link: https://bioregistry.io/cellosaurus:1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://bioregistry.io/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: bto:0006459
       identifier: BTO:0006459
@@ -1584,11 +1584,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://bioregistry.io/efo:0006612
+      curie: cellosaurus:1334
+      identifier: CVCL_1334
+      link: https://bioregistry.io/cellosaurus:1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: cellosaurus:1334
       identifier: CVCL_1334
@@ -2971,11 +2971,11 @@
       name: Ossification of the posterior longitudinal ligament of the spine
       prefix: mesh
     target:
-      curie: mesh:D017887
-      identifier: D017887
-      link: https://bioregistry.io/mesh:D017887
-      name: Ossification of Posterior Longitudinal Ligament
-      prefix: mesh
+      curie: umls:C1865343
+      identifier: C1865343
+      link: https://bioregistry.io/umls:C1865343
+      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
+      prefix: umls
   - source:
       curie: mesh:C537143
       identifier: C537143
@@ -2983,11 +2983,11 @@
       name: Ossification of the posterior longitudinal ligament of the spine
       prefix: mesh
     target:
-      curie: umls:C1865343
-      identifier: C1865343
-      link: https://bioregistry.io/umls:C1865343
-      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
-      prefix: umls
+      curie: mesh:D017887
+      identifier: D017887
+      link: https://bioregistry.io/mesh:D017887
+      name: Ossification of Posterior Longitudinal Ligament
+      prefix: mesh
   - source:
       curie: mesh:D017887
       identifier: D017887
@@ -3660,11 +3660,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: mesh:D009041
-      identifier: D009041
-      link: https://bioregistry.io/mesh:D009041
+      curie: ncit:C34824
+      identifier: C34824
+      link: https://bioregistry.io/ncit:C34824
       name: Motion Sickness
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: doid:2951
       identifier: DOID:2951
@@ -3672,11 +3672,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: ncit:C34824
-      identifier: C34824
-      link: https://bioregistry.io/ncit:C34824
+      curie: mesh:D009041
+      identifier: D009041
+      link: https://bioregistry.io/mesh:D009041
       name: Motion Sickness
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: efo:0006928
       identifier: 0006928
@@ -4018,10 +4018,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: GO:0033210
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: GO:0033211
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -4030,10 +4030,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: GO:0033211
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: GO:0033210
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033210
@@ -6448,6 +6448,151 @@
       prefix: ncit
 - edges:
   - source:
+      curie: hp:0025567
+      identifier: HP:0025567
+      link: https://bioregistry.io/hp:0025567
+      name: Central serous chorioretinopathy
+      prefix: hp
+    target:
+      curie: ncit:C115124
+      identifier: C115124
+      link: https://bioregistry.io/ncit:C115124
+      name: Central Serous Chorioretinopathy
+      prefix: ncit
+  nodes:
+    hp:0025567:
+      identifier: HP:0025567
+      link: https://bioregistry.io/hp:0025567
+      name: Central serous chorioretinopathy
+      prefix: hp
+    mesh:D056833:
+      identifier: D056833
+      link: https://bioregistry.io/mesh:D056833
+      name: Central Serous Chorioretinopathy
+      prefix: mesh
+    ncit:C115124:
+      identifier: C115124
+      link: https://bioregistry.io/ncit:C115124
+      name: Central Serous Chorioretinopathy
+      prefix: ncit
+- edges:
+  - source:
+      curie: hgnc:1772
+      identifier: '1772'
+      link: https://bioregistry.io/hgnc:1772
+      name: CDK3
+      prefix: hgnc
+    target:
+      curie: ncit:C25865
+      identifier: C25865
+      link: https://bioregistry.io/ncit:C25865
+      name: Cyclin-Dependent Kinase 3
+      prefix: ncit
+  nodes:
+    hgnc:1772:
+      identifier: '1772'
+      link: https://bioregistry.io/hgnc:1772
+      name: CDK3
+      prefix: hgnc
+    mesh:D056849:
+      identifier: D056849
+      link: https://bioregistry.io/mesh:D056849
+      name: Cyclin-Dependent Kinase 3
+      prefix: mesh
+    ncit:C25865:
+      identifier: C25865
+      link: https://bioregistry.io/ncit:C25865
+      name: Cyclin-Dependent Kinase 3
+      prefix: ncit
+- edges:
+  - source:
+      curie: hgnc:1779
+      identifier: '1779'
+      link: https://bioregistry.io/hgnc:1779
+      name: CDK8
+      prefix: hgnc
+    target:
+      curie: ncit:C95299
+      identifier: C95299
+      link: https://bioregistry.io/ncit:C95299
+      name: Cyclin-Dependent Kinase 8
+      prefix: ncit
+  nodes:
+    hgnc:1779:
+      identifier: '1779'
+      link: https://bioregistry.io/hgnc:1779
+      name: CDK8
+      prefix: hgnc
+    mesh:D056850:
+      identifier: D056850
+      link: https://bioregistry.io/mesh:D056850
+      name: Cyclin-Dependent Kinase 8
+      prefix: mesh
+    ncit:C95299:
+      identifier: C95299
+      link: https://bioregistry.io/ncit:C95299
+      name: Cyclin-Dependent Kinase 8
+      prefix: ncit
+- edges:
+  - source:
+      curie: go:0016592
+      identifier: GO:0016592
+      link: https://bioregistry.io/go:0016592
+      name: mediator complex
+      prefix: go
+    target:
+      curie: ncit:C19864
+      identifier: C19864
+      link: https://bioregistry.io/ncit:C19864
+      name: Mediator Complex
+      prefix: ncit
+  nodes:
+    go:0016592:
+      identifier: GO:0016592
+      link: https://bioregistry.io/go:0016592
+      name: mediator complex
+      prefix: go
+    mesh:D056892:
+      identifier: D056892
+      link: https://bioregistry.io/mesh:D056892
+      name: Mediator Complex
+      prefix: mesh
+    ncit:C19864:
+      identifier: C19864
+      link: https://bioregistry.io/ncit:C19864
+      name: Mediator Complex
+      prefix: ncit
+- edges:
+  - source:
+      curie: ncit:C158329
+      identifier: C158329
+      link: https://bioregistry.io/ncit:C158329
+      name: Cervical Rib
+      prefix: ncit
+    target:
+      curie: uberon:0018144
+      identifier: UBERON:0018144
+      link: https://bioregistry.io/uberon:0018144
+      name: cervical rib
+      prefix: uberon
+  nodes:
+    mesh:D057070:
+      identifier: D057070
+      link: https://bioregistry.io/mesh:D057070
+      name: Cervical Rib
+      prefix: mesh
+    ncit:C158329:
+      identifier: C158329
+      link: https://bioregistry.io/ncit:C158329
+      name: Cervical Rib
+      prefix: ncit
+    uberon:0018144:
+      identifier: UBERON:0018144
+      link: https://bioregistry.io/uberon:0018144
+      name: cervical rib
+      prefix: uberon
+- edges:
+  - source:
       curie: chebi:61016
       identifier: CHEBI:61016
       link: https://bioregistry.io/chebi:61016
@@ -6678,6 +6823,64 @@
       link: https://bioregistry.io/ncit:C18105
       name: Proteolysis
       prefix: ncit
+- edges:
+  - source:
+      curie: go:0033151
+      identifier: GO:0033151
+      link: https://bioregistry.io/go:0033151
+      name: V(D)J recombination
+      prefix: go
+    target:
+      curie: ncit:C20971
+      identifier: C20971
+      link: https://bioregistry.io/ncit:C20971
+      name: V(D)J Recombination
+      prefix: ncit
+  nodes:
+    go:0033151:
+      identifier: GO:0033151
+      link: https://bioregistry.io/go:0033151
+      name: V(D)J recombination
+      prefix: go
+    mesh:D060152:
+      identifier: D060152
+      link: https://bioregistry.io/mesh:D060152
+      name: V(D)J Recombination
+      prefix: mesh
+    ncit:C20971:
+      identifier: C20971
+      link: https://bioregistry.io/ncit:C20971
+      name: V(D)J Recombination
+      prefix: ncit
+- edges:
+  - source:
+      curie: ncit:C34280
+      identifier: C34280
+      link: https://bioregistry.io/ncit:C34280
+      name: Pronephros
+      prefix: ncit
+    target:
+      curie: uberon:0002120
+      identifier: UBERON:0002120
+      link: https://bioregistry.io/uberon:0002120
+      name: pronephros
+      prefix: uberon
+  nodes:
+    mesh:D060910:
+      identifier: D060910
+      link: https://bioregistry.io/mesh:D060910
+      name: Pronephros
+      prefix: mesh
+    ncit:C34280:
+      identifier: C34280
+      link: https://bioregistry.io/ncit:C34280
+      name: Pronephros
+      prefix: ncit
+    uberon:0002120:
+      identifier: UBERON:0002120
+      link: https://bioregistry.io/uberon:0002120
+      name: pronephros
+      prefix: uberon
 - edges:
   - source:
       curie: efo:0009111
