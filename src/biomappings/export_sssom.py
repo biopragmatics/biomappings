@@ -24,6 +24,10 @@ META = {
     "mapping_set_title": "Biomappings",
 }
 
+TYPE_TO_JUSTIFICATION = {
+    "lexical": "semapv:LexicalMatching",
+}
+
 
 def get_sssom_df():
     """Get an SSSOM dataframe."""
@@ -37,7 +41,8 @@ def get_sssom_df():
         "predicate_id",
         "object_id",
         "object_label",
-        "match_type",
+        # "match_type",
+        "mapping_justification",
         "creator_id",
         "confidence",
         "mapping_tool",
@@ -52,7 +57,8 @@ def get_sssom_df():
                 f'{mapping["relation"]}',
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
-                "HumanCurated",  # match type
+                # "HumanCurated",  # match type
+                "semapv:ManualMappingCuration",  # match justification
                 mapping["source"],  # curator CURIE
                 None,  # no confidence necessary
                 None,  # mapping tool: none necessary for manually curated
@@ -68,7 +74,8 @@ def get_sssom_df():
                 f'{mapping["relation"]}',
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
-                "Lexical",  # match type
+                # mapping["type"],  # match type
+                TYPE_TO_JUSTIFICATION[mapping["type"]],
                 None,  # no curator CURIE
                 mapping["confidence"],
                 mapping["source"],  # mapping tool: source script
