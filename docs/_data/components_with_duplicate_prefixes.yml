@@ -103,6 +103,71 @@
     link: https://bioregistry.io/mesh:D044945
     name: Proanthocyanidins
     prefix: mesh
+  ncit:C68541:
+    identifier: C68541
+    link: https://bioregistry.io/ncit:C68541
+    name: Proanthocyanidin
+    prefix: ncit
+- chebi:33963:
+    identifier: CHEBI:33963
+    link: https://bioregistry.io/chebi:33963
+    name: metallocene
+    prefix: chebi
+  mesh:C013108:
+    identifier: C013108
+    link: https://bioregistry.io/mesh:C013108
+    name: metallocene
+    prefix: mesh
+  mesh:D000075163:
+    identifier: D000075163
+    link: https://bioregistry.io/mesh:D000075163
+    name: Metallocenes
+    prefix: mesh
+- chebi:37942:
+    identifier: CHEBI:37942
+    link: https://bioregistry.io/chebi:37942
+    name: thienopyridine
+    prefix: chebi
+  mesh:C446540:
+    identifier: C446540
+    link: https://bioregistry.io/mesh:C446540
+    name: thienopyridine
+    prefix: mesh
+  mesh:D058924:
+    identifier: D058924
+    link: https://bioregistry.io/mesh:D058924
+    name: Thienopyridines
+    prefix: mesh
+- chebi:48041:
+    identifier: CHEBI:48041
+    link: https://bioregistry.io/chebi:48041
+    name: microcystin
+    prefix: chebi
+  mesh:C078588:
+    identifier: C078588
+    link: https://bioregistry.io/mesh:C078588
+    name: microcystin
+    prefix: mesh
+  mesh:D052998:
+    identifier: D052998
+    link: https://bioregistry.io/mesh:D052998
+    name: Microcystins
+    prefix: mesh
+- chebi:50199:
+    identifier: CHEBI:50199
+    link: https://bioregistry.io/chebi:50199
+    name: pefloxacin
+    prefix: chebi
+  mesh:C077130:
+    identifier: C077130
+    link: https://bioregistry.io/mesh:C077130
+    name: perfloxacin
+    prefix: mesh
+  mesh:D015366:
+    identifier: D015366
+    link: https://bioregistry.io/mesh:D015366
+    name: Pefloxacin
+    prefix: mesh
 - chebi:50469:
     identifier: CHEBI:50469
     link: https://bioregistry.io/chebi:50469
@@ -117,6 +182,56 @@
     identifier: D064801
     link: https://bioregistry.io/mesh:D064801
     name: Phospholipase A2 Inhibitors
+    prefix: mesh
+- chebi:50960:
+    identifier: CHEBI:50960
+    link: https://bioregistry.io/chebi:50960
+    name: catenane
+    prefix: chebi
+  mesh:C467767:
+    identifier: C467767
+    link: https://bioregistry.io/mesh:C467767
+    name: catenane
+    prefix: mesh
+  mesh:D043863:
+    identifier: D043863
+    link: https://bioregistry.io/mesh:D043863
+    name: Catenanes
+    prefix: mesh
+- chebi:64318:
+    identifier: CHEBI:64318
+    link: https://bioregistry.io/chebi:64318
+    name: ergotamine
+    prefix: chebi
+  mesh:D004878:
+    identifier: D004878
+    link: https://bioregistry.io/mesh:D004878
+    name: Ergotamine
+    prefix: mesh
+  mesh:D004879:
+    identifier: D004879
+    link: https://bioregistry.io/mesh:D004879
+    name: Ergotamines
+    prefix: mesh
+  ncit:C61751:
+    identifier: C61751
+    link: https://bioregistry.io/ncit:C61751
+    name: Ergotamine
+    prefix: ncit
+- chebi:83328:
+    identifier: CHEBI:83328
+    link: https://bioregistry.io/chebi:83328
+    name: pyrazolone
+    prefix: chebi
+  mesh:C038362:
+    identifier: C038362
+    link: https://bioregistry.io/mesh:C038362
+    name: pyrazolone
+    prefix: mesh
+  mesh:D047069:
+    identifier: D047069
+    link: https://bioregistry.io/mesh:D047069
+    name: Pyrazolones
     prefix: mesh
 - cl:0000101:
     identifier: CL:0000101
@@ -157,6 +272,51 @@
     identifier: C1865343
     link: https://bioregistry.io/umls:C1865343
     name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
+    prefix: umls
+- doid:0080141:
+    identifier: DOID:0080141
+    link: https://bioregistry.io/doid:0080141
+    name: mosaic variegated aneuploidy syndrome 1
+    prefix: doid
+  doid:0080688:
+    identifier: DOID:0080688
+    link: https://bioregistry.io/doid:0080688
+    name: mosaic variegated aneuploidy syndrome
+    prefix: doid
+  mesh:C536987:
+    identifier: C536987
+    link: https://bioregistry.io/mesh:C536987
+    name: Mosaic variegated aneuploidy syndrome
+    prefix: mesh
+  umls:C1850343:
+    identifier: C1850343
+    link: https://bioregistry.io/umls:C1850343
+    name: Mosaic variegated aneuploidy syndrome 1
+    prefix: umls
+  umls:C4551972:
+    identifier: C4551972
+    link: https://bioregistry.io/umls:C4551972
+    name: Mosaic variegated aneuploidy syndrome
+    prefix: umls
+- doid:11263:
+    identifier: DOID:11263
+    link: https://bioregistry.io/doid:11263
+    name: chlamydia
+    prefix: doid
+  mesh:D002689:
+    identifier: D002689
+    link: https://bioregistry.io/mesh:D002689
+    name: Chlamydia
+    prefix: mesh
+  mesh:D002690:
+    identifier: D002690
+    link: https://bioregistry.io/mesh:D002690
+    name: Chlamydia Infections
+    prefix: mesh
+  umls:C0008148:
+    identifier: C0008148
+    link: https://bioregistry.io/umls:C0008148
+    name: Chlamydia
     prefix: umls
 - kegg.pathway:hsa00100:
     identifier: hsa00100

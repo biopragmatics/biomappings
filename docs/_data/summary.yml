@@ -1,9 +1,10 @@
 contributors:
+- count: 15566
 - count: 4931
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 1963
+- count: 2159
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -54,7 +55,7 @@ negative:
 - count: 35
   source: doid
   target: umls
-- count: 27
+- count: 30
   source: ccle
   target: cellosaurus
 - count: 20
@@ -79,11 +80,11 @@ negative:
   source: hgnc
   target: reactome
 - count: 9
-  source: pr
-  target: uniprot.chain
-- count: 8
   source: ccle
   target: efo
+- count: 9
+  source: pr
+  target: uniprot.chain
 - count: 7
   source: doid
   target: efo
@@ -117,25 +118,28 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1079
+negative_mapping_count: 1083
 negative_prefix_count: 22
 positive:
-- count: 2349
+- count: 10361
   source: chebi
   target: mesh
-- count: 1306
-  source: doid
-  target: mesh
-- count: 746
+- count: 6931
   source: mesh
   target: ncit
-- count: 515
+- count: 1416
+  source: doid
+  target: mesh
+- count: 1355
+  source: doid
+  target: umls
+- count: 516
   source: ccle
   target: efo
 - count: 404
   source: go
   target: mesh
-- count: 370
+- count: 378
   source: mesh
   target: uniprot
 - count: 366
@@ -144,30 +148,33 @@ positive:
 - count: 222
   source: go
   target: reactome
-- count: 201
+- count: 206
   source: mesh
   target: mondo
+- count: 165
+  source: hp
+  target: mesh
 - count: 142
   source: agro
   target: agrovoc
-- count: 130
+- count: 131
   source: mesh
   target: uberon
-- count: 121
-  source: doid
-  target: umls
 - count: 113
   source: go
   target: kegg.pathway
+- count: 108
+  source: efo
+  target: mesh
 - count: 106
   source: ccle
   target: cellosaurus
 - count: 102
   source: hgnc
   target: mesh
-- count: 97
-  source: efo
-  target: mesh
+- count: 96
+  source: doid
+  target: efo
 - count: 81
   source: cl
   target: mesh
@@ -180,9 +187,6 @@ positive:
 - count: 70
   source: kegg.pathway
   target: wikipathways
-- count: 61
-  source: doid
-  target: efo
 - count: 61
   source: kegg.pathway
   target: reactome
@@ -198,10 +202,7 @@ positive:
 - count: 17
   source: mesh
   target: pubchem.compound
-- count: 11
-  source: hp
-  target: mesh
-- count: 9
+- count: 10
   source: wikipathways
   target: wikipathways
 - count: 8
@@ -231,67 +232,67 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 7849
+positive_mapping_count: 23606
 positive_prefix_count: 27
 predictions:
-- count: 12417
-  source: chebi
-  target: mesh
-- count: 11897
-  source: mesh
-  target: ncit
-- count: 10978
+- count: 10970
   source: mesh
   target: uniprot
-- count: 2411
-  source: doid
-  target: umls
-- count: 1686
+- count: 5712
+  source: mesh
+  target: ncit
+- count: 4405
+  source: chebi
+  target: mesh
+- count: 1685
   source: wikipathways
   target: wikipathways
 - count: 1375
   source: hgnc
   target: mesh
-- count: 383
+- count: 1177
+  source: doid
+  target: umls
+- count: 273
   source: doid
   target: mesh
-- count: 361
+- count: 207
   source: hp
   target: mesh
-- count: 188
+- count: 177
   source: efo
   target: mesh
-- count: 86
+- count: 81
   source: mesh
   target: mondo
-- count: 74
-  source: doid
-  target: efo
-- count: 69
+- count: 68
   source: mesh
   target: uberon
-- count: 60
+- count: 58
   source: ccle
   target: efo
-- count: 48
+- count: 44
   source: ccle
   target: cellosaurus
 - count: 44
   source: go
   target: mesh
+- count: 39
+  source: doid
+  target: efo
 - count: 20
   source: go
   target: reactome
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 42100
+predictions_mapping_count: 26338
 predictions_prefix_count: 17
 unsure:
 - count: 26
   source: doid
   target: mesh
-- count: 5
+- count: 6
   source: ccle
   target: cellosaurus
 - count: 3
@@ -309,5 +310,5 @@ unsure:
 - count: 1
   source: hgnc
   target: mesh
-unsure_mapping_count: 42
+unsure_mapping_count: 43
 unsure_prefix_count: 9
