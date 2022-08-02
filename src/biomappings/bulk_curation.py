@@ -45,6 +45,12 @@ def _accept_same_name(s, t, p: Mapping[str, str]) -> bool:
 def _main():
     bulk_accept_same_text("chebi", "mesh")
     bulk_accept_same_text("mesh", "ncit")
+    bulk_accept_same_text("mesh", "umls")
+    bulk_accept_same_text("mesh", "hp")
+    bulk_accept_same_text("mesh", "efo")
+    bulk_accept_same_text("doid", "umls")
+    bulk_accept_same_text("doid", "mesh")
+    bulk_accept_same_text("doid", "efo")
 
 
 if __name__ == "__main__":
