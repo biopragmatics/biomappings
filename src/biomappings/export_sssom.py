@@ -16,18 +16,28 @@ DIRECTORY.mkdir(exist_ok=True, parents=True)
 TSV_PATH = DIRECTORY.joinpath("biomappings.sssom.tsv")
 JSON_PATH = DIRECTORY.joinpath("biomappings.sssom.json")
 META_PATH = DIRECTORY.joinpath("biomappings.sssom.yml")
+
+CC0_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
 META = {
-    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license": CC0_URL,
     "mapping_provider": "https://github.com/biopragmatics/biomappings",
     "mapping_set_group": "biomappings",
     "mapping_set_id": "biomappings",
     "mapping_set_title": "Biomappings",
+}
+# TODO use this vocabulary directly in file
+TYPE_TO_JUSTIFICATION = {
+    "lexical": "semapv:LexicalMatching",
+    "manual": "semapv:ManualMappingCuration",  # FIXME in source
+    "manually_reviewed": "semapv:ManualMappingCuration",
 }
 
 
 def get_sssom_df():
     """Get an SSSOM dataframe."""
     import pandas as pd
+
+    creators = set()
 
     rows = []
     prefixes = set()
@@ -37,14 +47,17 @@ def get_sssom_df():
         "predicate_id",
         "object_id",
         "object_label",
-        "match_type",
-        "creator_id",
+        "mapping_justification",
+        "author_id",
         "confidence",
         "mapping_tool",
+        "license",
     ]
     for mapping in load_mappings():
         prefixes.add(mapping["source prefix"])
         prefixes.add(mapping["target prefix"])
+        source = mapping["source"]
+        creators.add(source)
         rows.append(
             (
                 get_curie(mapping["source prefix"], mapping["source identifier"]),
@@ -52,10 +65,11 @@ def get_sssom_df():
                 f'{mapping["relation"]}',
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
-                "HumanCurated",  # match type
-                mapping["source"],  # curator CURIE
+                TYPE_TO_JUSTIFICATION[mapping["type"]],  # match justification
+                source,  # curator CURIE
                 None,  # no confidence necessary
                 None,  # mapping tool: none necessary for manually curated
+                CC0_URL,
             )
         )
     for mapping in load_predictions():
@@ -68,20 +82,21 @@ def get_sssom_df():
                 f'{mapping["relation"]}',
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
-                "Lexical",  # match type
+                TYPE_TO_JUSTIFICATION[mapping["type"]],
                 None,  # no curator CURIE
                 mapping["confidence"],
                 mapping["source"],  # mapping tool: source script
+                CC0_URL,
             )
         )
     df = pd.DataFrame(rows, columns=columns)
-    return prefixes, df
+    return prefixes, sorted(creators), df
 
 
 @click.command()
 def sssom():
     """Export SSSOM."""
-    prefixes, df = get_sssom_df()
+    prefixes, creators, df = get_sssom_df()
     df.to_csv(TSV_PATH, sep="\t", index=False)
 
     # Get a CURIE map containing only the relevant prefixes
@@ -91,7 +106,7 @@ def sssom():
         if prefix in prefixes
     }
     with open(META_PATH, "w") as file:
-        yaml.safe_dump({"curie_map": prefix_map, **META}, file)
+        yaml.safe_dump({"curie_map": prefix_map, "creator_id": creators, **META}, file)
 
     from sssom.parsers import from_sssom_dataframe
     from sssom.writers import write_json
