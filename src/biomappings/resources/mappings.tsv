@@ -6047,7 +6047,6 @@ mesh	D017728	Lymphoma, Large-Cell, Anaplastic	skos:exactMatch	doid	DOID:0050744	
 mesh	D017735	Virus Latency	skos:exactMatch	go	GO:0019042	viral latency	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D017824	Bone Cysts, Aneurysmal	skos:exactMatch	ncit	C3516	Aneurysmal Bone Cyst	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017850	Economics, Pharmaceutical	skos:exactMatch	ncit	C142636	Pharmacoeconomics	manually_reviewed	orcid:0000-0001-9439-5346
-mesh	D017887	Ossification of Posterior Longitudinal Ligament	skos:exactMatch	efo	0005895	ossification of the posterior longitudinal ligament of the spine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018058	Tympanic Membrane Perforation	skos:exactMatch	efo	0009472	tympanic membrane perforation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018087	Plastids	skos:exactMatch	go	GO:0009536	plastid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018253	Adenoma, Villous	skos:exactMatch	doid	DOID:0050869	villous adenoma	manually_reviewed	orcid:0000-0003-1307-2508
@@ -7542,7 +7541,7 @@ uberon	UBERON:1000010	mole	skos:exactMatch	mesh	D009506	Nevus	manually_reviewed	
 uberon	UBERON:2001553	manubrium	skos:exactMatch	mesh	D008371	Manubrium	manually_reviewed	orcid:0000-0001-9439-5346
 uberon	UBERON:4000104	ganoine	skos:exactMatch	mesh	C067951	ganoine	manually_reviewed	orcid:0000-0001-9439-5346
 uberon	UBERON:4200215	suture	skos:exactMatch	mesh	D013537	Sutures	manually_reviewed	orcid:0000-0001-9439-5346
-umls	C0001973	Alcoholic Intoxication, Chronic	skos:narrower	mesh	D000435	Alcoholic Intoxication	manual	orcid:0000-0003-4423-4370
+umls	C0001973	Alcoholic Intoxication, Chronic	skos:narrowMatch	mesh	D000435	Alcoholic Intoxication	manual	orcid:0000-0003-4423-4370
 umls	C0004352	Autistic Disorder	skos:exactMatch	mesh	D001321	Autistic Disorder	manual	orcid:0000-0003-4423-4370
 umls	C0006118	Brain Neoplasms	skos:exactMatch	mesh	D001932	Brain Neoplasms	manual	orcid:0000-0003-4423-4370
 uniprot.chain	PRO_0000005909	Complement C3 alpha chain	speciesSpecific	pr	PR:000050120	complement C3 alpha chain	manually_reviewed	orcid:0000-0003-4423-4370
