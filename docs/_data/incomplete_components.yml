@@ -1572,11 +1572,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://bioregistry.io/efo:0006612
+      curie: cellosaurus:1334
+      identifier: CVCL_1334
+      link: https://bioregistry.io/cellosaurus:1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: bto:0006459
       identifier: BTO:0006459
@@ -1584,11 +1584,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:1334
-      identifier: CVCL_1334
-      link: https://bioregistry.io/cellosaurus:1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://bioregistry.io/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: cellosaurus:1334
       identifier: CVCL_1334
@@ -2941,18 +2941,6 @@
       name: ossification of the posterior longitudinal ligament of the spine
       prefix: efo
   - source:
-      curie: doid:0060887
-      identifier: DOID:0060887
-      link: https://bioregistry.io/doid:0060887
-      name: ossification of the posterior longitudinal ligament of spine
-      prefix: doid
-    target:
-      curie: mesh:D017887
-      identifier: D017887
-      link: https://bioregistry.io/mesh:D017887
-      name: Ossification of Posterior Longitudinal Ligament
-      prefix: mesh
-  - source:
       curie: efo:0005895
       identifier: 0005895
       link: https://bioregistry.io/efo:0005895
@@ -2976,30 +2964,6 @@
       link: https://bioregistry.io/umls:C1865343
       name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
       prefix: umls
-  - source:
-      curie: mesh:C537143
-      identifier: C537143
-      link: https://bioregistry.io/mesh:C537143
-      name: Ossification of the posterior longitudinal ligament of the spine
-      prefix: mesh
-    target:
-      curie: mesh:D017887
-      identifier: D017887
-      link: https://bioregistry.io/mesh:D017887
-      name: Ossification of Posterior Longitudinal Ligament
-      prefix: mesh
-  - source:
-      curie: mesh:D017887
-      identifier: D017887
-      link: https://bioregistry.io/mesh:D017887
-      name: Ossification of Posterior Longitudinal Ligament
-      prefix: mesh
-    target:
-      curie: umls:C1865343
-      identifier: C1865343
-      link: https://bioregistry.io/umls:C1865343
-      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
-      prefix: umls
   nodes:
     doid:0060887:
       identifier: DOID:0060887
@@ -3015,11 +2979,6 @@
       identifier: C537143
       link: https://bioregistry.io/mesh:C537143
       name: Ossification of the posterior longitudinal ligament of the spine
-      prefix: mesh
-    mesh:D017887:
-      identifier: D017887
-      link: https://bioregistry.io/mesh:D017887
-      name: Ossification of Posterior Longitudinal Ligament
       prefix: mesh
     umls:C1865343:
       identifier: C1865343
@@ -3602,11 +3561,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: ncit:C3275
-      identifier: C3275
-      link: https://bioregistry.io/ncit:C3275
+      curie: mesh:D009463
+      identifier: D009463
+      link: https://bioregistry.io/mesh:D009463
       name: Neuroma
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: doid:2001
       identifier: DOID:2001
@@ -3614,11 +3573,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: mesh:D009463
-      identifier: D009463
-      link: https://bioregistry.io/mesh:D009463
+      curie: ncit:C3275
+      identifier: C3275
+      link: https://bioregistry.io/ncit:C3275
       name: Neuroma
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: efo:0009619
       identifier: 0009619
@@ -3660,11 +3619,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: ncit:C34824
-      identifier: C34824
-      link: https://bioregistry.io/ncit:C34824
+      curie: mesh:D009041
+      identifier: D009041
+      link: https://bioregistry.io/mesh:D009041
       name: Motion Sickness
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: doid:2951
       identifier: DOID:2951
@@ -3672,11 +3631,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: mesh:D009041
-      identifier: D009041
-      link: https://bioregistry.io/mesh:D009041
+      curie: ncit:C34824
+      identifier: C34824
+      link: https://bioregistry.io/ncit:C34824
       name: Motion Sickness
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: efo:0006928
       identifier: 0006928
@@ -4018,10 +3977,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: GO:0033211
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: GO:0033210
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -4030,10 +3989,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: GO:0033210
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: GO:0033211
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033210
