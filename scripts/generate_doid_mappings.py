@@ -29,7 +29,6 @@ def main():
         # "ordo",
         # "cido"
     ]
-
     custom_filter = get_custom_filter(prefix, targets)
     append_gilda_predictions(
         prefix,

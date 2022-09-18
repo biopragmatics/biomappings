@@ -106,8 +106,6 @@ cl	CL:2000004	pituitary gland cell	skos:exactMatch	mesh	D010902	Pituitary Gland	
 cl	CL:2000021	sebaceous gland cell	skos:exactMatch	mesh	D012627	Sebaceous Glands	manually_reviewed	orcid:0000-0001-9439-5346
 cl	CL:2000022	cardiac septum cell	skos:exactMatch	mesh	D006346	Heart Septum	manually_reviewed	orcid:0000-0001-9439-5346
 cl	CL:2000030	hypothalamus cell	skos:exactMatch	mesh	D007031	Hypothalamus	manually_reviewed	orcid:0000-0001-9439-5346
-doid	0080046	Stickler syndrome	skos:exactMatch	mesh	C537492	Stickler syndrome, type 1	manually_reviewed	orcid:0000-0001-9439-5346
-doid	0080939	hereditary angioedema type I	skos:exactMatch	mesh	D056829	Hereditary Angioedema Types I and II	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	mesh	D006394	Hemangiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0018923	Hemangiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0278592	Adult Angiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
@@ -161,6 +159,7 @@ doid	DOID:0080546	non-alcoholic fatty liver	skos:exactMatch	mesh	D065626	Non-alc
 doid	DOID:0080547	non-alcoholic steatohepatitis	skos:exactMatch	mesh	D065626	Non-alcoholic Fatty Liver Disease	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0080748	chronic inducible urticaria	skos:exactMatch	mesh	D000080223	Chronic Urticaria	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0080749	chronic spontaneous urticaria	skos:exactMatch	mesh	D000080223	Chronic Urticaria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080939	hereditary angioedema type I	skos:exactMatch	mesh	D056829	Hereditary Angioedema Types I and II	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0111135	congenital generalized lipodystrophy type 1	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0111136	congenital generalized lipodystrophy type 2	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:1024	leprosy	skos:exactMatch	umls	C0051981	leprosy vaccine	manually_reviewed	orcid:0000-0003-4423-4370
@@ -178,6 +177,7 @@ doid	DOID:1498	cholera	skos:exactMatch	umls	C0008359	cholera vaccine	manually_re
 doid	DOID:1586	rheumatic fever	skos:exactMatch	umls	C1548484	rheumatic fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:1909	melanoma	skos:exactMatch	umls	C0796561	Melanoma vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:2043	hepatitis B	skos:exactMatch	umls	C0062527	hepatitis B surface antigen vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:3479	uveal cancer	skos:exactMatch	mesh	D014604	Uveal Neoplasms	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:3482	plague	skos:exactMatch	umls	C0032066	Plague Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:3910	lung adenocarcinoma	skos:exactMatch	efo	0005288	non-small cell lung adenocarcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4552	large cell carcinoma	skos:exactMatch	efo	0003050	large cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
