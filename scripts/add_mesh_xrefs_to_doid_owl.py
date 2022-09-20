@@ -3,7 +3,9 @@
 These are directly added to the version controlled DOID OWL file.
 """
 import csv
+
 import obonet
+
 from biomappings import load_mappings
 
 EDITABLE_OWL_PATH = "/Users/ben/src/HumanDiseaseOntology/src/ontology/doid-edit.owl"

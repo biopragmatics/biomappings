@@ -7,7 +7,7 @@ from indra.databases import mesh_client
 from indra.ontology.standardize import standardize_db_refs
 from indra.tools.fix_invalidities import fix_invalidities_db_refs
 
-from biomappings import load_mappings, load_unsure, load_false_mappings
+from biomappings import load_false_mappings, load_mappings, load_unsure
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
 # Get the DOID ontology
