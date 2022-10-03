@@ -20,7 +20,12 @@ from biomappings.resources import (
     load_curators,
     mapping_sort_key,
 )
-from biomappings.utils import SKIP_BANANA, check_valid_prefix_id, get_canonical_tuple
+from biomappings.utils import (
+    InvalidIdentifierPattern,
+    InvalidNormIdentifier,
+    check_valid_prefix_id,
+    get_canonical_tuple,
+)
 
 mappings = load_mappings()
 predictions = load_predictions()
@@ -84,28 +89,16 @@ class TestIntegrity(unittest.TestCase):
             does not have namespace embedded in LUI. See also:
             https://github.com/biopragmatics/bioregistry/issues/208
         """
-        if prefix in SKIP_BANANA:
-            return
-        resource = bioregistry.get_resource(prefix)
-        self.assertIsNotNone(resource)
-        if resource.get_miriam_prefix():
-            norm_id = resource.miriam_standardize_identifier(identifier)
-            self.assertIsNotNone(
-                norm_id,
-                msg=f"Normalization of {prefix}:{identifier} failed on {label}:{line}",
+        try:
+            check_valid_prefix_id(prefix, identifier)
+        except InvalidNormIdentifier as e:
+            self.fail(
+                msg=f"[{label}:{line}] Identifier in {prefix}:{identifier}"
+                f" should be normalized to {prefix}:{e.norm_identifier}"
             )
-            self.assertEqual(
-                identifier,
-                norm_id,
-                msg=f"Normalization (via MIRIAM) of {prefix}:{identifier} failed on {label}:{line}",
-            )
-        else:
-            norm_id = resource.standardize_identifier(identifier)
-            self.assertIsNotNone(norm_id)
-            self.assertEqual(
-                identifier,
-                norm_id,
-                msg=f"Normalization of {prefix}:{identifier} failed on {label}:{line}",
+        except InvalidIdentifierPattern as e:
+            self.fail(
+                msg=f"[{label}:{line}] Identifier in {prefix}:{identifier} should match pattern {e.pattern}"
             )
 
     def test_contributors(self):
