@@ -82,12 +82,6 @@ class TestIntegrity(unittest.TestCase):
         :param identifier: The identifier in the semantic space for the prefix
         :param label: The label of the mapping file
         :param line: The line number of the mapping
-
-        .. warning::
-
-            NCIT is skipped for now, since it has an OBO Foundry definition but explicitly
-            does not have namespace embedded in LUI. See also:
-            https://github.com/biopragmatics/bioregistry/issues/208
         """
         try:
             check_valid_prefix_id(prefix, identifier)
