@@ -100,19 +100,6 @@ class TestIntegrity(unittest.TestCase):
             self.assertIn(source[len("orcid:") :], contributor_orcids)
 
 
-def test_valid_mappings():
-    """Test the validity of the prefixes and identifiers in the mappings."""
-    for _label, _line, mapping in _iter_groups():
-        check_valid_prefix_id(
-            mapping["source prefix"],
-            mapping["source identifier"],
-        )
-        check_valid_prefix_id(
-            mapping["target prefix"],
-            mapping["target identifier"],
-        )
-
-
 def _extract_redundant(counter):
     return [(key, values) for key, values in counter.items() if len(values) > 1]
 
