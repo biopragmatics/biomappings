@@ -1,5 +1,5 @@
 contributors:
-- count: 4931
+- count: 5093
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
@@ -7,7 +7,7 @@ contributors:
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
-- count: 1697
+- count: 1695
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
   user: hoytfamily
@@ -27,7 +27,7 @@ negative:
 - count: 218
   source: mesh
   target: reactome
-- count: 189
+- count: 197
   source: doid
   target: mesh
 - count: 91
@@ -117,13 +117,13 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1083
+negative_mapping_count: 1091
 negative_prefix_count: 22
 positive:
 - count: 2466
   source: chebi
   target: mesh
-- count: 1306
+- count: 1454
   source: doid
   target: mesh
 - count: 799
@@ -153,7 +153,7 @@ positive:
 - count: 131
   source: mesh
   target: uberon
-- count: 121
+- count: 123
   source: doid
   target: umls
 - count: 113
@@ -180,7 +180,7 @@ positive:
 - count: 70
   source: kegg.pathway
   target: wikipathways
-- count: 61
+- count: 63
   source: doid
   target: efo
 - count: 61
@@ -231,7 +231,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 8040
+positive_mapping_count: 8192
 positive_prefix_count: 27
 predictions:
 - count: 12300
@@ -243,7 +243,7 @@ predictions:
 - count: 10970
   source: mesh
   target: uniprot
-- count: 2411
+- count: 2409
   source: doid
   target: umls
 - count: 1685
@@ -251,9 +251,6 @@ predictions:
   target: wikipathways
 - count: 1375
   source: hgnc
-  target: mesh
-- count: 383
-  source: doid
   target: mesh
 - count: 356
   source: hp
@@ -264,12 +261,15 @@ predictions:
 - count: 81
   source: mesh
   target: mondo
-- count: 74
+- count: 72
   source: doid
   target: efo
 - count: 68
   source: mesh
   target: uberon
+- count: 61
+  source: doid
+  target: mesh
 - count: 58
   source: ccle
   target: efo
@@ -285,7 +285,7 @@ predictions:
 - count: 3
   source: ccle
   target: depmap
-predictions_mapping_count: 41904
+predictions_mapping_count: 41578
 predictions_prefix_count: 17
 unsure:
 - count: 26
