@@ -132,9 +132,12 @@ doid	DOID:0050575	D-2-hydroxyglutaric aciduria	skos:exactMatch	mesh	C535306	2-Hy
 doid	DOID:0050575	D-2-hydroxyglutaric aciduria	skos:exactMatch	umls	C2746066	Combined D-2- and L-2-hydroxyglutaric aciduria	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050577	cranioectodermal dysplasia	skos:exactMatch	umls	C0432235	CRANIOECTODERMAL DYSPLASIA 1	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050580	hereditary lymphedema	skos:exactMatch	mesh	D008209	Lymphedema	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050650	familial atrial fibrillation	skos:exactMatch	mesh	D001281	Atrial Fibrillation	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050665	fetal alcohol syndrome	skos:exactMatch	mesh	D063647	Fetal Alcohol Spectrum Disorders	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050666	partial fetal alcohol syndrome	skos:exactMatch	mesh	D063647	Fetal Alcohol Spectrum Disorders	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050667	alcohol-related neurodevelopmental disorder	skos:exactMatch	mesh	D063647	Fetal Alcohol Spectrum Disorders	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050672	dyskinetic cerebral palsy	skos:exactMatch	mesh	D002547	Cerebral Palsy	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050673	mixed cerebral palsy	skos:exactMatch	mesh	D002547	Cerebral Palsy	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050685	small cell carcinoma	skos:exactMatch	umls	C0149925	Small cell carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0050882	spinocerebellar ataxia type 5	skos:exactMatch	mesh	D020754	Spinocerebellar Ataxias	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050954	spinocerebellar ataxia type 1	skos:exactMatch	mesh	D020754	Spinocerebellar Ataxias	manually_reviewed	orcid:0000-0001-9439-5346
@@ -148,11 +151,15 @@ doid	DOID:0060141	finger agnosia	skos:exactMatch	mesh	D000377	Agnosia	manually_r
 doid	DOID:0060151	tactile agnosia	skos:exactMatch	mesh	D000377	Agnosia	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0060152	time agnosia	skos:exactMatch	mesh	D000377	Agnosia	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0060153	topographical agnosia	skos:exactMatch	mesh	D000377	Agnosia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0070197	distal myopathy 1	skos:exactMatch	mesh	D049310	Distal Myopathies	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0070340	classic citrullinemia	skos:exactMatch	mesh	D020159	Citrullinemia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080046	Stickler syndrome	skos:exactMatch	mesh	C537492	Stickler syndrome, type 1	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0080333	aortic valve disease 1	skos:exactMatch	mesh	D000082882	Bicuspid Aortic Valve Disease	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0080546	non-alcoholic fatty liver	skos:exactMatch	mesh	D065626	Non-alcoholic Fatty Liver Disease	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0080547	non-alcoholic steatohepatitis	skos:exactMatch	mesh	D065626	Non-alcoholic Fatty Liver Disease	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0080748	chronic inducible urticaria	skos:exactMatch	mesh	D000080223	Chronic Urticaria	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0080749	chronic spontaneous urticaria	skos:exactMatch	mesh	D000080223	Chronic Urticaria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080939	hereditary angioedema type I	skos:exactMatch	mesh	D056829	Hereditary Angioedema Types I and II	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0111135	congenital generalized lipodystrophy type 1	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0111136	congenital generalized lipodystrophy type 2	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:1024	leprosy	skos:exactMatch	umls	C0051981	leprosy vaccine	manually_reviewed	orcid:0000-0003-4423-4370
@@ -170,6 +177,7 @@ doid	DOID:1498	cholera	skos:exactMatch	umls	C0008359	cholera vaccine	manually_re
 doid	DOID:1586	rheumatic fever	skos:exactMatch	umls	C1548484	rheumatic fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:1909	melanoma	skos:exactMatch	umls	C0796561	Melanoma vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:2043	hepatitis B	skos:exactMatch	umls	C0062527	hepatitis B surface antigen vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:3479	uveal cancer	skos:exactMatch	mesh	D014604	Uveal Neoplasms	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:3482	plague	skos:exactMatch	umls	C0032066	Plague Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:3910	lung adenocarcinoma	skos:exactMatch	efo	0005288	non-small cell lung adenocarcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4552	large cell carcinoma	skos:exactMatch	efo	0003050	large cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
@@ -358,6 +366,7 @@ mesh	C535442	Bile acid synthesis defect, congenital, 1	skos:exactMatch	doid	DOID
 mesh	C535536	Iridogoniodysgenesis, dominant type	skos:exactMatch	doid	DOID:0050786	iridogoniodysgenesis syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C535837	Pancreatic carcinoma, familial	skos:exactMatch	doid	DOID:4905	pancreatic carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C535847	Hay-Wells syndrome	skos:exactMatch	doid	DOID:0090119	ankyloblepharon-ectodermal defects-cleft lip/palate syndrome	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C536133	Meckel syndrome type 1	skos:exactMatch	doid	DOID:0050778	Meckel syndrome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C536192	Brittle cornea syndrome 1	skos:exactMatch	doid	DOID:14775	brittle cornea syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C536277	Idiopathic dilation cardiomyopathy	skos:exactMatch	doid	DOID:0110429	dilated cardiomyopathy 1H	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C536300	Partington X-linked mental retardation syndrome	skos:exactMatch	doid	DOID:14744	Partington syndrome	manually_reviewed	orcid:0000-0003-1307-2508
@@ -379,7 +388,6 @@ mesh	C567200	Immunodeficiency, Hypogammaglobulinemia, and Reduced B Cells	skos:e
 mesh	C567484	Mental Retardation, X-Linked, Syndromic, Christianson Type	skos:exactMatch	doid	DOID:0060825	Christianson syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C567738	Neuropathy, Hereditary Sensory And Autonomic, Type IIB	skos:exactMatch	doid	DOID:0070150	hereditary sensory and autonomic neuropathy type 2B	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C579934	Autosomal Recessive Cerebellar Ataxia Type 1	skos:exactMatch	doid	DOID:0111618	autosomal recessive spinocerebellar ataxia 8	manually_reviewed	orcid:0000-0003-1307-2508
-mesh	C580012	Congenital Fibrosis of the Extraocular Muscles	skos:exactMatch	doid	DOID:0080143	congenital fibrosis of the extraocular muscles	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C580473	Succinate-Coa Ligase Deficiency	skos:exactMatch	doid	DOID:0080124	mitochondrial DNA depletion syndrome 5	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C584135	endotrophin	skos:exactMatch	ncit	C165979	Pro-C6 Measurement	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000071636	Protein Phosphatase 2C	skos:exactMatch	hgnc	9279	PDP1	manually_reviewed	orcid:0000-0001-9439-5346
@@ -413,6 +421,7 @@ mesh	D003924	Diabetes Mellitus, Type 2	skos:exactMatch	doid	DOID:0050524	maturit
 mesh	D003925	Diabetic Angiopathies	skos:exactMatch	doid	DOID:10182	diabetic peripheral angiopathy	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D004407	Dysgerminoma	skos:exactMatch	doid	DOID:5511	dysgerminoma of ovary	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D004410	Dyslexia	skos:exactMatch	doid	DOID:13365	reading disorder	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D004697	Endocarditis, Bacterial	skos:exactMatch	doid	DOID:0060000	infective endocarditis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D004932	Esophageal and Gastric Varices	skos:exactMatch	doid	DOID:112	esophageal varix	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D005319	Fetal Hemoglobin	skos:exactMatch	efo	0004576	fetal hemoglobin measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D005351	Fibromatosis, Gingival	skos:exactMatch	doid	DOID:0060466	gingival fibromatosis	manually_reviewed	orcid:0000-0003-1307-2508
@@ -424,7 +433,6 @@ mesh	D006441	Hemoglobin A	skos:exactMatch	efo	0009208	Hemoglobin A Measurement	m
 mesh	D006443	Hemoglobin A2	skos:exactMatch	efo	0005845	hemoglobin A2 measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006451	Hemoglobin, Sickle	skos:exactMatch	efo	0009223	Hemoglobin S Measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006480	Hemorrhagic Fever with Renal Syndrome	skos:exactMatch	doid	DOID:0050200	Korean hemorrhagic fever	manually_reviewed	orcid:0000-0003-1307-2508
-mesh	D006519	Hepatitis, Alcoholic	skos:exactMatch	doid	DOID:12351	alcoholic hepatitis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006593	Hexokinase	skos:exactMatch	go	GO:0004396	hexokinase activity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006646	Histiocytosis, Langerhans-Cell	skos:exactMatch	doid	DOID:2571	Langerhans-cell histiocytosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007014	Hypophosphatasia	skos:exactMatch	doid	DOID:0110915	childhood hypophosphatasia	manually_reviewed	orcid:0000-0003-1307-2508
