@@ -186,6 +186,10 @@ def check_valid_prefix_id(prefix: str, identifier: str):
     if prefix != resource.prefix:
         raise UnstandardizedPrefix(prefix, resource.prefix)
     miriam_prefix = resource.get_miriam_prefix()
+
+    # If this resource has a mapping to MIRIAM, the MIRIAM-specific
+    # normalization will be applied, which e.g., adds missing
+    # redundant prefixes into the local unique identifiers
     if miriam_prefix is not None:
         norm_id = resource.miriam_standardize_identifier(identifier)
         if norm_id is None:
@@ -195,6 +199,11 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         if norm_id != identifier:
             raise InvalidNormIdentifier(prefix, identifier, norm_id)
         pattern = re.compile(resource.miriam["pattern"])
+
+    # If this resource does not have a mapping to MIRIAM, then
+    # the Bioregistry normalization will be applied, which e.g.,
+    # strips potential redundant prefixes in local unique identifiers
+    # or any other "bananas"
     else:
         norm_id = resource.standardize_identifier(identifier)
         if norm_id != identifier:
