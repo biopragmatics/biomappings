@@ -1427,11 +1427,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000003
-      identifier: ACH-000003
-      link: https://bioregistry.io/depmap:ACH-000003
-      name: CACO2
-      prefix: depmap
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://bioregistry.io/efo:0001099
+      name: Caco-2
+      prefix: efo
   - source:
       curie: cellosaurus:0025
       identifier: CVCL_0025
@@ -1439,11 +1439,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: efo:0001099
-      identifier: 0001099
-      link: https://bioregistry.io/efo:0001099
-      name: Caco-2
-      prefix: efo
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://bioregistry.io/depmap:ACH-000003
+      name: CACO2
+      prefix: depmap
   - source:
       curie: depmap:ACH-000003
       identifier: ACH-000003
@@ -1572,11 +1572,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://bioregistry.io/efo:0006612
+      curie: cellosaurus:1334
+      identifier: CVCL_1334
+      link: https://bioregistry.io/cellosaurus:1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: bto:0006459
       identifier: BTO:0006459
@@ -1584,11 +1584,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:1334
-      identifier: CVCL_1334
-      link: https://bioregistry.io/cellosaurus:1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://bioregistry.io/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: cellosaurus:1334
       identifier: CVCL_1334
@@ -2472,7 +2472,7 @@
       prefix: doid
     target:
       curie: mondo:0000239
-      identifier: MONDO:0000239
+      identifier: 0000239
       link: https://bioregistry.io/mondo:0000239
       name: adiaspiromycosis
       prefix: mondo
@@ -2490,7 +2490,7 @@
       prefix: umls
   - source:
       curie: mondo:0000239
-      identifier: MONDO:0000239
+      identifier: 0000239
       link: https://bioregistry.io/mondo:0000239
       name: adiaspiromycosis
       prefix: mondo
@@ -2512,7 +2512,7 @@
       name: adiaspiromycosis
       prefix: mesh
     mondo:0000239:
-      identifier: MONDO:0000239
+      identifier: 0000239
       link: https://bioregistry.io/mondo:0000239
       name: adiaspiromycosis
       prefix: mondo
@@ -2559,7 +2559,7 @@
       prefix: doid
     target:
       curie: mondo:0000242
-      identifier: MONDO:0000242
+      identifier: '0000242'
       link: https://bioregistry.io/mondo:0000242
       name: tinea barbae
       prefix: mondo
@@ -2577,7 +2577,7 @@
       prefix: umls
   - source:
       curie: mondo:0000242
-      identifier: MONDO:0000242
+      identifier: '0000242'
       link: https://bioregistry.io/mondo:0000242
       name: tinea barbae
       prefix: mondo
@@ -2599,7 +2599,7 @@
       name: tinea barbae
       prefix: mesh
     mondo:0000242:
-      identifier: MONDO:0000242
+      identifier: '0000242'
       link: https://bioregistry.io/mondo:0000242
       name: tinea barbae
       prefix: mondo
@@ -2971,11 +2971,11 @@
       name: Ossification of the posterior longitudinal ligament of the spine
       prefix: mesh
     target:
-      curie: umls:C1865343
-      identifier: C1865343
-      link: https://bioregistry.io/umls:C1865343
-      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
-      prefix: umls
+      curie: mesh:D017887
+      identifier: D017887
+      link: https://bioregistry.io/mesh:D017887
+      name: Ossification of Posterior Longitudinal Ligament
+      prefix: mesh
   - source:
       curie: mesh:C537143
       identifier: C537143
@@ -2983,11 +2983,11 @@
       name: Ossification of the posterior longitudinal ligament of the spine
       prefix: mesh
     target:
-      curie: mesh:D017887
-      identifier: D017887
-      link: https://bioregistry.io/mesh:D017887
-      name: Ossification of Posterior Longitudinal Ligament
-      prefix: mesh
+      curie: umls:C1865343
+      identifier: C1865343
+      link: https://bioregistry.io/umls:C1865343
+      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
+      prefix: umls
   - source:
       curie: mesh:D017887
       identifier: D017887
@@ -3602,11 +3602,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: ncit:C3275
-      identifier: C3275
-      link: https://bioregistry.io/ncit:C3275
+      curie: mesh:D009463
+      identifier: D009463
+      link: https://bioregistry.io/mesh:D009463
       name: Neuroma
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: doid:2001
       identifier: DOID:2001
@@ -3614,11 +3614,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: mesh:D009463
-      identifier: D009463
-      link: https://bioregistry.io/mesh:D009463
+      curie: ncit:C3275
+      identifier: C3275
+      link: https://bioregistry.io/ncit:C3275
       name: Neuroma
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: efo:0009619
       identifier: 0009619
@@ -3660,11 +3660,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: ncit:C34824
-      identifier: C34824
-      link: https://bioregistry.io/ncit:C34824
+      curie: mesh:D009041
+      identifier: D009041
+      link: https://bioregistry.io/mesh:D009041
       name: Motion Sickness
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: doid:2951
       identifier: DOID:2951
@@ -3672,11 +3672,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: mesh:D009041
-      identifier: D009041
-      link: https://bioregistry.io/mesh:D009041
+      curie: ncit:C34824
+      identifier: C34824
+      link: https://bioregistry.io/ncit:C34824
       name: Motion Sickness
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: efo:0006928
       identifier: 0006928
@@ -4018,10 +4018,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: GO:0033211
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: GO:0033210
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -4030,10 +4030,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: GO:0033210
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: GO:0033211
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033210
@@ -4106,7 +4106,7 @@
       prefix: doid
     target:
       curie: mondo:0018878
-      identifier: MONDO:0018878
+      identifier: 0018878
       link: https://bioregistry.io/mondo:0018878
       name: branchiootic syndrome
       prefix: mondo
@@ -4122,7 +4122,7 @@
       name: Branchiootic syndrome
       prefix: mesh
     mondo:0018878:
-      identifier: MONDO:0018878
+      identifier: 0018878
       link: https://bioregistry.io/mondo:0018878
       name: branchiootic syndrome
       prefix: mondo
@@ -4135,7 +4135,7 @@
       prefix: doid
     target:
       curie: mondo:0010261
-      identifier: MONDO:0010261
+      identifier: '0010261'
       link: https://bioregistry.io/mondo:0010261
       name: microphthalmia, syndromic 2
       prefix: mondo
@@ -4151,7 +4151,7 @@
       name: Microphthalmia, syndromic 2
       prefix: mesh
     mondo:0010261:
-      identifier: MONDO:0010261
+      identifier: '0010261'
       link: https://bioregistry.io/mondo:0010261
       name: microphthalmia, syndromic 2
       prefix: mondo
@@ -4164,7 +4164,7 @@
       prefix: efo
     target:
       curie: mondo:0020540
-      identifier: MONDO:0020540
+      identifier: '0020540'
       link: https://bioregistry.io/mondo:0020540
       name: ovarian gynandroblastoma
       prefix: mondo
@@ -4180,7 +4180,7 @@
       name: Ovarian gynandroblastoma
       prefix: mesh
     mondo:0020540:
-      identifier: MONDO:0020540
+      identifier: '0020540'
       link: https://bioregistry.io/mondo:0020540
       name: ovarian gynandroblastoma
       prefix: mondo
@@ -4193,7 +4193,7 @@
       prefix: hp
     target:
       curie: mondo:0018154
-      identifier: MONDO:0018154
+      identifier: 0018154
       link: https://bioregistry.io/mondo:0018154
       name: Madelung deformity
       prefix: mondo
@@ -4209,7 +4209,7 @@
       name: Madelung Deformity
       prefix: mesh
     mondo:0018154:
-      identifier: MONDO:0018154
+      identifier: 0018154
       link: https://bioregistry.io/mondo:0018154
       name: Madelung deformity
       prefix: mondo
@@ -4222,7 +4222,7 @@
       prefix: doid
     target:
       curie: mondo:0019107
-      identifier: MONDO:0019107
+      identifier: 0019107
       link: https://bioregistry.io/mondo:0019107
       name: Rh deficiency syndrome
       prefix: mondo
@@ -4238,7 +4238,7 @@
       name: Rh Deficiency Syndrome
       prefix: mesh
     mondo:0019107:
-      identifier: MONDO:0019107
+      identifier: 0019107
       link: https://bioregistry.io/mondo:0019107
       name: Rh deficiency syndrome
       prefix: mondo
@@ -4251,7 +4251,7 @@
       prefix: doid
     target:
       curie: mondo:0007390
-      identifier: MONDO:0007390
+      identifier: 0007390
       link: https://bioregistry.io/mondo:0007390
       name: coumarin resistance
       prefix: mondo
@@ -4267,7 +4267,7 @@
       name: Coumarin Resistance
       prefix: mesh
     mondo:0007390:
-      identifier: MONDO:0007390
+      identifier: 0007390
       link: https://bioregistry.io/mondo:0007390
       name: coumarin resistance
       prefix: mondo
@@ -4280,7 +4280,7 @@
       prefix: doid
     target:
       curie: mondo:0100350
-      identifier: MONDO:0100350
+      identifier: '0100350'
       link: https://bioregistry.io/mondo:0100350
       name: neuronopathy, distal hereditary motor, type 5
       prefix: mondo
@@ -4296,7 +4296,7 @@
       name: Neuronopathy, Distal Hereditary Motor, Type V
       prefix: mesh
     mondo:0100350:
-      identifier: MONDO:0100350
+      identifier: '0100350'
       link: https://bioregistry.io/mondo:0100350
       name: neuronopathy, distal hereditary motor, type 5
       prefix: mondo
@@ -4309,7 +4309,7 @@
       prefix: doid
     target:
       curie: mondo:0015240
-      identifier: MONDO:0015240
+      identifier: '0015240'
       link: https://bioregistry.io/mondo:0015240
       name: digitotalar dysmorphism
       prefix: mondo
@@ -4325,7 +4325,7 @@
       name: Digitotalar Dysmorphism
       prefix: mesh
     mondo:0015240:
-      identifier: MONDO:0015240
+      identifier: '0015240'
       link: https://bioregistry.io/mondo:0015240
       name: digitotalar dysmorphism
       prefix: mondo
@@ -4338,7 +4338,7 @@
       prefix: doid
     target:
       curie: mondo:0017999
-      identifier: MONDO:0017999
+      identifier: 0017999
       link: https://bioregistry.io/mondo:0017999
       name: fatty acid hydroxylase-associated neurodegeneration
       prefix: mondo
@@ -4354,7 +4354,7 @@
       name: Fatty Acid Hydroxylase-Associated Neurodegeneration
       prefix: mesh
     mondo:0017999:
-      identifier: MONDO:0017999
+      identifier: 0017999
       link: https://bioregistry.io/mondo:0017999
       name: fatty acid hydroxylase-associated neurodegeneration
       prefix: mondo
@@ -4541,7 +4541,7 @@
       prefix: efo
     target:
       curie: mondo:0041656
-      identifier: MONDO:0041656
+      identifier: '0041656'
       link: https://bioregistry.io/mondo:0041656
       name: ST-elevation myocardial infarction
       prefix: mondo
@@ -4557,7 +4557,7 @@
       name: ST Elevation Myocardial Infarction
       prefix: mesh
     mondo:0041656:
-      identifier: MONDO:0041656
+      identifier: '0041656'
       link: https://bioregistry.io/mondo:0041656
       name: ST-elevation myocardial infarction
       prefix: mondo
@@ -4570,7 +4570,7 @@
       prefix: efo
     target:
       curie: mondo:0023305
-      identifier: MONDO:0023305
+      identifier: '0023305'
       link: https://bioregistry.io/mondo:0023305
       name: heavy metal poisoning
       prefix: mondo
@@ -4586,7 +4586,7 @@
       name: Heavy Metal Poisoning
       prefix: mesh
     mondo:0023305:
-      identifier: MONDO:0023305
+      identifier: '0023305'
       link: https://bioregistry.io/mondo:0023305
       name: heavy metal poisoning
       prefix: mondo
@@ -4744,7 +4744,7 @@
       prefix: doid
     target:
       curie: mondo:0000455
-      identifier: MONDO:0000455
+      identifier: '0000455'
       link: https://bioregistry.io/mondo:0000455
       name: cone dystrophy
       prefix: mondo
@@ -4760,7 +4760,7 @@
       name: Cone Dystrophy
       prefix: mesh
     mondo:0000455:
-      identifier: MONDO:0000455
+      identifier: '0000455'
       link: https://bioregistry.io/mondo:0000455
       name: cone dystrophy
       prefix: mondo
@@ -4831,7 +4831,7 @@
       prefix: doid
     target:
       curie: mondo:0000716
-      identifier: MONDO:0000716
+      identifier: '0000716'
       link: https://bioregistry.io/mondo:0000716
       name: agraphia
       prefix: mondo
@@ -4847,7 +4847,7 @@
       name: Agraphia
       prefix: mesh
     mondo:0000716:
-      identifier: MONDO:0000716
+      identifier: '0000716'
       link: https://bioregistry.io/mondo:0000716
       name: agraphia
       prefix: mondo
@@ -5150,7 +5150,7 @@
       prefix: doid
     target:
       curie: mondo:0021092
-      identifier: MONDO:0021092
+      identifier: 0021092
       link: https://bioregistry.io/mondo:0021092
       name: fallopian tube neoplasm
       prefix: mondo
@@ -5166,7 +5166,7 @@
       name: Fallopian Tube Neoplasms
       prefix: mesh
     mondo:0021092:
-      identifier: MONDO:0021092
+      identifier: 0021092
       link: https://bioregistry.io/mondo:0021092
       name: fallopian tube neoplasm
       prefix: mondo
@@ -5208,7 +5208,7 @@
       prefix: doid
     target:
       curie: mondo:0021253
-      identifier: MONDO:0021253
+      identifier: '0021253'
       link: https://bioregistry.io/mondo:0021253
       name: gallbladder neoplasm
       prefix: mondo
@@ -5224,7 +5224,7 @@
       name: Gallbladder Neoplasms
       prefix: mesh
     mondo:0021253:
-      identifier: MONDO:0021253
+      identifier: '0021253'
       link: https://bioregistry.io/mondo:0021253
       name: gallbladder neoplasm
       prefix: mondo
@@ -5323,11 +5323,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: mondo:0100075
-      identifier: MONDO:0100075
-      link: https://bioregistry.io/mondo:0100075
-      name: jaw fracture
-      prefix: mondo
+      curie: ncit:C26803
+      identifier: C26803
+      link: https://bioregistry.io/ncit:C26803
+      name: Jaw Fracture
+      prefix: ncit
   - source:
       curie: efo:0009612
       identifier: 0009612
@@ -5335,14 +5335,14 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: ncit:C26803
-      identifier: C26803
-      link: https://bioregistry.io/ncit:C26803
-      name: Jaw Fracture
-      prefix: ncit
+      curie: mondo:0100075
+      identifier: '0100075'
+      link: https://bioregistry.io/mondo:0100075
+      name: jaw fracture
+      prefix: mondo
   - source:
       curie: mondo:0100075
-      identifier: MONDO:0100075
+      identifier: '0100075'
       link: https://bioregistry.io/mondo:0100075
       name: jaw fracture
       prefix: mondo
@@ -5364,7 +5364,7 @@
       name: Jaw Fractures
       prefix: mesh
     mondo:0100075:
-      identifier: MONDO:0100075
+      identifier: '0100075'
       link: https://bioregistry.io/mondo:0100075
       name: jaw fracture
       prefix: mondo
@@ -5382,7 +5382,7 @@
       prefix: doid
     target:
       curie: mondo:0100345
-      identifier: MONDO:0100345
+      identifier: '0100345'
       link: https://bioregistry.io/mondo:0100345
       name: lactose intolerance
       prefix: mondo
@@ -5398,7 +5398,7 @@
       name: Lactose Intolerance
       prefix: mesh
     mondo:0100345:
-      identifier: MONDO:0100345
+      identifier: '0100345'
       link: https://bioregistry.io/mondo:0100345
       name: lactose intolerance
       prefix: mondo
@@ -6217,7 +6217,7 @@
 - edges:
   - source:
       curie: mondo:0018815
-      identifier: MONDO:0018815
+      identifier: 0018815
       link: https://bioregistry.io/mondo:0018815
       name: aneurysmal bone cyst
       prefix: mondo
@@ -6234,7 +6234,7 @@
       name: Bone Cysts, Aneurysmal
       prefix: mesh
     mondo:0018815:
-      identifier: MONDO:0018815
+      identifier: 0018815
       link: https://bioregistry.io/mondo:0018815
       name: aneurysmal bone cyst
       prefix: mondo
