@@ -92,14 +92,9 @@ class TestIntegrity(unittest.TestCase):
         try:
             check_valid_prefix_id(prefix, identifier)
         except InvalidNormIdentifier as e:
-            self.fail(
-                msg=f"[{label}:{line}] Identifier in {prefix}:{identifier}"
-                f" should be normalized to {prefix}:{e.norm_identifier}"
-            )
+            self.fail(f"[{label}:{line}] {e}")
         except InvalidIdentifierPattern as e:
-            self.fail(
-                msg=f"[{label}:{line}] Identifier in {prefix}:{identifier} should match pattern {e.pattern}"
-            )
+            self.fail(f"[{label}:{line}] {e}")
 
     def test_contributors(self):
         """Test all contributors have an entry in the curators.tsv file."""

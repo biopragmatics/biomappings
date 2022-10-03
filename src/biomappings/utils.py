@@ -90,8 +90,24 @@ def get_canonical_tuple(mapping: Mapping[str, Any]) -> Tuple[str, str, str, str]
     return (*source, *target)
 
 
-class InvalidPrefix(ValueError):
+class UnregisteredPrefix(ValueError):
     """Raised for an invalid prefix."""
+
+
+class UnstandardizedPrefix(ValueError):
+    """Raised for an unstandardized prefix."""
+
+    def __init__(self, prefix: str, norm_prefix: str):
+        """Initialize the error.
+
+        :param prefix: A CURIE's prefix
+        :param norm_prefix: The normalized prefid
+        """
+        self.prefix = prefix
+        self.norm_prefix = norm_prefix
+
+    def __str__(self) -> str:  # noqa:D105
+        return f"{self.prefix} should be standardized to {self.norm_prefix}"
 
 
 class InvalidIdentifier(ValueError):
@@ -141,16 +157,39 @@ class InvalidNormIdentifier(InvalidIdentifier):
         return f"{self.prefix}:{self.identifier} does not match normalized CURIE {self.prefix}:{self.norm_identifier}"
 
 
-def check_valid_prefix_id(prefix: str, identifier: str) -> None:
-    """Check the prefix/identifier pair is valid."""
+def check_valid_prefix_id(prefix: str, identifier: str):
+    """Check the prefix/identifier pair is valid.
+
+    :param prefix:
+        The prefix from a CURIE
+    :param identifier:
+        The local unique identifier from a CURIE
+    :raises UnregisteredPrefix:
+        if the prefix is not registered with the Bioregistry
+    :raises UnstandardizedPrefix:
+        if the prefix is not standardized w.r.t. the Bioregistry
+    :raises InvalidNormIdentifier:
+        if the identifier is not standardized, either against the MIRIAM
+        standard, if available, or against the Bioregistry standard
+    :raises InvalidIdentifierPattern:
+        if the does not match the appropriate regular expression for MIRIAM
+        (if available) or for the Bioregistry. If no regular expression is
+        available, then this check is not applied.
+    :raises RuntimeError:
+        If the preconditions for miriam standardization aren't met. However,
+        this shouldn't be possible in practice, and this documentation is
+        merely a formality.
+    """
     resource = bioregistry.get_resource(prefix)
     if resource is None:
-        raise InvalidPrefix(prefix)
+        raise UnregisteredPrefix(prefix)
+    if prefix != resource.prefix:
+        raise UnstandardizedPrefix(prefix, resource.prefix)
     miriam_prefix = resource.get_miriam_prefix()
     if miriam_prefix is not None:
         norm_id = resource.miriam_standardize_identifier(identifier)
         if norm_id is None:
-            raise ValueError(
+            raise RuntimeError(
                 "should not be possible since we check for miriam prefix before running miriam_standardize_identifier"
             )
         if norm_id != identifier:
@@ -163,7 +202,6 @@ def check_valid_prefix_id(prefix: str, identifier: str) -> None:
         pattern = resource.get_pattern_re()
     if pattern is not None and not pattern.match(identifier):
         raise InvalidIdentifierPattern(prefix, identifier, pattern)
-    return None
 
 
 def get_curie(prefix: str, identifier: str) -> str:
