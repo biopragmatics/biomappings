@@ -194,7 +194,8 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         norm_id = resource.miriam_standardize_identifier(identifier)
         if norm_id is None:
             raise RuntimeError(
-                "should not be possible since we check for miriam prefix before running miriam_standardize_identifier"
+                "should not be possible since we check for miriam prefix"
+                " before running miriam_standardize_identifier"
             )
         if norm_id != identifier:
             raise InvalidNormIdentifier(prefix, identifier, norm_id)
