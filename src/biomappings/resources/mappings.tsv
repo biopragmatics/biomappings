@@ -5453,6 +5453,7 @@ mesh	D002245	Carbon Dioxide	skos:exactMatch	chebi	CHEBI:16526	carbon dioxide	man
 mesh	D002254	Carbonates	skos:exactMatch	chebi	CHEBI:23016	carbonates	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002260	Carboprost	skos:exactMatch	chebi	CHEBI:3403	carboprost	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002261	Carboxin	skos:exactMatch	chebi	CHEBI:3405	carboxin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D002266	Carboxymethylcellulose Sodium	skos:exactMatch	ncit	C83596	Carboxymethylcellulose Sodium	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D002273	Carcinogens	skos:exactMatch	chebi	CHEBI:50903	carcinogenic agent	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D002277	Carcinoma	skos:exactMatch	doid	DOID:4015	spindle cell carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D002285	Carcinoma, Intraductal, Noninfiltrating	skos:exactMatch	doid	DOID:0060074	ductal carcinoma in situ	manually_reviewed	orcid:0000-0003-1307-2508
@@ -6576,10 +6577,12 @@ mesh	D020433	Trigeminal Nerve Diseases	skos:exactMatch	doid	DOID:561	trigeminal 
 mesh	D020435	Glossopharyngeal Nerve Diseases	skos:exactMatch	doid	DOID:3418	glossopharyngeal nerve disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D020439	Growth Cones	skos:exactMatch	go	GO:0030426	growth cone	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020460	Melanosomes	skos:exactMatch	go	GO:0042470	melanosome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D020522	Lymphoma, Mantle-Cell	skos:exactMatch	ncit	C4337	Mantle Cell Lymphoma	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020524	Thylakoids	skos:exactMatch	go	GO:0009579	thylakoid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020541	Coiled Bodies	skos:exactMatch	go	GO:0015030	Cajal body	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020675	Peroxisomes	skos:exactMatch	go	GO:0005777	peroxisome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020676	Glyoxysomes	skos:exactMatch	go	GO:0009514	glyoxysome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D020799	Pancrelipase	skos:exactMatch	ncit	C29345	Pancrelipase	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020845	Selective Estrogen Receptor Modulators	skos:exactMatch	ncit	C1821	Selective Estrogen Receptor Modulator	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020847	Estrogen Receptor Modulators	skos:exactMatch	chebi	CHEBI:50739	estrogen receptor modulator	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020868	Gene Silencing	skos:exactMatch	go	GO:0016458	gene silencing	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6611,6 +6614,7 @@ mesh	D023102	Anoikis	skos:exactMatch	go	GO:0043276	anoikis	manually_reviewed	orc
 mesh	D023902	Chromosome Pairing	skos:exactMatch	go	GO:0007129	synapsis	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D024505	Tocopherols	skos:exactMatch	chebi	CHEBI:27013	tocopherol	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D024508	Tocotrienols	skos:exactMatch	chebi	CHEBI:33235	tocotrienol	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D024508	Tocotrienols	skos:exactMatch	ncit	C68318	Tocotrienol	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D026721	RNA 3' End Processing	skos:exactMatch	go	GO:0031123	RNA 3'-end processing	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D026941	Sodium Channel Blockers	skos:exactMatch	chebi	CHEBI:38633	sodium channel blocker	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D029322	Norovirus	skos:exactMatch	ncit	C112362	Norovirus	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6620,6 +6624,7 @@ mesh	D030762	Estrous Cycle	skos:exactMatch	go	GO:0044849	estrous cycle	manually_
 mesh	D031425	Plasmodesmata	skos:exactMatch	go	GO:0009506	plasmodesma	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D032961	Sperm Midpiece	skos:exactMatch	go	GO:0097225	sperm midpiece	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D033461	Hyperuricemia	skos:exactMatch	efo	0009104	hyperuricemia	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D034381	Hearing Loss	skos:exactMatch	ncit	C35731	Hearing Loss	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D034443	RNA Transport	skos:exactMatch	go	GO:0050658	RNA transport	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D034461	Luteinization	skos:exactMatch	go	GO:0001553	luteinization	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D034622	RNA Interference	skos:exactMatch	go	GO:0016246	RNA interference	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6631,6 +6636,7 @@ mesh	D036881	Long-Term Synaptic Depression	skos:exactMatch	go	GO:0060292	long-te
 mesh	D042003	DNA Packaging	skos:exactMatch	go	GO:0006323	DNA packaging	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D042583	Lymphangiogenesis	skos:exactMatch	go	GO:0001946	lymphangiogenesis	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D042863	Cyclin-Dependent Kinase 9	skos:exactMatch	hgnc	1780	CDK9	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D042882	Gallstones	skos:exactMatch	ncit	C34443	Gallbladder Stone	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D043343	Testosterone Propionate	skos:exactMatch	chebi	CHEBI:9466	Testosterone propionate	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D043371	Fatty Acids, Omega-6	skos:exactMatch	chebi	CHEBI:36009	omega-6 fatty acid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D043762	Reproductive Behavior	skos:exactMatch	go	GO:0019098	reproductive behavior	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6672,7 +6678,9 @@ mesh	D047311	Luteolin	skos:exactMatch	chebi	CHEBI:15864	luteolin	manually_review
 mesh	D047348	Hydrolyzable Tannins	skos:exactMatch	chebi	CHEBI:78689	hydrolysable tannin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D047428	Protein Kinase Inhibitors	skos:exactMatch	chebi	CHEBI:37699	protein kinase inhibitor	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D047630	Depsipeptides	skos:exactMatch	chebi	CHEBI:23643	depsipeptide	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D047708	Myofibroma	skos:exactMatch	ncit	C7052	Myofibroma	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D047728	Myopia, Degenerative	skos:exactMatch	doid	DOID:11829	degenerative myopia	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D047928	Premature Birth	skos:exactMatch	ncit	C92861	Preterm Birth	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D048271	Chitosan	skos:exactMatch	chebi	CHEBI:16261	chitosan	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D048288	Imidazolines	skos:exactMatch	chebi	CHEBI:53095	imidazolines	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D048289	Imidazolidines	skos:exactMatch	chebi	CHEBI:38261	imidazolidines	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6680,6 +6688,7 @@ mesh	D048348	Reverse Transcription	skos:exactMatch	go	GO:0001171	reverse transcr
 mesh	D048369	MAP Kinase Kinase 1	skos:exactMatch	ncit	C17808	Dual Specificity Mitogen-Activated Protein Kinase Kinase 1	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D048370	MAP Kinase Kinase 2	skos:exactMatch	ncit	C106633	Dual Specificity Mitogen-Activated Protein Kinase Kinase 2	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D048371	MAP Kinase Kinase 3	skos:exactMatch	ncit	C125166	Dual Specificity Mitogen-Activated Protein Kinase Kinase 3	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D048550	Hepatic Insufficiency	skos:exactMatch	ncit	C141245	Liver Insufficiency	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D048588	Benzoxazines	skos:exactMatch	chebi	CHEBI:46969	benzoxazine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D048648	Macronucleus	skos:exactMatch	go	GO:0031039	macronucleus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D048669	MAP Kinase Kinase 6	skos:exactMatch	ncit	C26485	Dual Specificity Mitogen-Activated Protein Kinase Kinase 6	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6688,6 +6697,7 @@ mesh	D048708	Cell Growth Processes	skos:exactMatch	go	GO:0016049	cell growth	man
 mesh	D048749	Cytokinesis	skos:exactMatch	go	GO:0000910	cytokinesis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D048750	Cell Nucleus Division	skos:exactMatch	go	GO:0000280	nuclear division	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D048789	Phytoestrogens	skos:exactMatch	chebi	CHEBI:76989	phytoestrogen	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D048949	Labor Pain	skos:exactMatch	ncit	C92821	Labor Pain	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D049109	Cell Proliferation	skos:exactMatch	go	GO:0008283	cell population proliferation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D049229	Dendritic Spines	skos:exactMatch	go	GO:0043197	dendritic spine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D049469	Meiotic Prophase I	skos:exactMatch	go	GO:0007128	meiotic prophase I	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6695,6 +6705,8 @@ mesh	D049934	Isocoumarins	skos:exactMatch	chebi	CHEBI:38758	isocoumarins	manuall
 mesh	D049971	Thiazides	skos:exactMatch	chebi	CHEBI:50264	thiazide	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D049990	Membrane Transport Modulators	skos:exactMatch	chebi	CHEBI:38632	membrane transport modulator	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D050071	Bone Density Conservation Agents	skos:exactMatch	chebi	CHEBI:50646	bone density conservation agent	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D050177	Overweight	skos:exactMatch	hp	HP:0025502	Overweight	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D050197	Atherosclerosis	skos:exactMatch	ncit	C35768	Atherosclerosis	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D050256	Antimitotic Agents	skos:exactMatch	chebi	CHEBI:64911	antimitotic	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D050257	Tubulin Modulators	skos:exactMatch	chebi	CHEBI:60832	tubulin modulator	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D050261	Glycogenolysis	skos:exactMatch	go	GO:0005980	glycogen catabolic process	manually_reviewed	orcid:0000-0003-4423-4370
@@ -6770,6 +6782,7 @@ mesh	D053959	Alpha-Amanitin	skos:exactMatch	chebi	CHEBI:37415	alpha-amanitin	man
 mesh	D054079	Vascular Malformations	skos:exactMatch	efo	0006888	vascular malformation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D054179	Angioedemas, Hereditary	skos:exactMatch	ncit	C84758	Hereditary Angioedema	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D054199	Pseudoephedrine	skos:exactMatch	chebi	CHEBI:51209	pseudoephedrine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D054219	Neoplasms, Plasma Cell	skos:exactMatch	ncit	C4665	Plasma Cell Neoplasm	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D054238	Perinatal Mortality	skos:exactMatch	ncit	C118676	Perinatal Mortality	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D054261	Neurulation	skos:exactMatch	go	GO:0001841	neural tube formation	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D054262	Gastrulation	skos:exactMatch	go	GO:0007369	gastrulation	manually_reviewed	orcid:0000-0001-9439-5346
