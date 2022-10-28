@@ -1972,6 +1972,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: mesh:D009525
+      identifier: D009525
+      link: https://bioregistry.io/mesh:D009525
+      name: Niacin
+      prefix: mesh
+    target:
+      curie: mesh:D009539
+      identifier: D009539
+      link: https://bioregistry.io/mesh:D009539
+      name: Nicotinic Acids
+      prefix: mesh
+  nodes:
+    chebi:15940:
+      identifier: CHEBI:15940
+      link: https://bioregistry.io/chebi:15940
+      name: nicotinic acid
+      prefix: chebi
+    mesh:D009525:
+      identifier: D009525
+      link: https://bioregistry.io/mesh:D009525
+      name: Niacin
+      prefix: mesh
+    mesh:D009539:
+      identifier: D009539
+      link: https://bioregistry.io/mesh:D009539
+      name: Nicotinic Acids
+      prefix: mesh
+- edges:
+  - source:
       curie: chebi:22587
       identifier: CHEBI:22587
       link: https://bioregistry.io/chebi:22587
@@ -2088,6 +2117,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: mesh:C068538
+      identifier: C068538
+      link: https://bioregistry.io/mesh:C068538
+      name: liposomal amphotericin B
+      prefix: mesh
+    target:
+      curie: mesh:D000666
+      identifier: D000666
+      link: https://bioregistry.io/mesh:D000666
+      name: Amphotericin B
+      prefix: mesh
+  nodes:
+    chebi:2682:
+      identifier: CHEBI:2682
+      link: https://bioregistry.io/chebi:2682
+      name: amphotericin B
+      prefix: chebi
+    mesh:C068538:
+      identifier: C068538
+      link: https://bioregistry.io/mesh:C068538
+      name: liposomal amphotericin B
+      prefix: mesh
+    mesh:D000666:
+      identifier: D000666
+      link: https://bioregistry.io/mesh:D000666
+      name: Amphotericin B
+      prefix: mesh
+- edges:
+  - source:
       curie: chebi:35497
       identifier: CHEBI:35497
       link: https://bioregistry.io/chebi:35497
@@ -2146,6 +2204,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: chebi:4953
+      identifier: CHEBI:4953
+      link: https://bioregistry.io/chebi:4953
+      name: exemestane
+      prefix: chebi
+    target:
+      curie: ncit:C1097
+      identifier: C1097
+      link: https://bioregistry.io/ncit:C1097
+      name: Exemestane
+      prefix: ncit
+  nodes:
+    chebi:4953:
+      identifier: CHEBI:4953
+      link: https://bioregistry.io/chebi:4953
+      name: exemestane
+      prefix: chebi
+    mesh:C056516:
+      identifier: C056516
+      link: https://bioregistry.io/mesh:C056516
+      name: exemestane
+      prefix: mesh
+    ncit:C1097:
+      identifier: C1097
+      link: https://bioregistry.io/ncit:C1097
+      name: Exemestane
+      prefix: ncit
+- edges:
+  - source:
       curie: mesh:C400481
       identifier: C400481
       link: https://bioregistry.io/mesh:C400481
@@ -2173,6 +2260,35 @@
       link: https://bioregistry.io/mesh:D064801
       name: Phospholipase A2 Inhibitors
       prefix: mesh
+- edges:
+  - source:
+      curie: chebi:50749
+      identifier: CHEBI:50749
+      link: https://bioregistry.io/chebi:50749
+      name: calcipotriol
+      prefix: chebi
+    target:
+      curie: ncit:C28900
+      identifier: C28900
+      link: https://bioregistry.io/ncit:C28900
+      name: Calcipotriene
+      prefix: ncit
+  nodes:
+    chebi:50749:
+      identifier: CHEBI:50749
+      link: https://bioregistry.io/chebi:50749
+      name: calcipotriol
+      prefix: chebi
+    mesh:C055085:
+      identifier: C055085
+      link: https://bioregistry.io/mesh:C055085
+      name: calcipotriene
+      prefix: mesh
+    ncit:C28900:
+      identifier: C28900
+      link: https://bioregistry.io/ncit:C28900
+      name: Calcipotriene
+      prefix: ncit
 - edges:
   - source:
       curie: chebi:75283
@@ -2993,11 +3109,11 @@
       name: ossification of the posterior longitudinal ligament of spine
       prefix: doid
     target:
-      curie: efo:0005895
-      identifier: 0005895
-      link: https://bioregistry.io/efo:0005895
-      name: ossification of the posterior longitudinal ligament of the spine
-      prefix: efo
+      curie: mesh:D017887
+      identifier: D017887
+      link: https://bioregistry.io/mesh:D017887
+      name: Ossification of Posterior Longitudinal Ligament
+      prefix: mesh
   - source:
       curie: doid:0060887
       identifier: DOID:0060887
@@ -3005,11 +3121,11 @@
       name: ossification of the posterior longitudinal ligament of spine
       prefix: doid
     target:
-      curie: mesh:D017887
-      identifier: D017887
-      link: https://bioregistry.io/mesh:D017887
-      name: Ossification of Posterior Longitudinal Ligament
-      prefix: mesh
+      curie: efo:0005895
+      identifier: 0005895
+      link: https://bioregistry.io/efo:0005895
+      name: ossification of the posterior longitudinal ligament of the spine
+      prefix: efo
   - source:
       curie: efo:0005895
       identifier: 0005895
@@ -3029,11 +3145,11 @@
       name: Ossification of the posterior longitudinal ligament of the spine
       prefix: mesh
     target:
-      curie: umls:C1865343
-      identifier: C1865343
-      link: https://bioregistry.io/umls:C1865343
-      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
-      prefix: umls
+      curie: mesh:D017887
+      identifier: D017887
+      link: https://bioregistry.io/mesh:D017887
+      name: Ossification of Posterior Longitudinal Ligament
+      prefix: mesh
   - source:
       curie: mesh:C537143
       identifier: C537143
@@ -3041,11 +3157,11 @@
       name: Ossification of the posterior longitudinal ligament of the spine
       prefix: mesh
     target:
-      curie: mesh:D017887
-      identifier: D017887
-      link: https://bioregistry.io/mesh:D017887
-      name: Ossification of Posterior Longitudinal Ligament
-      prefix: mesh
+      curie: umls:C1865343
+      identifier: C1865343
+      link: https://bioregistry.io/umls:C1865343
+      name: OSSIFICATION OF THE POSTERIOR LONGITUDINAL LIGAMENT OF SPINE
+      prefix: umls
   - source:
       curie: mesh:D017887
       identifier: D017887
@@ -4598,10 +4714,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: GO:0033211
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: GO:0033210
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -4610,10 +4726,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: GO:0033210
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: GO:0033211
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033210
@@ -5143,6 +5259,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: chebi:31690
+      identifier: CHEBI:31690
+      link: https://bioregistry.io/chebi:31690
+      name: imatinib methanesulfonate
+      prefix: chebi
+    target:
+      curie: ncit:C1687
+      identifier: C1687
+      link: https://bioregistry.io/ncit:C1687
+      name: Imatinib Mesylate
+      prefix: ncit
+  nodes:
+    chebi:31690:
+      identifier: CHEBI:31690
+      link: https://bioregistry.io/chebi:31690
+      name: imatinib methanesulfonate
+      prefix: chebi
+    mesh:D000068877:
+      identifier: D000068877
+      link: https://bioregistry.io/mesh:D000068877
+      name: Imatinib Mesylate
+      prefix: mesh
+    ncit:C1687:
+      identifier: C1687
+      link: https://bioregistry.io/ncit:C1687
+      name: Imatinib Mesylate
+      prefix: ncit
+- edges:
+  - source:
       curie: chebi:31243
       identifier: CHEBI:31243
       link: https://bioregistry.io/chebi:31243
@@ -5286,6 +5431,93 @@
       link: https://bioregistry.io/mondo:0023305
       name: heavy metal poisoning
       prefix: mondo
+- edges:
+  - source:
+      curie: chebi:50131
+      identifier: CHEBI:50131
+      link: https://bioregistry.io/chebi:50131
+      name: 5-aza-2'-deoxycytidine
+      prefix: chebi
+    target:
+      curie: ncit:C981
+      identifier: C981
+      link: https://bioregistry.io/ncit:C981
+      name: Decitabine
+      prefix: ncit
+  nodes:
+    chebi:50131:
+      identifier: CHEBI:50131
+      link: https://bioregistry.io/chebi:50131
+      name: 5-aza-2'-deoxycytidine
+      prefix: chebi
+    mesh:D000077209:
+      identifier: D000077209
+      link: https://bioregistry.io/mesh:D000077209
+      name: Decitabine
+      prefix: mesh
+    ncit:C981:
+      identifier: C981
+      link: https://bioregistry.io/ncit:C981
+      name: Decitabine
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:30621
+      identifier: CHEBI:30621
+      link: https://bioregistry.io/chebi:30621
+      name: diarsenic trioxide
+      prefix: chebi
+    target:
+      curie: ncit:C1005
+      identifier: C1005
+      link: https://bioregistry.io/ncit:C1005
+      name: Arsenic Trioxide
+      prefix: ncit
+  nodes:
+    chebi:30621:
+      identifier: CHEBI:30621
+      link: https://bioregistry.io/chebi:30621
+      name: diarsenic trioxide
+      prefix: chebi
+    mesh:D000077237:
+      identifier: D000077237
+      link: https://bioregistry.io/mesh:D000077237
+      name: Arsenic Trioxide
+      prefix: mesh
+    ncit:C1005:
+      identifier: C1005
+      link: https://bioregistry.io/ncit:C1005
+      name: Arsenic Trioxide
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:64073
+      identifier: CHEBI:64073
+      link: https://bioregistry.io/chebi:64073
+      name: exendin-4
+      prefix: chebi
+    target:
+      curie: ncit:C65611
+      identifier: C65611
+      link: https://bioregistry.io/ncit:C65611
+      name: Exenatide
+      prefix: ncit
+  nodes:
+    chebi:64073:
+      identifier: CHEBI:64073
+      link: https://bioregistry.io/chebi:64073
+      name: exendin-4
+      prefix: chebi
+    mesh:D000077270:
+      identifier: D000077270
+      link: https://bioregistry.io/mesh:D000077270
+      name: Exenatide
+      prefix: mesh
+    ncit:C65611:
+      identifier: C65611
+      link: https://bioregistry.io/ncit:C65611
+      name: Exenatide
+      prefix: ncit
 - edges:
   - source:
       curie: efo:0005922
@@ -5489,6 +5721,35 @@
       link: https://bioregistry.io/mondo:0019353
       name: Stargardt disease
       prefix: mondo
+- edges:
+  - source:
+      curie: chebi:28939
+      identifier: CHEBI:28939
+      link: https://bioregistry.io/chebi:28939
+      name: N-acetyl-L-cysteine
+      prefix: chebi
+    target:
+      curie: ncit:C200
+      identifier: C200
+      link: https://bioregistry.io/ncit:C200
+      name: Acetylcysteine
+      prefix: ncit
+  nodes:
+    chebi:28939:
+      identifier: CHEBI:28939
+      link: https://bioregistry.io/chebi:28939
+      name: N-acetyl-L-cysteine
+      prefix: chebi
+    mesh:D000111:
+      identifier: D000111
+      link: https://bioregistry.io/mesh:D000111
+      name: Acetylcysteine
+      prefix: mesh
+    ncit:C200:
+      identifier: C200
+      link: https://bioregistry.io/ncit:C200
+      name: Acetylcysteine
+      prefix: ncit
 - edges:
   - source:
       curie: chebi:2453
@@ -5781,6 +6042,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: chebi:28940
+      identifier: CHEBI:28940
+      link: https://bioregistry.io/chebi:28940
+      name: calciol
+      prefix: chebi
+    target:
+      curie: ncit:C48194
+      identifier: C48194
+      link: https://bioregistry.io/ncit:C48194
+      name: Cholecalciferol
+      prefix: ncit
+  nodes:
+    chebi:28940:
+      identifier: CHEBI:28940
+      link: https://bioregistry.io/chebi:28940
+      name: calciol
+      prefix: chebi
+    mesh:D002762:
+      identifier: D002762
+      link: https://bioregistry.io/mesh:D002762
+      name: Cholecalciferol
+      prefix: mesh
+    ncit:C48194:
+      identifier: C48194
+      link: https://bioregistry.io/ncit:C48194
+      name: Cholecalciferol
+      prefix: ncit
+- edges:
+  - source:
       curie: efo:0009714
       identifier: 0009714
       link: https://bioregistry.io/efo:0009714
@@ -5895,6 +6185,35 @@
       link: https://bioregistry.io/mondo:0021092
       name: fallopian tube neoplasm
       prefix: mondo
+- edges:
+  - source:
+      curie: chebi:46345
+      identifier: CHEBI:46345
+      link: https://bioregistry.io/chebi:46345
+      name: 5-fluorouracil
+      prefix: chebi
+    target:
+      curie: ncit:C505
+      identifier: C505
+      link: https://bioregistry.io/ncit:C505
+      name: Fluorouracil
+      prefix: ncit
+  nodes:
+    chebi:46345:
+      identifier: CHEBI:46345
+      link: https://bioregistry.io/chebi:46345
+      name: 5-fluorouracil
+      prefix: chebi
+    mesh:D005472:
+      identifier: D005472
+      link: https://bioregistry.io/mesh:D005472
+      name: Fluorouracil
+      prefix: mesh
+    ncit:C505:
+      identifier: C505
+      link: https://bioregistry.io/ncit:C505
+      name: Fluorouracil
+      prefix: ncit
 - edges:
   - source:
       curie: efo:0009527
@@ -6048,11 +6367,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: ncit:C26803
-      identifier: C26803
-      link: https://bioregistry.io/ncit:C26803
-      name: Jaw Fracture
-      prefix: ncit
+      curie: mondo:0100075
+      identifier: '0100075'
+      link: https://bioregistry.io/mondo:0100075
+      name: jaw fracture
+      prefix: mondo
   - source:
       curie: efo:0009612
       identifier: 0009612
@@ -6060,11 +6379,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: mondo:0100075
-      identifier: '0100075'
-      link: https://bioregistry.io/mondo:0100075
-      name: jaw fracture
-      prefix: mondo
+      curie: ncit:C26803
+      identifier: C26803
+      link: https://bioregistry.io/ncit:C26803
+      name: Jaw Fracture
+      prefix: ncit
   - source:
       curie: mondo:0100075
       identifier: '0100075'
@@ -6417,6 +6736,35 @@
       link: https://bioregistry.io/uberon:0000175
       name: pleural effusion
       prefix: uberon
+- edges:
+  - source:
+      curie: chebi:8378
+      identifier: CHEBI:8378
+      link: https://bioregistry.io/chebi:8378
+      name: prednisolone
+      prefix: chebi
+    target:
+      curie: ncit:C769
+      identifier: C769
+      link: https://bioregistry.io/ncit:C769
+      name: Prednisolone
+      prefix: ncit
+  nodes:
+    chebi:8378:
+      identifier: CHEBI:8378
+      link: https://bioregistry.io/chebi:8378
+      name: prednisolone
+      prefix: chebi
+    mesh:D011239:
+      identifier: D011239
+      link: https://bioregistry.io/mesh:D011239
+      name: Prednisolone
+      prefix: mesh
+    ncit:C769:
+      identifier: C769
+      link: https://bioregistry.io/ncit:C769
+      name: Prednisolone
+      prefix: ncit
 - edges:
   - source:
       curie: doid:0002116
@@ -7258,6 +7606,64 @@
       link: https://bioregistry.io/ncit:C47726
       name: Sodium Lactate
       prefix: ncit
+- edges:
+  - source:
+      curie: chebi:33235
+      identifier: CHEBI:33235
+      link: https://bioregistry.io/chebi:33235
+      name: tocotrienol
+      prefix: chebi
+    target:
+      curie: ncit:C68318
+      identifier: C68318
+      link: https://bioregistry.io/ncit:C68318
+      name: Tocotrienol
+      prefix: ncit
+  nodes:
+    chebi:33235:
+      identifier: CHEBI:33235
+      link: https://bioregistry.io/chebi:33235
+      name: tocotrienol
+      prefix: chebi
+    mesh:D024508:
+      identifier: D024508
+      link: https://bioregistry.io/mesh:D024508
+      name: Tocotrienols
+      prefix: mesh
+    ncit:C68318:
+      identifier: C68318
+      link: https://bioregistry.io/ncit:C68318
+      name: Tocotrienol
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0001668
+      identifier: 0001668
+      link: https://bioregistry.io/efo:0001668
+      name: human papilloma virus infection
+      prefix: efo
+    target:
+      curie: mondo:0005161
+      identifier: '0005161'
+      link: https://bioregistry.io/mondo:0005161
+      name: human papilloma virus infection
+      prefix: mondo
+  nodes:
+    efo:0001668:
+      identifier: 0001668
+      link: https://bioregistry.io/efo:0001668
+      name: human papilloma virus infection
+      prefix: efo
+    mesh:D030361:
+      identifier: D030361
+      link: https://bioregistry.io/mesh:D030361
+      name: Papillomavirus Infections
+      prefix: mesh
+    mondo:0005161:
+      identifier: '0005161'
+      link: https://bioregistry.io/mondo:0005161
+      name: human papilloma virus infection
+      prefix: mondo
 - edges:
   - source:
       curie: doid:0080653

@@ -88,6 +88,21 @@
     link: https://bioregistry.io/agrovoc:918
     name: biological control
     prefix: agrovoc
+- chebi:15940:
+    identifier: CHEBI:15940
+    link: https://bioregistry.io/chebi:15940
+    name: nicotinic acid
+    prefix: chebi
+  mesh:D009525:
+    identifier: D009525
+    link: https://bioregistry.io/mesh:D009525
+    name: Niacin
+    prefix: mesh
+  mesh:D009539:
+    identifier: D009539
+    link: https://bioregistry.io/mesh:D009539
+    name: Nicotinic Acids
+    prefix: mesh
 - chebi:26267:
     identifier: CHEBI:26267
     link: https://bioregistry.io/chebi:26267
@@ -102,6 +117,21 @@
     identifier: D044945
     link: https://bioregistry.io/mesh:D044945
     name: Proanthocyanidins
+    prefix: mesh
+- chebi:2682:
+    identifier: CHEBI:2682
+    link: https://bioregistry.io/chebi:2682
+    name: amphotericin B
+    prefix: chebi
+  mesh:C068538:
+    identifier: C068538
+    link: https://bioregistry.io/mesh:C068538
+    name: liposomal amphotericin B
+    prefix: mesh
+  mesh:D000666:
+    identifier: D000666
+    link: https://bioregistry.io/mesh:D000666
+    name: Amphotericin B
     prefix: mesh
 - chebi:50469:
     identifier: CHEBI:50469
