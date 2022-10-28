@@ -5,6 +5,8 @@
 import click
 from more_click import make_web_command
 
+from biomappings.resources import get_curated_filter
+
 from .export_sssom import sssom
 from .graph import charts
 from .summary import export
@@ -75,6 +77,14 @@ def prune(prefixes):
 
     cf = get_custom_filter(prefixes[0], prefixes[1:])
     filter_predictions(cf)
+
+
+@main.command()
+def remove_curated():
+    """Remove curated mappings from the predicted mappings, use this if they get out of sync."""
+    from .resources import filter_predictions, get_curated_filter
+
+    filter_predictions(get_curated_filter())
 
 
 main.add_command(export)
