@@ -20,6 +20,7 @@ def append_gilda_predictions(
     prefix: str,
     target_prefixes: Union[str, Iterable[str]],
     provenance: str,
+    *,
     relation: str = "skos:exactMatch",
     custom_filter: Optional[CMapping] = None,
     unnamed: Optional[Iterable[str]] = None,
@@ -53,8 +54,9 @@ def append_gilda_predictions(
 
 def iter_prediction_tuples(
     prefix: str,
-    relation: str,
     provenance: str,
+    *,
+    relation: str = "skos:exactMatch",
     grounder: Optional[Grounder] = None,
     identifiers_are_names: bool = False,
 ) -> Iterable[PredictionTuple]:
