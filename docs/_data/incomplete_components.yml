@@ -3109,11 +3109,11 @@
       name: ossification of the posterior longitudinal ligament of spine
       prefix: doid
     target:
-      curie: mesh:D017887
-      identifier: D017887
-      link: https://bioregistry.io/mesh:D017887
-      name: Ossification of Posterior Longitudinal Ligament
-      prefix: mesh
+      curie: efo:0005895
+      identifier: 0005895
+      link: https://bioregistry.io/efo:0005895
+      name: ossification of the posterior longitudinal ligament of the spine
+      prefix: efo
   - source:
       curie: doid:0060887
       identifier: DOID:0060887
@@ -3121,11 +3121,11 @@
       name: ossification of the posterior longitudinal ligament of spine
       prefix: doid
     target:
-      curie: efo:0005895
-      identifier: 0005895
-      link: https://bioregistry.io/efo:0005895
-      name: ossification of the posterior longitudinal ligament of the spine
-      prefix: efo
+      curie: mesh:D017887
+      identifier: D017887
+      link: https://bioregistry.io/mesh:D017887
+      name: Ossification of Posterior Longitudinal Ligament
+      prefix: mesh
   - source:
       curie: efo:0005895
       identifier: 0005895
@@ -4356,11 +4356,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: mesh:D009041
-      identifier: D009041
-      link: https://bioregistry.io/mesh:D009041
+      curie: ncit:C34824
+      identifier: C34824
+      link: https://bioregistry.io/ncit:C34824
       name: Motion Sickness
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: doid:2951
       identifier: DOID:2951
@@ -4368,11 +4368,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: ncit:C34824
-      identifier: C34824
-      link: https://bioregistry.io/ncit:C34824
+      curie: mesh:D009041
+      identifier: D009041
+      link: https://bioregistry.io/mesh:D009041
       name: Motion Sickness
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: efo:0006928
       identifier: 0006928
