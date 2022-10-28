@@ -5,8 +5,6 @@
 import click
 from more_click import make_web_command
 
-from biomappings.resources import get_curated_filter
-
 from .export_sssom import sssom
 from .graph import charts
 from .summary import export
