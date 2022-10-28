@@ -51,11 +51,18 @@ def _manual_source():
 class Controller:
     """A module for interacting with the predictions and mappings."""
 
-    def __init__(self):  # noqa: D107
+    def __init__(self, target_curies: Optional[Iterable[Tuple[str, str]]] = None):
+        """Instantiate the web controller.
+
+        :param target_curies: Pairs of prefix, local unique identifiers that are the target
+            of curation. If this is given, pre-filters will be made before on predictions
+            to only show ones where either the source or target appears in this set
+        """
         self._predictions = load_predictions()
         self._marked = {}
         self.total_curated = 0
         self._added_mappings = []
+        self.target_ids = set(target_curies or [])
 
     def predictions(
         self,
@@ -130,6 +137,14 @@ class Controller:
         same_text: bool = False,
     ):
         it: Iterable[Tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
+        if self.target_ids:
+            it = (
+                (line, p)
+                for (line, p) in it
+                if (p["source prefix"], p["source identifier"]) in self.target_ids
+                or (p["target prefix"], p["target identifier"]) in self.target_ids
+            )
+
         if query is not None:
             it = self._help_filter(
                 query,
