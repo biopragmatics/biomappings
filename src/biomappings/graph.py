@@ -192,19 +192,19 @@ def charts():
     plt.savefig(os.path.join(IMG, "components.svg"))
     plt.close(fig)
 
-    fig, axes = plt.subplots(1, 2, figsize=(8, 3.5))
+    fig, axes = plt.subplots(1, 2, figsize=(8, 3.75))
     sns.countplot(
         y=prefix_list, ax=axes[0], order=[k for k, _ in Counter(prefix_list).most_common()]
     )
     axes[0].set_xscale("log")
     axes[0].set_xlabel("Count")
-    axes[0].set_title(f"Prefixes ({len(prefix_list)})")
+    axes[0].set_title(f"Prefixes ({len(prefix_list):,})")
 
     relations = [m["relation"] for m in true_mappings]
     sns.countplot(y=relations, ax=axes[1], order=[k for k, _ in Counter(relations).most_common()])
     axes[1].set_xscale("log")
     axes[1].set_xlabel("Count")
-    axes[1].set_title(f"Relations ({len(relations)})")
+    axes[1].set_title(f"Relations ({len(relations):,})")
 
     path = os.path.join(IMG, "summary.png")
     print("saving to", path)
