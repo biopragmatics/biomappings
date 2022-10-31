@@ -9,6 +9,7 @@ from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 from textwrap import dedent
+from typing import Dict, Mapping, Tuple
 
 import bioontologies
 import bioregistry
@@ -125,46 +126,41 @@ class Result:
         )
 
 
-@lru_cache
-def get_graph(prefix: str, graph_uri=None):
-    parse_results = bioontologies.get_obograph_by_prefix(prefix)
-    if len(parse_results.graph_document.graphs) == 1:
-        return parse_results.graph_document.graphs[0]
-    if graph_uri is None:
-        uris = sorted(graph.id for graph in parse_results.graph_document.graphs)
-        raise ValueError(f"need a graph_uri for {prefix} since it has multiple graphs: {uris}.")
-    return next(graph for graph in parse_results.graph_document.graphs if graph.id == graph_uri)
-
-
-def get_primary_mappings(prefix: str, graph_uri: str, external_prefix: str, cache_path: Path):
+def get_primary_mappings(
+    prefix: str,
+    external_prefix: str,
+    cache_path: Path,
+) -> Tuple[str, Mapping[str, str]]:
     if cache_path.is_file():
         d = json.loads(cache_path.read_text())
         return d["version"], d["mappings"]
 
-    graph = get_graph(prefix, graph_uri)
-    rv = {}
-    for node in tqdm(
-        graph.nodes,
-        unit="node",
-        unit_scale=True,
-        desc=f"Extracting {external_prefix} from {prefix}",
-    ):
-        try:
-            node_prefix, node_id = _parse_uri_or_curie_or_str(node.id)
-        except ValueError:
-            continue
-
-        if node_prefix is None or bioregistry.normalize_prefix(node_prefix) != prefix:
-            continue
-
-        for xref in node.xrefs:
-            xref_prefix, xref_identifier = bioregistry.parse_curie(xref.val)
-            if xref_prefix != external_prefix:
+    parse_results = bioontologies.get_obograph_by_prefix(prefix)
+    version = parse_results.guess_version(prefix)
+    graphs = parse_results.graph_document.graphs if parse_results.graph_document else []
+    for graph in graphs:
+        rv: Dict[str, str] = {}
+        for node in tqdm(
+            graph.nodes,
+            unit="node",
+            unit_scale=True,
+            desc=f"Extracting {external_prefix} from {prefix}",
+        ):
+            try:
+                node_prefix, node_luid = _parse_uri_or_curie_or_str(node.id)
+            except ValueError:
                 continue
-            rv[xref_identifier] = node_id
 
-    version = graph.version or graph.version_iri
-    d = {"mappings": rv, "version": version}
+            if node_prefix is None or bioregistry.normalize_prefix(node_prefix) != prefix:
+                continue
+
+            for xref in node.xrefs:
+                xref_prefix, xref_luid = bioregistry.parse_curie(xref.val)
+                if xref_prefix != external_prefix:
+                    continue
+                rv[xref_luid] = node_luid
+
+    d = {"mappings": rv, "version": "?"}
     cache_path.write_text(json.dumps(d, indent=2, sort_keys=True))
     return version, rv
 
@@ -204,7 +200,7 @@ PRIMARY_MAPPING_CONFIG = [
     ("mondo", "efo", "http://purl.obolibrary.org/obo/mondo.owl"),
     ("efo", "mesh", "http://www.ebi.ac.uk/efo/efo.obo"),
     ("efo", "doid", "http://www.ebi.ac.uk/efo/efo.obo"),
-    # ("efo", "cl", "http://www.ebi.ac.uk/efo/efo.obo"),
+    ("efo", "cl", "http://www.ebi.ac.uk/efo/efo.obo"),
     ("efo", "ccle", "http://www.ebi.ac.uk/efo/efo.obo"),
     ("hp", "mesh", "http://purl.obolibrary.org/obo/hp.owl"),
     ("go", "mesh", "http://purl.obolibrary.org/obo/go.owl"),
@@ -222,35 +218,41 @@ PRIMARY_MAPPING_CONFIG = [
 ]
 
 
+def _clean_version(version: str, prefix) -> str:
+    return (
+        version.removeprefix(f"http://purl.obolibrary.org/obo/{prefix}/")
+        .removeprefix("releases/")
+        .removesuffix(f"/{prefix}.owl")
+    )
+
+
 def get_obo_mappings(primary_dd, biomappings_dd):
     summary_rows = []
     for prefix, external, uri in PRIMARY_MAPPING_CONFIG:
         cache_path = EVALUATION.join("mappings", name=f"{prefix}_{external}.json")
-        version, primary = get_primary_mappings(prefix, uri, external, cache_path=cache_path)
+        version, primary = get_primary_mappings(prefix, external, cache_path=cache_path)
         primary_dd[external][prefix] = primary
-        n_primary = len(primary)
 
+        primary_set = set(primary)
         bm = set(biomappings_dd.get(external, {}).get(prefix, {})).union(
             biomappings_dd.get(prefix, {}).get(external, {})
         )
+        n_primary = len(primary_set.difference(bm))
         n_biomappings = len(bm)
-        n_total = len(set(primary).union(bm))
+        n_total = len(primary_set.union(bm))
 
         if not n_primary and n_biomappings:
             gain = float("inf")
         elif not n_primary and not n_biomappings:
-            gain = "-"
+            continue  # skip this
+            # gain = "-"
         else:
             gain = round(100 * n_biomappings / n_primary, 1) if n_primary else None
 
         summary_rows.append(
             (
                 prefix,
-                (
-                    version.removeprefix(f"http://purl.obolibrary.org/obo/{prefix}/")
-                    .removeprefix("releases/")
-                    .removesuffix(f"/{prefix}.owl")
-                ),
+                _clean_version(version, prefix),
                 external,
                 n_primary,
                 n_biomappings,
@@ -297,11 +299,7 @@ def get_non_obo_mappings(primary_dd, biomappings_dd):
         summary_rows.append(
             (
                 prefix,
-                (
-                    version.removeprefix(f"http://purl.obolibrary.org/obo/{prefix}/")
-                    .removeprefix("releases/")
-                    .removesuffix(f"/{prefix}.owl")
-                ),
+                _clean_version(version, prefix),
                 external,
                 n_primary,
                 n_biomappings,
