@@ -1,5 +1,5 @@
 contributors:
-- count: 5141
+- count: 5142
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
@@ -57,7 +57,7 @@ negative:
 - count: 30
   source: ccle
   target: cellosaurus
-- count: 24
+- count: 25
   source: efo
   target: mesh
 - count: 21
@@ -120,7 +120,7 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1121
+negative_mapping_count: 1122
 negative_prefix_count: 23
 positive:
 - count: 2666

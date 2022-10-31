@@ -1,15 +1,29 @@
-import json
-from collections import defaultdict
-from dataclasses import dataclass
-from functools import lru_cache
-from pathlib import Path
+"""Code for the paper analysis."""
 
 import bioontologies
+import json
+import matplotlib.pyplot as plt
+import pandas as pd
+import pickle
+import sys
+import time
+from IPython.display import HTML
+from bioontologies.obograph import _parse_uri_or_curie_or_str
+from collections import Counter, defaultdict, defaultdict
+from dataclasses import dataclass, dataclass
+from functools import lru_cache, lru_cache
+from matplotlib_venn import venn2
+from pathlib import Path
+from tabulate import tabulate, tabulate
+from textwrap import dedent
+from tqdm.auto import tqdm, tqdm
+
+import biomappings
 import bioregistry
-from bioontologies.obograph import _compress_uri
+import bioversions
+import pyobo
+import pystow
 from bioregistry import manager
-from tabulate import tabulate
-from tqdm.auto import tqdm
 
 __all__ = [
     "Result",
@@ -18,9 +32,13 @@ __all__ = [
     "index_mappings",
 ]
 
+EVALUATION = pystow.module("biomappings", "evaluation")
+
 
 @dataclass
 class Result:
+    """Added value result set."""
+
     dataset: str
     source: str
     target: str
@@ -131,7 +149,7 @@ def get_primary_mappings(prefix: str, graph_uri: str, external_prefix: str, cach
         desc=f"Extracting {external_prefix} from {prefix}",
     ):
         try:
-            node_prefix, node_id = _compress_uri(node.id)
+            node_prefix, node_id = _parse_uri_or_curie_or_str(node.id)
         except ValueError:
             continue
 
@@ -150,7 +168,11 @@ def get_primary_mappings(prefix: str, graph_uri: str, external_prefix: str, cach
     return version, rv
 
 
-def index_mappings(mappings):
+def index_mappings(mappings, path=None, force: bool = False):
+    if path and path.is_file() and not force:
+        with open(path, "rb") as file:
+            return pickle.load(file)
+
     rv = defaultdict(lambda: defaultdict(dict))
 
     for mapping in tqdm(mappings, unit_scale=True, unit="mapping"):
@@ -163,4 +185,127 @@ def index_mappings(mappings):
         rv[source_prefix][target_prefix][source_id] = target_id
         rv[target_prefix][source_prefix][target_id] = source_id
 
-    return {k: dict(v) for k, v in rv.items()}
+    rvp = {k: dict(v) for k, v in rv.items()}
+    if path:
+        with open(path, "wb") as file:
+            return pickle.dump(rvp, file)
+    return rvp
+
+
+PRIMARY_MAPPING_CONFIG = [
+    ("doid", "umls", "http://purl.obolibrary.org/obo/doid.owl"),
+    ("doid", "mesh", "http://purl.obolibrary.org/obo/doid.owl"),
+    ("doid", "mondo", "http://purl.obolibrary.org/obo/doid.owl"),
+    ("doid", "efo", "http://purl.obolibrary.org/obo/doid.owl"),
+    ("mondo", "umls", "http://purl.obolibrary.org/obo/mondo.owl"),
+    ("mondo", "mesh", "http://purl.obolibrary.org/obo/mondo.owl"),
+    ("mondo", "doid", "http://purl.obolibrary.org/obo/mondo.owl"),
+    ("mondo", "efo", "http://purl.obolibrary.org/obo/mondo.owl"),
+    ("efo", "mesh", "http://www.ebi.ac.uk/efo/efo.obo"),
+    ("efo", "doid", "http://www.ebi.ac.uk/efo/efo.obo"),
+    # ("efo", "cl", "http://www.ebi.ac.uk/efo/efo.obo"),
+    ("efo", "ccle", "http://www.ebi.ac.uk/efo/efo.obo"),
+    ("hp", "mesh", "http://purl.obolibrary.org/obo/hp.owl"),
+    ("go", "mesh", "http://purl.obolibrary.org/obo/go.owl"),
+    ("go", "reactome", "http://purl.obolibrary.org/obo/go.owl"),
+    ("go", "wikipathways", "http://purl.obolibrary.org/obo/go.owl"),
+    # ("clo", "efo", "http://purl.obolibrary.org/obo/clo.owl"),
+    # ("clo", "ccle", "http://purl.obolibrary.org/obo/clo.owl"),
+    # ("clo", "depmap", "http://purl.obolibrary.org/obo/clo.owl"),
+    # ("clo", "cellosaurus", "http://purl.obolibrary.org/obo/clo.owl"),
+    ("uberon", "mesh", "http://purl.obolibrary.org/obo/uberon.owl"),
+    ("cl", "efo", "http://purl.obolibrary.org/obo/cl.owl"),
+    ("cl", "mesh", "http://purl.obolibrary.org/obo/cl.owl"),
+    ("chebi", "mesh", "http://purl.obolibrary.org/obo/chebi.owl"),
+    ("chebi", "ncit", "http://purl.obolibrary.org/obo/chebi.owl"),
+]
+
+
+def get_obo_mappings(primary_dd, biomappings_dd):
+    summary_rows = []
+    for prefix, external, uri in PRIMARY_MAPPING_CONFIG:
+        cache_path = EVALUATION.join("mappings", name=f"{prefix}_{external}.json")
+        version, primary = get_primary_mappings(prefix, uri, external, cache_path=cache_path)
+        primary_dd[external][prefix] = primary
+        n_primary = len(primary)
+
+        bm = set(biomappings_dd.get(external, {}).get(prefix, {})).union(
+            biomappings_dd.get(prefix, {}).get(external, {})
+        )
+        n_biomappings = len(bm)
+        n_total = len(set(primary).union(bm))
+
+        if not n_primary and n_biomappings:
+            gain = float("inf")
+        elif not n_primary and not n_biomappings:
+            gain = "-"
+        else:
+            gain = round(100 * n_biomappings / n_primary, 1) if n_primary else None
+
+        summary_rows.append(
+            (
+                prefix,
+                (
+                    version.removeprefix(f"http://purl.obolibrary.org/obo/{prefix}/")
+                    .removeprefix("releases/")
+                    .removesuffix(f"/{prefix}.owl")
+                ),
+                external,
+                n_primary,
+                n_biomappings,
+                n_total,
+                gain,
+            )
+        )
+    return summary_rows
+
+
+PYOBO_CONFIGS = [
+    ("cellosaurus", "efo", "CVCL_", "EFO_"),
+    ("cellosaurus", "ccle", "CVCL_", ""),
+    # ("cellosaurus", "cl", "CVCL_", ""),
+]
+
+
+def get_non_obo_mappings(primary_dd, biomappings_dd):
+    summary_rows = []
+    for prefix, external, source_banana, target_banana in PYOBO_CONFIGS:
+        xrefs_df = pyobo.get_xrefs_df(prefix)
+        xrefs_slim_df = xrefs_df[xrefs_df["target_ns"] == external]
+
+        version = "unknown"  # FIXME, e.g., with bioversions.get_version(prefix)
+        primary = primary_dd[external][prefix] = {
+            target_id.removeprefix(target_banana): source_id.removeprefix(source_banana)
+            for source_id, target_id in xrefs_slim_df[[f"{prefix}_id", "target_id"]].values
+        }
+        n_primary = len(primary)
+
+        bm = set(biomappings_dd.get(external, {}).get(prefix, {})).union(
+            biomappings_dd.get(prefix, {}).get(external, {})
+        )
+        n_biomappings = len(bm)
+        n_total = len(set(primary).union(bm))
+
+        if not n_primary and n_biomappings:
+            gain = float("inf")
+        elif not n_primary and not n_biomappings:
+            gain = "-"
+        else:
+            gain = round(100 * n_biomappings / n_primary, 1) if n_primary else None
+
+        summary_rows.append(
+            (
+                prefix,
+                (
+                    version.removeprefix(f"http://purl.obolibrary.org/obo/{prefix}/")
+                    .removeprefix("releases/")
+                    .removesuffix(f"/{prefix}.owl")
+                ),
+                external,
+                n_primary,
+                n_biomappings,
+                n_total,
+                gain,
+            )
+        )
+    return summary_rows

@@ -216,7 +216,6 @@ def charts():
     plt.tight_layout()
     plt.savefig(path, dpi=300)
     plt.savefig(os.path.join(IMG, "components.svg"))
-    plt.savefig(os.path.join(IMG, "components.eps"))
     plt.close(fig)
 
     fig, axes = plt.subplots(1, 2, figsize=(8.5, 5))
@@ -237,7 +236,7 @@ def charts():
     print("saving to", path)
     plt.tight_layout()
     plt.savefig(path, dpi=300)
-    plt.savefig(os.path.join(IMG, "summary.eps"))
+    plt.savefig(os.path.join(IMG, "summary.svg"))
     plt.close(fig)
 
 
