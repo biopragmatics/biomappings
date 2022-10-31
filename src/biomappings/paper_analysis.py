@@ -1,29 +1,30 @@
 """Code for the paper analysis."""
 
-import bioontologies
 import json
-import matplotlib.pyplot as plt
-import pandas as pd
 import pickle
 import sys
 import time
-from IPython.display import HTML
-from bioontologies.obograph import _parse_uri_or_curie_or_str
-from collections import Counter, defaultdict, defaultdict
-from dataclasses import dataclass, dataclass
-from functools import lru_cache, lru_cache
-from matplotlib_venn import venn2
+from collections import Counter, defaultdict
+from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
-from tabulate import tabulate, tabulate
 from textwrap import dedent
-from tqdm.auto import tqdm, tqdm
 
-import biomappings
+import bioontologies
 import bioregistry
 import bioversions
+import matplotlib.pyplot as plt
+import pandas as pd
 import pyobo
 import pystow
+from bioontologies.obograph import _parse_uri_or_curie_or_str
 from bioregistry import manager
+from IPython.display import HTML
+from matplotlib_venn import venn2
+from tabulate import tabulate
+from tqdm.auto import tqdm
+
+import biomappings
 
 __all__ = [
     "Result",
