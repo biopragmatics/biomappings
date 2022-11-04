@@ -2,6 +2,7 @@
 
 """Load Biomappings as a graph."""
 
+import itertools as itt
 import os
 from collections import Counter
 from operator import itemgetter
@@ -13,7 +14,7 @@ import yaml
 from bioregistry.resolve_identifier import get_bioregistry_iri
 from tqdm import tqdm
 
-from biomappings.resources import load_false_mappings, load_mappings
+from biomappings.resources import load_false_mappings, load_mappings, load_predictions
 from biomappings.utils import DATA, IMG, get_curie
 
 
@@ -21,25 +22,30 @@ def get_true_graph(
     include: Optional[Sequence[str]] = None, exclude: Optional[Sequence[str]] = None
 ) -> nx.Graph:
     """Get a graph of the true mappings."""
-    return _graph_from_mappings(load_mappings(), include=include, exclude=exclude)
+    return _graph_from_mappings(load_mappings(), strata="correct", include=include, exclude=exclude)
 
 
 def get_false_graph(
     include: Optional[Sequence[str]] = None, exclude: Optional[Sequence[str]] = None
 ) -> nx.Graph:
     """Get a graph of the false mappings."""
-    return _graph_from_mappings(load_false_mappings(), include=include, exclude=exclude)
+    return _graph_from_mappings(
+        load_false_mappings(), strata="incorrect", include=include, exclude=exclude
+    )
 
 
 def get_predictions_graph(
     include: Optional[Collection[str]] = None, exclude: Optional[Collection[str]] = None
 ) -> nx.Graph:
     """Get a graph of the predicted mappings."""
-    return _graph_from_mappings(load_false_mappings(), include=include, exclude=exclude)
+    return _graph_from_mappings(
+        load_predictions(), strata="predicted", include=include, exclude=exclude
+    )
 
 
 def _graph_from_mappings(
     mappings: Iterable[Mapping[str, str]],
+    strata: str,
     include: Optional[Collection[str]] = None,
     exclude: Optional[Collection[str]] = None,
 ) -> nx.Graph:
@@ -79,6 +85,7 @@ def _graph_from_mappings(
             relation=relation,
             provenance=mapping["source"],
             type=mapping["type"],
+            strata=strata,
         )
     return graph
 
@@ -90,7 +97,15 @@ def charts():
     import seaborn as sns
 
     true_mappings = load_mappings()
-    true_graph = _graph_from_mappings(true_mappings, include=["skos:exactMatch"])
+    true_graph = _graph_from_mappings(true_mappings, include=["skos:exactMatch"], strata="correct")
+    for u, v in true_graph.edges():
+        true_graph.edges[u, v]["correct"] = True
+    false_mappings = load_false_mappings()
+    false_graph = _graph_from_mappings(
+        false_mappings, include=["skos:exactMatch"], strata="incorrect"
+    )
+    for u, v in false_graph.edges():
+        false_graph.edges[u, v]["correct"] = False
 
     component_node_sizes, component_edge_sizes, component_densities, component_number_prefixes = (
         [],
@@ -101,9 +116,10 @@ def charts():
     prefix_list = []
     components_with_duplicate_prefixes = []
     incomplete_components = []
+    unstable_components = []
     n_duplicates = []
     for component in tqdm(
-        nx.connected_components(true_graph), desc="Positive SCCs", unit="component"
+        nx.connected_components(true_graph), desc="Positive SCCs", unit="component", unit_scale=True
     ):
         component = true_graph.subgraph(component)
         node_size = component.number_of_nodes()
@@ -116,6 +132,14 @@ def charts():
             }
             for curie, data in sorted(component.nodes(data=True), key=itemgetter(0))
         }
+
+        unstable_edges = [
+            (u, v, false_graph[u, v])
+            for u, v in itt.combinations(component, 2)
+            if false_graph.has_edge(u, v)
+        ]
+        if unstable_edges:
+            unstable_components.append({"nodes": nodes_data, "unstable_edges": unstable_edges})
 
         component_node_sizes.append(node_size)
         component_edge_sizes.append(edge_size)
@@ -155,6 +179,8 @@ def charts():
         yaml.safe_dump(incomplete_components, file)
     with open(os.path.join(DATA, "components_with_duplicate_prefixes.yml"), "w") as file:
         yaml.safe_dump(components_with_duplicate_prefixes, file)
+    with open(os.path.join(DATA, "unstable_components.yml"), "w") as file:
+        yaml.safe_dump(unstable_components, file)
 
     fig, axes = plt.subplots(2, 3, figsize=(10.5, 6.5))
 
@@ -192,19 +218,19 @@ def charts():
     plt.savefig(os.path.join(IMG, "components.svg"))
     plt.close(fig)
 
-    fig, axes = plt.subplots(1, 2, figsize=(8, 3.75))
-    sns.countplot(
-        y=prefix_list, ax=axes[0], order=[k for k, _ in Counter(prefix_list).most_common()]
-    )
+    fig, axes = plt.subplots(1, 2, figsize=(8.5, 5))
+    prefix_counter = Counter(prefix_list)
+    sns.countplot(y=prefix_list, ax=axes[0], order=[k for k, _ in prefix_counter.most_common()])
     axes[0].set_xscale("log")
     axes[0].set_xlabel("Count")
-    axes[0].set_title(f"Prefixes ({len(prefix_list):,})")
+    axes[0].set_title(f"Prefixes ({len(prefix_counter)})")
 
     relations = [m["relation"] for m in true_mappings]
-    sns.countplot(y=relations, ax=axes[1], order=[k for k, _ in Counter(relations).most_common()])
+    relation_counter = Counter(relations)
+    sns.countplot(y=relations, ax=axes[1], order=[k for k, _ in relation_counter.most_common()])
     axes[1].set_xscale("log")
     axes[1].set_xlabel("Count")
-    axes[1].set_title(f"Relations ({len(relations):,})")
+    axes[1].set_title(f"Relations ({len(relation_counter)})")
 
     path = os.path.join(IMG, "summary.png")
     print("saving to", path)

@@ -5,7 +5,7 @@
 import getpass
 import os
 from collections import defaultdict
-from typing import Any, Iterable, Mapping, Optional, Set, Tuple
+from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple
 
 import flask
 import flask_bootstrap
@@ -59,9 +59,9 @@ class Controller:
             to only show ones where either the source or target appears in this set
         """
         self._predictions = load_predictions()
-        self._marked = {}
+        self._marked: Dict[int, str] = {}
         self.total_curated = 0
-        self._added_mappings = []
+        self._added_mappings: List[Dict[str, str]] = []
         self.target_ids = set(target_curies or [])
 
     def predictions(
