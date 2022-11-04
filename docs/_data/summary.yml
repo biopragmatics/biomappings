@@ -1,5 +1,5 @@
 contributors:
-- count: 5142
+- count: 5141
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
@@ -162,7 +162,7 @@ positive:
 - count: 113
   source: go
   target: kegg.pathway
-- count: 109
+- count: 108
   source: efo
   target: mesh
 - count: 106
@@ -234,7 +234,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 8497
+positive_mapping_count: 8496
 positive_prefix_count: 27
 predictions:
 - count: 12096

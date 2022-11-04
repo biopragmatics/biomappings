@@ -1972,6 +1972,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: mesh:D009525
+      identifier: D009525
+      link: https://bioregistry.io/mesh:D009525
+      name: Niacin
+      prefix: mesh
+    target:
+      curie: mesh:D009539
+      identifier: D009539
+      link: https://bioregistry.io/mesh:D009539
+      name: Nicotinic Acids
+      prefix: mesh
+  nodes:
+    chebi:15940:
+      identifier: CHEBI:15940
+      link: https://bioregistry.io/chebi:15940
+      name: nicotinic acid
+      prefix: chebi
+    mesh:D009525:
+      identifier: D009525
+      link: https://bioregistry.io/mesh:D009525
+      name: Niacin
+      prefix: mesh
+    mesh:D009539:
+      identifier: D009539
+      link: https://bioregistry.io/mesh:D009539
+      name: Nicotinic Acids
+      prefix: mesh
+- edges:
+  - source:
       curie: chebi:22587
       identifier: CHEBI:22587
       link: https://bioregistry.io/chebi:22587
@@ -2088,6 +2117,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: mesh:C068538
+      identifier: C068538
+      link: https://bioregistry.io/mesh:C068538
+      name: liposomal amphotericin B
+      prefix: mesh
+    target:
+      curie: mesh:D000666
+      identifier: D000666
+      link: https://bioregistry.io/mesh:D000666
+      name: Amphotericin B
+      prefix: mesh
+  nodes:
+    chebi:2682:
+      identifier: CHEBI:2682
+      link: https://bioregistry.io/chebi:2682
+      name: amphotericin B
+      prefix: chebi
+    mesh:C068538:
+      identifier: C068538
+      link: https://bioregistry.io/mesh:C068538
+      name: liposomal amphotericin B
+      prefix: mesh
+    mesh:D000666:
+      identifier: D000666
+      link: https://bioregistry.io/mesh:D000666
+      name: Amphotericin B
+      prefix: mesh
+- edges:
+  - source:
       curie: chebi:35497
       identifier: CHEBI:35497
       link: https://bioregistry.io/chebi:35497
@@ -2146,6 +2204,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: chebi:4953
+      identifier: CHEBI:4953
+      link: https://bioregistry.io/chebi:4953
+      name: exemestane
+      prefix: chebi
+    target:
+      curie: ncit:C1097
+      identifier: C1097
+      link: https://bioregistry.io/ncit:C1097
+      name: Exemestane
+      prefix: ncit
+  nodes:
+    chebi:4953:
+      identifier: CHEBI:4953
+      link: https://bioregistry.io/chebi:4953
+      name: exemestane
+      prefix: chebi
+    mesh:C056516:
+      identifier: C056516
+      link: https://bioregistry.io/mesh:C056516
+      name: exemestane
+      prefix: mesh
+    ncit:C1097:
+      identifier: C1097
+      link: https://bioregistry.io/ncit:C1097
+      name: Exemestane
+      prefix: ncit
+- edges:
+  - source:
       curie: mesh:C400481
       identifier: C400481
       link: https://bioregistry.io/mesh:C400481
@@ -2173,6 +2260,35 @@
       link: https://bioregistry.io/mesh:D064801
       name: Phospholipase A2 Inhibitors
       prefix: mesh
+- edges:
+  - source:
+      curie: chebi:50749
+      identifier: CHEBI:50749
+      link: https://bioregistry.io/chebi:50749
+      name: calcipotriol
+      prefix: chebi
+    target:
+      curie: ncit:C28900
+      identifier: C28900
+      link: https://bioregistry.io/ncit:C28900
+      name: Calcipotriene
+      prefix: ncit
+  nodes:
+    chebi:50749:
+      identifier: CHEBI:50749
+      link: https://bioregistry.io/chebi:50749
+      name: calcipotriol
+      prefix: chebi
+    mesh:C055085:
+      identifier: C055085
+      link: https://bioregistry.io/mesh:C055085
+      name: calcipotriene
+      prefix: mesh
+    ncit:C28900:
+      identifier: C28900
+      link: https://bioregistry.io/ncit:C28900
+      name: Calcipotriene
+      prefix: ncit
 - edges:
   - source:
       curie: chebi:75283
@@ -2472,7 +2588,7 @@
       prefix: doid
     target:
       curie: mondo:0000239
-      identifier: MONDO:0000239
+      identifier: 0000239
       link: https://bioregistry.io/mondo:0000239
       name: adiaspiromycosis
       prefix: mondo
@@ -2490,7 +2606,7 @@
       prefix: umls
   - source:
       curie: mondo:0000239
-      identifier: MONDO:0000239
+      identifier: 0000239
       link: https://bioregistry.io/mondo:0000239
       name: adiaspiromycosis
       prefix: mondo
@@ -2512,7 +2628,7 @@
       name: adiaspiromycosis
       prefix: mesh
     mondo:0000239:
-      identifier: MONDO:0000239
+      identifier: 0000239
       link: https://bioregistry.io/mondo:0000239
       name: adiaspiromycosis
       prefix: mondo
@@ -2559,7 +2675,7 @@
       prefix: doid
     target:
       curie: mondo:0000242
-      identifier: MONDO:0000242
+      identifier: '0000242'
       link: https://bioregistry.io/mondo:0000242
       name: tinea barbae
       prefix: mondo
@@ -2577,7 +2693,7 @@
       prefix: umls
   - source:
       curie: mondo:0000242
-      identifier: MONDO:0000242
+      identifier: '0000242'
       link: https://bioregistry.io/mondo:0000242
       name: tinea barbae
       prefix: mondo
@@ -2599,7 +2715,7 @@
       name: tinea barbae
       prefix: mesh
     mondo:0000242:
-      identifier: MONDO:0000242
+      identifier: '0000242'
       link: https://bioregistry.io/mondo:0000242
       name: tinea barbae
       prefix: mondo
@@ -2784,6 +2900,35 @@
       prefix: umls
 - edges:
   - source:
+      curie: doid:0060046
+      identifier: DOID:0060046
+      link: https://bioregistry.io/doid:0060046
+      name: aphasia
+      prefix: doid
+    target:
+      curie: mondo:0000598
+      identifier: 0000598
+      link: https://bioregistry.io/mondo:0000598
+      name: aphasia
+      prefix: mondo
+  nodes:
+    doid:0060046:
+      identifier: DOID:0060046
+      link: https://bioregistry.io/doid:0060046
+      name: aphasia
+      prefix: doid
+    mesh:D001037:
+      identifier: D001037
+      link: https://bioregistry.io/mesh:D001037
+      name: Aphasia
+      prefix: mesh
+    mondo:0000598:
+      identifier: 0000598
+      link: https://bioregistry.io/mondo:0000598
+      name: aphasia
+      prefix: mondo
+- edges:
+  - source:
       curie: doid:0060317
       identifier: DOID:0060317
       link: https://bioregistry.io/doid:0060317
@@ -2869,6 +3014,35 @@
       link: https://bioregistry.io/umls:C2930930
       name: Abdominal obesity metabolic syndrome
       prefix: umls
+- edges:
+  - source:
+      curie: doid:0060668
+      identifier: DOID:0060668
+      link: https://bioregistry.io/doid:0060668
+      name: anencephaly
+      prefix: doid
+    target:
+      curie: mondo:0000819
+      identifier: 0000819
+      link: https://bioregistry.io/mondo:0000819
+      name: anencephaly
+      prefix: mondo
+  nodes:
+    doid:0060668:
+      identifier: DOID:0060668
+      link: https://bioregistry.io/doid:0060668
+      name: anencephaly
+      prefix: doid
+    mesh:D000757:
+      identifier: D000757
+      link: https://bioregistry.io/mesh:D000757
+      name: Anencephaly
+      prefix: mesh
+    mondo:0000819:
+      identifier: 0000819
+      link: https://bioregistry.io/mondo:0000819
+      name: anencephaly
+      prefix: mondo
 - edges:
   - source:
       curie: doid:0060743
@@ -3016,6 +3190,238 @@
       prefix: mesh
 - edges:
   - source:
+      curie: mesh:C580012
+      identifier: C580012
+      link: https://bioregistry.io/mesh:C580012
+      name: Congenital Fibrosis of the Extraocular Muscles
+      prefix: mesh
+    target:
+      curie: umls:C1302995
+      identifier: C1302995
+      link: https://bioregistry.io/umls:C1302995
+      name: Congenital Fibrosis of the Extraocular Muscles
+      prefix: umls
+  nodes:
+    doid:0080143:
+      identifier: DOID:0080143
+      link: https://bioregistry.io/doid:0080143
+      name: congenital fibrosis of the extraocular muscles
+      prefix: doid
+    mesh:C580012:
+      identifier: C580012
+      link: https://bioregistry.io/mesh:C580012
+      name: Congenital Fibrosis of the Extraocular Muscles
+      prefix: mesh
+    umls:C1302995:
+      identifier: C1302995
+      link: https://bioregistry.io/umls:C1302995
+      name: Congenital Fibrosis of the Extraocular Muscles
+      prefix: umls
+- edges:
+  - source:
+      curie: doid:0080324
+      identifier: DOID:0080324
+      link: https://bioregistry.io/doid:0080324
+      name: tuberous sclerosis 1
+      prefix: doid
+    target:
+      curie: mondo:0008612
+      identifier: 0008612
+      link: https://bioregistry.io/mondo:0008612
+      name: tuberous sclerosis 1
+      prefix: mondo
+  nodes:
+    doid:0080324:
+      identifier: DOID:0080324
+      link: https://bioregistry.io/doid:0080324
+      name: tuberous sclerosis 1
+      prefix: doid
+    mesh:C565346:
+      identifier: C565346
+      link: https://bioregistry.io/mesh:C565346
+      name: Tuberous Sclerosis 1
+      prefix: mesh
+    mondo:0008612:
+      identifier: 0008612
+      link: https://bioregistry.io/mondo:0008612
+      name: tuberous sclerosis 1
+      prefix: mondo
+- edges:
+  - source:
+      curie: doid:0080325
+      identifier: DOID:0080325
+      link: https://bioregistry.io/doid:0080325
+      name: tuberous sclerosis 2
+      prefix: doid
+    target:
+      curie: mondo:0013199
+      identifier: 0013199
+      link: https://bioregistry.io/mondo:0013199
+      name: tuberous sclerosis 2
+      prefix: mondo
+  nodes:
+    doid:0080325:
+      identifier: DOID:0080325
+      link: https://bioregistry.io/doid:0080325
+      name: tuberous sclerosis 2
+      prefix: doid
+    mesh:C566021:
+      identifier: C566021
+      link: https://bioregistry.io/mesh:C566021
+      name: Tuberous Sclerosis 2
+      prefix: mesh
+    mondo:0013199:
+      identifier: 0013199
+      link: https://bioregistry.io/mondo:0013199
+      name: tuberous sclerosis 2
+      prefix: mondo
+- edges:
+  - source:
+      curie: doid:0080696
+      identifier: DOID:0080696
+      link: https://bioregistry.io/doid:0080696
+      name: Winchester syndrome
+      prefix: doid
+    target:
+      curie: mondo:0010201
+      identifier: '0010201'
+      link: https://bioregistry.io/mondo:0010201
+      name: Winchester syndrome
+      prefix: mondo
+  nodes:
+    doid:0080696:
+      identifier: DOID:0080696
+      link: https://bioregistry.io/doid:0080696
+      name: Winchester syndrome
+      prefix: doid
+    mesh:C536709:
+      identifier: C536709
+      link: https://bioregistry.io/mesh:C536709
+      name: Winchester syndrome
+      prefix: mesh
+    mondo:0010201:
+      identifier: '0010201'
+      link: https://bioregistry.io/mondo:0010201
+      name: Winchester syndrome
+      prefix: mondo
+- edges:
+  - source:
+      curie: efo:1001982
+      identifier: '1001982'
+      link: https://bioregistry.io/efo:1001982
+      name: Antisynthetase syndrome
+      prefix: efo
+    target:
+      curie: mesh:C537778
+      identifier: C537778
+      link: https://bioregistry.io/mesh:C537778
+      name: Antisynthetase syndrome
+      prefix: mesh
+  nodes:
+    doid:0080744:
+      identifier: DOID:0080744
+      link: https://bioregistry.io/doid:0080744
+      name: antisynthetase syndrome
+      prefix: doid
+    efo:1001982:
+      identifier: '1001982'
+      link: https://bioregistry.io/efo:1001982
+      name: Antisynthetase syndrome
+      prefix: efo
+    mesh:C537778:
+      identifier: C537778
+      link: https://bioregistry.io/mesh:C537778
+      name: Antisynthetase syndrome
+      prefix: mesh
+- edges:
+  - source:
+      curie: efo:0003063
+      identifier: '0003063'
+      link: https://bioregistry.io/efo:0003063
+      name: polymyositis
+      prefix: efo
+    target:
+      curie: mesh:D017285
+      identifier: D017285
+      link: https://bioregistry.io/mesh:D017285
+      name: Polymyositis
+      prefix: mesh
+  nodes:
+    doid:0080745:
+      identifier: DOID:0080745
+      link: https://bioregistry.io/doid:0080745
+      name: polymyositis
+      prefix: doid
+    efo:0003063:
+      identifier: '0003063'
+      link: https://bioregistry.io/efo:0003063
+      name: polymyositis
+      prefix: efo
+    mesh:D017285:
+      identifier: D017285
+      link: https://bioregistry.io/mesh:D017285
+      name: Polymyositis
+      prefix: mesh
+- edges:
+  - source:
+      curie: efo:0003029
+      identifier: 0003029
+      link: https://bioregistry.io/efo:0003029
+      name: acute basophilic leukemia
+      prefix: efo
+    target:
+      curie: mesh:D015471
+      identifier: D015471
+      link: https://bioregistry.io/mesh:D015471
+      name: Leukemia, Basophilic, Acute
+      prefix: mesh
+  nodes:
+    doid:0080795:
+      identifier: DOID:0080795
+      link: https://bioregistry.io/doid:0080795
+      name: acute basophilic leukemia
+      prefix: doid
+    efo:0003029:
+      identifier: 0003029
+      link: https://bioregistry.io/efo:0003029
+      name: acute basophilic leukemia
+      prefix: efo
+    mesh:D015471:
+      identifier: D015471
+      link: https://bioregistry.io/mesh:D015471
+      name: Leukemia, Basophilic, Acute
+      prefix: mesh
+- edges:
+  - source:
+      curie: efo:1000527
+      identifier: '1000527'
+      link: https://bioregistry.io/efo:1000527
+      name: Sinonasal Undifferentiated Carcinoma
+      prefix: efo
+    target:
+      curie: mesh:C537344
+      identifier: C537344
+      link: https://bioregistry.io/mesh:C537344
+      name: Sinonasal undifferentiated carcinoma
+      prefix: mesh
+  nodes:
+    doid:0080799:
+      identifier: DOID:0080799
+      link: https://bioregistry.io/doid:0080799
+      name: sinonasal undifferentiated carcinoma
+      prefix: doid
+    efo:1000527:
+      identifier: '1000527'
+      link: https://bioregistry.io/efo:1000527
+      name: Sinonasal Undifferentiated Carcinoma
+      prefix: efo
+    mesh:C537344:
+      identifier: C537344
+      link: https://bioregistry.io/mesh:C537344
+      name: Sinonasal undifferentiated carcinoma
+      prefix: mesh
+- edges:
+  - source:
       curie: doid:0080833
       identifier: DOID:0080833
       link: https://bioregistry.io/doid:0080833
@@ -3091,6 +3497,93 @@
       prefix: umls
 - edges:
   - source:
+      curie: doid:0080918
+      identifier: DOID:0080918
+      link: https://bioregistry.io/doid:0080918
+      name: polymicrogyria
+      prefix: doid
+    target:
+      curie: ncit:C116936
+      identifier: C116936
+      link: https://bioregistry.io/ncit:C116936
+      name: Polymicrogyria
+      prefix: ncit
+  nodes:
+    doid:0080918:
+      identifier: DOID:0080918
+      link: https://bioregistry.io/doid:0080918
+      name: polymicrogyria
+      prefix: doid
+    mesh:D065706:
+      identifier: D065706
+      link: https://bioregistry.io/mesh:D065706
+      name: Polymicrogyria
+      prefix: mesh
+    ncit:C116936:
+      identifier: C116936
+      link: https://bioregistry.io/ncit:C116936
+      name: Polymicrogyria
+      prefix: ncit
+- edges:
+  - source:
+      curie: doid:0080947
+      identifier: DOID:0080947
+      link: https://bioregistry.io/doid:0080947
+      name: acute flaccid myelitis
+      prefix: doid
+    target:
+      curie: mondo:0100115
+      identifier: '0100115'
+      link: https://bioregistry.io/mondo:0100115
+      name: acute flaccid myelitis
+      prefix: mondo
+  nodes:
+    doid:0080947:
+      identifier: DOID:0080947
+      link: https://bioregistry.io/doid:0080947
+      name: acute flaccid myelitis
+      prefix: doid
+    mesh:C000629404:
+      identifier: C000629404
+      link: https://bioregistry.io/mesh:C000629404
+      name: acute flaccid myelitis
+      prefix: mesh
+    mondo:0100115:
+      identifier: '0100115'
+      link: https://bioregistry.io/mondo:0100115
+      name: acute flaccid myelitis
+      prefix: mondo
+- edges:
+  - source:
+      curie: doid:0081021
+      identifier: DOID:0081021
+      link: https://bioregistry.io/doid:0081021
+      name: Tukel syndrome
+      prefix: doid
+    target:
+      curie: mondo:0012270
+      identifier: '0012270'
+      link: https://bioregistry.io/mondo:0012270
+      name: Tukel syndrome
+      prefix: mondo
+  nodes:
+    doid:0081021:
+      identifier: DOID:0081021
+      link: https://bioregistry.io/doid:0081021
+      name: Tukel syndrome
+      prefix: doid
+    mesh:C536925:
+      identifier: C536925
+      link: https://bioregistry.io/mesh:C536925
+      name: Tukel syndrome
+      prefix: mesh
+    mondo:0012270:
+      identifier: '0012270'
+      link: https://bioregistry.io/mondo:0012270
+      name: Tukel syndrome
+      prefix: mondo
+- edges:
+  - source:
       curie: efo:0009055
       identifier: 0009055
       link: https://bioregistry.io/efo:0009055
@@ -3118,6 +3611,64 @@
       link: https://bioregistry.io/mesh:C567453
       name: Riddle Syndrome
       prefix: mesh
+- edges:
+  - source:
+      curie: doid:0090130
+      identifier: DOID:0090130
+      link: https://bioregistry.io/doid:0090130
+      name: cortical dysplasia-focal epilepsy syndrome
+      prefix: doid
+    target:
+      curie: mondo:0012400
+      identifier: '0012400'
+      link: https://bioregistry.io/mondo:0012400
+      name: cortical dysplasia-focal epilepsy syndrome
+      prefix: mondo
+  nodes:
+    doid:0090130:
+      identifier: DOID:0090130
+      link: https://bioregistry.io/doid:0090130
+      name: cortical dysplasia-focal epilepsy syndrome
+      prefix: doid
+    mesh:C567657:
+      identifier: C567657
+      link: https://bioregistry.io/mesh:C567657
+      name: Cortical Dysplasia-Focal Epilepsy Syndrome
+      prefix: mesh
+    mondo:0012400:
+      identifier: '0012400'
+      link: https://bioregistry.io/mondo:0012400
+      name: cortical dysplasia-focal epilepsy syndrome
+      prefix: mondo
+- edges:
+  - source:
+      curie: doid:0110007
+      identifier: DOID:0110007
+      link: https://bioregistry.io/doid:0110007
+      name: achromatopsia 2
+      prefix: doid
+    target:
+      curie: mondo:0009003
+      identifier: 0009003
+      link: https://bioregistry.io/mondo:0009003
+      name: achromatopsia 2
+      prefix: mondo
+  nodes:
+    doid:0110007:
+      identifier: DOID:0110007
+      link: https://bioregistry.io/doid:0110007
+      name: achromatopsia 2
+      prefix: doid
+    mesh:C536128:
+      identifier: C536128
+      link: https://bioregistry.io/mesh:C536128
+      name: Achromatopsia 2
+      prefix: mesh
+    mondo:0009003:
+      identifier: 0009003
+      link: https://bioregistry.io/mondo:0009003
+      name: achromatopsia 2
+      prefix: mondo
 - edges:
   - source:
       curie: mesh:C566982
@@ -3352,6 +3903,64 @@
       prefix: umls
 - edges:
   - source:
+      curie: doid:0111167
+      identifier: DOID:0111167
+      link: https://bioregistry.io/doid:0111167
+      name: Dyggve-Melchior-Clausen disease
+      prefix: doid
+    target:
+      curie: mondo:0009130
+      identifier: 0009130
+      link: https://bioregistry.io/mondo:0009130
+      name: Dyggve-Melchior-Clausen disease
+      prefix: mondo
+  nodes:
+    doid:0111167:
+      identifier: DOID:0111167
+      link: https://bioregistry.io/doid:0111167
+      name: Dyggve-Melchior-Clausen disease
+      prefix: doid
+    mesh:C535726:
+      identifier: C535726
+      link: https://bioregistry.io/mesh:C535726
+      name: Dyggve-Melchior-Clausen syndrome
+      prefix: mesh
+    mondo:0009130:
+      identifier: 0009130
+      link: https://bioregistry.io/mondo:0009130
+      name: Dyggve-Melchior-Clausen disease
+      prefix: mondo
+- edges:
+  - source:
+      curie: doid:0112259
+      identifier: DOID:0112259
+      link: https://bioregistry.io/doid:0112259
+      name: Leydig cell hypoplasia
+      prefix: doid
+    target:
+      curie: mondo:0019155
+      identifier: 0019155
+      link: https://bioregistry.io/mondo:0019155
+      name: Leydig cell hypoplasia
+      prefix: mondo
+  nodes:
+    doid:0112259:
+      identifier: DOID:0112259
+      link: https://bioregistry.io/doid:0112259
+      name: Leydig cell hypoplasia
+      prefix: doid
+    mesh:C562567:
+      identifier: C562567
+      link: https://bioregistry.io/mesh:C562567
+      name: Leydig Cell Hypoplasia
+      prefix: mesh
+    mondo:0019155:
+      identifier: 0019155
+      link: https://bioregistry.io/mondo:0019155
+      name: Leydig cell hypoplasia
+      prefix: mondo
+- edges:
+  - source:
       curie: mesh:D019568
       identifier: D019568
       link: https://bioregistry.io/mesh:D019568
@@ -3379,6 +3988,64 @@
       link: https://bioregistry.io/umls:C0524799
       name: Lung, Hyperlucent
       prefix: umls
+- edges:
+  - source:
+      curie: efo:1002027
+      identifier: '1002027'
+      link: https://bioregistry.io/efo:1002027
+      name: osteomalacia
+      prefix: efo
+    target:
+      curie: mesh:D010018
+      identifier: D010018
+      link: https://bioregistry.io/mesh:D010018
+      name: Osteomalacia
+      prefix: mesh
+  nodes:
+    doid:10573:
+      identifier: DOID:10573
+      link: https://bioregistry.io/doid:10573
+      name: osteomalacia
+      prefix: doid
+    efo:1002027:
+      identifier: '1002027'
+      link: https://bioregistry.io/efo:1002027
+      name: osteomalacia
+      prefix: efo
+    mesh:D010018:
+      identifier: D010018
+      link: https://bioregistry.io/mesh:D010018
+      name: Osteomalacia
+      prefix: mesh
+- edges:
+  - source:
+      curie: mesh:D002689
+      identifier: D002689
+      link: https://bioregistry.io/mesh:D002689
+      name: Chlamydia
+      prefix: mesh
+    target:
+      curie: mesh:D002690
+      identifier: D002690
+      link: https://bioregistry.io/mesh:D002690
+      name: Chlamydia Infections
+      prefix: mesh
+  nodes:
+    doid:11263:
+      identifier: DOID:11263
+      link: https://bioregistry.io/doid:11263
+      name: chlamydia
+      prefix: doid
+    mesh:D002689:
+      identifier: D002689
+      link: https://bioregistry.io/mesh:D002689
+      name: Chlamydia
+      prefix: mesh
+    mesh:D002690:
+      identifier: D002690
+      link: https://bioregistry.io/mesh:D002690
+      name: Chlamydia Infections
+      prefix: mesh
 - edges:
   - source:
       curie: doid:11613
@@ -3524,6 +4191,35 @@
       link: https://bioregistry.io/umls:C0015634
       name: Farmer's Lung
       prefix: umls
+- edges:
+  - source:
+      curie: doid:14749
+      identifier: DOID:14749
+      link: https://bioregistry.io/doid:14749
+      name: methylmalonic acidemia
+      prefix: doid
+    target:
+      curie: mondo:0002012
+      identifier: '0002012'
+      link: https://bioregistry.io/mondo:0002012
+      name: methylmalonic acidemia
+      prefix: mondo
+  nodes:
+    doid:14749:
+      identifier: DOID:14749
+      link: https://bioregistry.io/doid:14749
+      name: methylmalonic acidemia
+      prefix: doid
+    mesh:C537358:
+      identifier: C537358
+      link: https://bioregistry.io/mesh:C537358
+      name: Methylmalonic acidemia
+      prefix: mesh
+    mondo:0002012:
+      identifier: '0002012'
+      link: https://bioregistry.io/mondo:0002012
+      name: methylmalonic acidemia
+      prefix: mondo
 - edges:
   - source:
       curie: doid:1920
@@ -4029,6 +4725,64 @@
       prefix: kegg.pathway
 - edges:
   - source:
+      curie: doid:0112249
+      identifier: DOID:0112249
+      link: https://bioregistry.io/doid:0112249
+      name: GAPO syndrome
+      prefix: doid
+    target:
+      curie: mondo:0009263
+      identifier: 0009263
+      link: https://bioregistry.io/mondo:0009263
+      name: gapo syndrome
+      prefix: mondo
+  nodes:
+    doid:0112249:
+      identifier: DOID:0112249
+      link: https://bioregistry.io/doid:0112249
+      name: GAPO syndrome
+      prefix: doid
+    mesh:C535642:
+      identifier: C535642
+      link: https://bioregistry.io/mesh:C535642
+      name: Growth retardation, Alopecia, Pseudoanodontia and Optic atrophy
+      prefix: mesh
+    mondo:0009263:
+      identifier: 0009263
+      link: https://bioregistry.io/mondo:0009263
+      name: gapo syndrome
+      prefix: mondo
+- edges:
+  - source:
+      curie: doid:0080141
+      identifier: DOID:0080141
+      link: https://bioregistry.io/doid:0080141
+      name: mosaic variegated aneuploidy syndrome 1
+      prefix: doid
+    target:
+      curie: doid:0080688
+      identifier: DOID:0080688
+      link: https://bioregistry.io/doid:0080688
+      name: mosaic variegated aneuploidy syndrome
+      prefix: doid
+  nodes:
+    doid:0080141:
+      identifier: DOID:0080141
+      link: https://bioregistry.io/doid:0080141
+      name: mosaic variegated aneuploidy syndrome 1
+      prefix: doid
+    doid:0080688:
+      identifier: DOID:0080688
+      link: https://bioregistry.io/doid:0080688
+      name: mosaic variegated aneuploidy syndrome
+      prefix: doid
+    mesh:C536987:
+      identifier: C536987
+      link: https://bioregistry.io/mesh:C536987
+      name: Mosaic variegated aneuploidy syndrome
+      prefix: mesh
+- edges:
+  - source:
       curie: mesh:C537027
       identifier: C537027
       link: https://bioregistry.io/mesh:C537027
@@ -4065,7 +4819,7 @@
       prefix: doid
     target:
       curie: mondo:0018878
-      identifier: MONDO:0018878
+      identifier: 0018878
       link: https://bioregistry.io/mondo:0018878
       name: branchiootic syndrome
       prefix: mondo
@@ -4081,7 +4835,7 @@
       name: Branchiootic syndrome
       prefix: mesh
     mondo:0018878:
-      identifier: MONDO:0018878
+      identifier: 0018878
       link: https://bioregistry.io/mondo:0018878
       name: branchiootic syndrome
       prefix: mondo
@@ -4094,7 +4848,7 @@
       prefix: doid
     target:
       curie: mondo:0010261
-      identifier: MONDO:0010261
+      identifier: '0010261'
       link: https://bioregistry.io/mondo:0010261
       name: microphthalmia, syndromic 2
       prefix: mondo
@@ -4110,7 +4864,7 @@
       name: Microphthalmia, syndromic 2
       prefix: mesh
     mondo:0010261:
-      identifier: MONDO:0010261
+      identifier: '0010261'
       link: https://bioregistry.io/mondo:0010261
       name: microphthalmia, syndromic 2
       prefix: mondo
@@ -4123,7 +4877,7 @@
       prefix: efo
     target:
       curie: mondo:0020540
-      identifier: MONDO:0020540
+      identifier: '0020540'
       link: https://bioregistry.io/mondo:0020540
       name: ovarian gynandroblastoma
       prefix: mondo
@@ -4139,7 +4893,7 @@
       name: Ovarian gynandroblastoma
       prefix: mesh
     mondo:0020540:
-      identifier: MONDO:0020540
+      identifier: '0020540'
       link: https://bioregistry.io/mondo:0020540
       name: ovarian gynandroblastoma
       prefix: mondo
@@ -4152,7 +4906,7 @@
       prefix: hp
     target:
       curie: mondo:0018154
-      identifier: MONDO:0018154
+      identifier: 0018154
       link: https://bioregistry.io/mondo:0018154
       name: Madelung deformity
       prefix: mondo
@@ -4168,7 +4922,7 @@
       name: Madelung Deformity
       prefix: mesh
     mondo:0018154:
-      identifier: MONDO:0018154
+      identifier: 0018154
       link: https://bioregistry.io/mondo:0018154
       name: Madelung deformity
       prefix: mondo
@@ -4181,7 +4935,7 @@
       prefix: doid
     target:
       curie: mondo:0019107
-      identifier: MONDO:0019107
+      identifier: 0019107
       link: https://bioregistry.io/mondo:0019107
       name: Rh deficiency syndrome
       prefix: mondo
@@ -4197,7 +4951,7 @@
       name: Rh Deficiency Syndrome
       prefix: mesh
     mondo:0019107:
-      identifier: MONDO:0019107
+      identifier: 0019107
       link: https://bioregistry.io/mondo:0019107
       name: Rh deficiency syndrome
       prefix: mondo
@@ -4210,7 +4964,7 @@
       prefix: doid
     target:
       curie: mondo:0007390
-      identifier: MONDO:0007390
+      identifier: 0007390
       link: https://bioregistry.io/mondo:0007390
       name: coumarin resistance
       prefix: mondo
@@ -4226,9 +4980,38 @@
       name: Coumarin Resistance
       prefix: mesh
     mondo:0007390:
-      identifier: MONDO:0007390
+      identifier: 0007390
       link: https://bioregistry.io/mondo:0007390
       name: coumarin resistance
+      prefix: mondo
+- edges:
+  - source:
+      curie: doid:0060639
+      identifier: DOID:0060639
+      link: https://bioregistry.io/doid:0060639
+      name: permanent neonatal diabetes mellitus
+      prefix: doid
+    target:
+      curie: mondo:0100164
+      identifier: '0100164'
+      link: https://bioregistry.io/mondo:0100164
+      name: permanent neonatal diabetes mellitus
+      prefix: mondo
+  nodes:
+    doid:0060639:
+      identifier: DOID:0060639
+      link: https://bioregistry.io/doid:0060639
+      name: permanent neonatal diabetes mellitus
+      prefix: doid
+    mesh:C563425:
+      identifier: C563425
+      link: https://bioregistry.io/mesh:C563425
+      name: Diabetes Mellitus, Permanent Neonatal
+      prefix: mesh
+    mondo:0100164:
+      identifier: '0100164'
+      link: https://bioregistry.io/mondo:0100164
+      name: permanent neonatal diabetes mellitus
       prefix: mondo
 - edges:
   - source:
@@ -4239,7 +5022,7 @@
       prefix: doid
     target:
       curie: mondo:0100350
-      identifier: MONDO:0100350
+      identifier: '0100350'
       link: https://bioregistry.io/mondo:0100350
       name: neuronopathy, distal hereditary motor, type 5
       prefix: mondo
@@ -4255,7 +5038,7 @@
       name: Neuronopathy, Distal Hereditary Motor, Type V
       prefix: mesh
     mondo:0100350:
-      identifier: MONDO:0100350
+      identifier: '0100350'
       link: https://bioregistry.io/mondo:0100350
       name: neuronopathy, distal hereditary motor, type 5
       prefix: mondo
@@ -4268,7 +5051,7 @@
       prefix: doid
     target:
       curie: mondo:0015240
-      identifier: MONDO:0015240
+      identifier: '0015240'
       link: https://bioregistry.io/mondo:0015240
       name: digitotalar dysmorphism
       prefix: mondo
@@ -4284,9 +5067,38 @@
       name: Digitotalar Dysmorphism
       prefix: mesh
     mondo:0015240:
-      identifier: MONDO:0015240
+      identifier: '0015240'
       link: https://bioregistry.io/mondo:0015240
       name: digitotalar dysmorphism
+      prefix: mondo
+- edges:
+  - source:
+      curie: doid:0060740
+      identifier: DOID:0060740
+      link: https://bioregistry.io/doid:0060740
+      name: methylmalonic aciduria due to methylmalonyl-CoA mutase deficiency
+      prefix: doid
+    target:
+      curie: mondo:0009612
+      identifier: 0009612
+      link: https://bioregistry.io/mondo:0009612
+      name: methylmalonic aciduria due to methylmalonyl-CoA mutase deficiency
+      prefix: mondo
+  nodes:
+    doid:0060740:
+      identifier: DOID:0060740
+      link: https://bioregistry.io/doid:0060740
+      name: methylmalonic aciduria due to methylmalonyl-CoA mutase deficiency
+      prefix: doid
+    mesh:C565390:
+      identifier: C565390
+      link: https://bioregistry.io/mesh:C565390
+      name: Methylmalonic Aciduria due to Methylmalonyl-CoA Mutase Deficiency
+      prefix: mesh
+    mondo:0009612:
+      identifier: 0009612
+      link: https://bioregistry.io/mondo:0009612
+      name: methylmalonic aciduria due to methylmalonyl-CoA mutase deficiency
       prefix: mondo
 - edges:
   - source:
@@ -4297,7 +5109,7 @@
       prefix: doid
     target:
       curie: mondo:0017999
-      identifier: MONDO:0017999
+      identifier: 0017999
       link: https://bioregistry.io/mondo:0017999
       name: fatty acid hydroxylase-associated neurodegeneration
       prefix: mondo
@@ -4313,7 +5125,7 @@
       name: Fatty Acid Hydroxylase-Associated Neurodegeneration
       prefix: mesh
     mondo:0017999:
-      identifier: MONDO:0017999
+      identifier: 0017999
       link: https://bioregistry.io/mondo:0017999
       name: fatty acid hydroxylase-associated neurodegeneration
       prefix: mondo
@@ -4403,6 +5215,35 @@
       identifier: C76929
       link: https://bioregistry.io/ncit:C76929
       name: Rilpivirine
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:31690
+      identifier: CHEBI:31690
+      link: https://bioregistry.io/chebi:31690
+      name: imatinib methanesulfonate
+      prefix: chebi
+    target:
+      curie: ncit:C1687
+      identifier: C1687
+      link: https://bioregistry.io/ncit:C1687
+      name: Imatinib Mesylate
+      prefix: ncit
+  nodes:
+    chebi:31690:
+      identifier: CHEBI:31690
+      link: https://bioregistry.io/chebi:31690
+      name: imatinib methanesulfonate
+      prefix: chebi
+    mesh:D000068877:
+      identifier: D000068877
+      link: https://bioregistry.io/mesh:D000068877
+      name: Imatinib Mesylate
+      prefix: mesh
+    ncit:C1687:
+      identifier: C1687
+      link: https://bioregistry.io/ncit:C1687
+      name: Imatinib Mesylate
       prefix: ncit
 - edges:
   - source:
@@ -4500,7 +5341,7 @@
       prefix: efo
     target:
       curie: mondo:0041656
-      identifier: MONDO:0041656
+      identifier: '0041656'
       link: https://bioregistry.io/mondo:0041656
       name: ST-elevation myocardial infarction
       prefix: mondo
@@ -4516,7 +5357,7 @@
       name: ST Elevation Myocardial Infarction
       prefix: mesh
     mondo:0041656:
-      identifier: MONDO:0041656
+      identifier: '0041656'
       link: https://bioregistry.io/mondo:0041656
       name: ST-elevation myocardial infarction
       prefix: mondo
@@ -4529,7 +5370,7 @@
       prefix: efo
     target:
       curie: mondo:0023305
-      identifier: MONDO:0023305
+      identifier: '0023305'
       link: https://bioregistry.io/mondo:0023305
       name: heavy metal poisoning
       prefix: mondo
@@ -4545,10 +5386,97 @@
       name: Heavy Metal Poisoning
       prefix: mesh
     mondo:0023305:
-      identifier: MONDO:0023305
+      identifier: '0023305'
       link: https://bioregistry.io/mondo:0023305
       name: heavy metal poisoning
       prefix: mondo
+- edges:
+  - source:
+      curie: chebi:50131
+      identifier: CHEBI:50131
+      link: https://bioregistry.io/chebi:50131
+      name: 5-aza-2'-deoxycytidine
+      prefix: chebi
+    target:
+      curie: ncit:C981
+      identifier: C981
+      link: https://bioregistry.io/ncit:C981
+      name: Decitabine
+      prefix: ncit
+  nodes:
+    chebi:50131:
+      identifier: CHEBI:50131
+      link: https://bioregistry.io/chebi:50131
+      name: 5-aza-2'-deoxycytidine
+      prefix: chebi
+    mesh:D000077209:
+      identifier: D000077209
+      link: https://bioregistry.io/mesh:D000077209
+      name: Decitabine
+      prefix: mesh
+    ncit:C981:
+      identifier: C981
+      link: https://bioregistry.io/ncit:C981
+      name: Decitabine
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:30621
+      identifier: CHEBI:30621
+      link: https://bioregistry.io/chebi:30621
+      name: diarsenic trioxide
+      prefix: chebi
+    target:
+      curie: ncit:C1005
+      identifier: C1005
+      link: https://bioregistry.io/ncit:C1005
+      name: Arsenic Trioxide
+      prefix: ncit
+  nodes:
+    chebi:30621:
+      identifier: CHEBI:30621
+      link: https://bioregistry.io/chebi:30621
+      name: diarsenic trioxide
+      prefix: chebi
+    mesh:D000077237:
+      identifier: D000077237
+      link: https://bioregistry.io/mesh:D000077237
+      name: Arsenic Trioxide
+      prefix: mesh
+    ncit:C1005:
+      identifier: C1005
+      link: https://bioregistry.io/ncit:C1005
+      name: Arsenic Trioxide
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:64073
+      identifier: CHEBI:64073
+      link: https://bioregistry.io/chebi:64073
+      name: exendin-4
+      prefix: chebi
+    target:
+      curie: ncit:C65611
+      identifier: C65611
+      link: https://bioregistry.io/ncit:C65611
+      name: Exenatide
+      prefix: ncit
+  nodes:
+    chebi:64073:
+      identifier: CHEBI:64073
+      link: https://bioregistry.io/chebi:64073
+      name: exendin-4
+      prefix: chebi
+    mesh:D000077270:
+      identifier: D000077270
+      link: https://bioregistry.io/mesh:D000077270
+      name: Exenatide
+      prefix: mesh
+    ncit:C65611:
+      identifier: C65611
+      link: https://bioregistry.io/ncit:C65611
+      name: Exenatide
+      prefix: ncit
 - edges:
   - source:
       curie: efo:0005922
@@ -4703,7 +5631,7 @@
       prefix: doid
     target:
       curie: mondo:0000455
-      identifier: MONDO:0000455
+      identifier: '0000455'
       link: https://bioregistry.io/mondo:0000455
       name: cone dystrophy
       prefix: mondo
@@ -4719,10 +5647,68 @@
       name: Cone Dystrophy
       prefix: mesh
     mondo:0000455:
-      identifier: MONDO:0000455
+      identifier: '0000455'
       link: https://bioregistry.io/mondo:0000455
       name: cone dystrophy
       prefix: mondo
+- edges:
+  - source:
+      curie: doid:0050817
+      identifier: DOID:0050817
+      link: https://bioregistry.io/doid:0050817
+      name: Stargardt disease
+      prefix: doid
+    target:
+      curie: mondo:0019353
+      identifier: 0019353
+      link: https://bioregistry.io/mondo:0019353
+      name: Stargardt disease
+      prefix: mondo
+  nodes:
+    doid:0050817:
+      identifier: DOID:0050817
+      link: https://bioregistry.io/doid:0050817
+      name: Stargardt disease
+      prefix: doid
+    mesh:D000080362:
+      identifier: D000080362
+      link: https://bioregistry.io/mesh:D000080362
+      name: Stargardt Disease
+      prefix: mesh
+    mondo:0019353:
+      identifier: 0019353
+      link: https://bioregistry.io/mondo:0019353
+      name: Stargardt disease
+      prefix: mondo
+- edges:
+  - source:
+      curie: chebi:28939
+      identifier: CHEBI:28939
+      link: https://bioregistry.io/chebi:28939
+      name: N-acetyl-L-cysteine
+      prefix: chebi
+    target:
+      curie: ncit:C200
+      identifier: C200
+      link: https://bioregistry.io/ncit:C200
+      name: Acetylcysteine
+      prefix: ncit
+  nodes:
+    chebi:28939:
+      identifier: CHEBI:28939
+      link: https://bioregistry.io/chebi:28939
+      name: N-acetyl-L-cysteine
+      prefix: chebi
+    mesh:D000111:
+      identifier: D000111
+      link: https://bioregistry.io/mesh:D000111
+      name: Acetylcysteine
+      prefix: mesh
+    ncit:C200:
+      identifier: C200
+      link: https://bioregistry.io/ncit:C200
+      name: Acetylcysteine
+      prefix: ncit
 - edges:
   - source:
       curie: chebi:2453
@@ -4790,7 +5776,7 @@
       prefix: doid
     target:
       curie: mondo:0000716
-      identifier: MONDO:0000716
+      identifier: '0000716'
       link: https://bioregistry.io/mondo:0000716
       name: agraphia
       prefix: mondo
@@ -4806,7 +5792,7 @@
       name: Agraphia
       prefix: mesh
     mondo:0000716:
-      identifier: MONDO:0000716
+      identifier: '0000716'
       link: https://bioregistry.io/mondo:0000716
       name: agraphia
       prefix: mondo
@@ -5015,6 +6001,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: chebi:28940
+      identifier: CHEBI:28940
+      link: https://bioregistry.io/chebi:28940
+      name: calciol
+      prefix: chebi
+    target:
+      curie: ncit:C48194
+      identifier: C48194
+      link: https://bioregistry.io/ncit:C48194
+      name: Cholecalciferol
+      prefix: ncit
+  nodes:
+    chebi:28940:
+      identifier: CHEBI:28940
+      link: https://bioregistry.io/chebi:28940
+      name: calciol
+      prefix: chebi
+    mesh:D002762:
+      identifier: D002762
+      link: https://bioregistry.io/mesh:D002762
+      name: Cholecalciferol
+      prefix: mesh
+    ncit:C48194:
+      identifier: C48194
+      link: https://bioregistry.io/ncit:C48194
+      name: Cholecalciferol
+      prefix: ncit
+- edges:
+  - source:
       curie: efo:0009714
       identifier: 0009714
       link: https://bioregistry.io/efo:0009714
@@ -5109,7 +6124,7 @@
       prefix: doid
     target:
       curie: mondo:0021092
-      identifier: MONDO:0021092
+      identifier: 0021092
       link: https://bioregistry.io/mondo:0021092
       name: fallopian tube neoplasm
       prefix: mondo
@@ -5125,10 +6140,39 @@
       name: Fallopian Tube Neoplasms
       prefix: mesh
     mondo:0021092:
-      identifier: MONDO:0021092
+      identifier: 0021092
       link: https://bioregistry.io/mondo:0021092
       name: fallopian tube neoplasm
       prefix: mondo
+- edges:
+  - source:
+      curie: chebi:46345
+      identifier: CHEBI:46345
+      link: https://bioregistry.io/chebi:46345
+      name: 5-fluorouracil
+      prefix: chebi
+    target:
+      curie: ncit:C505
+      identifier: C505
+      link: https://bioregistry.io/ncit:C505
+      name: Fluorouracil
+      prefix: ncit
+  nodes:
+    chebi:46345:
+      identifier: CHEBI:46345
+      link: https://bioregistry.io/chebi:46345
+      name: 5-fluorouracil
+      prefix: chebi
+    mesh:D005472:
+      identifier: D005472
+      link: https://bioregistry.io/mesh:D005472
+      name: Fluorouracil
+      prefix: mesh
+    ncit:C505:
+      identifier: C505
+      link: https://bioregistry.io/ncit:C505
+      name: Fluorouracil
+      prefix: ncit
 - edges:
   - source:
       curie: efo:0009527
@@ -5167,7 +6211,7 @@
       prefix: doid
     target:
       curie: mondo:0021253
-      identifier: MONDO:0021253
+      identifier: '0021253'
       link: https://bioregistry.io/mondo:0021253
       name: gallbladder neoplasm
       prefix: mondo
@@ -5183,7 +6227,7 @@
       name: Gallbladder Neoplasms
       prefix: mesh
     mondo:0021253:
-      identifier: MONDO:0021253
+      identifier: '0021253'
       link: https://bioregistry.io/mondo:0021253
       name: gallbladder neoplasm
       prefix: mondo
@@ -5283,7 +6327,7 @@
       prefix: efo
     target:
       curie: mondo:0100075
-      identifier: MONDO:0100075
+      identifier: '0100075'
       link: https://bioregistry.io/mondo:0100075
       name: jaw fracture
       prefix: mondo
@@ -5301,7 +6345,7 @@
       prefix: ncit
   - source:
       curie: mondo:0100075
-      identifier: MONDO:0100075
+      identifier: '0100075'
       link: https://bioregistry.io/mondo:0100075
       name: jaw fracture
       prefix: mondo
@@ -5323,7 +6367,7 @@
       name: Jaw Fractures
       prefix: mesh
     mondo:0100075:
-      identifier: MONDO:0100075
+      identifier: '0100075'
       link: https://bioregistry.io/mondo:0100075
       name: jaw fracture
       prefix: mondo
@@ -5341,7 +6385,7 @@
       prefix: doid
     target:
       curie: mondo:0100345
-      identifier: MONDO:0100345
+      identifier: '0100345'
       link: https://bioregistry.io/mondo:0100345
       name: lactose intolerance
       prefix: mondo
@@ -5357,7 +6401,7 @@
       name: Lactose Intolerance
       prefix: mesh
     mondo:0100345:
-      identifier: MONDO:0100345
+      identifier: '0100345'
       link: https://bioregistry.io/mondo:0100345
       name: lactose intolerance
       prefix: mondo
@@ -5537,6 +6581,35 @@
       prefix: mesh
 - edges:
   - source:
+      curie: doid:3125
+      identifier: DOID:3125
+      link: https://bioregistry.io/doid:3125
+      name: multiple endocrine neoplasia
+      prefix: doid
+    target:
+      curie: mondo:0017169
+      identifier: 0017169
+      link: https://bioregistry.io/mondo:0017169
+      name: multiple endocrine neoplasia
+      prefix: mondo
+  nodes:
+    doid:3125:
+      identifier: DOID:3125
+      link: https://bioregistry.io/doid:3125
+      name: multiple endocrine neoplasia
+      prefix: doid
+    mesh:D009377:
+      identifier: D009377
+      link: https://bioregistry.io/mesh:D009377
+      name: Multiple Endocrine Neoplasia
+      prefix: mesh
+    mondo:0017169:
+      identifier: 0017169
+      link: https://bioregistry.io/mondo:0017169
+      name: multiple endocrine neoplasia
+      prefix: mondo
+- edges:
+  - source:
       curie: efo:0009611
       identifier: 0009611
       link: https://bioregistry.io/efo:0009611
@@ -5566,6 +6639,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: doid:3443
+      identifier: DOID:3443
+      link: https://bioregistry.io/doid:3443
+      name: mammary Paget's disease
+      prefix: doid
+    target:
+      curie: mondo:0002648
+      identifier: 0002648
+      link: https://bioregistry.io/mondo:0002648
+      name: mammary Paget disease
+      prefix: mondo
+  nodes:
+    doid:3443:
+      identifier: DOID:3443
+      link: https://bioregistry.io/doid:3443
+      name: mammary Paget's disease
+      prefix: doid
+    mesh:D010144:
+      identifier: D010144
+      link: https://bioregistry.io/mesh:D010144
+      name: Paget's Disease, Mammary
+      prefix: mesh
+    mondo:0002648:
+      identifier: 0002648
+      link: https://bioregistry.io/mondo:0002648
+      name: mammary Paget disease
+      prefix: mondo
+- edges:
+  - source:
       curie: efo:0009637
       identifier: 0009637
       link: https://bioregistry.io/efo:0009637
@@ -5593,6 +6695,64 @@
       link: https://bioregistry.io/uberon:0000175
       name: pleural effusion
       prefix: uberon
+- edges:
+  - source:
+      curie: chebi:8378
+      identifier: CHEBI:8378
+      link: https://bioregistry.io/chebi:8378
+      name: prednisolone
+      prefix: chebi
+    target:
+      curie: ncit:C769
+      identifier: C769
+      link: https://bioregistry.io/ncit:C769
+      name: Prednisolone
+      prefix: ncit
+  nodes:
+    chebi:8378:
+      identifier: CHEBI:8378
+      link: https://bioregistry.io/chebi:8378
+      name: prednisolone
+      prefix: chebi
+    mesh:D011239:
+      identifier: D011239
+      link: https://bioregistry.io/mesh:D011239
+      name: Prednisolone
+      prefix: mesh
+    ncit:C769:
+      identifier: C769
+      link: https://bioregistry.io/ncit:C769
+      name: Prednisolone
+      prefix: ncit
+- edges:
+  - source:
+      curie: doid:0002116
+      identifier: DOID:0002116
+      link: https://bioregistry.io/doid:0002116
+      name: pterygium
+      prefix: doid
+    target:
+      curie: doid:10526
+      identifier: DOID:10526
+      link: https://bioregistry.io/doid:10526
+      name: conjunctival pterygium
+      prefix: doid
+  nodes:
+    doid:0002116:
+      identifier: DOID:0002116
+      link: https://bioregistry.io/doid:0002116
+      name: pterygium
+      prefix: doid
+    doid:10526:
+      identifier: DOID:10526
+      link: https://bioregistry.io/doid:10526
+      name: conjunctival pterygium
+      prefix: doid
+    mesh:D011625:
+      identifier: D011625
+      link: https://bioregistry.io/mesh:D011625
+      name: Pterygium
+      prefix: mesh
 - edges:
   - source:
       curie: efo:0009581
@@ -6176,7 +7336,7 @@
 - edges:
   - source:
       curie: mondo:0018815
-      identifier: MONDO:0018815
+      identifier: 0018815
       link: https://bioregistry.io/mondo:0018815
       name: aneurysmal bone cyst
       prefix: mondo
@@ -6193,7 +7353,7 @@
       name: Bone Cysts, Aneurysmal
       prefix: mesh
     mondo:0018815:
-      identifier: MONDO:0018815
+      identifier: 0018815
       link: https://bioregistry.io/mondo:0018815
       name: aneurysmal bone cyst
       prefix: mondo
@@ -6202,6 +7362,35 @@
       link: https://bioregistry.io/ncit:C3516
       name: Aneurysmal Bone Cyst
       prefix: ncit
+- edges:
+  - source:
+      curie: doid:0050748
+      identifier: DOID:0050748
+      link: https://bioregistry.io/doid:0050748
+      name: marginal zone B-cell lymphoma
+      prefix: doid
+    target:
+      curie: doid:0050909
+      identifier: DOID:0050909
+      link: https://bioregistry.io/doid:0050909
+      name: MALT lymphoma
+      prefix: doid
+  nodes:
+    doid:0050748:
+      identifier: DOID:0050748
+      link: https://bioregistry.io/doid:0050748
+      name: marginal zone B-cell lymphoma
+      prefix: doid
+    doid:0050909:
+      identifier: DOID:0050909
+      link: https://bioregistry.io/doid:0050909
+      name: MALT lymphoma
+      prefix: doid
+    mesh:D018442:
+      identifier: D018442
+      link: https://bioregistry.io/mesh:D018442
+      name: Lymphoma, B-Cell, Marginal Zone
+      prefix: mesh
 - edges:
   - source:
       curie: chebi:51065
@@ -6376,6 +7565,93 @@
       link: https://bioregistry.io/ncit:C47726
       name: Sodium Lactate
       prefix: ncit
+- edges:
+  - source:
+      curie: chebi:33235
+      identifier: CHEBI:33235
+      link: https://bioregistry.io/chebi:33235
+      name: tocotrienol
+      prefix: chebi
+    target:
+      curie: ncit:C68318
+      identifier: C68318
+      link: https://bioregistry.io/ncit:C68318
+      name: Tocotrienol
+      prefix: ncit
+  nodes:
+    chebi:33235:
+      identifier: CHEBI:33235
+      link: https://bioregistry.io/chebi:33235
+      name: tocotrienol
+      prefix: chebi
+    mesh:D024508:
+      identifier: D024508
+      link: https://bioregistry.io/mesh:D024508
+      name: Tocotrienols
+      prefix: mesh
+    ncit:C68318:
+      identifier: C68318
+      link: https://bioregistry.io/ncit:C68318
+      name: Tocotrienol
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0001668
+      identifier: 0001668
+      link: https://bioregistry.io/efo:0001668
+      name: human papilloma virus infection
+      prefix: efo
+    target:
+      curie: mondo:0005161
+      identifier: '0005161'
+      link: https://bioregistry.io/mondo:0005161
+      name: human papilloma virus infection
+      prefix: mondo
+  nodes:
+    efo:0001668:
+      identifier: 0001668
+      link: https://bioregistry.io/efo:0001668
+      name: human papilloma virus infection
+      prefix: efo
+    mesh:D030361:
+      identifier: D030361
+      link: https://bioregistry.io/mesh:D030361
+      name: Papillomavirus Infections
+      prefix: mesh
+    mondo:0005161:
+      identifier: '0005161'
+      link: https://bioregistry.io/mondo:0005161
+      name: human papilloma virus infection
+      prefix: mondo
+- edges:
+  - source:
+      curie: doid:0080653
+      identifier: DOID:0080653
+      link: https://bioregistry.io/doid:0080653
+      name: urolithiasis
+      prefix: doid
+    target:
+      curie: mondo:0024647
+      identifier: '0024647'
+      link: https://bioregistry.io/mondo:0024647
+      name: urolithiasis
+      prefix: mondo
+  nodes:
+    doid:0080653:
+      identifier: DOID:0080653
+      link: https://bioregistry.io/doid:0080653
+      name: urolithiasis
+      prefix: doid
+    mesh:D052878:
+      identifier: D052878
+      link: https://bioregistry.io/mesh:D052878
+      name: Urolithiasis
+      prefix: mesh
+    mondo:0024647:
+      identifier: '0024647'
+      link: https://bioregistry.io/mondo:0024647
+      name: urolithiasis
+      prefix: mondo
 - edges:
   - source:
       curie: efo:0007046
