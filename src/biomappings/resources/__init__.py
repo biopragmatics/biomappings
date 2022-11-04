@@ -6,7 +6,17 @@ import csv
 import itertools as itt
 import os
 from collections import defaultdict
-from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Sequence, Tuple
+from typing import (
+    Any,
+    DefaultDict,
+    Dict,
+    Iterable,
+    List,
+    Mapping,
+    NamedTuple,
+    Sequence,
+    Tuple,
+)
 
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
@@ -333,7 +343,7 @@ def _check_filter(
 
 def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:
     """Get a filter over all curated mappings."""
-    d = defaultdict(lambda: defaultdict(dict))
+    d: DefaultDict[str, DefaultDict[str, Dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
     for m in itt.chain(load_mappings(), load_false_mappings(), load_unsure()):
         d[m["source prefix"]][m["target prefix"]][m["source identifier"]] = m["target identifier"]
     return {k: dict(v) for k, v in d.items()}

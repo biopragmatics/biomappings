@@ -2,35 +2,25 @@
 
 import json
 import pickle
-import sys
-import time
-from collections import Counter, defaultdict
+from collections import defaultdict
 from dataclasses import dataclass
-from functools import lru_cache
 from pathlib import Path
-from textwrap import dedent
-from typing import Dict, Mapping, Tuple
+from typing import DefaultDict, Dict, Iterable, Mapping, Tuple
 
 import bioontologies
 import bioregistry
-import bioversions
-import matplotlib.pyplot as plt
-import pandas as pd
 import pyobo
 import pystow
 from bioontologies.obograph import _parse_uri_or_curie_or_str
 from bioregistry import manager
-from IPython.display import HTML
-from matplotlib_venn import venn2
 from tabulate import tabulate
 from tqdm.auto import tqdm
 
-import biomappings
-
 __all__ = [
     "Result",
-    "get_graph",
     "get_primary_mappings",
+    "get_obo_mappings",
+    "get_non_obo_mappings",
     "index_mappings",
 ]
 
@@ -60,7 +50,8 @@ class Result:
         secondary,
         tertiary,
     ):
-        return cls.from_dicts(
+        """Create a value added summary object with analysis over several dictionaries."""
+        return cls._from_dicts(
             dataset=dataset,
             source=source,
             target=target,
@@ -71,7 +62,7 @@ class Result:
         )
 
     @classmethod
-    def from_dicts(
+    def _from_dicts(
         cls,
         dataset,
         source,
@@ -81,6 +72,7 @@ class Result:
         biomappings_external_identifiers,
         biomappings_prediction_identifiers,
     ):
+        """Create a value added summary object with analysis over several dictionaries."""
         return Result(
             dataset=dataset,
             source=source,
@@ -101,6 +93,7 @@ class Result:
         )
 
     def print(self):
+        """Print a summary of value added statistics."""
         print(
             tabulate(
                 [
@@ -131,6 +124,7 @@ def get_primary_mappings(
     external_prefix: str,
     cache_path: Path,
 ) -> Tuple[str, Mapping[str, str]]:
+    """Get mappings from a given ontology (prefix) to another resource (external prefix)."""
     if cache_path.is_file():
         d = json.loads(cache_path.read_text())
         return d["version"], d["mappings"]
@@ -138,8 +132,8 @@ def get_primary_mappings(
     parse_results = bioontologies.get_obograph_by_prefix(prefix)
     version = parse_results.guess_version(prefix)
     graphs = parse_results.graph_document.graphs if parse_results.graph_document else []
+    rv: Dict[str, str] = {}
     for graph in graphs:
-        rv: Dict[str, str] = {}
         for node in tqdm(
             graph.nodes,
             unit="node",
@@ -165,12 +159,13 @@ def get_primary_mappings(
     return version, rv
 
 
-def index_mappings(mappings, path=None, force: bool = False):
+def index_mappings(mappings: Iterable[Mapping[str, str]], path=None, force: bool = False):
+    """Create an index of mappings."""
     if path and path.is_file() and not force:
         with open(path, "rb") as file:
             return pickle.load(file)
 
-    rv = defaultdict(lambda: defaultdict(dict))
+    rv: DefaultDict[str, DefaultDict[str, Dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
 
     for mapping in tqdm(mappings, unit_scale=True, unit="mapping"):
         source_prefix = mapping["source prefix"]
@@ -227,8 +222,9 @@ def _clean_version(version: str, prefix) -> str:
 
 
 def get_obo_mappings(primary_dd, biomappings_dd):
+    """Fill the primary mappings for ontologies and calculate a value added summary."""
     summary_rows = []
-    for prefix, external, uri in PRIMARY_MAPPING_CONFIG:
+    for prefix, external, _uri in PRIMARY_MAPPING_CONFIG:
         cache_path = EVALUATION.join("mappings", name=f"{prefix}_{external}.json")
         version, primary = get_primary_mappings(prefix, external, cache_path=cache_path)
         primary_dd[external][prefix] = primary
@@ -271,6 +267,7 @@ PYOBO_CONFIGS = [
 
 
 def get_non_obo_mappings(primary_dd, biomappings_dd):
+    """Fill the primary mappings for non-obo sources calculate a value added summary."""
     summary_rows = []
     for prefix, external, source_banana, target_banana in PYOBO_CONFIGS:
         xrefs_df = pyobo.get_xrefs_df(prefix)
