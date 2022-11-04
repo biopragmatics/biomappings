@@ -138,6 +138,7 @@ def get_primary_mappings(
             graph.nodes,
             unit="node",
             unit_scale=True,
+            leave=False,
             desc=f"Extracting {external_prefix} from {prefix}",
         ):
             try:
@@ -154,7 +155,7 @@ def get_primary_mappings(
                     continue
                 rv[xref_luid] = node_luid
 
-    d = {"mappings": rv, "version": "?"}
+    d = {"mappings": rv, "version": version}
     cache_path.write_text(json.dumps(d, indent=2, sort_keys=True))
     return version, rv
 
@@ -180,7 +181,7 @@ def index_mappings(mappings: Iterable[Mapping[str, str]], path=None, force: bool
     rvp = {k: dict(v) for k, v in rv.items()}
     if path:
         with open(path, "wb") as file:
-            return pickle.dump(rvp, file)
+            pickle.dump(rvp, file)
     return rvp
 
 
