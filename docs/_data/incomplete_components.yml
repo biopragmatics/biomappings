@@ -2726,6 +2726,35 @@
       prefix: umls
 - edges:
   - source:
+      curie: mesh:C562489
+      identifier: C562489
+      link: https://bioregistry.io/mesh:C562489
+      name: Lymphoid Interstitial Pneumonia
+      prefix: mesh
+    target:
+      curie: umls:C0264511
+      identifier: C0264511
+      link: https://bioregistry.io/umls:C0264511
+      name: Lymphoid interstitial pneumonia
+      prefix: umls
+  nodes:
+    doid:0050159:
+      identifier: DOID:0050159
+      link: https://bioregistry.io/doid:0050159
+      name: lymphoid interstitial pneumonia
+      prefix: doid
+    mesh:C562489:
+      identifier: C562489
+      link: https://bioregistry.io/mesh:C562489
+      name: Lymphoid Interstitial Pneumonia
+      prefix: mesh
+    umls:C0264511:
+      identifier: C0264511
+      link: https://bioregistry.io/umls:C0264511
+      name: Lymphoid interstitial pneumonia
+      prefix: umls
+- edges:
+  - source:
       curie: mesh:C536369
       identifier: C536369
       link: https://bioregistry.io/mesh:C536369
@@ -2755,6 +2784,64 @@
       prefix: umls
 - edges:
   - source:
+      curie: mesh:D001906
+      identifier: D001906
+      link: https://bioregistry.io/mesh:D001906
+      name: Botulism
+      prefix: mesh
+    target:
+      curie: umls:C1739094
+      identifier: C1739094
+      link: https://bioregistry.io/umls:C1739094
+      name: Foodborne botulism
+      prefix: umls
+  nodes:
+    doid:0050352:
+      identifier: DOID:0050352
+      link: https://bioregistry.io/doid:0050352
+      name: foodborne botulism
+      prefix: doid
+    mesh:D001906:
+      identifier: D001906
+      link: https://bioregistry.io/mesh:D001906
+      name: Botulism
+      prefix: mesh
+    umls:C1739094:
+      identifier: C1739094
+      link: https://bioregistry.io/umls:C1739094
+      name: Foodborne botulism
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C537582
+      identifier: C537582
+      link: https://bioregistry.io/mesh:C537582
+      name: Sennetsu Fever
+      prefix: mesh
+    target:
+      curie: umls:C0520779
+      identifier: C0520779
+      link: https://bioregistry.io/umls:C0520779
+      name: Sennetsu Fever
+      prefix: umls
+  nodes:
+    doid:0050485:
+      identifier: DOID:0050485
+      link: https://bioregistry.io/doid:0050485
+      name: sennetsu fever
+      prefix: doid
+    mesh:C537582:
+      identifier: C537582
+      link: https://bioregistry.io/mesh:C537582
+      name: Sennetsu Fever
+      prefix: mesh
+    umls:C0520779:
+      identifier: C0520779
+      link: https://bioregistry.io/umls:C0520779
+      name: Sennetsu Fever
+      prefix: umls
+- edges:
+  - source:
       curie: mesh:C564683
       identifier: C564683
       link: https://bioregistry.io/mesh:C564683
@@ -2781,6 +2868,64 @@
       identifier: C4048705
       link: https://bioregistry.io/umls:C4048705
       name: Hypermethioninemia
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C536911
+      identifier: C536911
+      link: https://bioregistry.io/mesh:C536911
+      name: Familial medullary thyroid carcinoma
+      prefix: mesh
+    target:
+      curie: umls:C1833921
+      identifier: C1833921
+      link: https://bioregistry.io/umls:C1833921
+      name: Familial medullary thyroid carcinoma
+      prefix: umls
+  nodes:
+    doid:0050547:
+      identifier: DOID:0050547
+      link: https://bioregistry.io/doid:0050547
+      name: familial medullary thyroid carcinoma
+      prefix: doid
+    mesh:C536911:
+      identifier: C536911
+      link: https://bioregistry.io/mesh:C536911
+      name: Familial medullary thyroid carcinoma
+      prefix: mesh
+    umls:C1833921:
+      identifier: C1833921
+      link: https://bioregistry.io/umls:C1833921
+      name: Familial medullary thyroid carcinoma
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C537521
+      identifier: C537521
+      link: https://bioregistry.io/mesh:C537521
+      name: Scleroatonic muscular dystrophy
+      prefix: mesh
+    target:
+      curie: umls:C4551860
+      identifier: C4551860
+      link: https://bioregistry.io/umls:C4551860
+      name: Ullrich congenital muscular dystrophy
+      prefix: umls
+  nodes:
+    doid:0050558:
+      identifier: DOID:0050558
+      link: https://bioregistry.io/doid:0050558
+      name: Ullrich congenital muscular dystrophy
+      prefix: doid
+    mesh:C537521:
+      identifier: C537521
+      link: https://bioregistry.io/mesh:C537521
+      name: Scleroatonic muscular dystrophy
+      prefix: mesh
+    umls:C4551860:
+      identifier: C4551860
+      link: https://bioregistry.io/umls:C4551860
+      name: Ullrich congenital muscular dystrophy
       prefix: umls
 - edges:
   - source:
@@ -2897,6 +3042,615 @@
       identifier: C4551571
       link: https://bioregistry.io/umls:C4551571
       name: Cranioectodermal dysplasia
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:D059327
+      identifier: D059327
+      link: https://bioregistry.io/mesh:D059327
+      name: Brachydactyly
+      prefix: mesh
+    target:
+      curie: umls:C0221357
+      identifier: C0221357
+      link: https://bioregistry.io/umls:C0221357
+      name: Brachydactyly
+      prefix: umls
+  nodes:
+    doid:0050581:
+      identifier: DOID:0050581
+      link: https://bioregistry.io/doid:0050581
+      name: brachydactyly
+      prefix: doid
+    mesh:D059327:
+      identifier: D059327
+      link: https://bioregistry.io/mesh:D059327
+      name: Brachydactyly
+      prefix: mesh
+    umls:C0221357:
+      identifier: C0221357
+      link: https://bioregistry.io/umls:C0221357
+      name: Brachydactyly
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C535334
+      identifier: C535334
+      link: https://bioregistry.io/mesh:C535334
+      name: ABCD syndrome
+      prefix: mesh
+    target:
+      curie: umls:C1838099
+      identifier: C1838099
+      link: https://bioregistry.io/umls:C1838099
+      name: ABCD syndrome
+      prefix: umls
+  nodes:
+    doid:0050600:
+      identifier: DOID:0050600
+      link: https://bioregistry.io/doid:0050600
+      name: ABCD syndrome
+      prefix: doid
+    mesh:C535334:
+      identifier: C535334
+      link: https://bioregistry.io/mesh:C535334
+      name: ABCD syndrome
+      prefix: mesh
+    umls:C1838099:
+      identifier: C1838099
+      link: https://bioregistry.io/umls:C1838099
+      name: ABCD syndrome
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C538052
+      identifier: C538052
+      link: https://bioregistry.io/mesh:C538052
+      name: Propping Zerres syndrome
+      prefix: mesh
+    target:
+      curie: umls:C1863204
+      identifier: C1863204
+      link: https://bioregistry.io/umls:C1863204
+      name: ADULT SYNDROME
+      prefix: umls
+  nodes:
+    doid:0050601:
+      identifier: DOID:0050601
+      link: https://bioregistry.io/doid:0050601
+      name: ADULT syndrome
+      prefix: doid
+    mesh:C538052:
+      identifier: C538052
+      link: https://bioregistry.io/mesh:C538052
+      name: Propping Zerres syndrome
+      prefix: mesh
+    umls:C1863204:
+      identifier: C1863204
+      link: https://bioregistry.io/umls:C1863204
+      name: ADULT SYNDROME
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C564334
+      identifier: C564334
+      link: https://bioregistry.io/mesh:C564334
+      name: Acrocapitofemoral Dysplasia
+      prefix: mesh
+    target:
+      curie: umls:C1843096
+      identifier: C1843096
+      link: https://bioregistry.io/umls:C1843096
+      name: Acrocapitofemoral Dysplasia
+      prefix: umls
+  nodes:
+    doid:0050604:
+      identifier: DOID:0050604
+      link: https://bioregistry.io/doid:0050604
+      name: acrocapitofemoral dysplasia
+      prefix: doid
+    mesh:C564334:
+      identifier: C564334
+      link: https://bioregistry.io/mesh:C564334
+      name: Acrocapitofemoral Dysplasia
+      prefix: mesh
+    umls:C1843096:
+      identifier: C1843096
+      link: https://bioregistry.io/umls:C1843096
+      name: Acrocapitofemoral Dysplasia
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C538178
+      identifier: C538178
+      link: https://bioregistry.io/mesh:C538178
+      name: Acrodermatitis enteropathica
+      prefix: mesh
+    target:
+      curie: umls:C0221036
+      identifier: C0221036
+      link: https://bioregistry.io/umls:C0221036
+      name: Acrodermatitis enteropathica
+      prefix: umls
+  nodes:
+    doid:0050605:
+      identifier: DOID:0050605
+      link: https://bioregistry.io/doid:0050605
+      name: acrodermatitis enteropathica
+      prefix: doid
+    mesh:C538178:
+      identifier: C538178
+      link: https://bioregistry.io/mesh:C538178
+      name: Acrodermatitis enteropathica
+      prefix: mesh
+    umls:C0221036:
+      identifier: C0221036
+      link: https://bioregistry.io/umls:C0221036
+      name: Acrodermatitis enteropathica
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C535607
+      identifier: C535607
+      link: https://bioregistry.io/mesh:C535607
+      name: Aicardi-Goutieres syndrome
+      prefix: mesh
+    target:
+      curie: umls:C0393591
+      identifier: C0393591
+      link: https://bioregistry.io/umls:C0393591
+      name: AICARDI-GOUTIERES SYNDROME
+      prefix: umls
+  nodes:
+    doid:0050629:
+      identifier: DOID:0050629
+      link: https://bioregistry.io/doid:0050629
+      name: Aicardi-Goutieres syndrome
+      prefix: doid
+    mesh:C535607:
+      identifier: C535607
+      link: https://bioregistry.io/mesh:C535607
+      name: Aicardi-Goutieres syndrome
+      prefix: mesh
+    umls:C0393591:
+      identifier: C0393591
+      link: https://bioregistry.io/umls:C0393591
+      name: AICARDI-GOUTIERES SYNDROME
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C537055
+      identifier: C537055
+      link: https://bioregistry.io/mesh:C537055
+      name: Alopecia universalis
+      prefix: mesh
+    target:
+      curie: umls:C0263505
+      identifier: C0263505
+      link: https://bioregistry.io/umls:C0263505
+      name: Alopecia universalis
+      prefix: umls
+  nodes:
+    doid:0050634:
+      identifier: DOID:0050634
+      link: https://bioregistry.io/doid:0050634
+      name: alopecia universalis
+      prefix: doid
+    mesh:C537055:
+      identifier: C537055
+      link: https://bioregistry.io/mesh:C537055
+      name: Alopecia universalis
+      prefix: mesh
+    umls:C0263505:
+      identifier: C0263505
+      link: https://bioregistry.io/umls:C0263505
+      name: Alopecia universalis
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C536589
+      identifier: C536589
+      link: https://bioregistry.io/mesh:C536589
+      name: Alternating hemiplegia of childhood
+      prefix: mesh
+    target:
+      curie: umls:C0338488
+      identifier: C0338488
+      link: https://bioregistry.io/umls:C0338488
+      name: Alternating hemiplegia of childhood
+      prefix: umls
+  nodes:
+    doid:0050635:
+      identifier: DOID:0050635
+      link: https://bioregistry.io/doid:0050635
+      name: alternating hemiplegia of childhood
+      prefix: doid
+    mesh:C536589:
+      identifier: C536589
+      link: https://bioregistry.io/mesh:C536589
+      name: Alternating hemiplegia of childhood
+      prefix: mesh
+    umls:C0338488:
+      identifier: C0338488
+      link: https://bioregistry.io/umls:C0338488
+      name: Alternating hemiplegia of childhood
+      prefix: umls
+- edges:
+  - source:
+      curie: doid:0050641
+      identifier: DOID:0050641
+      link: https://bioregistry.io/doid:0050641
+      name: Rh deficiency syndrome
+      prefix: doid
+    target:
+      curie: mondo:0019107
+      identifier: 0019107
+      link: https://bioregistry.io/mondo:0019107
+      name: Rh deficiency syndrome
+      prefix: mondo
+  - source:
+      curie: mesh:C562717
+      identifier: C562717
+      link: https://bioregistry.io/mesh:C562717
+      name: Rh Deficiency Syndrome
+      prefix: mesh
+    target:
+      curie: umls:C0272052
+      identifier: C0272052
+      link: https://bioregistry.io/umls:C0272052
+      name: Rh Deficiency Syndrome
+      prefix: umls
+  - source:
+      curie: mondo:0019107
+      identifier: 0019107
+      link: https://bioregistry.io/mondo:0019107
+      name: Rh deficiency syndrome
+      prefix: mondo
+    target:
+      curie: umls:C0272052
+      identifier: C0272052
+      link: https://bioregistry.io/umls:C0272052
+      name: Rh Deficiency Syndrome
+      prefix: umls
+  nodes:
+    doid:0050641:
+      identifier: DOID:0050641
+      link: https://bioregistry.io/doid:0050641
+      name: Rh deficiency syndrome
+      prefix: doid
+    mesh:C562717:
+      identifier: C562717
+      link: https://bioregistry.io/mesh:C562717
+      name: Rh Deficiency Syndrome
+      prefix: mesh
+    mondo:0019107:
+      identifier: 0019107
+      link: https://bioregistry.io/mondo:0019107
+      name: Rh deficiency syndrome
+      prefix: mondo
+    umls:C0272052:
+      identifier: C0272052
+      link: https://bioregistry.io/umls:C0272052
+      name: Rh Deficiency Syndrome
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C537440
+      identifier: C537440
+      link: https://bioregistry.io/mesh:C537440
+      name: Arterial calcification of infancy
+      prefix: mesh
+    target:
+      curie: umls:C1859727
+      identifier: C1859727
+      link: https://bioregistry.io/umls:C1859727
+      name: Arterial calcification of infancy
+      prefix: umls
+  nodes:
+    doid:0050644:
+      identifier: DOID:0050644
+      link: https://bioregistry.io/doid:0050644
+      name: arterial calcification of infancy
+      prefix: doid
+    mesh:C537440:
+      identifier: C537440
+      link: https://bioregistry.io/mesh:C537440
+      name: Arterial calcification of infancy
+      prefix: mesh
+    umls:C1859727:
+      identifier: C1859727
+      link: https://bioregistry.io/umls:C1859727
+      name: Arterial calcification of infancy
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C565942
+      identifier: C565942
+      link: https://bioregistry.io/mesh:C565942
+      name: Arterial Tortuosity Syndrome
+      prefix: mesh
+    target:
+      curie: umls:C1859726
+      identifier: C1859726
+      link: https://bioregistry.io/umls:C1859726
+      name: ARTERIAL TORTUOSITY SYNDROME
+      prefix: umls
+  nodes:
+    doid:0050645:
+      identifier: DOID:0050645
+      link: https://bioregistry.io/doid:0050645
+      name: arterial tortuosity syndrome
+      prefix: doid
+    mesh:C565942:
+      identifier: C565942
+      link: https://bioregistry.io/mesh:C565942
+      name: Arterial Tortuosity Syndrome
+      prefix: mesh
+    umls:C1859726:
+      identifier: C1859726
+      link: https://bioregistry.io/umls:C1859726
+      name: ARTERIAL TORTUOSITY SYNDROME
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C567518
+      identifier: C567518
+      link: https://bioregistry.io/mesh:C567518
+      name: Bestrophinopathy
+      prefix: mesh
+    target:
+      curie: umls:C2678493
+      identifier: C2678493
+      link: https://bioregistry.io/umls:C2678493
+      name: BESTROPHINOPATHY
+      prefix: umls
+  nodes:
+    doid:0050662:
+      identifier: DOID:0050662
+      link: https://bioregistry.io/doid:0050662
+      name: bestrophinopathy
+      prefix: doid
+    mesh:C567518:
+      identifier: C567518
+      link: https://bioregistry.io/mesh:C567518
+      name: Bestrophinopathy
+      prefix: mesh
+    umls:C2678493:
+      identifier: C2678493
+      link: https://bioregistry.io/umls:C2678493
+      name: BESTROPHINOPATHY
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C535440
+      identifier: C535440
+      link: https://bioregistry.io/mesh:C535440
+      name: Bietti Crystalline Dystrophy
+      prefix: mesh
+    target:
+      curie: umls:C1859486
+      identifier: C1859486
+      link: https://bioregistry.io/umls:C1859486
+      name: BIETTI CRYSTALLINE CORNEORETINAL DYSTROPHY
+      prefix: umls
+  nodes:
+    doid:0050664:
+      identifier: DOID:0050664
+      link: https://bioregistry.io/doid:0050664
+      name: Bietti crystalline corneoretinal dystrophy
+      prefix: doid
+    mesh:C535440:
+      identifier: C535440
+      link: https://bioregistry.io/mesh:C535440
+      name: Bietti Crystalline Dystrophy
+      prefix: mesh
+    umls:C1859486:
+      identifier: C1859486
+      link: https://bioregistry.io/umls:C1859486
+      name: BIETTI CRYSTALLINE CORNEORETINAL DYSTROPHY
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C538157
+      identifier: C538157
+      link: https://bioregistry.io/mesh:C538157
+      name: Blau syndrome
+      prefix: mesh
+    target:
+      curie: umls:C5201146
+      identifier: C5201146
+      link: https://bioregistry.io/umls:C5201146
+      name: Blau syndrome
+      prefix: umls
+  nodes:
+    doid:0050678:
+      identifier: DOID:0050678
+      link: https://bioregistry.io/doid:0050678
+      name: Blau syndrome
+      prefix: doid
+    mesh:C538157:
+      identifier: C538157
+      link: https://bioregistry.io/mesh:C538157
+      name: Blau syndrome
+      prefix: mesh
+    umls:C5201146:
+      identifier: C5201146
+      link: https://bioregistry.io/umls:C5201146
+      name: Blau syndrome
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C536573
+      identifier: C536573
+      link: https://bioregistry.io/mesh:C536573
+      name: Boomerang dysplasia
+      prefix: mesh
+    target:
+      curie: umls:C0432201
+      identifier: C0432201
+      link: https://bioregistry.io/umls:C0432201
+      name: Boomerang dysplasia
+      prefix: umls
+  nodes:
+    doid:0050680:
+      identifier: DOID:0050680
+      link: https://bioregistry.io/doid:0050680
+      name: Boomerang dysplasia
+      prefix: doid
+    mesh:C536573:
+      identifier: C536573
+      link: https://bioregistry.io/mesh:C536573
+      name: Boomerang dysplasia
+      prefix: mesh
+    umls:C0432201:
+      identifier: C0432201
+      link: https://bioregistry.io/umls:C0432201
+      name: Boomerang dysplasia
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C564392
+      identifier: C564392
+      link: https://bioregistry.io/mesh:C564392
+      name: Bothnia Retinal Dystrophy
+      prefix: mesh
+    target:
+      curie: umls:C1843816
+      identifier: C1843816
+      link: https://bioregistry.io/umls:C1843816
+      name: Bothnia Retinal Dystrophy
+      prefix: umls
+  nodes:
+    doid:0050683:
+      identifier: DOID:0050683
+      link: https://bioregistry.io/doid:0050683
+      name: Bothnia retinal dystrophy
+      prefix: doid
+    mesh:C564392:
+      identifier: C564392
+      link: https://bioregistry.io/mesh:C564392
+      name: Bothnia Retinal Dystrophy
+      prefix: mesh
+    umls:C1843816:
+      identifier: C1843816
+      link: https://bioregistry.io/umls:C1843816
+      name: Bothnia Retinal Dystrophy
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C565193
+      identifier: C565193
+      link: https://bioregistry.io/mesh:C565193
+      name: Brachydactyly-Syndactyly Syndrome
+      prefix: mesh
+    target:
+      curie: umls:C1853137
+      identifier: C1853137
+      link: https://bioregistry.io/umls:C1853137
+      name: BRACHYDACTYLY-SYNDACTYLY SYNDROME
+      prefix: umls
+  nodes:
+    doid:0050689:
+      identifier: DOID:0050689
+      link: https://bioregistry.io/doid:0050689
+      name: brachydactyly-syndactyly syndrome
+      prefix: doid
+    mesh:C565193:
+      identifier: C565193
+      link: https://bioregistry.io/mesh:C565193
+      name: Brachydactyly-Syndactyly Syndrome
+      prefix: mesh
+    umls:C1853137:
+      identifier: C1853137
+      link: https://bioregistry.io/umls:C1853137
+      name: BRACHYDACTYLY-SYNDACTYLY SYNDROME
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C537098
+      identifier: C537098
+      link: https://bioregistry.io/mesh:C537098
+      name: Brachyolmia
+      prefix: mesh
+    target:
+      curie: umls:C0432228
+      identifier: C0432228
+      link: https://bioregistry.io/umls:C0432228
+      name: Brachyolmia
+      prefix: umls
+  nodes:
+    doid:0050690:
+      identifier: DOID:0050690
+      link: https://bioregistry.io/doid:0050690
+      name: brachyolmia
+      prefix: doid
+    mesh:C537098:
+      identifier: C537098
+      link: https://bioregistry.io/mesh:C537098
+      name: Brachyolmia
+      prefix: mesh
+    umls:C0432228:
+      identifier: C0432228
+      link: https://bioregistry.io/umls:C0432228
+      name: Brachyolmia
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C536607
+      identifier: C536607
+      link: https://bioregistry.io/mesh:C536607
+      name: Brody myopathy
+      prefix: mesh
+    target:
+      curie: umls:C1832918
+      identifier: C1832918
+      link: https://bioregistry.io/umls:C1832918
+      name: Brody myopathy
+      prefix: umls
+  nodes:
+    doid:0050692:
+      identifier: DOID:0050692
+      link: https://bioregistry.io/doid:0050692
+      name: Brody myopathy
+      prefix: doid
+    mesh:C536607:
+      identifier: C536607
+      link: https://bioregistry.io/mesh:C536607
+      name: Brody myopathy
+      prefix: mesh
+    umls:C1832918:
+      identifier: C1832918
+      link: https://bioregistry.io/umls:C1832918
+      name: Brody myopathy
+      prefix: umls
+- edges:
+  - source:
+      curie: mesh:C537111
+      identifier: C537111
+      link: https://bioregistry.io/mesh:C537111
+      name: Brown-Vialetto-Van Laere syndrome
+      prefix: mesh
+    target:
+      curie: umls:C4551777
+      identifier: C4551777
+      link: https://bioregistry.io/umls:C4551777
+      name: Brown-Vialetto-Van Laere syndrome
+      prefix: umls
+  nodes:
+    doid:0050694:
+      identifier: DOID:0050694
+      link: https://bioregistry.io/doid:0050694
+      name: Brown-Vialetto-Van Laere syndrome
+      prefix: doid
+    mesh:C537111:
+      identifier: C537111
+      link: https://bioregistry.io/mesh:C537111
+      name: Brown-Vialetto-Van Laere syndrome
+      prefix: mesh
+    umls:C4551777:
+      identifier: C4551777
+      link: https://bioregistry.io/umls:C4551777
+      name: Brown-Vialetto-Van Laere syndrome
       prefix: umls
 - edges:
   - source:
@@ -4925,35 +5679,6 @@
       identifier: 0018154
       link: https://bioregistry.io/mondo:0018154
       name: Madelung deformity
-      prefix: mondo
-- edges:
-  - source:
-      curie: doid:0050641
-      identifier: DOID:0050641
-      link: https://bioregistry.io/doid:0050641
-      name: Rh deficiency syndrome
-      prefix: doid
-    target:
-      curie: mondo:0019107
-      identifier: 0019107
-      link: https://bioregistry.io/mondo:0019107
-      name: Rh deficiency syndrome
-      prefix: mondo
-  nodes:
-    doid:0050641:
-      identifier: DOID:0050641
-      link: https://bioregistry.io/doid:0050641
-      name: Rh deficiency syndrome
-      prefix: doid
-    mesh:C562717:
-      identifier: C562717
-      link: https://bioregistry.io/mesh:C562717
-      name: Rh Deficiency Syndrome
-      prefix: mesh
-    mondo:0019107:
-      identifier: 0019107
-      link: https://bioregistry.io/mondo:0019107
-      name: Rh deficiency syndrome
       prefix: mondo
 - edges:
   - source:
