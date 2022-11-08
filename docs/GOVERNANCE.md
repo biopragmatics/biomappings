@@ -1,4 +1,8 @@
-# Governance
+---
+layout: page
+title: Governance
+permalink: /governance/
+---
 
 The goal of the Biomappings project is to enable community-driven curation and maintenance of semantic mappings between
 ontology and database terms, either to fill in the gaps in existing direct first-party mappings (e.g., DOID to MeSH) or

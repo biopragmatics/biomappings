@@ -30,9 +30,12 @@ anywhere.
 
 ### Requirements for New Mappings
 
-1. Mapping must use canonical Bioregistry prefixes and local unique identifier
+1. Mappings must use canonical Bioregistry prefixes and local unique identifier
    standards
-2. Mapping should not duplicate previously curated work
+2. Mappings should not duplicate previously curated work (e.g., from primary resources or other Biomappings curations)
+3. Mappings should be one-to-one between vocabularies when possible
+4. Mappings should be properly attributed with ORCID for manual curation or provenance to a script if automatically
+   generated.
 
 ### Editing Mappings
 
