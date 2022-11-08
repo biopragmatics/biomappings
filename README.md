@@ -48,12 +48,12 @@ Mappings are stored in a simple TSV file that looks like this:
 The data are available through the following four files on
 the [biopragmatics/biomappings](https://github.com/biopragmatics/biomappings) GitHub repository.
 
-| Curated | Description                      | Link |
-| ------- | -------------------------------- | ----------- |
-|  Yes    | Human-curated true mappings      | [`src/biomappings/resources/mappings.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/mappings.tsv) |
-|  Yes    | Human-curated *non-trivial* false (i.e., incorrect) mappings | [`src/biomappings/resources/incorrect.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/incorrect.tsv) |
-|  Yes    | Mappings that have been checked but not yet decided | [`src/biomappings/resources/unsure.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/unsure.tsv) |
-|  No     | Automatically predicted mappings | [`src/biomappings/resources/predictions.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/predictions.tsv) |
+| Curated | Description                                                  | Link                                                                                                                                             |
+| ------- |--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+|  Yes    | Human-curated true mappings                                  | [`src/biomappings/resources/mappings.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/mappings.tsv)       |
+|  Yes    | Human-curated *non-trivial* false (i.e., incorrect) mappings | [`src/biomappings/resources/incorrect.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/incorrect.tsv)     |
+|  Yes    | Mappings that have been checked but not yet decided          | [`src/biomappings/resources/unsure.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/unsure.tsv)           |
+|  No     | Automatically predicted mappings                             | [`src/biomappings/resources/predictions.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/predictions.tsv) |
 
 The primary and derived data in this repository are both available under
 the [CC0 1.0 Universal License](https://github.com/biopragmatics/biomappings/blob/master/LICENSE).
