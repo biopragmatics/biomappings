@@ -101,6 +101,7 @@ def filter_pyobo(
         if (
             prediction.source_prefix in source_prefixes
             and prediction.target_prefix in target_prefixes
+            and isinstance(prediction.source_id, str)
             and has_mapping(
                 prediction.source_prefix, prediction.source_id, prediction.target_prefix
             )
