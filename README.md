@@ -223,6 +223,8 @@ false_graph = biomappings.get_false_graph()
 predictions_graph = biomappings.get_predictions_graph()
 ```
 
+Full documentation can be found on [ReadTheDocs](https://biomappings.readthedocs.io).
+
 ## 👋 Attribution
 
 ### ⚖️ License
