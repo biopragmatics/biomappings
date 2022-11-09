@@ -3,6 +3,7 @@
 """Load Biomappings as a graph."""
 
 import itertools as itt
+import logging
 import os
 from collections import Counter
 from operator import itemgetter
@@ -16,6 +17,8 @@ from tqdm import tqdm
 
 from biomappings.resources import load_false_mappings, load_mappings, load_predictions
 from biomappings.utils import DATA, IMG, get_curie
+
+logger = logging.getLogger(__name__)
 
 
 def get_true_graph(
@@ -53,10 +56,10 @@ def _graph_from_mappings(
 
     if include is not None:
         include = set(include)
-        print("only including", *include)
+        logger.info("only including %s", include)
     if exclude is not None:
         exclude = set(exclude)
-        print("excluding", *exclude)
+        logger.info("excluding %s", exclude)
 
     for mapping in mappings:
         relation = mapping["relation"]
@@ -212,7 +215,7 @@ def charts():
     axes[1][2].axis("off")
 
     path = os.path.join(IMG, "components.png")
-    print("saving to", path)
+    click.echo(f"saving to {path}")
     plt.tight_layout()
     plt.savefig(path, dpi=300)
     plt.savefig(os.path.join(IMG, "components.svg"))
@@ -233,7 +236,7 @@ def charts():
     axes[1].set_title(f"Relations ({len(relation_counter)})")
 
     path = os.path.join(IMG, "summary.png")
-    print("saving to", path)
+    click.echo(f"saving to {path}")
     plt.tight_layout()
     plt.savefig(path, dpi=300)
     plt.savefig(os.path.join(IMG, "summary.svg"))

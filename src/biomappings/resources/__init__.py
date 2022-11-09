@@ -135,9 +135,9 @@ def _write_helper(
     lod = sorted(lod, key=mapping_sort_key)
     with open(path, mode) as file:
         if mode == "w":
-            print(*header, sep="\t", file=file)
+            print(*header, sep="\t", file=file)  # noqa:T201
         for line in lod:
-            print(*[line[k] for k in header], sep="\t", file=file)
+            print(*[line[k] for k in header], sep="\t", file=file)  # noqa:T201
 
 
 def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
