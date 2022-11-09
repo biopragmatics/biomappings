@@ -9,4 +9,4 @@ prune notebooks
 global-exclude *.py[cod] __pycache__ *.so *.dylib .DS_Store *.gpickle
 
 include README.md LICENSE
-exclude tox.ini .flake8 .bumpversion.cfg docs/index.md docs/_config.yml
+exclude tox.ini .flake8 .bumpversion.cfg docs/index.md docs/_config.yml .readthedocs.yml
