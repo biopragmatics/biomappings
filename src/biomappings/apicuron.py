@@ -103,7 +103,7 @@ def main(token):
     """Submit the payload."""
     sub = get_curation_payload()
     res = resubmit_curations(sub, token=token)
-    print(res.text)
+    click.echo(res.text)
 
 
 if __name__ == "__main__":

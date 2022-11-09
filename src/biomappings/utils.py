@@ -34,9 +34,9 @@ def commit(message: str) -> Optional[str]:
     return _git("commit", "-m", message, "-a")
 
 
-def push(branch_name: str = None) -> Optional[str]:
+def push(branch_name: Optional[str] = None) -> Optional[str]:
     """Push the git repo."""
-    if branch_name:
+    if branch_name is not None:
         return _git("push", "origin", branch_name)
     else:
         return _git("push")
@@ -64,7 +64,7 @@ def _git(*args: str) -> Optional[str]:
                 stderr=devnull,
             )
         except CalledProcessError as e:
-            print(e)
+            print(e)  # noqa:T201
             return None
         else:
             return ret.strip().decode("utf-8")

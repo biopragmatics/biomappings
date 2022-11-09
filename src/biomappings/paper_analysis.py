@@ -92,9 +92,9 @@ class Result:
             ),
         )
 
-    def print(self):
+    def print(self):  # noqa:T202
         """Print a summary of value added statistics."""
-        print(
+        print(  # noqa:T201
             tabulate(
                 [
                     (f"Total in {self.dataset}", f"{self.total:,}", ""),
