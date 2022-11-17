@@ -2822,6 +2822,671 @@ doid	DOID:8850	salivary gland cancer	skos:exactMatch	mesh	D012468	Salivary Gland
 doid	DOID:9335	scotoma	skos:exactMatch	mesh	D012607	Scotoma	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:9383	iridocyclitis	skos:exactMatch	mesh	D015863	Iridocyclitis	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:9675	pulmonary emphysema	skos:exactMatch	mesh	D011656	Pulmonary Emphysema	manually_reviewed	orcid:0000-0001-9439-5346
+drugbank	DB00001	Lepirudin	skos:exactMatch	drugcentral	2995	lepirudin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00003	Dornase alfa	skos:exactMatch	drugcentral	5135	dornase alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00008	Peginterferon alfa-2a	skos:exactMatch	drugcentral	5158	peginterferon alfa-2a	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00009	Alteplase	skos:exactMatch	drugcentral	5141	alteplase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00012	Darbepoetin alfa	skos:exactMatch	drugcentral	5157	darbepoetin alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00013	Urokinase	skos:exactMatch	drugcentral	5109	urokinase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00014	Goserelin	skos:exactMatch	drugcentral	1327	goserelin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00016	Erythropoietin	skos:exactMatch	drugcentral	5160	epoetin beta	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00016	Erythropoietin	skos:exactMatch	drugcentral	5170	epoetin zeta	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00022	Peginterferon alfa-2b	skos:exactMatch	drugcentral	5164	peginterferon alfa-2b	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00025	Antihemophilic factor, human recombinant	skos:exactMatch	drugcentral	5099	octocog alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00036	Coagulation factor VIIa Recombinant Human	skos:exactMatch	drugcentral	5159	eptacog alfa (activated)	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00053	Imiglucerase	skos:exactMatch	drugcentral	4932	imiglucerase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00054	Abciximab	skos:exactMatch	drugcentral	4950	abciximab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00060	Interferon beta-1a	skos:exactMatch	drugcentral	5139	interferon beta-1a	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00065	Infliximab	skos:exactMatch	drugcentral	4974	infliximab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00068	Interferon beta-1b	skos:exactMatch	drugcentral	5140	interferon beta-1b	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00073	Rituximab	skos:exactMatch	drugcentral	4975	rituximab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00075	Muromonab	skos:exactMatch	drugcentral	5177	muromonab-CD3	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00082	Pegvisomant	skos:exactMatch	drugcentral	5015	pegvisomant	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00083	Botulinum toxin type A	skos:exactMatch	drugcentral	5368	botulinum toxin type A	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00085	Pancrelipase	skos:exactMatch	drugcentral	5161	pancrelipase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00088	Alglucerase	skos:exactMatch	drugcentral	5129	alglucerase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00092	Alefacept	skos:exactMatch	drugcentral	5088	alefacept	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00097	Choriogonadotropin alfa	skos:exactMatch	drugcentral	5149	choriogonadotropin alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00100	Coagulation Factor IX (Recombinant)	skos:exactMatch	drugcentral	5163	nonacog alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00103	Agalsidase beta	skos:exactMatch	drugcentral	5018	agalsidase beta	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00105	Interferon alfa-2b	skos:exactMatch	drugcentral	5205	interferon alfa-2b	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00113	Technetium Tc-99m arcitumomab	skos:exactMatch	drugcentral	5127	arcitumomab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00130	L-Glutamine	skos:exactMatch	drugcentral	1311	glutamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00152	Thiamine	skos:exactMatch	drugcentral	2832	thiamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00156	Threonine	skos:exactMatch	drugcentral	4254	threonine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00159	Icosapent	skos:exactMatch	drugcentral	3174	eicosapentaenoic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00160	Alanine	skos:exactMatch	drugcentral	4255	alanine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00169	Cholecalciferol	skos:exactMatch	drugcentral	2840	colecalciferol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00182	Amphetamine	skos:exactMatch	drugcentral	195	amfetamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00196	Fluconazole	skos:exactMatch	drugcentral	1187	fluconazole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00196	Fluconazole	skos:exactMatch	drugcentral	1242	fosfluconazole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00226	Guanadrel	skos:exactMatch	drugcentral	1339	guanadrel	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00232	Methyclothiazide	skos:exactMatch	drugcentral	1759	methylclothiazide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00237	Butabarbital	skos:exactMatch	drugcentral	439	secbutabarbital	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00240	Alclometasone	skos:exactMatch	drugcentral	4493	alclometasone dipropionate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00255	Diethylstilbestrol	skos:exactMatch	drugcentral	3248	fosfestrol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00262	Carmustine	skos:exactMatch	drugcentral	512	carmustine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00265	Crotamiton	skos:exactMatch	drugcentral	744	crotamiton	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00269	Chlorotrianisene	skos:exactMatch	drugcentral	610	chlorotrianisene	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00279	Liothyronine	skos:exactMatch	drugcentral	1585	liothyronine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00287	Travoprost	skos:exactMatch	drugcentral	2716	travoprost	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00291	Chlorambucil	skos:exactMatch	drugcentral	588	chlorambucil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00327	Hydromorphone	skos:exactMatch	drugcentral	1393	hydromorphone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00328	Indomethacin	skos:exactMatch	drugcentral	1440	indomethacin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00335	Atenolol	skos:exactMatch	drugcentral	255	atenolol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00359	Sulfadiazine	skos:exactMatch	drugcentral	2500	sulfadiazine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00365	Grepafloxacin	skos:exactMatch	drugcentral	1330	grepafloxacin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00395	Carisoprodol	skos:exactMatch	drugcentral	509	carisoprodol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00415	Ampicillin	skos:exactMatch	drugcentral	1553	lenampicillin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00431	Lindane	skos:exactMatch	drugcentral	1583	lindane	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00433	Prochlorperazine	skos:exactMatch	drugcentral	2274	prochlorperazine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00434	Cyproheptadine	skos:exactMatch	drugcentral	765	cyproheptadine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00443	Betamethasone	skos:exactMatch	drugcentral	351	betamethasone benzoate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00452	Framycetin	skos:exactMatch	drugcentral	1896	framycetin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00456	Cefalotin	skos:exactMatch	drugcentral	574	cefalotin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00458	Imipramine	skos:exactMatch	drugcentral	1427	imipramine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00461	Nabumetone	skos:exactMatch	drugcentral	1863	nabumetone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00473	Hexylcaine	skos:exactMatch	drugcentral	1373	hexylcaine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00478	Rimantadine	skos:exactMatch	drugcentral	2383	rimantadine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00508	Triflupromazine	skos:exactMatch	drugcentral	2742	triflupromazine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00509	Dextrothyroxine	skos:exactMatch	drugcentral	846	dextrothyroxine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00511	Acetyldigitoxin	skos:exactMatch	drugcentral	67	acetyldigitoxin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00513	Aminocaproic acid	skos:exactMatch	drugcentral	163	aminocaproic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00516	Bentoquatam	skos:exactMatch	drugcentral	5116	bentoquatam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00519	Trandolapril	skos:exactMatch	drugcentral	2712	trandolapril	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00520	Caspofungin	skos:exactMatch	drugcentral	2977	caspofungin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00538	Gadoversetamide	skos:exactMatch	drugcentral	4147	gadoversetamide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00544	Fluorouracil	skos:exactMatch	drugcentral	26	fluorouracil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00548	Azelaic acid	skos:exactMatch	drugcentral	270	azelaic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00553	Methoxsalen	skos:exactMatch	drugcentral	30	methoxsalen	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00561	Doxapram	skos:exactMatch	drugcentral	953	doxapram	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00563	Methotrexate	skos:exactMatch	drugcentral	1751	methotrexate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00569	Fondaparinux	skos:exactMatch	drugcentral	1236	fondaparinux	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00570	Vinblastine	skos:exactMatch	drugcentral	2823	vinblastine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00577	Valaciclovir	skos:exactMatch	drugcentral	2798	valaciclovir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00578	Carbenicillin	skos:exactMatch	drugcentral	492	carbenicillin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00584	Enalapril	skos:exactMatch	drugcentral	1005	enalapril	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00595	Oxytetracycline	skos:exactMatch	drugcentral	2041	oxytetracycline	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00613	Amodiaquine	skos:exactMatch	drugcentral	186	amodiaquine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00618	Demeclocycline	skos:exactMatch	drugcentral	802	demeclocycline	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00622	Nicardipine	skos:exactMatch	drugcentral	1909	nicardipine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00623	Fluphenazine	skos:exactMatch	drugcentral	1214	fluphenazine enanthate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00639	Butoconazole	skos:exactMatch	drugcentral	450	butoconazole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00656	Trazodone	skos:exactMatch	drugcentral	2717	trazodone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00662	Trimethobenzamide	skos:exactMatch	drugcentral	2754	trimethobenzamide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00663	Flumethasone	skos:exactMatch	drugcentral	4548	flumetasone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00671	Cefixime	skos:exactMatch	drugcentral	537	cefixime	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00676	Benzyl benzoate	skos:exactMatch	drugcentral	335	benzyl benzoate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00682	Warfarin	skos:exactMatch	drugcentral	2847	warfarin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00690	Flurazepam	skos:exactMatch	drugcentral	1218	flurazepam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00692	Phentolamine	skos:exactMatch	drugcentral	2142	phentolamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00694	Daunorubicin	skos:exactMatch	drugcentral	786	daunorubicin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00696	Ergotamine	skos:exactMatch	drugcentral	1043	ergotamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00698	Nitrofurantoin	skos:exactMatch	drugcentral	1949	nitrofurantoin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00706	Tamsulosin	skos:exactMatch	drugcentral	2562	tamsulosin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00734	Risperidone	skos:exactMatch	drugcentral	2389	risperidone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00743	Gadobenic acid	skos:exactMatch	drugcentral	4557	gadobenic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00755	Tretinoin	skos:exactMatch	drugcentral	2722	tretinoin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00767	Benzquinamide	skos:exactMatch	drugcentral	331	benzquinamide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00770	Alprostadil	skos:exactMatch	drugcentral	3864	alprostadil alfadex	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00781	Polymyxin B	skos:exactMatch	drugcentral	4246	Polymyxin B	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00797	Tolazoline	skos:exactMatch	drugcentral	2695	tolazoline	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00798	Gentamicin	skos:exactMatch	drugcentral	4265	gentamicin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00801	Halazepam	skos:exactMatch	drugcentral	1348	halazepam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00802	Alfentanil	skos:exactMatch	drugcentral	114	alfentanil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00810	Biperiden	skos:exactMatch	drugcentral	374	biperiden	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00826	Natamycin	skos:exactMatch	drugcentral	1885	natamycin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00829	Diazepam	skos:exactMatch	drugcentral	852	diazepam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00834	Mifepristone	skos:exactMatch	drugcentral	1805	mifepristone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00838	Clocortolone	skos:exactMatch	drugcentral	4606	clocortolone pivalate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00859	Penicillamine	skos:exactMatch	drugcentral	2081	penicillamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00860	Prednisolone	skos:exactMatch	drugcentral	3820	prednisolamate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00880	Chlorothiazide	skos:exactMatch	drugcentral	609	chlorothiazide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00909	Zonisamide	skos:exactMatch	drugcentral	2872	zonisamide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00925	Phenoxybenzamine	skos:exactMatch	drugcentral	2136	phenoxybenzamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00933	Mesoridazine	skos:exactMatch	drugcentral	1712	mesoridazine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00981	Physostigmine	skos:exactMatch	drugcentral	2159	physostigmine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00983	Formoterol	skos:exactMatch	drugcentral	1239	formoterol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB00988	Dopamine	skos:exactMatch	drugcentral	947	dopamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01002	Levobupivacaine	skos:exactMatch	drugcentral	4	levobupivacaine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01049	Ergoloid mesylate	skos:exactMatch	drugcentral	5035	ergoloid mesylates	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01056	Tocainide	skos:exactMatch	drugcentral	2686	tocainide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01070	Dihydrotachysterol	skos:exactMatch	drugcentral	2841	dihydrotachysterol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01072	Atazanavir	skos:exactMatch	drugcentral	254	atazanavir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01078	Deslanoside	skos:exactMatch	drugcentral	813	deslanoside	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01086	Benzocaine	skos:exactMatch	drugcentral	323	benzocaine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01091	Butenafine	skos:exactMatch	drugcentral	444	butenafine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01115	Nifedipine	skos:exactMatch	drugcentral	1922	nifedipine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01135	Doxacurium	skos:exactMatch	drugcentral	2974	doxacurium	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01143	Amifostine	skos:exactMatch	drugcentral	156	amifostine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01152	Candicidin	skos:exactMatch	drugcentral	4424	candicidin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01213	Fomepizole	skos:exactMatch	drugcentral	1233	fomepizole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01226	Mivacurium	skos:exactMatch	drugcentral	1822	mivacurium	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01231	Diphenidol	skos:exactMatch	drugcentral	313	diphenidol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01242	Clomipramine	skos:exactMatch	drugcentral	701	clomipramine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01246	Alimemazine	skos:exactMatch	drugcentral	2749	alimemazine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01254	Dasatinib	skos:exactMatch	drugcentral	785	dasatinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01255	Lisdexamfetamine	skos:exactMatch	drugcentral	4135	lisdexamfetamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01276	Exenatide	skos:exactMatch	drugcentral	1123	exenatide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01279	Galsulfase	skos:exactMatch	drugcentral	5101	galsulfase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01281	Abatacept	skos:exactMatch	drugcentral	5089	abatacept	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01303	Oxtriphylline	skos:exactMatch	drugcentral	4390	choline theophyllinate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01306	Insulin aspart	skos:exactMatch	drugcentral	4981	insulin aspart	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01320	Fosphenytoin	skos:exactMatch	drugcentral	1247	fosphenytoin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01326	Cefamandole	skos:exactMatch	drugcentral	527	cefamandole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01327	Cefazolin	skos:exactMatch	drugcentral	530	cefazolin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01338	Pipecuronium	skos:exactMatch	drugcentral	2183	pipecuronium	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01352	Aprobarbital	skos:exactMatch	drugcentral	232	aprobarbital	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01357	Mestranol	skos:exactMatch	drugcentral	1714	mestranol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01365	Mephentermine	skos:exactMatch	drugcentral	1694	mephentermine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01409	Tiotropium	skos:exactMatch	drugcentral	2677	tiotropium bromide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01475	Dioxaphetyl butyrate	skos:exactMatch	drugcentral	3733	dioxaphetyl butyrate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01483	Barbital	skos:exactMatch	drugcentral	289	barbital	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01531	Desomorphine	skos:exactMatch	drugcentral	3134	desomorphine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01538	Acetyldihydrocodeine	skos:exactMatch	drugcentral	69	acetyldihydrocodeine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01547	Drotebanol	skos:exactMatch	drugcentral	3168	drotebanol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01594	Cinolazepam	skos:exactMatch	drugcentral	656	cinolazepam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01595	Nitrazepam	skos:exactMatch	drugcentral	1945	nitrazepam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01608	Periciazine	skos:exactMatch	drugcentral	2107	periciazine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01626	Pargyline	skos:exactMatch	drugcentral	2065	pargyline	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB01677	Fumaric acid	skos:exactMatch	drugcentral	3229	fumaric acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB02266	Flufenamic acid	skos:exactMatch	drugcentral	1193	flufenamic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB02300	Calcipotriol	skos:exactMatch	drugcentral	465	calcipotriene	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB02546	Vorinostat	skos:exactMatch	drugcentral	4124	vorinostat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB02638	Terlipressin	skos:exactMatch	drugcentral	2967	terlipressin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB02701	Nicotinamide	skos:exactMatch	drugcentral	1906	nicotinamide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB03310	Glutathione disulfide	skos:exactMatch	drugcentral	5130	oxiglutatione	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB03404	Hemin	skos:exactMatch	drugcentral	5117	hemin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB03614	Mecobalamin	skos:exactMatch	drugcentral	4600	mecobalamin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB03754	Tromethamine	skos:exactMatch	drugcentral	2771	trometamol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04167	Aceglutamide	skos:exactMatch	drugcentral	46	aceglutamide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04216	Quercetin	skos:exactMatch	drugcentral	3514	quercetin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04552	Niflumic acid	skos:exactMatch	drugcentral	1925	niflumic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04564	Gluconolactone	skos:exactMatch	drugcentral	5144	gluconolactone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04573	Estriol	skos:exactMatch	drugcentral	1067	estriol succinate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04660	Choline alfoscerate	skos:exactMatch	drugcentral	3906	glycerylphosphorylcholine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04847	Roxadustat	skos:exactMatch	drugcentral	5371	roxadustat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04877	Voacamine	skos:exactMatch	drugcentral	5100	voacamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04900	Thymalfasin	skos:exactMatch	drugcentral	2643	thymalfasin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04932	Defibrotide	skos:exactMatch	drugcentral	5092	defibrotide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04946	Iloperidone	skos:exactMatch	drugcentral	3294	iloperidone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04953	Ezogabine	skos:exactMatch	drugcentral	4181	retigabine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB04972	Canfosfamide	skos:exactMatch	drugcentral	3062	canfosfamide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05018	Migalastat	skos:exactMatch	drugcentral	5110	migalastat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05084	Abaloparatide	skos:exactMatch	drugcentral	5232	abaloparatide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05154	Pretomanid	skos:exactMatch	drugcentral	5344	pretomanid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05197	Sofalcone	skos:exactMatch	drugcentral	2456	sofalcone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05260	Gallium nitrate	skos:exactMatch	drugcentral	5115	gallium nitrate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05266	Ibudilast	skos:exactMatch	drugcentral	1406	ibudilast	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05295	Eldecalcitol	skos:exactMatch	drugcentral	5169	eldecalcitol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05316	Pimavanserin	skos:exactMatch	drugcentral	5142	pimavanserin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05336	Obiltoxaximab	skos:exactMatch	drugcentral	5094	obiltoxaximab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05351	Dexlansoprazole	skos:exactMatch	drugcentral	4162	dexlansoprazole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05659	Faropenem medoxomil	skos:exactMatch	drugcentral	5145	faropenem medoxil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05786	Irofulven	skos:exactMatch	drugcentral	1483	irofulven	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05791	Perflubron	skos:exactMatch	drugcentral	2102	perflubron	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05889	Inotuzumab ozogamicin	skos:exactMatch	drugcentral	5247	inotuzumab ozogamicin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB05990	Obeticholic acid	skos:exactMatch	drugcentral	5155	obeticholic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06014	Eteplirsen	skos:exactMatch	drugcentral	5182	eteplirsen	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06043	Olaratumab	skos:exactMatch	drugcentral	5183	olaratumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06077	Lumateperone	skos:exactMatch	drugcentral	5358	lumateperone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06081	Caplacizumab	skos:exactMatch	drugcentral	5308	caplacizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06119	Cenobamate	skos:exactMatch	drugcentral	5355	cenobamate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06137	Tirbanibulin	skos:exactMatch	drugcentral	5431	tirbanibulin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06148	Mianserin	skos:exactMatch	drugcentral	1796	mianserin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06154	Pentaerythritol tetranitrate	skos:exactMatch	drugcentral	2087	pentaerithrityl tetranitrate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06209	Prasugrel	skos:exactMatch	drugcentral	4113	prasugrel	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06216	Asenapine	skos:exactMatch	drugcentral	4115	asenapine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06219	Dalbavancin	skos:exactMatch	drugcentral	777	dalbavancin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06237	Avanafil	skos:exactMatch	drugcentral	4305	avanafil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06343	Teprotumumab	skos:exactMatch	drugcentral	5387	teprotumumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06372	Rilonacept	skos:exactMatch	drugcentral	5105	rilonacept	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06402	Telavancin	skos:exactMatch	drugcentral	4116	telavancin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06414	Etravirine	skos:exactMatch	drugcentral	1115	etravirine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06448	Lonafarnib	skos:exactMatch	drugcentral	5414	lonafarnib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06480	Prucalopride	skos:exactMatch	drugcentral	3502	prucalopride	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06586	Cetilistat	skos:exactMatch	drugcentral	4886	cetilistat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06589	Pazopanib	skos:exactMatch	drugcentral	4118	pazopanib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06590	Ceftaroline fosamil	skos:exactMatch	drugcentral	4169	ceftaroline fosamil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06595	Midostaurin	skos:exactMatch	drugcentral	5231	midostaurin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06602	Reslizumab	skos:exactMatch	drugcentral	5093	reslizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06605	Apixaban	skos:exactMatch	drugcentral	4298	apixaban	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06626	Axitinib	skos:exactMatch	drugcentral	4225	axitinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06637	Dalfampridine	skos:exactMatch	drugcentral	4163	fampridine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06650	Ofatumumab	skos:exactMatch	drugcentral	4951	ofatumumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06681	Belatacept	skos:exactMatch	drugcentral	5091	belatacept	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06683	Clevudine	skos:exactMatch	drugcentral	4394	clevudine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06697	Artemether	skos:exactMatch	drugcentral	245	artemether	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06703	Gadobutrol	skos:exactMatch	drugcentral	4179	gadobutrol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06712	Nilvadipine	skos:exactMatch	drugcentral	1934	nilvadipine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06752	Chymopapain	skos:exactMatch	drugcentral	5131	chymopapain	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06761	Beractant	skos:exactMatch	drugcentral	5108	beractant	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06769	Bendamustine	skos:exactMatch	drugcentral	302	bendamustine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06775	Carglumic acid	skos:exactMatch	drugcentral	3068	carglumic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06786	Halcinonide	skos:exactMatch	drugcentral	4507	halcinonide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06787	Hexocyclium	skos:exactMatch	drugcentral	1371	hexocyclium	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06800	Methylnaltrexone	skos:exactMatch	drugcentral	4616	methylnaltrexone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06804	Nonoxynol-9	skos:exactMatch	drugcentral	5107	nonoxinol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB06826	Unoprostone	skos:exactMatch	drugcentral	2794	unoprostone isopropyl	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB07159	Tamatinib	skos:exactMatch	drugcentral	5280	fostamatinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08621	Thiamphenicol	skos:exactMatch	drugcentral	2625	thiamphenicol glycinate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08807	Bopindolol	skos:exactMatch	drugcentral	389	bopindolol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08808	Bupranolol	skos:exactMatch	drugcentral	433	bupranolol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08813	Nadroparin	skos:exactMatch	drugcentral	5162	nadroparin calcium	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08878	Aminopterin	skos:exactMatch	drugcentral	21	aminopterin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08880	Teriflunomide	skos:exactMatch	drugcentral	4634	teriflunomide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08886	Asparaginase Erwinia chrysanthemi	skos:exactMatch	drugcentral	5216	crisantaspase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08894	Peginesatide	skos:exactMatch	drugcentral	4234	peginesatide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08898	Glucarpidase	skos:exactMatch	drugcentral	5138	glucarpidase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08906	Fluticasone furoate	skos:exactMatch	drugcentral	4554	fluticasone furoate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08909	Glycerol phenylbutyrate	skos:exactMatch	drugcentral	4745	glycerol phenylbutyrate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08913	Radium Ra 223 dichloride	skos:exactMatch	drugcentral	4800	radium Ra 223 dichloride	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08917	Ferric carboxymaltose	skos:exactMatch	drugcentral	5128	ferric carboxymaltose	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08924	Amfecloral	skos:exactMatch	drugcentral	5113	amfecloral	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08927	Amperozide	skos:exactMatch	drugcentral	193	amperozide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08928	Arsthinol	skos:exactMatch	drugcentral	3007	arsthinol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08944	Isoaminile	skos:exactMatch	drugcentral	1487	isoaminile	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08957	Hexoprenaline	skos:exactMatch	drugcentral	1372	hexoprenaline	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08958	Hexetidine	skos:exactMatch	drugcentral	3277	hexetidine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08964	Gemeprost	skos:exactMatch	drugcentral	1284	gemeprost	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08965	Fusafungine	skos:exactMatch	drugcentral	5112	fusafungine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08967	Dimetotiazine	skos:exactMatch	drugcentral	1235	dimetotiazine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB08982	Etozoline	skos:exactMatch	drugcentral	1114	etozolin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09004	Clobutinol	skos:exactMatch	drugcentral	686	clobutinol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09021	Benzoctamine	skos:exactMatch	drugcentral	324	benzoctamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09054	Idelalisib	skos:exactMatch	drugcentral	4878	idelalisib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09061	Cannabidiol	skos:exactMatch	drugcentral	5288	cannabidiol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09063	Ceritinib	skos:exactMatch	drugcentral	4866	ceritinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09065	Cobicistat	skos:exactMatch	drugcentral	4299	cobicistat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09066	Corifollitropin alfa	skos:exactMatch	drugcentral	5245	corifollitropin alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09085	Tetracaine	skos:exactMatch	drugcentral	2610	tetracaine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09094	Podophyllin	skos:exactMatch	drugcentral	5114	podophyllin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09096	Benzoyl peroxide	skos:exactMatch	drugcentral	328	benzoyl peroxide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09107	Methoxy polyethylene glycol-epoetin beta	skos:exactMatch	drugcentral	5165	methoxy polyethylene glycol-epoetin beta	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09108	Simoctocog alfa	skos:exactMatch	drugcentral	5228	simoctocog alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09113	Poractant alfa	skos:exactMatch	drugcentral	5148	poractant alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09122	Peginterferon beta-1a	skos:exactMatch	drugcentral	5137	peginterferon beta-1a	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09129	Chromic chloride	skos:exactMatch	drugcentral	5118	chromic chloride	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09137	Technetium Tc-99m mebrofenin	skos:exactMatch	drugcentral	5119	technetium Tc 99m mebrofenin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09138	Technetium Tc-99m medronate	skos:exactMatch	drugcentral	5120	technetium Tc 99m medronate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09146	Iron sucrose	skos:exactMatch	drugcentral	5121	sucroferric oxyhydroxide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09151	Flutemetamol (18F)	skos:exactMatch	drugcentral	4301	Flutemetamol (18F)	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09160	Technetium Tc-99m tetrofosmin	skos:exactMatch	drugcentral	5123	technetium Tc 99m tetrofosmin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09161	Technetium Tc-99m sestamibi	skos:exactMatch	drugcentral	5124	technetium (99mTc) sestamibi	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09164	Technetium Tc-99m disofenin	skos:exactMatch	drugcentral	3161	disofenin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09195	Lorpiprazole	skos:exactMatch	drugcentral	5098	lorpiprazole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09197	Mepiprazole	skos:exactMatch	drugcentral	5097	mepiprazole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09203	Synephrine	skos:exactMatch	drugcentral	3577	oxedrine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09205	Moxisylyte	skos:exactMatch	drugcentral	1855	moxisylyte	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09208	Pegloticase	skos:exactMatch	drugcentral	5176	pegloticase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09227	Barnidipine	skos:exactMatch	drugcentral	290	barnidipine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09228	Conestat alfa	skos:exactMatch	drugcentral	5152	conestat alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09230	Azelnidipine	skos:exactMatch	drugcentral	272	azelnidipine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09243	Hydracarbazine	skos:exactMatch	drugcentral	5125	hydracarbazine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09248	Mebanazine	skos:exactMatch	drugcentral	4865	mebanazine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09257	Gimeracil	skos:exactMatch	drugcentral	1293	gimeracil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09287	Polyethylene glycol	skos:exactMatch	drugcentral	4253	macrogol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09306	Metralindole	skos:exactMatch	drugcentral	3358	metralindole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09310	Catridecacog	skos:exactMatch	drugcentral	5134	catridecacog	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09316	Thallous chloride	skos:exactMatch	drugcentral	5095	thallous chloride Tl-201	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09319	Carindacillin	skos:exactMatch	drugcentral	508	carindacillin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09325	Sodium fluoride	skos:exactMatch	drugcentral	4243	sodium fluoride	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09336	Technetium Tc-99m nofetumomab merpentan	skos:exactMatch	drugcentral	5041	technetium (99mTc) nofetumomab merpentan	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09347	Acetrizoic acid	skos:exactMatch	drugcentral	63	acetrizoic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09377	Undecoylium chloride iodine complex	skos:exactMatch	drugcentral	5104	undecoylium chloride iodine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09379	Sutilain	skos:exactMatch	drugcentral	5102	sutilains	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09380	Sodium chromate Cr-51	skos:exactMatch	drugcentral	5106	sodium chromate (51Cr)	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09383	Meprednisone	skos:exactMatch	drugcentral	1702	meprednisone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09413	Monopotassium phosphate	skos:exactMatch	drugcentral	4480	potassium phosphate, monobasic	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09449	Sodium phosphate, monobasic	skos:exactMatch	drugcentral	4219	sodium phosphate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09460	Sodium carbonate	skos:exactMatch	drugcentral	5132	sodium carbonate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09481	Magnesium carbonate	skos:exactMatch	drugcentral	4288	magnesium carbonate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09495	Avobenzone	skos:exactMatch	drugcentral	4242	avobenzone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09507	Ferumoxsil	skos:exactMatch	drugcentral	5146	ferumoxsil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09511	Talc	skos:exactMatch	drugcentral	5190	talc	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09513	Urea C-14	skos:exactMatch	drugcentral	5147	UREA C 14	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09551	Desoxyribonuclease	skos:exactMatch	drugcentral	5135	dornase alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09561	Sodium glycerophosphate	skos:exactMatch	drugcentral	1318	sodium glycerophosphate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB09568	Omega-3-carboxylic acids	skos:exactMatch	drugcentral	5126	omega-3-carboxylic acids	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11063	Polysorbate 80	skos:exactMatch	drugcentral	2227	polysorbate 80	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11077	Polyethylene glycol 400	skos:exactMatch	drugcentral	4253	macrogol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11080	Silver nitrate	skos:exactMatch	drugcentral	4502	silver nitrate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11098	Potassium bicarbonate	skos:exactMatch	drugcentral	4520	potassium hydrogencarbonate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11132	Silicon dioxide	skos:exactMatch	drugcentral	4284	silicon dioxide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11134	Cupric oxide	skos:exactMatch	drugcentral	4291	cupric oxide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11161	Polyethylene glycol 300	skos:exactMatch	drugcentral	4253	macrogol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11182	Rose bengal	skos:exactMatch	drugcentral	4637	rose bengal	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11210	Ferrous bisglycinate	skos:exactMatch	drugcentral	5187	ferrous bisglycinate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11283	DL-dimyristoylphosphatidylcholine	skos:exactMatch	drugcentral	4651	dimyristoylphosphatidylcholine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11304	Phenoxyethanol	skos:exactMatch	drugcentral	3442	phenoxyethanol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11359	Guaiacol	skos:exactMatch	drugcentral	3450	guaiacol benzoate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11431	Moxidectin	skos:exactMatch	drugcentral	5286	moxidectin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11504	Caramiphen	skos:exactMatch	drugcentral	486	caramiphen	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11580	Ravulizumab	skos:exactMatch	drugcentral	5322	ravulizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11581	Venetoclax	skos:exactMatch	drugcentral	5133	venetoclax	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11583	Cetalkonium	skos:exactMatch	drugcentral	3078	cetalkonium chloride	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11587	Etafedrine	skos:exactMatch	drugcentral	3189	etafedrine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11595	Atezolizumab	skos:exactMatch	drugcentral	5151	atezolizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11607	Efmoroctocog alfa	skos:exactMatch	drugcentral	5178	efmoroctocog alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11611	Lifitegrast	skos:exactMatch	drugcentral	5174	lifitegrast	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11613	Velpatasvir	skos:exactMatch	drugcentral	5154	velpatasvir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11614	Rupatadine	skos:exactMatch	drugcentral	2413	rupatadine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11626	Tasonermin	skos:exactMatch	drugcentral	5212	tasonermin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11631	Eptotermin alfa	skos:exactMatch	drugcentral	5175	eptotermin alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11632	Opicapone	skos:exactMatch	drugcentral	5143	opicapone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11639	Dibotermin alfa	skos:exactMatch	drugcentral	5024	dibotermin alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11640	Amifampridine	skos:exactMatch	drugcentral	4336	amifampridine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11652	Tucatinib	skos:exactMatch	drugcentral	5389	tucatinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11653	Bremelanotide	skos:exactMatch	drugcentral	5329	bremelanotide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11660	Latanoprostene bunod	skos:exactMatch	drugcentral	5261	latanoprostene bunod	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11677	Triheptanoin	skos:exactMatch	drugcentral	5399	triheptanoin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11682	Daprodustat	skos:exactMatch	drugcentral	5421	daprodustat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11689	Selumetinib	skos:exactMatch	drugcentral	5388	selumetinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11700	Setmelanotide	skos:exactMatch	drugcentral	5416	setmelanotide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11701	Amenamevir	skos:exactMatch	drugcentral	5266	amenamevir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11703	Acalabrutinib	skos:exactMatch	drugcentral	5260	acalabrutinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11712	Tezacaftor	skos:exactMatch	drugcentral	5276	tezacaftor	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11714	Durvalumab	skos:exactMatch	drugcentral	5234	durvalumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11718	Encorafenib	skos:exactMatch	drugcentral	5289	encorafenib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11732	Lasmiditan	skos:exactMatch	drugcentral	5351	lasmiditan	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11735	Galactose	skos:exactMatch	drugcentral	1271	galactose	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11757	Istradefylline	skos:exactMatch	drugcentral	4882	istradefylline	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11760	Talazoparib	skos:exactMatch	drugcentral	5300	talazoparib tosylate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11761	Tenapanor	skos:exactMatch	drugcentral	5349	tenapanor	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11767	Sarilumab	skos:exactMatch	drugcentral	5237	sarilumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11776	Brodalumab	skos:exactMatch	drugcentral	5179	brodalumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11791	Capmatinib	skos:exactMatch	drugcentral	5392	capmatinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11796	Fostemsavir	skos:exactMatch	drugcentral	5401	fostemsavir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11799	Bictegravir	skos:exactMatch	drugcentral	5274	bictegravir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11800	Tivozanib	skos:exactMatch	drugcentral	5258	tivozanib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11827	Ertugliflozin	skos:exactMatch	drugcentral	5270	ertugliflozin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11828	Neratinib	skos:exactMatch	drugcentral	5252	neratinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11834	Guselkumab	skos:exactMatch	drugcentral	5246	guselkumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11837	Osilodrostat	skos:exactMatch	drugcentral	5384	osilodrostat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11842	Angiotensin II	skos:exactMatch	drugcentral	5272	angiotensin II	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11853	Relugolix	skos:exactMatch	drugcentral	5432	relugolix	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11855	Revefenacin	skos:exactMatch	drugcentral	5303	revefenacin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11859	Brexanolone	skos:exactMatch	drugcentral	5324	brexanolone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11866	Romosozumab	skos:exactMatch	drugcentral	5362	romosozumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11876	Alanyl glutamine	skos:exactMatch	drugcentral	4319	alanyl glutamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11901	Apalutamide	skos:exactMatch	drugcentral	5278	apalutamide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11929	Vaniprevir	skos:exactMatch	drugcentral	4939	vaniprevir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11932	Abametapir	skos:exactMatch	drugcentral	5403	abametapir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11936	Bempedoic acid	skos:exactMatch	drugcentral	5382	bempedoic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11943	Delafloxacin	skos:exactMatch	drugcentral	5238	delafloxacin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11951	Lemborexant	skos:exactMatch	drugcentral	5360	lemborexant	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11952	Duvelisib	skos:exactMatch	drugcentral	5296	duvelisib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11963	Dacomitinib	skos:exactMatch	drugcentral	5297	dacomitinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11967	Binimetinib	skos:exactMatch	drugcentral	5290	binimetinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11978	Glasdegib	skos:exactMatch	drugcentral	5304	glasdegib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11979	Elagolix	skos:exactMatch	drugcentral	5293	elagolix	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11986	Entrectinib	skos:exactMatch	drugcentral	5345	entrectinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB11995	Avatrombopag	skos:exactMatch	drugcentral	5285	avatrombopag	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12001	Abemaciclib	skos:exactMatch	drugcentral	5259	abemaciclib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12010	Fostamatinib	skos:exactMatch	drugcentral	5280	fostamatinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12015	Alpelisib	skos:exactMatch	drugcentral	5328	alpelisib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12017	Ozagrel	skos:exactMatch	drugcentral	2043	ozagrel	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12020	Tecovirimat	skos:exactMatch	drugcentral	5291	tecovirimat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12023	Benralizumab	skos:exactMatch	drugcentral	5263	benralizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12026	Voxilaprevir	skos:exactMatch	drugcentral	5242	voxilaprevir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12028	Broxuridine	skos:exactMatch	drugcentral	3042	broxuridine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12035	Sarecycline	skos:exactMatch	drugcentral	5298	sarecycline	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12070	Letermovir	skos:exactMatch	drugcentral	5262	letermovir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12107	Vaborbactam	skos:exactMatch	drugcentral	5253	vaborbactam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12130	Lorlatinib	skos:exactMatch	drugcentral	5302	lorlatinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12141	Gilteritinib	skos:exactMatch	drugcentral	5306	gilteritinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12147	Erdafitinib	skos:exactMatch	drugcentral	5327	erdafitinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12255	Vadadustat	skos:exactMatch	drugcentral	5420	vadadustat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12267	Brigatinib	skos:exactMatch	drugcentral	5233	brigatinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12281	Luspatercept	skos:exactMatch	drugcentral	5364	luspatercept	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12293	Nefopam	skos:exactMatch	drugcentral	1891	nefopam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12301	Doravirine	skos:exactMatch	drugcentral	5295	doravirine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12308	Eltanolone	skos:exactMatch	drugcentral	997	eltanolone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12329	Eravacycline	skos:exactMatch	drugcentral	5294	eravacycline dihydrochloride	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12332	Rucaparib	skos:exactMatch	drugcentral	5203	rucaparib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12354	Imrecoxib	skos:exactMatch	drugcentral	5250	imrecoxib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12364	Betrixaban	skos:exactMatch	drugcentral	5241	betrixaban	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12366	Vestronidase alfa	skos:exactMatch	drugcentral	5264	vestronidase alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12371	Siponimod	skos:exactMatch	drugcentral	5326	siponimod	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12388	Evocalcet	skos:exactMatch	drugcentral	5307	evocalcet	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12399	Polmacoxib	skos:exactMatch	drugcentral	5240	polmacoxib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12404	Remimazolam	skos:exactMatch	drugcentral	5400	remimazolam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12455	Omadacycline	skos:exactMatch	drugcentral	5299	omadacycline	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12457	Rimegepant	skos:exactMatch	drugcentral	5381	rimegepant	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12479	Zabofloxacin	skos:exactMatch	drugcentral	5249	zabofloxacin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12483	Copanlisib	skos:exactMatch	drugcentral	5256	copanlisib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12486	Elobixibat	skos:exactMatch	drugcentral	5277	elobixibat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12487	Promestriene	skos:exactMatch	drugcentral	4023	promestriene	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12499	Clascoterone	skos:exactMatch	drugcentral	5410	clascoterone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12500	Fedratinib	skos:exactMatch	drugcentral	5347	fedratinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12530	Inebilizumab	skos:exactMatch	drugcentral	5397	inebilizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12598	Nafamostat	skos:exactMatch	drugcentral	1867	nafamostat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12612	Ozanimod	skos:exactMatch	drugcentral	5383	ozanimod	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12615	Plazomicin	skos:exactMatch	drugcentral	5287	plazomicin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12625	Evogliptin	skos:exactMatch	drugcentral	5239	evogliptin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12667	Protionamide	skos:exactMatch	drugcentral	2314	protionamide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12674	Lurbinectedin	skos:exactMatch	drugcentral	5398	lurbinectedin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12688	Moxetumomab pasudotox	skos:exactMatch	drugcentral	5314	moxetumomab pasudotox	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12698	Ibalizumab	skos:exactMatch	drugcentral	5279	ibalizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12713	Sotagliflozin	skos:exactMatch	drugcentral	5339	sotagliflozin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12749	Butylphthalide	skos:exactMatch	drugcentral	5257	butylphthalide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12793	Condoliase	skos:exactMatch	drugcentral	5310	condoliase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12808	Trifarotene	skos:exactMatch	drugcentral	5350	trifarotene	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12825	Lefamulin	skos:exactMatch	drugcentral	5348	lefamulin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12834	Secnidazole	skos:exactMatch	drugcentral	2427	secnidazole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12865	Etelcalcetide	skos:exactMatch	drugcentral	5181	etelcalcetide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12872	Vonicog alfa	skos:exactMatch	drugcentral	5173	vonicog alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12887	Tazemetostat	skos:exactMatch	drugcentral	5380	tazemetostat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12893	Sacituzumab govitecan	skos:exactMatch	drugcentral	5391	sacituzumab govitecan	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12944	Phloroglucinol	skos:exactMatch	drugcentral	2153	phloroglucinol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB12952	Methylprednisone	skos:exactMatch	drugcentral	1702	meprednisone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13007	Enfortumab vedotin	skos:exactMatch	drugcentral	5366	enfortumab vedotin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13026	Ornidazole	skos:exactMatch	drugcentral	1997	ornidazole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13036	Ramatroban	skos:exactMatch	drugcentral	2354	ramatroban	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13050	Tirilazad	skos:exactMatch	drugcentral	4063	tirilazad	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13074	Macimorelin	skos:exactMatch	drugcentral	5271	macimorelin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13082	Nefiracetam	skos:exactMatch	drugcentral	3376	nefiracetam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13132	Artemisinin	skos:exactMatch	drugcentral	3871	artemisinin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13133	Von Willebrand factor human	skos:exactMatch	drugcentral	5173	vonicog alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13139	Levosalbutamol	skos:exactMatch	drugcentral	1575	levosalbutamol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13140	Bezlotoxumab	skos:exactMatch	drugcentral	5186	bezlotoxumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13144	Lenograstim	skos:exactMatch	drugcentral	5167	lenograstim	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13146	Fluciclovine (18F)	skos:exactMatch	drugcentral	5153	fluciclovine (18F)	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13156	Inosine pranobex	skos:exactMatch	drugcentral	4576	inosine pranobex	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13164	Olmutinib	skos:exactMatch	drugcentral	5210	olmutinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13173	Cerliponase alfa	skos:exactMatch	drugcentral	5230	cerliponase alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13179	Troleandomycin	skos:exactMatch	drugcentral	2769	troleandomycin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13190	Ethacridine	skos:exactMatch	drugcentral	3194	ethacridine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13203	Bamifylline	skos:exactMatch	drugcentral	287	bamifylline	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13216	Oxolamine	skos:exactMatch	drugcentral	2023	oxolamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13223	Fluocortin	skos:exactMatch	drugcentral	3234	fluocortin butyl	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13230	Gestonorone	skos:exactMatch	drugcentral	4563	gestonorone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13234	Propanidid	skos:exactMatch	drugcentral	3494	propanidid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13238	Tuaminoheptane	skos:exactMatch	drugcentral	3637	tuaminoheptane	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13239	Neltenexine	skos:exactMatch	drugcentral	1894	neltenexine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13243	Tiazofurine	skos:exactMatch	drugcentral	3605	tiazofurine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13250	Methylmethionine chloride	skos:exactMatch	drugcentral	3354	methiosulfonium chloride	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13294	Azidamfenicol	skos:exactMatch	drugcentral	3011	azidamfenicol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13302	Hachimycin	skos:exactMatch	drugcentral	4783	hachimycin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13305	Tolpropamine	skos:exactMatch	drugcentral	3618	tolpropamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13307	Proscillaridin	skos:exactMatch	drugcentral	2313	proscillaridin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13309	Benproperine	skos:exactMatch	drugcentral	5236	benproperine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13335	Pinazepam	skos:exactMatch	drugcentral	2175	pinazepam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13338	Flurithromycin	skos:exactMatch	drugcentral	1221	flurithromycin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13341	Fenozolone	skos:exactMatch	drugcentral	1157	fenozolone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13347	Diphenadione	skos:exactMatch	drugcentral	4450	diphenadione	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13396	Neocitrullamon	skos:exactMatch	drugcentral	5053	amino(diphenylhydantoin) valeric acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13397	Prenoxdiazine	skos:exactMatch	drugcentral	2260	prenoxdiazine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13410	Guanoxabenz	skos:exactMatch	drugcentral	1345	guanoxabenz	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13415	Pentetrazol	skos:exactMatch	drugcentral	3428	pentetrazol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13420	Thiazinam	skos:exactMatch	drugcentral	2628	thiazinam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13428	Iobenzamic acid	skos:exactMatch	drugcentral	3759	iobenzamic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13431	Proglumide	skos:exactMatch	drugcentral	2281	proglumide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13453	Xenon	skos:exactMatch	drugcentral	4369	xenon	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13458	Thebacon	skos:exactMatch	drugcentral	3144	thebacon	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13459	Pecilocin	skos:exactMatch	drugcentral	3419	pecilocin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13470	Cefodizime	skos:exactMatch	drugcentral	541	cefodizime	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13477	Sodium apolate	skos:exactMatch	drugcentral	4705	sodium apolate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13478	Meptazinol	skos:exactMatch	drugcentral	1706	meptazinol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13488	Bencyclane	skos:exactMatch	drugcentral	301	bencyclane	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13491	Fluperolone	skos:exactMatch	drugcentral	3237	fluperolone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13493	Cyclobutyrol	skos:exactMatch	drugcentral	752	cyclobutyrol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13500	Otilonium	skos:exactMatch	drugcentral	2003	otilonium bromide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13505	Emepronium	skos:exactMatch	drugcentral	1000	emepronium	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13521	Alipogene tiparvovec	skos:exactMatch	drugcentral	5172	alipogene tiparvovec	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13523	Veralipride	skos:exactMatch	drugcentral	2814	veralipride	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13532	Cyclopenthiazide	skos:exactMatch	drugcentral	756	cyclopenthiazide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13543	Mitobronitol	skos:exactMatch	drugcentral	858	mitobronitol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13553	Carumonam	skos:exactMatch	drugcentral	521	carumonam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13557	Thiopropazate	skos:exactMatch	drugcentral	2634	thiopropazate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13566	Sequifenadine	skos:exactMatch	drugcentral	4803	sequifenadine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13575	Bietaserpine	skos:exactMatch	drugcentral	3687	bietaserpine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13598	Diethyl ether	skos:exactMatch	drugcentral	4417	diethyl ether	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13602	Promegestone	skos:exactMatch	drugcentral	2285	promegestone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13610	Flumedroxone	skos:exactMatch	drugcentral	3749	flumedroxone acetate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13610	Flumedroxone	skos:exactMatch	drugcentral	4547	flumedroxone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13611	Chlormidazole	skos:exactMatch	drugcentral	3091	chlormidazole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13629	Mofebutazone	skos:exactMatch	drugcentral	1828	mofebutazone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13644	Methylthiouracil	skos:exactMatch	drugcentral	1773	methylthiouracil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13652	Bunaftine	skos:exactMatch	drugcentral	428	bunaftine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13657	Benorilate	skos:exactMatch	drugcentral	310	benorilate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13667	Cefozopran	skos:exactMatch	drugcentral	551	cefozopran	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13693	Sulbenicillin	skos:exactMatch	drugcentral	4052	sulbenicillin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13694	Distigmine	skos:exactMatch	drugcentral	927	distigmine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13705	Decamethoxine	skos:exactMatch	drugcentral	4919	decamethoxine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13711	Tritoqualine	skos:exactMatch	drugcentral	2765	tritoqualine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13717	Phenothrin	skos:exactMatch	drugcentral	4686	phenothrin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13730	Nifurtoinol	skos:exactMatch	drugcentral	1930	nifurtoinol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13733	Methylpentynol	skos:exactMatch	drugcentral	1687	methylpentynol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13739	Penamecillin	skos:exactMatch	drugcentral	2077	penamecillin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13742	Elcatonin	skos:exactMatch	drugcentral	994	elcatonin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13744	Piromidic acid	skos:exactMatch	drugcentral	2209	piromidic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13775	Tertatolol	skos:exactMatch	drugcentral	2605	tertatolol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13776	Ibacitabine	skos:exactMatch	drugcentral	4572	ibacitabine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13779	Guanoclor	skos:exactMatch	drugcentral	4564	guanoclor	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13781	Xamoterol	skos:exactMatch	drugcentral	2848	xamoterol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13783	Acemetacin	skos:exactMatch	drugcentral	47	acemetacin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13793	Vinburnine	skos:exactMatch	drugcentral	2824	vinburnine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13796	Dibunate	skos:exactMatch	drugcentral	860	dibunate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13817	Carbromal	skos:exactMatch	drugcentral	504	carbromal	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13826	Etohexadiol	skos:exactMatch	drugcentral	4774	etohexadiol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13833	Methylatropine	skos:exactMatch	drugcentral	4660	methylatropine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13861	Iopentol	skos:exactMatch	drugcentral	1466	iopentol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13867	Fluticasone	skos:exactMatch	drugcentral	4554	fluticasone furoate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13874	Enasidenib	skos:exactMatch	drugcentral	5251	enasidenib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13878	Pibrentasvir	skos:exactMatch	drugcentral	5244	pibrentasvir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13879	Glecaprevir	skos:exactMatch	drugcentral	5243	glecaprevir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13882	Methyl nicotinate	skos:exactMatch	drugcentral	3355	methyl nicotinate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13896	Talimogene laherparepvec	skos:exactMatch	drugcentral	5180	talimogene laherparepvec	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13909	Bismuth subgallate	skos:exactMatch	drugcentral	4531	bismuth subgallate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13923	Emicizumab	skos:exactMatch	drugcentral	5268	emicizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13925	Dotatate gallium Ga-68	skos:exactMatch	drugcentral	5156	Gallium Ga 68 dotatate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13926	Cenegermin	skos:exactMatch	drugcentral	5235	cenegermin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13928	Semaglutide	skos:exactMatch	drugcentral	5267	semaglutide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13931	Netarsudil	skos:exactMatch	drugcentral	5269	netarsudil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13956	Estradiol valerate	skos:exactMatch	drugcentral	1064	estradiol valerate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13985	Lutetium Lu 177 dotatate	skos:exactMatch	drugcentral	5275	lutetium (177Lu) oxodotreotide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13995	Ferric pyrophosphate citrate	skos:exactMatch	drugcentral	5122	ferric pyrophosphate citrate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13997	Baloxavir marboxil	skos:exactMatch	drugcentral	5301	baloxavir marboxil	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13998	Lonoctocog alfa	skos:exactMatch	drugcentral	5265	lonoctocog alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB13999	Moroctocog alfa	skos:exactMatch	drugcentral	5166	moroctocog alfa	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14004	Tildrakizumab	skos:exactMatch	drugcentral	5281	tildrakizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14012	Burosumab	skos:exactMatch	drugcentral	5282	burosumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14019	Fosnetupitant	skos:exactMatch	drugcentral	5283	fosnetupitant	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14031	Tretamine	skos:exactMatch	drugcentral	2739	tretamine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14033	Acetyl sulfisoxazole	skos:exactMatch	drugcentral	4458	sulfisoxazole acetyl	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14039	Erenumab	skos:exactMatch	drugcentral	5284	erenumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14040	Eptinezumab	skos:exactMatch	drugcentral	5386	eptinezumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14041	Fremanezumab	skos:exactMatch	drugcentral	5315	fremanezumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14042	Galcanezumab	skos:exactMatch	drugcentral	5316	galcanezumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14044	Hopantenic acid	skos:exactMatch	drugcentral	3280	hopantenic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14068	Dexniguldipine	skos:exactMatch	drugcentral	837	dexniguldipine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14079	Hydroxybutyloxide	skos:exactMatch	drugcentral	891	oxydibutanol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14086	Cianidanol	skos:exactMatch	drugcentral	629	cianidanol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14209	Trandolaprilat	skos:exactMatch	drugcentral	2712	trandolapril	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14232	Deacetylbisacodyl	skos:exactMatch	drugcentral	4779	sodium picosulfate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14502	Sodium phosphate, dibasic	skos:exactMatch	drugcentral	4219	sodium phosphate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14533	Zinc chloride	skos:exactMatch	drugcentral	4344	zinc chloride	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14539	Hydrocortisone acetate	skos:exactMatch	drugcentral	4213	hydrocortisone acetate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14542	Hydrocortisone phosphate	skos:exactMatch	drugcentral	5193	hydrocortisone phosphate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14568	Ivosidenib	skos:exactMatch	drugcentral	5292	ivosidenib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14582	Patisiran	skos:exactMatch	drugcentral	5313	patisiran	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14597	Lanadelumab	skos:exactMatch	drugcentral	5309	lanadelumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14643	Methylprednisolone aceponate	skos:exactMatch	drugcentral	1769	methylprednisolone aceponate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14658	Chloramphenicol palmitate	skos:exactMatch	drugcentral	5150	chloramphenicol palmitate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14695	Ferric oxyhydroxide	skos:exactMatch	drugcentral	5121	sucroferric oxyhydroxide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14707	Cemiplimab	skos:exactMatch	drugcentral	5317	cemiplimab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14712	Elapegademase	skos:exactMatch	drugcentral	5318	elapegademase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14713	Inotersen	skos:exactMatch	drugcentral	5319	inotersen 	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14723	Larotrectinib	skos:exactMatch	drugcentral	5305	larotrectinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14724	Emapalumab	skos:exactMatch	drugcentral	5320	emapalumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14730	Calaspargase pegol	skos:exactMatch	drugcentral	5321	calaspargase pegol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14731	Tagraxofusp	skos:exactMatch	drugcentral	5323	tagraxofusp	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14738	Turoctocog alfa pegol	skos:exactMatch	drugcentral	5374	turoctocog alfa pegol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14754	Solriamfetol	skos:exactMatch	drugcentral	5325	solriamfetol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14761	Remdesivir	skos:exactMatch	drugcentral	5376	remdesivir	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14811	Isatuximab	skos:exactMatch	drugcentral	5385	isatuximab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14840	Ripretinib	skos:exactMatch	drugcentral	5394	ripretinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14845	Filgotinib	skos:exactMatch	drugcentral	5419	filgotinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14853	Myrcludex B	skos:exactMatch	drugcentral	5417	bulevirtide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14864	Brolucizumab	skos:exactMatch	drugcentral	5363	brolucizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14879	Cefiderocol	skos:exactMatch	drugcentral	5352	cefiderocol	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14881	Oliceridine	skos:exactMatch	drugcentral	5406	oliceridine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14895	Vibegron	skos:exactMatch	drugcentral	5311	vibegron	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14914	Flortaucipir F-18	skos:exactMatch	drugcentral	5396	flortaucipir F 18	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14962	Trastuzumab deruxtecan	skos:exactMatch	drugcentral	5367	trastuzumab deruxtecan	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14967	Margetuximab	skos:exactMatch	drugcentral	5434	margetuximab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14975	Voxelotor	skos:exactMatch	drugcentral	5356	voxelotor	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14985	Enarodustat	skos:exactMatch	drugcentral	5427	enarodustat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB14989	Umbralisib	skos:exactMatch	drugcentral	5441	umbralisib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15005	Viltolarsen	skos:exactMatch	drugcentral	5408	viltolarsen	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15033	Flortaucipir	skos:exactMatch	drugcentral	5396	flortaucipir F 18	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15035	Zanubrutinib	skos:exactMatch	drugcentral	5353	zanubrutinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15044	Tafasitamab	skos:exactMatch	drugcentral	5404	tafasitamab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15066	Givosiran	skos:exactMatch	drugcentral	5354	givosiran	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15071	Omidenepag isopropyl	skos:exactMatch	drugcentral	5312	omidenepag isopropyl	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15091	Upadacitinib	skos:exactMatch	drugcentral	5346	upadacitinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15093	Somapacitan	skos:exactMatch	drugcentral	5413	somapacitan	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15098	Morinidazole	skos:exactMatch	drugcentral	5255	morinidazole	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15102	Pemigatinib	skos:exactMatch	drugcentral	5390	pemigatinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15133	Tepotinib	skos:exactMatch	drugcentral	5424	tepotinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15212	Pemafibrate	skos:exactMatch	drugcentral	5248	pemafibrate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15227	Tirabrutinib	skos:exactMatch	drugcentral	5423	tirabrutinib hydrochloride	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15233	Avapritinib	skos:exactMatch	drugcentral	5379	avapritinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15248	Bulevirtide	skos:exactMatch	drugcentral	5417	bulevirtide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15258	Imlifidase	skos:exactMatch	drugcentral	5418	imlifidase	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15271	Crizanlizumab	skos:exactMatch	drugcentral	5365	crizanlizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15305	Risdiplam	skos:exactMatch	drugcentral	5407	risdiplam	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15328	Ubrogepant	skos:exactMatch	drugcentral	5361	ubrogepant	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15444	Elexacaftor	skos:exactMatch	drugcentral	5372	elexacaftor	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15494	Edotreotide gallium Ga-68	skos:exactMatch	drugcentral	5185	gallium (68Ga) edotreotide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15575	Padeliporfin	skos:exactMatch	drugcentral	5273	padeliporfin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15593	Golodirsen	skos:exactMatch	drugcentral	5357	golodirsen	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15594	Brilliant blue G	skos:exactMatch	drugcentral	5359	brilliant Blue G	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15660	N4-Hydroxycytidine	skos:exactMatch	drugcentral	5377	EIDD-1931	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15661	Molnupiravir	skos:exactMatch	drugcentral	5377	EIDD-1931	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15685	Selpercatinib	skos:exactMatch	drugcentral	5393	selpercatinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15690	Fluoroestradiol F-18	skos:exactMatch	drugcentral	5395	fluoroestradiol F 18	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15694	Cedazuridine	skos:exactMatch	drugcentral	5402	inqovi	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15719	Belantamab mafodotin	skos:exactMatch	drugcentral	5405	belantamab mafodotin	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15762	Satralizumab	skos:exactMatch	drugcentral	5409	satralizumab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15783	Pargeverine	skos:exactMatch	drugcentral	2064	pargeverine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15785	Myrtecaine	skos:exactMatch	drugcentral	3787	myrtecaine	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15822	Pralsetinib	skos:exactMatch	drugcentral	5412	pralsetinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15873	Copper oxodotreotide Cu-64	skos:exactMatch	drugcentral	5411	copper dotatate Cu-64	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15935	Lumasiran	skos:exactMatch	drugcentral	5415	lumasiran	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15947	Pitofenone	skos:exactMatch	drugcentral	2215	pitofenone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15965	Naxitamab	skos:exactMatch	drugcentral	5435	naxitamab	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15970	Chloroprednisone	skos:exactMatch	drugcentral	3093	chloroprednisone	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15982	Berotralstat	skos:exactMatch	drugcentral	5430	berotralstat	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB15984	Clostebol acetate	skos:exactMatch	drugcentral	716	clostebol acetate	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB16000	Salicylamide O-acetic acid	skos:exactMatch	drugcentral	3538	salamidacetic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB16019	Gallium Ga-68 gozetotide	skos:exactMatch	drugcentral	5429	gallium (68Ga) gozetotide	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB16084	Iron (III) oxide adipate	skos:exactMatch	drugcentral	3474	adipic acid	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB16133	Delgocitinib	skos:exactMatch	drugcentral	5426	delgocitinib	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB16145	Dotinurad	skos:exactMatch	drugcentral	5425	dotinurad	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB16292	Perfluorodecalin	skos:exactMatch	drugcentral	2103	perflunafene	manually_reviewed	orcid:0000-0001-5705-7831
+drugbank	DB16385	Ansuvimab	skos:exactMatch	drugcentral	5433	ansuvimab	manually_reviewed	orcid:0000-0001-5705-7831
 go	GO:0005816	spindle pole body	skos:exactMatch	ncit	C13365	Spindle Pole Body	manual	orcid:0000-0003-4423-4370
 go	GO:0070266	necroptotic process	skos:exactMatch	mesh	D000079302	Necroptosis	manual	orcid:0000-0003-4423-4370
 kegg.pathway	hsa00010	Glycolysis / Gluconeogenesis - Homo sapiens (human)	skos:exactMatch	wikipathways	WP534	Glycolysis and gluconeogenesis	manual	orcid:0000-0002-2046-6145

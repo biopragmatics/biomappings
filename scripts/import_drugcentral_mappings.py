@@ -28,13 +28,19 @@ def main():
     )
     df["type"] = "manually_reviewed"
 
+    drugcentral_drugbank_mappings = pyobo.get_filtered_xrefs("drugcentral", "drugbank")
+
     mappings = df.iterrows()
     mappings = [
         row
         for _, row in tqdm(
             mappings, unit="mapping", unit_scale=True, total=len(df.index), desc="Pre-Filtering"
         )
-        if row["subject_id"].startswith("DRUGBANK:") and row["object_id"].startswith("DrugCentral")
+        if (
+            row["subject_id"].startswith("DRUGBANK:")
+            and row["object_id"].startswith("DrugCentral:")
+            and row["object_id"].removeprefix("DrugCentral:") not in drugcentral_drugbank_mappings
+        )
     ]
     mappings = (
         _prepare_mapping(row)
