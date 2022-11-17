@@ -34,14 +34,14 @@ unsure = load_unsure()
 
 
 def _iter_groups():
-    for group, label in [
+    for group, group_label in [
         (mappings, "positive"),
         (incorrect, "negative"),
         (predictions, "predictions"),
         (unsure, "unsure"),
     ]:
-        for i, mapping in enumerate(group, start=2):
-            yield label, i, mapping
+        for line_number, mapping in enumerate(group, start=2):
+            yield group_label, line_number, mapping
 
 
 class TestIntegrity(unittest.TestCase):
@@ -50,27 +50,27 @@ class TestIntegrity(unittest.TestCase):
     def test_canonical_prefixes(self):
         """Test that all mappings use canonical bioregistry prefixes."""
         valid_prefixes = set(bioregistry.read_registry())
-        for label, line, mapping in _iter_groups():
+        for group_label, line_number, mapping in _iter_groups():
             source_prefix, target_prefix = mapping["source prefix"], mapping["target prefix"]
             self.assertIn(
                 source_prefix,
                 valid_prefixes,
-                msg=f"Invalid prefix: {source_prefix} on {label}:{line}",
+                msg=f"Invalid prefix: {source_prefix} on {group_label}:{line_number}",
             )
             self.assertIn(
                 target_prefix,
                 valid_prefixes,
-                msg=f"Invalid prefix: {target_prefix} on {label}:{line}",
+                msg=f"Invalid prefix: {target_prefix} on {group_label}:{line_number}",
             )
 
     def test_normalized_identifiers(self):
         """Test that all identifiers have been normalized (based on bioregistry definition)."""
-        for label, line, mapping in _iter_groups():
+        for group_label, line_number, mapping in _iter_groups():
             self.assert_canonical_identifier(
-                mapping["source prefix"], mapping["source identifier"], label, line
+                mapping["source prefix"], mapping["source identifier"], group_label, line_number
             )
             self.assert_canonical_identifier(
-                mapping["target prefix"], mapping["target identifier"], label, line
+                mapping["target prefix"], mapping["target identifier"], group_label, line_number
             )
 
     def assert_canonical_identifier(
@@ -107,8 +107,8 @@ def _extract_redundant(counter):
 def test_cross_redundancy():
     """Test the redundancy of manually curated mappings and predicted mappings."""
     counter = defaultdict(list)
-    for label, line, mapping in _iter_groups():
-        counter[get_canonical_tuple(mapping)].append((label, line))
+    for group_label, line_number, mapping in _iter_groups():
+        counter[get_canonical_tuple(mapping)].append((group_label, line_number))
 
     redundant = _extract_redundant(counter)
     if redundant:
