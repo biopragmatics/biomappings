@@ -141,6 +141,27 @@ agrovoc	d2c183d0	compost mulches	skos:exactMatch	agro	00000102	compost mulch	man
 agrovoc	e7505488	tine harrows	skos:exactMatch	agro	00000138	tine harrow	manually_reviewed	orcid:0000-0002-2627-0696
 agrovoc	ea23424c	alpha lattice design	skos:exactMatch	agro	00000337	alpha lattice design	manually_reviewed	orcid:0000-0002-2627-0696
 agrovoc	eb7af602	raised beds	skos:exactMatch	agro	00002021	raised seedbed	manually_reviewed	orcid:0000-0002-2627-0696
+apollosv	00000097	ecosystem	skos:exactMatch	envo	01001110	ecosystem	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000142	vaccination	skos:exactMatch	idomal	0001040	vaccination	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000154	exposed population	skos:exactMatch	ncit	C71551	Exposed Population	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000205	susceptible organism	skos:exactMatch	ido	0000659	susceptible organism	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000209	infected organism	skos:exactMatch	ido	0000460	infected organism	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000233	infected population	skos:exactMatch	ido	0000511	infected population	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000234	susceptible population	skos:exactMatch	ido	0000514	susceptible population	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000235	immune population	skos:exactMatch	ido	0000592	immune population	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000237	pathogen	skos:exactMatch	ido	0000528	pathogen	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000237	pathogen	skos:exactMatch	idomal	0000063	pathogen	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000239	infectious disease	skos:exactMatch	doid	0050117	disease by infectious agent	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000239	infectious disease	skos:exactMatch	ido	0000436	infectious disease	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000311	Breteau Index	skos:exactMatch	vsmo	0000070	breteau index	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000314	gonotrophic cycle	skos:exactMatch	vsmo	0000904	gonotrophic cycle	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000317	incubation period	skos:exactMatch	ido	0000519	incubation period	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000317	incubation period	skos:exactMatch	idomal	0000355	incubation period	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000422	confidence interval	skos:exactMatch	stato	0000196	confidence interval	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000429	date	skos:exactMatch	dc	date	Date	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000429	date	skos:exactMatch	oboinowl	date	date	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000445	mortality rate	skos:exactMatch	stato	0000414	mortality rate	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000476	description	skos:exactMatch	dc	description	description	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	1321N1_CENTRAL_NERVOUS_SYSTEM	1321N1	skos:exactMatch	cellosaurus	CVCL_0110	1321N1	manually_reviewed	orcid:0000-0003-1307-2508
 ccle	143B_BONE	143B	skos:exactMatch	cellosaurus	CVCL_2270	143B	manually_reviewed	orcid:0000-0003-1307-2508
 ccle	143B_BONE	143B	skos:exactMatch	efo	0006355	143B	manually_reviewed	orcid:0000-0003-1307-2508
@@ -766,6 +787,8 @@ ccle	ZR751_BREAST	ZR-75-1	skos:exactMatch	cellosaurus	CVCL_0588	ZR-75-1	manually
 ccle	ZR751_BREAST	ZR-75-1	skos:exactMatch	efo	0001262	ZR751	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	ZR7530_BREAST	ZR-75-30	skos:exactMatch	cellosaurus	CVCL_1661	ZR-75-30	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	ZR7530_BREAST	ZR-75-30	skos:exactMatch	efo	0001263	ZR7530	manually_reviewed	orcid:0000-0003-4423-4370
+cemo	case_fatality_rate	case fatality rate	skos:exactMatch	ncit	C173779	Case Fatality Rate	manually_reviewed	orcid:0000-0003-4423-4370
+cemo	infection_fatality_rate	infection fatality rate	skos:exactMatch	ncit	C173780	Infection Fatality Rate	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:10001	Visnadin	skos:exactMatch	mesh	C067604	visnadin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:10002	visnagin	skos:exactMatch	mesh	C044999	visnagin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:10014	Voacamine	skos:exactMatch	mesh	C005891	voacamine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -2351,6 +2374,13 @@ chebi	CHEBI:9969	Verruculotoxin	skos:exactMatch	mesh	C011563	verruculotoxin	manu
 chebi	CHEBI:9970	Verticine	skos:exactMatch	mesh	C014242	verticine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:9973	vibriobactin	skos:exactMatch	mesh	C040227	vibriobactin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:9976	Vicine	skos:exactMatch	mesh	C009661	vicine	manually_reviewed	orcid:0000-0001-9439-5346
+cido	0000152	COVID-19 pandemic	skos:exactMatch	idocovid19	0001388	COVID-19 pandemic	manually_reviewed	orcid:0000-0003-4423-4370
+cido	0000154	COVID-19 epidemic	skos:exactMatch	idocovid19	0001391	COVID-19 epidemic	manually_reviewed	orcid:0000-0003-4423-4370
+cido	0000366	protective clothing	skos:exactMatch	idomal	0001031	protective clothing	manually_reviewed	orcid:0000-0003-4423-4370
+cido	0000390	BALB/c mouse	skos:exactMatch	vo	0000051	Balb/c mouse	manually_reviewed	orcid:0000-0003-4423-4370
+cido	0001004	Bevacizumab	skos:exactMatch	dron	00014332	bevacizumab	manually_reviewed	orcid:0000-0003-4423-4370
+cido	0001007	EIDD-2801	skos:exactMatch	chebi	180653	molnupiravir	manually_reviewed	orcid:0000-0003-4423-4370
+cido	0001037	Fostamatinib	skos:exactMatch	dron	00819888	fostamatinib	manually_reviewed	orcid:0000-0003-4423-4370
 cl	CL:0000000	cell	skos:exactMatch	mesh	D002477	Cells	manually_reviewed	orcid:0000-0001-9439-5346
 cl	CL:0000010	cultured cell	skos:exactMatch	mesh	D002478	Cells, Cultured	manually_reviewed	orcid:0000-0001-9439-5346
 cl	CL:0000023	oocyte	skos:exactMatch	mesh	D009865	Oocytes	manually_reviewed	orcid:0000-0001-9439-5346
@@ -2824,6 +2854,10 @@ doid	DOID:9383	iridocyclitis	skos:exactMatch	mesh	D015863	Iridocyclitis	manually
 doid	DOID:9675	pulmonary emphysema	skos:exactMatch	mesh	D011656	Pulmonary Emphysema	manually_reviewed	orcid:0000-0001-9439-5346
 go	GO:0005816	spindle pole body	skos:exactMatch	ncit	C13365	Spindle Pole Body	manual	orcid:0000-0003-4423-4370
 go	GO:0070266	necroptotic process	skos:exactMatch	mesh	D000079302	Necroptosis	manual	orcid:0000-0003-4423-4370
+ido	0000405	pathogen role	skos:exactMatch	obi	0000718	pathogen role	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000436	infectious disease	skos:exactMatch	apollosv	00000239	infectious disease	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000443	antiparasitic disposition	skos:exactMatch	idomal	0000425	antiparasitic disposition	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000447	herd immunity to infectious organism	skos:exactMatch	idomal	0000352	herd immunity to infectious organism	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	hsa00010	Glycolysis / Gluconeogenesis - Homo sapiens (human)	skos:exactMatch	wikipathways	WP534	Glycolysis and gluconeogenesis	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00020	Citrate cycle (TCA cycle) - Homo sapiens (human)	skos:exactMatch	reactome	R-HSA-71403	Citric acid cycle (TCA cycle)	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00020	Citrate cycle (TCA cycle) - Homo sapiens (human)	skos:exactMatch	wikipathways	WP78	TCA cycle (aka Krebs or citric acid cycle)	manual	orcid:0000-0002-2046-6145
