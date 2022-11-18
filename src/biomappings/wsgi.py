@@ -74,6 +74,7 @@ class Controller:
         target_query: Optional[str] = None,
         prefix: Optional[str] = None,
         same_text: bool = False,
+        provenance: Optional[str] = None,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
@@ -95,6 +96,7 @@ class Controller:
             target=target_query,
             prefix=prefix,
             same_text=same_text,
+            provenance=provenance,
         )
         if offset is not None:
             try:
@@ -117,6 +119,7 @@ class Controller:
         target_query: Optional[str] = None,
         prefix: Optional[str] = None,
         same_text: bool = False,
+        provenance: Optional[str] = None,
     ) -> int:
         """Count the number of predictions to check for the given filters."""
         it = self._help_it_predictions(
@@ -125,6 +128,7 @@ class Controller:
             target=target_query,
             prefix=prefix,
             same_text=same_text,
+            provenance=provenance,
         )
         return sum(1 for _ in it)
 
@@ -135,6 +139,7 @@ class Controller:
         target: Optional[str] = None,
         prefix: Optional[str] = None,
         same_text: bool = False,
+        provenance: Optional[str] = None
     ):
         it: Iterable[Tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
         if self.target_ids:
@@ -168,6 +173,8 @@ class Controller:
             )
         if prefix is not None:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
+        if provenance is not None:
+            it = self._help_filter(provenance, it, {"source"})
 
         if same_text:
             it = (
@@ -305,6 +312,7 @@ def home():
     query = flask.request.args.get("query")
     source_query = flask.request.args.get("source")
     target_query = flask.request.args.get("target")
+    provenance = flask.request.args.get("provenance")
     prefix = flask.request.args.get("prefix")
     same_text = flask.request.args.get("same_text", default="false").lower() in {"true", "t"}
     show_relations = app.config["SHOW_RELATIONS"]
@@ -320,6 +328,7 @@ def home():
         target_query=target_query,
         prefix=prefix,
         same_text=same_text,
+        provenance=provenance,
         # configured
         show_relations=show_relations,
         show_lines=show_lines,
@@ -400,6 +409,7 @@ def _go_home():
             target=flask.request.args.get("target"),
             prefix=flask.request.args.get("prefix"),
             same_text=flask.request.args.get("same_text", default="false").lower() in {"true", "t"},
+            provenance=flask.request.args.get("provenance"),
             # config
             show_relations=app.config["SHOW_RELATIONS"],
             show_lines=app.config["SHOW_LINES"],
