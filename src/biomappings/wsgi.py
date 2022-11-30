@@ -9,6 +9,8 @@ from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple
 
 import flask
 import flask_bootstrap
+
+import bioregistry
 from bioregistry.resolve_identifier import get_bioregistry_iri
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -204,6 +206,8 @@ class Controller:
     @classmethod
     def get_url(cls, prefix: str, identifier: str) -> str:
         """Return URL for a given prefix and identifier."""
+        if bioregistry.get_obofoundry_prefix(prefix):
+            return bioregistry.get_ols_iri(prefix, identifier)
         return get_bioregistry_iri(prefix, identifier)
 
     @property
