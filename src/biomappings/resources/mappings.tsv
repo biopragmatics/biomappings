@@ -383,6 +383,7 @@ ccle	HGC27_STOMACH	HGC-27	skos:exactMatch	efo	0006581	HGC-27	manually_reviewed	o
 ccle	HH_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HH	skos:exactMatch	efo	0002194	HH	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	HK2_KIDNEY	HK-2	skos:exactMatch	cellosaurus	CVCL_YE28	HK2	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	HMCB_SKIN	HMCB	skos:exactMatch	efo	0002195	HMCB	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	HNT34	HNT34	skos:exactMatch	depmap	ACH-000299		manually_reviewed	orcid:0000-0003-4423-4370
 ccle	HOP62_LUNG	HOP-62	skos:exactMatch	efo	0006439	HOP62	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	HOP92_LUNG	HOP-92	skos:exactMatch	efo	0006440	HOP92	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	HOS_BONE	HOS	skos:exactMatch	efo	0002196	HOS	manually_reviewed	orcid:0000-0001-9439-5346
@@ -499,6 +500,7 @@ ccle	MDAMB468_BREAST	MDA-MB-468	skos:exactMatch	efo	0001216	MDAMB468	manually_re
 ccle	MDST8_LARGE_INTESTINE	MDST8	skos:exactMatch	efo	0006644	MDST8	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	ME1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	ME-1	skos:exactMatch	efo	0006645	ME-1	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	MEC1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	MEC-1	skos:exactMatch	efo	0002231	MEC1	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	MET2B	MET2B	skos:exactMatch	depmap	ACH-002388	MET2B	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	MG63_BONE	MG-63	skos:exactMatch	efo	0002234	MG63	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	MHHES1_BONE	MHH-ES-1	skos:exactMatch	efo	0006650	MHH-ES-1	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	MHHNB11_AUTONOMIC_GANGLIA	MHH-NB-11	skos:exactMatch	efo	0006651	MHH-NB-11	manually_reviewed	orcid:0000-0001-9439-5346
@@ -667,6 +669,7 @@ ccle	SF268_CENTRAL_NERVOUS_SYSTEM	SF268	skos:exactMatch	efo	0005451	SF268	manual
 ccle	SF295_CENTRAL_NERVOUS_SYSTEM	SF-295	skos:exactMatch	efo	0005452	SF295	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	SF539_CENTRAL_NERVOUS_SYSTEM	SF539	skos:exactMatch	efo	0005453	SF539	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	SIHA	SIHA	skos:exactMatch	cellosaurus	CVCL_0032	SiHa	manually_reviewed	orcid:0000-0003-4423-4370
+ccle	SIHA	SIHA	skos:exactMatch	depmap	ACH-000556	SIHA	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	SJRH30_SOFT_TISSUE	SJRH30	skos:exactMatch	cellosaurus	CVCL_0041	Rh30	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	SJRH30_SOFT_TISSUE	SJRH30	skos:exactMatch	efo	0002329	SJRH30	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	SJSA1_BONE	SJSA-1	skos:exactMatch	efo	0002330	SJSA1	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1795,17 +1798,24 @@ chebi	CHEBI:137685	glycolonitrile	skos:exactMatch	mesh	C035740	glycolonitrile	ma
 chebi	CHEBI:137693	rhosin	skos:exactMatch	mesh	C586690	rhosin	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:137747	ciliobrevin D	skos:exactMatch	mesh	C000595851	ciliobrevin D	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:137773	Derricin	skos:exactMatch	mesh	C000604275	derricin	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:138870	Gonyautoxin 5	skos:exactMatch	mesh	C042155	gonyautoxin V	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:138935	S-nitroso-L-cysteine	skos:exactMatch	mesh	C021315	S-nitrosocysteine	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:139030	hydroxysafflor yellow A	skos:exactMatch	mesh	C085278	hydroxysafflor yellow A	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:139037	golgicide A	skos:exactMatch	mesh	C539165	golgicide A	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:139557	antalarmin	skos:exactMatch	mesh	C103016	antalarmin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:140079	itasetron	skos:exactMatch	mesh	C070191	itasetron	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:140407	ceftobiprole	skos:exactMatch	mesh	C443755	ceftobiprole	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:140427	desirudin	skos:exactMatch	mesh	C060225	desirudin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:140621	cisatracurium	skos:exactMatch	mesh	C101584	cisatracurium	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:141520	imidaprilat	skos:exactMatch	mesh	C078006	imidaprilat	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:141904	Goniomedine A	skos:exactMatch	mesh	C576310	goniomedine A	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:141905	Goniomedine B	skos:exactMatch	mesh	C576311	goniomedine B	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:141908	Goniomitine	skos:exactMatch	mesh	C526621	goniomitine	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:141969	tipifarnib	skos:exactMatch	mesh	C402769	tipifarnib	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:142261	ganoderol B	skos:exactMatch	mesh	C521787	ganoderol B	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:142437	lepirudin	skos:exactMatch	mesh	C083544	lepirudin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:144086	spongotine A	skos:exactMatch	mesh	C525418	spongotine A	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:144113	Argopsin	skos:exactMatch	mesh	C058444	argopsin	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:144119	Atranorin	skos:exactMatch	mesh	C026304	atranorin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:144205	Protolichesterinic acid	skos:exactMatch	mesh	C095781	protolichesterinic acid	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:144984	NSC 23766	skos:exactMatch	mesh	C487513	NSC 23766	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1817,14 +1827,33 @@ chebi	CHEBI:15843	arachidonic acid	skos:exactMatch	mesh	D016718	Arachidonic Acid
 chebi	CHEBI:15940	nicotinic acid	skos:exactMatch	mesh	D009539	Nicotinic Acids	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:16400	gossypetin	skos:exactMatch	mesh	C059922	gossypetin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:16563	tetrahydropalmatine	skos:exactMatch	mesh	C014215	tetrahydropalmatine	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:166797	Gorgosterol	skos:exactMatch	mesh	C021689	gorgosterol	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:167600	delgocitinib	skos:exactMatch	mesh	C000621572	delgocitinib	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:167707	acalabrutinib	skos:exactMatch	mesh	C000604908	acalabrutinib	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:167768	Oregonin	skos:exactMatch	mesh	C409456	oregonin	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:167873	Erythro-dihydrosphingosine	skos:exactMatch	mesh	C458141	erythro-dihydrosphingosine	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:168069	Garcimangosone D	skos:exactMatch	mesh	C435264	garcimangosone D	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:169234	Garcimangosone C	skos:exactMatch	mesh	C435263	garcimangosone C	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:169864	Sphingofungin E	skos:exactMatch	mesh	C078943	sphingofungin E	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:172692	Mangostenone B	skos:exactMatch	mesh	C461722	mangostenone B	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:17351	linoleic acid	skos:exactMatch	mesh	D019787	Linoleic Acid	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:17447	geraniol	skos:exactMatch	mesh	C007836	geraniol	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:175290	3-Isomangostin	skos:exactMatch	mesh	C114655	3-isomangostin	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:17548	alginic acid	skos:exactMatch	mesh	D000077322	Alginic Acid	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:175901	gemcitabine	skos:exactMatch	mesh	C056507	gemcitabine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:17609	cortisol 21-acetate	skos:exactMatch	mesh	C021650	hydrocortisone acetate	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:176844	niraparib	skos:exactMatch	mesh	C545685	niraparib	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:176928	Gomisin D	skos:exactMatch	mesh	C082092	gomisin D	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:177453	Elagolix	skos:exactMatch	mesh	C539351	elagolix	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:177459	Golotimod	skos:exactMatch	mesh	C470075	golotimod	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:177512	Sagopilone	skos:exactMatch	mesh	C530494	sagopilone	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:177579	lergotrile	skos:exactMatch	mesh	C031875	lergotrile	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:177858	gosogliptin	skos:exactMatch	mesh	C558848	gosogliptin	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:178161	Mangostenol	skos:exactMatch	mesh	C461720	mangostenol	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:178686	N,N,N-trimethyl-sphingosine	skos:exactMatch	mesh	C071600	N,N,N-trimethylsphingosine	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:17968	butyrate	skos:exactMatch	mesh	D002087	Butyrates	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:180160	Uvangoletin	skos:exactMatch	mesh	C000611553	uvangoletin	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:180404	Isoegomaketone	skos:exactMatch	mesh	C568138	isoegomaketone	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:18059	lipid	skos:exactMatch	mesh	D008055	Lipids	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:18085	glycosaminoglycan	skos:exactMatch	mesh	D006025	Glycosaminoglycans	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:18170	selenic acid	skos:exactMatch	mesh	D064586	Selenic Acid	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1852,6 +1881,7 @@ chebi	CHEBI:26333	prostaglandin	skos:exactMatch	mesh	D011453	Prostaglandins	manu
 chebi	CHEBI:26667	sialic acid	skos:exactMatch	mesh	D012794	Sialic Acids	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:267413	balsalazide	skos:exactMatch	mesh	C038637	balsalazide	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:2682	amphotericin B	skos:exactMatch	mesh	C068538	liposomal amphotericin B	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:2721	Angoline	skos:exactMatch	mesh	C113966	angoline	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:27612	hydantoin	skos:exactMatch	mesh	D006827	Hydantoins	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:27777	acetohydroxamic acid	skos:exactMatch	mesh	C006358	acetohydroxamic acid	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:28179	benzamide	skos:exactMatch	mesh	C037689	benzamide	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1864,6 +1894,7 @@ chebi	CHEBI:28934	vitamin D2	skos:exactMatch	mesh	D004872	Ergocalciferols	manual
 chebi	CHEBI:29005	cyclohexane	skos:exactMatch	mesh	D003510	Cyclohexanes	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:291342	desloratadine	skos:exactMatch	mesh	C121345	desloratadine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:291902	eptifibatide	skos:exactMatch	mesh	D000077542	Eptifibatide	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:29547	Bis-noryangonin	skos:exactMatch	mesh	C000293	bisnoryangonin	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:29678	sodium arsenite	skos:exactMatch	mesh	C017947	sodium arsenite	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:2968	bacampicillin	skos:exactMatch	mesh	C011674	bacampicillin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:29688	telithromycin	skos:exactMatch	mesh	C106791	telithromycin	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1897,12 +1928,14 @@ chebi	CHEBI:31439	crotamiton	skos:exactMatch	mesh	C005553	crotamiton	manually_re
 chebi	CHEBI:31501	dimorpholamine	skos:exactMatch	mesh	C100074	dimorpholamine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:315018	echinocandin B	skos:exactMatch	mesh	C007572	echinocandin B	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:315019	cilofungin	skos:exactMatch	mesh	C042101	cilofungin	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:31529	ecgonine methyl ester	skos:exactMatch	mesh	C034524	ecgonine methyl ester	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:31549	epothilone A	skos:exactMatch	mesh	C093787	epothilone A	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:31550	epothilone B	skos:exactMatch	mesh	C093788	epothilone B	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:31612	Floctafenine	skos:exactMatch	mesh	C084600	floctafenine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:31649	teprenone	skos:exactMatch	mesh	C031049	geranylgeranylacetone	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:31664	Haloperidol decanoate	skos:exactMatch	mesh	C033563	haloperidol decanoate	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:3176	brinzolamide	skos:exactMatch	mesh	C111827	brinzolamide	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:31817	Menfegol	skos:exactMatch	mesh	C029270	menfegol	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:31857	Mizolastine	skos:exactMatch	mesh	C076170	mizolastine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:31864	Montirelin	skos:exactMatch	mesh	C031926	montirelin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:31883	N-oleoyldopamine	skos:exactMatch	mesh	C488796	N-oleoyldopamine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1915,6 +1948,8 @@ chebi	CHEBI:32061	Propentofylline	skos:exactMatch	mesh	C032114	propentofylline	m
 chebi	CHEBI:32076	zinc pyrithione	skos:exactMatch	mesh	C010423	pyrithione zinc	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:3208	Budlein A	skos:exactMatch	mesh	C520233	budlein A	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:32126	Seratrodast	skos:exactMatch	mesh	C060230	seratrodast	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:32174	syringomycin	skos:exactMatch	mesh	C032677	syringomycin	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:32175	Syrosingopine	skos:exactMatch	mesh	C084824	syrosingopine	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:32184	tazarotene	skos:exactMatch	mesh	C086827	tazarotene	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:32195	Tesaglitazar	skos:exactMatch	mesh	C501413	tesaglitazar	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:32223	tibolone	skos:exactMatch	mesh	C027385	tibolone	manually_reviewed	orcid:0000-0001-9439-5346
@@ -1954,8 +1989,10 @@ chebi	CHEBI:36092	clavulone	skos:exactMatch	mesh	C046249	clavulones	manually_rev
 chebi	CHEBI:36241	3,4-dihydroxybenzoate	skos:exactMatch	mesh	C520290	3,4-dihydroxybenzoate	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:36413	anabolic agent	skos:exactMatch	mesh	D045930	Anabolic Agents	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:36624	naphthyridine	skos:exactMatch	mesh	D009287	Naphthyridines	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:3700	Cimicifugoside	skos:exactMatch	mesh	C031436	cimicifugoside	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:3746	clindamycin phosphate	skos:exactMatch	mesh	C007084	clindamycin phosphate	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:37527	acid	skos:exactMatch	mesh	D000143	Acids	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:37550	sphingosine 1-phosphate	skos:exactMatch	mesh	C060506	sphingosine 1-phosphate	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:37965	2H-pyran-2-one	skos:exactMatch	mesh	C584017	2-pyrone	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:38068	antimalarial	skos:exactMatch	mesh	D000962	Antimalarials	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:38070	anti-arrhythmia drug	skos:exactMatch	mesh	D000889	Anti-Arrhythmia Agents	manually_reviewed	orcid:0000-0001-9439-5346
