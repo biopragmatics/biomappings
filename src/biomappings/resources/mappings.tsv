@@ -3254,6 +3254,7 @@ mesh	C021240	tissue-factor-pathway inhibitor 2	skos:exactMatch	ncit	C111846	Tiss
 mesh	C022052	placental ribonuclease inhibitor	skos:exactMatch	ncit	C101604	Ribonuclease Inhibitor	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C024352	fludarabine	skos:exactMatch	ncit	C1094	Fludarabine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C025026	sodium sulfite	skos:exactMatch	ncit	C28205	Sodium Sulfite	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	C026452	messenger ribonucleoprotein	skos:exactMatch	go	GO:1990124	messenger ribonucleoprotein complex	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C029943	potassium hydroxide	skos:exactMatch	ncit	C28204	Potassium Hydroxide	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C033065	aluminum magnesium silicate	skos:exactMatch	ncit	C83898	Magnesium Aluminum Silicate	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C033246	prostaglandin E3	skos:exactMatch	ncit	C121971	Prostaglandin E3	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4940,6 +4941,7 @@ mesh	D000071218	Ultradian Rhythm	skos:exactMatch	go	GO:0007624	ultradian rhythm	
 mesh	D000071243	Zika Virus Infection	skos:exactMatch	ncit	C128423	Zika Virus Infection	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000071244	Zika Virus	skos:exactMatch	ncit	C128553	Zika Virus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000071380	Fibromatosis, Plantar	skos:exactMatch	doid	DOID:8936	plantar fascial fibromatosis	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D000071436	Thermotolerance	skos:exactMatch	go	GO:0010286	heat acclimation	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000071437	Axon Guidance	skos:exactMatch	go	GO:0007411	axon guidance	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000071444	Phototaxis	skos:exactMatch	go	GO:0042331	phototaxis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000071448	Axon Fasciculation	skos:exactMatch	go	GO:0007413	axonal fasciculation	manually_reviewed	orcid:0000-0001-9439-5346
@@ -4978,6 +4980,7 @@ mesh	D000074324	Ipilimumab	skos:exactMatch	ncit	C2654	Ipilimumab	manually_review
 mesh	D000074361	Sleep Latency	skos:exactMatch	efo	0005280	sleep latency	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000074382	Greenhouse Gases	skos:exactMatch	chebi	CHEBI:76413	greenhouse gas	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000075	Acepromazine	skos:exactMatch	chebi	CHEBI:44932	acepromazine	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000075065	Elongin	skos:exactMatch	go	GO:0070449	elongin complex	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000075122	Smoldering Multiple Myeloma	skos:exactMatch	doid	DOID:9551	smoldering myeloma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D000075163	Metallocenes	skos:exactMatch	chebi	CHEBI:33963	metallocene	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000075322	Heavy Metal Poisoning	skos:exactMatch	efo	1001518	heavy metal poisoning	manually_reviewed	orcid:0000-0001-9439-5346
@@ -5201,6 +5204,7 @@ mesh	D000186	Actinium	skos:exactMatch	chebi	CHEBI:33337	actinium atom	manually_r
 mesh	D000198	Spectinomycin	skos:exactMatch	chebi	CHEBI:9215	spectinomycin	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000200	Action Potentials	skos:exactMatch	go	GO:0001508	action potential	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000205	Actomyosin	skos:exactMatch	go	GO:0042641	actomyosin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000210	Acute-Phase Reaction	skos:exactMatch	go	GO:0006953	acute-phase response	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000212	Acyclovir	skos:exactMatch	chebi	CHEBI:2453	acyclovir	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000212	Acyclovir	skos:exactMatch	ncit	C205	Acyclovir	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000225	Adenine	skos:exactMatch	chebi	CHEBI:16708	adenine	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6162,6 +6166,8 @@ mesh	D010588	Phagosomes	skos:exactMatch	go	GO:0045335	phagocytic vesicle	manuall
 mesh	D010656	Phenylephrine	skos:exactMatch	chebi	CHEBI:8093	phenylephrine	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D010673	Pheochromocytoma	skos:exactMatch	doid	DOID:0050892	adrenal gland pheochromocytoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D010766	Phosphorylation	skos:exactMatch	go	GO:0016310	phosphorylation	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D010782	Photolysis	skos:exactMatch	go	GO:0019684	photosynthesis, light reaction	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D010785	Photophosphorylation	skos:exactMatch	go	GO:0009777	photosynthetic phosphorylation	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D010788	Photosynthesis	skos:exactMatch	go	GO:0015979	photosynthesis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D010849	Picornaviridae	skos:exactMatch	ncit	C14256	Picornavirus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D010858	Pigmentation	skos:exactMatch	go	GO:0043473	pigmentation	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6310,6 +6316,7 @@ mesh	D013122	Spinal Diseases	skos:exactMatch	doid	DOID:0060564	spinal disease	ma
 mesh	D013148	Spironolactone	skos:exactMatch	chebi	CHEBI:9241	spironolactone	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D013155	Spleen Focus-Forming Viruses	skos:exactMatch	ncit	C14276	Spleen Focus-Forming Virus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D013203	Staphylococcal Infections	skos:exactMatch	efo	0005681	Staphylococcus aureus infection	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D013216	Reflex, Startle	skos:exactMatch	go	GO:0001964	startle response	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D013375	Substance Withdrawal Syndrome	skos:exactMatch	doid	DOID:0060001	withdrawal disorder	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D013394	Sucrase-Isomaltase Complex	skos:exactMatch	go	GO:0070014	sucrase-isomaltase complex	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D013405	Suicide	skos:exactMatch	efo	0007624	suicide	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6550,6 +6557,9 @@ mesh	D017366	Serotonin Receptor Agonists	skos:exactMatch	ncit	C47794	Serotonin A
 mesh	D017368	Protein Prenylation	skos:exactMatch	go	GO:0018342	protein prenylation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017374	Paroxetine	skos:exactMatch	chebi	CHEBI:7936	paroxetine	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D017409	Sufentanil	skos:exactMatch	chebi	CHEBI:9316	sufentanil	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D017412	Ribonucleoprotein, U1 Small Nuclear	skos:exactMatch	go	GO:0005685	U1 snRNP	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D017413	Ribonucleoprotein, U2 Small Nuclear	skos:exactMatch	go	GO:0005686	U2 snRNP	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D017415	Ribonucleoprotein, U5 Small Nuclear	skos:exactMatch	go	GO:0005682	U5 snRNP	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D017442	Histamine Agonists	skos:exactMatch	chebi	CHEBI:35678	histamine agonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D017499	Porokeratosis	skos:exactMatch	doid	DOID:3805	porokeratosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D017510	Protein Folding	skos:exactMatch	go	GO:0006457	protein folding	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6628,6 +6638,7 @@ mesh	D019145	Rehabilitation Nursing	skos:exactMatch	ncit	C17959	Rehabilitation N
 mesh	D019154	Protein Splicing	skos:exactMatch	go	GO:0030908	protein splicing	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019175	DNA Methylation	skos:exactMatch	go	GO:0006306	DNA methylation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019213	Rubulavirus	skos:exactMatch	ncit	C14326	Rubulavirus	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D019251	Nucleocapsid	skos:exactMatch	go	GO:0019013	viral nucleocapsid	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D019259	Lamivudine	skos:exactMatch	chebi	CHEBI:63577	lamivudine	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D019274	Botulinum Toxins, Type A	skos:exactMatch	chebi	CHEBI:3160	Botulinum toxin type A	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D019276	Glycocalyx	skos:exactMatch	go	GO:0030112	glycocalyx	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6693,6 +6704,7 @@ mesh	D020799	Pancrelipase	skos:exactMatch	ncit	C29345	Pancrelipase	manually_revi
 mesh	D020845	Selective Estrogen Receptor Modulators	skos:exactMatch	ncit	C1821	Selective Estrogen Receptor Modulator	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020847	Estrogen Receptor Modulators	skos:exactMatch	chebi	CHEBI:50739	estrogen receptor modulator	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020868	Gene Silencing	skos:exactMatch	go	GO:0016458	gene silencing	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D020885	Ribonucleoprotein, U7 Small Nuclear	skos:exactMatch	go	GO:0005683	U7 snRNP	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020894	Microfibrils	skos:exactMatch	go	GO:0001527	microfibril	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020910	Ketorolac	skos:exactMatch	chebi	CHEBI:6129	ketorolac	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020911	Ketorolac Tromethamine	skos:exactMatch	chebi	CHEBI:6130	ketorolac tromethamine	manually_reviewed	orcid:0000-0003-4423-4370
@@ -6945,6 +6957,7 @@ mesh	D054972	Postural Orthostatic Tachycardia Syndrome	skos:exactMatch	doid	DOID
 mesh	D054974	Costameres	skos:exactMatch	go	GO:0043034	costamere	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D054990	Idiopathic Pulmonary Fibrosis	skos:exactMatch	ncit	C35716	Idiopathic Pulmonary Fibrosis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D054992	Immunological Synapses	skos:exactMatch	go	GO:0001772	immunological synapse	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D055049	Salt Tolerance	skos:exactMatch	go	GO:0042538	hyperosmotic salinity response	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D055092	Laryngomalacia	skos:exactMatch	ncit	C98971	Laryngomalacia	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055212	Photoreceptor Connecting Cilium	skos:exactMatch	go	GO:0032391	photoreceptor connecting cilium	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055257	Mucin-5B	skos:exactMatch	hgnc	7516	MUC5B	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6969,7 +6982,9 @@ mesh	D055430	Bone Morphogenetic Protein 15	skos:exactMatch	hgnc	1068	BMP15	manua
 mesh	D055436	Growth Differentiation Factor 15	skos:exactMatch	hgnc	30142	GDF15	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055451	Growth Differentiation Factor 3	skos:exactMatch	hgnc	4218	GDF3	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055495	Neurogenesis	skos:exactMatch	go	GO:0022008	neurogenesis	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D055503	Protein Multimerization	skos:exactMatch	go	GO:0051259	protein complex oligomerization	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D055531	Gemini of Coiled Bodies	skos:exactMatch	go	GO:0097504	Gemini of coiled bodies	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D055537	Light Signal Transduction	skos:exactMatch	go	GO:0007602	phototransduction	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D055549	Volatile Organic Compounds	skos:exactMatch	chebi	CHEBI:134179	volatile organic compound	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055623	Keratosis, Actinic	skos:exactMatch	hp	HP:0025127	Actinic keratosis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055666	Lipopeptides	skos:exactMatch	chebi	CHEBI:46895	lipopeptide	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6980,6 +6995,7 @@ mesh	D055752	Small Cell Lung Carcinoma	skos:exactMatch	ncit	C4917	Small Cell Lun
 mesh	D055944	Magnetosomes	skos:exactMatch	go	GO:0110143	magnetosome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D055959	Intervertebral Disc Degeneration	skos:exactMatch	doid	DOID:90	degenerative disc disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D056245	Mi-2 Nucleosome Remodeling and Deacetylase Complex	skos:exactMatch	go	GO:0016581	NuRD complex	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D056264	Sin3 Histone Deacetylase and Corepressor Complex	skos:exactMatch	go	GO:0016580	Sin3 complex	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D056344	Executive Function	skos:exactMatch	efo	0007046	executive function	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D056344	Executive Function	skos:exactMatch	ncit	C88419	Executive Function	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D056572	Histone Deacetylase Inhibitors	skos:exactMatch	chebi	CHEBI:61115	EC 3.5.1.98 (histone deacetylase) inhibitor	manually_reviewed	orcid:0000-0003-4423-4370
@@ -7211,6 +7227,7 @@ mesh	D060388	Support Vector Machine	skos:exactMatch	ncit	C78542	Support Vector M
 mesh	D060406	Brassinosteroids	skos:exactMatch	chebi	CHEBI:22921	brassinosteroid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D060449	Wnt Signaling Pathway	skos:exactMatch	go	GO:0016055	Wnt signaling pathway	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D060449	Wnt Signaling Pathway	skos:exactMatch	kegg.pathway	map04310	Wnt signaling pathway	manual	orcid:0000-0003-4423-4370
+mesh	D060465	Axin Signaling Complex	skos:exactMatch	go	GO:0030877	beta-catenin destruction complex	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D060645	Scopulariopsis	skos:exactMatch	ncit	C124394	Scopulariopsis	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D060705	Dyscalculia	skos:exactMatch	hp	HP:0002442	Dyscalculia	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D060733	Electromagnetic Radiation	skos:exactMatch	ncit	C17050	Electromagnetic Radiation	manually_reviewed	orcid:0000-0001-9439-5346
@@ -7396,6 +7413,7 @@ mesh	D065819	Voriconazole	skos:exactMatch	ncit	C1707	Voriconazole	manually_revie
 mesh	D065842	Pars Compacta	skos:exactMatch	ncit	C97341	Pars Compacta	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065843	Cerebral Crus	skos:exactMatch	ncit	C32409	Crus Cerebri	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065850	Cerebral Peduncle	skos:exactMatch	ncit	C32291	Cerebral Peduncle	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D065853	Spatial Learning	skos:exactMatch	go	GO:0008542	visual learning	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D065866	Optic Tract	skos:exactMatch	ncit	C33218	Optic Tract	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065886	Neurodevelopmental Disorders	skos:exactMatch	efo	0010642	Neurodevelopmental disorder	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D065908	Transcranial Direct Current Stimulation	skos:exactMatch	ncit	C129862	Transcranial Direct Current Stimulation	manually_reviewed	orcid:0000-0001-9439-5346
