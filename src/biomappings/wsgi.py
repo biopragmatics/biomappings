@@ -71,7 +71,9 @@ class Controller:
         limit: Optional[int] = None,
         query: Optional[str] = None,
         source_query: Optional[str] = None,
+        source_prefix: Optional[str] = None,
         target_query: Optional[str] = None,
+        target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
         same_text: bool = False,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
@@ -83,16 +85,20 @@ class Controller:
             or target fields.
         :param source_query: If given, show only equivalences that have it appearing as a substring in one of the source
             fields.
+        :param source_prefix: If given, show only mappings that have it appearing in the source prefix field
         :param target_query: If given, show only equivalences that have it appearing as a substring in one of the target
             fields.
+        :param target_prefix: If given, show only mappings that have it appearing in the target prefix field
         :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes.
         :param same_text: If true, filter to predictions with the same label
         :yields: Pairs of positions and prediction dictionaries
         """
         it = self._help_it_predictions(
             query=query,
-            source=source_query,
-            target=target_query,
+            source_query=source_query,
+            source_prefix=source_prefix,
+            target_query=target_query,
+            target_prefix=target_prefix,
             prefix=prefix,
             same_text=same_text,
         )
@@ -114,15 +120,19 @@ class Controller:
         self,
         query: Optional[str] = None,
         source_query: Optional[str] = None,
+        source_prefix: Optional[str] = None,
         target_query: Optional[str] = None,
+        target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
         same_text: bool = False,
     ) -> int:
         """Count the number of predictions to check for the given filters."""
         it = self._help_it_predictions(
             query=query,
-            source=source_query,
-            target=target_query,
+            source_query=source_query,
+            source_prefix=source_prefix,
+            target_query=target_query,
+            target_prefix=target_prefix,
             prefix=prefix,
             same_text=same_text,
         )
@@ -131,8 +141,10 @@ class Controller:
     def _help_it_predictions(
         self,
         query: Optional[str] = None,
-        source: Optional[str] = None,
-        target: Optional[str] = None,
+        source_query: Optional[str] = None,
+        source_prefix: Optional[str] = None,
+        target_query: Optional[str] = None,
+        target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
         same_text: bool = False,
     ):
@@ -158,14 +170,18 @@ class Controller:
                     "target name",
                 },
             )
-        if source is not None:
+        if source_prefix is not None:
+            it = self._help_filter(source_prefix, it, {"source prefix"})
+        if source_query is not None:
             it = self._help_filter(
-                source, it, {"source prefix", "source identifier", "source name"}
+                source_query, it, {"source prefix", "source identifier", "source name"}
             )
-        if target is not None:
+        if target_query is not None:
             it = self._help_filter(
-                target, it, {"target prefix", "target identifier", "target name"}
+                target_query, it, {"target prefix", "target identifier", "target name"}
             )
+        if target_prefix is not None:
+            it = self._help_filter(target_prefix, it, {"target prefix"})
         if prefix is not None:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
 
@@ -303,8 +319,10 @@ def home():
     limit = flask.request.args.get("limit", type=int, default=10)
     offset = flask.request.args.get("offset", type=int, default=0)
     query = flask.request.args.get("query")
-    source_query = flask.request.args.get("source")
-    target_query = flask.request.args.get("target")
+    source_query = flask.request.args.get("source_query")
+    source_prefix = flask.request.args.get("source_prefix")
+    target_query = flask.request.args.get("target_query")
+    target_prefix = flask.request.args.get("target_prefix")
     prefix = flask.request.args.get("prefix")
     same_text = flask.request.args.get("same_text", default="false").lower() in {"true", "t"}
     show_relations = app.config["SHOW_RELATIONS"]
@@ -317,7 +335,9 @@ def home():
         offset=offset,
         query=query,
         source_query=source_query,
+        source_prefix=source_prefix,
         target_query=target_query,
+        target_prefix=target_prefix,
         prefix=prefix,
         same_text=same_text,
         # configured
@@ -396,8 +416,10 @@ def _go_home():
             limit=flask.request.args.get("limit", type=int),
             offset=flask.request.args.get("offset", type=int),
             query=flask.request.args.get("query"),
-            source=flask.request.args.get("source"),
-            target=flask.request.args.get("target"),
+            source_query=flask.request.args.get("source_query"),
+            source_prefix=flask.request.args.get("source_prefix"),
+            target_query=flask.request.args.get("target_query"),
+            target_prefix=flask.request.args.get("target_prefix"),
             prefix=flask.request.args.get("prefix"),
             same_text=flask.request.args.get("same_text", default="false").lower() in {"true", "t"},
             # config
