@@ -1,3 +1,183 @@
+- agro:00000116:
+    identifier: '00000116'
+    link: https://bioregistry.io/agro:00000116
+    name: draft animal
+    prefix: agro
+  agrovoc:10457:
+    identifier: '10457'
+    link: https://bioregistry.io/agrovoc:10457
+    name: draught animals
+    prefix: agrovoc
+  agrovoc:8446:
+    identifier: '8446'
+    link: https://bioregistry.io/agrovoc:8446
+    name: working animals
+    prefix: agrovoc
+- agro:00000229:
+    identifier: 00000229
+    link: https://bioregistry.io/agro:00000229
+    name: plant transplanting process
+    prefix: agro
+  agrovoc:13811:
+    identifier: '13811'
+    link: https://bioregistry.io/agrovoc:13811
+    name: replanting
+    prefix: agrovoc
+  agrovoc:7873:
+    identifier: '7873'
+    link: https://bioregistry.io/agrovoc:7873
+    name: transplanting
+    prefix: agrovoc
+- agro:00000540:
+    identifier: '00000540'
+    link: https://bioregistry.io/agro:00000540
+    name: forage harvester
+    prefix: agro
+  agrovoc:24001:
+    identifier: '24001'
+    link: https://bioregistry.io/agrovoc:24001
+    name: choppers
+    prefix: agrovoc
+  agrovoc:25763:
+    identifier: '25763'
+    link: https://bioregistry.io/agrovoc:25763
+    name: forage harvesters
+    prefix: agrovoc
+- agro:00002042:
+    identifier: '00002042'
+    link: https://bioregistry.io/agro:00002042
+    name: vermicompost
+    prefix: agro
+  agrovoc:24262:
+    identifier: '24262'
+    link: https://bioregistry.io/agrovoc:24262
+    name: vermiculture
+    prefix: agrovoc
+  agrovoc:c319a4d3:
+    identifier: c319a4d3
+    link: https://bioregistry.io/agrovoc:c319a4d3
+    name: vermicomposts
+    prefix: agrovoc
+- agro:00000051:
+    identifier: '00000051'
+    link: https://bioregistry.io/agro:00000051
+    name: seed dressing
+    prefix: agro
+  agrovoc:26820:
+    identifier: '26820'
+    link: https://bioregistry.io/agrovoc:26820
+    name: seed dressing
+    prefix: agrovoc
+  agrovoc:6940:
+    identifier: '6940'
+    link: https://bioregistry.io/agrovoc:6940
+    name: seed treatment
+    prefix: agrovoc
+- agro:00000022:
+    identifier: '00000022'
+    link: https://bioregistry.io/agro:00000022
+    name: biological pest control process
+    prefix: agro
+  agrovoc:330635:
+    identifier: '330635'
+    link: https://bioregistry.io/agrovoc:330635
+    name: biological pest control
+    prefix: agrovoc
+  agrovoc:918:
+    identifier: '918'
+    link: https://bioregistry.io/agrovoc:918
+    name: biological control
+    prefix: agrovoc
+- chebi:15940:
+    identifier: CHEBI:15940
+    link: https://bioregistry.io/chebi:15940
+    name: nicotinic acid
+    prefix: chebi
+  mesh:D009525:
+    identifier: D009525
+    link: https://bioregistry.io/mesh:D009525
+    name: Niacin
+    prefix: mesh
+  mesh:D009539:
+    identifier: D009539
+    link: https://bioregistry.io/mesh:D009539
+    name: Nicotinic Acids
+    prefix: mesh
+- chebi:26267:
+    identifier: CHEBI:26267
+    link: https://bioregistry.io/chebi:26267
+    name: proanthocyanidin
+    prefix: chebi
+  mesh:C013221:
+    identifier: C013221
+    link: https://bioregistry.io/mesh:C013221
+    name: proanthocyanidin
+    prefix: mesh
+  mesh:D044945:
+    identifier: D044945
+    link: https://bioregistry.io/mesh:D044945
+    name: Proanthocyanidins
+    prefix: mesh
+- chebi:2682:
+    identifier: CHEBI:2682
+    link: https://bioregistry.io/chebi:2682
+    name: amphotericin B
+    prefix: chebi
+  mesh:C068538:
+    identifier: C068538
+    link: https://bioregistry.io/mesh:C068538
+    name: liposomal amphotericin B
+    prefix: mesh
+  mesh:D000666:
+    identifier: D000666
+    link: https://bioregistry.io/mesh:D000666
+    name: Amphotericin B
+    prefix: mesh
+- chebi:50469:
+    identifier: CHEBI:50469
+    link: https://bioregistry.io/chebi:50469
+    name: EC 3.1.1.4 (phospholipase A2) inhibitor
+    prefix: chebi
+  mesh:C400481:
+    identifier: C400481
+    link: https://bioregistry.io/mesh:C400481
+    name: PLIalpha
+    prefix: mesh
+  mesh:D064801:
+    identifier: D064801
+    link: https://bioregistry.io/mesh:D064801
+    name: Phospholipase A2 Inhibitors
+    prefix: mesh
+- cl:0000101:
+    identifier: CL:0000101
+    link: https://bioregistry.io/cl:0000101
+    name: sensory neuron
+    prefix: cl
+  cl:0000197:
+    identifier: CL:0000197
+    link: https://bioregistry.io/cl:0000197
+    name: sensory receptor cell
+    prefix: cl
+  mesh:D011984:
+    identifier: D011984
+    link: https://bioregistry.io/mesh:D011984
+    name: Sensory Receptor Cells
+    prefix: mesh
+- doid:11263:
+    identifier: DOID:11263
+    link: https://bioregistry.io/doid:11263
+    name: chlamydia
+    prefix: doid
+  mesh:D002689:
+    identifier: D002689
+    link: https://bioregistry.io/mesh:D002689
+    name: Chlamydia
+    prefix: mesh
+  mesh:D002690:
+    identifier: D002690
+    link: https://bioregistry.io/mesh:D002690
+    name: Chlamydia Infections
+    prefix: mesh
 - kegg.pathway:hsa00100:
     identifier: hsa00100
     link: https://bioregistry.io/kegg.pathway:hsa00100
@@ -213,6 +393,21 @@
     link: https://bioregistry.io/kegg.pathway:map04920
     name: Adipocytokine signaling pathway
     prefix: kegg.pathway
+- doid:0080141:
+    identifier: DOID:0080141
+    link: https://bioregistry.io/doid:0080141
+    name: mosaic variegated aneuploidy syndrome 1
+    prefix: doid
+  doid:0080688:
+    identifier: DOID:0080688
+    link: https://bioregistry.io/doid:0080688
+    name: mosaic variegated aneuploidy syndrome
+    prefix: doid
+  mesh:C536987:
+    identifier: C536987
+    link: https://bioregistry.io/mesh:C536987
+    name: Mosaic variegated aneuploidy syndrome
+    prefix: mesh
 - doid:0050811:
     identifier: DOID:0050811
     link: https://bioregistry.io/doid:0050811
@@ -227,6 +422,36 @@
     identifier: D000312
     link: https://bioregistry.io/mesh:D000312
     name: Adrenal Hyperplasia, Congenital
+    prefix: mesh
+- doid:0002116:
+    identifier: DOID:0002116
+    link: https://bioregistry.io/doid:0002116
+    name: pterygium
+    prefix: doid
+  doid:10526:
+    identifier: DOID:10526
+    link: https://bioregistry.io/doid:10526
+    name: conjunctival pterygium
+    prefix: doid
+  mesh:D011625:
+    identifier: D011625
+    link: https://bioregistry.io/mesh:D011625
+    name: Pterygium
+    prefix: mesh
+- doid:0050748:
+    identifier: DOID:0050748
+    link: https://bioregistry.io/doid:0050748
+    name: marginal zone B-cell lymphoma
+    prefix: doid
+  doid:0050909:
+    identifier: DOID:0050909
+    link: https://bioregistry.io/doid:0050909
+    name: MALT lymphoma
+    prefix: doid
+  mesh:D018442:
+    identifier: D018442
+    link: https://bioregistry.io/mesh:D018442
+    name: Lymphoma, B-Cell, Marginal Zone
     prefix: mesh
 - reactome:R-HSA-8937144:
     identifier: R-HSA-8937144

@@ -1,21 +1,32 @@
+creator_id:
+- orcid:0000-0001-9439-5346
+- orcid:0000-0002-2046-6145
+- orcid:0000-0002-2627-0696
+- orcid:0000-0003-1307-2508
+- orcid:0000-0003-4423-4370
 curie_map:
+  agro: http://purl.obolibrary.org/obo/AGRO_
+  agrovoc: http://aims.fao.org/aos/agrovoc/c_
   bto: 'https://www.ebi.ac.uk/ols/ontologies/bto/terms?obo_id=BTO:'
   ccle: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
-  cellosaurus: https://web.expasy.org/cellosaurus/
+  cellosaurus: https://www.cellosaurus.org/CVCL_
   chebi: 'https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:'
+  cl: 'https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:'
   depmap: https://depmap.org/portal/cell_line/
   doid: 'https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:'
   efo: http://www.ebi.ac.uk/efo/EFO_
   go: 'http://amigo.geneontology.org/amigo/term/GO:'
   hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
   hp: 'https://hpo.jax.org/app/browse/term/HP:'
-  kegg.pathway: https://www.kegg.jp/entry/
   mesh: https://meshb.nlm.nih.gov/record/ui?ui=
+  mondo: http://purl.obolibrary.org/obo/MONDO_
   ncbiprotein: https://www.ncbi.nlm.nih.gov/protein/
   ncit: http://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=
-  pfam: https://pfam.xfam.org/family/
+  pfam: https://www.ebi.ac.uk/interpro/entry/pfam/
   pr: 'https://proconsortium.org/app/entry/PR:'
+  pubchem.compound: https://pubchem.ncbi.nlm.nih.gov/compound/
   reactome: https://reactome.org/content/detail/
+  uberon: http://purl.obolibrary.org/obo/UBERON_
   umls: http://linkedlifedata.com/resource/umls/id/
   uniprot: http://purl.uniprot.org/uniprot/
   uniprot.chain: http://purl.uniprot.org/annotation/

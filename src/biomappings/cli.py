@@ -54,10 +54,10 @@ def update(ctx: click.Context):
 def lint():
     """Sort files and remove duplicates."""
     from .resources import (
+        lint_false_mappings,
         lint_predictions,
         lint_true_mappings,
         lint_unsure_mappings,
-        lint_false_mappings,
     )
 
     lint_true_mappings()
@@ -77,9 +77,18 @@ def prune(prefixes):
     filter_predictions(cf)
 
 
+@main.command()
+def remove_curated():
+    """Remove curated mappings from the predicted mappings, use this if they get out of sync."""
+    from .resources import filter_predictions, get_curated_filter
+
+    filter_predictions(get_curated_filter())
+
+
 main.add_command(export)
 main.add_command(ndex)
 main.add_command(charts)
+main.add_command(sssom)
 
 if __name__ == "__main__":
     main()

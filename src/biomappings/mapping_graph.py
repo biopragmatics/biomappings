@@ -4,7 +4,7 @@
 
 import itertools as itt
 from collections import defaultdict
-from typing import Iterable, Mapping, Optional
+from typing import DefaultDict, Dict, Iterable, Mapping, Optional
 
 import networkx as nx
 import pyobo
@@ -20,7 +20,7 @@ def get_custom_filter(
     :returns: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
     """
     graph = mutual_mapping_graph([prefix, *targets])
-    rv = defaultdict(dict)
+    rv: DefaultDict[str, Dict[str, str]] = defaultdict(dict)
     for p, identifier in graph:
         if p != prefix:
             continue

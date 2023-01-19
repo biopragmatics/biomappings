@@ -1,4 +1,24 @@
 source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	source
+agrovoc	10457	draught animals	skos:exactMatch	agro	00002004	draft animal role	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	15662	Mus	skos:exactMatch	agro	00002067	methylene urea	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	1797	compound fertilizers	skos:exactMatch	agro	00002046	NPK fertilizer	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	1972	crops	skos:exactMatch	agro	00002001	crop role	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	25694	disc ploughs	skos:exactMatch	agro	00000128	disc harrow	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	25698	mole ploughs	skos:exactMatch	agro	00000130	subsoiler	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	25716	topping	skos:exactMatch	agro	00000220	mowing process	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	2863	fertilization	skos:exactMatch	agro	01000000	agronomic fertilization process	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	3414	guano	skos:exactMatch	agro	00020003	bird guano	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	3498	harrows	skos:exactMatch	agro	00000137	chain harrow	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	3498	harrows	skos:exactMatch	agro	00000138	tine harrow	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	3510	heading	skos:exactMatch	agro	00000458	tree topping process	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	35362	monocalcium phosphate	skos:exactMatch	agro	00002065	triple superphosphate	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	5e57cd77	broiler litter	skos:exactMatch	agro	00000080	poultry litter	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	6274	pruning	skos:exactMatch	agro	00000027	thinning	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	6891	SDI	skos:exactMatch	agro	00000058	subsurface drip irrigation process	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	7771	tillage	skos:exactMatch	agro	00000002	tillage process	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	7b960f69	rainwater harvesting	skos:exactMatch	agro	00000589	water harvesting	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	8446	working animals	skos:exactMatch	agro	00002004	draft animal role	manually_reviewed	orcid:0000-0002-2627-0696
+agrovoc	fdfbb37f	parcels	skos:exactMatch	agro	00000301	agricultural experimental plot	manually_reviewed	orcid:0000-0002-2627-0696
 ccle	697_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	697	skos:exactMatch	cellosaurus	CVCL_8056	697-mel	manually_reviewed	orcid:0000-0003-1307-2508
 ccle	A204_SOFT_TISSUE	A-204	skos:exactMatch	cellosaurus	CVCL_1N55	Urd-B	manually_reviewed	orcid:0000-0003-1307-2508
 ccle	ABC1_LUNG	ABC-1	skos:exactMatch	cellosaurus	CVCL_ZB62	AbC1	manually_reviewed	orcid:0000-0003-1307-2508
@@ -17,12 +37,16 @@ ccle	COLO818_SKIN	COLO-818	skos:exactMatch	efo	0006378	COLO 800	manually_reviewe
 ccle	DEL_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	DEL	skos:exactMatch	efo	0004014	deletion	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	DM3_FIBROBLAST	DM-3	skos:exactMatch	cellosaurus	CVCL_Z233	Schneider 3	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	EBC1_LUNG	EBC-1	skos:exactMatch	cellosaurus	CVCL_E218	NB-EbC1	manually_reviewed	orcid:0000-0003-4423-4370
+ccle	ES2_OVARY	ES-2	skos:exactMatch	cellosaurus	CVCL_AX39	ES2	manually_reviewed	orcid:0000-0003-4423-4370
+ccle	ES2_OVARY	ES-2	skos:exactMatch	cellosaurus	CVCL_C769	ESe009-A	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	F5_CENTRAL_NERVOUS_SYSTEM	F5	skos:exactMatch	cellosaurus	CVCL_L876	TS/A clone F5	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	GRM_SKIN	GR-M	skos:exactMatch	cellosaurus	CVCL_WL69	GR [Mouse mammary tumor]	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	H4_CENTRAL_NERVOUS_SYSTEM	H4	skos:exactMatch	cellosaurus	CVCL_6C19	H-4	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	H4_CENTRAL_NERVOUS_SYSTEM	H4	skos:exactMatch	cellosaurus	CVCL_HA56	Hutt60	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	H4_CENTRAL_NERVOUS_SYSTEM	H4	skos:exactMatch	cellosaurus	CVCL_JF98	cyfH-4	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	HCC2279_LUNG	HCC-2279	skos:exactMatch	efo	0005374	HCC227	manually_reviewed	orcid:0000-0001-9439-5346
+ccle	HEL_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HEL	skos:exactMatch	cellosaurus	CVCL_6D72	HEL-30	manually_reviewed	orcid:0000-0003-4423-4370
+ccle	HEL_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HEL	skos:exactMatch	efo	0006579	HEL	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	HT_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HT	skos:exactMatch	efo	0003779	Hashimoto's thyroiditis	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	HT_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	HT	skos:exactMatch	efo	0004348	hematocrit	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	MCAS_OVARY	MCAS	skos:exactMatch	efo	0009001	Mastocytosis	manually_reviewed	orcid:0000-0001-9439-5346
@@ -35,18 +59,111 @@ ccle	PC3_PROSTATE	PC-3	skos:exactMatch	cellosaurus	CVCL_S982	PC-3 [Human lung ca
 ccle	PL21_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	PL-21	skos:exactMatch	cellosaurus	CVCL_E295	TS 0129	manually_reviewed	orcid:0000-0001-9439-5346
 ccle	TC71_BONE	TC-71	skos:exactMatch	cellosaurus	CVCL_S882	TC71	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	WM239A	WM239A	skos:exactMatch	cellosaurus	CVCL_RN56	WM239B	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:135025	rimazolium	skos:exactMatch	mesh	C100296	probon	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:135083	cibenzoline	skos:exactMatch	mesh	C032151	cifenline	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:17544	hydrogencarbonate	skos:exactMatch	mesh	D001639	Bicarbonates	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:29806	fumarate(2-)	skos:exactMatch	mesh	D005650	Fumarates	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:33224	chromane	skos:exactMatch	mesh	D002839	Chromans	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:33363	palladium	skos:exactMatch	mesh	D010300	Parkinson Disease	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:4031	cyclosporin A	skos:exactMatch	mesh	D003524	Cyclosporins	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:45373	sulfanilamide	skos:exactMatch	mesh	D013424	Sulfanilamides	manually_reviewed	orcid:0000-0001-9439-5346
+chebi	CHEBI:50183	P450 inhibitor	skos:exactMatch	mesh	D065690	Cytochrome P-450 CYP2D6 Inhibitors	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:50664	matrix metalloproteinase inhibitor	skos:exactMatch	mesh	D008950	MMPI	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:6456	lidocaine	skos:exactMatch	mesh	C511998	Lidoderm	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000149	visual pigment cell	skos:exactMatch	mesh	D012168	Retinal Pigments	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000322	pneumocyte	skos:exactMatch	mesh	D056809	Alveolar Epithelial Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000345	dental papilla cell	skos:exactMatch	mesh	D003771	Dental Papilla	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000384	ligament cell	skos:exactMatch	mesh	D008022	Ligaments	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000388	tendon cell	skos:exactMatch	mesh	D013710	Tendons	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000412	polyploid cell	skos:exactMatch	mesh	D011123	Polyploidy	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000413	haploid cell	skos:exactMatch	mesh	D006238	Haploidy	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000415	diploid cell	skos:exactMatch	mesh	D004171	Diploidy	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000429	imaginal disc cell	skos:exactMatch	mesh	D060227	Imaginal Discs	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000477	ovarian follicle cell	skos:exactMatch	mesh	D006080	Ovarian Follicle	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000548	animal cell	skos:exactMatch	mesh	D000818	Animals	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000565	fat body cell	skos:exactMatch	mesh	D005216	Fat Body	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000737	striated muscle cell	skos:exactMatch	mesh	D054792	Muscle, Striated	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0000968	Be cell	skos:exactMatch	mesh	D001471	Barrett Esophagus	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002148	dental pulp cell	skos:exactMatch	mesh	D003782	Dental Pulp	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002258	thyroid follicular cell	skos:exactMatch	mesh	D000072637	Thyroid Epithelial Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002367	trabecular meshwork cell	skos:exactMatch	mesh	D014129	Trabecular Meshwork	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002372	myotube	skos:exactMatch	mesh	D018485	Muscle Fibers, Skeletal	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002521	subcutaneous fat cell	skos:exactMatch	mesh	D050151	Subcutaneous Fat	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0002559	hair follicle cell	skos:exactMatch	mesh	D018859	Hair Follicle	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0008022	endocardial cushion cell	skos:exactMatch	mesh	D054089	Endocardial Cushions	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0009004	retinal cell	skos:exactMatch	mesh	D012172	Retinaldehyde	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0009005	salivary gland cell	skos:exactMatch	mesh	D012469	Salivary Glands	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0010005	atrioventricular bundle cell	skos:exactMatch	mesh	D002036	Bundle of His	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0011012	neural crest cell	skos:exactMatch	mesh	D009432	Neural Crest	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:0011026	progenitor cell	skos:exactMatch	mesh	D013234	Stem Cells	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:1000147	heart valve cell	skos:exactMatch	mesh	D006351	Heart Valves	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:1000497	kidney cell	skos:exactMatch	mesh	D007668	Kidney	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:1000504	kidney medulla cell	skos:exactMatch	mesh	D007679	Kidney Medulla	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:1000505	kidney pelvis cell	skos:exactMatch	mesh	D007682	Kidney Pelvis	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:1000507	kidney tubule cell	skos:exactMatch	mesh	D007684	Kidney Tubules	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:1001225	kidney collecting duct cell	skos:exactMatch	mesh	D007685	Kidney Tubules, Collecting	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:1001319	bladder cell	skos:exactMatch	mesh	D001743	Urinary Bladder	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:1001320	urethra cell	skos:exactMatch	mesh	D014521	Urethra	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:2000004	pituitary gland cell	skos:exactMatch	mesh	D010902	Pituitary Gland	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:2000021	sebaceous gland cell	skos:exactMatch	mesh	D012627	Sebaceous Glands	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:2000022	cardiac septum cell	skos:exactMatch	mesh	D006346	Heart Septum	manually_reviewed	orcid:0000-0001-9439-5346
+cl	CL:2000030	hypothalamus cell	skos:exactMatch	mesh	D007031	Hypothalamus	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	mesh	D006394	Hemangiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0018923	Hemangiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0278592	Adult Angiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0279988	Childhood Angiosarcoma	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0050046	Far Eastern spotted fever	skos:exactMatch	mesh	D000073605	Spotted Fever Group Rickettsiosis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050047	Flinders Island spotted fever	skos:exactMatch	mesh	D000073605	Spotted Fever Group Rickettsiosis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050050	Japanese spotted fever	skos:exactMatch	mesh	D000073605	Spotted Fever Group Rickettsiosis	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050052	Rocky Mountain spotted fever	skos:exactMatch	umls	C0035795	Rocky mountain spotted fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0050125	dengue shock syndrome	skos:exactMatch	efo	0004227	Dengue Hemorrhagic Fever	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050125	dengue shock syndrome	skos:exactMatch	mesh	D019595	Severe Dengue	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050175	tick-borne encephalitis	skos:exactMatch	umls	C0593408	Tick-borne encephalitis vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0050179	Powassan encephalitis	skos:exactMatch	mesh	D004675	Encephalitis, Tick-Borne	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050185	erythema multiforme	skos:exactMatch	umls	C4554073	Erythema Multiforme, CTCAE	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050195	Bolivian hemorrhagic fever	skos:exactMatch	mesh	D006478	Hemorrhagic Fever, American	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050256	angiostrongyliasis	skos:exactMatch	umls	C4316792	Angiostrongylus Infections	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050278	basidiobolomycosis	skos:exactMatch	mesh	C000656785	entomophthoromycosis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050279	conidiobolomycosis	skos:exactMatch	mesh	C000656785	entomophthoromycosis	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050353	wound botulism	skos:exactMatch	mesh	D001906	Botulism	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050354	infant botulism	skos:exactMatch	mesh	D001906	Botulism	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050544	hypermethioninemia	skos:exactMatch	umls	C0268621	Hepatic methionine adenosyltransferase deficiency	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050574	L-2-hydroxyglutaric aciduria	skos:exactMatch	mesh	C535306	2-Hydroxyglutaricaciduria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050574	L-2-hydroxyglutaric aciduria	skos:exactMatch	umls	C2746066	Combined D-2- and L-2-hydroxyglutaric aciduria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050575	D-2-hydroxyglutaric aciduria	skos:exactMatch	mesh	C535306	2-Hydroxyglutaricaciduria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050575	D-2-hydroxyglutaric aciduria	skos:exactMatch	umls	C2746066	Combined D-2- and L-2-hydroxyglutaric aciduria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050577	cranioectodermal dysplasia	skos:exactMatch	umls	C0432235	CRANIOECTODERMAL DYSPLASIA 1	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050580	hereditary lymphedema	skos:exactMatch	mesh	D008209	Lymphedema	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050650	familial atrial fibrillation	skos:exactMatch	mesh	D001281	Atrial Fibrillation	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050665	fetal alcohol syndrome	skos:exactMatch	mesh	D063647	Fetal Alcohol Spectrum Disorders	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050666	partial fetal alcohol syndrome	skos:exactMatch	mesh	D063647	Fetal Alcohol Spectrum Disorders	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050667	alcohol-related neurodevelopmental disorder	skos:exactMatch	mesh	D063647	Fetal Alcohol Spectrum Disorders	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050672	dyskinetic cerebral palsy	skos:exactMatch	mesh	D002547	Cerebral Palsy	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050673	mixed cerebral palsy	skos:exactMatch	mesh	D002547	Cerebral Palsy	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:0050685	small cell carcinoma	skos:exactMatch	umls	C0149925	Small cell carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:0050882	spinocerebellar ataxia type 5	skos:exactMatch	mesh	D020754	Spinocerebellar Ataxias	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050954	spinocerebellar ataxia type 1	skos:exactMatch	mesh	D020754	Spinocerebellar Ataxias	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050955	spinocerebellar ataxia type 2	skos:exactMatch	mesh	D020754	Spinocerebellar Ataxias	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050956	spinocerebellar ataxia type 6	skos:exactMatch	mesh	D020754	Spinocerebellar Ataxias	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0050958	spinocerebellar ataxia type 7	skos:exactMatch	mesh	D020754	Spinocerebellar Ataxias	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0060072	benign neoplasm	skos:exactMatch	mesh	D009369	Neoplasms	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0060133	anosognosia	skos:exactMatch	mesh	D000377	Agnosia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0060137	auditory agnosia	skos:exactMatch	mesh	D000377	Agnosia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0060141	finger agnosia	skos:exactMatch	mesh	D000377	Agnosia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0060151	tactile agnosia	skos:exactMatch	mesh	D000377	Agnosia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0060152	time agnosia	skos:exactMatch	mesh	D000377	Agnosia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0060153	topographical agnosia	skos:exactMatch	mesh	D000377	Agnosia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0070197	distal myopathy 1	skos:exactMatch	mesh	D049310	Distal Myopathies	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0070340	classic citrullinemia	skos:exactMatch	mesh	D020159	Citrullinemia	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080046	Stickler syndrome	skos:exactMatch	mesh	C537492	Stickler syndrome, type 1	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080333	aortic valve disease 1	skos:exactMatch	mesh	D000082882	Bicuspid Aortic Valve Disease	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080546	non-alcoholic fatty liver	skos:exactMatch	mesh	D065626	Non-alcoholic Fatty Liver Disease	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080547	non-alcoholic steatohepatitis	skos:exactMatch	mesh	D065626	Non-alcoholic Fatty Liver Disease	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080748	chronic inducible urticaria	skos:exactMatch	mesh	D000080223	Chronic Urticaria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080749	chronic spontaneous urticaria	skos:exactMatch	mesh	D000080223	Chronic Urticaria	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0080939	hereditary angioedema type I	skos:exactMatch	mesh	D056829	Hereditary Angioedema Types I and II	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0111135	congenital generalized lipodystrophy type 1	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	manually_reviewed	orcid:0000-0001-9439-5346
+doid	DOID:0111136	congenital generalized lipodystrophy type 2	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:1024	leprosy	skos:exactMatch	umls	C0051981	leprosy vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:10264	mumps	skos:exactMatch	umls	C0026782	Mumps Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:10844	Japanese encephalitis	skos:exactMatch	umls	C0771080	Japanese Encephalitis Vaccines	manually_reviewed	orcid:0000-0003-4423-4370
@@ -62,17 +179,22 @@ doid	DOID:1498	cholera	skos:exactMatch	umls	C0008359	cholera vaccine	manually_re
 doid	DOID:1586	rheumatic fever	skos:exactMatch	umls	C1548484	rheumatic fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:1909	melanoma	skos:exactMatch	umls	C0796561	Melanoma vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:2043	hepatitis B	skos:exactMatch	umls	C0062527	hepatitis B surface antigen vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:3479	uveal cancer	skos:exactMatch	mesh	D014604	Uveal Neoplasms	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:3482	plague	skos:exactMatch	umls	C0032066	Plague Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:3910	lung adenocarcinoma	skos:exactMatch	efo	0005288	non-small cell lung adenocarcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:4552	large cell carcinoma	skos:exactMatch	efo	0003050	large cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5411	lung oat cell carcinoma	skos:exactMatch	efo	0000702	small cell lung carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:5411	lung oat cell carcinoma	skos:exactMatch	umls	C0149925	Small cell carcinoma of lung	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:8469	influenza	skos:exactMatch	umls	C0021403	Influenza virus vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:8485	mucormycosis	skos:exactMatch	umls	C0043541	Zygomycosis	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:8622	measles	skos:exactMatch	umls	C0025010	Measles Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:870	neuropathy	skos:exactMatch	efo	0003100	peripheral neuropathy	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:8736	smallpox	skos:exactMatch	umls	C0037355	smallpox vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:8781	rubella	skos:exactMatch	umls	C0035923	Rubella virus vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:9065	leishmaniasis	skos:exactMatch	umls	C1548483	Leishmaniasis Vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:9675	pulmonary emphysema	skos:exactMatch	efo	0000464	emphysema	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:9682	yellow fever	skos:exactMatch	umls	C0301508	yellow fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
+doid	DOID:9847	peripheral vertigo	skos:exactMatch	mesh	D014717	Vertigo	manually_reviewed	orcid:0000-0001-9439-5346
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	mesh	D018528	ATP-Binding Cassette Transporters	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map03010	Ribosome	skos:exactMatch	go	GO:0005840	ribosome	manually_reviewed	orcid:0000-0003-4423-4370
@@ -173,6 +295,7 @@ mesh	C005941	3-acetylpyridine adenine dinucleotide	skos:exactMatch	doid	DOID:360
 mesh	C009524	tributyl phosphate	skos:exactMatch	efo	0004536	total blood protein measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	C010073	chemotactic factor inactivator	skos:exactMatch	go	GO:0034029	2-oxoglutarate carboxylase activity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C014801	alpha-sarcin	skos:exactMatch	go	GO:0033902	rRNA endonuclease activity	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	C014896	6-chloro-2-(1-piperazinyl)pyrazine	skos:exactMatch	efo	0009029	Central precocious puberty	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C016532	maltoporins	skos:exactMatch	go	GO:0015481	maltose transporting porin activity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C019328	deoxyribonuclease A	skos:exactMatch	go	GO:0004530	deoxyribonuclease I activity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C019618	adenylylsulfate reductase	skos:exactMatch	go	GO:0009973	adenylyl-sulfate reductase activity	manually_reviewed	orcid:0000-0001-9439-5346
@@ -245,6 +368,7 @@ mesh	C535442	Bile acid synthesis defect, congenital, 1	skos:exactMatch	doid	DOID
 mesh	C535536	Iridogoniodysgenesis, dominant type	skos:exactMatch	doid	DOID:0050786	iridogoniodysgenesis syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C535837	Pancreatic carcinoma, familial	skos:exactMatch	doid	DOID:4905	pancreatic carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C535847	Hay-Wells syndrome	skos:exactMatch	doid	DOID:0090119	ankyloblepharon-ectodermal defects-cleft lip/palate syndrome	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	C536133	Meckel syndrome type 1	skos:exactMatch	doid	DOID:0050778	Meckel syndrome	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	C536192	Brittle cornea syndrome 1	skos:exactMatch	doid	DOID:14775	brittle cornea syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C536277	Idiopathic dilation cardiomyopathy	skos:exactMatch	doid	DOID:0110429	dilated cardiomyopathy 1H	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C536300	Partington X-linked mental retardation syndrome	skos:exactMatch	doid	DOID:14744	Partington syndrome	manually_reviewed	orcid:0000-0003-1307-2508
@@ -266,24 +390,38 @@ mesh	C567200	Immunodeficiency, Hypogammaglobulinemia, and Reduced B Cells	skos:e
 mesh	C567484	Mental Retardation, X-Linked, Syndromic, Christianson Type	skos:exactMatch	doid	DOID:0060825	Christianson syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C567738	Neuropathy, Hereditary Sensory And Autonomic, Type IIB	skos:exactMatch	doid	DOID:0070150	hereditary sensory and autonomic neuropathy type 2B	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C579934	Autosomal Recessive Cerebellar Ataxia Type 1	skos:exactMatch	doid	DOID:0111618	autosomal recessive spinocerebellar ataxia 8	manually_reviewed	orcid:0000-0003-1307-2508
-mesh	C580012	Congenital Fibrosis of the Extraocular Muscles	skos:exactMatch	doid	DOID:0080143	congenital fibrosis of the extraocular muscles	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C580473	Succinate-Coa Ligase Deficiency	skos:exactMatch	doid	DOID:0080124	mitochondrial DNA depletion syndrome 5	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	C584135	endotrophin	skos:exactMatch	ncit	C165979	Pro-C6 Measurement	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000068256	Darbepoetin alfa	skos:exactMatch	hgnc	4392	GNAS	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D000068437	Pemetrexed	skos:exactMatch	chebi	CHEBI:17509	5'-S-methyl-5'-thioadenosine	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D000068800	Etanercept	skos:exactMatch	hgnc	11917	TNFRSF1B	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D000070636	Rotator Cuff Injuries	skos:exactMatch	efo	1001250	rotator cuff tear	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000071636	Protein Phosphatase 2C	skos:exactMatch	hgnc	9279	PDP1	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000074767	Diapause	skos:exactMatch	go	GO:0030431	sleep	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D000077190	Interferon alpha-2	skos:exactMatch	hgnc	5423	IFNA2	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D000077212	Ropivacaine	skos:exactMatch	chebi	CHEBI:8890	(S)-ropivacaine	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000077324	Crystalloid Solutions	skos:exactMatch	go	GO:0044312	crystalloid	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000203	Activities of Daily Living	skos:exactMatch	efo	0008451	activities of daily living score measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000309	Adrenal Insufficiency	skos:exactMatch	doid	DOID:10493	adrenal cortical hypofunction	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D000377	Agnosia	skos:exactMatch	doid	DOID:0060150	astereognosia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D000464	Alginates	skos:exactMatch	chebi	CHEBI:17548	alginic acid	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000505	Alopecia	skos:exactMatch	doid	DOID:0050801	androgenic alopecia	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D000544	Alzheimer Disease	skos:exactMatch	efo	1001870	late-onset Alzheimers disease	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000650	Amnion	skos:exactMatch	efo	0003028	acute myeloblastic leukemia with maturation	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000691	Anabasine	skos:exactMatch	chebi	CHEBI:74	(S)-anabasine	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D001024	Aortic Valve Stenosis	skos:exactMatch	go	GO:0004066	asparagine synthase (glutamine-hydrolyzing) activity	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D001161	Arteriosclerosis	skos:exactMatch	ncit	C34398	Arteriosclerosis	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D001171	Arthritis, Juvenile	skos:exactMatch	doid	DOID:6776	breast myoepithelial carcinoma	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D001205	Ascorbic Acid	skos:exactMatch	ncit	C285	Ascorbic Acid	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D001215	Asparaginase	skos:exactMatch	hgnc	20123	ASPG	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D001249	Asthma	skos:exactMatch	efo	0009759	Chronic Obstructive Asthma	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001254	Astrocytoma	skos:exactMatch	doid	DOID:3078	grade III astrocytoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D001661	Biliary Tract Neoplasms	skos:exactMatch	doid	DOID:0050625	biliary tract benign neoplasm	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D001731	Bisphosphoglycerate Mutase	skos:exactMatch	go	GO:0004619	phosphoglycerate mutase activity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D001749	Urinary Bladder Neoplasms	skos:exactMatch	doid	DOID:4007	bladder carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D001761	Bleomycin	skos:exactMatch	chebi	CHEBI:3139	bleomycin A2	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D001792	Blood Platelets	skos:exactMatch	efo	0009237	Estimated Platelets Measurement	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D001859	Bone Neoplasms	skos:exactMatch	efo	1000350	Malignant Bone Neoplasm	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D001907	Boutonneuse Fever	skos:exactMatch	doid	DOID:0050035	African tick-bite fever	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D002037	Bundle-Branch Block	skos:exactMatch	doid	DOID:0111074	progressive familial heart block type IA	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D002095	Byssinosis	skos:exactMatch	doid	DOID:12118	pulmonary hemosiderosis	manually_reviewed	orcid:0000-0003-1307-2508
@@ -293,30 +431,38 @@ mesh	D002780	Cholestasis, Intrahepatic	skos:exactMatch	doid	DOID:0070227	intrahe
 mesh	D002822	Choriocarcinoma	skos:exactMatch	doid	DOID:5551	choriocarcinoma of the testis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D003231	Conjunctivitis	skos:exactMatch	doid	DOID:11213	acute contagious conjunctivitis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D003635	De Lange Syndrome	skos:exactMatch	doid	DOID:0080505	Cornelia de Lange syndrome 1	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D003872	Dermatitis	skos:exactMatch	efo	1000636	inflammatory skin disease	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D003884	Dermoid Cyst	skos:exactMatch	doid	DOID:5117	dermoid cyst of ovary	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D003924	Diabetes Mellitus, Type 2	skos:exactMatch	doid	DOID:0050524	maturity-onset diabetes of the young	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D003925	Diabetic Angiopathies	skos:exactMatch	doid	DOID:10182	diabetic peripheral angiopathy	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D004407	Dysgerminoma	skos:exactMatch	doid	DOID:5511	dysgerminoma of ovary	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D004410	Dyslexia	skos:exactMatch	doid	DOID:13365	reading disorder	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D004697	Endocarditis, Bacterial	skos:exactMatch	doid	DOID:0060000	infective endocarditis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D004932	Esophageal and Gastric Varices	skos:exactMatch	doid	DOID:112	esophageal varix	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D005234	Fatty Liver	skos:exactMatch	efo	0008527	steatosis	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D005319	Fetal Hemoglobin	skos:exactMatch	efo	0004576	fetal hemoglobin measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D005351	Fibromatosis, Gingival	skos:exactMatch	doid	DOID:0060466	gingival fibromatosis	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D005390	Fires	skos:exactMatch	ncit	C63143	Device Fire	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D005621	Friedreich Ataxia	skos:exactMatch	doid	DOID:0111218	Friedreich ataxia 1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D005776	Gaucher Disease	skos:exactMatch	doid	DOID:0110957	Gaucher's disease type I	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D005934	Glucagon	skos:exactMatch	hgnc	4191	GCG	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006429	Hemiplegia	skos:exactMatch	doid	DOID:10967	spastic hemiplegia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006441	Hemoglobin A	skos:exactMatch	efo	0009208	Hemoglobin A Measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006443	Hemoglobin A2	skos:exactMatch	efo	0005845	hemoglobin A2 measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006451	Hemoglobin, Sickle	skos:exactMatch	efo	0009223	Hemoglobin S Measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D006480	Hemorrhagic Fever with Renal Syndrome	skos:exactMatch	doid	DOID:0050200	Korean hemorrhagic fever	manually_reviewed	orcid:0000-0003-1307-2508
-mesh	D006519	Hepatitis, Alcoholic	skos:exactMatch	doid	DOID:12351	alcoholic hepatitis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D006593	Hexokinase	skos:exactMatch	go	GO:0004396	hexokinase activity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D006646	Histiocytosis, Langerhans-Cell	skos:exactMatch	doid	DOID:2571	Langerhans-cell histiocytosis	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D006973	Hypertension	skos:exactMatch	hp	HP:0032263	Increased blood pressure	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007014	Hypophosphatasia	skos:exactMatch	doid	DOID:0110915	childhood hypophosphatasia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007018	Hypopituitarism	skos:exactMatch	doid	DOID:9410	panhypopituitarism	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007161	Immunoproliferative Small Intestinal Disease	skos:exactMatch	doid	DOID:0060126	alpha chain disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007319	Sleep Initiation and Maintenance Disorders	skos:exactMatch	doid	DOID:0111141	delayed sleep phase syndrome	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D007328	Insulin	skos:exactMatch	hgnc	6081	INS	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D007376	Interleukin-2	skos:exactMatch	hgnc	6001	IL2	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D007588	Job Satisfaction	skos:exactMatch	efo	0009723	job satisfaction measurement	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D007589	Job Syndrome	skos:exactMatch	doid	DOID:0080545	hyper IgE syndrome	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D007605	Juvenile Hormones	skos:exactMatch	chebi	CHEBI:24851	insect growth regulator	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D007680	Kidney Neoplasms	skos:exactMatch	doid	DOID:4451	renal carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007713	Klinefelter Syndrome	skos:exactMatch	doid	DOID:0090070	hypogonadotropic hypogonadism	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D007762	Labyrinthitis	skos:exactMatch	doid	DOID:3930	otitis interna	manually_reviewed	orcid:0000-0003-1307-2508
@@ -324,6 +470,7 @@ mesh	D007805	Language Development Disorders	skos:exactMatch	doid	DOID:0060244	sp
 mesh	D007952	Leukemia, Plasma Cell	skos:exactMatch	doid	DOID:0070212	hereditary lymphedema I	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D008113	Liver Neoplasms	skos:exactMatch	doid	DOID:916	liver benign neoplasm	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D008180	Lupus Erythematosus, Systemic	skos:exactMatch	doid	DOID:8857	lupus erythematosus	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D008353	Mannitol	skos:exactMatch	chebi	CHEBI:16899	D-mannitol	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D009062	Mouth Neoplasms	skos:exactMatch	doid	DOID:8618	oral cavity cancer	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D009101	Multiple Myeloma	skos:exactMatch	doid	DOID:0070004	myeloid neoplasm	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D009196	Myeloproliferative Disorders	skos:exactMatch	doid	DOID:2226	myeloproliferative neoplasm	manually_reviewed	orcid:0000-0003-1307-2508
@@ -345,6 +492,7 @@ mesh	D010523	Peripheral Nervous System Diseases	skos:exactMatch	doid	DOID:870	ne
 mesh	D010534	Peritoneal Neoplasms	skos:exactMatch	doid	DOID:1725	peritoneum cancer	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D010911	Pituitary Neoplasms	skos:exactMatch	doid	DOID:1785	pituitary cancer	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D010997	Pleural Neoplasms	skos:exactMatch	doid	DOID:5158	pleural cancer	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D011014	Pneumonia	skos:exactMatch	efo	1001991	pneumonitis	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D011471	Prostatic Neoplasms	skos:exactMatch	doid	DOID:2526	prostate adenocarcinoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D011490	Protein Disulfide Reductase (Glutathione)	skos:exactMatch	go	GO:0019153	protein-disulfide reductase (glutathione) activity	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D011497	Protein O-Methyltransferase	skos:exactMatch	go	GO:0008983	protein-glutamate O-methyltransferase activity	manually_reviewed	orcid:0000-0001-9439-5346
@@ -357,8 +505,10 @@ mesh	D012559	Schizophrenia	skos:exactMatch	doid	DOID:5418	schizoaffective disord
 mesh	D012734	Disorders of Sex Development	skos:exactMatch	doid	DOID:3765	pseudohermaphroditism	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D012804	Sick Sinus Syndrome	skos:exactMatch	doid	DOID:0050824	sinoatrial node disease	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D012878	Skin Neoplasms	skos:exactMatch	doid	DOID:8923	skin melanoma	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D012915	Soaps	skos:exactMatch	ncit	C42983	Soap Dosage Form	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D013125	Spinal Neoplasms	skos:exactMatch	doid	DOID:14150	spinal cord lymphoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D013274	Stomach Neoplasms	skos:exactMatch	doid	DOID:5517	stomach carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D013577	Syndrome	skos:exactMatch	ncit	C53799	Adverse Event Associated with Syndromes	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D013700	Giant Cell Arteritis	skos:exactMatch	go	GO:0033968	glutaryl-7-aminocephalosporanic-acid acylase activity	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D013953	Thymus Neoplasms	skos:exactMatch	doid	DOID:3277	thymus cancer	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D013964	Thyroid Neoplasms	skos:exactMatch	doid	DOID:3963	thyroid gland carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
@@ -371,11 +521,16 @@ mesh	D015179	Colorectal Neoplasms	skos:exactMatch	doid	DOID:0050913	large intest
 mesh	D015452	Precursor B-Cell Lymphoblastic Leukemia-Lymphoma	skos:exactMatch	doid	DOID:7061	precursor B lymphoblastic lymphoma/leukemia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D015458	Leukemia, T-Cell	skos:exactMatch	doid	DOID:5599	precursor T-lymphoblastic lymphoma/leukemia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D015593	Retinal Drusen	skos:exactMatch	doid	DOID:0060746	basal laminar drusen	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D015746	Abdominal Pain	skos:exactMatch	ncit	C140947	How Often Experienced Abdominal Discomfort	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D015812	Glaucoma, Angle-Closure	skos:exactMatch	doid	DOID:1405	primary angle-closure glaucoma	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D016685	Mitomycin	skos:exactMatch	chebi	CHEBI:27504	mitomycin C	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D016756	Immunoglobulins, Intravenous	skos:exactMatch	efo	0010065	response to intravenous immunoglobulin therapy	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D016757	Death, Sudden, Cardiac	skos:exactMatch	efo	1001497	cardiac conduction defect	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D016878	POEMS Syndrome	skos:exactMatch	doid	DOID:9541	osteosclerotic myeloma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D016889	Endometrial Neoplasms	skos:exactMatch	doid	DOID:6212	ovarian endometrial cancer	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D016914	Ribonuclease H	skos:exactMatch	go	GO:0004523	RNA-DNA hybrid ribonuclease activity	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D017436	Kallmann Syndrome	skos:exactMatch	doid	DOID:0090094	hypogonadotropic hypogonadism 1 with or without anosmia	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D017887	Ossification of Posterior Longitudinal Ligament	skos:exactMatch	efo	0005895	ossification of the posterior longitudinal ligament of the spine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018015	Receptors, Calcitonin Gene-Related Peptide	skos:exactMatch	go	GO:0001635	calcitonin gene-related peptide receptor activity	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D018208	Liposarcoma, Myxoid	skos:exactMatch	doid	DOID:5709	mixed-type liposarcoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D018233	Rhabdomyosarcoma, Embryonal	skos:exactMatch	doid	DOID:3255	botryoid rhabdomyosarcoma	manually_reviewed	orcid:0000-0003-1307-2508
@@ -396,6 +551,7 @@ mesh	D020096	Zygomycosis	skos:exactMatch	doid	DOID:8485	mucormycosis	manually_re
 mesh	D020182	Sleep Apnea, Central	skos:exactMatch	doid	DOID:0060731	congenital central hypoventilation syndrome	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D020386	Isaacs Syndrome	skos:exactMatch	doid	DOID:963	episodic ataxia	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D020425	Radial Neuropathy	skos:exactMatch	doid	DOID:12170	radial nerve lesion	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D020521	Stroke	skos:exactMatch	hp	HP:0002140	Ischemic stroke	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D020747	Calcium Channels, T-Type	skos:exactMatch	go	GO:0008332	low voltage-gated calcium channel activity	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D020751	Alcohol-Induced Disorders	skos:exactMatch	doid	DOID:0050741	alcohol dependence	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D020821	Dystonic Disorders	skos:exactMatch	doid	DOID:0090056	dystonia 12	manually_reviewed	orcid:0000-0003-1307-2508
@@ -430,6 +586,7 @@ mesh	D051057	Proto-Oncogene Proteins c-akt	skos:exactMatch	hgnc	391	AKT1	manual	
 mesh	D051236	Receptors, Pituitary Adenylate Cyclase-Activating Polypeptide	skos:exactMatch	go	GO:0001634	pituitary adenylate cyclase-activating polypeptide receptor activity	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D052003	NF-kappa B p52 Subunit	skos:exactMatch	hgnc	7795	NFKB2	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D053483	Eye Movement Measurements	skos:exactMatch	efo	0007699	eye movement measurement	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D053496	Inositol 1,4,5-Trisphosphate Receptors	skos:exactMatch	chebi	CHEBI:131186	IP3 receptor antagonist	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D053840	Brugada Syndrome	skos:exactMatch	doid	DOID:0110218	Brugada syndrome 1	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D054000	Nevus, Sebaceous of Jadassohn	skos:exactMatch	doid	DOID:7039	Borst-Jadassohn intraepidermal carcinoma	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D054467	Phospholipases A2	skos:exactMatch	hgnc	9030	PLA2G1B	manually_reviewed	orcid:0000-0001-9439-5346
@@ -442,10 +599,18 @@ mesh	D058570	TOR Serine-Threonine Kinases	skos:exactMatch	hgnc	3942	MTOR	manuall
 mesh	D063807	Dandruff	skos:exactMatch	doid	DOID:8941	seborrheic infantile dermatitis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D063847	Mean Platelet Volume	skos:exactMatch	ncit	C74730	Mean Platelet Volume Measurement	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D063948	Enslaved Persons	skos:exactMatch	ncit	C153898	Slavey Language	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D064697	Racemethionine	skos:exactMatch	chebi	CHEBI:16811	methionine	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D065627	Familial Primary Pulmonary Hypertension	skos:exactMatch	doid	DOID:14557	primary pulmonary hypertension	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D065637	Cytochrome P-450 CYP2A6	skos:exactMatch	hgnc	2610	CYP2A6	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D066167	Slit Lamp	skos:exactMatch	ncit	C75583	Slit-lamp Examination	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D066246	ErbB Receptors	skos:exactMatch	ncit	C17068	Epidermal Growth Factor Receptor	manually_reviewed	orcid:0000-0001-9439-5346
+mondo	0005187	human herpesvirus 8 infection	skos:exactMatch	mesh	D019288	Herpesvirus 8, Human	manually_reviewed	orcid:0000-0001-9439-5346
+mondo	0007028	rotator cuff syndrome	skos:exactMatch	mesh	D000070636	Rotator Cuff Injuries	manually_reviewed	orcid:0000-0003-4423-4370
+mondo	0015053	hereditary angioedema type 1	skos:exactMatch	mesh	D056829	Hereditary Angioedema Types I and II	manually_reviewed	orcid:0000-0001-9439-5346
+mondo	0020320	acute myeloblastic leukemia with maturation	skos:exactMatch	mesh	D000650	Amnion	manually_reviewed	orcid:0000-0001-9439-5346
+mondo	0021661	coronary atherosclerosis	skos:exactMatch	mesh	D003324	Coronary Artery Disease	manually_reviewed	orcid:0000-0001-9439-5346
+mondo	0044346	echinococcus granulosus infectious disease	skos:exactMatch	mesh	D048209	Echinococcus granulosus	manually_reviewed	orcid:0000-0001-9439-5346
+mondo	0100073	methicillin-resistant staphylococcus aureus infectious disease	skos:exactMatch	mesh	D055624	Methicillin-Resistant Staphylococcus aureus	manually_reviewed	orcid:0000-0001-9439-5346
 pr	PR:000035716	ubiquitin (RPS27A)	skos:exactMatch	uniprot.chain	PRO_0000396174	Ubiquitin	manually_reviewed	orcid:0000-0001-9439-5346
 pr	PR:000035720	ubiquitin (UBC)	skos:exactMatch	uniprot.chain	PRO_0000396174	Ubiquitin	manually_reviewed	orcid:0000-0001-9439-5346
 pr	PR:000035722	ubiquitin (UBA52)	skos:exactMatch	uniprot.chain	PRO_0000396174	Ubiquitin	manually_reviewed	orcid:0000-0001-9439-5346
@@ -892,6 +1057,9 @@ reactome	R-XTR-8877627	Vitamin E	skos:exactMatch	chebi	CHEBI:46430	(-)-alpha-toc
 reactome	R-XTR-8877627	Vitamin E	skos:exactMatch	mesh	D014810	Vitamin E	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-XTR-9664873	Pexophagy	speciesSpecific	go	GO:0030242	autophagy of peroxisome	manually_reviewed	orcid:0000-0003-4423-4370
 reactome	R-XTR-983189	Kinesins	speciesSpecific	fplx	Kinesin	Kinesin	manually_reviewed	orcid:0000-0003-4423-4370
+uberon	UBERON:0000104	life cycle	skos:exactMatch	mesh	D008018	Life Cycle Stages	manually_reviewed	orcid:0000-0001-9439-5346
+uberon	UBERON:0022469	primary olfactory cortex	skos:exactMatch	mesh	D066194	Olfactory Cortex	manually_reviewed	orcid:0000-0001-9439-5346
+uberon	UBERON:2001977	pad	skos:exactMatch	mesh	D058729	Peripheral Arterial Disease	manually_reviewed	orcid:0000-0001-9439-5346
 umls	C0006142	Malignant neoplasm of breast	skos:exactMatch	mesh	D001943	Breast Neoplasms	manual	orcid:0000-0002-6601-2165
 wikipathways	WP1060	Matrix Metalloproteinases	speciesSpecific	fplx	MMP	MMP	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP1176	Matrix Metalloproteinases	speciesSpecific	fplx	MMP	MMP	manually_reviewed	orcid:0000-0003-4423-4370

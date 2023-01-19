@@ -20,6 +20,7 @@ def append_gilda_predictions(
     prefix: str,
     target_prefixes: Union[str, Iterable[str]],
     provenance: str,
+    *,
     relation: str = "skos:exactMatch",
     custom_filter: Optional[CMapping] = None,
     unnamed: Optional[Iterable[str]] = None,
@@ -53,8 +54,9 @@ def append_gilda_predictions(
 
 def iter_prediction_tuples(
     prefix: str,
-    relation: str,
     provenance: str,
+    *,
+    relation: str = "skos:exactMatch",
     grounder: Optional[Grounder] = None,
     identifiers_are_names: bool = False,
 ) -> Iterable[PredictionTuple]:
@@ -65,7 +67,7 @@ def iter_prediction_tuples(
         grounder=grounder,
         identifiers_are_names=identifiers_are_names,
     ):
-        yield PredictionTuple(*t, provenance)
+        yield PredictionTuple(*t, provenance)  # type: ignore
 
 
 def filter_custom(
@@ -99,6 +101,7 @@ def filter_pyobo(
         if (
             prediction.source_prefix in source_prefixes
             and prediction.target_prefix in target_prefixes
+            and isinstance(prediction.source_id, str)
             and has_mapping(
                 prediction.source_prefix, prediction.source_id, prediction.target_prefix
             )

@@ -21,16 +21,16 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      - name: Create local changes
+      - name: Install dependencies
         run: |
-          pip install --upgrade pip setuptools wheel
-          pip install -e .[charts,exports]
-          biomappings update
+          pip install tox
+      - name: Create local changes
+        run: tox -e update
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "🗺️ Update biomappings summary" -a
+          git commit -m "🗺️ Update summaries" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:

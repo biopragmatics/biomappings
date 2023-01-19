@@ -15,8 +15,11 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      - name: Upload to NDEx
+      - name: Install dependencies
         run: |
-          pip install --upgrade pip setuptools wheel
-          pip install -e .[ndex]
-          biomappings ndex --username ${{ secrets.NDEX_USERNAME }} --password ${{ secrets.NDEX_PASSWORD }}
+          pip install tox
+      - name: Upload to NDEx
+        run: tox -e upload-ndex
+        env:
+          NDEX_USERNAME: ${{ secrets.NDEX_USERNAME }}
+          NDEX_PASSWORD: ${{ secrets.NDEX_PASSWORD }}

@@ -5,7 +5,18 @@
 import csv
 import itertools as itt
 import os
-from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Sequence, Tuple
+from collections import defaultdict
+from typing import (
+    Any,
+    DefaultDict,
+    Dict,
+    Iterable,
+    List,
+    Mapping,
+    NamedTuple,
+    Sequence,
+    Tuple,
+)
 
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
@@ -88,7 +99,12 @@ class PredictionTuple(NamedTuple):
     @classmethod
     def from_dict(cls, mapping: Mapping[str, str]) -> "PredictionTuple":
         """Get the prediction tuple from a dictionary."""
-        return cls(*[mapping[key] for key in PREDICTIONS_HEADER])
+        return cls(
+            *[  # type: ignore
+                float(mapping[key]) if key == "confidence" else mapping[key]
+                for key in PREDICTIONS_HEADER
+            ]
+        )
 
     @property
     def source_curie(self) -> str:
@@ -119,9 +135,9 @@ def _write_helper(
     lod = sorted(lod, key=mapping_sort_key)
     with open(path, mode) as file:
         if mode == "w":
-            print(*header, sep="\t", file=file)
+            print(*header, sep="\t", file=file)  # noqa:T201
         for line in lod:
-            print(*[line[k] for k in header], sep="\t", file=file)
+            print(*[line[k] for k in header], sep="\t", file=file)  # noqa:T201
 
 
 def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
@@ -323,3 +339,11 @@ def _check_filter(
     source_prefix, target_prefix = prediction["source prefix"], prediction["target prefix"]
     source_id, target_id = prediction["source identifier"], prediction["target identifier"]
     return target_id != custom_filter.get(source_prefix, {}).get(target_prefix, {}).get(source_id)
+
+
+def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:
+    """Get a filter over all curated mappings."""
+    d: DefaultDict[str, DefaultDict[str, Dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
+    for m in itt.chain(load_mappings(), load_false_mappings(), load_unsure()):
+        d[m["source prefix"]][m["target prefix"]][m["source identifier"]] = m["target identifier"]
+    return {k: dict(v) for k, v in d.items()}

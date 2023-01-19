@@ -8,9 +8,24 @@ from collections import defaultdict
 
 import bioregistry
 
-from biomappings import load_false_mappings, load_mappings, load_predictions, load_unsure
-from biomappings.resources import MappingTuple, PredictionTuple, load_curators, mapping_sort_key
-from biomappings.utils import check_valid_prefix_id, get_canonical_tuple
+from biomappings import (
+    load_false_mappings,
+    load_mappings,
+    load_predictions,
+    load_unsure,
+)
+from biomappings.resources import (
+    MappingTuple,
+    PredictionTuple,
+    load_curators,
+    mapping_sort_key,
+)
+from biomappings.utils import (
+    InvalidIdentifierPattern,
+    InvalidNormIdentifier,
+    check_valid_prefix_id,
+    get_canonical_tuple,
+)
 
 mappings = load_mappings()
 predictions = load_predictions()
@@ -67,24 +82,13 @@ class TestIntegrity(unittest.TestCase):
         :param identifier: The identifier in the semantic space for the prefix
         :param label: The label of the mapping file
         :param line: The line number of the mapping
-
-        .. warning::
-
-            NCIT is skipped for now, since it has an OBO Foundry definition but explicitly
-            does not have namespace embedded in LUI. See also:
-            https://github.com/biopragmatics/bioregistry/issues/208
         """
-        if prefix in {"ncit"}:
-            return
-        resource = bioregistry.get_resource(prefix)
-        self.assertIsNotNone(resource)
-        norm_id = resource.normalize_identifier(identifier)
-        self.assertIsNotNone(norm_id)
-        self.assertEqual(
-            identifier,
-            norm_id,
-            msg=f"Normalization of {prefix}:{identifier} failed on {label}:{line}",
-        )
+        try:
+            check_valid_prefix_id(prefix, identifier)
+        except InvalidNormIdentifier as e:
+            self.fail(f"[{label}:{line}] {e}")
+        except InvalidIdentifierPattern as e:
+            self.fail(f"[{label}:{line}] {e}")
 
     def test_contributors(self):
         """Test all contributors have an entry in the curators.tsv file."""
@@ -94,19 +98,6 @@ class TestIntegrity(unittest.TestCase):
             if not source.startswith("orcid:"):
                 continue
             self.assertIn(source[len("orcid:") :], contributor_orcids)
-
-
-def test_valid_mappings():
-    """Test the validity of the prefixes and identifiers in the mappings."""
-    for _label, _line, mapping in _iter_groups():
-        check_valid_prefix_id(
-            mapping["source prefix"],
-            mapping["source identifier"],
-        )
-        check_valid_prefix_id(
-            mapping["target prefix"],
-            mapping["target identifier"],
-        )
 
 
 def _extract_redundant(counter):

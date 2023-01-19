@@ -5,7 +5,7 @@
 import getpass
 import os
 from collections import defaultdict
-from typing import Any, Iterable, Mapping, Optional, Set, Tuple
+from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple
 
 import flask
 import flask_bootstrap
@@ -21,12 +21,20 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import check_valid_prefix_id, commit, get_branch, get_curie, not_main, push
+from biomappings.utils import (
+    check_valid_prefix_id,
+    commit,
+    get_branch,
+    get_curie,
+    not_main,
+    push,
+)
 
 app = flask.Flask(__name__)
 app.config["WTF_CSRF_ENABLED"] = False
 app.config["SECRET_KEY"] = os.urandom(8)
 app.config["SHOW_RELATIONS"] = True
+app.config["SHOW_LINES"] = False
 flask_bootstrap.Bootstrap(app)
 
 # A mapping from your computer's user, returned by getuser.getpass()
@@ -43,11 +51,18 @@ def _manual_source():
 class Controller:
     """A module for interacting with the predictions and mappings."""
 
-    def __init__(self):  # noqa: D107
+    def __init__(self, target_curies: Optional[Iterable[Tuple[str, str]]] = None):
+        """Instantiate the web controller.
+
+        :param target_curies: Pairs of prefix, local unique identifiers that are the target
+            of curation. If this is given, pre-filters will be made before on predictions
+            to only show ones where either the source or target appears in this set
+        """
         self._predictions = load_predictions()
-        self._marked = {}
+        self._marked: Dict[int, str] = {}
         self.total_curated = 0
-        self._added_mappings = []
+        self._added_mappings: List[Dict[str, str]] = []
+        self.target_ids = set(target_curies or [])
 
     def predictions(
         self,
@@ -59,6 +74,7 @@ class Controller:
         target_query: Optional[str] = None,
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
+        same_text: bool = False,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
@@ -71,6 +87,7 @@ class Controller:
         :param target_query: If given, show only equivalences that have it appearing as a substring in one of the target
             fields.
         :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes.
+        :param same_text: If true, filter to predictions with the same label
         :yields: Pairs of positions and prediction dictionaries
         """
         it = self._help_it_predictions(
@@ -79,6 +96,7 @@ class Controller:
             target=target_query,
             prefix=prefix,
             sort=sort,
+            same_text=same_text,
         )
         if offset is not None:
             try:
@@ -101,6 +119,7 @@ class Controller:
         target_query: Optional[str] = None,
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
+        same_text: bool = False,
     ) -> int:
         """Count the number of predictions to check for the given filters."""
         it = self._help_it_predictions(
@@ -109,6 +128,7 @@ class Controller:
             target=target_query,
             prefix=prefix,
             sort=sort,
+            same_text=same_text,
         )
         return sum(1 for _ in it)
 
@@ -119,8 +139,17 @@ class Controller:
         target: Optional[str] = None,
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
+        same_text: bool = False,
     ):
-        it = enumerate(self._predictions)
+        it: Iterable[Tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
+        if self.target_ids:
+            it = (
+                (line, p)
+                for (line, p) in it
+                if (p["source prefix"], p["source identifier"]) in self.target_ids
+                or (p["target prefix"], p["target identifier"]) in self.target_ids
+            )
+
         if query is not None:
             it = self._help_filter(
                 query,
@@ -145,11 +174,19 @@ class Controller:
         if prefix is not None:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
 
-        it = ((line, prediction) for line, prediction in it if line not in self._marked)
-
         if sort is not None:
             it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=sort == "desc"))
-        return it
+
+        if same_text:
+            it = (
+                (line, prediction)
+                for line, prediction in it
+                if prediction["source name"].casefold() == prediction["target name"].casefold()
+                and prediction["relation"] == "skos:exactMatch"
+            )
+
+        rv = ((line, prediction) for line, prediction in it if line not in self._marked)
+        return rv
 
     @staticmethod
     def _help_filter(query: str, it, elements: Set[str]):
@@ -278,7 +315,9 @@ def home():
     target_query = flask.request.args.get("target")
     prefix = flask.request.args.get("prefix")
     sort = flask.request.args.get("sort")
+    same_text = flask.request.args.get("same_text", default="false").lower() in {"true", "t"}
     show_relations = app.config["SHOW_RELATIONS"]
+    show_lines = app.config["SHOW_LINES"]
     return flask.render_template(
         "home.html",
         controller=controller,
@@ -290,7 +329,10 @@ def home():
         target_query=target_query,
         prefix=prefix,
         sort=sort,
+        same_text=same_text,
+        # configured
         show_relations=show_relations,
+        show_lines=show_lines,
     )
 
 
@@ -367,7 +409,10 @@ def _go_home():
             source=flask.request.args.get("source"),
             target=flask.request.args.get("target"),
             prefix=flask.request.args.get("prefix"),
+            same_text=flask.request.args.get("same_text", default="false").lower() in {"true", "t"},
+            # config
             show_relations=app.config["SHOW_RELATIONS"],
+            show_lines=app.config["SHOW_LINES"],
         )
     )
 

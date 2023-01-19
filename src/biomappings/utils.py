@@ -3,6 +3,7 @@
 """Utilities."""
 
 import os
+import re
 from subprocess import CalledProcessError, check_output  # noqa: S404
 from typing import Any, Mapping, Optional, Tuple
 
@@ -23,8 +24,9 @@ def get_git_hash() -> Optional[str]:
         code is not installed in development mode.
     """
     rv = _git("rev-parse", "HEAD")
-    if rv:
-        return rv[:6]
+    if not rv:
+        return None
+    return rv[:6]
 
 
 def commit(message: str) -> Optional[str]:
@@ -32,9 +34,9 @@ def commit(message: str) -> Optional[str]:
     return _git("commit", "-m", message, "-a")
 
 
-def push(branch_name: str = None) -> Optional[str]:
+def push(branch_name: Optional[str] = None) -> Optional[str]:
     """Push the git repo."""
-    if branch_name:
+    if branch_name is not None:
         return _git("push", "origin", branch_name)
     else:
         return _git("push")
@@ -47,7 +49,10 @@ def not_main() -> bool:
 
 def get_branch() -> str:
     """Return current git branch."""
-    return _git("branch", "--show-current")
+    rv = _git("branch", "--show-current")
+    if rv is None:
+        raise RuntimeError
+    return rv
 
 
 def _git(*args: str) -> Optional[str]:
@@ -59,8 +64,8 @@ def _git(*args: str) -> Optional[str]:
                 stderr=devnull,
             )
         except CalledProcessError as e:
-            print(e)
-            return
+            print(e)  # noqa:T201
+            return None
         else:
             return ret.strip().decode("utf-8")
 
@@ -85,8 +90,24 @@ def get_canonical_tuple(mapping: Mapping[str, Any]) -> Tuple[str, str, str, str]
     return (*source, *target)
 
 
-class InvalidPrefix(ValueError):
+class UnregisteredPrefix(ValueError):
     """Raised for an invalid prefix."""
+
+
+class UnstandardizedPrefix(ValueError):
+    """Raised for an unstandardized prefix."""
+
+    def __init__(self, prefix: str, norm_prefix: str):
+        """Initialize the error.
+
+        :param prefix: A CURIE's prefix
+        :param norm_prefix: The normalized prefid
+        """
+        self.prefix = prefix
+        self.norm_prefix = norm_prefix
+
+    def __str__(self) -> str:  # noqa:D105
+        return f"{self.prefix} should be standardized to {self.norm_prefix}"
 
 
 class InvalidIdentifier(ValueError):
@@ -136,16 +157,59 @@ class InvalidNormIdentifier(InvalidIdentifier):
         return f"{self.prefix}:{self.identifier} does not match normalized CURIE {self.prefix}:{self.norm_identifier}"
 
 
-def check_valid_prefix_id(prefix, identifier):
-    """Check the prefix/identifier pair is valid."""
+def check_valid_prefix_id(prefix: str, identifier: str):
+    """Check the prefix/identifier pair is valid.
+
+    :param prefix:
+        The prefix from a CURIE
+    :param identifier:
+        The local unique identifier from a CURIE
+    :raises UnregisteredPrefix:
+        if the prefix is not registered with the Bioregistry
+    :raises UnstandardizedPrefix:
+        if the prefix is not standardized w.r.t. the Bioregistry
+    :raises InvalidNormIdentifier:
+        if the identifier is not standardized, either against the MIRIAM
+        standard, if available, or against the Bioregistry standard
+    :raises InvalidIdentifierPattern:
+        if the does not match the appropriate regular expression for MIRIAM
+        (if available) or for the Bioregistry. If no regular expression is
+        available, then this check is not applied.
+    :raises RuntimeError:
+        If the preconditions for miriam standardization aren't met. However,
+        this shouldn't be possible in practice, and this documentation is
+        merely a formality.
+    """
     resource = bioregistry.get_resource(prefix)
     if resource is None:
-        raise InvalidPrefix(prefix)
-    if prefix not in {"ncit"}:
-        norm_identifier = resource.normalize_identifier(identifier)
-        if norm_identifier != identifier:
-            raise InvalidNormIdentifier(prefix, identifier, norm_identifier)
-    pattern = resource.get_pattern_re()
+        raise UnregisteredPrefix(prefix)
+    if prefix != resource.prefix:
+        raise UnstandardizedPrefix(prefix, resource.prefix)
+    miriam_prefix = resource.get_miriam_prefix()
+
+    # If this resource has a mapping to MIRIAM, the MIRIAM-specific
+    # normalization will be applied, which e.g., adds missing
+    # redundant prefixes into the local unique identifiers
+    if miriam_prefix is not None:
+        norm_id = resource.miriam_standardize_identifier(identifier)
+        if norm_id is None:
+            raise RuntimeError(
+                "should not be possible since we check for miriam prefix"
+                " before running miriam_standardize_identifier"
+            )
+        if norm_id != identifier:
+            raise InvalidNormIdentifier(prefix, identifier, norm_id)
+        pattern = re.compile(resource.miriam["pattern"])
+
+    # If this resource does not have a mapping to MIRIAM, then
+    # the Bioregistry normalization will be applied, which e.g.,
+    # strips potential redundant prefixes in local unique identifiers
+    # or any other "bananas"
+    else:
+        norm_id = resource.standardize_identifier(identifier)
+        if norm_id != identifier:
+            raise InvalidNormIdentifier(prefix, identifier, norm_id)
+        pattern = resource.get_pattern_re()
     if pattern is not None and not pattern.match(identifier):
         raise InvalidIdentifierPattern(prefix, identifier, pattern)
 
