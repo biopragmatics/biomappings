@@ -5098,6 +5098,7 @@ mesh	D000077289	Letrozole	skos:exactMatch	chebi	CHEBI:6413	letrozole	manually_re
 mesh	D000077290	Harmala Alkaloids	skos:exactMatch	chebi	CHEBI:61379	harmala alkaloid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000077291	Terbinafine	skos:exactMatch	chebi	CHEBI:9448	terbinafine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000077300	Bosentan	skos:exactMatch	chebi	CHEBI:51450	bosentan	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D000077317	Extracellular Polymeric Substance Matrix	skos:exactMatch	go	GO:0062039	biofilm matrix	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D000077320	Biomineralization	skos:exactMatch	go	GO:0110148	biomineralization	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000077332	Artesunate	skos:exactMatch	chebi	CHEBI:63918	artesunate	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D000077333	Telmisartan	skos:exactMatch	chebi	CHEBI:9434	telmisartan	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6332,6 +6333,7 @@ mesh	D012559	Schizophrenia	skos:exactMatch	ncit	C3362	Schizophrenia	manually_rev
 mesh	D012592	Scleredema Adultorum	skos:exactMatch	ncit	C85057	Scleredema Adultorum	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012598	Sclerosis	skos:exactMatch	ncit	C69309	Sclerosis	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D012625	Sebaceous Gland Diseases	skos:exactMatch	doid	DOID:9098	sebaceous gland disease	manually_reviewed	orcid:0000-0003-1307-2508
+mesh	D012634	Bodily Secretions	skos:exactMatch	go	GO:0046903	secretion	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D012643	Selenium	skos:exactMatch	chebi	CHEBI:27568	selenium atom	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D012702	Serotonin Antagonists	skos:exactMatch	chebi	CHEBI:48279	serotonergic antagonist	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D012728	Sex Chromatin	skos:exactMatch	go	GO:0001739	sex chromatin	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6627,6 +6629,7 @@ mesh	D017442	Histamine Agonists	skos:exactMatch	chebi	CHEBI:35678	histamine agon
 mesh	D017499	Porokeratosis	skos:exactMatch	doid	DOID:3805	porokeratosis	manually_reviewed	orcid:0000-0003-1307-2508
 mesh	D017510	Protein Folding	skos:exactMatch	go	GO:0006457	protein folding	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017544	Aortic Aneurysm, Abdominal	skos:exactMatch	ncit	C27000	Abdominal Aortic Aneurysm	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D017578	Immunoglobulin Class Switching	skos:exactMatch	go	GO:0045190	isotype switching	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D017588	Hyperandrogenism	skos:exactMatch	efo	0009006	hyperandrogenism	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017629	Gap Junctions	skos:exactMatch	go	GO:0005921	gap junction	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D017673	Sodium Chloride, Dietary	skos:exactMatch	ncit	C72068	Table Salt	manually_reviewed	orcid:0000-0003-4423-4370
@@ -6691,6 +6694,7 @@ mesh	D018870	Endoplasmic Reticulum, Rough	skos:exactMatch	go	GO:0005791	rough en
 mesh	D018871	Endoplasmic Reticulum, Smooth	skos:exactMatch	go	GO:0005790	smooth endoplasmic reticulum	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D018919	Neovascularization, Physiologic	skos:exactMatch	go	GO:0001525	angiogenesis	manual	orcid:0000-0001-9439-5346
 mesh	D018928	Immunity, Mucosal	skos:exactMatch	ncit	C17889	Mucosal Immunity	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D018965	Frameshifting, Ribosomal	skos:exactMatch	go	GO:0006452	translational frameshifting	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D018967	Risperidone	skos:exactMatch	chebi	CHEBI:8871	risperidone	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D019005	Cystic Fibrosis Transmembrane Conductance Regulator	skos:exactMatch	ncit	C111927	Cystic Fibrosis Transmembrane Conductance Regulator	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D019047	Phantoms, Imaging	skos:exactMatch	ncit	C17892	Imaging Phantoms	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6839,10 +6843,13 @@ mesh	D044947	Flavonolignans	skos:exactMatch	chebi	CHEBI:72709	flavonolignan	manu
 mesh	D044948	Flavonols	skos:exactMatch	chebi	CHEBI:28802	flavonols	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D044950	Flavanones	skos:exactMatch	chebi	CHEBI:28863	flavanones	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D045162	Thiazolidinediones	skos:exactMatch	chebi	CHEBI:50990	thiazolidinediones	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D045331	Photosystem I Protein Complex	skos:exactMatch	go	GO:0009538	photosystem I reaction center	manually_reviewed	orcid:0000-0003-4423-4370
+mesh	D045332	Photosystem II Protein Complex	skos:exactMatch	go	GO:0009539	photosystem II reaction center	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D045346	Cytochrome b6f Complex	skos:exactMatch	go	GO:0009512	cytochrome b6f complex	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D045403	Henipavirus	skos:exactMatch	ncit	C112290	Henipavirus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D045473	SARS Virus	skos:exactMatch	ncit	C112432	SARS Coronavirus	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D045524	Phycobilisomes	skos:exactMatch	go	GO:0030089	phycobilisome	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D045586	Intranuclear Inclusion Bodies	skos:exactMatch	go	GO:0042405	nuclear inclusion body	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D045725	Tetrapyrroles	skos:exactMatch	chebi	CHEBI:26932	tetrapyrrole	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D045728	Corrinoids	skos:exactMatch	chebi	CHEBI:33913	corrinoid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D045782	Hemiterpenes	skos:exactMatch	chebi	CHEBI:35188	hemiterpene	manually_reviewed	orcid:0000-0001-9439-5346
