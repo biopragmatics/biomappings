@@ -1884,7 +1884,6 @@ chebi	CHEBI:145994	remdesivir	skos:exactMatch	mesh	C000606551	remdesivir	manuall
 chebi	CHEBI:146244	HU-308	skos:exactMatch	mesh	C402416	HU 308	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:15771	loganin	skos:exactMatch	mesh	C059516	loganin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:15843	arachidonic acid	skos:exactMatch	mesh	D016718	Arachidonic Acid	manually_reviewed	orcid:0000-0001-9439-5346
-chebi	CHEBI:15940	nicotinic acid	skos:exactMatch	mesh	D009539	Nicotinic Acids	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:16400	gossypetin	skos:exactMatch	mesh	C059922	gossypetin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:16563	tetrahydropalmatine	skos:exactMatch	mesh	C014215	tetrahydropalmatine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:166797	Gorgosterol	skos:exactMatch	mesh	C021689	gorgosterol	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1940,7 +1939,7 @@ chebi	CHEBI:26267	proanthocyanidin	skos:exactMatch	mesh	C013221	proanthocyanidin
 chebi	CHEBI:26333	prostaglandin	skos:exactMatch	mesh	D011453	Prostaglandins	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:26667	sialic acid	skos:exactMatch	mesh	D012794	Sialic Acids	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:267413	balsalazide	skos:exactMatch	mesh	C038637	balsalazide	manually_reviewed	orcid:0000-0001-9439-5346
-chebi	CHEBI:2682	amphotericin B	skos:exactMatch	mesh	C068538	liposomal amphotericin B	manually_reviewed	orcid:0000-0003-4423-4370
+chebi	CHEBI:2682	amphotericin B	skos:narrowMatch	mesh	C068538	liposomal amphotericin B	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:2721	Angoline	skos:exactMatch	mesh	C113966	angoline	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:27612	hydantoin	skos:exactMatch	mesh	D006827	Hydantoins	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:27777	acetohydroxamic acid	skos:exactMatch	mesh	C006358	acetohydroxamic acid	manually_reviewed	orcid:0000-0001-9439-5346
@@ -2164,7 +2163,6 @@ chebi	CHEBI:50114	estrogen	skos:exactMatch	mesh	D004967	Estrogens	manually_revie
 chebi	CHEBI:50199	pefloxacin	skos:exactMatch	mesh	C077130	perfloxacin	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:50378	nitisinone	skos:exactMatch	mesh	C077073	nitisinone	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:50381	miglustat	skos:exactMatch	mesh	C059896	miglustat	manually_reviewed	orcid:0000-0001-9439-5346
-chebi	CHEBI:50469	EC 3.1.1.4 (phospholipase A2) inhibitor	skos:exactMatch	mesh	C400481	PLIalpha	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:5050	fexofenadine	skos:exactMatch	mesh	C093230	fexofenadine	manually_reviewed	orcid:0000-0001-9439-5346
 chebi	CHEBI:50509	potassium channel blocker	skos:exactMatch	mesh	D026902	Potassium Channel Blockers	manually_reviewed	orcid:0000-0003-4423-4370
 chebi	CHEBI:50629	cyclooxygenase 2 inhibitor	skos:exactMatch	mesh	D052246	Cyclooxygenase 2 Inhibitors	manually_reviewed	orcid:0000-0001-9439-5346
@@ -6833,7 +6831,7 @@ mesh	D044243	Linoleic Acids, Conjugated	skos:exactMatch	chebi	CHEBI:61159	conjug
 mesh	D044262	Prostaglandin H2	skos:exactMatch	chebi	CHEBI:15554	prostaglandin H2	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D044503	5-Methylcytosine	skos:exactMatch	chebi	CHEBI:27551	5-methylcytosine	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D044603	Cellulosomes	skos:exactMatch	go	GO:0043263	cellulosome	manually_reviewed	orcid:0000-0001-9439-5346
-mesh	D044945	Proanthocyanidins	skos:exactMatch	chebi	CHEBI:26267	proanthocyanidin	manually_reviewed	orcid:0000-0001-9439-5346
+mesh	D044945	Proanthocyanidins	skos:narrowMatch	chebi	CHEBI:26267	proanthocyanidin	manually_reviewed	orcid:0000-0003-4423-4370
 mesh	D044946	Biflavonoids	skos:exactMatch	chebi	CHEBI:50128	biflavonoid	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D044947	Flavonolignans	skos:exactMatch	chebi	CHEBI:72709	flavonolignan	manually_reviewed	orcid:0000-0001-9439-5346
 mesh	D044948	Flavonols	skos:exactMatch	chebi	CHEBI:28802	flavonols	manually_reviewed	orcid:0000-0001-9439-5346
