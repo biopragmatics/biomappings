@@ -198,6 +198,7 @@ doid	DOID:9065	leishmaniasis	skos:exactMatch	umls	C1548483	Leishmaniasis Vaccine
 doid	DOID:9675	pulmonary emphysema	skos:exactMatch	efo	0000464	emphysema	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:9682	yellow fever	skos:exactMatch	umls	C0301508	yellow fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:9847	peripheral vertigo	skos:exactMatch	mesh	D014717	Vertigo	manually_reviewed	orcid:0000-0001-9439-5346
+idomal	0001123	RAP-1	skos:exactMatch	vo	0011026	RAP-1	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	mesh	D018528	ATP-Binding Cassette Transporters	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map03010	Ribosome	skos:exactMatch	go	GO:0005840	ribosome	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1069,6 +1070,16 @@ vo	0010988	IroN	skos:exactMatch	chebi	18248	iron atom	manually_reviewed	orcid:00
 vo	0010997	IroN	skos:exactMatch	chebi	18248	iron atom	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0011021	CP	skos:exactMatch	chebi	3380	captopril	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0011021	CP	skos:exactMatch	hp	0100021	Cerebral palsy	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011026	RAP-1	skos:exactMatch	idomal	0001123	RAP-1	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011231	Glycoprotein	skos:exactMatch	chebi	17089	glycoprotein	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011276	SP	skos:exactMatch	uberon	0004035	cortical subplate	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011306	E1	skos:exactMatch	pr	000011357	NPC intracellular cholesterol transporter 2	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011312	NS1	skos:exactMatch	doid	0060578	Noonan syndrome 1	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011339	Catalase	skos:exactMatch	pr	000005061	catalase	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0012389	CNA	skos:exactMatch	pr	000003278	serine/threonine-protein phosphatase 2B catalytic subunit alpha isoform	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0012389	CNA	skos:exactMatch	pr	Q08209	serine/threonine-protein phosphatase 2B catalytic subunit alpha isoform (human)	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0012403	Rib	skos:exactMatch	chebi	33942	ribose	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0012403	Rib	skos:exactMatch	uberon	0002228	rib	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP1060	Matrix Metalloproteinases	speciesSpecific	fplx	MMP	MMP	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP1176	Matrix Metalloproteinases	speciesSpecific	fplx	MMP	MMP	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP1256	NLR Proteins	speciesSpecific	mesh	D000070576	NLR Proteins	manually_reviewed	orcid:0000-0003-4423-4370
