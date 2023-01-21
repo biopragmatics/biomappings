@@ -25,7 +25,7 @@
                 <h5 class="card-header text-center">Biomappings Curation Interface</h5>
                 <div class="card-body">
                     {% if controller.total_curated %}
-                        <a href="{{ url_for('run_commit', limit=limit, offset=offset, query=query, source_query=source_query,  target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
+                        <a href="{{ url_for('.run_commit', limit=limit, offset=offset, query=query, source_query=source_query,  target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
                             <button class="btn btn-sm btn-outline-dark">Commit ({{ controller.total_curated }}) and Push
                                 <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
                             </button>
@@ -35,11 +35,11 @@
                         <span class="btn btn-sm btn-outline-dark">
                             Query: <code>{{ query }}</code> ({{ "{:,d}".format(remaining_rows) }} Results)
                         </span>
-                        <a href="{{ url_for('home', limit=limit, offset=offset, prefix=prefix) }}">
+                        <a href="{{ url_for('.home', limit=limit, offset=offset, prefix=prefix) }}">
                             <button class="btn btn-sm btn-outline-dark">Clear</button>
                         </a>
                     {% else %}
-                        <form class="form" method="GET" role="form" action="{{ url_for('home', prefix=prefix) }}">
+                        <form class="form" method="GET" role="form" action="{{ url_for('.home', prefix=prefix) }}">
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <button type="submit" class="btn btn-outline-secondary">Go!</button>
@@ -106,21 +106,21 @@
                             </td>
                             <td>
                                 <a data-toggle="tooltip" title="The {{ p['relation'] }} relationship is correct."
-                                   href="{{ url_for('mark', line=line, value='yup', limit=limit, offset=offset, query=query, source_query=source_query, target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
+                                   href="{{ url_for('.mark', line=line, value='yup', limit=limit, offset=offset, query=query, source_query=source_query, target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
                                     <i class="far fa-thumbs-up"></i>
                                 </a>
                             </td>
                             <td>
                                 <a data-toggle="tooltip"
                                    title="These two entities do not have the {{ p['relation'] }} relationship. You should still click this even if you think there could be a different relationship."
-                                   href="{{ url_for('mark', line=line, value='nope', limit=limit, offset=offset, query=query, source_query=source_query, target_query=target_query, prefix=prefix,  source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
+                                   href="{{ url_for('.mark', line=line, value='nope', limit=limit, offset=offset, query=query, source_query=source_query, target_query=target_query, prefix=prefix,  source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
                                     <i class="far fa-thumbs-down"></i>
                                 </a>
                             </td>
                             <td>
                                 <a style="color: darkgoldenrod;" data-toggle="tooltip"
                                    title="I'm not sure if this is correct or not"
-                                   href="{{ url_for('mark', line=line, value='idk', limit=limit, offset=offset, query=query, source_query=source_query, target_query=target_query, prefix=prefix,  source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
+                                   href="{{ url_for('.mark', line=line, value='idk', limit=limit, offset=offset, query=query, source_query=source_query, target_query=target_query, prefix=prefix,  source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
                                     <i class="far fa-question-circle"></i>
                                 </a>
                             </td>
@@ -129,7 +129,7 @@
                     </tbody>
                 </table>
 
-                <form class="form" method="POST" role="form" action="{{ url_for('add_mapping') }}">
+                <form class="form" method="POST" role="form" action="{{ url_for('.add_mapping') }}">
                     <table class="table" style="margin-bottom: 0">
                         <tr>
                             <td>{{ wtf.render_field(form.source_prefix) }}</td>
@@ -147,23 +147,23 @@
 
                 <div class="card-footer text-center">
                     {% if 0 <= offset - limit %}
-                        <a href="{{ url_for('home', limit=limit, offset=0, query=query, source_query=source_query, target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
+                        <a href="{{ url_for('.home', limit=limit, offset=0, query=query, source_query=source_query, target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
                             <i class="fas fa-angle-double-left"></i>
                             First
                         </a> &nbsp;|&nbsp;
-                        <a href="{{ url_for('home', limit=limit, offset=offset - limit, query=query, source_query=source_query, target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
+                        <a href="{{ url_for('.home', limit=limit, offset=offset - limit, query=query, source_query=source_query, target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
                             <i class="fas fa-angle-left"></i>
                             Previous {{ limit }}
                         </a>  &nbsp;|&nbsp;
                     {% endif %}
                     {% if offset < remaining_rows - limit %}
-                        <a href="{{ url_for('home', limit=limit, offset=offset + limit, query=query, source_query=source_query, target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix,same_text=same_text) }}">
+                        <a href="{{ url_for('.home', limit=limit, offset=offset + limit, query=query, source_query=source_query, target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix,same_text=same_text) }}">
                             Next {{ limit }}
                             <i class="fas fa-angle-right"></i>
                         </a>  &nbsp;|&nbsp;
                     {% endif %}
                     {% if offset < remaining_rows - limit %}
-                        <a href="{{ url_for('home', limit=limit, offset=remaining_rows - limit, query=query, source_query=source_query, target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
+                        <a href="{{ url_for('.home', limit=limit, offset=remaining_rows - limit, query=query, source_query=source_query, target_query=target_query, prefix=prefix, source_prefix=source_prefix, target_prefix=target_prefix, same_text=same_text) }}">
                             Last ({{ "{:,d}".format(remaining_rows) }})
                             <i class="fas fa-angle-double-right"></i>
                         </a>
