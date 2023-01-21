@@ -10,6 +10,7 @@ from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple
 import flask
 import flask_bootstrap
 from bioregistry.resolve_identifier import get_bioregistry_iri
+from flask import current_app
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
@@ -30,12 +31,20 @@ from biomappings.utils import (
     push,
 )
 
-app = flask.Flask(__name__)
-app.config["WTF_CSRF_ENABLED"] = False
-app.config["SECRET_KEY"] = os.urandom(8)
-app.config["SHOW_RELATIONS"] = True
-app.config["SHOW_LINES"] = False
-flask_bootstrap.Bootstrap(app)
+
+def get_app(target_curies: Optional[Iterable[Tuple[str, str]]] = None) -> flask.Flask:
+    """Get a curation flask app."""
+    app_ = flask.Flask(__name__)
+    app_.config["WTF_CSRF_ENABLED"] = False
+    app_.config["SECRET_KEY"] = os.urandom(8)
+    app_.config["SHOW_RELATIONS"] = True
+    app_.config["SHOW_LINES"] = False
+    controller = Controller(target_curies=target_curies)
+    app_.config["controller"] = controller
+    flask_bootstrap.Bootstrap(app_)
+    app_.register_blueprint(blueprint)
+    return app_
+
 
 # A mapping from your computer's user, returned by getuser.getpass()
 KNOWN_USERS = {record["user"]: record["orcid"] for record in load_curators()}
@@ -71,7 +80,9 @@ class Controller:
         limit: Optional[int] = None,
         query: Optional[str] = None,
         source_query: Optional[str] = None,
+        source_prefix: Optional[str] = None,
         target_query: Optional[str] = None,
+        target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
         same_text: bool = False,
@@ -84,16 +95,20 @@ class Controller:
             or target fields.
         :param source_query: If given, show only equivalences that have it appearing as a substring in one of the source
             fields.
+        :param source_prefix: If given, show only mappings that have it appearing in the source prefix field
         :param target_query: If given, show only equivalences that have it appearing as a substring in one of the target
             fields.
+        :param target_prefix: If given, show only mappings that have it appearing in the target prefix field
         :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes.
         :param same_text: If true, filter to predictions with the same label
         :yields: Pairs of positions and prediction dictionaries
         """
         it = self._help_it_predictions(
             query=query,
-            source=source_query,
-            target=target_query,
+            source_query=source_query,
+            source_prefix=source_prefix,
+            target_query=target_query,
+            target_prefix=target_prefix,
             prefix=prefix,
             sort=sort,
             same_text=same_text,
@@ -116,7 +131,9 @@ class Controller:
         self,
         query: Optional[str] = None,
         source_query: Optional[str] = None,
+        source_prefix: Optional[str] = None,
         target_query: Optional[str] = None,
+        target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
         same_text: bool = False,
@@ -124,8 +141,10 @@ class Controller:
         """Count the number of predictions to check for the given filters."""
         it = self._help_it_predictions(
             query=query,
-            source=source_query,
-            target=target_query,
+            source_query=source_query,
+            source_prefix=source_prefix,
+            target_query=target_query,
+            target_prefix=target_prefix,
             prefix=prefix,
             sort=sort,
             same_text=same_text,
@@ -135,8 +154,10 @@ class Controller:
     def _help_it_predictions(
         self,
         query: Optional[str] = None,
-        source: Optional[str] = None,
-        target: Optional[str] = None,
+        source_query: Optional[str] = None,
+        source_prefix: Optional[str] = None,
+        target_query: Optional[str] = None,
+        target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
         same_text: bool = False,
@@ -163,14 +184,18 @@ class Controller:
                     "target name",
                 },
             )
-        if source is not None:
+        if source_prefix is not None:
+            it = self._help_filter(source_prefix, it, {"source prefix"})
+        if source_query is not None:
             it = self._help_filter(
-                source, it, {"source prefix", "source identifier", "source name"}
+                source_query, it, {"source prefix", "source identifier", "source name"}
             )
-        if target is not None:
+        if target_query is not None:
             it = self._help_filter(
-                target, it, {"target prefix", "target identifier", "target name"}
+                target_query, it, {"target prefix", "target identifier", "target name"}
             )
+        if target_prefix is not None:
+            it = self._help_filter(target_prefix, it, {"target prefix"})
         if prefix is not None:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
 
@@ -289,9 +314,6 @@ class Controller:
         self._added_mappings = []
 
 
-controller = Controller()
-
-
 class MappingForm(FlaskForm):
     """Form for entering new mappings."""
 
@@ -304,29 +326,36 @@ class MappingForm(FlaskForm):
     submit = SubmitField("Add")
 
 
-@app.route("/")
+blueprint = flask.Blueprint("ui", __name__)
+
+
+@blueprint.route("/")
 def home():
     """Serve the home page."""
     form = MappingForm()
     limit = flask.request.args.get("limit", type=int, default=10)
     offset = flask.request.args.get("offset", type=int, default=0)
     query = flask.request.args.get("query")
-    source_query = flask.request.args.get("source")
-    target_query = flask.request.args.get("target")
+    source_query = flask.request.args.get("source_query")
+    source_prefix = flask.request.args.get("source_prefix")
+    target_query = flask.request.args.get("target_query")
+    target_prefix = flask.request.args.get("target_prefix")
     prefix = flask.request.args.get("prefix")
     sort = flask.request.args.get("sort")
     same_text = flask.request.args.get("same_text", default="false").lower() in {"true", "t"}
-    show_relations = app.config["SHOW_RELATIONS"]
-    show_lines = app.config["SHOW_LINES"]
+    show_relations = current_app.config["SHOW_RELATIONS"]
+    show_lines = current_app.config["SHOW_LINES"]
     return flask.render_template(
         "home.html",
-        controller=controller,
+        controller=current_app.config["controller"],
         form=form,
         limit=limit,
         offset=offset,
         query=query,
         source_query=source_query,
+        source_prefix=source_prefix,
         target_query=target_query,
+        target_prefix=target_prefix,
         prefix=prefix,
         sort=sort,
         same_text=same_text,
@@ -336,12 +365,12 @@ def home():
     )
 
 
-@app.route("/add_mapping", methods=["POST"])
+@blueprint.route("/add_mapping", methods=["POST"])
 def add_mapping():
     """Add a new mapping manually."""
     form = MappingForm()
     if form.is_submitted():
-        controller.add_mapping(
+        current_app.config["controller"].add_mapping(
             form.data["source_prefix"],
             form.data["source_id"],
             form.data["source_name"],
@@ -349,28 +378,29 @@ def add_mapping():
             form.data["target_id"],
             form.data["target_name"],
         )
-        controller.persist()
+        current_app.config["controller"].persist()
     else:
         flask.flash("missing form data", category="warning")
     return _go_home()
 
 
-@app.route("/commit")
+@blueprint.route("/commit")
 def run_commit():
     """Make a commit then redirect to the the home page."""
     commit_info = commit(
-        f'Curated {controller.total_curated} mapping{"s" if controller.total_curated > 1 else ""}'
+        f'Curated {current_app.config["controller"].total_curated} mapping'
+        f'{"s" if current_app.config["controller"].total_curated > 1 else ""}'
         f" ({getpass.getuser()})",
     )
-    app.logger.warning("git commit res: %s", commit_info)
+    current_app.logger.warning("git commit res: %s", commit_info)
     if not_main():
         branch = get_branch()
         push_output = push(branch_name=branch)
-        app.logger.warning("git push res: %s", push_output)
+        current_app.logger.warning("git push res: %s", push_output)
     else:
         flask.flash("did not push because on master branch")
-        app.logger.warning("did not push because on master branch")
-    controller.total_curated = 0
+        current_app.logger.warning("did not push because on master branch")
+    current_app.config["controller"].total_curated = 0
     return _go_home()
 
 
@@ -391,31 +421,35 @@ def _normalize_mark(value: str) -> str:
         raise ValueError
 
 
-@app.route("/mark/<int:line>/<value>")
+@blueprint.route("/mark/<int:line>/<value>")
 def mark(line: int, value: str):
     """Mark the given line as correct or not."""
-    controller.mark(line, _normalize_mark(value))
-    controller.persist()
+    current_app.config["controller"].mark(line, _normalize_mark(value))
+    current_app.config["controller"].persist()
     return _go_home()
 
 
 def _go_home():
     return flask.redirect(
         flask.url_for(
-            "home",
+            ".home",
             limit=flask.request.args.get("limit", type=int),
             offset=flask.request.args.get("offset", type=int),
             query=flask.request.args.get("query"),
-            source=flask.request.args.get("source"),
-            target=flask.request.args.get("target"),
+            source_query=flask.request.args.get("source_query"),
+            source_prefix=flask.request.args.get("source_prefix"),
+            target_query=flask.request.args.get("target_query"),
+            target_prefix=flask.request.args.get("target_prefix"),
             prefix=flask.request.args.get("prefix"),
             same_text=flask.request.args.get("same_text", default="false").lower() in {"true", "t"},
             # config
-            show_relations=app.config["SHOW_RELATIONS"],
-            show_lines=app.config["SHOW_LINES"],
+            show_relations=current_app.config["SHOW_RELATIONS"],
+            show_lines=current_app.config["SHOW_LINES"],
         )
     )
 
+
+app = get_app()
 
 if __name__ == "__main__":
     app.run()
