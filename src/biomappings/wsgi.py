@@ -7,9 +7,9 @@ import os
 from collections import defaultdict
 from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple
 
+import bioregistry
 import flask
 import flask_bootstrap
-from bioregistry.resolve_identifier import get_bioregistry_iri
 from flask import current_app
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -41,7 +41,7 @@ def get_app(target_curies: Optional[Iterable[Tuple[str, str]]] = None) -> flask.
     app_.config["SHOW_LINES"] = False
     controller = Controller(target_curies=target_curies)
     app_.config["controller"] = controller
-    flask_bootstrap.Bootstrap(app_)
+    flask_bootstrap.Bootstrap4(app_)
     app_.register_blueprint(blueprint)
     return app_
 
@@ -101,6 +101,8 @@ class Controller:
         :param target_prefix: If given, show only mappings that have it appearing in the target prefix field
         :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes.
         :param same_text: If true, filter to predictions with the same label
+        :param sort: If "desc", sorts in descending confidence order. If "asc", sorts in increasing confidence order.
+            Otherwise, do not sort.
         :yields: Pairs of positions and prediction dictionaries
         """
         it = self._help_it_predictions(
@@ -230,7 +232,9 @@ class Controller:
     @classmethod
     def get_url(cls, prefix: str, identifier: str) -> str:
         """Return URL for a given prefix and identifier."""
-        return get_bioregistry_iri(prefix, identifier)
+        if bioregistry.get_obofoundry_prefix(prefix):
+            return bioregistry.get_ols_iri(prefix, identifier)
+        return bioregistry.get_bioregistry_iri(prefix, identifier)
 
     @property
     def total_predictions(self) -> int:
