@@ -3,7 +3,7 @@
 """The biomappings CLI."""
 
 import click
-from more_click import make_web_command
+from more_click import make_web_command, run_app
 
 from .export_sssom import sssom
 from .graph import charts
@@ -21,6 +21,21 @@ def main():
 if get_git_hash() is not None:
     # This command is called "web" by default
     main.add_command(make_web_command("biomappings.wsgi:app"))
+
+    @main.command()
+    @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
+    def curate(path):
+        """Run a target curation web app."""
+        from .resources import _load_table
+        from .wsgi import get_app
+
+        target_curies = []
+        for mapping in _load_table(path):
+            target_curies.append((mapping["source prefix"], mapping["source identifier"]))
+            target_curies.append((mapping["target prefix"], mapping["target identifier"]))
+        app = get_app(target_curies=target_curies)
+        run_app(app, with_gunicorn=False)
+
 else:
 
     @main.command()

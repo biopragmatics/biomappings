@@ -1,0 +1,101 @@
+source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	confidence	source	curation_status
+chebi	CHEBI:135656	mazaticol	skos:exactMatch	mesh	C003706	mazaticol	manually_reviewed		orcid:0000-0001-9439-5346	positive
+chebi	CHEBI:135822	nafiverine	skos:exactMatch	mesh	C002681	nafiverine	manually_reviewed		orcid:0000-0003-4423-4370	positive
+chebi	CHEBI:75408	sulindac sulfide	skos:exactMatch	mesh	C025462	sulindac sulfide	manually_reviewed		orcid:0000-0001-9439-5346	positive
+chebi	CHEBI:132171	5,6-dihydrothymidine	skos:exactMatch	mesh	C029949	5,6-dihydrothymidine	manually_reviewed		orcid:0000-0001-9439-5346	positive
+chebi	CHEBI:4948	Evodiamine	skos:exactMatch	mesh	C049639	evodiamine	manually_reviewed		orcid:0000-0001-9439-5346	positive
+chebi	CHEBI:31501	dimorpholamine	skos:exactMatch	mesh	C100074	dimorpholamine	manually_reviewed		orcid:0000-0001-9439-5346	positive
+chebi	CHEBI:10072	xanthurenic acid	skos:exactMatch	mesh	C028330	xanthurenic acid	manually_reviewed		orcid:0000-0001-9439-5346	positive
+chebi	CHEBI:8695	quercetagetin	skos:exactMatch	mesh	C079163	quercetagetin	manually_reviewed		orcid:0000-0001-9439-5346	positive
+chebi	CHEBI:6988	monotropein	skos:exactMatch	mesh	C507582	monotropein	manually_reviewed		orcid:0000-0001-9439-5346	positive
+chebi	CHEBI:135697	sarpogrelate	skos:exactMatch	mesh	C064294	sarpogrelate	manually_reviewed		orcid:0000-0001-9439-5346	positive
+chebi	CHEBI:17351	linoleic acid	skos:exactMatch	mesh	D019787	Linoleic Acid	manually_reviewed		orcid:0000-0001-9439-5346	positive
+chebi	CHEBI:138656	rhizathalene A	skos:exactMatch	mesh	C586007	rhizathalene A	manually_reviewed		orcid:0000-0003-4423-4370	positive
+chebi	CHEBI:50464	cis-vaccenic acid	skos:exactMatch	mesh	C065593	cis-vaccenic acid	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:53078	N(6)-(2,4-dinitrophenyl)lysine	skos:exactMatch	mesh	C007493	epsilon-dinitrophenyllysine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:31186	alfacalcidol	skos:exactMatch	mesh	C008088	alfacalcidol	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:43043	hexadecane-1-sulfonic acid	skos:exactMatch	mesh	C025737	cetylsulfonic acid	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:59065	3,3,5-trimethylcyclohexanol	skos:exactMatch	mesh	C037269	3,3,5-trimethylcyclohexanol	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:34815	Leucomycin A5	skos:exactMatch	mesh	C111299	leucomycin A5	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:55518	butanilicaine	skos:exactMatch	mesh	C008337	butanilicaine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:84212	furan-2,5-dicarboxylic acid	skos:exactMatch	mesh	C551400	2,5-furandicarboxylic acid	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:59925	dihydro-beta-ergocryptine	skos:exactMatch	mesh	C527876	beta-dihydroergocryptine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:88776	Dopamine glucuronide	skos:exactMatch	mesh	C037719	dopamine glucuronide	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:178144	Clitocine	skos:exactMatch	mesh	C055433	clitocine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:50867	ciprofibrate	skos:exactMatch	mesh	C019304	ciprofibrate	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:4940	Euphol	skos:exactMatch	mesh	C062557	euphol	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:76308	tetradecanedioic acid	skos:exactMatch	mesh	C441251	1,14-tetradecanedioic acid	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:67171	cortistatin A	skos:exactMatch	mesh	C531521	cortistatin A	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:165877	N-Acetyl-S-(2-carbamoyl-2-hydroxyethyl)-L-cysteine	skos:exactMatch	mesh	C000625513	N-acetyl-S-(2-carbamoyl-2-hydroxyethyl)-L-cysteine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:80147	Katacalcin	skos:exactMatch	mesh	C037553	katacalcin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:61010	alpha-L-Fuc-(1->2)-[alpha-D-Gal-(1->3)]-beta-D-Gal	skos:exactMatch	mesh	C406478	blood group B trisaccharide	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:74039	perillene	skos:exactMatch	mesh	C090823	perillene	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:8256	Plantamajoside	skos:exactMatch	mesh	C421173	plantamajoside	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:9690	tricholomic acid	skos:exactMatch	mesh	C064598	alpha-amino-3-oxo-5-isoxazolidineacetic acid	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:6567	Lunularic acid	skos:exactMatch	mesh	C067452	lunularic acid	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:35036	fentin chloride	skos:exactMatch	mesh	C012594	triphenyltin chloride	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:53457	glucuronoxylomannan	skos:exactMatch	mesh	C027478	glucuronoxylomannan	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:5635	helenalin	skos:exactMatch	mesh	C001329	helenalin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:82017	fluroxypyr	skos:exactMatch	mesh	C416382	4,5-amino-3,5-dichloro-6-fluoro-2-pyridinyloxyacetic acid	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:80495	benzidine	skos:exactMatch	mesh	C029876	benzidine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:16543	N(2)-acetyl-L-ornithine	skos:exactMatch	mesh	C021951	N(delta)-acetylornithine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:7611	nonacosan-10-ol	skos:exactMatch	mesh	C468854	10-nonacosanol	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:6694	maritimetin	skos:exactMatch	mesh	C539537	maritimetin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:83101	coprogen	skos:exactMatch	mesh	C010896	coprogen	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:82102	Amidithion	skos:exactMatch	mesh	C006493	amidithion	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:80068	Westiellamide	skos:exactMatch	mesh	C074972	westiellamide	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:83125	desferricoprogen	skos:exactMatch	mesh	C047664	desferricoprogen	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:81503	1,2,3,6,7,8-Hexachlorodibenzodioxin	skos:exactMatch	mesh	C046838	1,2,3,6,7,8-hexachlorodibenzodioxin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:69959	Lauroside B	skos:exactMatch	mesh	C557426	lauroside B	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:23104	chitooligosaccharide	skos:exactMatch	mesh	C493484	oligochitosan	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:65600	cathestatin B	skos:exactMatch	mesh	C092940	cathestatin B	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:177416	Pexacerfont	skos:exactMatch	mesh	C542342	pexacerfont	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:37974	silicon-29 atom	skos:exactMatch	mesh	C000615303	Silicon-29	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:89406	Norcotinine	skos:exactMatch	mesh	C066333	norcotinine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:75272	splitomicin	skos:exactMatch	mesh	C444426	splitomicin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:68508	diethyl maleate	skos:exactMatch	mesh	C014476	diethyl maleate	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:19544	2-dehydroecdysone	skos:exactMatch	mesh	C054761	2-dehydroecdysone	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:82220	atraton	skos:exactMatch	mesh	C017035	atratone	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:75937	monooleoylglycerol	skos:exactMatch	mesh	C005953	monoolein	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:91107	SB 415286	skos:exactMatch	mesh	C417520	3-(3-chloro-4-hydroxyphenylamino)-4-(4-nitrophenyl)-1H-pyrrole-2,5-dione	lexical	0.9	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	prediction
+chebi	CHEBI:82392	Arsenobetaine	skos:exactMatch	mesh	C038992	arsenobetaine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:174606	2,3-Epoxysesamone	skos:exactMatch	mesh	C447010	2,3-epoxysesamone	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:61700	(+)-valencene	skos:exactMatch	mesh	C506706	valencene	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:177640	Mycalolide B	skos:exactMatch	mesh	C080978	mycalolide B	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:82112	Cyanofenphos	skos:exactMatch	mesh	C002488	cyanophenphos	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:41988	3,4-dihydrozebularine	skos:exactMatch	mesh	C436982	3,4-dihydrozebularine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:5375	Glaucolide B	skos:exactMatch	mesh	C065496	glaucolide B	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:37974	silicon-29 atom	skos:exactMatch	mesh	C000615303	Silicon-29	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:180630	2-(1,3-benzoxazol-2-yl)phenol	skos:exactMatch	mesh	C433838	2-(2'-hydroxyphenyl)benzoxazole	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:73159	pyrabactin	skos:exactMatch	mesh	C540973	pyrabactin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:31963	Paramethasone acetate	skos:exactMatch	mesh	C032128	paramethasone acetate	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:4385	Delsoline	skos:exactMatch	mesh	C045308	delsoline	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:175562	Muzanzagenin	skos:exactMatch	mesh	C109392	muzanzagenin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:33135	pyrrolidine	skos:exactMatch	mesh	C032519	pyrrolidine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:70008	quercetin 3,4'-dimethyl ether	skos:exactMatch	mesh	C549753	5,7,3'-trihydroxy-3,4'-dimethoxyflavone	lexical	0.9	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	prediction
+chebi	CHEBI:82357	N-Nitrosodiethanolamine	skos:exactMatch	mesh	C014129	N-nitrosodiethanolamine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:34946	Reactive blue 2	skos:exactMatch	mesh	C012842	Cibacron Blue F 3GA	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:66349	Variecolin	skos:exactMatch	mesh	C433945	variecolin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:136604	cyclohexyl isocyanate	skos:exactMatch	mesh	C000536	cyclohexylisocyanate	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:61010	alpha-L-Fuc-(1->2)-[alpha-D-Gal-(1->3)]-beta-D-Gal	skos:exactMatch	mesh	C406478	blood group B trisaccharide	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:52233	tin-116 atom	skos:exactMatch	mesh	C000615562	Tin-116	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:166478	2-Aminopropanol	skos:exactMatch	mesh	C034448	2-aminopropanol	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:81216	Chrysanthetriol	skos:exactMatch	mesh	C076943	chrysanthetriol	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:24479	heme a	skos:exactMatch	mesh	C027728	heme a	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:17407	2-trans,6-trans-farnesyl diphosphate	skos:exactMatch	mesh	C004808	farnesyl pyrophosphate	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:81111	Pseudoprotodioscin	skos:exactMatch	mesh	C000606215	pseudo-protodioscin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:3932	cryptopleurine	skos:exactMatch	mesh	C007160	cryptopleurine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:65907	forskoditerpenoside C	skos:exactMatch	mesh	C525681	forskoditerpenoside C	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:37386	aurantio-obtusin	skos:exactMatch	mesh	C000595611	aurantio-obtusin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:77927	nonan-2-one	skos:exactMatch	mesh	C026636	2-nonanone	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:6799	metazocine	skos:exactMatch	mesh	C047238	metazocine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:50642	1,8-dinitronaphthalene	skos:exactMatch	mesh	C541501	1,8-dinitronaphthalene	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:175649	Hydroxyisonobilin	skos:exactMatch	mesh	C032659	hydroxyisonobilin	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:81005	Cilazaprilat	skos:exactMatch	mesh	C045980	cilazaprilat	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:37981	sulfur-34 atom	skos:exactMatch	mesh	C000615316	Sulfur-34	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:89195	2-Methyl-4-heptanone	skos:exactMatch	mesh	C520062	2-methyl-4-heptanone	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:82469	Glycidyl oleate	skos:exactMatch	mesh	C013542	glycidyl oleate	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:6086	Jatrophone	skos:exactMatch	mesh	C006386	jatrophone	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:34339	3-Hydroxyestra-1,3,5(10),6-tetraen-17-one	skos:exactMatch	mesh	C076348	3-hydroxyestra-1,3,5(10),6-tetraen-17-one	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:3174	Brevicolline	skos:exactMatch	mesh	C519984	brevicolline	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
+chebi	CHEBI:3875	coprine	skos:exactMatch	mesh	C014423	coprine	lexical	0.95	generate_chebi_mesh_mappings.py	prediction
