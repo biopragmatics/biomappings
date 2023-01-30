@@ -231,6 +231,24 @@ Full documentation can be found on [ReadTheDocs](https://biomappings.readthedocs
 
 Code is licensed under the MIT License. Data are licensed under the CC0 License.
 
+### 📖 Citation
+
+> [Prediction and Curation of Missing Biomedical Identifier Mappings with Biomappings](https://doi.org/10.1101/2022.11.29.518386)
+> <br />Hoyt, C. T., Hoyt, A. L., and Gyori, B. M. (2022)
+> <br />*bioRxiv*, 2022.11.29.518386. 
+
+```bibtex
+@article{Hoyt2022,
+   title = {{Prediction and Curation of Missing Biomedical Identifier Mappings with Biomappings}},
+   author = {Hoyt, Charles Tapley and Hoyt, Amelia L and Gyori, Benjamin M},
+   journal = {bioRxiv},
+   year = {2022},
+   month = {dec},
+   doi = {10.1101/2022.11.29.518386},
+   url = {http://biorxiv.org/content/early/2022/12/02/2022.11.29.518386.abstract},
+}
+```
+
 ### 🎁 Support
 
 Biomappings was developed by the [INDRA Lab](https://indralab.github.io), a part of the
