@@ -7,9 +7,9 @@ import os
 from collections import defaultdict
 from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple
 
+import bioregistry
 import flask
 import flask_bootstrap
-from bioregistry.resolve_identifier import get_bioregistry_iri
 from flask import current_app
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -41,7 +41,7 @@ def get_app(target_curies: Optional[Iterable[Tuple[str, str]]] = None) -> flask.
     app_.config["SHOW_LINES"] = False
     controller = Controller(target_curies=target_curies)
     app_.config["controller"] = controller
-    flask_bootstrap.Bootstrap(app_)
+    flask_bootstrap.Bootstrap4(app_)
     app_.register_blueprint(blueprint)
     return app_
 
@@ -84,6 +84,7 @@ class Controller:
         target_query: Optional[str] = None,
         target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
+        sort: Optional[str] = None,
         same_text: bool = False,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
@@ -100,6 +101,8 @@ class Controller:
         :param target_prefix: If given, show only mappings that have it appearing in the target prefix field
         :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes.
         :param same_text: If true, filter to predictions with the same label
+        :param sort: If "desc", sorts in descending confidence order. If "asc", sorts in increasing confidence order.
+            Otherwise, do not sort.
         :yields: Pairs of positions and prediction dictionaries
         """
         it = self._help_it_predictions(
@@ -109,6 +112,7 @@ class Controller:
             target_query=target_query,
             target_prefix=target_prefix,
             prefix=prefix,
+            sort=sort,
             same_text=same_text,
         )
         if offset is not None:
@@ -133,6 +137,7 @@ class Controller:
         target_query: Optional[str] = None,
         target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
+        sort: Optional[str] = None,
         same_text: bool = False,
     ) -> int:
         """Count the number of predictions to check for the given filters."""
@@ -143,6 +148,7 @@ class Controller:
             target_query=target_query,
             target_prefix=target_prefix,
             prefix=prefix,
+            sort=sort,
             same_text=same_text,
         )
         return sum(1 for _ in it)
@@ -155,6 +161,7 @@ class Controller:
         target_query: Optional[str] = None,
         target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
+        sort: Optional[str] = None,
         same_text: bool = False,
     ):
         it: Iterable[Tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
@@ -194,6 +201,9 @@ class Controller:
         if prefix is not None:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
 
+        if sort is not None:
+            it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=sort == "desc"))
+
         if same_text:
             it = (
                 (line, prediction)
@@ -222,7 +232,9 @@ class Controller:
     @classmethod
     def get_url(cls, prefix: str, identifier: str) -> str:
         """Return URL for a given prefix and identifier."""
-        return get_bioregistry_iri(prefix, identifier)
+        if bioregistry.get_obofoundry_prefix(prefix):
+            return bioregistry.get_ols_iri(prefix, identifier)
+        return bioregistry.get_bioregistry_iri(prefix, identifier)
 
     @property
     def total_predictions(self) -> int:
@@ -333,6 +345,7 @@ def home():
     target_query = flask.request.args.get("target_query")
     target_prefix = flask.request.args.get("target_prefix")
     prefix = flask.request.args.get("prefix")
+    sort = flask.request.args.get("sort")
     same_text = flask.request.args.get("same_text", default="false").lower() in {"true", "t"}
     show_relations = current_app.config["SHOW_RELATIONS"]
     show_lines = current_app.config["SHOW_LINES"]
@@ -348,6 +361,7 @@ def home():
         target_query=target_query,
         target_prefix=target_prefix,
         prefix=prefix,
+        sort=sort,
         same_text=same_text,
         # configured
         show_relations=show_relations,
