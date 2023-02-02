@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """The biomappings CLI."""
+import sys
 
 import click
 from more_click import make_web_command, run_app
@@ -87,6 +88,10 @@ def prune(prefixes):
     """Prune inferred mappings between the given prefixes from the predictions."""
     from .mapping_graph import get_custom_filter
     from .resources import filter_predictions
+
+    if len(prefixes) < 2:
+        click.secho("Must give at least 2 prefixes", fg="red")
+        return sys.exit(0)
 
     cf = get_custom_filter(prefixes[0], prefixes[1:])
     filter_predictions(cf)

@@ -104,6 +104,7 @@ class Controller:
         :param same_text: If true, filter to predictions with the same label
         :param sort: If "desc", sorts in descending confidence order. If "asc", sorts in increasing confidence order.
             Otherwise, do not sort.
+        :param provenance: If given, filters to provenance values matching this
         :yields: Pairs of positions and prediction dictionaries
         """
         it = self._help_it_predictions(
