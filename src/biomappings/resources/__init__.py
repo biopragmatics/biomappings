@@ -331,7 +331,8 @@ def _standardize_mapping(mapping):
     ]:
         prefix, identifier = mapping[prefix_key], mapping[identifier_key]
         resource = bioregistry.get_resource(prefix)
-        assert resource is not None
+        if resource is None:
+            raise ValueError
         miriam_prefix = resource.get_miriam_prefix()
         if miriam_prefix is not None:
             mapping[identifier_key] = (
