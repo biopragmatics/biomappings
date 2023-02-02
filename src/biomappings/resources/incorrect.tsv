@@ -19,6 +19,9 @@ agrovoc	7771	tillage	skos:exactMatch	agro	00000002	tillage process	manually_revi
 agrovoc	7b960f69	rainwater harvesting	skos:exactMatch	agro	00000589	water harvesting	manually_reviewed	orcid:0000-0002-2627-0696
 agrovoc	8446	working animals	skos:exactMatch	agro	00002004	draft animal role	manually_reviewed	orcid:0000-0002-2627-0696
 agrovoc	fdfbb37f	parcels	skos:exactMatch	agro	00000301	agricultural experimental plot	manually_reviewed	orcid:0000-0002-2627-0696
+apollosv	00000094	community	skos:exactMatch	ncit	C16453	Community	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000340	agonism	skos:exactMatch	nbo	0000015	aggressive behavior	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000340	agonism	skos:exactMatch	nbo	0000121	agonistic behavior	manually_reviewed	orcid:0000-0003-4423-4370
 ccle	697_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	697	skos:exactMatch	cellosaurus	CVCL_8056	697-mel	manually_reviewed	orcid:0000-0003-1307-2508
 ccle	A204_SOFT_TISSUE	A-204	skos:exactMatch	cellosaurus	CVCL_1N55	Urd-B	manually_reviewed	orcid:0000-0003-1307-2508
 ccle	ABC1_LUNG	ABC-1	skos:exactMatch	cellosaurus	CVCL_ZB62	AbC1	manually_reviewed	orcid:0000-0003-1307-2508
@@ -230,6 +233,7 @@ doid	DOID:9065	leishmaniasis	skos:exactMatch	umls	C1548483	Leishmaniasis Vaccine
 doid	DOID:9675	pulmonary emphysema	skos:exactMatch	efo	0000464	emphysema	manually_reviewed	orcid:0000-0001-9439-5346
 doid	DOID:9682	yellow fever	skos:exactMatch	umls	C0301508	yellow fever vaccine	manually_reviewed	orcid:0000-0003-4423-4370
 doid	DOID:9847	peripheral vertigo	skos:exactMatch	mesh	D014717	Vertigo	manually_reviewed	orcid:0000-0001-9439-5346
+idomal	0001123	RAP-1	skos:exactMatch	vo	0011026	RAP-1	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	mesh	D018528	ATP-Binding Cassette Transporters	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	map03010	Ribosome	skos:exactMatch	go	GO:0005840	ribosome	manually_reviewed	orcid:0000-0003-4423-4370
@@ -1133,6 +1137,21 @@ uberon	UBERON:0000104	life cycle	skos:exactMatch	mesh	D008018	Life Cycle Stages	
 uberon	UBERON:0022469	primary olfactory cortex	skos:exactMatch	mesh	D066194	Olfactory Cortex	manually_reviewed	orcid:0000-0001-9439-5346
 uberon	UBERON:2001977	pad	skos:exactMatch	mesh	D058729	Peripheral Arterial Disease	manually_reviewed	orcid:0000-0001-9439-5346
 umls	C0006142	Malignant neoplasm of breast	skos:exactMatch	mesh	D001943	Breast Neoplasms	manual	orcid:0000-0002-6601-2165
+vo	0010896	Ssb	skos:exactMatch	uberon	UBERON:0004199	S-shaped body	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0010988	IroN	skos:exactMatch	chebi	CHEBI:18248	iron atom	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0010997	IroN	skos:exactMatch	chebi	CHEBI:18248	iron atom	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011021	CP	skos:exactMatch	chebi	CHEBI:3380	captopril	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011021	CP	skos:exactMatch	hp	HP:0100021	Cerebral palsy	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011026	RAP-1	skos:exactMatch	idomal	0001123	RAP-1	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011231	Glycoprotein	skos:exactMatch	chebi	CHEBI:17089	glycoprotein	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011276	SP	skos:exactMatch	uberon	UBERON:0004035	cortical subplate	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011306	E1	skos:exactMatch	pr	PR:000011357	NPC intracellular cholesterol transporter 2	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011312	NS1	skos:exactMatch	doid	DOID:0060578	Noonan syndrome 1	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011339	Catalase	skos:exactMatch	pr	PR:000005061	catalase	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0012389	CNA	skos:exactMatch	pr	PR:000003278	serine/threonine-protein phosphatase 2B catalytic subunit alpha isoform	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0012389	CNA	skos:exactMatch	pr	PR:Q08209	serine/threonine-protein phosphatase 2B catalytic subunit alpha isoform (human)	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0012403	Rib	skos:exactMatch	chebi	CHEBI:33942	ribose	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0012403	Rib	skos:exactMatch	uberon	UBERON:0002228	rib	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP1060	Matrix Metalloproteinases	speciesSpecific	fplx	MMP	MMP	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP1176	Matrix Metalloproteinases	speciesSpecific	fplx	MMP	MMP	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP1256	NLR Proteins	speciesSpecific	mesh	D000070576	NLR Proteins	manually_reviewed	orcid:0000-0003-4423-4370

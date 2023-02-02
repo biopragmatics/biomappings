@@ -200,6 +200,8 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         if norm_id != identifier:
             raise InvalidNormIdentifier(prefix, identifier, norm_id)
         pattern = re.compile(resource.miriam["pattern"])
+        if prefix == "pr":
+            pattern = None  # identifiers.org is broken for uniprot in PR
 
     # If this resource does not have a mapping to MIRIAM, then
     # the Bioregistry normalization will be applied, which e.g.,
@@ -216,7 +218,7 @@ def check_valid_prefix_id(prefix: str, identifier: str):
 
 def get_curie(prefix: str, identifier: str) -> str:
     """Get a normalized curie from a pre-parsed prefix/identifier pair."""
-    p, i = bioregistry.normalize_parsed_curie(prefix, identifier)
-    if p is None or i is None:
-        raise ValueError
-    return f"{p}:{i}"
+    prefix_norm, identifier_norm = bioregistry.normalize_parsed_curie(prefix, identifier)
+    if prefix_norm is None or identifier_norm is None:
+        raise ValueError(f"could not normalize {prefix}:{identifier}")
+    return f"{prefix_norm}:{identifier_norm}"

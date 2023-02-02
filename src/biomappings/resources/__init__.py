@@ -18,6 +18,9 @@ from typing import (
     Tuple,
 )
 
+import bioregistry
+from tqdm import tqdm
+
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
 MAPPINGS_HEADER = [
@@ -301,17 +304,43 @@ def lint_predictions() -> None:
             load_unsure(),
         )
     }
-    mappings = (
+    mappings = [
         mapping
-        for mapping in load_predictions()
+        for mapping in tqdm(
+            load_predictions(), desc="Removing curated from predicted", unit_scale=True
+        )
         if get_canonical_tuple(mapping) not in curated_mappings
-    )
+    ]
     mappings = _remove_redundant(mappings, PredictionTuple)
     write_predictions(sorted(mappings, key=mapping_sort_key))
 
 
 def _remove_redundant(mappings, tuple_cls):
+    mappings = (
+        _standardize_mapping(mapping)
+        for mapping in tqdm(mappings, desc="Standardizing mappings", unit_scale=True)
+    )
     return (mapping.as_dict() for mapping in {tuple_cls.from_dict(mapping) for mapping in mappings})
+
+
+def _standardize_mapping(mapping):
+    """Standardize a mapping."""
+    for prefix_key, identifier_key in [
+        ("source prefix", "source identifier"),
+        ("target prefix", "target identifier"),
+    ]:
+        prefix, identifier = mapping[prefix_key], mapping[identifier_key]
+        resource = bioregistry.get_resource(prefix)
+        if resource is None:
+            raise ValueError
+        miriam_prefix = resource.get_miriam_prefix()
+        if miriam_prefix is not None:
+            mapping[identifier_key] = (
+                resource.miriam_standardize_identifier(identifier) or identifier
+            )
+        else:
+            mapping[identifier_key] = resource.standardize_identifier(identifier)
+    return mapping
 
 
 def load_curators():

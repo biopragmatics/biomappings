@@ -86,6 +86,7 @@ class Controller:
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
         same_text: bool = False,
+        provenance: Optional[str] = None,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
@@ -103,6 +104,7 @@ class Controller:
         :param same_text: If true, filter to predictions with the same label
         :param sort: If "desc", sorts in descending confidence order. If "asc", sorts in increasing confidence order.
             Otherwise, do not sort.
+        :param provenance: If given, filters to provenance values matching this
         :yields: Pairs of positions and prediction dictionaries
         """
         it = self._help_it_predictions(
@@ -114,6 +116,7 @@ class Controller:
             prefix=prefix,
             sort=sort,
             same_text=same_text,
+            provenance=provenance,
         )
         if offset is not None:
             try:
@@ -139,6 +142,7 @@ class Controller:
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
         same_text: bool = False,
+        provenance: Optional[str] = None,
     ) -> int:
         """Count the number of predictions to check for the given filters."""
         it = self._help_it_predictions(
@@ -150,6 +154,7 @@ class Controller:
             prefix=prefix,
             sort=sort,
             same_text=same_text,
+            provenance=provenance,
         )
         return sum(1 for _ in it)
 
@@ -163,6 +168,7 @@ class Controller:
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
         same_text: bool = False,
+        provenance: Optional[str] = None,
     ):
         it: Iterable[Tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
         if self.target_ids:
@@ -200,6 +206,8 @@ class Controller:
             it = self._help_filter(target_prefix, it, {"target prefix"})
         if prefix is not None:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
+        if provenance is not None:
+            it = self._help_filter(provenance, it, {"source"})
 
         if sort is not None:
             it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=sort == "desc"))
@@ -344,6 +352,7 @@ def home():
     source_prefix = flask.request.args.get("source_prefix")
     target_query = flask.request.args.get("target_query")
     target_prefix = flask.request.args.get("target_prefix")
+    provenance = flask.request.args.get("provenance")
     prefix = flask.request.args.get("prefix")
     sort = flask.request.args.get("sort")
     same_text = flask.request.args.get("same_text", default="false").lower() in {"true", "t"}
@@ -363,6 +372,7 @@ def home():
         prefix=prefix,
         sort=sort,
         same_text=same_text,
+        provenance=provenance,
         # configured
         show_relations=show_relations,
         show_lines=show_lines,
@@ -446,6 +456,7 @@ def _go_home():
             target_prefix=flask.request.args.get("target_prefix"),
             prefix=flask.request.args.get("prefix"),
             same_text=flask.request.args.get("same_text", default="false").lower() in {"true", "t"},
+            provenance=flask.request.args.get("provenance"),
             # config
             show_relations=current_app.config["SHOW_RELATIONS"],
             show_lines=current_app.config["SHOW_LINES"],
