@@ -141,7 +141,7 @@ agrovoc	d2c183d0	compost mulches	skos:exactMatch	agro	00000102	compost mulch	man
 agrovoc	e7505488	tine harrows	skos:exactMatch	agro	00000138	tine harrow	manually_reviewed	orcid:0000-0002-2627-0696
 agrovoc	ea23424c	alpha lattice design	skos:exactMatch	agro	00000337	alpha lattice design	manually_reviewed	orcid:0000-0002-2627-0696
 agrovoc	eb7af602	raised beds	skos:exactMatch	agro	00002021	raised seedbed	manually_reviewed	orcid:0000-0002-2627-0696
-apollosv	00000097	ecosystem	skos:exactMatch	envo	01001110	ecosystem	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000097	ecosystem	skos:exactMatch	envo	ENVO:01001110	ecosystem	manually_reviewed	orcid:0000-0003-4423-4370
 apollosv	00000142	vaccination	skos:exactMatch	idomal	0001040	vaccination	manually_reviewed	orcid:0000-0003-4423-4370
 apollosv	00000154	exposed population	skos:exactMatch	ncit	C71551	Exposed Population	manually_reviewed	orcid:0000-0003-4423-4370
 apollosv	00000172	susceptibility	skos:exactMatch	ido	0000467	susceptibility	manually_reviewed	orcid:0000-0003-4423-4370
@@ -154,7 +154,7 @@ apollosv	00000234	susceptible population	skos:exactMatch	ido	0000514	susceptible
 apollosv	00000235	immune population	skos:exactMatch	ido	0000592	immune population	manually_reviewed	orcid:0000-0003-4423-4370
 apollosv	00000237	pathogen	skos:exactMatch	ido	0000528	pathogen	manually_reviewed	orcid:0000-0003-4423-4370
 apollosv	00000237	pathogen	skos:exactMatch	idomal	0000063	pathogen	manually_reviewed	orcid:0000-0003-4423-4370
-apollosv	00000239	infectious disease	skos:exactMatch	doid	0050117	disease by infectious agent	manually_reviewed	orcid:0000-0003-4423-4370
+apollosv	00000239	infectious disease	skos:exactMatch	doid	DOID:0050117	disease by infectious agent	manually_reviewed	orcid:0000-0003-4423-4370
 apollosv	00000239	infectious disease	skos:exactMatch	ido	0000436	infectious disease	manually_reviewed	orcid:0000-0003-4423-4370
 apollosv	00000311	Breteau Index	skos:exactMatch	vsmo	0000070	breteau index	manually_reviewed	orcid:0000-0003-4423-4370
 apollosv	00000314	gonotrophic cycle	skos:exactMatch	vsmo	0000904	gonotrophic cycle	manually_reviewed	orcid:0000-0003-4423-4370
@@ -2633,7 +2633,7 @@ cido	0000154	COVID-19 epidemic	skos:exactMatch	idocovid19	0001391	COVID-19 epide
 cido	0000366	protective clothing	skos:exactMatch	idomal	0001031	protective clothing	manually_reviewed	orcid:0000-0003-4423-4370
 cido	0000390	BALB/c mouse	skos:exactMatch	vo	0000051	Balb/c mouse	manually_reviewed	orcid:0000-0003-4423-4370
 cido	0001004	Bevacizumab	skos:exactMatch	dron	00014332	bevacizumab	manually_reviewed	orcid:0000-0003-4423-4370
-cido	0001007	EIDD-2801	skos:exactMatch	chebi	180653	molnupiravir	manually_reviewed	orcid:0000-0003-4423-4370
+cido	0001007	EIDD-2801	skos:exactMatch	chebi	CHEBI:180653	molnupiravir	manually_reviewed	orcid:0000-0003-4423-4370
 cido	0001037	Fostamatinib	skos:exactMatch	dron	00819888	fostamatinib	manually_reviewed	orcid:0000-0003-4423-4370
 cl	CL:0000000	cell	skos:exactMatch	mesh	D002477	Cells	manually_reviewed	orcid:0000-0001-9439-5346
 cl	CL:0000010	cultured cell	skos:exactMatch	mesh	D002478	Cells, Cultured	manually_reviewed	orcid:0000-0001-9439-5346
@@ -3141,14 +3141,14 @@ doid	DOID:9600	plantar fasciitis	skos:exactMatch	efo	1001909	Plantar Fasciitis	m
 doid	DOID:9675	pulmonary emphysema	skos:exactMatch	mesh	D011656	Pulmonary Emphysema	manually_reviewed	orcid:0000-0001-9439-5346
 go	GO:0005816	spindle pole body	skos:exactMatch	ncit	C13365	Spindle Pole Body	manual	orcid:0000-0003-4423-4370
 go	GO:0070266	necroptotic process	skos:exactMatch	mesh	D000079302	Necroptosis	manual	orcid:0000-0003-4423-4370
-ido	0000405	pathogen role	skos:exactMatch	obi	0000718	pathogen role	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000405	pathogen role	skos:exactMatch	obi	OBI:0000718	pathogen role	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000436	infectious disease	skos:exactMatch	apollosv	00000239	infectious disease	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000443	antiparasitic disposition	skos:exactMatch	idomal	0000425	antiparasitic disposition	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000447	herd immunity to infectious organism	skos:exactMatch	idomal	0000352	herd immunity to infectious organism	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000460	infected organism	skos:exactMatch	apollosv	00000209	infected organism	manually_reviewed	orcid:0000-0003-4423-4370
-ido	0000505	viremia	skos:exactMatch	hp	0020071	Viremia	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000505	viremia	skos:exactMatch	hp	HP:0020071	Viremia	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000505	viremia	skos:exactMatch	vido	0000505	viremia	manually_reviewed	orcid:0000-0003-4423-4370
-ido	0000506	bacteremia	skos:exactMatch	hp	0031864	Bacteremia	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000506	bacteremia	skos:exactMatch	hp	HP:0031864	Bacteremia	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000511	infected population	skos:exactMatch	apollosv	00000233	infected population	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000514	susceptible population	skos:exactMatch	apollosv	00000234	susceptible population	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000519	incubation period	skos:exactMatch	apollosv	00000317	incubation period	manually_reviewed	orcid:0000-0003-4423-4370
@@ -3156,22 +3156,22 @@ ido	0000519	incubation period	skos:exactMatch	idomal	0000355	incubation period	m
 ido	0000526	parasite	skos:exactMatch	apollosv	00000373	parasite	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000526	parasite	skos:exactMatch	idomal	0000995	parasite	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000528	pathogen	skos:exactMatch	idomal	0000063	pathogen	manually_reviewed	orcid:0000-0003-4423-4370
-ido	0000549	toxin	skos:exactMatch	chebi	27026	toxin	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000549	toxin	skos:exactMatch	chebi	CHEBI:27026	toxin	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000549	toxin	skos:exactMatch	idomal	0000043	toxin	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000550	exotoxin	skos:exactMatch	idomal	0000045	exotoxin	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0000552	endotoxin	skos:exactMatch	idomal	0000044	endotoxin	manually_reviewed	orcid:0000-0003-4423-4370
-ido	0000632	neurotoxin	skos:exactMatch	chebi	50910	neurotoxin	manually_reviewed	orcid:0000-0003-4423-4370
-ido	0000636	sepsis	skos:exactMatch	hp	0100806	Sepsis	manually_reviewed	orcid:0000-0003-4423-4370
-ido	0000645	candidiasis	skos:exactMatch	doid	1508	candidiasis	manually_reviewed	orcid:0000-0003-4423-4370
-ido	0000646	trichomoniasis	skos:exactMatch	doid	1947	trichomoniasis	manually_reviewed	orcid:0000-0003-4423-4370
-ido	0000647	leptospirosis	skos:exactMatch	doid	2297	leptospirosis	manually_reviewed	orcid:0000-0003-4423-4370
-ido	0000648	Shigellosis	skos:exactMatch	doid	12385	shigellosis	manually_reviewed	orcid:0000-0003-4423-4370
-ido	0000649	amebiasis	skos:exactMatch	doid	9181	amebiasis	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000632	neurotoxin	skos:exactMatch	chebi	CHEBI:50910	neurotoxin	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000636	sepsis	skos:exactMatch	hp	HP:0100806	Sepsis	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000645	candidiasis	skos:exactMatch	doid	DOID:1508	candidiasis	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000646	trichomoniasis	skos:exactMatch	doid	DOID:1947	trichomoniasis	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000647	leptospirosis	skos:exactMatch	doid	DOID:2297	leptospirosis	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000648	Shigellosis	skos:exactMatch	doid	DOID:12385	shigellosis	manually_reviewed	orcid:0000-0003-4423-4370
+ido	0000649	amebiasis	skos:exactMatch	doid	DOID:9181	amebiasis	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0001377	pathogen surveillance	skos:exactMatch	vsmo	0001959	pathogen surveillance	manually_reviewed	orcid:0000-0003-4423-4370
 ido	0001378	vector surveillance	skos:exactMatch	vsmo	0000169	vector surveillance	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000008	contagiousness	skos:exactMatch	apollosv	00000182	contagiousness	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000008	contagiousness	skos:exactMatch	ido	0000458	contagiousness	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000043	toxin	skos:exactMatch	chebi	27026	toxin	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000043	toxin	skos:exactMatch	chebi	CHEBI:27026	toxin	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000043	toxin	skos:exactMatch	ido	0000549	toxin	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000044	endotoxin	skos:exactMatch	ido	0000552	endotoxin	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000045	exotoxin	skos:exactMatch	ido	0000550	exotoxin	manually_reviewed	orcid:0000-0003-4423-4370
@@ -3185,16 +3185,16 @@ idomal	0000132	Plasmodium vivax	skos:exactMatch	ncbitaxon	5855	Plasmodium vivax	
 idomal	0000132	Plasmodium vivax	skos:exactMatch	vsmo	0001265	Plasmodium vivax	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000133	Plasmodium malariae	skos:exactMatch	ncbitaxon	5858	Plasmodium malariae	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000133	Plasmodium malariae	skos:exactMatch	vsmo	0001267	Plasmodium malariae	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000205	sulfone	skos:exactMatch	chebi	35850	sulfone	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000206	sulfonamide	skos:exactMatch	chebi	35358	sulfonamide	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000207	biguanide	skos:exactMatch	chebi	3095	biguanide	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000211	naphthoquinone	skos:exactMatch	chebi	25481	naphthoquinone	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000234	mefloquine	skos:exactMatch	chebi	63609	Mefloquine	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000205	sulfone	skos:exactMatch	chebi	CHEBI:35850	sulfone	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000206	sulfonamide	skos:exactMatch	chebi	CHEBI:35358	sulfonamide	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000207	biguanide	skos:exactMatch	chebi	CHEBI:3095	biguanide	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000211	naphthoquinone	skos:exactMatch	chebi	CHEBI:25481	naphthoquinone	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000234	mefloquine	skos:exactMatch	chebi	CHEBI:63609	Mefloquine	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000234	mefloquine	skos:exactMatch	ndfrt	N0000147900	MEFLOQUINE	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000236	quinidine	skos:exactMatch	chebi	28593	quinidine	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000270	cerebral malaria	skos:exactMatch	doid	14069	cerebral malaria	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000302	zygote stage	skos:exactMatch	uberon	0000106	zygote stage	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000378	macrophage	skos:exactMatch	cl	0000235	macrophage	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000236	quinidine	skos:exactMatch	chebi	CHEBI:28593	quinidine	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000270	cerebral malaria	skos:exactMatch	doid	DOID:14069	cerebral malaria	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000302	zygote stage	skos:exactMatch	uberon	UBERON:0000106	zygote stage	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000378	macrophage	skos:exactMatch	cl	CL:0000235	macrophage	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000411	entomological inoculation rate	skos:exactMatch	vsmo	0000112	entomological inoculation rate	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000428	measure relating to aggregate of arthropods	skos:exactMatch	vsmo	0000264	measure relating to aggregate of arthropods	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000430	measure relating to aggregate of vertebrates	skos:exactMatch	vsmo	0002028	measure relating to aggregate of vertebrates	manually_reviewed	orcid:0000-0003-4423-4370
@@ -3208,14 +3208,14 @@ idomal	0000438	parous	skos:exactMatch	vsmo	0000214	parous	manually_reviewed	orci
 idomal	0000440	measure relating to enumeration of aggregate of arthropods	skos:exactMatch	vsmo	0000066	measure relating to enumeration of aggregate of arthropods	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000441	measure relating to host blood in aggregate of arthropods	skos:exactMatch	vsmo	0000140	measure relating to host blood in aggregate of arthropods	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000442	measure relating to infection in aggregate of arthropods	skos:exactMatch	vsmo	0000142	measure relating to infection in aggregate of arthropods	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000531	splenic rupture	skos:exactMatch	hp	0012223	Splenic rupture	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000531	splenic rupture	skos:exactMatch	hp	HP:0012223	Splenic rupture	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000672	chemical compound	skos:exactMatch	vsmo	0000011	chemical compound	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000873	piperonyl butoxide	skos:exactMatch	chebi	32687	piperonyl butoxide	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000886	triphenyl phosphate	skos:exactMatch	chebi	35033	triphenyl phosphate	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000895	sulfoxide	skos:exactMatch	chebi	22063	sulfoxide	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0000895	sulfoxide	skos:exactMatch	chebi	35813	sulfoxide	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000873	piperonyl butoxide	skos:exactMatch	chebi	CHEBI:32687	piperonyl butoxide	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000886	triphenyl phosphate	skos:exactMatch	chebi	CHEBI:35033	triphenyl phosphate	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000895	sulfoxide	skos:exactMatch	chebi	CHEBI:22063	sulfoxide	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0000895	sulfoxide	skos:exactMatch	chebi	CHEBI:35813	sulfoxide	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0000930	insecticidal substance	skos:exactMatch	miro	10000239	insecticidal substance	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	0001052	malaria	skos:exactMatch	doid	12365	malaria	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	0001052	malaria	skos:exactMatch	doid	DOID:12365	malaria	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0001093	LSA-3	skos:exactMatch	vo	0012381	LSA-3	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0001109	SERA-5	skos:exactMatch	vo	0011210	SERA-5	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0001115	EBA-175	skos:exactMatch	vo	0012382	eba-175	manually_reviewed	orcid:0000-0003-4423-4370
@@ -3223,9 +3223,9 @@ idomal	0001228	Plasmodium knowlesi	skos:exactMatch	vsmo	0001269	Plasmodium knowl
 idomal	0001229	Plasmodium berghei	skos:exactMatch	ncbitaxon	5821	Plasmodium berghei	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0001230	Plasmodium gallinaceum	skos:exactMatch	vsmo	0001253	Plasmodium gallinaceum	manually_reviewed	orcid:0000-0003-4423-4370
 idomal	0001231	Plasmodium yoelii	skos:exactMatch	ncbitaxon	5861	Plasmodium yoelii	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	6000017	quinoline alkaloid	skos:exactMatch	chebi	26509	quinoline alkaloid	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	6000018	cinchona alkaloid	skos:exactMatch	chebi	51323	cinchona alkaloid	manually_reviewed	orcid:0000-0003-4423-4370
-idomal	6000032	maceration	skos:exactMatch	hp	0032007	Maceration	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	6000017	quinoline alkaloid	skos:exactMatch	chebi	CHEBI:26509	quinoline alkaloid	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	6000018	cinchona alkaloid	skos:exactMatch	chebi	CHEBI:51323	cinchona alkaloid	manually_reviewed	orcid:0000-0003-4423-4370
+idomal	6000032	maceration	skos:exactMatch	hp	HP:0032007	Maceration	manually_reviewed	orcid:0000-0003-4423-4370
 kegg.pathway	hsa00010	Glycolysis / Gluconeogenesis - Homo sapiens (human)	skos:exactMatch	wikipathways	WP534	Glycolysis and gluconeogenesis	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00020	Citrate cycle (TCA cycle) - Homo sapiens (human)	skos:exactMatch	reactome	R-HSA-71403	Citric acid cycle (TCA cycle)	manual	orcid:0000-0002-2046-6145
 kegg.pathway	hsa00020	Citrate cycle (TCA cycle) - Homo sapiens (human)	skos:exactMatch	wikipathways	WP78	TCA cycle (aka Krebs or citric acid cycle)	manual	orcid:0000-0002-2046-6145
@@ -8202,12 +8202,12 @@ ncit	C1707	Voriconazole	skos:exactMatch	chebi	CHEBI:10023	voriconazole	manual	or
 ncit	C2160	Proteasome Inhibitor	skos:exactMatch	chebi	CHEBI:52726	proteasome inhibitor	manual	orcid:0000-0003-4423-4370
 ncit	C65538	Esomeprazole	skos:exactMatch	chebi	CHEBI:50275	esomeprazole	manual	orcid:0000-0003-4423-4370
 oae	0000011	drug administration	skos:exactMatch	dron	00000031	drug administration	manually_reviewed	orcid:0000-0003-4423-4370
-oae	0000225	drug resistance	skos:exactMatch	hp	0020174	Refractory drug response	manually_reviewed	orcid:0000-0003-4423-4370
-oae	0000461	cardiac arrest	skos:exactMatch	doid	0060319	cardiac arrest	manually_reviewed	orcid:0000-0003-4423-4370
-oae	0000461	cardiac arrest	skos:exactMatch	hp	0001695	Cardiac arrest	manually_reviewed	orcid:0000-0003-4423-4370
+oae	0000225	drug resistance	skos:exactMatch	hp	HP:0020174	Refractory drug response	manually_reviewed	orcid:0000-0003-4423-4370
+oae	0000461	cardiac arrest	skos:exactMatch	doid	DOID:0060319	cardiac arrest	manually_reviewed	orcid:0000-0003-4423-4370
+oae	0000461	cardiac arrest	skos:exactMatch	hp	HP:0001695	Cardiac arrest	manually_reviewed	orcid:0000-0003-4423-4370
 oae	0001817	patient	skos:exactMatch	idomal	0000603	patient	manually_reviewed	orcid:0000-0003-4423-4370
 oae	0001817	patient	skos:exactMatch	opmi	0000417	patient	manually_reviewed	orcid:0000-0003-4423-4370
-oae	0002495	dialysis	skos:exactMatch	obi	0600052	dialysis	manually_reviewed	orcid:0000-0003-4423-4370
+oae	0002495	dialysis	skos:exactMatch	obi	OBI:0600052	dialysis	manually_reviewed	orcid:0000-0003-4423-4370
 oae	0004232	physical examination	skos:exactMatch	maxo	0000527	physical examination	manually_reviewed	orcid:0000-0003-4423-4370
 oae	0004372	ulcer	skos:exactMatch	mpath	579	ulcer	manually_reviewed	orcid:0000-0003-4423-4370
 pfam	PF01391	Collagen	skos:exactMatch	mesh	D003094	Collagen	manual	orcid:0000-0001-9439-5346
@@ -8704,15 +8704,15 @@ uniprot.chain	PRO_0000449642	Non-structural protein 8	skos:exactMatch	ncbiprotei
 uniprot.chain	PRO_0000449643	Non-structural protein 9	skos:exactMatch	ncbiprotein	YP_009742616	nsp9	manual	orcid:0000-0001-9439-5346
 uniprot.chain	PRO_0000449644	Non-structural protein 10	skos:exactMatch	ncbiprotein	YP_009742617	nsp10	manual	orcid:0000-0001-9439-5346
 uniprot.chain	PRO_0000449645	Non-structural protein 11	skos:exactMatch	ncbiprotein	YP_009725312	nsp11	manual	orcid:0000-0001-9439-5346
-vido	0000505	viremia	skos:exactMatch	hp	0020071	Viremia	manually_reviewed	orcid:0000-0003-4423-4370
+vido	0000505	viremia	skos:exactMatch	hp	HP:0020071	Viremia	manually_reviewed	orcid:0000-0003-4423-4370
 vido	0000505	viremia	skos:exactMatch	ido	0000505	viremia	manually_reviewed	orcid:0000-0003-4423-4370
 vido	0000508	virion	skos:exactMatch	ido	0000508	virion	manually_reviewed	orcid:0000-0003-4423-4370
 vido	0000564	viricide	skos:exactMatch	ido	0000564	viricide	manually_reviewed	orcid:0000-0003-4423-4370
 vido	0001066	virus aggregate	skos:exactMatch	vsmo	0000297	virus aggregate	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0000051	Balb/c mouse	skos:exactMatch	cido	0000390	BALB/c mouse	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0000087	Plasmodium falciparum vaccine	skos:exactMatch	idomal	0000115	plasmodium falciparum vaccine	manually_reviewed	orcid:0000-0003-4423-4370
-vo	0000516	human protein	skos:exactMatch	pr	000029067	Homo sapiens protein	manually_reviewed	orcid:0000-0003-4423-4370
-vo	0000560	toxin	skos:exactMatch	chebi	27026	toxin	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0000516	human protein	skos:exactMatch	pr	PR:000029067	Homo sapiens protein	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0000560	toxin	skos:exactMatch	chebi	CHEBI:27026	toxin	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0000560	toxin	skos:exactMatch	ido	0000549	toxin	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0000560	toxin	skos:exactMatch	idomal	0000043	toxin	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0000740	P. falciparum vaccine Combination B	skos:exactMatch	idomal	0000135	P. falciparum vaccine Combination B	manually_reviewed	orcid:0000-0003-4423-4370
@@ -8723,12 +8723,12 @@ vo	0001092	USDA	skos:exactMatch	ncit	C68708	United States Department of Agricult
 vo	0004932	Janssen Pharmaceutica	skos:exactMatch	ncit	C164191	Janssen Pharmaceuticals	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0004948	AstraZeneca	skos:exactMatch	ncit	C177125	AstraZeneca	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0004953	Moderna	skos:exactMatch	ncit	C177124	Moderna	manually_reviewed	orcid:0000-0003-4423-4370
-vo	0004988	SARS-CoV-2 protein	skos:exactMatch	pr	000050262	severe acute respiratory syndrome coronavirus 2 protein	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0004988	SARS-CoV-2 protein	skos:exactMatch	pr	PR:000050262	severe acute respiratory syndrome coronavirus 2 protein	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0010632	country	skos:exactMatch	commoncoreontology	Country	country	manually_reviewed	orcid:0000-0003-4423-4370
-vo	0010754	virus protein	skos:exactMatch	pr	000036197	viral protein	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0010754	virus protein	skos:exactMatch	pr	PR:000036197	viral protein	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0010950	SecA2	skos:exactMatch	ogg	3000885594	secA2	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0011210	SERA-5	skos:exactMatch	idomal	0001109	SERA-5	manually_reviewed	orcid:0000-0003-4423-4370
-vo	0011241	Hsp90	skos:exactMatch	pr	000025350	HSPC protein	manually_reviewed	orcid:0000-0003-4423-4370
+vo	0011241	Hsp90	skos:exactMatch	pr	PR:000025350	HSPC protein	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0012381	LSA-3	skos:exactMatch	idomal	0001093	LSA-3	manually_reviewed	orcid:0000-0003-4423-4370
 vo	0012382	eba-175	skos:exactMatch	idomal	0001115	EBA-175	manually_reviewed	orcid:0000-0003-4423-4370
 wikipathways	WP100	Glutathione metabolism	skos:exactMatch	reactome	R-HSA-174403	Glutathione synthesis and recycling	manual	orcid:0000-0002-2046-6145
