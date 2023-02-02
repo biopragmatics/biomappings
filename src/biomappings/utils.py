@@ -199,9 +199,10 @@ def check_valid_prefix_id(prefix: str, identifier: str):
             )
         if norm_id != identifier:
             raise InvalidNormIdentifier(prefix, identifier, norm_id)
-        pattern = re.compile(resource.miriam["pattern"])
         if prefix == "pr":
             pattern = None  # identifiers.org is broken for uniprot in PR
+        else:
+            pattern = re.compile(resource.miriam["pattern"])
 
     # If this resource does not have a mapping to MIRIAM, then
     # the Bioregistry normalization will be applied, which e.g.,

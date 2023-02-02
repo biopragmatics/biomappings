@@ -88,66 +88,26 @@
     link: https://bioregistry.io/agrovoc:918
     name: biological control
     prefix: agrovoc
-- chebi:15940:
-    identifier: CHEBI:15940
-    link: https://bioregistry.io/chebi:15940
-    name: nicotinic acid
-    prefix: chebi
-  mesh:D009525:
-    identifier: D009525
-    link: https://bioregistry.io/mesh:D009525
-    name: Niacin
-    prefix: mesh
-  mesh:D009539:
-    identifier: D009539
-    link: https://bioregistry.io/mesh:D009539
-    name: Nicotinic Acids
-    prefix: mesh
-- chebi:26267:
-    identifier: CHEBI:26267
-    link: https://bioregistry.io/chebi:26267
-    name: proanthocyanidin
-    prefix: chebi
-  mesh:C013221:
-    identifier: C013221
-    link: https://bioregistry.io/mesh:C013221
-    name: proanthocyanidin
-    prefix: mesh
-  mesh:D044945:
-    identifier: D044945
-    link: https://bioregistry.io/mesh:D044945
-    name: Proanthocyanidins
-    prefix: mesh
-- chebi:2682:
-    identifier: CHEBI:2682
-    link: https://bioregistry.io/chebi:2682
-    name: amphotericin B
-    prefix: chebi
-  mesh:C068538:
-    identifier: C068538
-    link: https://bioregistry.io/mesh:C068538
-    name: liposomal amphotericin B
-    prefix: mesh
-  mesh:D000666:
-    identifier: D000666
-    link: https://bioregistry.io/mesh:D000666
-    name: Amphotericin B
-    prefix: mesh
-- chebi:50469:
-    identifier: CHEBI:50469
-    link: https://bioregistry.io/chebi:50469
-    name: EC 3.1.1.4 (phospholipase A2) inhibitor
-    prefix: chebi
-  mesh:C400481:
-    identifier: C400481
-    link: https://bioregistry.io/mesh:C400481
-    name: PLIalpha
-    prefix: mesh
-  mesh:D064801:
-    identifier: D064801
-    link: https://bioregistry.io/mesh:D064801
-    name: Phospholipase A2 Inhibitors
-    prefix: mesh
+- ccle:RH30_SOFT_TISSUE:
+    identifier: RH30_SOFT_TISSUE
+    link: https://bioregistry.io/ccle:RH30_SOFT_TISSUE
+    name: RH-30
+    prefix: ccle
+  ccle:SJRH30_SOFT_TISSUE:
+    identifier: SJRH30_SOFT_TISSUE
+    link: https://bioregistry.io/ccle:SJRH30_SOFT_TISSUE
+    name: SJRH30
+    prefix: ccle
+  cellosaurus:0041:
+    identifier: CVCL_0041
+    link: https://bioregistry.io/cellosaurus:0041
+    name: Rh30
+    prefix: cellosaurus
+  efo:0002329:
+    identifier: 0002329
+    link: https://bioregistry.io/efo:0002329
+    name: SJRH30
+    prefix: efo
 - cl:0000101:
     identifier: CL:0000101
     link: https://bioregistry.io/cl:0000101
@@ -178,6 +138,21 @@
     link: https://bioregistry.io/mesh:D002690
     name: Chlamydia Infections
     prefix: mesh
+- chebi:22063:
+    identifier: CHEBI:22063
+    link: https://bioregistry.io/chebi:22063
+    name: sulfoxide
+    prefix: chebi
+  chebi:35813:
+    identifier: CHEBI:35813
+    link: https://bioregistry.io/chebi:35813
+    name: sulfoxide
+    prefix: chebi
+  idomal:0000895:
+    identifier: 0000895
+    link: https://bioregistry.io/idomal:0000895
+    name: sulfoxide
+    prefix: idomal
 - kegg.pathway:hsa00100:
     identifier: hsa00100
     link: https://bioregistry.io/kegg.pathway:hsa00100
