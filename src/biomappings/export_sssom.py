@@ -116,7 +116,11 @@ def sssom():
     from sssom.parsers import from_sssom_dataframe
     from sssom.writers import write_json
 
-    msdf = from_sssom_dataframe(df, prefix_map=prefix_map, meta=META)
+    try:
+        msdf = from_sssom_dataframe(df, prefix_map=prefix_map, meta=META)
+    except Exception as e:
+        click.secho(f"SSSOM Export failed...\n{e}", fg="red")
+        return
     with JSON_PATH.open("w") as file:
         write_json(msdf, file)
 

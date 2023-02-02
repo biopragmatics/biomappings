@@ -1,9 +1,9 @@
 contributors:
-- count: 5141
+- count: 5139
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 2514
+- count: 3264
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -30,18 +30,21 @@ negative:
 - count: 198
   source: doid
   target: mesh
-- count: 91
+- count: 102
   source: go
   target: mesh
+- count: 91
+  source: go
+  target: reactome
 - count: 85
   source: chebi
   target: reactome
 - count: 77
   source: kegg.pathway
   target: mesh
-- count: 71
-  source: go
-  target: reactome
+- count: 59
+  source: ccle
+  target: cellosaurus
 - count: 49
   source: fplx
   target: reactome
@@ -54,16 +57,13 @@ negative:
 - count: 35
   source: doid
   target: umls
-- count: 30
-  source: ccle
-  target: cellosaurus
-- count: 25
+- count: 29
   source: efo
   target: mesh
-- count: 21
+- count: 26
   source: chebi
   target: mesh
-- count: 21
+- count: 22
   source: hgnc
   target: mesh
 - count: 20
@@ -78,21 +78,27 @@ negative:
 - count: 11
   source: hgnc
   target: reactome
-- count: 9
+- count: 10
   source: ccle
   target: efo
 - count: 9
   source: pr
   target: uniprot.chain
+- count: 8
+  source: mesh
+  target: mondo
 - count: 7
   source: doid
   target: efo
 - count: 7
-  source: mesh
-  target: mondo
-- count: 7
   source: fplx
   target: wikipathways
+- count: 5
+  source: chebi
+  target: vo
+- count: 4
+  source: pr
+  target: vo
 - count: 3
   source: doid
   target: reactome
@@ -100,8 +106,17 @@ negative:
   source: mesh
   target: uberon
 - count: 3
+  source: uberon
+  target: vo
+- count: 3
   source: hgnc
   target: wikipathways
+- count: 2
+  source: apollosv
+  target: nbo
+- count: 2
+  source: idomal
+  target: vo
 - count: 2
   source: hp
   target: mesh
@@ -112,30 +127,39 @@ negative:
   source: doid
   target: wikipathways
 - count: 1
+  source: apollosv
+  target: ncit
+- count: 1
   source: ccle
   target: depmap
 - count: 1
   source: mesh
   target: umls
 - count: 1
+  source: hp
+  target: vo
+- count: 1
+  source: doid
+  target: vo
+- count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1122
-negative_prefix_count: 23
+negative_mapping_count: 1213
+negative_prefix_count: 27
 positive:
-- count: 2666
+- count: 2851
   source: chebi
   target: mesh
-- count: 1455
+- count: 1458
   source: doid
   target: mesh
-- count: 888
+- count: 893
   source: mesh
   target: ncit
-- count: 516
+- count: 570
   source: ccle
   target: efo
-- count: 404
+- count: 432
   source: go
   target: mesh
 - count: 378
@@ -147,30 +171,36 @@ positive:
 - count: 222
   source: go
   target: reactome
-- count: 207
+- count: 208
   source: mesh
   target: mondo
 - count: 187
   source: doid
   target: umls
+- count: 165
+  source: hp
+  target: mesh
 - count: 142
   source: agro
   target: agrovoc
 - count: 131
   source: mesh
   target: uberon
+- count: 125
+  source: efo
+  target: mesh
+- count: 114
+  source: ccle
+  target: cellosaurus
 - count: 113
   source: go
   target: kegg.pathway
-- count: 108
-  source: efo
-  target: mesh
-- count: 106
-  source: ccle
-  target: cellosaurus
 - count: 102
   source: hgnc
   target: mesh
+- count: 96
+  source: doid
+  target: efo
 - count: 81
   source: cl
   target: mesh
@@ -183,9 +213,6 @@ positive:
 - count: 70
   source: kegg.pathway
   target: wikipathways
-- count: 63
-  source: doid
-  target: efo
 - count: 61
   source: kegg.pathway
   target: reactome
@@ -195,24 +222,60 @@ positive:
 - count: 25
   source: kegg.pathway
   target: mesh
-- count: 18
-  source: hp
-  target: mesh
+- count: 20
+  source: idomal
+  target: vsmo
 - count: 18
   source: mesh
   target: wikipathways
 - count: 17
   source: mesh
   target: pubchem.compound
+- count: 16
+  source: apollosv
+  target: ido
+- count: 13
+  source: ido
+  target: idomal
+- count: 13
+  source: chebi
+  target: idomal
+- count: 10
+  source: idomal
+  target: vo
 - count: 10
   source: wikipathways
   target: wikipathways
 - count: 8
   source: mesh
   target: reactome
+- count: 7
+  source: idomal
+  target: ncbitaxon
 - count: 6
   source: chebi
   target: ncit
+- count: 5
+  source: apollosv
+  target: idomal
+- count: 5
+  source: doid
+  target: ido
+- count: 5
+  source: ncit
+  target: vo
+- count: 4
+  source: ccle
+  target: depmap
+- count: 4
+  source: ido
+  target: vido
+- count: 4
+  source: pr
+  target: vo
+- count: 3
+  source: hp
+  target: ido
 - count: 3
   source: kegg.pathway
   target: kegg.pathway
@@ -220,27 +283,138 @@ positive:
   source: mesh
   target: umls
 - count: 2
+  source: apollosv
+  target: vsmo
+- count: 2
+  source: apollosv
+  target: stato
+- count: 2
+  source: apollosv
+  target: dc
+- count: 2
   source: bto
   target: ccle
+- count: 2
+  source: cemo
+  target: ncit
+- count: 2
+  source: cido
+  target: idocovid19
+- count: 2
+  source: cido
+  target: vo
+- count: 2
+  source: cido
+  target: dron
+- count: 2
+  source: chebi
+  target: ido
+- count: 2
+  source: ido
+  target: vsmo
+- count: 2
+  source: doid
+  target: idomal
+- count: 2
+  source: hp
+  target: idomal
+- count: 2
+  source: hp
+  target: oae
 - count: 1
-  source: ccle
-  target: depmap
+  source: apollosv
+  target: envo
+- count: 1
+  source: apollosv
+  target: ncit
+- count: 1
+  source: apollosv
+  target: doid
+- count: 1
+  source: apollosv
+  target: iao
+- count: 1
+  source: apollosv
+  target: oboinowl
+- count: 1
+  source: cido
+  target: idomal
+- count: 1
+  source: chebi
+  target: cido
 - count: 1
   source: go
   target: ncit
 - count: 1
+  source: ido
+  target: obi
+- count: 1
+  source: idomal
+  target: ndfrt
+- count: 1
+  source: idomal
+  target: uberon
+- count: 1
+  source: cl
+  target: idomal
+- count: 1
+  source: idomal
+  target: miro
+- count: 1
+  source: dron
+  target: oae
+- count: 1
+  source: doid
+  target: oae
+- count: 1
+  source: idomal
+  target: oae
+- count: 1
+  source: oae
+  target: opmi
+- count: 1
+  source: oae
+  target: obi
+- count: 1
+  source: maxo
+  target: oae
+- count: 1
+  source: mpath
+  target: oae
+- count: 1
   source: mesh
   target: pfam
 - count: 1
+  source: hp
+  target: vido
+- count: 1
+  source: vido
+  target: vsmo
+- count: 1
+  source: chebi
+  target: vo
+- count: 1
+  source: ido
+  target: vo
+- count: 1
+  source: idocovid19
+  target: vo
+- count: 1
+  source: commoncoreontology
+  target: vo
+- count: 1
+  source: ogg
+  target: vo
+- count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 8560
-positive_prefix_count: 27
+positive_mapping_count: 9199
+positive_prefix_count: 52
 predictions:
-- count: 12096
+- count: 11904
   source: chebi
   target: mesh
-- count: 11751
+- count: 11746
   source: mesh
   target: ncit
 - count: 10970
@@ -252,57 +426,180 @@ predictions:
 - count: 1685
   source: wikipathways
   target: wikipathways
-- count: 1368
+- count: 1367
   source: hgnc
   target: mesh
-- count: 352
+- count: 205
   source: hp
   target: mesh
-- count: 166
+- count: 145
   source: efo
   target: mesh
-- count: 78
+- count: 76
   source: mesh
   target: mondo
-- count: 72
-  source: doid
-  target: efo
 - count: 68
   source: mesh
   target: uberon
-- count: 58
-  source: ccle
-  target: efo
-- count: 58
+- count: 55
   source: doid
   target: mesh
-- count: 44
-  source: ccle
-  target: cellosaurus
-- count: 44
+- count: 39
+  source: doid
+  target: efo
+- count: 18
   source: go
-  target: mesh
-- count: 20
-  source: go
-  target: reactome
+  target: idomal
+- count: 11
+  source: ido
+  target: idomal
+- count: 11
+  source: idomal
+  target: ncbitaxon
+- count: 11
+  source: idomal
+  target: uberon
+- count: 10
+  source: doid
+  target: idomal
+- count: 9
+  source: idomal
+  target: pr
+- count: 9
+  source: idomal
+  target: vo
+- count: 7
+  source: chebi
+  target: ido
+- count: 6
+  source: pr
+  target: vo
+- count: 5
+  source: hp
+  target: idomal
+- count: 5
+  source: chebi
+  target: idomal
+- count: 5
+  source: doid
+  target: vo
+- count: 4
+  source: apollosv
+  target: ido
+- count: 4
+  source: apollosv
+  target: idomal
+- count: 4
+  source: idomal
+  target: vsmo
 - count: 3
-  source: ccle
-  target: depmap
-predictions_mapping_count: 41178
-predictions_prefix_count: 17
+  source: idomal
+  target: maxo
+- count: 3
+  source: idomal
+  target: obi
+- count: 3
+  source: ncit
+  target: vo
+- count: 3
+  source: uberon
+  target: vo
+- count: 2
+  source: apollosv
+  target: vo
+- count: 2
+  source: apollosv
+  target: pato
+- count: 2
+  source: ido
+  target: pato
+- count: 2
+  source: hp
+  target: ido
+- count: 2
+  source: doid
+  target: idocovid19
+- count: 2
+  source: idocovid19
+  target: ncit
+- count: 2
+  source: bfo
+  target: idomal
+- count: 2
+  source: idomal
+  target: obo
+- count: 2
+  source: idomal
+  target: ncit
+- count: 2
+  source: caro
+  target: idomal
+- count: 1
+  source: apollosv
+  target: vsmo
+- count: 1
+  source: apollosv
+  target: ncit
+- count: 1
+  source: apollosv
+  target: go
+- count: 1
+  source: cemo
+  target: pato
+- count: 1
+  source: cemo
+  target: ncit
+- count: 1
+  source: go
+  target: ido
+- count: 1
+  source: ido
+  target: vsmo
+- count: 1
+  source: envo
+  target: ido
+- count: 1
+  source: ido
+  target: obi
+- count: 1
+  source: idomal
+  target: pato
+- count: 1
+  source: idomal
+  target: nbo
+- count: 1
+  source: idomal
+  target: opmi
+- count: 1
+  source: idomal
+  target: ogms
+- count: 1
+  source: idomal
+  target: pco
+- count: 1
+  source: fma
+  target: idomal
+- count: 1
+  source: doid
+  target: vido
+predictions_mapping_count: 40772
+predictions_prefix_count: 35
 unsure:
 - count: 27
   source: doid
   target: mesh
-- count: 6
+- count: 13
   source: ccle
   target: cellosaurus
+- count: 6
+  source: ccle
+  target: efo
+- count: 5
+  source: go
+  target: mesh
 - count: 4
   source: mesh
   target: ncit
-- count: 3
-  source: ccle
-  target: efo
 - count: 2
   source: ccle
   target: depmap
@@ -313,7 +610,16 @@ unsure:
   source: efo
   target: mesh
 - count: 1
+  source: apollosv
+  target: ncit
+- count: 1
+  source: chebi
+  target: mesh
+- count: 1
+  source: doid
+  target: ido
+- count: 1
   source: hgnc
   target: mesh
-unsure_mapping_count: 47
-unsure_prefix_count: 9
+unsure_mapping_count: 65
+unsure_prefix_count: 13
