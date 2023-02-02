@@ -106,11 +106,16 @@ def _extract_redundant(counter):
 
 def test_cross_redundancy():
     """Test the redundancy of manually curated mappings and predicted mappings."""
-    counter = defaultdict(list)
+    counter = defaultdict(lambda: defaultdict(list))
     for label, line, mapping in _iter_groups():
-        counter[get_canonical_tuple(mapping)].append((label, line))
+        counter[get_canonical_tuple(mapping)][label].append(line)
 
-    redundant = _extract_redundant(counter)
+    redundant = []
+    for mapping, label_to_lines in counter.items():
+        if len(label_to_lines) <= 1:
+            continue
+        redundant.append((mapping, sorted(label_to_lines.items())))
+
     if redundant:
         msg = "".join(
             f"\n  {mapping}: {_locations_str(locations)}" for mapping, locations in redundant
