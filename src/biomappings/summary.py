@@ -85,7 +85,7 @@ def _get_contributors(mappings: Iterable[Mapping[str, str]]):
 
 def _get_source(source: str) -> Optional[str]:
     if source.startswith("orcid:"):
-        return source[len("orcid:"):]
+        return source[len("orcid:") :]
     return None
 
 
