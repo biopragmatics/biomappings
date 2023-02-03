@@ -50,7 +50,7 @@ def get_app(target_curies: Optional[Iterable[Tuple[str, str]]] = None) -> flask.
 KNOWN_USERS = {record["user"]: record["orcid"] for record in load_curators()}
 
 
-def _get_reviewer_orcid():
+def _get_manual_source():
     known_user = KNOWN_USERS.get(getpass.getuser())
     if known_user:
         return f"orcid:{known_user}"
@@ -290,7 +290,7 @@ class Controller:
             )
             return
 
-        reviewer_orcid = _get_reviewer_orcid()
+        reviewer_orcid = _get_manual_source()
         self._added_mappings.append(
             {
                 "source prefix": source_prefix,
@@ -318,7 +318,7 @@ class Controller:
             prediction["prediction_type"] = prediction.pop("type")
             prediction["prediction_source"] = prediction.pop("source")
             prediction["prediction_confidence"] = prediction.pop("confidence")
-            prediction["source"] = _get_reviewer_orcid()
+            prediction["source"] = _get_manual_source()
             prediction["type"] = "manually_reviewed"
             entries[value].append(prediction)
 

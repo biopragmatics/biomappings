@@ -47,25 +47,25 @@ def ndex(username, password):
     cx.add_network_attribute("version", get_git_hash())
     authors = sorted(
         set(
-            mapping["reviewer"]
+            mapping["source"]
             for mapping in positive_mappings
-            if mapping["reviewer"].startswith("orcid:")
+            if mapping["source"].startswith("orcid:")
         )
     )
     cx.add_network_attribute("author", authors, type="list_of_string")
 
     for mapping in tqdm(positive_mappings, desc="Loading NiceCXBuilder"):
-        source_node = cx.add_node(
+        source = cx.add_node(
             represents=mapping["source name"],
             name=get_curie(mapping["source prefix"], mapping["source identifier"]),
         )
-        target_node = cx.add_node(
+        target = cx.add_node(
             represents=mapping["target name"],
             name=get_curie(mapping["target prefix"], mapping["target identifier"]),
         )
         edge = cx.add_edge(
-            source_node,
-            target_node,
+            source,
+            target,
             interaction=mapping["relation"],
         )
         cx.add_edge_attribute(edge, "type", mapping["type"])
