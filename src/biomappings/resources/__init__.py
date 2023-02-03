@@ -289,12 +289,15 @@ def append_predictions(
         lint_predictions()
 
 
-def lint_predictions() -> None:
+def lint_predictions(standardize: bool = False) -> None:
     """Lint the predictions file.
 
     1. Make sure there are no redundant rows
     2. Make sure no rows in predictions match a row in the curated files
     3. Make sure it's sorted
+
+    :param standardize: Should identifiers be standardized (against the
+             combination of Identifiers.org and Bioregistry)?
     """
     curated_mappings = {
         get_canonical_tuple(mapping)
@@ -311,15 +314,16 @@ def lint_predictions() -> None:
         )
         if get_canonical_tuple(mapping) not in curated_mappings
     ]
-    mappings = _remove_redundant(mappings, PredictionTuple)
+    mappings = _remove_redundant(mappings, PredictionTuple, standardize=standardize)
     write_predictions(sorted(mappings, key=mapping_sort_key))
 
 
-def _remove_redundant(mappings, tuple_cls):
-    mappings = (
-        _standardize_mapping(mapping)
-        for mapping in tqdm(mappings, desc="Standardizing mappings", unit_scale=True)
-    )
+def _remove_redundant(mappings, tuple_cls, standardize: bool = False):
+    if standardize:
+        mappings = (
+            _standardize_mapping(mapping)
+            for mapping in tqdm(mappings, desc="Standardizing mappings", unit_scale=True)
+        )
     return (mapping.as_dict() for mapping in {tuple_cls.from_dict(mapping) for mapping in mappings})
 
 
