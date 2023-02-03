@@ -67,7 +67,8 @@ def update(ctx: click.Context):
 
 
 @main.command()
-def lint():
+@click.option("--standardize", is_flag=True)
+def lint(standardize: bool):
     """Sort files and remove duplicates."""
     from .resources import (
         lint_false_mappings,
@@ -79,7 +80,7 @@ def lint():
     lint_true_mappings()
     lint_false_mappings()
     lint_unsure_mappings()
-    lint_predictions()
+    lint_predictions(standardize=standardize)
 
 
 @main.command()
