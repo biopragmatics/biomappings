@@ -103,8 +103,9 @@ class TestIntegrity(unittest.TestCase):
 
     def test_prediction_reviewer(self):
         """Test that there's a reviewer column for predictions, but nothing filled out."""
-        for p in predictions:
-            self.assertIsNone(p["reviewer"])
+        for i, p in enumerate(predictions, start=2):
+            self.assertIn("reviewer", p, msg=f"Missing reviewer key on line {i}")
+            self.assertIsNone(p["reviewer"], msg=f"Unexpected reviewer annotation on line {i}")
 
 
 def _extract_redundant(counter):
