@@ -460,6 +460,7 @@ def _go_home():
             prefix=flask.request.args.get("prefix"),
             same_text=flask.request.args.get("same_text", default="false").lower() in {"true", "t"},
             provenance=flask.request.args.get("provenance"),
+            sort=flask.request.args.get("sort"),
             # config
             show_relations=current_app.config["SHOW_RELATIONS"],
             show_lines=current_app.config["SHOW_LINES"],
