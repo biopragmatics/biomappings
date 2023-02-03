@@ -290,7 +290,6 @@ class Controller:
             )
             return
 
-        reviewer_orcid = _get_manual_source()
         self._added_mappings.append(
             {
                 "source prefix": source_prefix,
@@ -301,7 +300,7 @@ class Controller:
                 "target identifier": target_id,
                 "target name": target_name,
                 "type": "manual",
-                "source": reviewer_orcid,
+                "source": _manual_source(),
                 "prediction_type": None,
                 "prediction_source": None,
                 "prediction_confidence": None,
