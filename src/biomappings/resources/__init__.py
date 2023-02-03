@@ -95,7 +95,7 @@ class MappingTuple(NamedTuple):
 
 
 class PredictionTuple(NamedTuple):
-    """A named tuple class for predicted mappings."""
+    """A named tuple class for predictions."""
 
     source_prefix: str
     source_id: str
@@ -109,12 +109,12 @@ class PredictionTuple(NamedTuple):
     source: str
 
     def as_dict(self) -> Mapping[str, Any]:
-        """Get the mapping tuple as a dictionary."""
+        """Get the prediction tuple as a dictionary."""
         return dict(zip(PREDICTIONS_HEADER, self))  # type:ignore
 
     @classmethod
     def from_dict(cls, mapping: Mapping[str, str]) -> "MappingTuple":
-        """Get the mapping tuple from a dictionary."""
+        """Get the prediction tuple from a dictionary."""
         values = []
         for key in PREDICTIONS_HEADER:
             value = mapping.get(key) or None
