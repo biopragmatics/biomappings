@@ -7,13 +7,13 @@ import itertools as itt
 import os
 from collections import defaultdict
 from typing import (
-    Any,
     DefaultDict,
     Dict,
     Iterable,
     List,
     Mapping,
     NamedTuple,
+    Optional,
     Sequence,
     Tuple,
 )
@@ -32,19 +32,9 @@ MAPPINGS_HEADER = [
     "target identifier",
     "target name",
     "type",
-    "source",
-]
-PREDICTIONS_HEADER = [
-    "source prefix",
-    "source identifier",
-    "source name",
-    "relation",
-    "target prefix",
-    "target identifier",
-    "target name",
-    "type",
     "confidence",
     "source",
+    "reviewer",
 ]
 
 
@@ -59,7 +49,9 @@ class MappingTuple(NamedTuple):
     target_identifier: str
     target_name: str
     type: str
-    source: str
+    confidence: Optional[float]
+    source: Optional[str]
+    reviewer: Optional[str]
 
     def as_dict(self) -> Mapping[str, str]:
         """Get the mapping tuple as a dictionary."""
@@ -68,7 +60,13 @@ class MappingTuple(NamedTuple):
     @classmethod
     def from_dict(cls, mapping: Mapping[str, str]) -> "MappingTuple":
         """Get the mapping tuple from a dictionary."""
-        return cls(*[mapping[key] for key in MAPPINGS_HEADER])
+        values = []
+        for key in MAPPINGS_HEADER:
+            value = mapping.get(key) or None
+            if key == "confidence" and value is not None:
+                value = float(value)
+            values.append(value)
+        return cls(*values)
 
     @property
     def source_curie(self) -> str:
@@ -81,43 +79,7 @@ class MappingTuple(NamedTuple):
         return f"{self.target_prefix}:{self.target_identifier}"
 
 
-class PredictionTuple(NamedTuple):
-    """A named tuple class for predictions."""
-
-    source_prefix: str
-    source_id: str
-    source_name: str
-    relation: str
-    target_prefix: str
-    target_identifier: str
-    target_name: str
-    type: str
-    confidence: float
-    source: str
-
-    def as_dict(self) -> Mapping[str, Any]:
-        """Get the prediction tuple as a dictionary."""
-        return dict(zip(PREDICTIONS_HEADER, self))
-
-    @classmethod
-    def from_dict(cls, mapping: Mapping[str, str]) -> "PredictionTuple":
-        """Get the prediction tuple from a dictionary."""
-        return cls(
-            *[  # type: ignore
-                float(mapping[key]) if key == "confidence" else mapping[key]
-                for key in PREDICTIONS_HEADER
-            ]
-        )
-
-    @property
-    def source_curie(self) -> str:
-        """Concatenate the source prefix and ID to a CURIE."""
-        return f"{self.source_prefix}:{self.source_id}"
-
-    @property
-    def target_curie(self) -> str:
-        """Concatenate the target prefix and ID to a CURIE."""
-        return f"{self.target_prefix}:{self.target_identifier}"
+PredictionTuple = MappingTuple
 
 
 def get_resource_file_path(fname) -> str:
@@ -129,7 +91,12 @@ def _load_table(fname) -> List[Dict[str, str]]:
     with open(fname, "r") as fh:
         reader = csv.reader(fh, delimiter="\t")
         header = next(reader)
-        return [dict(zip(header, row)) for row in reader]
+        return [_clean(header, row) for row in reader]
+
+
+def _clean(header, row):
+    d = dict(zip(header, row))
+    return {k: v if v else None for k, v in d.items()}
 
 
 def _write_helper(
@@ -140,7 +107,7 @@ def _write_helper(
         if mode == "w":
             print(*header, sep="\t", file=file)  # noqa:T201
         for line in lod:
-            print(*[line[k] for k in header], sep="\t", file=file)  # noqa:T201
+            print(*[line[k] or "" for k in header], sep="\t", file=file)  # noqa:T201
 
 
 def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
@@ -152,7 +119,7 @@ def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
         prediction["target prefix"],
         prediction["target identifier"],
         prediction["type"],
-        prediction["source"],
+        prediction["source"] or "",
     )
 
 
@@ -252,7 +219,7 @@ def load_predictions() -> List[Dict[str, str]]:
 
 def write_predictions(m: Iterable[Mapping[str, str]]) -> None:
     """Write new content to the predictions table."""
-    _write_helper(PREDICTIONS_HEADER, m, PREDICTIONS_PATH, "w")
+    _write_helper(MAPPINGS_HEADER, m, PREDICTIONS_PATH, "w")
 
 
 def append_prediction_tuples(
@@ -284,17 +251,20 @@ def append_predictions(
             mapping for mapping in mappings if get_canonical_tuple(mapping) not in existing_mappings
         )
 
-    _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, "a")
+    _write_helper(MAPPINGS_HEADER, mappings, PREDICTIONS_PATH, "a")
     if sort:
         lint_predictions()
 
 
-def lint_predictions() -> None:
+def lint_predictions(standardize: bool = False) -> None:
     """Lint the predictions file.
 
     1. Make sure there are no redundant rows
     2. Make sure no rows in predictions match a row in the curated files
     3. Make sure it's sorted
+
+    :param standardize: Should identifiers be standardized (against the
+        combination of Identifiers.org and Bioregistry)?
     """
     curated_mappings = {
         get_canonical_tuple(mapping)
@@ -311,15 +281,16 @@ def lint_predictions() -> None:
         )
         if get_canonical_tuple(mapping) not in curated_mappings
     ]
-    mappings = _remove_redundant(mappings, PredictionTuple)
+    mappings = _remove_redundant(mappings, PredictionTuple, standardize=standardize)
     write_predictions(sorted(mappings, key=mapping_sort_key))
 
 
-def _remove_redundant(mappings, tuple_cls):
-    mappings = (
-        _standardize_mapping(mapping)
-        for mapping in tqdm(mappings, desc="Standardizing mappings", unit_scale=True)
-    )
+def _remove_redundant(mappings, tuple_cls, standardize: bool = False):
+    if standardize:
+        mappings = (
+            _standardize_mapping(mapping)
+            for mapping in tqdm(mappings, desc="Standardizing mappings", unit_scale=True)
+        )
     return (mapping.as_dict() for mapping in {tuple_cls.from_dict(mapping) for mapping in mappings})
 
 

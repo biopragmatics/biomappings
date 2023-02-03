@@ -142,7 +142,9 @@ agrovoc	e7505488	tine harrows	skos:exactMatch	agro	00000138	tine harrow	manually
 agrovoc	ea23424c	alpha lattice design	skos:exactMatch	agro	00000337	alpha lattice design	manually_reviewed			orcid:0000-0002-2627-0696
 agrovoc	eb7af602	raised beds	skos:exactMatch	agro	00002021	raised seedbed	manually_reviewed			orcid:0000-0002-2627-0696
 apollosv	00000097	ecosystem	skos:exactMatch	envo	ENVO:01001110	ecosystem	manually_reviewed			orcid:0000-0003-4423-4370
+apollosv	00000114	infection	skos:exactMatch	ido	0000586	infection	lexical	0.7777777777777778	mira	orcid:0000-0003-4423-4370
 apollosv	00000142	vaccination	skos:exactMatch	idomal	0001040	vaccination	manually_reviewed			orcid:0000-0003-4423-4370
+apollosv	00000142	vaccination	skos:exactMatch	vo	0000002	vaccination	lexical	0.7777777777777778	mira	orcid:0000-0003-4423-4370
 apollosv	00000154	exposed population	skos:exactMatch	ncit	C71551	Exposed Population	manually_reviewed			orcid:0000-0003-4423-4370
 apollosv	00000172	susceptibility	skos:exactMatch	ido	0000467	susceptibility	manually_reviewed			orcid:0000-0003-4423-4370
 apollosv	00000182	contagiousness	skos:exactMatch	ido	0000458	contagiousness	manually_reviewed			orcid:0000-0003-4423-4370
@@ -2797,6 +2799,7 @@ doid	DOID:0050204	Epstein-Barr virus hepatitis	skos:exactMatch	umls	C0554114	Eps
 doid	DOID:0050211	swine influenza	skos:exactMatch	umls	C0276357	Swine influenza	manually_reviewed			orcid:0000-0003-4423-4370
 doid	DOID:0050242	primary amebic meningoencephalitis	skos:exactMatch	umls	C0300934	Primary Amebic Meningoencephalitis	manually_reviewed			orcid:0000-0003-4423-4370
 doid	DOID:0050246	granulomatous amebic encephalitis	skos:exactMatch	umls	C0338428	Granulomatous amebic encephalitis	manually_reviewed			orcid:0000-0003-4423-4370
+doid	DOID:0050251	coenurosis	skos:exactMatch	umls	C0009225	Coenuriasis	lexical	0.5555555555555556	https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py	orcid:0000-0003-4423-4370
 doid	DOID:0050254	acanthocephaliasis	skos:exactMatch	umls	C1385938	acanthocephaliasis	manually_reviewed			orcid:0000-0001-9439-5346
 doid	DOID:0050256	angiostrongyliasis	skos:exactMatch	mesh	C536369	Angiostrongyliasis	manually_reviewed			orcid:0000-0001-9439-5346
 doid	DOID:0050256	angiostrongyliasis	skos:exactMatch	umls	C0392662	Angiostrongyliasis	manually_reviewed			orcid:0000-0001-9439-5346

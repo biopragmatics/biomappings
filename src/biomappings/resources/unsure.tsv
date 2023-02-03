@@ -26,6 +26,8 @@ cl	CL:0000798	gamma-delta T cell	skos:exactMatch	mesh	D000075942	Intraepithelial
 cl	CL:0000816	immature B cell	skos:exactMatch	mesh	D054448	Precursor Cells, B-Lymphoid	manually_reviewed			orcid:0000-0001-9439-5346
 doid	DOID:0050025	human granulocytic anaplasmosis	skos:exactMatch	mesh	D000712	Anaplasmosis	manually_reviewed			orcid:0000-0003-4423-4370
 doid	DOID:0050035	African tick-bite fever	skos:exactMatch	mesh	D000073605	Spotted Fever Group Rickettsiosis	manually_reviewed			orcid:0000-0003-4423-4370
+doid	DOID:0050061	erysipeloid	skos:exactMatch	umls	C0014736	Erysipelothrix infection	lexical	0.5400948258091115	https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py	orcid:0000-0003-4423-4370
+doid	DOID:0050061	erysipeloid	skos:exactMatch	umls	C1276801	Infection due to Erysipelothrix rhusiopathiae (disorder)	lexical	0.5555555555555556	https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py	orcid:0000-0003-4423-4370
 doid	DOID:0050201	nephropathia epidemica	skos:exactMatch	mesh	D006480	Hemorrhagic Fever with Renal Syndrome	manually_reviewed			orcid:0000-0001-9439-5346
 doid	DOID:0080832	mild cognitive impairment	skos:exactMatch	mesh	D060825	Cognitive Dysfunction	manually_reviewed			orcid:0000-0001-9439-5346
 doid	DOID:7173	cloacogenic carcinoma	skos:exactMatch	mesh	C563020	Anal Canal Carcinoma	manually_reviewed			orcid:0000-0001-9439-5346

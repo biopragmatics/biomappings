@@ -1,8 +1,12 @@
-from biomappings.resources import (
-    TRUE_MAPPINGS_PATH, FALSE_MAPPINGS_PATH, PREDICTIONS_PATH, UNSURE_PATH,
-    MAPPINGS_HEADER,
-)
 import csv
+
+from biomappings.resources import (
+    FALSE_MAPPINGS_PATH,
+    MAPPINGS_HEADER,
+    PREDICTIONS_PATH,
+    TRUE_MAPPINGS_PATH,
+    UNSURE_PATH,
+)
 
 
 def main():
@@ -33,5 +37,5 @@ def main():
             print(*line, sep="\t", file=fh)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

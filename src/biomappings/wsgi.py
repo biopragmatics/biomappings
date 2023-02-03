@@ -290,6 +290,7 @@ class Controller:
             )
             return
 
+        source = _manual_source()
         self._added_mappings.append(
             {
                 "source prefix": source_prefix,
@@ -299,7 +300,9 @@ class Controller:
                 "target prefix": target_prefix,
                 "target identifier": target_id,
                 "target name": target_name,
-                "source": _manual_source(),
+                "confidence": 0.95,
+                "source": source,
+                "reviewer": source,
                 "type": "manual",
             }
         )
@@ -311,8 +314,7 @@ class Controller:
 
         for line, value in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(line)
-            prediction["source"] = _manual_source()
-            prediction["type"] = "manually_reviewed"
+            prediction["reviewer"] = _manual_source()
             entries[value].append(prediction)
 
         append_true_mappings(entries["correct"])
