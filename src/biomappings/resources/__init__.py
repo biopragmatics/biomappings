@@ -113,7 +113,7 @@ class PredictionTuple(NamedTuple):
         return dict(zip(PREDICTIONS_HEADER, self))  # type:ignore
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, str]) -> "MappingTuple":
+    def from_dict(cls, mapping: Mapping[str, str]) -> "PredictionTuple":
         """Get the prediction tuple from a dictionary."""
         values = []
         for key in PREDICTIONS_HEADER:
