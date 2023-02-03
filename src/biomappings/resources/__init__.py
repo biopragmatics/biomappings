@@ -23,6 +23,7 @@ from tqdm import tqdm
 
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
+PROVENANCE_KEY = "source"
 MAPPINGS_HEADER = [
     "source prefix",
     "source identifier",
@@ -33,7 +34,7 @@ MAPPINGS_HEADER = [
     "target name",
     "type",
     "confidence",
-    "source",
+    PROVENANCE_KEY,
     "reviewer",
 ]
 
@@ -119,7 +120,7 @@ def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
         prediction["target prefix"],
         prediction["target identifier"],
         prediction["type"],
-        prediction["source"] or "",
+        prediction[PROVENANCE_KEY] or "",
     )
 
 

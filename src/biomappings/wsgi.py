@@ -15,6 +15,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
 from biomappings.resources import (
+    PROVENANCE_KEY,
     append_false_mappings,
     append_true_mappings,
     append_unsure_mappings,
@@ -50,7 +51,7 @@ def get_app(target_curies: Optional[Iterable[Tuple[str, str]]] = None) -> flask.
 KNOWN_USERS = {record["user"]: record["orcid"] for record in load_curators()}
 
 
-def _manual_source():
+def _get_reviewer_orcid():
     known_user = KNOWN_USERS.get(getpass.getuser())
     if known_user:
         return f"orcid:{known_user}"
@@ -207,7 +208,7 @@ class Controller:
         if prefix is not None:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
         if provenance is not None:
-            it = self._help_filter(provenance, it, {"source"})
+            it = self._help_filter(provenance, it, {PROVENANCE_KEY})
 
         if sort is not None:
             it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=sort == "desc"))
@@ -290,7 +291,7 @@ class Controller:
             )
             return
 
-        source = _manual_source()
+        reviewer_orcid = _get_reviewer_orcid()
         self._added_mappings.append(
             {
                 "source prefix": source_prefix,
@@ -301,8 +302,8 @@ class Controller:
                 "target identifier": target_id,
                 "target name": target_name,
                 "confidence": 0.95,
-                "source": source,
-                "reviewer": source,
+                PROVENANCE_KEY: reviewer_orcid,
+                "reviewer": reviewer_orcid,
                 "type": "manual",
             }
         )
@@ -314,7 +315,7 @@ class Controller:
 
         for line, value in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(line)
-            prediction["reviewer"] = _manual_source()
+            prediction["reviewer"] = _get_reviewer_orcid()
             entries[value].append(prediction)
 
         append_true_mappings(entries["correct"])

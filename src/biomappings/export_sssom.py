@@ -9,6 +9,7 @@ import click
 import yaml
 
 from biomappings import load_mappings, load_predictions
+from biomappings.resources import PROVENANCE_KEY
 from biomappings.utils import DATA, get_curie
 
 DIRECTORY = pathlib.Path(DATA).joinpath("sssom")
@@ -62,9 +63,11 @@ def get_sssom_df():
     for mapping in load_mappings():
         prefixes.add(mapping["source prefix"])
         prefixes.add(mapping["target prefix"])
-        source = mapping["source"]
-        if any(source.startswith(x) for x in ["orcid:", "wikidata:"]):
-            creators.add(source)
+        reviewer_curie = mapping["reviewer"]
+        if reviewer_curie is None:
+            raise ValueError
+        if any(reviewer_curie.startswith(x) for x in ["orcid:", "wikidata:"]):
+            creators.add(reviewer_curie)
         rows.append(
             (
                 get_curie(mapping["source prefix"], mapping["source identifier"]),
@@ -73,7 +76,7 @@ def get_sssom_df():
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
                 _get_justification(mapping),  # match justification
-                source,  # curator CURIE
+                reviewer_curie,
                 None,  # no confidence necessary
                 None,  # mapping tool: none necessary for manually curated
             )
@@ -81,6 +84,9 @@ def get_sssom_df():
     for mapping in load_predictions():
         prefixes.add(mapping["source prefix"])
         prefixes.add(mapping["target prefix"])
+        reviewer_curie = mapping["reviewer"]
+        if reviewer_curie is not None:
+            raise ValueError
         rows.append(
             (
                 get_curie(mapping["source prefix"], mapping["source identifier"]),

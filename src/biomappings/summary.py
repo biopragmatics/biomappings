@@ -76,16 +76,16 @@ def _get_contributors(mappings: Iterable[Mapping[str, str]]):
     from biomappings.resources import load_curators
 
     curators = {record["orcid"]: record for record in load_curators()}
-    counter = Counter(_get_source(mapping["source"]) for mapping in mappings)
+    counter = Counter(_get_orcid(mapping["reviewer"]) for mapping in mappings)
     return [
         dict(count=count, **curators[orcid]) if orcid else dict(count=count)
         for orcid, count in counter.most_common()
     ]
 
 
-def _get_source(source: str) -> Optional[str]:
-    if source.startswith("orcid:"):
-        return source[len("orcid:") :]
+def _get_orcid(reviewer_orcid: str) -> Optional[str]:
+    if reviewer_orcid.startswith("orcid:"):
+        return reviewer_orcid[len("orcid:") :]
     return None
 
 
