@@ -15,7 +15,12 @@ import yaml
 from bioregistry.resolve_identifier import get_bioregistry_iri
 from tqdm import tqdm
 
-from biomappings.resources import PROVENANCE_KEY, load_false_mappings, load_mappings, load_predictions
+from biomappings.resources import (
+    PROVENANCE_KEY,
+    load_false_mappings,
+    load_mappings,
+    load_predictions,
+)
 from biomappings.utils import DATA, IMG, get_curie
 
 logger = logging.getLogger(__name__)

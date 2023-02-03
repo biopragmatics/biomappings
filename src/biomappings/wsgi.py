@@ -5,7 +5,7 @@
 import getpass
 import os
 from collections import defaultdict
-from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple
+from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple, Union
 
 import bioregistry
 import flask
@@ -71,7 +71,7 @@ class Controller:
         self._predictions = load_predictions()
         self._marked: Dict[int, str] = {}
         self.total_curated = 0
-        self._added_mappings: List[Dict[str, str]] = []
+        self._added_mappings: List[Dict[str, Union[str, float]]] = []
         self.target_ids = set(target_curies or [])
 
     def predictions(

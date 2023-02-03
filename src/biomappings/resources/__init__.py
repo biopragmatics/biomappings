@@ -7,6 +7,7 @@ import itertools as itt
 import os
 from collections import defaultdict
 from typing import (
+    Any,
     DefaultDict,
     Dict,
     Iterable,
@@ -16,6 +17,7 @@ from typing import (
     Optional,
     Sequence,
     Tuple,
+    Union,
 )
 
 import bioregistry
@@ -54,9 +56,9 @@ class MappingTuple(NamedTuple):
     source: Optional[str]
     reviewer: Optional[str]
 
-    def as_dict(self) -> Mapping[str, str]:
+    def as_dict(self) -> Mapping[str, Any]:
         """Get the mapping tuple as a dictionary."""
-        return dict(zip(MAPPINGS_HEADER, self))
+        return dict(zip(MAPPINGS_HEADER, self))  # type:ignore
 
     @classmethod
     def from_dict(cls, mapping: Mapping[str, str]) -> "MappingTuple":
@@ -65,9 +67,9 @@ class MappingTuple(NamedTuple):
         for key in MAPPINGS_HEADER:
             value = mapping.get(key) or None
             if key == "confidence" and value is not None:
-                value = float(value)
+                value = float(value)  # type:ignore
             values.append(value)
-        return cls(*values)
+        return cls(*values)  # type:ignore
 
     @property
     def source_curie(self) -> str:

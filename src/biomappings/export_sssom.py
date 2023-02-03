@@ -9,7 +9,6 @@ import click
 import yaml
 
 from biomappings import load_mappings, load_predictions
-from biomappings.resources import PROVENANCE_KEY
 from biomappings.utils import DATA, get_curie
 
 DIRECTORY = pathlib.Path(DATA).joinpath("sssom")
