@@ -316,7 +316,7 @@ def lint_predictions(standardize: bool = False) -> None:
     3. Make sure it's sorted
 
     :param standardize: Should identifiers be standardized (against the
-        combination of Identifiers.org and Bioregistry)?
+             combination of Identifiers.org and Bioregistry)?
     """
     curated_mappings = {
         get_canonical_tuple(mapping)
