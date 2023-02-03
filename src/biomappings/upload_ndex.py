@@ -64,8 +64,8 @@ def ndex(username, password):
             name=get_curie(mapping["target prefix"], mapping["target identifier"]),
         )
         edge = cx.add_edge(
-            source,
-            target,
+            source=source,
+            target=target,
             interaction=mapping["relation"],
         )
         cx.add_edge_attribute(edge, "type", mapping["type"])
