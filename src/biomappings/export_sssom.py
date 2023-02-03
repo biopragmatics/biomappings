@@ -62,7 +62,7 @@ def get_sssom_df():
     for mapping in load_mappings():
         prefixes.add(mapping["source prefix"])
         prefixes.add(mapping["target prefix"])
-        source = mapping["reviewer"]
+        source = mapping["source"]
         if any(source.startswith(x) for x in ["orcid:", "wikidata:"]):
             creators.add(source)
         rows.append(
