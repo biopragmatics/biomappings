@@ -24,7 +24,6 @@ from tqdm import tqdm
 
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
-PROVENANCE_KEY = "source"
 MAPPINGS_HEADER = [
     "source prefix",
     "source identifier",
@@ -34,9 +33,22 @@ MAPPINGS_HEADER = [
     "target identifier",
     "target name",
     "type",
+    "source",
+    "prediction_type",
+    "prediction_source",
+    "prediction_confidence",
+]
+PREDICTIONS_HEADER = [
+    "source prefix",
+    "source identifier",
+    "source name",
+    "relation",
+    "target prefix",
+    "target identifier",
+    "target name",
+    "type",
     "confidence",
-    PROVENANCE_KEY,
-    "reviewer",
+    "source",
 ]
 
 
@@ -51,9 +63,10 @@ class MappingTuple(NamedTuple):
     target_identifier: str
     target_name: str
     type: str
-    confidence: Optional[float]
-    source: Optional[str]
-    reviewer: Optional[str]
+    source: str
+    prediction_type: Optional[str]
+    prediction_source: Optional[str]
+    prediction_confidence: Optional[float]
 
     def as_dict(self) -> Mapping[str, Any]:
         """Get the mapping tuple as a dictionary."""
@@ -65,7 +78,7 @@ class MappingTuple(NamedTuple):
         values = []
         for key in MAPPINGS_HEADER:
             value = mapping.get(key) or None
-            if key == "confidence" and value is not None:
+            if key == "prediction_confidence" and value is not None:
                 value = float(value)  # type:ignore
             values.append(value)
         return cls(*values)  # type:ignore
@@ -81,7 +94,44 @@ class MappingTuple(NamedTuple):
         return f"{self.target_prefix}:{self.target_identifier}"
 
 
-PredictionTuple = MappingTuple
+class PredictionTuple(NamedTuple):
+    """A named tuple class for predicted mappings."""
+
+    source_prefix: str
+    source_id: str
+    source_name: str
+    relation: str
+    target_prefix: str
+    target_identifier: str
+    target_name: str
+    type: str
+    confidence: float
+    source: str
+
+    def as_dict(self) -> Mapping[str, Any]:
+        """Get the mapping tuple as a dictionary."""
+        return dict(zip(PREDICTIONS_HEADER, self))  # type:ignore
+
+    @classmethod
+    def from_dict(cls, mapping: Mapping[str, str]) -> "MappingTuple":
+        """Get the mapping tuple from a dictionary."""
+        values = []
+        for key in PREDICTIONS_HEADER:
+            value = mapping.get(key) or None
+            if key == "confidence" and value is not None:
+                value = float(value)  # type:ignore
+            values.append(value)
+        return cls(*values)  # type:ignore
+
+    @property
+    def source_curie(self) -> str:
+        """Concatenate the source prefix and ID to a CURIE."""
+        return f"{self.source_prefix}:{self.source_id}"
+
+    @property
+    def target_curie(self) -> str:
+        """Concatenate the target prefix and ID to a CURIE."""
+        return f"{self.target_prefix}:{self.target_identifier}"
 
 
 def get_resource_file_path(fname) -> str:
@@ -121,7 +171,7 @@ def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
         prediction["target prefix"],
         prediction["target identifier"],
         prediction["type"],
-        prediction[PROVENANCE_KEY] or "",
+        prediction["source"] or "",
     )
 
 
@@ -221,7 +271,7 @@ def load_predictions() -> List[Dict[str, str]]:
 
 def write_predictions(m: Iterable[Mapping[str, str]]) -> None:
     """Write new content to the predictions table."""
-    _write_helper(MAPPINGS_HEADER, m, PREDICTIONS_PATH, "w")
+    _write_helper(PREDICTIONS_HEADER, m, PREDICTIONS_PATH, "w")
 
 
 def append_prediction_tuples(
@@ -253,7 +303,7 @@ def append_predictions(
             mapping for mapping in mappings if get_canonical_tuple(mapping) not in existing_mappings
         )
 
-    _write_helper(MAPPINGS_HEADER, mappings, PREDICTIONS_PATH, "a")
+    _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, "a")
     if sort:
         lint_predictions()
 

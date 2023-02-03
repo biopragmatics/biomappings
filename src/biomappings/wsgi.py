@@ -15,7 +15,6 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
 from biomappings.resources import (
-    PROVENANCE_KEY,
     append_false_mappings,
     append_true_mappings,
     append_unsure_mappings,
@@ -71,7 +70,7 @@ class Controller:
         self._predictions = load_predictions()
         self._marked: Dict[int, str] = {}
         self.total_curated = 0
-        self._added_mappings: List[Dict[str, Union[str, float]]] = []
+        self._added_mappings: List[Dict[str, Union[None, str, float]]] = []
         self.target_ids = set(target_curies or [])
 
     def predictions(
@@ -208,7 +207,7 @@ class Controller:
         if prefix is not None:
             it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
         if provenance is not None:
-            it = self._help_filter(provenance, it, {PROVENANCE_KEY})
+            it = self._help_filter(provenance, it, {"source"})
 
         if sort is not None:
             it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=sort == "desc"))
@@ -301,10 +300,11 @@ class Controller:
                 "target prefix": target_prefix,
                 "target identifier": target_id,
                 "target name": target_name,
-                "confidence": 0.95,
-                PROVENANCE_KEY: reviewer_orcid,
-                "reviewer": reviewer_orcid,
                 "type": "manual",
+                "source": reviewer_orcid,
+                "prediction_type": None,
+                "prediction_source": None,
+                "prediction_confidence": None,
             }
         )
         self.total_curated += 1
@@ -315,7 +315,11 @@ class Controller:
 
         for line, value in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(line)
-            prediction["reviewer"] = _get_reviewer_orcid()
+            prediction["prediction_type"] = prediction.pop("type")
+            prediction["prediction_source"] = prediction.pop("source")
+            prediction["prediction_confidence"] = prediction.pop("confidence")
+            prediction["source"] = _get_reviewer_orcid()
+            prediction["type"] = "manually_reviewed"
             entries[value].append(prediction)
 
         append_true_mappings(entries["correct"])

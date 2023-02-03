@@ -62,11 +62,9 @@ def get_sssom_df():
     for mapping in load_mappings():
         prefixes.add(mapping["source prefix"])
         prefixes.add(mapping["target prefix"])
-        reviewer_curie = mapping["reviewer"]
-        if reviewer_curie is None:
-            raise ValueError
-        if any(reviewer_curie.startswith(x) for x in ["orcid:", "wikidata:"]):
-            creators.add(reviewer_curie)
+        source = mapping["reviewer"]
+        if any(source.startswith(x) for x in ["orcid:", "wikidata:"]):
+            creators.add(source)
         rows.append(
             (
                 get_curie(mapping["source prefix"], mapping["source identifier"]),
@@ -75,7 +73,7 @@ def get_sssom_df():
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
                 _get_justification(mapping),  # match justification
-                reviewer_curie,
+                source,  # curator CURIE
                 None,  # no confidence necessary
                 None,  # mapping tool: none necessary for manually curated
             )
@@ -83,9 +81,6 @@ def get_sssom_df():
     for mapping in load_predictions():
         prefixes.add(mapping["source prefix"])
         prefixes.add(mapping["target prefix"])
-        reviewer_curie = mapping["reviewer"]
-        if reviewer_curie is not None:
-            raise ValueError
         rows.append(
             (
                 get_curie(mapping["source prefix"], mapping["source identifier"]),

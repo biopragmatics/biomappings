@@ -15,12 +15,7 @@ import yaml
 from bioregistry.resolve_identifier import get_bioregistry_iri
 from tqdm import tqdm
 
-from biomappings.resources import (
-    PROVENANCE_KEY,
-    load_false_mappings,
-    load_mappings,
-    load_predictions,
-)
+from biomappings.resources import load_false_mappings, load_mappings, load_predictions
 from biomappings.utils import DATA, IMG, get_curie
 
 logger = logging.getLogger(__name__)
@@ -91,7 +86,7 @@ def _graph_from_mappings(
             source_curie,
             target_curie,
             relation=relation,
-            provenance=mapping[PROVENANCE_KEY],
+            provenance=mapping["source"],
             type=mapping["type"],
             strata=strata,
         )

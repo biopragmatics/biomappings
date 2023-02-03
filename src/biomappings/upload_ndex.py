@@ -11,7 +11,6 @@ import pystow
 from tqdm import tqdm
 
 from biomappings import load_mappings
-from biomappings.resources import PROVENANCE_KEY
 from biomappings.utils import get_curie, get_git_hash
 
 BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
@@ -70,7 +69,7 @@ def ndex(username, password):
             interaction=mapping["relation"],
         )
         cx.add_edge_attribute(edge, "type", mapping["type"])
-        cx.add_edge_attribute(edge, "provenance", mapping[PROVENANCE_KEY])
+        cx.add_edge_attribute(edge, "provenance", mapping["source"])
 
     nice_cx = cx.get_nice_cx()
     nice_cx.update_to(

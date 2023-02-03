@@ -94,18 +94,10 @@ class TestIntegrity(unittest.TestCase):
         """Test all contributors have an entry in the curators.tsv file."""
         contributor_orcids = {row["orcid"] for row in load_curators()}
         for mapping in itt.chain(mappings, incorrect, unsure):
-            reviewer = mapping["reviewer"]
-            if reviewer is None:
+            source = mapping["source"]
+            if not source.startswith("orcid:"):
                 continue
-            self.assertNotEqual("", reviewer)
-            self.assertTrue(reviewer.startswith("orcid:"))
-            self.assertIn(reviewer[len("orcid:") :], contributor_orcids)
-
-    def test_prediction_reviewer(self):
-        """Test that there's a reviewer column for predictions, but nothing filled out."""
-        for i, p in enumerate(predictions, start=2):
-            self.assertIn("reviewer", p, msg=f"Missing reviewer key on line {i}")
-            self.assertIsNone(p["reviewer"], msg=f"Unexpected reviewer annotation on line {i}")
+            self.assertIn(source[len("orcid:") :], contributor_orcids)
 
 
 def _extract_redundant(counter):
