@@ -8,6 +8,13 @@ layout: home
 This site summarizes the `biomappings` resources. They can be downloaded under the CC0-1.0 License from the open-source
 repository on [GitHub](https://github.com/biopragmatics/biomappings).
 
+| Type      |                                             Count | 
+|-----------|--------------------------------------------------:|
+| Positive  |    {{ site.data.summary.positive_mapping_count }} |
+| Negative  |    {{ site.data.summary.negative_mapping_count }} |
+| Unsure    |      {{ site.data.summary.unsure_mapping_count }} |
+| Predicted | {{ site.data.summary.predictions_mapping_count }} |
+
 ## Positive Mappings ({{ site.data.summary.positive_mapping_count }})
 
 <table>

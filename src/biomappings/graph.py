@@ -221,8 +221,8 @@ def charts():
     plt.savefig(os.path.join(IMG, "components.svg"))
     plt.close(fig)
 
-    fig, axes = plt.subplots(1, 2, figsize=(8.5, 5))
     prefix_counter = Counter(prefix_list)
+    fig, axes = plt.subplots(1, 2, figsize=(8.5, 7))
     sns.countplot(y=prefix_list, ax=axes[0], order=[k for k, _ in prefix_counter.most_common()])
     axes[0].set_xscale("log")
     axes[0].set_xlabel("Count")
