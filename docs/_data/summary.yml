@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 3264
+- count: 3343
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -54,13 +54,13 @@ negative:
 - count: 38
   source: cl
   target: mesh
-- count: 35
+- count: 36
   source: doid
   target: umls
 - count: 29
   source: efo
   target: mesh
-- count: 26
+- count: 27
   source: chebi
   target: mesh
 - count: 22
@@ -144,16 +144,16 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1213
+negative_mapping_count: 1215
 negative_prefix_count: 27
 positive:
-- count: 2851
+- count: 2912
   source: chebi
   target: mesh
 - count: 1458
   source: doid
   target: mesh
-- count: 893
+- count: 902
   source: mesh
   target: ncit
 - count: 570
@@ -174,7 +174,7 @@ positive:
 - count: 208
   source: mesh
   target: mondo
-- count: 187
+- count: 190
   source: doid
   target: umls
 - count: 165
@@ -229,11 +229,11 @@ positive:
   source: mesh
   target: wikipathways
 - count: 17
-  source: mesh
-  target: pubchem.compound
-- count: 16
   source: apollosv
   target: ido
+- count: 17
+  source: mesh
+  target: pubchem.compound
 - count: 13
   source: ido
   target: idomal
@@ -326,6 +326,9 @@ positive:
   target: envo
 - count: 1
   source: apollosv
+  target: vo
+- count: 1
+  source: apollosv
   target: ncit
 - count: 1
   source: apollosv
@@ -408,19 +411,19 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 9199
+positive_mapping_count: 9274
 positive_prefix_count: 52
 predictions:
-- count: 11904
+- count: 11842
   source: chebi
   target: mesh
-- count: 11746
+- count: 11737
   source: mesh
   target: ncit
 - count: 10970
   source: mesh
   target: uniprot
-- count: 2345
+- count: 2339
   source: doid
   target: umls
 - count: 1685
@@ -485,9 +488,6 @@ predictions:
   target: vo
 - count: 4
   source: apollosv
-  target: ido
-- count: 4
-  source: apollosv
   target: idomal
 - count: 4
   source: idomal
@@ -506,10 +506,10 @@ predictions:
   target: vo
 - count: 2
   source: apollosv
-  target: vo
+  target: pato
 - count: 2
   source: apollosv
-  target: pato
+  target: ido
 - count: 2
   source: ido
   target: pato
@@ -582,7 +582,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 40772
+predictions_mapping_count: 40691
 predictions_prefix_count: 35
 unsure:
 - count: 27
@@ -607,6 +607,9 @@ unsure:
   source: cl
   target: mesh
 - count: 2
+  source: doid
+  target: umls
+- count: 2
   source: efo
   target: mesh
 - count: 1
@@ -621,5 +624,5 @@ unsure:
 - count: 1
   source: hgnc
   target: mesh
-unsure_mapping_count: 65
-unsure_prefix_count: 13
+unsure_mapping_count: 67
+unsure_prefix_count: 14

@@ -174,6 +174,35 @@
       prefix: agrovoc
 - edges:
   - source:
+      curie: idomal:0001040
+      identifier: '0001040'
+      link: https://bioregistry.io/idomal:0001040
+      name: vaccination
+      prefix: idomal
+    target:
+      curie: vo:0000002
+      identifier: '0000002'
+      link: https://bioregistry.io/vo:0000002
+      name: vaccination
+      prefix: vo
+  nodes:
+    apollosv:00000142:
+      identifier: '00000142'
+      link: https://bioregistry.io/apollosv:00000142
+      name: vaccination
+      prefix: apollosv
+    idomal:0001040:
+      identifier: '0001040'
+      link: https://bioregistry.io/idomal:0001040
+      name: vaccination
+      prefix: idomal
+    vo:0000002:
+      identifier: '0000002'
+      link: https://bioregistry.io/vo:0000002
+      name: vaccination
+      prefix: vo
+- edges:
+  - source:
       curie: apollosv:00000239
       identifier: 00000239
       link: https://bioregistry.io/apollosv:00000239
@@ -772,11 +801,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: mesh:D000072283
-      identifier: D000072283
-      link: https://bioregistry.io/mesh:D000072283
-      name: A549 Cells
-      prefix: mesh
+      curie: efo:0001086
+      identifier: 0001086
+      link: https://bioregistry.io/efo:0001086
+      name: A549
+      prefix: efo
   - source:
       curie: cellosaurus:0023
       identifier: CVCL_0023
@@ -784,11 +813,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: efo:0001086
-      identifier: 0001086
-      link: https://bioregistry.io/efo:0001086
-      name: A549
-      prefix: efo
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
   nodes:
     ccle:A549_LUNG:
       identifier: A549_LUNG
@@ -1604,7 +1633,7 @@
       curie: depmap:ACH-000299
       identifier: ACH-000299
       link: https://bioregistry.io/depmap:ACH-000299
-      name: ''
+      name: null
       prefix: depmap
   - source:
       curie: cellosaurus:2071
@@ -1622,7 +1651,7 @@
       curie: depmap:ACH-000299
       identifier: ACH-000299
       link: https://bioregistry.io/depmap:ACH-000299
-      name: ''
+      name: null
       prefix: depmap
     target:
       curie: efo:0006583
@@ -1644,7 +1673,7 @@
     depmap:ACH-000299:
       identifier: ACH-000299
       link: https://bioregistry.io/depmap:ACH-000299
-      name: ''
+      name: null
       prefix: depmap
     efo:0006583:
       identifier: 0006583
@@ -5284,11 +5313,11 @@
       name: osteomalacia
       prefix: efo
     target:
-      curie: hp:0002749
-      identifier: HP:0002749
-      link: https://bioregistry.io/hp:0002749
+      curie: mesh:D010018
+      identifier: D010018
+      link: https://bioregistry.io/mesh:D010018
       name: Osteomalacia
-      prefix: hp
+      prefix: mesh
   - source:
       curie: efo:1002027
       identifier: '1002027'
@@ -5296,11 +5325,11 @@
       name: osteomalacia
       prefix: efo
     target:
-      curie: mesh:D010018
-      identifier: D010018
-      link: https://bioregistry.io/mesh:D010018
+      curie: hp:0002749
+      identifier: HP:0002749
+      link: https://bioregistry.io/hp:0002749
       name: Osteomalacia
-      prefix: mesh
+      prefix: hp
   nodes:
     doid:10573:
       identifier: DOID:10573
@@ -5504,11 +5533,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: mondo:0002012
-      identifier: '0002012'
-      link: https://bioregistry.io/mondo:0002012
-      name: methylmalonic acidemia
-      prefix: mondo
+      curie: hp:0002912
+      identifier: HP:0002912
+      link: https://bioregistry.io/hp:0002912
+      name: Methylmalonic acidemia
+      prefix: hp
   - source:
       curie: doid:14749
       identifier: DOID:14749
@@ -5516,11 +5545,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: hp:0002912
-      identifier: HP:0002912
-      link: https://bioregistry.io/hp:0002912
-      name: Methylmalonic acidemia
-      prefix: hp
+      curie: mondo:0002012
+      identifier: '0002012'
+      link: https://bioregistry.io/mondo:0002012
+      name: methylmalonic acidemia
+      prefix: mondo
   - source:
       curie: hp:0002912
       identifier: HP:0002912
