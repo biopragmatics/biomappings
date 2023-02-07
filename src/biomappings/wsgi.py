@@ -5,7 +5,7 @@
 import getpass
 import os
 from collections import defaultdict
-from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple
+from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple, Union
 
 import bioregistry
 import flask
@@ -70,7 +70,7 @@ class Controller:
         self._predictions = load_predictions()
         self._marked: Dict[int, str] = {}
         self.total_curated = 0
-        self._added_mappings: List[Dict[str, str]] = []
+        self._added_mappings: List[Dict[str, Union[None, str, float]]] = []
         self.target_ids = set(target_curies or [])
 
     def predictions(
@@ -301,6 +301,9 @@ class Controller:
                 "target name": target_name,
                 "source": _manual_source(),
                 "type": "manual",
+                "prediction_type": None,
+                "prediction_source": None,
+                "prediction_confidence": None,
             }
         )
         self.total_curated += 1
@@ -311,6 +314,9 @@ class Controller:
 
         for line, value in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(line)
+            prediction["prediction_type"] = prediction.pop("type")
+            prediction["prediction_source"] = prediction.pop("source")
+            prediction["prediction_confidence"] = prediction.pop("confidence")
             prediction["source"] = _manual_source()
             prediction["type"] = "manually_reviewed"
             entries[value].append(prediction)
@@ -457,6 +463,7 @@ def _go_home():
             prefix=flask.request.args.get("prefix"),
             same_text=flask.request.args.get("same_text", default="false").lower() in {"true", "t"},
             provenance=flask.request.args.get("provenance"),
+            sort=flask.request.args.get("sort"),
             # config
             show_relations=current_app.config["SHOW_RELATIONS"],
             show_lines=current_app.config["SHOW_LINES"],

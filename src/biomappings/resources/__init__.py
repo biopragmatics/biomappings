@@ -14,6 +14,7 @@ from typing import (
     List,
     Mapping,
     NamedTuple,
+    Optional,
     Sequence,
     Tuple,
 )
@@ -33,6 +34,9 @@ MAPPINGS_HEADER = [
     "target name",
     "type",
     "source",
+    "prediction_type",
+    "prediction_source",
+    "prediction_confidence",
 ]
 PREDICTIONS_HEADER = [
     "source prefix",
@@ -60,15 +64,24 @@ class MappingTuple(NamedTuple):
     target_name: str
     type: str
     source: str
+    prediction_type: Optional[str]
+    prediction_source: Optional[str]
+    prediction_confidence: Optional[float]
 
-    def as_dict(self) -> Mapping[str, str]:
+    def as_dict(self) -> Mapping[str, Any]:
         """Get the mapping tuple as a dictionary."""
-        return dict(zip(MAPPINGS_HEADER, self))
+        return dict(zip(MAPPINGS_HEADER, self))  # type:ignore
 
     @classmethod
     def from_dict(cls, mapping: Mapping[str, str]) -> "MappingTuple":
         """Get the mapping tuple from a dictionary."""
-        return cls(*[mapping[key] for key in MAPPINGS_HEADER])
+        values = []
+        for key in MAPPINGS_HEADER:
+            value = mapping.get(key) or None
+            if key == "prediction_confidence" and value is not None:
+                value = float(value)  # type:ignore
+            values.append(value)
+        return cls(*values)  # type:ignore
 
     @property
     def source_curie(self) -> str:
@@ -97,17 +110,18 @@ class PredictionTuple(NamedTuple):
 
     def as_dict(self) -> Mapping[str, Any]:
         """Get the prediction tuple as a dictionary."""
-        return dict(zip(PREDICTIONS_HEADER, self))
+        return dict(zip(PREDICTIONS_HEADER, self))  # type:ignore
 
     @classmethod
     def from_dict(cls, mapping: Mapping[str, str]) -> "PredictionTuple":
         """Get the prediction tuple from a dictionary."""
-        return cls(
-            *[  # type: ignore
-                float(mapping[key]) if key == "confidence" else mapping[key]
-                for key in PREDICTIONS_HEADER
-            ]
-        )
+        values = []
+        for key in PREDICTIONS_HEADER:
+            value = mapping.get(key) or None
+            if key == "confidence" and value is not None:
+                value = float(value)  # type:ignore
+            values.append(value)
+        return cls(*values)  # type:ignore
 
     @property
     def source_curie(self) -> str:
@@ -129,7 +143,12 @@ def _load_table(fname) -> List[Dict[str, str]]:
     with open(fname, "r") as fh:
         reader = csv.reader(fh, delimiter="\t")
         header = next(reader)
-        return [dict(zip(header, row)) for row in reader]
+        return [_clean(header, row) for row in reader]
+
+
+def _clean(header, row):
+    d = dict(zip(header, row))
+    return {k: v if v else None for k, v in d.items()}
 
 
 def _write_helper(
@@ -140,7 +159,7 @@ def _write_helper(
         if mode == "w":
             print(*header, sep="\t", file=file)  # noqa:T201
         for line in lod:
-            print(*[line[k] for k in header], sep="\t", file=file)  # noqa:T201
+            print(*[line[k] or "" for k in header], sep="\t", file=file)  # noqa:T201
 
 
 def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
@@ -152,7 +171,7 @@ def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
         prediction["target prefix"],
         prediction["target identifier"],
         prediction["type"],
-        prediction["source"],
+        prediction["source"] or "",
     )
 
 
