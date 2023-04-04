@@ -19,6 +19,8 @@ from typing import (
     Tuple,
 )
 
+import pandas as pd
+
 import bioregistry
 from tqdm import tqdm
 
@@ -183,6 +185,14 @@ def load_mappings() -> List[Dict[str, str]]:
     return _load_table(TRUE_MAPPINGS_PATH)
 
 
+load_positive_mappings = load_mappings
+
+
+def load_positive_mappings_df() -> pd.DataFrame:
+    """Load positive mappings as a dataframe."""
+    return pd.read_csv(TRUE_MAPPINGS_PATH, sep='\t')
+
+
 def append_true_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
     """Append new lines to the mappings table."""
     _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "a")
@@ -215,6 +225,14 @@ def load_false_mappings() -> List[Dict[str, str]]:
     return _load_table(FALSE_MAPPINGS_PATH)
 
 
+load_negative_mappings = load_false_mappings
+
+
+def load_negative_mappings_df() -> pd.DataFrame:
+    """Load negative mappings as a dataframe."""
+    return pd.read_csv(FALSE_MAPPINGS_PATH, sep='\t')
+
+
 def append_false_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
     """Append new lines to the false mappings table."""
     _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "a")
@@ -242,6 +260,11 @@ def load_unsure() -> List[Dict[str, str]]:
     return _load_table(UNSURE_PATH)
 
 
+def load_unsure_mappings_df() -> pd.DataFrame:
+    """Load unsure mappings as a dataframe."""
+    return pd.read_csv(UNSURE_PATH, sep='\t')
+
+
 def append_unsure_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
     """Append new lines to the "unsure" mappings table."""
     _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "a")
@@ -267,6 +290,11 @@ PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
 def load_predictions() -> List[Dict[str, str]]:
     """Load the predictions table."""
     return _load_table(PREDICTIONS_PATH)
+
+
+def load_predicted_mappings_df() -> pd.DataFrame:
+    """Load predicted mappings as a dataframe."""
+    return pd.read_csv(PREDICTIONS_PATH, sep='\t')
 
 
 def write_predictions(m: Iterable[Mapping[str, str]]) -> None:
@@ -399,3 +427,15 @@ def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:
     for m in itt.chain(load_mappings(), load_false_mappings(), load_unsure()):
         d[m["source prefix"]][m["target prefix"]][m["source identifier"]] = m["target identifier"]
     return {k: dict(v) for k, v in d.items()}
+
+
+def load_concat_mappings_df() -> pd.DataFrame:
+    a = load_unsure_mappings_df()
+    a["status"] = "unsure"
+    b = load_predicted_mappings_df()
+    b["status"] = "predicted"
+    c = load_positive_mappings_df()
+    c["status"] = "positive"
+    d = load_negative_mappings_df()
+    d["status"] = "negative"
+    return pd.concat([c, d, a, b])
