@@ -8784,17 +8784,56 @@ vido	0000505	viremia	skos:exactMatch	ido	0000505	viremia	manually_reviewed	orcid
 vido	0000508	virion	skos:exactMatch	ido	0000508	virion	manually_reviewed	orcid:0000-0003-4423-4370			
 vido	0000564	viricide	skos:exactMatch	ido	0000564	viricide	manually_reviewed	orcid:0000-0003-4423-4370			
 vido	0001066	virus aggregate	skos:exactMatch	vsmo	0000297	virus aggregate	manually_reviewed	orcid:0000-0003-4423-4370			
+vo	0000001	vaccine	skos:exactMatch	mesh	D014612	Vaccines	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000002	vaccination	skos:exactMatch	idomal	0001040	vaccination	manually_reviewed	orcid:0000-0003-4423-4370	lexical	mira	0.7777777777777778
+vo	0000002	vaccination	skos:exactMatch	mesh	D014611	Vaccination	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000003	ACAM2000	skos:exactMatch	mesh	C000588544	ACAM2000	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000014	Biothrax	skos:exactMatch	mesh	C493276	Biothrax	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000015	Boostrix	skos:exactMatch	mesh	C505143	Boostrix	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000025	Brucella vaccine	skos:exactMatch	mesh	D002004	Brucella Vaccine	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
+vo	0000028	Comvax	skos:exactMatch	mesh	C104289	COMVAX	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000043	FluLaval	skos:exactMatch	mesh	C517981	FluLaval	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000044	FluMist	skos:exactMatch	mesh	C000613429	FluMist	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000045	Fluarix	skos:exactMatch	mesh	C510903	fluarix	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000051	Balb/c mouse	skos:exactMatch	cido	0000390	BALB/c mouse	manually_reviewed	orcid:0000-0003-4423-4370			
+vo	0000079	Fluzone High-dose	skos:exactMatch	mesh	C000618615	Fluzone High-Dose	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
+vo	0000082	Pediarix	skos:exactMatch	mesh	C472675	PEDIARIX	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000084	Pentacel	skos:exactMatch	mesh	C512971	pentacel	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000087	Plasmodium falciparum vaccine	skos:exactMatch	idomal	0000115	plasmodium falciparum vaccine	manually_reviewed	orcid:0000-0003-4423-4370			
+vo	0000097	RotaTeq	skos:exactMatch	mesh	C492535	RotaTeq	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000113	Twinrix	skos:exactMatch	mesh	C433226	twinrix	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000247	vaccine efficacy	skos:exactMatch	mesh	D000087507	Vaccine Efficacy	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000350	Arepanrix	skos:exactMatch	mesh	C568072	arepanrix	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000402	AIDSVAX	skos:exactMatch	mesh	C112734	AIDSVAX	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000410	Pandemrix	skos:exactMatch	mesh	C556153	pandemrix	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000414	Panvax	skos:exactMatch	mesh	C551358	panvax	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000490	immunization	skos:exactMatch	idomal	0001039	immunization	manually_reviewed	orcid:0000-0003-4423-4370	lexical	mira	0.7777777777777778
+vo	0000490	immunization	skos:exactMatch	mesh	D007114	Immunization	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000516	human protein	skos:exactMatch	pr	PR:000029067	Homo sapiens protein	manually_reviewed	orcid:0000-0003-4423-4370			
+vo	0000547	virulence factor	skos:exactMatch	chebi	CHEBI:72316	virulence factor	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
 vo	0000560	toxin	skos:exactMatch	chebi	CHEBI:27026	toxin	manually_reviewed	orcid:0000-0003-4423-4370			
 vo	0000560	toxin	skos:exactMatch	ido	0000549	toxin	manually_reviewed	orcid:0000-0003-4423-4370			
 vo	0000560	toxin	skos:exactMatch	idomal	0000043	toxin	manually_reviewed	orcid:0000-0003-4423-4370			
+vo	0000731	Measles-Mumps-Rubella vaccine	skos:exactMatch	mesh	D022542	Measles-Mumps-Rubella Vaccine	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
+vo	0000732	Diphtheria-Tetanus vaccine	skos:exactMatch	mesh	D022422	Diphtheria-Tetanus Vaccine	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
+vo	0000738	Diphtheria-Tetanus-Pertussis vaccine	skos:exactMatch	mesh	D015721	Diphtheria-Tetanus-Pertussis Vaccine	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
 vo	0000740	P. falciparum vaccine Combination B	skos:exactMatch	idomal	0000135	P. falciparum vaccine Combination B	manually_reviewed	orcid:0000-0003-4423-4370			
 vo	0000761	malaria vaccine	skos:exactMatch	idomal	0001055	malaria vaccine	manually_reviewed	orcid:0000-0003-4423-4370			
+vo	0000771	BCG vaccine	skos:exactMatch	mesh	D001500	BCG Vaccine	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
+vo	0000809	vaccination coverage	skos:exactMatch	mesh	D000073887	Vaccination Coverage	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000843	Feline leukemia virus vaccine	skos:exactMatch	mesh	C045569	feline leukemia virus vaccine	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
 vo	0000862	Canada	skos:exactMatch	idocovid19	0001302	Canada	manually_reviewed	orcid:0000-0003-4423-4370			
+vo	0000867	Influvac	skos:exactMatch	mesh	C568705	influvac	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000868	Vaxigrip	skos:exactMatch	mesh	C478242	vaxigrip	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000971	Novartis	skos:exactMatch	ncit	C126403	Novartis	manually_reviewed	orcid:0000-0003-4423-4370			
+vo	0000978	Flublok	skos:exactMatch	mesh	C528512	FluBlok	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.743764172335601
+vo	0001010	Promega	skos:exactMatch	mesh	C060580	Promega	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
 vo	0001092	USDA	skos:exactMatch	ncit	C68708	United States Department of Agriculture	manually_reviewed	orcid:0000-0003-4423-4370			
+vo	0001215	Vaxstrate	skos:exactMatch	mesh	C066608	Vaxstrate	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0003082	Vaxchora	skos:exactMatch	mesh	C000613802	Vaxchora	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0003112	Rudivax	skos:exactMatch	mesh	C112264	Rudivax	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0003495	influenza vaccines	skos:exactMatch	mesh	D007252	Influenza Vaccines	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0004613	smallpox vaccine	skos:exactMatch	mesh	D012900	Smallpox Vaccine	manually_reviewed	orcid:0000-0003-4423-4370	lexical	https://github.com/biomappings/biomappings/blob/c0a45c/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0004932	Janssen Pharmaceutica	skos:exactMatch	ncit	C164191	Janssen Pharmaceuticals	manually_reviewed	orcid:0000-0003-4423-4370			
 vo	0004948	AstraZeneca	skos:exactMatch	ncit	C177125	AstraZeneca	manually_reviewed	orcid:0000-0003-4423-4370			
 vo	0004953	Moderna	skos:exactMatch	ncit	C177124	Moderna	manually_reviewed	orcid:0000-0003-4423-4370			
