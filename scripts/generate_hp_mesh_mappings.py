@@ -7,20 +7,27 @@ from indra.databases import mesh_client
 from indra.ontology.standardize import standardize_db_refs
 from indra.tools.fix_invalidities import fix_invalidities_db_refs
 
-from biomappings import load_false_mappings, load_mappings, load_unsure, \
-    load_predictions
+from biomappings import (
+    load_false_mappings,
+    load_mappings,
+    load_predictions,
+    load_unsure,
+)
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
 # Get the DOID ontology
 g = obonet.read_obo(
-    "https://raw.githubusercontent.com/obophenotype/"
-    "human-phenotype-ontology/master/hp.obo"
+    "https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/hp.obo"
 )
 
 # Make sure we know which mappings have already been predicted or curated
 curated_mappings = set()
-for m in list(load_mappings()) + list(load_unsure()) + \
-         list(load_false_mappings() + list(load_predictions())):
+for m in (
+    list(load_mappings())
+    + list(load_unsure())
+    + list(load_false_mappings())
+    + list(load_predictions())
+):
     if m["source prefix"] == "hp" and m["target prefix"] == "mesh":
         curated_mappings.add(m["source identifier"])
     elif m["target prefix"] == "hp" and m["source prefix"] == "mesh":
@@ -43,7 +50,7 @@ for node, data in g.nodes(data=True):
         continue
     # Get existing xrefs as a standardized dict
     xrefs = [xref.split(":", maxsplit=1) for xref in data.get("xref", [])]
-    xrefs = {("MESH" if k == 'MSH' else k): v for k, v in xrefs}
+    xrefs = {("MESH" if k == "MSH" else k): v for k, v in xrefs}
     xrefs_dict = fix_invalidities_db_refs(dict(xrefs))
     standard_refs = standardize_db_refs(xrefs_dict)
     # If there are already MESH mappings, we keep track of that
