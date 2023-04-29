@@ -241,6 +241,8 @@ class Controller:
     def get_url(cls, prefix: str, identifier: str) -> str:
         """Return URL for a given prefix and identifier."""
         if bioregistry.get_obofoundry_prefix(prefix):
+            if prefix == 'hp' and identifier.startswith('HP:'):
+                identifier = identifier[3:]
             return bioregistry.get_ols_iri(prefix, identifier)
         return bioregistry.get_bioregistry_iri(prefix, identifier)
 
