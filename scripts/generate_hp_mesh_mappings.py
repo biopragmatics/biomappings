@@ -15,7 +15,7 @@ from biomappings import (
 )
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
-# Get the DOID ontology
+# Get the HP ontology
 g = obonet.read_obo(
     "https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/hp.obo"
 )
@@ -34,7 +34,7 @@ for m in (
         curated_mappings.add(m["target identifier"])
 
 
-# We now iterate over all DOID entries and check for possible mappings
+# We now iterate over all HP entries and check for possible mappings
 mappings = {}
 existing_refs_to_mesh = set()
 already_mappable = set()
