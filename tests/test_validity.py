@@ -57,6 +57,11 @@ class TestIntegrity(unittest.TestCase):
                 pt.startswith("semapv:"),
                 msg=f"Prediction type should be annotated with semapv on line {line}",
             )
+            self.assertNotEqual(
+                "semapv:ManualMatchingCuration",
+                pt,
+                msg="Prediction can not be annotated with manual curation",
+            )
 
     def test_canonical_prefixes(self):
         """Test that all mappings use canonical bioregistry prefixes."""
