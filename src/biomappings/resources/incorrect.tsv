@@ -95,7 +95,7 @@ ccle	WM239A	WM239A	skos:exactMatch	cellosaurus	CVCL_RN56	WM239B	semapv:ManualMap
 chebi	CHEBI:10057	9H-xanthene	skos:exactMatch	mesh	C002563	xanthan gum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:135025	rimazolium	skos:exactMatch	mesh	C100296	probon	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:135083	cibenzoline	skos:exactMatch	mesh	C032151	cifenline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
-chebi	CHEBI:15756	hexadecanoic acid	skos:exactMatch	mesh	D010169	Palmitic Acids	lexical	orcid:0000-0003-4423-4370		https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	0.9
+chebi	CHEBI:15756	hexadecanoic acid	skos:exactMatch	mesh	D010169	Palmitic Acids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	0.9
 chebi	CHEBI:15940	nicotinic acid	skos:exactMatch	mesh	D009539	Nicotinic Acids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:16543	N(2)-acetyl-L-ornithine	skos:exactMatch	mesh	C021951	N(delta)-acetylornithine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:17544	hydrogencarbonate	skos:exactMatch	mesh	D001639	Bicarbonates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -161,7 +161,7 @@ doid	DOID:0050175	tick-borne encephalitis	skos:exactMatch	umls	C0593408	Tick-bor
 doid	DOID:0050179	Powassan encephalitis	skos:exactMatch	mesh	D004675	Encephalitis, Tick-Borne	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0050185	erythema multiforme	skos:exactMatch	umls	C4554073	Erythema Multiforme, CTCAE	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0050195	Bolivian hemorrhagic fever	skos:exactMatch	mesh	D006478	Hemorrhagic Fever, American	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
-doid	DOID:0050251	coenurosis	skos:exactMatch	umls	C0010678	Cysticercosis	lexical	orcid:0000-0003-4423-4370		https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py	0.5400948258091115
+doid	DOID:0050251	coenurosis	skos:exactMatch	umls	C0010678	Cysticercosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py	0.5400948258091115
 doid	DOID:0050256	angiostrongyliasis	skos:exactMatch	umls	C4316792	Angiostrongylus Infections	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0050278	basidiobolomycosis	skos:exactMatch	mesh	C000656785	entomophthoromycosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0050279	conidiobolomycosis	skos:exactMatch	mesh	C000656785	entomophthoromycosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -430,7 +430,7 @@ mesh	C548841	Parasitic infection caused by Dracunculus medinensis	skos:exactMatc
 mesh	C562584	Xanthinuria, Type I	skos:exactMatch	doid	DOID:0060236	xanthinuria	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C562601	Lactose Intolerance, Adult Type	skos:exactMatch	doid	DOID:10604	lactose intolerance	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C562680	Cystathionase Deficiency	skos:exactMatch	doid	DOID:0090142	cystathioninuria	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
-mesh	C562684	Hyper-Beta-Alaninemia	skos:exactMatch	hp	HP:0003348	Hyperalaninemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	lexical	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
+mesh	C562684	Hyper-Beta-Alaninemia	skos:exactMatch	hp	HP:0003348	Hyperalaninemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C563052	Digitorenocerebral Syndrome	skos:exactMatch	doid	DOID:0111627	DOORS syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C564625	Congenital Disorder Of Glycosylation, Type IIID	skos:exactMatch	doid	DOID:0070256	congenital disorder of glycosylation type IId	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C566113	Progressive Encephalomyelitis with Rigidity	skos:exactMatch	go	GO:0046524	sucrose-phosphate synthase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -493,8 +493,8 @@ mesh	D005234	Fatty Liver	skos:exactMatch	efo	0008527	steatosis	semapv:ManualMapp
 mesh	D005319	Fetal Hemoglobin	skos:exactMatch	efo	0004576	fetal hemoglobin measurement	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D005351	Fibromatosis, Gingival	skos:exactMatch	doid	DOID:0060466	gingival fibromatosis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D005390	Fires	skos:exactMatch	ncit	C63143	Device Fire	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
-mesh	D005512	Food Hypersensitivity	skos:exactMatch	hp	HP:0012537	Food intolerance	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	lexical	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
-mesh	D005512	Food Hypersensitivity	skos:exactMatch	hp	HP:0500093	Food allergy	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	lexical	generate_hp_mesh_mappings.py	0.9
+mesh	D005512	Food Hypersensitivity	skos:exactMatch	hp	HP:0012537	Food intolerance	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
+mesh	D005512	Food Hypersensitivity	skos:exactMatch	hp	HP:0500093	Food allergy	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	D005621	Friedreich Ataxia	skos:exactMatch	doid	DOID:0111218	Friedreich ataxia 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D005776	Gaucher Disease	skos:exactMatch	doid	DOID:0110957	Gaucher's disease type I	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D005934	Glucagon	skos:exactMatch	hgnc	4191	GCG	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -520,7 +520,7 @@ mesh	D007680	Kidney Neoplasms	skos:exactMatch	doid	DOID:4451	renal carcinoma	sem
 mesh	D007713	Klinefelter Syndrome	skos:exactMatch	doid	DOID:0090070	hypogonadotropic hypogonadism	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D007762	Labyrinthitis	skos:exactMatch	doid	DOID:3930	otitis interna	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D007805	Language Development Disorders	skos:exactMatch	doid	DOID:0060244	specific language impairment	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
-mesh	D007938	Leukemia	skos:exactMatch	hp	HP:0005558	Chronic leukemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	lexical	generate_hp_mesh_mappings.py	0.9
+mesh	D007938	Leukemia	skos:exactMatch	hp	HP:0005558	Chronic leukemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	D007952	Leukemia, Plasma Cell	skos:exactMatch	doid	DOID:0070212	hereditary lymphedema I	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D008113	Liver Neoplasms	skos:exactMatch	doid	DOID:916	liver benign neoplasm	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D008180	Lupus Erythematosus, Systemic	skos:exactMatch	doid	DOID:8857	lupus erythematosus	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -641,7 +641,7 @@ mesh	D048209	Echinococcus granulosus	skos:exactMatch	doid	DOID:1495	cystic echin
 mesh	D049310	Distal Myopathies	skos:exactMatch	doid	DOID:0070198	Miyoshi muscular dystrophy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D050600	SNARE Proteins	skos:exactMatch	go	GO:0005484	SNAP receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D050727	Benzaldehyde Dehydrogenase (NADP+)	skos:exactMatch	go	GO:0018477	benzaldehyde dehydrogenase (NADP+) activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-mesh	D050815	Fractures, Compression	skos:exactMatch	hp	HP:0002953	Vertebral compression fractures	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	lexical	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
+mesh	D050815	Fractures, Compression	skos:exactMatch	hp	HP:0002953	Vertebral compression fractures	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
 mesh	D051057	Proto-Oncogene Proteins c-akt	skos:exactMatch	hgnc	391	AKT1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D051236	Receptors, Pituitary Adenylate Cyclase-Activating Polypeptide	skos:exactMatch	go	GO:0001634	pituitary adenylate cyclase-activating polypeptide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D052003	NF-kappa B p52 Subunit	skos:exactMatch	hgnc	7795	NFKB2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -650,7 +650,7 @@ mesh	D053483	Eye Movement Measurements	skos:exactMatch	efo	0007699	eye movement 
 mesh	D053496	Inositol 1,4,5-Trisphosphate Receptors	skos:exactMatch	chebi	CHEBI:131186	IP3 receptor antagonist	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D053840	Brugada Syndrome	skos:exactMatch	doid	DOID:0110218	Brugada syndrome 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D054000	Nevus, Sebaceous of Jadassohn	skos:exactMatch	doid	DOID:7039	Borst-Jadassohn intraepidermal carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
-mesh	D054068	Livedo Reticularis	skos:exactMatch	hp	HP:0000965	Cutis marmorata	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	lexical	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
+mesh	D054068	Livedo Reticularis	skos:exactMatch	hp	HP:0000965	Cutis marmorata	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
 mesh	D054467	Phospholipases A2	skos:exactMatch	hgnc	9030	PLA2G1B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D054629	Genome, Mitochondrial	skos:exactMatch	go	GO:0000262	mitochondrial chromosome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D054740	Dendritic Cell Sarcoma, Follicular	skos:exactMatch	doid	DOID:7849	dendritic cell sarcoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			

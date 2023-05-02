@@ -24,6 +24,8 @@ from tqdm import tqdm
 
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
 
+from .semapv import get_semapv
+
 MAPPINGS_HEADER = [
     "source prefix",
     "source identifier",
