@@ -46,7 +46,7 @@ if __name__ == "__main__":
             target_prefix="mesh",
             target_identifier=mesh_term.id,
             target_name=mesh_term.entry_name,
-            type="lexical",
+            type="semapv:LexicalMatching",
             confidence=0.95,
             source="generate_chebi_mesh_mappings.py",
         )
