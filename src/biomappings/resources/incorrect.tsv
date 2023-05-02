@@ -430,6 +430,7 @@ mesh	C548841	Parasitic infection caused by Dracunculus medinensis	skos:exactMatc
 mesh	C562584	Xanthinuria, Type I	skos:exactMatch	doid	DOID:0060236	xanthinuria	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	C562601	Lactose Intolerance, Adult Type	skos:exactMatch	doid	DOID:10604	lactose intolerance	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	C562680	Cystathionase Deficiency	skos:exactMatch	doid	DOID:0090142	cystathioninuria	manually_reviewed	orcid:0000-0003-1307-2508			
+mesh	C562684	Hyper-Beta-Alaninemia	skos:exactMatch	hp	HP:0003348	Hyperalaninemia	manually_reviewed	orcid:0000-0001-9439-5346	lexical	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C563052	Digitorenocerebral Syndrome	skos:exactMatch	doid	DOID:0111627	DOORS syndrome	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	C564625	Congenital Disorder Of Glycosylation, Type IIID	skos:exactMatch	doid	DOID:0070256	congenital disorder of glycosylation type IId	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	C566113	Progressive Encephalomyelitis with Rigidity	skos:exactMatch	go	GO:0046524	sucrose-phosphate synthase activity	manually_reviewed	orcid:0000-0001-9439-5346			
@@ -492,6 +493,8 @@ mesh	D005234	Fatty Liver	skos:exactMatch	efo	0008527	steatosis	manually_reviewed
 mesh	D005319	Fetal Hemoglobin	skos:exactMatch	efo	0004576	fetal hemoglobin measurement	manually_reviewed	orcid:0000-0003-4423-4370			
 mesh	D005351	Fibromatosis, Gingival	skos:exactMatch	doid	DOID:0060466	gingival fibromatosis	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	D005390	Fires	skos:exactMatch	ncit	C63143	Device Fire	manually_reviewed	orcid:0000-0001-9439-5346			
+mesh	D005512	Food Hypersensitivity	skos:exactMatch	hp	HP:0012537	Food intolerance	manually_reviewed	orcid:0000-0001-9439-5346	lexical	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
+mesh	D005512	Food Hypersensitivity	skos:exactMatch	hp	HP:0500093	Food allergy	manually_reviewed	orcid:0000-0001-9439-5346	lexical	generate_hp_mesh_mappings.py	0.9
 mesh	D005621	Friedreich Ataxia	skos:exactMatch	doid	DOID:0111218	Friedreich ataxia 1	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	D005776	Gaucher Disease	skos:exactMatch	doid	DOID:0110957	Gaucher's disease type I	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	D005934	Glucagon	skos:exactMatch	hgnc	4191	GCG	manually_reviewed	orcid:0000-0003-4423-4370			
@@ -517,6 +520,7 @@ mesh	D007680	Kidney Neoplasms	skos:exactMatch	doid	DOID:4451	renal carcinoma	man
 mesh	D007713	Klinefelter Syndrome	skos:exactMatch	doid	DOID:0090070	hypogonadotropic hypogonadism	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	D007762	Labyrinthitis	skos:exactMatch	doid	DOID:3930	otitis interna	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	D007805	Language Development Disorders	skos:exactMatch	doid	DOID:0060244	specific language impairment	manually_reviewed	orcid:0000-0003-1307-2508			
+mesh	D007938	Leukemia	skos:exactMatch	hp	HP:0005558	Chronic leukemia	manually_reviewed	orcid:0000-0001-9439-5346	lexical	generate_hp_mesh_mappings.py	0.9
 mesh	D007952	Leukemia, Plasma Cell	skos:exactMatch	doid	DOID:0070212	hereditary lymphedema I	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	D008113	Liver Neoplasms	skos:exactMatch	doid	DOID:916	liver benign neoplasm	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	D008180	Lupus Erythematosus, Systemic	skos:exactMatch	doid	DOID:8857	lupus erythematosus	manually_reviewed	orcid:0000-0003-1307-2508			
@@ -637,6 +641,7 @@ mesh	D048209	Echinococcus granulosus	skos:exactMatch	doid	DOID:1495	cystic echin
 mesh	D049310	Distal Myopathies	skos:exactMatch	doid	DOID:0070198	Miyoshi muscular dystrophy	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	D050600	SNARE Proteins	skos:exactMatch	go	GO:0005484	SNAP receptor activity	manually_reviewed	orcid:0000-0003-4423-4370			
 mesh	D050727	Benzaldehyde Dehydrogenase (NADP+)	skos:exactMatch	go	GO:0018477	benzaldehyde dehydrogenase (NADP+) activity	manually_reviewed	orcid:0000-0003-4423-4370			
+mesh	D050815	Fractures, Compression	skos:exactMatch	hp	HP:0002953	Vertebral compression fractures	manually_reviewed	orcid:0000-0001-9439-5346	lexical	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
 mesh	D051057	Proto-Oncogene Proteins c-akt	skos:exactMatch	hgnc	391	AKT1	manual	orcid:0000-0001-9439-5346			
 mesh	D051236	Receptors, Pituitary Adenylate Cyclase-Activating Polypeptide	skos:exactMatch	go	GO:0001634	pituitary adenylate cyclase-activating polypeptide receptor activity	manually_reviewed	orcid:0000-0003-4423-4370			
 mesh	D052003	NF-kappa B p52 Subunit	skos:exactMatch	hgnc	7795	NFKB2	manually_reviewed	orcid:0000-0003-4423-4370			
@@ -645,6 +650,7 @@ mesh	D053483	Eye Movement Measurements	skos:exactMatch	efo	0007699	eye movement 
 mesh	D053496	Inositol 1,4,5-Trisphosphate Receptors	skos:exactMatch	chebi	CHEBI:131186	IP3 receptor antagonist	manually_reviewed	orcid:0000-0001-9439-5346			
 mesh	D053840	Brugada Syndrome	skos:exactMatch	doid	DOID:0110218	Brugada syndrome 1	manually_reviewed	orcid:0000-0003-1307-2508			
 mesh	D054000	Nevus, Sebaceous of Jadassohn	skos:exactMatch	doid	DOID:7039	Borst-Jadassohn intraepidermal carcinoma	manually_reviewed	orcid:0000-0003-1307-2508			
+mesh	D054068	Livedo Reticularis	skos:exactMatch	hp	HP:0000965	Cutis marmorata	manually_reviewed	orcid:0000-0001-9439-5346	lexical	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
 mesh	D054467	Phospholipases A2	skos:exactMatch	hgnc	9030	PLA2G1B	manually_reviewed	orcid:0000-0001-9439-5346			
 mesh	D054629	Genome, Mitochondrial	skos:exactMatch	go	GO:0000262	mitochondrial chromosome	manually_reviewed	orcid:0000-0003-4423-4370			
 mesh	D054740	Dendritic Cell Sarcoma, Follicular	skos:exactMatch	doid	DOID:7849	dendritic cell sarcoma	manually_reviewed	orcid:0000-0003-1307-2508			
