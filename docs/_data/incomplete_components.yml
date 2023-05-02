@@ -1630,11 +1630,11 @@
       name: HNT-34
       prefix: cellosaurus
     target:
-      curie: efo:0006583
-      identifier: 0006583
-      link: https://bioregistry.io/efo:0006583
-      name: HNT-34
-      prefix: efo
+      curie: depmap:ACH-000299
+      identifier: ACH-000299
+      link: https://bioregistry.io/depmap:ACH-000299
+      name: null
+      prefix: depmap
   - source:
       curie: cellosaurus:2071
       identifier: CVCL_2071
@@ -1642,11 +1642,11 @@
       name: HNT-34
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000299
-      identifier: ACH-000299
-      link: https://bioregistry.io/depmap:ACH-000299
-      name: null
-      prefix: depmap
+      curie: efo:0006583
+      identifier: 0006583
+      link: https://bioregistry.io/efo:0006583
+      name: HNT-34
+      prefix: efo
   - source:
       curie: depmap:ACH-000299
       identifier: ACH-000299
@@ -5383,11 +5383,11 @@
       name: osteomalacia
       prefix: efo
     target:
-      curie: mesh:D010018
-      identifier: D010018
-      link: https://bioregistry.io/mesh:D010018
+      curie: hp:0002749
+      identifier: HP:0002749
+      link: https://bioregistry.io/hp:0002749
       name: Osteomalacia
-      prefix: mesh
+      prefix: hp
   - source:
       curie: efo:1002027
       identifier: '1002027'
@@ -5395,11 +5395,11 @@
       name: osteomalacia
       prefix: efo
     target:
-      curie: hp:0002749
-      identifier: HP:0002749
-      link: https://bioregistry.io/hp:0002749
+      curie: mesh:D010018
+      identifier: D010018
+      link: https://bioregistry.io/mesh:D010018
       name: Osteomalacia
-      prefix: hp
+      prefix: mesh
   nodes:
     doid:10573:
       identifier: DOID:10573
@@ -5603,11 +5603,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: mondo:0002012
-      identifier: '0002012'
-      link: https://bioregistry.io/mondo:0002012
-      name: methylmalonic acidemia
-      prefix: mondo
+      curie: hp:0002912
+      identifier: HP:0002912
+      link: https://bioregistry.io/hp:0002912
+      name: Methylmalonic acidemia
+      prefix: hp
   - source:
       curie: doid:14749
       identifier: DOID:14749
@@ -5615,11 +5615,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: hp:0002912
-      identifier: HP:0002912
-      link: https://bioregistry.io/hp:0002912
-      name: Methylmalonic acidemia
-      prefix: hp
+      curie: mondo:0002012
+      identifier: '0002012'
+      link: https://bioregistry.io/mondo:0002012
+      name: methylmalonic acidemia
+      prefix: mondo
   - source:
       curie: hp:0002912
       identifier: HP:0002912
@@ -6606,10 +6606,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP61
-      identifier: WP61
-      link: https://bioregistry.io/wikipathways:WP61
-      name: Notch signaling pathway (Netpath)
+      curie: wikipathways:WP3845
+      identifier: WP3845
+      link: https://bioregistry.io/wikipathways:WP3845
+      name: Canonical and non-canonical Notch signaling
       prefix: wikipathways
   - source:
       curie: wikipathways:WP268
@@ -6618,10 +6618,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP3845
-      identifier: WP3845
-      link: https://bioregistry.io/wikipathways:WP3845
-      name: Canonical and non-canonical Notch signaling
+      curie: wikipathways:WP61
+      identifier: WP61
+      link: https://bioregistry.io/wikipathways:WP61
+      name: Notch signaling pathway (Netpath)
       prefix: wikipathways
   nodes:
     kegg.pathway:hsa04330:
