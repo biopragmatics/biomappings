@@ -9893,11 +9893,11 @@
       name: bronchoconstriction
       prefix: efo
     target:
-      curie: hp:4000007
-      identifier: HP:4000007
-      link: https://bioregistry.io/hp:4000007
+      curie: ncit:C40942
+      identifier: C40942
+      link: https://bioregistry.io/ncit:C40942
       name: Bronchoconstriction
-      prefix: hp
+      prefix: ncit
   - source:
       curie: efo:0009836
       identifier: 0009836
@@ -9905,11 +9905,11 @@
       name: bronchoconstriction
       prefix: efo
     target:
-      curie: ncit:C40942
-      identifier: C40942
-      link: https://bioregistry.io/ncit:C40942
+      curie: hp:4000007
+      identifier: HP:4000007
+      link: https://bioregistry.io/hp:4000007
       name: Bronchoconstriction
-      prefix: ncit
+      prefix: hp
   - source:
       curie: hp:4000007
       identifier: HP:4000007
@@ -10531,11 +10531,11 @@
       name: urolithiasis
       prefix: doid
     target:
-      curie: hp:0034368
-      identifier: HP:0034368
-      link: https://bioregistry.io/hp:0034368
-      name: Urolithiasis
-      prefix: hp
+      curie: mondo:0024647
+      identifier: '0024647'
+      link: https://bioregistry.io/mondo:0024647
+      name: urolithiasis
+      prefix: mondo
   - source:
       curie: doid:0080653
       identifier: DOID:0080653
@@ -10543,11 +10543,11 @@
       name: urolithiasis
       prefix: doid
     target:
-      curie: mondo:0024647
-      identifier: '0024647'
-      link: https://bioregistry.io/mondo:0024647
-      name: urolithiasis
-      prefix: mondo
+      curie: hp:0034368
+      identifier: HP:0034368
+      link: https://bioregistry.io/hp:0034368
+      name: Urolithiasis
+      prefix: hp
   - source:
       curie: hp:0034368
       identifier: HP:0034368
