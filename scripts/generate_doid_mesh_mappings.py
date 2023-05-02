@@ -85,7 +85,7 @@ for doid, mesh_id in mappings.items():
         source_prefix="mesh",
         source_id=mesh_id,
         source_name=mesh_client.get_mesh_name(mesh_id),
-        type="lexical",
+        type="semapv:LexicalMatching",
         confidence=0.9,
         source="generate_doid_mesh_mappings.py",
     )

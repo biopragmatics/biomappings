@@ -46,7 +46,7 @@ def iterate_orthologous_lexical_matches(prefix: str = "wikipathways") -> Iterabl
                 prefix,
                 target_id,
                 target_name,
-                "lexical",
+                "semapv:LexicalMatching",
                 0.95,
                 provenance,
             )

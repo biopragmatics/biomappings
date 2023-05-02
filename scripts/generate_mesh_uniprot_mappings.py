@@ -16,7 +16,7 @@ MESH_PROTEIN_RE = re.compile(r"^(.+) protein, human$")
 def get_mappings() -> Iterable[PredictionTuple]:
     """Iterate high-confidence lexical mappings between MeSH and UniProt human proteins."""
     url = get_script_url(__file__)
-    mapping_type = "lexical"
+    mapping_type = "semapv:LexicalMatching"
     match_type = "skos:exactMatch"
     confidence = 0.999
     for mesh_name, mesh_id in mesh_client.mesh_name_to_id.items():

@@ -30,7 +30,7 @@ def iterate_kegg_matches() -> Iterable[PredictionTuple]:
                 scored_match.term.db.lower(),
                 scored_match.term.id,
                 scored_match.term.entry_name,
-                "lexical",
+                "semapv:LexicalMatching",
                 scored_match.score,
                 provenance,
             )

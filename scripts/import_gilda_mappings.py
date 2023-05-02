@@ -48,7 +48,7 @@ def get_primary_mappings():
 def get_mappings() -> Iterable[PredictionTuple]:
     """Iterate lexical mappings from Gilda."""
     url = get_script_url(__file__)
-    mapping_type = "lexical"
+    mapping_type = "semapv:LexicalMatching"
     match_type = "skos:exactMatch"
     confidence = 0.95
     primary_mappings = get_primary_mappings()

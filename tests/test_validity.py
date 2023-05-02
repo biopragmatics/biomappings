@@ -47,6 +47,22 @@ def _iter_groups():
 class TestIntegrity(unittest.TestCase):
     """Data integrity tests."""
 
+    def test_prediction_types(self):
+        """Test that the prediction type is pulled in properly."""
+        for line, mapping in enumerate(mappings, start=2):
+            pt = mapping.get("prediction_type", "".strip())
+            if not pt:
+                continue
+            self.assertTrue(
+                pt.startswith("semapv:"),
+                msg=f"Prediction type should be annotated with semapv on line {line}",
+            )
+            self.assertNotEqual(
+                "semapv:ManualMatchingCuration",
+                pt,
+                msg="Prediction can not be annotated with manual curation",
+            )
+
     def test_canonical_prefixes(self):
         """Test that all mappings use canonical bioregistry prefixes."""
         valid_prefixes = set(bioregistry.read_registry())

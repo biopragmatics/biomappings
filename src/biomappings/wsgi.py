@@ -319,7 +319,7 @@ class Controller:
             prediction["prediction_source"] = prediction.pop("source")
             prediction["prediction_confidence"] = prediction.pop("confidence")
             prediction["source"] = _manual_source()
-            prediction["type"] = "manually_reviewed"
+            prediction["type"] = "semapv:ManualMatchingCuration"
             entries[value].append(prediction)
 
         append_true_mappings(entries["correct"])
