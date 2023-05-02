@@ -59,7 +59,7 @@ class TestIntegrity(unittest.TestCase):
                 pt.startswith("semapv:"),
                 msg=f"Prediction type should be annotated with semapv on line {line}",
             )
-            self.assertIn(pt.removeprefix("semapv:"), semapv)
+            self.assertIn(pt[len("semapv:") :], semapv)
             self.assertNotEqual(
                 "semapv:ManualMappingCuration",
                 pt,
@@ -72,7 +72,7 @@ class TestIntegrity(unittest.TestCase):
                 tt.startswith("semapv:"),
                 msg=f"[{label}] The 'type' column should be annotated with semapv on line {line}",
             )
-            self.assertIn(tt.removeprefix("semapv:"), semapv)
+            self.assertIn(tt[len("semapv:") :], semapv)
 
     def test_canonical_prefixes(self):
         """Test that all mappings use canonical bioregistry prefixes."""
