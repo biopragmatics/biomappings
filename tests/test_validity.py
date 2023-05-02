@@ -17,10 +17,10 @@ from biomappings import (
 from biomappings.resources import (
     MappingTuple,
     PredictionTuple,
-    get_semapv,
     load_curators,
     mapping_sort_key,
 )
+from biomappings.resources.semapv import get_semapv
 from biomappings.utils import (
     InvalidIdentifierPattern,
     InvalidNormIdentifier,
