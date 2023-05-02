@@ -1630,11 +1630,11 @@
       name: HNT-34
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000299
-      identifier: ACH-000299
-      link: https://bioregistry.io/depmap:ACH-000299
-      name: null
-      prefix: depmap
+      curie: efo:0006583
+      identifier: 0006583
+      link: https://bioregistry.io/efo:0006583
+      name: HNT-34
+      prefix: efo
   - source:
       curie: cellosaurus:2071
       identifier: CVCL_2071
@@ -1642,11 +1642,11 @@
       name: HNT-34
       prefix: cellosaurus
     target:
-      curie: efo:0006583
-      identifier: 0006583
-      link: https://bioregistry.io/efo:0006583
-      name: HNT-34
-      prefix: efo
+      curie: depmap:ACH-000299
+      identifier: ACH-000299
+      link: https://bioregistry.io/depmap:ACH-000299
+      name: null
+      prefix: depmap
   - source:
       curie: depmap:ACH-000299
       identifier: ACH-000299
@@ -3915,6 +3915,35 @@
       prefix: umls
 - edges:
   - source:
+      curie: doid:0050679
+      identifier: DOID:0050679
+      link: https://bioregistry.io/doid:0050679
+      name: blue cone monochromacy
+      prefix: doid
+    target:
+      curie: hp:0007939
+      identifier: HP:0007939
+      link: https://bioregistry.io/hp:0007939
+      name: Blue cone monochromacy
+      prefix: hp
+  nodes:
+    doid:0050679:
+      identifier: DOID:0050679
+      link: https://bioregistry.io/doid:0050679
+      name: blue cone monochromacy
+      prefix: doid
+    hp:0007939:
+      identifier: HP:0007939
+      link: https://bioregistry.io/hp:0007939
+      name: Blue cone monochromacy
+      prefix: hp
+    mesh:C536238:
+      identifier: C536238
+      link: https://bioregistry.io/mesh:C536238
+      name: Blue cone monochromatism
+      prefix: mesh
+- edges:
+  - source:
       curie: mesh:C536573
       identifier: C536573
       link: https://bioregistry.io/mesh:C536573
@@ -4159,6 +4188,42 @@
       name: Lung Abscess
       prefix: ncit
   - source:
+      curie: doid:0060317
+      identifier: DOID:0060317
+      link: https://bioregistry.io/doid:0060317
+      name: lung abscess
+      prefix: doid
+    target:
+      curie: hp:0025044
+      identifier: HP:0025044
+      link: https://bioregistry.io/hp:0025044
+      name: Lung abscess
+      prefix: hp
+  - source:
+      curie: hp:0025044
+      identifier: HP:0025044
+      link: https://bioregistry.io/hp:0025044
+      name: Lung abscess
+      prefix: hp
+    target:
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
+      name: Lung Abscess
+      prefix: ncit
+  - source:
+      curie: hp:0025044
+      identifier: HP:0025044
+      link: https://bioregistry.io/hp:0025044
+      name: Lung abscess
+      prefix: hp
+    target:
+      curie: umls:C0024110
+      identifier: C0024110
+      link: https://bioregistry.io/umls:C0024110
+      name: Lung Abscess
+      prefix: umls
+  - source:
       curie: mesh:D008169
       identifier: D008169
       link: https://bioregistry.io/mesh:D008169
@@ -4188,6 +4253,11 @@
       link: https://bioregistry.io/doid:0060317
       name: lung abscess
       prefix: doid
+    hp:0025044:
+      identifier: HP:0025044
+      link: https://bioregistry.io/hp:0025044
+      name: Lung abscess
+      prefix: hp
     mesh:D008169:
       identifier: D008169
       link: https://bioregistry.io/mesh:D008169
@@ -5533,11 +5603,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: hp:0002912
-      identifier: HP:0002912
-      link: https://bioregistry.io/hp:0002912
-      name: Methylmalonic acidemia
-      prefix: hp
+      curie: mondo:0002012
+      identifier: '0002012'
+      link: https://bioregistry.io/mondo:0002012
+      name: methylmalonic acidemia
+      prefix: mondo
   - source:
       curie: doid:14749
       identifier: DOID:14749
@@ -5545,11 +5615,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: mondo:0002012
-      identifier: '0002012'
-      link: https://bioregistry.io/mondo:0002012
-      name: methylmalonic acidemia
-      prefix: mondo
+      curie: hp:0002912
+      identifier: HP:0002912
+      link: https://bioregistry.io/hp:0002912
+      name: Methylmalonic acidemia
+      prefix: hp
   - source:
       curie: hp:0002912
       identifier: HP:0002912
@@ -5962,6 +6032,35 @@
       prefix: mesh
 - edges:
   - source:
+      curie: doid:6590
+      identifier: DOID:6590
+      link: https://bioregistry.io/doid:6590
+      name: spondylitis
+      prefix: doid
+    target:
+      curie: hp:0033631
+      identifier: HP:0033631
+      link: https://bioregistry.io/hp:0033631
+      name: Spondylitis
+      prefix: hp
+  nodes:
+    doid:6590:
+      identifier: DOID:6590
+      link: https://bioregistry.io/doid:6590
+      name: spondylitis
+      prefix: doid
+    hp:0033631:
+      identifier: HP:0033631
+      link: https://bioregistry.io/hp:0033631
+      name: Spondylitis
+      prefix: hp
+    mesh:D013166:
+      identifier: D013166
+      link: https://bioregistry.io/mesh:D013166
+      name: Spondylitis
+      prefix: mesh
+- edges:
+  - source:
       curie: efo:1000446
       identifier: '1000446'
       link: https://bioregistry.io/efo:1000446
@@ -6153,6 +6252,35 @@
       prefix: idomal
 - edges:
   - source:
+      curie: ido:0000617
+      identifier: '0000617'
+      link: https://bioregistry.io/ido:0000617
+      name: immunodeficiency
+      prefix: ido
+    target:
+      curie: idomal:0000024
+      identifier: '0000024'
+      link: https://bioregistry.io/idomal:0000024
+      name: immunodeficiency
+      prefix: idomal
+  nodes:
+    hp:0002721:
+      identifier: HP:0002721
+      link: https://bioregistry.io/hp:0002721
+      name: Immunodeficiency
+      prefix: hp
+    ido:0000617:
+      identifier: '0000617'
+      link: https://bioregistry.io/ido:0000617
+      name: immunodeficiency
+      prefix: ido
+    idomal:0000024:
+      identifier: '0000024'
+      link: https://bioregistry.io/idomal:0000024
+      name: immunodeficiency
+      prefix: idomal
+- edges:
+  - source:
       curie: ncbitaxon:5794
       identifier: '5794'
       link: https://bioregistry.io/ncbitaxon:5794
@@ -6327,6 +6455,35 @@
       prefix: ndfrt
 - edges:
   - source:
+      curie: idomal:0000398
+      identifier: 0000398
+      link: https://bioregistry.io/idomal:0000398
+      name: shivering
+      prefix: idomal
+    target:
+      curie: mesh:D012768
+      identifier: D012768
+      link: https://bioregistry.io/mesh:D012768
+      name: Shivering
+      prefix: mesh
+  nodes:
+    hp:0025144:
+      identifier: HP:0025144
+      link: https://bioregistry.io/hp:0025144
+      name: Shivering
+      prefix: hp
+    idomal:0000398:
+      identifier: 0000398
+      link: https://bioregistry.io/idomal:0000398
+      name: shivering
+      prefix: idomal
+    mesh:D012768:
+      identifier: D012768
+      link: https://bioregistry.io/mesh:D012768
+      name: Shivering
+      prefix: mesh
+- edges:
+  - source:
       curie: chebi:22063
       identifier: CHEBI:22063
       link: https://bioregistry.io/chebi:22063
@@ -6449,10 +6606,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP3845
-      identifier: WP3845
-      link: https://bioregistry.io/wikipathways:WP3845
-      name: Canonical and non-canonical Notch signaling
+      curie: wikipathways:WP61
+      identifier: WP61
+      link: https://bioregistry.io/wikipathways:WP61
+      name: Notch signaling pathway (Netpath)
       prefix: wikipathways
   - source:
       curie: wikipathways:WP268
@@ -6461,10 +6618,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP61
-      identifier: WP61
-      link: https://bioregistry.io/wikipathways:WP61
-      name: Notch signaling pathway (Netpath)
+      curie: wikipathways:WP3845
+      identifier: WP3845
+      link: https://bioregistry.io/wikipathways:WP3845
+      name: Canonical and non-canonical Notch signaling
       prefix: wikipathways
   nodes:
     kegg.pathway:hsa04330:
@@ -6575,10 +6732,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: GO:0033211
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: GO:0033210
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -6587,10 +6744,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: GO:0033210
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: GO:0033211
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033210
@@ -6627,6 +6784,35 @@
       prefix: kegg.pathway
 - edges:
   - source:
+      curie: doid:3927
+      identifier: DOID:3927
+      link: https://bioregistry.io/doid:3927
+      name: pelvic lipomatosis
+      prefix: doid
+    target:
+      curie: hp:0034009
+      identifier: HP:0034009
+      link: https://bioregistry.io/hp:0034009
+      name: Pelvic lipomatosis
+      prefix: hp
+  nodes:
+    doid:3927:
+      identifier: DOID:3927
+      link: https://bioregistry.io/doid:3927
+      name: pelvic lipomatosis
+      prefix: doid
+    hp:0034009:
+      identifier: HP:0034009
+      link: https://bioregistry.io/hp:0034009
+      name: Pelvic lipomatosis
+      prefix: hp
+    mesh:C535549:
+      identifier: C535549
+      link: https://bioregistry.io/mesh:C535549
+      name: Pelvic lipomatosis
+      prefix: mesh
+- edges:
+  - source:
       curie: doid:0112249
       identifier: DOID:0112249
       link: https://bioregistry.io/doid:0112249
@@ -6656,6 +6842,64 @@
       prefix: mondo
 - edges:
   - source:
+      curie: doid:0111362
+      identifier: DOID:0111362
+      link: https://bioregistry.io/doid:0111362
+      name: hawkinsinuria
+      prefix: doid
+    target:
+      curie: hp:0034457
+      identifier: HP:0034457
+      link: https://bioregistry.io/hp:0034457
+      name: Hawkinsinuria
+      prefix: hp
+  nodes:
+    doid:0111362:
+      identifier: DOID:0111362
+      link: https://bioregistry.io/doid:0111362
+      name: hawkinsinuria
+      prefix: doid
+    hp:0034457:
+      identifier: HP:0034457
+      link: https://bioregistry.io/hp:0034457
+      name: Hawkinsinuria
+      prefix: hp
+    mesh:C535845:
+      identifier: C535845
+      link: https://bioregistry.io/mesh:C535845
+      name: Hawkinsinuria
+      prefix: mesh
+- edges:
+  - source:
+      curie: doid:5339
+      identifier: DOID:5339
+      link: https://bioregistry.io/doid:5339
+      name: cyclic hematopoiesis
+      prefix: doid
+    target:
+      curie: hp:0040289
+      identifier: HP:0040289
+      link: https://bioregistry.io/hp:0040289
+      name: Cyclic neutropenia
+      prefix: hp
+  nodes:
+    doid:5339:
+      identifier: DOID:5339
+      link: https://bioregistry.io/doid:5339
+      name: cyclic hematopoiesis
+      prefix: doid
+    hp:0040289:
+      identifier: HP:0040289
+      link: https://bioregistry.io/hp:0040289
+      name: Cyclic neutropenia
+      prefix: hp
+    mesh:C536227:
+      identifier: C536227
+      link: https://bioregistry.io/mesh:C536227
+      name: Cyclic neutropenia
+      prefix: mesh
+- edges:
+  - source:
       curie: doid:0050770
       identifier: DOID:0050770
       link: https://bioregistry.io/doid:0050770
@@ -6682,6 +6926,35 @@
       identifier: C536330
       link: https://bioregistry.io/mesh:C536330
       name: Polycystic liver disease
+      prefix: mesh
+- edges:
+  - source:
+      curie: doid:0111257
+      identifier: DOID:0111257
+      link: https://bioregistry.io/doid:0111257
+      name: gamma-glutamyl transpeptidase deficiency
+      prefix: doid
+    target:
+      curie: hp:0034586
+      identifier: HP:0034586
+      link: https://bioregistry.io/hp:0034586
+      name: Glutathionuria
+      prefix: hp
+  nodes:
+    doid:0111257:
+      identifier: DOID:0111257
+      link: https://bioregistry.io/doid:0111257
+      name: gamma-glutamyl transpeptidase deficiency
+      prefix: doid
+    hp:0034586:
+      identifier: HP:0034586
+      link: https://bioregistry.io/hp:0034586
+      name: Glutathionuria
+      prefix: hp
+    mesh:C536836:
+      identifier: C536836
+      link: https://bioregistry.io/mesh:C536836
+      name: Glutathionuria
       prefix: mesh
 - edges:
   - source:
@@ -7146,6 +7419,35 @@
       identifier: C34332
       link: https://bioregistry.io/ncit:C34332
       name: Abdominal Injury
+      prefix: ncit
+- edges:
+  - source:
+      curie: hp:4000172
+      identifier: HP:4000172
+      link: https://bioregistry.io/hp:4000172
+      name: Vegan diet
+      prefix: hp
+    target:
+      curie: ncit:C15630
+      identifier: C15630
+      link: https://bioregistry.io/ncit:C15630
+      name: Vegan Diet
+      prefix: ncit
+  nodes:
+    hp:4000172:
+      identifier: HP:4000172
+      link: https://bioregistry.io/hp:4000172
+      name: Vegan diet
+      prefix: hp
+    mesh:D000067269:
+      identifier: D000067269
+      link: https://bioregistry.io/mesh:D000067269
+      name: Diet, Vegan
+      prefix: mesh
+    ncit:C15630:
+      identifier: C15630
+      link: https://bioregistry.io/ncit:C15630
+      name: Vegan Diet
       prefix: ncit
 - edges:
   - source:
@@ -7619,6 +7921,30 @@
       name: cone dystrophy
       prefix: doid
     target:
+      curie: hp:0008020
+      identifier: HP:0008020
+      link: https://bioregistry.io/hp:0008020
+      name: Cone dystrophy
+      prefix: hp
+  - source:
+      curie: doid:0050795
+      identifier: DOID:0050795
+      link: https://bioregistry.io/doid:0050795
+      name: cone dystrophy
+      prefix: doid
+    target:
+      curie: mondo:0000455
+      identifier: '0000455'
+      link: https://bioregistry.io/mondo:0000455
+      name: cone dystrophy
+      prefix: mondo
+  - source:
+      curie: hp:0008020
+      identifier: HP:0008020
+      link: https://bioregistry.io/hp:0008020
+      name: Cone dystrophy
+      prefix: hp
+    target:
       curie: mondo:0000455
       identifier: '0000455'
       link: https://bioregistry.io/mondo:0000455
@@ -7630,6 +7956,11 @@
       link: https://bioregistry.io/doid:0050795
       name: cone dystrophy
       prefix: doid
+    hp:0008020:
+      identifier: HP:0008020
+      link: https://bioregistry.io/hp:0008020
+      name: Cone dystrophy
+      prefix: hp
     mesh:D000077765:
       identifier: D000077765
       link: https://bioregistry.io/mesh:D000077765
@@ -7700,6 +8031,35 @@
       prefix: mondo
 - edges:
   - source:
+      curie: hp:0011627
+      identifier: HP:0011627
+      link: https://bioregistry.io/hp:0011627
+      name: Aorto-ventricular tunnel
+      prefix: hp
+    target:
+      curie: mondo:0018082
+      identifier: 0018082
+      link: https://bioregistry.io/mondo:0018082
+      name: aorto-ventricular tunnel
+      prefix: mondo
+  nodes:
+    hp:0011627:
+      identifier: HP:0011627
+      link: https://bioregistry.io/hp:0011627
+      name: Aorto-ventricular tunnel
+      prefix: hp
+    mesh:D000082903:
+      identifier: D000082903
+      link: https://bioregistry.io/mesh:D000082903
+      name: Aortico-Ventricular Tunnel
+      prefix: mesh
+    mondo:0018082:
+      identifier: 0018082
+      link: https://bioregistry.io/mondo:0018082
+      name: aorto-ventricular tunnel
+      prefix: mondo
+- edges:
+  - source:
       curie: chebi:28939
       identifier: CHEBI:28939
       link: https://bioregistry.io/chebi:28939
@@ -7727,6 +8087,35 @@
       link: https://bioregistry.io/ncit:C200
       name: Acetylcysteine
       prefix: ncit
+- edges:
+  - source:
+      curie: doid:3091
+      identifier: DOID:3091
+      link: https://bioregistry.io/doid:3091
+      name: Acinetobacter infectious disease
+      prefix: doid
+    target:
+      curie: hp:0032250
+      identifier: HP:0032250
+      link: https://bioregistry.io/hp:0032250
+      name: Acinetobacter infection
+      prefix: hp
+  nodes:
+    doid:3091:
+      identifier: DOID:3091
+      link: https://bioregistry.io/doid:3091
+      name: Acinetobacter infectious disease
+      prefix: doid
+    hp:0032250:
+      identifier: HP:0032250
+      link: https://bioregistry.io/hp:0032250
+      name: Acinetobacter infection
+      prefix: hp
+    mesh:D000151:
+      identifier: D000151
+      link: https://bioregistry.io/mesh:D000151
+      name: Acinetobacter Infections
+      prefix: mesh
 - edges:
   - source:
       curie: chebi:2453
@@ -7843,6 +8232,35 @@
       link: https://bioregistry.io/ncit:C39707
       name: Aluminum Hydroxide
       prefix: ncit
+- edges:
+  - source:
+      curie: doid:0050894
+      identifier: DOID:0050894
+      link: https://bioregistry.io/doid:0050894
+      name: ameloblastoma
+      prefix: doid
+    target:
+      curie: hp:0034515
+      identifier: HP:0034515
+      link: https://bioregistry.io/hp:0034515
+      name: Ameloblastoma
+      prefix: hp
+  nodes:
+    doid:0050894:
+      identifier: DOID:0050894
+      link: https://bioregistry.io/doid:0050894
+      name: ameloblastoma
+      prefix: doid
+    hp:0034515:
+      identifier: HP:0034515
+      link: https://bioregistry.io/hp:0034515
+      name: Ameloblastoma
+      prefix: hp
+    mesh:D000564:
+      identifier: D000564
+      link: https://bioregistry.io/mesh:D000564
+      name: Ameloblastoma
+      prefix: mesh
 - edges:
   - source:
       curie: efo:0009659
@@ -8164,6 +8582,35 @@
       prefix: mondo
 - edges:
   - source:
+      curie: efo:0009669
+      identifier: 0009669
+      link: https://bioregistry.io/efo:0009669
+      name: flatulence
+      prefix: efo
+    target:
+      curie: hp:0033589
+      identifier: HP:0033589
+      link: https://bioregistry.io/hp:0033589
+      name: Flatulence
+      prefix: hp
+  nodes:
+    efo:0009669:
+      identifier: 0009669
+      link: https://bioregistry.io/efo:0009669
+      name: flatulence
+      prefix: efo
+    hp:0033589:
+      identifier: HP:0033589
+      link: https://bioregistry.io/hp:0033589
+      name: Flatulence
+      prefix: hp
+    mesh:D005414:
+      identifier: D005414
+      link: https://bioregistry.io/mesh:D005414
+      name: Flatulence
+      prefix: mesh
+- edges:
+  - source:
       curie: chebi:46345
       identifier: CHEBI:46345
       link: https://bioregistry.io/chebi:46345
@@ -8190,6 +8637,64 @@
       identifier: C505
       link: https://bioregistry.io/ncit:C505
       name: Fluorouracil
+      prefix: ncit
+- edges:
+  - source:
+      curie: hp:4000051
+      identifier: HP:4000051
+      link: https://bioregistry.io/hp:4000051
+      name: Closed fracture
+      prefix: hp
+    target:
+      curie: ncit:C34623
+      identifier: C34623
+      link: https://bioregistry.io/ncit:C34623
+      name: Closed Fracture
+      prefix: ncit
+  nodes:
+    hp:4000051:
+      identifier: HP:4000051
+      link: https://bioregistry.io/hp:4000051
+      name: Closed fracture
+      prefix: hp
+    mesh:D005596:
+      identifier: D005596
+      link: https://bioregistry.io/mesh:D005596
+      name: Fractures, Closed
+      prefix: mesh
+    ncit:C34623:
+      identifier: C34623
+      link: https://bioregistry.io/ncit:C34623
+      name: Closed Fracture
+      prefix: ncit
+- edges:
+  - source:
+      curie: hp:4000050
+      identifier: HP:4000050
+      link: https://bioregistry.io/hp:4000050
+      name: Open fracture
+      prefix: hp
+    target:
+      curie: ncit:C34624
+      identifier: C34624
+      link: https://bioregistry.io/ncit:C34624
+      name: Open Fracture
+      prefix: ncit
+  nodes:
+    hp:4000050:
+      identifier: HP:4000050
+      link: https://bioregistry.io/hp:4000050
+      name: Open fracture
+      prefix: hp
+    mesh:D005597:
+      identifier: D005597
+      link: https://bioregistry.io/mesh:D005597
+      name: Fractures, Open
+      prefix: mesh
+    ncit:C34624:
+      identifier: C34624
+      link: https://bioregistry.io/ncit:C34624
+      name: Open Fracture
       prefix: ncit
 - edges:
   - source:
@@ -8686,6 +9191,64 @@
       prefix: mondo
 - edges:
   - source:
+      curie: efo:0005762
+      identifier: '0005762'
+      link: https://bioregistry.io/efo:0005762
+      name: neuropathic pain
+      prefix: efo
+    target:
+      curie: hp:0033345
+      identifier: HP:0033345
+      link: https://bioregistry.io/hp:0033345
+      name: Neuralgia
+      prefix: hp
+  nodes:
+    efo:0005762:
+      identifier: '0005762'
+      link: https://bioregistry.io/efo:0005762
+      name: neuropathic pain
+      prefix: efo
+    hp:0033345:
+      identifier: HP:0033345
+      link: https://bioregistry.io/hp:0033345
+      name: Neuralgia
+      prefix: hp
+    mesh:D009437:
+      identifier: D009437
+      link: https://bioregistry.io/mesh:D009437
+      name: Neuralgia
+      prefix: mesh
+- edges:
+  - source:
+      curie: doid:7912
+      identifier: DOID:7912
+      link: https://bioregistry.io/doid:7912
+      name: mixed oligodendroglioma-astrocytoma
+      prefix: doid
+    target:
+      curie: hp:0033681
+      identifier: HP:0033681
+      link: https://bioregistry.io/hp:0033681
+      name: Oligodendroglioma
+      prefix: hp
+  nodes:
+    doid:7912:
+      identifier: DOID:7912
+      link: https://bioregistry.io/doid:7912
+      name: mixed oligodendroglioma-astrocytoma
+      prefix: doid
+    hp:0033681:
+      identifier: HP:0033681
+      link: https://bioregistry.io/hp:0033681
+      name: Oligodendroglioma
+      prefix: hp
+    mesh:D009837:
+      identifier: D009837
+      link: https://bioregistry.io/mesh:D009837
+      name: Oligodendroglioma
+      prefix: mesh
+- edges:
+  - source:
       curie: efo:0009611
       identifier: 0009611
       link: https://bioregistry.io/efo:0009611
@@ -8713,6 +9276,35 @@
       link: https://bioregistry.io/ncit:C118744
       name: Orbital Fracture
       prefix: ncit
+- edges:
+  - source:
+      curie: doid:9463
+      identifier: DOID:9463
+      link: https://bioregistry.io/doid:9463
+      name: otitis externa
+      prefix: doid
+    target:
+      curie: hp:0410017
+      identifier: HP:0410017
+      link: https://bioregistry.io/hp:0410017
+      name: Otitis externa
+      prefix: hp
+  nodes:
+    doid:9463:
+      identifier: DOID:9463
+      link: https://bioregistry.io/doid:9463
+      name: otitis externa
+      prefix: doid
+    hp:0410017:
+      identifier: HP:0410017
+      link: https://bioregistry.io/hp:0410017
+      name: Otitis externa
+      prefix: hp
+    mesh:D010032:
+      identifier: D010032
+      link: https://bioregistry.io/mesh:D010032
+      name: Otitis Externa
+      prefix: mesh
 - edges:
   - source:
       curie: doid:3443
@@ -9208,6 +9800,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: hp:0012122
+      identifier: HP:0012122
+      link: https://bioregistry.io/hp:0012122
+      name: Anterior uveitis
+      prefix: hp
+    target:
+      curie: ncit:C35109
+      identifier: C35109
+      link: https://bioregistry.io/ncit:C35109
+      name: Anterior Uveitis
+      prefix: ncit
+  nodes:
+    hp:0012122:
+      identifier: HP:0012122
+      link: https://bioregistry.io/hp:0012122
+      name: Anterior uveitis
+      prefix: hp
+    mesh:D014606:
+      identifier: D014606
+      link: https://bioregistry.io/mesh:D014606
+      name: Uveitis, Anterior
+      prefix: mesh
+    ncit:C35109:
+      identifier: C35109
+      link: https://bioregistry.io/ncit:C35109
+      name: Anterior Uveitis
+      prefix: ncit
+- edges:
+  - source:
       curie: efo:0009869
       identifier: 0009869
       link: https://bioregistry.io/efo:0009869
@@ -9272,6 +9893,30 @@
       name: bronchoconstriction
       prefix: efo
     target:
+      curie: hp:4000007
+      identifier: HP:4000007
+      link: https://bioregistry.io/hp:4000007
+      name: Bronchoconstriction
+      prefix: hp
+  - source:
+      curie: efo:0009836
+      identifier: 0009836
+      link: https://bioregistry.io/efo:0009836
+      name: bronchoconstriction
+      prefix: efo
+    target:
+      curie: ncit:C40942
+      identifier: C40942
+      link: https://bioregistry.io/ncit:C40942
+      name: Bronchoconstriction
+      prefix: ncit
+  - source:
+      curie: hp:4000007
+      identifier: HP:4000007
+      link: https://bioregistry.io/hp:4000007
+      name: Bronchoconstriction
+      prefix: hp
+    target:
       curie: ncit:C40942
       identifier: C40942
       link: https://bioregistry.io/ncit:C40942
@@ -9283,6 +9928,11 @@
       link: https://bioregistry.io/efo:0009836
       name: bronchoconstriction
       prefix: efo
+    hp:4000007:
+      identifier: HP:4000007
+      link: https://bioregistry.io/hp:4000007
+      name: Bronchoconstriction
+      prefix: hp
     mesh:D016084:
       identifier: D016084
       link: https://bioregistry.io/mesh:D016084
@@ -9382,6 +10032,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: hp:0005112
+      identifier: HP:0005112
+      link: https://bioregistry.io/hp:0005112
+      name: Abdominal aortic aneurysm
+      prefix: hp
+    target:
+      curie: ncit:C27000
+      identifier: C27000
+      link: https://bioregistry.io/ncit:C27000
+      name: Abdominal Aortic Aneurysm
+      prefix: ncit
+  nodes:
+    hp:0005112:
+      identifier: HP:0005112
+      link: https://bioregistry.io/hp:0005112
+      name: Abdominal aortic aneurysm
+      prefix: hp
+    mesh:D017544:
+      identifier: D017544
+      link: https://bioregistry.io/mesh:D017544
+      name: Aortic Aneurysm, Abdominal
+      prefix: mesh
+    ncit:C27000:
+      identifier: C27000
+      link: https://bioregistry.io/ncit:C27000
+      name: Abdominal Aortic Aneurysm
+      prefix: ncit
+- edges:
+  - source:
       curie: chebi:32139
       identifier: CHEBI:32139
       link: https://bioregistry.io/chebi:32139
@@ -9466,6 +10145,35 @@
       identifier: C3516
       link: https://bioregistry.io/ncit:C3516
       name: Aneurysmal Bone Cyst
+      prefix: ncit
+- edges:
+  - source:
+      curie: hp:0034557
+      identifier: HP:0034557
+      link: https://bioregistry.io/hp:0034557
+      name: Rhabdoid tumor
+      prefix: hp
+    target:
+      curie: ncit:C3808
+      identifier: C3808
+      link: https://bioregistry.io/ncit:C3808
+      name: Rhabdoid Tumor
+      prefix: ncit
+  nodes:
+    hp:0034557:
+      identifier: HP:0034557
+      link: https://bioregistry.io/hp:0034557
+      name: Rhabdoid tumor
+      prefix: hp
+    mesh:D018335:
+      identifier: D018335
+      link: https://bioregistry.io/mesh:D018335
+      name: Rhabdoid Tumor
+      prefix: mesh
+    ncit:C3808:
+      identifier: C3808
+      link: https://bioregistry.io/ncit:C3808
+      name: Rhabdoid Tumor
       prefix: ncit
 - edges:
   - source:
@@ -9672,6 +10380,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: doid:0060532
+      identifier: DOID:0060532
+      link: https://bioregistry.io/doid:0060532
+      name: latex allergy
+      prefix: doid
+    target:
+      curie: hp:0500094
+      identifier: HP:0500094
+      link: https://bioregistry.io/hp:0500094
+      name: Latex allergy
+      prefix: hp
+  nodes:
+    doid:0060532:
+      identifier: DOID:0060532
+      link: https://bioregistry.io/doid:0060532
+      name: latex allergy
+      prefix: doid
+    hp:0500094:
+      identifier: HP:0500094
+      link: https://bioregistry.io/hp:0500094
+      name: Latex allergy
+      prefix: hp
+    mesh:D020315:
+      identifier: D020315
+      link: https://bioregistry.io/mesh:D020315
+      name: Latex Hypersensitivity
+      prefix: mesh
+- edges:
+  - source:
       curie: hp:0032382
       identifier: HP:0032382
       link: https://bioregistry.io/hp:0032382
@@ -9759,11 +10496,64 @@
       prefix: mondo
 - edges:
   - source:
+      curie: hp:4000047
+      identifier: HP:4000047
+      link: https://bioregistry.io/hp:4000047
+      name: Compression fracture
+      prefix: hp
+    target:
+      curie: ncit:C27170
+      identifier: C27170
+      link: https://bioregistry.io/ncit:C27170
+      name: Compression Fracture
+      prefix: ncit
+  nodes:
+    hp:4000047:
+      identifier: HP:4000047
+      link: https://bioregistry.io/hp:4000047
+      name: Compression fracture
+      prefix: hp
+    mesh:D050815:
+      identifier: D050815
+      link: https://bioregistry.io/mesh:D050815
+      name: Fractures, Compression
+      prefix: mesh
+    ncit:C27170:
+      identifier: C27170
+      link: https://bioregistry.io/ncit:C27170
+      name: Compression Fracture
+      prefix: ncit
+- edges:
+  - source:
       curie: doid:0080653
       identifier: DOID:0080653
       link: https://bioregistry.io/doid:0080653
       name: urolithiasis
       prefix: doid
+    target:
+      curie: hp:0034368
+      identifier: HP:0034368
+      link: https://bioregistry.io/hp:0034368
+      name: Urolithiasis
+      prefix: hp
+  - source:
+      curie: doid:0080653
+      identifier: DOID:0080653
+      link: https://bioregistry.io/doid:0080653
+      name: urolithiasis
+      prefix: doid
+    target:
+      curie: mondo:0024647
+      identifier: '0024647'
+      link: https://bioregistry.io/mondo:0024647
+      name: urolithiasis
+      prefix: mondo
+  - source:
+      curie: hp:0034368
+      identifier: HP:0034368
+      link: https://bioregistry.io/hp:0034368
+      name: Urolithiasis
+      prefix: hp
     target:
       curie: mondo:0024647
       identifier: '0024647'
@@ -9776,6 +10566,11 @@
       link: https://bioregistry.io/doid:0080653
       name: urolithiasis
       prefix: doid
+    hp:0034368:
+      identifier: HP:0034368
+      link: https://bioregistry.io/hp:0034368
+      name: Urolithiasis
+      prefix: hp
     mesh:D052878:
       identifier: D052878
       link: https://bioregistry.io/mesh:D052878
