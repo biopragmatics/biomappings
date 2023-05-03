@@ -3,7 +3,9 @@
 The data is distributed under the [Simple Standard for Sharing Ontology Mappings
 (SSSOM)](https://github.com/mapping-commons/sssom) format.
 
-| Facet         | Description                      | Link |
-| ------------- | -------------------------------- | ----------- |
-|  TSV          | Mappings (predicted and curated) | [`docs/_data/biomappings.sssom.tsv`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/mappings.tsv) |
-|  Metadata YML | CURIE Map, credits, etc.         | [`docs/_data/biomappings.sssom.yml`](https://github.com/biomappings/biomappings/raw/master/src/biomappings/resources/incorrect.tsv) |
+| Facet        | Description                                                | Link                                                                                                                                   |
+|--------------|------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| TSV          | Mappings (predicted and curated)                           | [`docs/_data/biomappings.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/docs/_data/sssom/biomappings.sssom.tsv)   |
+| Metadata YML | CURIE Map, credits, etc. that go along with the TSV export | [`docs/_data/biomappings.sssom.yml`](https://github.com/biopragmatics/biomappings/raw/master/docs/_data/sssom/biomappings.sssom.yml)   |
+| JSON         | Mappings in JSON                                           | [`docs/_data/biomappings.sssom.json`](https://github.com/biopragmatics/biomappings/raw/master/docs/_data/sssom/biomappings.sssom.json) |
+| OWL          | Mappings in ontology format                                | [`docs/_data/biomappings.sssom.owl`](https://github.com/biopragmatics/biomappings/raw/master/docs/_data/sssom/biomappings.sssom.owl)   |
