@@ -65,7 +65,7 @@ for mondo_id, mesh_id in mappings.items():
         target_prefix="mesh",
         target_identifier=mesh_id,
         target_name=mesh_client.get_mesh_name(mesh_id),
-        type="lexical",
+        type="semapv:LexicalMatching",
         confidence=0.9,
         source="generate_mondo_mesh_mappings.py",
     )

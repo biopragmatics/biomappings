@@ -1,9 +1,9 @@
 contributors:
-- count: 5139
+- count: 5268
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 3343
+- count: 3344
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -85,6 +85,9 @@ negative:
   source: pr
   target: uniprot.chain
 - count: 8
+  source: hp
+  target: mesh
+- count: 8
   source: mesh
   target: mondo
 - count: 7
@@ -118,9 +121,6 @@ negative:
   source: idomal
   target: vo
 - count: 2
-  source: hp
-  target: mesh
-- count: 2
   source: chebi
   target: wikipathways
 - count: 2
@@ -144,7 +144,7 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1215
+negative_mapping_count: 1221
 negative_prefix_count: 27
 positive:
 - count: 2912
@@ -168,6 +168,9 @@ positive:
 - count: 366
   source: go
   target: wikipathways
+- count: 283
+  source: hp
+  target: mesh
 - count: 222
   source: go
   target: reactome
@@ -177,9 +180,6 @@ positive:
 - count: 190
   source: doid
   target: umls
-- count: 165
-  source: hp
-  target: mesh
 - count: 142
   source: agro
   target: agrovoc
@@ -226,11 +226,11 @@ positive:
   source: idomal
   target: vsmo
 - count: 18
-  source: mesh
-  target: wikipathways
-- count: 17
   source: apollosv
   target: ido
+- count: 18
+  source: mesh
+  target: wikipathways
 - count: 17
   source: mesh
   target: pubchem.compound
@@ -259,8 +259,14 @@ positive:
   source: apollosv
   target: idomal
 - count: 5
+  source: hp
+  target: ido
+- count: 5
   source: doid
   target: ido
+- count: 5
+  source: hp
+  target: idomal
 - count: 5
   source: ncit
   target: vo
@@ -273,9 +279,6 @@ positive:
 - count: 4
   source: pr
   target: vo
-- count: 3
-  source: hp
-  target: ido
 - count: 3
   source: kegg.pathway
   target: kegg.pathway
@@ -314,9 +317,6 @@ positive:
   target: vsmo
 - count: 2
   source: doid
-  target: idomal
-- count: 2
-  source: hp
   target: idomal
 - count: 2
   source: hp
@@ -411,7 +411,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 9274
+positive_mapping_count: 9398
 positive_prefix_count: 52
 predictions:
 - count: 11842
@@ -432,7 +432,7 @@ predictions:
 - count: 1367
   source: hgnc
   target: mesh
-- count: 205
+- count: 233
   source: hp
   target: mesh
 - count: 145
@@ -478,9 +478,6 @@ predictions:
   source: pr
   target: vo
 - count: 5
-  source: hp
-  target: idomal
-- count: 5
   source: chebi
   target: idomal
 - count: 5
@@ -508,14 +505,8 @@ predictions:
   source: apollosv
   target: pato
 - count: 2
-  source: apollosv
-  target: ido
-- count: 2
   source: ido
   target: pato
-- count: 2
-  source: hp
-  target: ido
 - count: 2
   source: doid
   target: idocovid19
@@ -531,6 +522,9 @@ predictions:
 - count: 2
   source: idomal
   target: ncit
+- count: 2
+  source: hp
+  target: idomal
 - count: 2
   source: caro
   target: idomal
@@ -582,7 +576,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 40691
+predictions_mapping_count: 40712
 predictions_prefix_count: 35
 unsure:
 - count: 27

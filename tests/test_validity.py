@@ -20,6 +20,7 @@ from biomappings.resources import (
     load_curators,
     mapping_sort_key,
 )
+from biomappings.resources.semapv import get_semapv
 from biomappings.utils import (
     InvalidIdentifierPattern,
     InvalidNormIdentifier,
@@ -31,6 +32,7 @@ mappings = load_mappings()
 predictions = load_predictions()
 incorrect = load_false_mappings()
 unsure = load_unsure()
+semapv = get_semapv()
 
 
 def _iter_groups():
@@ -46,6 +48,31 @@ def _iter_groups():
 
 class TestIntegrity(unittest.TestCase):
     """Data integrity tests."""
+
+    def test_prediction_types(self):
+        """Test that the prediction type is pulled in properly."""
+        for line, mapping in enumerate(mappings, start=2):
+            pt = mapping.get("prediction_type", "".strip())
+            if not pt:
+                continue
+            self.assertTrue(
+                pt.startswith("semapv:"),
+                msg=f"Prediction type should be annotated with semapv on line {line}",
+            )
+            self.assertIn(pt[len("semapv:") :], semapv)
+            self.assertNotEqual(
+                "semapv:ManualMappingCuration",
+                pt,
+                msg="Prediction can not be annotated with manual curation",
+            )
+
+        for label, line, mapping in _iter_groups():
+            tt = mapping["type"]
+            self.assertTrue(
+                tt.startswith("semapv:"),
+                msg=f"[{label}] The 'type' column should be annotated with semapv on line {line}",
+            )
+            self.assertIn(tt[len("semapv:") :], semapv)
 
     def test_canonical_prefixes(self):
         """Test that all mappings use canonical bioregistry prefixes."""

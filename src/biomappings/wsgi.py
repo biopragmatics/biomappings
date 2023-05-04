@@ -240,6 +240,7 @@ class Controller:
     @classmethod
     def get_url(cls, prefix: str, identifier: str) -> str:
         """Return URL for a given prefix and identifier."""
+        identifier = bioregistry.standardize_identifier(prefix, identifier)
         if bioregistry.get_obofoundry_prefix(prefix):
             return bioregistry.get_ols_iri(prefix, identifier)
         return bioregistry.get_bioregistry_iri(prefix, identifier)
@@ -318,7 +319,7 @@ class Controller:
             prediction["prediction_source"] = prediction.pop("source")
             prediction["prediction_confidence"] = prediction.pop("confidence")
             prediction["source"] = _manual_source()
-            prediction["type"] = "manually_reviewed"
+            prediction["type"] = "semapv:ManualMatchingCuration"
             entries[value].append(prediction)
 
         append_true_mappings(entries["correct"])

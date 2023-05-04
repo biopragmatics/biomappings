@@ -18,7 +18,7 @@ def main():
     df = df[df["relation"] == "skos:exactMatch"]
     df = df[~df["source prefix"].isin(BLACKLIST)]
     df = df[~df["target prefix"].isin(BLACKLIST)]
-    df["type"] = "manual"
+    df["type"] = "semapv:ManualMatchingCuration"
     df["source"] = "orcid:0000-0002-2046-6145"  # ComPath is courtesy of Uncle Daniel
 
     # TODO check that species are the same

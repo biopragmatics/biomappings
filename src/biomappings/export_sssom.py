@@ -15,6 +15,7 @@ DIRECTORY = pathlib.Path(DATA).joinpath("sssom")
 DIRECTORY.mkdir(exist_ok=True, parents=True)
 TSV_PATH = DIRECTORY.joinpath("biomappings.sssom.tsv")
 JSON_PATH = DIRECTORY.joinpath("biomappings.sssom.json")
+OWL_PATH = DIRECTORY.joinpath("biomappings.sssom.owl")
 META_PATH = DIRECTORY.joinpath("biomappings.sssom.yml")
 
 CC0_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
@@ -25,19 +26,6 @@ META = {
     "mapping_set_id": "biomappings",
     "mapping_set_title": "Biomappings",
 }
-# TODO use this vocabulary directly in file
-TYPE_TO_JUSTIFICATION = {
-    "lexical": "semapv:LexicalMatching",
-    "manual": "semapv:ManualMappingCuration",  # FIXME in source
-    "manually_reviewed": "semapv:ManualMappingCuration",
-}
-
-
-def _get_justification(mapping):
-    t = mapping["type"]
-    if t.startswith("semapv:"):
-        return t
-    return TYPE_TO_JUSTIFICATION[t]
 
 
 def get_sssom_df():
@@ -72,7 +60,7 @@ def get_sssom_df():
                 f'{mapping["relation"]}',
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
-                _get_justification(mapping),  # match justification
+                mapping["type"],  # match justification
                 source,  # curator CURIE
                 None,  # no confidence necessary
                 None,  # mapping tool: none necessary for manually curated
@@ -88,7 +76,7 @@ def get_sssom_df():
                 f'{mapping["relation"]}',
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
-                _get_justification(mapping),  # match justification
+                mapping["type"],  # match justification
                 None,  # no curator CURIE
                 mapping["confidence"],
                 mapping["source"],  # mapping tool: source script
@@ -114,18 +102,19 @@ def sssom():
         yaml.safe_dump({"curie_map": prefix_map, "creator_id": creators, **META}, file)
 
     from sssom.parsers import from_sssom_dataframe
-    from sssom.writers import write_json
+    from sssom.writers import write_json, write_owl
 
     try:
         msdf = from_sssom_dataframe(df, prefix_map=prefix_map, meta=META)
     except Exception as e:
         click.secho(f"SSSOM Export failed...\n{e}", fg="red")
         return
+    click.echo("Writing JSON")
     with JSON_PATH.open("w") as file:
         write_json(msdf, file)
-
-    # TODO add RDF export, but it's currently broken in SSSOM-py
-    #  and in general the LinkML one is completely unusable (too slow)
+    click.echo("Writing OWL")
+    with OWL_PATH.open("w") as file:
+        write_owl(msdf, file)
 
 
 if __name__ == "__main__":
