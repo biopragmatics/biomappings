@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+"""Generate mappings using Gilda from VO to MeSH."""
+
 import bioontologies
 import gilda
 import pyobo
@@ -23,15 +25,16 @@ def main():
     rows = []
     extracted_mesh = 0
     for node in tqdm(graph.nodes, unit="node", unit_scale=True):
-        if not node.lbl:
+        if not node.lbl or node.prefix != "vo":
             continue
         if node.meta:
             found_mesh = False
             for p in node.meta.basicPropertyValues or []:
                 if p.pred_prefix == "rdfs" and p.pred_identifier == "seeAlso":
                     values = [value.strip().replace(" ", "") for value in p.val.strip().split(";")]
-                    print(node.luid, values)
+                    # print(node.luid, values)
                     for value in values:
+                        # TODO this is place to extract oher mapping types
                         if not value.lower().startswith("mesh:"):
                             continue
                         mesh_id = value.split(":", 1)[1].strip()
@@ -58,7 +61,6 @@ def main():
             if found_mesh:
                 continue
 
-        continue
         _ground(node, rows, provenance)
 
     append_prediction_tuples(rows)

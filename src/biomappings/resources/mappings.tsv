@@ -8908,73 +8908,137 @@ vido	0000505	viremia	skos:exactMatch	ido	0000505	viremia	semapv:ManualMappingCur
 vido	0000508	virion	skos:exactMatch	ido	0000508	virion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vido	0000564	viricide	skos:exactMatch	ido	0000564	viricide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vido	0001066	virus aggregate	skos:exactMatch	vsmo	0000297	virus aggregate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0000001	vaccine	skos:exactMatch	mesh	D014612	Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000013	Bacillus anthracis vaccine	skos:exactMatch	mesh	D022122	Anthrax Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000025	Brucella vaccine	skos:exactMatch	mesh	D002004	Brucella Vaccine	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000041	Escherichia coli vaccine	skos:exactMatch	mesh	D022361	Escherichia coli Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000001	vaccine	skos:exactMatch	mesh	D014612	Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000002	vaccination	skos:exactMatch	mesh	D014611	Vaccination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000003	ACAM2000	skos:exactMatch	mesh	C000588544	ACAM2000	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000005	Adacel	skos:exactMatch	mesh	C509326	adacel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000006	Afluria	skos:exactMatch	mesh	C000613428	Afluria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000013	Bacillus anthracis vaccine	skos:exactMatch	mesh	D022122	Anthrax Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000014	Biothrax	skos:exactMatch	mesh	C493276	Biothrax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000015	Boostrix	skos:exactMatch	mesh	C505143	Boostrix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000025	Brucella vaccine	skos:exactMatch	mesh	D002004	Brucella Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000028	Comvax	skos:exactMatch	mesh	C104289	COMVAX	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000032	DNA vaccine	skos:exactMatch	mesh	D019444	Vaccines, DNA	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.549371263656978
+vo	0000037	adenovirus vaccine	skos:exactMatch	mesh	D062705	Adenovirus Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000041	Escherichia coli vaccine	skos:exactMatch	mesh	D022361	Escherichia coli Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000043	FluLaval	skos:exactMatch	mesh	C517981	FluLaval	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000044	FluMist	skos:exactMatch	mesh	C000613429	FluMist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000045	Fluarix	skos:exactMatch	mesh	C510903	fluarix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000051	Balb/c mouse	skos:exactMatch	cido	0000390	BALB/c mouse	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0000053	Neisseria meningitidis vaccine	skos:exactMatch	mesh	D022401	Meningococcal Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000077	Mycobacterium tuberculosis vaccine	skos:exactMatch	mesh	D032581	Tuberculosis Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000053	Neisseria meningitidis vaccine	skos:exactMatch	mesh	D022401	Meningococcal Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000077	Mycobacterium tuberculosis vaccine	skos:exactMatch	mesh	D032581	Tuberculosis Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000079	Fluzone High-dose	skos:exactMatch	mesh	C000618615	Fluzone High-Dose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
+vo	0000082	Pediarix	skos:exactMatch	mesh	C472675	PEDIARIX	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000084	Pentacel	skos:exactMatch	mesh	C512971	pentacel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000087	Plasmodium falciparum vaccine	skos:exactMatch	idomal	0000115	plasmodium falciparum vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0000123	Yellow fever virus vaccine	skos:exactMatch	mesh	D022341	Yellow Fever Vaccine	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000165	bacterial vaccine	skos:exactMatch	mesh	D001428	Bacterial Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000177	cancer vaccine	skos:exactMatch	mesh	D019496	Cancer Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000267	fungal vaccine	skos:exactMatch	mesh	D005657	Fungal Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000295	human immunodeficiency virus vaccine	skos:exactMatch	mesh	D016915	AIDS Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000417	protozoan vaccine	skos:exactMatch	mesh	D016052	Protozoan Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000097	RotaTeq	skos:exactMatch	mesh	C492535	RotaTeq	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000113	Twinrix	skos:exactMatch	mesh	C433226	twinrix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000123	Yellow fever virus vaccine	skos:exactMatch	mesh	D022341	Yellow Fever Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000156	viral gene	skos:exactMatch	mesh	D005814	Genes, Viral	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000165	bacterial vaccine	skos:exactMatch	mesh	D001428	Bacterial Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000170	protozoan gene	skos:exactMatch	mesh	D017125	Genes, Protozoan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000177	cancer vaccine	skos:exactMatch	mesh	D019496	Cancer Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000195	conjugate vaccine	skos:exactMatch	mesh	D018074	Vaccines, Conjugate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000247	vaccine efficacy	skos:exactMatch	mesh	D000087507	Vaccine Efficacy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000266	fungal disease	skos:exactMatch	mesh	D009181	Mycoses	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000267	fungal vaccine	skos:exactMatch	mesh	D005657	Fungal Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000295	human immunodeficiency virus vaccine	skos:exactMatch	mesh	D016915	AIDS Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000315	inactivated vaccine	skos:exactMatch	mesh	D015164	Vaccines, Inactivated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000350	Arepanrix	skos:exactMatch	mesh	C568072	arepanrix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000402	AIDSVAX	skos:exactMatch	mesh	C112734	AIDSVAX	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000410	Pandemrix	skos:exactMatch	mesh	C556153	pandemrix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000414	Panvax	skos:exactMatch	mesh	C551358	panvax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000417	protozoan vaccine	skos:exactMatch	mesh	D016052	Protozoan Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000490	immunization	skos:exactMatch	mesh	D007114	Immunization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000516	human protein	skos:exactMatch	pr	PR:000029067	Homo sapiens protein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0000534	subunit vaccine	skos:exactMatch	mesh	D022223	Vaccines, Subunit	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
 vo	0000560	toxin	skos:exactMatch	chebi	CHEBI:27026	toxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0000560	toxin	skos:exactMatch	ido	0000549	toxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0000560	toxin	skos:exactMatch	idomal	0000043	toxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0000609	viral vaccine	skos:exactMatch	mesh	D014765	Viral Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000641	combination vaccine	skos:exactMatch	mesh	D017778	Vaccines, Combined	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000642	Influenza virus vaccine	skos:exactMatch	mesh	D007252	Influenza Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000644	Hepatitis B virus vaccine	skos:exactMatch	mesh	D017325	Hepatitis B Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000646	Hepatitis A virus vaccine	skos:exactMatch	mesh	D022362	Hepatitis A Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000648	Yersinia pestis vaccine	skos:exactMatch	mesh	D010931	Plague Vaccine	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000650	Rabies virus vaccine	skos:exactMatch	mesh	D011819	Rabies Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000651	Smallpox virus vaccine	skos:exactMatch	mesh	D012900	Smallpox Vaccine	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000654	Measles virus vaccine	skos:exactMatch	mesh	D008458	Measles Vaccine	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000656	Mumps virus vaccine	skos:exactMatch	mesh	D009108	Mumps Vaccine	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000658	Rotavirus vaccine	skos:exactMatch	mesh	D022243	Rotavirus Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000661	Haemophilus vaccine	skos:exactMatch	mesh	D018073	Haemophilus Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000664	Poliovirus vaccine	skos:exactMatch	mesh	D023321	Poliovirus Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000665	Japanese encephalitis virus vaccine	skos:exactMatch	mesh	D022321	Japanese Encephalitis Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000725	Dengue virus vaccine	skos:exactMatch	mesh	D053059	Dengue Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000726	Ebola virus vaccine	skos:exactMatch	mesh	D046129	Ebola Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000727	Herpesvirus vaccine	skos:exactMatch	mesh	D022283	Herpesvirus Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000580	vaccine adjuvant	skos:exactMatch	mesh	D000089582	Adjuvants, Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000609	viral vaccine	skos:exactMatch	mesh	D014765	Viral Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000641	combination vaccine	skos:exactMatch	mesh	D017778	Vaccines, Combined	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000642	Influenza virus vaccine	skos:exactMatch	mesh	D007252	Influenza Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000644	Hepatitis B virus vaccine	skos:exactMatch	mesh	D017325	Hepatitis B Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000646	Hepatitis A virus vaccine	skos:exactMatch	mesh	D022362	Hepatitis A Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000648	Yersinia pestis vaccine	skos:exactMatch	mesh	D010931	Plague Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000650	Rabies virus vaccine	skos:exactMatch	mesh	D011819	Rabies Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000651	Smallpox virus vaccine	skos:exactMatch	mesh	D012900	Smallpox Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000654	Measles virus vaccine	skos:exactMatch	mesh	D008458	Measles Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000656	Mumps virus vaccine	skos:exactMatch	mesh	D009108	Mumps Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000658	Rotavirus vaccine	skos:exactMatch	mesh	D022243	Rotavirus Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000661	Haemophilus vaccine	skos:exactMatch	mesh	D018073	Haemophilus Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000664	Poliovirus vaccine	skos:exactMatch	mesh	D023321	Poliovirus Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000665	Japanese encephalitis virus vaccine	skos:exactMatch	mesh	D022321	Japanese Encephalitis Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000724	cytomegalovirus vaccine	skos:exactMatch	mesh	D022482	Cytomegalovirus Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000725	Dengue virus vaccine	skos:exactMatch	mesh	D053059	Dengue Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000726	Ebola virus vaccine	skos:exactMatch	mesh	D046129	Ebola Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000727	Herpesvirus vaccine	skos:exactMatch	mesh	D022283	Herpesvirus Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000731	Measles-Mumps-Rubella vaccine	skos:exactMatch	mesh	D022542	Measles-Mumps-Rubella Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
+vo	0000732	Diphtheria-Tetanus vaccine	skos:exactMatch	mesh	D022422	Diphtheria-Tetanus Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
+vo	0000738	Diphtheria-Tetanus-Pertussis vaccine	skos:exactMatch	mesh	D015721	Diphtheria-Tetanus-Pertussis Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
 vo	0000740	P. falciparum vaccine Combination B	skos:exactMatch	idomal	0000135	P. falciparum vaccine Combination B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0000748	Papillomavirus vaccine	skos:exactMatch	mesh	D053918	Papillomavirus Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000749	Parainfluenza virus vaccine	skos:exactMatch	mesh	D022241	Parainfluenza Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000750	Pseudorabies virus vaccine	skos:exactMatch	mesh	D022421	Pseudorabies Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000751	Simian immunodeficiency virus vaccine	skos:exactMatch	mesh	D018449	SAIDS Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000752	West Nile virus vaccine	skos:exactMatch	mesh	D053060	West Nile Virus Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000753	Respiratory syncytial virus vaccine	skos:exactMatch	mesh	D022261	Respiratory Syncytial Virus Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000754	marker vaccine	skos:exactMatch	mesh	D022581	Vaccines, Marker	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000755	edible vaccine	skos:exactMatch	mesh	D022462	Vaccines, Edible	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000759	contraceptive vaccine	skos:exactMatch	mesh	D022642	Vaccines, Contraceptive	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000760	Alzheimer vaccine	skos:exactMatch	mesh	D023582	Alzheimer Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000742	Diphtheria-Tetanus-Pertussis-Poliovirus vaccine	skos:exactMatch	mesh	C051021	DTPP vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.549371263656978
+vo	0000748	Papillomavirus vaccine	skos:exactMatch	mesh	D053918	Papillomavirus Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000749	Parainfluenza virus vaccine	skos:exactMatch	mesh	D022241	Parainfluenza Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000750	Pseudorabies virus vaccine	skos:exactMatch	mesh	D022421	Pseudorabies Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000751	Simian immunodeficiency virus vaccine	skos:exactMatch	mesh	D018449	SAIDS Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000752	West Nile virus vaccine	skos:exactMatch	mesh	D053060	West Nile Virus Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000753	Respiratory syncytial virus vaccine	skos:exactMatch	mesh	D022261	Respiratory Syncytial Virus Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000754	marker vaccine	skos:exactMatch	mesh	D022581	Vaccines, Marker	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000755	edible vaccine	skos:exactMatch	mesh	D022462	Vaccines, Edible	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000756	acellular vaccine	skos:exactMatch	mesh	D022282	Vaccines, Acellular	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000759	contraceptive vaccine	skos:exactMatch	mesh	D022642	Vaccines, Contraceptive	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000760	Alzheimer vaccine	skos:exactMatch	mesh	D023582	Alzheimer Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
 vo	0000761	malaria vaccine	skos:exactMatch	idomal	0001055	malaria vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0000761	malaria vaccine	skos:exactMatch	mesh	D017780	Malaria Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000762	Leishmania vaccine	skos:exactMatch	mesh	D054332	Leishmaniasis Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000763	Vibrio cholerae vaccine	skos:exactMatch	mesh	D022121	Cholera Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000764	Lyme disease vaccine	skos:exactMatch	mesh	D022123	Lyme Disease Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000765	Bordetella pertussis vaccine	skos:exactMatch	mesh	D010567	Pertussis Vaccine	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000766	Pseudomonas vaccine	skos:exactMatch	mesh	D054406	Pseudomonas Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000767	Rickettsial vaccine	skos:exactMatch	mesh	D012290	Rickettsial Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000768	Salmonella vaccine	skos:exactMatch	mesh	D022562	Salmonella Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000769	Shigella vaccine	skos:exactMatch	mesh	D022281	Shigella Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000770	Staphylococcal vaccine	skos:exactMatch	mesh	D013209	Staphylococcal Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000772	Streptococcal vaccine	skos:exactMatch	mesh	D022541	Streptococcal Vaccines	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000761	malaria vaccine	skos:exactMatch	mesh	D017780	Malaria Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000762	Leishmania vaccine	skos:exactMatch	mesh	D054332	Leishmaniasis Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000763	Vibrio cholerae vaccine	skos:exactMatch	mesh	D022121	Cholera Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000764	Lyme disease vaccine	skos:exactMatch	mesh	D022123	Lyme Disease Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000765	Bordetella pertussis vaccine	skos:exactMatch	mesh	D010567	Pertussis Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000766	Pseudomonas vaccine	skos:exactMatch	mesh	D054406	Pseudomonas Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000767	Rickettsial vaccine	skos:exactMatch	mesh	D012290	Rickettsial Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000768	Salmonella vaccine	skos:exactMatch	mesh	D022562	Salmonella Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000769	Shigella vaccine	skos:exactMatch	mesh	D022281	Shigella Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000770	Staphylococcal vaccine	skos:exactMatch	mesh	D013209	Staphylococcal Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000771	BCG vaccine	skos:exactMatch	mesh	D001500	BCG Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
+vo	0000772	Streptococcal vaccine	skos:exactMatch	mesh	D022541	Streptococcal Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0000809	vaccination coverage	skos:exactMatch	mesh	D000073887	Vaccination Coverage	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000843	Feline leukemia virus vaccine	skos:exactMatch	mesh	C045569	feline leukemia virus vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
 vo	0000862	Canada	skos:exactMatch	idocovid19	0001302	Canada	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0000862	Canada	skos:exactMatch	mesh	D002170	Canada	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0000867	Influvac	skos:exactMatch	mesh	C568705	influvac	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0000868	Vaxigrip	skos:exactMatch	mesh	C478242	vaxigrip	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000971	Novartis	skos:exactMatch	ncit	C126403	Novartis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0000978	Flublok	skos:exactMatch	mesh	C528512	FluBlok	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.743764172335601
+vo	0001010	Promega	skos:exactMatch	mesh	C060580	Promega	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0001092	USDA	skos:exactMatch	mesh	D016885	United States Department of Agriculture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0001092	USDA	skos:exactMatch	ncit	C68708	United States Department of Agriculture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0001094	pregnant women	skos:exactMatch	mesh	D037841	Pregnant Women	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0001215	Vaxstrate	skos:exactMatch	mesh	C066608	Vaxstrate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0003082	Vaxchora	skos:exactMatch	mesh	C000613802	Vaxchora	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0003112	Rudivax	skos:exactMatch	mesh	C112264	Rudivax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0003131	VPM1002	skos:exactMatch	mesh	C000705187	VPM1002 recombinant BCG vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0003495	influenza vaccines	skos:exactMatch	mesh	D007252	Influenza Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0004282	Focetria	skos:exactMatch	mesh	C558220	focetria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0004610	SRL172	skos:exactMatch	mesh	C451081	SRL172	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0004613	smallpox vaccine	skos:exactMatch	mesh	D012900	Smallpox Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0004859	meningococcal group C polysaccharide	skos:exactMatch	mesh	C037676	meningococcal group C polysaccharide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0004888	meningococcal group A polysaccharide	skos:exactMatch	mesh	C043226	meningococcal group A polysaccharide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
 vo	0004932	Janssen Pharmaceutica	skos:exactMatch	ncit	C164191	Janssen Pharmaceuticals	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0004948	AstraZeneca	skos:exactMatch	ncit	C177125	AstraZeneca	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0004953	Moderna	skos:exactMatch	ncit	C177124	Moderna	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0004988	SARS-CoV-2 protein	skos:exactMatch	pr	PR:000050262	severe acute respiratory syndrome coronavirus 2 protein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0005184	COVID-19 aAPC vaccine	skos:exactMatch	mesh	C000706170	Covid-19 aAPC vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7709750566893424
+vo	0005187	COVI-VAC	skos:exactMatch	mesh	C000721867	COVI-VAC	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0005188	Turkovac	skos:exactMatch	mesh	C000721868	TURKOVAC	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0005368	Syntex Adjuvant Formulation	skos:exactMatch	mesh	C077975	Syntex adjuvant formulation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
 vo	0010632	country	skos:exactMatch	commoncoreontology	Country	country	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0010637	Rubella virus vaccine	skos:exactMatch	mesh	D012411	Rubella Vaccine	semapv:ManualMatchingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0010637	Rubella virus vaccine	skos:exactMatch	mesh	D012411	Rubella Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
+vo	0010710	Dukoral	skos:exactMatch	mesh	C586175	Dukoral	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0010711	Engerix-B	skos:exactMatch	mesh	C075654	Engerix-B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0010715	Hiberix	skos:exactMatch	mesh	C514867	Hiberix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
+vo	0010737	Recombivax HB	skos:exactMatch	mesh	C075655	Recombivax HB	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
 vo	0010754	virus protein	skos:exactMatch	pr	PR:000036197	viral protein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0010950	SecA2	skos:exactMatch	ogg	3000885594	secA2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0011210	SERA-5	skos:exactMatch	idomal	0001109	SERA-5	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
