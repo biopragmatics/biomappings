@@ -428,6 +428,51 @@
     link: https://bioregistry.io/mesh:D018442
     name: Lymphoma, B-Cell, Marginal Zone
     prefix: mesh
+- mesh:D015164:
+    identifier: D015164
+    link: https://bioregistry.io/mesh:D015164
+    name: Vaccines, Inactivated
+    prefix: mesh
+  vo:0000017:
+    identifier: '0000017'
+    link: https://bioregistry.io/vo:0000017
+    name: killed vaccine
+    prefix: vo
+  vo:0000315:
+    identifier: '0000315'
+    link: https://bioregistry.io/vo:0000315
+    name: inactivated vaccine
+    prefix: vo
+- mesh:D007252:
+    identifier: D007252
+    link: https://bioregistry.io/mesh:D007252
+    name: Influenza Vaccines
+    prefix: mesh
+  vo:0000642:
+    identifier: '0000642'
+    link: https://bioregistry.io/vo:0000642
+    name: Influenza virus vaccine
+    prefix: vo
+  vo:0003495:
+    identifier: 0003495
+    link: https://bioregistry.io/vo:0003495
+    name: influenza vaccines
+    prefix: vo
+- mesh:D012900:
+    identifier: D012900
+    link: https://bioregistry.io/mesh:D012900
+    name: Smallpox Vaccine
+    prefix: mesh
+  vo:0000651:
+    identifier: '0000651'
+    link: https://bioregistry.io/vo:0000651
+    name: Smallpox virus vaccine
+    prefix: vo
+  vo:0004613:
+    identifier: '0004613'
+    link: https://bioregistry.io/vo:0004613
+    name: smallpox vaccine
+    prefix: vo
 - reactome:R-HSA-8937144:
     identifier: R-HSA-8937144
     link: https://bioregistry.io/reactome:R-HSA-8937144
