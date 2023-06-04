@@ -2019,6 +2019,9 @@ chebi	CHEBI:141380	indanomycin	skos:exactMatch	mesh	C114124	indanomycin	semapv:M
 chebi	CHEBI:141382	ekatetrone	skos:exactMatch	mesh	C018055	ekatetrone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:141383	4,5-dihydroxyisophthalic acid	skos:exactMatch	mesh	C015820	4,5-dihydroxyisophthalic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:141397	anthecotulide	skos:exactMatch	mesh	C499300	anthecotulide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141419	Arg-Pro	skos:exactMatch	mesh	C039357	arginylproline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141449	Trp-Pro	skos:exactMatch	mesh	C113296	tryptophyl-proline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141456	Tyr-Pro	skos:exactMatch	mesh	C120594	tyrosyl-proline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:141506	6-bromo-5,9-hexacosadienoic acid	skos:exactMatch	mesh	C090295	6-bromo-5,9-hexacosadienoic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:141520	imidaprilat	skos:exactMatch	mesh	C078006	imidaprilat	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:141524	ochratoxin B	skos:exactMatch	mesh	C045354	ochratoxin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
@@ -2029,17 +2032,171 @@ chebi	CHEBI:141565	2-ethylfuran	skos:exactMatch	mesh	C000609805	2-ethylfuran	sem
 chebi	CHEBI:14158	dihydromonacolin L	skos:exactMatch	mesh	C045373	dihydromonacolin L	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:141613	hapalindole U	skos:exactMatch	mesh	C518617	hapalindole U	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:141614	hapalindole G	skos:exactMatch	mesh	C568208	hapalindole G	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141700	3-methoxycatechol	skos:exactMatch	mesh	C066344	3-methoxycatechol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141872	cadambine	skos:exactMatch	mesh	C000598492	cadambine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141877	Akagerine	skos:exactMatch	mesh	C551516	akagerine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141888	Conopharyngine	skos:exactMatch	mesh	C007113	conopharyngine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141890	Corynantheidol	skos:exactMatch	mesh	C007137	corynantheidol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141892	Corynantheol	skos:exactMatch	mesh	C570571	corynantheol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141897	dregamine	skos:exactMatch	mesh	C000617031	dregamine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141898	Echitamidine	skos:exactMatch	mesh	C085228	echitamidine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141900	Ervatamine	skos:exactMatch	mesh	C017291	ervatamine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141902	Geissolaevine	skos:exactMatch	mesh	C000621470	geissolaevine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:141904	Goniomedine A	skos:exactMatch	mesh	C576310	goniomedine A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:141905	Goniomedine B	skos:exactMatch	mesh	C576311	goniomedine B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:141908	Goniomitine	skos:exactMatch	mesh	C526621	goniomitine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:141909	Grandilodine B	skos:exactMatch	mesh	C560042	grandilodine B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141916	Isosungucine	skos:exactMatch	mesh	C464957	isosungucine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141917	Lanciferine	skos:exactMatch	mesh	C000614946	lanciferine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141918	Leuconolam	skos:exactMatch	mesh	C062173	leuconolam	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141920	Lundurine A	skos:exactMatch	mesh	C000597197	lundurine A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141923	Methuenine	skos:exactMatch	mesh	C042118	methuenine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141924	Methyl reserpate	skos:exactMatch	mesh	C051349	methyl reserpate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141931	O-methylgeissolaevine	skos:exactMatch	mesh	C000621471	O-methylgeissolaevine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141936	Pericyclivine	skos:exactMatch	mesh	C031498	pericyclivine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141939	Pleiocarpamine	skos:exactMatch	mesh	C114765	pleiocarpamine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141944	Pleiokomenine A	skos:exactMatch	mesh	C000633304	pleiokomenine A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141948	Polyneuridine	skos:exactMatch	mesh	C518014	polyneuridine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141950	Quebrachidine	skos:exactMatch	mesh	C010318	quebrachidine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141953	Strychnofoline	skos:exactMatch	mesh	C471685	strychnofoline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141955	Strychnohexamine	skos:exactMatch	mesh	C472945	strychnohexamine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141956	Strychnopentamine	skos:exactMatch	mesh	C045110	strychnopentamine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141958	Sungucine	skos:exactMatch	mesh	C464946	sungucine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141960	Tubotaiwine	skos:exactMatch	mesh	C404563	tubotaiwine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141961	Villalstonine	skos:exactMatch	mesh	C009663	villalstonine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141963	Vincosamide	skos:exactMatch	mesh	C000598491	vincosamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141964	vindolinine	skos:exactMatch	mesh	C009668	vindolinine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:141967	voachalotine	skos:exactMatch	mesh	C568718	voachalotine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:141969	tipifarnib	skos:exactMatch	mesh	C402769	tipifarnib	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:142161	biotripyrrin-a	skos:exactMatch	mesh	C099842	biotripyrrin a	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142162	biotripyrrin-b	skos:exactMatch	mesh	C099843	biotripyrrin b	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142258	Ganoderic acid F	skos:exactMatch	mesh	C515006	ganoderic acid F	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:142261	ganoderol B	skos:exactMatch	mesh	C521787	ganoderol B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:142267	methyl N-methylanthranilate	skos:exactMatch	mesh	C412492	methyl N-methylanthranilate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142276	Soyacerebroside I	skos:exactMatch	mesh	C068190	soya-cerebroside I	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142282	4-chloro-3-methylcatechol	skos:exactMatch	mesh	C499987	4-chloro-3-methylcatechol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142284	3-chloro-4-methylcatechol	skos:exactMatch	mesh	C499986	3-chloro-4-methylcatechol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142391	gevotroline	skos:exactMatch	mesh	C069280	gevotroline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142397	pectenotoxin-11	skos:exactMatch	mesh	C556578	pectenotoxin 11	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142431	praliciguat	skos:exactMatch	mesh	C000631485	praliciguat	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142432	vericiguat	skos:exactMatch	mesh	C000603960	vericiguat	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:142437	lepirudin	skos:exactMatch	mesh	C083544	lepirudin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:142440	S-(1,2-dicarboxyethyl)glutathione	skos:exactMatch	mesh	C041581	S-(1,2-dicarboxyethyl)glutathione	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142451	bisphenol F diglycidyl ether	skos:exactMatch	mesh	C423722	bisphenol F diglycidyl ether	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142452	dabuzalgron	skos:exactMatch	mesh	C481520	dabuzalgron	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142494	laminarihexaose	skos:exactMatch	mesh	C086571	laminarihexaose	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142509	sulfinoacetaldehyde	skos:exactMatch	mesh	C028910	sulfinoacetaldehyde	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:14261	feruloyl-CoA	skos:exactMatch	mesh	C119167	feruloyl-CoA	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142623	spiroiminodihydantoin	skos:exactMatch	mesh	C408822	spiroiminodihydantoin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142648	alloy	skos:exactMatch	mesh	D000497	Alloys	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142649	platinum-iridium alloy	skos:exactMatch	mesh	C077763	platinum-iridium alloy	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:14272	fluoroacetaldehyde	skos:exactMatch	mesh	C075898	fluoroacetaldehyde	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142774	nitryl chloride	skos:exactMatch	mesh	C445660	nitryl chloride	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142841	spectinabilin	skos:exactMatch	mesh	C508401	spectinabilin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142915	cycloeucalenone	skos:exactMatch	mesh	C472599	cycloeucalenone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142968	Lipomannan	skos:exactMatch	mesh	C064351	lipomannan	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:142990	cyclolaudenol	skos:exactMatch	mesh	C024016	cyclolaudenol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143036	Isochlorogenic acid	skos:exactMatch	mesh	C469310	isochlorogenic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143045	Acoric acid	skos:exactMatch	mesh	C016201	acoric acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143059	Annuionone B	skos:exactMatch	mesh	C527915	annuionone B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143063	Dehydrotomatine	skos:exactMatch	mesh	C484752	dehydrotomatine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143082	mycocerosic acid	skos:exactMatch	mesh	C032992	mycocerosic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143085	phthiocerol dimycocerosate	skos:exactMatch	mesh	C008901	phthiocerol dimycocerosate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143114	CCT251545	skos:exactMatch	mesh	C000606523	CCT251545	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143117	lorlatinib	skos:exactMatch	mesh	C000590786	lorlatinib	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143141	N,N',N''-triacetylchitotriose	skos:exactMatch	mesh	C019117	N,N',N''-triacetylchitotriose	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143152	cloquintocet-mexyl	skos:exactMatch	mesh	C514515	cloquintocet-mexyl	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143197	culmorin	skos:exactMatch	mesh	C013900	culmorin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143225	azumolene	skos:exactMatch	mesh	C061387	azumolene	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143291	4-Hydroxysulfinpyrazone	skos:exactMatch	mesh	C025186	4-hydroxysulfinpyrazone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143298	4-chlorobenzenesulfonamide	skos:exactMatch	mesh	C047440	4-chlorobenzenesulfonamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143311	N-desmethylnizatidine	skos:exactMatch	mesh	C066301	N-desmethylnizatidine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143344	7-Aminoclonazepam	skos:exactMatch	mesh	C020860	7-aminoclonazepam	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143374	N-Desmethylzopiclone	skos:exactMatch	mesh	C053229	N-desmethylzopiclone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143378	3-Hydroxyglibenclamide	skos:exactMatch	mesh	C070072	3-hydroxyglibenclamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143382	5-hydroxyindapamide	skos:exactMatch	mesh	C064096	5-hydroxyindapamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143429	8-hydroxymirtazapine	skos:exactMatch	mesh	C415843	8-hydroxymirtazapine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143430	Mirtazapine-N-oxide	skos:exactMatch	mesh	C517417	mirtazapine-N-oxide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143437	hydroxyethylflurazepam	skos:exactMatch	mesh	C041538	hydroxyethylflurazepam	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143460	hydroxyitraconazole	skos:exactMatch	mesh	C084794	hydroxyitraconazole	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143467	N4-Acetylsulfaphenazole	skos:exactMatch	mesh	C068642	N4-acetylsulfaphenazole	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143473	3-O-methyltolcapone	skos:exactMatch	mesh	C108735	3-O-methyltolcapone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143509	N-Desmethyllevomepromazine	skos:exactMatch	mesh	C044467	N-desmethyllevomepromazine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143579	methyl myristoleate	skos:exactMatch	mesh	C000609422	methyl myristoleate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143848	3-methylhexane	skos:exactMatch	mesh	C000604282	3-methylhexane	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143863	butafenacil	skos:exactMatch	mesh	C487162	butafenacil	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:143889	galactosaminogalactan	skos:exactMatch	mesh	C062157	galactosaminogalactan	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144046	diflomotecan	skos:exactMatch	mesh	C424962	diflomotecan	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144069	lobarin	skos:exactMatch	mesh	C581171	lobarin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144078	dihydroartemisinic acid	skos:exactMatch	mesh	C520462	dihydroartemisinic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:144086	spongotine A	skos:exactMatch	mesh	C525418	spongotine A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:144087	bromodeoxytopsentin	skos:exactMatch	mesh	C000598719	bromodeoxytopsentin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:144113	Argopsin	skos:exactMatch	mesh	C058444	argopsin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:144115	Aspicilin	skos:exactMatch	mesh	C418323	aspicilin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144118	Atranol	skos:exactMatch	mesh	C493895	atranol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:144119	Atranorin	skos:exactMatch	mesh	C026304	atranorin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:144121	Baeomycesic acid	skos:exactMatch	mesh	C496299	baeomycesic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144123	Barbatic acid	skos:exactMatch	mesh	C509225	barbatic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144132	Caperatic acid	skos:exactMatch	mesh	C012802	caperatic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144138	Chloroatranorin	skos:exactMatch	mesh	C543235	chloroatranorin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144140	Confluentic acid	skos:exactMatch	mesh	C089056	confluentic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144147	Divaricatic acid	skos:exactMatch	mesh	C000627593	divaricatic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144154	3-Hydroxyphysodic acid	skos:exactMatch	mesh	C501217	3-hydroxyphysodic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144157	Fumarprotocetraric acid	skos:exactMatch	mesh	C026307	fumarprotocetraric acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144159	Gyrophoric acid	skos:exactMatch	mesh	C120727	gyrophoric acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144175	Murolic acid	skos:exactMatch	mesh	C420980	murolic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144179	Norstictic acid	skos:exactMatch	mesh	C553078	norstictic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144183	Olivetoric acid	skos:exactMatch	mesh	C514585	olivetoric acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144187	Perlatolic acid	skos:exactMatch	mesh	C522034	perlatolic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144192	Anziaic acid	skos:exactMatch	mesh	C584125	anziaic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144195	Pinastric acid	skos:exactMatch	mesh	C012495	pinastric acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144197	Polyporic acid	skos:exactMatch	mesh	C118527	polyporic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144201	Portentol	skos:exactMatch	mesh	C571246	portentol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144203	Protocetraric acid	skos:exactMatch	mesh	C578352	protocetraric acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144204	Bourgeanic acid	skos:exactMatch	mesh	C544845	bourgeanic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:144205	Protolichesterinic acid	skos:exactMatch	mesh	C095781	protolichesterinic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:144206	Buellin	skos:exactMatch	mesh	C546368	buellin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144209	Pulvinic acid	skos:exactMatch	mesh	C492654	pulvinic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144210	Canarione	skos:exactMatch	mesh	C548221	canarione	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144213	Rhizocarpic acid	skos:exactMatch	mesh	C466066	rhizocarpic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144220	Salazinic acid	skos:exactMatch	mesh	C116675	salazinic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144229	Sphaerophorin	skos:exactMatch	mesh	C518876	sphaerophorin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144233	Tenuiorin	skos:exactMatch	mesh	C472105	tenuiorin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144238	Thelephoric acid	skos:exactMatch	mesh	C000589783	thelephoric acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144250	Vulpinic acid	skos:exactMatch	mesh	C077134	vulpinic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144259	Imbricaric acid	skos:exactMatch	mesh	C000588767	imbricaric acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144278	Nephrosteranic acid	skos:exactMatch	mesh	C456480	nephrosteranic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144283	Obtusatic acid	skos:exactMatch	mesh	C411222	obtusatic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144295	Roccellaric acid	skos:exactMatch	mesh	C428504	roccellaric acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144311	skyrin	skos:exactMatch	mesh	C009274	skyrin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144317	altenuene	skos:exactMatch	mesh	C040005	altenuene	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144323	zinc dibutyldithiocarbamate	skos:exactMatch	mesh	C017801	zinc dibutyldithiocarbamate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144330	3-methylglutaconic acid	skos:exactMatch	mesh	C022034	3-methylglutaconic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144389	Eleutheroside E	skos:exactMatch	mesh	C421885	eleutheroside E	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144390	Lolicine B	skos:exactMatch	mesh	C518046	lolicine B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144392	Cytochalasin A	skos:exactMatch	mesh	C031218	cytochalasin A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144394	Acanthifolicin	skos:exactMatch	mesh	C065560	acanthifolicin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144404	Gymnodimine	skos:exactMatch	mesh	C407350	gymnodimine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144405	Contignasterol	skos:exactMatch	mesh	C091550	contignasterol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144406	Enanthotoxin	skos:exactMatch	mesh	C010719	enanthotoxin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144410	terpendole C	skos:exactMatch	mesh	C092163	terpendole C	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144424	Bupicomide	skos:exactMatch	mesh	C002659	bupicomide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144441	triacsin C	skos:exactMatch	mesh	C034613	triacsin C	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144514	mefentrifluconazole	skos:exactMatch	mesh	C000654324	mefentrifluconazole	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144672	PF-956980	skos:exactMatch	mesh	C554945	PF 956980	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:14469	isomethyleugenol	skos:exactMatch	mesh	C031050	isomethyleugenol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:144786	profoxydim	skos:exactMatch	mesh	C425983	profoxydim	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:144984	NSC 23766	skos:exactMatch	mesh	C487513	NSC 23766	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:145018	rebaudioside E	skos:exactMatch	mesh	C000607842	rebaudioside E	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:145021	rubusoside	skos:exactMatch	mesh	C056177	rubusoside	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:145022	rebaudioside D	skos:exactMatch	mesh	C586824	rebaudioside D	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:145105	asperphenamate	skos:exactMatch	mesh	C014343	asperphenamate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:145107	N-benzoyl-L-phenylalaninol	skos:exactMatch	mesh	C014358	N-benzoyl-L-phenylalaninol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:145108	bassianolide	skos:exactMatch	mesh	C035050	bassianolide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:145111	isopatulin	skos:exactMatch	mesh	C552375	isopatulin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:145155	Azaspiracid-2	skos:exactMatch	mesh	C520447	azaspiracid-2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:145156	Azaspiracid-3	skos:exactMatch	mesh	C520446	azaspiracid-3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:145170	13-desmethylspirolide C	skos:exactMatch	mesh	C517170	13-desmethylspirolide C	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:145705	prednisolone phosphate	skos:exactMatch	mesh	C009022	prednisolone phosphate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:145994	remdesivir	skos:exactMatch	mesh	C000606551	remdesivir	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:146244	HU-308	skos:exactMatch	mesh	C402416	HU 308	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -2064,6 +2221,9 @@ chebi	CHEBI:17447	geraniol	skos:exactMatch	mesh	C007836	geraniol	semapv:ManualMa
 chebi	CHEBI:174606	2,3-Epoxysesamone	skos:exactMatch	mesh	C447010	2,3-epoxysesamone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:175290	3-Isomangostin	skos:exactMatch	mesh	C114655	3-isomangostin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:17548	alginic acid	skos:exactMatch	mesh	D000077322	Alginic Acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:175496	Erinacine E	skos:exactMatch	mesh	C116931	erinacine E	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:175499	Erinacine A	skos:exactMatch	mesh	C000595639	erinacine A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:175500	Erinacine B	skos:exactMatch	mesh	C518057	erinacine B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:175562	Muzanzagenin	skos:exactMatch	mesh	C109392	muzanzagenin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:175649	Hydroxyisonobilin	skos:exactMatch	mesh	C032659	hydroxyisonobilin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:175901	gemcitabine	skos:exactMatch	mesh	C056507	gemcitabine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
