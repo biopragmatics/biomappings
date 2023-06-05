@@ -235,6 +235,15 @@ doid	DOID:9065	leishmaniasis	skos:exactMatch	umls	C1548483	Leishmaniasis Vaccine
 doid	DOID:9675	pulmonary emphysema	skos:exactMatch	efo	0000464	emphysema	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:9682	yellow fever	skos:exactMatch	umls	C0301508	yellow fever vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:9847	peripheral vertigo	skos:exactMatch	mesh	D014717	Vertigo	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+efo	0002102	A204	skos:exactMatch	mesh	C003808	A 204	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cfa177/scripts/generate_efo_mesh_mappings.py	0.5553494124922697
+efo	0002679	urocortin I	skos:exactMatch	mesh	D054832	Urocortins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cfa177/scripts/generate_efo_mesh_mappings.py	0.549371263656978
+efo	0002680	urocortin II	skos:exactMatch	mesh	D054832	Urocortins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cfa177/scripts/generate_efo_mesh_mappings.py	0.549371263656978
+efo	0002845	PC-6	skos:exactMatch	mesh	C069800	PC6 extract	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cfa177/scripts/generate_efo_mesh_mappings.py	0.5553494124922697
+efo	0004047	CB184	skos:exactMatch	mesh	C096583	CB 182	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cfa177/scripts/generate_efo_mesh_mappings.py	0.5553494124922697
+efo	0005161	Uk-1	skos:exactMatch	mesh	C082787	UK 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cfa177/scripts/generate_efo_mesh_mappings.py	0.7623170480313337
+efo	0008681	CHART	skos:exactMatch	mesh	D020468	Chart	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cfa177/scripts/generate_efo_mesh_mappings.py	0.761698618841476
+efo	0008773	ICE	skos:exactMatch	mesh	D007053	Ice	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cfa177/scripts/generate_efo_mesh_mappings.py	0.761698618841476
+efo	0008847	PARIS	skos:exactMatch	mesh	D010297	Paris	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cfa177/scripts/generate_efo_mesh_mappings.py	0.761698618841476
 idomal	0001123	RAP-1	skos:exactMatch	vo	0011026	RAP-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	mesh	D018528	ATP-Binding Cassette Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
