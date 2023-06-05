@@ -818,11 +818,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: efo:0001086
-      identifier: 0001086
-      link: https://bioregistry.io/efo:0001086
-      name: A549
-      prefix: efo
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
   - source:
       curie: cellosaurus:0023
       identifier: CVCL_0023
@@ -830,11 +830,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: mesh:D000072283
-      identifier: D000072283
-      link: https://bioregistry.io/mesh:D000072283
-      name: A549 Cells
-      prefix: mesh
+      curie: efo:0001086
+      identifier: 0001086
+      link: https://bioregistry.io/efo:0001086
+      name: A549
+      prefix: efo
   nodes:
     ccle:A549_LUNG:
       identifier: A549_LUNG
@@ -4310,11 +4310,11 @@
       name: cardiac arrest
       prefix: efo
     target:
-      curie: hp:0001695
-      identifier: HP:0001695
-      link: https://bioregistry.io/hp:0001695
-      name: Cardiac arrest
-      prefix: hp
+      curie: oae:0000461
+      identifier: '0000461'
+      link: https://bioregistry.io/oae:0000461
+      name: cardiac arrest
+      prefix: oae
   - source:
       curie: efo:0009492
       identifier: 0009492
@@ -4322,11 +4322,11 @@
       name: cardiac arrest
       prefix: efo
     target:
-      curie: oae:0000461
-      identifier: '0000461'
-      link: https://bioregistry.io/oae:0000461
-      name: cardiac arrest
-      prefix: oae
+      curie: hp:0001695
+      identifier: HP:0001695
+      link: https://bioregistry.io/hp:0001695
+      name: Cardiac arrest
+      prefix: hp
   nodes:
     doid:0060319:
       identifier: DOID:0060319
