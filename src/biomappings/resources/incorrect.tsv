@@ -93,23 +93,44 @@ ccle	TC71_BONE	TC-71	skos:exactMatch	cellosaurus	CVCL_S882	TC71	semapv:ManualMap
 ccle	TE15_OESOPHAGUS	TE-15	skos:exactMatch	cellosaurus	CVCL_F780	TE15	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ccle	WM239A	WM239A	skos:exactMatch	cellosaurus	CVCL_RN56	WM239B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:10057	9H-xanthene	skos:exactMatch	mesh	C002563	xanthan gum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:134126	picrotoxin	skos:exactMatch	mesh	D031605	Cocculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:135025	rimazolium	skos:exactMatch	mesh	C100296	probon	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:135083	cibenzoline	skos:exactMatch	mesh	C032151	cifenline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:15367	all-trans-retinoic acid	skos:exactMatch	mesh	D012160	Retina	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:15756	hexadecanoic acid	skos:exactMatch	mesh	D010169	Palmitic Acids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	0.9
 chebi	CHEBI:15940	nicotinic acid	skos:exactMatch	mesh	D009539	Nicotinic Acids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:16543	N(2)-acetyl-L-ornithine	skos:exactMatch	mesh	C021951	N(delta)-acetylornithine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:17544	hydrogencarbonate	skos:exactMatch	mesh	D001639	Bicarbonates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:17883	hydrogen chloride	skos:exactMatch	mesh	D007943	Leukemia, Hairy Cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:22927	bromine atom	skos:exactMatch	mesh	D031724	Bromus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:24536	hexachlorocyclohexane	skos:exactMatch	mesh	D002819	Chorea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:27777	acetohydroxamic acid	skos:exactMatch	mesh	D000744	Anemia, Hemolytic, Autoimmune	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:28201	rotenone	skos:exactMatch	mesh	D029866	Derris	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:29806	fumarate(2-)	skos:exactMatch	mesh	D005650	Fumarates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:30078	gold monochloride	skos:exactMatch	mesh	C038016	gold chloride	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:31013	cerotate	skos:exactMatch	mesh	C085095	Cerinate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:31739	josamycin	skos:exactMatch	mesh	D019169	Jurkat Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:32034	potassium bitartrate	skos:exactMatch	mesh	D003728	Dental Calculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:33224	chromane	skos:exactMatch	mesh	D002839	Chromans	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:33363	palladium	skos:exactMatch	mesh	D010300	Parkinson Disease	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:33942	ribose	skos:exactMatch	mesh	D012272	Ribs	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:39098	pyrethrins	skos:exactMatch	mesh	D011723	Chrysanthemum cinerariifolium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:4031	cyclosporin A	skos:exactMatch	mesh	D003524	Cyclosporins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:44520	methoxy group	skos:exactMatch	mesh	D010034	Otitis Media with Effusion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:45373	sulfanilamide	skos:exactMatch	mesh	D013424	Sulfanilamides	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:50183	P450 inhibitor	skos:exactMatch	mesh	D065690	Cytochrome P-450 CYP2D6 Inhibitors	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:50664	matrix metalloproteinase inhibitor	skos:exactMatch	mesh	D008950	MMPI	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:53311	sodium alginate	skos:exactMatch	mesh	D044646	Ascophyllum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:59113	3-heptadecylveratrole	skos:exactMatch	mesh	D003699	Hepatitis D	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:60411	bacteriopheophytin	skos:exactMatch	mesh	D011470	Prostatic Hyperplasia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:6446	levothyroxine sodium anhydrous	skos:exactMatch	mesh	D016422	Letter	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:6456	lidocaine	skos:exactMatch	mesh	C511998	Lidoderm	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:70255	(-)-epicatechin-3-O-gallate	skos:exactMatch	mesh	D004562	Electrocardiography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:75937	monooleoylglycerol	skos:exactMatch	mesh	C005953	monoolein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:78037	polyhydroxyalkanoate	skos:exactMatch	mesh	D010381	Pelger-Huet Anomaly	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:79068	crocin-1	skos:exactMatch	mesh	D027622	Crocus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:8075	phenoxyacetic acid	skos:exactMatch	mesh	D031785	Poa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:8925	ryanodine	skos:exactMatch	mesh	D031309	Ryania	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 cl	CL:0000149	visual pigment cell	skos:exactMatch	mesh	D012168	Retinal Pigments	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0000322	pneumocyte	skos:exactMatch	mesh	D056809	Alveolar Epithelial Cells	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0000345	dental papilla cell	skos:exactMatch	mesh	D003771	Dental Papilla	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
