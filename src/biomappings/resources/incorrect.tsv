@@ -103,6 +103,7 @@ chebi	CHEBI:16543	N(2)-acetyl-L-ornithine	skos:exactMatch	mesh	C021951	N(delta)-
 chebi	CHEBI:17544	hydrogencarbonate	skos:exactMatch	mesh	D001639	Bicarbonates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:17883	hydrogen chloride	skos:exactMatch	mesh	D007943	Leukemia, Hairy Cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:22927	bromine atom	skos:exactMatch	mesh	D031724	Bromus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:23888	drug	skos:exactMatch	mesh	D008511	Medicine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:24536	hexachlorocyclohexane	skos:exactMatch	mesh	D002819	Chorea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:27777	acetohydroxamic acid	skos:exactMatch	mesh	D000744	Anemia, Hemolytic, Autoimmune	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:28201	rotenone	skos:exactMatch	mesh	D029866	Derris	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
@@ -120,6 +121,7 @@ chebi	CHEBI:44520	methoxy group	skos:exactMatch	mesh	D010034	Otitis Media with E
 chebi	CHEBI:45373	sulfanilamide	skos:exactMatch	mesh	D013424	Sulfanilamides	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:50183	P450 inhibitor	skos:exactMatch	mesh	D065690	Cytochrome P-450 CYP2D6 Inhibitors	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:50664	matrix metalloproteinase inhibitor	skos:exactMatch	mesh	D008950	MMPI	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:50906	role	skos:exactMatch	mesh	D012380	Role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:53311	sodium alginate	skos:exactMatch	mesh	D044646	Ascophyllum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:59113	3-heptadecylveratrole	skos:exactMatch	mesh	D003699	Hepatitis D	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:60411	bacteriopheophytin	skos:exactMatch	mesh	D011470	Prostatic Hyperplasia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
