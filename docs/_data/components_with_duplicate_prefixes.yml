@@ -138,6 +138,26 @@
     link: https://bioregistry.io/mesh:D002690
     name: Chlamydia Infections
     prefix: mesh
+- chebi:33281:
+    identifier: CHEBI:33281
+    link: https://bioregistry.io/chebi:33281
+    name: antimicrobial agent
+    prefix: chebi
+  ido:0000558:
+    identifier: 0000558
+    link: https://bioregistry.io/ido:0000558
+    name: antimicrobial
+    prefix: ido
+  ido:0000563:
+    identifier: '0000563'
+    link: https://bioregistry.io/ido:0000563
+    name: microbicide
+    prefix: ido
+  idomal:0000643:
+    identifier: '0000643'
+    link: https://bioregistry.io/idomal:0000643
+    name: antibiotic
+    prefix: idomal
 - chebi:22063:
     identifier: CHEBI:22063
     link: https://bioregistry.io/chebi:22063

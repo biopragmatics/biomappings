@@ -818,11 +818,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: mesh:D000072283
-      identifier: D000072283
-      link: https://bioregistry.io/mesh:D000072283
-      name: A549 Cells
-      prefix: mesh
+      curie: efo:0001086
+      identifier: 0001086
+      link: https://bioregistry.io/efo:0001086
+      name: A549
+      prefix: efo
   - source:
       curie: cellosaurus:0023
       identifier: CVCL_0023
@@ -830,11 +830,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: efo:0001086
-      identifier: 0001086
-      link: https://bioregistry.io/efo:0001086
-      name: A549
-      prefix: efo
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
   nodes:
     ccle:A549_LUNG:
       identifier: A549_LUNG
@@ -2406,12 +2406,41 @@
       link: https://bioregistry.io/ncit:C281
       name: Antiviral Agent
       prefix: ncit
+  - source:
+      curie: ido:0000559
+      identifier: 0000559
+      link: https://bioregistry.io/ido:0000559
+      name: antiviral
+      prefix: ido
+    target:
+      curie: mesh:D000998
+      identifier: D000998
+      link: https://bioregistry.io/mesh:D000998
+      name: Antiviral Agents
+      prefix: mesh
+  - source:
+      curie: ido:0000559
+      identifier: 0000559
+      link: https://bioregistry.io/ido:0000559
+      name: antiviral
+      prefix: ido
+    target:
+      curie: ncit:C281
+      identifier: C281
+      link: https://bioregistry.io/ncit:C281
+      name: Antiviral Agent
+      prefix: ncit
   nodes:
     chebi:22587:
       identifier: CHEBI:22587
       link: https://bioregistry.io/chebi:22587
       name: antiviral agent
       prefix: chebi
+    ido:0000559:
+      identifier: 0000559
+      link: https://bioregistry.io/ido:0000559
+      name: antiviral
+      prefix: ido
     mesh:D000998:
       identifier: D000998
       link: https://bioregistry.io/mesh:D000998
@@ -2624,6 +2653,64 @@
       identifier: C28900
       link: https://bioregistry.io/ncit:C28900
       name: Calcipotriene
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:50804
+      identifier: CHEBI:50804
+      link: https://bioregistry.io/chebi:50804
+      name: nanoshell
+      prefix: chebi
+    target:
+      curie: ncit:C62375
+      identifier: C62375
+      link: https://bioregistry.io/ncit:C62375
+      name: Nanoshell
+      prefix: ncit
+  nodes:
+    chebi:50804:
+      identifier: CHEBI:50804
+      link: https://bioregistry.io/chebi:50804
+      name: nanoshell
+      prefix: chebi
+    mesh:D057145:
+      identifier: D057145
+      link: https://bioregistry.io/mesh:D057145
+      name: Nanoshells
+      prefix: mesh
+    ncit:C62375:
+      identifier: C62375
+      link: https://bioregistry.io/ncit:C62375
+      name: Nanoshell
+      prefix: ncit
+- edges:
+  - source:
+      curie: chebi:50853
+      identifier: CHEBI:50853
+      link: https://bioregistry.io/chebi:50853
+      name: quantum dot
+      prefix: chebi
+    target:
+      curie: ncit:C62378
+      identifier: C62378
+      link: https://bioregistry.io/ncit:C62378
+      name: Quantum Dot
+      prefix: ncit
+  nodes:
+    chebi:50853:
+      identifier: CHEBI:50853
+      link: https://bioregistry.io/chebi:50853
+      name: quantum dot
+      prefix: chebi
+    mesh:D045663:
+      identifier: D045663
+      link: https://bioregistry.io/mesh:D045663
+      name: Quantum Dots
+      prefix: mesh
+    ncit:C62378:
+      identifier: C62378
+      link: https://bioregistry.io/ncit:C62378
+      name: Quantum Dot
       prefix: ncit
 - edges:
   - source:
@@ -4199,11 +4286,11 @@
       name: lung abscess
       prefix: doid
     target:
-      curie: hp:0025044
-      identifier: HP:0025044
-      link: https://bioregistry.io/hp:0025044
-      name: Lung abscess
-      prefix: hp
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
+      name: Lung Abscess
+      prefix: ncit
   - source:
       curie: doid:0060317
       identifier: DOID:0060317
@@ -4211,11 +4298,11 @@
       name: lung abscess
       prefix: doid
     target:
-      curie: ncit:C99090
-      identifier: C99090
-      link: https://bioregistry.io/ncit:C99090
-      name: Lung Abscess
-      prefix: ncit
+      curie: hp:0025044
+      identifier: HP:0025044
+      link: https://bioregistry.io/hp:0025044
+      name: Lung abscess
+      prefix: hp
   - source:
       curie: hp:0025044
       identifier: HP:0025044
@@ -4310,11 +4397,11 @@
       name: cardiac arrest
       prefix: efo
     target:
-      curie: oae:0000461
-      identifier: '0000461'
-      link: https://bioregistry.io/oae:0000461
-      name: cardiac arrest
-      prefix: oae
+      curie: hp:0001695
+      identifier: HP:0001695
+      link: https://bioregistry.io/hp:0001695
+      name: Cardiac arrest
+      prefix: hp
   - source:
       curie: efo:0009492
       identifier: 0009492
@@ -4322,11 +4409,11 @@
       name: cardiac arrest
       prefix: efo
     target:
-      curie: hp:0001695
-      identifier: HP:0001695
-      link: https://bioregistry.io/hp:0001695
-      name: Cardiac arrest
-      prefix: hp
+      curie: oae:0000461
+      identifier: '0000461'
+      link: https://bioregistry.io/oae:0000461
+      name: cardiac arrest
+      prefix: oae
   nodes:
     doid:0060319:
       identifier: DOID:0060319
@@ -5400,11 +5487,11 @@
       name: osteomalacia
       prefix: efo
     target:
-      curie: hp:0002749
-      identifier: HP:0002749
-      link: https://bioregistry.io/hp:0002749
+      curie: mesh:D010018
+      identifier: D010018
+      link: https://bioregistry.io/mesh:D010018
       name: Osteomalacia
-      prefix: hp
+      prefix: mesh
   - source:
       curie: efo:1002027
       identifier: '1002027'
@@ -5412,11 +5499,11 @@
       name: osteomalacia
       prefix: efo
     target:
-      curie: mesh:D010018
-      identifier: D010018
-      link: https://bioregistry.io/mesh:D010018
+      curie: hp:0002749
+      identifier: HP:0002749
+      link: https://bioregistry.io/hp:0002749
       name: Osteomalacia
-      prefix: mesh
+      prefix: hp
   nodes:
     doid:10573:
       identifier: DOID:10573
@@ -5620,11 +5707,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: hp:0002912
-      identifier: HP:0002912
-      link: https://bioregistry.io/hp:0002912
-      name: Methylmalonic acidemia
-      prefix: hp
+      curie: mondo:0002012
+      identifier: '0002012'
+      link: https://bioregistry.io/mondo:0002012
+      name: methylmalonic acidemia
+      prefix: mondo
   - source:
       curie: doid:14749
       identifier: DOID:14749
@@ -5632,11 +5719,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: mondo:0002012
-      identifier: '0002012'
-      link: https://bioregistry.io/mondo:0002012
-      name: methylmalonic acidemia
-      prefix: mondo
+      curie: hp:0002912
+      identifier: HP:0002912
+      link: https://bioregistry.io/hp:0002912
+      name: Methylmalonic acidemia
+      prefix: hp
   - source:
       curie: hp:0002912
       identifier: HP:0002912
@@ -5794,11 +5881,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: mesh:D009041
-      identifier: D009041
-      link: https://bioregistry.io/mesh:D009041
+      curie: ncit:C34824
+      identifier: C34824
+      link: https://bioregistry.io/ncit:C34824
       name: Motion Sickness
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: doid:2951
       identifier: DOID:2951
@@ -5806,11 +5893,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: ncit:C34824
-      identifier: C34824
-      link: https://bioregistry.io/ncit:C34824
+      curie: mesh:D009041
+      identifier: D009041
+      link: https://bioregistry.io/mesh:D009041
       name: Motion Sickness
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: efo:0006928
       identifier: 0006928
@@ -6240,6 +6327,122 @@
       prefix: mesh
 - edges:
   - source:
+      curie: ido:0000555
+      identifier: '0000555'
+      link: https://bioregistry.io/ido:0000555
+      name: disinfectant
+      prefix: ido
+    target:
+      curie: mesh:D004202
+      identifier: D004202
+      link: https://bioregistry.io/mesh:D004202
+      name: Disinfectants
+      prefix: mesh
+  nodes:
+    chebi:48219:
+      identifier: CHEBI:48219
+      link: https://bioregistry.io/chebi:48219
+      name: disinfectant
+      prefix: chebi
+    ido:0000555:
+      identifier: '0000555'
+      link: https://bioregistry.io/ido:0000555
+      name: disinfectant
+      prefix: ido
+    mesh:D004202:
+      identifier: D004202
+      link: https://bioregistry.io/mesh:D004202
+      name: Disinfectants
+      prefix: mesh
+- edges:
+  - source:
+      curie: ido:0000558
+      identifier: 0000558
+      link: https://bioregistry.io/ido:0000558
+      name: antimicrobial
+      prefix: ido
+    target:
+      curie: idomal:0000643
+      identifier: '0000643'
+      link: https://bioregistry.io/idomal:0000643
+      name: antibiotic
+      prefix: idomal
+  - source:
+      curie: ido:0000558
+      identifier: 0000558
+      link: https://bioregistry.io/ido:0000558
+      name: antimicrobial
+      prefix: ido
+    target:
+      curie: ido:0000563
+      identifier: '0000563'
+      link: https://bioregistry.io/ido:0000563
+      name: microbicide
+      prefix: ido
+  - source:
+      curie: ido:0000563
+      identifier: '0000563'
+      link: https://bioregistry.io/ido:0000563
+      name: microbicide
+      prefix: ido
+    target:
+      curie: idomal:0000643
+      identifier: '0000643'
+      link: https://bioregistry.io/idomal:0000643
+      name: antibiotic
+      prefix: idomal
+  nodes:
+    chebi:33281:
+      identifier: CHEBI:33281
+      link: https://bioregistry.io/chebi:33281
+      name: antimicrobial agent
+      prefix: chebi
+    ido:0000558:
+      identifier: 0000558
+      link: https://bioregistry.io/ido:0000558
+      name: antimicrobial
+      prefix: ido
+    ido:0000563:
+      identifier: '0000563'
+      link: https://bioregistry.io/ido:0000563
+      name: microbicide
+      prefix: ido
+    idomal:0000643:
+      identifier: '0000643'
+      link: https://bioregistry.io/idomal:0000643
+      name: antibiotic
+      prefix: idomal
+- edges:
+  - source:
+      curie: ido:0000560
+      identifier: '0000560'
+      link: https://bioregistry.io/ido:0000560
+      name: antifungal
+      prefix: ido
+    target:
+      curie: mesh:D000935
+      identifier: D000935
+      link: https://bioregistry.io/mesh:D000935
+      name: Antifungal Agents
+      prefix: mesh
+  nodes:
+    chebi:35718:
+      identifier: CHEBI:35718
+      link: https://bioregistry.io/chebi:35718
+      name: antifungal agent
+      prefix: chebi
+    ido:0000560:
+      identifier: '0000560'
+      link: https://bioregistry.io/ido:0000560
+      name: antifungal
+      prefix: ido
+    mesh:D000935:
+      identifier: D000935
+      link: https://bioregistry.io/mesh:D000935
+      name: Antifungal Agents
+      prefix: mesh
+- edges:
+  - source:
       curie: ncbitaxon:5794
       identifier: '5794'
       link: https://bioregistry.io/ncbitaxon:5794
@@ -6469,6 +6672,35 @@
       identifier: D012768
       link: https://bioregistry.io/mesh:D012768
       name: Shivering
+      prefix: mesh
+- edges:
+  - source:
+      curie: idomal:0000634
+      identifier: '0000634'
+      link: https://bioregistry.io/idomal:0000634
+      name: cotrimoxazole
+      prefix: idomal
+    target:
+      curie: mesh:D015662
+      identifier: D015662
+      link: https://bioregistry.io/mesh:D015662
+      name: Trimethoprim, Sulfamethoxazole Drug Combination
+      prefix: mesh
+  nodes:
+    chebi:3770:
+      identifier: CHEBI:3770
+      link: https://bioregistry.io/chebi:3770
+      name: co-trimoxazole
+      prefix: chebi
+    idomal:0000634:
+      identifier: '0000634'
+      link: https://bioregistry.io/idomal:0000634
+      name: cotrimoxazole
+      prefix: idomal
+    mesh:D015662:
+      identifier: D015662
+      link: https://bioregistry.io/mesh:D015662
+      name: Trimethoprim, Sulfamethoxazole Drug Combination
       prefix: mesh
 - edges:
   - source:
@@ -10078,6 +10310,35 @@
       prefix: ncit
 - edges:
   - source:
+      curie: chebi:31739
+      identifier: CHEBI:31739
+      link: https://bioregistry.io/chebi:31739
+      name: josamycin
+      prefix: chebi
+    target:
+      curie: ncit:C83851
+      identifier: C83851
+      link: https://bioregistry.io/ncit:C83851
+      name: Josamycin
+      prefix: ncit
+  nodes:
+    chebi:31739:
+      identifier: CHEBI:31739
+      link: https://bioregistry.io/chebi:31739
+      name: josamycin
+      prefix: chebi
+    mesh:D015570:
+      identifier: D015570
+      link: https://bioregistry.io/mesh:D015570
+      name: Josamycin
+      prefix: mesh
+    ncit:C83851:
+      identifier: C83851
+      link: https://bioregistry.io/ncit:C83851
+      name: Josamycin
+      prefix: ncit
+- edges:
+  - source:
       curie: chebi:6636
       identifier: CHEBI:6636
       link: https://bioregistry.io/chebi:6636
@@ -10113,11 +10374,11 @@
       name: bronchoconstriction
       prefix: efo
     target:
-      curie: hp:4000007
-      identifier: HP:4000007
-      link: https://bioregistry.io/hp:4000007
+      curie: ncit:C40942
+      identifier: C40942
+      link: https://bioregistry.io/ncit:C40942
       name: Bronchoconstriction
-      prefix: hp
+      prefix: ncit
   - source:
       curie: efo:0009836
       identifier: 0009836
@@ -10125,11 +10386,11 @@
       name: bronchoconstriction
       prefix: efo
     target:
-      curie: ncit:C40942
-      identifier: C40942
-      link: https://bioregistry.io/ncit:C40942
+      curie: hp:4000007
+      identifier: HP:4000007
+      link: https://bioregistry.io/hp:4000007
       name: Bronchoconstriction
-      prefix: ncit
+      prefix: hp
   - source:
       curie: hp:4000007
       identifier: HP:4000007
