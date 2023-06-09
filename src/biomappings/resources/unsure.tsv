@@ -22,6 +22,8 @@ ccle	P116	P116	skos:exactMatch	cellosaurus	CVCL_6429	P116	semapv:ManualMappingCu
 ccle	P116	P116	skos:exactMatch	cellosaurus	CVCL_JU06	JHU116i	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ccle	TE4_OESOPHAGUS	TE-4	skos:exactMatch	cellosaurus	CVCL_F784	TE4 [Mouse hybridoma]	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:61700	(+)-valencene	skos:exactMatch	mesh	C506706	valencene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:68540	teriflunomide	skos:exactMatch	mesh	C072876	A 771726	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	0.9
+chebi	CHEBI:8416	Pristimerin	skos:exactMatch	mesh	C009043	pristimerin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 cl	CL:0000798	gamma-delta T cell	skos:exactMatch	mesh	D000075942	Intraepithelial Lymphocytes	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0000816	immature B cell	skos:exactMatch	mesh	D054448	Precursor Cells, B-Lymphoid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0050025	human granulocytic anaplasmosis	skos:exactMatch	mesh	D000712	Anaplasmosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -33,6 +35,8 @@ doid	DOID:0080832	mild cognitive impairment	skos:exactMatch	mesh	D060825	Cogniti
 doid	DOID:7173	cloacogenic carcinoma	skos:exactMatch	mesh	C563020	Anal Canal Carcinoma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:7474	malignant pleural mesothelioma	skos:exactMatch	mesh	D000086002	Mesothelioma, Malignant	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 ido	0000436	infectious disease	skos:exactMatch	doid	DOID:0050117	disease by infectious agent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+idomal	0000672	chemical compound	skos:exactMatch	chebi	CHEBI:37577	heteroatomic molecular entity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+idomal	0001067	protein	skos:exactMatch	chebi	CHEBI:16541	protein polypeptide chain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5400948258091115
 mesh	C000613429	FluMist	skos:exactMatch	ncit	C101094	Trivalent Live-Attenuated Influenza Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C000624615	IMX-101	skos:exactMatch	ncit	C153374	Helicobacter pylori Therapeutic Vaccine IMX101	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C535896	Limb-girdle muscular dystrophy type 2F	skos:exactMatch	doid	DOID:0110280	autosomal recessive limb-girdle muscular dystrophy type 2F	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
