@@ -3411,8 +3411,13 @@ ido	0000549	toxin	skos:exactMatch	chebi	CHEBI:27026	toxin	semapv:ManualMappingCu
 ido	0000549	toxin	skos:exactMatch	idomal	0000043	toxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000550	exotoxin	skos:exactMatch	idomal	0000045	exotoxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000552	endotoxin	skos:exactMatch	idomal	0000044	endotoxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+ido	0000555	disinfectant	skos:exactMatch	chebi	CHEBI:48219	disinfectant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 ido	0000556	antiseptic	skos:exactMatch	chebi	CHEBI:48218	antiseptic drug	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 ido	0000557	adhesion factor	skos:exactMatch	idomal	0000054	adhesion factor	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
+ido	0000558	antimicrobial	skos:exactMatch	chebi	CHEBI:33281	antimicrobial agent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+ido	0000559	antiviral	skos:exactMatch	chebi	CHEBI:22587	antiviral agent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+ido	0000560	antifungal	skos:exactMatch	chebi	CHEBI:35718	antifungal agent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+ido	0000563	microbicide	skos:exactMatch	chebi	CHEBI:33281	antimicrobial agent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 ido	0000581	antibiotic resistance	skos:exactMatch	idomal	0000028	antibiotic resistance	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 ido	0000610	immunosuppression	skos:exactMatch	idomal	0000010	immunosuppression	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 ido	0000617	immunodeficiency	skos:exactMatch	hp	HP:0002721	Immunodeficiency	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	mira	0.7623170480313337
@@ -3425,6 +3430,7 @@ ido	0000646	trichomoniasis	skos:exactMatch	doid	DOID:1947	trichomoniasis	semapv:
 ido	0000647	leptospirosis	skos:exactMatch	doid	DOID:2297	leptospirosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000648	Shigellosis	skos:exactMatch	doid	DOID:12385	shigellosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000649	amebiasis	skos:exactMatch	doid	DOID:9181	amebiasis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+ido	0001374	epitope role	skos:exactMatch	chebi	CHEBI:53000	epitope	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 ido	0001377	pathogen surveillance	skos:exactMatch	vsmo	0001959	pathogen surveillance	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0001378	vector surveillance	skos:exactMatch	vsmo	0000169	vector surveillance	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0000008	contagiousness	skos:exactMatch	apollosv	00000182	contagiousness	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -3476,6 +3482,8 @@ idomal	0000442	measure relating to infection in aggregate of arthropods	skos:exa
 idomal	0000525	hypoglycaemia	skos:exactMatch	hp	HP:0001943	Hypoglycemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	mira	0.5400948258091115
 idomal	0000531	splenic rupture	skos:exactMatch	hp	HP:0012223	Splenic rupture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0000603	patient	skos:exactMatch	opmi	0000417	patient	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
+idomal	0000634	cotrimoxazole	skos:exactMatch	chebi	CHEBI:3770	co-trimoxazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7775716347144919
+idomal	0000643	antibiotic	skos:exactMatch	chebi	CHEBI:33281	antimicrobial agent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 idomal	0000646	embryo	skos:exactMatch	uberon	UBERON:0000922	embryo	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0000672	chemical compound	skos:exactMatch	vsmo	0000011	chemical compound	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0000729	enzyme	skos:exactMatch	obi	OBI:0000427	enzyme	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
@@ -6575,6 +6583,7 @@ mesh	D004063	Digestion	skos:exactMatch	go	GO:0007586	digestion	semapv:ManualMapp
 mesh	D004077	Digoxin	skos:exactMatch	chebi	CHEBI:4551	digoxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D004091	Hydromorphone	skos:exactMatch	chebi	CHEBI:5790	hydromorphone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D004155	Diphenhydramine	skos:exactMatch	chebi	CHEBI:4636	diphenhydramine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	D004202	Disinfectants	skos:exactMatch	chebi	CHEBI:48219	disinfectant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	D004205	Cromolyn Sodium	skos:exactMatch	ncit	C28946	Cromolyn Sodium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D004232	Diuretics	skos:exactMatch	chebi	CHEBI:35498	diuretic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D004241	Diverticulum, Colon	skos:exactMatch	ncit	C34550	Colonic Diverticulum	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
