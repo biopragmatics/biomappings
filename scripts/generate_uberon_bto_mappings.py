@@ -23,20 +23,25 @@ for node, data in bto_graph.nodes(data=True):
 grounder = make_grounder(terms)
 
 mappings = {}
+bto_used = set()
 for node, data in uberon_graph.nodes(data=True):
     if not node.startswith("UBERON"):
         continue
     bto_refs = [xref for xref in data.get("xref", []) if xref.startswith("BTO")]
+    bto_used |= set(bto_refs)
     if bto_refs:
         continue
     matches = grounder.ground(data["name"])
     if matches and matches[0].term.db == "BTO":
         mappings[node] = matches[0].term.id
 
-print("Found %d UBERON->BTO mappings." % len(mappings))
+print("Found %d existing UBERON->BTO mappings." % len(bto_used))
+print("Predicted %d new UBERON->BTO mappings." % len(mappings))
 
 predictions = []
 for uberon_id, bto_id in mappings.items():
+    if bto_id in bto_used:
+        continue
     pred = PredictionTuple(
         source_prefix="uberon",
         source_id=uberon_id,
