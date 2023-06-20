@@ -1,10 +1,9 @@
 """Generate mappings using Gilda from UBERON to BTO."""
 
 import gilda
-import obonet
 from gilda import Term, make_grounder
 from gilda.process import normalize
-
+import obonet
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
@@ -14,10 +13,11 @@ bto_graph = obonet.read_obo("/Users/ben/src/BTO/bto.obo")
 
 terms = []
 for node, data in bto_graph.nodes(data=True):
-    prefix, id_stub = node.split(':', maxsplit=1)
+    prefix, id_stub = node.split(":", maxsplit=1)
     identifier = node
-    term = Term(normalize(data['name']), data['name'],
-                prefix, identifier, data['name'], 'name', 'bto')
+    term = Term(
+        normalize(data["name"]), data["name"], prefix, identifier, data["name"], "name", "bto"
+    )
     terms.append(term)
 
 grounder = make_grounder(terms)
