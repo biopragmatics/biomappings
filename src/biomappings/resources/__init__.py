@@ -18,6 +18,7 @@ from typing import (
     Optional,
     Sequence,
     Tuple,
+    Union,
 )
 
 import bioregistry
@@ -153,7 +154,7 @@ def _clean(header, row):
 
 
 def _write_helper(
-    header: Sequence[str], lod: Iterable[Mapping[str, str]], path: str, mode: str
+    header: Sequence[str], lod: Iterable[Mapping[str, str]], path: Union[str, Path], mode: str
 ) -> None:
     lod = sorted(lod, key=mapping_sort_key)
     with open(path, mode) as file:
