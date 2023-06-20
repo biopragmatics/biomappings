@@ -5,6 +5,7 @@
 import getpass
 import os
 from collections import defaultdict
+from pathlib import Path
 from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple, Union
 
 import bioregistry
@@ -32,14 +33,17 @@ from biomappings.utils import (
 )
 
 
-def get_app(target_curies: Optional[Iterable[Tuple[str, str]]] = None) -> flask.Flask:
+def get_app(
+    target_curies: Optional[Iterable[Tuple[str, str]]] = None,
+    predictions_path: Optional[Path] = None,
+) -> flask.Flask:
     """Get a curation flask app."""
     app_ = flask.Flask(__name__)
     app_.config["WTF_CSRF_ENABLED"] = False
     app_.config["SECRET_KEY"] = os.urandom(8)
     app_.config["SHOW_RELATIONS"] = True
     app_.config["SHOW_LINES"] = False
-    controller = Controller(target_curies=target_curies)
+    controller = Controller(target_curies=target_curies, predictions_path=predictions_path)
     app_.config["controller"] = controller
     flask_bootstrap.Bootstrap4(app_)
     app_.register_blueprint(blueprint)
@@ -60,14 +64,21 @@ def _manual_source():
 class Controller:
     """A module for interacting with the predictions and mappings."""
 
-    def __init__(self, target_curies: Optional[Iterable[Tuple[str, str]]] = None):
+    def __init__(
+        self,
+        *,
+        target_curies: Optional[Iterable[Tuple[str, str]]] = None,
+        predictions_path: Optional[Path] = None,
+    ):
         """Instantiate the web controller.
 
         :param target_curies: Pairs of prefix, local unique identifiers that are the target
             of curation. If this is given, pre-filters will be made before on predictions
             to only show ones where either the source or target appears in this set
+        :param predictions_path: A custom predictions file to curate from
         """
-        self._predictions = load_predictions()
+        self.predictions_path = predictions_path
+        self._predictions = load_predictions(path=self.predictions_path)
         self._marked: Dict[int, str] = {}
         self.total_curated = 0
         self._added_mappings: List[Dict[str, Union[None, str, float]]] = []
@@ -325,7 +336,7 @@ class Controller:
         append_true_mappings(entries["correct"])
         append_false_mappings(entries["incorrect"])
         append_unsure_mappings(entries["unsure"])
-        write_predictions(self._predictions)
+        write_predictions(self._predictions, path=self.predictions_path)
         self._marked.clear()
 
         # Now add manually curated mappings

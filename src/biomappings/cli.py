@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
 """The biomappings CLI."""
+
 import sys
 
 import click
-from more_click import make_web_command, run_app
+from more_click import run_app
 
 from .export_sssom import sssom
 from .graph import charts
@@ -20,8 +21,15 @@ def main():
 
 
 if get_git_hash() is not None:
-    # This command is called "web" by default
-    main.add_command(make_web_command("biomappings.wsgi:app"))
+
+    @main.command()
+    @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
+    def web(path):
+        """Run the biomappings web app."""
+        from .wsgi import get_app
+
+        app = get_app(predictions_path=path)
+        run_app(app, with_gunicorn=False)
 
     @main.command()
     @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
