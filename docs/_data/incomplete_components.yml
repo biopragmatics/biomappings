@@ -818,11 +818,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: efo:0001086
-      identifier: 0001086
-      link: https://bioregistry.io/efo:0001086
-      name: A549
-      prefix: efo
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
   - source:
       curie: cellosaurus:0023
       identifier: CVCL_0023
@@ -830,11 +830,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: mesh:D000072283
-      identifier: D000072283
-      link: https://bioregistry.io/mesh:D000072283
-      name: A549 Cells
-      prefix: mesh
+      curie: efo:0001086
+      identifier: 0001086
+      link: https://bioregistry.io/efo:0001086
+      name: A549
+      prefix: efo
   nodes:
     ccle:A549_LUNG:
       identifier: A549_LUNG
@@ -4286,29 +4286,17 @@
       name: lung abscess
       prefix: doid
     target:
-      curie: ncit:C99090
-      identifier: C99090
-      link: https://bioregistry.io/ncit:C99090
-      name: Lung Abscess
-      prefix: ncit
+      curie: hp:0025044
+      identifier: HP:0025044
+      link: https://bioregistry.io/hp:0025044
+      name: Lung abscess
+      prefix: hp
   - source:
       curie: doid:0060317
       identifier: DOID:0060317
       link: https://bioregistry.io/doid:0060317
       name: lung abscess
       prefix: doid
-    target:
-      curie: hp:0025044
-      identifier: HP:0025044
-      link: https://bioregistry.io/hp:0025044
-      name: Lung abscess
-      prefix: hp
-  - source:
-      curie: hp:0025044
-      identifier: HP:0025044
-      link: https://bioregistry.io/hp:0025044
-      name: Lung abscess
-      prefix: hp
     target:
       curie: ncit:C99090
       identifier: C99090
@@ -4327,6 +4315,18 @@
       link: https://bioregistry.io/umls:C0024110
       name: Lung Abscess
       prefix: umls
+  - source:
+      curie: hp:0025044
+      identifier: HP:0025044
+      link: https://bioregistry.io/hp:0025044
+      name: Lung abscess
+      prefix: hp
+    target:
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
+      name: Lung Abscess
+      prefix: ncit
   - source:
       curie: mesh:D008169
       identifier: D008169
@@ -5487,11 +5487,11 @@
       name: osteomalacia
       prefix: efo
     target:
-      curie: mesh:D010018
-      identifier: D010018
-      link: https://bioregistry.io/mesh:D010018
+      curie: hp:0002749
+      identifier: HP:0002749
+      link: https://bioregistry.io/hp:0002749
       name: Osteomalacia
-      prefix: mesh
+      prefix: hp
   - source:
       curie: efo:1002027
       identifier: '1002027'
@@ -5499,11 +5499,11 @@
       name: osteomalacia
       prefix: efo
     target:
-      curie: hp:0002749
-      identifier: HP:0002749
-      link: https://bioregistry.io/hp:0002749
+      curie: mesh:D010018
+      identifier: D010018
+      link: https://bioregistry.io/mesh:D010018
       name: Osteomalacia
-      prefix: hp
+      prefix: mesh
   nodes:
     doid:10573:
       identifier: DOID:10573
@@ -5707,11 +5707,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: mondo:0002012
-      identifier: '0002012'
-      link: https://bioregistry.io/mondo:0002012
-      name: methylmalonic acidemia
-      prefix: mondo
+      curie: hp:0002912
+      identifier: HP:0002912
+      link: https://bioregistry.io/hp:0002912
+      name: Methylmalonic acidemia
+      prefix: hp
   - source:
       curie: doid:14749
       identifier: DOID:14749
@@ -5719,11 +5719,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: hp:0002912
-      identifier: HP:0002912
-      link: https://bioregistry.io/hp:0002912
-      name: Methylmalonic acidemia
-      prefix: hp
+      curie: mondo:0002012
+      identifier: '0002012'
+      link: https://bioregistry.io/mondo:0002012
+      name: methylmalonic acidemia
+      prefix: mondo
   - source:
       curie: hp:0002912
       identifier: HP:0002912
@@ -5881,11 +5881,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: ncit:C34824
-      identifier: C34824
-      link: https://bioregistry.io/ncit:C34824
+      curie: mesh:D009041
+      identifier: D009041
+      link: https://bioregistry.io/mesh:D009041
       name: Motion Sickness
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: doid:2951
       identifier: DOID:2951
@@ -5893,11 +5893,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: mesh:D009041
-      identifier: D009041
-      link: https://bioregistry.io/mesh:D009041
+      curie: ncit:C34824
+      identifier: C34824
+      link: https://bioregistry.io/ncit:C34824
       name: Motion Sickness
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: efo:0006928
       identifier: 0006928
@@ -6362,11 +6362,11 @@
       name: antimicrobial
       prefix: ido
     target:
-      curie: idomal:0000643
-      identifier: '0000643'
-      link: https://bioregistry.io/idomal:0000643
-      name: antibiotic
-      prefix: idomal
+      curie: ido:0000563
+      identifier: '0000563'
+      link: https://bioregistry.io/ido:0000563
+      name: microbicide
+      prefix: ido
   - source:
       curie: ido:0000558
       identifier: 0000558
@@ -6374,11 +6374,11 @@
       name: antimicrobial
       prefix: ido
     target:
-      curie: ido:0000563
-      identifier: '0000563'
-      link: https://bioregistry.io/ido:0000563
-      name: microbicide
-      prefix: ido
+      curie: idomal:0000643
+      identifier: '0000643'
+      link: https://bioregistry.io/idomal:0000643
+      name: antibiotic
+      prefix: idomal
   - source:
       curie: ido:0000563
       identifier: '0000563'
@@ -7155,10 +7155,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: GO:0033210
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: GO:0033211
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -7167,10 +7167,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: GO:0033211
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: GO:0033210
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033210
@@ -10374,11 +10374,11 @@
       name: bronchoconstriction
       prefix: efo
     target:
-      curie: ncit:C40942
-      identifier: C40942
-      link: https://bioregistry.io/ncit:C40942
+      curie: hp:4000007
+      identifier: HP:4000007
+      link: https://bioregistry.io/hp:4000007
       name: Bronchoconstriction
-      prefix: ncit
+      prefix: hp
   - source:
       curie: efo:0009836
       identifier: 0009836
@@ -10386,11 +10386,11 @@
       name: bronchoconstriction
       prefix: efo
     target:
-      curie: hp:4000007
-      identifier: HP:4000007
-      link: https://bioregistry.io/hp:4000007
+      curie: ncit:C40942
+      identifier: C40942
+      link: https://bioregistry.io/ncit:C40942
       name: Bronchoconstriction
-      prefix: hp
+      prefix: ncit
   - source:
       curie: hp:4000007
       identifier: HP:4000007
