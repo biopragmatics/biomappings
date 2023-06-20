@@ -6,9 +6,10 @@ from gilda.process import normalize
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
-uberon_graph = obonet.read_obo("/Users/ben/src/uberon/src/ontology/uberon-edit.obo")
-bto_graph = obonet.read_obo("/Users/ben/src/BTO/bto.obo")
-
+base = "/Users/ben/src"
+# base = "/Users/cthoyt/dev"
+uberon_graph = obonet.read_obo(f"{base}/uberon/src/ontology/uberon-edit.obo")
+bto_graph = obonet.read_obo(f"{base}/BTO/bto.obo")
 
 terms = []
 for node, data in bto_graph.nodes(data=True):
@@ -30,9 +31,9 @@ for node, data in uberon_graph.nodes(data=True):
     bto_used |= set(bto_refs)
     if bto_refs:
         continue
-    matches = grounder.ground(data["name"])
-    if matches and matches[0].term.db == "BTO":
-        mappings[node] = matches[0].term.id
+    for match in grounder.ground(data["name"]):
+        if match.term.db == "BTO":
+            mappings[node] = match.term.id
 
 print("Found %d existing UBERON->BTO mappings." % len(bto_used))
 print("Predicted %d new UBERON->BTO mappings." % len(mappings))
