@@ -6,6 +6,7 @@ import csv
 import itertools as itt
 import os
 from collections import defaultdict
+from pathlib import Path
 from typing import (
     Any,
     DefaultDict,
@@ -17,6 +18,7 @@ from typing import (
     Optional,
     Sequence,
     Tuple,
+    Union,
 )
 
 import bioregistry
@@ -152,7 +154,7 @@ def _clean(header, row):
 
 
 def _write_helper(
-    header: Sequence[str], lod: Iterable[Mapping[str, str]], path: str, mode: str
+    header: Sequence[str], lod: Iterable[Mapping[str, str]], path: Union[str, Path], mode: str
 ) -> None:
     lod = sorted(lod, key=mapping_sort_key)
     with open(path, mode) as file:
@@ -264,14 +266,14 @@ def lint_unsure_mappings() -> None:
 PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
 
 
-def load_predictions() -> List[Dict[str, str]]:
+def load_predictions(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     """Load the predictions table."""
-    return _load_table(PREDICTIONS_PATH)
+    return _load_table(path or PREDICTIONS_PATH)
 
 
-def write_predictions(m: Iterable[Mapping[str, str]]) -> None:
+def write_predictions(m: Iterable[Mapping[str, str]], *, path: Optional[Path] = None) -> None:
     """Write new content to the predictions table."""
-    _write_helper(PREDICTIONS_HEADER, m, PREDICTIONS_PATH, "w")
+    _write_helper(PREDICTIONS_HEADER, m, path or PREDICTIONS_PATH, "w")
 
 
 def append_prediction_tuples(
