@@ -1,9 +1,8 @@
 """Generate mappings using Gilda from UBERON to BTO."""
 
-import gilda
+import obonet
 from gilda import Term, make_grounder
 from gilda.process import normalize
-import obonet
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 
