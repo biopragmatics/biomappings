@@ -23,7 +23,7 @@ def main():
 if get_git_hash() is not None:
 
     @main.command()
-    @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
+    @click.option("--path", type=click.Path(), help="A predictions TSV file path")
     def web(path):
         """Run the biomappings web app."""
         from .wsgi import get_app
