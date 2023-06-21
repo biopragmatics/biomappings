@@ -307,6 +307,93 @@
       prefix: oboinowl
 - edges:
   - source:
+      curie: bto:0002319
+      identifier: BTO:0002319
+      link: https://bioregistry.io/bto:0002319
+      name: skeletal muscle fiber
+      prefix: bto
+    target:
+      curie: mesh:D018485
+      identifier: D018485
+      link: https://bioregistry.io/mesh:D018485
+      name: Muscle Fibers, Skeletal
+      prefix: mesh
+  nodes:
+    bto:0002319:
+      identifier: BTO:0002319
+      link: https://bioregistry.io/bto:0002319
+      name: skeletal muscle fiber
+      prefix: bto
+    cl:0008002:
+      identifier: CL:0008002
+      link: https://bioregistry.io/cl:0008002
+      name: skeletal muscle fiber
+      prefix: cl
+    mesh:D018485:
+      identifier: D018485
+      link: https://bioregistry.io/mesh:D018485
+      name: Muscle Fibers, Skeletal
+      prefix: mesh
+- edges:
+  - source:
+      curie: bto:0006078
+      identifier: BTO:0006078
+      link: https://bioregistry.io/bto:0006078
+      name: pluripotent stem cell
+      prefix: bto
+    target:
+      curie: mesh:D039904
+      identifier: D039904
+      link: https://bioregistry.io/mesh:D039904
+      name: Pluripotent Stem Cells
+      prefix: mesh
+  nodes:
+    bto:0006078:
+      identifier: BTO:0006078
+      link: https://bioregistry.io/bto:0006078
+      name: pluripotent stem cell
+      prefix: bto
+    cl:0002248:
+      identifier: CL:0002248
+      link: https://bioregistry.io/cl:0002248
+      name: pluripotent stem cell
+      prefix: cl
+    mesh:D039904:
+      identifier: D039904
+      link: https://bioregistry.io/mesh:D039904
+      name: Pluripotent Stem Cells
+      prefix: mesh
+- edges:
+  - source:
+      curie: bto:0006205
+      identifier: BTO:0006205
+      link: https://bioregistry.io/bto:0006205
+      name: serotonergic neuron
+      prefix: bto
+    target:
+      curie: mesh:D059326
+      identifier: D059326
+      link: https://bioregistry.io/mesh:D059326
+      name: Serotonergic Neurons
+      prefix: mesh
+  nodes:
+    bto:0006205:
+      identifier: BTO:0006205
+      link: https://bioregistry.io/bto:0006205
+      name: serotonergic neuron
+      prefix: bto
+    cl:0000850:
+      identifier: CL:0000850
+      link: https://bioregistry.io/cl:0000850
+      name: serotonergic neuron
+      prefix: cl
+    mesh:D059326:
+      identifier: D059326
+      link: https://bioregistry.io/mesh:D059326
+      name: Serotonergic Neurons
+      prefix: mesh
+- edges:
+  - source:
       curie: cellosaurus:2270
       identifier: CVCL_2270
       link: https://bioregistry.io/cellosaurus:2270
@@ -818,11 +905,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: mesh:D000072283
-      identifier: D000072283
-      link: https://bioregistry.io/mesh:D000072283
-      name: A549 Cells
-      prefix: mesh
+      curie: efo:0001086
+      identifier: 0001086
+      link: https://bioregistry.io/efo:0001086
+      name: A549
+      prefix: efo
   - source:
       curie: cellosaurus:0023
       identifier: CVCL_0023
@@ -830,11 +917,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: efo:0001086
-      identifier: 0001086
-      link: https://bioregistry.io/efo:0001086
-      name: A549
-      prefix: efo
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
   nodes:
     ccle:A549_LUNG:
       identifier: A549_LUNG
@@ -1792,11 +1879,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:1334
-      identifier: CVCL_1334
-      link: https://bioregistry.io/cellosaurus:1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://bioregistry.io/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: bto:0006459
       identifier: BTO:0006459
@@ -1804,11 +1891,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://bioregistry.io/efo:0006612
+      curie: cellosaurus:1334
+      identifier: CVCL_1334
+      link: https://bioregistry.io/cellosaurus:1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: cellosaurus:1334
       identifier: CVCL_1334
@@ -4310,11 +4397,11 @@
       name: Lung abscess
       prefix: hp
     target:
-      curie: umls:C0024110
-      identifier: C0024110
-      link: https://bioregistry.io/umls:C0024110
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
       name: Lung Abscess
-      prefix: umls
+      prefix: ncit
   - source:
       curie: hp:0025044
       identifier: HP:0025044
@@ -4322,11 +4409,11 @@
       name: Lung abscess
       prefix: hp
     target:
-      curie: ncit:C99090
-      identifier: C99090
-      link: https://bioregistry.io/ncit:C99090
+      curie: umls:C0024110
+      identifier: C0024110
+      link: https://bioregistry.io/umls:C0024110
       name: Lung Abscess
-      prefix: ncit
+      prefix: umls
   - source:
       curie: mesh:D008169
       identifier: D008169
@@ -5881,11 +5968,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: mesh:D009041
-      identifier: D009041
-      link: https://bioregistry.io/mesh:D009041
+      curie: ncit:C34824
+      identifier: C34824
+      link: https://bioregistry.io/ncit:C34824
       name: Motion Sickness
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: doid:2951
       identifier: DOID:2951
@@ -5893,11 +5980,11 @@
       name: motion sickness
       prefix: doid
     target:
-      curie: ncit:C34824
-      identifier: C34824
-      link: https://bioregistry.io/ncit:C34824
+      curie: mesh:D009041
+      identifier: D009041
+      link: https://bioregistry.io/mesh:D009041
       name: Motion Sickness
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: efo:0006928
       identifier: 0006928
@@ -6362,11 +6449,11 @@
       name: antimicrobial
       prefix: ido
     target:
-      curie: ido:0000563
-      identifier: '0000563'
-      link: https://bioregistry.io/ido:0000563
-      name: microbicide
-      prefix: ido
+      curie: idomal:0000643
+      identifier: '0000643'
+      link: https://bioregistry.io/idomal:0000643
+      name: antibiotic
+      prefix: idomal
   - source:
       curie: ido:0000558
       identifier: 0000558
@@ -6374,11 +6461,11 @@
       name: antimicrobial
       prefix: ido
     target:
-      curie: idomal:0000643
-      identifier: '0000643'
-      link: https://bioregistry.io/idomal:0000643
-      name: antibiotic
-      prefix: idomal
+      curie: ido:0000563
+      identifier: '0000563'
+      link: https://bioregistry.io/ido:0000563
+      name: microbicide
+      prefix: ido
   - source:
       curie: ido:0000563
       identifier: '0000563'
@@ -7155,10 +7242,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: GO:0033211
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: GO:0033210
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -7167,10 +7254,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: GO:0033210
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: GO:0033211
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033210
@@ -12425,6 +12512,93 @@
       link: https://bioregistry.io/uniprot.chain:PRO_0000449633
       name: 2'-O-methyltransferase
       prefix: uniprot.chain
+- edges:
+  - source:
+      curie: bto:0006267
+      identifier: BTO:0006267
+      link: https://bioregistry.io/bto:0006267
+      name: circumventricular organ
+      prefix: bto
+    target:
+      curie: mesh:D066280
+      identifier: D066280
+      link: https://bioregistry.io/mesh:D066280
+      name: Circumventricular Organs
+      prefix: mesh
+  nodes:
+    bto:0006267:
+      identifier: BTO:0006267
+      link: https://bioregistry.io/bto:0006267
+      name: circumventricular organ
+      prefix: bto
+    mesh:D066280:
+      identifier: D066280
+      link: https://bioregistry.io/mesh:D066280
+      name: Circumventricular Organs
+      prefix: mesh
+    uberon:0005408:
+      identifier: UBERON:0005408
+      link: https://bioregistry.io/uberon:0005408
+      name: circumventricular organ
+      prefix: uberon
+- edges:
+  - source:
+      curie: bto:0006128
+      identifier: BTO:0006128
+      link: https://bioregistry.io/bto:0006128
+      name: spinothalamic tract
+      prefix: bto
+    target:
+      curie: mesh:D013133
+      identifier: D013133
+      link: https://bioregistry.io/mesh:D013133
+      name: Spinothalamic Tracts
+      prefix: mesh
+  nodes:
+    bto:0006128:
+      identifier: BTO:0006128
+      link: https://bioregistry.io/bto:0006128
+      name: spinothalamic tract
+      prefix: bto
+    mesh:D013133:
+      identifier: D013133
+      link: https://bioregistry.io/mesh:D013133
+      name: Spinothalamic Tracts
+      prefix: mesh
+    uberon:0007703:
+      identifier: UBERON:0007703
+      link: https://bioregistry.io/uberon:0007703
+      name: spinothalamic tract
+      prefix: uberon
+- edges:
+  - source:
+      curie: bto:0006193
+      identifier: BTO:0006193
+      link: https://bioregistry.io/bto:0006193
+      name: aortic body
+      prefix: bto
+    target:
+      curie: mesh:D001016
+      identifier: D001016
+      link: https://bioregistry.io/mesh:D001016
+      name: Aortic Bodies
+      prefix: mesh
+  nodes:
+    bto:0006193:
+      identifier: BTO:0006193
+      link: https://bioregistry.io/bto:0006193
+      name: aortic body
+      prefix: bto
+    mesh:D001016:
+      identifier: D001016
+      link: https://bioregistry.io/mesh:D001016
+      name: Aortic Bodies
+      prefix: mesh
+    uberon:0034971:
+      identifier: UBERON:0034971
+      link: https://bioregistry.io/uberon:0034971
+      name: aortic body
+      prefix: uberon
 - edges:
   - source:
       curie: vo:0000017
