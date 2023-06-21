@@ -9127,6 +9127,7 @@ uberon	UBERON:0011119	carpometacarpal joint	skos:exactMatch	mesh	D052737	Carpome
 uberon	UBERON:0011166	patellofemoral joint	skos:exactMatch	mesh	D057071	Patellofemoral Joint	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0011390	pudendal nerve	skos:exactMatch	mesh	D060525	Pudendal Nerve	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0011895	endomysium	skos:exactMatch	bto	BTO:0006241	endomysium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_uberon_bto_mappings.py	0.9
+uberon	UBERON:0011905	plantaris	skos:exactMatch	bto	BTO:0006312	plantaris muscle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
 uberon	UBERON:0012245	silk	skos:exactMatch	mesh	D047011	Silk	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0013218	rete mirabile	skos:exactMatch	bto	BTO:0006363	rete mirabile	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_uberon_bto_mappings.py	0.9
 uberon	UBERON:0013422	infratemporal fossa	skos:exactMatch	mesh	D000080884	Infratemporal Fossa	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -9154,10 +9155,13 @@ uberon	UBERON:2000297	vagal lobe	skos:exactMatch	bto	BTO:0006431	vagal lobe	sema
 uberon	UBERON:2000356	gill raker	skos:exactMatch	bto	BTO:0002149	gill raker	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_uberon_bto_mappings.py	0.9
 uberon	UBERON:2001553	manubrium	skos:exactMatch	mesh	D008371	Manubrium	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:3010463	animal cap	skos:exactMatch	bto	BTO:0004724	animal cap	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_uberon_bto_mappings.py	0.9
+uberon	UBERON:3010586	vasa efferentia	skos:exactMatch	bto	BTO:0002254	vas efferens	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
 uberon	UBERON:4000104	ganoine	skos:exactMatch	mesh	C067951	ganoine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:4000163	anal fin	skos:exactMatch	bto	BTO:0004652	anal fin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_uberon_bto_mappings.py	0.9
+uberon	UBERON:4000164	caudal fin	skos:exactMatch	bto	BTO:0001827	tail fin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
 uberon	UBERON:4200215	suture	skos:exactMatch	mesh	D013537	Sutures	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:4300194	photophore	skos:exactMatch	bto	BTO:0001477	photophore	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_uberon_bto_mappings.py	0.9
+uberon	UBERON:8440012	cerebral nuclei	skos:exactMatch	bto	BTO:0006534	cerebral nucleus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
 uberon	UBERON:8450002	excretory system	skos:exactMatch	bto	BTO:0006338	excretory system	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_uberon_bto_mappings.py	0.9
 uberon	UBERON:8480040	ovarian fluid	skos:exactMatch	bto	BTO:0004569	ovarian fluid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_uberon_bto_mappings.py	0.9
 umls	C0001973	Alcoholic Intoxication, Chronic	skos:narrowMatch	mesh	D000435	Alcoholic Intoxication	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			

@@ -1,3 +1,5 @@
+"""Generate mappings using Gilda from UBERON to BTO."""
+
 import click
 
 from biomappings.gilda_utils import append_gilda_predictions

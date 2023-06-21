@@ -3,11 +3,11 @@
 """Utilities for generating predictions with pyobo/gilda."""
 
 import logging
+from collections import defaultdict
 from typing import Iterable, Mapping, Optional, Tuple, Union
 
 import bioregistry
 import pyobo
-from collections import defaultdict
 from gilda.grounder import Grounder
 from pyobo import get_xref
 from pyobo.gilda_utils import get_grounder, iter_gilda_prediction_tuples
@@ -103,11 +103,17 @@ def filter_existing_xrefs(
 
     counter = 0
     for prediction in predictions:
-        source_id = bioregistry.standardize_identifier(prediction.source_prefix, prediction.source_id)
-        target_id = bioregistry.standardize_identifier(prediction.target_prefix, prediction.target_identifier)
+        source_id = bioregistry.standardize_identifier(
+            prediction.source_prefix, prediction.source_id
+        )
+        target_id = bioregistry.standardize_identifier(
+            prediction.target_prefix, prediction.target_identifier
+        )
         if (
-            prediction.target_prefix in entity_to_mapped_prefixes[prediction.source_prefix, source_id]
-            or prediction.source_prefix in entity_to_mapped_prefixes[prediction.target_prefix, target_id]
+            prediction.target_prefix
+            in entity_to_mapped_prefixes[prediction.source_prefix, source_id]
+            or prediction.source_prefix
+            in entity_to_mapped_prefixes[prediction.target_prefix, target_id]
         ):
             counter += 1
             continue
