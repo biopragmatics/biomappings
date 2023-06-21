@@ -170,6 +170,11 @@ apollosv	00000429	date	skos:exactMatch	dc	date	Date	semapv:ManualMappingCuration
 apollosv	00000429	date	skos:exactMatch	oboinowl	date	date	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000445	mortality rate	skos:exactMatch	stato	0000414	mortality rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000476	description	skos:exactMatch	dc	description	description	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+bto	BTO:0001025	peripheral blood mononuclear cell	skos:exactMatch	cl	CL:2000001	peripheral blood mononuclear cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.778
+bto	BTO:0001283	mitral cell	skos:exactMatch	cl	CL:1001502	mitral cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.778
+bto	BTO:0001528	B-lymphoblast	skos:exactMatch	cl	CL:0017006	B-lymphoblast	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.778
+bto	BTO:0001598	splenocyte	skos:exactMatch	cl	CL:2000074	splenocyte	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.778
+bto	BTO:0001760	myotube	skos:exactMatch	cl	CL:0002372	myotube	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.778
 ccle	1321N1_CENTRAL_NERVOUS_SYSTEM	1321N1	skos:exactMatch	cellosaurus	CVCL_0110	1321N1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 ccle	143B_BONE	143B	skos:exactMatch	cellosaurus	CVCL_2270	143B	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 ccle	143B_BONE	143B	skos:exactMatch	efo	0006355	143B	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
