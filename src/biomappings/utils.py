@@ -15,6 +15,13 @@ DOCS = os.path.abspath(os.path.join(HERE, os.pardir, os.pardir, "docs"))
 IMG = os.path.join(DOCS, "img")
 DATA = os.path.join(DOCS, "_data")
 
+OVERRIDE_MIRIAM = {
+    # ITO is very messy (combines mostly numbers with a few
+    # text based labels for top-level terms), has weird bananas,
+    # and also not very enjoyable to use so don't worry about them
+    "ito",
+}
+
 
 def get_git_hash() -> Optional[str]:
     """Get the git hash.
@@ -187,10 +194,7 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         raise UnstandardizedPrefix(prefix, resource.prefix)
     miriam_prefix = resource.get_miriam_prefix()
 
-    # ITO is very messy (combines mostly numbers with a few
-    # text based labels for top-level terms), has weird bananas,
-    # and also not very enjoyable to use so don't worry about them
-    if miriam_prefix == "ito":
+    if miriam_prefix in OVERRIDE_MIRIAM:
         return
 
     # If this resource has a mapping to MIRIAM, the MIRIAM-specific

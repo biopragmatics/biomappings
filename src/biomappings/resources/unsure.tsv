@@ -34,7 +34,7 @@ doid	DOID:0050201	nephropathia epidemica	skos:exactMatch	mesh	D006480	Hemorrhagi
 doid	DOID:0080832	mild cognitive impairment	skos:exactMatch	mesh	D060825	Cognitive Dysfunction	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:7173	cloacogenic carcinoma	skos:exactMatch	mesh	C563020	Anal Canal Carcinoma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:7474	malignant pleural mesothelioma	skos:exactMatch	mesh	D000086002	Mesothelioma, Malignant	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
-envo	06105012	biota	skos:exactMatch	ncbitaxon	131567	cellular organisms	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:06105012	biota	skos:exactMatch	ncbitaxon	131567	cellular organisms	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
 ido	0000436	infectious disease	skos:exactMatch	doid	DOID:0050117	disease by infectious agent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0000672	chemical compound	skos:exactMatch	chebi	CHEBI:37577	heteroatomic molecular entity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 idomal	0001067	protein	skos:exactMatch	chebi	CHEBI:16541	protein polypeptide chain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5400948258091115
@@ -73,8 +73,8 @@ mesh	D021581	Active Transport, Cell Nucleus	skos:exactMatch	go	GO:0051169	nuclea
 mesh	D051716	Replication Protein A	skos:exactMatch	go	GO:0005662	DNA replication factor A complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D059268	Atrophic Vaginitis	skos:exactMatch	doid	DOID:11968	postmenopausal atrophic vaginitis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D063306	Mitochondrial Degradation	skos:exactMatch	go	GO:0000423	mitophagy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-obi	0000430	plasmid	skos:exactMatch	ncbitaxon	45202	unidentified plasmid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
-obi	0000737	cloning vector	skos:exactMatch	ncbitaxon	45196	unidentified cloning vector	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+obi	OBI:0000430	plasmid	skos:exactMatch	ncbitaxon	45202	unidentified plasmid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+obi	OBI:0000737	cloning vector	skos:exactMatch	ncbitaxon	45196	unidentified cloning vector	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
 vo	0000491	active immunization	skos:exactMatch	mesh	D014611	Vaccination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0005243	CoviVac	skos:exactMatch	mesh	C000721867	COVI-VAC	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7621109049680478
 vo	0005246	COVIVAC	skos:exactMatch	mesh	C000721867	COVI-VAC	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7775716347144919

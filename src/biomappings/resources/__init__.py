@@ -24,7 +24,7 @@ from typing import (
 import bioregistry
 from tqdm import tqdm
 
-from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
+from biomappings.utils import OVERRIDE_MIRIAM, RESOURCE_PATH, get_canonical_tuple
 
 MAPPINGS_HEADER = [
     "source prefix",
@@ -361,12 +361,13 @@ def _standardize_mapping(mapping):
         if resource is None:
             raise ValueError
         miriam_prefix = resource.get_miriam_prefix()
-        if miriam_prefix is not None:
+        if miriam_prefix is None or miriam_prefix in OVERRIDE_MIRIAM:
+            mapping[identifier_key] = resource.standardize_identifier(identifier)
+        else:
             mapping[identifier_key] = (
                 resource.miriam_standardize_identifier(identifier) or identifier
             )
-        else:
-            mapping[identifier_key] = resource.standardize_identifier(identifier)
+
     return mapping
 
 

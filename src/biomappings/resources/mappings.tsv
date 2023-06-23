@@ -8903,7 +8903,7 @@ oae	0001817	patient	skos:exactMatch	opmi	0000417	patient	semapv:ManualMappingCur
 oae	0002495	dialysis	skos:exactMatch	obi	OBI:0600052	dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 oae	0004232	physical examination	skos:exactMatch	maxo	0000527	physical examination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 oae	0004372	ulcer	skos:exactMatch	mpath	579	ulcer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-obi	0000719	vaccine preparation	skos:exactMatch	vo	0000590	vaccine preparation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+obi	OBI:0000719	vaccine preparation	skos:exactMatch	vo	0000590	vaccine preparation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
 pfam	PF01391	Collagen	skos:exactMatch	mesh	D003094	Collagen	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 pr	PR:000001757	nuclear factor NF-kappa-B p50 subunit	skos:exactMatch	uniprot.chain	PRO_0000030311	Nuclear factor NF-kappa-B p50 subunit	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 pr	PR:000002439	BH3-interacting domain death agonist isoform 1 cleaved 1	skos:exactMatch	uniprot.chain	PRO_0000223233	BH3-interacting domain death agonist p15	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
