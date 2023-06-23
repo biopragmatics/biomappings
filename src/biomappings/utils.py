@@ -187,6 +187,12 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         raise UnstandardizedPrefix(prefix, resource.prefix)
     miriam_prefix = resource.get_miriam_prefix()
 
+    # ITO is very messy (combines mostly numbers with a few
+    # text based labels for top-level terms), has weird bananas,
+    # and also not very enjoyable to use so don't worry about them
+    if miriam_prefix == "ito":
+        return
+
     # If this resource has a mapping to MIRIAM, the MIRIAM-specific
     # normalization will be applied, which e.g., adds missing
     # redundant prefixes into the local unique identifiers
