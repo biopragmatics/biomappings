@@ -7,6 +7,7 @@ creator_id:
 curie_map:
   agro: http://purl.obolibrary.org/obo/AGRO_
   agrovoc: http://aims.fao.org/aos/agrovoc/c_
+  aio: https://w3id.org/aio/
   apollosv: http://purl.obolibrary.org/obo/APOLLO_SV_
   bfo: http://purl.obolibrary.org/obo/BFO_
   bto: 'https://www.ebi.ac.uk/ols/ontologies/bto/terms?obo_id=BTO:'
@@ -32,6 +33,8 @@ curie_map:
   ido: 'https://www.ebi.ac.uk/ols/ontologies/ido/terms?obo_id=IDO:'
   idocovid19: http://purl.obolibrary.org/obo/COVIDO_
   idomal: http://purl.obolibrary.org/obo/IDOMAL_
+  ito: 'https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:'
+  kestrelo: http://purl.obolibrary.org/obo/kestrelo_
   maxo: http://purl.obolibrary.org/obo/MAXO_
   mesh: https://meshb.nlm.nih.gov/record/ui?ui=
   miro: http://purl.obolibrary.org/obo/MIRO_

@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 3803
+- count: 4218
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -51,6 +51,9 @@ negative:
 - count: 51
   source: chebi
   target: mesh
+- count: 50
+  source: efo
+  target: ncbitaxon
 - count: 49
   source: fplx
   target: reactome
@@ -60,30 +63,48 @@ negative:
 - count: 38
   source: cl
   target: mesh
+- count: 38
+  source: ncbitaxon
+  target: pfam
 - count: 36
   source: doid
   target: umls
+- count: 34
+  source: envo
+  target: ncbitaxon
 - count: 29
   source: efo
   target: mesh
 - count: 22
   source: hgnc
   target: mesh
+- count: 21
+  source: chmo
+  target: ncbitaxon
 - count: 20
   source: agro
   target: agrovoc
+- count: 17
+  source: doid
+  target: ncbitaxon
 - count: 16
   source: go
   target: kegg.pathway
 - count: 14
   source: mesh
   target: ncit
+- count: 12
+  source: mi
+  target: ncbitaxon
 - count: 11
   source: hgnc
   target: reactome
 - count: 10
   source: ccle
   target: efo
+- count: 9
+  source: interpro
+  target: ncbitaxon
 - count: 9
   source: pr
   target: uniprot.chain
@@ -100,6 +121,9 @@ negative:
   source: doid
   target: efo
 - count: 7
+  source: ito
+  target: ncbitaxon
+- count: 7
   source: fplx
   target: wikipathways
 - count: 6
@@ -109,8 +133,14 @@ negative:
   source: doid
   target: vo
 - count: 5
+  source: ncbitaxon
+  target: obi
+- count: 5
   source: chebi
   target: vo
+- count: 3
+  source: ito
+  target: mi
 - count: 3
   source: doid
   target: reactome
@@ -124,8 +154,17 @@ negative:
   source: apollosv
   target: nbo
 - count: 2
+  source: hp
+  target: ncbitaxon
+- count: 2
   source: idomal
   target: vo
+- count: 2
+  source: miapa
+  target: ncbitaxon
+- count: 2
+  source: efo
+  target: pfam
 - count: 2
   source: ncit
   target: vo
@@ -139,8 +178,23 @@ negative:
   source: apollosv
   target: ncit
 - count: 1
+  source: bto
+  target: ncbitaxon
+- count: 1
   source: ccle
   target: depmap
+- count: 1
+  source: cl
+  target: ncbitaxon
+- count: 1
+  source: ido
+  target: ncbitaxon
+- count: 1
+  source: ncbitaxon
+  target: oae
+- count: 1
+  source: ito
+  target: pfam
 - count: 1
   source: bto
   target: uberon
@@ -153,8 +207,8 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1331
-negative_prefix_count: 28
+negative_mapping_count: 1538
+negative_prefix_count: 39
 positive:
 - count: 3106
   source: chebi
@@ -191,6 +245,9 @@ positive:
   target: umls
 - count: 154
   source: mesh
+  target: vo
+- count: 145
+  source: dron
   target: vo
 - count: 142
   source: agro
@@ -234,6 +291,9 @@ positive:
 - count: 46
   source: bto
   target: uberon
+- count: 40
+  source: aio
+  target: ito
 - count: 26
   source: ncbiprotein
   target: uniprot.chain
@@ -261,6 +321,9 @@ positive:
 - count: 16
   source: chebi
   target: idomal
+- count: 15
+  source: dron
+  target: ncbitaxon
 - count: 10
   source: wikipathways
   target: wikipathways
@@ -373,6 +436,9 @@ positive:
   source: chebi
   target: cido
 - count: 1
+  source: dron
+  target: efo
+- count: 1
   source: go
   target: ncit
 - count: 1
@@ -409,6 +475,9 @@ positive:
   source: fma
   target: idomal
 - count: 1
+  source: kestrelo
+  target: vo
+- count: 1
   source: dron
   target: oae
 - count: 1
@@ -429,6 +498,9 @@ positive:
 - count: 1
   source: mpath
   target: oae
+- count: 1
+  source: obi
+  target: vo
 - count: 1
   source: mesh
   target: pfam
@@ -453,8 +525,8 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 9896
-positive_prefix_count: 54
+positive_mapping_count: 10099
+positive_prefix_count: 57
 predictions:
 - count: 11735
   source: mesh
@@ -628,11 +700,20 @@ unsure:
   source: chebi
   target: idomal
 - count: 2
+  source: aio
+  target: ito
+- count: 2
   source: efo
   target: mesh
+- count: 2
+  source: ncbitaxon
+  target: obi
 - count: 1
   source: apollosv
   target: ncit
+- count: 1
+  source: envo
+  target: ncbitaxon
 - count: 1
   source: doid
   target: ido
@@ -645,5 +726,5 @@ unsure:
 - count: 1
   source: pr
   target: vo
-unsure_mapping_count: 78
-unsure_prefix_count: 17
+unsure_mapping_count: 83
+unsure_prefix_count: 22

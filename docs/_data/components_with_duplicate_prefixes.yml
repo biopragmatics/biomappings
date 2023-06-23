@@ -138,6 +138,44 @@
     link: https://bioregistry.io/mesh:D002690
     name: Chlamydia Infections
     prefix: mesh
+- dron:00017235:
+    identifier: '00017235'
+    link: https://bioregistry.io/dron:00017235
+    name: Smallpox Vaccine
+    prefix: dron
+  mesh:D012900:
+    identifier: D012900
+    link: https://bioregistry.io/mesh:D012900
+    name: Smallpox Vaccine
+    prefix: mesh
+  vo:0000651:
+    identifier: '0000651'
+    link: https://bioregistry.io/vo:0000651
+    name: Smallpox virus vaccine
+    prefix: vo
+  vo:0004613:
+    identifier: '0004613'
+    link: https://bioregistry.io/vo:0004613
+    name: smallpox vaccine
+    prefix: vo
+- dron:00771506:
+    identifier: '00771506'
+    link: https://bioregistry.io/dron:00771506
+    name: 0.65 ML Varicella-Zoster Virus Vaccine Live (Oka-Merck) strain 29800 UNT/ML
+      Injection
+    prefix: dron
+  vo:0003272:
+    identifier: '0003272'
+    link: https://bioregistry.io/vo:0003272
+    name: 0.65 ML Varicella-Zoster Virus Vaccine Live (Oka-Merck) strain 29800 UNT/ML
+      Injection
+    prefix: vo
+  vo:0003280:
+    identifier: 0003280
+    link: https://bioregistry.io/vo:0003280
+    name: 0.65 ML Varicella-Zoster Virus Vaccine Live (Oka-Merck) strain 29800 UNT/ML
+      Injection
+    prefix: vo
 - chebi:33281:
     identifier: CHEBI:33281
     link: https://bioregistry.io/chebi:33281
@@ -173,6 +211,86 @@
     link: https://bioregistry.io/idomal:0000895
     name: sulfoxide
     prefix: idomal
+- aio:Natural_Language_Processing:
+    identifier: Natural_Language_Processing
+    link: https://bioregistry.io/aio:Natural_Language_Processing
+    name: Natural Language Processing
+    prefix: aio
+  ito:00141:
+    identifier: '00141'
+    link: https://bioregistry.io/ito:00141
+    name: Natural language processing
+    prefix: ito
+  ito:39650:
+    identifier: '39650'
+    link: https://bioregistry.io/ito:39650
+    name: NLP
+    prefix: ito
+- aio:Continual_Learning:
+    identifier: Continual_Learning
+    link: https://bioregistry.io/aio:Continual_Learning
+    name: Continual Learning
+    prefix: aio
+  ito:01486:
+    identifier: 01486
+    link: https://bioregistry.io/ito:01486
+    name: Continual learning
+    prefix: ito
+  ito:17479:
+    identifier: '17479'
+    link: https://bioregistry.io/ito:17479
+    name: Incremental learning
+    prefix: ito
+  ito:23552:
+    identifier: '23552'
+    link: https://bioregistry.io/ito:23552
+    name: Incremental learning
+    prefix: ito
+- aio:LSTM:
+    identifier: LSTM
+    link: https://bioregistry.io/aio:LSTM
+    name: Long Short Term Memory
+    prefix: aio
+  ito:18262:
+    identifier: '18262'
+    link: https://bioregistry.io/ito:18262
+    name: LSTM
+    prefix: ito
+  ito:19480:
+    identifier: '19480'
+    link: https://bioregistry.io/ito:19480
+    name: lstm
+    prefix: ito
+- aio:Random_Forest:
+    identifier: Random_Forest
+    link: https://bioregistry.io/aio:Random_Forest
+    name: Random Forest
+    prefix: aio
+  ito:28410:
+    identifier: '28410'
+    link: https://bioregistry.io/ito:28410
+    name: Random Forest
+    prefix: ito
+  ito:39395:
+    identifier: '39395'
+    link: https://bioregistry.io/ito:39395
+    name: random forest
+    prefix: ito
+- aio:Logistic_Regression:
+    identifier: Logistic_Regression
+    link: https://bioregistry.io/aio:Logistic_Regression
+    name: Logistic Regression
+    prefix: aio
+  ito:29161:
+    identifier: '29161'
+    link: https://bioregistry.io/ito:29161
+    name: Logistic Regression
+    prefix: ito
+  ito:31970:
+    identifier: '31970'
+    link: https://bioregistry.io/ito:31970
+    name: Logistic regression
+    prefix: ito
 - kegg.pathway:hsa00100:
     identifier: hsa00100
     link: https://bioregistry.io/kegg.pathway:hsa00100
@@ -477,21 +595,6 @@
     identifier: 0003495
     link: https://bioregistry.io/vo:0003495
     name: influenza vaccines
-    prefix: vo
-- mesh:D012900:
-    identifier: D012900
-    link: https://bioregistry.io/mesh:D012900
-    name: Smallpox Vaccine
-    prefix: mesh
-  vo:0000651:
-    identifier: '0000651'
-    link: https://bioregistry.io/vo:0000651
-    name: Smallpox virus vaccine
-    prefix: vo
-  vo:0004613:
-    identifier: '0004613'
-    link: https://bioregistry.io/vo:0004613
-    name: smallpox vaccine
     prefix: vo
 - reactome:R-HSA-8937144:
     identifier: R-HSA-8937144
