@@ -3576,6 +3576,28 @@ idomal	0002461	anatomical cluster	skos:exactMatch	uberon	UBERON:0000477	anatomic
 idomal	6000017	quinoline alkaloid	skos:exactMatch	chebi	CHEBI:26509	quinoline alkaloid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	6000018	cinchona alkaloid	skos:exactMatch	chebi	CHEBI:51323	cinchona alkaloid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	6000032	maceration	skos:exactMatch	hp	HP:0032007	Maceration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+ito	00141	Natural language processing	skos:exactMatch	aio	Natural_Language_Processing	Natural Language Processing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	00476	One-shot learning	skos:exactMatch	aio	One-shot_Learning	One-shot Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	00482	Zero-shot learning	skos:exactMatch	aio	Zero-shot_Learning	Zero-shot Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	00510	Time Series Analysis	skos:exactMatch	aio	Time_Series_Analysis	Time Series Analysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	00514	Time series forecasting	skos:exactMatch	aio	Time_Series_Forecasting	Time Series Forecasting	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	00565	Representation learning	skos:exactMatch	aio	Representation_Learning	Representation Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	00713	Transfer learning	skos:exactMatch	aio	Transfer_Learning	Transfer Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	00774	Classification	skos:exactMatch	aio	Classification	Classification	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	00984	Survival Analysis	skos:exactMatch	aio	Survival_Analysis	Survival Analysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	01113	Dimensionality Reduction	skos:exactMatch	aio	Dimensionality_Reduction	Dimensionality Reduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	01202	Active learning	skos:exactMatch	aio	Active_Learning	Active Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	01262	Meta-learning	skos:exactMatch	aio	Meta-Learning	Meta-Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	01349	Metric learning	skos:exactMatch	aio	Metric_Learning	Metric Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	01395	Clustering	skos:exactMatch	aio	Clustering	Clustering	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	01463	Sparse learning	skos:exactMatch	aio	Sparse_Learning	Sparse Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	01486	Continual learning	skos:exactMatch	aio	Continual_Learning	Continual Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	17433	Contrastive learning	skos:exactMatch	aio	Contrastive_Learning	Contrastive Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	17494	Multimodal deep learning	skos:exactMatch	aio	Multimodal_Deep_Learning	Multimodal Deep Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	17535	Federated learning	skos:exactMatch	aio	Federated_Learning	Federated Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+ito	17541	Ensemble Learning	skos:exactMatch	aio	Ensemble_Learning	Ensemble Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	18262	LSTM	skos:exactMatch	aio	LSTM	Long Short Term Memory	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	18892	Conv3D	skos:exactMatch	aio	Convolution3D_Layer	Convolution3D Layer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.725
 kegg.pathway	hsa00010	Glycolysis / Gluconeogenesis - Homo sapiens (human)	skos:exactMatch	wikipathways	WP534	Glycolysis and gluconeogenesis	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 kegg.pathway	hsa00020	Citrate cycle (TCA cycle) - Homo sapiens (human)	skos:exactMatch	reactome	R-HSA-71403	Citric acid cycle (TCA cycle)	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 kegg.pathway	hsa00020	Citrate cycle (TCA cycle) - Homo sapiens (human)	skos:exactMatch	wikipathways	WP78	TCA cycle (aka Krebs or citric acid cycle)	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
