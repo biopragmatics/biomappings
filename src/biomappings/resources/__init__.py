@@ -202,10 +202,10 @@ def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
     _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "w")
 
 
-def lint_true_mappings() -> None:
+def lint_true_mappings(*, standardize: bool = False) -> None:
     """Lint the true mappings file."""
     mappings = load_mappings()
-    mappings = _remove_redundant(mappings, MappingTuple)
+    mappings = _remove_redundant(mappings, MappingTuple, standardize=standardize)
     write_true_mappings(sorted(mappings, key=mapping_sort_key))
 
 
@@ -229,10 +229,10 @@ def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
     _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "w")
 
 
-def lint_false_mappings() -> None:
+def lint_false_mappings(*, standardize: bool = False) -> None:
     """Lint the false mappings file."""
     mappings = load_false_mappings()
-    mappings = _remove_redundant(mappings, MappingTuple)
+    mappings = _remove_redundant(mappings, MappingTuple, standardize=standardize)
     write_false_mappings(sorted(mappings, key=mapping_sort_key))
 
 
@@ -256,10 +256,10 @@ def write_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
     _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "w")
 
 
-def lint_unsure_mappings() -> None:
+def lint_unsure_mappings(*, standardize: bool = False) -> None:
     """Lint the unsure mappings file."""
     mappings = load_unsure()
-    mappings = _remove_redundant(mappings, MappingTuple)
+    mappings = _remove_redundant(mappings, MappingTuple, standardize=standardize)
     write_unsure_mappings(sorted(mappings, key=mapping_sort_key))
 
 
@@ -343,7 +343,9 @@ def _remove_redundant(mappings, tuple_cls, standardize: bool = False):
     if standardize:
         mappings = (
             _standardize_mapping(mapping)
-            for mapping in tqdm(mappings, desc="Standardizing mappings", unit_scale=True)
+            for mapping in tqdm(
+                mappings, desc="Standardizing mappings", unit_scale=True, unit="mapping"
+            )
         )
     return (mapping.as_dict() for mapping in {tuple_cls.from_dict(mapping) for mapping in mappings})
 
