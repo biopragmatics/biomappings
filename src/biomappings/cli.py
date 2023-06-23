@@ -85,9 +85,9 @@ def lint(standardize: bool):
         lint_unsure_mappings,
     )
 
-    lint_true_mappings()
-    lint_false_mappings()
-    lint_unsure_mappings()
+    lint_true_mappings(standardize=standardize)
+    lint_false_mappings(standardize=standardize)
+    lint_unsure_mappings(standardize=standardize)
     lint_predictions(standardize=standardize)
 
 
