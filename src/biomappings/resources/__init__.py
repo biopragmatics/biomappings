@@ -357,7 +357,13 @@ def _remove_redundant(mappings, tuple_cls, standardize: bool = False):
 
 
 def _standardize_mappings(mappings, *, progress: bool = True):
-    for mapping in tqdm(mappings, desc="Standardizing mappings", unit_scale=True, unit="mapping", disable=not progress):
+    for mapping in tqdm(
+        mappings,
+        desc="Standardizing mappings",
+        unit_scale=True,
+        unit="mapping",
+        disable=not progress,
+    ):
         yield _standardize_mapping(mapping)
 
 
