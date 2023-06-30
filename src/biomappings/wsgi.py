@@ -221,7 +221,16 @@ class Controller:
             it = self._help_filter(provenance, it, {"source"})
 
         if sort is not None:
-            it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=sort == "desc"))
+            if sort == "desc":
+                it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=True))
+            elif sort == "asc":
+                it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=False))
+            elif sort == "object":
+                it = iter(
+                    sorted(
+                        it, key=lambda l_p: (l_p[1]["target prefix"], l_p[1]["target identifier"])
+                    )
+                )
 
         if same_text:
             it = (
