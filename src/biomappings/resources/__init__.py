@@ -22,7 +22,7 @@ from typing import (
 )
 
 import bioregistry
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 from biomappings.utils import OVERRIDE_MIRIAM, RESOURCE_PATH, get_canonical_tuple
 
@@ -187,7 +187,7 @@ def load_mappings() -> List[Dict[str, str]]:
 
 def append_true_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
     """Append new lines to the mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "a")
+    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, mode="a")
     if sort:
         lint_true_mappings()
 
@@ -199,7 +199,7 @@ def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
 
 def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Write mappigns to the true mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "w")
+    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, mode="w")
 
 
 def lint_true_mappings(*, standardize: bool = False) -> None:
@@ -219,14 +219,14 @@ def load_false_mappings() -> List[Dict[str, str]]:
 
 def append_false_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
     """Append new lines to the false mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "a")
+    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, mode="a")
     if sort:
         lint_false_mappings()
 
 
 def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Write mappings to the false mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "w")
+    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, mode="w")
 
 
 def lint_false_mappings(*, standardize: bool = False) -> None:
@@ -246,14 +246,14 @@ def load_unsure() -> List[Dict[str, str]]:
 
 def append_unsure_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
     """Append new lines to the "unsure" mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "a")
+    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, mode="a")
     if sort:
         lint_unsure_mappings()
 
 
 def write_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
     """Write mappings to the unsure mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "w")
+    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, mode="w")
 
 
 def lint_unsure_mappings(*, standardize: bool = False) -> None:
@@ -273,24 +273,35 @@ def load_predictions(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
 
 def write_predictions(m: Iterable[Mapping[str, str]], *, path: Optional[Path] = None) -> None:
     """Write new content to the predictions table."""
-    _write_helper(PREDICTIONS_HEADER, m, path or PREDICTIONS_PATH, "w")
+    _write_helper(PREDICTIONS_HEADER, m, path or PREDICTIONS_PATH, mode="w")
 
 
 def append_prediction_tuples(
-    prediction_tuples: Iterable[PredictionTuple], deduplicate: bool = True, sort: bool = True
+    prediction_tuples: Iterable[PredictionTuple],
+    *,
+    deduplicate: bool = True,
+    sort: bool = True,
+    standardize: bool = True,
 ) -> None:
     """Append new lines to the predictions table that come as canonical tuples."""
     append_predictions(
         (prediction_tuple.as_dict() for prediction_tuple in set(prediction_tuples)),
         deduplicate=deduplicate,
         sort=sort,
+        standardize=standardize,
     )
 
 
 def append_predictions(
-    mappings: Iterable[Mapping[str, str]], deduplicate: bool = True, sort: bool = True
+    mappings: Iterable[Mapping[str, str]],
+    *,
+    deduplicate: bool = True,
+    sort: bool = True,
+    standardize: bool = True,
 ) -> None:
     """Append new lines to the predictions table."""
+    if standardize:
+        mappings = _standardize_mappings(mappings)
     if deduplicate:
         existing_mappings = {
             get_canonical_tuple(existing_mapping)
@@ -305,7 +316,7 @@ def append_predictions(
             mapping for mapping in mappings if get_canonical_tuple(mapping) not in existing_mappings
         )
 
-    _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, "a")
+    _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, mode="a")
     if sort:
         lint_predictions()
 
@@ -341,13 +352,19 @@ def lint_predictions(standardize: bool = False) -> None:
 
 def _remove_redundant(mappings, tuple_cls, standardize: bool = False):
     if standardize:
-        mappings = (
-            _standardize_mapping(mapping)
-            for mapping in tqdm(
-                mappings, desc="Standardizing mappings", unit_scale=True, unit="mapping"
-            )
-        )
+        mappings = _standardize_mappings(mappings)
     return (mapping.as_dict() for mapping in {tuple_cls.from_dict(mapping) for mapping in mappings})
+
+
+def _standardize_mappings(mappings, *, progress: bool = True):
+    for mapping in tqdm(
+        mappings,
+        desc="Standardizing mappings",
+        unit_scale=True,
+        unit="mapping",
+        disable=not progress,
+    ):
+        yield _standardize_mapping(mapping)
 
 
 def _standardize_mapping(mapping):
