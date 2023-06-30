@@ -421,3 +421,43 @@ def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:
     for m in itt.chain(load_mappings(), load_false_mappings(), load_unsure()):
         d[m["source prefix"]][m["target prefix"]][m["source identifier"]] = m["target identifier"]
     return {k: dict(v) for k, v in d.items()}
+
+
+def prediction_tuples_from_semra(
+    mappings,
+    *,
+    confidence: float,
+    predicate: str = "skos:exactMatch",
+    justification: str = "semapv:UnspecifiedMatching",
+) -> list[PredictionTuple]:
+    """Get prediction tuples from SeMRA mappings."""
+    import pyobo
+    import semra
+
+    rows = []
+    for mapping in mappings:
+        s_name = pyobo.get_name(*mapping.s.pair)
+        if not s_name:
+            tqdm.write(f"could not look up name for {mapping.s.curie}")
+            continue
+        o_name = pyobo.get_name(*mapping.o.pair)
+        if not o_name:
+            tqdm.write(f"could not look up name for {mapping.o.curie}")
+            continue
+        # Assume that each mapping has a single simple evidence with a mapping set annotation
+        assert len(mapping.evidence) == 1
+        evidence = mapping.evidence[0]
+        assert isinstance(evidence, semra.SimpleEvidence)
+        assert evidence.mapping_set is not None
+        row = PredictionTuple(
+            *mapping.s.pair,
+            s_name,
+            predicate,
+            *mapping.o.pair,
+            o_name,
+            justification,
+            confidence,
+            evidence.mapping_set.name,
+        )
+        rows.append(row)
+    return rows
