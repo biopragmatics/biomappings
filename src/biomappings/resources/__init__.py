@@ -125,6 +125,37 @@ class PredictionTuple(NamedTuple):
             values.append(value)
         return cls(*values)  # type:ignore
 
+    @classmethod
+    def from_semra(cls, mapping, confidence) -> "PredictionTuple":
+        """Instantiate from a SeMRA mapping."""
+        import pyobo
+        import semra
+
+        s_name = pyobo.get_name(*mapping.s.pair)
+        if not s_name:
+            raise KeyError(f"could not look up name for {mapping.s.curie}")
+        o_name = pyobo.get_name(*mapping.o.pair)
+        if not o_name:
+            raise KeyError(f"could not look up name for {mapping.o.curie}")
+        # Assume that each mapping has a single simple evidence with a mapping set annotation
+        if len(mapping.evidence) != 1:
+            raise ValueError
+        evidence = mapping.evidence[0]
+        if not isinstance(evidence, semra.SimpleEvidence):
+            raise TypeError
+        if evidence.mapping_set is None:
+            raise ValueError
+        return cls(  # type:ignore
+            *mapping.s.pair,
+            s_name,
+            mapping.p.curie,
+            *mapping.o.pair,
+            o_name,
+            evidence.justification.curie,
+            confidence,
+            evidence.mapping_set.name,
+        )
+
     @property
     def source_curie(self) -> str:
         """Concatenate the source prefix and ID to a CURIE."""
@@ -427,37 +458,14 @@ def prediction_tuples_from_semra(
     mappings,
     *,
     confidence: float,
-    predicate: str = "skos:exactMatch",
-    justification: str = "semapv:UnspecifiedMatching",
-) -> list[PredictionTuple]:
+) -> List[PredictionTuple]:
     """Get prediction tuples from SeMRA mappings."""
-    import pyobo
-    import semra
-
     rows = []
     for mapping in mappings:
-        s_name = pyobo.get_name(*mapping.s.pair)
-        if not s_name:
-            tqdm.write(f"could not look up name for {mapping.s.curie}")
+        try:
+            row = PredictionTuple.from_semra(mapping, confidence)
+        except KeyError as e:
+            tqdm.write(str(e))
             continue
-        o_name = pyobo.get_name(*mapping.o.pair)
-        if not o_name:
-            tqdm.write(f"could not look up name for {mapping.o.curie}")
-            continue
-        # Assume that each mapping has a single simple evidence with a mapping set annotation
-        assert len(mapping.evidence) == 1
-        evidence = mapping.evidence[0]
-        assert isinstance(evidence, semra.SimpleEvidence)
-        assert evidence.mapping_set is not None
-        row = PredictionTuple(
-            *mapping.s.pair,
-            s_name,
-            predicate,
-            *mapping.o.pair,
-            o_name,
-            justification,
-            confidence,
-            evidence.mapping_set.name,
-        )
         rows.append(row)
     return rows

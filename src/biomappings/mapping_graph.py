@@ -23,7 +23,7 @@ __all__ = [
 
 def get_filter_from_semra(mappings: List["semra.Mapping"]) -> CMapping:
     """Get a custom filter dictionary from a set of SeMRA mappings."""
-    rv = defaultdict(lambda: defaultdict(dict))
+    rv: DefaultDict[str, DefaultDict[str, Dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
     for mapping in mappings:
         rv[mapping.s.prefix][mapping.o.prefix][mapping.s.identifier] = mapping.o.identifier
     return rv
