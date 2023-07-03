@@ -17,14 +17,10 @@ def main():
     """Generate CLO-MeSH mappings."""
     provenance = get_script_url(__file__)
 
-
-
     prefix = "clo"
     targets = [
         "mesh",
         "efo",
-        "bto",
-        "cellosaurus",
     ]
 
     clo_mappings = get_clo_mappings()
