@@ -4,7 +4,7 @@
 
 import logging
 from collections import defaultdict
-from typing import Iterable, Mapping, Optional, Tuple, Union
+from typing import Iterable, Optional, Tuple, Union
 
 import bioregistry
 import pyobo
@@ -13,10 +13,9 @@ from pyobo import get_xref
 from pyobo.gilda_utils import get_grounder, iter_gilda_prediction_tuples
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
+from biomappings.utils import CMapping
 
 logger = logging.getLogger(__name__)
-
-CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
 
 
 def append_gilda_predictions(

@@ -194,8 +194,12 @@ cl	CL:2000004	pituitary gland cell	skos:exactMatch	mesh	D010902	Pituitary Gland	
 cl	CL:2000021	sebaceous gland cell	skos:exactMatch	mesh	D012627	Sebaceous Glands	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:2000022	cardiac septum cell	skos:exactMatch	mesh	D006346	Heart Septum	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:2000030	hypothalamus cell	skos:exactMatch	mesh	D007031	Hypothalamus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+clo	0001922	BE2 cell	skos:exactMatch	mesh	D016175	B-Lymphocyte Subsets	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.502
 clo	0002596	COS-1 cell	skos:exactMatch	mesh	D019556	COS Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
 clo	0002597	COS-7 cell	skos:exactMatch	mesh	D019556	COS Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0002941	EPI cell	skos:exactMatch	mesh	D015251	Epirubicin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.556
+clo	0003413	G cell	skos:exactMatch	mesh	D019863	Gastrin-Secreting Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0009279	TC-1 cell	skos:exactMatch	mesh	D013602	T-Lymphocytes, Cytotoxic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
 clo	0037163	Ishikawa cell	skos:exactMatch	cellosaurus	CVCL_D199	Ishikawa 3-H-12	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
 clo	0037237	293-derived cell	skos:exactMatch	cellosaurus	CVCL_0045	HEK293	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
 clo	0037261	3T3-derived cell	skos:exactMatch	mesh	D016475	3T3 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
