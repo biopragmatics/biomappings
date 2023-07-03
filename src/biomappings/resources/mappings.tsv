@@ -3011,6 +3011,26 @@ cl	CL:0008002	skeletal muscle fiber	skos:exactMatch	mesh	D018485	Muscle Fibers, 
 cl	CL:0010003	epithelial cell of alveolus of lung	skos:exactMatch	mesh	D056809	Alveolar Epithelial Cells	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0010017	zygote	skos:exactMatch	mesh	D015053	Zygote	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0010021	cardiac myoblast	skos:exactMatch	mesh	D032386	Myoblasts, Cardiac	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+clo	0000031	cell line	skos:exactMatch	mesh	D002460	Cell Line	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.762
+clo	0001230	HEK293	skos:exactMatch	cellosaurus	CVCL_0045	HEK293	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0001345	3T3 cell	skos:exactMatch	mesh	D016475	3T3 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0001601	A549 cell	skos:exactMatch	mesh	D000072283	A549 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0002585	COR-L23 cell	skos:exactMatch	efo	0002142	CORL23	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0003704	Hep G2 cell	skos:exactMatch	mesh	D056945	Hep G2 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0007606	MCF7 cell	skos:exactMatch	mesh	D061986	MCF-7 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0007634	MDA-MB-231 cell	skos:exactMatch	efo	0001209	MDAMB231	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0007634	MDA-MB-231 cell	skos:exactMatch	mesh	D000092302	MDA-MB-231 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0007646	MDCK cell	skos:exactMatch	mesh	D061985	Madin Darby Canine Kidney Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0008395	PC-3 cell	skos:exactMatch	mesh	D000078722	PC-3 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0008753	RAW 264.7 cell	skos:exactMatch	mesh	D000067996	RAW 264.7 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0009348	THP-1 cell	skos:exactMatch	mesh	D000074084	THP-1 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0036932	Hybridoma	skos:exactMatch	mesh	D006825	Hybridomas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.556
+clo	0036936	Somatic cell hybrid	skos:exactMatch	mesh	D006822	Hybrid Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0037116	LNCaP cell	skos:exactMatch	efo	0002071	LNCAP	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/b250ea/scripts/generate_clo_mesh_mappings.py	0.53
+clo	0037230	Ishikawa 3-H-12 cell	skos:exactMatch	cellosaurus	CVCL_D199	Ishikawa 3-H-12	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0037291	MDAMB231 cell	skos:exactMatch	mesh	D000092302	MDA-MB-231 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0037300	BALL-1 cell	skos:exactMatch	cellosaurus	CVCL_1075	BALL-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0037339	tissue donor	skos:exactMatch	mesh	D014019	Tissue Donors	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.54
 doid	DOID:0040002	aspirin allergy	skos:exactMatch	umls	C0004058	Allergy to aspirin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0040004	amoxicillin allergy	skos:exactMatch	umls	C0571417	Allergy to amoxicillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0040005	ceftriaxone allergy	skos:exactMatch	umls	C0571463	Allergy to ceftriaxone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			

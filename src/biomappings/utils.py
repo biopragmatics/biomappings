@@ -233,3 +233,7 @@ def get_curie(prefix: str, identifier: str) -> str:
     if prefix_norm is None or identifier_norm is None:
         raise ValueError(f"could not normalize {prefix}:{identifier}")
     return f"{prefix_norm}:{identifier_norm}"
+
+
+#: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
+CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
