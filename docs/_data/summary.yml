@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 4218
+- count: 4250
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -118,6 +118,9 @@ negative:
   source: mesh
   target: mondo
 - count: 7
+  source: clo
+  target: mesh
+- count: 7
   source: doid
   target: efo
 - count: 7
@@ -138,6 +141,9 @@ negative:
 - count: 5
   source: chebi
   target: vo
+- count: 4
+  source: cellosaurus
+  target: clo
 - count: 3
   source: ito
   target: mi
@@ -187,6 +193,9 @@ negative:
   source: cl
   target: ncbitaxon
 - count: 1
+  source: clo
+  target: efo
+- count: 1
   source: ido
   target: ncbitaxon
 - count: 1
@@ -207,8 +216,8 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1538
-negative_prefix_count: 39
+negative_mapping_count: 1550
+negative_prefix_count: 40
 positive:
 - count: 3106
   source: chebi
@@ -324,6 +333,9 @@ positive:
 - count: 15
   source: dron
   target: ncbitaxon
+- count: 14
+  source: clo
+  target: mesh
 - count: 10
   source: wikipathways
   target: wikipathways
@@ -369,6 +381,12 @@ positive:
 - count: 4
   source: pr
   target: vo
+- count: 3
+  source: cellosaurus
+  target: clo
+- count: 3
+  source: clo
+  target: efo
 - count: 3
   source: kegg.pathway
   target: kegg.pathway
@@ -525,8 +543,8 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 10099
-positive_prefix_count: 57
+positive_mapping_count: 10119
+positive_prefix_count: 58
 predictions:
 - count: 11735
   source: mesh
@@ -567,6 +585,9 @@ predictions:
 - count: 31
   source: bto
   target: cl
+- count: 31
+  source: clo
+  target: efo
 - count: 14
   source: bto
   target: uberon
@@ -583,8 +604,14 @@ predictions:
   source: idomal
   target: pr
 - count: 6
+  source: cellosaurus
+  target: clo
+- count: 6
   source: idomal
   target: uberon
+- count: 5
+  source: clo
+  target: mesh
 - count: 2
   source: apollosv
   target: pato
@@ -663,8 +690,8 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 40458
-predictions_prefix_count: 33
+predictions_mapping_count: 40500
+predictions_prefix_count: 35
 unsure:
 - count: 27
   source: doid

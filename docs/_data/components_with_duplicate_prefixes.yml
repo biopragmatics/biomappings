@@ -88,6 +88,31 @@
     link: https://bioregistry.io/agrovoc:918
     name: biological control
     prefix: agrovoc
+- ccle:MDAMB231_BREAST:
+    identifier: MDAMB231_BREAST
+    link: https://bioregistry.io/ccle:MDAMB231_BREAST
+    name: MDA-MB-231
+    prefix: ccle
+  clo:0007634:
+    identifier: '0007634'
+    link: https://bioregistry.io/clo:0007634
+    name: MDA-MB-231 cell
+    prefix: clo
+  clo:0037291:
+    identifier: 0037291
+    link: https://bioregistry.io/clo:0037291
+    name: MDAMB231 cell
+    prefix: clo
+  efo:0001209:
+    identifier: 0001209
+    link: https://bioregistry.io/efo:0001209
+    name: MDAMB231
+    prefix: efo
+  mesh:D000092302:
+    identifier: D000092302
+    link: https://bioregistry.io/mesh:D000092302
+    name: MDA-MB-231 Cells
+    prefix: mesh
 - ccle:RH30_SOFT_TISSUE:
     identifier: RH30_SOFT_TISSUE
     link: https://bioregistry.io/ccle:RH30_SOFT_TISSUE
