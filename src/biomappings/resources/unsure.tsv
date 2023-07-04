@@ -25,6 +25,8 @@ ccle	OSA80	OSA80	skos:exactMatch	cellosaurus	CVCL_EQ73	OSA-80	semapv:ManualMappi
 ccle	P116	P116	skos:exactMatch	cellosaurus	CVCL_6429	P116	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ccle	P116	P116	skos:exactMatch	cellosaurus	CVCL_JU06	JHU116i	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ccle	TE4_OESOPHAGUS	TE-4	skos:exactMatch	cellosaurus	CVCL_F784	TE4 [Mouse hybridoma]	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+cemo	distribution	distribution	skos:exactMatch	pato	PATO:0000060	spatial pattern	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+cemo	growth_rate	growth rate	skos:exactMatch	ncit	C185276	Biospecimen Growth Rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 chebi	CHEBI:61700	(+)-valencene	skos:exactMatch	mesh	C506706	valencene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:68540	teriflunomide	skos:exactMatch	mesh	C072876	A 771726	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	0.9
 chebi	CHEBI:8416	Pristimerin	skos:exactMatch	mesh	C009043	pristimerin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
