@@ -4,9 +4,20 @@
 
 import getpass
 import os
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple, Union, Literal
+from typing import (
+    Any,
+    Dict,
+    Iterable,
+    List,
+    Literal,
+    Mapping,
+    Optional,
+    Set,
+    Tuple,
+    Union,
+)
 
 import bioregistry
 import flask
@@ -273,7 +284,7 @@ class Controller:
                 (line, p)
                 for (line, p) in it
                 if (p["source prefix"], p["source identifier"]) in self.target_ids
-                   or (p["target prefix"], p["target identifier"]) in self.target_ids
+                or (p["target prefix"], p["target identifier"]) in self.target_ids
             )
 
         if query is not None:
@@ -323,7 +334,7 @@ class Controller:
                 (line, prediction)
                 for line, prediction in it
                 if prediction["source name"].casefold() == prediction["target name"].casefold()
-                   and prediction["relation"] == "skos:exactMatch"
+                and prediction["relation"] == "skos:exactMatch"
             )
 
         rv = ((line, prediction) for line, prediction in it if line not in self._marked)
@@ -466,7 +477,6 @@ def home():
     remaining_rows = CONTROLLER.count_predictions_from_state(state)
     return flask.render_template(
         "home.html",
-        controller=CONTROLLER,
         predictions=predictions,
         form=form,
         state=state,
@@ -485,7 +495,6 @@ def summary():
     return flask.render_template(
         "summary.html",
         counter=counter,
-        controller=CONTOLLER,
         state=state,
     )
 
