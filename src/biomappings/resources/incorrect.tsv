@@ -1390,6 +1390,8 @@ reactome	R-XTR-8877627	Vitamin E	skos:exactMatch	mesh	D014810	Vitamin E	semapv:M
 reactome	R-XTR-9664873	Pexophagy	speciesSpecific	go	GO:0030242	autophagy of peroxisome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-XTR-983189	Kinesins	speciesSpecific	fplx	Kinesin	Kinesin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 uberon	UBERON:0000104	life cycle	skos:exactMatch	mesh	D008018	Life Cycle Stages	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+uberon	UBERON:0000353	parenchyma	skos:exactMatch	bto	BTO:0000999	plant parenchyma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
+uberon	UBERON:0001263	pancreatic acinus	skos:exactMatch	bto	BTO:0000028	pancreatic acinar cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
 uberon	UBERON:0012245	silk	skos:exactMatch	bto	BTO:0002854	corn silk	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
 uberon	UBERON:0022469	primary olfactory cortex	skos:exactMatch	mesh	D066194	Olfactory Cortex	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:2001977	pad	skos:exactMatch	mesh	D058729	Peripheral Arterial Disease	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
