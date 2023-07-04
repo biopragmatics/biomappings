@@ -6,13 +6,15 @@ import getpass
 import os
 from collections import defaultdict
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple, Union
+from typing import Any, Dict, Iterable, List, Mapping, Optional, Set, Tuple, Union, Literal
 
 import bioregistry
 import flask
 import flask_bootstrap
 from flask import current_app
 from flask_wtf import FlaskForm
+from pydantic import BaseModel
+from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
 from biomappings.resources import (
@@ -33,6 +35,54 @@ from biomappings.utils import (
 )
 
 
+class State(BaseModel):
+    limit: int = 10
+    offset: int = 0
+    query: Optional[str] = None
+    source_query: Optional[str] = None
+    source_prefix: Optional[str] = None
+    target_query: Optional[str] = None
+    target_prefix: Optional[str] = None
+    provenance: Optional[str] = None
+    prefix: Optional[str] = None
+    sort: Optional[str] = None
+    same_text: Optional[bool] = None
+    show_relations: bool = True
+    show_lines: bool = False
+
+    @classmethod
+    def from_flask_globals(cls) -> "State":
+        return State(
+            limit=flask.request.args.get("limit", type=int, default=10),
+            offset=flask.request.args.get("offset", type=int, default=0),
+            query=flask.request.args.get("query"),
+            source_query=flask.request.args.get("source_query"),
+            source_prefix=flask.request.args.get("source_prefix"),
+            target_query=flask.request.args.get("target_query"),
+            target_prefix=flask.request.args.get("target_prefix"),
+            provenance=flask.request.args.get("provenance"),
+            prefix=flask.request.args.get("prefix"),
+            sort=flask.request.args.get("sort"),
+            same_text=_get_bool_arg("same_text"),
+            show_relations=_get_bool_arg("show_relations") or current_app.config["SHOW_RELATIONS"],
+            show_lines=_get_bool_arg("show_lines") or current_app.config["SHOW_LINES"],
+        )
+
+
+def _get_bool_arg(name: str, default: Optional[Literal["true", "false"]] = None) -> Optional[bool]:
+    value = flask.request.args.get(name)
+    if value is None and default is None:
+        return None
+    return value.lower() in {"true", "t"}
+
+
+def url_for_state(endpoint, state: State, **kwargs) -> str:
+    """Get the URL for an endpoint based on the state class."""
+    vv = state.dict(exclude_none=True, exclude_defaults=True)
+    vv.update(kwargs)  # make sure stuff explicitly set overrides state
+    return flask.url_for(endpoint, **vv)
+
+
 def get_app(
     target_curies: Optional[Iterable[Tuple[str, str]]] = None,
     predictions_path: Optional[Path] = None,
@@ -47,6 +97,10 @@ def get_app(
     app_.config["controller"] = controller
     flask_bootstrap.Bootstrap4(app_)
     app_.register_blueprint(blueprint)
+    app_.jinja_env.globals.update(
+        controller=controller,
+        url_for_state=url_for_state,
+    )
     return app_
 
 
@@ -84,6 +138,22 @@ class Controller:
         self._added_mappings: List[Dict[str, Union[None, str, float]]] = []
         self.target_ids = set(target_curies or [])
 
+    def predictions_from_state(self, state: State) -> Iterable[Tuple[int, Mapping[str, Any]]]:
+        """Iterate over predictions from a state instance."""
+        return self.predictions(
+            offset=state.offset,
+            limit=state.limit,
+            query=state.query,
+            source_query=state.source_query,
+            source_prefix=state.source_prefix,
+            target_query=state.target_query,
+            target_prefix=state.target_prefix,
+            prefix=state.prefix,
+            sort=state.sort,
+            same_text=state.same_text,
+            provenance=state.provenance,
+        )
+
     def predictions(
         self,
         *,
@@ -96,7 +166,7 @@ class Controller:
         target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
-        same_text: bool = False,
+        same_text: Optional[bool] = None,
         provenance: Optional[str] = None,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
@@ -118,6 +188,8 @@ class Controller:
         :param provenance: If given, filters to provenance values matching this
         :yields: Pairs of positions and prediction dictionaries
         """
+        if same_text is None:
+            same_text = False
         it = self._help_it_predictions(
             query=query,
             source_query=source_query,
@@ -142,6 +214,20 @@ class Controller:
         else:
             for line_prediction, _ in zip(it, range(limit)):
                 yield line_prediction
+
+    def count_predictions_from_state(self, state: State) -> int:
+        """Count the number of predictions to check for the given filters."""
+        return self.count_predictions(
+            query=state.query,
+            source_query=state.source_query,
+            source_prefix=state.source_prefix,
+            target_query=state.target_query,
+            target_prefix=state.target_prefix,
+            prefix=state.prefix,
+            #  sort=state.sort,  # sort doesn't matter for count
+            same_text=state.same_text,
+            provenance=state.provenance,
+        )
 
     def count_predictions(
         self,
@@ -187,7 +273,7 @@ class Controller:
                 (line, p)
                 for (line, p) in it
                 if (p["source prefix"], p["source identifier"]) in self.target_ids
-                or (p["target prefix"], p["target identifier"]) in self.target_ids
+                   or (p["target prefix"], p["target identifier"]) in self.target_ids
             )
 
         if query is not None:
@@ -237,7 +323,7 @@ class Controller:
                 (line, prediction)
                 for line, prediction in it
                 if prediction["source name"].casefold() == prediction["target name"].casefold()
-                and prediction["relation"] == "skos:exactMatch"
+                   and prediction["relation"] == "skos:exactMatch"
             )
 
         rv = ((line, prediction) for line, prediction in it if line not in self._marked)
@@ -353,6 +439,9 @@ class Controller:
         self._added_mappings = []
 
 
+CONTROLLER: Controller = LocalProxy(lambda: current_app.config["controller"])
+
+
 class MappingForm(FlaskForm):
     """Form for entering new mappings."""
 
@@ -372,37 +461,32 @@ blueprint = flask.Blueprint("ui", __name__)
 def home():
     """Serve the home page."""
     form = MappingForm()
-    limit = flask.request.args.get("limit", type=int, default=10)
-    offset = flask.request.args.get("offset", type=int, default=0)
-    query = flask.request.args.get("query")
-    source_query = flask.request.args.get("source_query")
-    source_prefix = flask.request.args.get("source_prefix")
-    target_query = flask.request.args.get("target_query")
-    target_prefix = flask.request.args.get("target_prefix")
-    provenance = flask.request.args.get("provenance")
-    prefix = flask.request.args.get("prefix")
-    sort = flask.request.args.get("sort")
-    same_text = flask.request.args.get("same_text", default="false").lower() in {"true", "t"}
-    show_relations = current_app.config["SHOW_RELATIONS"]
-    show_lines = current_app.config["SHOW_LINES"]
+    state = State.from_flask_globals()
+    predictions = CONTROLLER.predictions_from_state(state)
+    remaining_rows = CONTROLLER.count_predictions_from_state(state)
     return flask.render_template(
         "home.html",
-        controller=current_app.config["controller"],
+        controller=CONTROLLER,
+        predictions=predictions,
         form=form,
-        limit=limit,
-        offset=offset,
-        query=query,
-        source_query=source_query,
-        source_prefix=source_prefix,
-        target_query=target_query,
-        target_prefix=target_prefix,
-        prefix=prefix,
-        sort=sort,
-        same_text=same_text,
-        provenance=provenance,
-        # configured
-        show_relations=show_relations,
-        show_lines=show_lines,
+        state=state,
+        remaining_rows=remaining_rows,
+    )
+
+
+@blueprint.route("/summary")
+def summary():
+    """Serve the summary page."""
+    state = State.from_flask_globals()
+    predictions = CONTROLLER.predictions_from_state(state)
+    counter = Counter(
+        (mapping["source prefix"], mapping["target prefix"]) for _, mapping in predictions
+    )
+    return flask.render_template(
+        "summary.html",
+        counter=counter,
+        controller=CONTOLLER,
+        state=state,
     )
 
 
@@ -411,7 +495,7 @@ def add_mapping():
     """Add a new mapping manually."""
     form = MappingForm()
     if form.is_submitted():
-        current_app.config["controller"].add_mapping(
+        CONTROLLER.add_mapping(
             form.data["source_prefix"],
             form.data["source_id"],
             form.data["source_name"],
@@ -419,7 +503,7 @@ def add_mapping():
             form.data["target_id"],
             form.data["target_name"],
         )
-        current_app.config["controller"].persist()
+        CONTROLLER.persist()
     else:
         flask.flash("missing form data", category="warning")
     return _go_home()
@@ -429,8 +513,8 @@ def add_mapping():
 def run_commit():
     """Make a commit then redirect to the the home page."""
     commit_info = commit(
-        f'Curated {current_app.config["controller"].total_curated} mapping'
-        f'{"s" if current_app.config["controller"].total_curated > 1 else ""}'
+        f"Curated {CONTROLLER.total_curated} mapping"
+        f'{"s" if CONTROLLER.total_curated > 1 else ""}'
         f" ({getpass.getuser()})",
     )
     current_app.logger.warning("git commit res: %s", commit_info)
@@ -441,7 +525,7 @@ def run_commit():
     else:
         flask.flash("did not push because on master branch")
         current_app.logger.warning("did not push because on master branch")
-    current_app.config["controller"].total_curated = 0
+    CONTROLLER.total_curated = 0
     return _go_home()
 
 
@@ -465,31 +549,14 @@ def _normalize_mark(value: str) -> str:
 @blueprint.route("/mark/<int:line>/<value>")
 def mark(line: int, value: str):
     """Mark the given line as correct or not."""
-    current_app.config["controller"].mark(line, _normalize_mark(value))
-    current_app.config["controller"].persist()
+    CONTROLLER.mark(line, _normalize_mark(value))
+    CONTROLLER.persist()
     return _go_home()
 
 
 def _go_home():
-    return flask.redirect(
-        flask.url_for(
-            ".home",
-            limit=flask.request.args.get("limit", type=int),
-            offset=flask.request.args.get("offset", type=int),
-            query=flask.request.args.get("query"),
-            source_query=flask.request.args.get("source_query"),
-            source_prefix=flask.request.args.get("source_prefix"),
-            target_query=flask.request.args.get("target_query"),
-            target_prefix=flask.request.args.get("target_prefix"),
-            prefix=flask.request.args.get("prefix"),
-            same_text=flask.request.args.get("same_text", default="false").lower() in {"true", "t"},
-            provenance=flask.request.args.get("provenance"),
-            sort=flask.request.args.get("sort"),
-            # config
-            show_relations=current_app.config["SHOW_RELATIONS"],
-            show_lines=current_app.config["SHOW_LINES"],
-        )
-    )
+    state = State.from_flask_globals()
+    return flask.redirect(url_for_state(".home", state))
 
 
 app = get_app()
