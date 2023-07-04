@@ -31,7 +31,7 @@ def ndex(username, password):
     cx = NiceCXBuilder()
     cx.set_name("Biomappings")
     cx.add_network_attribute(
-        "description", "Manually curated mappings (skos:exactMatch) between biological entities."
+        "description", "Manually curated semantic mappings (e.g., skos:exactMatch) between biological entities."
     )
     cx.add_network_attribute("reference", "https://github.com/biomappings/biomappings")
     cx.add_network_attribute("rights", "Waiver-No rights reserved (CC0)")
@@ -42,6 +42,7 @@ def ndex(username, password):
         for prefix in (mapping["source prefix"], mapping["target prefix"])
     }
     prefixes.add("orcid")
+    prefixes.add("semapv")
     cx.set_context({prefix: bioregistry.get_uri_prefix(prefix) for prefix in prefixes})
 
     cx.add_network_attribute("version", get_git_hash())
