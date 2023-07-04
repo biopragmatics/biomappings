@@ -47,6 +47,8 @@ from biomappings.utils import (
 
 
 class State(BaseModel):
+    """Contains the state for queries to the curation app."""
+
     limit: int = 10
     offset: int = 0
     query: Optional[str] = None
@@ -63,6 +65,7 @@ class State(BaseModel):
 
     @classmethod
     def from_flask_globals(cls) -> "State":
+        """Get the state from the flask current request."""
         return State(
             limit=flask.request.args.get("limit", type=int, default=10),
             offset=flask.request.args.get("offset", type=int, default=0),
@@ -249,7 +252,7 @@ class Controller:
         target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
-        same_text: bool = False,
+        same_text: Optional[bool] = None,
         provenance: Optional[str] = None,
     ) -> int:
         """Count the number of predictions to check for the given filters."""
@@ -275,7 +278,7 @@ class Controller:
         target_prefix: Optional[str] = None,
         prefix: Optional[str] = None,
         sort: Optional[str] = None,
-        same_text: bool = False,
+        same_text: Optional[bool] = None,
         provenance: Optional[str] = None,
     ):
         it: Iterable[Tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
