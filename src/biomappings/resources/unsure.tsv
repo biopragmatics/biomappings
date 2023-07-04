@@ -1,5 +1,9 @@
 source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	source	prediction_type	prediction_source	prediction_confidence
 apollosv	00000195	target population	skos:exactMatch	ncit	C142728	Target Study Population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+apollosv	00000243	duration	skos:exactMatch	pato	PATO:0001309	duration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
+apollosv	00000317	incubation period	skos:exactMatch	vsmo	0000499	intrinsic incubation period	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+apollosv	00000596	symbiosis	skos:exactMatch	go	GO:0044403	biological process involved in symbiotic interaction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+bto	BTO:0002314	satellite cell	skos:exactMatch	cl	CL:0000514	smooth muscle myoblast	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.556
 ccle	BCP1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BCP-1	skos:exactMatch	cellosaurus	CVCL_0107	BCP-1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 ccle	BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	cellosaurus	CVCL_4613	BDCM	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 ccle	BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	efo	0002113	BDCM	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -21,6 +25,8 @@ ccle	OSA80	OSA80	skos:exactMatch	cellosaurus	CVCL_EQ73	OSA-80	semapv:ManualMappi
 ccle	P116	P116	skos:exactMatch	cellosaurus	CVCL_6429	P116	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ccle	P116	P116	skos:exactMatch	cellosaurus	CVCL_JU06	JHU116i	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ccle	TE4_OESOPHAGUS	TE-4	skos:exactMatch	cellosaurus	CVCL_F784	TE4 [Mouse hybridoma]	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+cemo	distribution	distribution	skos:exactMatch	pato	PATO:0000060	spatial pattern	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+cemo	growth_rate	growth rate	skos:exactMatch	ncit	C185276	Biospecimen Growth Rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 chebi	CHEBI:61700	(+)-valencene	skos:exactMatch	mesh	C506706	valencene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:68540	teriflunomide	skos:exactMatch	mesh	C072876	A 771726	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	0.9
 chebi	CHEBI:8416	Pristimerin	skos:exactMatch	mesh	C009043	pristimerin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
@@ -75,6 +81,10 @@ mesh	D059268	Atrophic Vaginitis	skos:exactMatch	doid	DOID:11968	postmenopausal a
 mesh	D063306	Mitochondrial Degradation	skos:exactMatch	go	GO:0000423	mitophagy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 obi	OBI:0000430	plasmid	skos:exactMatch	ncbitaxon	45202	unidentified plasmid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
 obi	OBI:0000737	cloning vector	skos:exactMatch	ncbitaxon	45196	unidentified cloning vector	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+uberon	UBERON:0002397	maxilla	skos:exactMatch	bto	BTO:0006516	invertebrate maxilla	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
+uberon	UBERON:0009201	nephric duct	skos:exactMatch	bto	BTO:0005990	mesonephric duct	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
+uberon	UBERON:2002053	bony plate	skos:exactMatch	bto	BTO:0000967	osseous plate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
+uberon	UBERON:2002116	epibranchial organ	skos:exactMatch	bto	BTO:0004195	pharyngeal organ	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
 vo	0000491	active immunization	skos:exactMatch	mesh	D014611	Vaccination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0005243	CoviVac	skos:exactMatch	mesh	C000721867	COVI-VAC	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7621109049680478
 vo	0005246	COVIVAC	skos:exactMatch	mesh	C000721867	COVI-VAC	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7775716347144919
