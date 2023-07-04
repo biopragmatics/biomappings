@@ -49,8 +49,8 @@ from biomappings.utils import (
 class State(BaseModel):
     """Contains the state for queries to the curation app."""
 
-    limit: int = 10
-    offset: int = 0
+    limit: Optional[int] = 10
+    offset: Optional[int] = 0
     query: Optional[str] = None
     source_query: Optional[str] = None
     source_prefix: Optional[str] = None
@@ -491,6 +491,7 @@ def home():
 def summary():
     """Serve the summary page."""
     state = State.from_flask_globals()
+    state.limit = None
     predictions = CONTROLLER.predictions_from_state(state)
     counter = Counter(
         (mapping["source prefix"], mapping["target prefix"]) for _, mapping in predictions

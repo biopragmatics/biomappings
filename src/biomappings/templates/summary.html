@@ -27,7 +27,7 @@
                         <tr>
                             <td>{{ source_prefix }}</td>
                             <td>{{ target_prefix }}</td>
-                            <td style="text-align: right;">{{ count }}</td>
+                            <td style="text-align: right;">{{ "{:,d}".format(count) }}</td>
                         </tr>
                     {% endfor %}
                     </tbody>
