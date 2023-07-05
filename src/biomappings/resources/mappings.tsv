@@ -141,6 +141,14 @@ agrovoc	d2c183d0	compost mulches	skos:exactMatch	agro	00000102	compost mulch	sem
 agrovoc	e7505488	tine harrows	skos:exactMatch	agro	00000138	tine harrow	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696			
 agrovoc	ea23424c	alpha lattice design	skos:exactMatch	agro	00000337	alpha lattice design	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696			
 agrovoc	eb7af602	raised beds	skos:exactMatch	agro	00002021	raised seedbed	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696			
+aio	Binary_Classification	Binary Classification	skos:exactMatch	stato	0000031	binary classification	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
+aio	Data_Imputation	Data Imputation	skos:exactMatch	obi	0200061	data imputation	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
+aio	Data_Imputation	Data Imputation	skos:exactMatch	stato	0000518	data imputation	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
+aio	Dimensionality_Reduction	Dimensionality Reduction	skos:exactMatch	obi	0200050	dimensionality reduction	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
+aio	Hierarchical_Clustering	Hierarchical Clustering	skos:exactMatch	obi	0200042	hierarchical clustering	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
+aio	Machine_Learning	Machine Learning	skos:exactMatch	obi	0002587	machine learning	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
+aio	Regression_Analysis	Regression Analysis	skos:exactMatch	stato	0000390	regression model	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.772
+aio	SVM	Support Vector Machine	skos:exactMatch	obi	0000700	support vector machine	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
 apollosv	00000097	ecosystem	skos:exactMatch	envo	ENVO:01001110	ecosystem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000114	infection	skos:exactMatch	ido	0000586	infection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 apollosv	00000142	vaccination	skos:exactMatch	idomal	0001040	vaccination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -170,6 +178,10 @@ apollosv	00000429	date	skos:exactMatch	dc	date	Date	semapv:ManualMappingCuration
 apollosv	00000429	date	skos:exactMatch	oboinowl	date	date	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000445	mortality rate	skos:exactMatch	stato	0000414	mortality rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000476	description	skos:exactMatch	dc	description	description	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+bto	0000007	HEK-293 cell	skos:exactMatch	efo	0001182	HEK293	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.556
+bto	0000011	3T3-L1 cell	skos:exactMatch	clo	0001352	3T3-L1 cell	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.778
+bto	0000016	A-172 cell	skos:exactMatch	clo	0001559	A-172 cell	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.778
+bto	0000016	A-172 cell	skos:exactMatch	clo	0001560	A172 cell	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.778
 bto	BTO:0001025	peripheral blood mononuclear cell	skos:exactMatch	cl	CL:2000001	peripheral blood mononuclear cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.778
 bto	BTO:0001283	mitral cell	skos:exactMatch	cl	CL:1001502	mitral cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.778
 bto	BTO:0001528	B-lymphoblast	skos:exactMatch	cl	CL:0017006	B-lymphoblast	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.778

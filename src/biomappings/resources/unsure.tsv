@@ -1,4 +1,6 @@
 source prefix	source identifier	source name	relation	target prefix	target identifier	target name	type	source	prediction_type	prediction_source	prediction_confidence
+aio	Hierarchical_Clustering	Hierarchical Clustering	skos:exactMatch	swo	0000573	Hierarchical clustering	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.772
+aio	KN	Kohonen Network	skos:exactMatch	obi	0000701	self-organizing map	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
 apollosv	00000195	target population	skos:exactMatch	ncit	C142728	Target Study Population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000243	duration	skos:exactMatch	pato	PATO:0001309	duration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 apollosv	00000317	incubation period	skos:exactMatch	vsmo	0000499	intrinsic incubation period	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
