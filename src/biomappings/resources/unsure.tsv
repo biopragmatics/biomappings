@@ -2,6 +2,7 @@ source prefix	source identifier	source name	relation	target prefix	target identi
 aio	Hierarchical_Clustering	Hierarchical Clustering	skos:exactMatch	swo	0000573	Hierarchical clustering	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.772
 aio	KN	Kohonen Network	skos:exactMatch	obi	0000701	self-organizing map	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
 apollosv	00000195	target population	skos:exactMatch	ncit	C142728	Target Study Population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+bto	0000069	WISH cell	skos:exactMatch	clo	0009609	WISH cell	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.778
 ccle	BCP1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BCP-1	skos:exactMatch	cellosaurus	CVCL_0107	BCP-1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 ccle	BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	cellosaurus	CVCL_4613	BDCM	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 ccle	BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	efo	0002113	BDCM	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
