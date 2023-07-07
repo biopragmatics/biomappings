@@ -9518,6 +9518,7 @@ vo	0000417	protozoan vaccine	skos:exactMatch	mesh	D016052	Protozoan Vaccines	sem
 vo	0000490	immunization	skos:exactMatch	idomal	0001039	immunization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 vo	0000490	immunization	skos:exactMatch	mesh	D007114	Immunization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000492	passive immunization	skos:exactMatch	mesh	D007116	Immunization, Passive	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0000492	Immunization, Passive	skos:exactMatch	obi	0001174	passive immunization	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
 vo	0000516	human protein	skos:exactMatch	pr	PR:000029067	Homo sapiens protein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0000534	subunit vaccine	skos:exactMatch	mesh	D022223	Vaccines, Subunit	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
 vo	0000560	toxin	skos:exactMatch	chebi	CHEBI:27026	toxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
