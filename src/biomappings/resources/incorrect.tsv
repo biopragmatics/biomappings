@@ -56,9 +56,13 @@ apollosv	00000094	community	skos:exactMatch	ncit	C16453	Community	semapv:ManualM
 apollosv	00000172	susceptibility	skos:exactMatch	pato	PATO:0001043	susceptibility toward	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 apollosv	00000340	agonism	skos:exactMatch	nbo	0000015	aggressive behavior	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000340	agonism	skos:exactMatch	nbo	0000121	agonistic behavior	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+<<<<<<< HEAD
 apollosv	00000496	ORCID	skos:exactMatch	ncit	C188272	ORCID	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 bto	BTO:0002830	DB-1 cell	skos:exactMatch	cl	CL:4033027	diffuse bipolar 1 cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.555
 bto	BTO:0004500	R1 cell	skos:exactMatch	cl	CL:0000687	R1 photoreceptor cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.556
+=======
+bto	0000052	stoma	skos:exactMatch	uberon	0000165	mouth	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.778
+>>>>>>> a8b63a6 (curate biomapings for Kestrel)
 bto	BTO:0005825	ctenidium	skos:exactMatch	ncbitaxon	90308	Ctenidium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
 bto	BTO:0006359	TEX cell	skos:exactMatch	cl	CL:0011025	exhausted T cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.549
 ccle	697_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	697	skos:exactMatch	cellosaurus	CVCL_8056	697-mel	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
