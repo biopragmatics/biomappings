@@ -3,6 +3,7 @@ aio	Hierarchical_Clustering	Hierarchical Clustering	skos:exactMatch	swo	0000573	
 aio	KN	Kohonen Network	skos:exactMatch	obi	0000701	self-organizing map	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.762
 apollosv	00000195	target population	skos:exactMatch	ncit	C142728	Target Study Population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 <<<<<<< HEAD
+<<<<<<< HEAD
 apollosv	00000243	duration	skos:exactMatch	pato	PATO:0001309	duration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 apollosv	00000317	incubation period	skos:exactMatch	vsmo	0000499	intrinsic incubation period	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 apollosv	00000596	symbiosis	skos:exactMatch	go	GO:0044403	biological process involved in symbiotic interaction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
@@ -10,6 +11,9 @@ bto	BTO:0002314	satellite cell	skos:exactMatch	cl	CL:0000514	smooth muscle myobl
 =======
 bto	0000069	WISH cell	skos:exactMatch	clo	0009609	WISH cell	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.778
 >>>>>>> a8b63a6 (curate biomapings for Kestrel)
+=======
+bto	0000069	WISH cell	skos:exactMatch	clo	0009609	WISH cell	semapv:ManualMappingCuration	web	semapv:LexicalMatching	kestrel-mappings	0.778
+>>>>>>> 6aa64eda7839fda09d178978f8241472005aa7d4
 ccle	BCP1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BCP-1	skos:exactMatch	cellosaurus	CVCL_0107	BCP-1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 ccle	BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	cellosaurus	CVCL_4613	BDCM	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 ccle	BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	efo	0002113	BDCM	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
