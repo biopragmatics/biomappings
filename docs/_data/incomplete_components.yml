@@ -946,6 +946,18 @@
       name: A-549
       prefix: cellosaurus
     target:
+      curie: clo:0001601
+      identifier: '0001601'
+      link: https://bioregistry.io/clo:0001601
+      name: A549 cell
+      prefix: clo
+  - source:
+      curie: cellosaurus:0023
+      identifier: CVCL_0023
+      link: https://bioregistry.io/cellosaurus:0023
+      name: A-549
+      prefix: cellosaurus
+    target:
       curie: efo:0001086
       identifier: 0001086
       link: https://bioregistry.io/efo:0001086
@@ -963,18 +975,6 @@
       link: https://bioregistry.io/mesh:D000072283
       name: A549 Cells
       prefix: mesh
-  - source:
-      curie: cellosaurus:0023
-      identifier: CVCL_0023
-      link: https://bioregistry.io/cellosaurus:0023
-      name: A-549
-      prefix: cellosaurus
-    target:
-      curie: clo:0001601
-      identifier: '0001601'
-      link: https://bioregistry.io/clo:0001601
-      name: A549 cell
-      prefix: clo
   - source:
       curie: clo:0001601
       identifier: '0001601'
@@ -1833,11 +1833,11 @@
       name: HNT-34
       prefix: cellosaurus
     target:
-      curie: efo:0006583
-      identifier: 0006583
-      link: https://bioregistry.io/efo:0006583
-      name: HNT-34
-      prefix: efo
+      curie: depmap:ACH-000299
+      identifier: ACH-000299
+      link: https://bioregistry.io/depmap:ACH-000299
+      name: null
+      prefix: depmap
   - source:
       curie: cellosaurus:2071
       identifier: CVCL_2071
@@ -1845,11 +1845,11 @@
       name: HNT-34
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000299
-      identifier: ACH-000299
-      link: https://bioregistry.io/depmap:ACH-000299
-      name: null
-      prefix: depmap
+      curie: efo:0006583
+      identifier: 0006583
+      link: https://bioregistry.io/efo:0006583
+      name: HNT-34
+      prefix: efo
   - source:
       curie: depmap:ACH-000299
       identifier: ACH-000299
@@ -4624,11 +4624,11 @@
       name: Lung abscess
       prefix: hp
     target:
-      curie: ncit:C99090
-      identifier: C99090
-      link: https://bioregistry.io/ncit:C99090
+      curie: umls:C0024110
+      identifier: C0024110
+      link: https://bioregistry.io/umls:C0024110
       name: Lung Abscess
-      prefix: ncit
+      prefix: umls
   - source:
       curie: hp:0025044
       identifier: HP:0025044
@@ -4636,11 +4636,11 @@
       name: Lung abscess
       prefix: hp
     target:
-      curie: umls:C0024110
-      identifier: C0024110
-      link: https://bioregistry.io/umls:C0024110
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
       name: Lung Abscess
-      prefix: umls
+      prefix: ncit
   - source:
       curie: mesh:D008169
       identifier: D008169
@@ -6021,11 +6021,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: hp:0002912
-      identifier: HP:0002912
-      link: https://bioregistry.io/hp:0002912
-      name: Methylmalonic acidemia
-      prefix: hp
+      curie: mondo:0002012
+      identifier: '0002012'
+      link: https://bioregistry.io/mondo:0002012
+      name: methylmalonic acidemia
+      prefix: mondo
   - source:
       curie: doid:14749
       identifier: DOID:14749
@@ -6033,11 +6033,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: mondo:0002012
-      identifier: '0002012'
-      link: https://bioregistry.io/mondo:0002012
-      name: methylmalonic acidemia
-      prefix: mondo
+      curie: hp:0002912
+      identifier: HP:0002912
+      link: https://bioregistry.io/hp:0002912
+      name: Methylmalonic acidemia
+      prefix: hp
   - source:
       curie: hp:0002912
       identifier: HP:0002912
@@ -6601,11 +6601,11 @@
       name: BCG Vaccine
       prefix: dron
     target:
-      curie: ncit:C298
-      identifier: C298
-      link: https://bioregistry.io/ncit:C298
+      curie: mesh:D001500
+      identifier: D001500
+      link: https://bioregistry.io/mesh:D001500
       name: BCG Vaccine
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: dron:00012890
       identifier: 00012890
@@ -6613,11 +6613,11 @@
       name: BCG Vaccine
       prefix: dron
     target:
-      curie: mesh:D001500
-      identifier: D001500
-      link: https://bioregistry.io/mesh:D001500
+      curie: ncit:C298
+      identifier: C298
+      link: https://bioregistry.io/ncit:C298
       name: BCG Vaccine
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: ncit:C298
       identifier: C298
@@ -6942,11 +6942,11 @@
       name: antimicrobial
       prefix: ido
     target:
-      curie: ido:0000563
-      identifier: '0000563'
-      link: https://bioregistry.io/ido:0000563
-      name: microbicide
-      prefix: ido
+      curie: idomal:0000643
+      identifier: '0000643'
+      link: https://bioregistry.io/idomal:0000643
+      name: antibiotic
+      prefix: idomal
   - source:
       curie: ido:0000558
       identifier: 0000558
@@ -6954,11 +6954,11 @@
       name: antimicrobial
       prefix: ido
     target:
-      curie: idomal:0000643
-      identifier: '0000643'
-      link: https://bioregistry.io/idomal:0000643
-      name: antibiotic
-      prefix: idomal
+      curie: ido:0000563
+      identifier: '0000563'
+      link: https://bioregistry.io/ido:0000563
+      name: microbicide
+      prefix: ido
   - source:
       curie: ido:0000563
       identifier: '0000563'
@@ -7580,9 +7580,9 @@
       name: Continual learning
       prefix: ito
     target:
-      curie: ito:23552
-      identifier: '23552'
-      link: https://bioregistry.io/ito:23552
+      curie: ito:17479
+      identifier: '17479'
+      link: https://bioregistry.io/ito:17479
       name: Incremental learning
       prefix: ito
   - source:
@@ -7592,9 +7592,9 @@
       name: Continual learning
       prefix: ito
     target:
-      curie: ito:17479
-      identifier: '17479'
-      link: https://bioregistry.io/ito:17479
+      curie: ito:23552
+      identifier: '23552'
+      link: https://bioregistry.io/ito:23552
       name: Incremental learning
       prefix: ito
   - source:
@@ -7988,6 +7988,296 @@
       link: https://bioregistry.io/vo:0000001
       name: vaccine
       prefix: vo
+- edges:
+  - source:
+      curie: maxo:0000022
+      identifier: '0000022'
+      link: https://bioregistry.io/maxo:0000022
+      name: hospice care
+      prefix: maxo
+    target:
+      curie: ncit:C15252
+      identifier: C15252
+      link: https://bioregistry.io/ncit:C15252
+      name: Hospice Care
+      prefix: ncit
+  nodes:
+    maxo:0000022:
+      identifier: '0000022'
+      link: https://bioregistry.io/maxo:0000022
+      name: hospice care
+      prefix: maxo
+    mesh:D017051:
+      identifier: D017051
+      link: https://bioregistry.io/mesh:D017051
+      name: Hospice Care
+      prefix: mesh
+    ncit:C15252:
+      identifier: C15252
+      link: https://bioregistry.io/ncit:C15252
+      name: Hospice Care
+      prefix: ncit
+- edges:
+  - source:
+      curie: mesh:D010808
+      identifier: D010808
+      link: https://bioregistry.io/mesh:D010808
+      name: Physical Examination
+      prefix: mesh
+    target:
+      curie: oae:0004232
+      identifier: '0004232'
+      link: https://bioregistry.io/oae:0004232
+      name: physical examination
+      prefix: oae
+  nodes:
+    maxo:0000527:
+      identifier: '0000527'
+      link: https://bioregistry.io/maxo:0000527
+      name: physical examination
+      prefix: maxo
+    mesh:D010808:
+      identifier: D010808
+      link: https://bioregistry.io/mesh:D010808
+      name: Physical Examination
+      prefix: mesh
+    oae:0004232:
+      identifier: '0004232'
+      link: https://bioregistry.io/oae:0004232
+      name: physical examination
+      prefix: oae
+- edges:
+  - source:
+      curie: efo:0007986
+      identifier: 0007986
+      link: https://bioregistry.io/efo:0007986
+      name: reticulocyte count
+      prefix: efo
+    target:
+      curie: maxo:0000825
+      identifier: 0000825
+      link: https://bioregistry.io/maxo:0000825
+      name: reticulocyte count
+      prefix: maxo
+  - source:
+      curie: efo:0007986
+      identifier: 0007986
+      link: https://bioregistry.io/efo:0007986
+      name: reticulocyte count
+      prefix: efo
+    target:
+      curie: ncit:C51947
+      identifier: C51947
+      link: https://bioregistry.io/ncit:C51947
+      name: Reticulocyte Count
+      prefix: ncit
+  - source:
+      curie: maxo:0000825
+      identifier: 0000825
+      link: https://bioregistry.io/maxo:0000825
+      name: reticulocyte count
+      prefix: maxo
+    target:
+      curie: ncit:C51947
+      identifier: C51947
+      link: https://bioregistry.io/ncit:C51947
+      name: Reticulocyte Count
+      prefix: ncit
+  nodes:
+    efo:0007986:
+      identifier: 0007986
+      link: https://bioregistry.io/efo:0007986
+      name: reticulocyte count
+      prefix: efo
+    maxo:0000825:
+      identifier: 0000825
+      link: https://bioregistry.io/maxo:0000825
+      name: reticulocyte count
+      prefix: maxo
+    mesh:D017701:
+      identifier: D017701
+      link: https://bioregistry.io/mesh:D017701
+      name: Reticulocyte Count
+      prefix: mesh
+    ncit:C51947:
+      identifier: C51947
+      link: https://bioregistry.io/ncit:C51947
+      name: Reticulocyte Count
+      prefix: ncit
+- edges:
+  - source:
+      curie: maxo:0000945
+      identifier: 0000945
+      link: https://bioregistry.io/maxo:0000945
+      name: spinal cord stimulation
+      prefix: maxo
+    target:
+      curie: ncit:C21023
+      identifier: C21023
+      link: https://bioregistry.io/ncit:C21023
+      name: Spinal Cord Stimulation
+      prefix: ncit
+  nodes:
+    maxo:0000945:
+      identifier: 0000945
+      link: https://bioregistry.io/maxo:0000945
+      name: spinal cord stimulation
+      prefix: maxo
+    mesh:D062187:
+      identifier: D062187
+      link: https://bioregistry.io/mesh:D062187
+      name: Spinal Cord Stimulation
+      prefix: mesh
+    ncit:C21023:
+      identifier: C21023
+      link: https://bioregistry.io/ncit:C21023
+      name: Spinal Cord Stimulation
+      prefix: ncit
+- edges:
+  - source:
+      curie: maxo:0001032
+      identifier: '0001032'
+      link: https://bioregistry.io/maxo:0001032
+      name: appendectomy
+      prefix: maxo
+    target:
+      curie: ncit:C51687
+      identifier: C51687
+      link: https://bioregistry.io/ncit:C51687
+      name: Appendectomy
+      prefix: ncit
+  nodes:
+    maxo:0001032:
+      identifier: '0001032'
+      link: https://bioregistry.io/maxo:0001032
+      name: appendectomy
+      prefix: maxo
+    mesh:D001062:
+      identifier: D001062
+      link: https://bioregistry.io/mesh:D001062
+      name: Appendectomy
+      prefix: mesh
+    ncit:C51687:
+      identifier: C51687
+      link: https://bioregistry.io/ncit:C51687
+      name: Appendectomy
+      prefix: ncit
+- edges:
+  - source:
+      curie: maxo:0001053
+      identifier: '0001053'
+      link: https://bioregistry.io/maxo:0001053
+      name: gastrectomy
+      prefix: maxo
+    target:
+      curie: ncit:C15236
+      identifier: C15236
+      link: https://bioregistry.io/ncit:C15236
+      name: Gastrectomy
+      prefix: ncit
+  nodes:
+    maxo:0001053:
+      identifier: '0001053'
+      link: https://bioregistry.io/maxo:0001053
+      name: gastrectomy
+      prefix: maxo
+    mesh:D005743:
+      identifier: D005743
+      link: https://bioregistry.io/mesh:D005743
+      name: Gastrectomy
+      prefix: mesh
+    ncit:C15236:
+      identifier: C15236
+      link: https://bioregistry.io/ncit:C15236
+      name: Gastrectomy
+      prefix: ncit
+- edges:
+  - source:
+      curie: maxo:0001076
+      identifier: '0001076'
+      link: https://bioregistry.io/maxo:0001076
+      name: salpingectomy
+      prefix: maxo
+    target:
+      curie: ncit:C51605
+      identifier: C51605
+      link: https://bioregistry.io/ncit:C51605
+      name: Salpingectomy
+      prefix: ncit
+  nodes:
+    maxo:0001076:
+      identifier: '0001076'
+      link: https://bioregistry.io/maxo:0001076
+      name: salpingectomy
+      prefix: maxo
+    mesh:D058994:
+      identifier: D058994
+      link: https://bioregistry.io/mesh:D058994
+      name: Salpingectomy
+      prefix: mesh
+    ncit:C51605:
+      identifier: C51605
+      link: https://bioregistry.io/ncit:C51605
+      name: Salpingectomy
+      prefix: ncit
+- edges:
+  - source:
+      curie: efo:0003907
+      identifier: 0003907
+      link: https://bioregistry.io/efo:0003907
+      name: deep vein thrombosis
+      prefix: efo
+    target:
+      curie: maxo:0001108
+      identifier: 0001108
+      link: https://bioregistry.io/maxo:0001108
+      name: venous thrombosis
+      prefix: maxo
+  nodes:
+    efo:0003907:
+      identifier: 0003907
+      link: https://bioregistry.io/efo:0003907
+      name: deep vein thrombosis
+      prefix: efo
+    maxo:0001108:
+      identifier: 0001108
+      link: https://bioregistry.io/maxo:0001108
+      name: venous thrombosis
+      prefix: maxo
+    mesh:D020246:
+      identifier: D020246
+      link: https://bioregistry.io/mesh:D020246
+      name: Venous Thrombosis
+      prefix: mesh
+- edges:
+  - source:
+      curie: efo:0009123
+      identifier: 0009123
+      link: https://bioregistry.io/efo:0009123
+      name: urine collection
+      prefix: efo
+    target:
+      curie: maxo:0001161
+      identifier: '0001161'
+      link: https://bioregistry.io/maxo:0001161
+      name: urine specimen collection
+      prefix: maxo
+  nodes:
+    efo:0009123:
+      identifier: 0009123
+      link: https://bioregistry.io/efo:0009123
+      name: urine collection
+      prefix: efo
+    maxo:0001161:
+      identifier: '0001161'
+      link: https://bioregistry.io/maxo:0001161
+      name: urine specimen collection
+      prefix: maxo
+    mesh:D059349:
+      identifier: D059349
+      link: https://bioregistry.io/mesh:D059349
+      name: Urine Specimen Collection
+      prefix: mesh
 - edges:
   - source:
       curie: doid:3927
@@ -10084,11 +10374,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: ncit:C26803
-      identifier: C26803
-      link: https://bioregistry.io/ncit:C26803
-      name: Jaw Fracture
-      prefix: ncit
+      curie: mondo:0100075
+      identifier: '0100075'
+      link: https://bioregistry.io/mondo:0100075
+      name: jaw fracture
+      prefix: mondo
   - source:
       curie: efo:0009612
       identifier: 0009612
@@ -10096,11 +10386,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: mondo:0100075
-      identifier: '0100075'
-      link: https://bioregistry.io/mondo:0100075
-      name: jaw fracture
-      prefix: mondo
+      curie: ncit:C26803
+      identifier: C26803
+      link: https://bioregistry.io/ncit:C26803
+      name: Jaw Fracture
+      prefix: ncit
   - source:
       curie: mondo:0100075
       identifier: '0100075'
@@ -11128,11 +11418,11 @@
       name: bronchoconstriction
       prefix: efo
     target:
-      curie: hp:4000007
-      identifier: HP:4000007
-      link: https://bioregistry.io/hp:4000007
+      curie: ncit:C40942
+      identifier: C40942
+      link: https://bioregistry.io/ncit:C40942
       name: Bronchoconstriction
-      prefix: hp
+      prefix: ncit
   - source:
       curie: efo:0009836
       identifier: 0009836
@@ -11140,11 +11430,11 @@
       name: bronchoconstriction
       prefix: efo
     target:
-      curie: ncit:C40942
-      identifier: C40942
-      link: https://bioregistry.io/ncit:C40942
+      curie: hp:4000007
+      identifier: HP:4000007
+      link: https://bioregistry.io/hp:4000007
       name: Bronchoconstriction
-      prefix: ncit
+      prefix: hp
   - source:
       curie: hp:4000007
       identifier: HP:4000007
@@ -11322,35 +11612,6 @@
       identifier: C29457
       link: https://bioregistry.io/ncit:C29457
       name: Sodium Bicarbonate
-      prefix: ncit
-- edges:
-  - source:
-      curie: efo:0007986
-      identifier: 0007986
-      link: https://bioregistry.io/efo:0007986
-      name: reticulocyte count
-      prefix: efo
-    target:
-      curie: ncit:C51947
-      identifier: C51947
-      link: https://bioregistry.io/ncit:C51947
-      name: Reticulocyte Count
-      prefix: ncit
-  nodes:
-    efo:0007986:
-      identifier: 0007986
-      link: https://bioregistry.io/efo:0007986
-      name: reticulocyte count
-      prefix: efo
-    mesh:D017701:
-      identifier: D017701
-      link: https://bioregistry.io/mesh:D017701
-      name: Reticulocyte Count
-      prefix: mesh
-    ncit:C51947:
-      identifier: C51947
-      link: https://bioregistry.io/ncit:C51947
-      name: Reticulocyte Count
       prefix: ncit
 - edges:
   - source:
@@ -11882,11 +12143,11 @@
       name: urolithiasis
       prefix: doid
     target:
-      curie: hp:0034368
-      identifier: HP:0034368
-      link: https://bioregistry.io/hp:0034368
-      name: Urolithiasis
-      prefix: hp
+      curie: mondo:0024647
+      identifier: '0024647'
+      link: https://bioregistry.io/mondo:0024647
+      name: urolithiasis
+      prefix: mondo
   - source:
       curie: doid:0080653
       identifier: DOID:0080653
@@ -11894,11 +12155,11 @@
       name: urolithiasis
       prefix: doid
     target:
-      curie: mondo:0024647
-      identifier: '0024647'
-      link: https://bioregistry.io/mondo:0024647
-      name: urolithiasis
-      prefix: mondo
+      curie: hp:0034368
+      identifier: HP:0034368
+      link: https://bioregistry.io/hp:0034368
+      name: Urolithiasis
+      prefix: hp
   - source:
       curie: hp:0034368
       identifier: HP:0034368
