@@ -1,6 +1,7 @@
-"""This script adds newly inferred cross-references for UBERON.
+"""Contribute Biomappings back to ontologies encoded in the OBO flat file format.
 
-These are added directly to the version controlled UBERON OBO file.
+Example ontologies using Functional OWL:
+- Uber Anatomy Ontology (UBERON)
 """
 
 from pathlib import Path
@@ -9,25 +10,9 @@ from typing import Union
 from bioregistry import curie_to_str, standardize_identifier
 from tqdm.auto import tqdm
 
-from biomappings import load_mappings
+from biomappings.contribute.utils import get_mappings
 
 CONTRIBUTOR_URL = "http://purl.org/dc/terms/contributor"
-
-
-def get_mappings(prefix):
-    mappings = []
-    for mapping in load_mappings():
-        if mapping["source prefix"] == prefix:
-            mappings.append(mapping)
-        if mapping["target prefix"] == prefix:
-            for key in ["prefix", "name", "identifier"]:
-                mapping[f"source {key}"], mapping[f"target {key}"] = (
-                    mapping[f"target {key}"],
-                    mapping[f"source {key}"],
-                )
-            if mapping["relation"] != "skos:exactMatch":
-                raise NotImplementedError
-    return mappings
 
 
 def update_obo(prefix: str, path: Union[str, Path], *, uppercase_prefix: bool = False) -> None:
