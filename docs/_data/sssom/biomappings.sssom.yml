@@ -2,6 +2,7 @@ creator_id:
 - orcid:0000-0001-9439-5346
 - orcid:0000-0002-2046-6145
 - orcid:0000-0002-2627-0696
+- orcid:0000-0002-6601-2165
 - orcid:0000-0003-1307-2508
 - orcid:0000-0003-4423-4370
 curie_map:
@@ -16,6 +17,7 @@ curie_map:
   cellosaurus: https://www.cellosaurus.org/CVCL_
   cemo: https://biopragmatics.github.io/providers/cemo/
   chebi: 'https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:'
+  chmo: http://purl.obolibrary.org/obo/CHMO_
   cido: http://purl.obolibrary.org/obo/CIDO_
   cl: https://www.ebi.ac.uk/ols/ontologies/cl/terms?iri=http://purl.obolibrary.org/obo/
   clo: https://www.ebi.ac.uk/ols4/ontologies/clo/terms?short_form=CLO_
@@ -27,6 +29,7 @@ curie_map:
   efo: http://www.ebi.ac.uk/efo/EFO_
   envo: http://purl.obolibrary.org/obo/ENVO_
   fma: http://purl.org/sig/ont/fma/fma
+  fplx: https://sorgerlab.github.io/famplex/
   go: 'http://amigo.geneontology.org/amigo/term/GO:'
   hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
   hp: 'https://hpo.jax.org/app/browse/term/HP:'
@@ -34,10 +37,13 @@ curie_map:
   ido: 'https://www.ebi.ac.uk/ols4/ontologies/ido/terms?obo_id=IDO:'
   idocovid19: http://purl.obolibrary.org/obo/COVIDO_
   idomal: http://purl.obolibrary.org/obo/IDOMAL_
+  interpro: https://www.ebi.ac.uk/interpro/entry/
   ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
   kestrelo: http://purl.obolibrary.org/obo/kestrelo_
   maxo: http://purl.obolibrary.org/obo/MAXO_
   mesh: https://meshb.nlm.nih.gov/record/ui?ui=
+  mi: 'https://www.ebi.ac.uk/ols4/ontologies/mi/terms?obo_id=MI:'
+  miapa: http://purl.obolibrary.org/obo/MIAPA_
   miro: http://purl.obolibrary.org/obo/MIRO_
   mondo: http://www.bioregistry.io/
   mpath: http://purl.obolibrary.org/obo/MPATH_
