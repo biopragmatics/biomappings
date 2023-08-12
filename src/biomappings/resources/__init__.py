@@ -216,9 +216,14 @@ def load_mappings() -> List[Dict[str, str]]:
     return _load_table(TRUE_MAPPINGS_PATH)
 
 
-def append_true_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
+def append_true_mappings(
+    m: Iterable[Mapping[str, str]],
+    *,
+    sort: bool = True,
+    path: Optional[Path] = None,
+) -> None:
     """Append new lines to the mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, mode="a")
+    _write_helper(MAPPINGS_HEADER, m, path or TRUE_MAPPINGS_PATH, mode="a")
     if sort:
         lint_true_mappings()
 
@@ -248,9 +253,14 @@ def load_false_mappings() -> List[Dict[str, str]]:
     return _load_table(FALSE_MAPPINGS_PATH)
 
 
-def append_false_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
+def append_false_mappings(
+    m: Iterable[Mapping[str, str]],
+    *,
+    sort: bool = True,
+    path: Optional[Path] = None,
+) -> None:
     """Append new lines to the false mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, mode="a")
+    _write_helper(MAPPINGS_HEADER, m, path or FALSE_MAPPINGS_PATH, mode="a")
     if sort:
         lint_false_mappings()
 
@@ -275,9 +285,14 @@ def load_unsure() -> List[Dict[str, str]]:
     return _load_table(UNSURE_PATH)
 
 
-def append_unsure_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
+def append_unsure_mappings(
+    m: Iterable[Mapping[str, str]],
+    *,
+    sort: bool = True,
+    path: Optional[Path] = None,
+) -> None:
     """Append new lines to the "unsure" mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, mode="a")
+    _write_helper(MAPPINGS_HEADER, m, path or UNSURE_PATH, mode="a")
     if sort:
         lint_unsure_mappings()
 
