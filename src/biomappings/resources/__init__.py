@@ -213,9 +213,7 @@ TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
 
 def load_mappings(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     """Load the mappings table."""
-    if path is None:
-        path = TRUE_MAPPINGS_PATH
-    return _load_table(path)
+    return _load_table(path or TRUE_MAPPINGS_PATH)
 
 
 def append_true_mappings(
@@ -225,7 +223,7 @@ def append_true_mappings(
     path: Optional[Path] = None,
 ) -> None:
     """Append new lines to the mappings table."""
-    if not path:
+    if path is None:
         path = TRUE_MAPPINGS_PATH
     _write_helper(MAPPINGS_HEADER, m, path, mode="a")
     if sort:
@@ -254,9 +252,7 @@ FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
 
 def load_false_mappings(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     """Load the false mappings table."""
-    if path is None:
-        path = FALSE_MAPPINGS_PATH
-    return _load_table(path)
+    return _load_table(path or FALSE_MAPPINGS_PATH)
 
 
 def append_false_mappings(
@@ -450,7 +446,7 @@ def load_curators():
 
 
 def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:
-    """Filter all of the predictions by removing what's in the custom filter then re-write.
+    """Filter all the predictions by removing what's in the custom filter then re-write.
 
     :param custom_filter: A filter 3-dictionary of source prefix to target prefix
         to source identifier to target identifier
