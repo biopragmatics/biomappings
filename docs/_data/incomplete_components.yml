@@ -922,17 +922,29 @@
       name: A549
       prefix: ccle
     target:
-      curie: clo:0001601
-      identifier: '0001601'
-      link: https://bioregistry.io/clo:0001601
-      name: A549 cell
-      prefix: clo
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
   - source:
       curie: ccle:A549_LUNG
       identifier: A549_LUNG
       link: https://bioregistry.io/ccle:A549_LUNG
       name: A549
       prefix: ccle
+    target:
+      curie: clo:0001601
+      identifier: '0001601'
+      link: https://bioregistry.io/clo:0001601
+      name: A549 cell
+      prefix: clo
+  - source:
+      curie: cellosaurus:0023
+      identifier: CVCL_0023
+      link: https://bioregistry.io/cellosaurus:0023
+      name: A-549
+      prefix: cellosaurus
     target:
       curie: mesh:D000072283
       identifier: D000072283
@@ -963,18 +975,6 @@
       link: https://bioregistry.io/efo:0001086
       name: A549
       prefix: efo
-  - source:
-      curie: cellosaurus:0023
-      identifier: CVCL_0023
-      link: https://bioregistry.io/cellosaurus:0023
-      name: A-549
-      prefix: cellosaurus
-    target:
-      curie: mesh:D000072283
-      identifier: D000072283
-      link: https://bioregistry.io/mesh:D000072283
-      name: A549 Cells
-      prefix: mesh
   - source:
       curie: clo:0001601
       identifier: '0001601'
@@ -2065,6 +2065,18 @@
       name: MDA-MB-231
       prefix: ccle
     target:
+      curie: mesh:D000092302
+      identifier: D000092302
+      link: https://bioregistry.io/mesh:D000092302
+      name: MDA-MB-231 Cells
+      prefix: mesh
+  - source:
+      curie: ccle:MDAMB231_BREAST
+      identifier: MDAMB231_BREAST
+      link: https://bioregistry.io/ccle:MDAMB231_BREAST
+      name: MDA-MB-231
+      prefix: ccle
+    target:
       curie: clo:0007634
       identifier: '0007634'
       link: https://bioregistry.io/clo:0007634
@@ -2082,18 +2094,6 @@
       link: https://bioregistry.io/clo:0037291
       name: MDAMB231 cell
       prefix: clo
-  - source:
-      curie: ccle:MDAMB231_BREAST
-      identifier: MDAMB231_BREAST
-      link: https://bioregistry.io/ccle:MDAMB231_BREAST
-      name: MDA-MB-231
-      prefix: ccle
-    target:
-      curie: mesh:D000092302
-      identifier: D000092302
-      link: https://bioregistry.io/mesh:D000092302
-      name: MDA-MB-231 Cells
-      prefix: mesh
   - source:
       curie: clo:0007634
       identifier: '0007634'
@@ -2698,11 +2698,11 @@
       name: antiviral
       prefix: ido
     target:
-      curie: ncit:C281
-      identifier: C281
-      link: https://bioregistry.io/ncit:C281
-      name: Antiviral Agent
-      prefix: ncit
+      curie: mesh:D000998
+      identifier: D000998
+      link: https://bioregistry.io/mesh:D000998
+      name: Antiviral Agents
+      prefix: mesh
   - source:
       curie: ido:0000559
       identifier: 0000559
@@ -2710,11 +2710,11 @@
       name: antiviral
       prefix: ido
     target:
-      curie: mesh:D000998
-      identifier: D000998
-      link: https://bioregistry.io/mesh:D000998
-      name: Antiviral Agents
-      prefix: mesh
+      curie: ncit:C281
+      identifier: C281
+      link: https://bioregistry.io/ncit:C281
+      name: Antiviral Agent
+      prefix: ncit
   nodes:
     chebi:22587:
       identifier: CHEBI:22587
@@ -6601,11 +6601,11 @@
       name: BCG Vaccine
       prefix: dron
     target:
-      curie: mesh:D001500
-      identifier: D001500
-      link: https://bioregistry.io/mesh:D001500
+      curie: ncit:C298
+      identifier: C298
+      link: https://bioregistry.io/ncit:C298
       name: BCG Vaccine
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: dron:00012890
       identifier: 00012890
@@ -6613,11 +6613,11 @@
       name: BCG Vaccine
       prefix: dron
     target:
-      curie: ncit:C298
-      identifier: C298
-      link: https://bioregistry.io/ncit:C298
+      curie: mesh:D001500
+      identifier: D001500
+      link: https://bioregistry.io/mesh:D001500
       name: BCG Vaccine
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: ncit:C298
       identifier: C298
@@ -6746,11 +6746,11 @@
       name: Smallpox Vaccine
       prefix: dron
     target:
-      curie: vo:0000651
-      identifier: '0000651'
-      link: https://bioregistry.io/vo:0000651
-      name: Smallpox virus vaccine
-      prefix: vo
+      curie: mesh:D012900
+      identifier: D012900
+      link: https://bioregistry.io/mesh:D012900
+      name: Smallpox Vaccine
+      prefix: mesh
   - source:
       curie: dron:00017235
       identifier: '00017235'
@@ -6758,11 +6758,11 @@
       name: Smallpox Vaccine
       prefix: dron
     target:
-      curie: mesh:D012900
-      identifier: D012900
-      link: https://bioregistry.io/mesh:D012900
-      name: Smallpox Vaccine
-      prefix: mesh
+      curie: vo:0000651
+      identifier: '0000651'
+      link: https://bioregistry.io/vo:0000651
+      name: Smallpox virus vaccine
+      prefix: vo
   - source:
       curie: vo:0000651
       identifier: '0000651'
@@ -7783,10 +7783,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP61
-      identifier: WP61
-      link: https://bioregistry.io/wikipathways:WP61
-      name: Notch signaling pathway (Netpath)
+      curie: wikipathways:WP3845
+      identifier: WP3845
+      link: https://bioregistry.io/wikipathways:WP3845
+      name: Canonical and non-canonical Notch signaling
       prefix: wikipathways
   - source:
       curie: wikipathways:WP268
@@ -7795,10 +7795,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP3845
-      identifier: WP3845
-      link: https://bioregistry.io/wikipathways:WP3845
-      name: Canonical and non-canonical Notch signaling
+      curie: wikipathways:WP61
+      identifier: WP61
+      link: https://bioregistry.io/wikipathways:WP61
+      name: Notch signaling pathway (Netpath)
       prefix: wikipathways
   nodes:
     kegg.pathway:hsa04330:
@@ -7909,10 +7909,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: GO:0033211
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: GO:0033210
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -7921,10 +7921,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: GO:0033210
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: GO:0033211
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033210
@@ -9417,11 +9417,11 @@
       name: cone dystrophy
       prefix: doid
     target:
-      curie: mondo:0000455
-      identifier: '0000455'
-      link: https://bioregistry.io/mondo:0000455
-      name: cone dystrophy
-      prefix: mondo
+      curie: hp:0008020
+      identifier: HP:0008020
+      link: https://bioregistry.io/hp:0008020
+      name: Cone dystrophy
+      prefix: hp
   - source:
       curie: doid:0050795
       identifier: DOID:0050795
@@ -9429,11 +9429,11 @@
       name: cone dystrophy
       prefix: doid
     target:
-      curie: hp:0008020
-      identifier: HP:0008020
-      link: https://bioregistry.io/hp:0008020
-      name: Cone dystrophy
-      prefix: hp
+      curie: mondo:0000455
+      identifier: '0000455'
+      link: https://bioregistry.io/mondo:0000455
+      name: cone dystrophy
+      prefix: mondo
   - source:
       curie: hp:0008020
       identifier: HP:0008020
@@ -12143,11 +12143,11 @@
       name: urolithiasis
       prefix: doid
     target:
-      curie: mondo:0024647
-      identifier: '0024647'
-      link: https://bioregistry.io/mondo:0024647
-      name: urolithiasis
-      prefix: mondo
+      curie: hp:0034368
+      identifier: HP:0034368
+      link: https://bioregistry.io/hp:0034368
+      name: Urolithiasis
+      prefix: hp
   - source:
       curie: doid:0080653
       identifier: DOID:0080653
@@ -12155,11 +12155,11 @@
       name: urolithiasis
       prefix: doid
     target:
-      curie: hp:0034368
-      identifier: HP:0034368
-      link: https://bioregistry.io/hp:0034368
-      name: Urolithiasis
-      prefix: hp
+      curie: mondo:0024647
+      identifier: '0024647'
+      link: https://bioregistry.io/mondo:0024647
+      name: urolithiasis
+      prefix: mondo
   - source:
       curie: hp:0034368
       identifier: HP:0034368
