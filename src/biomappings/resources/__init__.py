@@ -255,7 +255,7 @@ def lint_true_mappings(*, standardize: bool = False, path: Optional[Path] = None
 def _lint_curated_mappings(path: Path, *, standardize: bool = False) -> None:
     """Lint the true mappings file."""
     mappings = _load_table(path)
-    mappings = _remove_redundant(mappings, MappingTuple, standardize=standardize)
+    mappings = _remove_redundant(mappings, standardize=standardize)
     _write_helper(MAPPINGS_HEADER, mappings, path, mode="w")
 
 
@@ -406,12 +406,12 @@ def lint_predictions(standardize: bool = False) -> None:
         )
         if get_canonical_tuple(mapping) not in curated_mappings
     ]
-    mappings = _remove_redundant(mappings, PredictionTuple, standardize=standardize)
+    mappings = _remove_redundant(mappings, standardize=standardize)
     mappings = sorted(mappings, key=mapping_sort_key)
     write_predictions(mappings)
 
 
-def _remove_redundant(mappings, tuple_cls, standardize: bool = False):
+def _remove_redundant(mappings, *, standardize: bool = False):
     if standardize:
         mappings = _standardize_mappings(mappings)
     dd = defaultdict(list)
@@ -420,7 +420,19 @@ def _remove_redundant(mappings, tuple_cls, standardize: bool = False):
     return [max(mappings, key=_pick_best) for mappings in dd.values()]
 
 
-def _pick_best(mapping):
+def _pick_best(mapping: Dict[str, str]) -> int:
+    """Assign a value for this mapping.
+
+    :param mapping: A mapping dictionary
+    :returns: An integer, where higher means a better choice.
+
+    This function is currently simple, but can later be extended to
+    account for several other things including:
+
+    - confidence in the curator
+    - prediction methodology
+    - date of prediction/curation (to keep the earliest)
+    """
     if mapping["source"].startswith("orcid"):
         return 1
     return 0
