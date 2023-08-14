@@ -5,6 +5,7 @@
 import getpass
 import os
 from collections import Counter, defaultdict
+from copy import deepcopy
 from pathlib import Path
 from typing import (
     Any,
@@ -513,10 +514,17 @@ def summary():
     counter = Counter(
         (mapping["source prefix"], mapping["target prefix"]) for _, mapping in predictions
     )
+    rows = []
+    for (source_prefix, target_prefix), count in counter.most_common():
+        row_state = deepcopy(state)
+        row_state.source_prefix = source_prefix
+        row_state.target_prefix = target_prefix
+        rows.append((source_prefix, target_prefix, count, url_for_state(".home", row_state)))
+
     return flask.render_template(
         "summary.html",
-        counter=counter,
         state=state,
+        rows=rows,
     )
 
 
