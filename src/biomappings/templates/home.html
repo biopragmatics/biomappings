@@ -20,7 +20,13 @@
         {{ util.render_messages(dismissible=True, container=False) }}
         <div class="row">
             <div class="card">
-                <h5 class="card-header text-center">Biomappings Curation Interface</h5>
+                <h5 class="card-header text-center">
+                    <a class="btn btn-primary btn-sm" style="float: right;"
+                       href="{{ url_for_state(".summary", state=state) }}">
+                        Summarize
+                    </a>
+                    Biomappings Curation Interface
+                </h5>
                 <div class="card-body">
                     {% if controller.total_curated %}
                         <a href="{{ url_for_state('.run_commit', state) }}">
