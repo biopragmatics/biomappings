@@ -380,9 +380,6 @@ class Controller:
     @classmethod
     def get_url(cls, prefix: str, identifier: str) -> str:
         """Return URL for a given prefix and identifier."""
-        identifier = bioregistry.standardize_identifier(prefix, identifier)
-        if bioregistry.get_obofoundry_prefix(prefix):
-            return bioregistry.get_ols_iri(prefix, identifier)
         return bioregistry.get_bioregistry_iri(prefix, identifier)
 
     @property
@@ -544,7 +541,7 @@ def add_mapping():
 
 @blueprint.route("/commit")
 def run_commit():
-    """Make a commit then redirect to the the home page."""
+    """Make a commit then redirect to the home page."""
     commit_info = commit(
         f"Curated {CONTROLLER.total_curated} mapping"
         f'{"s" if CONTROLLER.total_curated > 1 else ""}'
