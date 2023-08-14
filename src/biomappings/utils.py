@@ -213,6 +213,8 @@ def check_valid_prefix_id(prefix: str, identifier: str):
             raise InvalidNormIdentifier(prefix, identifier, norm_id)
         if prefix == "pr":
             pattern = None  # identifiers.org is broken for uniprot in PR
+        elif prefix == "obi":
+            pattern = re.compile(r"^OBI:\d{7,8}$")  # identifiers.org is broken for OBI
         else:
             pattern = re.compile(resource.miriam["pattern"])
 
