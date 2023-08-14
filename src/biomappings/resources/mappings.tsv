@@ -3649,16 +3649,11 @@ dron	00925916	Vaccinia virus	skos:exactMatch	ncbitaxon	10245	Vaccinia virus	sema
 go	GO:0005816	spindle pole body	skos:exactMatch	ncit	C13365	Spindle Pole Body	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 go	GO:0070266	necroptotic process	skos:exactMatch	mesh	D000079302	Necroptosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000405	pathogen role	skos:exactMatch	obi	OBI:0000718	pathogen role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-ido	0000436	infectious disease	skos:exactMatch	apollosv	00000239	infectious disease	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000443	antiparasitic disposition	skos:exactMatch	idomal	0000425	antiparasitic disposition	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000447	herd immunity to infectious organism	skos:exactMatch	idomal	0000352	herd immunity to infectious organism	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-ido	0000460	infected organism	skos:exactMatch	apollosv	00000209	infected organism	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000505	viremia	skos:exactMatch	hp	HP:0020071	Viremia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000505	viremia	skos:exactMatch	vido	0000505	viremia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000506	bacteremia	skos:exactMatch	hp	HP:0031864	Bacteremia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-ido	0000511	infected population	skos:exactMatch	apollosv	00000233	infected population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-ido	0000514	susceptible population	skos:exactMatch	apollosv	00000234	susceptible population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-ido	0000519	incubation period	skos:exactMatch	apollosv	00000317	incubation period	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000519	incubation period	skos:exactMatch	idomal	0000355	incubation period	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000526	parasite	skos:exactMatch	apollosv	00000373	parasite	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000526	parasite	skos:exactMatch	idomal	0000995	parasite	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -3691,15 +3686,9 @@ ido	0000649	amebiasis	skos:exactMatch	doid	DOID:9181	amebiasis	semapv:ManualMapp
 ido	0001374	epitope role	skos:exactMatch	chebi	CHEBI:53000	epitope	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 ido	0001377	pathogen surveillance	skos:exactMatch	vsmo	0001959	pathogen surveillance	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0001378	vector surveillance	skos:exactMatch	vsmo	0000169	vector surveillance	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-idomal	0000008	contagiousness	skos:exactMatch	apollosv	00000182	contagiousness	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0000008	contagiousness	skos:exactMatch	ido	0000458	contagiousness	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0000024	immunodeficiency	skos:exactMatch	hp	HP:0002721	Immunodeficiency	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	mira	0.7623170480313337
-idomal	0000040	virulence factor	skos:exactMatch	ido	0000547	virulence factor	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0000043	toxin	skos:exactMatch	chebi	CHEBI:27026	toxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-idomal	0000043	toxin	skos:exactMatch	ido	0000549	toxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-idomal	0000044	endotoxin	skos:exactMatch	ido	0000552	endotoxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-idomal	0000045	exotoxin	skos:exactMatch	ido	0000550	exotoxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-idomal	0000054	adhesion factor	skos:exactMatch	ido	0000557	adhesion factor	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0000125	apicomplexa	skos:exactMatch	ncbitaxon	5794	Apicomplexa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0000125	apicomplexa	skos:exactMatch	vsmo	0000006	Apicomplexa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0000126	Plasmodium	skos:exactMatch	ncbitaxon	5820	Plasmodium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
@@ -3751,7 +3740,6 @@ idomal	0000886	triphenyl phosphate	skos:exactMatch	chebi	CHEBI:35033	triphenyl p
 idomal	0000895	sulfoxide	skos:exactMatch	chebi	CHEBI:22063	sulfoxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0000895	sulfoxide	skos:exactMatch	chebi	CHEBI:35813	sulfoxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0000930	insecticidal substance	skos:exactMatch	miro	10000239	insecticidal substance	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-idomal	0000995	parasite	skos:exactMatch	apollosv	00000373	parasite	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0001039	immunization	skos:exactMatch	vo	0000490	immunization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0001040	vaccination	skos:exactMatch	vo	0000002	vaccination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0001052	malaria	skos:exactMatch	doid	DOID:12365	malaria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -9632,12 +9620,10 @@ uniprot.chain	PRO_0000449643	Non-structural protein 9	skos:exactMatch	ncbiprotei
 uniprot.chain	PRO_0000449644	Non-structural protein 10	skos:exactMatch	ncbiprotein	YP_009742617	nsp10	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uniprot.chain	PRO_0000449645	Non-structural protein 11	skos:exactMatch	ncbiprotein	YP_009725312	nsp11	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 vido	0000505	viremia	skos:exactMatch	hp	HP:0020071	Viremia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vido	0000505	viremia	skos:exactMatch	ido	0000505	viremia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vido	0000508	virion	skos:exactMatch	ido	0000508	virion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vido	0000564	viricide	skos:exactMatch	ido	0000564	viricide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vido	0001066	virus aggregate	skos:exactMatch	vsmo	0000297	virus aggregate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0000001	vaccine	skos:exactMatch	mesh	D014612	Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000002	vaccination	skos:exactMatch	idomal	0001040	vaccination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 vo	0000002	vaccination	skos:exactMatch	mesh	D014611	Vaccination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000003	ACAM2000	skos:exactMatch	mesh	C000588544	ACAM2000	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
 vo	0000005	Adacel	skos:exactMatch	mesh	C509326	adacel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
@@ -9654,7 +9640,6 @@ vo	0000041	Escherichia coli vaccine	skos:exactMatch	mesh	D022361	Escherichia col
 vo	0000043	FluLaval	skos:exactMatch	mesh	C517981	FluLaval	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
 vo	0000044	FluMist	skos:exactMatch	mesh	C000613429	FluMist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
 vo	0000045	Fluarix	skos:exactMatch	mesh	C510903	fluarix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
-vo	0000051	Balb/c mouse	skos:exactMatch	cido	0000390	BALB/c mouse	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0000053	Neisseria meningitidis vaccine	skos:exactMatch	mesh	D022401	Meningococcal Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
 vo	0000077	Mycobacterium tuberculosis vaccine	skos:exactMatch	mesh	D032581	Tuberculosis Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
 vo	0000079	Fluzone High-dose	skos:exactMatch	mesh	C000618615	Fluzone High-Dose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7715934858792002
@@ -9680,7 +9665,6 @@ vo	0000402	AIDSVAX	skos:exactMatch	mesh	C112734	AIDSVAX	semapv:ManualMappingCura
 vo	0000410	Pandemrix	skos:exactMatch	mesh	C556153	pandemrix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000414	Panvax	skos:exactMatch	mesh	C551358	panvax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000417	protozoan vaccine	skos:exactMatch	mesh	D016052	Protozoan Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
-vo	0000490	immunization	skos:exactMatch	idomal	0001039	immunization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 vo	0000490	immunization	skos:exactMatch	mesh	D007114	Immunization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000492	passive immunization	skos:exactMatch	mesh	D007116	Immunization, Passive	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
 vo	0000516	human protein	skos:exactMatch	pr	PR:000029067	Homo sapiens protein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -9812,12 +9796,7 @@ vo	0010737	Recombivax HB	skos:exactMatch	mesh	C075655	Recombivax HB	semapv:Manua
 vo	0010754	virus protein	skos:exactMatch	pr	PR:000036197	viral protein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0010950	SecA2	skos:exactMatch	ogg	3000885594	secA2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0011093	Hepatitis B surface antigen	skos:exactMatch	mesh	D006514	Hepatitis B Surface Antigens	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.549371263656978
-vo	0011210	SERA-5	skos:exactMatch	idomal	0001109	SERA-5	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0011220	MSP3	skos:exactMatch	idomal	0001145	MSP-3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7775716347144919
-vo	0011221	MSP8	skos:exactMatch	idomal	0001150	MSP-8	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7775716347144919
 vo	0011241	Hsp90	skos:exactMatch	pr	PR:000025350	HSPC protein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0012381	LSA-3	skos:exactMatch	idomal	0001093	LSA-3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0012382	eba-175	skos:exactMatch	idomal	0001115	EBA-175	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP100	Glutathione metabolism	skos:exactMatch	reactome	R-HSA-174403	Glutathione synthesis and recycling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP100	Glutathione metabolism	speciesSpecific	go	GO:0006749	glutathione metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP1002	Electron Transport Chain	speciesSpecific	go	GO:0022900	electron transport chain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
