@@ -4,7 +4,6 @@
 
 import csv
 import itertools as itt
-import os
 from collections import defaultdict
 from pathlib import Path
 from typing import (
@@ -167,9 +166,9 @@ class PredictionTuple(NamedTuple):
         return f"{self.target_prefix}:{self.target_identifier}"
 
 
-def get_resource_file_path(fname) -> str:
+def get_resource_file_path(fname) -> Path:
     """Get a resource by its file name."""
-    return os.path.join(RESOURCE_PATH, fname)
+    return RESOURCE_PATH.joinpath(fname)
 
 
 def _load_table(fname) -> List[Dict[str, str]]:
@@ -211,16 +210,23 @@ def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
 TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
 
 
-def load_mappings() -> List[Dict[str, str]]:
+def load_mappings(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     """Load the mappings table."""
-    return _load_table(TRUE_MAPPINGS_PATH)
+    return _load_table(path or TRUE_MAPPINGS_PATH)
 
 
-def append_true_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
+def append_true_mappings(
+    m: Iterable[Mapping[str, str]],
+    *,
+    sort: bool = True,
+    path: Optional[Path] = None,
+) -> None:
     """Append new lines to the mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, mode="a")
+    if path is None:
+        path = TRUE_MAPPINGS_PATH
+    _write_helper(MAPPINGS_HEADER, m, path, mode="a")
     if sort:
-        lint_true_mappings()
+        lint_true_mappings(path=path)
 
 
 def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
@@ -228,70 +234,84 @@ def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
     append_true_mappings(mapping.as_dict() for mapping in set(mappings))
 
 
-def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
+def write_true_mappings(m: Iterable[Mapping[str, str]], *, path: Optional[Path] = None) -> None:
     """Write mappigns to the true mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, mode="w")
+    _write_helper(MAPPINGS_HEADER, m, path or TRUE_MAPPINGS_PATH, mode="w")
 
 
-def lint_true_mappings(*, standardize: bool = False) -> None:
+def lint_true_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the true mappings file."""
-    mappings = load_mappings()
+    mappings = load_mappings(path=path)
     mappings = _remove_redundant(mappings, MappingTuple, standardize=standardize)
-    write_true_mappings(sorted(mappings, key=mapping_sort_key))
+    write_true_mappings(sorted(mappings, key=mapping_sort_key), path=path)
 
 
 FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
 
 
-def load_false_mappings() -> List[Dict[str, str]]:
+def load_false_mappings(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     """Load the false mappings table."""
-    return _load_table(FALSE_MAPPINGS_PATH)
+    return _load_table(path or FALSE_MAPPINGS_PATH)
 
 
-def append_false_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
+def append_false_mappings(
+    m: Iterable[Mapping[str, str]],
+    *,
+    sort: bool = True,
+    path: Optional[Path] = None,
+) -> None:
     """Append new lines to the false mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, mode="a")
+    if path is None:
+        path = FALSE_MAPPINGS_PATH
+    _write_helper(MAPPINGS_HEADER, m, path, mode="a")
     if sort:
-        lint_false_mappings()
+        lint_false_mappings(path=path)
 
 
-def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
+def write_false_mappings(m: Iterable[Mapping[str, str]], *, path: Optional[Path] = None) -> None:
     """Write mappings to the false mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, mode="w")
+    _write_helper(MAPPINGS_HEADER, m, path or FALSE_MAPPINGS_PATH, mode="w")
 
 
-def lint_false_mappings(*, standardize: bool = False) -> None:
+def lint_false_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the false mappings file."""
-    mappings = load_false_mappings()
+    mappings = load_false_mappings(path=path)
     mappings = _remove_redundant(mappings, MappingTuple, standardize=standardize)
-    write_false_mappings(sorted(mappings, key=mapping_sort_key))
+    write_false_mappings(sorted(mappings, key=mapping_sort_key), path=path)
 
 
 UNSURE_PATH = get_resource_file_path("unsure.tsv")
 
 
-def load_unsure() -> List[Dict[str, str]]:
+def load_unsure(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     """Load the unsure table."""
-    return _load_table(UNSURE_PATH)
+    return _load_table(path or UNSURE_PATH)
 
 
-def append_unsure_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
+def append_unsure_mappings(
+    m: Iterable[Mapping[str, str]],
+    *,
+    sort: bool = True,
+    path: Optional[Path] = None,
+) -> None:
     """Append new lines to the "unsure" mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, mode="a")
+    if path is None:
+        path = UNSURE_PATH
+    _write_helper(MAPPINGS_HEADER, m, path, mode="a")
     if sort:
-        lint_unsure_mappings()
+        lint_unsure_mappings(path=path)
 
 
-def write_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
+def write_unsure_mappings(m: Iterable[Mapping[str, str]], *, path: Optional[Path] = None) -> None:
     """Write mappings to the unsure mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, mode="w")
+    _write_helper(MAPPINGS_HEADER, m, path or UNSURE_PATH, mode="w")
 
 
-def lint_unsure_mappings(*, standardize: bool = False) -> None:
+def lint_unsure_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the unsure mappings file."""
-    mappings = load_unsure()
+    mappings = load_unsure(path=path)
     mappings = _remove_redundant(mappings, MappingTuple, standardize=standardize)
-    write_unsure_mappings(sorted(mappings, key=mapping_sort_key))
+    write_unsure_mappings(sorted(mappings, key=mapping_sort_key), path=path)
 
 
 PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
@@ -425,7 +445,7 @@ def load_curators():
 
 
 def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:
-    """Filter all of the predictions by removing what's in the custom filter then re-write.
+    """Filter all the predictions by removing what's in the custom filter then re-write.
 
     :param custom_filter: A filter 3-dictionary of source prefix to target prefix
         to source identifier to target identifier

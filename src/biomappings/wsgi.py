@@ -100,6 +100,9 @@ def url_for_state(endpoint, state: State, **kwargs) -> str:
 def get_app(
     target_curies: Optional[Iterable[Tuple[str, str]]] = None,
     predictions_path: Optional[Path] = None,
+    positives_path: Optional[Path] = None,
+    negatives_path: Optional[Path] = None,
+    unsure_path: Optional[Path] = None,
 ) -> flask.Flask:
     """Get a curation flask app."""
     app_ = flask.Flask(__name__)
@@ -107,7 +110,13 @@ def get_app(
     app_.config["SECRET_KEY"] = os.urandom(8)
     app_.config["SHOW_RELATIONS"] = True
     app_.config["SHOW_LINES"] = False
-    controller = Controller(target_curies=target_curies, predictions_path=predictions_path)
+    controller = Controller(
+        target_curies=target_curies,
+        predictions_path=predictions_path,
+        positives_path=positives_path,
+        negatives_path=negatives_path,
+        unsure_path=unsure_path,
+    )
     app_.config["controller"] = controller
     flask_bootstrap.Bootstrap4(app_)
     app_.register_blueprint(blueprint)
@@ -137,6 +146,9 @@ class Controller:
         *,
         target_curies: Optional[Iterable[Tuple[str, str]]] = None,
         predictions_path: Optional[Path] = None,
+        positives_path: Optional[Path] = None,
+        negatives_path: Optional[Path] = None,
+        unsure_path: Optional[Path] = None,
     ):
         """Instantiate the web controller.
 
@@ -144,9 +156,17 @@ class Controller:
             of curation. If this is given, pre-filters will be made before on predictions
             to only show ones where either the source or target appears in this set
         :param predictions_path: A custom predictions file to curate from
+        :param positives_path: A custom positives file to curate to
+        :param negatives_path: A custom negatives file to curate to
+        :param unsure_path: A custom unsure file to curate to
         """
         self.predictions_path = predictions_path
         self._predictions = load_predictions(path=self.predictions_path)
+
+        self.positives_path = positives_path
+        self.negatives_path = negatives_path
+        self.unsure_path = unsure_path
+
         self._marked: Dict[int, str] = {}
         self.total_curated = 0
         self._added_mappings: List[Dict[str, Union[None, str, float]]] = []
@@ -442,14 +462,14 @@ class Controller:
             prediction["type"] = "semapv:ManualMappingCuration"
             entries[value].append(prediction)
 
-        append_true_mappings(entries["correct"])
-        append_false_mappings(entries["incorrect"])
-        append_unsure_mappings(entries["unsure"])
+        append_true_mappings(entries["correct"], path=self.positives_path)
+        append_false_mappings(entries["incorrect"], path=self.negatives_path)
+        append_unsure_mappings(entries["unsure"], path=self.unsure_path)
         write_predictions(self._predictions, path=self.predictions_path)
         self._marked.clear()
 
         # Now add manually curated mappings
-        append_true_mappings(self._added_mappings)
+        append_true_mappings(self._added_mappings, path=self.positives_path)
         self._added_mappings = []
 
 
