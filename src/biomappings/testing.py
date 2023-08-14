@@ -162,28 +162,36 @@ class IntegrityTestCase(unittest.TestCase):
 
     def test_predictions_sorted(self):
         """Test the predictions are in a canonical order."""
-        assert self.predictions == sorted(  # noqa:S101
-            self.predictions, key=mapping_sort_key
-        ), "Predictions are not sorted"
+        self.assertEqual(
+            self.predictions,
+            sorted(self.predictions, key=mapping_sort_key),
+            msg="Predictions are not sorted",
+        )
         self.assert_no_internal_redundancies(self.predictions, PredictionTuple)
 
     def test_curations_sorted(self):
         """Test the true curated mappings are in a canonical order."""
-        assert self.mappings == sorted(  # noqa:S101
-            self.mappings, key=mapping_sort_key
-        ), "True curations are not sorted"
+        self.assertEqual(
+            self.mappings,
+            sorted(self.mappings, key=mapping_sort_key),
+            msg="True curations are not sorted",
+        )
         self.assert_no_internal_redundancies(self.mappings, MappingTuple)
 
     def test_false_mappings_sorted(self):
         """Test the false curated mappings are in a canonical order."""
-        assert self.incorrect == sorted(  # noqa:S101
-            self.incorrect, key=mapping_sort_key
-        ), "False curations are not sorted"
+        self.assertEqual(
+            self.incorrect,
+            sorted(self.incorrect, key=mapping_sort_key),
+            msg="False curations are not sorted",
+        )
         self.assert_no_internal_redundancies(self.incorrect, MappingTuple)
 
     def test_unsure_sorted(self):
         """Test the unsure mappings are in a canonical order."""
-        assert self.unsure == sorted(  # noqa:S101
-            self.unsure, key=mapping_sort_key
-        ), "Unsure curations are not sorted"
+        self.assertEqual(
+            self.unsure,
+            sorted(self.unsure, key=mapping_sort_key),
+            msg="Unsure curations are not sorted",
+        )
         self.assert_no_internal_redundancies(self.unsure, MappingTuple)
