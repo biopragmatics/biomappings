@@ -3,6 +3,7 @@
 """The biomappings CLI."""
 
 import sys
+from pathlib import Path
 
 import click
 from more_click import run_app
@@ -23,12 +24,25 @@ def main():
 if get_git_hash() is not None:
 
     @main.command()
-    @click.option("--path", type=click.Path(), help="A predictions TSV file path")
-    def web(path):
+    @click.option("--predictions-path", type=click.Path(), help="A predictions TSV file path")
+    @click.option("--positives-path", type=click.Path(), help="A positives curation TSV file path")
+    @click.option("--negatives-path", type=click.Path(), help="A negatives curation TSV file path")
+    @click.option("--unsure-path", type=click.Path(), help="An unsure curation TSV file path")
+    def web(
+        predictions_path: Path,
+        positives_path: Path,
+        negatives_path: Path,
+        unsure_path: Path,
+    ):
         """Run the biomappings web app."""
         from .wsgi import get_app
 
-        app = get_app(predictions_path=path)
+        app = get_app(
+            predictions_path=predictions_path,
+            positives_path=positives_path,
+            negatives_path=negatives_path,
+            unsure_path=unsure_path,
+        )
         run_app(app, with_gunicorn=False)
 
     @main.command()

@@ -4,7 +4,6 @@
 
 import csv
 import itertools as itt
-import os
 from collections import defaultdict
 from pathlib import Path
 from typing import (
@@ -167,9 +166,9 @@ class PredictionTuple(NamedTuple):
         return f"{self.target_prefix}:{self.target_identifier}"
 
 
-def get_resource_file_path(fname) -> str:
+def get_resource_file_path(fname) -> Path:
     """Get a resource by its file name."""
-    return os.path.join(RESOURCE_PATH, fname)
+    return RESOURCE_PATH.joinpath(fname)
 
 
 def _load_table(fname) -> List[Dict[str, str]]:
