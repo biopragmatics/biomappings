@@ -4313,6 +4313,7 @@ mesh	C000637995	Ruminococcus gnavus	skos:exactMatch	ncit	C124373	Ruminococcus gn
 mesh	C000639838	Sphingomonas paucimobilis	skos:exactMatch	ncit	C86749	Sphingomonas paucimobilis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C000650035	Citrobacter farmeri	skos:exactMatch	ncit	C86264	Citrobacter farmeri	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C000654629	H3B-6545	skos:exactMatch	ncit	C142980	Selective Estrogen Receptor Covalent Antagonist H3B-6545	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	C000655084	red meat allergy	skos:exactMatch	hp	HP:0410319	Alpha-gal allergy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C000655246	ACT-774312	skos:exactMatch	ncit	C161834	CRTH2 Antagonist ACT-774312	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C000655292	unicuspid aortic valve	skos:exactMatch	hp	HP:0012561	Unicuspid aortic valve	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C000656407	MSANTD3 protein, human	skos:exactMatch	uniprot	Q96H12	MSANTD3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -4335,11 +4336,14 @@ mesh	C000706695	ABBV-744	skos:exactMatch	ncit	C148415	BET Inhibitor ABBV-744	sem
 mesh	C000706947	FGF21 protein, human	skos:exactMatch	uniprot	Q9NSA1	FGF21	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C000715747	Telangiectasia macularis eruptiva perstans	skos:exactMatch	hp	HP:0007583	Telangiectasia macularis eruptiva perstans	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C000718787	AA amyloidosis	skos:exactMatch	hp	HP:4000041	AA amyloidosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
+mesh	C000718810	anti-amphiphysin autoantibody	skos:exactMatch	hp	HP:5000002	Anti-Amphiphysin antibody	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C000718811	Anti-ARHGAP26 antibody	skos:exactMatch	hp	HP:5000003	Anti-ARHGAP26 antibody	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C000718813	Anti-CARP VIII antibody	skos:exactMatch	hp	HP:5000004	Anti-CARP VIII antibody	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
+mesh	C000719029	anti-GFAP autoantibodies	skos:exactMatch	hp	HP:5000013	Anti-GFAP antibody	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C000719042	anti-ryanodine receptor autoantibody	skos:exactMatch	hp	HP:5000047	Anti-ryanodine receptor antibody	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C000719407	Midline brainstem cleft	skos:exactMatch	hp	HP:0033645	Midline brainstem cleft	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C000719531	misophonia	skos:exactMatch	hp	HP:0025113	Misophonia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
+mesh	C000721288	Cleft eyelid	skos:exactMatch	hp	HP:0000625	Eyelid coloboma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C000721322	Coarse facial features	skos:exactMatch	hp	HP:0000280	Coarse facial features	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C000721349	Air crescent sign	skos:exactMatch	hp	HP:0032172	Air crescent sign	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C000721350	Silhouette sign	skos:exactMatch	hp	HP:0033647	Silhouette sign	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
