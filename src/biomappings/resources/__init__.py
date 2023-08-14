@@ -254,8 +254,8 @@ def lint_true_mappings(*, standardize: bool = False, path: Optional[Path] = None
 
 def _lint_curated_mappings(path: Path, *, standardize: bool = False) -> None:
     """Lint the true mappings file."""
-    mappings = _load_table(path)
-    mappings = _remove_redundant(mappings, standardize=standardize)
+    mapping_list = _load_table(path)
+    mappings = _remove_redundant(mapping_list, standardize=standardize)
     _write_helper(MAPPINGS_HEADER, mappings, path, mode="w")
 
 
@@ -381,7 +381,12 @@ def append_predictions(
         lint_predictions()
 
 
-def lint_predictions(standardize: bool = False) -> None:
+def lint_predictions(
+    *,
+    standardize: bool = False,
+    path: Optional[Path] = None,
+    additional_curated_mappings: Optional[List[Dict[str, str]]] = None,
+) -> None:
     """Lint the predictions file.
 
     1. Make sure there are no redundant rows
@@ -390,37 +395,39 @@ def lint_predictions(standardize: bool = False) -> None:
 
     :param standardize: Should identifiers be standardized (against the
              combination of Identifiers.org and Bioregistry)?
+    :param path: The path to the predicted mappings
+    :param additional_curated_mappings: A list of additional mappings
     """
-    curated_mappings = {
-        get_canonical_tuple(mapping)
-        for mapping in itt.chain(
+    mappings = remove_mappings(
+        load_predictions(path=path),
+        itt.chain(
             load_mappings(),
             load_false_mappings(),
             load_unsure(),
-        )
-    }
-    mappings = [
-        mapping
-        for mapping in tqdm(
-            load_predictions(), desc="Removing curated from predicted", unit_scale=True
-        )
-        if get_canonical_tuple(mapping) not in curated_mappings
-    ]
+            additional_curated_mappings or [],
+        ),
+    )
     mappings = _remove_redundant(mappings, standardize=standardize)
     mappings = sorted(mappings, key=mapping_sort_key)
-    write_predictions(mappings)
+    write_predictions(mappings, path=path)
 
 
-def _remove_redundant(mappings, *, standardize: bool = False):
+def remove_mappings(mappings: Mappings, mappings_to_remove: Mappings) -> Mappings:
+    """Remove the first set of mappings from the second."""
+    skip_tuples = {get_canonical_tuple(mtr) for mtr in mappings_to_remove}
+    return (mapping for mapping in mappings if get_canonical_tuple(mapping) not in skip_tuples)
+
+
+def _remove_redundant(mappings: Mappings, *, standardize: bool = False) -> Mappings:
     if standardize:
         mappings = _standardize_mappings(mappings)
     dd = defaultdict(list)
     for mapping in mappings:
         dd[get_canonical_tuple(mapping)].append(mapping)
-    return [max(mappings, key=_pick_best) for mappings in dd.values()]
+    return (max(mappings, key=_pick_best) for mappings in dd.values())
 
 
-def _pick_best(mapping: Dict[str, str]) -> int:
+def _pick_best(mapping: Mapping[str, str]) -> int:
     """Assign a value for this mapping.
 
     :param mapping: A mapping dictionary
@@ -438,7 +445,7 @@ def _pick_best(mapping: Dict[str, str]) -> int:
     return 0
 
 
-def _standardize_mappings(mappings, *, progress: bool = True):
+def _standardize_mappings(mappings: Mappings, *, progress: bool = True) -> Mappings:
     for mapping in tqdm(
         mappings,
         desc="Standardizing mappings",
