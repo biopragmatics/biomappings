@@ -4539,6 +4539,7 @@ mesh	C486356	FGF12 protein, human	skos:exactMatch	uniprot	P61328	FGF12	semapv:Ma
 mesh	C486393	RAX protein, human	skos:exactMatch	uniprot	Q9Y2V3	RAX	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C486593	PARVG protein, human	skos:exactMatch	uniprot	Q9HBI0	PARVG	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C486655	BMF protein, human	skos:exactMatch	uniprot	Q96LC9	BMF	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	C487483	ANNA-2 antibody, human	skos:exactMatch	hp	HP:5000030	Anti-Ri antibody	semapv:ManualMappingCuration	web	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C488098	NXNL1 protein, human	skos:exactMatch	uniprot	Q96CM4	NXNL1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C488261	ZW10 protein, human	skos:exactMatch	uniprot	O43264	ZW10	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C488760	RAET1E protein, human	skos:exactMatch	uniprot	Q8TD07	RAET1E	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -4719,6 +4720,7 @@ mesh	C535419	Charcot-Marie-Tooth disease, Type 4A	skos:exactMatch	doid	DOID:0110
 mesh	C535420	Charcot-Marie-Tooth disease, Type 4B1	skos:exactMatch	doid	DOID:0110191	Charcot-Marie-Tooth disease type 4B1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C535421	Charcot-Marie-Tooth disease, Type 4B2	skos:exactMatch	doid	DOID:0110190	Charcot-Marie-Tooth disease type 4B2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C535436	Bethlem myopathy	skos:exactMatch	doid	DOID:0050663	Bethlem myopathy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	C535438	Bidirectional tachycardia	skos:exactMatch	hp	HP:0034040	Bidirectional ventricular tachycardia	semapv:ManualMappingCuration	web	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C535440	Bietti Crystalline Dystrophy	skos:exactMatch	doid	DOID:0050664	Bietti crystalline corneoretinal dystrophy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C535441	Bifid nose	skos:exactMatch	hp	HP:0011803	Bifid nose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C535443	Bile acid synthesis defect, congenital, 2	skos:exactMatch	doid	DOID:0111069	congenital bile acid synthesis defect 2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -4752,6 +4754,7 @@ mesh	C535566	Absent corpus callosum cataract immunodeficiency	skos:exactMatch	do
 mesh	C535572	Cantu syndrome	skos:exactMatch	doid	DOID:0060569	hypertrichotic osteochondrodysplasia Cantu type	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C535579	Cardiofaciocutaneous syndrome	skos:exactMatch	doid	DOID:0060233	cardiofaciocutaneous syndrome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C535581	Cardiomyopathy dilated with Woolly hair and keratoderma	skos:exactMatch	doid	DOID:0090128	Carvajal syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C535584	Cardiomyopathy, infantile histiocytoid	skos:exactMatch	hp	HP:0005152	Histiocytoid cardiomyopathy	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C535588	Carnitine palmitoyl transferase 1A deficiency	skos:exactMatch	doid	DOID:0090129	carnitine palmitoyltransferase I deficiency	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C535600	dopamine beta hydroxylase deficiency	skos:exactMatch	doid	DOID:0090145	dopamine beta-hydroxylase deficiency	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C535601	Dosage-sensitive sex reversal	skos:exactMatch	doid	DOID:0111777	46,XY sex reversal 2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -4787,6 +4790,7 @@ mesh	C535780	Spondylocarpotarsal synostosis	skos:exactMatch	doid	DOID:0090116	sp
 mesh	C535786	Spondyloepimetaphyseal dysplasia, sponastrime type	skos:exactMatch	doid	DOID:5684	spondyloepimetaphyseal dysplasia, Sponastrime type	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C535788	Spondyloepiphyseal dysplasia, congenita	skos:exactMatch	doid	DOID:14789	spondyloepiphyseal dysplasia congenita	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C535789	Spondyloepiphyseal dysplasia, Omani type	skos:exactMatch	doid	DOID:0050813	spondyloepiphyseal dysplasia with congenital joint dislocations	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C535802	Sprengel deformity	skos:exactMatch	hp	HP:0000912	Sprengel anomaly	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C535803	succinic semialdehyde dehydrogenase deficiency	skos:exactMatch	doid	DOID:0060175	succinic semialdehyde dehydrogenase deficiency	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C535811	Molybdenum cofactor deficiency	skos:exactMatch	hp	HP:0003570	Molybdenum cofactor deficiency	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C535813	Neuropathy, hereditary motor and sensory, Russe type	skos:exactMatch	doid	DOID:0110196	Charcot-Marie-Tooth disease type 4G	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -4841,6 +4845,7 @@ mesh	C536096	Myoclonic dystonia	skos:exactMatch	doid	DOID:0090033	myoclonic dyst
 mesh	C536102	Myopathy, congenital nonprogressive with Moebius and Robin sequences	skos:exactMatch	doid	DOID:0080194	Carey-Fineman-Ziter syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C536106	Myostatin-related muscle hypertrophy	skos:exactMatch	doid	DOID:0111072	myostatin-related muscle hypertrophy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C536108	N syndrome	skos:exactMatch	doid	DOID:0050769	N syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C536111	Partial agenesis of corpus callosum	skos:exactMatch	hp	HP:0001338	Partial agenesis of the corpus callosum	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C536123	Nivelon Nivelon Mabille syndrome	skos:exactMatch	doid	DOID:0060644	chondrodysplasia-pseudohermaphroditism syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C536129	Achromatopsia 3	skos:exactMatch	doid	DOID:0110008	achromatopsia 3	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C536131	Meckel syndrome type 2	skos:exactMatch	doid	DOID:0070116	Meckel syndrome 2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -4917,6 +4922,7 @@ mesh	C536494	Uveal melanoma	skos:exactMatch	hp	HP:0007716	Uveal melanoma	semapv:
 mesh	C536495	VACTERL association	skos:exactMatch	doid	DOID:14679	VACTERL association	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C536510	Thiamine responsive megaloblastic anemia syndrome	skos:exactMatch	doid	DOID:0090117	thiamine-responsive megaloblastic anemia syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C536512	Thiopurine S methyltranferase deficiency	skos:exactMatch	doid	DOID:0080172	thiopurine S-methyltransferase deficiency	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C536524	Valinemia	skos:exactMatch	hp	HP:0010910	Hypervalinemia	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C536525	Valproic acid antenatal infection	skos:exactMatch	doid	DOID:0060471	fetal valproate syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C536528	Van der Woude syndrome	skos:exactMatch	doid	DOID:0060239	Van der Woude syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C536530	Van Maldergem Wetzburger Verloes syndrome	skos:exactMatch	doid	DOID:0060238	Van Maldergem syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -5235,6 +5241,7 @@ mesh	C538344	Navajo neurohepatopathy	skos:exactMatch	doid	DOID:0080125	mitochond
 mesh	C538346	Naxos disease	skos:exactMatch	doid	DOID:0080551	Naxos disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C538348	Nemaline myopathy 1	skos:exactMatch	doid	DOID:0110926	nemaline myopathy 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C538351	Nemaline myopathy 4	skos:exactMatch	doid	DOID:0110932	nemaline myopathy 4	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C538354	Potato nose	skos:exactMatch	hp	HP:0000414	Bulbous nose	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C538355	Potocki-Lupski syndrome	skos:exactMatch	doid	DOID:0060853	Potocki-Lupski syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C538356	Potocki-Shaffer syndrome	skos:exactMatch	doid	DOID:0111687	Potocki-Shaffer syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C538361	Reticular dysgenesis	skos:exactMatch	doid	DOID:0060020	reticular dysgenesis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -5302,6 +5309,7 @@ mesh	C562489	Lymphoid Interstitial Pneumonia	skos:exactMatch	doid	DOID:0050159	l
 mesh	C562509	Popliteal Pterygium Syndrome	skos:exactMatch	doid	DOID:0060055	popliteal pterygium syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C562524	Fibrochondrogenesis	skos:exactMatch	doid	DOID:0060465	fibrochondrogenesis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C562538	Cerebrocostomandibular Syndrome	skos:exactMatch	doid	DOID:0111248	cerebrocostomandibular syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C562546	Megalodactyly	skos:exactMatch	hp	HP:0004099	Macrodactyly	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C562562	Colonic Atresia	skos:exactMatch	hp	HP:0010448	Colonic atresia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C562563	Microcolon	skos:exactMatch	hp	HP:0004388	Microcolon	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C562568	Cerebellar Hypoplasia	skos:exactMatch	doid	DOID:0070338	cerebellar hypoplasia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -6025,6 +6033,7 @@ mesh	D000009	Abdominal Muscles	skos:exactMatch	ncit	C32040	Abdominal Muscle	sema
 mesh	D000019	Abortifacient Agents	skos:exactMatch	chebi	CHEBI:50691	abortifacient	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D000022	Abortion, Spontaneous	skos:exactMatch	ncit	C34336	Spontaneous Abortion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D000038	Abscess	skos:exactMatch	hp	HP:0025615	Abscess	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	D000058	Accidental Falls	skos:exactMatch	hp	HP:0002527	Falls	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	D000066450	Mouse Embryonic Stem Cells	skos:exactMatch	efo	0004038	mouse embryonic stem cell	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D000066530	Neurological Rehabilitation	skos:exactMatch	ncit	C157934	Neurological Rehabilitation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D000067128	Extracellular Vesicles	skos:exactMatch	go	GO:1903561	extracellular vesicle	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			

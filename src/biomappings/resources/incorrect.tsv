@@ -599,10 +599,14 @@ mesh	C477269	3 beta-hydroxy-delta 5-steroid dehydrogenase, rat	skos:exactMatch	g
 mesh	C509674	marinocine protein, Marinomonas mediterranea	skos:exactMatch	go	GO:0033736	L-lysine 6-oxidase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C531673	Familial ependymoma	skos:exactMatch	doid	DOID:5509	pediatric ependymoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C531763	Irritable heart	skos:exactMatch	doid	DOID:0111154	postural orthostatic tachycardia syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	C535425	Congenital torticollis	skos:exactMatch	hp	HP:0005988	Congenital muscular torticollis	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C535442	Bile acid synthesis defect, congenital, 1	skos:exactMatch	doid	DOID:0050674	congenital bile acid synthesis defect	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C535536	Iridogoniodysgenesis, dominant type	skos:exactMatch	doid	DOID:0050786	iridogoniodysgenesis syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C535568	Absent patella	skos:exactMatch	hp	HP:0006443	Patellar aplasia	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C535837	Pancreatic carcinoma, familial	skos:exactMatch	doid	DOID:4905	pancreatic carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C535847	Hay-Wells syndrome	skos:exactMatch	doid	DOID:0090119	ankyloblepharon-ectodermal defects-cleft lip/palate syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C535968	Hereditary macular coloboma	skos:exactMatch	hp	HP:0001116	Macular coloboma	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
+mesh	C536021	Achromatopsia 1	skos:exactMatch	hp	HP:0011516	Achromatopsia	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C536133	Meckel syndrome type 1	skos:exactMatch	doid	DOID:0050778	Meckel syndrome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C536192	Brittle cornea syndrome 1	skos:exactMatch	doid	DOID:14775	brittle cornea syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C536277	Idiopathic dilation cardiomyopathy	skos:exactMatch	doid	DOID:0110429	dilated cardiomyopathy 1H	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -632,11 +636,14 @@ mesh	D000068256	Darbepoetin alfa	skos:exactMatch	hgnc	4392	GNAS	semapv:ManualMap
 mesh	D000068437	Pemetrexed	skos:exactMatch	chebi	CHEBI:17509	5'-S-methyl-5'-thioadenosine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D000068800	Etanercept	skos:exactMatch	hgnc	11917	TNFRSF1B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D000070636	Rotator Cuff Injuries	skos:exactMatch	efo	1001250	rotator cuff tear	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	D000070636	Rotator Cuff Injuries	skos:exactMatch	hp	HP:0032201	Rotator cuff tear	semapv:ManualMappingCuration	web	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	D000071636	Protein Phosphatase 2C	skos:exactMatch	hgnc	9279	PDP1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D000074767	Diapause	skos:exactMatch	go	GO:0030431	sleep	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	D000075529	Solitary Kidney	skos:exactMatch	hp	HP:0000122	Unilateral renal agenesis	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
 mesh	D000077190	Interferon alpha-2	skos:exactMatch	hgnc	5423	IFNA2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D000077212	Ropivacaine	skos:exactMatch	chebi	CHEBI:8890	(S)-ropivacaine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D000077324	Crystalloid Solutions	skos:exactMatch	go	GO:0044312	crystalloid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	D000152	Acne Vulgaris	skos:exactMatch	hp	HP:0001061	Acne	semapv:ManualMappingCuration	web	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	D000203	Activities of Daily Living	skos:exactMatch	efo	0008451	activities of daily living score measurement	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D000309	Adrenal Insufficiency	skos:exactMatch	doid	DOID:10493	adrenal cortical hypofunction	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D000371	Agglutination	skos:exactMatch	go	GO:0007157	heterophilic cell-cell adhesion via plasma membrane cell adhesion molecules	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -657,6 +664,7 @@ mesh	D001661	Biliary Tract Neoplasms	skos:exactMatch	doid	DOID:0050625	biliary t
 mesh	D001731	Bisphosphoglycerate Mutase	skos:exactMatch	go	GO:0004619	phosphoglycerate mutase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D001749	Urinary Bladder Neoplasms	skos:exactMatch	doid	DOID:4007	bladder carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D001761	Bleomycin	skos:exactMatch	chebi	CHEBI:3139	bleomycin A2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	D001766	Blindness	skos:exactMatch	hp	HP:0000572	Visual loss	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
 mesh	D001792	Blood Platelets	skos:exactMatch	efo	0009237	Estimated Platelets Measurement	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D001859	Bone Neoplasms	skos:exactMatch	efo	1000350	Malignant Bone Neoplasm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D001907	Boutonneuse Fever	skos:exactMatch	doid	DOID:0050035	African tick-bite fever	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
