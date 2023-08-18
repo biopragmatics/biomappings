@@ -477,9 +477,12 @@ def _standardize_mapping(mapping):
     return mapping
 
 
+CURATORS_PATH = get_resource_file_path("curators.tsv")
+
+
 def load_curators():
     """Load the curators table."""
-    return _load_table(get_resource_file_path("curators.tsv"))
+    return _load_table(CURATORS_PATH)
 
 
 def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:

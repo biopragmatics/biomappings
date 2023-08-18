@@ -9,6 +9,7 @@ from collections import defaultdict
 import bioregistry
 
 from biomappings.resources import (
+    CURATORS_PATH,
     Mappings,
     MappingTuple,
     PredictionTuple,
@@ -126,7 +127,9 @@ class IntegrityTestCase(unittest.TestCase):
         for mapping in itt.chain(self.mappings, self.incorrect, self.unsure):
             source = mapping["source"]
             if not source.startswith("orcid:"):
-                continue
+                self.assertTrue(source.startswith("web-"))
+                ss = source[len("web-")]
+                self.fail(msg=f'Add an entry with "{ss}" and your ORCID to {CURATORS_PATH}')
             self.assertIn(source[len("orcid:") :], contributor_orcids)
 
     def test_cross_redundancy(self):
