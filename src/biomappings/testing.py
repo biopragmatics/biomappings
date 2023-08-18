@@ -128,7 +128,7 @@ class IntegrityTestCase(unittest.TestCase):
             source = mapping["source"]
             if not source.startswith("orcid:"):
                 self.assertTrue(source.startswith("web-"))
-                ss = source[len("web-")]
+                ss = source[len("web-") :]
                 self.fail(msg=f'Add an entry with "{ss}" and your ORCID to {CURATORS_PATH}')
             self.assertIn(source[len("orcid:") :], contributor_orcids)
 
