@@ -14,11 +14,11 @@ from pyobo.sources.cpt import iter_terms
 def main():
     """Generate vaccine mappings."""
     provenance = get_script_url(__file__)
-    # append_gilda_predictions("cvx", ["mesh", "cpt"], provenance=provenance)
-    # append_gilda_predictions("cpt", ["mesh"], provenance=provenance)
+    append_gilda_predictions("cvx", ["mesh", "cpt", "vo"], provenance=provenance)
+    append_gilda_predictions("cpt", ["mesh", "vo"], provenance=provenance)
 
     preds = []
-    grounder = get_grounder("mesh", versions="2023")
+    grounder = get_grounder(["mesh", "vo"], versions=["2023", None])
     for term in iter_terms():
         texts = [term.name, *(s.name for s in term.synonyms)]
         for text in texts:
@@ -28,7 +28,7 @@ def main():
                     source_id=term.identifier,
                     source_name=term.name,
                     relation="skos:exactMatch",
-                    target_prefix="mesh",
+                    target_prefix=scored_match.term.db,
                     target_identifier=scored_match.term.id,
                     target_name=scored_match.term.entry_name,
                     type="semapv:LexicalMatching",

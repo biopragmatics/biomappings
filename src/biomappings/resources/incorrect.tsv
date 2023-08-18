@@ -211,6 +211,7 @@ clo	0037261	3T3-derived cell	skos:exactMatch	mesh	D016475	3T3 Cells	semapv:Manua
 clo	0037287	COR123 cell	skos:exactMatch	efo	0002142	CORL23	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
 clo	0051004	RCB0256 cell	skos:exactMatch	cellosaurus	CVCL_1075	BALL-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
 clo	0051005	RCB1882 cell	skos:exactMatch	cellosaurus	CVCL_1075	BALL-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+cpt	90389	TIG	skos:exactMatch	vo	0010969	Tig	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/e55031/scripts/generate_vaccine_mappings.py	0.762
 cpt	90581	anthrax	skos:exactMatch	mesh	D000881	Anthrax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.762
 cpt	90585	BCG	skos:exactMatch	mesh	D009163	Mycobacterium bovis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.556
 cpt	90665	Lyme disease	skos:exactMatch	mesh	D008193	Lyme Disease	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.772
