@@ -85,11 +85,7 @@ def add_xref(
                 if not start_xref_idx:
                     start_xref_idx = idx
                 xref_line: str = line.removeprefix("xref:").strip()
-                # TODO handle [] xrefs
-                if "{" in xref_line:  # if there are qualifiers, only keep everything up until them
-                    xref_values.add(xref_line[: xref_line.find("{")].strip())
-                else:
-                    xref_values.add(xref_line)
+                xref_values.add(_extract_ref(xref_line))
                 xref_entries.append(xref_line)
             if start_xref_idx and not line.startswith("xref"):
                 break
@@ -107,6 +103,19 @@ def add_xref(
         raise RuntimeError
     lines.insert(start_xref_idx + xr_idx, line)
     return lines
+
+
+def _extract_ref(xref_line):
+    # remove trailing comments
+    if "!" in xref_line:
+        xref_line = xref_line[: xref_line.find("!")].strip()
+    # remove meta-xrefs
+    if "[" in xref_line:
+        xref_line = xref_line[: xref_line.find("[")].strip()
+    # if there are qualifiers, only keep everything up until them
+    if "{" in xref_line:
+        return xref_line[: xref_line.find("{")].strip()
+    return xref_line
 
 
 if __name__ == "__main__":
