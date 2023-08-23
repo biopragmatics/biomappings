@@ -67,7 +67,7 @@ def update_obo_lines(
             mapping["source identifier"],
             curie_to_str(target_prefix, target_identifier),
             mapping["target name"],
-            source_curie.removeprefix("orcid:"),
+            source_curie[len("orcid:") :],
         )
     return lines
 
@@ -95,7 +95,7 @@ def add_xref(
             if line.startswith("xref"):
                 if not start_xref_idx:
                     start_xref_idx = idx
-                xref_line: str = line.removeprefix("xref:").strip()
+                xref_line: str = line[len("xref:") :].strip()
                 xref_values.add(_extract_ref(xref_line))
                 xref_entries.append(xref_line)
             if start_xref_idx and not line.startswith("xref"):
