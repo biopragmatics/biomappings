@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 4412
+- count: 4463
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -112,6 +112,9 @@ negative:
   source: pr
   target: vo
 - count: 8
+  source: cpt
+  target: mesh
+- count: 8
   source: hp
   target: mesh
 - count: 8
@@ -202,6 +205,9 @@ negative:
   source: clo
   target: efo
 - count: 1
+  source: cpt
+  target: vo
+- count: 1
   source: ido
   target: ncbitaxon
 - count: 1
@@ -222,8 +228,8 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1556
-negative_prefix_count: 41
+negative_mapping_count: 1565
+negative_prefix_count: 42
 positive:
 - count: 3106
   source: chebi
@@ -321,6 +327,9 @@ positive:
 - count: 23
   source: idomal
   target: vsmo
+- count: 19
+  source: cpt
+  target: mesh
 - count: 18
   source: mesh
   target: wikipathways
@@ -339,6 +348,9 @@ positive:
 - count: 14
   source: clo
   target: mesh
+- count: 14
+  source: cvx
+  target: mesh
 - count: 13
   source: apollosv
   target: ido
@@ -351,6 +363,9 @@ positive:
 - count: 9
   source: chebi
   target: ido
+- count: 8
+  source: cpt
+  target: vo
 - count: 8
   source: idomal
   target: ncbitaxon
@@ -552,8 +567,8 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 10265
-positive_prefix_count: 58
+positive_mapping_count: 10306
+positive_prefix_count: 60
 predictions:
 - count: 11735
   source: mesh
@@ -591,6 +606,9 @@ predictions:
 - count: 55
   source: doid
   target: mesh
+- count: 48
+  source: cvx
+  target: vo
 - count: 39
   source: doid
   target: efo
@@ -678,8 +696,8 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 40511
-predictions_prefix_count: 31
+predictions_mapping_count: 40559
+predictions_prefix_count: 33
 unsure:
 - count: 27
   source: doid
@@ -748,6 +766,9 @@ unsure:
   source: cemo
   target: ncit
 - count: 1
+  source: cpt
+  target: mesh
+- count: 1
   source: envo
   target: ncbitaxon
 - count: 1
@@ -762,5 +783,5 @@ unsure:
 - count: 1
   source: pr
   target: vo
-unsure_mapping_count: 93
-unsure_prefix_count: 27
+unsure_mapping_count: 94
+unsure_prefix_count: 28
