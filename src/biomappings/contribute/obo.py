@@ -31,16 +31,17 @@ def update_obo(*, prefix: str, path: Union[str, Path]) -> None:
         file.writelines(lines)
 
 
-def update_obo_lines(*, lines: List[str], mappings: List[Dict[str, Any]]) -> List[str]:
+def update_obo_lines(*, lines: List[str], mappings: List[Dict[str, Any]], progress: bool = True) -> List[str]:
     """Update the lines of an OBO file.
 
     :param mappings: Mappings to add
     :param lines: A list of lines of the file (still containing trailing newlines)
+    :param progress: Show a progress bar
     :returns: New lines. Does not modify the original list.
     """
     lines = deepcopy(lines)
 
-    for mapping in tqdm(mappings, unit="mapping", unit_scale=True):
+    for mapping in tqdm(mappings, unit="mapping", unit_scale=True, disable=not progress):
         target_prefix = mapping["target prefix"]
         target_prefix = bioregistry.get_preferred_prefix(target_prefix) or target_prefix
         target_identifier = standardize_identifier(target_prefix, mapping["target identifier"])
