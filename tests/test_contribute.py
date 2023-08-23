@@ -67,6 +67,28 @@ class TestContributeOBO(unittest.TestCase):
             update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
         )
 
+    def test_addition_no_xrefs(self):
+        """Test adding a non-redundant mapping."""
+        original = dedent(
+            """\
+            [Term]
+            id: UBERON:0000018
+            name: compound eye
+            """
+        )
+        expected = dedent(
+            """\
+            [Term]
+            id: UBERON:0000018
+            name: compound eye
+            xref: IDOMAL:0002421 {dcterms:contributor="https://orcid.org/0000-0003-4423-4370"} ! compound eye
+            """
+        )
+        self.assertEqual(
+            expected.splitlines(),
+            update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
+        )
+
     def test_skip_redundant_1(self):
         """Test skipping adding a mapping that doesn't have metadata."""
         original = dedent(
