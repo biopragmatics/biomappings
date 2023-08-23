@@ -33,6 +33,10 @@ def update_obo(prefix: str, path: Union[str, Path], *, uppercase_prefix: bool = 
         if uppercase_prefix:
             target_prefix = target_prefix.upper()
 
+        source_curie = mapping["source"]
+        if not source_curie.startswith("orcid:"):
+            continue
+
         # FIXME be careful about assumption about identifier. currently
         #  assumes that OBO all have bananas.
         lines = add_xref(
@@ -40,7 +44,7 @@ def update_obo(prefix: str, path: Union[str, Path], *, uppercase_prefix: bool = 
             mapping["source identifier"],
             curie_to_str(target_prefix, target_identifier),
             mapping["target name"],
-            mapping["source"],
+            source_curie.removeprefix("orcid:"),
         )
 
     with open(path, "w") as fh:
@@ -80,7 +84,7 @@ def add_xref(lines, node, xref, xref_name, author_orcid: str):
     xref_entries.append(xref)
     xref_entries = sorted(xref_entries)
     xr_idx = xref_entries.index(xref)
-    line = f'xref: {xref} {{{CONTRIBUTOR_URL}="https://orcid.org/{author_orcid}"}} ! {xref_name}\n'
+    line = f'xref: {xref} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}\n'
     lines.insert(start_xref_idx + xr_idx, line)
     return lines
 
