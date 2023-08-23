@@ -25,6 +25,20 @@ class TestContributeOBO(unittest.TestCase):
         self.assertEqual(1, len(mappings))
         self.mappings = mappings
 
+    def test_no_addition(self):
+        """Test adding a non-redundant mapping."""
+        original = dedent(
+            """\
+            [Term]
+            id: UBERON:0000019
+            name: something else
+            """
+        )
+        self.assertEqual(
+            original.splitlines(),
+            update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
+        )
+
     def test_addition(self):
         """Test adding a non-redundant mapping."""
         original = dedent(
@@ -67,6 +81,30 @@ class TestContributeOBO(unittest.TestCase):
             update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
         )
 
+    def test_addition_no_xrefs_with_def(self):
+        """Test adding a non-redundant mapping."""
+        original = dedent(
+            """\
+            [Term]
+            id: UBERON:0000018
+            name: compound eye
+            def: "A light sensing organ composed of ommatidia." [FB:gg, Wikipedia:Compound_eye]
+            """
+        )
+        expected = dedent(
+            """\
+            [Term]
+            id: UBERON:0000018
+            name: compound eye
+            def: "A light sensing organ composed of ommatidia." [FB:gg, Wikipedia:Compound_eye]
+            xref: IDOMAL:0002421 {dcterms:contributor="https://orcid.org/0000-0003-4423-4370"} ! compound eye
+            """
+        )
+        self.assertEqual(
+            expected.splitlines(),
+            update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
+        )
+
     def test_addition_no_xrefs(self):
         """Test adding a non-redundant mapping."""
         original = dedent(
@@ -80,8 +118,8 @@ class TestContributeOBO(unittest.TestCase):
             """\
             [Term]
             id: UBERON:0000018
-            name: compound eye
             xref: IDOMAL:0002421 {dcterms:contributor="https://orcid.org/0000-0003-4423-4370"} ! compound eye
+            name: compound eye
             """
         )
         self.assertEqual(

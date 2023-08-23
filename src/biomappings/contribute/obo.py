@@ -69,6 +69,8 @@ def add_xref(
 ) -> List[str]:
     """Add xref to OBO file lines in the appropriate place."""
     look_for_xref = False
+    id_idx = None
+
     #: The 0-indexed line number on which the first xref appears
     start_xref_idx = None
     #: The 0-indexed line number on which the definition appears in a given
@@ -77,6 +79,7 @@ def add_xref(
     xref_values = set()
     for idx, line in enumerate(lines):
         if line == f"id: {node}":
+            id_idx = idx
             look_for_xref = True
         if look_for_xref and line.startswith("def"):
             def_idx = idx
@@ -92,15 +95,25 @@ def add_xref(
         if look_for_xref and not line.strip():
             start_xref_idx = def_idx
 
-    if xref in xref_values:
+    if id_idx is None:
+        # term not found
         return lines
+
+    if xref in xref_values:
+        # term already has this xref, don't modify it
+        return lines
+
+    if start_xref_idx is None:
+        if def_idx:
+            start_xref_idx = def_idx + 1
+        else:
+            # there were no existing xrefs, so let's just stick them directly after the definition
+            start_xref_idx = id_idx + 1
 
     xref_entries.append(xref)
     xref_entries = sorted(xref_entries)
     xr_idx = xref_entries.index(xref)
     line = f'xref: {xref} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}'
-    if start_xref_idx is None:
-        raise RuntimeError
     lines.insert(start_xref_idx + xr_idx, line)
     return lines
 
