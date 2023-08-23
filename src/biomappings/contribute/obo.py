@@ -12,11 +12,9 @@ from tqdm.auto import tqdm
 
 from biomappings.contribute.utils import get_mappings
 
-CONTRIBUTOR_URL = "http://purl.org/dc/terms/contributor"
-
 
 def update_obo(prefix: str, path: Union[str, Path], *, uppercase_prefix: bool = False) -> None:
-    """Update a OBO flat file.
+    """Update an OBO flat file.
 
     :param prefix: Prefix for the ontology
     :param path: Path to the ontology edit file, encoded with OBO flat file format
