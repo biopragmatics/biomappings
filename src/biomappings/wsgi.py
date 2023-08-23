@@ -132,11 +132,12 @@ def get_app(
 KNOWN_USERS = {record["user"]: record["orcid"] for record in load_curators()}
 
 
-def _manual_source():
-    known_user = KNOWN_USERS.get(getpass.getuser())
+def _manual_source() -> str:
+    usr = getpass.getuser()
+    known_user = KNOWN_USERS.get(usr)
     if known_user:
         return f"orcid:{known_user}"
-    return "web"
+    return f"web-{usr}"
 
 
 class Controller:
