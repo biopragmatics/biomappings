@@ -1,7 +1,8 @@
 """Contribute Biomappings back to ontologies encoded in the OBO flat file format.
 
-Example ontologies using Functional OWL:
+Example ontologies using the OBO flat file format:
 - Uber Anatomy Ontology (UBERON)
+- Mondo Disease Ontology (MONDO)
 """
 
 from pathlib import Path
@@ -52,12 +53,14 @@ def update_obo(prefix: str, path: Union[str, Path], *, uppercase_prefix: bool = 
 def add_xref(lines, node, xref, xref_name, author_orcid: str):
     """Add xref to OBO file lines in the appropriate place."""
     look_for_xref = False
+    #: The 0-indexed line number on which the first xref appears
     start_xref_idx = None
+    #: The 0-indexed line number on which the definition appears in a given
     def_idx = None
     xref_entries = []
     xref_values = set()
     for idx, line in enumerate(lines):
-        if line == "id: %s\n" % node:
+        if line == f"id: {node}\n":
             look_for_xref = True
         if look_for_xref and line.startswith("def"):
             def_idx = idx
@@ -65,12 +68,13 @@ def add_xref(lines, node, xref, xref_name, author_orcid: str):
             if line.startswith("xref"):
                 if not start_xref_idx:
                     start_xref_idx = idx
-                xxx: str = line.removeprefix("xref:").strip()
-                if "{" in xxx:  # if there are qualifiers, strip them
-                    xref_values.add(xxx[: xxx.find("{")].strip())
+                xref_line: str = line.removeprefix("xref:").strip()
+                # TODO handle [] xrefs
+                if "{" in xref_line:  # if there are qualifiers, only keep everything up until them
+                    xref_values.add(xref_line[: xref_line.find("{")].strip())
                 else:
-                    xref_values.add(xxx)
-                xref_entries.append(xxx)
+                    xref_values.add(xref_line)
+                xref_entries.append(xref_line)
             if start_xref_idx and not line.startswith("xref"):
                 break
         if look_for_xref and not line.strip():
@@ -82,7 +86,9 @@ def add_xref(lines, node, xref, xref_name, author_orcid: str):
     xref_entries.append(xref)
     xref_entries = sorted(xref_entries)
     xr_idx = xref_entries.index(xref)
-    line = f'xref: {xref} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}\n'
+    line = (
+        f'xref: {xref} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}\n'
+    )
     lines.insert(start_xref_idx + xr_idx, line)
     return lines
 
