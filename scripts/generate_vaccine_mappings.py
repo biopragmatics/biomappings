@@ -1,13 +1,12 @@
 """Generate vaccine mappings."""
 
 import click
+from pyobo.sources.cpt import iter_terms
 
 from biomappings import PredictionTuple
 from biomappings.gilda_utils import append_gilda_predictions, get_grounder
 from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
-
-from pyobo.sources.cpt import iter_terms
 
 
 @click.command()
