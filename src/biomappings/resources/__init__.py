@@ -4,7 +4,6 @@
 
 import csv
 import itertools as itt
-import os
 from collections import defaultdict
 from pathlib import Path
 from typing import (
@@ -23,6 +22,7 @@ from typing import (
 
 import bioregistry
 from tqdm.auto import tqdm
+from typing_extensions import Literal
 
 from biomappings.utils import OVERRIDE_MIRIAM, RESOURCE_PATH, get_canonical_tuple
 
@@ -167,9 +167,12 @@ class PredictionTuple(NamedTuple):
         return f"{self.target_prefix}:{self.target_identifier}"
 
 
-def get_resource_file_path(fname) -> str:
+Mappings = Iterable[Mapping[str, str]]
+
+
+def get_resource_file_path(fname) -> Path:
     """Get a resource by its file name."""
-    return os.path.join(RESOURCE_PATH, fname)
+    return RESOURCE_PATH.joinpath(fname)
 
 
 def _load_table(fname) -> List[Dict[str, str]]:
@@ -185,13 +188,13 @@ def _clean(header, row):
 
 
 def _write_helper(
-    header: Sequence[str], lod: Iterable[Mapping[str, str]], path: Union[str, Path], mode: str
+    header: Sequence[str], mappings: Mappings, path: Union[str, Path], mode: Literal["w", "a"]
 ) -> None:
-    lod = sorted(lod, key=mapping_sort_key)
+    mappings = sorted(mappings, key=mapping_sort_key)
     with open(path, mode) as file:
         if mode == "w":
             print(*header, sep="\t", file=file)  # noqa:T201
-        for line in lod:
+        for line in mappings:
             print(*[line[k] or "" for k in header], sep="\t", file=file)  # noqa:T201
 
 
@@ -211,16 +214,23 @@ def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
 TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
 
 
-def load_mappings() -> List[Dict[str, str]]:
+def load_mappings(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     """Load the mappings table."""
-    return _load_table(TRUE_MAPPINGS_PATH)
+    return _load_table(path or TRUE_MAPPINGS_PATH)
 
 
-def append_true_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
+def append_true_mappings(
+    mappings: Mappings,
+    *,
+    sort: bool = True,
+    path: Optional[Path] = None,
+) -> None:
     """Append new lines to the mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, mode="a")
+    if path is None:
+        path = TRUE_MAPPINGS_PATH
+    _write_curated(mappings, path=path, mode="a")
     if sort:
-        lint_true_mappings()
+        lint_true_mappings(path=path)
 
 
 def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
@@ -228,70 +238,89 @@ def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
     append_true_mappings(mapping.as_dict() for mapping in set(mappings))
 
 
-def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
+def write_true_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write mappigns to the true mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, mode="w")
+    _write_curated(mappings=mappings, path=path or TRUE_MAPPINGS_PATH, mode="w")
 
 
-def lint_true_mappings(*, standardize: bool = False) -> None:
+def _write_curated(mappings: Mappings, *, path: Path, mode: Literal["w", "a"]):
+    _write_helper(MAPPINGS_HEADER, mappings, path, mode=mode)
+
+
+def lint_true_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the true mappings file."""
-    mappings = load_mappings()
-    mappings = _remove_redundant(mappings, MappingTuple, standardize=standardize)
-    write_true_mappings(sorted(mappings, key=mapping_sort_key))
+    _lint_curated_mappings(standardize=standardize, path=path or TRUE_MAPPINGS_PATH)
+
+
+def _lint_curated_mappings(path: Path, *, standardize: bool = False) -> None:
+    """Lint the true mappings file."""
+    mapping_list = _load_table(path)
+    mappings = _remove_redundant(mapping_list, standardize=standardize)
+    _write_helper(MAPPINGS_HEADER, mappings, path, mode="w")
 
 
 FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
 
 
-def load_false_mappings() -> List[Dict[str, str]]:
+def load_false_mappings(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     """Load the false mappings table."""
-    return _load_table(FALSE_MAPPINGS_PATH)
+    return _load_table(path or FALSE_MAPPINGS_PATH)
 
 
-def append_false_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
+def append_false_mappings(
+    mappings: Mappings,
+    *,
+    sort: bool = True,
+    path: Optional[Path] = None,
+) -> None:
     """Append new lines to the false mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, mode="a")
+    if path is None:
+        path = FALSE_MAPPINGS_PATH
+    _write_curated(mappings=mappings, path=path, mode="a")
     if sort:
-        lint_false_mappings()
+        lint_false_mappings(path=path)
 
 
-def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
+def write_false_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write mappings to the false mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, mode="w")
+    _write_helper(MAPPINGS_HEADER, mappings, path or FALSE_MAPPINGS_PATH, mode="w")
 
 
-def lint_false_mappings(*, standardize: bool = False) -> None:
+def lint_false_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the false mappings file."""
-    mappings = load_false_mappings()
-    mappings = _remove_redundant(mappings, MappingTuple, standardize=standardize)
-    write_false_mappings(sorted(mappings, key=mapping_sort_key))
+    _lint_curated_mappings(standardize=standardize, path=path or FALSE_MAPPINGS_PATH)
 
 
 UNSURE_PATH = get_resource_file_path("unsure.tsv")
 
 
-def load_unsure() -> List[Dict[str, str]]:
+def load_unsure(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     """Load the unsure table."""
-    return _load_table(UNSURE_PATH)
+    return _load_table(path or UNSURE_PATH)
 
 
-def append_unsure_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
+def append_unsure_mappings(
+    mappings: Mappings,
+    *,
+    sort: bool = True,
+    path: Optional[Path] = None,
+) -> None:
     """Append new lines to the "unsure" mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, mode="a")
+    if path is None:
+        path = UNSURE_PATH
+    _write_curated(mappings, path=path, mode="a")
     if sort:
-        lint_unsure_mappings()
+        lint_unsure_mappings(path=path)
 
 
-def write_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
+def write_unsure_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write mappings to the unsure mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, mode="w")
+    _write_helper(MAPPINGS_HEADER, mappings, path or UNSURE_PATH, mode="w")
 
 
-def lint_unsure_mappings(*, standardize: bool = False) -> None:
+def lint_unsure_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the unsure mappings file."""
-    mappings = load_unsure()
-    mappings = _remove_redundant(mappings, MappingTuple, standardize=standardize)
-    write_unsure_mappings(sorted(mappings, key=mapping_sort_key))
+    _lint_curated_mappings(standardize=standardize, path=path or UNSURE_PATH)
 
 
 PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
@@ -302,9 +331,9 @@ def load_predictions(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     return _load_table(path or PREDICTIONS_PATH)
 
 
-def write_predictions(m: Iterable[Mapping[str, str]], *, path: Optional[Path] = None) -> None:
+def write_predictions(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write new content to the predictions table."""
-    _write_helper(PREDICTIONS_HEADER, m, path or PREDICTIONS_PATH, mode="w")
+    _write_helper(PREDICTIONS_HEADER, mappings, path or PREDICTIONS_PATH, mode="w")
 
 
 def append_prediction_tuples(
@@ -324,7 +353,7 @@ def append_prediction_tuples(
 
 
 def append_predictions(
-    mappings: Iterable[Mapping[str, str]],
+    mappings: Mappings,
     *,
     deduplicate: bool = True,
     sort: bool = True,
@@ -352,7 +381,12 @@ def append_predictions(
         lint_predictions()
 
 
-def lint_predictions(standardize: bool = False) -> None:
+def lint_predictions(
+    *,
+    standardize: bool = False,
+    path: Optional[Path] = None,
+    additional_curated_mappings: Optional[List[Dict[str, str]]] = None,
+) -> None:
     """Lint the predictions file.
 
     1. Make sure there are no redundant rows
@@ -361,33 +395,57 @@ def lint_predictions(standardize: bool = False) -> None:
 
     :param standardize: Should identifiers be standardized (against the
              combination of Identifiers.org and Bioregistry)?
+    :param path: The path to the predicted mappings
+    :param additional_curated_mappings: A list of additional mappings
     """
-    curated_mappings = {
-        get_canonical_tuple(mapping)
-        for mapping in itt.chain(
+    mappings = remove_mappings(
+        load_predictions(path=path),
+        itt.chain(
             load_mappings(),
             load_false_mappings(),
             load_unsure(),
-        )
-    }
-    mappings = [
-        mapping
-        for mapping in tqdm(
-            load_predictions(), desc="Removing curated from predicted", unit_scale=True
-        )
-        if get_canonical_tuple(mapping) not in curated_mappings
-    ]
-    mappings = _remove_redundant(mappings, PredictionTuple, standardize=standardize)
-    write_predictions(sorted(mappings, key=mapping_sort_key))
+            additional_curated_mappings or [],
+        ),
+    )
+    mappings = _remove_redundant(mappings, standardize=standardize)
+    mappings = sorted(mappings, key=mapping_sort_key)
+    write_predictions(mappings, path=path)
 
 
-def _remove_redundant(mappings, tuple_cls, standardize: bool = False):
+def remove_mappings(mappings: Mappings, mappings_to_remove: Mappings) -> Mappings:
+    """Remove the first set of mappings from the second."""
+    skip_tuples = {get_canonical_tuple(mtr) for mtr in mappings_to_remove}
+    return (mapping for mapping in mappings if get_canonical_tuple(mapping) not in skip_tuples)
+
+
+def _remove_redundant(mappings: Mappings, *, standardize: bool = False) -> Mappings:
     if standardize:
         mappings = _standardize_mappings(mappings)
-    return (mapping.as_dict() for mapping in {tuple_cls.from_dict(mapping) for mapping in mappings})
+    dd = defaultdict(list)
+    for mapping in mappings:
+        dd[get_canonical_tuple(mapping)].append(mapping)
+    return (max(mappings, key=_pick_best) for mappings in dd.values())
 
 
-def _standardize_mappings(mappings, *, progress: bool = True):
+def _pick_best(mapping: Mapping[str, str]) -> int:
+    """Assign a value for this mapping.
+
+    :param mapping: A mapping dictionary
+    :returns: An integer, where higher means a better choice.
+
+    This function is currently simple, but can later be extended to
+    account for several other things including:
+
+    - confidence in the curator
+    - prediction methodology
+    - date of prediction/curation (to keep the earliest)
+    """
+    if mapping["source"].startswith("orcid"):
+        return 1
+    return 0
+
+
+def _standardize_mappings(mappings: Mappings, *, progress: bool = True) -> Mappings:
     for mapping in tqdm(
         mappings,
         desc="Standardizing mappings",
@@ -419,13 +477,16 @@ def _standardize_mapping(mapping):
     return mapping
 
 
+CURATORS_PATH = get_resource_file_path("curators.tsv")
+
+
 def load_curators():
     """Load the curators table."""
-    return _load_table(get_resource_file_path("curators.tsv"))
+    return _load_table(CURATORS_PATH)
 
 
 def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:
-    """Filter all of the predictions by removing what's in the custom filter then re-write.
+    """Filter all the predictions by removing what's in the custom filter then re-write.
 
     :param custom_filter: A filter 3-dictionary of source prefix to target prefix
         to source identifier to target identifier

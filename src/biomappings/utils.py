@@ -4,16 +4,18 @@
 
 import os
 import re
+from pathlib import Path
 from subprocess import CalledProcessError, check_output  # noqa: S404
 from typing import Any, Mapping, Optional, Tuple
 
 import bioregistry
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-RESOURCE_PATH = os.path.abspath(os.path.join(HERE, "resources"))
-DOCS = os.path.abspath(os.path.join(HERE, os.pardir, os.pardir, "docs"))
-IMG = os.path.join(DOCS, "img")
-DATA = os.path.join(DOCS, "_data")
+HERE = Path(__file__).parent.resolve()
+ROOT = HERE.parent.parent.resolve()
+RESOURCE_PATH = HERE.joinpath("resources")
+DOCS = ROOT.joinpath("docs")
+IMG = DOCS.joinpath("img")
+DATA = DOCS.joinpath("_data")
 
 OVERRIDE_MIRIAM = {
     # ITO is very messy (combines mostly numbers with a few
@@ -211,6 +213,8 @@ def check_valid_prefix_id(prefix: str, identifier: str):
             raise InvalidNormIdentifier(prefix, identifier, norm_id)
         if prefix == "pr":
             pattern = None  # identifiers.org is broken for uniprot in PR
+        elif prefix == "obi":
+            pattern = re.compile(r"^OBI:\d{7,8}$")  # identifiers.org is broken for OBI
         else:
             pattern = re.compile(resource.miriam["pattern"])
 

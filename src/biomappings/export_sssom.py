@@ -7,8 +7,9 @@ import pathlib
 import bioregistry
 import click
 import yaml
+from tqdm.auto import tqdm
 
-from biomappings import load_mappings, load_predictions
+from biomappings import load_false_mappings, load_mappings, load_predictions
 from biomappings.utils import DATA, get_curie
 
 DIRECTORY = pathlib.Path(DATA).joinpath("sssom")
@@ -28,7 +29,7 @@ META = {
 }
 
 
-def get_sssom_df():
+def get_sssom_df(use_tqdm: bool = False):
     """Get an SSSOM dataframe."""
     import pandas as pd
 
@@ -40,6 +41,7 @@ def get_sssom_df():
         "subject_id",
         "subject_label",
         "predicate_id",
+        "predicate_modifier",
         "object_id",
         "object_label",
         "mapping_justification",
@@ -47,26 +49,34 @@ def get_sssom_df():
         "confidence",
         "mapping_tool",
     ]
-    for mapping in load_mappings():
-        prefixes.add(mapping["source prefix"])
-        prefixes.add(mapping["target prefix"])
-        source = mapping["source"]
-        if any(source.startswith(x) for x in ["orcid:", "wikidata:"]):
-            creators.add(source)
-        rows.append(
-            (
-                get_curie(mapping["source prefix"], mapping["source identifier"]),
-                mapping["source name"],
-                f'{mapping["relation"]}',
-                get_curie(mapping["target prefix"], mapping["target identifier"]),
-                mapping["target name"],
-                mapping["type"],  # match justification
-                source,  # curator CURIE
-                None,  # no confidence necessary
-                None,  # mapping tool: none necessary for manually curated
+    # see https://mapping-commons.github.io/sssom/predicate_modifier/
+    # for more information on predicate modifiers
+    for mappings, predicate_modifier in [
+        (load_mappings(), ""),  # no predicate modifier
+        (load_false_mappings(), "Not"),
+    ]:
+        for mapping in tqdm(mappings, unit="mapping", unit_scale=True, disable=not use_tqdm):
+            prefixes.add(mapping["source prefix"])
+            prefixes.add(mapping["target prefix"])
+            source = mapping["source"]
+            if any(source.startswith(x) for x in ["orcid:", "wikidata:"]):
+                creators.add(source)
+            rows.append(
+                (
+                    get_curie(mapping["source prefix"], mapping["source identifier"]),
+                    mapping["source name"],
+                    f'{mapping["relation"]}',
+                    predicate_modifier,
+                    get_curie(mapping["target prefix"], mapping["target identifier"]),
+                    mapping["target name"],
+                    mapping["type"],  # match justification
+                    source,  # curator CURIE
+                    mapping.get("prediction_confidence"),  # may be brought over from prediction
+                    mapping.get("prediction_source"),  # may be brought over from prediction
+                )
             )
-        )
-    for mapping in load_predictions():
+
+    for mapping in tqdm(load_predictions(), unit="mapping", unit_scale=True, disable=not use_tqdm):
         prefixes.add(mapping["source prefix"])
         prefixes.add(mapping["target prefix"])
         rows.append(
@@ -74,6 +84,7 @@ def get_sssom_df():
                 get_curie(mapping["source prefix"], mapping["source identifier"]),
                 mapping["source name"],
                 f'{mapping["relation"]}',
+                "",  # no predicate modifier
                 get_curie(mapping["target prefix"], mapping["target identifier"]),
                 mapping["target name"],
                 mapping["type"],  # match justification
@@ -82,6 +93,7 @@ def get_sssom_df():
                 mapping["source"],  # mapping tool: source script
             )
         )
+
     df = pd.DataFrame(rows, columns=columns)
     return prefixes, sorted(creators), df
 

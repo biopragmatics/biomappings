@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 4303
+- count: 4412
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -172,9 +172,6 @@ negative:
   source: hp
   target: ncbitaxon
 - count: 2
-  source: idomal
-  target: vo
-- count: 2
   source: miapa
   target: ncbitaxon
 - count: 2
@@ -208,6 +205,9 @@ negative:
   source: ido
   target: ncbitaxon
 - count: 1
+  source: idomal
+  target: vo
+- count: 1
   source: ncbitaxon
   target: oae
 - count: 1
@@ -222,7 +222,7 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1557
+negative_mapping_count: 1556
 negative_prefix_count: 41
 positive:
 - count: 3106
@@ -246,7 +246,7 @@ positive:
 - count: 366
   source: go
   target: wikipathways
-- count: 284
+- count: 288
   source: hp
   target: mesh
 - count: 222
@@ -270,6 +270,9 @@ positive:
 - count: 131
   source: mesh
   target: uberon
+- count: 127
+  source: maxo
+  target: mesh
 - count: 125
   source: efo
   target: mesh
@@ -318,15 +321,6 @@ positive:
 - count: 23
   source: idomal
   target: vsmo
-- count: 20
-  source: ido
-  target: idomal
-- count: 18
-  source: apollosv
-  target: ido
-- count: 18
-  source: idomal
-  target: vo
 - count: 18
   source: mesh
   target: wikipathways
@@ -339,18 +333,24 @@ positive:
 - count: 15
   source: dron
   target: ncbitaxon
+- count: 15
+  source: ido
+  target: idomal
 - count: 14
   source: clo
   target: mesh
+- count: 13
+  source: apollosv
+  target: ido
+- count: 11
+  source: idomal
+  target: vo
 - count: 10
   source: wikipathways
   target: wikipathways
 - count: 9
   source: chebi
   target: ido
-- count: 8
-  source: apollosv
-  target: idomal
 - count: 8
   source: idomal
   target: ncbitaxon
@@ -360,6 +360,9 @@ positive:
 - count: 8
   source: mesh
   target: reactome
+- count: 6
+  source: apollosv
+  target: idomal
 - count: 6
   source: chebi
   target: ncit
@@ -385,14 +388,14 @@ positive:
   source: clo
   target: efo
 - count: 4
-  source: ido
-  target: vido
-- count: 4
   source: pr
   target: vo
 - count: 3
   source: cellosaurus
   target: clo
+- count: 3
+  source: ido
+  target: vido
 - count: 3
   source: kegg.pathway
   target: kegg.pathway
@@ -417,9 +420,6 @@ positive:
 - count: 2
   source: cido
   target: idocovid19
-- count: 2
-  source: cido
-  target: vo
 - count: 2
   source: cido
   target: dron
@@ -456,6 +456,9 @@ positive:
 - count: 1
   source: cido
   target: idomal
+- count: 1
+  source: cido
+  target: vo
 - count: 1
   source: chebi
   target: cido
@@ -549,7 +552,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 10155
+positive_mapping_count: 10265
 positive_prefix_count: 58
 predictions:
 - count: 11735
@@ -570,7 +573,7 @@ predictions:
 - count: 1367
   source: hgnc
   target: mesh
-- count: 232
+- count: 228
   source: hp
   target: mesh
 - count: 145
@@ -579,6 +582,9 @@ predictions:
 - count: 76
   source: mesh
   target: mondo
+- count: 68
+  source: maxo
+  target: mesh
 - count: 68
   source: mesh
   target: uberon
@@ -672,7 +678,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 40447
+predictions_mapping_count: 40511
 predictions_prefix_count: 31
 unsure:
 - count: 27
