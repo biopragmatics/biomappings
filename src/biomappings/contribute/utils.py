@@ -22,6 +22,6 @@ def get_curated_mappings(prefix: str) -> List[Dict[str, Any]]:
                     mapping[f"source {key}"],
                 )
             if mapping["relation"] != "skos:exactMatch":
-                raise NotImplementedError
+                continue  # not implemented
             mappings.append(mapping)
     return mappings
