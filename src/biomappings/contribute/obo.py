@@ -7,45 +7,43 @@ Example ontologies using the OBO flat file format:
 
 from copy import deepcopy
 from pathlib import Path
-from typing import Union
+from typing import Any, Dict, List, Union
 
+import bioregistry
 from bioregistry import curie_to_str, standardize_identifier
 from tqdm.auto import tqdm
 
-from biomappings.contribute.utils import get_mappings
+from biomappings.contribute.utils import get_curated_mappings
 
 
-def update_obo(prefix: str, path: Union[str, Path], *, uppercase_prefix: bool = False) -> None:
+def update_obo(*, prefix: str, path: Union[str, Path]) -> None:
     """Update an OBO flat file.
 
     :param prefix: Prefix for the ontology
     :param path: Path to the ontology edit file, encoded with OBO flat file format
-    :param uppercase_prefix: Should prefixes be uppercased?
     """
-    with open(path, "r") as fh:
-        lines = fh.readlines()
-    lines = update_obo_lines(lines=lines, prefix=prefix, uppercase_prefix=uppercase_prefix)
-    with open(path, "w") as fh:
-        fh.writelines(lines)
+    path = Path(path).resolve()
+    with path.open("r") as file:
+        lines = file.readlines()
+    mappings = get_curated_mappings(prefix)
+    lines = update_obo_lines(lines=lines, mappings=mappings)
+    with path.open("w") as file:
+        file.writelines(lines)
 
 
-def update_obo_lines(*, prefix: str, lines: list[str], uppercase_prefix: bool = False) -> list[str]:
+def update_obo_lines(*, lines: List[str], mappings: List[Dict[str, Any]]) -> List[str]:
     """Update the lines of an OBO file.
 
-    :param prefix: Prefix for the ontology
+    :param mappings: Mappings to add
     :param lines: A list of lines of the file (still containing trailing newlines)
-    :param uppercase_prefix: Should prefixes be uppercased?
     :returns: New lines. Does not modify the original list.
     """
     lines = deepcopy(lines)
 
-    mappings = get_mappings(prefix)
-
     for mapping in tqdm(mappings, unit="mapping", unit_scale=True):
         target_prefix = mapping["target prefix"]
+        target_prefix = bioregistry.get_preferred_prefix(target_prefix) or target_prefix
         target_identifier = standardize_identifier(target_prefix, mapping["target identifier"])
-        if uppercase_prefix:
-            target_prefix = target_prefix.upper()
 
         source_curie = mapping["source"]
         if not source_curie.startswith("orcid:"):
@@ -64,8 +62,8 @@ def update_obo_lines(*, prefix: str, lines: list[str], uppercase_prefix: bool = 
 
 
 def add_xref(
-    lines: list[str], node: str, xref: str, xref_name: str, author_orcid: str
-) -> list[str]:
+    lines: List[str], node: str, xref: str, xref_name: str, author_orcid: str
+) -> List[str]:
     """Add xref to OBO file lines in the appropriate place."""
     look_for_xref = False
     #: The 0-indexed line number on which the first xref appears
@@ -75,7 +73,7 @@ def add_xref(
     xref_entries = []
     xref_values = set()
     for idx, line in enumerate(lines):
-        if line == f"id: {node}\n":
+        if line == f"id: {node}":
             look_for_xref = True
         if look_for_xref and line.startswith("def"):
             def_idx = idx
@@ -101,9 +99,7 @@ def add_xref(
     xref_entries.append(xref)
     xref_entries = sorted(xref_entries)
     xr_idx = xref_entries.index(xref)
-    line = (
-        f'xref: {xref} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}\n'
-    )
+    line = f'xref: {xref} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}'
     if start_xref_idx is None:
         raise
     lines.insert(start_xref_idx + xr_idx, line)
@@ -111,6 +107,4 @@ def add_xref(
 
 
 if __name__ == "__main__":
-    update_obo(
-        "uberon", "/Users/cthoyt/dev/uberon/src/ontology/uberon-edit.obo", uppercase_prefix=True
-    )
+    update_obo(prefix="uberon", path="/Users/cthoyt/dev/uberon/src/ontology/uberon-edit.obo")

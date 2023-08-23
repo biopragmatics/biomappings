@@ -5,11 +5,11 @@ from typing import Any, Dict, List
 from biomappings import load_mappings
 
 __all__ = [
-    "get_mappings",
+    "get_curated_mappings",
 ]
 
 
-def get_mappings(prefix: str) -> List[Dict[str, Any]]:
+def get_curated_mappings(prefix: str) -> List[Dict[str, Any]]:
     """Get mappings for a given prefix."""
     mappings = []
     for mapping in load_mappings():

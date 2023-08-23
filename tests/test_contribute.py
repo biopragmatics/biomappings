@@ -3,7 +3,7 @@
 import unittest
 from textwrap import dedent
 
-from biomappings.contribute.obo import update_obo_lines
+from biomappings.contribute.obo import get_curated_mappings, update_obo_lines
 
 
 class TestContributeOBO(unittest.TestCase):
@@ -11,6 +11,19 @@ class TestContributeOBO(unittest.TestCase):
 
     def test_addition(self):
         """Test adding a non-redundant mapping."""
+        mappings = get_curated_mappings("uberon")
+        sources = {mapping["source identifier"] for mapping in mappings}
+        self.assertIn("UBERON:0000018", sources, msg="Mappings are not loaded properly")
+
+        # cut the mappings down in case additional ones are curated later
+        mappings = [
+            mappings
+            for mappings in mappings
+            if mappings["source identifier"] == "UBERON:0000018"
+            and mappings["target prefix"] == "idomal"
+        ]
+        self.assertEqual(1, len(mappings))
+
         original = dedent(
             """\
             [Term]
@@ -27,6 +40,8 @@ class TestContributeOBO(unittest.TestCase):
             property_value: seeAlso "https://github.com/obophenotype/uberon/issues/457" xsd:anyURI
             """
         )
+
+        # node that the IDOMAL xref line is added
         expected = dedent(
             """\
             [Term]
@@ -42,9 +57,9 @@ class TestContributeOBO(unittest.TestCase):
             intersection_of: UBERON:0000970 ! eye
             relationship: only_in_taxon NCBITaxon:6656 {source="PMID:21062451"} ! Arthropoda
             property_value: seeAlso "https://github.com/obophenotype/uberon/issues/457" xsd:anyURI
-        """
+            """
         )
         self.assertEqual(
             expected.splitlines(),
-            update_obo_lines(prefix="uberon", lines=original.splitlines()),
+            update_obo_lines(mappings=mappings, lines=original.splitlines()),
         )
