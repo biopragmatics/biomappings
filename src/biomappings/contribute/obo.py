@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Union
 
 import bioregistry
+import click
 from bioregistry import curie_to_str, standardize_identifier
 from tqdm.auto import tqdm
 
@@ -21,6 +22,13 @@ def update_obo(*, prefix: str, path: Union[str, Path]) -> None:
 
     :param prefix: Prefix for the ontology
     :param path: Path to the ontology edit file, encoded with OBO flat file format
+
+    Example usage
+
+    .. code-block:: sh
+
+        git clone https://github.com/obophenotype/uberon.git
+        python -m biomappings.contribute.obo --prefix uberon --path uberon/src/ontology/uberon-edit.obo
     """
     path = Path(path).resolve()
     with path.open("r") as file:
@@ -131,5 +139,19 @@ def _extract_ref(xref_line):
     return xref_line
 
 
+@click.command()
+@click.option("--prefix", required=True, help="The prefix corresponding to the ontology")
+@click.option(
+    "--path",
+    type=click.Path(),
+    required=True,
+    help="After forking and cloning the version controlled repository for an ontology locally, "
+    "give the path inside the directory to the ontology's edit file.",
+)
+def main(prefix: str, path: Path):
+    """Contribute to an OBO file."""
+    update_obo(prefix=prefix, path=path)
+
+
 if __name__ == "__main__":
-    update_obo(prefix="uberon", path="/Users/cthoyt/dev/uberon/src/ontology/uberon-edit.obo")
+    main()
