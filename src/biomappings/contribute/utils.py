@@ -1,6 +1,6 @@
 """Utilities for contributing back to upstream resources."""
 
-from typing import Any, List, Mapping
+from typing import Any, Dict, List
 
 from biomappings import load_mappings
 
@@ -9,7 +9,7 @@ __all__ = [
 ]
 
 
-def get_mappings(prefix: str) -> List[Mapping[str, Any]]:
+def get_mappings(prefix: str) -> List[Dict[str, Any]]:
     """Get mappings for a given prefix."""
     mappings = []
     for mapping in load_mappings():

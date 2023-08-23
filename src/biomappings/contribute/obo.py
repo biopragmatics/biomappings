@@ -5,6 +5,7 @@ Example ontologies using the OBO flat file format:
 - Mondo Disease Ontology (MONDO)
 """
 
+from copy import deepcopy
 from pathlib import Path
 from typing import Union
 
@@ -21,10 +22,24 @@ def update_obo(prefix: str, path: Union[str, Path], *, uppercase_prefix: bool = 
     :param path: Path to the ontology edit file, encoded with OBO flat file format
     :param uppercase_prefix: Should prefixes be uppercased?
     """
-    mappings = get_mappings(prefix)
-
     with open(path, "r") as fh:
         lines = fh.readlines()
+    lines = update_obo_lines(lines=lines, prefix=prefix, uppercase_prefix=uppercase_prefix)
+    with open(path, "w") as fh:
+        fh.writelines(lines)
+
+
+def update_obo_lines(*, prefix: str, lines: list[str], uppercase_prefix: bool = False) -> list[str]:
+    """Update the lines of an OBO file.
+
+    :param prefix: Prefix for the ontology
+    :param lines: A list of lines of the file (still containing trailing newlines)
+    :param uppercase_prefix: Should prefixes be uppercased?
+    :returns: New lines. Does not modify the original list.
+    """
+    lines = deepcopy(lines)
+
+    mappings = get_mappings(prefix)
 
     for mapping in tqdm(mappings, unit="mapping", unit_scale=True):
         target_prefix = mapping["target prefix"]
@@ -45,12 +60,12 @@ def update_obo(prefix: str, path: Union[str, Path], *, uppercase_prefix: bool = 
             mapping["target name"],
             source_curie.removeprefix("orcid:"),
         )
-
-    with open(path, "w") as fh:
-        fh.writelines(lines)
+    return lines
 
 
-def add_xref(lines, node, xref, xref_name, author_orcid: str):
+def add_xref(
+    lines: list[str], node: str, xref: str, xref_name: str, author_orcid: str
+) -> list[str]:
     """Add xref to OBO file lines in the appropriate place."""
     look_for_xref = False
     #: The 0-indexed line number on which the first xref appears
@@ -89,6 +104,8 @@ def add_xref(lines, node, xref, xref_name, author_orcid: str):
     line = (
         f'xref: {xref} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}\n'
     )
+    if start_xref_idx is None:
+        raise
     lines.insert(start_xref_idx + xr_idx, line)
     return lines
 
