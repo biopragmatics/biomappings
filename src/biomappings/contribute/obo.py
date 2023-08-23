@@ -31,7 +31,9 @@ def update_obo(*, prefix: str, path: Union[str, Path]) -> None:
         file.writelines(lines)
 
 
-def update_obo_lines(*, lines: List[str], mappings: List[Dict[str, Any]], progress: bool = True) -> List[str]:
+def update_obo_lines(
+    *, lines: List[str], mappings: List[Dict[str, Any]], progress: bool = True
+) -> List[str]:
     """Update the lines of an OBO file.
 
     :param mappings: Mappings to add
@@ -102,7 +104,7 @@ def add_xref(
     xr_idx = xref_entries.index(xref)
     line = f'xref: {xref} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}'
     if start_xref_idx is None:
-        raise
+        raise RuntimeError
     lines.insert(start_xref_idx + xr_idx, line)
     return lines
 
