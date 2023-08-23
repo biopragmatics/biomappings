@@ -114,3 +114,27 @@ class TestContributeOBO(unittest.TestCase):
             original.splitlines(),
             update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
         )
+
+    def test_skip_redundant_3(self):
+        """Test skipping where the xref just has meta-xrefs."""
+        original = dedent(
+            """\
+            [Term]
+            id: UBERON:0000018
+            name: compound eye
+            def: "A light sensing organ composed of ommatidia." [FB:gg, Wikipedia:Compound_eye]
+            subset: organ_slim
+            synonym: "adult compound eye" RELATED []
+            xref: BTO:0001921
+            xref: HAO:0000217
+            xref: IDOMAL:0002421 [https://orcid.org/0000-0003-4423-4370]
+            xref: TGMA:0000024
+            intersection_of: UBERON:0000970 ! eye
+            relationship: only_in_taxon NCBITaxon:6656 {source="PMID:21062451"} ! Arthropoda
+            property_value: seeAlso "https://github.com/obophenotype/uberon/issues/457" xsd:anyURI
+            """
+        )
+        self.assertEqual(
+            original.splitlines(),
+            update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
+        )
