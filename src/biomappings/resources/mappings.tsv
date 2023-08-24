@@ -5061,6 +5061,7 @@ mesh	C537210	Knuckle pads, leuconychia and sensorineural deafness	skos:exactMatc
 mesh	C537213	Kohlschutter Tonz syndrome	skos:exactMatch	doid	DOID:0111668	Kohlschutter-Tonz syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C537218	Saccharopinuria	skos:exactMatch	hp	HP:0034028	Saccharopinuria	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	C537227	Sakati syndrome	skos:exactMatch	doid	DOID:0060359	Sakati-Nyhan syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C537236	Sarcosinemia	skos:exactMatch	hp	HP:0010896	Hypersarcosinemia	semapv:ManualMappingCuration	web	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	0.95
 mesh	C537247	Hemochromatosis, type 2	skos:exactMatch	doid	DOID:0111034	hemochromatosis type 2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C537248	Hemochromatosis, type 3	skos:exactMatch	doid	DOID:0111030	hemochromatosis type 3	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C537249	Hemochromatosis, type 4	skos:exactMatch	doid	DOID:0111028	hemochromatosis type 4	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -7068,6 +7069,7 @@ mesh	D005283	Fentanyl	skos:exactMatch	chebi	CHEBI:119915	fentanyl	semapv:ManualM
 mesh	D005285	Fermentation	skos:exactMatch	go	GO:0006113	fermentation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D005306	Fertilization	skos:exactMatch	go	GO:0009566	fertilization	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D005316	Fetal Distress	skos:exactMatch	hp	HP:0025116	Fetal distress	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	D005330	Fetofetal Transfusion	skos:exactMatch	hp	HP:0031110	Twin-to-twin transfusion	semapv:ManualMappingCuration	web	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
 mesh	D005342	Fibrinolysis	skos:exactMatch	go	GO:0042730	fibrinolysis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D005348	Fibrocystic Breast Disease	skos:exactMatch	doid	DOID:5998	microglandular adenosis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D005350	Fibroma	skos:exactMatch	doid	DOID:0050871	fibroma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			

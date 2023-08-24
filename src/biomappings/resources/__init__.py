@@ -183,7 +183,7 @@ def _load_table(fname) -> List[Dict[str, str]]:
 
 
 def _clean(header, row):
-    d = dict(zip(header, row))
+    d = dict(itt.zip_longest(header, row, fillvalue=None))
     return {k: v if v else None for k, v in d.items()}
 
 
