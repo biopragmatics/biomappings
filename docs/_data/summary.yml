@@ -20,6 +20,10 @@ contributors:
   orcid: 0000-0002-2627-0696
   user: KrishnaTO
 - count: 1
+  name: Sumir Pandit
+  orcid: 0000-0002-1216-4761
+  user: sumir
+- count: 1
   name: Christopher Mungall
   orcid: 0000-0002-6601-2165
   user: cmungall
@@ -106,6 +110,9 @@ negative:
   source: interpro
   target: ncbitaxon
 - count: 9
+  source: mesh
+  target: mondo
+- count: 9
   source: pr
   target: uniprot.chain
 - count: 9
@@ -117,9 +124,6 @@ negative:
 - count: 8
   source: hp
   target: mesh
-- count: 8
-  source: mesh
-  target: mondo
 - count: 7
   source: clo
   target: mesh
@@ -228,7 +232,7 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1565
+negative_mapping_count: 1566
 negative_prefix_count: 42
 positive:
 - count: 3106
@@ -594,7 +598,7 @@ predictions:
 - count: 145
   source: efo
   target: mesh
-- count: 76
+- count: 75
   source: mesh
   target: mondo
 - count: 68
@@ -696,7 +700,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 40559
+predictions_mapping_count: 40558
 predictions_prefix_count: 33
 unsure:
 - count: 27
