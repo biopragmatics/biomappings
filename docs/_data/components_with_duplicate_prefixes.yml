@@ -148,6 +148,41 @@
     link: https://bioregistry.io/mesh:D011984
     name: Sensory Receptor Cells
     prefix: mesh
+- cpt:90585:
+    identifier: '90585'
+    link: https://bioregistry.io/cpt:90585
+    name: BCG
+    prefix: cpt
+  cpt:90728:
+    identifier: '90728'
+    link: https://bioregistry.io/cpt:90728
+    name: BCG
+    prefix: cpt
+  cvx:19:
+    identifier: '19'
+    link: https://bioregistry.io/cvx:19
+    name: Bacillus Calmette-Guerin vaccine
+    prefix: cvx
+  dron:00012890:
+    identifier: 00012890
+    link: https://bioregistry.io/dron:00012890
+    name: BCG Vaccine
+    prefix: dron
+  mesh:D001500:
+    identifier: D001500
+    link: https://bioregistry.io/mesh:D001500
+    name: BCG Vaccine
+    prefix: mesh
+  ncit:C298:
+    identifier: C298
+    link: https://bioregistry.io/ncit:C298
+    name: BCG Vaccine
+    prefix: ncit
+  vo:0000771:
+    identifier: '0000771'
+    link: https://bioregistry.io/vo:0000771
+    name: BCG vaccine
+    prefix: vo
 - doid:11263:
     identifier: DOID:11263
     link: https://bioregistry.io/doid:11263

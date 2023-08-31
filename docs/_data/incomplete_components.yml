@@ -922,11 +922,11 @@
       name: A549
       prefix: ccle
     target:
-      curie: mesh:D000072283
-      identifier: D000072283
-      link: https://bioregistry.io/mesh:D000072283
-      name: A549 Cells
-      prefix: mesh
+      curie: clo:0001601
+      identifier: '0001601'
+      link: https://bioregistry.io/clo:0001601
+      name: A549 cell
+      prefix: clo
   - source:
       curie: ccle:A549_LUNG
       identifier: A549_LUNG
@@ -934,35 +934,11 @@
       name: A549
       prefix: ccle
     target:
-      curie: clo:0001601
-      identifier: '0001601'
-      link: https://bioregistry.io/clo:0001601
-      name: A549 cell
-      prefix: clo
-  - source:
-      curie: cellosaurus:0023
-      identifier: CVCL_0023
-      link: https://bioregistry.io/cellosaurus:0023
-      name: A-549
-      prefix: cellosaurus
-    target:
       curie: mesh:D000072283
       identifier: D000072283
       link: https://bioregistry.io/mesh:D000072283
       name: A549 Cells
       prefix: mesh
-  - source:
-      curie: cellosaurus:0023
-      identifier: CVCL_0023
-      link: https://bioregistry.io/cellosaurus:0023
-      name: A-549
-      prefix: cellosaurus
-    target:
-      curie: clo:0001601
-      identifier: '0001601'
-      link: https://bioregistry.io/clo:0001601
-      name: A549 cell
-      prefix: clo
   - source:
       curie: cellosaurus:0023
       identifier: CVCL_0023
@@ -975,6 +951,30 @@
       link: https://bioregistry.io/efo:0001086
       name: A549
       prefix: efo
+  - source:
+      curie: cellosaurus:0023
+      identifier: CVCL_0023
+      link: https://bioregistry.io/cellosaurus:0023
+      name: A-549
+      prefix: cellosaurus
+    target:
+      curie: clo:0001601
+      identifier: '0001601'
+      link: https://bioregistry.io/clo:0001601
+      name: A549 cell
+      prefix: clo
+  - source:
+      curie: cellosaurus:0023
+      identifier: CVCL_0023
+      link: https://bioregistry.io/cellosaurus:0023
+      name: A-549
+      prefix: cellosaurus
+    target:
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
   - source:
       curie: clo:0001601
       identifier: '0001601'
@@ -1833,11 +1833,11 @@
       name: HNT-34
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000299
-      identifier: ACH-000299
-      link: https://bioregistry.io/depmap:ACH-000299
-      name: null
-      prefix: depmap
+      curie: efo:0006583
+      identifier: 0006583
+      link: https://bioregistry.io/efo:0006583
+      name: HNT-34
+      prefix: efo
   - source:
       curie: cellosaurus:2071
       identifier: CVCL_2071
@@ -1845,11 +1845,11 @@
       name: HNT-34
       prefix: cellosaurus
     target:
-      curie: efo:0006583
-      identifier: 0006583
-      link: https://bioregistry.io/efo:0006583
-      name: HNT-34
-      prefix: efo
+      curie: depmap:ACH-000299
+      identifier: ACH-000299
+      link: https://bioregistry.io/depmap:ACH-000299
+      name: null
+      prefix: depmap
   - source:
       curie: depmap:ACH-000299
       identifier: ACH-000299
@@ -2065,18 +2065,6 @@
       name: MDA-MB-231
       prefix: ccle
     target:
-      curie: mesh:D000092302
-      identifier: D000092302
-      link: https://bioregistry.io/mesh:D000092302
-      name: MDA-MB-231 Cells
-      prefix: mesh
-  - source:
-      curie: ccle:MDAMB231_BREAST
-      identifier: MDAMB231_BREAST
-      link: https://bioregistry.io/ccle:MDAMB231_BREAST
-      name: MDA-MB-231
-      prefix: ccle
-    target:
       curie: clo:0007634
       identifier: '0007634'
       link: https://bioregistry.io/clo:0007634
@@ -2094,6 +2082,18 @@
       link: https://bioregistry.io/clo:0037291
       name: MDAMB231 cell
       prefix: clo
+  - source:
+      curie: ccle:MDAMB231_BREAST
+      identifier: MDAMB231_BREAST
+      link: https://bioregistry.io/ccle:MDAMB231_BREAST
+      name: MDA-MB-231
+      prefix: ccle
+    target:
+      curie: mesh:D000092302
+      identifier: D000092302
+      link: https://bioregistry.io/mesh:D000092302
+      name: MDA-MB-231 Cells
+      prefix: mesh
   - source:
       curie: clo:0007634
       identifier: '0007634'
@@ -3258,6 +3258,924 @@
       link: https://bioregistry.io/ncit:C18096
       name: MCF7
       prefix: ncit
+- edges:
+  - source:
+      curie: cpt:90287
+      identifier: '90287'
+      link: https://bioregistry.io/cpt:90287
+      name: botulinum antitoxin
+      prefix: cpt
+    target:
+      curie: cvx:27
+      identifier: '27'
+      link: https://bioregistry.io/cvx:27
+      name: botulinum antitoxin
+      prefix: cvx
+  - source:
+      curie: cvx:27
+      identifier: '27'
+      link: https://bioregistry.io/cvx:27
+      name: botulinum antitoxin
+      prefix: cvx
+    target:
+      curie: vo:0006001
+      identifier: '0006001'
+      link: https://bioregistry.io/vo:0006001
+      name: botulinum antitoxin
+      prefix: vo
+  - source:
+      curie: mesh:D001904
+      identifier: D001904
+      link: https://bioregistry.io/mesh:D001904
+      name: Botulinum Antitoxin
+      prefix: mesh
+    target:
+      curie: vo:0006001
+      identifier: '0006001'
+      link: https://bioregistry.io/vo:0006001
+      name: botulinum antitoxin
+      prefix: vo
+  nodes:
+    cpt:90287:
+      identifier: '90287'
+      link: https://bioregistry.io/cpt:90287
+      name: botulinum antitoxin
+      prefix: cpt
+    cvx:27:
+      identifier: '27'
+      link: https://bioregistry.io/cvx:27
+      name: botulinum antitoxin
+      prefix: cvx
+    mesh:D001904:
+      identifier: D001904
+      link: https://bioregistry.io/mesh:D001904
+      name: Botulinum Antitoxin
+      prefix: mesh
+    vo:0006001:
+      identifier: '0006001'
+      link: https://bioregistry.io/vo:0006001
+      name: botulinum antitoxin
+      prefix: vo
+- edges:
+  - source:
+      curie: cpt:90296
+      identifier: '90296'
+      link: https://bioregistry.io/cpt:90296
+      name: diphtheria antitoxin
+      prefix: cpt
+    target:
+      curie: cvx:12
+      identifier: '12'
+      link: https://bioregistry.io/cvx:12
+      name: diphtheria antitoxin
+      prefix: cvx
+  - source:
+      curie: cvx:12
+      identifier: '12'
+      link: https://bioregistry.io/cvx:12
+      name: diphtheria antitoxin
+      prefix: cvx
+    target:
+      curie: vo:0006005
+      identifier: '0006005'
+      link: https://bioregistry.io/vo:0006005
+      name: diphtheria antitoxin
+      prefix: vo
+  - source:
+      curie: mesh:D004166
+      identifier: D004166
+      link: https://bioregistry.io/mesh:D004166
+      name: Diphtheria Antitoxin
+      prefix: mesh
+    target:
+      curie: vo:0006005
+      identifier: '0006005'
+      link: https://bioregistry.io/vo:0006005
+      name: diphtheria antitoxin
+      prefix: vo
+  nodes:
+    cpt:90296:
+      identifier: '90296'
+      link: https://bioregistry.io/cpt:90296
+      name: diphtheria antitoxin
+      prefix: cpt
+    cvx:12:
+      identifier: '12'
+      link: https://bioregistry.io/cvx:12
+      name: diphtheria antitoxin
+      prefix: cvx
+    mesh:D004166:
+      identifier: D004166
+      link: https://bioregistry.io/mesh:D004166
+      name: Diphtheria Antitoxin
+      prefix: mesh
+    vo:0006005:
+      identifier: '0006005'
+      link: https://bioregistry.io/vo:0006005
+      name: diphtheria antitoxin
+      prefix: vo
+- edges:
+  - source:
+      curie: cpt:90581
+      identifier: '90581'
+      link: https://bioregistry.io/cpt:90581
+      name: anthrax
+      prefix: cpt
+    target:
+      curie: cvx:24
+      identifier: '24'
+      link: https://bioregistry.io/cvx:24
+      name: anthrax vaccine
+      prefix: cvx
+  - source:
+      curie: cpt:90581
+      identifier: '90581'
+      link: https://bioregistry.io/cpt:90581
+      name: anthrax
+      prefix: cpt
+    target:
+      curie: vo:0000013
+      identifier: '0000013'
+      link: https://bioregistry.io/vo:0000013
+      name: Bacillus anthracis vaccine
+      prefix: vo
+  - source:
+      curie: cvx:24
+      identifier: '24'
+      link: https://bioregistry.io/cvx:24
+      name: anthrax vaccine
+      prefix: cvx
+    target:
+      curie: vo:0000013
+      identifier: '0000013'
+      link: https://bioregistry.io/vo:0000013
+      name: Bacillus anthracis vaccine
+      prefix: vo
+  nodes:
+    cpt:90581:
+      identifier: '90581'
+      link: https://bioregistry.io/cpt:90581
+      name: anthrax
+      prefix: cpt
+    cvx:24:
+      identifier: '24'
+      link: https://bioregistry.io/cvx:24
+      name: anthrax vaccine
+      prefix: cvx
+    mesh:D022122:
+      identifier: D022122
+      link: https://bioregistry.io/mesh:D022122
+      name: Anthrax Vaccines
+      prefix: mesh
+    vo:0000013:
+      identifier: '0000013'
+      link: https://bioregistry.io/vo:0000013
+      name: Bacillus anthracis vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cpt:90585
+      identifier: '90585'
+      link: https://bioregistry.io/cpt:90585
+      name: BCG
+      prefix: cpt
+    target:
+      curie: cpt:90728
+      identifier: '90728'
+      link: https://bioregistry.io/cpt:90728
+      name: BCG
+      prefix: cpt
+  - source:
+      curie: cpt:90585
+      identifier: '90585'
+      link: https://bioregistry.io/cpt:90585
+      name: BCG
+      prefix: cpt
+    target:
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
+  - source:
+      curie: cpt:90585
+      identifier: '90585'
+      link: https://bioregistry.io/cpt:90585
+      name: BCG
+      prefix: cpt
+    target:
+      curie: ncit:C298
+      identifier: C298
+      link: https://bioregistry.io/ncit:C298
+      name: BCG Vaccine
+      prefix: ncit
+  - source:
+      curie: cpt:90585
+      identifier: '90585'
+      link: https://bioregistry.io/cpt:90585
+      name: BCG
+      prefix: cpt
+    target:
+      curie: dron:00012890
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
+      name: BCG Vaccine
+      prefix: dron
+  - source:
+      curie: cpt:90728
+      identifier: '90728'
+      link: https://bioregistry.io/cpt:90728
+      name: BCG
+      prefix: cpt
+    target:
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
+  - source:
+      curie: cpt:90728
+      identifier: '90728'
+      link: https://bioregistry.io/cpt:90728
+      name: BCG
+      prefix: cpt
+    target:
+      curie: ncit:C298
+      identifier: C298
+      link: https://bioregistry.io/ncit:C298
+      name: BCG Vaccine
+      prefix: ncit
+  - source:
+      curie: cpt:90728
+      identifier: '90728'
+      link: https://bioregistry.io/cpt:90728
+      name: BCG
+      prefix: cpt
+    target:
+      curie: dron:00012890
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
+      name: BCG Vaccine
+      prefix: dron
+  - source:
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
+    target:
+      curie: dron:00012890
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
+      name: BCG Vaccine
+      prefix: dron
+  - source:
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
+    target:
+      curie: ncit:C298
+      identifier: C298
+      link: https://bioregistry.io/ncit:C298
+      name: BCG Vaccine
+      prefix: ncit
+  - source:
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
+    target:
+      curie: vo:0000771
+      identifier: '0000771'
+      link: https://bioregistry.io/vo:0000771
+      name: BCG vaccine
+      prefix: vo
+  - source:
+      curie: dron:00012890
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
+      name: BCG Vaccine
+      prefix: dron
+    target:
+      curie: mesh:D001500
+      identifier: D001500
+      link: https://bioregistry.io/mesh:D001500
+      name: BCG Vaccine
+      prefix: mesh
+  - source:
+      curie: dron:00012890
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
+      name: BCG Vaccine
+      prefix: dron
+    target:
+      curie: ncit:C298
+      identifier: C298
+      link: https://bioregistry.io/ncit:C298
+      name: BCG Vaccine
+      prefix: ncit
+  - source:
+      curie: ncit:C298
+      identifier: C298
+      link: https://bioregistry.io/ncit:C298
+      name: BCG Vaccine
+      prefix: ncit
+    target:
+      curie: vo:0000771
+      identifier: '0000771'
+      link: https://bioregistry.io/vo:0000771
+      name: BCG vaccine
+      prefix: vo
+  nodes:
+    cpt:90585:
+      identifier: '90585'
+      link: https://bioregistry.io/cpt:90585
+      name: BCG
+      prefix: cpt
+    cpt:90728:
+      identifier: '90728'
+      link: https://bioregistry.io/cpt:90728
+      name: BCG
+      prefix: cpt
+    cvx:19:
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
+    dron:00012890:
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
+      name: BCG Vaccine
+      prefix: dron
+    mesh:D001500:
+      identifier: D001500
+      link: https://bioregistry.io/mesh:D001500
+      name: BCG Vaccine
+      prefix: mesh
+    ncit:C298:
+      identifier: C298
+      link: https://bioregistry.io/ncit:C298
+      name: BCG Vaccine
+      prefix: ncit
+    vo:0000771:
+      identifier: '0000771'
+      link: https://bioregistry.io/vo:0000771
+      name: BCG vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cpt:90665
+      identifier: '90665'
+      link: https://bioregistry.io/cpt:90665
+      name: Lyme disease
+      prefix: cpt
+    target:
+      curie: cvx:66
+      identifier: '66'
+      link: https://bioregistry.io/cvx:66
+      name: Lyme disease vaccine
+      prefix: cvx
+  - source:
+      curie: cpt:90665
+      identifier: '90665'
+      link: https://bioregistry.io/cpt:90665
+      name: Lyme disease
+      prefix: cpt
+    target:
+      curie: dron:00016926
+      identifier: 00016926
+      link: https://bioregistry.io/dron:00016926
+      name: Lyme Disease Vaccine
+      prefix: dron
+  - source:
+      curie: cvx:66
+      identifier: '66'
+      link: https://bioregistry.io/cvx:66
+      name: Lyme disease vaccine
+      prefix: cvx
+    target:
+      curie: vo:0000764
+      identifier: '0000764'
+      link: https://bioregistry.io/vo:0000764
+      name: Lyme disease vaccine
+      prefix: vo
+  - source:
+      curie: cvx:66
+      identifier: '66'
+      link: https://bioregistry.io/cvx:66
+      name: Lyme disease vaccine
+      prefix: cvx
+    target:
+      curie: dron:00016926
+      identifier: 00016926
+      link: https://bioregistry.io/dron:00016926
+      name: Lyme Disease Vaccine
+      prefix: dron
+  - source:
+      curie: dron:00016926
+      identifier: 00016926
+      link: https://bioregistry.io/dron:00016926
+      name: Lyme Disease Vaccine
+      prefix: dron
+    target:
+      curie: mesh:D022123
+      identifier: D022123
+      link: https://bioregistry.io/mesh:D022123
+      name: Lyme Disease Vaccines
+      prefix: mesh
+  nodes:
+    cpt:90665:
+      identifier: '90665'
+      link: https://bioregistry.io/cpt:90665
+      name: Lyme disease
+      prefix: cpt
+    cvx:66:
+      identifier: '66'
+      link: https://bioregistry.io/cvx:66
+      name: Lyme disease vaccine
+      prefix: cvx
+    dron:00016926:
+      identifier: 00016926
+      link: https://bioregistry.io/dron:00016926
+      name: Lyme Disease Vaccine
+      prefix: dron
+    mesh:D022123:
+      identifier: D022123
+      link: https://bioregistry.io/mesh:D022123
+      name: Lyme Disease Vaccines
+      prefix: mesh
+    vo:0000764:
+      identifier: '0000764'
+      link: https://bioregistry.io/vo:0000764
+      name: Lyme disease vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cpt:90701
+      identifier: '90701'
+      link: https://bioregistry.io/cpt:90701
+      name: DTP
+      prefix: cpt
+    target:
+      curie: vo:0000738
+      identifier: 0000738
+      link: https://bioregistry.io/vo:0000738
+      name: Diphtheria-Tetanus-Pertussis vaccine
+      prefix: vo
+  nodes:
+    cpt:90701:
+      identifier: '90701'
+      link: https://bioregistry.io/cpt:90701
+      name: DTP
+      prefix: cpt
+    mesh:D015721:
+      identifier: D015721
+      link: https://bioregistry.io/mesh:D015721
+      name: Diphtheria-Tetanus-Pertussis Vaccine
+      prefix: mesh
+    vo:0000738:
+      identifier: 0000738
+      link: https://bioregistry.io/vo:0000738
+      name: Diphtheria-Tetanus-Pertussis vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cpt:90704
+      identifier: '90704'
+      link: https://bioregistry.io/cpt:90704
+      name: mumps
+      prefix: cpt
+    target:
+      curie: vo:0000656
+      identifier: '0000656'
+      link: https://bioregistry.io/vo:0000656
+      name: Mumps virus vaccine
+      prefix: vo
+  nodes:
+    cpt:90704:
+      identifier: '90704'
+      link: https://bioregistry.io/cpt:90704
+      name: mumps
+      prefix: cpt
+    mesh:D009108:
+      identifier: D009108
+      link: https://bioregistry.io/mesh:D009108
+      name: Mumps Vaccine
+      prefix: mesh
+    vo:0000656:
+      identifier: '0000656'
+      link: https://bioregistry.io/vo:0000656
+      name: Mumps virus vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cpt:90705
+      identifier: '90705'
+      link: https://bioregistry.io/cpt:90705
+      name: measles
+      prefix: cpt
+    target:
+      curie: vo:0000654
+      identifier: '0000654'
+      link: https://bioregistry.io/vo:0000654
+      name: Measles virus vaccine
+      prefix: vo
+  nodes:
+    cpt:90705:
+      identifier: '90705'
+      link: https://bioregistry.io/cpt:90705
+      name: measles
+      prefix: cpt
+    mesh:D008458:
+      identifier: D008458
+      link: https://bioregistry.io/mesh:D008458
+      name: Measles Vaccine
+      prefix: mesh
+    vo:0000654:
+      identifier: '0000654'
+      link: https://bioregistry.io/vo:0000654
+      name: Measles virus vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cpt:90706
+      identifier: '90706'
+      link: https://bioregistry.io/cpt:90706
+      name: rubella
+      prefix: cpt
+    target:
+      curie: dron:00012200
+      identifier: '00012200'
+      link: https://bioregistry.io/dron:00012200
+      name: Rubella virus vaccine
+      prefix: dron
+  - source:
+      curie: cpt:90706
+      identifier: '90706'
+      link: https://bioregistry.io/cpt:90706
+      name: rubella
+      prefix: cpt
+    target:
+      curie: vo:0010637
+      identifier: '0010637'
+      link: https://bioregistry.io/vo:0010637
+      name: Rubella virus vaccine
+      prefix: vo
+  - source:
+      curie: dron:00012200
+      identifier: '00012200'
+      link: https://bioregistry.io/dron:00012200
+      name: Rubella virus vaccine
+      prefix: dron
+    target:
+      curie: mesh:D012411
+      identifier: D012411
+      link: https://bioregistry.io/mesh:D012411
+      name: Rubella Vaccine
+      prefix: mesh
+  nodes:
+    cpt:90706:
+      identifier: '90706'
+      link: https://bioregistry.io/cpt:90706
+      name: rubella
+      prefix: cpt
+    dron:00012200:
+      identifier: '00012200'
+      link: https://bioregistry.io/dron:00012200
+      name: Rubella virus vaccine
+      prefix: dron
+    mesh:D012411:
+      identifier: D012411
+      link: https://bioregistry.io/mesh:D012411
+      name: Rubella Vaccine
+      prefix: mesh
+    vo:0010637:
+      identifier: '0010637'
+      link: https://bioregistry.io/vo:0010637
+      name: Rubella virus vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cpt:90707
+      identifier: '90707'
+      link: https://bioregistry.io/cpt:90707
+      name: MMR
+      prefix: cpt
+    target:
+      curie: ncit:C96403
+      identifier: C96403
+      link: https://bioregistry.io/ncit:C96403
+      name: Measles/Mumps/Rubella Vaccine
+      prefix: ncit
+  - source:
+      curie: cpt:90707
+      identifier: '90707'
+      link: https://bioregistry.io/cpt:90707
+      name: MMR
+      prefix: cpt
+    target:
+      curie: vo:0000731
+      identifier: '0000731'
+      link: https://bioregistry.io/vo:0000731
+      name: Measles-Mumps-Rubella vaccine
+      prefix: vo
+  - source:
+      curie: ncit:C96403
+      identifier: C96403
+      link: https://bioregistry.io/ncit:C96403
+      name: Measles/Mumps/Rubella Vaccine
+      prefix: ncit
+    target:
+      curie: vo:0000731
+      identifier: '0000731'
+      link: https://bioregistry.io/vo:0000731
+      name: Measles-Mumps-Rubella vaccine
+      prefix: vo
+  nodes:
+    cpt:90707:
+      identifier: '90707'
+      link: https://bioregistry.io/cpt:90707
+      name: MMR
+      prefix: cpt
+    mesh:D022542:
+      identifier: D022542
+      link: https://bioregistry.io/mesh:D022542
+      name: Measles-Mumps-Rubella Vaccine
+      prefix: mesh
+    ncit:C96403:
+      identifier: C96403
+      link: https://bioregistry.io/ncit:C96403
+      name: Measles/Mumps/Rubella Vaccine
+      prefix: ncit
+    vo:0000731:
+      identifier: '0000731'
+      link: https://bioregistry.io/vo:0000731
+      name: Measles-Mumps-Rubella vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cpt:90727
+      identifier: '90727'
+      link: https://bioregistry.io/cpt:90727
+      name: plague
+      prefix: cpt
+    target:
+      curie: cvx:23
+      identifier: '23'
+      link: https://bioregistry.io/cvx:23
+      name: plague vaccine
+      prefix: cvx
+  - source:
+      curie: cpt:90727
+      identifier: '90727'
+      link: https://bioregistry.io/cpt:90727
+      name: plague
+      prefix: cpt
+    target:
+      curie: vo:0000648
+      identifier: 0000648
+      link: https://bioregistry.io/vo:0000648
+      name: Yersinia pestis vaccine
+      prefix: vo
+  - source:
+      curie: cvx:23
+      identifier: '23'
+      link: https://bioregistry.io/cvx:23
+      name: plague vaccine
+      prefix: cvx
+    target:
+      curie: vo:0000648
+      identifier: 0000648
+      link: https://bioregistry.io/vo:0000648
+      name: Yersinia pestis vaccine
+      prefix: vo
+  nodes:
+    cpt:90727:
+      identifier: '90727'
+      link: https://bioregistry.io/cpt:90727
+      name: plague
+      prefix: cpt
+    cvx:23:
+      identifier: '23'
+      link: https://bioregistry.io/cvx:23
+      name: plague vaccine
+      prefix: cvx
+    mesh:D010931:
+      identifier: D010931
+      link: https://bioregistry.io/mesh:D010931
+      name: Plague Vaccine
+      prefix: mesh
+    vo:0000648:
+      identifier: 0000648
+      link: https://bioregistry.io/vo:0000648
+      name: Yersinia pestis vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cvx:10
+      identifier: '10'
+      link: https://bioregistry.io/cvx:10
+      name: poliovirus vaccine, inactivated
+      prefix: cvx
+    target:
+      curie: ncit:C91715
+      identifier: C91715
+      link: https://bioregistry.io/ncit:C91715
+      name: Inactivated Poliovirus Vaccine
+      prefix: ncit
+  nodes:
+    cvx:10:
+      identifier: '10'
+      link: https://bioregistry.io/cvx:10
+      name: poliovirus vaccine, inactivated
+      prefix: cvx
+    mesh:D011054:
+      identifier: D011054
+      link: https://bioregistry.io/mesh:D011054
+      name: Poliovirus Vaccine, Inactivated
+      prefix: mesh
+    ncit:C91715:
+      identifier: C91715
+      link: https://bioregistry.io/ncit:C91715
+      name: Inactivated Poliovirus Vaccine
+      prefix: ncit
+- edges:
+  - source:
+      curie: cvx:11
+      identifier: '11'
+      link: https://bioregistry.io/cvx:11
+      name: pertussis vaccine
+      prefix: cvx
+    target:
+      curie: vo:0000765
+      identifier: '0000765'
+      link: https://bioregistry.io/vo:0000765
+      name: Bordetella pertussis vaccine
+      prefix: vo
+  nodes:
+    cvx:11:
+      identifier: '11'
+      link: https://bioregistry.io/cvx:11
+      name: pertussis vaccine
+      prefix: cvx
+    mesh:D010567:
+      identifier: D010567
+      link: https://bioregistry.io/mesh:D010567
+      name: Pertussis Vaccine
+      prefix: mesh
+    vo:0000765:
+      identifier: '0000765'
+      link: https://bioregistry.io/vo:0000765
+      name: Bordetella pertussis vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cvx:37
+      identifier: '37'
+      link: https://bioregistry.io/cvx:37
+      name: yellow fever vaccine
+      prefix: cvx
+    target:
+      curie: ncit:C96396
+      identifier: C96396
+      link: https://bioregistry.io/ncit:C96396
+      name: Yellow Fever Vaccine
+      prefix: ncit
+  - source:
+      curie: cvx:37
+      identifier: '37'
+      link: https://bioregistry.io/cvx:37
+      name: yellow fever vaccine
+      prefix: cvx
+    target:
+      curie: vo:0000123
+      identifier: '0000123'
+      link: https://bioregistry.io/vo:0000123
+      name: Yellow fever virus vaccine
+      prefix: vo
+  - source:
+      curie: ncit:C96396
+      identifier: C96396
+      link: https://bioregistry.io/ncit:C96396
+      name: Yellow Fever Vaccine
+      prefix: ncit
+    target:
+      curie: vo:0000123
+      identifier: '0000123'
+      link: https://bioregistry.io/vo:0000123
+      name: Yellow fever virus vaccine
+      prefix: vo
+  nodes:
+    cvx:37:
+      identifier: '37'
+      link: https://bioregistry.io/cvx:37
+      name: yellow fever vaccine
+      prefix: cvx
+    mesh:D022341:
+      identifier: D022341
+      link: https://bioregistry.io/mesh:D022341
+      name: Yellow Fever Vaccine
+      prefix: mesh
+    ncit:C96396:
+      identifier: C96396
+      link: https://bioregistry.io/ncit:C96396
+      name: Yellow Fever Vaccine
+      prefix: ncit
+    vo:0000123:
+      identifier: '0000123'
+      link: https://bioregistry.io/vo:0000123
+      name: Yellow fever virus vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cvx:64
+      identifier: '64'
+      link: https://bioregistry.io/cvx:64
+      name: leishmaniasis vaccine
+      prefix: cvx
+    target:
+      curie: vo:0000762
+      identifier: '0000762'
+      link: https://bioregistry.io/vo:0000762
+      name: Leishmania vaccine
+      prefix: vo
+  nodes:
+    cvx:64:
+      identifier: '64'
+      link: https://bioregistry.io/cvx:64
+      name: leishmaniasis vaccine
+      prefix: cvx
+    mesh:D054332:
+      identifier: D054332
+      link: https://bioregistry.io/mesh:D054332
+      name: Leishmaniasis Vaccines
+      prefix: mesh
+    vo:0000762:
+      identifier: '0000762'
+      link: https://bioregistry.io/vo:0000762
+      name: Leishmania vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: cvx:67
+      identifier: '67'
+      link: https://bioregistry.io/cvx:67
+      name: malaria vaccine
+      prefix: cvx
+    target:
+      curie: idomal:0001055
+      identifier: '0001055'
+      link: https://bioregistry.io/idomal:0001055
+      name: malaria vaccine
+      prefix: idomal
+  - source:
+      curie: cvx:67
+      identifier: '67'
+      link: https://bioregistry.io/cvx:67
+      name: malaria vaccine
+      prefix: cvx
+    target:
+      curie: vo:0000761
+      identifier: '0000761'
+      link: https://bioregistry.io/vo:0000761
+      name: malaria vaccine
+      prefix: vo
+  - source:
+      curie: idomal:0001055
+      identifier: '0001055'
+      link: https://bioregistry.io/idomal:0001055
+      name: malaria vaccine
+      prefix: idomal
+    target:
+      curie: mesh:D017780
+      identifier: D017780
+      link: https://bioregistry.io/mesh:D017780
+      name: Malaria Vaccines
+      prefix: mesh
+  nodes:
+    cvx:67:
+      identifier: '67'
+      link: https://bioregistry.io/cvx:67
+      name: malaria vaccine
+      prefix: cvx
+    idomal:0001055:
+      identifier: '0001055'
+      link: https://bioregistry.io/idomal:0001055
+      name: malaria vaccine
+      prefix: idomal
+    mesh:D017780:
+      identifier: D017780
+      link: https://bioregistry.io/mesh:D017780
+      name: Malaria Vaccines
+      prefix: mesh
+    vo:0000761:
+      identifier: '0000761'
+      link: https://bioregistry.io/vo:0000761
+      name: malaria vaccine
+      prefix: vo
 - edges:
   - source:
       curie: mesh:D011018
@@ -4624,11 +5542,11 @@
       name: Lung abscess
       prefix: hp
     target:
-      curie: umls:C0024110
-      identifier: C0024110
-      link: https://bioregistry.io/umls:C0024110
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
       name: Lung Abscess
-      prefix: umls
+      prefix: ncit
   - source:
       curie: hp:0025044
       identifier: HP:0025044
@@ -4636,11 +5554,11 @@
       name: Lung abscess
       prefix: hp
     target:
-      curie: ncit:C99090
-      identifier: C99090
-      link: https://bioregistry.io/ncit:C99090
+      curie: umls:C0024110
+      identifier: C0024110
+      link: https://bioregistry.io/umls:C0024110
       name: Lung Abscess
-      prefix: ncit
+      prefix: umls
   - source:
       curie: mesh:D008169
       identifier: D008169
@@ -6566,93 +7484,6 @@
       prefix: umls
 - edges:
   - source:
-      curie: dron:00012200
-      identifier: '00012200'
-      link: https://bioregistry.io/dron:00012200
-      name: Rubella virus vaccine
-      prefix: dron
-    target:
-      curie: mesh:D012411
-      identifier: D012411
-      link: https://bioregistry.io/mesh:D012411
-      name: Rubella Vaccine
-      prefix: mesh
-  nodes:
-    dron:00012200:
-      identifier: '00012200'
-      link: https://bioregistry.io/dron:00012200
-      name: Rubella virus vaccine
-      prefix: dron
-    mesh:D012411:
-      identifier: D012411
-      link: https://bioregistry.io/mesh:D012411
-      name: Rubella Vaccine
-      prefix: mesh
-    vo:0010637:
-      identifier: '0010637'
-      link: https://bioregistry.io/vo:0010637
-      name: Rubella virus vaccine
-      prefix: vo
-- edges:
-  - source:
-      curie: dron:00012890
-      identifier: 00012890
-      link: https://bioregistry.io/dron:00012890
-      name: BCG Vaccine
-      prefix: dron
-    target:
-      curie: ncit:C298
-      identifier: C298
-      link: https://bioregistry.io/ncit:C298
-      name: BCG Vaccine
-      prefix: ncit
-  - source:
-      curie: dron:00012890
-      identifier: 00012890
-      link: https://bioregistry.io/dron:00012890
-      name: BCG Vaccine
-      prefix: dron
-    target:
-      curie: mesh:D001500
-      identifier: D001500
-      link: https://bioregistry.io/mesh:D001500
-      name: BCG Vaccine
-      prefix: mesh
-  - source:
-      curie: ncit:C298
-      identifier: C298
-      link: https://bioregistry.io/ncit:C298
-      name: BCG Vaccine
-      prefix: ncit
-    target:
-      curie: vo:0000771
-      identifier: '0000771'
-      link: https://bioregistry.io/vo:0000771
-      name: BCG vaccine
-      prefix: vo
-  nodes:
-    dron:00012890:
-      identifier: 00012890
-      link: https://bioregistry.io/dron:00012890
-      name: BCG Vaccine
-      prefix: dron
-    mesh:D001500:
-      identifier: D001500
-      link: https://bioregistry.io/mesh:D001500
-      name: BCG Vaccine
-      prefix: mesh
-    ncit:C298:
-      identifier: C298
-      link: https://bioregistry.io/ncit:C298
-      name: BCG Vaccine
-      prefix: ncit
-    vo:0000771:
-      identifier: '0000771'
-      link: https://bioregistry.io/vo:0000771
-      name: BCG vaccine
-      prefix: vo
-- edges:
-  - source:
       curie: dron:00013702
       identifier: '00013702'
       link: https://bioregistry.io/dron:00013702
@@ -6679,35 +7510,6 @@
       identifier: 0004888
       link: https://bioregistry.io/vo:0004888
       name: meningococcal group A polysaccharide
-      prefix: vo
-- edges:
-  - source:
-      curie: dron:00016926
-      identifier: 00016926
-      link: https://bioregistry.io/dron:00016926
-      name: Lyme Disease Vaccine
-      prefix: dron
-    target:
-      curie: mesh:D022123
-      identifier: D022123
-      link: https://bioregistry.io/mesh:D022123
-      name: Lyme Disease Vaccines
-      prefix: mesh
-  nodes:
-    dron:00016926:
-      identifier: 00016926
-      link: https://bioregistry.io/dron:00016926
-      name: Lyme Disease Vaccine
-      prefix: dron
-    mesh:D022123:
-      identifier: D022123
-      link: https://bioregistry.io/mesh:D022123
-      name: Lyme Disease Vaccines
-      prefix: mesh
-    vo:0000764:
-      identifier: '0000764'
-      link: https://bioregistry.io/vo:0000764
-      name: Lyme disease vaccine
       prefix: vo
 - edges:
   - source:
@@ -10374,11 +11176,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: mondo:0100075
-      identifier: '0100075'
-      link: https://bioregistry.io/mondo:0100075
-      name: jaw fracture
-      prefix: mondo
+      curie: ncit:C26803
+      identifier: C26803
+      link: https://bioregistry.io/ncit:C26803
+      name: Jaw Fracture
+      prefix: ncit
   - source:
       curie: efo:0009612
       identifier: 0009612
@@ -10386,11 +11188,11 @@
       name: jaw fracture
       prefix: efo
     target:
-      curie: ncit:C26803
-      identifier: C26803
-      link: https://bioregistry.io/ncit:C26803
-      name: Jaw Fracture
-      prefix: ncit
+      curie: mondo:0100075
+      identifier: '0100075'
+      link: https://bioregistry.io/mondo:0100075
+      name: jaw fracture
+      prefix: mondo
   - source:
       curie: mondo:0100075
       identifier: '0100075'
@@ -11905,35 +12707,6 @@
       prefix: mesh
 - edges:
   - source:
-      curie: ncit:C96396
-      identifier: C96396
-      link: https://bioregistry.io/ncit:C96396
-      name: Yellow Fever Vaccine
-      prefix: ncit
-    target:
-      curie: vo:0000123
-      identifier: '0000123'
-      link: https://bioregistry.io/vo:0000123
-      name: Yellow fever virus vaccine
-      prefix: vo
-  nodes:
-    mesh:D022341:
-      identifier: D022341
-      link: https://bioregistry.io/mesh:D022341
-      name: Yellow Fever Vaccine
-      prefix: mesh
-    ncit:C96396:
-      identifier: C96396
-      link: https://bioregistry.io/ncit:C96396
-      name: Yellow Fever Vaccine
-      prefix: ncit
-    vo:0000123:
-      identifier: '0000123'
-      link: https://bioregistry.io/vo:0000123
-      name: Yellow fever virus vaccine
-      prefix: vo
-- edges:
-  - source:
       curie: ncit:C29090
       identifier: C29090
       link: https://bioregistry.io/ncit:C29090
@@ -11989,35 +12762,6 @@
       identifier: '0000053'
       link: https://bioregistry.io/vo:0000053
       name: Neisseria meningitidis vaccine
-      prefix: vo
-- edges:
-  - source:
-      curie: ncit:C96403
-      identifier: C96403
-      link: https://bioregistry.io/ncit:C96403
-      name: Measles/Mumps/Rubella Vaccine
-      prefix: ncit
-    target:
-      curie: vo:0000731
-      identifier: '0000731'
-      link: https://bioregistry.io/vo:0000731
-      name: Measles-Mumps-Rubella vaccine
-      prefix: vo
-  nodes:
-    mesh:D022542:
-      identifier: D022542
-      link: https://bioregistry.io/mesh:D022542
-      name: Measles-Mumps-Rubella Vaccine
-      prefix: mesh
-    ncit:C96403:
-      identifier: C96403
-      link: https://bioregistry.io/ncit:C96403
-      name: Measles/Mumps/Rubella Vaccine
-      prefix: ncit
-    vo:0000731:
-      identifier: '0000731'
-      link: https://bioregistry.io/vo:0000731
-      name: Measles-Mumps-Rubella vaccine
       prefix: vo
 - edges:
   - source:
@@ -13584,35 +14328,6 @@
       identifier: 0003495
       link: https://bioregistry.io/vo:0003495
       name: influenza vaccines
-      prefix: vo
-- edges:
-  - source:
-      curie: idomal:0001055
-      identifier: '0001055'
-      link: https://bioregistry.io/idomal:0001055
-      name: malaria vaccine
-      prefix: idomal
-    target:
-      curie: mesh:D017780
-      identifier: D017780
-      link: https://bioregistry.io/mesh:D017780
-      name: Malaria Vaccines
-      prefix: mesh
-  nodes:
-    idomal:0001055:
-      identifier: '0001055'
-      link: https://bioregistry.io/idomal:0001055
-      name: malaria vaccine
-      prefix: idomal
-    mesh:D017780:
-      identifier: D017780
-      link: https://bioregistry.io/mesh:D017780
-      name: Malaria Vaccines
-      prefix: mesh
-    vo:0000761:
-      identifier: '0000761'
-      link: https://bioregistry.io/vo:0000761
-      name: malaria vaccine
       prefix: vo
 - edges:
   - source:

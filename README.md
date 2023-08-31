@@ -143,6 +143,7 @@ development mode with the `web` option (which installs `flask` and `flask-bootst
 ```bash
 $ git clone git+https://github.com/biopragmatics/biomappings.git
 $ cd biomappings
+$ git checkout -b your-branch-name
 $ pip install -e .[web]
 ```
 
@@ -186,7 +187,7 @@ The most recent code and data can be installed directly from GitHub with:
 $ pip install git+https://github.com/biopragmatics/biomappings.git
 ```
 
-To install in development mode, use the following:
+To install in development mode and create a new branch, use the following:
 
 ```bash
 $ git clone git+https://github.com/biopragmatics/biomappings.git
