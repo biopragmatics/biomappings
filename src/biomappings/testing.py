@@ -2,7 +2,6 @@
 
 """Validation tests for :mod:`biomappings`."""
 
-import itertools as itt
 import unittest
 from collections import defaultdict
 
@@ -124,10 +123,15 @@ class IntegrityTestCase(unittest.TestCase):
     def test_contributors(self):
         """Test all contributors have an entry in the curators.tsv file."""
         contributor_orcids = {row["orcid"] for row in load_curators()}
-        for mapping in itt.chain(self.mappings, self.incorrect, self.unsure):
+        for label, i, mapping in self._iter_groups():
+            if label == "predictions":
+                continue
             source = mapping["source"]
             if not source.startswith("orcid:"):
-                self.assertTrue(source.startswith("web-"))
+                self.assertTrue(
+                    source.startswith("web-"),
+                    msg=f"[{label.title()}, Line {i:,}] invalid contributor: {source}",
+                )
                 ss = source[len("web-") :]
                 self.fail(msg=f'Add an entry with "{ss}" and your ORCID to {CURATORS_PATH}')
             self.assertIn(source[len("orcid:") :], contributor_orcids)
