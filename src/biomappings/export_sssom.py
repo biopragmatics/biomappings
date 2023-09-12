@@ -2,6 +2,7 @@
 
 """Export Biomappings as SSSOM."""
 
+import importlib.metadata
 import pathlib
 
 import bioregistry
@@ -23,9 +24,13 @@ CC0_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
 META = {
     "license": CC0_URL,
     "mapping_provider": "https://github.com/biopragmatics/biomappings",
-    "mapping_set_group": "biomappings",
-    "mapping_set_id": "biomappings",
+    "mapping_set_group": "biopragmatics",
+    "mapping_set_description": "Biomappings is a repository of community curated and predicted equivalences and "
+    "related mappings between named biological entities that are not available from primary sources. It's also a "
+    "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
+    "mapping_set_id": "https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv",
     "mapping_set_title": "Biomappings",
+    "mapping_set_version": importlib.metadata.version("biomappings"),
 }
 
 
@@ -123,9 +128,15 @@ def sssom():
         return
     click.echo("Writing JSON")
     with JSON_PATH.open("w") as file:
+        msdf.metadata[
+            "mapping_set_id"
+        ] = "https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.json"
         write_json(msdf, file)
     click.echo("Writing OWL")
     with OWL_PATH.open("w") as file:
+        msdf.metadata[
+            "mapping_set_id"
+        ] = "https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.owl"
         write_owl(msdf, file)
 
 
