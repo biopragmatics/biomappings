@@ -463,10 +463,10 @@ class Controller:
             # note these go backwards because of the way they are read
             if value == "broad":
                 value = "correct"
-                prediction['relation'] = "skos:narrowMatch"
+                prediction["relation"] = "skos:narrowMatch"
             elif value == "narrow":
                 value = "correct"
-                prediction['relation'] = "skos:broadMatch"
+                prediction["relation"] = "skos:broadMatch"
 
             entries[value].append(prediction)
 
