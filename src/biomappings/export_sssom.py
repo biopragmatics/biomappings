@@ -55,11 +55,13 @@ def get_sssom_df(use_tqdm: bool = False):
     ]
     # see https://mapping-commons.github.io/sssom/predicate_modifier/
     # for more information on predicate modifiers
-    for mappings, predicate_modifier in [
-        (load_mappings(), ""),  # no predicate modifier
-        (load_false_mappings(), "Not"),
+    for label, mappings, predicate_modifier in [
+        ("positive mappings", load_mappings(), ""),  # no predicate modifier
+        ("negative mappings", load_false_mappings(), "Not"),
     ]:
-        for mapping in tqdm(mappings, unit="mapping", unit_scale=True, disable=not use_tqdm):
+        for mapping in tqdm(
+            mappings, unit="mapping", unit_scale=True, disable=not use_tqdm, desc=label
+        ):
             prefixes.add(mapping["source prefix"])
             prefixes.add(mapping["target prefix"])
             source = mapping["source"]
@@ -86,7 +88,13 @@ def get_sssom_df(use_tqdm: bool = False):
                 )
             )
 
-    for mapping in tqdm(load_predictions(), unit="mapping", unit_scale=True, disable=not use_tqdm):
+    for mapping in tqdm(
+        load_predictions(),
+        unit="mapping",
+        unit_scale=True,
+        disable=not use_tqdm,
+        desc="predicted mappings",
+    ):
         prefixes.add(mapping["source prefix"])
         prefixes.add(mapping["target prefix"])
         rows.append(
@@ -126,10 +134,10 @@ def sssom():
     with open(META_PATH, "w") as file:
         yaml.safe_dump({"curie_map": prefix_map, "creator_id": creators, **META}, file)
 
-    from sssom.parsers import from_sssom_dataframe
-    from sssom.writers import write_json, write_owl
-    from sssom.validators import validate
     from sssom.constants import DEFAULT_VALIDATION_TYPES
+    from sssom.parsers import from_sssom_dataframe
+    from sssom.validators import validate
+    from sssom.writers import write_json, write_owl
 
     try:
         msdf = from_sssom_dataframe(df, prefix_map=prefix_map, meta=META)
