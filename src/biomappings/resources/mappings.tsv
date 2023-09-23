@@ -9687,6 +9687,7 @@ vo	0000079	Fluzone High-dose	skos:exactMatch	mesh	C000618615	Fluzone High-Dose	s
 vo	0000082	Pediarix	skos:exactMatch	mesh	C472675	PEDIARIX	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000084	Pentacel	skos:exactMatch	mesh	C512971	pentacel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000087	Plasmodium falciparum vaccine	skos:exactMatch	idomal	0000115	plasmodium falciparum vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0000096	Adenovirus Type 4 and Type 7 Vaccine, Live, Oral	skos:broadMatch	mesh	D062705	Adenovirus Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	0.56
 vo	0000097	RotaTeq	skos:exactMatch	mesh	C492535	RotaTeq	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7777777777777778
 vo	0000113	Twinrix	skos:exactMatch	mesh	C433226	twinrix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
 vo	0000123	Yellow fever virus vaccine	skos:exactMatch	mesh	D022341	Yellow Fever Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
@@ -9713,6 +9714,7 @@ vo	0000534	subunit vaccine	skos:exactMatch	mesh	D022223	Vaccines, Subunit	semapv
 vo	0000560	toxin	skos:exactMatch	chebi	CHEBI:27026	toxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0000560	toxin	skos:exactMatch	ido	0000549	toxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0000560	toxin	skos:exactMatch	idomal	0000043	toxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0000577	peptide vaccine	skos:broadMatch	mesh	D022223	Vaccines, Subunit	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	0.54
 vo	0000580	vaccine adjuvant	skos:exactMatch	mesh	D000089582	Adjuvants, Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
 vo	0000609	viral vaccine	skos:exactMatch	mesh	D014765	Viral Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
 vo	0000641	combination vaccine	skos:exactMatch	mesh	D017778	Vaccines, Combined	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:StructuralMatching	vo	0.99
