@@ -72,11 +72,15 @@ def get_sssom_df(use_tqdm: bool = False):
 
             rows.append(
                 (
-                    get_curie(mapping["source prefix"], mapping["source identifier"]),
+                    get_curie(
+                        mapping["source prefix"], mapping["source identifier"], preferred=True
+                    ),
                     mapping["source name"],
                     f'{mapping["relation"]}',
                     predicate_modifier,
-                    get_curie(mapping["target prefix"], mapping["target identifier"]),
+                    get_curie(
+                        mapping["target prefix"], mapping["target identifier"], preferred=True
+                    ),
                     mapping["target name"],
                     mapping["type"],  # match justification
                     source,  # curator CURIE
@@ -96,11 +100,11 @@ def get_sssom_df(use_tqdm: bool = False):
         prefixes.add(mapping["target prefix"])
         rows.append(
             (
-                get_curie(mapping["source prefix"], mapping["source identifier"]),
+                get_curie(mapping["source prefix"], mapping["source identifier"], preferred=True),
                 mapping["source name"],
                 f'{mapping["relation"]}',
                 "",  # no predicate modifier
-                get_curie(mapping["target prefix"], mapping["target identifier"]),
+                get_curie(mapping["target prefix"], mapping["target identifier"], preferred=True),
                 mapping["target name"],
                 mapping["type"],  # match justification
                 None,  # no curator CURIE
@@ -125,7 +129,8 @@ def sssom():
         uri_prefix = bioregistry.get_uri_prefix(prefix)
         if uri_prefix is None:
             raise ValueError(f"could not look up URI prefix for {prefix}")
-        prefix_map[prefix] = uri_prefix
+        pp = bioregistry.get_preferred_prefix(prefix) or prefix
+        prefix_map[pp] = uri_prefix
 
     with open(META_PATH, "w") as file:
         yaml.safe_dump({"curie_map": prefix_map, "creator_id": creators, **META}, file)

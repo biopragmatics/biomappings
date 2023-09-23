@@ -231,11 +231,13 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         raise InvalidIdentifierPattern(prefix, identifier, pattern)
 
 
-def get_curie(prefix: str, identifier: str) -> str:
+def get_curie(prefix: str, identifier: str, *, preferred: bool = False) -> str:
     """Get a normalized curie from a pre-parsed prefix/identifier pair."""
     prefix_norm, identifier_norm = bioregistry.normalize_parsed_curie(prefix, identifier)
     if prefix_norm is None or identifier_norm is None:
         raise ValueError(f"could not normalize {prefix}:{identifier}")
+    if preferred:
+        prefix_norm = bioregistry.get_preferred_prefix(prefix_norm) or prefix_norm
     return f"{prefix_norm}:{identifier_norm}"
 
 
