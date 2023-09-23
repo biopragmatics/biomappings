@@ -24,7 +24,6 @@ CC0_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
 META = {
     "license": CC0_URL,
     "mapping_provider": "https://github.com/biopragmatics/biomappings",
-    "mapping_set_group": "biopragmatics",
     "mapping_set_description": "Biomappings is a repository of community curated and predicted equivalences and "
     "related mappings between named biological entities that are not available from primary sources. It's also a "
     "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
