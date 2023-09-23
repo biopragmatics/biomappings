@@ -120,12 +120,17 @@ def sssom():
 
     from sssom.parsers import from_sssom_dataframe
     from sssom.writers import write_json, write_owl
+    from sssom.validators import validate
+    from sssom.constants import DEFAULT_VALIDATION_TYPES
 
     try:
         msdf = from_sssom_dataframe(df, prefix_map=prefix_map, meta=META)
     except Exception as e:
         click.secho(f"SSSOM Export failed...\n{e}", fg="red")
         return
+
+    validate(msdf=msdf, validation_types=DEFAULT_VALIDATION_TYPES)
+
     click.echo("Writing JSON")
     with JSON_PATH.open("w") as file:
         msdf.metadata[
