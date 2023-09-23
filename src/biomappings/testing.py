@@ -78,6 +78,16 @@ class IntegrityTestCase(unittest.TestCase):
             )
             self.assertIn(tt[len("semapv:") :], semapv)
 
+    def test_relations(self):
+        """Test that the relation is a CURIE."""
+        for label, line, mapping in self._iter_groups():
+            parts = mapping["relation"].split(":")
+            self.assertEqual(2, len(parts))
+            prefix, identifier = parts
+            self.assertNotEqual("ro", prefix, msg="RO should be capitalized")
+            if prefix != "RO":
+                self.assert_canonical_identifier(prefix, identifier, label, line)
+
     def test_canonical_prefixes(self):
         """Test that all mappings use canonical bioregistry prefixes."""
         valid_prefixes = set(bioregistry.read_registry())
