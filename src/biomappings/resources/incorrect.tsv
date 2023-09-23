@@ -1406,6 +1406,7 @@ uberon	UBERON:0012245	silk	skos:exactMatch	bto	BTO:0002854	corn silk	semapv:Manu
 uberon	UBERON:0022469	primary olfactory cortex	skos:exactMatch	mesh	D066194	Olfactory Cortex	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:2001977	pad	skos:exactMatch	mesh	D058729	Peripheral Arterial Disease	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 umls	C0006142	Malignant neoplasm of breast	skos:exactMatch	mesh	D001943	Breast Neoplasms	semapv:ManualMappingCuration	orcid:0000-0002-6601-2165			
+vo	0000189	colony forming unit	skos:exactMatch	mesh	D013234	Stem Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	0.54
 vo	0004075	PBT	skos:exactMatch	mesh	D001803	Blood Transfusion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0004075	PBT	skos:exactMatch	mesh	D013601	T-Lymphocytes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0004075	PBT	skos:exactMatch	mesh	D061766	Proton Therapy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
