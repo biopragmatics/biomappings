@@ -65,7 +65,13 @@ def get_sssom_df(use_tqdm: bool = False):
             prefixes.add(mapping["target prefix"])
             source = mapping["source"]
             if any(source.startswith(x) for x in ["orcid:", "wikidata:"]):
+                prefixes.add(source.split(":")[0])
                 creators.add(source)
+            try:
+                prefixes.add(mapping["relation"].split(":")[0])
+            except ValueError:
+                pass  # TODO make sure all relations are valid CURIEs
+
             rows.append(
                 (
                     get_curie(mapping["source prefix"], mapping["source identifier"]),
@@ -112,9 +118,12 @@ def sssom():
     # Get a CURIE map containing only the relevant prefixes
     prefix_map = {
         prefix: formatter
-        for prefix, formatter in bioregistry.get_prefix_map().items()
+        for prefix, formatter in bioregistry.get_prefix_map(include_synonyms=True).items()
         if prefix in prefixes
     }
+    # Add always used in metadata
+    prefix_map["RO"] = "http://purl.obolibrary.org/obo/RO_"
+
     with open(META_PATH, "w") as file:
         yaml.safe_dump({"curie_map": prefix_map, "creator_id": creators, **META}, file)
 
