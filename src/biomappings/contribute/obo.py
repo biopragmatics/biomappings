@@ -17,7 +17,7 @@ from tqdm.auto import tqdm
 from biomappings.contribute.utils import get_curated_mappings
 
 
-def update_obo(*, prefix: str, path: Union[str, Path]) -> None:
+def update_obo(*, prefix: str, path: Union[str, Path], upper: bool = False) -> None:
     """Update an OBO flat file.
 
     :param prefix: Prefix for the ontology
@@ -34,13 +34,13 @@ def update_obo(*, prefix: str, path: Union[str, Path]) -> None:
     with path.open("r") as file:
         lines = file.readlines()
     mappings = get_curated_mappings(prefix)
-    lines = update_obo_lines(lines=lines, mappings=mappings)
+    lines = update_obo_lines(lines=lines, mappings=mappings, upper=upper)
     with path.open("w") as file:
         file.writelines(lines)
 
 
 def update_obo_lines(
-    *, lines: List[str], mappings: List[Dict[str, Any]], progress: bool = True
+    *, lines: List[str], mappings: List[Dict[str, Any]], progress: bool = True, upper: bool = False
 ) -> List[str]:
     """Update the lines of an OBO file.
 
@@ -51,13 +51,20 @@ def update_obo_lines(
     """
     lines = deepcopy(lines)
 
-    for mapping in tqdm(mappings, unit="mapping", unit_scale=True, disable=not progress):
+    for mapping in tqdm(
+        mappings, unit="mapping", unit_scale=True, disable=not progress, desc="Adding mappings"
+    ):
         target_prefix = mapping["target prefix"]
-        target_prefix = bioregistry.get_preferred_prefix(target_prefix) or target_prefix
+        preterred_target_prefix = bioregistry.get_preferred_prefix(target_prefix)
+        if preterred_target_prefix:
+            target_prefix = preterred_target_prefix
+        elif upper:
+            target_prefix = target_prefix.upper()
         target_identifier = standardize_identifier(target_prefix, mapping["target identifier"])
 
         source_curie = mapping["source"]
         if not source_curie.startswith("orcid:"):
+            tqdm.write("missing ORCID")
             continue
 
         # FIXME be careful about assumption about identifier. currently
@@ -73,7 +80,7 @@ def update_obo_lines(
 
 
 def add_xref(
-    lines: List[str], node: str, xref: str, xref_name: str, author_orcid: str
+    lines: List[str], node: str, xref_curie: str, xref_name: str, author_orcid: str
 ) -> List[str]:
     """Add xref to OBO file lines in the appropriate place."""
     look_for_xref = False
@@ -84,9 +91,9 @@ def add_xref(
     #: The 0-indexed line number on which the definition appears in a given
     def_idx = None
     xref_entries = []
-    xref_values = set()
+    existing_xref_curies = set()
     for idx, line in enumerate(lines):
-        if line == f"id: {node}":
+        if line.strip() == f"id: {node}":
             id_idx = idx
             look_for_xref = True
         if look_for_xref and line.startswith("def"):
@@ -96,7 +103,7 @@ def add_xref(
                 if not start_xref_idx:
                     start_xref_idx = idx
                 xref_line: str = line[len("xref:") :].strip()
-                xref_values.add(_extract_ref(xref_line))
+                existing_xref_curies.add(_extract_ref(xref_line))
                 xref_entries.append(xref_line)
             if start_xref_idx and not line.startswith("xref"):
                 break
@@ -104,10 +111,10 @@ def add_xref(
             start_xref_idx = def_idx
 
     if id_idx is None:
-        # term not found
+        tqdm.write(f"term not found for {node}")
         return lines
 
-    if xref in xref_values:
+    if _standardize_curie(xref_curie) in existing_xref_curies:
         # term already has this xref, don't modify it
         return lines
 
@@ -118,15 +125,17 @@ def add_xref(
             # there were no existing xrefs, so let's just stick them directly after the definition
             start_xref_idx = id_idx + 1
 
-    xref_entries.append(xref)
-    xref_entries = sorted(xref_entries)
-    xr_idx = xref_entries.index(xref)
-    line = f'xref: {xref} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}'
+    xref_entries.append(xref_curie)
+    xref_entries = sorted(xref_entries, key=str.casefold)
+    xr_idx = xref_entries.index(xref_curie)
+    # see https://github.com/obophenotype/uberon/pull/2950/files#r1302892427 for explanation of correct
+    # format for xref contributor information. Names aren't added since they get stripped by protege
+    line = f'xref: {xref_curie} {{http://purl.org/dc/terms/contributor="https://orcid.org/{author_orcid}"}}\n'
     lines.insert(start_xref_idx + xr_idx, line)
     return lines
 
 
-def _extract_ref(xref_line):
+def _extract_ref(xref_line: str) -> str:
     # remove trailing comments
     if "!" in xref_line:
         xref_line = xref_line[: xref_line.find("!")].strip()
@@ -136,7 +145,15 @@ def _extract_ref(xref_line):
     # if there are qualifiers, only keep everything up until them
     if "{" in xref_line:
         return xref_line[: xref_line.find("{")].strip()
-    return xref_line
+    return _standardize_curie(xref_line)
+
+
+def _standardize_curie(curie: str) -> str:
+    p, i = bioregistry.parse_curie(curie)
+    if not p or not i:
+        tqdm.write(f"could not parse existing xref: {curie}")
+        return curie
+    return bioregistry.curie_to_str(p, i)
 
 
 @click.command()
@@ -148,9 +165,10 @@ def _extract_ref(xref_line):
     help="After forking and cloning the version controlled repository for an ontology locally, "
     "give the path inside the directory to the ontology's edit file.",
 )
-def main(prefix: str, path: Path):
+@click.option("--upper", is_flag=True)
+def main(prefix: str, path: Path, upper: bool):
     """Contribute to an OBO file."""
-    update_obo(prefix=prefix, path=path)
+    update_obo(prefix=prefix, path=path, upper=upper)
 
 
 if __name__ == "__main__":
