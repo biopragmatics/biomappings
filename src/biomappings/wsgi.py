@@ -398,7 +398,7 @@ class Controller:
         """
         if line not in self._marked:
             self.total_curated += 1
-        if value not in {"correct", "incorrect", "unsure"}:
+        if value not in {"correct", "incorrect", "unsure", "broad", "narrow"}:
             raise ValueError
         self._marked[line] = value
 
@@ -459,6 +459,15 @@ class Controller:
             prediction["prediction_confidence"] = prediction.pop("confidence")
             prediction["source"] = _manual_source()
             prediction["type"] = "semapv:ManualMappingCuration"
+
+            # note these go backwards because of the way they are read
+            if value == "broad":
+                value = "correct"
+                prediction["relation"] = "skos:narrowMatch"
+            elif value == "narrow":
+                value = "correct"
+                prediction["relation"] = "skos:broadMatch"
+
             entries[value].append(prediction)
 
         append_true_mappings(entries["correct"], path=self.positives_path)
@@ -581,6 +590,10 @@ def _normalize_mark(value: str) -> str:
         return "incorrect"
     elif value in UNSURE:
         return "unsure"
+    elif value in {"broader", "broad"}:
+        return "broad"
+    elif value in {"narrow", "narrower"}:
+        return "narrow"
     else:
         raise ValueError
 
