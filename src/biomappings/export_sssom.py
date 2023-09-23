@@ -119,14 +119,14 @@ def get_sssom_df(use_tqdm: bool = False):
 @click.command()
 def sssom():
     """Export SSSOM."""
-    prefixes, creators, df = get_sssom_df(use_tqdm=True)
+    prefixes, creators, df = get_sssom_df()
     df.to_csv(TSV_PATH, sep="\t", index=False)
 
     # Get a CURIE map containing only the relevant prefixes
     prefix_map = {
         "RO": "http://purl.obolibrary.org/obo/RO_",  # Default
     }
-    for prefix in tqdm(prefixes):
+    for prefix in prefixes:
         uri_prefix = bioregistry.get_uri_prefix(prefix)
         if uri_prefix is None:
             raise ValueError(f"could not look up URI prefix for {prefix}")
