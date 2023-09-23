@@ -945,8 +945,8 @@ pr	PR:000037406	dystroglycan beta chain (mouse)	skos:exactMatch	uniprot.chain	PR
 reactome	R-BTA-1266738	Developmental Biology	debio:0000003	mesh	D015509	Developmental Biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-1296025	ATP sensitive Potassium channels	skos:exactMatch	mesh	D054086	KATP Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-1296052	Ca2+ activated K+ channels	skos:exactMatch	mesh	D024681	Potassium Channels, Calcium-Activated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-BTA-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-1296071	Potassium Channels	debio:0000003	fplx	KCN	KCN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-BTA-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-1296072	Voltage gated Potassium channels	skos:exactMatch	mesh	D024642	Potassium Channels, Voltage-Gated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-1296346	Tandem pore domain potassium channels	skos:exactMatch	mesh	D024683	Potassium Channels, Tandem Pore Domain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-1461957	Beta defensins	skos:exactMatch	mesh	D023083	beta-Defensins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -961,11 +961,11 @@ reactome	R-BTA-390651	Dopamine receptors	debio:0000003	fplx	DRD	DRD	semapv:Manua
 reactome	R-BTA-390666	Serotonin receptors	skos:exactMatch	mesh	D011985	Receptors, Serotonin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adrenergic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-391906	Leukotriene receptors	debio:0000003	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-BTA-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-417957	P2Y receptors	debio:0000003	fplx	P2RY	P2RY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-BTA-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-BTA-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-BTA-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-BTA-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -978,8 +978,8 @@ reactome	R-BTA-8877627	Vitamin E	debio:0000003	mesh	D014810	Vitamin E	semapv:Man
 reactome	R-BTA-983189	Kinesins	debio:0000003	fplx	Kinesin	Kinesin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-1266738	Developmental Biology	debio:0000003	mesh	D015509	Developmental Biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-1296052	Ca2+ activated K+ channels	skos:exactMatch	mesh	D024681	Potassium Channels, Calcium-Activated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-CEL-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-1296071	Potassium Channels	debio:0000003	fplx	KCN	KCN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-CEL-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-1296346	Tandem pore domain potassium channels	skos:exactMatch	mesh	D024683	Potassium Channels, Tandem Pore Domain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-211916	Vitamins	skos:exactMatch	chebi	CHEBI:33229	vitamin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-211935	Fatty acids	skos:exactMatch	chebi	CHEBI:35366	fatty acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -991,11 +991,11 @@ reactome	R-CEL-390651	Dopamine receptors	debio:0000003	fplx	DRD	DRD	semapv:Manua
 reactome	R-CEL-390666	Serotonin receptors	skos:exactMatch	mesh	D011985	Receptors, Serotonin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adrenergic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-391906	Leukotriene receptors	skos:exactMatch	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-CEL-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-417957	P2Y receptors	debio:0000003	fplx	P2RY	P2RY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-CEL-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-CEL-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-CEL-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CEL-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1008,8 +1008,8 @@ reactome	R-CEL-983189	Kinesins	debio:0000003	fplx	Kinesin	Kinesin	semapv:ManualM
 reactome	R-CFA-1266738	Developmental Biology	debio:0000003	mesh	D015509	Developmental Biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-1296025	ATP sensitive Potassium channels	skos:exactMatch	mesh	D054086	KATP Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-1296052	Ca2+ activated K+ channels	skos:exactMatch	mesh	D024681	Potassium Channels, Calcium-Activated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-CFA-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-1296071	Potassium Channels	debio:0000003	fplx	KCN	KCN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-CFA-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-1296072	Voltage gated Potassium channels	skos:exactMatch	mesh	D024642	Potassium Channels, Voltage-Gated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-1296346	Tandem pore domain potassium channels	skos:exactMatch	mesh	D024683	Potassium Channels, Tandem Pore Domain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-1461957	Beta defensins	skos:exactMatch	mesh	D023083	beta-Defensins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1024,11 +1024,11 @@ reactome	R-CFA-390651	Dopamine receptors	debio:0000003	fplx	DRD	DRD	semapv:Manua
 reactome	R-CFA-390666	Serotonin receptors	skos:exactMatch	mesh	D011985	Receptors, Serotonin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adrenergic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-391906	Leukotriene receptors	skos:exactMatch	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-CFA-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-417957	P2Y receptors	debio:0000003	fplx	P2RY	P2RY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-CFA-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-CFA-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-CFA-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-CFA-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1045,8 +1045,8 @@ reactome	R-CFA-9664873	Pexophagy	debio:0000003	go	GO:0030242	autophagy of peroxi
 reactome	R-CFA-983189	Kinesins	debio:0000003	fplx	Kinesin	Kinesin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DDI-1266738	Developmental Biology	debio:0000003	mesh	D015509	Developmental Biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DDI-1296052	Ca2+ activated K+ channels	skos:exactMatch	mesh	D024681	Potassium Channels, Calcium-Activated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-DDI-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DDI-1296071	Potassium Channels	debio:0000003	fplx	KCN	KCN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-DDI-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DDI-1296346	Tandem pore domain potassium channels	skos:exactMatch	mesh	D024683	Potassium Channels, Tandem Pore Domain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DDI-211916	Vitamins	skos:exactMatch	chebi	CHEBI:33229	vitamin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DDI-211935	Fatty acids	skos:exactMatch	chebi	CHEBI:35366	fatty acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1065,8 +1065,8 @@ reactome	R-DDI-983189	Kinesins	debio:0000003	fplx	Kinesin	Kinesin	semapv:ManualM
 reactome	R-DME-1266738	Developmental Biology	debio:0000003	mesh	D015509	Developmental Biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-1296025	ATP sensitive Potassium channels	skos:exactMatch	mesh	D054086	KATP Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-1296052	Ca2+ activated K+ channels	skos:exactMatch	mesh	D024681	Potassium Channels, Calcium-Activated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-DME-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-1296071	Potassium Channels	debio:0000003	fplx	KCN	KCN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-DME-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-1296072	Voltage gated Potassium channels	skos:exactMatch	mesh	D024642	Potassium Channels, Voltage-Gated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-1296346	Tandem pore domain potassium channels	skos:exactMatch	mesh	D024683	Potassium Channels, Tandem Pore Domain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-211916	Vitamins	skos:exactMatch	chebi	CHEBI:33229	vitamin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1078,9 +1078,9 @@ reactome	R-DME-390651	Dopamine receptors	debio:0000003	fplx	DRD	DRD	semapv:Manua
 reactome	R-DME-390666	Serotonin receptors	skos:exactMatch	mesh	D011985	Receptors, Serotonin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adrenergic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-391906	Leukotriene receptors	skos:exactMatch	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-DME-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-DME-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DME-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1098,8 +1098,8 @@ reactome	R-DME-983189	Kinesins	debio:0000003	fplx	Kinesin	Kinesin	semapv:ManualM
 reactome	R-DRE-1266738	Developmental Biology	debio:0000003	mesh	D015509	Developmental Biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-1296025	ATP sensitive Potassium channels	skos:exactMatch	mesh	D054086	KATP Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-1296052	Ca2+ activated K+ channels	skos:exactMatch	mesh	D024681	Potassium Channels, Calcium-Activated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-DRE-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-1296071	Potassium Channels	debio:0000003	fplx	KCN	KCN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-DRE-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-1296072	Voltage gated Potassium channels	skos:exactMatch	mesh	D024642	Potassium Channels, Voltage-Gated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-1296346	Tandem pore domain potassium channels	skos:exactMatch	mesh	D024683	Potassium Channels, Tandem Pore Domain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-211916	Vitamins	skos:exactMatch	chebi	CHEBI:33229	vitamin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1112,11 +1112,11 @@ reactome	R-DRE-390651	Dopamine receptors	debio:0000003	fplx	DRD	DRD	semapv:Manua
 reactome	R-DRE-390666	Serotonin receptors	skos:exactMatch	mesh	D011985	Receptors, Serotonin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adrenergic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-391906	Leukotriene receptors	skos:exactMatch	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-DRE-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-417957	P2Y receptors	debio:0000003	fplx	P2RY	P2RY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-DRE-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-DRE-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-DRE-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1134,8 +1134,8 @@ reactome	R-DRE-983189	Kinesins	debio:0000003	fplx	Kinesin	Kinesin	semapv:ManualM
 reactome	R-GGA-1266738	Developmental Biology	debio:0000003	mesh	D015509	Developmental Biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-1296025	ATP sensitive Potassium channels	skos:exactMatch	mesh	D054086	KATP Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-1296052	Ca2+ activated K+ channels	skos:exactMatch	mesh	D024681	Potassium Channels, Calcium-Activated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-GGA-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-1296071	Potassium Channels	debio:0000003	fplx	KCN	KCN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-GGA-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-1296072	Voltage gated Potassium channels	skos:exactMatch	mesh	D024642	Potassium Channels, Voltage-Gated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-1296346	Tandem pore domain potassium channels	skos:exactMatch	mesh	D024683	Potassium Channels, Tandem Pore Domain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-1461957	Beta defensins	skos:exactMatch	mesh	D023083	beta-Defensins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1150,11 +1150,11 @@ reactome	R-GGA-390651	Dopamine receptors	debio:0000003	fplx	DRD	DRD	semapv:Manua
 reactome	R-GGA-390666	Serotonin receptors	skos:exactMatch	mesh	D011985	Receptors, Serotonin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adrenergic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-391906	Leukotriene receptors	skos:exactMatch	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-GGA-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-417957	P2Y receptors	debio:0000003	fplx	P2RY	P2RY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-GGA-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-GGA-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-GGA-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1172,8 +1172,8 @@ reactome	R-GGA-983189	Kinesins	debio:0000003	fplx	Kinesin	Kinesin	semapv:ManualM
 reactome	R-HSA-1266738	Developmental Biology	debio:0000003	mesh	D015509	Developmental Biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-1296025	ATP sensitive Potassium channels	skos:exactMatch	mesh	D054086	KATP Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-1296052	Ca2+ activated K+ channels	skos:exactMatch	mesh	D024681	Potassium Channels, Calcium-Activated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-HSA-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-1296071	Potassium Channels	debio:0000003	fplx	KCN	KCN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-HSA-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-1296072	Voltage gated Potassium channels	skos:exactMatch	mesh	D024642	Potassium Channels, Voltage-Gated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-1296346	Tandem pore domain potassium channels	skos:exactMatch	mesh	D024683	Potassium Channels, Tandem Pore Domain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-1461957	Beta defensins	skos:exactMatch	mesh	D023083	beta-Defensins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1200,11 +1200,11 @@ reactome	R-HSA-390651	Dopamine receptors	debio:0000003	fplx	DRD	DRD	semapv:Manua
 reactome	R-HSA-390666	Serotonin receptors	skos:exactMatch	mesh	D011985	Receptors, Serotonin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adrenergic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-391906	Leukotriene receptors	skos:exactMatch	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-HSA-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-417957	P2Y receptors	debio:0000003	fplx	P2RY	P2RY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-HSA-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-HSA-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-HSA-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1223,9 +1223,9 @@ reactome	R-HSA-8877627	Vitamin E	skos:exactMatch	chebi	CHEBI:18145	(+)-alpha-toc
 reactome	R-HSA-8877627	Vitamin E	skos:exactMatch	chebi	CHEBI:33234	vitamin E	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-8877627	Vitamin E	skos:exactMatch	chebi	CHEBI:46430	(-)-alpha-tocopherol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-8877627	Vitamin E	skos:exactMatch	mesh	D014810	Vitamin E	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-HSA-9005895	Pervasive developmental disorders	skos:exactMatch	doid	DOID:0060040	pervasive developmental disorder	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-9005895	Pervasive developmental disorders	debio:0000003	mesh	D000067877	Autism Spectrum Disorder	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-9005895	Pervasive developmental disorders	debio:0000003	mesh	D002659	Child Development Disorders, Pervasive	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-HSA-9005895	Pervasive developmental disorders	skos:exactMatch	doid	DOID:0060040	pervasive developmental disorder	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-9609646	HCMV Infection	skos:exactMatch	mesh	D003586	Cytomegalovirus Infections	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-9658195	Leishmania infection	skos:exactMatch	mesh	D007896	Leishmaniasis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-9664407	Parasite infection	skos:exactMatch	mesh	D010272	Parasitic Diseases	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1236,8 +1236,8 @@ reactome	R-HSA-983189	Kinesins	debio:0000003	fplx	Kinesin	Kinesin	semapv:ManualM
 reactome	R-MMU-1266738	Developmental Biology	debio:0000003	mesh	D015509	Developmental Biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-1296025	ATP sensitive Potassium channels	skos:exactMatch	mesh	D054086	KATP Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-1296052	Ca2+ activated K+ channels	skos:exactMatch	mesh	D024681	Potassium Channels, Calcium-Activated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-MMU-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-1296071	Potassium Channels	debio:0000003	fplx	KCN	KCN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-MMU-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-1296072	Voltage gated Potassium channels	skos:exactMatch	mesh	D024642	Potassium Channels, Voltage-Gated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-1296346	Tandem pore domain potassium channels	skos:exactMatch	mesh	D024683	Potassium Channels, Tandem Pore Domain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-1461957	Beta defensins	skos:exactMatch	mesh	D023083	beta-Defensins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1253,11 +1253,11 @@ reactome	R-MMU-390651	Dopamine receptors	debio:0000003	fplx	DRD	DRD	semapv:Manua
 reactome	R-MMU-390666	Serotonin receptors	skos:exactMatch	mesh	D011985	Receptors, Serotonin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adrenergic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-391906	Leukotriene receptors	skos:exactMatch	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-MMU-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-417957	P2Y receptors	debio:0000003	fplx	P2RY	P2RY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-MMU-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-MMU-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-MMU-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-MMU-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1278,8 +1278,8 @@ reactome	R-PFA-983189	Kinesins	debio:0000003	fplx	Kinesin	Kinesin	semapv:ManualM
 reactome	R-RNO-1266738	Developmental Biology	debio:0000003	mesh	D015509	Developmental Biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-1296025	ATP sensitive Potassium channels	skos:exactMatch	mesh	D054086	KATP Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-1296052	Ca2+ activated K+ channels	skos:exactMatch	mesh	D024681	Potassium Channels, Calcium-Activated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-RNO-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-1296071	Potassium Channels	debio:0000003	fplx	KCN	KCN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-RNO-1296071	Potassium Channels	skos:exactMatch	mesh	D015221	Potassium Channels	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-1296072	Voltage gated Potassium channels	skos:exactMatch	mesh	D024642	Potassium Channels, Voltage-Gated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-1296346	Tandem pore domain potassium channels	skos:exactMatch	mesh	D024683	Potassium Channels, Tandem Pore Domain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-1461957	Beta defensins	skos:exactMatch	mesh	D023083	beta-Defensins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1297,9 +1297,9 @@ reactome	R-RNO-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adre
 reactome	R-RNO-391906	Leukotriene receptors	skos:exactMatch	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-417957	P2Y receptors	skos:exactMatch	fplx	P2RY	P2RY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-RNO-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-RNO-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-RNO-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1351,9 +1351,9 @@ reactome	R-SSC-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adre
 reactome	R-SSC-391906	Leukotriene receptors	skos:exactMatch	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-SSC-417957	P2Y receptors	skos:exactMatch	fplx	P2RY	P2RY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-SSC-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-SSC-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-SSC-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-SSC-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-SSC-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-SSC-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-SSC-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-SSC-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -1382,9 +1382,9 @@ reactome	R-XTR-390696	Adrenoceptors	skos:exactMatch	mesh	D011941	Receptors, Adre
 reactome	R-XTR-391906	Leukotriene receptors	skos:exactMatch	mesh	D018077	Receptors, Leukotriene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-XTR-417957	P2Y receptors	skos:exactMatch	fplx	P2RY	P2RY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-XTR-417957	P2Y receptors	skos:exactMatch	go	GO:0045028	G protein-coupled purinergic nucleotide receptor activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-XTR-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-XTR-419771	Opsins	skos:exactMatch	go	GO:0016918	retinal binding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-XTR-419771	Opsins	skos:exactMatch	mesh	D055355	Opsins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-XTR-419771	Opsins	debio:0000003	go	GO:0007602	phototransduction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-XTR-425381	Bicarbonate transporters	debio:0000003	hgnc	11033	SLC4A7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-XTR-425561	Sodium/Calcium exchangers	skos:exactMatch	go	GO:0005432	calcium:sodium antiporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-XTR-428643	Organic anion transporters	skos:exactMatch	mesh	D027361	Organic Anion Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			

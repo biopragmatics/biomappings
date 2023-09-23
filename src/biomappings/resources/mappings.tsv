@@ -9227,8 +9227,8 @@ reactome	R-DDI-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go
 reactome	R-DME-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go	GO:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-DRE-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go	GO:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-GGA-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go	GO:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-reactome	R-HSA-109581	Apoptosis	skos:exactMatch	kegg.pathway	hsa04215	Apoptosis - multiple species - Homo sapiens (human)	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 reactome	R-HSA-109581	Apoptosis	debio:0000003	go	GO:0006915	apoptotic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+reactome	R-HSA-109581	Apoptosis	skos:exactMatch	kegg.pathway	hsa04215	Apoptosis - multiple species - Homo sapiens (human)	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 reactome	R-HSA-109582	Hemostasis	debio:0000003	go	GO:0007599	hemostasis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-109704	PI3K Cascade	debio:0000003	go	GO:0014065	phosphatidylinositol 3-kinase signaling	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-HSA-114608	Platelet degranulation	debio:0000003	go	GO:0002576	platelet degranulation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -9838,8 +9838,8 @@ vo	0010754	virus protein	skos:exactMatch	pr	PR:000036197	viral protein	semapv:Ma
 vo	0010950	SecA2	skos:exactMatch	ogg	3000885594	secA2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0011093	Hepatitis B surface antigen	skos:exactMatch	mesh	D006514	Hepatitis B Surface Antigens	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.549371263656978
 vo	0011241	Hsp90	skos:exactMatch	pr	PR:000025350	HSPC protein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-wikipathways	WP100	Glutathione metabolism	skos:exactMatch	reactome	R-HSA-174403	Glutathione synthesis and recycling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP100	Glutathione metabolism	debio:0000003	go	GO:0006749	glutathione metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP100	Glutathione metabolism	skos:exactMatch	reactome	R-HSA-174403	Glutathione synthesis and recycling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP1002	Electron Transport Chain	debio:0000003	go	GO:0022900	electron transport chain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP1009	MAPK Cascade	debio:0000003	go	GO:0000165	MAPK cascade	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP1011	TCR Signaling Pathway	debio:0000003	go	GO:0050852	T cell receptor signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -9968,8 +9968,8 @@ wikipathways	WP1489	TOR signaling	debio:0000003	go	GO:0031929	TOR signaling	sema
 wikipathways	WP1495	Glycine Metabolism	debio:0000003	go	GO:0006544	glycine metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP150	DNA Replication	debio:0000003	go	GO:0006260	DNA replication	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP1518	Aspartate Biosynthesis	debio:0000003	go	GO:0006532	aspartate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-wikipathways	WP1531	Vitamin D metabolism	skos:exactMatch	reactome	R-HSA-196791	Vitamin D (calciferol) metabolism	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP1531	Vitamin D Metabolism	debio:0000003	go	GO:0042359	vitamin D metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP1531	Vitamin D metabolism	skos:exactMatch	reactome	R-HSA-196791	Vitamin D (calciferol) metabolism	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP1533	Vitamin B12 Metabolism	debio:0000003	go	GO:0009235	cobalamin metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP1538	Flavonoid Biosynthesis	debio:0000003	go	GO:0009813	flavonoid biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP1539	Angiogenesis	debio:0000003	go	GO:0001525	angiogenesis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -9994,8 +9994,8 @@ wikipathways	WP175	Acetylcholine Synthesis	debio:0000003	go	GO:0008292	acetylcho
 wikipathways	WP176	Folate Metabolism	debio:0000003	go	GO:0046655	folic acid metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP1771	Kennedy pathway	debio:0000003	go	GO:0006657	CDP-choline pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP178	Isoleucine Degradation	debio:0000003	go	GO:0006550	isoleucine catabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-wikipathways	WP179	Cell cycle	skos:exactMatch	reactome	R-HSA-1640170	Cell Cycle	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP179	Cell Cycle	debio:0000003	go	GO:0007049	cell cycle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP179	Cell cycle	skos:exactMatch	reactome	R-HSA-1640170	Cell Cycle	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP18	Heme Biosynthesis	debio:0000003	go	GO:0006783	heme biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP180	Leucine Biosynthesis	debio:0000003	go	GO:0009098	leucine biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP181	P-cymene Degradation	debio:0000003	go	GO:0019334	p-cymene catabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -10011,8 +10011,8 @@ wikipathways	WP1981	Thyroxine (thyroid hormone) production	skos:exactMatch	react
 wikipathways	WP2	Valine Biosynthesis	debio:0000003	go	GO:0009099	valine biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP200	Complement Activation, Classical Pathway	debio:0000003	go	GO:0006958	complement activation, classical pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP2034	Leptin signaling pathway	skos:exactMatch	reactome	R-HSA-2586552	Signaling by Leptin	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
-wikipathways	WP2037	Prolactin signaling pathway	skos:exactMatch	reactome	R-HSA-1170546	Prolactin receptor signaling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP2037	Prolactin Signaling Pathway	debio:0000003	go	GO:0038161	prolactin signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP2037	Prolactin signaling pathway	skos:exactMatch	reactome	R-HSA-1170546	Prolactin receptor signaling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP205	IL-7 signaling pathway	skos:exactMatch	reactome	R-HSA-1266695	Interleukin-7 signaling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP2067	Heart Development	debio:0000003	go	GO:0007507	heart development	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP208	Notch Signaling Pathway	debio:0000003	go	GO:0007219	Notch signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -10026,8 +10026,8 @@ wikipathways	WP224	Aerobic Glycerol Catabolism	debio:0000003	go	GO:0019564	aerob
 wikipathways	WP2276	Glial Cell Differentiation	debio:0000003	go	GO:0010001	glial cell differentiation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP2279	Seed Development	debio:0000003	go	GO:0048316	seed development	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP228	Deoxyribose phosphate metabolism	debio:0000003	go	GO:0019692	deoxyribose phosphate metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-wikipathways	WP23	B cell receptor signaling pathway	skos:exactMatch	reactome	R-HSA-983705	Signaling by the B Cell Receptor (BCR)	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP23	B Cell Receptor Signaling Pathway	debio:0000003	go	GO:0050853	B cell receptor signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP23	B cell receptor signaling pathway	skos:exactMatch	reactome	R-HSA-983705	Signaling by the B Cell Receptor (BCR)	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP2313	Aging	debio:0000003	go	GO:0007568	aging	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP2313	Aging	debio:0000003	mesh	D000375	Aging	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP2316	PPAR signaling pathway	debio:0000003	go	GO:0035357	peroxisome proliferator activated receptor signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -10043,9 +10043,9 @@ wikipathways	WP250	Isoleucine Biosynthesis	debio:0000003	go	GO:0009097	isoleucin
 wikipathways	WP251	MAPK Cascade	debio:0000003	go	GO:0000165	MAPK cascade	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP253	Glycolysis	debio:0000003	go	GO:0006096	glycolytic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP2533	Glycerophospholipid biosynthetic pathway	skos:exactMatch	reactome	R-HSA-1483206	Glycerophospholipid biosynthesis	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
+wikipathways	WP254	Apoptosis	debio:0000003	go	GO:0006915	apoptotic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP254	Apoptosis	skos:exactMatch	kegg.pathway	hsa04215	Apoptosis - multiple species - Homo sapiens (human)	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP254	Apoptosis	skos:exactMatch	reactome	R-HSA-109581	Apoptosis	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
-wikipathways	WP254	Apoptosis	debio:0000003	go	GO:0006915	apoptotic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP2586	Aryl hydrocarbon receptor Netpath	skos:exactMatch	reactome	R-HSA-8937144	Aryl hydrocarbon receptor signalling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP261	Glycine biosynthesis	debio:0000003	go	GO:0006545	glycine biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP2621	Glycolysis	debio:0000003	go	GO:0006096	glycolytic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -10143,8 +10143,8 @@ wikipathways	WP400	p38 MAPK signaling pathway	skos:exactMatch	reactome	R-HSA-171
 wikipathways	WP4020	PPAR Signaling Pathway	debio:0000003	go	GO:0035357	peroxisome proliferator activated receptor signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP4022	Pyrimidine metabolism	debio:0000003	go	GO:0006206	pyrimidine nucleobase metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP403	Wnt Signaling Pathway	debio:0000003	go	GO:0016055	Wnt signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-wikipathways	WP404	Nucleotide metabolism	skos:exactMatch	reactome	R-HSA-15869	Metabolism of nucleotides	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP404	Nucleotide Metabolism	debio:0000003	go	GO:0009117	nucleotide metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP404	Nucleotide metabolism	skos:exactMatch	reactome	R-HSA-15869	Metabolism of nucleotides	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP408	Oxidative Stress	debio:0000003	mesh	D018384	Oxidative Stress	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP411	mRNA Processing	debio:0000003	go	GO:0006397	mRNA processing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP412	Oxidative Stress	debio:0000003	mesh	D018384	Oxidative Stress	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -10152,12 +10152,12 @@ wikipathways	WP4149	White fat cell differentiation	debio:0000003	go	GO:0050872	w
 wikipathways	WP4159	GABA receptor signaling	skos:exactMatch	reactome	R-HSA-977443	GABA receptor activation	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP4172	PI3K-Akt signaling pathway	skos:exactMatch	reactome	R-HSA-198203	PI3K/AKT activation	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP421	Pentose Phosphate Pathway	debio:0000003	go	GO:0006098	pentose-phosphate shunt	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP422	MAPK Cascade	debio:0000003	go	GO:0000165	MAPK cascade	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP422	MAPK cascade	skos:exactMatch	kegg.pathway	hsa04010	MAPK signaling pathway - Homo sapiens (human)	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP422	MAPK cascade	skos:exactMatch	reactome	R-HSA-5683057	MAPK family signaling cascades	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP422	MAPK cascade	skos:exactMatch	wikipathways	WP382	MAPK signaling pathway	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
-wikipathways	WP422	MAPK Cascade	debio:0000003	go	GO:0000165	MAPK cascade	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-wikipathways	WP4249	Hedgehog signaling pathway	skos:exactMatch	reactome	R-HSA-5358351	Signaling by Hedgehog	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP4249	Hedgehog Signaling Pathway	debio:0000003	go	GO:0007224	smoothened signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP4249	Hedgehog signaling pathway	skos:exactMatch	reactome	R-HSA-5358351	Signaling by Hedgehog	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP428	Wnt signaling	skos:exactMatch	reactome	R-HSA-195721	Signaling by WNT	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP428	Wnt signaling	skos:exactMatch	wikipathways	WP363	Wnt signaling pathway	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP428	Wnt signaling	skos:exactMatch	wikipathways	WP399	Wnt signaling pathway and pluripotency	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
@@ -10179,8 +10179,8 @@ wikipathways	WP46	Methionine Degradation	debio:0000003	go	GO:0009087	methionine 
 wikipathways	WP461	Cholesterol Biosynthesis	debio:0000003	go	GO:0006695	cholesterol biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP463	Purine Fermentation	debio:0000003	go	GO:0019653	anaerobic purine nucleobase catabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP465	Tryptophan metabolism	debio:0000003	go	GO:0006568	tryptophan metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-wikipathways	WP466	DNA replication	skos:exactMatch	reactome	R-HSA-69306	DNA Replication	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP466	DNA Replication	debio:0000003	go	GO:0006260	DNA replication	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP466	DNA replication	skos:exactMatch	reactome	R-HSA-69306	DNA Replication	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP467	mRNA processing	debio:0000003	go	GO:0006397	mRNA processing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP469	Glutathione metabolism	debio:0000003	go	GO:0006749	glutathione metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP47	Hedgehog signaling pathway Netpath	skos:exactMatch	reactome	R-HSA-5358351	Signaling by Hedgehog	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
@@ -10214,14 +10214,14 @@ wikipathways	WP533	Lysine Biosynthesis	debio:0000003	go	GO:0009085	lysine biosyn
 wikipathways	WP538	Tyrosine Biosynthesis	debio:0000003	go	GO:0006571	tyrosine biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP54	Arginine degradation	debio:0000003	go	GO:0006527	arginine catabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP542	Electron Transport Chain	debio:0000003	go	GO:0022900	electron transport chain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-wikipathways	WP545	Complement activation	skos:exactMatch	reactome	R-HSA-166658	Complement cascade	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP545	Complement Activation	debio:0000003	go	GO:0006956	complement activation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP545	Complement activation	skos:exactMatch	reactome	R-HSA-166658	Complement cascade	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP55	Steroid Biosynthesis	debio:0000003	go	GO:0006694	steroid biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP550	Biogenic Amine Synthesis	debio:0000003	go	GO:0042401	cellular biogenic amine biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP551	TCA Cycle	debio:0000003	go	GO:0006099	tricarboxylic acid cycle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP560	TGF-beta receptor signaling	skos:exactMatch	reactome	R-HSA-9006936	Signaling by TGFB family members	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
-wikipathways	WP561	Heme biosynthesis	skos:exactMatch	reactome	R-HSA-189451	Heme biosynthesis	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP561	Heme Biosynthesis	debio:0000003	go	GO:0006783	heme biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP561	Heme biosynthesis	skos:exactMatch	reactome	R-HSA-189451	Heme biosynthesis	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP564	Wnt Signaling Pathway	debio:0000003	go	GO:0016055	Wnt signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP565	DNA Replication	debio:0000003	go	GO:0006260	DNA replication	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP568	Fatty Acid Biosynthesis	debio:0000003	go	GO:0006633	fatty acid biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -10233,8 +10233,8 @@ wikipathways	WP61	Notch signaling pathway (Netpath)	skos:exactMatch	reactome	R-H
 wikipathways	WP61	Notch signaling pathway (Netpath)	skos:exactMatch	wikipathways	WP3845	Canonical and non-canonical Notch signaling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP618	Flower Development	debio:0000003	go	GO:0009908	flower development	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP619	Type II interferon signaling (IFNG)	skos:exactMatch	reactome	R-HSA-877300	Interferon gamma signaling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
-wikipathways	WP623	Oxidative phosphorylation	skos:exactMatch	reactome	R-HSA-163210	Formation of ATP by chemiosmotic coupling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP623	Oxidative phosphorylation	debio:0000003	go	GO:0006119	oxidative phosphorylation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP623	Oxidative phosphorylation	skos:exactMatch	reactome	R-HSA-163210	Formation of ATP by chemiosmotic coupling	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP626	Abscisic Acid Biosynthesis	debio:0000003	go	GO:0009688	abscisic acid biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP627	Triacylglycerol Biosynthesis	debio:0000003	go	GO:0019432	triglyceride biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP63	Pentose Phosphate Pathway	debio:0000003	go	GO:0006098	pentose-phosphate shunt	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -10250,9 +10250,9 @@ wikipathways	WP7	Sulfur Amino Acid biosynthesis	debio:0000003	go	GO:0000097	sulf
 wikipathways	WP704	Methylation pathways	skos:exactMatch	reactome	R-HSA-156581	Methylation	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP707	DNA Damage Response	debio:0000003	go	GO:0006974	cellular response to DNA damage stimulus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP727	Monoamine Transport	debio:0000003	go	GO:0015844	monoamine transport	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+wikipathways	WP75	Toll-like Receptor Signaling Pathway	debio:0000003	go	GO:0002224	toll-like receptor signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP75	Toll-like receptor signaling pathway	skos:exactMatch	reactome	R-HSA-168898	Toll-like Receptor Cascades	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
 wikipathways	WP75	Toll-like receptor signaling pathway	skos:exactMatch	wikipathways	WP3858	Toll-like receptor signaling related to MyD88	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145			
-wikipathways	WP75	Toll-like Receptor Signaling Pathway	debio:0000003	go	GO:0002224	toll-like receptor signaling pathway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP757	DNA Replication	debio:0000003	go	GO:0006260	DNA replication	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP76	TCA Cycle	debio:0000003	go	GO:0006099	tricarboxylic acid cycle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP77	Glutamate biosynthesis	debio:0000003	go	GO:0006537	glutamate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
