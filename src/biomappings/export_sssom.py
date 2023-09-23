@@ -68,10 +68,7 @@ def get_sssom_df(use_tqdm: bool = False):
             if any(source.startswith(x) for x in ["orcid:", "wikidata:"]):
                 prefixes.add(source.split(":")[0])
                 creators.add(source)
-            try:
-                prefixes.add(mapping["relation"].split(":")[0])
-            except ValueError:
-                pass  # TODO make sure all relations are valid CURIEs
+            prefixes.add(mapping["relation"].split(":")[0])
 
             rows.append(
                 (
@@ -123,10 +120,8 @@ def sssom():
     df.to_csv(TSV_PATH, sep="\t", index=False)
 
     # Get a CURIE map containing only the relevant prefixes
-    prefix_map = {
-        "RO": "http://purl.obolibrary.org/obo/RO_",  # Default
-    }
-    for prefix in prefixes:
+    prefix_map = {}
+    for prefix in sorted(prefixes, key=str.casefold):
         uri_prefix = bioregistry.get_uri_prefix(prefix)
         if uri_prefix is None:
             raise ValueError(f"could not look up URI prefix for {prefix}")
