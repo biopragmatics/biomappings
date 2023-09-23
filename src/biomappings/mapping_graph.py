@@ -4,15 +4,32 @@
 
 import itertools as itt
 from collections import defaultdict
-from typing import DefaultDict, Dict, Iterable, Mapping, Optional
+from typing import TYPE_CHECKING, DefaultDict, Dict, Iterable, List, Optional
 
 import networkx as nx
 import pyobo
 
+from biomappings.utils import CMapping
 
-def get_custom_filter(
-    prefix: str, targets: Iterable[str]
-) -> Mapping[str, Mapping[str, Mapping[str, str]]]:
+if TYPE_CHECKING:
+    import semra
+
+__all__ = [
+    "get_custom_filter",
+    "get_filter_from_semra",
+    "mutual_mapping_graph",
+]
+
+
+def get_filter_from_semra(mappings: List["semra.Mapping"]) -> CMapping:
+    """Get a custom filter dictionary from a set of SeMRA mappings."""
+    rv: DefaultDict[str, DefaultDict[str, Dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
+    for mapping in mappings:
+        rv[mapping.s.prefix][mapping.o.prefix][mapping.s.identifier] = mapping.o.identifier
+    return rv
+
+
+def get_custom_filter(prefix: str, targets: Iterable[str]) -> CMapping:
     """Get a custom filter dictionary induced over the mutual mapping graph with all target prefixes.
 
     :param prefix: The source prefix

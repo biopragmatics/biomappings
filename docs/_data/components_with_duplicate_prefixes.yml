@@ -88,6 +88,31 @@
     link: https://bioregistry.io/agrovoc:918
     name: biological control
     prefix: agrovoc
+- ccle:MDAMB231_BREAST:
+    identifier: MDAMB231_BREAST
+    link: https://bioregistry.io/ccle:MDAMB231_BREAST
+    name: MDA-MB-231
+    prefix: ccle
+  clo:0007634:
+    identifier: '0007634'
+    link: https://bioregistry.io/clo:0007634
+    name: MDA-MB-231 cell
+    prefix: clo
+  clo:0037291:
+    identifier: 0037291
+    link: https://bioregistry.io/clo:0037291
+    name: MDAMB231 cell
+    prefix: clo
+  efo:0001209:
+    identifier: 0001209
+    link: https://bioregistry.io/efo:0001209
+    name: MDAMB231
+    prefix: efo
+  mesh:D000092302:
+    identifier: D000092302
+    link: https://bioregistry.io/mesh:D000092302
+    name: MDA-MB-231 Cells
+    prefix: mesh
 - ccle:RH30_SOFT_TISSUE:
     identifier: RH30_SOFT_TISSUE
     link: https://bioregistry.io/ccle:RH30_SOFT_TISSUE
@@ -123,6 +148,41 @@
     link: https://bioregistry.io/mesh:D011984
     name: Sensory Receptor Cells
     prefix: mesh
+- cpt:90585:
+    identifier: '90585'
+    link: https://bioregistry.io/cpt:90585
+    name: BCG
+    prefix: cpt
+  cpt:90728:
+    identifier: '90728'
+    link: https://bioregistry.io/cpt:90728
+    name: BCG
+    prefix: cpt
+  cvx:19:
+    identifier: '19'
+    link: https://bioregistry.io/cvx:19
+    name: Bacillus Calmette-Guerin vaccine
+    prefix: cvx
+  dron:00012890:
+    identifier: 00012890
+    link: https://bioregistry.io/dron:00012890
+    name: BCG Vaccine
+    prefix: dron
+  mesh:D001500:
+    identifier: D001500
+    link: https://bioregistry.io/mesh:D001500
+    name: BCG Vaccine
+    prefix: mesh
+  ncit:C298:
+    identifier: C298
+    link: https://bioregistry.io/ncit:C298
+    name: BCG Vaccine
+    prefix: ncit
+  vo:0000771:
+    identifier: '0000771'
+    link: https://bioregistry.io/vo:0000771
+    name: BCG vaccine
+    prefix: vo
 - doid:11263:
     identifier: DOID:11263
     link: https://bioregistry.io/doid:11263
@@ -138,6 +198,64 @@
     link: https://bioregistry.io/mesh:D002690
     name: Chlamydia Infections
     prefix: mesh
+- dron:00017235:
+    identifier: '00017235'
+    link: https://bioregistry.io/dron:00017235
+    name: Smallpox Vaccine
+    prefix: dron
+  mesh:D012900:
+    identifier: D012900
+    link: https://bioregistry.io/mesh:D012900
+    name: Smallpox Vaccine
+    prefix: mesh
+  vo:0000651:
+    identifier: '0000651'
+    link: https://bioregistry.io/vo:0000651
+    name: Smallpox virus vaccine
+    prefix: vo
+  vo:0004613:
+    identifier: '0004613'
+    link: https://bioregistry.io/vo:0004613
+    name: smallpox vaccine
+    prefix: vo
+- dron:00771506:
+    identifier: '00771506'
+    link: https://bioregistry.io/dron:00771506
+    name: 0.65 ML Varicella-Zoster Virus Vaccine Live (Oka-Merck) strain 29800 UNT/ML
+      Injection
+    prefix: dron
+  vo:0003272:
+    identifier: '0003272'
+    link: https://bioregistry.io/vo:0003272
+    name: 0.65 ML Varicella-Zoster Virus Vaccine Live (Oka-Merck) strain 29800 UNT/ML
+      Injection
+    prefix: vo
+  vo:0003280:
+    identifier: 0003280
+    link: https://bioregistry.io/vo:0003280
+    name: 0.65 ML Varicella-Zoster Virus Vaccine Live (Oka-Merck) strain 29800 UNT/ML
+      Injection
+    prefix: vo
+- chebi:33281:
+    identifier: CHEBI:33281
+    link: https://bioregistry.io/chebi:33281
+    name: antimicrobial agent
+    prefix: chebi
+  ido:0000558:
+    identifier: 0000558
+    link: https://bioregistry.io/ido:0000558
+    name: antimicrobial
+    prefix: ido
+  ido:0000563:
+    identifier: '0000563'
+    link: https://bioregistry.io/ido:0000563
+    name: microbicide
+    prefix: ido
+  idomal:0000643:
+    identifier: '0000643'
+    link: https://bioregistry.io/idomal:0000643
+    name: antibiotic
+    prefix: idomal
 - chebi:22063:
     identifier: CHEBI:22063
     link: https://bioregistry.io/chebi:22063
@@ -153,6 +271,86 @@
     link: https://bioregistry.io/idomal:0000895
     name: sulfoxide
     prefix: idomal
+- aio:Natural_Language_Processing:
+    identifier: Natural_Language_Processing
+    link: https://bioregistry.io/aio:Natural_Language_Processing
+    name: Natural Language Processing
+    prefix: aio
+  ito:00141:
+    identifier: '00141'
+    link: https://bioregistry.io/ito:00141
+    name: Natural language processing
+    prefix: ito
+  ito:39650:
+    identifier: '39650'
+    link: https://bioregistry.io/ito:39650
+    name: NLP
+    prefix: ito
+- aio:Continual_Learning:
+    identifier: Continual_Learning
+    link: https://bioregistry.io/aio:Continual_Learning
+    name: Continual Learning
+    prefix: aio
+  ito:01486:
+    identifier: 01486
+    link: https://bioregistry.io/ito:01486
+    name: Continual learning
+    prefix: ito
+  ito:17479:
+    identifier: '17479'
+    link: https://bioregistry.io/ito:17479
+    name: Incremental learning
+    prefix: ito
+  ito:23552:
+    identifier: '23552'
+    link: https://bioregistry.io/ito:23552
+    name: Incremental learning
+    prefix: ito
+- aio:LSTM:
+    identifier: LSTM
+    link: https://bioregistry.io/aio:LSTM
+    name: Long Short Term Memory
+    prefix: aio
+  ito:18262:
+    identifier: '18262'
+    link: https://bioregistry.io/ito:18262
+    name: LSTM
+    prefix: ito
+  ito:19480:
+    identifier: '19480'
+    link: https://bioregistry.io/ito:19480
+    name: lstm
+    prefix: ito
+- aio:Random_Forest:
+    identifier: Random_Forest
+    link: https://bioregistry.io/aio:Random_Forest
+    name: Random Forest
+    prefix: aio
+  ito:28410:
+    identifier: '28410'
+    link: https://bioregistry.io/ito:28410
+    name: Random Forest
+    prefix: ito
+  ito:39395:
+    identifier: '39395'
+    link: https://bioregistry.io/ito:39395
+    name: random forest
+    prefix: ito
+- aio:Logistic_Regression:
+    identifier: Logistic_Regression
+    link: https://bioregistry.io/aio:Logistic_Regression
+    name: Logistic Regression
+    prefix: aio
+  ito:29161:
+    identifier: '29161'
+    link: https://bioregistry.io/ito:29161
+    name: Logistic Regression
+    prefix: ito
+  ito:31970:
+    identifier: '31970'
+    link: https://bioregistry.io/ito:31970
+    name: Logistic regression
+    prefix: ito
 - kegg.pathway:hsa00100:
     identifier: hsa00100
     link: https://bioregistry.io/kegg.pathway:hsa00100
@@ -428,6 +626,36 @@
     link: https://bioregistry.io/mesh:D018442
     name: Lymphoma, B-Cell, Marginal Zone
     prefix: mesh
+- mesh:D015164:
+    identifier: D015164
+    link: https://bioregistry.io/mesh:D015164
+    name: Vaccines, Inactivated
+    prefix: mesh
+  vo:0000017:
+    identifier: '0000017'
+    link: https://bioregistry.io/vo:0000017
+    name: killed vaccine
+    prefix: vo
+  vo:0000315:
+    identifier: '0000315'
+    link: https://bioregistry.io/vo:0000315
+    name: inactivated vaccine
+    prefix: vo
+- mesh:D007252:
+    identifier: D007252
+    link: https://bioregistry.io/mesh:D007252
+    name: Influenza Vaccines
+    prefix: mesh
+  vo:0000642:
+    identifier: '0000642'
+    link: https://bioregistry.io/vo:0000642
+    name: Influenza virus vaccine
+    prefix: vo
+  vo:0003495:
+    identifier: 0003495
+    link: https://bioregistry.io/vo:0003495
+    name: influenza vaccines
+    prefix: vo
 - reactome:R-HSA-8937144:
     identifier: R-HSA-8937144
     link: https://bioregistry.io/reactome:R-HSA-8937144

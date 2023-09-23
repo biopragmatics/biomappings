@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
 """The biomappings CLI."""
+
 import sys
+from pathlib import Path
 
 import click
-from more_click import make_web_command, run_app
+from more_click import run_app
 
 from .export_sssom import sssom
 from .graph import charts
@@ -20,8 +22,28 @@ def main():
 
 
 if get_git_hash() is not None:
-    # This command is called "web" by default
-    main.add_command(make_web_command("biomappings.wsgi:app"))
+
+    @main.command()
+    @click.option("--predictions-path", type=click.Path(), help="A predictions TSV file path")
+    @click.option("--positives-path", type=click.Path(), help="A positives curation TSV file path")
+    @click.option("--negatives-path", type=click.Path(), help="A negatives curation TSV file path")
+    @click.option("--unsure-path", type=click.Path(), help="An unsure curation TSV file path")
+    def web(
+        predictions_path: Path,
+        positives_path: Path,
+        negatives_path: Path,
+        unsure_path: Path,
+    ):
+        """Run the biomappings web app."""
+        from .wsgi import get_app
+
+        app = get_app(
+            predictions_path=predictions_path,
+            positives_path=positives_path,
+            negatives_path=negatives_path,
+            unsure_path=unsure_path,
+        )
+        run_app(app, with_gunicorn=False)
 
     @main.command()
     @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
@@ -77,9 +99,9 @@ def lint(standardize: bool):
         lint_unsure_mappings,
     )
 
-    lint_true_mappings()
-    lint_false_mappings()
-    lint_unsure_mappings()
+    lint_true_mappings(standardize=standardize)
+    lint_false_mappings(standardize=standardize)
+    lint_unsure_mappings(standardize=standardize)
     lint_predictions(standardize=standardize)
 
 

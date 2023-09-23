@@ -1,39 +1,51 @@
 creator_id:
 - orcid:0000-0001-9439-5346
+- orcid:0000-0002-1216-4761
 - orcid:0000-0002-2046-6145
 - orcid:0000-0002-2627-0696
+- orcid:0000-0002-6601-2165
 - orcid:0000-0003-1307-2508
 - orcid:0000-0003-4423-4370
 curie_map:
   agro: http://purl.obolibrary.org/obo/AGRO_
   agrovoc: http://aims.fao.org/aos/agrovoc/c_
+  aio: https://w3id.org/aio/
   apollosv: http://purl.obolibrary.org/obo/APOLLO_SV_
   bfo: http://purl.obolibrary.org/obo/BFO_
-  bto: 'https://www.ebi.ac.uk/ols/ontologies/bto/terms?obo_id=BTO:'
+  bto: https://www.brenda-enzymes.org/ontology.php?ontology_id=3&id_go=
   caro: http://purl.obolibrary.org/obo/CARO_
   ccle: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
   cellosaurus: https://www.cellosaurus.org/CVCL_
   cemo: https://biopragmatics.github.io/providers/cemo/
   chebi: 'https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:'
+  chmo: http://purl.obolibrary.org/obo/CHMO_
   cido: http://purl.obolibrary.org/obo/CIDO_
-  cl: 'https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:'
+  cl: https://www.ebi.ac.uk/ols/ontologies/cl/terms?iri=http://purl.obolibrary.org/obo/
+  clo: https://www.ebi.ac.uk/ols4/ontologies/clo/terms?short_form=CLO_
   commoncoreontology: http://www.ontologyrepository.com/CommonCoreOntologies/
+  cpt: https://www.aapc.com/codes/cpt-codes/
   dc: http://purl.org/dc/elements/1.1/
   depmap: https://depmap.org/portal/cell_line/
-  doid: 'https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:'
+  doid: 'https://www.ebi.ac.uk/ols4/ontologies/doid/terms?obo_id=DOID:'
   dron: http://purl.obolibrary.org/obo/DRON_
   efo: http://www.ebi.ac.uk/efo/EFO_
-  envo: 'https://www.ebi.ac.uk/ols/ontologies/envo/terms?obo_id=ENVO:'
-  fma: 'https://www.ebi.ac.uk/ols/ontologies/fma/terms?obo_id=FMA:'
+  envo: http://purl.obolibrary.org/obo/ENVO_
+  fma: http://purl.org/sig/ont/fma/fma
+  fplx: https://sorgerlab.github.io/famplex/
   go: 'http://amigo.geneontology.org/amigo/term/GO:'
   hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
   hp: 'https://hpo.jax.org/app/browse/term/HP:'
   iao: http://purl.obolibrary.org/obo/IAO_
-  ido: 'https://www.ebi.ac.uk/ols/ontologies/ido/terms?obo_id=IDO:'
+  ido: 'https://www.ebi.ac.uk/ols4/ontologies/ido/terms?obo_id=IDO:'
   idocovid19: http://purl.obolibrary.org/obo/COVIDO_
   idomal: http://purl.obolibrary.org/obo/IDOMAL_
+  interpro: https://www.ebi.ac.uk/interpro/entry/
+  ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
+  kestrelo: http://purl.obolibrary.org/obo/kestrelo_
   maxo: http://purl.obolibrary.org/obo/MAXO_
   mesh: https://meshb.nlm.nih.gov/record/ui?ui=
+  mi: 'https://www.ebi.ac.uk/ols4/ontologies/mi/terms?obo_id=MI:'
+  miapa: http://purl.obolibrary.org/obo/MIAPA_
   miro: http://purl.obolibrary.org/obo/MIRO_
   mondo: http://purl.obolibrary.org/obo/MONDO_
   mpath: http://purl.obolibrary.org/obo/MPATH_
@@ -49,14 +61,14 @@ curie_map:
   ogg: http://purl.obolibrary.org/obo/OGG_
   ogms: http://purl.obolibrary.org/obo/OGMS_
   opmi: http://purl.obolibrary.org/obo/OPMI_
-  pato: 'https://www.ebi.ac.uk/ols/ontologies/pato/terms?obo_id=PATO:'
+  pato: http://purl.obolibrary.org/obo/PATO_
   pco: http://purl.obolibrary.org/obo/PCO_
   pfam: https://www.ebi.ac.uk/interpro/entry/pfam/
   pr: 'https://proconsortium.org/app/entry/PR:'
   pubchem.compound: https://pubchem.ncbi.nlm.nih.gov/compound/
   reactome: https://reactome.org/content/detail/
   stato: http://purl.obolibrary.org/obo/STATO_
-  uberon: 'https://www.ebi.ac.uk/ols/ontologies/uberon/terms?obo_id=UBERON:'
+  uberon: 'https://www.ebi.ac.uk/ols4/ontologies/uberon/terms?obo_id=UBERON:'
   umls: http://linkedlifedata.com/resource/umls/id/
   uniprot: https://purl.uniprot.org/uniprot/
   uniprot.chain: http://purl.uniprot.org/annotation/
@@ -66,6 +78,11 @@ curie_map:
   wikipathways: http://www.wikipathways.org/instance/
 license: https://creativecommons.org/publicdomain/zero/1.0/
 mapping_provider: https://github.com/biopragmatics/biomappings
-mapping_set_group: biomappings
-mapping_set_id: biomappings
+mapping_set_description: Biomappings is a repository of community curated and predicted
+  equivalences and related mappings between named biological entities that are not
+  available from primary sources. It's also a place where anyone can contribute curations
+  of predicted mappings or their own novel mappings.
+mapping_set_group: biopragmatics
+mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv
 mapping_set_title: Biomappings
+mapping_set_version: 0.3.5

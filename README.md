@@ -69,7 +69,8 @@ interact with the mappings files, e.g., to add predictions.
 
 The mappings are distributed in the [Simple Standard for Sharing Ontology Mappings
 (SSSOM)](https://github.com/mapping-commons/sssom) format
-([here](https://github.com/biopragmatics/biomappings/blob/master/docs/_data/sssom)).
+([here](https://github.com/biopragmatics/biomappings/blob/master/docs/_data/sssom))
+and can be referenced by PURL such as https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv.
 The positive mappings are also available as a network through
 [NDEx](https://www.ndexbio.org/#/network/402d1fd6-49d6-11eb-9e72-0ac135e8bacf).
 
@@ -143,6 +144,7 @@ development mode with the `web` option (which installs `flask` and `flask-bootst
 ```bash
 $ git clone git+https://github.com/biopragmatics/biomappings.git
 $ cd biomappings
+$ git checkout -b your-branch-name
 $ pip install -e .[web]
 ```
 
@@ -186,7 +188,7 @@ The most recent code and data can be installed directly from GitHub with:
 $ pip install git+https://github.com/biopragmatics/biomappings.git
 ```
 
-To install in development mode, use the following:
+To install in development mode and create a new branch, use the following:
 
 ```bash
 $ git clone git+https://github.com/biopragmatics/biomappings.git

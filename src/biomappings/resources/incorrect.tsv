@@ -20,8 +20,14 @@ agrovoc	7b960f69	rainwater harvesting	skos:exactMatch	agro	00000589	water harves
 agrovoc	8446	working animals	skos:exactMatch	agro	00002004	draft animal role	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696			
 agrovoc	fdfbb37f	parcels	skos:exactMatch	agro	00000301	agricultural experimental plot	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696			
 apollosv	00000094	community	skos:exactMatch	ncit	C16453	Community	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+apollosv	00000172	susceptibility	skos:exactMatch	pato	PATO:0001043	susceptibility toward	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 apollosv	00000340	agonism	skos:exactMatch	nbo	0000015	aggressive behavior	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000340	agonism	skos:exactMatch	nbo	0000121	agonistic behavior	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+apollosv	00000496	ORCID	skos:exactMatch	ncit	C188272	ORCID	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
+bto	BTO:0002830	DB-1 cell	skos:exactMatch	cl	CL:4033027	diffuse bipolar 1 cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.555
+bto	BTO:0004500	R1 cell	skos:exactMatch	cl	CL:0000687	R1 photoreceptor cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.556
+bto	BTO:0005825	ctenidium	skos:exactMatch	ncbitaxon	90308	Ctenidium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+bto	BTO:0006359	TEX cell	skos:exactMatch	cl	CL:0011025	exhausted T cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.549
 ccle	697_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	697	skos:exactMatch	cellosaurus	CVCL_8056	697-mel	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 ccle	A204_SOFT_TISSUE	A-204	skos:exactMatch	cellosaurus	CVCL_1N55	Urd-B	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 ccle	ABC1_LUNG	ABC-1	skos:exactMatch	cellosaurus	CVCL_ZB62	AbC1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -93,22 +99,67 @@ ccle	TC71_BONE	TC-71	skos:exactMatch	cellosaurus	CVCL_S882	TC71	semapv:ManualMap
 ccle	TE15_OESOPHAGUS	TE-15	skos:exactMatch	cellosaurus	CVCL_F780	TE15	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ccle	WM239A	WM239A	skos:exactMatch	cellosaurus	CVCL_RN56	WM239B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:10057	9H-xanthene	skos:exactMatch	mesh	C002563	xanthan gum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:134126	picrotoxin	skos:exactMatch	mesh	D031605	Cocculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:135025	rimazolium	skos:exactMatch	mesh	C100296	probon	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:135083	cibenzoline	skos:exactMatch	mesh	C032151	cifenline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:15367	all-trans-retinoic acid	skos:exactMatch	mesh	D012160	Retina	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:15756	hexadecanoic acid	skos:exactMatch	mesh	D010169	Palmitic Acids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	0.9
 chebi	CHEBI:15940	nicotinic acid	skos:exactMatch	mesh	D009539	Nicotinic Acids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:16543	N(2)-acetyl-L-ornithine	skos:exactMatch	mesh	C021951	N(delta)-acetylornithine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:17544	hydrogencarbonate	skos:exactMatch	mesh	D001639	Bicarbonates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:17883	hydrogen chloride	skos:exactMatch	mesh	D007943	Leukemia, Hairy Cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:22927	bromine atom	skos:exactMatch	mesh	D031724	Bromus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:23888	drug	skos:exactMatch	mesh	D008511	Medicine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:24536	hexachlorocyclohexane	skos:exactMatch	mesh	D002819	Chorea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:27777	acetohydroxamic acid	skos:exactMatch	mesh	D000744	Anemia, Hemolytic, Autoimmune	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:28201	rotenone	skos:exactMatch	mesh	D029866	Derris	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:29806	fumarate(2-)	skos:exactMatch	mesh	D005650	Fumarates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:30078	gold monochloride	skos:exactMatch	mesh	C038016	gold chloride	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:31013	cerotate	skos:exactMatch	mesh	C085095	Cerinate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:31739	josamycin	skos:exactMatch	mesh	D019169	Jurkat Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:32034	potassium bitartrate	skos:exactMatch	mesh	D003728	Dental Calculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:33224	chromane	skos:exactMatch	mesh	D002839	Chromans	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:33363	palladium	skos:exactMatch	mesh	D010300	Parkinson Disease	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:33942	ribose	skos:exactMatch	mesh	D012272	Ribs	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:39098	pyrethrins	skos:exactMatch	mesh	D011723	Chrysanthemum cinerariifolium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:4031	cyclosporin A	skos:exactMatch	mesh	D003524	Cyclosporins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:44520	methoxy group	skos:exactMatch	mesh	D010034	Otitis Media with Effusion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:45373	sulfanilamide	skos:exactMatch	mesh	D013424	Sulfanilamides	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:50183	P450 inhibitor	skos:exactMatch	mesh	D065690	Cytochrome P-450 CYP2D6 Inhibitors	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:50664	matrix metalloproteinase inhibitor	skos:exactMatch	mesh	D008950	MMPI	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:50906	role	skos:exactMatch	mesh	D012380	Role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:53311	sodium alginate	skos:exactMatch	mesh	D044646	Ascophyllum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:59113	3-heptadecylveratrole	skos:exactMatch	mesh	D003699	Hepatitis D	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:60411	bacteriopheophytin	skos:exactMatch	mesh	D011470	Prostatic Hyperplasia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:6446	levothyroxine sodium anhydrous	skos:exactMatch	mesh	D016422	Letter	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:6456	lidocaine	skos:exactMatch	mesh	C511998	Lidoderm	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+chebi	CHEBI:70255	(-)-epicatechin-3-O-gallate	skos:exactMatch	mesh	D004562	Electrocardiography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:75937	monooleoylglycerol	skos:exactMatch	mesh	C005953	monoolein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:78037	polyhydroxyalkanoate	skos:exactMatch	mesh	D010381	Pelger-Huet Anomaly	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:79068	crocin-1	skos:exactMatch	mesh	D027622	Crocus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:8075	phenoxyacetic acid	skos:exactMatch	mesh	D031785	Poa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chebi	CHEBI:8925	ryanodine	skos:exactMatch	mesh	D031309	Ryania	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
+chmo	0000026	fast-scan cyclic voltammetry	skos:exactMatch	ncbitaxon	11978	Feline calicivirus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+chmo	0000028	linear-sweep voltammetry	skos:exactMatch	ncbitaxon	12173	Lily symptomless virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+chmo	0000041	stripping voltammetry	skos:exactMatch	ncbitaxon	2846078	Alphachrysovirus saladoense	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+chmo	0000047	cathodic stripping voltammetry	skos:exactMatch	ncbitaxon	192452	Cocksfoot streak virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+chmo	0000049	chemical imaging	skos:exactMatch	ncbitaxon	245896	Cis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+chmo	0000377	inverse photoelectron spectroscopy	skos:exactMatch	ncbitaxon	55979	Ips	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+chmo	0000412	angle-resolved secondary electron spectroscopy	skos:exactMatch	ncbitaxon	338443	Arses	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+chmo	0000422	alternating current impedance spectroscopy	skos:exactMatch	ncbitaxon	197677	Acis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+chmo	0000515	laser desorption-ionisation mass spectrometry	skos:exactMatch	ncbitaxon	102304	Lima	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+chmo	0000641	surface enhanced infrared absorption spectroscopy	skos:exactMatch	ncbitaxon	186261	Seira	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+chmo	0000744	electron–electron double resonance spectroscopy	skos:exactMatch	ncbitaxon	9850	Cervidae	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.54
+chmo	0000928	particle-tracking velocimetry	skos:exactMatch	ncbitaxon	187978	Peru tomato mosaic virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+chmo	0001184	gas-phase electrophoretic mobility molecular analysis	skos:exactMatch	ncbitaxon	345460	Gemma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+chmo	0001337	atomic layer epitaxy	skos:exactMatch	ncbitaxon	513146	Plantago princeps	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.484
+chmo	0001522	dialysis	skos:exactMatch	ncbitaxon	124307	Dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+chmo	0001849	phase alternated rotation of magnetisation	skos:exactMatch	ncbitaxon	44741	Rickettsia sp. PAR	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+chmo	0001880	cyclically ordered phase sequence	skos:exactMatch	ncbitaxon	263416	Cyclops	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+chmo	0001943	higher-order Raman spectral excitation spectroscopy	skos:exactMatch	ncbitaxon	9788	Equidae	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.54
+chmo	0002040	ultrasonic velocimetry	skos:exactMatch	ncbitaxon	10783	Aleutian mink disease parvovirus (STRAIN G)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+chmo	0002540	programmed temperature vaporisation	skos:exactMatch	ncbitaxon	187978	Peru tomato mosaic virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+chmo	0002696	photoelectron spectroscopy of adsorbed xenon	skos:exactMatch	ncbitaxon	2033138	Pax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
 cl	CL:0000149	visual pigment cell	skos:exactMatch	mesh	D012168	Retinal Pigments	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0000322	pneumocyte	skos:exactMatch	mesh	D056809	Alveolar Epithelial Cells	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0000345	dental papilla cell	skos:exactMatch	mesh	D003771	Dental Papilla	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -129,6 +180,7 @@ cl	CL:0002367	trabecular meshwork cell	skos:exactMatch	mesh	D014129	Trabecular M
 cl	CL:0002372	myotube	skos:exactMatch	mesh	D018485	Muscle Fibers, Skeletal	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0002521	subcutaneous fat cell	skos:exactMatch	mesh	D050151	Subcutaneous Fat	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0002559	hair follicle cell	skos:exactMatch	mesh	D018859	Hair Follicle	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+cl	CL:0004124	retinal ganglion cell C1	skos:exactMatch	ncbitaxon	998453	Delta	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
 cl	CL:0008022	endocardial cushion cell	skos:exactMatch	mesh	D054089	Endocardial Cushions	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0009004	retinal cell	skos:exactMatch	mesh	D012172	Retinaldehyde	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:0009005	salivary gland cell	skos:exactMatch	mesh	D012469	Salivary Glands	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -147,6 +199,27 @@ cl	CL:2000004	pituitary gland cell	skos:exactMatch	mesh	D010902	Pituitary Gland	
 cl	CL:2000021	sebaceous gland cell	skos:exactMatch	mesh	D012627	Sebaceous Glands	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:2000022	cardiac septum cell	skos:exactMatch	mesh	D006346	Heart Septum	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 cl	CL:2000030	hypothalamus cell	skos:exactMatch	mesh	D007031	Hypothalamus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+clo	0001922	BE2 cell	skos:exactMatch	mesh	D016175	B-Lymphocyte Subsets	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.502
+clo	0002596	COS-1 cell	skos:exactMatch	mesh	D019556	COS Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0002597	COS-7 cell	skos:exactMatch	mesh	D019556	COS Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0002941	EPI cell	skos:exactMatch	mesh	D015251	Epirubicin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.556
+clo	0003413	G cell	skos:exactMatch	mesh	D019863	Gastrin-Secreting Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0009279	TC-1 cell	skos:exactMatch	mesh	D013602	T-Lymphocytes, Cytotoxic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py	0.549
+clo	0037163	Ishikawa cell	skos:exactMatch	cellosaurus	CVCL_D199	Ishikawa 3-H-12	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0037237	293-derived cell	skos:exactMatch	cellosaurus	CVCL_0045	HEK293	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0037261	3T3-derived cell	skos:exactMatch	mesh	D016475	3T3 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0037287	COR123 cell	skos:exactMatch	efo	0002142	CORL23	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0051004	RCB0256 cell	skos:exactMatch	cellosaurus	CVCL_1075	BALL-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+clo	0051005	RCB1882 cell	skos:exactMatch	cellosaurus	CVCL_1075	BALL-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:UnspecifiedMatching	clo	0.8
+cpt	90389	TIG	skos:exactMatch	vo	0010969	Tig	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/e55031/scripts/generate_vaccine_mappings.py	0.762
+cpt	90581	anthrax	skos:exactMatch	mesh	D000881	Anthrax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.762
+cpt	90585	BCG	skos:exactMatch	mesh	D009163	Mycobacterium bovis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.556
+cpt	90665	Lyme disease	skos:exactMatch	mesh	D008193	Lyme Disease	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.772
+cpt	90704	mumps	skos:exactMatch	mesh	D009107	Mumps	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.762
+cpt	90705	measles	skos:exactMatch	mesh	D008457	Measles	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.762
+cpt	90706	rubella	skos:exactMatch	mesh	D012409	Rubella	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.762
+cpt	90716	varicella	skos:exactMatch	mesh	D002644	Chickenpox	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.54
+cpt	90727	plague	skos:exactMatch	mesh	D010930	Plague	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.762
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	mesh	D006394	Hemangiosarcoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0018923	Hemangiosarcoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0278592	Adult Angiosarcoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -202,18 +275,35 @@ doid	DOID:0080547	non-alcoholic steatohepatitis	skos:exactMatch	mesh	D065626	Non
 doid	DOID:0080748	chronic inducible urticaria	skos:exactMatch	mesh	D000080223	Chronic Urticaria	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0080749	chronic spontaneous urticaria	skos:exactMatch	mesh	D000080223	Chronic Urticaria	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0080939	hereditary angioedema type I	skos:exactMatch	mesh	D056829	Hereditary Angioedema Types I and II	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+doid	DOID:0110390	retinitis pigmentosa 1	skos:exactMatch	ncbitaxon	2670	Plasmid RP1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
 doid	DOID:0111135	congenital generalized lipodystrophy type 1	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0111136	congenital generalized lipodystrophy type 2	skos:exactMatch	mesh	D052497	Lipodystrophy, Congenital Generalized	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+doid	DOID:0111414	trichohepatoenteric syndrome	skos:exactMatch	ncbitaxon	1971357	Thes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+doid	DOID:0111536	Buschke-Ollendorff syndrome	skos:exactMatch	ncbitaxon	9903	Bos	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+doid	DOID:0111666	proliferative vasculopathy and hydranencephaly-hydrocephaly syndrome	skos:exactMatch	ncbitaxon	10376	Human gammaherpesvirus 4	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
 doid	DOID:1024	leprosy	skos:exactMatch	umls	C0051981	leprosy vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:10264	mumps	skos:exactMatch	umls	C0026782	Mumps Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+doid	DOID:10457	Legionnaires' disease	skos:exactMatch	ncbitaxon	445	Legionella	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
 doid	DOID:10844	Japanese encephalitis	skos:exactMatch	umls	C0771080	Japanese Encephalitis Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+doid	DOID:11079	leech infestation	skos:exactMatch	ncbitaxon	55824	Hirudinea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.54
 doid	DOID:11100	Q fever	skos:exactMatch	umls	C0872996	Q fever vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:1116	pertussis	skos:exactMatch	umls	C0031237	pertussis vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+doid	DOID:11260	rabies	skos:exactMatch	ncbitaxon	655070	Lyssa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+doid	DOID:11263	chlamydia	skos:exactMatch	ncbitaxon	810	Chlamydia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+doid	DOID:11265	trachoma	skos:exactMatch	ncbitaxon	1772192	Trachoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
 doid	DOID:11338	tetanus	skos:exactMatch	umls	C0305062	tetanus toxoid vaccine, inactivated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:11729	Lyme disease	skos:exactMatch	umls	C0717360	Lyme Disease Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+doid	DOID:12053	cryptococcosis	skos:exactMatch	ncbitaxon	430997	Torula	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
 doid	DOID:12365	malaria	skos:exactMatch	umls	C0206255	Malaria Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:12549	hepatitis A	skos:exactMatch	umls	C0795623	hepatitis A vaccine, inactivated	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+doid	DOID:1273	respiratory syncytial virus infectious disease	skos:exactMatch	ncbitaxon	12331	Rice stripe tenuivirus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+doid	DOID:1273	respiratory syncytial virus infectious disease	skos:exactMatch	ncbitaxon	12814	Respiratory syncytial virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+doid	DOID:13117	paronychia	skos:exactMatch	ncbitaxon	157596	Paronychia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+doid	DOID:13268	porphyria	skos:exactMatch	ncbitaxon	1162790	Porphyria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
 doid	DOID:1328	Rift Valley fever	skos:exactMatch	umls	C1548485	Rift Valley fever vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+doid	DOID:13417	alexia	skos:exactMatch	ncbitaxon	347478	Alexia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+doid	DOID:13714	anodontia	skos:exactMatch	ncbitaxon	244457	Anodontia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+doid	DOID:13757	excessive tearing	skos:exactMatch	ncbitaxon	63971	Epiphora	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
 doid	DOID:14453	farmer's lung	skos:exactMatch	efo	0007385	mushroom workers' lung	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:1498	cholera	skos:exactMatch	umls	C0008359	cholera vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:1586	rheumatic fever	skos:exactMatch	umls	C1548484	rheumatic fever vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -235,7 +325,113 @@ doid	DOID:9065	leishmaniasis	skos:exactMatch	umls	C1548483	Leishmaniasis Vaccine
 doid	DOID:9675	pulmonary emphysema	skos:exactMatch	efo	0000464	emphysema	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:9682	yellow fever	skos:exactMatch	umls	C0301508	yellow fever vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:9847	peripheral vertigo	skos:exactMatch	mesh	D014717	Vertigo	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+efo	0000180	HIV-1 infection	skos:exactMatch	ncbitaxon	11676	Human immunodeficiency virus 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+efo	0000220	acute lymphoblastic leukemia	skos:exactMatch	ncbitaxon	1	root	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.484
+efo	0000289	obsolete_bipolar disorder	skos:exactMatch	ncbitaxon	753251	Mania	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+efo	0000311	obsolete_cancer	skos:exactMatch	ncbitaxon	6754	Cancer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0000558	Kaposi's sarcoma	skos:exactMatch	ncbitaxon	37296	Human gammaherpesvirus 8	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.549
+efo	0000694	severe acute respiratory syndrome	skos:exactMatch	ncbitaxon	694009	Severe acute respiratory syndrome-related coronavirus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0000717	systemic scleroderma	skos:exactMatch	ncbitaxon	386268	Sclerodermus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0000717	systemic scleroderma	skos:exactMatch	ncbitaxon	68787	Scleroderma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+efo	0000764	HIV infection	skos:exactMatch	ncbitaxon	11676	Human immunodeficiency virus 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0000764	HIV infection	skos:exactMatch	ncbitaxon	11709	Human immunodeficiency virus 2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0000764	HIV infection	skos:exactMatch	ncbitaxon	12721	Human immunodeficiency virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+efo	0000764	HIV infection	skos:exactMatch	ncbitaxon	35274	Human immunodeficiency virus 3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0000764	HIV infection	skos:exactMatch	ncbitaxon	57667	Simian-Human immunodeficiency virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0000768	idiopathic pulmonary fibrosis	skos:exactMatch	ncbitaxon	31658	Cell fusing agent virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0000778	anthrax infection	skos:exactMatch	ncbitaxon	117078	Anthrax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0000778	anthrax infection	skos:exactMatch	ncbitaxon	1392	Bacillus anthracis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0000847	obsolete_anal region	skos:exactMatch	ncbitaxon	547	Enterobacter	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.54
+efo	0000903	obsolete_trigeminal ganglion	skos:exactMatch	ncbitaxon	558017	Betabaculovirus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.521
+efo	0000933	obsolete_gill	skos:exactMatch	ncbitaxon	118513	Branchia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0000984	obsolete_testis	skos:exactMatch	ncbitaxon	59331	Orchis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0000987	obsolete_penis	skos:exactMatch	ncbitaxon	146780	Phallus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0000989	root structure	skos:exactMatch	ncbitaxon	1	root	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+efo	0001040	obsolete_stem	skos:exactMatch	ncbitaxon	9855	Axis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0001062	cytomegalovirus infection	skos:exactMatch	ncbitaxon	10359	Human betaherpesvirus 5	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.549
+efo	0001075	ovarian carcinoma	skos:exactMatch	ncbitaxon	176063	Eos	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0001409	obsolete_ankle	skos:exactMatch	ncbitaxon	20400	Astragalus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0001675	simian immunodeficiency virus infection	skos:exactMatch	ncbitaxon	11723	Simian immunodeficiency virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0002065	ITV	skos:exactMatch	ncbitaxon	64291	Israel turkey meningoencephalomyelitis virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+efo	0002233	MESSA	skos:exactMatch	ncbitaxon	1252993	Messa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0002429	polycythemia vera	skos:exactMatch	ncbitaxon	10345	Suid alphaherpesvirus 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0002612	human herpesvirus 8 infection	skos:exactMatch	ncbitaxon	37296	Human gammaherpesvirus 8	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0002626	thymus neoplasm	skos:exactMatch	ncbitaxon	49990	Thymus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0002707	NT-1	skos:exactMatch	ncbitaxon	115992	Vibrio phage nt-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+efo	0003156	obsolete_Caucasian	skos:exactMatch	ncbitaxon	42449	Pierinae	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.54
+efo	0003167	obsolete_Pima Indian	skos:exactMatch	ncbitaxon	1666846	Pima	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+efo	0003764	transient ischemic attack	skos:exactMatch	ncbitaxon	72648	Tacca leontopetaloides	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.484
+efo	0003812	refractory anemia with ringed sideroblasts	skos:exactMatch	ncbitaxon	562243	Aisa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0003918	obstructive sleep apnea	skos:exactMatch	ncbitaxon	2680947	Osa <flies>	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0003918	obstructive sleep apnea	skos:exactMatch	ncbitaxon	297542	Osa <eudicots>	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0003927	obsolete_myopia	skos:exactMatch	ncbitaxon	369171	Myopias	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+efo	0003963	freckles	skos:exactMatch	ncbitaxon	2738362	Melasma <gastropods>	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0003963	freckles	skos:exactMatch	ncbitaxon	46041	Melasma <eudicots>	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0004016	insertion	skos:exactMatch	ncbitaxon	2673	insertion sequences	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0005226	swine influenza	skos:exactMatch	ncbitaxon	11723	Simian immunodeficiency virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0005262	mitral annular calcification	skos:exactMatch	ncbitaxon	120793	Mycobacterium avium complex (MAC)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+efo	0006818	stricture	skos:exactMatch	ncbitaxon	513343	Stenosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	0007128	actinomycosis	skos:exactMatch	ncbitaxon	1760	Actinomycetes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+efo	0007136	agnosia	skos:exactMatch	ncbitaxon	523289	Agnosia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+efo	1001993	scleroderma	skos:exactMatch	ncbitaxon	386268	Sclerodermus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.54
+efo	1001993	scleroderma	skos:exactMatch	ncbitaxon	68787	Scleroderma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000016	sea	skos:exactMatch	ncbitaxon	2798467	Sea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000019	saline lake	skos:exactMatch	ncbitaxon	33337	Salina	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000029	watercourse	skos:exactMatch	ncbitaxon	1725053	Barranca	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000032	bay	skos:exactMatch	ncbitaxon	41489	Bahia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000080	mountain range	skos:exactMatch	ncbitaxon	2893724	Cordillera	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000101	delta	skos:exactMatch	ncbitaxon	998453	Delta	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000104	undersea feature	skos:exactMatch	ncbitaxon	138334	Allium tricoccum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:00000109	woodland area	skos:exactMatch	ncbitaxon	205021	Acacia aneura	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:00000109	woodland area	skos:exactMatch	ncbitaxon	55611	Artemisia tridentata	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:00000109	woodland area	skos:exactMatch	ncbitaxon	669369	Acacia harpophylla	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:00000169	canyon	skos:exactMatch	ncbitaxon	1725053	Barranca	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000196	alkaline flat	skos:exactMatch	ncbitaxon	33337	Salina	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000234	bayou	skos:exactMatch	ncbitaxon	41489	Bahia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000260	prairie	skos:exactMatch	ncbitaxon	2678135	Pampa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000262	steppe	skos:exactMatch	ncbitaxon	2678135	Pampa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000283	ridge	skos:exactMatch	ncbitaxon	2518551	Arete	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000309	depressed landform	skos:exactMatch	ncbitaxon	9596	Pan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000429	arete	skos:exactMatch	ncbitaxon	2518551	Arete	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00000550	range of seamounts	skos:exactMatch	ncbitaxon	2893724	Cordillera	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:00002046	activated sludge	skos:exactMatch	ncbitaxon	942017	activated sludge metagenome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+envo	ENVO:01000258	fluid cline	skos:exactMatch	ncbitaxon	57788	Clinitrachus argentatus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:01000579	television set	skos:exactMatch	ncbitaxon	2844102	Drosophila melanogaster nudivirus B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:01000605	car	skos:exactMatch	ncbitaxon	201850	Car	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:01000750	Mohorovicic discontinuity	skos:exactMatch	ncbitaxon	572097	Moho	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+envo	ENVO:01000806	nebula	skos:exactMatch	ncbitaxon	987027	Nebula	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:01000837	virga	skos:exactMatch	ncbitaxon	509515	Virga	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:01000969	cafeteria	skos:exactMatch	ncbitaxon	33652	Cafeteria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:01001482	tornado	skos:exactMatch	ncbitaxon	582525	Bellapiscis medius	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:01001864	photosynthetically active radiation	skos:exactMatch	ncbitaxon	44741	Rickettsia sp. PAR	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:02000074	obsolete cantaloupe	skos:exactMatch	ncbitaxon	3656	Cucumis melo	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:03501159	neonatal unit facility	skos:exactMatch	ncbitaxon	2489059	Nu	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+envo	ENVO:03501173	post-anesthesia care unit facility	skos:exactMatch	ncbitaxon	42528	Piaractus mesopotamicus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.54
+envo	ENVO:03501173	post-anesthesia care unit facility	skos:exactMatch	ncbitaxon	44741	Rickettsia sp. PAR	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+envo	ENVO:03501219	window	skos:exactMatch	ncbitaxon	183654	Scophthalmus aquosus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+hp	HP:0000001	All	skos:exactMatch	ncbitaxon	1	root	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+hp	HP:0000039	Epispadias	skos:exactMatch	ncbitaxon	2865123	Epispadias	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ido	0000636	sepsis	skos:exactMatch	ncbitaxon	137507	Sepsis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
 idomal	0001123	RAP-1	skos:exactMatch	vo	0011026	RAP-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+interpro	IPR000225	Armadillo	skos:exactMatch	ncbitaxon	9359	Dasypodidae	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+interpro	IPR000225	Armadillo	skos:exactMatch	ncbitaxon	96820	Armadillo	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+interpro	IPR007273	SCAMP	skos:exactMatch	ncbitaxon	160730	Mycteroperca phenax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+interpro	IPR007702	Janus	skos:exactMatch	ncbitaxon	1385265	Janus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+interpro	IPR007733	Agouti	skos:exactMatch	ncbitaxon	723807	Cuniculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+interpro	IPR010777	PipA	skos:exactMatch	ncbitaxon	191479	Pipa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+interpro	IPR012975	NOPS	skos:exactMatch	ncbitaxon	1956867	Nops	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+interpro	IPR016860	Cerberus	skos:exactMatch	ncbitaxon	46266	Cerberus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+interpro	IPR022773	Siva	skos:exactMatch	ncbitaxon	2183855	Siva	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	00089	Undetermined	skos:exactMatch	mi	MI:0339	undetermined sequence position	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+ito	01623	Vector	skos:exactMatch	ncbitaxon	2873985	Vector	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	09422	All	skos:exactMatch	ncbitaxon	1	root	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+ito	20249	CPM	skos:exactMatch	mi	MI:1329	cpm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.707
+ito	21751	SGD	skos:exactMatch	mi	MI:0484	sgd	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	23756	Humans	skos:exactMatch	ncbitaxon	9605	Homo	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+ito	27186	Human	skos:exactMatch	ncbitaxon	9606	Homo sapiens	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+ito	27304	human	skos:exactMatch	ncbitaxon	9606	Homo sapiens	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+ito	62361	ToS	skos:exactMatch	ncbitaxon	11590	Toscana virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.743
+ito	Data	Data	skos:exactMatch	ncbitaxon	1369087	Data	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	mesh	D018528	ATP-Binding Cassette Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 kegg.pathway	map03010	Ribosome	skos:exactMatch	go	GO:0005840	ribosome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -667,6 +863,21 @@ mesh	D065627	Familial Primary Pulmonary Hypertension	skos:exactMatch	doid	DOID:1
 mesh	D065637	Cytochrome P-450 CYP2A6	skos:exactMatch	hgnc	2610	CYP2A6	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D066167	Slit Lamp	skos:exactMatch	ncit	C75583	Slit-lamp Examination	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D066246	ErbB Receptors	skos:exactMatch	ncit	C17068	Epidermal Growth Factor Receptor	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+mi	MI:0048	filamentous phage display	skos:exactMatch	ncbitaxon	12420	Filamentous phage	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.772
+mi	MI:0066	lambda phage display	skos:exactMatch	ncbitaxon	2681611	Escherichia phage Lambda	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.549
+mi	MI:0092	protein in situ array	skos:exactMatch	ncbitaxon	1340058	Pisa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+mi	MI:0135	n-acetyl-methionine	skos:exactMatch	ncbitaxon	120793	Mycobacterium avium complex (MAC)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+mi	MI:0518	flag tag	skos:exactMatch	ncbitaxon	34205	Iris germanica	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.54
+mi	MI:0864	brenda	skos:exactMatch	ncbitaxon	139583	Brenda	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+mi	MI:0983	gemma	skos:exactMatch	ncbitaxon	345460	Gemma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+mi	MI:1135	venus fluorescent protein tag	skos:exactMatch	ncbitaxon	55714	Venus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+mi	MI:1344	erythrosin iodoacetamide label	skos:exactMatch	ncbitaxon	38200	Eria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.743
+mi	MI:2017	heterogen	skos:exactMatch	ncbitaxon	1616137	Heterogen	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+mi	MI:2181	cacao	skos:exactMatch	ncbitaxon	3641	Theobroma cacao	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
+mi	MI:2344	rhea	skos:exactMatch	ncbitaxon	8796	Rhea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+miapa	0000022	SINA	skos:exactMatch	ncbitaxon	647292	Erythrina poeppigiana	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+miapa	0000028	AMPHORA	skos:exactMatch	ncbitaxon	59796	Amphora	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+mondo	0001049	Dressler syndrome	skos:exactMatch	mesh	C538618	Donath-Landsteiner hemolytic anemia	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0005187	human herpesvirus 8 infection	skos:exactMatch	mesh	D019288	Herpesvirus 8, Human	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0007028	rotator cuff syndrome	skos:exactMatch	mesh	D000070636	Rotator Cuff Injuries	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mondo	0007323	Chondronectin	skos:exactMatch	mesh	C029172	chondronectin protein, human	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -675,6 +886,53 @@ mondo	0020320	acute myeloblastic leukemia with maturation	skos:exactMatch	mesh	D
 mondo	0021661	coronary atherosclerosis	skos:exactMatch	mesh	D003324	Coronary Artery Disease	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0044346	echinococcus granulosus infectious disease	skos:exactMatch	mesh	D048209	Echinococcus granulosus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0100073	methicillin-resistant staphylococcus aureus infectious disease	skos:exactMatch	mesh	D055624	Methicillin-Resistant Staphylococcus aureus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+oae	0002495	dialysis	skos:exactMatch	ncbitaxon	124307	Dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+obi	OBI:0000758	Roche	skos:exactMatch	ncbitaxon	2506334	Roche	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+obi	OBI:0400064	laser	skos:exactMatch	ncbitaxon	62990	Laser	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+obi	OBI:0400168	microtome	skos:exactMatch	ncbitaxon	1766024	Microtome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+obi	OBI:0600052	dialysis	skos:exactMatch	ncbitaxon	124307	Dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+obi	OBI:1110053	cancer	skos:exactMatch	ncbitaxon	6754	Cancer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF00292	PAX	skos:exactMatch	ncbitaxon	2033138	Pax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF00302	CAT	skos:exactMatch	ncbitaxon	9685	Felis catus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.707
+pfam	PF00377	Prion	skos:exactMatch	ncbitaxon	36469	prion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF00518	E6	skos:exactMatch	ncbitaxon	12062	Echovirus E6	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF00527	E7	skos:exactMatch	ncbitaxon	46018	Echovirus E7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF00803	3A	skos:exactMatch	ncbitaxon	215167	Triavirus tv3a	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF00823	PPE	skos:exactMatch	ncbitaxon	2803947	photosynthetic picoeukaryotic metagenome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF01390	SEA	skos:exactMatch	ncbitaxon	2798467	Sea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF01544	CorA	skos:exactMatch	ncbitaxon	1399800	Cora <basidiomycete fungi>	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF01544	CorA	skos:exactMatch	ncbitaxon	476738	Cora <damselflies>	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF01554	MatE	skos:exactMatch	ncbitaxon	185542	Ilex paraguariensis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF01790	LGT	skos:exactMatch	ncbitaxon	11085	Langat virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF02184	HAT	skos:exactMatch	efo	0005225	human african trypanosomiasis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF02431	Chalcone	skos:exactMatch	ncbitaxon	2839451	Chalcone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF02597	ThiS	skos:exactMatch	ncbitaxon	169495	This	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF02679	ComA	skos:exactMatch	ncbitaxon	873064	Coma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF03145	Sina	skos:exactMatch	ncbitaxon	647292	Erythrina poeppigiana	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF03255	ACCA	skos:exactMatch	ncbitaxon	260129	Acca	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF03271	EB1	skos:exactMatch	efo	0002172	EB1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF03590	AsnA	skos:exactMatch	ncbitaxon	1288024	Terminalia elliptica	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF03629	SASA	skos:exactMatch	ncbitaxon	66037	Sasa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF03646	FlaG	skos:exactMatch	ncbitaxon	34205	Iris germanica	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF03669	ASTER	skos:exactMatch	ncbitaxon	41479	Aster	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF03724	META	skos:exactMatch	ncbitaxon	94025	Meta	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF03789	ELK	skos:exactMatch	ncbitaxon	1574408	Cervus canadensis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.707
+pfam	PF03789	ELK	skos:exactMatch	ncbitaxon	9852	Alces alces	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.707
+pfam	PF03826	OAR	skos:exactMatch	ncbitaxon	1441487	Oar	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF03846	SulA	skos:exactMatch	ncbitaxon	32641	Sula	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF04011	LemA	skos:exactMatch	ncbitaxon	200870	Lema	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF04092	SAG	skos:exactMatch	ncbitaxon	59303	Sagiyama virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF04144	SCAMP	skos:exactMatch	ncbitaxon	160730	Mycteroperca phenax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF04161	Arv1	skos:exactMatch	ncbitaxon	2845023	Itarudivirus ARV1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.725
+pfam	PF04831	Popeye	skos:exactMatch	ncbitaxon	269452	Pleuronichthys coenosus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF04901	RAMP	skos:exactMatch	ncbitaxon	138334	Allium tricoccum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+pfam	PF04958	AstA	skos:exactMatch	ncbitaxon	2753134	Asta <moths>	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF04958	AstA	skos:exactMatch	ncbitaxon	359558	Asta <eudicots>	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF05039	Agouti	skos:exactMatch	ncbitaxon	723807	Cuniculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF05458	Siva	skos:exactMatch	ncbitaxon	2183855	Siva	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+pfam	PF05816	TelA	skos:exactMatch	ncbitaxon	268541	Tela	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF05866	RusA	skos:exactMatch	ncbitaxon	662560	Rusa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.744
+pfam	PF05874	PBAN	skos:exactMatch	ito	31490	PBAN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
 pr	PR:000035716	ubiquitin (RPS27A)	skos:exactMatch	uniprot.chain	PRO_0000396174	Ubiquitin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 pr	PR:000035720	ubiquitin (UBC)	skos:exactMatch	uniprot.chain	PRO_0000396174	Ubiquitin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 pr	PR:000035722	ubiquitin (UBA52)	skos:exactMatch	uniprot.chain	PRO_0000396174	Ubiquitin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -1142,23 +1400,110 @@ reactome	R-XTR-8877627	Vitamin E	skos:exactMatch	mesh	D014810	Vitamin E	semapv:M
 reactome	R-XTR-9664873	Pexophagy	debio:0000003	go	GO:0030242	autophagy of peroxisome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-XTR-983189	Kinesins	debio:0000003	fplx	Kinesin	Kinesin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 uberon	UBERON:0000104	life cycle	skos:exactMatch	mesh	D008018	Life Cycle Stages	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+uberon	UBERON:0000353	parenchyma	skos:exactMatch	bto	BTO:0000999	plant parenchyma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
+uberon	UBERON:0001263	pancreatic acinus	skos:exactMatch	bto	BTO:0000028	pancreatic acinar cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
+uberon	UBERON:0012245	silk	skos:exactMatch	bto	BTO:0002854	corn silk	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	0.556
 uberon	UBERON:0022469	primary olfactory cortex	skos:exactMatch	mesh	D066194	Olfactory Cortex	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:2001977	pad	skos:exactMatch	mesh	D058729	Peripheral Arterial Disease	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 umls	C0006142	Malignant neoplasm of breast	skos:exactMatch	mesh	D001943	Breast Neoplasms	semapv:ManualMappingCuration	orcid:0000-0002-6601-2165			
+vo	0004075	PBT	skos:exactMatch	mesh	D001803	Blood Transfusion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0004075	PBT	skos:exactMatch	mesh	D013601	T-Lymphocytes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0004075	PBT	skos:exactMatch	mesh	D061766	Proton Therapy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0010896	Ssb	skos:exactMatch	uberon	UBERON:0004199	S-shaped body	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0010912	NP	skos:exactMatch	mesh	C000621033	napabucasin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	C028525	N-phenylmaleimide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D000066829	Neuroprotection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D000070614	Nucleus Pulposus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D000071067	Pneumonia, Necrotizing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D009305	Nasopharynx	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D009437	Neuralgia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D009479	Neuropeptides	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D009687	Nuclear Proteins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D009698	Nucleoproteins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D011141	Polyuria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D019251	Nucleocapsid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D019547	Neck Pain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D019590	Nucleocapsid Proteins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D039921	Neuropilins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D053758	Nanoparticles	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D056489	Nucleoplasmins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010912	NP	skos:exactMatch	mesh	D058632	Neuroprostanes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010927	ORF	skos:exactMatch	doid	DOID:8771	contagious pustular dermatitis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5394763966192538
+vo	0010927	ORF	skos:exactMatch	mesh	D004474	Ecthyma, Contagious	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5394763966192538
+vo	0010944	Eae	skos:exactMatch	mesh	D004681	Encephalomyelitis, Autoimmune, Experimental	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0010971	SurA	skos:exactMatch	uberon	UBERON:0003823	hindlimb zeugopod	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5209235209235209
 vo	0010988	IroN	skos:exactMatch	chebi	CHEBI:18248	iron atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0010997	IroN	skos:exactMatch	chebi	CHEBI:18248	iron atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0011021	CP	skos:exactMatch	chebi	CHEBI:3380	captopril	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0011021	CP	skos:exactMatch	hp	HP:0100021	Cerebral palsy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-vo	0011026	RAP-1	skos:exactMatch	idomal	0001123	RAP-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0011021	CP	skos:exactMatch	mesh	D002547	Cerebral Palsy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011021	CP	skos:exactMatch	pr	PR:P00450	ceruloplasmin (human)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+vo	0011021	CP	skos:exactMatch	uberon	UBERON:0001886	choroid plexus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+vo	0011021	CP	skos:exactMatch	uberon	UBERON:0005343	cortical plate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+vo	0011050	Tax	skos:exactMatch	mesh	D013660	Taxes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011081	Hpd	skos:exactMatch	pr	PR:000008730	4-hydroxyphenylpyruvate dioxygenase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5400948258091115
+vo	0011081	Hpd	skos:exactMatch	pr	PR:P32754	4-hydroxyphenylpyruvate dioxygenase (human)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	C023592	glycocalicin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	C031610	glycolchitin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	C118638	glycol-chitosan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	C121252	glycated chitosan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	C575740	gnetin C	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D005854	Germ Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D005938	Glucocorticoids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D006107	Granulosa Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D009344	Neisseria gonorrhoeae	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D013274	Stomach Neoplasms	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D015726	Giant Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D018302	Neoplasms, Neuroepithelial	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D018858	Germinal Center	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D020048	Blattellidae	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D020397	Goblet Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	mesh	D029761	Garcinia cambogia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	pr	PR:000007956	vitamin K-dependent gamma-carboxylase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5400948258091115
+vo	0011085	Gc	skos:exactMatch	pr	PR:P38435	vitamin K-dependent gamma-carboxylase (human)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5400948258091115
+vo	0011147	NS1	skos:exactMatch	doid	DOID:0060578	Noonan syndrome 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+vo	0011147	NS1	skos:exactMatch	mesh	D009634	Noonan Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011148	NS3	skos:exactMatch	doid	DOID:0060581	Noonan syndrome 3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+vo	0011149	NS5	skos:exactMatch	doid	DOID:0060583	Noonan syndrome 5	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+vo	0011171	HN	skos:exactMatch	mesh	D055882	Nevus, Halo	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011171	HN	skos:exactMatch	ncit	C158173	Hani Chinese	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+vo	0011178	TM-1	skos:exactMatch	mesh	C098227	TM 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0011220	MSP3	skos:exactMatch	doid	DOID:0111386	inclusion body myopathy with early-onset Paget disease of bone with or without frontotemporal dementia 3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 vo	0011231	Glycoprotein	skos:exactMatch	chebi	CHEBI:17089	glycoprotein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0011251	GI	skos:exactMatch	ncit	C158200	Gin Chinese	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
+vo	0011273	TSA	skos:exactMatch	mesh	C481298	theasinensin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	C001205	fanasil, pyrimethamine drug combination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	C059910	perovskite	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	C065446	spantide II	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	C088184	spiropyran	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	C099145	succinyl phosphonate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	C451060	spasmolytic polypeptide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D000072861	Phobia, Social	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D000077319	Pyrolysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D011698	Pursuit, Smooth	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D012559	Schizophrenia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D013156	Splenectomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D019936	Probiotics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D020069	Shoulder Pain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D020188	Sleep Paralysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D047868	Pulmonary Sclerosing Hemangioma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D053545	Spirulina	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D058985	Side-Population Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011276	SP	skos:exactMatch	mesh	D058992	Social Participation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0011276	SP	skos:exactMatch	uberon	UBERON:0004035	cortical subplate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0011306	E1	skos:exactMatch	pr	PR:000011357	NPC intracellular cholesterol transporter 2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0011312	NS1	skos:exactMatch	doid	DOID:0060578	Noonan syndrome 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0011312	NS1	skos:exactMatch	mesh	D009634	Noonan Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0011328	AMN1	skos:exactMatch	mesh	C063665	aminatrone 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5553494124922697
+vo	0011338	TSA	skos:exactMatch	mesh	C481298	theasinensin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0011339	Catalase	skos:exactMatch	pr	PR:000005061	catalase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0012386	OspC	skos:exactMatch	mesh	C067973	1-oleoyl-2-stearoylphosphatidylcholine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5209235209235209
+vo	0012387	DbpA	skos:exactMatch	mesh	C061629	4,5-dibromo-2-pyrrolic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5209235209235209
 vo	0012389	CNA	skos:exactMatch	pr	PR:000003278	serine/threonine-protein phosphatase 2B catalytic subunit alpha isoform	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0012389	CNA	skos:exactMatch	pr	PR:Q08209	serine/threonine-protein phosphatase 2B catalytic subunit alpha isoform (human)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0012391	MecA	skos:exactMatch	mesh	C046756	5'-N-methylcarboxamideadenosine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5209235209235209
 vo	0012403	Rib	skos:exactMatch	chebi	CHEBI:33942	ribose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0012403	Rib	skos:exactMatch	mesh	D012272	Ribs	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0012403	Rib	skos:exactMatch	uberon	UBERON:0002228	rib	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP1060	Matrix Metalloproteinases	debio:0000003	fplx	MMP	MMP	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 wikipathways	WP1176	Matrix Metalloproteinases	debio:0000003	fplx	MMP	MMP	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
