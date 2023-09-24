@@ -19,7 +19,6 @@ curie_map:
   CLO: http://purl.obolibrary.org/obo/CLO_
   DOID: http://purl.obolibrary.org/obo/DOID_
   DRON: http://purl.obolibrary.org/obo/DRON_
-  DeBiO: https://biopragmatics.github.io/debio/
   EFO: http://www.ebi.ac.uk/efo/EFO_
   ENVO: http://purl.obolibrary.org/obo/ENVO_
   FMA: http://purl.org/sig/ont/fma/fma
@@ -59,6 +58,7 @@ curie_map:
   cpt: https://www.aapc.com/codes/cpt-codes/
   cvx: https://biopragmatics.github.io/providers/cvx/
   dc: http://purl.org/dc/elements/1.1/
+  debio: https://biopragmatics.github.io/debio/
   depmap: https://depmap.org/portal/cell_line/
   fplx: https://sorgerlab.github.io/famplex/
   hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/

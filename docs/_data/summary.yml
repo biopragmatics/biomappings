@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 4463
+- count: 4482
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -46,7 +46,7 @@ negative:
 - count: 77
   source: kegg.pathway
   target: mesh
-- count: 70
+- count: 73
   source: mesh
   target: vo
 - count: 59
@@ -232,7 +232,7 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1566
+negative_mapping_count: 1569
 negative_prefix_count: 42
 positive:
 - count: 3106
@@ -268,7 +268,7 @@ positive:
 - count: 190
   source: doid
   target: umls
-- count: 154
+- count: 170
   source: mesh
   target: vo
 - count: 145
@@ -571,7 +571,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 10306
+positive_mapping_count: 10322
 positive_prefix_count: 60
 predictions:
 - count: 11735
@@ -607,6 +607,9 @@ predictions:
 - count: 68
   source: mesh
   target: uberon
+- count: 59
+  source: mesh
+  target: vo
 - count: 55
   source: doid
   target: mesh
@@ -700,7 +703,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 40558
+predictions_mapping_count: 40617
 predictions_prefix_count: 33
 unsure:
 - count: 27

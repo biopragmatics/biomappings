@@ -76,7 +76,7 @@ def get_sssom_df(use_tqdm: bool = False):
                         mapping["source prefix"], mapping["source identifier"], preferred=True
                     ),
                     mapping["source name"],
-                    f'{mapping["relation"]}',
+                    _standardize_curie(mapping["relation"]),
                     predicate_modifier,
                     get_curie(
                         mapping["target prefix"], mapping["target identifier"], preferred=True
@@ -102,7 +102,7 @@ def get_sssom_df(use_tqdm: bool = False):
             (
                 get_curie(mapping["source prefix"], mapping["source identifier"], preferred=True),
                 mapping["source name"],
-                f'{mapping["relation"]}',
+                _standardize_curie(mapping["relation"]),
                 "",  # no predicate modifier
                 get_curie(mapping["target prefix"], mapping["target identifier"], preferred=True),
                 mapping["target name"],
@@ -115,6 +115,13 @@ def get_sssom_df(use_tqdm: bool = False):
 
     df = pd.DataFrame(rows, columns=columns)
     return prefixes, sorted(creators), df
+
+
+def _standardize_curie(curie: str) -> str:
+    prefix, identifier = bioregistry.parse_curie(curie, use_preferred=True)
+    if prefix is None or identifier is None:
+        raise RuntimeError
+    return bioregistry.curie_to_str(prefix, identifier)
 
 
 @click.command()

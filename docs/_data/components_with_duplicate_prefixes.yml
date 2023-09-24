@@ -641,6 +641,21 @@
     link: https://bioregistry.io/vo:0000315
     name: inactivated vaccine
     prefix: vo
+- mesh:D000087507:
+    identifier: D000087507
+    link: https://bioregistry.io/mesh:D000087507
+    name: Vaccine Efficacy
+    prefix: mesh
+  vo:0000247:
+    identifier: '0000247'
+    link: https://bioregistry.io/vo:0000247
+    name: vaccine efficacy
+    prefix: vo
+  vo:0000860:
+    identifier: 0000860
+    link: https://bioregistry.io/vo:0000860
+    name: vaccine effectiveness
+    prefix: vo
 - mesh:D007252:
     identifier: D007252
     link: https://bioregistry.io/mesh:D007252
