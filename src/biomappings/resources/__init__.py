@@ -219,6 +219,15 @@ def load_mappings(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
     return _load_table(path or TRUE_MAPPINGS_PATH)
 
 
+def load_mappings_subset(source: str, target: str) -> Mapping[str, str]:
+    """Get a dictionary of 1-1 mappings from the source prefix to the target prefix."""
+    return {
+        mapping["source identifier"]: mapping["target identifier"]
+        for mapping in load_mappings()
+        if mapping["source prefix"] == source and mapping["target prefix"] == target
+    }
+
+
 def append_true_mappings(
     mappings: Mappings,
     *,
