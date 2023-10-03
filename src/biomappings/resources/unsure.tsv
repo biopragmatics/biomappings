@@ -43,6 +43,8 @@ doid	DOID:7173	cloacogenic carcinoma	skos:exactMatch	mesh	C563020	Anal Canal Car
 doid	DOID:7474	malignant pleural mesothelioma	skos:exactMatch	mesh	D000086002	Mesothelioma, Malignant	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 envo	ENVO:06105012	biota	skos:exactMatch	ncbitaxon	131567	cellular organisms	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.556
 ido	0000436	infectious disease	skos:exactMatch	doid	DOID:0050117	disease by infectious agent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+idomal	0000655	adult	skos:exactMatch	ncit	C17600	Adult	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7623170480313337
+idomal	0000655	adult	skos:exactMatch	uberon	UBERON:0007023	adult organism	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 idomal	0000672	chemical compound	skos:exactMatch	chebi	CHEBI:37577	heteroatomic molecular entity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 idomal	0001067	protein	skos:exactMatch	chebi	CHEBI:16541	protein polypeptide chain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5400948258091115
 ito	07816	CNN	skos:exactMatch	aio	DCN	Deep Convolutional Network	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
