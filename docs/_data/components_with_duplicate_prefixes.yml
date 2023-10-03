@@ -183,6 +183,21 @@
     link: https://bioregistry.io/vo:0000771
     name: BCG vaccine
     prefix: vo
+- cvx:13:
+    identifier: '13'
+    link: https://bioregistry.io/cvx:13
+    name: tetanus immune globulin
+    prefix: cvx
+  cvx:180:
+    identifier: '180'
+    link: https://bioregistry.io/cvx:180
+    name: tetanus immune globulin
+    prefix: cvx
+  vo:0005452:
+    identifier: '0005452'
+    link: https://bioregistry.io/vo:0005452
+    name: tetanus immune globulin
+    prefix: vo
 - doid:11263:
     identifier: DOID:11263
     link: https://bioregistry.io/doid:11263
@@ -255,6 +270,21 @@
     identifier: '0000643'
     link: https://bioregistry.io/idomal:0000643
     name: antibiotic
+    prefix: idomal
+- go:0032991:
+    identifier: GO:0032991
+    link: https://bioregistry.io/go:0032991
+    name: protein-containing complex
+    prefix: go
+  go:0043234:
+    identifier: GO:0043234
+    link: https://bioregistry.io/go:0043234
+    name: protein complex
+    prefix: go
+  idomal:0000732:
+    identifier: '0000732'
+    link: https://bioregistry.io/idomal:0000732
+    name: protein complex
     prefix: idomal
 - chebi:22063:
     identifier: CHEBI:22063

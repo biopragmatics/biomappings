@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 4482
+- count: 4550
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -155,6 +155,9 @@ negative:
   source: bto
   target: cl
 - count: 3
+  source: doid
+  target: idomal
+- count: 3
   source: ito
   target: mi
 - count: 3
@@ -178,6 +181,9 @@ negative:
 - count: 2
   source: hp
   target: ncbitaxon
+- count: 2
+  source: idomal
+  target: pr
 - count: 2
   source: miapa
   target: ncbitaxon
@@ -216,6 +222,12 @@ negative:
   target: ncbitaxon
 - count: 1
   source: idomal
+  target: maxo
+- count: 1
+  source: idomal
+  target: ncbitaxon
+- count: 1
+  source: idomal
   target: vo
 - count: 1
   source: ncbitaxon
@@ -232,8 +244,8 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1569
-negative_prefix_count: 42
+negative_mapping_count: 1576
+negative_prefix_count: 43
 positive:
 - count: 3106
   source: chebi
@@ -319,6 +331,9 @@ positive:
 - count: 54
   source: bto
   target: uberon
+- count: 48
+  source: cvx
+  target: vo
 - count: 40
   source: aio
   target: ito
@@ -358,6 +373,9 @@ positive:
 - count: 13
   source: apollosv
   target: ido
+- count: 13
+  source: idomal
+  target: ncbitaxon
 - count: 11
   source: idomal
   target: vo
@@ -367,15 +385,12 @@ positive:
 - count: 9
   source: chebi
   target: ido
+- count: 9
+  source: go
+  target: idomal
 - count: 8
   source: cpt
   target: vo
-- count: 8
-  source: idomal
-  target: ncbitaxon
-- count: 8
-  source: go
-  target: idomal
 - count: 8
   source: mesh
   target: reactome
@@ -385,6 +400,9 @@ positive:
 - count: 6
   source: chebi
   target: ncit
+- count: 6
+  source: hp
+  target: idomal
 - count: 6
   source: idomal
   target: uberon
@@ -397,15 +415,15 @@ positive:
 - count: 5
   source: doid
   target: ido
-- count: 5
-  source: hp
-  target: idomal
 - count: 4
   source: ccle
   target: depmap
 - count: 4
   source: clo
   target: efo
+- count: 4
+  source: doid
+  target: idomal
 - count: 4
   source: pr
   target: vo
@@ -446,8 +464,8 @@ positive:
   source: ido
   target: vsmo
 - count: 2
-  source: doid
-  target: idomal
+  source: idomal
+  target: obi
 - count: 2
   source: hp
   target: oae
@@ -507,13 +525,13 @@ positive:
   target: opmi
 - count: 1
   source: idomal
-  target: obi
-- count: 1
-  source: idomal
   target: miro
 - count: 1
   source: idomal
   target: pr
+- count: 1
+  source: idomal
+  target: pco
 - count: 1
   source: caro
   target: idomal
@@ -571,8 +589,8 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 10322
-positive_prefix_count: 60
+positive_mapping_count: 10381
+positive_prefix_count: 61
 predictions:
 - count: 11735
   source: mesh
@@ -613,36 +631,33 @@ predictions:
 - count: 55
   source: doid
   target: mesh
-- count: 48
-  source: cvx
-  target: vo
 - count: 39
   source: doid
   target: efo
 - count: 30
   source: clo
   target: efo
-- count: 10
-  source: doid
-  target: idomal
-- count: 10
+- count: 9
   source: go
   target: idomal
-- count: 10
-  source: idomal
-  target: ncbitaxon
-- count: 8
-  source: idomal
-  target: pr
 - count: 6
   source: cellosaurus
   target: clo
 - count: 6
   source: idomal
-  target: uberon
+  target: pr
 - count: 5
   source: clo
   target: mesh
+- count: 5
+  source: doid
+  target: idomal
+- count: 5
+  source: idomal
+  target: uberon
+- count: 4
+  source: idomal
+  target: ncbitaxon
 - count: 2
   source: ido
   target: pato
@@ -658,18 +673,6 @@ predictions:
 - count: 2
   source: idomal
   target: obo
-- count: 2
-  source: idomal
-  target: maxo
-- count: 2
-  source: idomal
-  target: obi
-- count: 2
-  source: idomal
-  target: ncit
-- count: 2
-  source: hp
-  target: idomal
 - count: 1
   source: go
   target: ido
@@ -693,18 +696,27 @@ predictions:
   target: nbo
 - count: 1
   source: idomal
+  target: obi
+- count: 1
+  source: idomal
   target: ogms
 - count: 1
   source: idomal
-  target: pco
+  target: maxo
+- count: 1
+  source: hp
+  target: idomal
+- count: 1
+  source: idomal
+  target: ncit
 - count: 1
   source: caro
   target: idomal
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 40617
-predictions_prefix_count: 33
+predictions_mapping_count: 40549
+predictions_prefix_count: 31
 unsure:
 - count: 27
   source: doid
@@ -782,6 +794,12 @@ unsure:
   source: doid
   target: ido
 - count: 1
+  source: idomal
+  target: ncit
+- count: 1
+  source: idomal
+  target: uberon
+- count: 1
   source: hgnc
   target: mesh
 - count: 1
@@ -790,5 +808,5 @@ unsure:
 - count: 1
   source: pr
   target: vo
-unsure_mapping_count: 94
+unsure_mapping_count: 96
 unsure_prefix_count: 28
