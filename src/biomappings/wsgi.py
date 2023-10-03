@@ -63,6 +63,8 @@ class State(BaseModel):
     same_text: Optional[bool] = None
     show_relations: bool = True
     show_lines: bool = False
+    # if true, remove mappings whose subjects or objects appear multiple times in the given prefix
+    remove_mn: bool = False
 
     @classmethod
     def from_flask_globals(cls) -> "State":
@@ -79,6 +81,7 @@ class State(BaseModel):
             prefix=flask.request.args.get("prefix"),
             sort=flask.request.args.get("sort"),
             same_text=_get_bool_arg("same_text"),
+            remove_mn=_get_bool_arg("remove_mn"),
             show_relations=_get_bool_arg("show_relations") or current_app.config["SHOW_RELATIONS"],
             show_lines=_get_bool_arg("show_lines") or current_app.config["SHOW_LINES"],
         )
@@ -188,6 +191,7 @@ class Controller:
             sort=state.sort,
             same_text=state.same_text,
             provenance=state.provenance,
+            remove_mn=state.remove_mn,
         )
 
     def predictions(
@@ -204,6 +208,7 @@ class Controller:
         sort: Optional[str] = None,
         same_text: Optional[bool] = None,
         provenance: Optional[str] = None,
+        remove_mn: Optional[bool] = None,
     ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
@@ -236,6 +241,7 @@ class Controller:
             sort=sort,
             same_text=same_text,
             provenance=provenance,
+            remove_mn=remove_mn,
         )
         if offset is not None:
             try:
@@ -302,6 +308,7 @@ class Controller:
         sort: Optional[str] = None,
         same_text: Optional[bool] = None,
         provenance: Optional[str] = None,
+        remove_mn: Optional[bool] = None,
     ):
         it: Iterable[Tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
         if self.target_ids:
@@ -353,6 +360,10 @@ class Controller:
                         it, key=lambda l_p: (l_p[1]["target prefix"], l_p[1]["target identifier"])
                     )
                 )
+
+        if remove_mn:
+            _p = list(it)
+
 
         if same_text:
             it = (
