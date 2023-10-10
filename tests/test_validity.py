@@ -14,9 +14,7 @@ from biomappings import (
 class TestIntegrity(testing.IntegrityTestCase):
     """Data integrity tests."""
 
-    def setUp(self) -> None:
-        """Set up the test case."""
-        self.mappings = load_mappings()
-        self.predictions = load_predictions()
-        self.incorrect = load_false_mappings()
-        self.unsure = load_unsure()
+    mappings = load_mappings()
+    predictions = load_predictions()
+    incorrect = load_false_mappings()
+    unsure = load_unsure()

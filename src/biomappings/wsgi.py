@@ -118,6 +118,8 @@ def get_app(
         negatives_path=negatives_path,
         unsure_path=unsure_path,
     )
+    if not controller._predictions and predictions_path is not None:
+        raise RuntimeError(f"There are no predictions to curate in {predictions_path}")
     app_.config["controller"] = controller
     flask_bootstrap.Bootstrap4(app_)
     app_.register_blueprint(blueprint)
