@@ -1441,10 +1441,18 @@ vo	0010927	ORF	skos:exactMatch	mesh	D004474	Ecthyma, Contagious	semapv:ManualMap
 vo	0010944	Eae	skos:exactMatch	mesh	D004681	Encephalomyelitis, Autoimmune, Experimental	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5400948258091115
 vo	0010971	SurA	skos:exactMatch	uberon	UBERON:0003823	hindlimb zeugopod	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5209235209235209
 vo	0010988	IroN	skos:exactMatch	chebi	CHEBI:18248	iron atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0010988	IroN	skos:exactMatch	drugbank	DB00115	Cyanocobalamin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.521
+vo	0010988	IroN	skos:exactMatch	drugbank	DB00126	Ascorbic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.521
+vo	0010988	IroN	skos:exactMatch	drugbank	DB00158	Folic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.521
 vo	0010988	IroN	skos:exactMatch	drugbank	DB01592	Iron	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.743
+vo	0010988	IroN	skos:exactMatch	drugbank	DB11089	Docusate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.521
 vo	0010988	IroN	skos:exactMatch	mesh	D007501	Iron	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	0.74
 vo	0010997	IroN	skos:exactMatch	chebi	CHEBI:18248	iron atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+vo	0010997	IroN	skos:exactMatch	drugbank	DB00115	Cyanocobalamin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.521
+vo	0010997	IroN	skos:exactMatch	drugbank	DB00126	Ascorbic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.521
+vo	0010997	IroN	skos:exactMatch	drugbank	DB00158	Folic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.521
 vo	0010997	IroN	skos:exactMatch	drugbank	DB01592	Iron	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.743
+vo	0010997	IroN	skos:exactMatch	drugbank	DB11089	Docusate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.521
 vo	0010997	IroN	skos:exactMatch	mesh	D007501	Iron	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	0.74
 vo	0011021	CP	skos:exactMatch	chebi	CHEBI:3380	captopril	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0011021	CP	skos:exactMatch	hp	HP:0100021	Cerebral palsy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
