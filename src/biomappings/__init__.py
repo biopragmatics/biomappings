@@ -8,6 +8,7 @@ from .resources import (  # noqa:F401
     PredictionTuple,
     load_false_mappings,
     load_mappings,
+    load_mappings_subset,
     load_predictions,
     load_unsure,
 )
