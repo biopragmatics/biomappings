@@ -4,6 +4,7 @@
 
 import logging
 from collections import defaultdict
+from pathlib import Path
 from typing import Iterable, Optional, Tuple, Union
 
 import bioregistry
@@ -27,6 +28,7 @@ def append_gilda_predictions(
     custom_filter: Optional[CMapping] = None,
     unnamed: Optional[Iterable[str]] = None,
     identifiers_are_names: bool = False,
+    path: Optional[Path] = None,
 ) -> None:
     """Add gilda predictions to the Biomappings predictions.tsv file.
 
@@ -38,6 +40,7 @@ def append_gilda_predictions(
         Any source prefix, target prefix, source id combinations in this dictionary will be filtered.
     :param unnamed: An optional list of prefixes whose identifiers should be considered as names (e.g., CCLE, FPLX)
     :param identifiers_are_names: The source prefix's identifiers should be considered as names
+    :param path: A custom path to predictions TSV file
     """
     if isinstance(target_prefixes, str):
         target_prefixes = [target_prefixes]
@@ -53,7 +56,7 @@ def append_gilda_predictions(
         predictions = filter_custom(predictions, custom_filter)
     predictions = filter_existing_xrefs(predictions, [prefix, *target_prefixes])
     predictions = sorted(predictions, key=_key)
-    append_prediction_tuples(predictions)
+    append_prediction_tuples(predictions, path=path)
 
 
 def iter_prediction_tuples(

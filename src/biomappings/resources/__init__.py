@@ -349,6 +349,7 @@ def append_prediction_tuples(
     deduplicate: bool = True,
     sort: bool = True,
     standardize: bool = True,
+    path: Optional[Path] = None,
 ) -> None:
     """Append new lines to the predictions table that come as canonical tuples."""
     append_predictions(
@@ -356,6 +357,7 @@ def append_prediction_tuples(
         deduplicate=deduplicate,
         sort=sort,
         standardize=standardize,
+        path=path,
     )
 
 
@@ -365,6 +367,7 @@ def append_predictions(
     deduplicate: bool = True,
     sort: bool = True,
     standardize: bool = True,
+    path: Optional[Path] = None,
 ) -> None:
     """Append new lines to the predictions table."""
     if standardize:
@@ -383,9 +386,11 @@ def append_predictions(
             mapping for mapping in mappings if get_canonical_tuple(mapping) not in existing_mappings
         )
 
-    _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, mode="a")
+    if path is None:
+        path = PREDICTIONS_PATH
+    _write_helper(PREDICTIONS_HEADER, mappings, path, mode="a")
     if sort:
-        lint_predictions()
+        lint_predictions(path=path)
 
 
 def lint_predictions(
