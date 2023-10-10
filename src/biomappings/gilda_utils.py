@@ -9,12 +9,19 @@ from typing import Iterable, Optional, Tuple, Union
 
 import bioregistry
 import pyobo
+import pyobo.gilda_utils
 from gilda.grounder import Grounder
-from pyobo import get_xref
-from pyobo.gilda_utils import get_grounder, iter_gilda_prediction_tuples
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import CMapping
+
+__all__ = [
+    "append_gilda_predictions",
+    "iter_prediction_tuples",
+    "filter_custom",
+    "filter_existing_xrefs",
+    "has_mapping",
+]
 
 logger = logging.getLogger(__name__)
 
@@ -44,7 +51,7 @@ def append_gilda_predictions(
     """
     if isinstance(target_prefixes, str):
         target_prefixes = [target_prefixes]
-    grounder = get_grounder(target_prefixes, unnamed=unnamed)
+    grounder = pyobo.gilda_utils.get_grounder(target_prefixes, unnamed=unnamed)
     predictions = iter_prediction_tuples(
         prefix,
         relation=relation,
@@ -68,7 +75,7 @@ def iter_prediction_tuples(
     identifiers_are_names: bool = False,
 ) -> Iterable[PredictionTuple]:
     """Iterate over prediction tuples for a given prefix."""
-    for t in iter_gilda_prediction_tuples(
+    for t in pyobo.gilda_utils.iter_gilda_prediction_tuples(
         prefix=prefix,
         relation=relation,
         grounder=grounder,
@@ -125,7 +132,7 @@ def filter_existing_xrefs(
 
 def has_mapping(prefix: str, identifier: str, target_prefix: str) -> bool:
     """Check if there's already a mapping available for this entity in a target namespace."""
-    return get_xref(prefix, identifier, target_prefix) is not None
+    return pyobo.get_xref(prefix, identifier, target_prefix) is not None
 
 
 def _key(t: PredictionTuple) -> Tuple[str, str]:

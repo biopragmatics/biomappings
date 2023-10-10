@@ -1,6 +1,6 @@
 Biomappings |release| Documentation
 ===================================
-Community curated mappings between biomedical entities.
+.. automodule:: biomappings
 
 Installation
 ------------

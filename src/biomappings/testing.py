@@ -220,7 +220,23 @@ class IntegrityTestCase(unittest.TestCase):
 
 
 class PathIntegrityTestCase(IntegrityTestCase):
-    """A test case that can be configured with paths."""
+    """A test case that can be configured with paths.
+
+    For example, in this might be used in a custom instance of Biomappings
+    like in the following:
+
+    .. code-block:: python
+
+        from biomappings.testing import PathIntegrityTestCase
+
+        HERE = Path(__file__).parent.resolve()
+
+        class TestCustom(PathIntegrityTestCase):
+            predictions_path = HERE.joinpath("predictions.tsv")
+            positives_path = HERE.joinpath("positive.tsv")
+            negatives_path = HERE.joinpath("negative.tsv")
+            unsure_path = HERE.joinpath("unsure.tsv")
+    """
 
     predictions_path: ClassVar[Union[str, Path]]
     positives_path: ClassVar[Union[str, Path]]
