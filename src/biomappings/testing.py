@@ -5,6 +5,8 @@
 import itertools as itt
 import unittest
 from collections import defaultdict
+from pathlib import Path
+from typing import ClassVar, Union
 
 import bioregistry
 
@@ -14,6 +16,8 @@ from biomappings.resources import (
     MappingTuple,
     PredictionTuple,
     load_curators,
+    load_mappings,
+    load_predictions,
     mapping_sort_key,
 )
 from biomappings.resources.semapv import get_semapv
@@ -23,6 +27,11 @@ from biomappings.utils import (
     check_valid_prefix_id,
     get_canonical_tuple,
 )
+
+__all__ = [
+    "IntegrityTestCase",
+    "PathIntegrityTestCase",
+]
 
 semapv = get_semapv()
 
@@ -208,3 +217,20 @@ class IntegrityTestCase(unittest.TestCase):
             msg="Unsure curations are not sorted",
         )
         self.assert_no_internal_redundancies(self.unsure, MappingTuple)
+
+
+class PathIntegrityTestCase(IntegrityTestCase):
+    """A test case that can be configured with paths."""
+
+    predictions_path: ClassVar[Union[str, Path]]
+    positives_path: ClassVar[Union[str, Path]]
+    negatives_path: ClassVar[Union[str, Path]]
+    unsure_path: ClassVar[Union[str, Path]]
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        """Set up the test case."""
+        cls.predictions = load_predictions(path=cls.predictions_path)
+        cls.mappings = load_mappings(path=cls.positives_path)
+        cls.incorrect = load_mappings(path=cls.negatives_path)
+        cls.unsure = load_mappings(path=cls.unsure_path)
