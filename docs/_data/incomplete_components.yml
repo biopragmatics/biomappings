@@ -946,11 +946,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: mesh:D000072283
-      identifier: D000072283
-      link: https://bioregistry.io/mesh:D000072283
-      name: A549 Cells
-      prefix: mesh
+      curie: clo:0001601
+      identifier: '0001601'
+      link: https://bioregistry.io/clo:0001601
+      name: A549 cell
+      prefix: clo
   - source:
       curie: cellosaurus:0023
       identifier: CVCL_0023
@@ -958,11 +958,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: clo:0001601
-      identifier: '0001601'
-      link: https://bioregistry.io/clo:0001601
-      name: A549 cell
-      prefix: clo
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
   - source:
       curie: cellosaurus:0023
       identifier: CVCL_0023
@@ -1978,11 +1978,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:1334
-      identifier: CVCL_1334
-      link: https://bioregistry.io/cellosaurus:1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://bioregistry.io/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: bto:0006459
       identifier: BTO:0006459
@@ -1990,11 +1990,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://bioregistry.io/efo:0006612
+      curie: cellosaurus:1334
+      identifier: CVCL_1334
+      link: https://bioregistry.io/cellosaurus:1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: cellosaurus:1334
       identifier: CVCL_1334
@@ -2065,10 +2065,10 @@
       name: MDA-MB-231
       prefix: ccle
     target:
-      curie: clo:0037291
-      identifier: 0037291
-      link: https://bioregistry.io/clo:0037291
-      name: MDAMB231 cell
+      curie: clo:0007634
+      identifier: '0007634'
+      link: https://bioregistry.io/clo:0007634
+      name: MDA-MB-231 cell
       prefix: clo
   - source:
       curie: ccle:MDAMB231_BREAST
@@ -2077,10 +2077,10 @@
       name: MDA-MB-231
       prefix: ccle
     target:
-      curie: clo:0007634
-      identifier: '0007634'
-      link: https://bioregistry.io/clo:0007634
-      name: MDA-MB-231 cell
+      curie: clo:0037291
+      identifier: 0037291
+      link: https://bioregistry.io/clo:0037291
+      name: MDAMB231 cell
       prefix: clo
   - source:
       curie: ccle:MDAMB231_BREAST
@@ -2251,11 +2251,11 @@
       name: RH-30
       prefix: ccle
     target:
-      curie: ccle:SJRH30_SOFT_TISSUE
-      identifier: SJRH30_SOFT_TISSUE
-      link: https://bioregistry.io/ccle:SJRH30_SOFT_TISSUE
+      curie: efo:0002329
+      identifier: 0002329
+      link: https://bioregistry.io/efo:0002329
       name: SJRH30
-      prefix: ccle
+      prefix: efo
   - source:
       curie: ccle:RH30_SOFT_TISSUE
       identifier: RH30_SOFT_TISSUE
@@ -2263,11 +2263,11 @@
       name: RH-30
       prefix: ccle
     target:
-      curie: efo:0002329
-      identifier: 0002329
-      link: https://bioregistry.io/efo:0002329
+      curie: ccle:SJRH30_SOFT_TISSUE
+      identifier: SJRH30_SOFT_TISSUE
+      link: https://bioregistry.io/ccle:SJRH30_SOFT_TISSUE
       name: SJRH30
-      prefix: efo
+      prefix: ccle
   - source:
       curie: cellosaurus:0041
       identifier: CVCL_0041
@@ -2698,11 +2698,11 @@
       name: antiviral
       prefix: ido
     target:
-      curie: mesh:D000998
-      identifier: D000998
-      link: https://bioregistry.io/mesh:D000998
-      name: Antiviral Agents
-      prefix: mesh
+      curie: ncit:C281
+      identifier: C281
+      link: https://bioregistry.io/ncit:C281
+      name: Antiviral Agent
+      prefix: ncit
   - source:
       curie: ido:0000559
       identifier: 0000559
@@ -2710,11 +2710,11 @@
       name: antiviral
       prefix: ido
     target:
-      curie: ncit:C281
-      identifier: C281
-      link: https://bioregistry.io/ncit:C281
-      name: Antiviral Agent
-      prefix: ncit
+      curie: mesh:D000998
+      identifier: D000998
+      link: https://bioregistry.io/mesh:D000998
+      name: Antiviral Agents
+      prefix: mesh
   nodes:
     chebi:22587:
       identifier: CHEBI:22587
@@ -3392,6 +3392,18 @@
       name: BCG
       prefix: cpt
     target:
+      curie: dron:00012890
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
+      name: BCG Vaccine
+      prefix: dron
+  - source:
+      curie: cpt:90585
+      identifier: '90585'
+      link: https://bioregistry.io/cpt:90585
+      name: BCG
+      prefix: cpt
+    target:
       curie: cpt:90728
       identifier: '90728'
       link: https://bioregistry.io/cpt:90728
@@ -3416,11 +3428,11 @@
       name: BCG
       prefix: cpt
     target:
-      curie: dron:00012890
-      identifier: 00012890
-      link: https://bioregistry.io/dron:00012890
-      name: BCG Vaccine
-      prefix: dron
+      curie: drugbank:DB12768
+      identifier: DB12768
+      link: https://bioregistry.io/drugbank:DB12768
+      name: BCG vaccine
+      prefix: drugbank
   - source:
       curie: cpt:90585
       identifier: '90585'
@@ -3470,6 +3482,18 @@
       name: BCG Vaccine
       prefix: ncit
   - source:
+      curie: cpt:90728
+      identifier: '90728'
+      link: https://bioregistry.io/cpt:90728
+      name: BCG
+      prefix: cpt
+    target:
+      curie: drugbank:DB12768
+      identifier: DB12768
+      link: https://bioregistry.io/drugbank:DB12768
+      name: BCG vaccine
+      prefix: drugbank
+  - source:
       curie: cvx:19
       identifier: '19'
       link: https://bioregistry.io/cvx:19
@@ -3481,6 +3505,30 @@
       link: https://bioregistry.io/dron:00012890
       name: BCG Vaccine
       prefix: dron
+  - source:
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
+    target:
+      curie: ncit:C298
+      identifier: C298
+      link: https://bioregistry.io/ncit:C298
+      name: BCG Vaccine
+      prefix: ncit
+  - source:
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
+    target:
+      curie: drugbank:DB12768
+      identifier: DB12768
+      link: https://bioregistry.io/drugbank:DB12768
+      name: BCG vaccine
+      prefix: drugbank
   - source:
       curie: cvx:19
       identifier: '19'
@@ -3494,17 +3542,17 @@
       name: BCG vaccine
       prefix: vo
   - source:
-      curie: cvx:19
-      identifier: '19'
-      link: https://bioregistry.io/cvx:19
-      name: Bacillus Calmette-Guerin vaccine
-      prefix: cvx
-    target:
-      curie: ncit:C298
-      identifier: C298
-      link: https://bioregistry.io/ncit:C298
+      curie: dron:00012890
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
       name: BCG Vaccine
-      prefix: ncit
+      prefix: dron
+    target:
+      curie: drugbank:DB12768
+      identifier: DB12768
+      link: https://bioregistry.io/drugbank:DB12768
+      name: BCG vaccine
+      prefix: drugbank
   - source:
       curie: dron:00012890
       identifier: 00012890
@@ -3523,6 +3571,30 @@
       link: https://bioregistry.io/dron:00012890
       name: BCG Vaccine
       prefix: dron
+    target:
+      curie: ncit:C298
+      identifier: C298
+      link: https://bioregistry.io/ncit:C298
+      name: BCG Vaccine
+      prefix: ncit
+  - source:
+      curie: drugbank:DB12768
+      identifier: DB12768
+      link: https://bioregistry.io/drugbank:DB12768
+      name: BCG vaccine
+      prefix: drugbank
+    target:
+      curie: mesh:D001500
+      identifier: D001500
+      link: https://bioregistry.io/mesh:D001500
+      name: BCG Vaccine
+      prefix: mesh
+  - source:
+      curie: drugbank:DB12768
+      identifier: DB12768
+      link: https://bioregistry.io/drugbank:DB12768
+      name: BCG vaccine
+      prefix: drugbank
     target:
       curie: ncit:C298
       identifier: C298
@@ -3562,6 +3634,11 @@
       link: https://bioregistry.io/dron:00012890
       name: BCG Vaccine
       prefix: dron
+    drugbank:DB12768:
+      identifier: DB12768
+      link: https://bioregistry.io/drugbank:DB12768
+      name: BCG vaccine
+      prefix: drugbank
     mesh:D001500:
       identifier: D001500
       link: https://bioregistry.io/mesh:D001500
@@ -3776,11 +3853,11 @@
       name: measles
       prefix: cpt
     target:
-      curie: cvx:05
-      identifier: '05'
-      link: https://bioregistry.io/cvx:05
-      name: measles virus vaccine
-      prefix: cvx
+      curie: vo:0000654
+      identifier: '0000654'
+      link: https://bioregistry.io/vo:0000654
+      name: Measles virus vaccine
+      prefix: vo
   - source:
       curie: cpt:90705
       identifier: '90705'
@@ -3788,11 +3865,11 @@
       name: measles
       prefix: cpt
     target:
-      curie: vo:0000654
-      identifier: '0000654'
-      link: https://bioregistry.io/vo:0000654
-      name: Measles virus vaccine
-      prefix: vo
+      curie: cvx:05
+      identifier: '05'
+      link: https://bioregistry.io/cvx:05
+      name: measles virus vaccine
+      prefix: cvx
   - source:
       curie: cvx:05
       identifier: '05'
@@ -3834,36 +3911,48 @@
       name: rubella
       prefix: cpt
     target:
-      curie: cvx:06
-      identifier: '06'
-      link: https://bioregistry.io/cvx:06
-      name: rubella virus vaccine
-      prefix: cvx
-  - source:
-      curie: cpt:90706
-      identifier: '90706'
-      link: https://bioregistry.io/cpt:90706
-      name: rubella
-      prefix: cpt
-    target:
-      curie: dron:00012200
-      identifier: '00012200'
-      link: https://bioregistry.io/dron:00012200
-      name: Rubella virus vaccine
-      prefix: dron
-  - source:
-      curie: cpt:90706
-      identifier: '90706'
-      link: https://bioregistry.io/cpt:90706
-      name: rubella
-      prefix: cpt
-    target:
       curie: vo:0010637
       identifier: '0010637'
       link: https://bioregistry.io/vo:0010637
       name: Rubella virus vaccine
       prefix: vo
   - source:
+      curie: cpt:90706
+      identifier: '90706'
+      link: https://bioregistry.io/cpt:90706
+      name: rubella
+      prefix: cpt
+    target:
+      curie: cvx:06
+      identifier: '06'
+      link: https://bioregistry.io/cvx:06
+      name: rubella virus vaccine
+      prefix: cvx
+  - source:
+      curie: cpt:90706
+      identifier: '90706'
+      link: https://bioregistry.io/cpt:90706
+      name: rubella
+      prefix: cpt
+    target:
+      curie: dron:00012200
+      identifier: '00012200'
+      link: https://bioregistry.io/dron:00012200
+      name: Rubella virus vaccine
+      prefix: dron
+  - source:
+      curie: cpt:90706
+      identifier: '90706'
+      link: https://bioregistry.io/cpt:90706
+      name: rubella
+      prefix: cpt
+    target:
+      curie: drugbank:DB10317
+      identifier: DB10317
+      link: https://bioregistry.io/drugbank:DB10317
+      name: Rubella virus vaccine
+      prefix: drugbank
+  - source:
       curie: cvx:06
       identifier: '06'
       link: https://bioregistry.io/cvx:06
@@ -3875,6 +3964,18 @@
       link: https://bioregistry.io/dron:00012200
       name: Rubella virus vaccine
       prefix: dron
+  - source:
+      curie: cvx:06
+      identifier: '06'
+      link: https://bioregistry.io/cvx:06
+      name: rubella virus vaccine
+      prefix: cvx
+    target:
+      curie: drugbank:DB10317
+      identifier: DB10317
+      link: https://bioregistry.io/drugbank:DB10317
+      name: Rubella virus vaccine
+      prefix: drugbank
   - source:
       curie: cvx:06
       identifier: '06'
@@ -3893,6 +3994,30 @@
       link: https://bioregistry.io/dron:00012200
       name: Rubella virus vaccine
       prefix: dron
+    target:
+      curie: mesh:D012411
+      identifier: D012411
+      link: https://bioregistry.io/mesh:D012411
+      name: Rubella Vaccine
+      prefix: mesh
+  - source:
+      curie: dron:00012200
+      identifier: '00012200'
+      link: https://bioregistry.io/dron:00012200
+      name: Rubella virus vaccine
+      prefix: dron
+    target:
+      curie: drugbank:DB10317
+      identifier: DB10317
+      link: https://bioregistry.io/drugbank:DB10317
+      name: Rubella virus vaccine
+      prefix: drugbank
+  - source:
+      curie: drugbank:DB10317
+      identifier: DB10317
+      link: https://bioregistry.io/drugbank:DB10317
+      name: Rubella virus vaccine
+      prefix: drugbank
     target:
       curie: mesh:D012411
       identifier: D012411
@@ -3915,6 +4040,11 @@
       link: https://bioregistry.io/dron:00012200
       name: Rubella virus vaccine
       prefix: dron
+    drugbank:DB10317:
+      identifier: DB10317
+      link: https://bioregistry.io/drugbank:DB10317
+      name: Rubella virus vaccine
+      prefix: drugbank
     mesh:D012411:
       identifier: D012411
       link: https://bioregistry.io/mesh:D012411
@@ -3991,11 +4121,11 @@
       name: plague
       prefix: cpt
     target:
-      curie: vo:0000648
-      identifier: 0000648
-      link: https://bioregistry.io/vo:0000648
-      name: Yersinia pestis vaccine
-      prefix: vo
+      curie: cvx:23
+      identifier: '23'
+      link: https://bioregistry.io/cvx:23
+      name: plague vaccine
+      prefix: cvx
   - source:
       curie: cpt:90727
       identifier: '90727'
@@ -4003,11 +4133,11 @@
       name: plague
       prefix: cpt
     target:
-      curie: cvx:23
-      identifier: '23'
-      link: https://bioregistry.io/cvx:23
-      name: plague vaccine
-      prefix: cvx
+      curie: vo:0000648
+      identifier: 0000648
+      link: https://bioregistry.io/vo:0000648
+      name: Yersinia pestis vaccine
+      prefix: vo
   - source:
       curie: cvx:23
       identifier: '23'
@@ -4165,11 +4295,11 @@
       name: yellow fever vaccine
       prefix: cvx
     target:
-      curie: vo:0000123
-      identifier: '0000123'
-      link: https://bioregistry.io/vo:0000123
-      name: Yellow fever virus vaccine
-      prefix: vo
+      curie: ncit:C96396
+      identifier: C96396
+      link: https://bioregistry.io/ncit:C96396
+      name: Yellow Fever Vaccine
+      prefix: ncit
   - source:
       curie: cvx:37
       identifier: '37'
@@ -4177,11 +4307,11 @@
       name: yellow fever vaccine
       prefix: cvx
     target:
-      curie: ncit:C96396
-      identifier: C96396
-      link: https://bioregistry.io/ncit:C96396
-      name: Yellow Fever Vaccine
-      prefix: ncit
+      curie: vo:0000123
+      identifier: '0000123'
+      link: https://bioregistry.io/vo:0000123
+      name: Yellow fever virus vaccine
+      prefix: vo
   - source:
       curie: ncit:C96396
       identifier: C96396
@@ -5661,11 +5791,11 @@
       name: lung abscess
       prefix: doid
     target:
-      curie: ncit:C99090
-      identifier: C99090
-      link: https://bioregistry.io/ncit:C99090
-      name: Lung Abscess
-      prefix: ncit
+      curie: hp:0025044
+      identifier: HP:0025044
+      link: https://bioregistry.io/hp:0025044
+      name: Lung abscess
+      prefix: hp
   - source:
       curie: doid:0060317
       identifier: DOID:0060317
@@ -5673,11 +5803,11 @@
       name: lung abscess
       prefix: doid
     target:
-      curie: hp:0025044
-      identifier: HP:0025044
-      link: https://bioregistry.io/hp:0025044
-      name: Lung abscess
-      prefix: hp
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
+      name: Lung Abscess
+      prefix: ncit
   - source:
       curie: hp:0025044
       identifier: HP:0025044
@@ -5772,11 +5902,11 @@
       name: cardiac arrest
       prefix: efo
     target:
-      curie: hp:0001695
-      identifier: HP:0001695
-      link: https://bioregistry.io/hp:0001695
-      name: Cardiac arrest
-      prefix: hp
+      curie: oae:0000461
+      identifier: '0000461'
+      link: https://bioregistry.io/oae:0000461
+      name: cardiac arrest
+      prefix: oae
   - source:
       curie: efo:0009492
       identifier: 0009492
@@ -5784,11 +5914,11 @@
       name: cardiac arrest
       prefix: efo
     target:
-      curie: oae:0000461
-      identifier: '0000461'
-      link: https://bioregistry.io/oae:0000461
-      name: cardiac arrest
-      prefix: oae
+      curie: hp:0001695
+      identifier: HP:0001695
+      link: https://bioregistry.io/hp:0001695
+      name: Cardiac arrest
+      prefix: hp
   nodes:
     doid:0060319:
       identifier: DOID:0060319
@@ -7082,11 +7212,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: hp:0002912
-      identifier: HP:0002912
-      link: https://bioregistry.io/hp:0002912
-      name: Methylmalonic acidemia
-      prefix: hp
+      curie: mondo:0002012
+      identifier: '0002012'
+      link: https://bioregistry.io/mondo:0002012
+      name: methylmalonic acidemia
+      prefix: mondo
   - source:
       curie: doid:14749
       identifier: DOID:14749
@@ -7094,11 +7224,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: mondo:0002012
-      identifier: '0002012'
-      link: https://bioregistry.io/mondo:0002012
-      name: methylmalonic acidemia
-      prefix: mondo
+      curie: hp:0002912
+      identifier: HP:0002912
+      link: https://bioregistry.io/hp:0002912
+      name: Methylmalonic acidemia
+      prefix: hp
   - source:
       curie: hp:0002912
       identifier: HP:0002912
@@ -7887,11 +8017,11 @@
       name: antimicrobial
       prefix: ido
     target:
-      curie: idomal:0000643
-      identifier: '0000643'
-      link: https://bioregistry.io/idomal:0000643
-      name: antibiotic
-      prefix: idomal
+      curie: ido:0000563
+      identifier: '0000563'
+      link: https://bioregistry.io/ido:0000563
+      name: microbicide
+      prefix: ido
   - source:
       curie: ido:0000558
       identifier: 0000558
@@ -7899,11 +8029,11 @@
       name: antimicrobial
       prefix: ido
     target:
-      curie: ido:0000563
-      identifier: '0000563'
-      link: https://bioregistry.io/ido:0000563
-      name: microbicide
-      prefix: ido
+      curie: idomal:0000643
+      identifier: '0000643'
+      link: https://bioregistry.io/idomal:0000643
+      name: antibiotic
+      prefix: idomal
   - source:
       curie: ido:0000563
       identifier: '0000563'
@@ -14532,6 +14662,35 @@
       prefix: uberon
 - edges:
   - source:
+      curie: drugbank:DB11003
+      identifier: DB11003
+      link: https://bioregistry.io/drugbank:DB11003
+      name: Anthrax vaccine
+      prefix: drugbank
+    target:
+      curie: mesh:C493276
+      identifier: C493276
+      link: https://bioregistry.io/mesh:C493276
+      name: Biothrax
+      prefix: mesh
+  nodes:
+    drugbank:DB11003:
+      identifier: DB11003
+      link: https://bioregistry.io/drugbank:DB11003
+      name: Anthrax vaccine
+      prefix: drugbank
+    mesh:C493276:
+      identifier: C493276
+      link: https://bioregistry.io/mesh:C493276
+      name: Biothrax
+      prefix: mesh
+    vo:0000014:
+      identifier: '0000014'
+      link: https://bioregistry.io/vo:0000014
+      name: Biothrax
+      prefix: vo
+- edges:
+  - source:
       curie: vo:0000017
       identifier: '0000017'
       link: https://bioregistry.io/vo:0000017
@@ -14619,6 +14778,64 @@
       prefix: vo
 - edges:
   - source:
+      curie: drugbank:DB10276
+      identifier: DB10276
+      link: https://bioregistry.io/drugbank:DB10276
+      name: Rotavirus vaccine
+      prefix: drugbank
+    target:
+      curie: mesh:D022243
+      identifier: D022243
+      link: https://bioregistry.io/mesh:D022243
+      name: Rotavirus Vaccines
+      prefix: mesh
+  - source:
+      curie: mesh:D022243
+      identifier: D022243
+      link: https://bioregistry.io/mesh:D022243
+      name: Rotavirus Vaccines
+      prefix: mesh
+    target:
+      curie: vo:0010738
+      identifier: 0010738
+      link: https://bioregistry.io/vo:0010738
+      name: Rotarix
+      prefix: vo
+  - source:
+      curie: vo:0000658
+      identifier: 0000658
+      link: https://bioregistry.io/vo:0000658
+      name: Rotavirus vaccine
+      prefix: vo
+    target:
+      curie: vo:0010738
+      identifier: 0010738
+      link: https://bioregistry.io/vo:0010738
+      name: Rotarix
+      prefix: vo
+  nodes:
+    drugbank:DB10276:
+      identifier: DB10276
+      link: https://bioregistry.io/drugbank:DB10276
+      name: Rotavirus vaccine
+      prefix: drugbank
+    mesh:D022243:
+      identifier: D022243
+      link: https://bioregistry.io/mesh:D022243
+      name: Rotavirus Vaccines
+      prefix: mesh
+    vo:0000658:
+      identifier: 0000658
+      link: https://bioregistry.io/vo:0000658
+      name: Rotavirus vaccine
+      prefix: vo
+    vo:0010738:
+      identifier: 0010738
+      link: https://bioregistry.io/vo:0010738
+      name: Rotarix
+      prefix: vo
+- edges:
+  - source:
       curie: idocovid19:0001302
       identifier: '0001302'
       link: https://bioregistry.io/idocovid19:0001302
@@ -14648,11 +14865,64 @@
       prefix: vo
 - edges:
   - source:
+      curie: drugbank:DB01536
+      identifier: DB01536
+      link: https://bioregistry.io/drugbank:DB01536
+      name: Androstenedione
+      prefix: drugbank
+    target:
+      curie: mesh:D000735
+      identifier: D000735
+      link: https://bioregistry.io/mesh:D000735
+      name: Androstenedione
+      prefix: mesh
+  nodes:
+    drugbank:DB01536:
+      identifier: DB01536
+      link: https://bioregistry.io/drugbank:DB01536
+      name: Androstenedione
+      prefix: drugbank
+    mesh:D000735:
+      identifier: D000735
+      link: https://bioregistry.io/mesh:D000735
+      name: Androstenedione
+      prefix: mesh
+    vo:0001080:
+      identifier: 0001080
+      link: https://bioregistry.io/vo:0001080
+      name: Androstenedione
+      prefix: vo
+- edges:
+  - source:
       curie: chebi:5291
       identifier: CHEBI:5291
       link: https://bioregistry.io/chebi:5291
       name: gelatin
       prefix: chebi
+    target:
+      curie: drugbank:DB11242
+      identifier: DB11242
+      link: https://bioregistry.io/drugbank:DB11242
+      name: Gelatin
+      prefix: drugbank
+  - source:
+      curie: chebi:5291
+      identifier: CHEBI:5291
+      link: https://bioregistry.io/chebi:5291
+      name: gelatin
+      prefix: chebi
+    target:
+      curie: mesh:D005780
+      identifier: D005780
+      link: https://bioregistry.io/mesh:D005780
+      name: Gelatin
+      prefix: mesh
+  - source:
+      curie: drugbank:DB11242
+      identifier: DB11242
+      link: https://bioregistry.io/drugbank:DB11242
+      name: Gelatin
+      prefix: drugbank
     target:
       curie: mesh:D005780
       identifier: D005780
@@ -14665,6 +14935,11 @@
       link: https://bioregistry.io/chebi:5291
       name: gelatin
       prefix: chebi
+    drugbank:DB11242:
+      identifier: DB11242
+      link: https://bioregistry.io/drugbank:DB11242
+      name: Gelatin
+      prefix: drugbank
     mesh:D005780:
       identifier: D005780
       link: https://bioregistry.io/mesh:D005780
@@ -14674,4 +14949,178 @@
       identifier: '0003030'
       link: https://bioregistry.io/vo:0003030
       name: gelatin
+      prefix: vo
+- edges:
+  - source:
+      curie: drugbank:DB15801
+      identifier: DB15801
+      link: https://bioregistry.io/drugbank:DB15801
+      name: VPM1002
+      prefix: drugbank
+    target:
+      curie: mesh:C000705187
+      identifier: C000705187
+      link: https://bioregistry.io/mesh:C000705187
+      name: VPM1002 recombinant BCG vaccine
+      prefix: mesh
+  nodes:
+    drugbank:DB15801:
+      identifier: DB15801
+      link: https://bioregistry.io/drugbank:DB15801
+      name: VPM1002
+      prefix: drugbank
+    mesh:C000705187:
+      identifier: C000705187
+      link: https://bioregistry.io/mesh:C000705187
+      name: VPM1002 recombinant BCG vaccine
+      prefix: mesh
+    vo:0003131:
+      identifier: '0003131'
+      link: https://bioregistry.io/vo:0003131
+      name: VPM1002
+      prefix: vo
+- edges:
+  - source:
+      curie: drugbank:DB15805
+      identifier: DB15805
+      link: https://bioregistry.io/drugbank:DB15805
+      name: SCB-2019
+      prefix: drugbank
+    target:
+      curie: mesh:C000721887
+      identifier: C000721887
+      link: https://bioregistry.io/mesh:C000721887
+      name: SCB-2019 COVID-19 vaccine
+      prefix: mesh
+  nodes:
+    drugbank:DB15805:
+      identifier: DB15805
+      link: https://bioregistry.io/drugbank:DB15805
+      name: SCB-2019
+      prefix: drugbank
+    mesh:C000721887:
+      identifier: C000721887
+      link: https://bioregistry.io/mesh:C000721887
+      name: SCB-2019 COVID-19 vaccine
+      prefix: mesh
+    vo:0004994:
+      identifier: 0004994
+      link: https://bioregistry.io/vo:0004994
+      name: SCB-2019
+      prefix: vo
+- edges:
+  - source:
+      curie: drugbank:DB16444
+      identifier: DB16444
+      link: https://bioregistry.io/drugbank:DB16444
+      name: UB-612
+      prefix: drugbank
+    target:
+      curie: mesh:C000722335
+      identifier: C000722335
+      link: https://bioregistry.io/mesh:C000722335
+      name: UB-612 COVID-19 vaccine
+      prefix: mesh
+  nodes:
+    drugbank:DB16444:
+      identifier: DB16444
+      link: https://bioregistry.io/drugbank:DB16444
+      name: UB-612
+      prefix: drugbank
+    mesh:C000722335:
+      identifier: C000722335
+      link: https://bioregistry.io/mesh:C000722335
+      name: UB-612 COVID-19 vaccine
+      prefix: mesh
+    vo:0004995:
+      identifier: 0004995
+      link: https://bioregistry.io/vo:0004995
+      name: UB-612
+      prefix: vo
+- edges:
+  - source:
+      curie: drugbank:DB16439
+      identifier: DB16439
+      link: https://bioregistry.io/drugbank:DB16439
+      name: EpiVacCorona
+      prefix: drugbank
+    target:
+      curie: mesh:C000718910
+      identifier: C000718910
+      link: https://bioregistry.io/mesh:C000718910
+      name: EpiVacCorona vaccine
+      prefix: mesh
+  nodes:
+    drugbank:DB16439:
+      identifier: DB16439
+      link: https://bioregistry.io/drugbank:DB16439
+      name: EpiVacCorona
+      prefix: drugbank
+    mesh:C000718910:
+      identifier: C000718910
+      link: https://bioregistry.io/mesh:C000718910
+      name: EpiVacCorona vaccine
+      prefix: mesh
+    vo:0005088:
+      identifier: 0005088
+      link: https://bioregistry.io/vo:0005088
+      name: EpiVacCorona
+      prefix: vo
+- edges:
+  - source:
+      curie: drugbank:DB15654
+      identifier: DB15654
+      link: https://bioregistry.io/drugbank:DB15654
+      name: Moderna COVID-19 Vaccine
+      prefix: drugbank
+    target:
+      curie: mesh:D000090983
+      identifier: D000090983
+      link: https://bioregistry.io/mesh:D000090983
+      name: 2019-nCoV Vaccine mRNA-1273
+      prefix: mesh
+  nodes:
+    drugbank:DB15654:
+      identifier: DB15654
+      link: https://bioregistry.io/drugbank:DB15654
+      name: Moderna COVID-19 Vaccine
+      prefix: drugbank
+    mesh:D000090983:
+      identifier: D000090983
+      link: https://bioregistry.io/mesh:D000090983
+      name: 2019-nCoV Vaccine mRNA-1273
+      prefix: mesh
+    vo:0005157:
+      identifier: '0005157'
+      link: https://bioregistry.io/vo:0005157
+      name: Moderna COVID-19 vaccine
+      prefix: vo
+- edges:
+  - source:
+      curie: drugbank:DB16077
+      identifier: DB16077
+      link: https://bioregistry.io/drugbank:DB16077
+      name: Abagovomab
+      prefix: drugbank
+    target:
+      curie: mesh:C518318
+      identifier: C518318
+      link: https://bioregistry.io/mesh:C518318
+      name: abagovomab
+      prefix: mesh
+  nodes:
+    drugbank:DB16077:
+      identifier: DB16077
+      link: https://bioregistry.io/drugbank:DB16077
+      name: Abagovomab
+      prefix: drugbank
+    mesh:C518318:
+      identifier: C518318
+      link: https://bioregistry.io/mesh:C518318
+      name: abagovomab
+      prefix: mesh
+    vo:0007193:
+      identifier: 0007193
+      link: https://bioregistry.io/vo:0007193
+      name: Abagovomab
       prefix: vo
