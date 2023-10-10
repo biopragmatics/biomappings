@@ -4,6 +4,7 @@
 
 import csv
 import itertools as itt
+import logging
 from collections import defaultdict
 from pathlib import Path
 from typing import (
@@ -25,6 +26,8 @@ from tqdm.auto import tqdm
 from typing_extensions import Literal
 
 from biomappings.utils import OVERRIDE_MIRIAM, RESOURCE_PATH, get_canonical_tuple
+
+logger = logging.getLogger(__name__)
 
 MAPPINGS_HEADER = [
     "source prefix",
@@ -175,8 +178,12 @@ def get_resource_file_path(fname) -> Path:
     return RESOURCE_PATH.joinpath(fname)
 
 
-def _load_table(fname) -> List[Dict[str, str]]:
-    with open(fname, "r") as fh:
+def _load_table(path: Union[str, Path]) -> List[Dict[str, str]]:
+    path = Path(path).resolve()
+    if not path.is_file():
+        logger.warning("mappings file does not exist, returning empty list: %s", path)
+        return []
+    with path.open("r") as fh:
         reader = csv.reader(fh, delimiter="\t")
         header = next(reader)
         return [_clean(header, row) for row in reader]
@@ -214,7 +221,7 @@ def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
 TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
 
 
-def load_mappings(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
+def load_mappings(*, path: Union[str, Path, None] = None) -> List[Dict[str, str]]:
     """Load the mappings table."""
     return _load_table(path or TRUE_MAPPINGS_PATH)
 
@@ -326,7 +333,7 @@ def lint_unsure_mappings(*, standardize: bool = False, path: Optional[Path] = No
 PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
 
 
-def load_predictions(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
+def load_predictions(*, path: Union[str, Path, None] = None) -> List[Dict[str, str]]:
     """Load the predictions table."""
     return _load_table(path or PREDICTIONS_PATH)
 
