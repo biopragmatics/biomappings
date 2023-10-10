@@ -1417,6 +1417,8 @@ vo	0000189	colony forming unit	skos:exactMatch	mesh	D013234	Stem Cells	semapv:Ma
 vo	0004075	PBT	skos:exactMatch	mesh	D001803	Blood Transfusion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0004075	PBT	skos:exactMatch	mesh	D013601	T-Lymphocytes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0004075	PBT	skos:exactMatch	mesh	D061766	Proton Therapy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
+vo	0010715	Hiberix	skos:exactMatch	drugbank	DB09145	Water	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.556
+vo	0010746	Varilrix	skos:exactMatch	drugbank	DB09145	Water	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.556
 vo	0010896	Ssb	skos:exactMatch	uberon	UBERON:0004199	S-shaped body	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0010912	NP	skos:exactMatch	mesh	C000621033	napabucasin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0010912	NP	skos:exactMatch	mesh	C028525	N-phenylmaleimide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
@@ -1488,6 +1490,7 @@ vo	0011149	NS5	skos:exactMatch	doid	DOID:0060583	Noonan syndrome 5	semapv:Manual
 vo	0011171	HN	skos:exactMatch	mesh	D055882	Nevus, Halo	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0011171	HN	skos:exactMatch	ncit	C158173	Hani Chinese	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 vo	0011178	TM-1	skos:exactMatch	mesh	C098227	TM 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.7623170480313337
+vo	0011215	Sfs	skos:exactMatch	drugbank	DB09325	Sodium fluoride	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.556
 vo	0011220	MSP3	skos:exactMatch	doid	DOID:0111386	inclusion body myopathy with early-onset Paget disease of bone with or without frontotemporal dementia 3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 vo	0011231	Glycoprotein	skos:exactMatch	chebi	CHEBI:17089	glycoprotein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0011251	GI	skos:exactMatch	ncit	C158200	Gin Chinese	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
@@ -1522,6 +1525,8 @@ vo	0012387	DbpA	skos:exactMatch	mesh	C061629	4,5-dibromo-2-pyrrolic acid	semapv:
 vo	0012389	CNA	skos:exactMatch	pr	PR:000003278	serine/threonine-protein phosphatase 2B catalytic subunit alpha isoform	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0012389	CNA	skos:exactMatch	pr	PR:Q08209	serine/threonine-protein phosphatase 2B catalytic subunit alpha isoform (human)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0012391	MecA	skos:exactMatch	mesh	C046756	5'-N-methylcarboxamideadenosine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5209235209235209
+vo	0012393	BPS	skos:exactMatch	drugbank	DB09096	Benzoyl peroxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.539
+vo	0012393	BPS	skos:exactMatch	drugbank	DB09353	Octasulfur	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	0.539
 vo	0012403	Rib	skos:exactMatch	chebi	CHEBI:33942	ribose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 vo	0012403	Rib	skos:exactMatch	mesh	D012272	Ribs	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	0.5555555555555556
 vo	0012403	Rib	skos:exactMatch	uberon	UBERON:0002228	rib	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
