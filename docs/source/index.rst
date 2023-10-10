@@ -34,6 +34,8 @@ Table of Contents
 
    usage
    cli
+   predict
+   custom
 
 Indices and Tables
 ------------------
