@@ -9,6 +9,7 @@ from biomappings import (
     load_unsure,
     testing,
 )
+from biomappings.resources import load_curators
 
 
 class TestIntegrity(testing.IntegrityTestCase):
@@ -18,3 +19,4 @@ class TestIntegrity(testing.IntegrityTestCase):
     predictions = load_predictions()
     incorrect = load_false_mappings()
     unsure = load_unsure()
+    contributor_orcids = {row["orcid"] for row in load_curators()}

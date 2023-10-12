@@ -6,7 +6,7 @@ import itertools as itt
 import unittest
 from collections import defaultdict
 from pathlib import Path
-from typing import ClassVar, Union
+from typing import ClassVar, Union, Optional, Set, Collection
 
 import bioregistry
 
@@ -51,6 +51,7 @@ class IntegrityTestCase(unittest.TestCase):
     predictions: Mappings
     incorrect: Mappings
     unsure: Mappings
+    contributor_orcids: Optional[Collection[str]] = None
 
     def _iter_groups(self):
         for group, label in [
@@ -142,14 +143,14 @@ class IntegrityTestCase(unittest.TestCase):
 
     def test_contributors(self):
         """Test all contributors have an entry in the curators.tsv file."""
-        contributor_orcids = {row["orcid"] for row in load_curators()}
         for mapping in itt.chain(self.mappings, self.incorrect, self.unsure):
             source = mapping["source"]
             if not source.startswith("orcid:"):
-                self.assertTrue(source.startswith("web-"))
+                self.assertTrue(source.startswith("web-"), msg=f"Source: {source}")
                 ss = source[len("web-") :]
                 self.fail(msg=f'Add an entry with "{ss}" and your ORCID to {CURATORS_PATH}')
-            self.assertIn(source[len("orcid:") :], contributor_orcids)
+            if self.contributor_orcids is not None:
+                self.assertIn(source[len("orcid:") :], self.contributor_orcids)
 
     def test_cross_redundancy(self):
         """Test the redundancy of manually curated mappings and predicted mappings."""
