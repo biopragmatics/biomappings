@@ -191,7 +191,7 @@ def _load_table(path: Union[str, Path]) -> List[Dict[str, str]]:
 
 def _clean(header, row):
     d = dict(zip(header, row))
-    return {k: v if v else None for k, v in d.items()}
+    return {k: v if v and v != "." else None for k, v in d.items()}
 
 
 def _write_helper(
