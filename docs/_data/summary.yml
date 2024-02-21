@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 4606
+- count: 4612
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -154,6 +154,9 @@ negative:
 - count: 4
   source: cellosaurus
   target: clo
+- count: 4
+  source: cvx
+  target: vo
 - count: 3
   source: bto
   target: cl
@@ -181,6 +184,9 @@ negative:
 - count: 2
   source: apollosv
   target: nbo
+- count: 2
+  source: cvx
+  target: mesh
 - count: 2
   source: hp
   target: ncbitaxon
@@ -221,6 +227,9 @@ negative:
   source: cpt
   target: vo
 - count: 1
+  source: cvx
+  target: umls
+- count: 1
   source: ido
   target: ncbitaxon
 - count: 1
@@ -247,8 +256,8 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1591
-negative_prefix_count: 44
+negative_mapping_count: 1598
+negative_prefix_count: 45
 positive:
 - count: 3106
   source: chebi
@@ -334,7 +343,7 @@ positive:
 - count: 54
   source: bto
   target: uberon
-- count: 48
+- count: 47
   source: cvx
   target: vo
 - count: 40
@@ -595,7 +604,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 10421
+positive_mapping_count: 10420
 positive_prefix_count: 62
 predictions:
 - count: 11735
