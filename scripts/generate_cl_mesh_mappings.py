@@ -1,4 +1,5 @@
 """Generate mappings using Gilda from CL to MeSH."""
+
 import re
 
 import gilda
