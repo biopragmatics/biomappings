@@ -2,6 +2,7 @@
 
 These are directly added to the version controlled DOID OWL file.
 """
+
 import csv
 
 import obonet
