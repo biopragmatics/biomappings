@@ -221,14 +221,13 @@ cpt	90706	rubella	skos:exactMatch	mesh	D012409	Rubella	semapv:ManualMappingCurat
 cpt	90716	varicella	skos:exactMatch	mesh	D002644	Chickenpox	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.54
 cpt	90727	plague	skos:exactMatch	mesh	D010930	Plague	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	0.762
 cvx	180	tetanus immune globulin	skos:exactMatch	vo	0005452	tetanus immune globulin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+cvx	217	SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3mL dose, tris-sucrose formulation	skos:exactMatch	vo	0005437	SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3mL dose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+cvx	221	SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 50 mcg/0.5 mL dose	skos:exactMatch	umls	C5674324	SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, pediatric 25 mcg/0.25 mL dose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+cvx	32	meningococcal polysaccharide vaccine (MPSV4)	skos:exactMatch	vo	0000053	Neisseria meningitidis vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 cvx	33	pneumococcal polysaccharide vaccine, 23 valent	skos:exactMatch	mesh	D022242	Pneumococcal Vaccines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+cvx	35	tetanus toxoid, adsorbed	skos:exactMatch	mesh	D013745	Tetanus Toxoid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 cvx	90	rabies vaccine, unspecified formulation	skos:exactMatch	vo	0006021	Human Rabies vaccine from human diploid cell culture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-cvx	32	meningococcal polysaccharide vaccine (MPSV4)	skos:exactMatch	vo	0000053	Neisseria meningitidis vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370
-cvx	35	tetanus toxoid, adsorbed	skos:exactMatch	mesh	D013745	Tetanus Toxoid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370
-cvx	90	rabies vaccine, unspecified formulation	skos:exactMatch	vo	0006021	Human Rabies vaccine from human diploid cell culture	orcid:0000-0003-4423-4370
-cvx	217	SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3mL dose, tris-sucrose formulation	skos:exactMatch	vo	0005437	SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3mL dose	orcid:0000-0003-4423-4370
-cvx	221	SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 50 mcg/0.5 mL dose	skos:exactMatch	umls	C5674324	SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, pediatric 25 mcg/0.25 mL dose	orcid:0000-0003-4423-4370
-doid	DOID:0001816	angiosarcoma	skos:exactMatch	mesh	D006394	Hemangiosarcoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370
+doid	DOID:0001816	angiosarcoma	skos:exactMatch	mesh	D006394	Hemangiosarcoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0018923	Hemangiosarcoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0278592	Adult Angiosarcoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0001816	angiosarcoma	skos:exactMatch	umls	C0279988	Childhood Angiosarcoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
