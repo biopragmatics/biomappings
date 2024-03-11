@@ -5,6 +5,8 @@
 import itertools as itt
 import unittest
 from collections import defaultdict
+from pathlib import Path
+from typing import ClassVar, Union
 
 import bioregistry
 
@@ -14,6 +16,8 @@ from biomappings.resources import (
     MappingTuple,
     PredictionTuple,
     load_curators,
+    load_mappings,
+    load_predictions,
     mapping_sort_key,
 )
 from biomappings.resources.semapv import get_semapv
@@ -23,6 +27,11 @@ from biomappings.utils import (
     check_valid_prefix_id,
     get_canonical_tuple,
 )
+
+__all__ = [
+    "IntegrityTestCase",
+    "PathIntegrityTestCase",
+]
 
 semapv = get_semapv()
 
@@ -77,6 +86,16 @@ class IntegrityTestCase(unittest.TestCase):
                 msg=f"[{label}] The 'type' column should be annotated with semapv on line {line}",
             )
             self.assertIn(tt[len("semapv:") :], semapv)
+
+    def test_relations(self):
+        """Test that the relation is a CURIE."""
+        for label, line, mapping in self._iter_groups():
+            parts = mapping["relation"].split(":")
+            self.assertEqual(2, len(parts))
+            prefix, identifier = parts
+            self.assertNotEqual("ro", prefix, msg="RO should be capitalized")
+            if prefix != "RO":
+                self.assert_canonical_identifier(prefix, identifier, label, line)
 
     def test_canonical_prefixes(self):
         """Test that all mappings use canonical bioregistry prefixes."""
@@ -198,3 +217,36 @@ class IntegrityTestCase(unittest.TestCase):
             msg="Unsure curations are not sorted",
         )
         self.assert_no_internal_redundancies(self.unsure, MappingTuple)
+
+
+class PathIntegrityTestCase(IntegrityTestCase):
+    """A test case that can be configured with paths.
+
+    For example, in this might be used in a custom instance of Biomappings
+    like in the following:
+
+    .. code-block:: python
+
+        from biomappings.testing import PathIntegrityTestCase
+
+        HERE = Path(__file__).parent.resolve()
+
+        class TestCustom(PathIntegrityTestCase):
+            predictions_path = HERE.joinpath("predictions.tsv")
+            positives_path = HERE.joinpath("positive.tsv")
+            negatives_path = HERE.joinpath("negative.tsv")
+            unsure_path = HERE.joinpath("unsure.tsv")
+    """
+
+    predictions_path: ClassVar[Union[str, Path]]
+    positives_path: ClassVar[Union[str, Path]]
+    negatives_path: ClassVar[Union[str, Path]]
+    unsure_path: ClassVar[Union[str, Path]]
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        """Set up the test case."""
+        cls.predictions = load_predictions(path=cls.predictions_path)
+        cls.mappings = load_mappings(path=cls.positives_path)
+        cls.incorrect = load_mappings(path=cls.negatives_path)
+        cls.unsure = load_mappings(path=cls.unsure_path)

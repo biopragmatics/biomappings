@@ -4,6 +4,7 @@
 
 import csv
 import itertools as itt
+import logging
 from collections import defaultdict
 from pathlib import Path
 from typing import (
@@ -25,6 +26,8 @@ from tqdm.auto import tqdm
 from typing_extensions import Literal
 
 from biomappings.utils import OVERRIDE_MIRIAM, RESOURCE_PATH, get_canonical_tuple
+
+logger = logging.getLogger(__name__)
 
 MAPPINGS_HEADER = [
     "source prefix",
@@ -175,8 +178,12 @@ def get_resource_file_path(fname) -> Path:
     return RESOURCE_PATH.joinpath(fname)
 
 
-def _load_table(fname) -> List[Dict[str, str]]:
-    with open(fname, "r") as fh:
+def _load_table(path: Union[str, Path]) -> List[Dict[str, str]]:
+    path = Path(path).resolve()
+    if not path.is_file():
+        logger.warning("mappings file does not exist, returning empty list: %s", path)
+        return []
+    with path.open("r") as fh:
         reader = csv.reader(fh, delimiter="\t")
         header = next(reader)
         return [_clean(header, row) for row in reader]
@@ -184,7 +191,7 @@ def _load_table(fname) -> List[Dict[str, str]]:
 
 def _clean(header, row):
     d = dict(zip(header, row))
-    return {k: v if v else None for k, v in d.items()}
+    return {k: v if v and v != "." else None for k, v in d.items()}
 
 
 def _write_helper(
@@ -214,9 +221,18 @@ def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
 TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
 
 
-def load_mappings(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
+def load_mappings(*, path: Union[str, Path, None] = None) -> List[Dict[str, str]]:
     """Load the mappings table."""
     return _load_table(path or TRUE_MAPPINGS_PATH)
+
+
+def load_mappings_subset(source: str, target: str) -> Mapping[str, str]:
+    """Get a dictionary of 1-1 mappings from the source prefix to the target prefix."""
+    return {
+        mapping["source identifier"]: mapping["target identifier"]
+        for mapping in load_mappings()
+        if mapping["source prefix"] == source and mapping["target prefix"] == target
+    }
 
 
 def append_true_mappings(
@@ -326,7 +342,7 @@ def lint_unsure_mappings(*, standardize: bool = False, path: Optional[Path] = No
 PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
 
 
-def load_predictions(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
+def load_predictions(*, path: Union[str, Path, None] = None) -> List[Dict[str, str]]:
     """Load the predictions table."""
     return _load_table(path or PREDICTIONS_PATH)
 
@@ -342,6 +358,7 @@ def append_prediction_tuples(
     deduplicate: bool = True,
     sort: bool = True,
     standardize: bool = True,
+    path: Optional[Path] = None,
 ) -> None:
     """Append new lines to the predictions table that come as canonical tuples."""
     append_predictions(
@@ -349,6 +366,7 @@ def append_prediction_tuples(
         deduplicate=deduplicate,
         sort=sort,
         standardize=standardize,
+        path=path,
     )
 
 
@@ -358,6 +376,7 @@ def append_predictions(
     deduplicate: bool = True,
     sort: bool = True,
     standardize: bool = True,
+    path: Optional[Path] = None,
 ) -> None:
     """Append new lines to the predictions table."""
     if standardize:
@@ -376,9 +395,11 @@ def append_predictions(
             mapping for mapping in mappings if get_canonical_tuple(mapping) not in existing_mappings
         )
 
-    _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, mode="a")
+    if path is None:
+        path = PREDICTIONS_PATH
+    _write_helper(PREDICTIONS_HEADER, mappings, path, mode="a")
     if sort:
-        lint_predictions()
+        lint_predictions(path=path)
 
 
 def lint_predictions(

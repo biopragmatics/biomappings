@@ -168,6 +168,11 @@
     link: https://bioregistry.io/dron:00012890
     name: BCG Vaccine
     prefix: dron
+  drugbank:DB12768:
+    identifier: DB12768
+    link: https://bioregistry.io/drugbank:DB12768
+    name: BCG vaccine
+    prefix: drugbank
   mesh:D001500:
     identifier: D001500
     link: https://bioregistry.io/mesh:D001500
@@ -255,6 +260,21 @@
     identifier: '0000643'
     link: https://bioregistry.io/idomal:0000643
     name: antibiotic
+    prefix: idomal
+- go:0032991:
+    identifier: GO:0032991
+    link: https://bioregistry.io/go:0032991
+    name: protein-containing complex
+    prefix: go
+  go:0043234:
+    identifier: GO:0043234
+    link: https://bioregistry.io/go:0043234
+    name: protein complex
+    prefix: go
+  idomal:0000732:
+    identifier: '0000732'
+    link: https://bioregistry.io/idomal:0000732
+    name: protein complex
     prefix: idomal
 - chebi:22063:
     identifier: CHEBI:22063
@@ -641,6 +661,21 @@
     link: https://bioregistry.io/vo:0000315
     name: inactivated vaccine
     prefix: vo
+- mesh:D000087507:
+    identifier: D000087507
+    link: https://bioregistry.io/mesh:D000087507
+    name: Vaccine Efficacy
+    prefix: mesh
+  vo:0000247:
+    identifier: '0000247'
+    link: https://bioregistry.io/vo:0000247
+    name: vaccine efficacy
+    prefix: vo
+  vo:0000860:
+    identifier: 0000860
+    link: https://bioregistry.io/vo:0000860
+    name: vaccine effectiveness
+    prefix: vo
 - mesh:D007252:
     identifier: D007252
     link: https://bioregistry.io/mesh:D007252
@@ -655,6 +690,26 @@
     identifier: 0003495
     link: https://bioregistry.io/vo:0003495
     name: influenza vaccines
+    prefix: vo
+- drugbank:DB10276:
+    identifier: DB10276
+    link: https://bioregistry.io/drugbank:DB10276
+    name: Rotavirus vaccine
+    prefix: drugbank
+  mesh:D022243:
+    identifier: D022243
+    link: https://bioregistry.io/mesh:D022243
+    name: Rotavirus Vaccines
+    prefix: mesh
+  vo:0000658:
+    identifier: 0000658
+    link: https://bioregistry.io/vo:0000658
+    name: Rotavirus vaccine
+    prefix: vo
+  vo:0010738:
+    identifier: 0010738
+    link: https://bioregistry.io/vo:0010738
+    name: Rotarix
     prefix: vo
 - reactome:R-HSA-8937144:
     identifier: R-HSA-8937144

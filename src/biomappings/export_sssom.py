@@ -2,6 +2,7 @@
 
 """Export Biomappings as SSSOM."""
 
+import importlib.metadata
 import pathlib
 
 import bioregistry
@@ -23,9 +24,12 @@ CC0_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
 META = {
     "license": CC0_URL,
     "mapping_provider": "https://github.com/biopragmatics/biomappings",
-    "mapping_set_group": "biomappings",
-    "mapping_set_id": "biomappings",
+    "mapping_set_description": "Biomappings is a repository of community curated and predicted equivalences and "
+    "related mappings between named biological entities that are not available from primary sources. It's also a "
+    "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
+    "mapping_set_id": "https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv",
     "mapping_set_title": "Biomappings",
+    "mapping_set_version": importlib.metadata.version("biomappings"),
 }
 
 
@@ -51,23 +55,32 @@ def get_sssom_df(use_tqdm: bool = False):
     ]
     # see https://mapping-commons.github.io/sssom/predicate_modifier/
     # for more information on predicate modifiers
-    for mappings, predicate_modifier in [
-        (load_mappings(), ""),  # no predicate modifier
-        (load_false_mappings(), "Not"),
+    for label, mappings, predicate_modifier in [
+        ("positive mappings", load_mappings(), ""),  # no predicate modifier
+        ("negative mappings", load_false_mappings(), "Not"),
     ]:
-        for mapping in tqdm(mappings, unit="mapping", unit_scale=True, disable=not use_tqdm):
+        for mapping in tqdm(
+            mappings, unit="mapping", unit_scale=True, disable=not use_tqdm, desc=label
+        ):
             prefixes.add(mapping["source prefix"])
             prefixes.add(mapping["target prefix"])
             source = mapping["source"]
             if any(source.startswith(x) for x in ["orcid:", "wikidata:"]):
+                prefixes.add(source.split(":")[0])
                 creators.add(source)
+            prefixes.add(mapping["relation"].split(":")[0])
+
             rows.append(
                 (
-                    get_curie(mapping["source prefix"], mapping["source identifier"]),
+                    get_curie(
+                        mapping["source prefix"], mapping["source identifier"], preferred=True
+                    ),
                     mapping["source name"],
-                    f'{mapping["relation"]}',
+                    _standardize_curie(mapping["relation"]),
                     predicate_modifier,
-                    get_curie(mapping["target prefix"], mapping["target identifier"]),
+                    get_curie(
+                        mapping["target prefix"], mapping["target identifier"], preferred=True
+                    ),
                     mapping["target name"],
                     mapping["type"],  # match justification
                     source,  # curator CURIE
@@ -76,16 +89,22 @@ def get_sssom_df(use_tqdm: bool = False):
                 )
             )
 
-    for mapping in tqdm(load_predictions(), unit="mapping", unit_scale=True, disable=not use_tqdm):
+    for mapping in tqdm(
+        load_predictions(),
+        unit="mapping",
+        unit_scale=True,
+        disable=not use_tqdm,
+        desc="predicted mappings",
+    ):
         prefixes.add(mapping["source prefix"])
         prefixes.add(mapping["target prefix"])
         rows.append(
             (
-                get_curie(mapping["source prefix"], mapping["source identifier"]),
+                get_curie(mapping["source prefix"], mapping["source identifier"], preferred=True),
                 mapping["source name"],
-                f'{mapping["relation"]}',
+                _standardize_curie(mapping["relation"]),
                 "",  # no predicate modifier
-                get_curie(mapping["target prefix"], mapping["target identifier"]),
+                get_curie(mapping["target prefix"], mapping["target identifier"], preferred=True),
                 mapping["target name"],
                 mapping["type"],  # match justification
                 None,  # no curator CURIE
@@ -98,6 +117,13 @@ def get_sssom_df(use_tqdm: bool = False):
     return prefixes, sorted(creators), df
 
 
+def _standardize_curie(curie: str) -> str:
+    prefix, identifier = bioregistry.parse_curie(curie, use_preferred=True)
+    if prefix is None or identifier is None:
+        raise RuntimeError
+    return bioregistry.curie_to_str(prefix, identifier)
+
+
 @click.command()
 def sssom():
     """Export SSSOM."""
@@ -105,15 +131,20 @@ def sssom():
     df.to_csv(TSV_PATH, sep="\t", index=False)
 
     # Get a CURIE map containing only the relevant prefixes
-    prefix_map = {
-        prefix: formatter
-        for prefix, formatter in bioregistry.get_prefix_map().items()
-        if prefix in prefixes
-    }
+    prefix_map = {}
+    for prefix in sorted(prefixes, key=str.casefold):
+        uri_prefix = bioregistry.get_uri_prefix(prefix)
+        if uri_prefix is None:
+            raise ValueError(f"could not look up URI prefix for {prefix}")
+        pp = bioregistry.get_preferred_prefix(prefix) or prefix
+        prefix_map[pp] = uri_prefix
+
     with open(META_PATH, "w") as file:
         yaml.safe_dump({"curie_map": prefix_map, "creator_id": creators, **META}, file)
 
+    from sssom.constants import DEFAULT_VALIDATION_TYPES
     from sssom.parsers import from_sssom_dataframe
+    from sssom.validators import validate
     from sssom.writers import write_json, write_owl
 
     try:
@@ -121,11 +152,20 @@ def sssom():
     except Exception as e:
         click.secho(f"SSSOM Export failed...\n{e}", fg="red")
         return
+
+    validate(msdf=msdf, validation_types=DEFAULT_VALIDATION_TYPES)
+
     click.echo("Writing JSON")
     with JSON_PATH.open("w") as file:
+        msdf.metadata["mapping_set_id"] = (
+            "https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.json"
+        )
         write_json(msdf, file)
     click.echo("Writing OWL")
     with OWL_PATH.open("w") as file:
+        msdf.metadata["mapping_set_id"] = (
+            "https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.owl"
+        )
         write_owl(msdf, file)
 
 

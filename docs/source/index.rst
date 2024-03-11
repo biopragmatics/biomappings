@@ -1,6 +1,6 @@
 Biomappings |release| Documentation
 ===================================
-Community curated mappings between biomedical entities.
+.. automodule:: biomappings
 
 Installation
 ------------
@@ -34,6 +34,8 @@ Table of Contents
 
    usage
    cli
+   predict
+   custom
 
 Indices and Tables
 ------------------

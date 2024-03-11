@@ -10,6 +10,20 @@ from typing import Any, Mapping, Optional, Tuple
 
 import bioregistry
 
+__all__ = [
+    "get_git_hash",
+    "get_script_url",
+    "get_canonical_tuple",
+    "UnregisteredPrefix",
+    "UnstandardizedPrefix",
+    "InvalidIdentifier",
+    "InvalidNormIdentifier",
+    "InvalidIdentifierPattern",
+    "check_valid_prefix_id",
+    "get_curie",
+    "CMapping",
+]
+
 HERE = Path(__file__).parent.resolve()
 ROOT = HERE.parent.parent.resolve()
 RESOURCE_PATH = HERE.joinpath("resources")
@@ -231,11 +245,13 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         raise InvalidIdentifierPattern(prefix, identifier, pattern)
 
 
-def get_curie(prefix: str, identifier: str) -> str:
+def get_curie(prefix: str, identifier: str, *, preferred: bool = False) -> str:
     """Get a normalized curie from a pre-parsed prefix/identifier pair."""
     prefix_norm, identifier_norm = bioregistry.normalize_parsed_curie(prefix, identifier)
     if prefix_norm is None or identifier_norm is None:
         raise ValueError(f"could not normalize {prefix}:{identifier}")
+    if preferred:
+        prefix_norm = bioregistry.get_preferred_prefix(prefix_norm) or prefix_norm
     return f"{prefix_norm}:{identifier_norm}"
 
 
