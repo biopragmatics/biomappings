@@ -27,6 +27,34 @@ from typing_extensions import Literal
 
 from biomappings.utils import OVERRIDE_MIRIAM, RESOURCE_PATH, get_canonical_tuple
 
+__all__ = [
+    "MappingTuple",
+    "MAPPINGS_HEADER",
+    "PredictionTuple",
+    "PREDICTIONS_HEADER",
+    "Mappings",
+    "load_mappings",
+    "load_mappings_subset",
+    "append_true_mappings",
+    "append_true_mapping_tuples",
+    "write_true_mappings",
+    "load_false_mappings",
+    "append_false_mappings",
+    "write_false_mappings",
+    "load_unsure",
+    "append_unsure_mappings",
+    "write_unsure_mappings",
+    "load_predictions",
+    "append_predictions",
+    "append_prediction_tuples",
+    "write_predictions",
+    "remove_mappings",
+    "load_curators",
+    "filter_predictions",
+    "get_curated_filter",
+    "prediction_tuples_from_semra",
+]
+
 logger = logging.getLogger(__name__)
 
 MAPPINGS_HEADER = [
