@@ -113,14 +113,14 @@
                                     <i class="far fa-thumbs-up"></i>
                                 </a>
                             </td>
-                            <td>
+                            <td class="text-nowrap">
                                 <a data-toggle="tooltip"
                                    title="{{ p['source name'] }} is broader than {{ p['target name'] }}."
                                    href="{{ url_for_state('.mark', state, line=line, value='broad') }}">
                                     -B-
                                 </a>
                             </td>
-                            <td>
+                            <td class="text-nowrap">
                                 <a data-toggle="tooltip"
                                    title="{{ p['source name'] }} is narrower than {{ p['target name'] }}."
                                    href="{{ url_for_state('.mark', state, line=line, value='narrow') }}">
