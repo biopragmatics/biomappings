@@ -165,10 +165,10 @@ apollosv	00000317	incubation period	skos:exactMatch	ido	0000519	incubation perio
 apollosv	00000317	incubation period	skos:exactMatch	idomal	0000355	incubation period	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000329	author list	skos:exactMatch	iao	0000321	author list	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000373	parasite	skos:exactMatch	idomal	0000995	parasite	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
-apollosv	00000422	confidence interval	skos:exactMatch	stato	0000196	confidence interval	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+apollosv	00000422	confidence interval	skos:exactMatch	stato	STATO:0000196	confidence interval	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000429	date	skos:exactMatch	dc	date	Date	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000429	date	skos:exactMatch	oboinowl	date	date	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-apollosv	00000445	mortality rate	skos:exactMatch	stato	0000414	mortality rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+apollosv	00000445	mortality rate	skos:exactMatch	stato	STATO:0000414	mortality rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 apollosv	00000476	description	skos:exactMatch	dc	description	description	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 bto	BTO:0001025	peripheral blood mononuclear cell	skos:exactMatch	cl	CL:2000001	peripheral blood mononuclear cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.778
 bto	BTO:0001283	mitral cell	skos:exactMatch	cl	CL:1001502	mitral cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	0.778
