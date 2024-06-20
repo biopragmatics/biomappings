@@ -106,6 +106,7 @@ chebi	CHEBI:15367	all-trans-retinoic acid	skos:exactMatch	mesh	D012160	Retina	se
 chebi	CHEBI:15756	hexadecanoic acid	skos:exactMatch	mesh	D010169	Palmitic Acids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	0.9
 chebi	CHEBI:15940	nicotinic acid	skos:exactMatch	mesh	D009539	Nicotinic Acids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:16543	N(2)-acetyl-L-ornithine	skos:exactMatch	mesh	C021951	N(delta)-acetylornithine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:17221	beta-myrcene	skos:exactMatch	mesh	C509595	myrcene	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:17544	hydrogencarbonate	skos:exactMatch	mesh	D001639	Bicarbonates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 chebi	CHEBI:17883	hydrogen chloride	skos:exactMatch	mesh	D007943	Leukemia, Hairy Cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:22927	bromine atom	skos:exactMatch	mesh	D031724	Bromus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
