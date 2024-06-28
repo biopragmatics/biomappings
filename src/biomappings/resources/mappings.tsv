@@ -4317,6 +4317,7 @@ mesh	C000179	N-acetylaspartate	skos:exactMatch	ncit	C118887	N-Acetylaspartate	se
 mesh	C000203	deoxyaminopteroic acid	skos:exactMatch	ncit	C157133	Deoxyaminopteroic Acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C000288	ritrosulfan	skos:exactMatch	ncit	C75294	Ritrosulfan	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C000589263	AZD7451	skos:exactMatch	ncit	C99161	Tropomyosin Receptor Kinase Inhibitor AZD7451	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	C000589330	CLDN17 protein, human	skos:exactMatch	uniprot	P56750	CLDN17	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py	0.999
 mesh	C000589490	Omaveloxolone	skos:exactMatch	ncit	C113443	Omaveloxolone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C000590398	DEPDC5 protein, human	skos:exactMatch	uniprot	O75140	DEPDC5	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C000590915	Aticaprant	skos:exactMatch	ncit	C170144	Aticaprant	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -4572,7 +4573,9 @@ mesh	C118437	negative elongation factor	skos:exactMatch	go	GO:0032021	NELF compl
 mesh	C118513	TSSC4 protein, human	skos:exactMatch	uniprot	Q9Y5U2	TSSC4	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C118874	rupintrivir	skos:exactMatch	ncit	C82255	Rupintrivir	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C118927	AMMECR1 protein, human	skos:exactMatch	uniprot	Q9Y4X0	AMMECR1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C120453	CLDN11 protein, human	skos:exactMatch	uniprot	O75508	CLDN11	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py	0.999
 mesh	C120759	TRAPPC2 protein, human	skos:exactMatch	uniprot	P0DI81	TRAPPC2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C121305	CES1P1 protein, human	skos:exactMatch	uniprot	Q9UKY3	CES1P1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py	0.999
 mesh	C122111	NXF1 protein, human	skos:exactMatch	uniprot	Q9UBU9	NXF1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C122168	OR52A1 protein, human	skos:exactMatch	uniprot	Q9UKL2	OR52A1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C400401	maribavir	skos:exactMatch	ncit	C82254	Maribavir	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -4582,6 +4585,7 @@ mesh	C402592	EI24 protein, human	skos:exactMatch	uniprot	O14681	EI24	semapv:Manu
 mesh	C403492	FEM1B protein, human	skos:exactMatch	uniprot	Q9UK73	FEM1B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C404412	VCY protein, human	skos:exactMatch	uniprot	O14598	VCY	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C407644	IL1RAPL2 protein, human	skos:exactMatch	uniprot	Q9NP60	IL1RAPL2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+mesh	C408464	HAO2 protein, human	skos:exactMatch	uniprot	Q9NYQ3	HAO2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py	0.999
 mesh	C414177	SLC7A2 protein, human	skos:exactMatch	uniprot	P52569	SLC7A2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C414206	CYP2A13 protein, human	skos:exactMatch	uniprot	Q16696	CYP2A13	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C414210	peramivir	skos:exactMatch	ncit	C81611	Peramivir	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -4623,6 +4627,7 @@ mesh	C470409	TICAM1 protein, human	skos:exactMatch	uniprot	Q8IUC6	TICAM1	semapv:
 mesh	C470798	LMTK2 protein, human	skos:exactMatch	uniprot	Q8IWU2	LMTK2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C472003	CRYL1 protein, human	skos:exactMatch	uniprot	Q9Y2S2	CRYL1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C472808	ADAM32 protein, human	skos:exactMatch	uniprot	Q8TC27	ADAM32	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C474609	CES1 protein, human	skos:exactMatch	uniprot	P23141	CES1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py	0.999
 mesh	C475472	B3GAT2 protein, human	skos:exactMatch	uniprot	Q9NPZ5	B3GAT2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C477650	RCC2 protein, human	skos:exactMatch	uniprot	Q9P258	RCC2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C478021	DNAJB9 protein, human	skos:exactMatch	uniprot	Q9UBS3	DNAJB9	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -4647,6 +4652,7 @@ mesh	C486356	FGF12 protein, human	skos:exactMatch	uniprot	P61328	FGF12	semapv:Ma
 mesh	C486393	RAX protein, human	skos:exactMatch	uniprot	Q9Y2V3	RAX	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C486593	PARVG protein, human	skos:exactMatch	uniprot	Q9HBI0	PARVG	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C486655	BMF protein, human	skos:exactMatch	uniprot	Q96LC9	BMF	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	C486683	CLDN18 protein, human	skos:exactMatch	uniprot	P56856	CLDN18	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py	0.999
 mesh	C488098	NXNL1 protein, human	skos:exactMatch	uniprot	Q96CM4	NXNL1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C488261	ZW10 protein, human	skos:exactMatch	uniprot	O43264	ZW10	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C488760	RAET1E protein, human	skos:exactMatch	uniprot	Q8TD07	RAET1E	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -4759,6 +4765,7 @@ mesh	C507694	LYZL6 protein, human	skos:exactMatch	uniprot	O75951	LYZL6	semapv:Ma
 mesh	C508078	ZNF641 protein, human	skos:exactMatch	uniprot	Q96N77	ZNF641	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C508131	ING5 protein, human	skos:exactMatch	uniprot	Q8WYH8	ING5	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C508705	RND3 protein, human	skos:exactMatch	uniprot	P61587	RND3	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C508912	CLDN19 protein, human	skos:exactMatch	uniprot	Q8N6F1	CLDN19	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py	0.999
 mesh	C510070	AP3M2 protein, human	skos:exactMatch	uniprot	P53677	AP3M2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C510132	GEMIN8 protein, human	skos:exactMatch	uniprot	Q9NWZ8	GEMIN8	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C510183	TSPYL1 protein, human	skos:exactMatch	uniprot	Q9H0U9	TSPYL1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -4781,6 +4788,7 @@ mesh	C518505	ZBED1 protein, human	skos:exactMatch	uniprot	O96006	ZBED1	semapv:Ma
 mesh	C519072	CHRNB1 protein, human	skos:exactMatch	uniprot	P11230	CHRNB1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C519156	MTIF3 protein, human	skos:exactMatch	uniprot	Q9H2K0	MTIF3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C519405	DNAJC15 protein, human	skos:exactMatch	uniprot	Q9Y5T4	DNAJC15	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	C522352	CLDN12 protein, human	skos:exactMatch	uniprot	P56749	CLDN12	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py	0.999
 mesh	C525074	chitooctaose	skos:exactMatch	efo	0003237	chitin octamer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C525733	brincidofovir	skos:exactMatch	ncit	C90587	Brincidofovir	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C526744	ASAH2 protein, human	skos:exactMatch	uniprot	Q9NR71	ASAH2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -5996,6 +6004,7 @@ mesh	C567854	Retinitis Pigmentosa 42	skos:exactMatch	doid	DOID:0110386	retinitis
 mesh	C567855	Cutis Laxa, Autosomal Recessive, Type IIB	skos:exactMatch	doid	DOID:0070137	autosomal recessive cutis laxa type IIB	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C567863	Congenital Lipomatous Overgrowth, Vascular Malformations, and Epidermal Nevi	skos:exactMatch	doid	DOID:0080351	CLOVES syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	C567877	Cardiomyopathy, Dilated, 1BB	skos:exactMatch	doid	DOID:0110458	dilated cardiomyopathy 1BB	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
+mesh	C568108	CLDN1 protein, human	skos:exactMatch	uniprot	O95832	CLDN1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/a840cf/scripts/generate_mesh_uniprot_mappings.py	0.999
 mesh	C569686	Alexa Fluor 647	skos:exactMatch	efo	0004967	Alexa Fluor 647	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	C570240	empagliflozin	skos:exactMatch	ncit	C158136	Empagliflozin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	C570377	Benign Pseudohypertrophic Muscular Dystrophy	skos:exactMatch	doid	DOID:9883	Becker muscular dystrophy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
@@ -7400,6 +7409,7 @@ mesh	D007937	Leukapheresis	skos:exactMatch	efo	0009126	leukapheresis	semapv:Manu
 mesh	D007937	Leukapheresis	skos:exactMatch	ncit	C15269	Leukapheresis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D007938	Leukemia	skos:exactMatch	ncit	C3161	Leukemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D007980	Levodopa	skos:exactMatch	chebi	CHEBI:15765	L-dopa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mesh	D008049	Lipase	skos:narrowMatch	hgnc	1863	CES1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	0.95
 mesh	D008066	Lipolysis	skos:exactMatch	go	GO:0016042	lipid catabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D008115	Liver Regeneration	skos:exactMatch	go	GO:0097421	liver regeneration	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mesh	D008169	Lung Abscess	skos:exactMatch	hp	HP:0025044	Lung abscess	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	semapv:LexicalMatching	generate_hp_mesh_mappings.py	0.9
