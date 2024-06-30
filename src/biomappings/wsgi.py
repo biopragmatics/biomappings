@@ -325,6 +325,7 @@ class Controller:
                     "target prefix",
                     "target identifier",
                     "target name",
+                    "source",
                 },
             )
         if source_prefix is not None:
