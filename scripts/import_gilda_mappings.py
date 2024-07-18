@@ -28,6 +28,8 @@ db_ns_mappings = {
     "NCIT": "ncit",
     "GO": "go",
     "FPLX": "fplx",
+    "UP": "uniprot",
+    "MESH": "mesh",
 }
 
 
@@ -57,8 +59,10 @@ def get_mappings() -> Iterable[PredictionTuple]:
     known_mappings = set()
     with open(KNOWN_MAPPINGS, "r") as fh:
         for dba_ns, dba_id, dbb_ns, dbb_id in csv.reader(fh, delimiter="\t"):
-            known_mappings.add((dba_ns, dba_id, dbb_ns, dbb_id))
-            known_mappings.add((dbb_ns, dbb_id, dba_ns, dba_id))
+            known_mappings.add((db_ns_mappings[dba_ns], dba_id,
+                                db_ns_mappings[dbb_ns], dbb_id))
+            known_mappings.add((db_ns_mappings[dbb_ns], dbb_id,
+                                db_ns_mappings[dba_ns], dba_id))
     with open(GILDA_MAPPINGS, "r") as fh:
         for _, mesh_id, mesh_name, db_ns, db_id, db_name in csv.reader(fh, delimiter="\t"):
             if ("mesh", mesh_id, db_ns, db_id) in primary_mappings or \
