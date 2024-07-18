@@ -616,6 +616,46 @@
     link: https://bioregistry.io/mesh:D000312
     name: Adrenal Hyperplasia, Congenital
     prefix: mesh
+- doid:0060313:
+    identifier: DOID:0060313
+    link: https://bioregistry.io/doid:0060313
+    name: tracheomalacia
+    prefix: doid
+  mesh:C557675:
+    identifier: C557675
+    link: https://bioregistry.io/mesh:C557675
+    name: Congenital tracheomalacia
+    prefix: mesh
+  mesh:D055090:
+    identifier: D055090
+    link: https://bioregistry.io/mesh:D055090
+    name: Tracheomalacia
+    prefix: mesh
+  mondo:0019804:
+    identifier: 0019804
+    link: https://bioregistry.io/mondo:0019804
+    name: tracheomalacia
+    prefix: mondo
+- doid:9255:
+    identifier: DOID:9255
+    link: https://bioregistry.io/doid:9255
+    name: frontotemporal dementia
+    prefix: doid
+  mesh:C563003:
+    identifier: C563003
+    link: https://bioregistry.io/mesh:C563003
+    name: Pallidopontonigral Degeneration
+    prefix: mesh
+  mesh:D057180:
+    identifier: D057180
+    link: https://bioregistry.io/mesh:D057180
+    name: Frontotemporal Dementia
+    prefix: mesh
+  ncit:C84719:
+    identifier: C84719
+    link: https://bioregistry.io/ncit:C84719
+    name: Frontotemporal Dementia
+    prefix: ncit
 - doid:0002116:
     identifier: DOID:0002116
     link: https://bioregistry.io/doid:0002116

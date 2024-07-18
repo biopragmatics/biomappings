@@ -64,12 +64,12 @@ curie_map:
   fplx: https://sorgerlab.github.io/famplex/
   hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
   idocovid19: http://purl.obolibrary.org/obo/COVIDO_
-  interpro: http://purl.obolibrary.org/obo/IPR_
+  interpro: https://www.ebi.ac.uk/interpro/entry/InterPro/
   ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
   kegg.pathway: https://www.kegg.jp/entry/
   kestrelo: http://purl.obolibrary.org/obo/kestrelo_
   mesh: https://meshb.nlm.nih.gov/record/ui?ui=
-  ndfrt: https://evs.nci.nih.gov/ftp1/NDF-RT/NDF-RT.owl#
+  ndfrt: https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NDFRT&code=
   obo: http://purl.obolibrary.org/obo/
   oboInOwl: http://www.geneontology.org/formats/oboInOwl#
   orcid: https://orcid.org/
@@ -78,7 +78,7 @@ curie_map:
   reactome: https://reactome.org/content/detail/
   skos: http://www.w3.org/2004/02/skos/core#
   umls: https://uts.nlm.nih.gov/uts/umls/concept/
-  uniprot: https://purl.uniprot.org/uniprot/
+  uniprot: http://purl.uniprot.org/uniprot/
   uniprot.chain: http://purl.uniprot.org/annotation/
   vido: http://purl.obolibrary.org/obo/VIDO_
   vsmo: http://purl.obolibrary.org/obo/VSMO_
