@@ -8,16 +8,15 @@ from typing import Iterable
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import get_script_url
+from biomappings import load_mappings, load_false_mappings
 
 GILDA_PATH = os.environ.get("GILDA_PATH")
 if GILDA_PATH:
     GILDA_MAPPINGS = os.path.join(GILDA_PATH, "gilda", "resources", "mesh_mappings.tsv")
-    KNOWN_MAPPINGS = os.path.join(GILDA_PATH, "gilda", "resources", "known_mappings.tsv")
 else:
-    from gilda.resources import MESH_MAPPINGS_PATH, KNOWN_MAPPINGS_PATH
+    from gilda.resources import MESH_MAPPINGS_PATH
 
     GILDA_MAPPINGS = MESH_MAPPINGS_PATH
-    KNOWN_MAPPINGS = KNOWN_MAPPINGS_PATH
 
 db_ns_mappings = {
     "CHEBI": "chebi",
@@ -49,6 +48,26 @@ def get_primary_mappings():
     return mappings
 
 
+def get_curated_mappings():
+    """Get curated mappings."""
+    curated_mappings = set()
+    for mapping in load_mappings() + load_false_mappings():
+        mapping_tuples = {(
+            mapping["source prefix"],
+            mapping["source identifier"],
+            mapping["target prefix"],
+            mapping["target identifier"],
+        ),
+        (
+            mapping["target prefix"],
+            mapping["target identifier"],
+            mapping["source prefix"],
+            mapping["source identifier"],
+        )}
+        curated_mappings |= mapping_tuples
+    return curated_mappings
+
+
 def get_mappings() -> Iterable[PredictionTuple]:
     """Iterate lexical mappings from Gilda."""
     url = get_script_url(__file__)
@@ -56,17 +75,11 @@ def get_mappings() -> Iterable[PredictionTuple]:
     match_type = "skos:exactMatch"
     confidence = 0.95
     primary_mappings = get_primary_mappings()
-    known_mappings = set()
-    with open(KNOWN_MAPPINGS, "r") as fh:
-        for dba_ns, dba_id, dbb_ns, dbb_id in csv.reader(fh, delimiter="\t"):
-            known_mappings.add((db_ns_mappings[dba_ns], dba_id,
-                                db_ns_mappings[dbb_ns], dbb_id))
-            known_mappings.add((db_ns_mappings[dbb_ns], dbb_id,
-                                db_ns_mappings[dba_ns], dba_id))
+    curated_mappings = get_curated_mappings()
     with open(GILDA_MAPPINGS, "r") as fh:
         for _, mesh_id, mesh_name, db_ns, db_id, db_name in csv.reader(fh, delimiter="\t"):
-            if ("mesh", mesh_id, db_ns, db_id) in primary_mappings or \
-                    ("mesh", mesh_id, db_ns, db_id) in known_mappings:
+            if ("mesh", mesh_id, db_ns_mappings[db_ns], db_id) in primary_mappings \
+                    or ("mesh", mesh_id, db_ns_mappings[db_ns], db_id) in curated_mappings:
                 continue
             yield PredictionTuple(
                 "mesh",
