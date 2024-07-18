@@ -52,18 +52,20 @@ def get_curated_mappings():
     """Get curated mappings."""
     curated_mappings = set()
     for mapping in load_mappings() + load_false_mappings():
-        mapping_tuples = {(
-            mapping["source prefix"],
-            mapping["source identifier"],
-            mapping["target prefix"],
-            mapping["target identifier"],
-        ),
-        (
-            mapping["target prefix"],
-            mapping["target identifier"],
-            mapping["source prefix"],
-            mapping["source identifier"],
-        )}
+        mapping_tuples = {
+            (
+                mapping["source prefix"],
+                mapping["source identifier"],
+                mapping["target prefix"],
+                mapping["target identifier"],
+            ),
+            (
+                mapping["target prefix"],
+                mapping["target identifier"],
+                mapping["source prefix"],
+                mapping["source identifier"],
+            ),
+        }
         curated_mappings |= mapping_tuples
     return curated_mappings
 
@@ -78,8 +80,12 @@ def get_mappings() -> Iterable[PredictionTuple]:
     curated_mappings = get_curated_mappings()
     with open(GILDA_MAPPINGS, "r") as fh:
         for _, mesh_id, mesh_name, db_ns, db_id, db_name in csv.reader(fh, delimiter="\t"):
-            if ("mesh", mesh_id, db_ns_mappings[db_ns], db_id) in primary_mappings \
-                    or ("mesh", mesh_id, db_ns_mappings[db_ns], db_id) in curated_mappings:
+            if ("mesh", mesh_id, db_ns_mappings[db_ns], db_id) in primary_mappings or (
+                "mesh",
+                mesh_id,
+                db_ns_mappings[db_ns],
+                db_id,
+            ) in curated_mappings:
                 continue
             yield PredictionTuple(
                 "mesh",
