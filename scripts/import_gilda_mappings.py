@@ -12,10 +12,12 @@ from biomappings.utils import get_script_url
 GILDA_PATH = os.environ.get("GILDA_PATH")
 if GILDA_PATH:
     GILDA_MAPPINGS = os.path.join(GILDA_PATH, "gilda", "resources", "mesh_mappings.tsv")
+    KNOWN_MAPPINGS = os.path.join(GILDA_PATH, "gilda", "resources", "known_mappings.tsv")
 else:
-    from gilda.resources import MESH_MAPPINGS_PATH
+    from gilda.resources import MESH_MAPPINGS_PATH, KNOWN_MAPPINGS_PATH
 
     GILDA_MAPPINGS = MESH_MAPPINGS_PATH
+    KNOWN_MAPPINGS = KNOWN_MAPPINGS_PATH
 
 db_ns_mappings = {
     "CHEBI": "chebi",
@@ -52,9 +54,15 @@ def get_mappings() -> Iterable[PredictionTuple]:
     match_type = "skos:exactMatch"
     confidence = 0.95
     primary_mappings = get_primary_mappings()
+    known_mappings = set()
+    with open(KNOWN_MAPPINGS, "r") as fh:
+        for dba_ns, dba_id, dbb_ns, dbb_id in csv.reader(fh, delimiter="\t"):
+            known_mappings.add((dba_ns, dba_id, dbb_ns, dbb_id))
+            known_mappings.add((dbb_ns, dbb_id, dba_ns, dba_id))
     with open(GILDA_MAPPINGS, "r") as fh:
         for _, mesh_id, mesh_name, db_ns, db_id, db_name in csv.reader(fh, delimiter="\t"):
-            if ("mesh", mesh_id, db_ns, db_id) in primary_mappings:
+            if ("mesh", mesh_id, db_ns, db_id) in primary_mappings or \
+                    ("mesh", mesh_id, db_ns, db_id) in known_mappings:
                 continue
             yield PredictionTuple(
                 "mesh",
