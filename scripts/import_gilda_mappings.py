@@ -6,9 +6,9 @@ import csv
 import os
 from typing import Iterable
 
+from biomappings import load_false_mappings, load_mappings
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import get_script_url
-from biomappings import load_mappings, load_false_mappings
 
 GILDA_PATH = os.environ.get("GILDA_PATH")
 if GILDA_PATH:
