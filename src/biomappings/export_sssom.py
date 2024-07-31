@@ -157,15 +157,15 @@ def sssom():
 
     click.echo("Writing JSON")
     with JSON_PATH.open("w") as file:
-        msdf.metadata[
-            "mapping_set_id"
-        ] = "https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.json"
+        msdf.metadata["mapping_set_id"] = (
+            "https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.json"
+        )
         write_json(msdf, file)
     click.echo("Writing OWL")
     with OWL_PATH.open("w") as file:
-        msdf.metadata[
-            "mapping_set_id"
-        ] = "https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.owl"
+        msdf.metadata["mapping_set_id"] = (
+            "https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.owl"
+        )
         write_owl(msdf, file)
 
 

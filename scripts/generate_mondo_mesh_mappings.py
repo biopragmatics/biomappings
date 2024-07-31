@@ -1,4 +1,5 @@
 """Generate mappings using Gilda from MONDO to MeSH."""
+
 from collections import Counter
 
 import gilda
