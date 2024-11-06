@@ -12,6 +12,7 @@ from deeponto.align.bertmap import DEFAULT_CONFIG_FILE, BERTMapPipeline
 from deeponto.onto import Ontology
 from huggingface_hub import snapshot_download
 from pystow.utils import download
+from tqdm import tqdm
 
 import biomappings
 from biomappings.bertmap import (
@@ -21,13 +22,18 @@ from biomappings.bertmap import (
 )
 from biomappings.resources import append_prediction_tuples
 
+HERE = Path(__file__).parent.resolve()
+ROOT = HERE.parent.resolve()
+BERTMAP_DIR = ROOT.joinpath("bertmap")
+BERTMAP_DIR.mkdir(exist_ok=True)
+
 
 # pull
 def download_ontologies(
     target_ontology_train: str,
     source_ontology_train: str,
-    source_ontologies_inference: list,
-    target_ontologies_inference: list,
+    source_ontologies_inference: list[str],
+    target_ontologies_inference: list[str],
     ontologies_directory: Path,
 ) -> dict[str, Path]:
     """Download OWL Files for specified ontologies."""
@@ -35,20 +41,22 @@ def download_ontologies(
     click.echo(f"Caching in {ontologies_directory}")
 
     prefix_to_path = {}
-    for prefix in [
-        target_ontology_train,
-        source_ontology_train,
-        *source_ontologies_inference,
-        *target_ontologies_inference,
-    ]:
+    for prefix in tqdm(
+        [
+            target_ontology_train,
+            source_ontology_train,
+            *source_ontologies_inference,
+            *target_ontologies_inference,
+        ],
+        desc="Downloading ontologies",
+        leave=False,
+    ):
         ext = ".ttl" if prefix.upper() == "MESH2024" else ".owl"
         ontology_path = ontologies_directory.joinpath(prefix.lower()).with_suffix(ext)
         prefix_to_path[prefix.lower()] = ontology_path
         if not ontology_path.is_file():
-            print(f"Downloading {prefix}")
+            tqdm.write(f"Downloading {prefix}")
             download(url=PREFIX_TO_DOWNLOAD_URL[prefix.upper()], path=ontology_path)
-        else:
-            print(f"found {prefix.lower()} at {ontology_path}")
     return prefix_to_path
 
 
@@ -59,7 +67,7 @@ def load_bertmap(
     ontology_paths: dict[str, Path],
     use_biomappings: bool = False,
     train_model: bool = False,
-):
+) -> BERTMapPipeline:
     """Load in the bertmap model (will download from hugging face if not present in ./bertmap)."""
     config = BERTMapPipeline.load_bertmap_config(config_path.as_posix())
 
@@ -69,8 +77,8 @@ def load_bertmap(
         config.known_mappings = save_known_maps(
             target_ontology_train=target_ontology_train,
             source_ontology_train=source_ontology_train,
-            mappings_path="knownMaps",
-        )
+            mappings_directory=BERTMAP_DIR.joinpath("knownMaps"),
+        ).as_posix()
     print("-" * 100)
     print(f"Using config: \n{config}")
     print("-" * 100)
@@ -78,6 +86,8 @@ def load_bertmap(
         config.global_matching.enabled = False
         if not os.path.isdir("bertmap"):
             print("downloading model from hugging face")
+            # Need documentation about this!
+            raise ValueError("unsafe to download without documentation")
             snapshot_download(repo_id="buzgalbraith/BERTMAP-BioMappings", local_dir="./")
         else:
             print("Model found at bertmap")
@@ -87,8 +97,8 @@ def load_bertmap(
 
 
 def save_known_maps(
-    target_ontology_train: str, source_ontology_train: str, mappings_path="knownMaps"
-):
+    target_ontology_train: str, source_ontology_train: str, mappings_directory: Path
+) -> Path:
     """Use true mappings from Biomappings as ground truth for training BertMap Model."""
     true_mappings = biomappings.load_mappings()
 
@@ -117,10 +127,9 @@ def save_known_maps(
     # FIXME use explicit list comprehensions instead of maps/filters
     known_maps = map(iri_map, filter(onto_filter, true_mappings))
 
-    os.makedirs(mappings_path, exist_ok=True)
-    known_maps_path = os.path.join(
-        mappings_path,
-        source_ontology_train.lower() + "-" + target_ontology_train.lower() + ".tsv",
+    mappings_directory.mkdir(exist_ok=True)
+    known_maps_path = mappings_directory.joinpath(
+        source_ontology_train.lower() + "-" + target_ontology_train.lower() + ".tsv"
     )
 
     f = open(known_maps_path, mode="w")
@@ -136,6 +145,12 @@ def strip_digits(x):
     return "".join(filter(lambda x: not x.isdigit(), x))
 
 
+# setting constants
+RELATION = "skos:exactMatch"
+MATCH_TYPE = "semapv:SemanticSimilarityThresholdMatching"
+SOURCE = "generate_BERTMap_predictions.py"
+
+
 def bertmap_inference(
     ambig_maps_to_check,
     nonambig_maps_to_check,
@@ -148,10 +163,7 @@ def bertmap_inference(
     """Run inference on a single pair of ontologies using BertMap."""
     target_prefix = target_onto_prefix.lower()
     source_prefix = source_onto_prefix.lower()
-    # setting constants
-    relation = "skos:exactMatch"
-    match_type = "semapv:SemanticSimilarityThresholdMatching"
-    source = "generate_BERTMap_predictions.py"
+
     # re-write this as a new lst
     rows = []
     for src_class_iri, src_name, tgt_class_iri, target_name in nonambig_maps_to_check:
@@ -185,13 +197,13 @@ def bertmap_inference(
                     strip_digits(source_prefix),
                     source_identifier,
                     src_name,
-                    relation,
+                    RELATION,
                     strip_digits(target_prefix),
                     target_identifier,
                     target_name,
-                    match_type,
+                    MATCH_TYPE,
                     conf,
-                    source,
+                    SOURCE,
                 )
             )
     for src_class_iri, src_name, tgt_class_iri, target_name in ambig_maps_to_check:
@@ -226,13 +238,13 @@ def bertmap_inference(
                     strip_digits(source_prefix),
                     source_identifier,
                     src_name,
-                    relation,
+                    RELATION,
                     strip_digits(target_prefix),
                     target_identifier,
                     target_name,
-                    match_type,
+                    MATCH_TYPE,
                     conf,
-                    source,
+                    SOURCE,
                 )
             )
     return rows
@@ -383,6 +395,7 @@ def inference_across_ontologies(
         print("loading ontologies")
         src_onto = Ontology(ontology_paths[source_prefix.lower()])
         target_onto = Ontology(ontology_paths[target_prefix.lower()])
+        # FIXME why is this loaded inside the loop?
         config = BERTMapPipeline.load_bertmap_config(config_path.as_posix())
         config.global_matching.enabled = False
         print("loading model")
