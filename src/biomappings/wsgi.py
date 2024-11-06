@@ -1,22 +1,15 @@
-# -*- coding: utf-8 -*-
-
 """Web curation interface for :mod:`biomappings`."""
 
 import getpass
 import os
 from collections import Counter, defaultdict
+from collections.abc import Iterable, Mapping
 from copy import deepcopy
 from pathlib import Path
 from typing import (
     Any,
-    Dict,
-    Iterable,
-    List,
     Literal,
-    Mapping,
     Optional,
-    Set,
-    Tuple,
     Union,
 )
 
@@ -99,7 +92,7 @@ def url_for_state(endpoint, state: State, **kwargs) -> str:
 
 
 def get_app(
-    target_curies: Optional[Iterable[Tuple[str, str]]] = None,
+    target_curies: Optional[Iterable[tuple[str, str]]] = None,
     predictions_path: Optional[Path] = None,
     positives_path: Optional[Path] = None,
     negatives_path: Optional[Path] = None,
@@ -148,7 +141,7 @@ class Controller:
     def __init__(
         self,
         *,
-        target_curies: Optional[Iterable[Tuple[str, str]]] = None,
+        target_curies: Optional[Iterable[tuple[str, str]]] = None,
         predictions_path: Optional[Path] = None,
         positives_path: Optional[Path] = None,
         negatives_path: Optional[Path] = None,
@@ -171,12 +164,12 @@ class Controller:
         self.negatives_path = negatives_path
         self.unsure_path = unsure_path
 
-        self._marked: Dict[int, str] = {}
+        self._marked: dict[int, str] = {}
         self.total_curated = 0
-        self._added_mappings: List[Dict[str, Union[None, str, float]]] = []
+        self._added_mappings: list[dict[str, Union[None, str, float]]] = []
         self.target_ids = set(target_curies or [])
 
-    def predictions_from_state(self, state: State) -> Iterable[Tuple[int, Mapping[str, Any]]]:
+    def predictions_from_state(self, state: State) -> Iterable[tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions from a state instance."""
         return self.predictions(
             offset=state.offset,
@@ -206,7 +199,7 @@ class Controller:
         sort: Optional[str] = None,
         same_text: Optional[bool] = None,
         provenance: Optional[str] = None,
-    ) -> Iterable[Tuple[int, Mapping[str, Any]]]:
+    ) -> Iterable[tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
         :param offset: If given, offset the iteration by this number
@@ -262,7 +255,6 @@ class Controller:
             target_query=state.target_query,
             target_prefix=state.target_prefix,
             prefix=state.prefix,
-            #  sort=state.sort,  # sort doesn't matter for count
             same_text=state.same_text,
             provenance=state.provenance,
         )
@@ -305,7 +297,7 @@ class Controller:
         same_text: Optional[bool] = None,
         provenance: Optional[str] = None,
     ):
-        it: Iterable[Tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
+        it: Iterable[tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
         if self.target_ids:
             it = (
                 (line, p)
@@ -369,7 +361,7 @@ class Controller:
         return rv
 
     @staticmethod
-    def _help_filter(query: str, it, elements: Set[str]):
+    def _help_filter(query: str, it, elements: set[str]):
         query = query.casefold()
         return (
             (line, prediction)

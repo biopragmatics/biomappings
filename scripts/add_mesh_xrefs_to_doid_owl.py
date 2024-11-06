@@ -29,7 +29,7 @@ def add_xref(lines, node, xref):
     xref_entries = []
     for idx, line in enumerate(lines):
         # First, find the class with the given ID and start looking for xrefs
-        if line.startswith("# Class: obo:%s" % node_owl):
+        if line.startswith(f"# Class: obo:{node_owl}"):
             blank_counter = 0
             look_for_xref = True
             def_idx = idx + 2
@@ -60,10 +60,7 @@ def add_xref(lines, node, xref):
         start_xref_idx = def_idx + 1
     # We now have to render the xref string and sort xrefs alphabetically
     # to make sure we put the new one in the right place
-    xref_str = 'AnnotationAssertion(oboInOwl:hasDbXref obo:%s "%s"^^xsd:string)\n' % (
-        node_owl,
-        xref,
-    )
+    xref_str = f'AnnotationAssertion(oboInOwl:hasDbXref obo:{node_owl} "{xref}"^^xsd:string)\n'
     xref_entries.append(xref_str)
     xref_entries = sorted(xref_entries)
     xr_idx = xref_entries.index(xref_str)
@@ -113,7 +110,7 @@ if __name__ == "__main__":
     ]
 
     # Read the OWL file
-    with open(EDITABLE_OWL_PATH, "r") as fh:
+    with open(EDITABLE_OWL_PATH) as fh:
         lines = fh.readlines()
 
     review_cols = [

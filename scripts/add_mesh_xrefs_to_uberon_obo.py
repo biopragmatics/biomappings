@@ -15,7 +15,7 @@ def add_xref(lines, node, xref):
     def_idx = None
     xref_entries = []
     for idx, line in enumerate(lines):
-        if line == "id: %s\n" % node:
+        if line == f"id: {node}\n":
             look_for_xref = True
         if look_for_xref and line.startswith("def"):
             def_idx = idx
@@ -31,7 +31,7 @@ def add_xref(lines, node, xref):
     xref_entries.append(xref)
     xref_entries = sorted(xref_entries)
     xr_idx = xref_entries.index(xref)
-    lines.insert(start_xref_idx + xr_idx, "xref: %s\n" % xref)
+    lines.insert(start_xref_idx + xr_idx, f"xref: {xref}\n")
     return lines
 
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     mappings = load_mappings()
     uberon_mappings = [m for m in mappings if m["source prefix"] == "uberon"]
 
-    with open(EDITABLE_OBO_PATH, "r") as fh:
+    with open(EDITABLE_OBO_PATH) as fh:
         lines = fh.readlines()
 
     for mapping in uberon_mappings:

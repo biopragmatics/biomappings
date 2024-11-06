@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
-
 """Append lexical mappings between MeSH and UniProt."""
 
 import re
-from typing import Iterable
+from collections.abc import Iterable
 
 from indra.databases import hgnc_client, mesh_client
 

@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
-
 """Utilities for automated curation."""
 
 import logging
-from typing import Mapping
+from collections.abc import Mapping
 
 from biomappings.resources import (
     append_true_mappings,

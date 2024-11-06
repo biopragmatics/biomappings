@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Import mappings from ComPath."""
 
 import pandas as pd

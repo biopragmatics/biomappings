@@ -21,7 +21,7 @@ for node, data in g.nodes(data=True):
         continue
 
     has_mesh_id = False
-    for value in [data.get("def", "")] + data.get("synonym", []) + data.get("xref", []):
+    for value in [data.get("def", ""), *data.get("synonym", []), *data.get("xref", [])]:
         if re.findall(mesh_tree_pattern, value) or re.findall(mesh_id_pattern, value):
             has_mesh_id = True
             break
@@ -43,9 +43,9 @@ for node, data in g.nodes(data=True):
         groundings = match.get_groundings()
         mesh_ids |= {id for ns, id in groundings if ns == "MESH"}
     if len(mesh_ids) > 1:
-        print("Multiple MESH IDs for %s" % node)
+        print(f"Multiple MESH IDs for {node}")
     elif len(mesh_ids) == 1:
-        mesh_id = list(mesh_ids)[0]
+        mesh_id = next(iter(mesh_ids))
         mappings[node] = mesh_id
 
 

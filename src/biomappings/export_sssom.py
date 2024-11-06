@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Export Biomappings as SSSOM."""
 
 import importlib.metadata
