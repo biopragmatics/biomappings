@@ -101,7 +101,7 @@ def download_ontologies(
         ontology_paths[ontology.lower()] = ontology_path
         if not os.path.isfile(ontology_path):
             print("Downloading {0}".format(ontology))
-            cmd = "wget -O {0} {1}".format(ontology_path, ENDPOINTS[ontology.upper()])
+            cmd = ['wget', '-O', ontology_path, ENDPOINTS[ontology.upper()]]
             subprocess.run(cmd)
         else:
             print("found {0} at {1}".format(ontology.lower(), ontology_path))
@@ -419,7 +419,7 @@ def check_ambagious_maps(maps_not_in_biomappings):
 
 
 def inference_across_ontologies(
-    config: str,
+    config_path: str,
     target_ontologies_inference: list,
     source_ontologies_inference: list,
     mappings_path: str,
@@ -438,7 +438,7 @@ def inference_across_ontologies(
         print("loading ontologies")
         src_onto = Ontology(ontology_paths[source_onto_prefix.lower()])
         target_onto = Ontology(ontology_paths[target_onto_prefix.lower()])
-        config = BERTMapPipeline.load_bertmap_config(config)
+        config = BERTMapPipeline.load_bertmap_config(config_path)
         config.global_matching.enabled = False
         print("loading model")
         bertmap = BERTMapPipeline(src_onto, target_onto, config)
@@ -473,7 +473,7 @@ if __name__ == "__main__":
         train_model=args.train_model,
     )
     inference_across_ontologies(
-        config=args.config,
+        config_path=args.config,
         target_ontologies_inference=args.target_ontologies_inference,
         source_ontologies_inference=args.source_ontologies_inference,
         mappings_path=args.mappings_path,
