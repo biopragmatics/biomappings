@@ -5,6 +5,7 @@ import os
 import subprocess
 from functools import reduce
 from itertools import product
+from pathlib import Path
 
 import torch
 from deeponto.align.bertmap import DEFAULT_CONFIG_FILE, BERTMapPipeline
@@ -58,10 +59,11 @@ def download_ontologies(
     source_ontology_train: str,
     source_ontologies_inference: list,
     target_ontologies_inference: list,
-    ontologies_path: str,
-):
+    ontologies_directory: Path,
+) -> dict[str, Path]:
     """Download OWL Files for specified ontologies."""
-    os.makedirs(ontologies_path, exist_ok=True)
+    ontologies_directory.mkdir(exist_ok=True)
+
     ontology_paths = {}
     for ontology in [
         target_ontology_train,
@@ -70,11 +72,11 @@ def download_ontologies(
         *target_ontologies_inference,
     ]:
         ext = ".ttl" if ontology.upper() == "MESH2024" else ".owl"
-        ontology_path = os.path.join(ontologies_path, ontology.lower() + ext)
+        ontology_path = ontologies_directory.joinpath(ontology.lower()).with_suffix(ext)
         ontology_paths[ontology.lower()] = ontology_path
         if not os.path.isfile(ontology_path):
             print(f"Downloading {ontology}")
-            cmd = ["wget", "-O", ontology_path, ENDPOINTS[ontology.upper()]]
+            cmd = ["wget", "-O", str(ontology_path), ENDPOINTS[ontology.upper()]]
             subprocess.run(cmd)
         else:
             print(f"found {ontology.lower()} at {ontology_path}")
@@ -82,15 +84,15 @@ def download_ontologies(
 
 
 def load_bertmap(
-    config: str,
+    config_path: Path,
     target_ontology_train: str,
     source_ontology_train: str,
-    ontology_paths: dict,
+    ontology_paths: dict[str, Path],
     use_biomappings: bool = False,
     train_model: bool = False,
 ):
     """Load in the bertmap model (will download from hugging face if not present in ./bertmap)."""
-    config = BERTMapPipeline.load_bertmap_config(config)
+    config = BERTMapPipeline.load_bertmap_config(config_path.as_posix())
 
     if use_biomappings:
         print("-" * 100)
@@ -143,6 +145,7 @@ def save_known_maps(
             + "\t1.0\n"
         )
 
+    # FIXME use explicit list comprehensions instead of maps/filters
     known_maps = map(iri_map, filter(onto_filter, true_mappings))
 
     os.makedirs(mappings_path, exist_ok=True)
@@ -266,18 +269,18 @@ def bertmap_inference(
     return rows
 
 
-def get_novel_mappings(target_onto_prefix: str, source_onto_prefix: str, maps_path: str):
+def get_novel_mappings(target_prefix: str, source_prefix: str, mappings_path: Path):
     """Get mappings to use for inference."""
     # get all potential mappings
     maps_to_check = get_maps_to_evaluate(
-        target_onto_prefix=target_onto_prefix,
-        source_onto_prefix=source_onto_prefix,
-        maps_path=maps_path,
+        target_onto_prefix=target_prefix,
+        source_onto_prefix=source_prefix,
+        mappings_path=mappings_path,
     )
     # filter out those already in biomappings
     maps_not_in_biomappings = filter_for_biomappings(
-        target_onto_prefix=target_onto_prefix,
-        source_onto_prefix=source_onto_prefix,
+        target_onto_prefix=target_prefix,
+        source_onto_prefix=source_prefix,
         maps_to_check=maps_to_check,
     )
     # break the remaining into an ambagious an non-ambagious set
@@ -287,11 +290,11 @@ def get_novel_mappings(target_onto_prefix: str, source_onto_prefix: str, maps_pa
     return ambagious_maps, non_ambagious_maps
 
 
-def get_maps_to_evaluate(target_onto_prefix: str, source_onto_prefix: str, maps_path: str):
+def get_maps_to_evaluate(target_onto_prefix: str, source_onto_prefix: str, mappings_path: Path):
     """Read in the initial set of mappings from a file."""
     target_name = target_onto_prefix.lower()
     source_name = source_onto_prefix.lower()
-    mappings = open(maps_path).readlines()
+    mappings = open(mappings_path).readlines()  # FIXME use context manager with open(): ...
 
     # split_map = lambda x: x.split("\t")
     # onto_filter = lambda x: (x[0].lower() == strip_digits(source_name)) & (
@@ -322,6 +325,7 @@ def get_maps_to_evaluate(target_onto_prefix: str, source_onto_prefix: str, maps_
             x[5].strip(),
         )
 
+    # FIXME use explicit list comprehensions instead of maps/filters
     maps_to_check = map(iri_map, filter(onto_filter, map(split_map, mappings)))
     return maps_to_check
 
@@ -361,6 +365,7 @@ def filter_for_biomappings(target_onto_prefix: str, source_onto_prefix: str, map
         """Filter for mappings not in biomappings."""
         return x not in biomappping_maps_to_check_against
 
+    # FIXME use explicit list comprehensions instead of maps/filters
     biomappping_maps_to_check_against = set(map(iri_map, filter(onto_filter, biomappings_maps)))
     maps_not_in_biomappings = filter(known_filter, maps_to_check)
     return maps_not_in_biomappings
@@ -369,6 +374,7 @@ def filter_for_biomappings(target_onto_prefix: str, source_onto_prefix: str, map
 def check_ambagious_maps(maps_not_in_biomappings):
     """Split maps into ambagious and non-ambagious."""
     maps_not_in_biomappings = list(maps_not_in_biomappings)
+    # FIXME use explicit list comprehensions and accumulation instead of reduce. This is totally illegible
     value_counts = reduce(
         lambda acc, item: {
             **acc,
@@ -391,26 +397,24 @@ def check_ambagious_maps(maps_not_in_biomappings):
 
 
 def inference_across_ontologies(
-    config_path: str,
-    target_ontologies_inference: list,
-    source_ontologies_inference: list,
-    mappings_path: str,
+    config_path: Path,
+    target_prefixes: list[str],
+    source_prefixes: list[str],
+    mappings_path: Path,
     ontology_paths: dict,
 ):
     """Run inference using BERTMap model over multiple ontologies."""
-    for target_onto_prefix, source_onto_prefix in product(
-        target_ontologies_inference, source_ontologies_inference
-    ):
+    for target_prefix, source_prefix in product(target_prefixes, source_prefixes):
         print("Filtering Mappings")
         ambagious_maps, non_ambagious_maps = get_novel_mappings(
-            target_onto_prefix=target_onto_prefix,
-            source_onto_prefix=source_onto_prefix,
-            maps_path=mappings_path,
+            target_prefix=target_prefix,
+            source_prefix=source_prefix,
+            mappings_path=mappings_path,
         )
         print("loading ontologies")
-        src_onto = Ontology(ontology_paths[source_onto_prefix.lower()])
-        target_onto = Ontology(ontology_paths[target_onto_prefix.lower()])
-        config = BERTMapPipeline.load_bertmap_config(config_path)
+        src_onto = Ontology(ontology_paths[source_prefix.lower()])
+        target_onto = Ontology(ontology_paths[target_prefix.lower()])
+        config = BERTMapPipeline.load_bertmap_config(config_path.as_posix())
         config.global_matching.enabled = False
         print("loading model")
         bertmap = BERTMapPipeline(src_onto, target_onto, config)
@@ -418,8 +422,8 @@ def inference_across_ontologies(
         rows = bertmap_inference(
             ambig_maps_to_check=ambagious_maps,
             nonambig_maps_to_check=non_ambagious_maps,
-            target_onto_prefix=target_onto_prefix,
-            source_onto_prefix=source_onto_prefix,
+            target_onto_prefix=target_prefix,
+            source_onto_prefix=source_prefix,
             bertmap=bertmap,
             target_onto=target_onto,
             source_onto=src_onto,
@@ -435,11 +439,11 @@ def main():
         source_ontology_train=args.source_ontology_train,
         source_ontologies_inference=args.source_ontologies_inference,
         target_ontologies_inference=args.target_ontologies_inference,
-        ontologies_path=args.ontologies_path,
+        ontologies_directory=Path(args.ontologies_path).resolve(),
     )
     # FIXME why isn't the model variable used anywhere?
     load_bertmap(
-        config=args.config,
+        config_path=Path(args.config),
         target_ontology_train=args.target_ontology_train,
         source_ontology_train=args.source_ontology_train,
         ontology_paths=ontology_paths,
@@ -448,9 +452,9 @@ def main():
     )
     inference_across_ontologies(
         config_path=args.config,
-        target_ontologies_inference=args.target_ontologies_inference,
-        source_ontologies_inference=args.source_ontologies_inference,
-        mappings_path=args.mappings_path,
+        target_prefixes=args.target_ontologies_inference,
+        source_prefixes=args.source_ontologies_inference,
+        mappings_path=Path(args.mappings_path).resolve(),
         ontology_paths=ontology_paths,
     )
 
