@@ -30,3 +30,8 @@ IRI_SOURCE_PREFIX_MAPS = {
     "chebi": lambda x: x.removeprefix("http://purl.obolibrary.org/obo/").replace("_", ":"),
     "go": lambda x: x.removeprefix("http://purl.obolibrary.org/obo/").replace("_", ":"),
 }
+
+
+def get_luid(prefix: str, iri: str) -> str:
+    """Get the local unique identifier."""
+    return IRI_SOURCE_PREFIX_MAPS[prefix](iri)

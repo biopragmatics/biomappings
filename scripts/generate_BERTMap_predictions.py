@@ -16,9 +16,9 @@ from tqdm import tqdm
 
 import biomappings
 from biomappings.bertmap import (
-    IRI_SOURCE_PREFIX_MAPS,
     PREFIX_TO_DOWNLOAD_URL,
     SOURCE_PREFIX_IRI_MAPS,
+    get_luid,
 )
 from biomappings.resources import append_prediction_tuples
 
@@ -161,30 +161,36 @@ def bertmap_inference(
     target_prefix = target_onto_prefix.lower()
     source_prefix = source_onto_prefix.lower()
 
+    # FIXME reduce code cuplication for handling ambig_maps_to_check and nonambig_maps_to_check
     # re-write this as a new lst
     rows = []
     for src_class_iri, src_name, tgt_class_iri, target_name in nonambig_maps_to_check:
         src_class_annotations = bertmap.src_annotation_index[src_class_iri]
+        if not src_class_annotations:
+            continue
         tgt_class_annotations = bertmap.tgt_annotation_index[tgt_class_iri]
+        if not tgt_class_annotations:
+            continue
+
         conf = bertmap.mapping_predictor.bert_mapping_score(
             src_class_annotations, tgt_class_annotations
         )
 
-        source_identifier = IRI_SOURCE_PREFIX_MAPS[source_prefix](src_class_iri)
-        target_identifier = IRI_SOURCE_PREFIX_MAPS[target_prefix](tgt_class_iri)
+        source_identifier = get_luid(source_prefix, src_class_iri)
+        target_identifier = get_luid(target_prefix, tgt_class_iri)
         # check if in provided map
-        target_annotations = target_onto.get_annotations(tgt_class_iri)
         target_known_maps = [
-            x for x in target_annotations if strip_digits(source_prefix).upper() in x
+            annotation
+            for annotation in target_onto.get_annotations(tgt_class_iri)
+            if strip_digits(source_prefix).upper() in annotation
         ]
-        source_annotations = source_onto.get_annotations(src_class_iri)
         source_known_maps = [
-            x for x in source_annotations if strip_digits(target_prefix).upper() in x
+            annotation
+            for annotation in source_onto.get_annotations(src_class_iri)
+            if strip_digits(target_prefix).upper() in annotation
         ]
         # if it is mapped at all that means the mapping is either already done or wrong so just skip
         if len(target_known_maps) > 0 or len(source_known_maps) > 0:
-            pass
-        elif len(src_class_annotations) == 0 or len(tgt_class_annotations) == 0:
             pass
         elif conf < 0.5:
             pass
@@ -205,14 +211,19 @@ def bertmap_inference(
             )
     for src_class_iri, src_name, tgt_class_iri, target_name in ambig_maps_to_check:
         src_class_annotations = bertmap.src_annotation_index[src_class_iri]
+        if not src_class_annotations:
+            continue
+
         tgt_class_annotations = bertmap.tgt_annotation_index[tgt_class_iri]
+        if not tgt_class_annotations:
+            continue
 
         class_annotation_pairs = list(product(src_class_annotations, tgt_class_annotations))
         synonym_scores = bertmap.bert_synonym_classifier.predict(class_annotation_pairs)
         # only one element tensor is able to be extracted as a scalar by .item()
         conf = float(torch.mean(synonym_scores).item())
-        source_identifier = IRI_SOURCE_PREFIX_MAPS[source_prefix](src_class_iri)
-        target_identifier = IRI_SOURCE_PREFIX_MAPS[target_prefix](tgt_class_iri)
+        source_identifier = get_luid(source_prefix, src_class_iri)
+        target_identifier = get_luid(target_prefix, tgt_class_iri)
         # check if in provided map
         target_annotations = target_onto.get_annotations(tgt_class_iri)
         target_known_maps = [
@@ -224,8 +235,6 @@ def bertmap_inference(
         ]
         # if it is mapped at all that means the mapping is either already done or wrong so just skip
         if len(target_known_maps) > 0 or len(source_known_maps) > 0:
-            pass
-        elif len(src_class_annotations) == 0 or len(tgt_class_annotations) == 0:
             pass
         elif conf < 0.5:
             pass
