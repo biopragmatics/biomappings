@@ -91,20 +91,21 @@ def download_ontologies(
     """Download OWL Files for specified ontologies."""
     os.makedirs(ontologies_path, exist_ok=True)
     ontology_paths = {}
-    for ontology in (
-        [target_ontology_train, source_ontology_train]
-        + source_ontologies_inference
-        + target_ontologies_inference
-    ):
+    for ontology in [
+        target_ontology_train,
+        source_ontology_train,
+        *source_ontologies_inference,
+        *target_ontologies_inference,
+    ]:
         ext = ".ttl" if ontology.upper() == "MESH2024" else ".owl"
         ontology_path = os.path.join(ontologies_path, ontology.lower() + ext)
         ontology_paths[ontology.lower()] = ontology_path
         if not os.path.isfile(ontology_path):
-            print("Downloading {0}".format(ontology))
-            cmd = ['wget', '-O', ontology_path, ENDPOINTS[ontology.upper()]]
+            print(f"Downloading {ontology}")
+            cmd = ["wget", "-O", ontology_path, ENDPOINTS[ontology.upper()]]
             subprocess.run(cmd)
         else:
-            print("found {0} at {1}".format(ontology.lower(), ontology_path))
+            print(f"found {ontology.lower()} at {ontology_path}")
     return ontology_paths
 
 
@@ -128,7 +129,7 @@ def load_bertmap(
             mappings_path="knownMaps",
         )
     print("-" * 100)
-    print("Using config: \n{0}".format(config))
+    print(f"Using config: \n{config}")
     print("-" * 100)
     if not train_model:
         config.global_matching.enabled = False
@@ -235,7 +236,6 @@ def bertmap_inference(
         elif conf < 0.5:
             pass
         else:
-
             rows.append(
                 biomappings.PredictionTuple(
                     strip_digits(source_prefix),
@@ -455,7 +455,8 @@ def inference_across_ontologies(
         append_prediction_tuples(rows)
 
 
-if __name__ == "__main__":
+def main():
+    """Run the BERTMap prediction workflow."""
     args = parser.parse_args()
     ontology_paths = download_ontologies(
         target_ontology_train=args.target_ontology_train,
@@ -464,7 +465,8 @@ if __name__ == "__main__":
         target_ontologies_inference=args.target_ontologies_inference,
         ontologies_path=args.ontologies_path,
     )
-    model = load_bertmap(
+    # FIXME why isn't the model variable used anywhere?
+    load_bertmap(
         config=args.config,
         target_ontology_train=args.target_ontology_train,
         source_ontology_train=args.source_ontology_train,
@@ -479,3 +481,7 @@ if __name__ == "__main__":
         mappings_path=args.mappings_path,
         ontology_paths=ontology_paths,
     )
+
+
+if __name__ == "__main__":
+    main()
