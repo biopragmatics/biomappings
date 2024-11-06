@@ -27,6 +27,9 @@ ROOT = HERE.parent.resolve()
 BERTMAP_DIR = ROOT.joinpath("bertmap")
 BERTMAP_DIR.mkdir(exist_ok=True)
 
+ONTOLOGIES_DIRECTORY = BERTMAP_DIR.joinpath("resources")
+ONTOLOGIES_DIRECTORY.mkdir(exist_ok=True)
+
 
 # pull
 def download_ontologies(
@@ -34,12 +37,8 @@ def download_ontologies(
     source_ontology_train: str,
     source_ontologies_inference: list[str],
     target_ontologies_inference: list[str],
-    ontologies_directory: Path,
 ) -> dict[str, Path]:
     """Download OWL Files for specified ontologies."""
-    ontologies_directory.mkdir(exist_ok=True)
-    click.echo(f"Caching in {ontologies_directory}")
-
     prefix_to_path = {}
     for prefix in tqdm(
         [
@@ -52,7 +51,7 @@ def download_ontologies(
         leave=False,
     ):
         ext = ".ttl" if prefix.upper() == "MESH2024" else ".owl"
-        ontology_path = ontologies_directory.joinpath(prefix.lower()).with_suffix(ext)
+        ontology_path = ONTOLOGIES_DIRECTORY.joinpath(prefix.lower()).with_suffix(ext)
         prefix_to_path[prefix.lower()] = ontology_path
         if not ontology_path.is_file():
             tqdm.write(f"Downloading {prefix}")
@@ -86,13 +85,11 @@ def load_bertmap(
         config.global_matching.enabled = False
         if not os.path.isdir("bertmap"):
             print("downloading model from hugging face")
-            # Need documentation about this!
-            raise ValueError("unsafe to download without documentation")
             snapshot_download(repo_id="buzgalbraith/BERTMAP-BioMappings", local_dir="./")
         else:
             print("Model found at bertmap")
-    src_onto = Ontology(ontology_paths[source_ontology_train.lower()])
-    target_onto = Ontology(ontology_paths[target_ontology_train.lower()])
+    src_onto = Ontology(ontology_paths[source_ontology_train.lower()].as_posix())
+    target_onto = Ontology(ontology_paths[target_ontology_train.lower()].as_posix())
     return BERTMapPipeline(src_onto, target_onto, config)
 
 
@@ -382,25 +379,30 @@ def inference_across_ontologies(
     target_prefixes: list[str],
     source_prefixes: list[str],
     mappings_path: Path,
-    ontology_paths: dict,
+    ontology_paths: dict[str, Path],
 ):
     """Run inference using BERTMap model over multiple ontologies."""
+    print("loading configuration")
+    config = BERTMapPipeline.load_bertmap_config(config_path.as_posix())
+    config.global_matching.enabled = False
+
     for target_prefix, source_prefix in product(target_prefixes, source_prefixes):
-        print("Filtering Mappings")
+        click.secho(f"[{target_prefix}/{source_prefix}] filtering mappings", fg="green")
         ambagious_maps, non_ambagious_maps = get_novel_mappings(
             target_prefix=target_prefix,
             source_prefix=source_prefix,
             mappings_path=mappings_path,
         )
-        print("loading ontologies")
-        src_onto = Ontology(ontology_paths[source_prefix.lower()])
-        target_onto = Ontology(ontology_paths[target_prefix.lower()])
-        # FIXME why is this loaded inside the loop?
-        config = BERTMapPipeline.load_bertmap_config(config_path.as_posix())
-        config.global_matching.enabled = False
-        print("loading model")
+        click.secho(f"[{target_prefix}/{source_prefix}] loading source ontology", fg="green")
+        src_onto = Ontology(ontology_paths[source_prefix.lower()].as_posix())
+
+        click.secho(f"[{target_prefix}/{source_prefix}] loading target ontology", fg="green")
+        target_onto = Ontology(ontology_paths[target_prefix.lower()].as_posix())
+
+        click.secho(f"[{target_prefix}/{source_prefix}] loading model", fg="green")
         bertmap = BERTMapPipeline(src_onto, target_onto, config)
-        print("running inference")
+
+        click.secho(f"[{target_prefix}/{source_prefix}] running inference", fg="green")
         rows = bertmap_inference(
             ambig_maps_to_check=ambagious_maps,
             nonambig_maps_to_check=non_ambagious_maps,
@@ -440,9 +442,6 @@ def get_parser():
         help="Ontologies to match as target during inference",
     )
     parser.add_argument(
-        "--ontologies_path", default="resources", help="Directory with ontology files"
-    )
-    parser.add_argument(
         "--mappings_path",
         default="mesh_ambig_mappings.tsv",
         help="Path with mappings to be evaluated with BERRTMap",
@@ -464,9 +463,8 @@ def main():
         source_ontology_train=args.source_ontology_train,
         source_ontologies_inference=args.source_ontologies_inference,
         target_ontologies_inference=args.target_ontologies_inference,
-        ontologies_directory=Path(args.ontologies_path).resolve(),
     )
-    # FIXME why isn't the model variable used anywhere?
+    # FIXME why isn't the result from this load used below?
     load_bertmap(
         config_path=Path(args.config),
         target_ontology_train=args.target_ontology_train,
@@ -476,7 +474,7 @@ def main():
         train_model=args.train_model,
     )
     inference_across_ontologies(
-        config_path=args.config,
+        config_path=Path(args.config),
         target_prefixes=args.target_ontologies_inference,
         source_prefixes=args.source_ontologies_inference,
         mappings_path=Path(args.mappings_path).resolve(),
