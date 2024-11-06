@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """The biomappings CLI."""
 
 import sys
@@ -84,8 +82,6 @@ def update(ctx: click.Context):
     ctx.invoke(sssom)
     click.secho("Generating charts", fg="green")
     ctx.invoke(charts)
-    # click.secho("Uploading to NDEx", fg="green")
-    # ctx.invoke(ndex)
 
 
 @main.command()

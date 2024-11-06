@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
-
 """Generate mappings to Gilda from given PyOBO prefixes."""
 
-from typing import Iterable
+from collections.abc import Iterable
 
 import gilda
 import gilda.grounder

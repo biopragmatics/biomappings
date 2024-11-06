@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Generate mappings using Gilda from VO to DrugBank."""
 
 import click

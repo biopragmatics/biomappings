@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Generate mappings to Gilda from given PyOBO prefixes."""
 
 from biomappings.gilda_utils import append_gilda_predictions

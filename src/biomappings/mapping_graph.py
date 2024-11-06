@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
-
 """Functions for working with the mapping graph."""
 
 import itertools as itt
 from collections import defaultdict
-from typing import TYPE_CHECKING, DefaultDict, Dict, Iterable, List, Optional
+from collections.abc import Iterable
+from typing import TYPE_CHECKING, Optional
 
 import networkx as nx
 import pyobo
@@ -21,9 +20,9 @@ __all__ = [
 ]
 
 
-def get_filter_from_semra(mappings: List["semra.Mapping"]) -> CMapping:
+def get_filter_from_semra(mappings: list["semra.Mapping"]) -> CMapping:
     """Get a custom filter dictionary from a set of SeMRA mappings."""
-    rv: DefaultDict[str, DefaultDict[str, Dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
+    rv: defaultdict[str, defaultdict[str, dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
     for mapping in mappings:
         rv[mapping.s.prefix][mapping.o.prefix][mapping.s.identifier] = mapping.o.identifier
     return rv
@@ -37,7 +36,7 @@ def get_custom_filter(prefix: str, targets: Iterable[str]) -> CMapping:
     :returns: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
     """
     graph = mutual_mapping_graph([prefix, *targets])
-    rv: DefaultDict[str, Dict[str, str]] = defaultdict(dict)
+    rv: defaultdict[str, dict[str, str]] = defaultdict(dict)
     for p, identifier in graph:
         if p != prefix:
             continue

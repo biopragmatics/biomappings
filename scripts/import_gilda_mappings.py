@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
-
 """Append lexical mapping predictions from Gilda."""
 
 import csv
 import os
-from typing import Iterable
+from collections.abc import Iterable
 
 from biomappings import load_false_mappings, load_mappings
 from biomappings.resources import PredictionTuple, append_prediction_tuples
@@ -78,7 +76,7 @@ def get_mappings() -> Iterable[PredictionTuple]:
     confidence = 0.95
     primary_mappings = get_primary_mappings()
     curated_mappings = get_curated_mappings()
-    with open(GILDA_MAPPINGS, "r") as fh:
+    with open(GILDA_MAPPINGS) as fh:
         for _, mesh_id, mesh_name, db_ns, db_id, db_name in csv.reader(fh, delimiter="\t"):
             if ("mesh", mesh_id, db_ns_mappings[db_ns], db_id) in primary_mappings or (
                 "mesh",

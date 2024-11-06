@@ -7,7 +7,7 @@ Example ontologies using the OBO flat file format:
 
 from copy import deepcopy
 from pathlib import Path
-from typing import Any, Dict, List, Union
+from typing import Any, Union
 
 import bioregistry
 import click
@@ -40,8 +40,8 @@ def update_obo(*, prefix: str, path: Union[str, Path]) -> None:
 
 
 def update_obo_lines(
-    *, lines: List[str], mappings: List[Dict[str, Any]], progress: bool = True
-) -> List[str]:
+    *, lines: list[str], mappings: list[dict[str, Any]], progress: bool = True
+) -> list[str]:
     """Update the lines of an OBO file.
 
     :param mappings: Mappings to add
@@ -73,8 +73,8 @@ def update_obo_lines(
 
 
 def add_xref(
-    lines: List[str], node: str, xref: str, xref_name: str, author_orcid: str
-) -> List[str]:
+    lines: list[str], node: str, xref: str, xref_name: str, author_orcid: str
+) -> list[str]:
     """Add xref to OBO file lines in the appropriate place."""
     look_for_xref = False
     id_idx = None

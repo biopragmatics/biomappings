@@ -25,10 +25,10 @@ def get_semapv():
         "bio",
         "semapv",
         url=url,
-        read_csv_kwargs=dict(
-            usecols=[0, 1],
-            skiprows=1,
-        ),
+        read_csv_kwargs={
+            "usecols": [0, 1],
+            "skiprows": 1,
+        },
     )
     df["ID"] = df["ID"].map(lambda s: s.removeprefix("semapv:"))
     rv = dict(df.values)

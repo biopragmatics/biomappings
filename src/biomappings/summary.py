@@ -1,12 +1,11 @@
-# -*- coding: utf-8 -*-
-
 """Generate a summary for the Biomappings website."""
 
 import itertools as itt
 import os
 import typing
 from collections import Counter
-from typing import Iterable, Mapping, Optional
+from collections.abc import Iterable, Mapping
+from typing import Optional
 
 import click
 import yaml
@@ -60,14 +59,14 @@ def export():
 
 
 def _get_counter(mappings: Iterable[Mapping[str, str]]):
-    counter: typing.Counter[typing.Tuple[str, str]] = Counter()
+    counter: typing.Counter[tuple[str, str]] = Counter()
     for mapping in mappings:
         source, target = mapping["source prefix"], mapping["target prefix"]
         if source > target:
             source, target = target, source
         counter[source, target] += 1
     return [
-        dict(source=source, target=target, count=count)
+        {"source": source, "target": target, "count": count}
         for (source, target), count in counter.most_common()
     ]
 
@@ -78,7 +77,7 @@ def _get_contributors(mappings: Iterable[Mapping[str, str]]):
     curators = {record["orcid"]: record for record in load_curators()}
     counter = Counter(_get_source(mapping["source"]) for mapping in mappings)
     return [
-        dict(count=count, **curators[orcid]) if orcid else dict(count=count)
+        dict(count=count, **curators[orcid]) if orcid else {"count": count}
         for orcid, count in counter.most_common()
     ]
 

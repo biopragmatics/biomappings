@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Validation tests for :mod:`biomappings`."""
 
 import itertools as itt
@@ -230,6 +228,7 @@ class PathIntegrityTestCase(IntegrityTestCase):
         from biomappings.testing import PathIntegrityTestCase
 
         HERE = Path(__file__).parent.resolve()
+
 
         class TestCustom(PathIntegrityTestCase):
             predictions_path = HERE.joinpath("predictions.tsv")

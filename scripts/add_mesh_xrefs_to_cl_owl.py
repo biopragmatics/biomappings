@@ -16,7 +16,7 @@ def add_xref(lines, node, xref):
     def_idx = None
     xref_entries = []
     for idx, line in enumerate(lines):
-        if line.startswith("# Class: obo:%s" % node_owl):
+        if line.startswith(f"# Class: obo:{node_owl}"):
             look_for_xref = True
         if look_for_xref and line.startswith('AnnotationAssertion(oboInOwl:hasDbXref "'):
             def_idx = idx
@@ -29,10 +29,7 @@ def add_xref(lines, node, xref):
                 break
         if look_for_xref and not line.strip():
             start_xref_idx = def_idx
-    xref_str = 'AnnotationAssertion(oboInOwl:hasDbXref obo:%s "%s"^^xsd:string)\n' % (
-        node_owl,
-        xref,
-    )
+    xref_str = f'AnnotationAssertion(oboInOwl:hasDbXref obo:{node_owl} "{xref}"^^xsd:string)\n'
     xref_entries.append(xref_str)
     xref_entries = sorted(xref_entries)
     xr_idx = xref_entries.index(xref_str)
@@ -46,7 +43,7 @@ if __name__ == "__main__":
         m for m in mappings if m["source prefix"] == "cl" and m["target prefix"] == "mesh"
     ]
 
-    with open(EDITABLE_OWL_PATH, "r") as fh:
+    with open(EDITABLE_OWL_PATH) as fh:
         lines = fh.readlines()
 
     for mapping in cl_mappings:

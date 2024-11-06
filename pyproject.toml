@@ -198,6 +198,9 @@ extend-select = [
 ignore = [
     "D105", # Missing docstring in magic method
     "E203", # Black conflicts with the following
+    "E501", # FIXME
+    "N818",
+    "C901",
 ]
 
 # See https://docs.astral.sh/ruff/settings/#per-file-ignores
@@ -207,8 +210,17 @@ ignore = [
 # Ignore commented out code in Sphinx configuration file
 "docs/source/conf.py" = ["ERA001"]
 # Prints are okay in notebooks and scripts
-"notebooks/**/*.ipynb" = ["T201"]
+"notebooks/**/*.ipynb" = [
+    "T201",
+    "E722", # FIXME
+    "S101", # FIXME
+    "S311", # FIXME
+    "ERA001", # FIXME
+    "D103", # FIXME - functions should be in package
+]
 "scripts/*.py" = ["T201"]
+# Commented code in paper analysis might be useful later
+"src/biomappings/paper_analysis.py" = ["ERA001", "S301"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "pep257"

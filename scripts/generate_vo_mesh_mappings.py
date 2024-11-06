@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Generate mappings using Gilda from VO to MeSH."""
 
 import bioontologies
@@ -33,7 +31,6 @@ def main():
                     values = [
                         value.strip().replace(" ", "") for value in p.value_raw.strip().split(";")
                     ]
-                    # print(node.luid, values)
                     for value in values:
                         # TODO this is place to extract other mapping types
                         if not value.lower().startswith("mesh:"):
