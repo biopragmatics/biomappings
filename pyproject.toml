@@ -206,8 +206,9 @@ ignore = [
 "src/biomappings/version.py" = ["S603", "S607"]
 # Ignore commented out code in Sphinx configuration file
 "docs/source/conf.py" = ["ERA001"]
-# Prints are okay in notebooks
+# Prints are okay in notebooks and scripts
 "notebooks/**/*.ipynb" = ["T201"]
+"scripts/*.py" = ["T201"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "pep257"
