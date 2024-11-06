@@ -82,6 +82,9 @@ mesh	D021581	Active Transport, Cell Nucleus	skos:exactMatch	go	GO:0051169	nuclea
 mesh	D051716	Replication Protein A	skos:exactMatch	go	GO:0005662	DNA replication factor A complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mesh	D059268	Atrophic Vaginitis	skos:exactMatch	doid	DOID:11968	postmenopausal atrophic vaginitis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508			
 mesh	D063306	Mitochondrial Degradation	skos:exactMatch	go	GO:0000423	mitophagy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mondo	0001115	familial polycythemia	skos:exactMatch	mesh	C536842	Polycythemia, primary familial and congenital	semapv:ManualMappingCuration	web-sumirpandit	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
+mondo	0007876	laryngeal abductor paralysis	skos:exactMatch	mesh	C536354	Vocal cord dysfunction familial	semapv:ManualMappingCuration	web-sumirpandit	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
+mondo	0008888	Williams-Campbell syndrome	skos:exactMatch	mesh	D055089	Tracheobronchomalacia	semapv:ManualMappingCuration	web-sumirpandit	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0010778	cyclic vomiting syndrome	skos:exactMatch	mesh	C536228	Familial cyclic vomiting syndrome	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0019636	renal agenesis, unilateral	skos:exactMatch	mesh	D000075529	Solitary Kidney	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 obi	OBI:0000430	plasmid	skos:exactMatch	ncbitaxon	45202	unidentified plasmid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
