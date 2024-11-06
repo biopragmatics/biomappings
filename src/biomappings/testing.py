@@ -151,7 +151,9 @@ class IntegrityTestCase(unittest.TestCase):
 
     def test_cross_redundancy(self) -> None:
         """Test the redundancy of manually curated mappings and predicted mappings."""
-        counter = defaultdict(lambda: defaultdict(list))
+        counter: defaultdict[tuple[str, str, str, str], defaultdict[str, list[int]]] = defaultdict(
+            lambda: defaultdict(list)
+        )
         for label, line, mapping in self._iter_groups():
             counter[get_canonical_tuple(mapping)][label].append(line)
 
