@@ -2,55 +2,24 @@
 
 import argparse
 import os
-import subprocess
 from functools import reduce
 from itertools import product
 from pathlib import Path
 
+import click
 import torch
 from deeponto.align.bertmap import DEFAULT_CONFIG_FILE, BERTMapPipeline
 from deeponto.onto import Ontology
 from huggingface_hub import snapshot_download
+from pystow.utils import download
 
 import biomappings
-from biomappings.bertmap import ENDPOINTS, IRI_SOURCE_PREFIX_MAPS, SOURCE_PREFIX_IRI_MAPS
+from biomappings.bertmap import (
+    IRI_SOURCE_PREFIX_MAPS,
+    PREFIX_TO_DOWNLOAD_URL,
+    SOURCE_PREFIX_IRI_MAPS,
+)
 from biomappings.resources import append_prediction_tuples
-
-parser = argparse.ArgumentParser(description="Train BERTMap Model")
-parser.add_argument("--config", default=DEFAULT_CONFIG_FILE, help="Path to Config File")
-parser.add_argument(
-    "--source_ontology_train",
-    default="MESH",
-    help="Ontologies to match as source during training",
-)
-parser.add_argument(
-    "--target_ontology_train",
-    default="DOID",
-    help="Ontologies to match as target during training",
-)
-parser.add_argument(
-    "--source_ontologies_inference",
-    nargs="+",
-    default=["MESH2024"],
-    help="Ontologies to match as source during inference",
-)
-parser.add_argument(
-    "--target_ontologies_inference",
-    nargs="+",
-    default=["DOID", "CHEBI", "HGNC", "GO"],
-    help="Ontologies to match as target during inference",
-)
-parser.add_argument("--ontologies_path", default="resources", help="Directory with ontology files")
-parser.add_argument(
-    "--mappings_path",
-    default="mesh_ambig_mappings.tsv",
-    help="Path with mappings to be evaluated with BERRTMap",
-)
-parser.add_argument(
-    "--train_model",
-    action="store_true",
-    help="If present will locally train a model otherwise will pull from hugging face.",
-)
 
 
 # pull
@@ -63,24 +32,24 @@ def download_ontologies(
 ) -> dict[str, Path]:
     """Download OWL Files for specified ontologies."""
     ontologies_directory.mkdir(exist_ok=True)
+    click.echo(f"Caching in {ontologies_directory}")
 
-    ontology_paths = {}
-    for ontology in [
+    prefix_to_path = {}
+    for prefix in [
         target_ontology_train,
         source_ontology_train,
         *source_ontologies_inference,
         *target_ontologies_inference,
     ]:
-        ext = ".ttl" if ontology.upper() == "MESH2024" else ".owl"
-        ontology_path = ontologies_directory.joinpath(ontology.lower()).with_suffix(ext)
-        ontology_paths[ontology.lower()] = ontology_path
-        if not os.path.isfile(ontology_path):
-            print(f"Downloading {ontology}")
-            cmd = ["wget", "-O", str(ontology_path), ENDPOINTS[ontology.upper()]]
-            subprocess.run(cmd)
+        ext = ".ttl" if prefix.upper() == "MESH2024" else ".owl"
+        ontology_path = ontologies_directory.joinpath(prefix.lower()).with_suffix(ext)
+        prefix_to_path[prefix.lower()] = ontology_path
+        if not ontology_path.is_file():
+            print(f"Downloading {prefix}")
+            download(url=PREFIX_TO_DOWNLOAD_URL[prefix.upper()], path=ontology_path)
         else:
-            print(f"found {ontology.lower()} at {ontology_path}")
-    return ontology_paths
+            print(f"found {prefix.lower()} at {ontology_path}")
+    return prefix_to_path
 
 
 def load_bertmap(
@@ -431,8 +400,51 @@ def inference_across_ontologies(
         append_prediction_tuples(rows)
 
 
+def get_parser():
+    """Build an argparse parser."""
+    parser = argparse.ArgumentParser(description="Train BERTMap Model")
+    parser.add_argument("--config", default=DEFAULT_CONFIG_FILE, help="Path to Config File")
+    parser.add_argument(
+        "--source_ontology_train",
+        default="MESH",
+        help="Ontologies to match as source during training",
+    )
+    parser.add_argument(
+        "--target_ontology_train",
+        default="DOID",
+        help="Ontologies to match as target during training",
+    )
+    parser.add_argument(
+        "--source_ontologies_inference",
+        nargs="+",
+        default=["MESH2024"],
+        help="Ontologies to match as source during inference",
+    )
+    parser.add_argument(
+        "--target_ontologies_inference",
+        nargs="+",
+        default=["DOID", "CHEBI", "HGNC", "GO"],
+        help="Ontologies to match as target during inference",
+    )
+    parser.add_argument(
+        "--ontologies_path", default="resources", help="Directory with ontology files"
+    )
+    parser.add_argument(
+        "--mappings_path",
+        default="mesh_ambig_mappings.tsv",
+        help="Path with mappings to be evaluated with BERRTMap",
+    )
+    parser.add_argument(
+        "--train_model",
+        action="store_true",
+        help="If present will locally train a model otherwise will pull from hugging face.",
+    )
+    return parser
+
+
 def main():
     """Run the BERTMap prediction workflow."""
+    parser = get_parser()
     args = parser.parse_args()
     ontology_paths = download_ontologies(
         target_ontology_train=args.target_ontology_train,

@@ -1,6 +1,6 @@
 """Utilities for generating mappings with BERTMap."""
 
-ENDPOINTS = {
+PREFIX_TO_DOWNLOAD_URL = {
     "GO": "https://purl.obolibrary.org/obo/go.owl",
     "CHEBI": "https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
     "DOID": "https://github.com/DiseaseOntology/HumanDiseaseOntology/raw/refs/heads/main/src/ontology/doid.owl",
