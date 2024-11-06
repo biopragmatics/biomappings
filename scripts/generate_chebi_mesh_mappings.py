@@ -31,8 +31,8 @@ if __name__ == "__main__":
     predictions = []
     n_redundant = 0
     for pair in mesh_chebi_simple:
-        chebi_term = [term for term in pair if term.db == "CHEBI"][0]
-        mesh_term = [term for term in pair if term.db == "MESH"][0]
+        chebi_term = next(term for term in pair if term.db == "CHEBI")
+        mesh_term = next(term for term in pair if term.db == "MESH")
 
         mappings = bio_ontology.get_mappings("MESH", mesh_term.id)
         if ("CHEBI", chebi_term.id) in mappings:

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Validation tests for :mod:`biomappings`."""
 
 from biomappings import (

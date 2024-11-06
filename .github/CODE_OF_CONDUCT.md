@@ -1,8 +1,4 @@
----
-layout: page
-title: Contributor Covenant Code of Conduct
-permalink: /coc
----
+# Contributor Covenant Code of Conduct
 
 ## Our Pledge
 

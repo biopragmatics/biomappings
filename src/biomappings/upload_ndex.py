@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Upload the Biomappings to NDEx.
 
 .. seealso:: https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf
@@ -48,11 +46,11 @@ def ndex(username, password):
 
     cx.add_network_attribute("version", get_git_hash())
     authors = sorted(
-        set(
+        {
             mapping["source"]
             for mapping in positive_mappings
             if mapping["source"].startswith("orcid:")
-        )
+        }
     )
     cx.add_network_attribute("author", authors, type="list_of_string")
 

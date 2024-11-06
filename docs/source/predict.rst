@@ -27,10 +27,11 @@ The following examples have already been used to predict mappings
 3. `generate_cl_mesh_mappings <https://github.com/biopragmatics/biomappings/blob/master/scripts/generate_cl_mesh_mappings.py>`_
    implements a fully custom matching workflow, also built on Gilda (in case you want to roll your own)
 4. `generate_mesh_uniprot_mappings <https://github.com/biopragmatics/biomappings/blob/master/scripts/generate_mesh_uniprot_mappings.py>`_
-   uses rule-based matching between MeSH and UniProt proteins that relies on the fact that the MeSH terms were generated from UniProt names.
+   uses rule-based matching between MeSH and UniProt proteins that relies on the fact that the MeSH terms were
+   generated from UniProt names.
 5. `generate_wikipathways_orthologs <https://github.com/biopragmatics/biomappings/blob/master/scripts/generate_wikipathways_orthologs.py>`_
-   uses a rule-based method for matching orthologous pathways in WikiPathways that relies on the fact that the names are procedurally generated
-   with a certain template
+   uses a rule-based method for matching orthologous pathways in WikiPathways that relies on the fact that the names
+   are procedurally generated with a certain template
 
 We also have a work-in-progress example using :mod:`pykeen` for generating mappings based on knowledge graph embeddings
 (both in the transductive and inductive setting).
