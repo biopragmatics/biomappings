@@ -60,7 +60,7 @@ class IntegrityTestCase(unittest.TestCase):
             for i, mapping in enumerate(group, start=2):
                 yield label, i, mapping
 
-    def test_prediction_types(self):
+    def test_prediction_types(self) -> None:
         """Test that the prediction type is pulled in properly."""
         for line, mapping in enumerate(self.mappings, start=2):
             pt = mapping.get("prediction_type", "".strip())
@@ -85,7 +85,7 @@ class IntegrityTestCase(unittest.TestCase):
             )
             self.assertIn(tt[len("semapv:") :], semapv)
 
-    def test_relations(self):
+    def test_relations(self) -> None:
         """Test that the relation is a CURIE."""
         for label, line, mapping in self._iter_groups():
             parts = mapping["relation"].split(":")
@@ -95,7 +95,7 @@ class IntegrityTestCase(unittest.TestCase):
             if prefix != "RO":
                 self.assert_canonical_identifier(prefix, identifier, label, line)
 
-    def test_canonical_prefixes(self):
+    def test_canonical_prefixes(self) -> None:
         """Test that all mappings use canonical bioregistry prefixes."""
         valid_prefixes = set(bioregistry.read_registry())
         for label, line, mapping in self._iter_groups():
@@ -111,7 +111,7 @@ class IntegrityTestCase(unittest.TestCase):
                 msg=f"Invalid prefix: {target_prefix} on {label}:{line}",
             )
 
-    def test_normalized_identifiers(self):
+    def test_normalized_identifiers(self) -> None:
         """Test that all identifiers have been normalized (based on bioregistry definition)."""
         for label, line, mapping in self._iter_groups():
             self.assert_canonical_identifier(
@@ -138,7 +138,7 @@ class IntegrityTestCase(unittest.TestCase):
         except InvalidIdentifierPattern as e:
             self.fail(f"[{label}:{line}] {e}")
 
-    def test_contributors(self):
+    def test_contributors(self) -> None:
         """Test all contributors have an entry in the curators.tsv file."""
         contributor_orcids = {row["orcid"] for row in load_curators()}
         for mapping in itt.chain(self.mappings, self.incorrect, self.unsure):
@@ -149,7 +149,7 @@ class IntegrityTestCase(unittest.TestCase):
                 self.fail(msg=f'Add an entry with "{ss}" and your ORCID to {CURATORS_PATH}')
             self.assertIn(source[len("orcid:") :], contributor_orcids)
 
-    def test_cross_redundancy(self):
+    def test_cross_redundancy(self) -> None:
         """Test the redundancy of manually curated mappings and predicted mappings."""
         counter = defaultdict(lambda: defaultdict(list))
         for label, line, mapping in self._iter_groups():
@@ -167,7 +167,7 @@ class IntegrityTestCase(unittest.TestCase):
             )
             raise ValueError(f"{len(redundant)} are redundant: {msg}")
 
-    def assert_no_internal_redundancies(self, m: Mappings, tuple_cls):
+    def assert_no_internal_redundancies(self, m: Mappings, tuple_cls) -> None:
         """Assert that the list of mappings doesn't have any redundancies."""
         counter = defaultdict(list)
         for line, mapping in enumerate(m, start=1):
@@ -180,7 +180,7 @@ class IntegrityTestCase(unittest.TestCase):
             )
             raise ValueError(f"{len(redundant)} are redundant: {msg}")
 
-    def test_predictions_sorted(self):
+    def test_predictions_sorted(self) -> None:
         """Test the predictions are in a canonical order."""
         self.assertEqual(
             self.predictions,
@@ -189,7 +189,7 @@ class IntegrityTestCase(unittest.TestCase):
         )
         self.assert_no_internal_redundancies(self.predictions, PredictionTuple)
 
-    def test_curations_sorted(self):
+    def test_curations_sorted(self) -> None:
         """Test the true curated mappings are in a canonical order."""
         self.assertEqual(
             self.mappings,
@@ -198,7 +198,7 @@ class IntegrityTestCase(unittest.TestCase):
         )
         self.assert_no_internal_redundancies(self.mappings, MappingTuple)
 
-    def test_false_mappings_sorted(self):
+    def test_false_mappings_sorted(self) -> None:
         """Test the false curated mappings are in a canonical order."""
         self.assertEqual(
             self.incorrect,
@@ -207,7 +207,7 @@ class IntegrityTestCase(unittest.TestCase):
         )
         self.assert_no_internal_redundancies(self.incorrect, MappingTuple)
 
-    def test_unsure_sorted(self):
+    def test_unsure_sorted(self) -> None:
         """Test the unsure mappings are in a canonical order."""
         self.assertEqual(
             self.unsure,
