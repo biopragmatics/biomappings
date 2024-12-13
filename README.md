@@ -137,9 +137,11 @@ Rather than editing files locally, this repository also comes with a web-based c
 development mode with the `web` option (which installs `flask` and `flask-bootstrap`) using:
 
 ```console
-$ git clone git+https://github.com/biopragmatics/biomappings.git
+$ git clone https://github.com/biopragmatics/biomappings.git
 $ cd biomappings
 $ git checkout -b your-branch-name
+$ python -m venv biomappings_venv
+$ source biomappings_venv/bin/activate
 $ pip install -e .[web]
 ```
 
@@ -186,8 +188,10 @@ python3 -m pip install git+https://github.com/biopragmatics/biomappings.git
 To install in development mode and create a new branch, use the following:
 
 ```console
-$ git clone git+https://github.com/biopragmatics/biomappings.git
+$ git clone https://github.com/biopragmatics/biomappings.git
 $ cd biomappings
+$ python -m venv biomappings_venv
+$ source biomappings_venv/bin/activate
 $ python3 -m pip install -e .
 ```
 
@@ -281,6 +285,8 @@ To install in development mode, use the following:
 ```console
 git clone git+https://github.com/biopragmatics/biomappings.git
 cd biomappings
+python -m venv biomappings_venv
+source biomappings_venv/bin/activate
 python3 -m pip install -e .
 ```
 
