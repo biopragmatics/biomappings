@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/cthoyt/cookiecutter-snekpack",
-  "commit": "12edfcfa5f519467b5d834f0d4e706fb7cf4f065",
+  "commit": "81fc20028c9d1c8d9dca93530c1d0151aa2a9265",
   "checkout": null,
   "context": {
     "cookiecutter": {
@@ -8,6 +8,7 @@
       "package_name_stylized": "Biomappings",
       "short_description": "Curated and predicted mappings between biomedical identifiers in different namespaces",
       "author_name": "Charles Tapley Hoyt",
+      "author_github": "",
       "author_email": "cthoyt@gmail.com",
       "github_organization_name": "biopragmatics",
       "github_repository_name": "biomappings",
