@@ -1,15 +1,18 @@
 """Validation tests for :mod:`biomappings`."""
 
-import itertools as itt
 import unittest
 from collections import defaultdict
 from pathlib import Path
+from textwrap import dedent
 from typing import ClassVar, Union
 
 import bioregistry
 
 from biomappings.resources import (
     CURATORS_PATH,
+    FALSE_MAPPINGS_PATH,
+    TRUE_MAPPINGS_PATH,
+    UNSURE_PATH,
     Mappings,
     MappingTuple,
     PredictionTuple,
@@ -140,14 +143,53 @@ class IntegrityTestCase(unittest.TestCase):
 
     def test_contributors(self) -> None:
         """Test all contributors have an entry in the curators.tsv file."""
-        contributor_orcids = {row["orcid"] for row in load_curators()}
-        for mapping in itt.chain(self.mappings, self.incorrect, self.unsure):
-            source = mapping["source"]
-            if not source.startswith("orcid:"):
-                self.assertTrue(source.startswith("web-"))
-                ss = source[len("web-") :]
-                self.fail(msg=f'Add an entry with "{ss}" and your ORCID to {CURATORS_PATH}')
-            self.assertIn(source[len("orcid:") :], contributor_orcids)
+        user_to_orcid = {row["user"]: row["orcid"] for row in load_curators()}
+
+        # it's possible that the same ORCID appears twice
+        contributor_orcids = set(user_to_orcid.values())
+
+        files = [
+            (TRUE_MAPPINGS_PATH, self.mappings),
+            (FALSE_MAPPINGS_PATH, self.incorrect),
+            (UNSURE_PATH, self.unsure),
+        ]
+        for path, mappings in files:
+            for mapping in mappings:
+                source = mapping["source"]
+                if not source.startswith("orcid:"):
+                    self.assertTrue(source.startswith("web-"))
+                    user = source[len("web-") :]
+                    orcid = user_to_orcid.get(user)
+                    if orcid:
+                        self.fail(
+                            msg=dedent(f"""
+
+                            There are some curations that don't have the right metadata
+                            in {path}.
+
+                            You can fix this by doing searching for
+                            "{source}" and replacing it with "orcid:{orcid}"
+                            """).rstrip()
+                        )
+                    else:
+                        self.fail(
+                            msg=dedent(f"""
+
+                            There are some curations that don't have the right metadata.
+                            This probably happened because you are curating locally and
+                            haven't added the right metadata to the curators.tsv file at
+                            {CURATORS_PATH}.
+
+                            You can fix this with the following steps:
+
+                            1. Add a row to the curators.tsv file with your local machine's
+                               username "{user}" in the first column, your ORCID in
+                               the second column, and your full name in the third column
+                            2. Replace all instances of "{source}" in {path}
+                               with your ORCID, properly prefixed with `orcid:`
+                            """).rstrip()
+                        )
+                self.assertIn(source[len("orcid:") :], contributor_orcids)
 
     def test_cross_redundancy(self) -> None:
         """Test the redundancy of manually curated mappings and predicted mappings."""
