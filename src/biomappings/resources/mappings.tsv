@@ -972,6 +972,7 @@ chebi	CHEBI:10129	Zwittergent 3-14	skos:exactMatch	mesh	C048256	zwittergent 3-14
 chebi	CHEBI:10136	gingerol	skos:exactMatch	mesh	C007845	gingerol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:1014	2-Aminoadenosine	skos:exactMatch	mesh	C033854	2-aminoadenosine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:101854	talarozole	skos:exactMatch	mesh	C406527	R 115866	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+chebi	CHEBI:1019	N-(2-phosphonoethyl)cholamide	skos:exactMatch	mesh	C013886	ciliatocholic acid	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_chebi_mesh_mappings.py	0.95
 chebi	CHEBI:102029	sorbinil	skos:exactMatch	mesh	C026411	sorbinil	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:10213	alpha-amyrin	skos:exactMatch	mesh	C000654244	alpha-amyrin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 chebi	CHEBI:10219	alpha-Chaconine	skos:exactMatch	mesh	C011860	alpha-chaconine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -9314,14 +9315,17 @@ mondo	0001357	hypochromic anemia	skos:exactMatch	mesh	D000747	Anemia, Hypochromi
 mondo	0001688	toxic optic neuropathy	skos:exactMatch	mesh	D000081028	Toxic Optic Neuropathy	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0002012	methylmalonic acidemia	skos:exactMatch	mesh	C537358	Methylmalonic acidemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0002648	mammary Paget disease	skos:exactMatch	mesh	D010144	Paget's Disease, Mammary	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+mondo	0002814	adrenal carcinoma	skos:narrowMatch	mesh	D018268	Adrenocortical Carcinoma	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0005161	human papilloma virus infection	skos:exactMatch	mesh	D030361	Papillomavirus Infections	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 mondo	0005594	severe cutaneous adverse reaction	skos:exactMatch	mesh	D002921	Cicatrix	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0005607	chronic bronchitis	skos:exactMatch	mesh	D029481	Bronchitis, Chronic	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0006033	diffuse intrinsic pontine glioma	skos:exactMatch	mesh	D000080443	Diffuse Intrinsic Pontine Glioma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0006094	Askin tumor	skos:exactMatch	mesh	C563168	Askin Tumor	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+mondo	0006209	fibroblastic neoplasm	skos:narrowMatch	mesh	D005354	Fibrosarcoma	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0007082	alopecia areata 1	skos:exactMatch	mesh	C566303	Alopecia Areata 1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0007088	Alzheimer disease type 1	skos:exactMatch	mesh	C536594	Alzheimer disease type 1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0007110	Diamond-Blackfan anemia 1	skos:exactMatch	mesh	C567302	Diamond-Blackfan Anemia 1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+mondo	0007116	hereditary neurocutaneous angioma	skos:exactMatch	mesh	C536364	Angioma hereditary neurocutaneous	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0007329	cirrhosis, familial	skos:exactMatch	mesh	C566123	Cirrhosis, Familial	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0007390	coumarin resistance	skos:exactMatch	mesh	C563039	Coumarin Resistance	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0007440	major affective disorder 1	skos:exactMatch	mesh	C565111	Major Affective Disorder 1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
@@ -9329,7 +9333,9 @@ mondo	0007459	dilution, pigmentary	skos:exactMatch	mesh	C566872	Dilution, Pigmen
 mondo	0007547	epidermoid cysts	skos:exactMatch	mesh	D004814	Epidermal Cyst	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0007578	esterase B	skos:exactMatch	mesh	C049262	esterase B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0007608	desmoid tumor	skos:exactMatch	mesh	D018222	Fibromatosis, Aggressive	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
+mondo	0007614	congenital fibrosis of extraocular muscles	skos:exactMatch	mesh	C580012	Congenital Fibrosis of the Extraocular Muscles	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0007767	hyperparathyroidism 1	skos:exactMatch	mesh	C564166	Hyperparathyroidism 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+mondo	0007794	hypogonadotropic hypogonadism 7 with or without anosmia	skos:exactMatch	mesh	C562785	Idiopathic Hypogonadotropic Hypogonadism	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0007817	IgE responsiveness, atopic	skos:exactMatch	mesh	C564133	Ige Responsiveness, Atopic	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0007909	familial multiple lipomatosis	skos:exactMatch	mesh	D000071070	Familial Multiple Lipomatosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0007942	Mammastatin	skos:exactMatch	mesh	C060120	mammastatin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
