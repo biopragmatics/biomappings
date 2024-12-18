@@ -18,9 +18,9 @@ from tqdm.auto import tqdm
 
 __all__ = [
     "Result",
-    "get_primary_mappings",
-    "get_obo_mappings",
     "get_non_obo_mappings",
+    "get_obo_mappings",
+    "get_primary_mappings",
     "index_mappings",
 ]
 

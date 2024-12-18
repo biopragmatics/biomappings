@@ -16,10 +16,10 @@ from biomappings.utils import CMapping
 
 __all__ = [
     "append_gilda_predictions",
-    "iter_prediction_tuples",
     "filter_custom",
     "filter_existing_xrefs",
     "has_mapping",
+    "iter_prediction_tuples",
 ]
 
 logger = logging.getLogger(__name__)

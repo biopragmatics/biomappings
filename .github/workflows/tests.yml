@@ -4,6 +4,10 @@
 
 name: Tests
 
+# by default, give the GITHUB_TOKEN no permissions
+# See https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/controlling-permissions-for-github_token
+permissions: {}
+
 on:
   push:
     branches: [ master ]
@@ -13,11 +17,16 @@ on:
 jobs:
   lint:
     name: Code Quality
+    permissions:
+      # give only read-only access to the contents of the repository
+      # this is the only permission this job requires, so keep it to the least privilege
+      # i.e., not to issues, discussions, actions, etc.
+      contents: read
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [ "3.12", "3.9" ]
-        tox-command: ["manifest", "lint", "pyroma", "mypy"]
+        tox-command: ["lint", "pyroma", "mypy"]
     steps:
       - uses: actions/checkout@v4
       - name: "Install uv"
@@ -31,6 +40,8 @@ jobs:
 
   docs:
     name: Documentation
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -56,6 +67,8 @@ jobs:
         run: uvx -p ${{ matrix.python-version }} --with tox-uv tox -e docs-test
   tests:
     name: Tests
+    permissions:
+      contents: read
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:

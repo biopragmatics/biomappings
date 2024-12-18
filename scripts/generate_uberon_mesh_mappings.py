@@ -19,7 +19,7 @@ for node, data in g.nodes(data=True):
     if matches and matches[0].term.db == "MESH":
         mappings[node] = matches[0].term.id
 
-print("Found %d UBERON->MESH mappings." % len(mappings))
+print(f"Found {len(mappings)} UBERON->MESH mappings.")
 
 predictions = []
 for uberon_id, mesh_id in mappings.items():
