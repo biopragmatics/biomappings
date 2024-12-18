@@ -167,8 +167,7 @@ class IntegrityTestCase(unittest.TestCase):
                             There are some curations that don't have the right metadata
                             in {path}.
 
-                            You can fix this by doing searching for
-                            "{source}" and replacing it with "orcid:{orcid}"
+                            You can fix this by running `biomappings lint` from the console
                             """).rstrip()
                         )
                     else:
