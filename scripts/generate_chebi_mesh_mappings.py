@@ -26,13 +26,13 @@ if __name__ == "__main__":
             continue
         mesh_chebi_simple.append(mesh_chebi_pair)
 
-    print("Found %d CHEBI-MESH mappings." % len(mesh_chebi_simple))
+    print(f"Found {len(mesh_chebi_simple)} CHEBI-MESH mappings.")
 
     predictions = []
     n_redundant = 0
     for pair in mesh_chebi_simple:
-        chebi_term = [term for term in pair if term.db == "CHEBI"][0]
-        mesh_term = [term for term in pair if term.db == "MESH"][0]
+        chebi_term = next(term for term in pair if term.db == "CHEBI")
+        mesh_term = next(term for term in pair if term.db == "MESH")
 
         mappings = bio_ontology.get_mappings("MESH", mesh_term.id)
         if ("CHEBI", chebi_term.id) in mappings:
@@ -53,7 +53,7 @@ if __name__ == "__main__":
         predictions.append(pred)
 
     print(
-        "A total of %d mappings could be indirectly inferred from"
-        "INDRA ontology xrefs" % len(n_redundant)
+        f"A total of {n_redundant} mappings could be indirectly inferred from"
+        "INDRA ontology xrefs"
     )
     append_prediction_tuples(predictions, deduplicate=True, sort=True)

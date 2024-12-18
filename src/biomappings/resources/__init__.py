@@ -1,25 +1,12 @@
-# -*- coding: utf-8 -*-
-
 """Biomappings resources."""
 
 import csv
 import itertools as itt
 import logging
 from collections import defaultdict
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import (
-    Any,
-    DefaultDict,
-    Dict,
-    Iterable,
-    List,
-    Mapping,
-    NamedTuple,
-    Optional,
-    Sequence,
-    Tuple,
-    Union,
-)
+from typing import Any, NamedTuple, Optional, Union
 
 import bioregistry
 from tqdm.auto import tqdm
@@ -28,31 +15,31 @@ from typing_extensions import Literal
 from biomappings.utils import OVERRIDE_MIRIAM, RESOURCE_PATH, get_canonical_tuple
 
 __all__ = [
-    "MappingTuple",
     "MAPPINGS_HEADER",
-    "PredictionTuple",
     "PREDICTIONS_HEADER",
+    "MappingTuple",
     "Mappings",
-    "load_mappings",
-    "load_mappings_subset",
-    "append_true_mappings",
-    "append_true_mapping_tuples",
-    "write_true_mappings",
-    "load_false_mappings",
+    "PredictionTuple",
     "append_false_mappings",
-    "write_false_mappings",
-    "load_unsure",
-    "append_unsure_mappings",
-    "write_unsure_mappings",
-    "load_predictions",
-    "append_predictions",
     "append_prediction_tuples",
-    "write_predictions",
-    "remove_mappings",
-    "load_curators",
+    "append_predictions",
+    "append_true_mapping_tuples",
+    "append_true_mappings",
+    "append_unsure_mappings",
     "filter_predictions",
     "get_curated_filter",
+    "load_curators",
+    "load_false_mappings",
+    "load_mappings",
+    "load_mappings_subset",
+    "load_predictions",
+    "load_unsure",
     "prediction_tuples_from_semra",
+    "remove_mappings",
+    "write_false_mappings",
+    "write_predictions",
+    "write_true_mappings",
+    "write_unsure_mappings",
 ]
 
 logger = logging.getLogger(__name__)
@@ -239,7 +226,7 @@ def get_resource_file_path(fname) -> Path:
     return RESOURCE_PATH.joinpath(fname)
 
 
-def _load_table(path: Union[str, Path]) -> List[Dict[str, str]]:
+def _load_table(path: Union[str, Path]) -> list[dict[str, str]]:
     path = Path(path).resolve()
     if not path.is_file():
         logger.warning("mappings file does not exist, returning empty list: %s", path)
@@ -261,12 +248,12 @@ def _write_helper(
     mappings = sorted(mappings, key=mapping_sort_key)
     with open(path, mode) as file:
         if mode == "w":
-            print(*header, sep="\t", file=file)  # noqa:T201
+            print(*header, sep="\t", file=file)
         for line in mappings:
-            print(*[line[k] or "" for k in header], sep="\t", file=file)  # noqa:T201
+            print(*[line[k] or "" for k in header], sep="\t", file=file)
 
 
-def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
+def mapping_sort_key(prediction: Mapping[str, str]) -> tuple[str, ...]:
     """Return a tuple for sorting mapping dictionaries."""
     return (
         prediction["source prefix"],
@@ -282,7 +269,7 @@ def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
 TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
 
 
-def load_mappings(*, path: Union[str, Path, None] = None) -> List[Dict[str, str]]:
+def load_mappings(*, path: Union[str, Path, None] = None) -> list[dict[str, str]]:
     """Load the mappings table."""
     return _load_table(path or TRUE_MAPPINGS_PATH)
 
@@ -339,7 +326,7 @@ def _lint_curated_mappings(path: Path, *, standardize: bool = False) -> None:
 FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
 
 
-def load_false_mappings(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
+def load_false_mappings(*, path: Optional[Path] = None) -> list[dict[str, str]]:
     """Load the false mappings table."""
     return _load_table(path or FALSE_MAPPINGS_PATH)
 
@@ -371,7 +358,7 @@ def lint_false_mappings(*, standardize: bool = False, path: Optional[Path] = Non
 UNSURE_PATH = get_resource_file_path("unsure.tsv")
 
 
-def load_unsure(*, path: Optional[Path] = None) -> List[Dict[str, str]]:
+def load_unsure(*, path: Optional[Path] = None) -> list[dict[str, str]]:
     """Load the unsure table."""
     return _load_table(path or UNSURE_PATH)
 
@@ -403,7 +390,7 @@ def lint_unsure_mappings(*, standardize: bool = False, path: Optional[Path] = No
 PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
 
 
-def load_predictions(*, path: Union[str, Path, None] = None) -> List[Dict[str, str]]:
+def load_predictions(*, path: Union[str, Path, None] = None) -> list[dict[str, str]]:
     """Load the predictions table."""
     return _load_table(path or PREDICTIONS_PATH)
 
@@ -467,7 +454,7 @@ def lint_predictions(
     *,
     standardize: bool = False,
     path: Optional[Path] = None,
-    additional_curated_mappings: Optional[List[Dict[str, str]]] = None,
+    additional_curated_mappings: Optional[list[dict[str, str]]] = None,
 ) -> None:
     """Lint the predictions file.
 
@@ -591,7 +578,7 @@ def _check_filter(
 
 def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:
     """Get a filter over all curated mappings."""
-    d: DefaultDict[str, DefaultDict[str, Dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
+    d: defaultdict[str, defaultdict[str, dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
     for m in itt.chain(load_mappings(), load_false_mappings(), load_unsure()):
         d[m["source prefix"]][m["target prefix"]][m["source identifier"]] = m["target identifier"]
     return {k: dict(v) for k, v in d.items()}
@@ -601,7 +588,7 @@ def prediction_tuples_from_semra(
     mappings,
     *,
     confidence: float,
-) -> List[PredictionTuple]:
+) -> list[PredictionTuple]:
     """Get prediction tuples from SeMRA mappings."""
     rows = []
     for mapping in mappings:

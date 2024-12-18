@@ -57,7 +57,7 @@ for node, data in g.nodes(data=True):
                 mappings[node] = matches[0].term.id
 
 
-print("Found %d DOID->MESH mappings." % len(mappings))
+print(f"Found {len(mappings)} DOID->MESH mappings.")
 
 # We makes sure that (i) the node is not already mappable to MESH and that
 # (ii) there isn't some other node that was not already mapped to the
@@ -73,7 +73,7 @@ mappings = {
 cnt = Counter(mappings.values())
 mappings = {k: v for k, v in mappings.items() if cnt[v] == 1}
 
-print("Found %d filtered DOID->MESH mappings." % len(mappings))
+print(f"Found {len(mappings)} filtered DOID->MESH mappings.")
 
 # We can now add the predictions
 predictions = []

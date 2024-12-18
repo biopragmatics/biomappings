@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Upload curation statistics to APICURON.
 
 Run this with:
@@ -12,7 +10,7 @@ Run this with:
 """
 
 import datetime
-from typing import Iterable
+from collections.abc import Iterable
 
 import click
 from apicuron_client import Description, Report, Submission, resubmit_curations
@@ -72,8 +70,6 @@ def get_curation_payload() -> Submission:
     """Get curation payload dictionary for upload to APICURON."""
     return Submission(
         resource_uri=DESCRIPTION.resource_uri,
-        # time_start=START,
-        # time_end=NOW,
         reports=list(iter_reports()),
     )
 
@@ -92,7 +88,6 @@ def iter_reports() -> Iterable[Report]:
             curator_orcid=provenance[len("orcid:") :],
             activity_term="novel_curation",
             resource_uri=DESCRIPTION.resource_uri,
-            # timestamp=NOW,
             entity_uri=entity_uri,
         )
 

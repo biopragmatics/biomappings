@@ -1,27 +1,26 @@
-# -*- coding: utf-8 -*-
-
 """Utilities."""
 
 import os
 import re
+from collections.abc import Mapping
 from pathlib import Path
-from subprocess import CalledProcessError, check_output  # noqa: S404
-from typing import Any, Mapping, Optional, Tuple
+from subprocess import CalledProcessError, check_output
+from typing import Any, Optional
 
 import bioregistry
 
 __all__ = [
-    "get_git_hash",
-    "get_script_url",
-    "get_canonical_tuple",
+    "CMapping",
+    "InvalidIdentifier",
+    "InvalidIdentifierPattern",
+    "InvalidNormIdentifier",
     "UnregisteredPrefix",
     "UnstandardizedPrefix",
-    "InvalidIdentifier",
-    "InvalidNormIdentifier",
-    "InvalidIdentifierPattern",
     "check_valid_prefix_id",
+    "get_canonical_tuple",
     "get_curie",
-    "CMapping",
+    "get_git_hash",
+    "get_script_url",
 ]
 
 HERE = Path(__file__).parent.resolve()
@@ -81,8 +80,8 @@ def get_branch() -> str:
 def _git(*args: str) -> Optional[str]:
     with open(os.devnull, "w") as devnull:
         try:
-            ret = check_output(  # noqa: S603,S607
-                ["git", *args],
+            ret = check_output(  # noqa: S603
+                ["git", *args],  # noqa:S607
                 cwd=os.path.dirname(__file__),
                 stderr=devnull,
             )
@@ -104,7 +103,7 @@ def get_script_url(fname: str) -> str:
     return f"https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}"
 
 
-def get_canonical_tuple(mapping: Mapping[str, Any]) -> Tuple[str, str, str, str]:
+def get_canonical_tuple(mapping: Mapping[str, Any]) -> tuple[str, str, str, str]:
     """Get the canonical tuple from a mapping entry."""
     source = mapping["source prefix"], mapping["source identifier"]
     target = mapping["target prefix"], mapping["target identifier"]
@@ -129,7 +128,7 @@ class UnstandardizedPrefix(ValueError):
         self.prefix = prefix
         self.norm_prefix = norm_prefix
 
-    def __str__(self) -> str:  # noqa:D105
+    def __str__(self) -> str:
         return f"{self.prefix} should be standardized to {self.norm_prefix}"
 
 
@@ -159,7 +158,7 @@ class InvalidIdentifierPattern(InvalidIdentifier):
         super().__init__(prefix, identifier)
         self.pattern = pattern
 
-    def __str__(self) -> str:  # noqa:D105
+    def __str__(self) -> str:
         return f"{self.prefix}:{self.identifier} does not match pattern {self.pattern}"
 
 
@@ -176,7 +175,7 @@ class InvalidNormIdentifier(InvalidIdentifier):
         super().__init__(prefix, identifier)
         self.norm_identifier = norm_identifier
 
-    def __str__(self) -> str:  # noqa:D105
+    def __str__(self) -> str:
         return f"{self.prefix}:{self.identifier} does not match normalized CURIE {self.prefix}:{self.norm_identifier}"
 
 

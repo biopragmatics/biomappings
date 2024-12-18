@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Community curated mappings between biomedical entities."""
 
 from .graph import get_false_graph, get_predictions_graph, get_true_graph  # noqa:F401

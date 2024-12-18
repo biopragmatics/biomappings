@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Generate mappings to CLO from to MeSH."""
 
 import click

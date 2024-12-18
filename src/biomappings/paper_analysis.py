@@ -3,9 +3,9 @@
 import json
 import pickle
 from collections import defaultdict
+from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from pathlib import Path
-from typing import DefaultDict, Dict, Iterable, Mapping, Tuple
 
 import bioontologies
 import bioregistry
@@ -18,9 +18,9 @@ from tqdm.auto import tqdm
 
 __all__ = [
     "Result",
-    "get_primary_mappings",
-    "get_obo_mappings",
     "get_non_obo_mappings",
+    "get_obo_mappings",
+    "get_primary_mappings",
     "index_mappings",
 ]
 
@@ -92,7 +92,7 @@ class Result:
             ),
         )
 
-    def print(self):  # noqa:T202
+    def print(self):
         """Print a summary of value added statistics."""
         print(  # noqa:T201
             tabulate(
@@ -123,7 +123,7 @@ def get_primary_mappings(
     prefix: str,
     external_prefix: str,
     cache_path: Path,
-) -> Tuple[str, Mapping[str, str]]:
+) -> tuple[str, Mapping[str, str]]:
     """Get mappings from a given ontology (prefix) to another resource (external prefix)."""
     if cache_path.is_file():
         d = json.loads(cache_path.read_text())
@@ -132,7 +132,7 @@ def get_primary_mappings(
     parse_results = bioontologies.get_obograph_by_prefix(prefix)
     version = parse_results.guess_version(prefix)
     graphs = parse_results.graph_document.graphs if parse_results.graph_document else []
-    rv: Dict[str, str] = {}
+    rv: dict[str, str] = {}
     for graph in graphs:
         for node in tqdm(
             graph.nodes,
@@ -166,7 +166,7 @@ def index_mappings(mappings: Iterable[Mapping[str, str]], path=None, force: bool
         with open(path, "rb") as file:
             return pickle.load(file)
 
-    rv: DefaultDict[str, DefaultDict[str, Dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
+    rv: defaultdict[str, defaultdict[str, dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
 
     for mapping in tqdm(mappings, unit_scale=True, unit="mapping"):
         source_prefix = mapping["source prefix"]

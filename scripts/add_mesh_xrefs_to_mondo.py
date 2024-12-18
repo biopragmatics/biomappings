@@ -17,7 +17,7 @@ def add_xref(lines, node, xref):
     xref_entries = []
     for idx, line in enumerate(lines):
         # If this is the block for the given node, we start looking for xrefs
-        if line == "id: %s\n" % node:
+        if line == f"id: {node}\n":
             look_for_xref = True
             continue
         # If we are looking for xrefs
@@ -48,7 +48,7 @@ def add_xref(lines, node, xref):
     xref_entries.append(xref)
     xref_entries = sorted(xref_entries)
     xr_idx = xref_entries.index(xref)
-    lines.insert(start_xref_idx + xr_idx, 'xref: %s {source="MONDO:equivalentTo"}\n' % xref)
+    lines.insert(start_xref_idx + xr_idx, f'xref: {xref} {{source="MONDO:equivalentTo"}}\n')
     return lines
 
 
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     mappings = load_mappings()
     mondo_mappings = [m for m in mappings if m["source prefix"] == "mondo"]
 
-    with open(EDITABLE_OBO_PATH, "r") as fh:
+    with open(EDITABLE_OBO_PATH) as fh:
         lines = fh.readlines()
 
     for mapping in mondo_mappings:

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """Generate mappings from AGRO to AGROVOC.
 
 Note: this script requires a minimum of PyOBO v0.7.0 to run.

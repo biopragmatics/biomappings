@@ -1,11 +1,10 @@
-# -*- coding: utf-8 -*-
-
 """Utilities for generating predictions with pyobo/gilda."""
 
 import logging
 from collections import defaultdict
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable, Optional, Tuple, Union
+from typing import Optional, Union
 
 import bioregistry
 import pyobo
@@ -17,10 +16,10 @@ from biomappings.utils import CMapping
 
 __all__ = [
     "append_gilda_predictions",
-    "iter_prediction_tuples",
     "filter_custom",
     "filter_existing_xrefs",
     "has_mapping",
+    "iter_prediction_tuples",
 ]
 
 logger = logging.getLogger(__name__)
@@ -135,5 +134,5 @@ def has_mapping(prefix: str, identifier: str, target_prefix: str) -> bool:
     return pyobo.get_xref(prefix, identifier, target_prefix) is not None
 
 
-def _key(t: PredictionTuple) -> Tuple[str, str]:
+def _key(t: PredictionTuple) -> tuple[str, str]:
     return t.source_prefix, t.source_name

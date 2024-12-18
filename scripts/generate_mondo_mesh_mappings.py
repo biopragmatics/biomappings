@@ -42,7 +42,7 @@ for node, data in g.nodes(data=True):
                 mappings[node] = matches[0].term.id
 
 
-print("Found %d MONDO->MESH mappings." % len(mappings))
+print(f"Found {len(mappings)} MONDO->MESH mappings.")
 
 mappings = {
     k: v
@@ -54,7 +54,7 @@ cnt = Counter(mappings.values())
 
 mappings = {k: v for k, v in mappings.items() if cnt[v] == 1}
 
-print("Found %d MONDO->MESH mappings." % len(mappings))
+print(f"Found {len(mappings)} MONDO->MESH mappings.")
 
 predictions = []
 for mondo_id, mesh_id in mappings.items():

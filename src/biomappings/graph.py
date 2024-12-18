@@ -1,13 +1,12 @@
-# -*- coding: utf-8 -*-
-
 """Load Biomappings as a graph."""
 
 import itertools as itt
 import logging
 import os
 from collections import Counter
+from collections.abc import Collection, Iterable, Mapping, Sequence
 from operator import itemgetter
-from typing import Collection, Iterable, List, Mapping, Optional, Sequence
+from typing import Optional
 
 import click
 import networkx as nx
@@ -198,7 +197,6 @@ def charts():
 
     sns.kdeplot(component_densities, ax=axes[0][2])
     axes[0][2].set_xlim([0.0, 1.0])
-    # axes[0][2].set_yscale('log')
     axes[0][2].set_title("Density ($|V| > 2$)")
     axes[0][2].set_ylabel("")
 
@@ -243,7 +241,7 @@ def charts():
     plt.close(fig)
 
 
-def _countplot_list(data: List[int], ax):
+def _countplot_list(data: list[int], ax):
     import pandas as pd
     import seaborn as sns
 
