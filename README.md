@@ -140,7 +140,7 @@ development mode with the `web` option (which installs `flask` and `flask-bootst
 $ git clone https://github.com/biopragmatics/biomappings.git
 $ cd biomappings
 $ git checkout -b your-branch-name
-$ pip install -e .[web]
+$ UV_PREVIEW=1 python3 -m pip install -e .[web]
 ```
 
 The web application can be run with:
