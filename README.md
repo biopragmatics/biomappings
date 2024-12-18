@@ -279,9 +279,16 @@ The final section of the README is for if you want to get involved by making a c
 To install in development mode, use the following:
 
 ```console
-git clone git+https://github.com/biopragmatics/biomappings.git
-cd biomappings
-python3 -m pip install -e .
+$ git clone git+https://github.com/biopragmatics/biomappings.git
+$ cd biomappings
+$ uv --preview pip install -e .
+```
+
+Alternatively, install using legacy pip with `UV_PREVIEW` mode enabled
+until the uv build backend becomes a stable feature:
+
+```console
+$ UV_PREVIEW=1 python3 -m pip install -e .
 ```
 
 ### Updating Package Boilerplate
