@@ -188,7 +188,7 @@ To install in development mode and create a new branch, use the following:
 ```console
 $ git clone https://github.com/biopragmatics/biomappings.git
 $ cd biomappings
-$ python3 -m pip install -e .
+$ UV_PREVIEW=1 python3 -m pip install -e .
 ```
 
 ## 💪 Usage
