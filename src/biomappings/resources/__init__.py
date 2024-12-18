@@ -88,7 +88,7 @@ class MappingTuple(NamedTuple):
     prediction_source: Optional[str]
     prediction_confidence: Optional[float]
 
-    def as_dict(self) -> Mapping[str, Any]:
+    def as_dict(self) -> dict[str, Any]:
         """Get the mapping tuple as a dictionary."""
         return dict(zip(MAPPINGS_HEADER, self))  # type:ignore
 
@@ -161,7 +161,7 @@ class PredictionTuple(NamedTuple):
     or can be based off of them.
     """
 
-    def as_dict(self) -> Mapping[str, Any]:
+    def as_dict(self) -> dict[str, Any]:
         """Get the prediction tuple as a dictionary."""
         return dict(zip(PREDICTIONS_HEADER, self))  # type:ignore
 
@@ -218,7 +218,7 @@ class PredictionTuple(NamedTuple):
         return f"{self.target_prefix}:{self.target_identifier}"
 
 
-Mappings = Iterable[Mapping[str, str]]
+Mappings = Iterable[dict[str, str]]
 
 
 def get_resource_file_path(fname) -> Path:
@@ -320,6 +320,7 @@ def _lint_curated_mappings(path: Path, *, standardize: bool = False) -> None:
     """Lint the true mappings file."""
     mapping_list = _load_table(path)
     mappings = _remove_redundant(mapping_list, standardize=standardize)
+    mappings = _replace_local_curation_source(mapping_list)
     _write_helper(MAPPINGS_HEADER, mappings, path, mode="w")
 
 
@@ -494,6 +495,17 @@ def _remove_redundant(mappings: Mappings, *, standardize: bool = False) -> Mappi
     for mapping in mappings:
         dd[get_canonical_tuple(mapping)].append(mapping)
     return (max(mappings, key=_pick_best) for mappings in dd.values())
+
+
+def _replace_local_curation_source(mappings: Mappings) -> Mappings:
+    """Find `web-` prefixed sources that can be replaced with ORCID CURIEs."""
+    user_to_contributors = {c["user"]: c["orcid"] for c in load_curators()}
+    for mapping in mappings:
+        source = mapping["source"]
+        orcid = user_to_contributors.get(source.removeprefix("web-"))
+        if orcid:
+            mapping["source"] = f"orcid:{orcid}"
+        yield mapping
 
 
 def _pick_best(mapping: Mapping[str, str]) -> int:
