@@ -49,7 +49,7 @@ for node, data in g.nodes(data=True):
         mappings[node] = mesh_id
 
 
-print("Found %d CL->MESH mappings." % len(mappings))
+print(f"Found {len(mappings)} CL->MESH mappings.")
 
 predictions = []
 for cl_id, mesh_id in mappings.items():

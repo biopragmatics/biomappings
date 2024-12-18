@@ -10,17 +10,17 @@ from typing import Any, Optional
 import bioregistry
 
 __all__ = [
-    "get_git_hash",
-    "get_script_url",
-    "get_canonical_tuple",
+    "CMapping",
+    "InvalidIdentifier",
+    "InvalidIdentifierPattern",
+    "InvalidNormIdentifier",
     "UnregisteredPrefix",
     "UnstandardizedPrefix",
-    "InvalidIdentifier",
-    "InvalidNormIdentifier",
-    "InvalidIdentifierPattern",
     "check_valid_prefix_id",
+    "get_canonical_tuple",
     "get_curie",
-    "CMapping",
+    "get_git_hash",
+    "get_script_url",
 ]
 
 HERE = Path(__file__).parent.resolve()
