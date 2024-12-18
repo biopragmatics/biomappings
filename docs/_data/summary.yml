@@ -19,10 +19,10 @@ contributors:
   name: Krishna Udaiwal
   orcid: 0000-0002-2627-0696
   user: KrishnaTO
-- count: 15
+- count: 25
   name: Sumir Pandit
   orcid: 0000-0002-1216-4761
-  user: sumir
+  user: sumirpandit
 - count: 1
   name: Christopher Mungall
   orcid: 0000-0002-6601-2165
@@ -104,14 +104,14 @@ negative:
   source: mi
   target: ncbitaxon
 - count: 11
+  source: mesh
+  target: mondo
+- count: 11
   source: hgnc
   target: reactome
 - count: 10
   source: ccle
   target: efo
-- count: 10
-  source: mesh
-  target: mondo
 - count: 9
   source: interpro
   target: ncbitaxon
@@ -256,10 +256,10 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1605
+negative_mapping_count: 1606
 negative_prefix_count: 45
 positive:
-- count: 3370
+- count: 3371
   source: chebi
   target: mesh
 - count: 1464
@@ -283,12 +283,12 @@ positive:
 - count: 294
   source: hp
   target: mesh
+- count: 224
+  source: mesh
+  target: mondo
 - count: 222
   source: go
   target: reactome
-- count: 219
-  source: mesh
-  target: mondo
 - count: 190
   source: doid
   target: umls
@@ -607,10 +607,10 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 10780
+positive_mapping_count: 10786
 positive_prefix_count: 63
 predictions:
-- count: 22729
+- count: 22728
   source: chebi
   target: mesh
 - count: 11733
@@ -649,12 +649,12 @@ predictions:
 - count: 68
   source: mesh
   target: uberon
-- count: 61
-  source: mesh
-  target: mondo
 - count: 59
   source: mesh
   target: vo
+- count: 52
+  source: mesh
+  target: mondo
 - count: 39
   source: doid
   target: efo
@@ -739,7 +739,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 54019
+predictions_mapping_count: 54009
 predictions_prefix_count: 32
 unsure:
 - count: 27
@@ -754,6 +754,9 @@ unsure:
 - count: 5
   source: go
   target: mesh
+- count: 5
+  source: mesh
+  target: mondo
 - count: 5
   source: mesh
   target: vo
@@ -784,9 +787,6 @@ unsure:
 - count: 2
   source: efo
   target: mesh
-- count: 2
-  source: mesh
-  target: mondo
 - count: 2
   source: ncbitaxon
   target: obi
@@ -838,5 +838,5 @@ unsure:
 - count: 1
   source: pr
   target: vo
-unsure_mapping_count: 99
+unsure_mapping_count: 102
 unsure_prefix_count: 30

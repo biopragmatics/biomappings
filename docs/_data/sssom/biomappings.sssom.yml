@@ -21,7 +21,7 @@ curie_map:
   DRON: http://purl.obolibrary.org/obo/DRON_
   EFO: http://www.ebi.ac.uk/efo/EFO_
   ENVO: http://purl.obolibrary.org/obo/ENVO_
-  FMA: http://purl.org/sig/ont/fma/fma
+  FMA: 'https://www.ebi.ac.uk/ols4/ontologies/fma/terms?obo_id=FMA:'
   GO: http://purl.obolibrary.org/obo/GO_
   HP: http://purl.obolibrary.org/obo/HP_
   IAO: http://purl.obolibrary.org/obo/IAO_
