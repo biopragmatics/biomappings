@@ -376,7 +376,7 @@ You only have to do the following steps once.
 
 #### Configuring your machine's connection to PyPI
 
-You have to do the following steps once per machine. 
+You have to do the following steps once per machine.
 
 ```console
 $ uv tool install keyring
