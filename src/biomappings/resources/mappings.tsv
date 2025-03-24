@@ -3745,7 +3745,7 @@ dron	00865527	Bacillus subtilis	skos:exactMatch	ncbitaxon	1423	Bacillus subtilis
 dron	00925916	Vaccinia virus	skos:exactMatch	ncbitaxon	10245	Vaccinia virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
 go	GO:0005816	spindle pole body	skos:exactMatch	ncit	C13365	Spindle Pole Body	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 go	GO:0070266	necroptotic process	skos:exactMatch	mesh	D000079302	Necroptosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-ido	0000405	pathogen role	skos:exactMatch	obi	OBI:0000718	pathogen role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+ido	0000405	pathogen role	skos:exactMatch	obi	0000718	pathogen role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370
 ido	0000443	antiparasitic disposition	skos:exactMatch	idomal	0000425	antiparasitic disposition	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000447	herd immunity to infectious organism	skos:exactMatch	idomal	0000352	herd immunity to infectious organism	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 ido	0000505	viremia	skos:exactMatch	hp	HP:0020071	Viremia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -3833,7 +3833,7 @@ idomal	0000634	cotrimoxazole	skos:exactMatch	chebi	CHEBI:3770	co-trimoxazole	sem
 idomal	0000643	antibiotic	skos:exactMatch	chebi	CHEBI:33281	antimicrobial agent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 idomal	0000646	embryo	skos:exactMatch	uberon	UBERON:0000922	embryo	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0000672	chemical compound	skos:exactMatch	vsmo	0000011	chemical compound	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-idomal	0000729	enzyme	skos:exactMatch	obi	OBI:0000427	enzyme	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
+idomal	0000729	enzyme	skos:exactMatch	obi	0000427	enzyme	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0000732	protein complex	skos:exactMatch	go	GO:0032991	protein-containing complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 idomal	0000732	protein complex	skos:exactMatch	go	GO:0043234	protein complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0000873	piperonyl butoxide	skos:exactMatch	chebi	CHEBI:32687	piperonyl butoxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -3858,7 +3858,7 @@ idomal	0001228	Plasmodium knowlesi	skos:exactMatch	vsmo	0001269	Plasmodium knowl
 idomal	0001229	Plasmodium berghei	skos:exactMatch	ncbitaxon	5821	Plasmodium berghei	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0001230	Plasmodium gallinaceum	skos:exactMatch	vsmo	0001253	Plasmodium gallinaceum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 idomal	0001231	Plasmodium yoelii	skos:exactMatch	ncbitaxon	5861	Plasmodium yoelii	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-idomal	0001254	population	skos:exactMatch	obi	OBI:0000181	population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
+idomal	0001254	population	skos:exactMatch	obi	0000181	population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0001254	population	skos:exactMatch	pco	0000001	population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.7777777777777778
 idomal	0001288	ovalocytosis	skos:exactMatch	doid	DOID:2373	hereditary elliptocytosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5555555555555556
 idomal	0001288	ovalocytosis	skos:exactMatch	hp	HP:0004445	Elliptocytosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	mira	0.5400948258091115
@@ -9532,10 +9532,10 @@ oae	0000461	cardiac arrest	skos:exactMatch	doid	DOID:0060319	cardiac arrest	sema
 oae	0000461	cardiac arrest	skos:exactMatch	hp	HP:0001695	Cardiac arrest	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 oae	0001817	patient	skos:exactMatch	idomal	0000603	patient	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 oae	0001817	patient	skos:exactMatch	opmi	0000417	patient	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-oae	0002495	dialysis	skos:exactMatch	obi	OBI:0600052	dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+oae	0002495	dialysis	skos:exactMatch	obi	0600052	dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370
 oae	0004232	physical examination	skos:exactMatch	maxo	0000527	physical examination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 oae	0004372	ulcer	skos:exactMatch	mpath	579	ulcer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
-obi	OBI:0000719	vaccine preparation	skos:exactMatch	vo	0000590	vaccine preparation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+obi	0000719	vaccine preparation	skos:exactMatch	vo	0000590	vaccine preparation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
 pfam	PF01391	Collagen	skos:exactMatch	mesh	D003094	Collagen	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 pr	PR:000001757	nuclear factor NF-kappa-B p50 subunit	skos:exactMatch	uniprot.chain	PRO_0000030311	Nuclear factor NF-kappa-B p50 subunit	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 pr	PR:000002439	BH3-interacting domain death agonist isoform 1 cleaved 1	skos:exactMatch	uniprot.chain	PRO_0000223233	BH3-interacting domain death agonist p15	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
