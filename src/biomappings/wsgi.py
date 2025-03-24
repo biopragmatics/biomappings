@@ -557,7 +557,7 @@ def run_commit():
     """Make a commit then redirect to the home page."""
     commit_info = commit(
         f"Curated {CONTROLLER.total_curated} mapping"
-        f'{"s" if CONTROLLER.total_curated > 1 else ""}'
+        f"{'s' if CONTROLLER.total_curated > 1 else ''}"
         f" ({getpass.getuser()})",
     )
     current_app.logger.warning("git commit res: %s", commit_info)

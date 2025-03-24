@@ -53,7 +53,6 @@ if __name__ == "__main__":
         predictions.append(pred)
 
     print(
-        f"A total of {n_redundant} mappings could be indirectly inferred from"
-        "INDRA ontology xrefs"
+        f"A total of {n_redundant} mappings could be indirectly inferred fromINDRA ontology xrefs"
     )
     append_prediction_tuples(predictions, deduplicate=True, sort=True)
