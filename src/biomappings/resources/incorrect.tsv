@@ -446,8 +446,7 @@ ito	23756	Humans	skos:exactMatch	ncbitaxon	9605	Homo	semapv:ManualMappingCuratio
 ito	27186	Human	skos:exactMatch	ncbitaxon	9606	Homo sapiens	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
 ito	27304	human	skos:exactMatch	ncbitaxon	9606	Homo sapiens	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
 ito	62361	ToS	skos:exactMatch	ncbitaxon	11590	Toscana virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.743
-ito	Data	Data	skos:exactMatch	ncbitaxon	1369087	Data	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
-kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+kegg.pathway	map02010	ABC transporters	skos:exactMatch	go	GO:0140359	ABC-type transmembrane transporter activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370
 kegg.pathway	map02010	ABC transporters	skos:exactMatch	mesh	D018528	ATP-Binding Cassette Transporters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 kegg.pathway	map03010	Ribosome	skos:exactMatch	go	GO:0005840	ribosome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 kegg.pathway	map03020	RNA polymerase	skos:exactMatch	mesh	D012321	DNA-Directed RNA Polymerases	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -909,11 +908,11 @@ mondo	0021661	coronary atherosclerosis	skos:exactMatch	mesh	D003324	Coronary Art
 mondo	0044346	echinococcus granulosus infectious disease	skos:exactMatch	mesh	D048209	Echinococcus granulosus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0100073	methicillin-resistant staphylococcus aureus infectious disease	skos:exactMatch	mesh	D055624	Methicillin-Resistant Staphylococcus aureus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 oae	0002495	dialysis	skos:exactMatch	ncbitaxon	124307	Dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
-obi	OBI:0000758	Roche	skos:exactMatch	ncbitaxon	2506334	Roche	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
-obi	OBI:0400064	laser	skos:exactMatch	ncbitaxon	62990	Laser	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
-obi	OBI:0400168	microtome	skos:exactMatch	ncbitaxon	1766024	Microtome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
-obi	OBI:0600052	dialysis	skos:exactMatch	ncbitaxon	124307	Dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
-obi	OBI:1110053	cancer	skos:exactMatch	ncbitaxon	6754	Cancer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+obi	0000758	Roche	skos:exactMatch	ncbitaxon	2506334	Roche	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.778
+obi	0400064	laser	skos:exactMatch	ncbitaxon	62990	Laser	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+obi	0400168	microtome	skos:exactMatch	ncbitaxon	1766024	Microtome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+obi	0600052	dialysis	skos:exactMatch	ncbitaxon	124307	Dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
+obi	1110053	cancer	skos:exactMatch	ncbitaxon	6754	Cancer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
 pfam	PF00292	PAX	skos:exactMatch	ncbitaxon	2033138	Pax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
 pfam	PF00302	CAT	skos:exactMatch	ncbitaxon	9685	Felis catus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.707
 pfam	PF00377	Prion	skos:exactMatch	ncbitaxon	36469	prion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	kestrel-mappings	0.762
