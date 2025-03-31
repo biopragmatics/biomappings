@@ -3259,6 +3259,7 @@ doid	DOID:0050537	posterior polar cataract	skos:exactMatch	umls	C1850191	Posteri
 doid	DOID:0050541	Charcot-Marie-Tooth disease type 4	skos:exactMatch	umls	C4082197	Charcot-Marie-Tooth disease type 4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0050544	hypermethioninemia	skos:exactMatch	mesh	C564683	Hypermethioninemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0050544	hypermethioninemia	skos:exactMatch	umls	C4048705	Hypermethioninemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+doid	DOID:0050545	visceral heterotaxy	skos:exactMatch	efo	0009081	Heterotaxia	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py	0.549371263656978
 doid	DOID:0050547	familial medullary thyroid carcinoma	skos:exactMatch	umls	C1833921	Familial medullary thyroid carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0050549	Saldino-Noonan syndrome	skos:exactMatch	umls	C0036069	Saldino-Noonan Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0050558	Ullrich congenital muscular dystrophy	skos:exactMatch	umls	C4551860	Ullrich congenital muscular dystrophy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -3293,6 +3294,7 @@ doid	DOID:0050629	Aicardi-Goutieres syndrome	skos:exactMatch	umls	C0393591	AICAR
 doid	DOID:0050634	alopecia universalis	skos:exactMatch	mesh	C537055	Alopecia universalis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 doid	DOID:0050634	alopecia universalis	skos:exactMatch	umls	C0263505	Alopecia universalis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0050635	alternating hemiplegia of childhood	skos:exactMatch	umls	C0338488	Alternating hemiplegia of childhood	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+doid	DOID:0050639	primary cutaneous amyloidosis	skos:exactMatch	efo	1001882	cutaneous nodular amyloidosis	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py	0.5555555555555556
 doid	DOID:0050640	anauxetic dysplasia 1	skos:exactMatch	umls	C4551965	ANAUXETIC DYSPLASIA 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0050641	Rh deficiency syndrome	skos:exactMatch	umls	C0272052	Rh Deficiency Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 doid	DOID:0050644	arterial calcification of infancy	skos:exactMatch	umls	C1859727	Arterial calcification of infancy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -9351,6 +9353,7 @@ mondo	0008597	trichorhinophalangeal syndrome, type III	skos:exactMatch	mesh	C566
 mondo	0008612	tuberous sclerosis 1	skos:exactMatch	mesh	C565346	Tuberous Sclerosis 1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0008734	adrenocortical carcinoma, hereditary	skos:exactMatch	mesh	C565972	Adrenocortical Carcinoma, Hereditary	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0008738	aganglionosis, total intestinal	skos:exactMatch	mesh	C538058	Aganglionosis, total intestinal	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+mondo	0008751	corticosterone methyloxidase type 1 deficiency	skos:exactMatch	mesh	C537806	18-Hydroxylase deficiency	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0008990	cleft larynx, posterior	skos:exactMatch	mesh	C537851	Novak syndrome	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_mondo_mesh_mappings.py	0.9
 mondo	0009003	achromatopsia 2	skos:exactMatch	mesh	C536128	Achromatopsia 2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 mondo	0009097	persistent hyperplastic primary vitreous, autosomal recessive	skos:exactMatch	mesh	C566966	Persistent Hyperplastic Primary Vitreous, Autosomal Recessive	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
@@ -9869,24 +9872,30 @@ reactome	R-SCE-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go
 reactome	R-SPO-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go	GO:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-SSC-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go	GO:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
 reactome	R-XTR-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go	GO:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			
+uberon	UBERON:0000016	endocrine pancreas	skos:narrowMatch	mesh	D007515	Islets of Langerhans	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_uberon_mesh_mappings.py	0.9
 uberon	UBERON:0000017	exocrine pancreas	skos:exactMatch	mesh	D046790	Pancreas, Exocrine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+uberon	UBERON:0000044	dorsal root ganglion	skos:exactMatch	mesh	D005727	Ganglia, Spinal	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_uberon_mesh_mappings.py	0.9
 uberon	UBERON:0000076	external ectoderm	skos:exactMatch	bto	BTO:0006242	external ectoderm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_uberon_bto_mappings.py	0.9
 uberon	UBERON:0000105	life cycle stage	skos:exactMatch	mesh	D008018	Life Cycle Stages	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0000120	blood brain barrier	skos:exactMatch	mesh	D001812	Blood-Brain Barrier	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0000127	facial nucleus	skos:exactMatch	mesh	D065828	Facial Nucleus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0000159	anal canal	skos:exactMatch	mesh	D001003	Anal Canal	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+uberon	UBERON:0000167	oral cavity	skos:broadMatch	mesh	D009055	Mouth	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_uberon_mesh_mappings.py	0.9
 uberon	UBERON:0000175	pleural effusion	skos:exactMatch	mesh	D010996	Pleural Effusion	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0000220	atlanto-occipital joint	skos:exactMatch	mesh	D001269	Atlanto-Occipital Joint	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+uberon	UBERON:0000341	throat	skos:exactMatch	mesh	D010614	Pharynx	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_uberon_mesh_mappings.py	0.9
 uberon	UBERON:0000353	parenchyma	skos:exactMatch	bto	BTO:0001539	parenchyma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	semapv:LexicalMatching	generate_uberon_bto_mappings.py	0.9
 uberon	UBERON:0000387	meniscus	skos:exactMatch	mesh	D000072600	Meniscus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0000569	ileocecal valve	skos:exactMatch	mesh	D007080	Ileocecal Valve	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0000939	imaginal disc	skos:exactMatch	mesh	D060227	Imaginal Discs	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+uberon	UBERON:0000990	reproductive system	skos:narrowMatch	mesh	D005835	Genitalia	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_uberon_mesh_mappings.py	0.9
 uberon	UBERON:0001049	neural tube	skos:exactMatch	mesh	D054259	Neural Tube	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0001156	ascending colon	skos:exactMatch	mesh	D044682	Colon, Ascending	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0001157	transverse colon	skos:exactMatch	mesh	D044684	Colon, Transverse	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0001158	descending colon	skos:exactMatch	mesh	D044683	Colon, Descending	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0001347	white adipose tissue	skos:exactMatch	mesh	D052436	Adipose Tissue, White	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0001473	lymphatic vessel	skos:exactMatch	mesh	D042601	Lymphatic Vessels	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
+uberon	UBERON:0001555	digestive tract	skos:exactMatch	mesh	D041981	Gastrointestinal Tract	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	semapv:LexicalMatching	generate_uberon_mesh_mappings.py	0.9
 uberon	UBERON:0001642	superior sagittal sinus	skos:exactMatch	mesh	D054063	Superior Sagittal Sinus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0001715	oculomotor nuclear complex	skos:exactMatch	mesh	D065838	Oculomotor Nuclear Complex	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
 uberon	UBERON:0001806	sympathetic ganglion	skos:exactMatch	mesh	D005728	Ganglia, Sympathetic	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			
