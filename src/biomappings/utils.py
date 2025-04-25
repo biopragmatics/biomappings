@@ -9,6 +9,7 @@ from typing import Any, Optional
 import bioregistry
 
 __all__ = [
+    "RESOURCE_PATH",
     "CMapping",
     "InvalidIdentifier",
     "InvalidIdentifierPattern",
@@ -22,9 +23,22 @@ __all__ = [
     "get_script_url",
 ]
 
+from curies import ReferenceTuple
+
 HERE = Path(__file__).parent.resolve()
 ROOT = HERE.parent.parent.resolve()
 RESOURCE_PATH = HERE.joinpath("resources")
+
+TRUE_MAPPINGS_PATH = RESOURCE_PATH.joinpath("mappings.tsv")
+FALSE_MAPPINGS_PATH = RESOURCE_PATH.joinpath("incorrect.tsv")
+UNSURE_PATH = RESOURCE_PATH.joinpath("unsure.tsv")
+PREDICTIONS_PATH = RESOURCE_PATH.joinpath("predictions.tsv")
+
+POSITIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("positive.sssom.tsv")
+NEGATIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("negative.sssom.tsv")
+UNSURE_SSSOM_PATH = RESOURCE_PATH.joinpath("unsure.sssom.tsv")
+PREDICTIONS_SSSOM_PATH = RESOURCE_PATH.joinpath("predictions.sssom.tsv")
+
 DOCS = ROOT.joinpath("docs")
 IMG = DOCS.joinpath("img")
 DATA = DOCS.joinpath("_data")
@@ -97,8 +111,8 @@ def get_script_url(fname: str) -> str:
 
 def get_canonical_tuple(mapping: Mapping[str, Any]) -> tuple[str, str, str, str]:
     """Get the canonical tuple from a mapping entry."""
-    source = mapping["source prefix"], mapping["source identifier"]
-    target = mapping["target prefix"], mapping["target identifier"]
+    source = ReferenceTuple.from_curie(mapping["subject_id"])
+    target = ReferenceTuple.from_curie(mapping["object_id"])
     if source > target:
         source, target = target, source
     return (*source, *target)
@@ -171,7 +185,7 @@ class InvalidNormIdentifier(InvalidIdentifier):
         return f"{self.prefix}:{self.identifier} does not match normalized CURIE {self.prefix}:{self.norm_identifier}"
 
 
-def check_valid_prefix_id(prefix: str, identifier: str):
+def check_valid_prefix_id(curie: str):
     """Check the prefix/identifier pair is valid.
 
     :param prefix:
@@ -194,6 +208,7 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         this shouldn't be possible in practice, and this documentation is
         merely a formality.
     """
+    prefix, _, identifier = curie.partition(":")
     resource = bioregistry.get_resource(prefix)
     if resource is None:
         raise UnregisteredPrefix(prefix)
@@ -220,3 +235,9 @@ def get_curie(prefix: str, identifier: str, *, preferred: bool = False) -> str:
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
 CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
+
+
+# TODO delete
+def get_resource_file_path(fname) -> Path:
+    """Get a resource by its file name."""
+    return RESOURCE_PATH.joinpath(fname)

@@ -12,7 +12,14 @@ import bioregistry
 from tqdm.auto import tqdm
 from typing_extensions import Literal
 
-from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
+from biomappings.utils import (
+    NEGATIVES_SSSOM_PATH,
+    POSITIVES_SSSOM_PATH,
+    PREDICTIONS_SSSOM_PATH,
+    UNSURE_SSSOM_PATH,
+    get_canonical_tuple,
+    get_resource_file_path,
+)
 
 if TYPE_CHECKING:
     import semra
@@ -51,13 +58,13 @@ logger = logging.getLogger(__name__)
 class MappingTuple(NamedTuple):
     """A named tuple class for mappings."""
 
-    source_id: str
-    source_name: str
-    relation_id: str
-    target_id: str
-    target_name: str
+    subject_id: str
+    subject_label: str
+    predicate_id: str
+    object_id: str
+    object_label: str
     mapping_justification: str
-    source: str
+    author_id: str
     prediction_type: Optional[str]
     prediction_source: Optional[str]
     prediction_confidence: Optional[float]
@@ -84,11 +91,11 @@ MAPPINGS_HEADER = MappingTuple._fields
 class PredictionTuple(NamedTuple):
     """A named tuple class for predictions."""
 
-    source_id: str
-    source_name: str
-    relation: str
-    target_id: str
-    target_name: str
+    subject_id: str
+    subject_label: str
+    predicate_id: str
+    object_id: str
+    object_label: str
     mapping_justification: str
     """A `semapv <https://bioregistry.io/registry/semapv>`_ term describing the mapping type.
 
@@ -119,7 +126,7 @@ class PredictionTuple(NamedTuple):
     However, other variants are possible. For example, this confidence could reflect the loss function
     if a knowledge graph embedding model was used ot generate a mapping orediction.
     """
-    source: str
+    mapping_tool: str
     """The script or process that generated this mapping.
 
     Most of these scripts are in https://github.com/biopragmatics/biomappings/tree/master/scripts,
@@ -162,35 +169,35 @@ class PredictionTuple(NamedTuple):
         if evidence.mapping_set is None:
             raise ValueError
         return cls(  # type:ignore
-            source_id=mapping.s.curie,
-            source_name=s_name,
-            relation=mapping.p.curie,
-            target_id=mapping.o.curie,
-            target_name=o_name,
+            subject_id=mapping.s.curie,
+            subject_label=s_name,
+            predicate_id=mapping.p.curie,
+            object_id=mapping.o.curie,
+            object_label=o_name,
             mapping_justification=evidence.justification.curie,
             confidence=confidence,
-            source=evidence.mapping_set.name,
+            mapping_tool=evidence.mapping_set.name,
         )
 
     @property
-    def source_prefix(self) -> str:
+    def subject_prefix(self) -> str:
         """Get the source's prefix."""
-        return self.source_id.split(":")[0]
+        return self.subject_id.split(":")[0]
 
     @property
-    def target_prefix(self) -> str:
+    def subject_identifier(self) -> str:
+        """Get the source's identifier."""
+        return self.subject_id.split(":")[1]
+
+    @property
+    def object_prefix(self) -> str:
         """Get the target's prefix."""
-        return self.target_id.split(":")[0]
+        return self.object_id.split(":")[0]
 
 
 PREDICTIONS_HEADER = PredictionTuple._fields
 
 Mappings = Iterable[dict[str, str]]
-
-
-def get_resource_file_path(fname) -> Path:
-    """Get a resource by its file name."""
-    return RESOURCE_PATH.joinpath(fname)
 
 
 def _load_table(path: Union[str, Path]) -> list[dict[str, str]]:
@@ -223,22 +230,17 @@ def _write_helper(
 def mapping_sort_key(prediction: Mapping[str, str]) -> tuple[str, ...]:
     """Return a tuple for sorting mapping dictionaries."""
     return (
-        prediction["source prefix"],
-        prediction["source identifier"],
-        prediction["relation"],
-        prediction["target prefix"],
-        prediction["target identifier"],
-        prediction["type"],
-        prediction["source"] or "",
+        prediction["subject_id"],
+        prediction["predicate_id"],
+        prediction["object_id"],
+        prediction["mapping_justification"],
+        prediction.get("mapping_tool") or "",
     )
-
-
-TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
 
 
 def load_mappings(*, path: Union[str, Path, None] = None) -> list[dict[str, str]]:
     """Load the mappings table."""
-    return _load_table(path or TRUE_MAPPINGS_PATH)
+    return _load_table(path or POSITIVES_SSSOM_PATH)
 
 
 def load_mappings_subset(source: str, target: str) -> Mapping[str, str]:
@@ -258,7 +260,7 @@ def append_true_mappings(
 ) -> None:
     """Append new lines to the mappings table."""
     if path is None:
-        path = TRUE_MAPPINGS_PATH
+        path = POSITIVES_SSSOM_PATH
     _write_curated(mappings, path=path, mode="a")
     if sort:
         lint_true_mappings(path=path)
@@ -271,7 +273,7 @@ def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
 
 def write_true_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write mappigns to the true mappings file."""
-    _write_curated(mappings=mappings, path=path or TRUE_MAPPINGS_PATH, mode="w")
+    _write_curated(mappings=mappings, path=path or POSITIVES_SSSOM_PATH, mode="w")
 
 
 def _write_curated(mappings: Mappings, *, path: Path, mode: Literal["w", "a"]):
@@ -280,7 +282,7 @@ def _write_curated(mappings: Mappings, *, path: Path, mode: Literal["w", "a"]):
 
 def lint_true_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the true mappings file."""
-    _lint_curated_mappings(standardize=standardize, path=path or TRUE_MAPPINGS_PATH)
+    _lint_curated_mappings(standardize=standardize, path=path or POSITIVES_SSSOM_PATH)
 
 
 def _lint_curated_mappings(path: Path, *, standardize: bool = False) -> None:
@@ -292,12 +294,9 @@ def _lint_curated_mappings(path: Path, *, standardize: bool = False) -> None:
     _write_helper(MAPPINGS_HEADER, mappings, path, mode="w")
 
 
-FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
-
-
 def load_false_mappings(*, path: Optional[Path] = None) -> list[dict[str, str]]:
     """Load the false mappings table."""
-    return _load_table(path or FALSE_MAPPINGS_PATH)
+    return _load_table(path or NEGATIVES_SSSOM_PATH)
 
 
 def append_false_mappings(
@@ -308,7 +307,7 @@ def append_false_mappings(
 ) -> None:
     """Append new lines to the false mappings table."""
     if path is None:
-        path = FALSE_MAPPINGS_PATH
+        path = NEGATIVES_SSSOM_PATH
     _write_curated(mappings=mappings, path=path, mode="a")
     if sort:
         lint_false_mappings(path=path)
@@ -316,20 +315,17 @@ def append_false_mappings(
 
 def write_false_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write mappings to the false mappings file."""
-    _write_helper(MAPPINGS_HEADER, mappings, path or FALSE_MAPPINGS_PATH, mode="w")
+    _write_helper(MAPPINGS_HEADER, mappings, path or NEGATIVES_SSSOM_PATH, mode="w")
 
 
 def lint_false_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the false mappings file."""
-    _lint_curated_mappings(standardize=standardize, path=path or FALSE_MAPPINGS_PATH)
-
-
-UNSURE_PATH = get_resource_file_path("unsure.tsv")
+    _lint_curated_mappings(standardize=standardize, path=path or NEGATIVES_SSSOM_PATH)
 
 
 def load_unsure(*, path: Optional[Path] = None) -> list[dict[str, str]]:
     """Load the unsure table."""
-    return _load_table(path or UNSURE_PATH)
+    return _load_table(path or UNSURE_SSSOM_PATH)
 
 
 def append_unsure_mappings(
@@ -340,7 +336,7 @@ def append_unsure_mappings(
 ) -> None:
     """Append new lines to the "unsure" mappings table."""
     if path is None:
-        path = UNSURE_PATH
+        path = UNSURE_SSSOM_PATH
     _write_curated(mappings, path=path, mode="a")
     if sort:
         lint_unsure_mappings(path=path)
@@ -348,25 +344,22 @@ def append_unsure_mappings(
 
 def write_unsure_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write mappings to the unsure mappings file."""
-    _write_helper(MAPPINGS_HEADER, mappings, path or UNSURE_PATH, mode="w")
+    _write_helper(MAPPINGS_HEADER, mappings, path or UNSURE_SSSOM_PATH, mode="w")
 
 
 def lint_unsure_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the unsure mappings file."""
-    _lint_curated_mappings(standardize=standardize, path=path or UNSURE_PATH)
-
-
-PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
+    _lint_curated_mappings(standardize=standardize, path=path or UNSURE_SSSOM_PATH)
 
 
 def load_predictions(*, path: Union[str, Path, None] = None) -> list[dict[str, str]]:
     """Load the predictions table."""
-    return _load_table(path or PREDICTIONS_PATH)
+    return _load_table(path or PREDICTIONS_SSSOM_PATH)
 
 
 def write_predictions(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write new content to the predictions table."""
-    _write_helper(PREDICTIONS_HEADER, mappings, path or PREDICTIONS_PATH, mode="w")
+    _write_helper(PREDICTIONS_HEADER, mappings, path or PREDICTIONS_SSSOM_PATH, mode="w")
 
 
 def append_prediction_tuples(
@@ -413,7 +406,7 @@ def append_predictions(
         )
 
     if path is None:
-        path = PREDICTIONS_PATH
+        path = PREDICTIONS_SSSOM_PATH
     _write_helper(PREDICTIONS_HEADER, mappings, path, mode="a")
     if sort:
         lint_predictions(path=path)

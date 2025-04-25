@@ -407,35 +407,35 @@ class Controller:
         target_name: str,
     ) -> None:
         """Add manually curated new mappings."""
+        subject_curie = f"{source_prefix}:{source_id}"
+        object_curie = f"{target_prefix}:{target_id}"
         try:
-            check_valid_prefix_id(source_prefix, source_id)
+            check_valid_prefix_id(subject_curie)
         except ValueError as e:
             flask.flash(
-                f"Problem with source CURIE {source_prefix}:{source_id}: {e.__class__.__name__}",
+                f"Problem with source CURIE {subject_curie}: {e.__class__.__name__}",
                 category="warning",
             )
             return
 
         try:
-            check_valid_prefix_id(target_prefix, target_id)
+            check_valid_prefix_id(object_curie)
         except ValueError as e:
             flask.flash(
-                f"Problem with target CURIE {target_prefix}:{target_id}: {e.__class__.__name__}",
+                f"Problem with target CURIE {object_curie}: {e.__class__.__name__}",
                 category="warning",
             )
             return
 
         self._added_mappings.append(
             {
-                "source prefix": source_prefix,
-                "source identifier": source_id,
-                "source name": source_name,
-                "relation": "skos:exactMatch",
-                "target prefix": target_prefix,
-                "target identifier": target_id,
-                "target name": target_name,
-                "source": _manual_source(),
-                "type": "manual",
+                "subject_id": subject_curie,
+                "subject_label": source_name,
+                "predicate_id": "skos:exactMatch",
+                "target_id": object_curie,
+                "target_label": target_name,
+                "author_id": _manual_source(),
+                "mapping_justification": "semapv:ManualMappingCuration",
                 "prediction_type": None,
                 "prediction_source": None,
                 "prediction_confidence": None,
@@ -452,16 +452,16 @@ class Controller:
             prediction["prediction_type"] = prediction.pop("type")
             prediction["prediction_source"] = prediction.pop("source")
             prediction["prediction_confidence"] = prediction.pop("confidence")
-            prediction["source"] = _manual_source()
-            prediction["type"] = "semapv:ManualMappingCuration"
+            prediction["author_id"] = _manual_source()
+            prediction["mapping_justification"] = "semapv:ManualMappingCuration"
 
             # note these go backwards because of the way they are read
             if value == "broad":
                 value = "correct"
-                prediction["relation"] = "skos:narrowMatch"
+                prediction["predicate_id"] = "skos:narrowMatch"
             elif value == "narrow":
                 value = "correct"
-                prediction["relation"] = "skos:broadMatch"
+                prediction["predicate_id"] = "skos:broadMatch"
 
             entries[value].append(prediction)
 

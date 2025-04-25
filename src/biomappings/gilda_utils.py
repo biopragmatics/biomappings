@@ -6,7 +6,6 @@ from collections.abc import Iterable
 from pathlib import Path
 from typing import Optional, Union
 
-import bioregistry
 import pyobo
 import ssslm
 from tqdm import tqdm
@@ -80,14 +79,14 @@ def iter_prediction_tuples(
     for identifier, name in it:
         for scored_match in grounder.get_matches(name):
             yield PredictionTuple(
-                source_id=f"{prefix}:{identifier}",
-                source_name=name,
-                relation=relation,
-                target_id=scored_match.curie,
-                target_name=scored_match.name,
+                subject_id=f"{prefix}:{identifier}",
+                subject_label=name,
+                predicate_id=relation,
+                object_id=scored_match.curie,
+                object_label=scored_match.name,
                 mapping_justification="semapv:LexicalMatching",
                 confidence=round(scored_match.score, 3),
-                source=provenance,
+                mapping_tool=provenance,
             )
 
     if identifiers_are_names:
@@ -97,14 +96,14 @@ def iter_prediction_tuples(
         for identifier in it:
             for scored_match in grounder.get_matches(identifier):
                 yield PredictionTuple(
-                    source_id=f"{prefix}:{identifier}",
-                    source_name=identifier,
-                    relation=relation,
-                    target_id=scored_match.curie,
-                    target_name=scored_match.name,
+                    subject_id=f"{prefix}:{identifier}",
+                    subject_label=identifier,
+                    predicate_id=relation,
+                    object_id=scored_match.curie,
+                    object_label=scored_match.name,
                     mapping_justification="semapv:LexicalMatching",
                     confidence=round(scored_match.score, 3),
-                    source=provenance,
+                    mapping_tool=provenance,
                 )
 
 
@@ -115,7 +114,11 @@ def filter_custom(
     """Filter out custom mappings."""
     counter = 0
     for p in predictions:
-        if custom_filter.get(p.source_prefix, {}).get(p.target_prefix, {}).get(p.source_id):
+        if (
+            custom_filter.get(p.subject_prefix, {})
+            .get(p.object_prefix, {})
+            .get(p.subject_identifier)
+        ):
             counter += 1
             continue
         yield p
@@ -129,24 +132,20 @@ def filter_existing_xrefs(
     prefixes = set(prefixes)
 
     entity_to_mapped_prefixes = defaultdict(set)
-    for prefix in prefixes:
-        for source_id, target_prefix, target_id in pyobo.get_xrefs_df(prefix).values:
-            entity_to_mapped_prefixes[prefix, source_id].add(target_prefix)
-            entity_to_mapped_prefixes[target_prefix, target_id].add(prefix)
+    for subject_prefix in prefixes:
+        for subject_id, target_prefix, object_id in pyobo.get_xrefs_df(subject_prefix).values:
+            entity_to_mapped_prefixes[subject_prefix, subject_id].add(target_prefix)
+            entity_to_mapped_prefixes[target_prefix, object_id].add(subject_prefix)
 
     counter = 0
     for prediction in predictions:
-        source_id = bioregistry.standardize_identifier(
-            prediction.source_prefix, prediction.source_id
-        )
-        target_id = bioregistry.standardize_identifier(
-            prediction.target_prefix, prediction.target_identifier
-        )
+        subject_id = prediction.subject_id
+        object_id = prediction.object_id
         if (
-            prediction.target_prefix
-            in entity_to_mapped_prefixes[prediction.source_prefix, source_id]
-            or prediction.source_prefix
-            in entity_to_mapped_prefixes[prediction.target_prefix, target_id]
+            prediction.object_prefix
+            in entity_to_mapped_prefixes[prediction.subject_prefix, subject_id]
+            or prediction.subject_prefix
+            in entity_to_mapped_prefixes[prediction.object_prefix, object_id]
         ):
             counter += 1
             continue
@@ -160,4 +159,4 @@ def has_mapping(prefix: str, identifier: str, target_prefix: str) -> bool:
 
 
 def _key(t: PredictionTuple) -> tuple[str, str]:
-    return t.source_prefix, t.source_name
+    return t.subject_prefix, t.subject_label
