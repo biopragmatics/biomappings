@@ -5,7 +5,7 @@ Note: this script requires a minimum of PyOBO v0.7.0 to run.
 
 import time
 
-from pyobo.gilda_utils import get_grounder
+import pyobo
 from pyobo.sources.agrovoc import ensure_agrovoc_graph
 from tqdm import tqdm
 
@@ -28,7 +28,7 @@ SELECT ?id ?label {
 def main():
     """Generate mappings from AGRO to AGROVOC."""
     provenance = get_script_url(__file__)
-    grounder = get_grounder("AGRO")
+    grounder = pyobo.get_grounder("AGRO")
     print("got grounder for AGRO", grounder)
     t = time.time()
     graph = ensure_agrovoc_graph(AGROVOC_VERSION)
@@ -37,16 +37,16 @@ def main():
     )
     rows = []
     for identifier, name in tqdm(graph.query(QUERY)):
-        for scored_match in grounder.ground(name):
+        for scored_match in grounder.get_matches(name):
             rows.append(
                 PredictionTuple(
                     "agrovoc",
                     identifier,
                     name,
                     "skos:exactMatch",
-                    scored_match.term.db.lower(),
-                    scored_match.term.id,
-                    scored_match.term.entry_name,
+                    scored_match.prefix,
+                    scored_match.identifier,
+                    scored_match.name,
                     "semapv:LexicalMatching",
                     scored_match.score,
                     provenance,

@@ -91,8 +91,10 @@ web = [
     "flask-wtf",
 ]
 gilda = [
-    "gilda",
-    "pyobo>=0.8.4",
+    "pyobo[gilda]>=0.12.0",
+]
+gilda-slim = [
+    "pyobo[gilda-slim]>=0.12.0",
 ]
 ndex = [
     "ndex2",

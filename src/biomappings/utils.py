@@ -1,7 +1,6 @@
 """Utilities."""
 
 import os
-import re
 from collections.abc import Mapping
 from pathlib import Path
 from subprocess import CalledProcessError, check_output
@@ -29,13 +28,6 @@ RESOURCE_PATH = HERE.joinpath("resources")
 DOCS = ROOT.joinpath("docs")
 IMG = DOCS.joinpath("img")
 DATA = DOCS.joinpath("_data")
-
-OVERRIDE_MIRIAM = {
-    # ITO is very messy (combines mostly numbers with a few
-    # text based labels for top-level terms), has weird bananas,
-    # and also not very enjoyable to use so don't worry about them
-    "ito",
-}
 
 
 def get_git_hash() -> Optional[str]:
@@ -198,7 +190,7 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         (if available) or for the Bioregistry. If no regular expression is
         available, then this check is not applied.
     :raises RuntimeError:
-        If the preconditions for miriam standardization aren't met. However,
+        If the preconditions for bioregistry standardization aren't met. However,
         this shouldn't be possible in practice, and this documentation is
         merely a formality.
     """
@@ -207,39 +199,11 @@ def check_valid_prefix_id(prefix: str, identifier: str):
         raise UnregisteredPrefix(prefix)
     if prefix != resource.prefix:
         raise UnstandardizedPrefix(prefix, resource.prefix)
-    miriam_prefix = resource.get_miriam_prefix()
 
-    if miriam_prefix in OVERRIDE_MIRIAM:
-        return
-
-    # If this resource has a mapping to MIRIAM, the MIRIAM-specific
-    # normalization will be applied, which e.g., adds missing
-    # redundant prefixes into the local unique identifiers
-    if miriam_prefix is not None:
-        norm_id = resource.miriam_standardize_identifier(identifier)
-        if norm_id is None:
-            raise RuntimeError(
-                "should not be possible since we check for miriam prefix"
-                " before running miriam_standardize_identifier"
-            )
-        if norm_id != identifier:
-            raise InvalidNormIdentifier(prefix, identifier, norm_id)
-        if prefix == "pr":
-            pattern = None  # identifiers.org is broken for uniprot in PR
-        elif prefix == "obi":
-            pattern = re.compile(r"^OBI:\d{7,8}$")  # identifiers.org is broken for OBI
-        else:
-            pattern = re.compile(resource.miriam["pattern"])
-
-    # If this resource does not have a mapping to MIRIAM, then
-    # the Bioregistry normalization will be applied, which e.g.,
-    # strips potential redundant prefixes in local unique identifiers
-    # or any other "bananas"
-    else:
-        norm_id = resource.standardize_identifier(identifier)
-        if norm_id != identifier:
-            raise InvalidNormIdentifier(prefix, identifier, norm_id)
-        pattern = resource.get_pattern_re()
+    norm_id = resource.standardize_identifier(identifier)
+    if norm_id != identifier:
+        raise InvalidNormIdentifier(prefix, identifier, norm_id)
+    pattern = resource.get_pattern_re()
     if pattern is not None and not pattern.match(identifier):
         raise InvalidIdentifierPattern(prefix, identifier, pattern)
 

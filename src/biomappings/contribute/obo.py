@@ -56,24 +56,25 @@ def update_obo_lines(
         target_prefix = bioregistry.get_preferred_prefix(target_prefix) or target_prefix
         target_identifier = standardize_identifier(target_prefix, mapping["target identifier"])
 
+        source_prefix = mapping["source prefix"]
+        source_prefix = bioregistry.get_preferred_prefix(source_prefix) or source_prefix
+
         source_curie = mapping["source"]
         if not source_curie.startswith("orcid:"):
             continue
 
-        # FIXME be careful about assumption about identifier. currently
-        #  assumes that OBO all have bananas.
         lines = add_xref(
             lines,
-            mapping["source identifier"],
-            curie_to_str(target_prefix, target_identifier),
-            mapping["target name"],
-            source_curie[len("orcid:") :],
+            node_curie=curie_to_str(source_prefix, mapping["source identifier"]),
+            xref_curie=curie_to_str(target_prefix, target_identifier),
+            xref_name=mapping["target name"],
+            author_orcid=source_curie[len("orcid:") :],
         )
     return lines
 
 
 def add_xref(
-    lines: list[str], node: str, xref: str, xref_name: str, author_orcid: str
+    lines: list[str], *, node_curie: str, xref_curie: str, xref_name: str, author_orcid: str
 ) -> list[str]:
     """Add xref to OBO file lines in the appropriate place."""
     look_for_xref = False
@@ -86,7 +87,7 @@ def add_xref(
     xref_entries = []
     xref_values = set()
     for idx, line in enumerate(lines):
-        if line == f"id: {node}":
+        if line == f"id: {node_curie}":
             id_idx = idx
             look_for_xref = True
         if look_for_xref and line.startswith("def"):
@@ -107,7 +108,7 @@ def add_xref(
         # term not found
         return lines
 
-    if xref in xref_values:
+    if xref_curie in xref_values:
         # term already has this xref, don't modify it
         return lines
 
@@ -118,10 +119,10 @@ def add_xref(
             # there were no existing xrefs, so let's just stick them directly after the definition
             start_xref_idx = id_idx + 1
 
-    xref_entries.append(xref)
+    xref_entries.append(xref_curie)
     xref_entries = sorted(xref_entries)
-    xr_idx = xref_entries.index(xref)
-    line = f'xref: {xref} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}'
+    xr_idx = xref_entries.index(xref_curie)
+    line = f'xref: {xref_curie} {{dcterms:contributor="https://orcid.org/{author_orcid}"}} ! {xref_name}'
     lines.insert(start_xref_idx + xr_idx, line)
     return lines
 
