@@ -4,7 +4,7 @@ import unittest
 from collections import defaultdict
 from pathlib import Path
 from textwrap import dedent
-from typing import ClassVar, Union, TypeVar, Counter
+from typing import ClassVar, TypeVar, Union
 
 import bioregistry
 
@@ -36,10 +36,12 @@ __all__ = [
 
 semapv = get_semapv()
 
+TPL = TypeVar("TPL", MappingTuple, PredictionTuple)
 X = TypeVar("X")
 Y = TypeVar("Y")
 
-def _extract_redundant(counter: dict[X, list[Y]]) -> list[tuple[X, Y]]:
+
+def _extract_redundant(counter: dict[X, list[Y]]) -> list[tuple[X, list[Y]]]:
     return [(key, values) for key, values in counter.items() if len(values) > 1]
 
 
@@ -207,9 +209,9 @@ class IntegrityTestCase(unittest.TestCase):
             )
             raise ValueError(f"{len(redundant)} are redundant: {msg}")
 
-    def assert_no_internal_redundancies[T](self, mappings: Mappings, tuple_cls: type[T]) -> None:
+    def assert_no_internal_redundancies(self, mappings: Mappings, tuple_cls: type[TPL]) -> None:
         """Assert that the list of mappings doesn't have any redundancies."""
-        counter: defaultdict[T, list[int]] = defaultdict(list)
+        counter: defaultdict[TPL, list[int]] = defaultdict(list)
         for line_number, mapping in enumerate(mappings, start=1):
             counter[tuple_cls.from_dict(mapping)].append(line_number)
         redundant = _extract_redundant(counter)

@@ -16,6 +16,7 @@ from typing import (
 import bioregistry
 import flask
 import flask_bootstrap
+from curies import ReferenceTuple
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
@@ -30,14 +31,7 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import (
-    check_valid_prefix_id,
-    commit,
-    get_branch,
-    get_curie,
-    not_main,
-    push,
-)
+from biomappings.utils import check_valid_prefix_id, commit, get_branch, not_main, push
 
 
 class State(BaseModel):
@@ -167,7 +161,7 @@ class Controller:
         self._marked: dict[int, str] = {}
         self.total_curated = 0
         self._added_mappings: list[dict[str, Union[None, str, float]]] = []
-        self.target_ids = set(target_curies or [])
+        self.target_ids = {ReferenceTuple.from_curie(c) for c in target_curies or []}
 
     def predictions_from_state(self, state: State) -> Iterable[tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions from a state instance."""
@@ -302,8 +296,8 @@ class Controller:
             it = (
                 (line, p)
                 for (line, p) in it
-                if (p["source prefix"], p["source identifier"]) in self.target_ids
-                or (p["target prefix"], p["target identifier"]) in self.target_ids
+                if ReferenceTuple.from_curie(p["subject_id"]) in self.target_ids
+                or ReferenceTuple.from_curie(p["object_id"]) in self.target_ids
             )
 
         if query is not None:
@@ -369,14 +363,10 @@ class Controller:
             if any(query in prediction[element].casefold() for element in elements)
         )
 
-    @staticmethod
-    def get_curie(prefix: str, identifier: str) -> str:
-        """Return CURIE for a given prefix and identifier."""
-        return get_curie(prefix, identifier)
-
     @classmethod
-    def get_url(cls, prefix: str, identifier: str) -> str:
+    def get_url(cls, curie: str) -> str:
         """Return URL for a given prefix and identifier."""
+        prefix, identifier = ReferenceTuple.from_curie(curie)
         return bioregistry.get_bioregistry_iri(prefix, identifier)
 
     @property
@@ -432,13 +422,13 @@ class Controller:
                 "subject_id": subject_curie,
                 "subject_label": source_name,
                 "predicate_id": "skos:exactMatch",
-                "target_id": object_curie,
-                "target_label": target_name,
+                "object_id": object_curie,
+                "object_label": target_name,
                 "author_id": _manual_source(),
                 "mapping_justification": "semapv:ManualMappingCuration",
                 "prediction_type": None,
-                "prediction_source": None,
-                "prediction_confidence": None,
+                "mapping_tool": None,
+                "confidence": None,
             }
         )
         self.total_curated += 1
@@ -449,8 +439,8 @@ class Controller:
 
         for line, value in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(line)
-            prediction["prediction_type"] = prediction.pop("type")
-            prediction["prediction_source"] = prediction.pop("source")
+            prediction["prediction_type"] = prediction.pop("mapping_justification")
+            prediction["prediction_source"] = prediction.pop("mapping_tool")
             prediction["prediction_confidence"] = prediction.pop("confidence")
             prediction["author_id"] = _manual_source()
             prediction["mapping_justification"] = "semapv:ManualMappingCuration"
@@ -517,7 +507,8 @@ def summary():
     state.limit = None
     predictions = CONTROLLER.predictions_from_state(state)
     counter = Counter(
-        (mapping["source prefix"], mapping["target prefix"]) for _, mapping in predictions
+        (mapping["subject_id"].split(":")[0], mapping["object_id"].split(":")[0])
+        for _, mapping in predictions
     )
     rows = []
     for (source_prefix, target_prefix), count in counter.most_common():

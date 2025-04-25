@@ -463,8 +463,8 @@ def _replace_local_curation_source(mappings: Mappings) -> Mappings:
     """Find `web-` prefixed sources that can be replaced with ORCID CURIEs."""
     user_to_contributors = {c["user"]: c["orcid"] for c in load_curators()}
     for mapping in mappings:
-        source = mapping["source"]
-        orcid = user_to_contributors.get(source.removeprefix("web-"))
+        author_curie = mapping["author_id"]
+        orcid = user_to_contributors.get(author_curie.removeprefix("web-"))
         if orcid:
             mapping["source"] = f"orcid:{orcid}"
         yield mapping
@@ -483,7 +483,7 @@ def _pick_best(mapping: Mapping[str, str]) -> int:
     - prediction methodology
     - date of prediction/curation (to keep the earliest)
     """
-    if mapping["source"].startswith("orcid"):
+    if mapping["author_id"].startswith("orcid:"):
         return 1
     return 0
 
@@ -501,17 +501,8 @@ def _standardize_mappings(mappings: Mappings, *, progress: bool = True) -> Mappi
 
 def _standardize_mapping(mapping):
     """Standardize a mapping."""
-    for prefix_key, identifier_key in [
-        ("source prefix", "source identifier"),
-        ("target prefix", "target identifier"),
-    ]:
-        prefix, identifier = mapping[prefix_key], mapping[identifier_key]
-        resource = bioregistry.get_resource(prefix)
-        if resource is None:
-            raise ValueError
-        mapping[prefix_key] = resource.prefix
-        mapping[identifier_key] = resource.standardize_identifier(identifier)
-
+    for key in ('subject_id', 'object_id'):
+        mapping[key] = bioregistry.normalize_curie(mapping[key], strict=True)
     return mapping
 
 
