@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import Any, NamedTuple, Optional, Union
 
 import bioregistry
+from bioregistry import NormalizedNamableReference, NormalizedReference
+from pydantic import BaseModel
 from tqdm.auto import tqdm
 from typing_extensions import Literal
 
@@ -52,8 +54,8 @@ MAPPINGS_HEADER = [
     "target prefix",
     "target identifier",
     "target name",
-    "type",
-    "source",
+    "type",  # TODO rename to mapping_justification
+    "source",  # TODO rename to reviewer_id
     "prediction_type",
     "prediction_source",
     "prediction_confidence",
@@ -66,22 +68,31 @@ PREDICTIONS_HEADER = [
     "target prefix",
     "target identifier",
     "target name",
-    "type",
+    "type",  # TODO rename to mapping_justification
     "confidence",
     "source",
 ]
 
 
+class MappingModel(BaseModel):
+    """A pydantic class for a semantic mapping."""
+
+    source: NormalizedNamableReference
+    relation: NormalizedNamableReference
+    target: NormalizedNamableReference
+    mapping_justification: NormalizedReference
+
+
 class MappingTuple(NamedTuple):
     """A named tuple class for mappings."""
 
-    source_prefix: str
-    source_id: str
-    source_name: str
-    relation: str
-    target_prefix: str
-    target_identifier: str
-    target_name: str
+    # source_prefix: str
+    # source_id: str
+    # source_name: str
+    # relation: str
+    # target_prefix: str
+    # target_identifier: str
+    # target_name: str
     type: str
     source: str
     prediction_type: Optional[str]
