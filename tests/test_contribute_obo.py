@@ -13,14 +13,13 @@ class TestContributeOBO(unittest.TestCase):
         """Set up the test case with a specific mapping."""
         mappings = get_curated_mappings("uberon")
         sources = {mapping["source identifier"] for mapping in mappings}
-        self.assertIn("UBERON:0000018", sources, msg="Mappings are not loaded properly")
+        self.assertIn("0000018", sources, msg="Mappings are not loaded properly")
 
         # cut the mappings down in case additional ones are curated later
         mappings = [
             mappings
             for mappings in mappings
-            if mappings["source identifier"] == "UBERON:0000018"
-            and mappings["target prefix"] == "idomal"
+            if mappings["source identifier"] == "0000018" and mappings["target prefix"] == "idomal"
         ]
         self.assertEqual(1, len(mappings))
         self.mappings = mappings
