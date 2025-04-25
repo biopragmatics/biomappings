@@ -6,15 +6,16 @@ import logging
 from collections import defaultdict
 from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Any, NamedTuple, Optional, Union
+from typing import TYPE_CHECKING, Any, NamedTuple, Optional, Union
 
 import bioregistry
-from bioregistry import NormalizedNamableReference, NormalizedReference
-from pydantic import BaseModel
 from tqdm.auto import tqdm
 from typing_extensions import Literal
 
 from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
+
+if TYPE_CHECKING:
+    import semra
 
 __all__ = [
     "MAPPINGS_HEADER",
@@ -46,54 +47,16 @@ __all__ = [
 
 logger = logging.getLogger(__name__)
 
-MAPPINGS_HEADER = [
-    "source prefix",
-    "source identifier",
-    "source name",
-    "relation",
-    "target prefix",
-    "target identifier",
-    "target name",
-    "type",  # TODO rename to mapping_justification
-    "source",  # TODO rename to reviewer_id
-    "prediction_type",
-    "prediction_source",
-    "prediction_confidence",
-]
-PREDICTIONS_HEADER = [
-    "source prefix",
-    "source identifier",
-    "source name",
-    "relation",
-    "target prefix",
-    "target identifier",
-    "target name",
-    "type",  # TODO rename to mapping_justification
-    "confidence",
-    "source",
-]
-
-
-class MappingModel(BaseModel):
-    """A pydantic class for a semantic mapping."""
-
-    source: NormalizedNamableReference
-    relation: NormalizedNamableReference
-    target: NormalizedNamableReference
-    mapping_justification: NormalizedReference
-
 
 class MappingTuple(NamedTuple):
     """A named tuple class for mappings."""
 
-    # source_prefix: str
-    # source_id: str
-    # source_name: str
-    # relation: str
-    # target_prefix: str
-    # target_identifier: str
-    # target_name: str
-    type: str
+    source_id: str
+    source_name: str
+    relation_id: str
+    target_id: str
+    target_name: str
+    mapping_justification: str
     source: str
     prediction_type: Optional[str]
     prediction_source: Optional[str]
@@ -101,41 +64,32 @@ class MappingTuple(NamedTuple):
 
     def as_dict(self) -> dict[str, Any]:
         """Get the mapping tuple as a dictionary."""
-        return dict(zip(MAPPINGS_HEADER, self))  # type:ignore
+        return dict(zip(self._fields, self))  # type:ignore
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, str]) -> "MappingTuple":
+    def from_dict(cls, mapping: Mapping[str, str | float | None]) -> "MappingTuple":
         """Get the mapping tuple from a dictionary."""
         values = []
-        for key in MAPPINGS_HEADER:
+        for key in cls._fields:
             value = mapping.get(key) or None
             if key == "prediction_confidence" and value is not None:
                 value = float(value)  # type:ignore
             values.append(value)
         return cls(*values)  # type:ignore
 
-    @property
-    def source_curie(self) -> str:
-        """Concatenate the source prefix and ID to a CURIE."""
-        return f"{self.source_prefix}:{self.source_id}"
 
-    @property
-    def target_curie(self) -> str:
-        """Concatenate the target prefix and ID to a CURIE."""
-        return f"{self.target_prefix}:{self.target_identifier}"
+MAPPINGS_HEADER = MappingTuple._fields
 
 
 class PredictionTuple(NamedTuple):
     """A named tuple class for predictions."""
 
-    source_prefix: str
     source_id: str
     source_name: str
     relation: str
-    target_prefix: str
-    target_identifier: str
+    target_id: str
     target_name: str
-    type: str
+    mapping_justification: str
     """A `semapv <https://bioregistry.io/registry/semapv>`_ term describing the mapping type.
 
     These are relatively high level, and can be any child of ``semapv:Matching``, including:
@@ -174,13 +128,13 @@ class PredictionTuple(NamedTuple):
 
     def as_dict(self) -> dict[str, Any]:
         """Get the prediction tuple as a dictionary."""
-        return dict(zip(PREDICTIONS_HEADER, self))  # type:ignore
+        return dict(zip(self._fields, self))  # type:ignore
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, str]) -> "PredictionTuple":
+    def from_dict(cls, mapping: Mapping[str, str | float]) -> "PredictionTuple":
         """Get the prediction tuple from a dictionary."""
         values = []
-        for key in PREDICTIONS_HEADER:
+        for key in cls._fields:
             value = mapping.get(key) or None
             if key == "confidence" and value is not None:
                 value = float(value)  # type:ignore
@@ -188,15 +142,15 @@ class PredictionTuple(NamedTuple):
         return cls(*values)  # type:ignore
 
     @classmethod
-    def from_semra(cls, mapping, confidence) -> "PredictionTuple":
+    def from_semra(cls, mapping: "semra.Mapping", confidence: float) -> "PredictionTuple":
         """Instantiate from a SeMRA mapping."""
         import pyobo
         import semra
 
-        s_name = pyobo.get_name(*mapping.s.pair)
+        s_name = pyobo.get_name(mapping.s)
         if not s_name:
             raise KeyError(f"could not look up name for {mapping.s.curie}")
-        o_name = pyobo.get_name(*mapping.o.pair)
+        o_name = pyobo.get_name(mapping.o)
         if not o_name:
             raise KeyError(f"could not look up name for {mapping.o.curie}")
         # Assume that each mapping has a single simple evidence with a mapping set annotation
@@ -208,26 +162,28 @@ class PredictionTuple(NamedTuple):
         if evidence.mapping_set is None:
             raise ValueError
         return cls(  # type:ignore
-            *mapping.s.pair,
-            s_name,
-            mapping.p.curie,
-            *mapping.o.pair,
-            o_name,
-            evidence.justification.curie,
-            confidence,
-            evidence.mapping_set.name,
+            source_id=mapping.s.curie,
+            source_name=s_name,
+            relation=mapping.p.curie,
+            target_id=mapping.o.curie,
+            target_name=o_name,
+            mapping_justification=evidence.justification.curie,
+            confidence=confidence,
+            source=evidence.mapping_set.name,
         )
 
     @property
-    def source_curie(self) -> str:
-        """Concatenate the source prefix and ID to a CURIE."""
-        return f"{self.source_prefix}:{self.source_id}"
+    def source_prefix(self) -> str:
+        """Get the source's prefix."""
+        return self.source_id.split(":")[0]
 
     @property
-    def target_curie(self) -> str:
-        """Concatenate the target prefix and ID to a CURIE."""
-        return f"{self.target_prefix}:{self.target_identifier}"
+    def target_prefix(self) -> str:
+        """Get the target's prefix."""
+        return self.target_id.split(":")[0]
 
+
+PREDICTIONS_HEADER = PredictionTuple._fields
 
 Mappings = Iterable[dict[str, str]]
 

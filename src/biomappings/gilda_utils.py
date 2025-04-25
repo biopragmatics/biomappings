@@ -80,14 +80,12 @@ def iter_prediction_tuples(
     for identifier, name in it:
         for scored_match in grounder.get_matches(name):
             yield PredictionTuple(
-                source_prefix=prefix,
-                source_id=identifier,
+                source_id=f"{prefix}:{identifier}",
                 source_name=name,
                 relation=relation,
-                target_prefix=scored_match.prefix,
-                target_identifier=scored_match.identifier,
+                target_id=scored_match.curie,
                 target_name=scored_match.name,
-                type="semapv:LexicalMatching",
+                mapping_justification="semapv:LexicalMatching",
                 confidence=round(scored_match.score, 3),
                 source=provenance,
             )
@@ -99,14 +97,12 @@ def iter_prediction_tuples(
         for identifier in it:
             for scored_match in grounder.get_matches(identifier):
                 yield PredictionTuple(
-                    source_prefix=prefix,
-                    source_id=identifier,
+                    source_id=f"{prefix}:{identifier}",
                     source_name=identifier,
                     relation=relation,
-                    target_prefix=scored_match.prefix,
-                    target_identifier=scored_match.identifier,
+                    target_id=scored_match.curie,
                     target_name=scored_match.name,
-                    type="semapv:LexicalMatching",
+                    mapping_justification="semapv:LexicalMatching",
                     confidence=round(scored_match.score, 3),
                     source=provenance,
                 )

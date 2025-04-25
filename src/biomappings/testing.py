@@ -218,7 +218,7 @@ class IntegrityTestCase(unittest.TestCase):
         redundant = _extract_redundant(counter)
         if redundant:
             msg = "".join(
-                f"\n  {mapping.source_curie}/{mapping.target_curie}: {locations}"
+                f"\n  {mapping.source_id}/{mapping.target_id}: {locations}"
                 for mapping, locations in redundant
             )
             raise ValueError(f"{len(redundant)} are redundant: {msg}")
