@@ -1,9 +1,8 @@
 """Generate mappings using Gilda from VO to MeSH."""
 
 import bioontologies
-import gilda
 import pyobo
-import pyobo.gilda_utils
+import ssslm
 from bioontologies.obograph import Node
 from tqdm import tqdm
 
@@ -14,7 +13,7 @@ from biomappings.utils import get_script_url
 
 def main():
     """Generate mappings from between VO and MeSH."""
-    mesh_grounder = pyobo.gilda_utils.get_grounder("mesh")
+    mesh_grounder = pyobo.get_grounder("mesh")
     provenance = get_script_url(__file__)
     graph = bioontologies.get_obograph_by_prefix("vo", check=False).guess("vo").standardize()
     rows = []
@@ -65,7 +64,7 @@ def main():
     print(f"extracted {extracted_mesh} mesh mappings. should be about 65")
 
 
-def _ground(grounder: gilda.Grounder, node: Node, rows, provenance):
+def _ground(grounder: ssslm.Grounder, node: Node, rows, provenance):
     texts = [node.name]
     # VO doesn't store its synonyms using standard predicates,
     # so look in IAO_0000118 (alternate label) or IAO_0000116 (editor note)
@@ -80,16 +79,16 @@ def _ground(grounder: gilda.Grounder, node: Node, rows, provenance):
                 texts.append(p.value_raw.removeprefix("synonym:").strip())
 
     for text in [node.name, *(s.value for s in node.synonyms)]:
-        for scored_match in grounder.ground(text):
+        for scored_match in grounder.get_matches(text):
             rows.append(
                 PredictionTuple(
                     node.prefix,
                     node.identifier,
                     node.name,
                     "skos:exactMatch",
-                    scored_match.term.db.lower(),
-                    scored_match.term.id,
-                    scored_match.term.entry_name,
+                    scored_match.prefix,
+                    scored_match.identifier,
+                    scored_match.name,
                     "semapv:LexicalMatching",
                     round(scored_match.score, 2),
                     provenance,

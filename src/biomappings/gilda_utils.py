@@ -1,4 +1,4 @@
-"""Utilities for generating predictions with pyobo/gilda."""
+"""Utilities for generating predictions with lexical predictions."""
 
 import logging
 from collections import defaultdict
@@ -8,8 +8,8 @@ from typing import Optional, Union
 
 import bioregistry
 import pyobo
-import pyobo.gilda_utils
-from gilda.grounder import Grounder
+import ssslm
+from tqdm import tqdm
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
 from biomappings.utils import CMapping
@@ -32,11 +32,10 @@ def append_gilda_predictions(
     *,
     relation: str = "skos:exactMatch",
     custom_filter: Optional[CMapping] = None,
-    unnamed: Optional[Iterable[str]] = None,
     identifiers_are_names: bool = False,
     path: Optional[Path] = None,
 ) -> None:
-    """Add gilda predictions to the Biomappings predictions.tsv file.
+    """Add lexical matching-based predictions to the Biomappings predictions.tsv file.
 
     :param prefix: The source prefix
     :param target_prefixes: The target prefix or prefixes
@@ -44,13 +43,12 @@ def append_gilda_predictions(
     :param relation: The relationship. Defaults to ``skos:exactMatch``.
     :param custom_filter: A triple nested dictionary from source prefix to target prefix to source id to target id.
         Any source prefix, target prefix, source id combinations in this dictionary will be filtered.
-    :param unnamed: An optional list of prefixes whose identifiers should be considered as names (e.g., CCLE, FPLX)
     :param identifiers_are_names: The source prefix's identifiers should be considered as names
     :param path: A custom path to predictions TSV file
     """
     if isinstance(target_prefixes, str):
         target_prefixes = [target_prefixes]
-    grounder = pyobo.gilda_utils.get_grounder(target_prefixes, unnamed=unnamed)
+    grounder = pyobo.get_grounder(target_prefixes)
     predictions = iter_prediction_tuples(
         prefix,
         relation=relation,
@@ -70,17 +68,48 @@ def iter_prediction_tuples(
     provenance: str,
     *,
     relation: str = "skos:exactMatch",
-    grounder: Optional[Grounder] = None,
+    grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
+    strict: bool = False,
 ) -> Iterable[PredictionTuple]:
     """Iterate over prediction tuples for a given prefix."""
-    for t in pyobo.gilda_utils.iter_gilda_prediction_tuples(
-        prefix=prefix,
-        relation=relation,
-        grounder=grounder,
-        identifiers_are_names=identifiers_are_names,
-    ):
-        yield PredictionTuple(*t, provenance)  # type: ignore
+    id_name_mapping = pyobo.get_id_name_mapping(prefix, strict=strict)
+    it = tqdm(
+        id_name_mapping.items(), desc=f"[{prefix}] lexical tuples", unit_scale=True, unit="name"
+    )
+    for identifier, name in it:
+        for scored_match in grounder.get_matches(name):
+            yield PredictionTuple(
+                source_prefix=prefix,
+                source_id=identifier,
+                source_name=name,
+                relation=relation,
+                target_prefix=scored_match.prefix,
+                target_identifier=scored_match.identifier,
+                target_name=scored_match.name,
+                type="semapv:LexicalMatching",
+                confidence=round(scored_match.score, 3),
+                source=provenance,
+            )
+
+    if identifiers_are_names:
+        it = tqdm(
+            pyobo.get_ids(prefix), desc=f"[{prefix}] lexical tuples", unit_scale=True, unit="id"
+        )
+        for identifier in it:
+            for scored_match in grounder.get_matches(identifier):
+                yield PredictionTuple(
+                    source_prefix=prefix,
+                    source_id=identifier,
+                    source_name=identifier,
+                    relation=relation,
+                    target_prefix=scored_match.prefix,
+                    target_identifier=scored_match.identifier,
+                    target_name=scored_match.name,
+                    type="semapv:LexicalMatching",
+                    confidence=round(scored_match.score, 3),
+                    source=provenance,
+                )
 
 
 def filter_custom(
