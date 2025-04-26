@@ -29,11 +29,6 @@ HERE = Path(__file__).parent.resolve()
 ROOT = HERE.parent.parent.resolve()
 RESOURCE_PATH = HERE.joinpath("resources")
 
-TRUE_MAPPINGS_PATH = RESOURCE_PATH.joinpath("mappings.tsv")
-FALSE_MAPPINGS_PATH = RESOURCE_PATH.joinpath("incorrect.tsv")
-UNSURE_PATH = RESOURCE_PATH.joinpath("unsure.tsv")
-PREDICTIONS_PATH = RESOURCE_PATH.joinpath("predictions.tsv")
-
 POSITIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("positive.sssom.tsv")
 NEGATIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("negative.sssom.tsv")
 UNSURE_SSSOM_PATH = RESOURCE_PATH.joinpath("unsure.sssom.tsv")

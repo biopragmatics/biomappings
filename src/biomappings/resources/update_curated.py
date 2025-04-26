@@ -6,13 +6,10 @@ import bioregistry
 import pandas as pd
 
 from biomappings.utils import (
-    FALSE_MAPPINGS_PATH,
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
-    PREDICTIONS_PATH,
     PREDICTIONS_SSSOM_PATH,
-    TRUE_MAPPINGS_PATH,
-    UNSURE_PATH,
+    RESOURCE_PATH,
     UNSURE_SSSOM_PATH,
 )
 
@@ -22,14 +19,14 @@ HERE = Path(__file__).parent.resolve()
 def main() -> None:
     """Update biomappings internal format to SSSOM."""
     paths = [
-        (FALSE_MAPPINGS_PATH, NEGATIVES_SSSOM_PATH, True),
-        (UNSURE_PATH, UNSURE_SSSOM_PATH, False),
-        (TRUE_MAPPINGS_PATH, POSITIVES_SSSOM_PATH, False),
+        (RESOURCE_PATH.joinpath("incorrect.tsv"), NEGATIVES_SSSOM_PATH, True),
+        (RESOURCE_PATH.joinpath("unsure.tsv"), UNSURE_SSSOM_PATH, False),
+        (RESOURCE_PATH.joinpath("mappings.tsv"), POSITIVES_SSSOM_PATH, False),
     ]
     for old_path, new_path, add_not in paths:
         update_curated(old_path, new_path, add_not=add_not)
 
-    update_predicted(PREDICTIONS_PATH, PREDICTIONS_SSSOM_PATH)
+    update_predicted(RESOURCE_PATH.joinpath("predictions.tsv"), PREDICTIONS_SSSOM_PATH)
 
 
 def update_predicted(old_path: Path, new_path: Path) -> None:
