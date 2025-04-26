@@ -183,10 +183,8 @@ class InvalidNormIdentifier(InvalidIdentifier):
 def check_valid_prefix_id(curie: str):
     """Check the prefix/identifier pair is valid.
 
-    :param prefix:
-        The prefix from a CURIE
-    :param identifier:
-        The local unique identifier from a CURIE
+    :param curie:
+        A CURIE
     :raises UnregisteredPrefix:
         if the prefix is not registered with the Bioregistry
     :raises UnstandardizedPrefix:

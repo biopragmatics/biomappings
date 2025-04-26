@@ -288,8 +288,7 @@ def lint_true_mappings(*, standardize: bool = False, path: Optional[Path] = None
 def _lint_curated_mappings(path: Path, *, standardize: bool = False) -> None:
     """Lint the true mappings file."""
     mapping_list = _load_table(path)
-    mappings = _standardize_mappings(mapping_list)
-    mappings = _remove_redundant(mappings, standardize=standardize)
+    mappings = _remove_redundant(mapping_list, standardize=standardize)
     mappings = _replace_local_curation_source(mappings)
     _write_helper(MAPPINGS_HEADER, mappings, path, mode="w")
 
@@ -438,7 +437,6 @@ def lint_predictions(
             additional_curated_mappings or [],
         ),
     )
-    mappings = _standardize_mappings(mappings)
     mappings = _remove_redundant(mappings, standardize=standardize)
     mappings = sorted(mappings, key=mapping_sort_key)
     write_predictions(mappings, path=path)
