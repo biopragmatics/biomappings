@@ -3,7 +3,7 @@
 import getpass
 import os
 from collections import Counter, defaultdict
-from collections.abc import Iterable, Mapping
+from collections.abc import Iterable, Iterator, Mapping
 from copy import deepcopy
 from pathlib import Path
 from typing import Any, Literal, Optional, Union, get_args
@@ -31,6 +31,8 @@ from biomappings.utils import check_valid_prefix_id, commit, get_branch, not_mai
 
 Mark: TypeAlias = Literal["correct", "incorrect", "unsure", "broad", "narrow"]
 MARKS: set[Mark] = set(get_args(Mark))
+
+PredictionDict: TypeAlias = Mapping[str, Any]
 
 
 class State(BaseModel):
@@ -289,8 +291,8 @@ class Controller:
         sort: Optional[str] = None,
         same_text: Optional[bool] = None,
         provenance: Optional[str] = None,
-    ):
-        it: Iterable[tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
+    ) -> Iterator[tuple[int, PredictionDict]]:
+        it: Iterable[tuple[int, PredictionDict]] = enumerate(self._predictions)
         if self.target_ids:
             it = (
                 (line, p)
@@ -304,29 +306,23 @@ class Controller:
                 query,
                 it,
                 {
-                    "source prefix",
-                    "source identifier",
-                    "source name",
-                    "target prefix",
-                    "target identifier",
-                    "target name",
-                    "source",
+                    "subject_id",
+                    "subject_label",
+                    "object_id",
+                    "object_label",
+                    "mapping_tool",
                 },
             )
         if source_prefix is not None:
-            it = self._help_filter(source_prefix, it, {"source prefix"})
+            it = self._help_filter(source_prefix, it, {"subject_id"})
         if source_query is not None:
-            it = self._help_filter(
-                source_query, it, {"source prefix", "source identifier", "source name"}
-            )
+            it = self._help_filter(source_query, it, {"subject_id", "subject_label"})
         if target_query is not None:
-            it = self._help_filter(
-                target_query, it, {"target prefix", "target identifier", "target name"}
-            )
+            it = self._help_filter(target_query, it, {"object_id", "target_label"})
         if target_prefix is not None:
-            it = self._help_filter(target_prefix, it, {"target prefix"})
+            it = self._help_filter(target_prefix, it, {"object_id"})
         if prefix is not None:
-            it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
+            it = self._help_filter(prefix, it, {"subject_id", "object_id"})
         if provenance is not None:
             it = self._help_filter(provenance, it, {"source"})
 
@@ -336,31 +332,27 @@ class Controller:
             elif sort == "asc":
                 it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=False))
             elif sort == "object":
-                it = iter(
-                    sorted(
-                        it, key=lambda l_p: (l_p[1]["target prefix"], l_p[1]["target identifier"])
-                    )
-                )
+                it = iter(sorted(it, key=lambda l_p: l_p[1]["target_id"]))
 
         if same_text:
             it = (
                 (line, prediction)
                 for line, prediction in it
-                if prediction["source name"].casefold() == prediction["target name"].casefold()
-                and prediction["relation"] == "skos:exactMatch"
+                if prediction["subject_label"].casefold() == prediction["object_label"].casefold()
+                and prediction["predicate_id"] == "skos:exactMatch"
             )
 
         rv = ((line, prediction) for line, prediction in it if line not in self._marked)
         return rv
 
     @staticmethod
-    def _help_filter(query: str, it, elements: set[str]):
+    def _help_filter(
+        query: str, it: Iterable[tuple[int, PredictionDict]], elements: set[str]
+    ) -> Iterable[tuple[int, PredictionDict]]:
         query = query.casefold()
-        return (
-            (line, prediction)
-            for line, prediction in it
-            if any(query in prediction[element].casefold() for element in elements)
-        )
+        for line, prediction in it:
+            if any(query in prediction[element].casefold() for element in elements):
+                yield line, prediction
 
     @classmethod
     def get_url(cls, curie: str) -> str:
