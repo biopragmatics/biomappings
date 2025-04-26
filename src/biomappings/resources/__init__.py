@@ -67,6 +67,7 @@ class MappingTuple(NamedTuple):
     author_id: str
     mapping_tool: Optional[str]
     confidence: Optional[float]
+    predicate_modifier: Optional[str]
 
     def as_dict(self) -> dict[str, Any]:
         """Get the mapping tuple as a dictionary."""

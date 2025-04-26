@@ -6,12 +6,7 @@ from collections import Counter, defaultdict
 from collections.abc import Iterable, Mapping
 from copy import deepcopy
 from pathlib import Path
-from typing import (
-    Any,
-    Literal,
-    Optional,
-    Union,
-)
+from typing import Any, Literal, Optional, Union, get_args
 
 import bioregistry
 import flask
@@ -20,6 +15,7 @@ from curies import ReferenceTuple
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
+from typing_extensions import TypeAlias
 from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
@@ -32,6 +28,9 @@ from biomappings.resources import (
     write_predictions,
 )
 from biomappings.utils import check_valid_prefix_id, commit, get_branch, not_main, push
+
+Mark: TypeAlias = Literal["correct", "incorrect", "unsure", "broad", "narrow"]
+MARKS: set[Mark] = set(get_args(Mark))
 
 
 class State(BaseModel):
@@ -158,7 +157,7 @@ class Controller:
         self.negatives_path = negatives_path
         self.unsure_path = unsure_path
 
-        self._marked: dict[int, str] = {}
+        self._marked: dict[int, Mark] = {}
         self.total_curated = 0
         self._added_mappings: list[dict[str, Union[None, str, float]]] = []
         self.target_ids = {ReferenceTuple.from_curie(c) for c in target_curies or []}
@@ -374,7 +373,7 @@ class Controller:
         """Return the total number of yet unmarked predictions."""
         return len(self._predictions) - len(self._marked)
 
-    def mark(self, line: int, value: str) -> None:
+    def mark(self, line: int, value: Mark) -> None:
         """Mark the given equivalency as correct.
 
         :param line: Position of the prediction
@@ -383,7 +382,7 @@ class Controller:
         """
         if line not in self._marked:
             self.total_curated += 1
-        if value not in {"correct", "incorrect", "unsure", "broad", "narrow"}:
+        if value not in MARKS:
             raise ValueError
         self._marked[line] = value
 
@@ -428,6 +427,7 @@ class Controller:
                 "mapping_justification": "semapv:ManualMappingCuration",
                 "mapping_tool": None,
                 "confidence": None,
+                "predicate_modifier": None,
             }
         )
         self.total_curated += 1
@@ -451,6 +451,11 @@ class Controller:
             elif value == "narrow":
                 value = "correct"
                 prediction["predicate_id"] = "skos:broadMatch"
+
+            if value != "incorrect":
+                prediction["predicate_modifier"] = ""
+            else:
+                prediction["predicate_modifier"] = "NOT"
 
             entries[value].append(prediction)
 
@@ -567,7 +572,7 @@ INCORRECT = {"no", "nope", "false", "f", "nada", "nein", "incorrect", "negative"
 UNSURE = {"unsure", "maybe", "idk", "idgaf", "idgaff"}
 
 
-def _normalize_mark(value: str) -> str:
+def _normalize_mark(value: str) -> Mark:
     value = value.lower()
     if value in CORRECT:
         return "correct"

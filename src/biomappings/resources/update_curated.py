@@ -23,8 +23,8 @@ def main() -> None:
     """Update biomappings internal format to SSSOM."""
     paths = [
         (FALSE_MAPPINGS_PATH, NEGATIVES_SSSOM_PATH, True),
-        (TRUE_MAPPINGS_PATH, POSITIVES_SSSOM_PATH, False),
         (UNSURE_PATH, UNSURE_SSSOM_PATH, False),
+        (TRUE_MAPPINGS_PATH, POSITIVES_SSSOM_PATH, False),
     ]
     for old_path, new_path, add_not in paths:
         update_curated(old_path, new_path, add_not=add_not)
@@ -54,6 +54,8 @@ def update_curated(old_path: Path, new_path: Path, add_not: bool = False) -> Non
     del df["prediction_type"]
     if add_not:
         df["predicate_modifier"] = "NOT"
+    else:
+        df["predicate_modifier"] = ""
     df.to_csv(new_path, sep="\t", index=False)
 
 
