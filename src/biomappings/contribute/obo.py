@@ -11,7 +11,6 @@ from typing import Any, Union
 
 import bioregistry
 import click
-from bioregistry import curie_to_str, standardize_identifier
 from tqdm.auto import tqdm
 
 from biomappings.contribute.utils import get_curated_mappings
@@ -52,23 +51,19 @@ def update_obo_lines(
     lines = deepcopy(lines)
 
     for mapping in tqdm(mappings, unit="mapping", unit_scale=True, disable=not progress):
-        target_prefix = mapping["target prefix"]
-        target_prefix = bioregistry.get_preferred_prefix(target_prefix) or target_prefix
-        target_identifier = standardize_identifier(target_prefix, mapping["target identifier"])
+        subject_curie = bioregistry.normalize_curie(mapping["subject_id"], use_preferred=True)
+        object_curie = bioregistry.normalize_curie(mapping["object_id"], use_preferred=True)
 
-        source_prefix = mapping["source prefix"]
-        source_prefix = bioregistry.get_preferred_prefix(source_prefix) or source_prefix
-
-        source_curie = mapping["source"]
-        if not source_curie.startswith("orcid:"):
+        author_curie = mapping["author_id"]
+        if not author_curie.startswith("orcid:"):
             continue
 
         lines = add_xref(
             lines,
-            node_curie=curie_to_str(source_prefix, mapping["source identifier"]),
-            xref_curie=curie_to_str(target_prefix, target_identifier),
-            xref_name=mapping["target name"],
-            author_orcid=source_curie[len("orcid:") :],
+            node_curie=subject_curie,
+            xref_curie=object_curie,
+            xref_name=mapping["object_label"],
+            author_orcid=author_curie[len("orcid:") :],
         )
     return lines
 

@@ -3,22 +3,19 @@
 import getpass
 import os
 from collections import Counter, defaultdict
-from collections.abc import Iterable, Mapping
+from collections.abc import Iterable, Iterator, Mapping
 from copy import deepcopy
 from pathlib import Path
-from typing import (
-    Any,
-    Literal,
-    Optional,
-    Union,
-)
+from typing import Any, Literal, Optional, Union, get_args
 
 import bioregistry
 import flask
 import flask_bootstrap
+from curies import ReferenceTuple
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
+from typing_extensions import TypeAlias
 from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
@@ -30,14 +27,12 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import (
-    check_valid_prefix_id,
-    commit,
-    get_branch,
-    get_curie,
-    not_main,
-    push,
-)
+from biomappings.utils import check_valid_prefix_id, commit, get_branch, not_main, push
+
+Mark: TypeAlias = Literal["correct", "incorrect", "unsure", "broad", "narrow"]
+MARKS: set[Mark] = set(get_args(Mark))
+
+PredictionDict: TypeAlias = Mapping[str, Any]
 
 
 class State(BaseModel):
@@ -164,10 +159,10 @@ class Controller:
         self.negatives_path = negatives_path
         self.unsure_path = unsure_path
 
-        self._marked: dict[int, str] = {}
+        self._marked: dict[int, Mark] = {}
         self.total_curated = 0
         self._added_mappings: list[dict[str, Union[None, str, float]]] = []
-        self.target_ids = set(target_curies or [])
+        self.target_ids = {ReferenceTuple.from_curie(c) for c in target_curies or []}
 
     def predictions_from_state(self, state: State) -> Iterable[tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions from a state instance."""
@@ -296,14 +291,14 @@ class Controller:
         sort: Optional[str] = None,
         same_text: Optional[bool] = None,
         provenance: Optional[str] = None,
-    ):
-        it: Iterable[tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
+    ) -> Iterator[tuple[int, PredictionDict]]:
+        it: Iterable[tuple[int, PredictionDict]] = enumerate(self._predictions)
         if self.target_ids:
             it = (
                 (line, p)
                 for (line, p) in it
-                if (p["source prefix"], p["source identifier"]) in self.target_ids
-                or (p["target prefix"], p["target identifier"]) in self.target_ids
+                if ReferenceTuple.from_curie(p["subject_id"]) in self.target_ids
+                or ReferenceTuple.from_curie(p["object_id"]) in self.target_ids
             )
 
         if query is not None:
@@ -311,29 +306,23 @@ class Controller:
                 query,
                 it,
                 {
-                    "source prefix",
-                    "source identifier",
-                    "source name",
-                    "target prefix",
-                    "target identifier",
-                    "target name",
-                    "source",
+                    "subject_id",
+                    "subject_label",
+                    "object_id",
+                    "object_label",
+                    "mapping_tool",
                 },
             )
         if source_prefix is not None:
-            it = self._help_filter(source_prefix, it, {"source prefix"})
+            it = self._help_filter(source_prefix, it, {"subject_id"})
         if source_query is not None:
-            it = self._help_filter(
-                source_query, it, {"source prefix", "source identifier", "source name"}
-            )
+            it = self._help_filter(source_query, it, {"subject_id", "subject_label"})
         if target_query is not None:
-            it = self._help_filter(
-                target_query, it, {"target prefix", "target identifier", "target name"}
-            )
+            it = self._help_filter(target_query, it, {"object_id", "target_label"})
         if target_prefix is not None:
-            it = self._help_filter(target_prefix, it, {"target prefix"})
+            it = self._help_filter(target_prefix, it, {"object_id"})
         if prefix is not None:
-            it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
+            it = self._help_filter(prefix, it, {"subject_id", "object_id"})
         if provenance is not None:
             it = self._help_filter(provenance, it, {"source"})
 
@@ -343,40 +332,32 @@ class Controller:
             elif sort == "asc":
                 it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=False))
             elif sort == "object":
-                it = iter(
-                    sorted(
-                        it, key=lambda l_p: (l_p[1]["target prefix"], l_p[1]["target identifier"])
-                    )
-                )
+                it = iter(sorted(it, key=lambda l_p: l_p[1]["target_id"]))
 
         if same_text:
             it = (
                 (line, prediction)
                 for line, prediction in it
-                if prediction["source name"].casefold() == prediction["target name"].casefold()
-                and prediction["relation"] == "skos:exactMatch"
+                if prediction["subject_label"].casefold() == prediction["object_label"].casefold()
+                and prediction["predicate_id"] == "skos:exactMatch"
             )
 
         rv = ((line, prediction) for line, prediction in it if line not in self._marked)
         return rv
 
     @staticmethod
-    def _help_filter(query: str, it, elements: set[str]):
+    def _help_filter(
+        query: str, it: Iterable[tuple[int, PredictionDict]], elements: set[str]
+    ) -> Iterable[tuple[int, PredictionDict]]:
         query = query.casefold()
-        return (
-            (line, prediction)
-            for line, prediction in it
-            if any(query in prediction[element].casefold() for element in elements)
-        )
-
-    @staticmethod
-    def get_curie(prefix: str, identifier: str) -> str:
-        """Return CURIE for a given prefix and identifier."""
-        return get_curie(prefix, identifier)
+        for line, prediction in it:
+            if any(query in prediction[element].casefold() for element in elements):
+                yield line, prediction
 
     @classmethod
-    def get_url(cls, prefix: str, identifier: str) -> str:
+    def get_url(cls, curie: str) -> str:
         """Return URL for a given prefix and identifier."""
+        prefix, identifier = ReferenceTuple.from_curie(curie)
         return bioregistry.get_bioregistry_iri(prefix, identifier)
 
     @property
@@ -384,7 +365,7 @@ class Controller:
         """Return the total number of yet unmarked predictions."""
         return len(self._predictions) - len(self._marked)
 
-    def mark(self, line: int, value: str) -> None:
+    def mark(self, line: int, value: Mark) -> None:
         """Mark the given equivalency as correct.
 
         :param line: Position of the prediction
@@ -393,7 +374,7 @@ class Controller:
         """
         if line not in self._marked:
             self.total_curated += 1
-        if value not in {"correct", "incorrect", "unsure", "broad", "narrow"}:
+        if value not in MARKS:
             raise ValueError
         self._marked[line] = value
 
@@ -407,38 +388,38 @@ class Controller:
         target_name: str,
     ) -> None:
         """Add manually curated new mappings."""
+        subject_curie = f"{source_prefix}:{source_id}"
+        object_curie = f"{target_prefix}:{target_id}"
         try:
-            check_valid_prefix_id(source_prefix, source_id)
+            check_valid_prefix_id(subject_curie)
         except ValueError as e:
             flask.flash(
-                f"Problem with source CURIE {source_prefix}:{source_id}: {e.__class__.__name__}",
+                f"Problem with source CURIE {subject_curie}: {e.__class__.__name__}",
                 category="warning",
             )
             return
 
         try:
-            check_valid_prefix_id(target_prefix, target_id)
+            check_valid_prefix_id(object_curie)
         except ValueError as e:
             flask.flash(
-                f"Problem with target CURIE {target_prefix}:{target_id}: {e.__class__.__name__}",
+                f"Problem with target CURIE {object_curie}: {e.__class__.__name__}",
                 category="warning",
             )
             return
 
         self._added_mappings.append(
             {
-                "source prefix": source_prefix,
-                "source identifier": source_id,
-                "source name": source_name,
-                "relation": "skos:exactMatch",
-                "target prefix": target_prefix,
-                "target identifier": target_id,
-                "target name": target_name,
-                "source": _manual_source(),
-                "type": "manual",
-                "prediction_type": None,
-                "prediction_source": None,
-                "prediction_confidence": None,
+                "subject_id": subject_curie,
+                "subject_label": source_name,
+                "predicate_id": "skos:exactMatch",
+                "object_id": object_curie,
+                "object_label": target_name,
+                "author_id": _manual_source(),
+                "mapping_justification": "semapv:ManualMappingCuration",
+                "mapping_tool": None,
+                "confidence": None,
+                "predicate_modifier": None,
             }
         )
         self.total_curated += 1
@@ -449,19 +430,24 @@ class Controller:
 
         for line, value in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(line)
-            prediction["prediction_type"] = prediction.pop("type")
-            prediction["prediction_source"] = prediction.pop("source")
-            prediction["prediction_confidence"] = prediction.pop("confidence")
-            prediction["source"] = _manual_source()
-            prediction["type"] = "semapv:ManualMappingCuration"
+            # prediction["prediction_type"] = prediction.pop("mapping_justification") # noqa:ERA001
+            prediction["mapping_tool"] = prediction.pop("mapping_tool")
+            prediction["confidence"] = prediction.pop("confidence")
+            prediction["author_id"] = _manual_source()
+            prediction["mapping_justification"] = "semapv:ManualMappingCuration"
 
             # note these go backwards because of the way they are read
             if value == "broad":
                 value = "correct"
-                prediction["relation"] = "skos:narrowMatch"
+                prediction["predicate_id"] = "skos:narrowMatch"
             elif value == "narrow":
                 value = "correct"
-                prediction["relation"] = "skos:broadMatch"
+                prediction["predicate_id"] = "skos:broadMatch"
+
+            if value != "incorrect":
+                prediction["predicate_modifier"] = ""
+            else:
+                prediction["predicate_modifier"] = "NOT"
 
             entries[value].append(prediction)
 
@@ -517,7 +503,8 @@ def summary():
     state.limit = None
     predictions = CONTROLLER.predictions_from_state(state)
     counter = Counter(
-        (mapping["source prefix"], mapping["target prefix"]) for _, mapping in predictions
+        (mapping["subject_id"].split(":")[0], mapping["object_id"].split(":")[0])
+        for _, mapping in predictions
     )
     rows = []
     for (source_prefix, target_prefix), count in counter.most_common():
@@ -577,7 +564,7 @@ INCORRECT = {"no", "nope", "false", "f", "nada", "nein", "incorrect", "negative"
 UNSURE = {"unsure", "maybe", "idk", "idgaf", "idgaff"}
 
 
-def _normalize_mark(value: str) -> str:
+def _normalize_mark(value: str) -> Mark:
     value = value.lower()
     if value in CORRECT:
         return "correct"
