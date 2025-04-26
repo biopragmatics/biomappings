@@ -65,9 +65,8 @@ class MappingTuple(NamedTuple):
     object_label: str
     mapping_justification: str
     author_id: str
-    prediction_type: Optional[str]
-    prediction_source: Optional[str]
-    prediction_confidence: Optional[float]
+    mapping_tool: Optional[str]
+    confidence: Optional[float]
 
     def as_dict(self) -> dict[str, Any]:
         """Get the mapping tuple as a dictionary."""
@@ -501,8 +500,11 @@ def _standardize_mappings(mappings: Mappings, *, progress: bool = True) -> Mappi
 
 def _standardize_mapping(mapping):
     """Standardize a mapping."""
-    for key in ('subject_id', 'object_id'):
-        mapping[key] = bioregistry.normalize_curie(mapping[key], strict=True)
+    for key in ("subject_id", "object_id"):
+        norm_curie = bioregistry.normalize_curie(mapping[key])
+        if norm_curie is None:
+            raise ValueError
+        mapping[key] = norm_curie
     return mapping
 
 

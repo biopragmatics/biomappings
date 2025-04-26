@@ -426,7 +426,6 @@ class Controller:
                 "object_label": target_name,
                 "author_id": _manual_source(),
                 "mapping_justification": "semapv:ManualMappingCuration",
-                "prediction_type": None,
                 "mapping_tool": None,
                 "confidence": None,
             }
@@ -439,9 +438,9 @@ class Controller:
 
         for line, value in sorted(self._marked.items(), reverse=True):
             prediction = self._predictions.pop(line)
-            prediction["prediction_type"] = prediction.pop("mapping_justification")
-            prediction["prediction_source"] = prediction.pop("mapping_tool")
-            prediction["prediction_confidence"] = prediction.pop("confidence")
+            # prediction["prediction_type"] = prediction.pop("mapping_justification") # noqa:ERA001
+            prediction["mapping_tool"] = prediction.pop("mapping_tool")
+            prediction["confidence"] = prediction.pop("confidence")
             prediction["author_id"] = _manual_source()
             prediction["mapping_justification"] = "semapv:ManualMappingCuration"
 

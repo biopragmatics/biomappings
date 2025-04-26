@@ -48,10 +48,10 @@ def update_curated(old_path: Path, new_path: Path, add_not: bool = False) -> Non
         columns={
             "source": "author_id",
             "prediction_source": "mapping_tool",
+            "prediction_confidence": "confidence",
         }
     )
     del df["prediction_type"]
-    del df["prediction_confidence"]
     if add_not:
         df["predicate_modifier"] = "NOT"
     df.to_csv(new_path, sep="\t", index=False)
