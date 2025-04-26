@@ -74,7 +74,7 @@ class MappingTuple(NamedTuple):
         return dict(zip(self._fields, self))  # type:ignore
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, str | float | None]) -> "MappingTuple":
+    def from_dict(cls, mapping: Mapping[str, Union[str, float, None]]) -> "MappingTuple":
         """Get the mapping tuple from a dictionary."""
         values = []
         for key in cls._fields:
@@ -138,7 +138,7 @@ class PredictionTuple(NamedTuple):
         return dict(zip(self._fields, self))  # type:ignore
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, str | float]) -> "PredictionTuple":
+    def from_dict(cls, mapping: Mapping[str, Union[str, float, None]]) -> "PredictionTuple":
         """Get the prediction tuple from a dictionary."""
         values = []
         for key in cls._fields:
