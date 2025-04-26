@@ -203,8 +203,7 @@ Mappings = Iterable[dict[str, str]]
 def _load_table(path: Union[str, Path]) -> list[dict[str, str]]:
     path = Path(path).resolve()
     if not path.is_file():
-        logger.warning("mappings file does not exist, returning empty list: %s", path)
-        return []
+        raise FileNotFoundError
     with path.open("r") as fh:
         reader = csv.reader(fh, delimiter="\t")
         header = next(reader)
