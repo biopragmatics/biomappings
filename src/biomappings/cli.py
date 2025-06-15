@@ -6,7 +6,7 @@ from pathlib import Path
 import click
 from more_click import run_app
 
-from .export_sssom import sssom
+from .resources.export_sssom import sssom
 from .graph import charts
 from .summary import export
 from .upload_ndex import ndex
