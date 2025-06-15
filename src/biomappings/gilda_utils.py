@@ -58,6 +58,7 @@ def append_gilda_predictions(
         predictions = filter_custom(predictions, custom_filter)
     predictions = filter_existing_xrefs(predictions, [prefix, *target_prefixes])
     predictions = sorted(predictions, key=lambda t: (t.subject_prefix, t.subject_label))
+    tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
     append_prediction_tuples(predictions, path=path)
 
 
@@ -77,8 +78,10 @@ def iter_prediction_tuples(
     it = tqdm(
         id_name_mapping.items(), desc=f"[{prefix}] lexical tuples", unit_scale=True, unit="name"
     )
+    name_prediction_count = 0
     for identifier, name in it:
         for scored_match in grounder.get_matches(name):
+            name_prediction_count += 1
             yield PredictionTuple(
                 subject_id=f"{prefix}:{identifier}",
                 subject_label=name,
@@ -90,12 +93,16 @@ def iter_prediction_tuples(
                 mapping_tool=provenance,
             )
 
+    tqdm.write(f"[{prefix}] generated {name_prediction_count:,} predictions from names")
+
     if identifiers_are_names:
         it = tqdm(
             pyobo.get_ids(prefix), desc=f"[{prefix}] lexical tuples", unit_scale=True, unit="id"
         )
+        identifier_prediction_count = 0
         for identifier in it:
             for scored_match in grounder.get_matches(identifier):
+                name_prediction_count += 1
                 yield PredictionTuple(
                     subject_id=f"{prefix}:{identifier}",
                     subject_label=identifier,
@@ -106,6 +113,9 @@ def iter_prediction_tuples(
                     confidence=round(scored_match.score, 3),
                     mapping_tool=provenance,
                 )
+        tqdm.write(
+            f"[{prefix}] generated {identifier_prediction_count:,} predictions from identifiers"
+        )
 
 
 def filter_custom(
@@ -138,8 +148,8 @@ def filter_existing_xrefs(
             entity_to_mapped_prefixes[subject_prefix, subject_id].add(target_prefix)
             entity_to_mapped_prefixes[target_prefix, object_id].add(subject_prefix)
 
-    counter = 0
-    for prediction in predictions:
+    n_predictions = 0
+    for prediction in tqdm(predictions, desc="filtering predictions"):
         subject_id = prediction.subject_id
         object_id = prediction.object_id
         if (
@@ -148,7 +158,10 @@ def filter_existing_xrefs(
             or prediction.subject_prefix
             in entity_to_mapped_prefixes[prediction.object_prefix, object_id]
         ):
-            counter += 1
+            n_predictions += 1
             continue
         yield prediction
-    logger.info("filtered out %d pre-mapped matches", counter)
+
+    tqdm.write(
+        f"filtered out {n_predictions:,} pre-mapped matches",
+    )

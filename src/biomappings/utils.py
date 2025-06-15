@@ -7,6 +7,7 @@ from subprocess import CalledProcessError, check_output
 from typing import Any, Optional
 
 import bioregistry
+from curies import ReferenceTuple
 
 __all__ = [
     "RESOURCE_PATH",
@@ -24,7 +25,6 @@ __all__ = [
     "get_script_url",
 ]
 
-from curies import ReferenceTuple
 
 HERE = Path(__file__).parent.resolve()
 ROOT = HERE.parent.parent.resolve()
@@ -34,6 +34,7 @@ POSITIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("positive.sssom.tsv")
 NEGATIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("negative.sssom.tsv")
 UNSURE_SSSOM_PATH = RESOURCE_PATH.joinpath("unsure.sssom.tsv")
 PREDICTIONS_SSSOM_PATH = RESOURCE_PATH.joinpath("predictions.sssom.tsv")
+CURATORS_PATH = RESOURCE_PATH.joinpath("curators.tsv")
 
 DOCS = ROOT.joinpath("docs")
 IMG = DOCS.joinpath("img")
@@ -229,12 +230,6 @@ def get_curie(prefix: str, identifier: str, *, preferred: bool = False) -> str:
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
 CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
-
-
-# TODO delete
-def get_resource_file_path(fname) -> Path:
-    """Get a resource by its file name."""
-    return RESOURCE_PATH.joinpath(fname)
 
 
 def get_prefix(curie: str) -> str:

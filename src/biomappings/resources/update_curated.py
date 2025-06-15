@@ -9,24 +9,24 @@ from biomappings.utils import (
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     PREDICTIONS_SSSOM_PATH,
-    RESOURCE_PATH,
     UNSURE_SSSOM_PATH,
 )
 
 HERE = Path(__file__).parent.resolve()
+OLD_RESOURCE_FOLDER = Path.home().joinpath("Desktop", "biomappings-old")
 
 
 def main() -> None:
     """Update biomappings internal format to SSSOM."""
     paths = [
-        (RESOURCE_PATH.joinpath("incorrect.tsv"), NEGATIVES_SSSOM_PATH, True),
-        (RESOURCE_PATH.joinpath("unsure.tsv"), UNSURE_SSSOM_PATH, False),
-        (RESOURCE_PATH.joinpath("mappings.tsv"), POSITIVES_SSSOM_PATH, False),
+        (OLD_RESOURCE_FOLDER.joinpath("incorrect.tsv"), NEGATIVES_SSSOM_PATH, True),
+        (OLD_RESOURCE_FOLDER.joinpath("unsure.tsv"), UNSURE_SSSOM_PATH, False),
+        (OLD_RESOURCE_FOLDER.joinpath("mappings.tsv"), POSITIVES_SSSOM_PATH, False),
     ]
     for old_path, new_path, add_not in paths:
         update_curated(old_path, new_path, add_not=add_not)
 
-    update_predicted(RESOURCE_PATH.joinpath("predictions.tsv"), PREDICTIONS_SSSOM_PATH)
+    update_predicted(OLD_RESOURCE_FOLDER.joinpath("predictions.tsv"), PREDICTIONS_SSSOM_PATH)
 
 
 def update_predicted(old_path: Path, new_path: Path) -> None:

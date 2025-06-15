@@ -1,0 +1,103 @@
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	mapping_tool	predicate_modifier
+apollosv:00000195	target population	skos:exactMatch	ncit:C142728	Target Study Population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+apollosv:00000243	duration	skos:exactMatch	pato:0001309	duration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+apollosv:00000317	incubation period	skos:exactMatch	vsmo:0000499	intrinsic incubation period	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+apollosv:00000596	symbiosis	skos:exactMatch	go:0044403	biological process involved in symbiotic interaction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+bto:0002314	satellite cell	skos:exactMatch	cl:0000514	smooth muscle myoblast	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	
+ccle:BCP1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BCP-1	skos:exactMatch	cellosaurus:0107	BCP-1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+ccle:BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	cellosaurus:4613	BDCM	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+ccle:BDCM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	BDCM	skos:exactMatch	efo:0002113	BDCM	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+ccle:C8166	C8166	skos:exactMatch	cellosaurus:1099	C8166	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+ccle:C8166	C8166	skos:exactMatch	depmap:ACH-000206		semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+ccle:DETROIT562_UPPER_AERODIGESTIVE_TRACT	Detroit 562	skos:exactMatch	efo:0002170	Detroit562	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+ccle:ECC4	ECC4	skos:exactMatch	cellosaurus:1190	ECC4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+ccle:ECC4	ECC4	skos:exactMatch	depmap:ACH-002024	ECC4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+ccle:EW7476	EW7476	skos:exactMatch	cellosaurus:EQ72	EW 7476	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:H2596	H2596	skos:exactMatch	cellosaurus:A546	NCI-H2596	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:HPAFII_PANCREAS	HPAF-II	skos:exactMatch	efo:0002198	HPAFII	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:HT55_LARGE_INTESTINE	HT55	skos:exactMatch	cellosaurus:A8FJ	HT55	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:K19	K19	skos:exactMatch	cellosaurus:W796	K19	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:LK2_LUNG	LK-2	skos:exactMatch	efo:0003141	LK-2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:LP1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE	LP-1	skos:exactMatch	efo:0003055	LP1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:MKL1SUBCLONE2	MKL1SUBCLONE2	skos:exactMatch	cellosaurus:EQ71	MKL-1 subclone 2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:NCIH1048_LUNG	NCI-H1048	skos:exactMatch	efo:0002248	NCI-H1048	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+ccle:OSA80	OSA80	skos:exactMatch	cellosaurus:EQ73	OSA-80	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:P116	P116	skos:exactMatch	cellosaurus:6429	P116	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:P116	P116	skos:exactMatch	cellosaurus:JU06	JHU116i	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccle:TE4_OESOPHAGUS	TE-4	skos:exactMatch	cellosaurus:F784	TE4 [Mouse hybridoma]	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+cemo:distribution	distribution	skos:exactMatch	pato:0000060	spatial pattern	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+cemo:growth_rate	growth rate	skos:exactMatch	ncit:C185276	Biospecimen Growth Rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+chebi:61700	(+)-valencene	skos:exactMatch	mesh:C506706	valencene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+chebi:68540	teriflunomide	skos:exactMatch	mesh:C072876	A 771726	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	
+chebi:8416	Pristimerin	skos:exactMatch	mesh:C009043	pristimerin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
+cl:0000798	gamma-delta T cell	skos:exactMatch	mesh:D000075942	Intraepithelial Lymphocytes	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+cl:0000816	immature B cell	skos:exactMatch	mesh:D054448	Precursor Cells, B-Lymphoid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+cpt:90728	BCG	skos:exactMatch	mesh:D009163	Mycobacterium bovis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py	
+doid:0050025	human granulocytic anaplasmosis	skos:exactMatch	mesh:D000712	Anaplasmosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+doid:0050035	African tick-bite fever	skos:exactMatch	mesh:D000073605	Spotted Fever Group Rickettsiosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+doid:0050061	erysipeloid	skos:exactMatch	umls:C0014736	Erysipelothrix infection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py	
+doid:0050061	erysipeloid	skos:exactMatch	umls:C1276801	Infection due to Erysipelothrix rhusiopathiae (disorder)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py	
+doid:0050201	nephropathia epidemica	skos:exactMatch	mesh:D006480	Hemorrhagic Fever with Renal Syndrome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+doid:0080832	mild cognitive impairment	skos:exactMatch	mesh:D060825	Cognitive Dysfunction	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+doid:7173	cloacogenic carcinoma	skos:exactMatch	mesh:C563020	Anal Canal Carcinoma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+doid:7474	malignant pleural mesothelioma	skos:exactMatch	mesh:D000086002	Mesothelioma, Malignant	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+envo:06105012	biota	skos:exactMatch	ncbitaxon:131567	cellular organisms	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+ido:0000436	infectious disease	skos:exactMatch	doid:0050117	disease by infectious agent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+idomal:0000655	adult	skos:exactMatch	ncit:C17600	Adult	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0000655	adult	skos:exactMatch	uberon:0007023	adult organism	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0000672	chemical compound	skos:exactMatch	chebi:37577	heteroatomic molecular entity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0001067	protein	skos:exactMatch	chebi:16541	protein polypeptide chain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+ito:07816	CNN	skos:exactMatch	aio:DCN	Deep Convolutional Network	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+ito:17424	Selection bias	skos:exactMatch	aio:Selection_And_Sampling_Bias	Selection And Sampling Bias	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+mesh:C000613429	FluMist	skos:exactMatch	ncit:C101094	Trivalent Live-Attenuated Influenza Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:C000624615	IMX-101	skos:exactMatch	ncit:C153374	Helicobacter pylori Therapeutic Vaccine IMX101	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:C535896	Limb-girdle muscular dystrophy type 2F	skos:exactMatch	doid:0110280	autosomal recessive limb-girdle muscular dystrophy type 2F	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C537464	Microphthalmia, syndromic 1	skos:exactMatch	doid:0111799	syndromic microphthalmia 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C537602	Short rib-polydactyly syndrome, Verma-Naumoff type	skos:exactMatch	doid:0110087	asphyxiating thoracic dystrophy 3	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C538078	Charcot-Marie-Tooth disease and deafness	skos:exactMatch	doid:0110153	Charcot-Marie-Tooth disease type 1E	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C538256	Anauxetic dysplasia	skos:exactMatch	doid:0050640	anauxetic dysplasia 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C563178	Aortic Valve Disease 1	skos:exactMatch	doid:0080333	aortic valve disease 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C564108	Major Affective Disorder 2	skos:exactMatch	doid:0080221	major affective disorder 2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C564344	Leukodystrophy, Dysmyelinating, with Oligodontia	skos:exactMatch	doid:0060794	hypomyelinating leukodystrophy 7 with or without oligodontia and-or hypogonadotropic hypogonadism	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C564457	Microphthalmia, Syndromic 4	skos:exactMatch	doid:0111810	syndromic microphthalmia 4	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C565062	Ectrodactyly, Ectodermal Dysplasia, And Cleft Lip-Palate Syndrome 1	skos:exactMatch	doid:0060784	ectrodactyly, ectodermal dysplasia, and cleft lip-palate syndrome 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C565111	Major Affective Disorder 1	skos:exactMatch	doid:0080220	major affective disorder 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C565799	Ectrodactyly, Ectodermal Dysplasia, and Cleft Lip-Palate Syndrome 3	skos:exactMatch	doid:0060783	ectrodactyly, ectodermal dysplasia, and cleft lip-palate syndrome 3	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C565891	Calcification of Joints and Arteries	skos:exactMatch	doid:0111582	hereditary arterial and articular multiple calcification syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C566973	Dystonia, Focal, Task-Specific	skos:exactMatch	doid:0050841	focal hand dystonia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C567063	Mental Retardation, X-Linked, Syndromic 14	skos:exactMatch	doid:0060821	syndromic X-linked intellectual disability 14	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D000071700	Cone-Rod Dystrophies	skos:exactMatch	doid:0050572	cone-rod dystrophy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D001471	Barrett Esophagus	skos:exactMatch	efo:0000478	esophageal adenocarcinoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D004194	Disease	skos:exactMatch	ncit:C2991	Disease or Disorder	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D004342	Drug Hypersensitivity	skos:exactMatch	doid:0060500	drug allergy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D005221	Fatigue	skos:exactMatch	efo:0009641	malaise	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D006255	Rhinitis, Allergic, Seasonal	skos:exactMatch	doid:0060497	pollen allergy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D014568	Urokinase-Type Plasminogen Activator	skos:exactMatch	hgnc:9052	PLAU	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D016192	Resting Phase, Cell Cycle	skos:exactMatch	go:0044838	cell quiescence	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D016470	Bacteremia	skos:exactMatch	doid:0040085	bacterial sepsis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D017486	Acneiform Eruptions	skos:exactMatch	doid:4399	acneiform dermatitis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D020718	Ribonucleoproteins, Small Nucleolar	skos:exactMatch	go:0005732	small nucleolar ribonucleoprotein complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D020847	Estrogen Receptor Modulators	skos:exactMatch	ncit:C481	Antiestrogen	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D021581	Active Transport, Cell Nucleus	skos:exactMatch	go:0051169	nuclear transport	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D051716	Replication Protein A	skos:exactMatch	go:0005662	DNA replication factor A complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D059268	Atrophic Vaginitis	skos:exactMatch	doid:11968	postmenopausal atrophic vaginitis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D063306	Mitochondrial Degradation	skos:exactMatch	go:0000423	mitophagy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mondo:0001115	familial polycythemia	skos:exactMatch	mesh:C536842	Polycythemia, primary familial and congenital	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	generate_mondo_mesh_mappings.py	
+mondo:0007876	laryngeal abductor paralysis	skos:exactMatch	mesh:C536354	Vocal cord dysfunction familial	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	generate_mondo_mesh_mappings.py	
+mondo:0008888	Williams-Campbell syndrome	skos:exactMatch	mesh:D055089	Tracheobronchomalacia	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	generate_mondo_mesh_mappings.py	
+mondo:0010778	cyclic vomiting syndrome	skos:exactMatch	mesh:C536228	Familial cyclic vomiting syndrome	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	generate_mondo_mesh_mappings.py	
+mondo:0019636	renal agenesis, unilateral	skos:exactMatch	mesh:D000075529	Solitary Kidney	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	generate_mondo_mesh_mappings.py	
+obi:0000430	plasmid	skos:exactMatch	ncbitaxon:45202	unidentified plasmid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+obi:0000737	cloning vector	skos:exactMatch	ncbitaxon:45196	unidentified cloning vector	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+uberon:0002397	maxilla	skos:exactMatch	bto:0006516	invertebrate maxilla	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	
+uberon:0009201	nephric duct	skos:exactMatch	bto:0005990	mesonephric duct	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	
+uberon:2002053	bony plate	skos:exactMatch	bto:0000967	osseous plate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	
+uberon:2002116	epibranchial organ	skos:exactMatch	bto:0004195	pharyngeal organ	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	
+vo:0000491	active immunization	skos:exactMatch	mesh:D014611	Vaccination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	
+vo:0005144	Ad5-nCoV	skos:exactMatch	drugbank:DB15655	Ad5-nCoV	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	
+vo:0005243	CoviVac	skos:exactMatch	mesh:C000721867	COVI-VAC	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	
+vo:0005246	COVIVAC	skos:exactMatch	mesh:C000721867	COVI-VAC	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	
+vo:0010926	ABRA	skos:exactMatch	idomal:0001151	MSP-9	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+vo:0011021	CP	skos:exactMatch	pr:000005794	ceruloplasmin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+vo:0011152	GRP-78	skos:exactMatch	mesh:D000091342	Endoplasmic Reticulum Chaperone BiP	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	
+vo:0011248	Gp50	skos:exactMatch	mesh:C052914	brain synaptic membrane glycoprotein gp 50	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	

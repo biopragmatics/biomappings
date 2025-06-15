@@ -13,12 +13,12 @@ from tqdm.auto import tqdm
 from typing_extensions import Literal
 
 from biomappings.utils import (
+    CURATORS_PATH,
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     PREDICTIONS_SSSOM_PATH,
     UNSURE_SSSOM_PATH,
     get_canonical_tuple,
-    get_resource_file_path,
 )
 
 if TYPE_CHECKING:
@@ -505,9 +505,6 @@ def _standardize_mapping(mapping):
             raise ValueError
         mapping[key] = norm_curie
     return mapping
-
-
-CURATORS_PATH = get_resource_file_path("curators.tsv")
 
 
 def load_curators():
