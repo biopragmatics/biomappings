@@ -586,6 +586,21 @@
     link: https://bioregistry.io/kegg.pathway:map04920
     name: Adipocytokine signaling pathway
     prefix: kegg.pathway
+- doid:14731:
+    identifier: '14731'
+    link: https://bioregistry.io/doid:14731
+    name: Weaver syndrome
+    prefix: doid
+  mesh:C536687:
+    identifier: C536687
+    link: https://bioregistry.io/mesh:C536687
+    name: Weaver syndrome
+    prefix: mesh
+  mesh:C562443:
+    identifier: C562443
+    link: https://bioregistry.io/mesh:C562443
+    name: Weaver-Like Syndrome
+    prefix: mesh
 - doid:0080141:
     identifier: 0080141
     link: https://bioregistry.io/doid:0080141
