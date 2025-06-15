@@ -13,9 +13,10 @@ import bioontologies
 import bioregistry
 import pyobo
 import pystow
-from bioregistry import manager
+from bioregistry import NormalizedReference
 from tabulate import tabulate
 from tqdm.auto import tqdm
+from typing_extensions import Self
 
 __all__ = [
     "Result",
@@ -50,7 +51,7 @@ class Result:
         primary,
         secondary,
         tertiary,
-    ):
+    ) -> Self:
         """Create a value added summary object with analysis over several dictionaries."""
         return cls._from_dicts(
             dataset=dataset,
@@ -72,9 +73,9 @@ class Result:
         ontology_external_identifiers,
         biomappings_external_identifiers,
         biomappings_prediction_identifiers,
-    ):
+    ) -> Self:
         """Create a value added summary object with analysis over several dictionaries."""
-        return Result(
+        return cls(
             dataset=dataset,
             source=source,
             target=target,
@@ -93,7 +94,7 @@ class Result:
             ),
         )
 
-    def print(self):
+    def print(self) -> None:
         """Print a summary of value added statistics."""
         print(  # noqa:T201
             tabulate(
@@ -124,7 +125,7 @@ def get_primary_mappings(
     prefix: str,
     external_prefix: str,
     cache_path: Path,
-) -> tuple[str, Mapping[str, str]]:
+) -> tuple[str | None, dict[str, str]]:
     """Get mappings from a given ontology (prefix) to another resource (external prefix)."""
     if cache_path.is_file():
         d = json.loads(cache_path.read_text())
@@ -138,33 +139,32 @@ def get_primary_mappings(
     converter = bioregistry.get_default_converter()
 
     for graph in graphs:
-        for node in tqdm(
+        for node_obj in tqdm(
             graph.nodes,
             unit="node",
             unit_scale=True,
             leave=False,
             desc=f"Extracting {external_prefix} from {prefix}",
         ):
-            try:
-                node_prefix, node_luid = converter.parse(node.id)
-            except ValueError:
+            reference = converter.parse(node_obj.id)
+            if reference is None:
                 continue
-
-            if node_prefix is None or bioregistry.normalize_prefix(node_prefix) != prefix:
+            if bioregistry.normalize_prefix(reference.prefix) != prefix:
                 continue
-
-            for xref in node.xrefs:
-                xref_prefix, xref_luid = bioregistry.parse_curie(xref.val)
-                if xref_prefix != external_prefix:
+            for xref_curie in node_obj.xrefs:
+                xref_reference = converter.parse_curie(xref_curie.val, strict=False)
+                if xref_reference is None or xref_reference.prefix != external_prefix:
                     continue
-                rv[xref_luid] = node_luid
+                rv[xref_reference.identifier] = reference.identifier
 
     d = {"mappings": rv, "version": version}
     cache_path.write_text(json.dumps(d, indent=2, sort_keys=True))
     return version, rv
 
 
-def index_mappings(mappings: Iterable[Mapping[str, str]], path=None, force: bool = False):
+def index_mappings(
+    mappings: Iterable[Mapping[str, str]], path: Path | None = None, *, force: bool = False
+) -> dict[str, dict[str, dict[str, str]]]:
     """Create an index of mappings."""
     if path and path.is_file() and not force:
         with open(path, "rb") as file:
@@ -173,16 +173,12 @@ def index_mappings(mappings: Iterable[Mapping[str, str]], path=None, force: bool
     rv: defaultdict[str, defaultdict[str, dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
 
     for mapping in tqdm(mappings, unit_scale=True, unit="mapping"):
-        source_prefix = mapping["source prefix"]
-        source_resource = manager.registry[source_prefix]
-        source_id = source_resource.standardize_identifier(mapping["source identifier"])
-        target_prefix = mapping["target prefix"]
-        target_resource = manager.registry[target_prefix]
-        target_id = target_resource.standardize_identifier(mapping["target identifier"])
-        rv[source_prefix][target_prefix][source_id] = target_id
-        rv[target_prefix][source_prefix][target_id] = source_id
+        source = NormalizedReference.from_curie(mapping["subject_id"])
+        target = NormalizedReference.from_curie(mapping["object_id"])
+        rv[source.prefix][target.prefix][source.identifier] = target.identifier
+        rv[target.prefix][source.prefix][target.identifier] = source.identifier
 
-    rvp = {k: dict(v) for k, v in rv.items()}
+    rvp = {k1: {k2: dict(v2) for k2, v2 in v1.items()} for k1, v1 in rv.items()}
     if path:
         with open(path, "wb") as file:
             pickle.dump(rvp, file)
@@ -253,7 +249,7 @@ def get_obo_mappings(primary_dd, biomappings_dd):
         summary_rows.append(
             (
                 prefix,
-                _clean_version(version, prefix),
+                _clean_version(version, prefix) if version else None,
                 external,
                 n_primary,
                 n_biomappings,

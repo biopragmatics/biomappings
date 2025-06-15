@@ -74,7 +74,7 @@ def _get_counter(mappings: Iterable[Mapping[str, str]]):
     ]
 
 
-def _get_contributors(mappings: Iterable[Mapping[str, str]]):
+def _get_contributors(mappings: Iterable[Mapping[str, str]]) -> list[dict[str, str | int]]:
     from biomappings.resources import load_curators
 
     curators = {record["orcid"]: record for record in load_curators()}

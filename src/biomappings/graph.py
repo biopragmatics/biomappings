@@ -8,8 +8,10 @@ import os
 from collections import Counter
 from collections.abc import Collection, Iterable, Mapping, Sequence
 from operator import itemgetter
+from typing import TYPE_CHECKING
 
 import click
+import matplotlib.axis
 import networkx as nx
 import yaml
 from curies import ReferenceTuple
@@ -17,6 +19,9 @@ from tqdm import tqdm
 
 from biomappings.resources import load_false_mappings, load_mappings, load_predictions
 from biomappings.utils import DATA, IMG, get_prefix
+
+if TYPE_CHECKING:
+    import matplotlib.axes
 
 logger = logging.getLogger(__name__)
 
@@ -97,7 +102,7 @@ def _graph_from_mappings(
 
 
 @click.command()
-def charts():
+def charts() -> None:
     """Make charts."""
     import matplotlib.pyplot as plt
     import seaborn as sns
@@ -245,7 +250,7 @@ def charts():
     plt.close(fig)
 
 
-def _countplot_list(data: list[int], ax):
+def _countplot_list(data: list[int], ax: matplotlib.axes.Axes) -> None:
     import pandas as pd
     import seaborn as sns
 

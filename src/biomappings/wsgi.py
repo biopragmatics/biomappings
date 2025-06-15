@@ -8,12 +8,13 @@ from collections import Counter, defaultdict
 from collections.abc import Iterable, Iterator, Mapping
 from copy import deepcopy
 from pathlib import Path
-from typing import Any, Literal, get_args
+from typing import Any, Literal, cast, get_args
 
 import flask
 import flask_bootstrap
 import pydantic
-from bioregistry import NormalizedNamableReference, NormalizedReference
+import werkzeug
+from bioregistry import NormalizedNamableReference
 from curies import ReferenceTuple
 from flask import current_app
 from flask_wtf import FlaskForm
@@ -75,22 +76,22 @@ class State(BaseModel):
         )
 
 
-def _get_bool_arg(name: str, default: Literal["true", "false"] | None = None) -> bool | None:
-    value = flask.request.args.get(name)
-    if value is None and default is None:
-        return None
-    return value.lower() in {"true", "t"}
+def _get_bool_arg(name: str) -> bool | None:
+    value: str | None = flask.request.args.get(name, type=str)
+    if value is not None:
+        return value.lower() in {"true", "t"}
+    return None
 
 
-def url_for_state(endpoint, state: State, **kwargs) -> str:
+def url_for_state(endpoint, state: State, **kwargs: Any) -> str:
     """Get the URL for an endpoint based on the state class."""
-    vv = state.dict(exclude_none=True, exclude_defaults=True)
+    vv = state.model_dump(exclude_none=True, exclude_defaults=True)
     vv.update(kwargs)  # make sure stuff explicitly set overrides state
     return flask.url_for(endpoint, **vv)
 
 
 def get_app(
-    target_curies: Iterable[tuple[str, str]] | None = None,
+    target_references: Iterable[ReferenceTuple] | None = None,
     predictions_path: Path | None = None,
     positives_path: Path | None = None,
     negatives_path: Path | None = None,
@@ -105,7 +106,7 @@ def get_app(
     app_.config["SHOW_LINES"] = False
     if controller is None:
         controller = Controller(
-            target_curies=target_curies,
+            target_references=target_references,
             predictions_path=predictions_path,
             positives_path=positives_path,
             negatives_path=negatives_path,
@@ -141,15 +142,15 @@ class Controller:
     def __init__(
         self,
         *,
-        target_curies: Iterable[tuple[str, str]] | None = None,
+        target_references: Iterable[ReferenceTuple] | None = None,
         predictions_path: Path | None = None,
         positives_path: Path | None = None,
         negatives_path: Path | None = None,
         unsure_path: Path | None = None,
-    ):
+    ) -> None:
         """Instantiate the web controller.
 
-        :param target_curies: Pairs of prefix, local unique identifiers that are the target
+        :param target_references: Pairs of prefix, local unique identifiers that are the target
             of curation. If this is given, pre-filters will be made before on predictions
             to only show ones where either the source or target appears in this set
         :param predictions_path: A custom predictions file to curate from
@@ -166,8 +167,8 @@ class Controller:
 
         self._marked: dict[int, Mark] = {}
         self.total_curated = 0
-        self._added_mappings: list[dict[str, None | str | float]] = []
-        self.target_ids = {ReferenceTuple.from_curie(c) for c in target_curies or []}
+        self._added_mappings: list[dict[str, str | None]] = []
+        self.target_references = set(target_references or [])
 
     def predictions_from_state(self, state: State) -> Iterable[tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions from a state instance."""
@@ -298,12 +299,12 @@ class Controller:
         provenance: str | None = None,
     ) -> Iterator[tuple[int, PredictionDict]]:
         it: Iterable[tuple[int, PredictionDict]] = enumerate(self._predictions)
-        if self.target_ids:
+        if self.target_references:
             it = (
                 (line, p)
                 for (line, p) in it
-                if ReferenceTuple.from_curie(p["subject_id"]) in self.target_ids
-                or ReferenceTuple.from_curie(p["object_id"]) in self.target_ids
+                if ReferenceTuple.from_curie(p["subject_id"]) in self.target_references
+                or ReferenceTuple.from_curie(p["object_id"]) in self.target_references
             )
 
         if query is not None:
@@ -385,8 +386,8 @@ class Controller:
 
     def add_mapping(
         self,
-        subject: NormalizedReference,
-        obj: NormalizedReference,
+        subject: NormalizedNamableReference,
+        obj: NormalizedNamableReference,
     ) -> None:
         """Add manually curated new mappings."""
         self._added_mappings.append(
@@ -405,7 +406,7 @@ class Controller:
         )
         self.total_curated += 1
 
-    def persist(self):
+    def persist(self) -> None:
         """Save the current markings to the source files."""
         entries = defaultdict(list)
 
@@ -447,7 +448,7 @@ class Controller:
         self._added_mappings = []
 
 
-CONTROLLER: Controller = LocalProxy(lambda: current_app.config["controller"])
+CONTROLLER: Controller = cast(Controller, LocalProxy(lambda: current_app.config["controller"]))
 
 
 class MappingForm(FlaskForm):
@@ -461,7 +462,7 @@ class MappingForm(FlaskForm):
     target_name = StringField("Target Name", id="target_name")
     submit = SubmitField("Add")
 
-    def get_subject(self) -> NormalizedReference:
+    def get_subject(self) -> NormalizedNamableReference:
         """Get the subject."""
         return NormalizedNamableReference(
             prefix=self.data["source_prefix"],
@@ -469,7 +470,7 @@ class MappingForm(FlaskForm):
             name=self.data["source_name"],
         )
 
-    def get_object(self) -> NormalizedReference:
+    def get_object(self) -> NormalizedNamableReference:
         """Get the object."""
         return NormalizedNamableReference(
             prefix=self.data["target_prefix"],
@@ -482,7 +483,7 @@ blueprint = flask.Blueprint("ui", __name__)
 
 
 @blueprint.route("/")
-def home():
+def home() -> str:
     """Serve the home page."""
     form = MappingForm()
     state = State.from_flask_globals()
@@ -498,7 +499,7 @@ def home():
 
 
 @blueprint.route("/summary")
-def summary():
+def summary() -> str:
     """Serve the summary page."""
     state = State.from_flask_globals()
     state.limit = None
@@ -522,7 +523,7 @@ def summary():
 
 
 @blueprint.route("/add_mapping", methods=["POST"])
-def add_mapping():
+def add_mapping() -> werkzeug.Response:
     """Add a new mapping manually."""
     form = MappingForm()
     if form.is_submitted():
@@ -546,7 +547,7 @@ def add_mapping():
 
 
 @blueprint.route("/commit")
-def run_commit():
+def run_commit() -> werkzeug.Response:
     """Make a commit then redirect to the home page."""
     commit_info = commit(
         f"Curated {CONTROLLER.total_curated} mapping"
@@ -587,14 +588,14 @@ def _normalize_mark(value: str) -> Mark:
 
 
 @blueprint.route("/mark/<int:line>/<value>")
-def mark(line: int, value: str):
+def mark(line: int, value: str) -> werkzeug.Response:
     """Mark the given line as correct or not."""
     CONTROLLER.mark(line, _normalize_mark(value))
     CONTROLLER.persist()
     return _go_home()
 
 
-def _go_home():
+def _go_home() -> werkzeug.Response:
     state = State.from_flask_globals()
     return flask.redirect(url_for_state(".home", state))
 

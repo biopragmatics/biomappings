@@ -81,16 +81,14 @@ class MappingTuple(NamedTuple):
 
     def as_dict(self) -> dict[str, Any]:
         """Get the mapping tuple as a dictionary."""
-        return dict(zip(self._fields, self))  # type:ignore
+        return dict(zip(self._fields, self))
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, str | float | None]) -> MappingTuple:
+    def from_dict(cls, mapping: Mapping[str, str | None]) -> MappingTuple:
         """Get the mapping tuple from a dictionary."""
         values = []
         for key in cls._fields:
             value = mapping.get(key) or None
-            if key == "prediction_confidence" and value is not None:
-                value = float(value)  # type:ignore
             values.append(value)
         return cls(*values)  # type:ignore
 
@@ -207,6 +205,9 @@ PREDICTIONS_HEADER = PredictionTuple._fields
 SemanticMapping: TypeAlias = dict[str, str]
 SemanticMappings: TypeAlias = Iterable[SemanticMapping]
 
+SemanticMappingLoose: TypeAlias = Mapping[str, str | None]
+SemanticMappingsLoose: TypeAlias = Iterable[SemanticMappingLoose]
+
 
 def _load_table(path: str | Path) -> list[SemanticMapping]:
     path = Path(path).resolve()
@@ -224,7 +225,10 @@ def _clean(header, row):
 
 
 def _write_helper(
-    header: Sequence[str], mappings: SemanticMappings, path: str | Path, mode: Literal["w", "a"]
+    header: Sequence[str],
+    mappings: SemanticMappingsLoose,
+    path: str | Path,
+    mode: Literal["w", "a"],
 ) -> None:
     mappings = sorted(mappings, key=mapping_sort_key)
     with open(path, mode) as file:
@@ -234,13 +238,13 @@ def _write_helper(
             print(*[line[k] or "" for k in header], sep="\t", file=file)
 
 
-def mapping_sort_key(prediction: Mapping[str, str]) -> tuple[str, ...]:
+def mapping_sort_key(prediction: Mapping[str, str | None]) -> tuple[str, ...]:
     """Return a tuple for sorting mapping dictionaries."""
     return (
-        prediction["subject_id"],
-        prediction["predicate_id"],
-        prediction["object_id"],
-        prediction["mapping_justification"],
+        prediction["subject_id"] or "",
+        prediction["predicate_id"] or "",
+        prediction["object_id"] or "",
+        prediction["mapping_justification"] or "",
         prediction.get("mapping_tool") or "",
     )
 
@@ -260,7 +264,7 @@ def load_mappings_subset(source: str, target: str) -> Mapping[str, str]:
 
 
 def append_true_mappings(
-    mappings: SemanticMappings,
+    mappings: SemanticMappingsLoose,
     *,
     sort: bool = True,
     path: Path | None = None,
@@ -283,7 +287,7 @@ def write_true_mappings(mappings: SemanticMappings, *, path: Path | None = None)
     _write_curated(mappings=mappings, path=path or POSITIVES_SSSOM_PATH, mode="w")
 
 
-def _write_curated(mappings: SemanticMappings, *, path: Path, mode: Literal["w", "a"]):
+def _write_curated(mappings: SemanticMappingsLoose, *, path: Path, mode: Literal["w", "a"]):
     _write_helper(MAPPINGS_HEADER, mappings, path, mode=mode)
 
 
