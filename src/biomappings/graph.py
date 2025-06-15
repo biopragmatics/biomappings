@@ -11,7 +11,6 @@ from operator import itemgetter
 from typing import TYPE_CHECKING
 
 import click
-import matplotlib.axis
 import networkx as nx
 import yaml
 from curies import ReferenceTuple
