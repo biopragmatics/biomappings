@@ -3,22 +3,20 @@
 import getpass
 import os
 from collections import Counter, defaultdict
-from collections.abc import Iterable, Mapping
+from collections.abc import Iterable, Iterator, Mapping
 from copy import deepcopy
 from pathlib import Path
-from typing import (
-    Any,
-    Literal,
-    Optional,
-    Union,
-)
+from typing import Any, Literal, Optional, Union, get_args
 
-import bioregistry
 import flask
 import flask_bootstrap
+import pydantic
+from bioregistry import NormalizedNamableReference, NormalizedReference
+from curies import ReferenceTuple
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
+from typing_extensions import TypeAlias
 from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
@@ -30,14 +28,12 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import (
-    check_valid_prefix_id,
-    commit,
-    get_branch,
-    get_curie,
-    not_main,
-    push,
-)
+from biomappings.utils import commit, get_branch, not_main, push
+
+Mark: TypeAlias = Literal["correct", "incorrect", "unsure", "broad", "narrow"]
+MARKS: set[Mark] = set(get_args(Mark))
+
+PredictionDict: TypeAlias = Mapping[str, Any]
 
 
 class State(BaseModel):
@@ -97,6 +93,7 @@ def get_app(
     positives_path: Optional[Path] = None,
     negatives_path: Optional[Path] = None,
     unsure_path: Optional[Path] = None,
+    controller: Optional["Controller"] = None,
 ) -> flask.Flask:
     """Get a curation flask app."""
     app_ = flask.Flask(__name__)
@@ -104,13 +101,14 @@ def get_app(
     app_.config["SECRET_KEY"] = os.urandom(8)
     app_.config["SHOW_RELATIONS"] = True
     app_.config["SHOW_LINES"] = False
-    controller = Controller(
-        target_curies=target_curies,
-        predictions_path=predictions_path,
-        positives_path=positives_path,
-        negatives_path=negatives_path,
-        unsure_path=unsure_path,
-    )
+    if controller is None:
+        controller = Controller(
+            target_curies=target_curies,
+            predictions_path=predictions_path,
+            positives_path=positives_path,
+            negatives_path=negatives_path,
+            unsure_path=unsure_path,
+        )
     if not controller._predictions and predictions_path is not None:
         raise RuntimeError(f"There are no predictions to curate in {predictions_path}")
     app_.config["controller"] = controller
@@ -164,10 +162,10 @@ class Controller:
         self.negatives_path = negatives_path
         self.unsure_path = unsure_path
 
-        self._marked: dict[int, str] = {}
+        self._marked: dict[int, Mark] = {}
         self.total_curated = 0
         self._added_mappings: list[dict[str, Union[None, str, float]]] = []
-        self.target_ids = set(target_curies or [])
+        self.target_ids = {ReferenceTuple.from_curie(c) for c in target_curies or []}
 
     def predictions_from_state(self, state: State) -> Iterable[tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions from a state instance."""
@@ -296,14 +294,14 @@ class Controller:
         sort: Optional[str] = None,
         same_text: Optional[bool] = None,
         provenance: Optional[str] = None,
-    ):
-        it: Iterable[tuple[int, Mapping[str, Any]]] = enumerate(self._predictions)
+    ) -> Iterator[tuple[int, PredictionDict]]:
+        it: Iterable[tuple[int, PredictionDict]] = enumerate(self._predictions)
         if self.target_ids:
             it = (
                 (line, p)
                 for (line, p) in it
-                if (p["source prefix"], p["source identifier"]) in self.target_ids
-                or (p["target prefix"], p["target identifier"]) in self.target_ids
+                if ReferenceTuple.from_curie(p["subject_id"]) in self.target_ids
+                or ReferenceTuple.from_curie(p["object_id"]) in self.target_ids
             )
 
         if query is not None:
@@ -311,31 +309,25 @@ class Controller:
                 query,
                 it,
                 {
-                    "source prefix",
-                    "source identifier",
-                    "source name",
-                    "target prefix",
-                    "target identifier",
-                    "target name",
-                    "source",
+                    "subject_id",
+                    "subject_label",
+                    "object_id",
+                    "object_label",
+                    "mapping_tool",
                 },
             )
         if source_prefix is not None:
-            it = self._help_filter(source_prefix, it, {"source prefix"})
+            it = self._help_filter(source_prefix, it, {"subject_id"})
         if source_query is not None:
-            it = self._help_filter(
-                source_query, it, {"source prefix", "source identifier", "source name"}
-            )
+            it = self._help_filter(source_query, it, {"subject_id", "subject_label"})
         if target_query is not None:
-            it = self._help_filter(
-                target_query, it, {"target prefix", "target identifier", "target name"}
-            )
+            it = self._help_filter(target_query, it, {"object_id", "object_label"})
         if target_prefix is not None:
-            it = self._help_filter(target_prefix, it, {"target prefix"})
+            it = self._help_filter(target_prefix, it, {"object_id"})
         if prefix is not None:
-            it = self._help_filter(prefix, it, {"source prefix", "target prefix"})
+            it = self._help_filter(prefix, it, {"subject_id", "object_id"})
         if provenance is not None:
-            it = self._help_filter(provenance, it, {"source"})
+            it = self._help_filter(provenance, it, {"mapping_tool"})
 
         if sort is not None:
             if sort == "desc":
@@ -343,102 +335,70 @@ class Controller:
             elif sort == "asc":
                 it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=False))
             elif sort == "object":
-                it = iter(
-                    sorted(
-                        it, key=lambda l_p: (l_p[1]["target prefix"], l_p[1]["target identifier"])
-                    )
-                )
+                it = iter(sorted(it, key=lambda l_p: l_p[1]["target_id"]))
+            else:
+                raise ValueError
 
         if same_text:
             it = (
                 (line, prediction)
                 for line, prediction in it
-                if prediction["source name"].casefold() == prediction["target name"].casefold()
-                and prediction["relation"] == "skos:exactMatch"
+                if prediction["subject_label"].casefold() == prediction["object_label"].casefold()
+                and prediction["predicate_id"] == "skos:exactMatch"
             )
 
         rv = ((line, prediction) for line, prediction in it if line not in self._marked)
         return rv
 
     @staticmethod
-    def _help_filter(query: str, it, elements: set[str]):
+    def _help_filter(
+        query: str, it: Iterable[tuple[int, PredictionDict]], elements: set[str]
+    ) -> Iterable[tuple[int, PredictionDict]]:
         query = query.casefold()
-        return (
-            (line, prediction)
-            for line, prediction in it
-            if any(query in prediction[element].casefold() for element in elements)
-        )
-
-    @staticmethod
-    def get_curie(prefix: str, identifier: str) -> str:
-        """Return CURIE for a given prefix and identifier."""
-        return get_curie(prefix, identifier)
-
-    @classmethod
-    def get_url(cls, prefix: str, identifier: str) -> str:
-        """Return URL for a given prefix and identifier."""
-        return bioregistry.get_bioregistry_iri(prefix, identifier)
+        for line, prediction in it:
+            if any(query in prediction[element].casefold() for element in elements):
+                yield line, prediction
 
     @property
     def total_predictions(self) -> int:
         """Return the total number of yet unmarked predictions."""
         return len(self._predictions) - len(self._marked)
 
-    def mark(self, line: int, value: str) -> None:
+    def mark(self, line: int, value: Mark) -> None:
         """Mark the given equivalency as correct.
 
         :param line: Position of the prediction
         :param value: Value to mark the prediction with
         :raises ValueError: if an invalid value is used
         """
+        if line > len(self._predictions):
+            raise IndexError(
+                f"given line {line} is larger than the number of predictions {len(self._predictions):,}"
+            )
         if line not in self._marked:
             self.total_curated += 1
-        if value not in {"correct", "incorrect", "unsure", "broad", "narrow"}:
-            raise ValueError
+        if value not in MARKS:
+            raise ValueError(f"illegal mark value given: {value}. Should be one of {MARKS}")
         self._marked[line] = value
 
     def add_mapping(
         self,
-        source_prefix: str,
-        source_id: str,
-        source_name: str,
-        target_prefix: str,
-        target_id: str,
-        target_name: str,
+        subject: NormalizedReference,
+        obj: NormalizedReference,
     ) -> None:
         """Add manually curated new mappings."""
-        try:
-            check_valid_prefix_id(source_prefix, source_id)
-        except ValueError as e:
-            flask.flash(
-                f"Problem with source CURIE {source_prefix}:{source_id}: {e.__class__.__name__}",
-                category="warning",
-            )
-            return
-
-        try:
-            check_valid_prefix_id(target_prefix, target_id)
-        except ValueError as e:
-            flask.flash(
-                f"Problem with target CURIE {target_prefix}:{target_id}: {e.__class__.__name__}",
-                category="warning",
-            )
-            return
-
         self._added_mappings.append(
             {
-                "source prefix": source_prefix,
-                "source identifier": source_id,
-                "source name": source_name,
-                "relation": "skos:exactMatch",
-                "target prefix": target_prefix,
-                "target identifier": target_id,
-                "target name": target_name,
-                "source": _manual_source(),
-                "type": "manual",
-                "prediction_type": None,
-                "prediction_source": None,
-                "prediction_confidence": None,
+                "subject_id": subject.curie,
+                "subject_label": subject.name,
+                "predicate_id": "skos:exactMatch",
+                "object_id": obj.curie,
+                "object_label": obj.name,
+                "author_id": _manual_source(),
+                "mapping_justification": "semapv:ManualMappingCuration",
+                "mapping_tool": None,
+                "confidence": None,
+                "predicate_modifier": None,
             }
         )
         self.total_curated += 1
@@ -448,20 +408,29 @@ class Controller:
         entries = defaultdict(list)
 
         for line, value in sorted(self._marked.items(), reverse=True):
-            prediction = self._predictions.pop(line)
-            prediction["prediction_type"] = prediction.pop("type")
-            prediction["prediction_source"] = prediction.pop("source")
-            prediction["prediction_confidence"] = prediction.pop("confidence")
-            prediction["source"] = _manual_source()
-            prediction["type"] = "semapv:ManualMappingCuration"
+            try:
+                prediction = self._predictions.pop(line)
+            except IndexError:
+                raise IndexError(
+                    f"you tried popping the {line} element from the predictions list, which only has {len(self._predictions):,} elements"
+                ) from None
+            prediction["mapping_tool"] = prediction.pop("mapping_tool")
+            prediction["confidence"] = prediction.pop("confidence")
+            prediction["author_id"] = _manual_source()
+            prediction["mapping_justification"] = "semapv:ManualMappingCuration"
 
             # note these go backwards because of the way they are read
             if value == "broad":
                 value = "correct"
-                prediction["relation"] = "skos:narrowMatch"
+                prediction["predicate_id"] = "skos:narrowMatch"
             elif value == "narrow":
                 value = "correct"
-                prediction["relation"] = "skos:broadMatch"
+                prediction["predicate_id"] = "skos:broadMatch"
+
+            if value != "incorrect":
+                prediction["predicate_modifier"] = ""
+            else:
+                prediction["predicate_modifier"] = "Not"
 
             entries[value].append(prediction)
 
@@ -490,6 +459,22 @@ class MappingForm(FlaskForm):
     target_name = StringField("Target Name", id="target_name")
     submit = SubmitField("Add")
 
+    def get_subject(self) -> NormalizedReference:
+        """Get the subject."""
+        return NormalizedNamableReference(
+            prefix=self.data["source_prefix"],
+            identifier=self.data["source_id"],
+            name=self.data["source_name"],
+        )
+
+    def get_object(self) -> NormalizedReference:
+        """Get the object."""
+        return NormalizedNamableReference(
+            prefix=self.data["target_prefix"],
+            identifier=self.data["target_id"],
+            name=self.data["target_name"],
+        )
+
 
 blueprint = flask.Blueprint("ui", __name__)
 
@@ -517,7 +502,8 @@ def summary():
     state.limit = None
     predictions = CONTROLLER.predictions_from_state(state)
     counter = Counter(
-        (mapping["source prefix"], mapping["target prefix"]) for _, mapping in predictions
+        (mapping["subject_id"].split(":")[0], mapping["object_id"].split(":")[0])
+        for _, mapping in predictions
     )
     rows = []
     for (source_prefix, target_prefix), count in counter.most_common():
@@ -538,14 +524,19 @@ def add_mapping():
     """Add a new mapping manually."""
     form = MappingForm()
     if form.is_submitted():
-        CONTROLLER.add_mapping(
-            form.data["source_prefix"],
-            form.data["source_id"],
-            form.data["source_name"],
-            form.data["target_prefix"],
-            form.data["target_id"],
-            form.data["target_name"],
-        )
+        try:
+            subject = form.get_subject()
+        except pydantic.ValidationError as e:
+            flask.flash(f"Problem with source CURIE {e}", category="warning")
+            return _go_home()
+
+        try:
+            obj = form.get_object()
+        except pydantic.ValidationError as e:
+            flask.flash(f"Problem with source CURIE {e}", category="warning")
+            return _go_home()
+
+        CONTROLLER.add_mapping(subject, obj)
         CONTROLLER.persist()
     else:
         flask.flash("missing form data", category="warning")
@@ -577,7 +568,7 @@ INCORRECT = {"no", "nope", "false", "f", "nada", "nein", "incorrect", "negative"
 UNSURE = {"unsure", "maybe", "idk", "idgaf", "idgaff"}
 
 
-def _normalize_mark(value: str) -> str:
+def _normalize_mark(value: str) -> Mark:
     value = value.lower()
     if value in CORRECT:
         return "correct"

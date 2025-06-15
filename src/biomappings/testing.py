@@ -4,15 +4,13 @@ import unittest
 from collections import defaultdict
 from pathlib import Path
 from textwrap import dedent
-from typing import ClassVar, Union
+from typing import ClassVar, TypeVar, Union
 
 import bioregistry
+from bioregistry import NormalizedReference
 
 from biomappings.resources import (
     CURATORS_PATH,
-    FALSE_MAPPINGS_PATH,
-    TRUE_MAPPINGS_PATH,
-    UNSURE_PATH,
     Mappings,
     MappingTuple,
     PredictionTuple,
@@ -23,10 +21,11 @@ from biomappings.resources import (
 )
 from biomappings.resources.semapv import get_semapv
 from biomappings.utils import (
-    InvalidIdentifierPattern,
-    InvalidNormIdentifier,
-    check_valid_prefix_id,
+    NEGATIVES_SSSOM_PATH,
+    POSITIVES_SSSOM_PATH,
+    UNSURE_SSSOM_PATH,
     get_canonical_tuple,
+    get_prefix,
 )
 
 __all__ = [
@@ -36,8 +35,12 @@ __all__ = [
 
 semapv = get_semapv()
 
+TPL = TypeVar("TPL", MappingTuple, PredictionTuple)
+X = TypeVar("X")
+Y = TypeVar("Y")
 
-def _extract_redundant(counter):
+
+def _extract_redundant(counter: dict[X, list[Y]]) -> list[tuple[X, list[Y]]]:
     return [(key, values) for key, values in counter.items() if len(values) > 1]
 
 
@@ -63,46 +66,42 @@ class IntegrityTestCase(unittest.TestCase):
             for i, mapping in enumerate(group, start=2):
                 yield label, i, mapping
 
-    def test_prediction_types(self) -> None:
+    def test_mapping_justifications(self) -> None:
         """Test that the prediction type is pulled in properly."""
-        for line, mapping in enumerate(self.mappings, start=2):
-            pt = mapping.get("prediction_type", "".strip())
-            if not pt:
-                continue
+        for label, line, mapping in self._iter_groups():
+            mapping_justification = mapping["mapping_justification"]
             self.assertTrue(
-                pt.startswith("semapv:"),
-                msg=f"Prediction type should be annotated with semapv on line {line}",
+                mapping_justification.startswith("semapv:"),
+                msg=f"[{label}] The 'mapping_justification' column should be annotated with semapv on line {line}",
             )
-            self.assertIn(pt[len("semapv:") :], semapv)
+            self.assertIn(mapping_justification[len("semapv:") :], semapv)
+
+    def test_prediction_not_manual(self) -> None:
+        """Test that predicted mappings don't use manual mapping justification."""
+        for _line, mapping in enumerate(self.predictions, start=2):
             self.assertNotEqual(
                 "semapv:ManualMappingCuration",
-                pt,
+                mapping["mapping_justification"],
                 msg="Prediction can not be annotated with manual curation",
             )
-
-        for label, line, mapping in self._iter_groups():
-            tt = mapping["type"]
-            self.assertTrue(
-                tt.startswith("semapv:"),
-                msg=f"[{label}] The 'type' column should be annotated with semapv on line {line}",
-            )
-            self.assertIn(tt[len("semapv:") :], semapv)
 
     def test_relations(self) -> None:
         """Test that the relation is a CURIE."""
         for label, line, mapping in self._iter_groups():
-            parts = mapping["relation"].split(":")
+            parts = mapping["predicate_id"].split(":")
             self.assertEqual(2, len(parts))
             prefix, identifier = parts
-            self.assertNotEqual("ro", prefix, msg="RO should be capitalized")
             if prefix != "RO":
-                self.assert_canonical_identifier(prefix, identifier, label, line)
+                self.assert_canonical_identifier(mapping["predicate_id"], label, line)
 
     def test_canonical_prefixes(self) -> None:
         """Test that all mappings use canonical bioregistry prefixes."""
         valid_prefixes = set(bioregistry.read_registry())
         for label, line, mapping in self._iter_groups():
-            source_prefix, target_prefix = mapping["source prefix"], mapping["target prefix"]
+            source_prefix, target_prefix = (
+                get_prefix(mapping["subject_id"]),
+                get_prefix(mapping["object_id"]),
+            )
             self.assertIn(
                 source_prefix,
                 valid_prefixes,
@@ -117,28 +116,19 @@ class IntegrityTestCase(unittest.TestCase):
     def test_normalized_identifiers(self) -> None:
         """Test that all identifiers have been normalized (based on bioregistry definition)."""
         for label, line, mapping in self._iter_groups():
-            self.assert_canonical_identifier(
-                mapping["source prefix"], mapping["source identifier"], label, line
-            )
-            self.assert_canonical_identifier(
-                mapping["target prefix"], mapping["target identifier"], label, line
-            )
+            self.assert_canonical_identifier(mapping["subject_id"], label, line)
+            self.assert_canonical_identifier(mapping["object_id"], label, line)
 
-    def assert_canonical_identifier(
-        self, prefix: str, identifier: str, label: str, line: int
-    ) -> None:
+    def assert_canonical_identifier(self, curie: str, label: str, line: int) -> None:
         """Assert a given identifier is canonical.
 
-        :param prefix: The prefix to check
-        :param identifier: The identifier in the semantic space for the prefix
+        :param curie: The CURIE to check
         :param label: The label of the mapping file
         :param line: The line number of the mapping
         """
         try:
-            check_valid_prefix_id(prefix, identifier)
-        except InvalidNormIdentifier as e:
-            self.fail(f"[{label}:{line}] {e}")
-        except InvalidIdentifierPattern as e:
+            NormalizedReference.from_curie(curie)
+        except Exception as e:
             self.fail(f"[{label}:{line}] {e}")
 
     def test_contributors(self) -> None:
@@ -149,16 +139,16 @@ class IntegrityTestCase(unittest.TestCase):
         contributor_orcids = set(user_to_orcid.values())
 
         files = [
-            (TRUE_MAPPINGS_PATH, self.mappings),
-            (FALSE_MAPPINGS_PATH, self.incorrect),
-            (UNSURE_PATH, self.unsure),
+            (POSITIVES_SSSOM_PATH, self.mappings),
+            (NEGATIVES_SSSOM_PATH, self.incorrect),
+            (UNSURE_SSSOM_PATH, self.unsure),
         ]
         for path, mappings in files:
             for mapping in mappings:
-                source = mapping["source"]
-                if not source.startswith("orcid:"):
-                    self.assertTrue(source.startswith("web-"))
-                    user = source[len("web-") :]
+                author_curie = mapping["author_id"]
+                if not author_curie.startswith("orcid:"):
+                    self.assertTrue(author_curie.startswith("web-"))
+                    user = author_curie[len("web-") :]
                     orcid = user_to_orcid.get(user)
                     if orcid:
                         self.fail(
@@ -184,11 +174,11 @@ class IntegrityTestCase(unittest.TestCase):
                             1. Add a row to the curators.tsv file with your local machine's
                                username "{user}" in the first column, your ORCID in
                                the second column, and your full name in the third column
-                            2. Replace all instances of "{source}" in {path}
+                            2. Replace all instances of "{author_curie}" in {path}
                                with your ORCID, properly prefixed with `orcid:`
                             """).rstrip()
                         )
-                self.assertIn(source[len("orcid:") :], contributor_orcids)
+                self.assertIn(author_curie[len("orcid:") :], contributor_orcids)
 
     def test_cross_redundancy(self) -> None:
         """Test the redundancy of manually curated mappings and predicted mappings."""
@@ -210,15 +200,15 @@ class IntegrityTestCase(unittest.TestCase):
             )
             raise ValueError(f"{len(redundant)} are redundant: {msg}")
 
-    def assert_no_internal_redundancies(self, m: Mappings, tuple_cls) -> None:
+    def assert_no_internal_redundancies(self, mappings: Mappings, tuple_cls: type[TPL]) -> None:
         """Assert that the list of mappings doesn't have any redundancies."""
-        counter = defaultdict(list)
-        for line, mapping in enumerate(m, start=1):
-            counter[tuple_cls.from_dict(mapping)].append(line)
+        counter: defaultdict[TPL, list[int]] = defaultdict(list)
+        for line_number, mapping in enumerate(mappings, start=1):
+            counter[tuple_cls.from_dict(mapping)].append(line_number)
         redundant = _extract_redundant(counter)
         if redundant:
             msg = "".join(
-                f"\n  {mapping.source_curie}/{mapping.target_curie}: {locations}"
+                f"\n  {mapping.subject_id}/{mapping.object_id}: {locations}"
                 for mapping, locations in redundant
             )
             raise ValueError(f"{len(redundant)} are redundant: {msg}")

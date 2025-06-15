@@ -11,11 +11,11 @@ from typing import Optional
 import click
 import networkx as nx
 import yaml
-from bioregistry.resolve_identifier import get_bioregistry_iri
+from curies import ReferenceTuple
 from tqdm import tqdm
 
 from biomappings.resources import load_false_mappings, load_mappings, load_predictions
-from biomappings.utils import DATA, IMG, get_curie
+from biomappings.utils import DATA, IMG, get_prefix
 
 logger = logging.getLogger(__name__)
 
@@ -61,32 +61,35 @@ def _graph_from_mappings(
         logger.info("excluding %s", exclude)
 
     for mapping in mappings:
-        relation = mapping["relation"]
-        if exclude and (relation in exclude):
+        predicate_curie = mapping["predicate_id"]
+        if exclude and (predicate_curie in exclude):
             continue
-        if include and (relation not in include):
+        if include and (predicate_curie not in include):
             continue
 
-        source_curie = get_curie(mapping["source prefix"], mapping["source identifier"])
+        source_curie = mapping["subject_id"]
+        source_reference = ReferenceTuple.from_curie(source_curie)
         graph.add_node(
             source_curie,
-            prefix=mapping["source prefix"],
-            identifier=mapping["source identifier"],
-            name=mapping["source name"],
+            prefix=source_reference.prefix,
+            identifier=source_reference.identifier,
+            name=mapping["subject_label"],
         )
-        target_curie = get_curie(mapping["target prefix"], mapping["target identifier"])
+
+        target_curie = mapping["object_id"]
+        target_reference = ReferenceTuple.from_curie(target_curie)
         graph.add_node(
             target_curie,
-            prefix=mapping["target prefix"],
-            identifier=mapping["target identifier"],
-            name=mapping["target name"],
+            prefix=target_reference.prefix,
+            identifier=target_reference.identifier,
+            name=mapping["object_label"],
         )
         graph.add_edge(
             source_curie,
             target_curie,
-            relation=relation,
-            provenance=mapping["source"],
-            type=mapping["type"],
+            relation=predicate_curie,
+            provenance=mapping["author_id"],
+            type=mapping["mapping_justification"],
             strata=strata,
         )
     return graph
@@ -129,7 +132,7 @@ def charts():
 
         nodes_data = {
             curie: {
-                "link": get_bioregistry_iri(data["prefix"], data["identifier"]),
+                "link": f"https://bioregistry.io/{curie}",
                 **data,
             }
             for curie, data in sorted(component.nodes(data=True), key=itemgetter(0))
@@ -168,7 +171,7 @@ def charts():
                 }
             )
 
-        prefixes = [true_graph.nodes[node]["prefix"] for node in component]
+        prefixes = [get_prefix(node) for node in component]
         prefix_list.extend(prefixes)
         unique_prefixes = len(set(prefixes))
         component_number_prefixes.append(unique_prefixes)
@@ -226,7 +229,7 @@ def charts():
     axes[0].set_xlabel("Count")
     axes[0].set_title(f"Prefixes ({len(prefix_counter)})")
 
-    relations = [m["relation"] for m in true_mappings]
+    relations = [m["predicate_id"] for m in true_mappings]
     relation_counter = Counter(relations)
     sns.countplot(y=relations, ax=axes[1], order=[k for k, _ in relation_counter.most_common()])
     axes[1].set_xscale("log")

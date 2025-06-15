@@ -6,9 +6,9 @@ from collections.abc import Iterable
 from pathlib import Path
 from typing import Optional, Union
 
-import bioregistry
 import pyobo
 import ssslm
+from curies import ReferenceTuple
 from tqdm import tqdm
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
@@ -18,7 +18,6 @@ __all__ = [
     "append_gilda_predictions",
     "filter_custom",
     "filter_existing_xrefs",
-    "has_mapping",
     "iter_prediction_tuples",
 ]
 
@@ -30,7 +29,7 @@ def append_gilda_predictions(
     target_prefixes: Union[str, Iterable[str]],
     provenance: str,
     *,
-    relation: str = "skos:exactMatch",
+    relation: Optional[str] = None,
     custom_filter: Optional[CMapping] = None,
     identifiers_are_names: bool = False,
     path: Optional[Path] = None,
@@ -59,7 +58,8 @@ def append_gilda_predictions(
     if custom_filter is not None:
         predictions = filter_custom(predictions, custom_filter)
     predictions = filter_existing_xrefs(predictions, [prefix, *target_prefixes])
-    predictions = sorted(predictions, key=_key)
+    predictions = sorted(predictions, key=lambda t: (t.subject.prefix, t.subject_label))
+    tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
     append_prediction_tuples(predictions, path=path)
 
 
@@ -67,49 +67,56 @@ def iter_prediction_tuples(
     prefix: str,
     provenance: str,
     *,
-    relation: str = "skos:exactMatch",
+    relation: Optional[str] = None,
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
 ) -> Iterable[PredictionTuple]:
     """Iterate over prediction tuples for a given prefix."""
+    if relation is None:
+        relation = "skos:exactMatch"
     id_name_mapping = pyobo.get_id_name_mapping(prefix, strict=strict)
     it = tqdm(
         id_name_mapping.items(), desc=f"[{prefix}] lexical tuples", unit_scale=True, unit="name"
     )
+    name_prediction_count = 0
     for identifier, name in it:
         for scored_match in grounder.get_matches(name):
+            name_prediction_count += 1
             yield PredictionTuple(
-                source_prefix=prefix,
-                source_id=identifier,
-                source_name=name,
-                relation=relation,
-                target_prefix=scored_match.prefix,
-                target_identifier=scored_match.identifier,
-                target_name=scored_match.name,
-                type="semapv:LexicalMatching",
+                subject_id=f"{prefix}:{identifier}",
+                subject_label=name,
+                predicate_id=relation,
+                object_id=scored_match.curie,
+                object_label=scored_match.name,
+                mapping_justification="semapv:LexicalMatching",
                 confidence=round(scored_match.score, 3),
-                source=provenance,
+                mapping_tool=provenance,
             )
+
+    tqdm.write(f"[{prefix}] generated {name_prediction_count:,} predictions from names")
 
     if identifiers_are_names:
         it = tqdm(
             pyobo.get_ids(prefix), desc=f"[{prefix}] lexical tuples", unit_scale=True, unit="id"
         )
+        identifier_prediction_count = 0
         for identifier in it:
             for scored_match in grounder.get_matches(identifier):
+                name_prediction_count += 1
                 yield PredictionTuple(
-                    source_prefix=prefix,
-                    source_id=identifier,
-                    source_name=identifier,
-                    relation=relation,
-                    target_prefix=scored_match.prefix,
-                    target_identifier=scored_match.identifier,
-                    target_name=scored_match.name,
-                    type="semapv:LexicalMatching",
+                    subject_id=f"{prefix}:{identifier}",
+                    subject_label=identifier,
+                    predicate_id=relation,
+                    object_id=scored_match.curie,
+                    object_label=scored_match.name,
+                    mapping_justification="semapv:LexicalMatching",
                     confidence=round(scored_match.score, 3),
-                    source=provenance,
+                    mapping_tool=provenance,
                 )
+        tqdm.write(
+            f"[{prefix}] generated {identifier_prediction_count:,} predictions from identifiers"
+        )
 
 
 def filter_custom(
@@ -119,7 +126,11 @@ def filter_custom(
     """Filter out custom mappings."""
     counter = 0
     for p in predictions:
-        if custom_filter.get(p.source_prefix, {}).get(p.target_prefix, {}).get(p.source_id):
+        if (
+            custom_filter.get(p.subject.prefix, {})
+            .get(p.object.prefix, {})
+            .get(p.subject.identifier)
+        ):
             counter += 1
             continue
         yield p
@@ -132,36 +143,22 @@ def filter_existing_xrefs(
     """Filter predictions that match xrefs already loaded through PyOBO."""
     prefixes = set(prefixes)
 
-    entity_to_mapped_prefixes = defaultdict(set)
-    for prefix in prefixes:
-        for source_id, target_prefix, target_id in pyobo.get_xrefs_df(prefix).values:
-            entity_to_mapped_prefixes[prefix, source_id].add(target_prefix)
-            entity_to_mapped_prefixes[target_prefix, target_id].add(prefix)
+    entity_to_mapped_prefixes: defaultdict[ReferenceTuple, set[str]] = defaultdict(set)
+    for subject_prefix in prefixes:
+        for subject_id, target_prefix, object_id in pyobo.get_xrefs_df(subject_prefix).values:
+            entity_to_mapped_prefixes[ReferenceTuple(subject_prefix, subject_id)].add(target_prefix)
+            entity_to_mapped_prefixes[ReferenceTuple(target_prefix, object_id)].add(subject_prefix)
 
-    counter = 0
-    for prediction in predictions:
-        source_id = bioregistry.standardize_identifier(
-            prediction.source_prefix, prediction.source_id
-        )
-        target_id = bioregistry.standardize_identifier(
-            prediction.target_prefix, prediction.target_identifier
-        )
+    n_predictions = 0
+    for prediction in tqdm(predictions, desc="filtering predictions"):
         if (
-            prediction.target_prefix
-            in entity_to_mapped_prefixes[prediction.source_prefix, source_id]
-            or prediction.source_prefix
-            in entity_to_mapped_prefixes[prediction.target_prefix, target_id]
+            prediction.object.prefix in entity_to_mapped_prefixes[prediction.subject]
+            or prediction.subject.prefix in entity_to_mapped_prefixes[prediction.object]
         ):
-            counter += 1
+            n_predictions += 1
             continue
         yield prediction
-    logger.info("filtered out %d pre-mapped matches", counter)
 
-
-def has_mapping(prefix: str, identifier: str, target_prefix: str) -> bool:
-    """Check if there's already a mapping available for this entity in a target namespace."""
-    return pyobo.get_xref(prefix, identifier, target_prefix) is not None
-
-
-def _key(t: PredictionTuple) -> tuple[str, str]:
-    return t.source_prefix, t.source_name
+    tqdm.write(
+        f"filtered out {n_predictions:,} pre-mapped matches",
+    )

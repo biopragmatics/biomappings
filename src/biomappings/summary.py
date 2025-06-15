@@ -59,15 +59,17 @@ def export():
 
 
 def _get_counter(mappings: Iterable[Mapping[str, str]]):
+    from biomappings.utils import get_prefix
+
     counter: typing.Counter[tuple[str, str]] = Counter()
     for mapping in mappings:
-        source, target = mapping["source prefix"], mapping["target prefix"]
-        if source > target:
-            source, target = target, source
-        counter[source, target] += 1
+        subject_curie, target_curie = mapping["subject_id"], mapping["object_id"]
+        if subject_curie > target_curie:
+            subject_curie, target_curie = target_curie, subject_curie
+        counter[get_prefix(subject_curie), get_prefix(target_curie)] += 1
     return [
-        {"source": source, "target": target, "count": count}
-        for (source, target), count in counter.most_common()
+        {"source": subject_prefix, "target": target_prefix, "count": count}
+        for (subject_prefix, target_prefix), count in counter.most_common()
     ]
 
 
@@ -75,7 +77,7 @@ def _get_contributors(mappings: Iterable[Mapping[str, str]]):
     from biomappings.resources import load_curators
 
     curators = {record["orcid"]: record for record in load_curators()}
-    counter = Counter(_get_source(mapping["source"]) for mapping in mappings)
+    counter = Counter(_get_source(mapping["author_id"]) for mapping in mappings)
     return [
         dict(count=count, **curators[orcid]) if orcid else {"count": count}
         for orcid, count in counter.most_common()

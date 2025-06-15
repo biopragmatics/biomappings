@@ -37,7 +37,9 @@ primary sources. It's also a place where anyone can contribute curations
 of predicted mappings or their own novel mappings. Ultimately, we hope that
 primary resources will integrate these mappings and distribute them themselves.
 
-Mappings are stored in a simple TSV file that looks like this:
+Mappings are stored in TSV files using the
+[Simple Standard for Sharing Ontology Mappings (SSSOM)](https://github.com/mapping-commons/sssom)
+format that look like this:
 
 ![](docs/img/mappings_screenshot.png)
 
@@ -46,12 +48,12 @@ Mappings are stored in a simple TSV file that looks like this:
 The data are available through the following four files on
 the [biopragmatics/biomappings](https://github.com/biopragmatics/biomappings) GitHub repository.
 
-| Curated | Description                                                  | Link                                                                                                                                             |
-| ------- |--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-|  Yes    | Human-curated true mappings                                  | [`src/biomappings/resources/mappings.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/mappings.tsv)       |
-|  Yes    | Human-curated *non-trivial* false (i.e., incorrect) mappings | [`src/biomappings/resources/incorrect.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/incorrect.tsv)     |
-|  Yes    | Mappings that have been checked but not yet decided          | [`src/biomappings/resources/unsure.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/unsure.tsv)           |
-|  No     | Automatically predicted mappings                             | [`src/biomappings/resources/predictions.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/predictions.tsv) |
+| Curated | Description                                                  | Link                                                                                                                                                         |
+| ------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Yes     | Human-curated true mappings                                  | [`src/biomappings/resources/positive.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/positive.sssom.tsv)       |
+| Yes     | Human-curated _non-trivial_ false (i.e., incorrect) mappings | [`src/biomappings/resources/negative.ssom..tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/negative.sssom.tsv)       |
+| Yes     | Mappings that have been checked but not yet decided          | [`src/biomappings/resources/unsure.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/unsure.sssom.tsv)           |
+| No      | Automatically predicted mappings                             | [`src/biomappings/resources/predictions.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/predictions.sssom.tsv) |
 
 The primary and derived data in this repository are both available under
 the [CC0 1.0 Universal License](https://github.com/biopragmatics/biomappings/blob/master/LICENSE).
@@ -62,11 +64,12 @@ interact with the mappings files, e.g., to add predictions.
 
 ### 🥒 Derived
 
-The mappings are distributed in the [Simple Standard for Sharing Ontology Mappings
-(SSSOM)](https://github.com/mapping-commons/sssom) format
+An aggregation of positive, negative, and predicted mappings are collated in the
+SSSOM
 ([here](https://github.com/biopragmatics/biomappings/blob/master/docs/_data/sssom))
-and can be referenced by PURL such as https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv.
-The positive mappings are also available as a network through
+and can be referenced by PURL such as
+https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv. The
+positive mappings are also available as a network through
 [NDEx](https://www.ndexbio.org/#/network/402d1fd6-49d6-11eb-9e72-0ac135e8bacf).
 
 Equivalences and related mappings that are available from the OBO Foundry and other primary sources can be accessed
@@ -87,19 +90,23 @@ We welcome contributions in the form of curations to any of the four primary TSV
 files in this repository via a pull request to the main Biomappings repository
 at https://github.com/biopragmatics/biomappings.
 
-Predicted mappings can be curated by moving a row in the `predictions.tsv` file
-into either the positive mappings file (`mappings.tsv`), negative mappings file
-(`incorrect.tsv`), or the unsure mappings file (`unsure.tsv`). Additionally,
-the `confidence` column should be removed, a `type` column should be added with
-the value `manually_reviewed`, and the `source` column should be changed from
-the prediction script's URI to your ORCiD identifier written as a CURIE
-(e.g., `orcid:0000-0003-1307-2508`).
+Predicted mappings can be curated by moving a row in the `predictions.sssom.tsv`
+file into either the positive mappings file (`positive.sssom.tsv`), negative
+mappings file (`negative.sssom.tsv`), or the unsure mappings file
+(`unsure.sssom.tsv`). Additionally, the `confidence` column should be removed, a
+`mapping_justification` column should be added with an appropriate value from
+the SEMAPV vocabulary, such as  
+the value `semapv:ManualMappingCuration`, and your ORCiD identifier should be
+written as a CURIE (e.g., `orcid:0000-0003-1307-2508`) in the `author_id`
+column.
 
-Novel mappings can be curated by adding a full row to the positive mappings
-file (`mappings.tsv`) following the format of the previous lines.
+Novel mappings can be curated by adding a full row to the positive mappings file
+(`positive.sssom.tsv`) following the format of the previous lines.
 
-While Biomappings is generally able to use any predicate written as a [compact URI (CURIE)](http://www.w3.org/TR/curie),
-it's preferred to use predicates from the [Simple Knowledge Organization System (SKOS)](https://www.w3.org/2004/02/skos/)
+While Biomappings is generally able to use any predicate written as a
+[compact URI (CURIE)](http://www.w3.org/TR/curie), it's preferred to use
+predicates from the
+[Simple Knowledge Organization System (SKOS)](https://www.w3.org/2004/02/skos/)
 to denote hierarchical relationships. The three most common predicates that are
 useful for curating mappings are:
 
@@ -115,10 +122,10 @@ GitHub has an interface for editing files directly in the browser. It will take 
 creating a pull request. After logging into GitHub, click one of the following links to be brought to the editing
 interface:
 
-- [True Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/mappings.tsv)
-- [False Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/incorrect.tsv)
-- [Unsure Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/unsure.tsv)
-- [Predictions](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/predictions.tsv)
+- [True Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/positive.sssom.tsv)
+- [False Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/negative.sssom.tsv)
+- [Unsure Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/unsure.sssom.tsv)
+- [Predictions](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/predictions.sssom.tsv)
 
 This has the caveat that you can only edit one file at a time. It's possible to navigate to your own forked version of
 the repository after, to the correct branch (will not be the default one), then edit other files in the web interface as
@@ -127,9 +134,12 @@ locally.
 
 ### ✍️ Local via a Text Editor
 
-1. Fork the repository at https://github.com/biopragmatics/biomappings, clone locally, and make a new branch (see below)
-2. Edit one or more of the resource files (`mappings.tsv`, `incorrect.tsv`, `unsure.tsv`, `predictions.tsv`)
-3. Commit to your branch, push, and create a pull request back to the upstream repository.
+1. Fork the repository at https://github.com/biopragmatics/biomappings, clone
+   locally, and make a new branch (see below)
+2. Edit one or more of the resource files (`positive.sssom.tsv`,
+   `negative.sssom.tsv`, `unsure.sssom.tsv`, `predictions.sssom.tsv`)
+3. Commit to your branch, push, and create a pull request back to the upstream
+   repository.
 
 ### 🌐 Local via the Web Curation Interface
 

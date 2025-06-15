@@ -13,15 +13,15 @@ def get_curated_mappings(prefix: str) -> list[dict[str, Any]]:
     """Get mappings for a given prefix."""
     mappings = []
     for mapping in load_mappings():
-        if mapping["source prefix"] == prefix:
+        if mapping["subject_id"].startswith(f"{prefix}:"):
             mappings.append(mapping)
-        elif mapping["target prefix"] == prefix:
-            for key in ["prefix", "name", "identifier"]:
-                mapping[f"source {key}"], mapping[f"target {key}"] = (
-                    mapping[f"target {key}"],
-                    mapping[f"source {key}"],
+        elif mapping["object_id"].startswith(f"{prefix}:"):
+            for key in ["_id", "_label"]:
+                mapping[f"subject{key}"], mapping[f"object{key}"] = (
+                    mapping[f"object{key}"],
+                    mapping[f"subject{key}"],
                 )
-            if mapping["relation"] != "skos:exactMatch":
+            if mapping["predicate_id"] != "skos:exactMatch":
                 raise NotImplementedError
             mappings.append(mapping)
     return mappings

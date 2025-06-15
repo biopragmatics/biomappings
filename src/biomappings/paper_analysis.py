@@ -11,7 +11,6 @@ import bioontologies
 import bioregistry
 import pyobo
 import pystow
-from bioontologies.obograph import _parse_uri_or_curie_or_str
 from bioregistry import manager
 from tabulate import tabulate
 from tqdm.auto import tqdm
@@ -133,6 +132,9 @@ def get_primary_mappings(
     version = parse_results.guess_version(prefix)
     graphs = parse_results.graph_document.graphs if parse_results.graph_document else []
     rv: dict[str, str] = {}
+
+    converter = bioregistry.get_default_converter()
+
     for graph in graphs:
         for node in tqdm(
             graph.nodes,
@@ -142,7 +144,7 @@ def get_primary_mappings(
             desc=f"Extracting {external_prefix} from {prefix}",
         ):
             try:
-                node_prefix, node_luid = _parse_uri_or_curie_or_str(node.id)
+                node_prefix, node_luid = converter.parse(node.id)
             except ValueError:
                 continue
 

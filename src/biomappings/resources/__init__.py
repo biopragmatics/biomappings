@@ -6,13 +6,24 @@ import logging
 from collections import defaultdict
 from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Any, NamedTuple, Optional, Union
+from typing import TYPE_CHECKING, Any, NamedTuple, Optional, Union
 
 import bioregistry
+from curies import ReferenceTuple
 from tqdm.auto import tqdm
 from typing_extensions import Literal
 
-from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
+from biomappings.utils import (
+    CURATORS_PATH,
+    NEGATIVES_SSSOM_PATH,
+    POSITIVES_SSSOM_PATH,
+    PREDICTIONS_SSSOM_PATH,
+    UNSURE_SSSOM_PATH,
+    get_canonical_tuple,
+)
+
+if TYPE_CHECKING:
+    import semra
 
 __all__ = [
     "MAPPINGS_HEADER",
@@ -44,87 +55,16 @@ __all__ = [
 
 logger = logging.getLogger(__name__)
 
-MAPPINGS_HEADER = [
-    "source prefix",
-    "source identifier",
-    "source name",
-    "relation",
-    "target prefix",
-    "target identifier",
-    "target name",
-    "type",
-    "source",
-    "prediction_type",
-    "prediction_source",
-    "prediction_confidence",
-]
-PREDICTIONS_HEADER = [
-    "source prefix",
-    "source identifier",
-    "source name",
-    "relation",
-    "target prefix",
-    "target identifier",
-    "target name",
-    "type",
-    "confidence",
-    "source",
-]
-
 
 class MappingTuple(NamedTuple):
     """A named tuple class for mappings."""
 
-    source_prefix: str
-    source_id: str
-    source_name: str
-    relation: str
-    target_prefix: str
-    target_identifier: str
-    target_name: str
-    type: str
-    source: str
-    prediction_type: Optional[str]
-    prediction_source: Optional[str]
-    prediction_confidence: Optional[float]
-
-    def as_dict(self) -> dict[str, Any]:
-        """Get the mapping tuple as a dictionary."""
-        return dict(zip(MAPPINGS_HEADER, self))  # type:ignore
-
-    @classmethod
-    def from_dict(cls, mapping: Mapping[str, str]) -> "MappingTuple":
-        """Get the mapping tuple from a dictionary."""
-        values = []
-        for key in MAPPINGS_HEADER:
-            value = mapping.get(key) or None
-            if key == "prediction_confidence" and value is not None:
-                value = float(value)  # type:ignore
-            values.append(value)
-        return cls(*values)  # type:ignore
-
-    @property
-    def source_curie(self) -> str:
-        """Concatenate the source prefix and ID to a CURIE."""
-        return f"{self.source_prefix}:{self.source_id}"
-
-    @property
-    def target_curie(self) -> str:
-        """Concatenate the target prefix and ID to a CURIE."""
-        return f"{self.target_prefix}:{self.target_identifier}"
-
-
-class PredictionTuple(NamedTuple):
-    """A named tuple class for predictions."""
-
-    source_prefix: str
-    source_id: str
-    source_name: str
-    relation: str
-    target_prefix: str
-    target_identifier: str
-    target_name: str
-    type: str
+    subject_id: str
+    subject_label: str
+    predicate_id: str
+    object_id: str
+    object_label: str
+    mapping_justification: str
     """A `semapv <https://bioregistry.io/registry/semapv>`_ term describing the mapping type.
 
     These are relatively high level, and can be any child of ``semapv:Matching``, including:
@@ -132,6 +72,47 @@ class PredictionTuple(NamedTuple):
     1. ``semapv:LexicalMatching``
     2. ``semapv:LogicalReasoning``
     """
+
+    author_id: str
+    mapping_tool: Optional[str]
+    predicate_modifier: Optional[str]
+
+    def as_dict(self) -> dict[str, Any]:
+        """Get the mapping tuple as a dictionary."""
+        return dict(zip(self._fields, self))  # type:ignore
+
+    @classmethod
+    def from_dict(cls, mapping: Mapping[str, Union[str, float, None]]) -> "MappingTuple":
+        """Get the mapping tuple from a dictionary."""
+        values = []
+        for key in cls._fields:
+            value = mapping.get(key) or None
+            if key == "prediction_confidence" and value is not None:
+                value = float(value)  # type:ignore
+            values.append(value)
+        return cls(*values)  # type:ignore
+
+
+MAPPINGS_HEADER = MappingTuple._fields
+
+
+class PredictionTuple(NamedTuple):
+    """A named tuple class for predictions."""
+
+    subject_id: str
+    subject_label: str
+    predicate_id: str
+    object_id: str
+    object_label: str
+    mapping_justification: str
+    """A `semapv <https://bioregistry.io/registry/semapv>`_ term describing the mapping type.
+
+    These are relatively high level, and can be any child of ``semapv:Matching``, including:
+
+    1. ``semapv:LexicalMatching``
+    2. ``semapv:LogicalReasoning``
+    """
+
     confidence: float
     """An assessment of the confidence of the mapping, reported by the method used to generate it.
 
@@ -154,7 +135,8 @@ class PredictionTuple(NamedTuple):
     However, other variants are possible. For example, this confidence could reflect the loss function
     if a knowledge graph embedding model was used ot generate a mapping orediction.
     """
-    source: str
+
+    mapping_tool: str
     """The script or process that generated this mapping.
 
     Most of these scripts are in https://github.com/biopragmatics/biomappings/tree/master/scripts,
@@ -162,14 +144,14 @@ class PredictionTuple(NamedTuple):
     """
 
     def as_dict(self) -> dict[str, Any]:
-        """Get the prediction tuple as a dictionary."""
-        return dict(zip(PREDICTIONS_HEADER, self))  # type:ignore
+        """Get the mapping tuple as a dictionary."""
+        return dict(zip(self._fields, self))  # type:ignore
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, str]) -> "PredictionTuple":
+    def from_dict(cls, mapping: Mapping[str, Union[str, float, None]]) -> "PredictionTuple":
         """Get the prediction tuple from a dictionary."""
         values = []
-        for key in PREDICTIONS_HEADER:
+        for key in cls._fields:
             value = mapping.get(key) or None
             if key == "confidence" and value is not None:
                 value = float(value)  # type:ignore
@@ -177,15 +159,15 @@ class PredictionTuple(NamedTuple):
         return cls(*values)  # type:ignore
 
     @classmethod
-    def from_semra(cls, mapping, confidence) -> "PredictionTuple":
+    def from_semra(cls, mapping: "semra.Mapping", confidence: float) -> "PredictionTuple":
         """Instantiate from a SeMRA mapping."""
         import pyobo
         import semra
 
-        s_name = pyobo.get_name(*mapping.s.pair)
+        s_name = mapping.s.name or pyobo.get_name(mapping.s)
         if not s_name:
             raise KeyError(f"could not look up name for {mapping.s.curie}")
-        o_name = pyobo.get_name(*mapping.o.pair)
+        o_name = mapping.o.name or pyobo.get_name(mapping.o)
         if not o_name:
             raise KeyError(f"could not look up name for {mapping.o.curie}")
         # Assume that each mapping has a single simple evidence with a mapping set annotation
@@ -197,40 +179,36 @@ class PredictionTuple(NamedTuple):
         if evidence.mapping_set is None:
             raise ValueError
         return cls(  # type:ignore
-            *mapping.s.pair,
-            s_name,
-            mapping.p.curie,
-            *mapping.o.pair,
-            o_name,
-            evidence.justification.curie,
-            confidence,
-            evidence.mapping_set.name,
+            subject_id=mapping.s.curie,
+            subject_label=s_name,
+            predicate_id=mapping.p.curie,
+            object_id=mapping.o.curie,
+            object_label=o_name,
+            mapping_justification=evidence.justification.curie,
+            confidence=confidence,
+            mapping_tool=evidence.mapping_set.name,
         )
 
     @property
-    def source_curie(self) -> str:
-        """Concatenate the source prefix and ID to a CURIE."""
-        return f"{self.source_prefix}:{self.source_id}"
+    def subject(self) -> ReferenceTuple:
+        """Get the subject as a reference."""
+        return ReferenceTuple.from_curie(self.subject_id)
 
     @property
-    def target_curie(self) -> str:
-        """Concatenate the target prefix and ID to a CURIE."""
-        return f"{self.target_prefix}:{self.target_identifier}"
+    def object(self) -> ReferenceTuple:
+        """Get the object as a reference."""
+        return ReferenceTuple.from_curie(self.object_id)
 
+
+PREDICTIONS_HEADER = PredictionTuple._fields
 
 Mappings = Iterable[dict[str, str]]
-
-
-def get_resource_file_path(fname) -> Path:
-    """Get a resource by its file name."""
-    return RESOURCE_PATH.joinpath(fname)
 
 
 def _load_table(path: Union[str, Path]) -> list[dict[str, str]]:
     path = Path(path).resolve()
     if not path.is_file():
-        logger.warning("mappings file does not exist, returning empty list: %s", path)
-        return []
+        raise FileNotFoundError
     with path.open("r") as fh:
         reader = csv.reader(fh, delimiter="\t")
         header = next(reader)
@@ -256,22 +234,17 @@ def _write_helper(
 def mapping_sort_key(prediction: Mapping[str, str]) -> tuple[str, ...]:
     """Return a tuple for sorting mapping dictionaries."""
     return (
-        prediction["source prefix"],
-        prediction["source identifier"],
-        prediction["relation"],
-        prediction["target prefix"],
-        prediction["target identifier"],
-        prediction["type"],
-        prediction["source"] or "",
+        prediction["subject_id"],
+        prediction["predicate_id"],
+        prediction["object_id"],
+        prediction["mapping_justification"],
+        prediction.get("mapping_tool") or "",
     )
-
-
-TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
 
 
 def load_mappings(*, path: Union[str, Path, None] = None) -> list[dict[str, str]]:
     """Load the mappings table."""
-    return _load_table(path or TRUE_MAPPINGS_PATH)
+    return _load_table(path or POSITIVES_SSSOM_PATH)
 
 
 def load_mappings_subset(source: str, target: str) -> Mapping[str, str]:
@@ -291,7 +264,7 @@ def append_true_mappings(
 ) -> None:
     """Append new lines to the mappings table."""
     if path is None:
-        path = TRUE_MAPPINGS_PATH
+        path = POSITIVES_SSSOM_PATH
     _write_curated(mappings, path=path, mode="a")
     if sort:
         lint_true_mappings(path=path)
@@ -304,7 +277,7 @@ def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
 
 def write_true_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write mappigns to the true mappings file."""
-    _write_curated(mappings=mappings, path=path or TRUE_MAPPINGS_PATH, mode="w")
+    _write_curated(mappings=mappings, path=path or POSITIVES_SSSOM_PATH, mode="w")
 
 
 def _write_curated(mappings: Mappings, *, path: Path, mode: Literal["w", "a"]):
@@ -313,24 +286,20 @@ def _write_curated(mappings: Mappings, *, path: Path, mode: Literal["w", "a"]):
 
 def lint_true_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the true mappings file."""
-    _lint_curated_mappings(standardize=standardize, path=path or TRUE_MAPPINGS_PATH)
+    _lint_curated_mappings(standardize=standardize, path=path or POSITIVES_SSSOM_PATH)
 
 
 def _lint_curated_mappings(path: Path, *, standardize: bool = False) -> None:
     """Lint the true mappings file."""
     mapping_list = _load_table(path)
-    mappings = _standardize_mappings(mapping_list)
-    mappings = _remove_redundant(mappings, standardize=standardize)
+    mappings = _remove_redundant(mapping_list, standardize=standardize)
     mappings = _replace_local_curation_source(mappings)
     _write_helper(MAPPINGS_HEADER, mappings, path, mode="w")
 
 
-FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
-
-
 def load_false_mappings(*, path: Optional[Path] = None) -> list[dict[str, str]]:
     """Load the false mappings table."""
-    return _load_table(path or FALSE_MAPPINGS_PATH)
+    return _load_table(path or NEGATIVES_SSSOM_PATH)
 
 
 def append_false_mappings(
@@ -341,7 +310,7 @@ def append_false_mappings(
 ) -> None:
     """Append new lines to the false mappings table."""
     if path is None:
-        path = FALSE_MAPPINGS_PATH
+        path = NEGATIVES_SSSOM_PATH
     _write_curated(mappings=mappings, path=path, mode="a")
     if sort:
         lint_false_mappings(path=path)
@@ -349,20 +318,17 @@ def append_false_mappings(
 
 def write_false_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write mappings to the false mappings file."""
-    _write_helper(MAPPINGS_HEADER, mappings, path or FALSE_MAPPINGS_PATH, mode="w")
+    _write_helper(MAPPINGS_HEADER, mappings, path or NEGATIVES_SSSOM_PATH, mode="w")
 
 
 def lint_false_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the false mappings file."""
-    _lint_curated_mappings(standardize=standardize, path=path or FALSE_MAPPINGS_PATH)
-
-
-UNSURE_PATH = get_resource_file_path("unsure.tsv")
+    _lint_curated_mappings(standardize=standardize, path=path or NEGATIVES_SSSOM_PATH)
 
 
 def load_unsure(*, path: Optional[Path] = None) -> list[dict[str, str]]:
     """Load the unsure table."""
-    return _load_table(path or UNSURE_PATH)
+    return _load_table(path or UNSURE_SSSOM_PATH)
 
 
 def append_unsure_mappings(
@@ -373,7 +339,7 @@ def append_unsure_mappings(
 ) -> None:
     """Append new lines to the "unsure" mappings table."""
     if path is None:
-        path = UNSURE_PATH
+        path = UNSURE_SSSOM_PATH
     _write_curated(mappings, path=path, mode="a")
     if sort:
         lint_unsure_mappings(path=path)
@@ -381,25 +347,22 @@ def append_unsure_mappings(
 
 def write_unsure_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write mappings to the unsure mappings file."""
-    _write_helper(MAPPINGS_HEADER, mappings, path or UNSURE_PATH, mode="w")
+    _write_helper(MAPPINGS_HEADER, mappings, path or UNSURE_SSSOM_PATH, mode="w")
 
 
 def lint_unsure_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
     """Lint the unsure mappings file."""
-    _lint_curated_mappings(standardize=standardize, path=path or UNSURE_PATH)
-
-
-PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
+    _lint_curated_mappings(standardize=standardize, path=path or UNSURE_SSSOM_PATH)
 
 
 def load_predictions(*, path: Union[str, Path, None] = None) -> list[dict[str, str]]:
     """Load the predictions table."""
-    return _load_table(path or PREDICTIONS_PATH)
+    return _load_table(path or PREDICTIONS_SSSOM_PATH)
 
 
 def write_predictions(mappings: Mappings, *, path: Optional[Path] = None) -> None:
     """Write new content to the predictions table."""
-    _write_helper(PREDICTIONS_HEADER, mappings, path or PREDICTIONS_PATH, mode="w")
+    _write_helper(PREDICTIONS_HEADER, mappings, path or PREDICTIONS_SSSOM_PATH, mode="w")
 
 
 def append_prediction_tuples(
@@ -446,7 +409,7 @@ def append_predictions(
         )
 
     if path is None:
-        path = PREDICTIONS_PATH
+        path = PREDICTIONS_SSSOM_PATH
     _write_helper(PREDICTIONS_HEADER, mappings, path, mode="a")
     if sort:
         lint_predictions(path=path)
@@ -478,7 +441,6 @@ def lint_predictions(
             additional_curated_mappings or [],
         ),
     )
-    mappings = _standardize_mappings(mappings)
     mappings = _remove_redundant(mappings, standardize=standardize)
     mappings = sorted(mappings, key=mapping_sort_key)
     write_predictions(mappings, path=path)
@@ -503,8 +465,8 @@ def _replace_local_curation_source(mappings: Mappings) -> Mappings:
     """Find `web-` prefixed sources that can be replaced with ORCID CURIEs."""
     user_to_contributors = {c["user"]: c["orcid"] for c in load_curators()}
     for mapping in mappings:
-        source = mapping["source"]
-        orcid = user_to_contributors.get(source.removeprefix("web-"))
+        author_curie = mapping["author_id"]
+        orcid = user_to_contributors.get(author_curie.removeprefix("web-"))
         if orcid:
             mapping["source"] = f"orcid:{orcid}"
         yield mapping
@@ -523,7 +485,8 @@ def _pick_best(mapping: Mapping[str, str]) -> int:
     - prediction methodology
     - date of prediction/curation (to keep the earliest)
     """
-    if mapping["source"].startswith("orcid"):
+    author_id = mapping.get("author_id")
+    if author_id and author_id.startswith("orcid:"):
         return 1
     return 0
 
@@ -541,21 +504,12 @@ def _standardize_mappings(mappings: Mappings, *, progress: bool = True) -> Mappi
 
 def _standardize_mapping(mapping):
     """Standardize a mapping."""
-    for prefix_key, identifier_key in [
-        ("source prefix", "source identifier"),
-        ("target prefix", "target identifier"),
-    ]:
-        prefix, identifier = mapping[prefix_key], mapping[identifier_key]
-        resource = bioregistry.get_resource(prefix)
-        if resource is None:
+    for key in ("subject_id", "object_id"):
+        norm_curie = bioregistry.normalize_curie(mapping[key])
+        if norm_curie is None:
             raise ValueError
-        mapping[prefix_key] = resource.prefix
-        mapping[identifier_key] = resource.standardize_identifier(identifier)
-
+        mapping[key] = norm_curie
     return mapping
-
-
-CURATORS_PATH = get_resource_file_path("curators.tsv")
 
 
 def load_curators():
@@ -580,16 +534,18 @@ def _check_filter(
     prediction: Mapping[str, str],
     custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]],
 ) -> bool:
-    source_prefix, target_prefix = prediction["source prefix"], prediction["target prefix"]
-    source_id, target_id = prediction["source identifier"], prediction["target identifier"]
+    source_prefix, source_id = ReferenceTuple.from_curie(prediction["subject_id"])
+    target_prefix, target_id = ReferenceTuple.from_curie(prediction["object_id"])
     return target_id != custom_filter.get(source_prefix, {}).get(target_prefix, {}).get(source_id)
 
 
 def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:
     """Get a filter over all curated mappings."""
     d: defaultdict[str, defaultdict[str, dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
-    for m in itt.chain(load_mappings(), load_false_mappings(), load_unsure()):
-        d[m["source prefix"]][m["target prefix"]][m["source identifier"]] = m["target identifier"]
+    for mapping in itt.chain(load_mappings(), load_false_mappings(), load_unsure()):
+        source = ReferenceTuple.from_curie(mapping["subject_id"])
+        target = ReferenceTuple.from_curie(mapping["object_id"])
+        d[source.prefix][target.prefix][source.identifier] = target.identifier
     return {k: dict(v) for k, v in d.items()}
 
 

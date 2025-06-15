@@ -5,10 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'src/biomappings/resources/mappings.tsv'
-      - 'src/biomappings/resources/incorrect.tsv'
-      - 'src/biomappings/resources/predictions.tsv'
-      - 'src/biomappings/resources/unsure.tsv'
+      - 'src/biomappings/resources/*.sssom.tsv'
 
 jobs:
   build:
@@ -20,7 +17,7 @@ jobs:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - uses: actions/setup-python@v2
         with:
-          python-version: "3.12"
+          python-version: "3.13"
       - name: Install dependencies
         run: |
           pip install tox tox-uv
