@@ -17,7 +17,6 @@ __all__ = [
     "append_gilda_predictions",
     "filter_custom",
     "filter_existing_xrefs",
-    "has_mapping",
     "iter_prediction_tuples",
 ]
 
@@ -29,7 +28,7 @@ def append_gilda_predictions(
     target_prefixes: Union[str, Iterable[str]],
     provenance: str,
     *,
-    relation: str = "skos:exactMatch",
+    relation: str | None = None,
     custom_filter: Optional[CMapping] = None,
     identifiers_are_names: bool = False,
     path: Optional[Path] = None,
@@ -58,7 +57,7 @@ def append_gilda_predictions(
     if custom_filter is not None:
         predictions = filter_custom(predictions, custom_filter)
     predictions = filter_existing_xrefs(predictions, [prefix, *target_prefixes])
-    predictions = sorted(predictions, key=_key)
+    predictions = sorted(predictions, key=lambda t: (t.subject_prefix, t.subject_label))
     append_prediction_tuples(predictions, path=path)
 
 
@@ -66,12 +65,14 @@ def iter_prediction_tuples(
     prefix: str,
     provenance: str,
     *,
-    relation: str = "skos:exactMatch",
+    relation: str | None = None,
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
 ) -> Iterable[PredictionTuple]:
     """Iterate over prediction tuples for a given prefix."""
+    if relation is None:
+        relation = "skos:exactMatch"
     id_name_mapping = pyobo.get_id_name_mapping(prefix, strict=strict)
     it = tqdm(
         id_name_mapping.items(), desc=f"[{prefix}] lexical tuples", unit_scale=True, unit="name"
@@ -151,12 +152,3 @@ def filter_existing_xrefs(
             continue
         yield prediction
     logger.info("filtered out %d pre-mapped matches", counter)
-
-
-def has_mapping(prefix: str, identifier: str, target_prefix: str) -> bool:
-    """Check if there's already a mapping available for this entity in a target namespace."""
-    return pyobo.get_xref(prefix, identifier, target_prefix) is not None
-
-
-def _key(t: PredictionTuple) -> tuple[str, str]:
-    return t.subject_prefix, t.subject_label

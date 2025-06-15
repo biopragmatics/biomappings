@@ -11,11 +11,11 @@ from typing import Optional
 import click
 import networkx as nx
 import yaml
+from curies import ReferenceTuple
 from tqdm import tqdm
 
 from biomappings.resources import load_false_mappings, load_mappings, load_predictions
 from biomappings.utils import DATA, IMG, get_prefix
-from curies import ReferenceTuple
 
 logger = logging.getLogger(__name__)
 
