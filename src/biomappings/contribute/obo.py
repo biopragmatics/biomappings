@@ -5,9 +5,11 @@ Example ontologies using the OBO flat file format:
 - Mondo Disease Ontology (MONDO)
 """
 
+from __future__ import annotations
+
 from copy import deepcopy
 from pathlib import Path
-from typing import Any, Union
+from typing import Any
 
 import bioregistry
 import click
@@ -16,7 +18,7 @@ from tqdm.auto import tqdm
 from biomappings.contribute.utils import get_curated_mappings
 
 
-def update_obo(*, prefix: str, path: Union[str, Path]) -> None:
+def update_obo(*, prefix: str, path: str | Path) -> None:
     """Update an OBO flat file.
 
     :param prefix: Prefix for the ontology
@@ -51,8 +53,16 @@ def update_obo_lines(
     lines = deepcopy(lines)
 
     for mapping in tqdm(mappings, unit="mapping", unit_scale=True, disable=not progress):
-        subject_curie = bioregistry.normalize_curie(mapping["subject_id"], use_preferred=True)
-        object_curie = bioregistry.normalize_curie(mapping["object_id"], use_preferred=True)
+        subject_curie = bioregistry.normalize_curie(
+            mapping["subject_id"], use_preferred=True, strict=True
+        )
+        if subject_curie is None:
+            raise ValueError
+        object_curie = bioregistry.normalize_curie(
+            mapping["object_id"], use_preferred=True, strict=True
+        )
+        if object_curie is None:
+            raise ValueError
 
         author_curie = mapping["author_id"]
         if not author_curie.startswith("orcid:"):
@@ -122,7 +132,7 @@ def add_xref(
     return lines
 
 
-def _extract_ref(xref_line):
+def _extract_ref(xref_line: str) -> str:
     # remove trailing comments
     if "!" in xref_line:
         xref_line = xref_line[: xref_line.find("!")].strip()
@@ -144,7 +154,7 @@ def _extract_ref(xref_line):
     help="After forking and cloning the version controlled repository for an ontology locally, "
     "give the path inside the directory to the ontology's edit file.",
 )
-def main(prefix: str, path: Path):
+def main(prefix: str, path: Path) -> None:
     """Contribute to an OBO file."""
     update_obo(prefix=prefix, path=path)
 

@@ -1,5 +1,7 @@
 """Utilities for contributing back to upstream resources."""
 
+from __future__ import annotations
+
 from typing import Any
 
 from biomappings import load_mappings

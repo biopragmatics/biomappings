@@ -1,10 +1,12 @@
 """Utilities."""
 
+from __future__ import annotations
+
 import os
 from collections.abc import Mapping
 from pathlib import Path
 from subprocess import CalledProcessError, check_output
-from typing import Any, Optional
+from typing import Any
 
 from curies import ReferenceTuple
 
@@ -32,7 +34,7 @@ IMG = DOCS.joinpath("img")
 DATA = DOCS.joinpath("_data")
 
 
-def get_git_hash() -> Optional[str]:
+def get_git_hash() -> str | None:
     """Get the git hash.
 
     :return:
@@ -45,12 +47,12 @@ def get_git_hash() -> Optional[str]:
     return rv[:6]
 
 
-def commit(message: str) -> Optional[str]:
+def commit(message: str) -> str | None:
     """Make a commit with the following message."""
     return _git("commit", "-m", message, "-a")
 
 
-def push(branch_name: Optional[str] = None) -> Optional[str]:
+def push(branch_name: str | None = None) -> str | None:
     """Push the git repo."""
     if branch_name is not None:
         return _git("push", "origin", branch_name)
@@ -71,7 +73,7 @@ def get_branch() -> str:
     return rv
 
 
-def _git(*args: str) -> Optional[str]:
+def _git(*args: str) -> str | None:
     with open(os.devnull, "w") as devnull:
         try:
             ret = check_output(  # noqa: S603

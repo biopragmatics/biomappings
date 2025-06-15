@@ -1,10 +1,12 @@
 """Utilities for generating predictions with lexical predictions."""
 
+from __future__ import annotations
+
 import logging
 from collections import defaultdict
 from collections.abc import Iterable
 from pathlib import Path
-from typing import Optional, Union
+from typing import cast
 
 import pyobo
 import ssslm
@@ -26,13 +28,13 @@ logger = logging.getLogger(__name__)
 
 def append_gilda_predictions(
     prefix: str,
-    target_prefixes: Union[str, Iterable[str]],
+    target_prefixes: str | Iterable[str],
     provenance: str,
     *,
-    relation: Optional[str] = None,
-    custom_filter: Optional[CMapping] = None,
+    relation: str | None = None,
+    custom_filter: CMapping | None = None,
     identifiers_are_names: bool = False,
-    path: Optional[Path] = None,
+    path: Path | None = None,
 ) -> None:
     """Add lexical matching-based predictions to the Biomappings predictions.tsv file.
 
@@ -67,7 +69,7 @@ def iter_prediction_tuples(
     prefix: str,
     provenance: str,
     *,
-    relation: Optional[str] = None,
+    relation: str | None = None,
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
@@ -88,7 +90,7 @@ def iter_prediction_tuples(
                 subject_label=name,
                 predicate_id=relation,
                 object_id=scored_match.curie,
-                object_label=scored_match.name,
+                object_label=cast(str, scored_match.name),
                 mapping_justification="semapv:LexicalMatching",
                 confidence=round(scored_match.score, 3),
                 mapping_tool=provenance,
@@ -109,7 +111,7 @@ def iter_prediction_tuples(
                     subject_label=identifier,
                     predicate_id=relation,
                     object_id=scored_match.curie,
-                    object_label=scored_match.name,
+                    object_label=cast(str, scored_match.name),
                     mapping_justification="semapv:LexicalMatching",
                     confidence=round(scored_match.score, 3),
                     mapping_tool=provenance,
