@@ -9,7 +9,7 @@ import pystow
 from tqdm import tqdm
 
 from biomappings import load_mappings
-from biomappings.utils import get_curie, get_git_hash
+from biomappings.utils import get_git_hash, get_prefix
 
 BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
 
@@ -36,9 +36,9 @@ def ndex(username, password):
     cx.add_network_attribute("rights", "Waiver-No rights reserved (CC0)")
 
     prefixes = {
-        prefix
+        get_prefix(curie)
         for mapping in positive_mappings
-        for prefix in (mapping["source prefix"], mapping["target prefix"])
+        for curie in (mapping["subject_id"], mapping["object_id"])
     }
     prefixes.add("orcid")
     prefixes.add("semapv")
@@ -47,29 +47,29 @@ def ndex(username, password):
     cx.add_network_attribute("version", get_git_hash())
     authors = sorted(
         {
-            mapping["source"]
+            mapping["author_id"]
             for mapping in positive_mappings
-            if mapping["source"].startswith("orcid:")
+            if mapping["author_id"].startswith("orcid:")
         }
     )
     cx.add_network_attribute("author", authors, type="list_of_string")
 
     for mapping in tqdm(positive_mappings, desc="Loading NiceCXBuilder"):
         source = cx.add_node(
-            represents=mapping["source name"],
-            name=get_curie(mapping["source prefix"], mapping["source identifier"]),
+            represents=mapping["subject_label"],
+            name=mapping["subject_id"],
         )
         target = cx.add_node(
-            represents=mapping["target name"],
-            name=get_curie(mapping["target prefix"], mapping["target identifier"]),
+            represents=mapping["object_label"],
+            name=mapping["object_id"],
         )
         edge = cx.add_edge(
             source=source,
             target=target,
-            interaction=mapping["relation"],
+            interaction=mapping["predicate_id"],
         )
-        cx.add_edge_attribute(edge, "type", mapping["type"])
-        cx.add_edge_attribute(edge, "provenance", mapping["source"])
+        cx.add_edge_attribute(edge, "mapping_justification", mapping["mapping_justification"])
+        cx.add_edge_attribute(edge, "author_id", mapping["author_id"])
 
     nice_cx = cx.get_nice_cx()
     nice_cx.update_to(
