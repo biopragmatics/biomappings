@@ -1,12 +1,14 @@
 """Web curation interface for :mod:`biomappings`."""
 
+from __future__ import annotations
+
 import getpass
 import os
 from collections import Counter, defaultdict
 from collections.abc import Iterable, Iterator, Mapping
 from copy import deepcopy
 from pathlib import Path
-from typing import Any, Literal, Optional, Union, get_args
+from typing import Any, Literal, get_args
 
 import flask
 import flask_bootstrap
@@ -39,22 +41,22 @@ PredictionDict: TypeAlias = Mapping[str, Any]
 class State(BaseModel):
     """Contains the state for queries to the curation app."""
 
-    limit: Optional[int] = 10
-    offset: Optional[int] = 0
-    query: Optional[str] = None
-    source_query: Optional[str] = None
-    source_prefix: Optional[str] = None
-    target_query: Optional[str] = None
-    target_prefix: Optional[str] = None
-    provenance: Optional[str] = None
-    prefix: Optional[str] = None
-    sort: Optional[str] = None
-    same_text: Optional[bool] = None
+    limit: int | None = 10
+    offset: int | None = 0
+    query: str | None = None
+    source_query: str | None = None
+    source_prefix: str | None = None
+    target_query: str | None = None
+    target_prefix: str | None = None
+    provenance: str | None = None
+    prefix: str | None = None
+    sort: str | None = None
+    same_text: bool | None = None
     show_relations: bool = True
     show_lines: bool = False
 
     @classmethod
-    def from_flask_globals(cls) -> "State":
+    def from_flask_globals(cls) -> State:
         """Get the state from the flask current request."""
         return State(
             limit=flask.request.args.get("limit", type=int, default=10),
@@ -73,7 +75,7 @@ class State(BaseModel):
         )
 
 
-def _get_bool_arg(name: str, default: Optional[Literal["true", "false"]] = None) -> Optional[bool]:
+def _get_bool_arg(name: str, default: Literal["true", "false"] | None = None) -> bool | None:
     value = flask.request.args.get(name)
     if value is None and default is None:
         return None
@@ -88,12 +90,12 @@ def url_for_state(endpoint, state: State, **kwargs) -> str:
 
 
 def get_app(
-    target_curies: Optional[Iterable[tuple[str, str]]] = None,
-    predictions_path: Optional[Path] = None,
-    positives_path: Optional[Path] = None,
-    negatives_path: Optional[Path] = None,
-    unsure_path: Optional[Path] = None,
-    controller: Optional["Controller"] = None,
+    target_curies: Iterable[tuple[str, str]] | None = None,
+    predictions_path: Path | None = None,
+    positives_path: Path | None = None,
+    negatives_path: Path | None = None,
+    unsure_path: Path | None = None,
+    controller: Controller | None = None,
 ) -> flask.Flask:
     """Get a curation flask app."""
     app_ = flask.Flask(__name__)
@@ -139,11 +141,11 @@ class Controller:
     def __init__(
         self,
         *,
-        target_curies: Optional[Iterable[tuple[str, str]]] = None,
-        predictions_path: Optional[Path] = None,
-        positives_path: Optional[Path] = None,
-        negatives_path: Optional[Path] = None,
-        unsure_path: Optional[Path] = None,
+        target_curies: Iterable[tuple[str, str]] | None = None,
+        predictions_path: Path | None = None,
+        positives_path: Path | None = None,
+        negatives_path: Path | None = None,
+        unsure_path: Path | None = None,
     ):
         """Instantiate the web controller.
 
@@ -164,7 +166,7 @@ class Controller:
 
         self._marked: dict[int, Mark] = {}
         self.total_curated = 0
-        self._added_mappings: list[dict[str, Union[None, str, float]]] = []
+        self._added_mappings: list[dict[str, None | str | float]] = []
         self.target_ids = {ReferenceTuple.from_curie(c) for c in target_curies or []}
 
     def predictions_from_state(self, state: State) -> Iterable[tuple[int, Mapping[str, Any]]]:
@@ -186,17 +188,17 @@ class Controller:
     def predictions(
         self,
         *,
-        offset: Optional[int] = None,
-        limit: Optional[int] = None,
-        query: Optional[str] = None,
-        source_query: Optional[str] = None,
-        source_prefix: Optional[str] = None,
-        target_query: Optional[str] = None,
-        target_prefix: Optional[str] = None,
-        prefix: Optional[str] = None,
-        sort: Optional[str] = None,
-        same_text: Optional[bool] = None,
-        provenance: Optional[str] = None,
+        offset: int | None = None,
+        limit: int | None = None,
+        query: str | None = None,
+        source_query: str | None = None,
+        source_prefix: str | None = None,
+        target_query: str | None = None,
+        target_prefix: str | None = None,
+        prefix: str | None = None,
+        sort: str | None = None,
+        same_text: bool | None = None,
+        provenance: str | None = None,
     ) -> Iterable[tuple[int, Mapping[str, Any]]]:
         """Iterate over predictions.
 
@@ -259,15 +261,15 @@ class Controller:
 
     def count_predictions(
         self,
-        query: Optional[str] = None,
-        source_query: Optional[str] = None,
-        source_prefix: Optional[str] = None,
-        target_query: Optional[str] = None,
-        target_prefix: Optional[str] = None,
-        prefix: Optional[str] = None,
-        sort: Optional[str] = None,
-        same_text: Optional[bool] = None,
-        provenance: Optional[str] = None,
+        query: str | None = None,
+        source_query: str | None = None,
+        source_prefix: str | None = None,
+        target_query: str | None = None,
+        target_prefix: str | None = None,
+        prefix: str | None = None,
+        sort: str | None = None,
+        same_text: bool | None = None,
+        provenance: str | None = None,
     ) -> int:
         """Count the number of predictions to check for the given filters."""
         it = self._help_it_predictions(
@@ -285,15 +287,15 @@ class Controller:
 
     def _help_it_predictions(
         self,
-        query: Optional[str] = None,
-        source_query: Optional[str] = None,
-        source_prefix: Optional[str] = None,
-        target_query: Optional[str] = None,
-        target_prefix: Optional[str] = None,
-        prefix: Optional[str] = None,
-        sort: Optional[str] = None,
-        same_text: Optional[bool] = None,
-        provenance: Optional[str] = None,
+        query: str | None = None,
+        source_query: str | None = None,
+        source_prefix: str | None = None,
+        target_query: str | None = None,
+        target_prefix: str | None = None,
+        prefix: str | None = None,
+        sort: str | None = None,
+        same_text: bool | None = None,
+        provenance: str | None = None,
     ) -> Iterator[tuple[int, PredictionDict]]:
         it: Iterable[tuple[int, PredictionDict]] = enumerate(self._predictions)
         if self.target_ids:

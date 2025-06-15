@@ -5,9 +5,11 @@ Example ontologies using the OBO flat file format:
 - Mondo Disease Ontology (MONDO)
 """
 
+from __future__ import annotations
+
 from copy import deepcopy
 from pathlib import Path
-from typing import Any, Union
+from typing import Any
 
 import bioregistry
 import click
@@ -16,7 +18,7 @@ from tqdm.auto import tqdm
 from biomappings.contribute.utils import get_curated_mappings
 
 
-def update_obo(*, prefix: str, path: Union[str, Path]) -> None:
+def update_obo(*, prefix: str, path: str | Path) -> None:
     """Update an OBO flat file.
 
     :param prefix: Prefix for the ontology

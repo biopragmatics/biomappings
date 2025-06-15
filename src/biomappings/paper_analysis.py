@@ -1,5 +1,7 @@
 """Code for the paper analysis."""
 
+from __future__ import annotations
+
 import json
 import pickle
 from collections import defaultdict

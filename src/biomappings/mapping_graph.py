@@ -1,9 +1,11 @@
 """Functions for working with the mapping graph."""
 
+from __future__ import annotations
+
 import itertools as itt
 from collections import defaultdict
 from collections.abc import Iterable
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING
 
 import networkx as nx
 import pyobo
@@ -20,7 +22,7 @@ __all__ = [
 ]
 
 
-def get_filter_from_semra(mappings: list["semra.Mapping"]) -> CMapping:
+def get_filter_from_semra(mappings: list[semra.Mapping]) -> CMapping:
     """Get a custom filter dictionary from a set of SeMRA mappings."""
     rv: defaultdict[str, defaultdict[str, dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
     for mapping in mappings:
@@ -47,8 +49,8 @@ def get_custom_filter(prefix: str, targets: Iterable[str]) -> CMapping:
 
 def mutual_mapping_graph(
     prefixes: Iterable[str],
-    skip_sources: Optional[Iterable[str]] = None,
-    skip_targets: Optional[Iterable[str]] = None,
+    skip_sources: Iterable[str] | None = None,
+    skip_targets: Iterable[str] | None = None,
 ) -> nx.Graph:
     """Get the undirected mapping graph between the given prefixes.
 

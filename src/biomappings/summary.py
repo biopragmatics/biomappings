@@ -1,11 +1,12 @@
 """Generate a summary for the Biomappings website."""
 
+from __future__ import annotations
+
 import itertools as itt
 import os
 import typing
 from collections import Counter
 from collections.abc import Iterable, Mapping
-from typing import Optional
 
 import click
 import yaml
@@ -16,7 +17,7 @@ __all__ = [
 
 
 @click.command()
-def export():
+def export() -> None:
     """Create export data file."""
     from biomappings.resources import (
         load_false_mappings,
@@ -84,7 +85,7 @@ def _get_contributors(mappings: Iterable[Mapping[str, str]]):
     ]
 
 
-def _get_source(source: str) -> Optional[str]:
+def _get_source(source: str) -> str | None:
     if source.startswith("orcid:"):
         return source[len("orcid:") :]
     return None
