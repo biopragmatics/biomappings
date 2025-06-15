@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any, NamedTuple, Optional, Union
 
 import bioregistry
+from curies import ReferenceTuple
 from tqdm.auto import tqdm
 from typing_extensions import Literal
 
@@ -529,16 +530,18 @@ def _check_filter(
     prediction: Mapping[str, str],
     custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]],
 ) -> bool:
-    source_prefix, target_prefix = prediction["source prefix"], prediction["target prefix"]
-    source_id, target_id = prediction["source identifier"], prediction["target identifier"]
+    source_prefix, source_id = ReferenceTuple.from_curie(prediction["subject_id"])
+    target_prefix, target_id = ReferenceTuple.from_curie(prediction["object_id"])
     return target_id != custom_filter.get(source_prefix, {}).get(target_prefix, {}).get(source_id)
 
 
 def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:
     """Get a filter over all curated mappings."""
     d: defaultdict[str, defaultdict[str, dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
-    for m in itt.chain(load_mappings(), load_false_mappings(), load_unsure()):
-        d[m["source prefix"]][m["target prefix"]][m["source identifier"]] = m["target identifier"]
+    for mapping in itt.chain(load_mappings(), load_false_mappings(), load_unsure()):
+        source = ReferenceTuple.from_curie(mapping["subject_id"])
+        target = ReferenceTuple.from_curie(mapping["object_id"])
+        d[source.prefix][target.prefix][source.identifier] = target.identifier
     return {k: dict(v) for k, v in d.items()}
 
 
