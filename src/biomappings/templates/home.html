@@ -81,7 +81,7 @@
                             <td class="text-right">{{ 1 + line }}</td>
                             {% endif %}
                             <td>
-                                <a href="{{ controller.get_url(p['subject_id']) }}">
+                                <a href="https://bioregistry.io/{{ p['subject_id'] }}">
                                     {{ p['subject_id'] }}
                                 </a>
                             </td>
@@ -90,7 +90,7 @@
                                 <td>{{ p['predicate_id'] }}</td>
                             {% endif %}
                             <td>
-                                <a href="{{ controller.get_url(p['object_id']) }}">
+                                <a href="https://bioregistry.io/{{ p['object_id'] }}">
                                     {{ p['object_id'] }}
                                 </a>
                             </td>

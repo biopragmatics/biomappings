@@ -6,25 +6,16 @@ from pathlib import Path
 from subprocess import CalledProcessError, check_output
 from typing import Any, Optional
 
-import bioregistry
 from curies import ReferenceTuple
 
 __all__ = [
     "RESOURCE_PATH",
     "CMapping",
-    "InvalidIdentifier",
-    "InvalidIdentifierPattern",
-    "InvalidNormIdentifier",
-    "UnregisteredPrefix",
-    "UnstandardizedPrefix",
-    "check_valid_prefix_id",
     "get_canonical_tuple",
-    "get_curie",
     "get_git_hash",
     "get_prefix",
     "get_script_url",
 ]
-
 
 HERE = Path(__file__).parent.resolve()
 ROOT = HERE.parent.parent.resolve()
@@ -113,119 +104,6 @@ def get_canonical_tuple(mapping: Mapping[str, Any]) -> tuple[str, str, str, str]
     if source > target:
         source, target = target, source
     return (*source, *target)
-
-
-class UnregisteredPrefix(ValueError):
-    """Raised for an invalid prefix."""
-
-
-class UnstandardizedPrefix(ValueError):
-    """Raised for an unstandardized prefix."""
-
-    def __init__(self, prefix: str, norm_prefix: str):
-        """Initialize the error.
-
-        :param prefix: A CURIE's prefix
-        :param norm_prefix: The normalized prefid
-        """
-        self.prefix = prefix
-        self.norm_prefix = norm_prefix
-
-    def __str__(self) -> str:
-        return f"{self.prefix} should be standardized to {self.norm_prefix}"
-
-
-class InvalidIdentifier(ValueError):
-    """Raised for an invalid identifier."""
-
-    def __init__(self, prefix: str, identifier: str):
-        """Initialize the error.
-
-        :param prefix: A CURIE's prefix
-        :param identifier: A CURIE's identifier
-        """
-        self.prefix = prefix
-        self.identifier = identifier
-
-
-class InvalidIdentifierPattern(InvalidIdentifier):
-    """Raised for an identifier that doesn't match the pattern."""
-
-    def __init__(self, prefix: str, identifier: str, pattern):
-        """Initialize the error.
-
-        :param prefix: A CURIE's prefix
-        :param identifier: A CURIE's identifier
-        :param pattern: A regular expression pattern
-        """
-        super().__init__(prefix, identifier)
-        self.pattern = pattern
-
-    def __str__(self) -> str:
-        return f"{self.prefix}:{self.identifier} does not match pattern {self.pattern}"
-
-
-class InvalidNormIdentifier(InvalidIdentifier):
-    """Raised for an invalid normalized identifier."""
-
-    def __init__(self, prefix: str, identifier: str, norm_identifier: str):
-        """Initialize the error.
-
-        :param prefix: A CURIE's prefix
-        :param identifier: A CURIE's identifier
-        :param norm_identifier: The normalized version of the identifier
-        """
-        super().__init__(prefix, identifier)
-        self.norm_identifier = norm_identifier
-
-    def __str__(self) -> str:
-        return f"{self.prefix}:{self.identifier} does not match normalized CURIE {self.prefix}:{self.norm_identifier}"
-
-
-def check_valid_prefix_id(curie: str):
-    """Check the prefix/identifier pair is valid.
-
-    :param curie:
-        A CURIE
-    :raises UnregisteredPrefix:
-        if the prefix is not registered with the Bioregistry
-    :raises UnstandardizedPrefix:
-        if the prefix is not standardized w.r.t. the Bioregistry
-    :raises InvalidNormIdentifier:
-        if the identifier is not standardized, either against the MIRIAM
-        standard, if available, or against the Bioregistry standard
-    :raises InvalidIdentifierPattern:
-        if the does not match the appropriate regular expression for MIRIAM
-        (if available) or for the Bioregistry. If no regular expression is
-        available, then this check is not applied.
-    :raises RuntimeError:
-        If the preconditions for bioregistry standardization aren't met. However,
-        this shouldn't be possible in practice, and this documentation is
-        merely a formality.
-    """
-    prefix, _, identifier = curie.partition(":")
-    resource = bioregistry.get_resource(prefix)
-    if resource is None:
-        raise UnregisteredPrefix(prefix)
-    if prefix != resource.prefix:
-        raise UnstandardizedPrefix(prefix, resource.prefix)
-
-    norm_id = resource.standardize_identifier(identifier)
-    if norm_id != identifier:
-        raise InvalidNormIdentifier(prefix, identifier, norm_id)
-    pattern = resource.get_pattern_re()
-    if pattern is not None and not pattern.match(identifier):
-        raise InvalidIdentifierPattern(prefix, identifier, pattern)
-
-
-def get_curie(prefix: str, identifier: str, *, preferred: bool = False) -> str:
-    """Get a normalized curie from a pre-parsed prefix/identifier pair."""
-    prefix_norm, identifier_norm = bioregistry.normalize_parsed_curie(prefix, identifier)
-    if prefix_norm is None or identifier_norm is None:
-        raise ValueError(f"could not normalize {prefix}:{identifier}")
-    if preferred:
-        prefix_norm = bioregistry.get_preferred_prefix(prefix_norm) or prefix_norm
-    return f"{prefix_norm}:{identifier_norm}"
 
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier

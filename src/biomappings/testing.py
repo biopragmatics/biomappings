@@ -7,6 +7,7 @@ from textwrap import dedent
 from typing import ClassVar, TypeVar, Union
 
 import bioregistry
+from bioregistry import NormalizedReference
 
 from biomappings.resources import (
     CURATORS_PATH,
@@ -23,9 +24,6 @@ from biomappings.utils import (
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     UNSURE_SSSOM_PATH,
-    InvalidIdentifierPattern,
-    InvalidNormIdentifier,
-    check_valid_prefix_id,
     get_canonical_tuple,
     get_prefix,
 )
@@ -68,30 +66,24 @@ class IntegrityTestCase(unittest.TestCase):
             for i, mapping in enumerate(group, start=2):
                 yield label, i, mapping
 
-    def test_prediction_types(self) -> None:
+    def test_mapping_justifications(self) -> None:
         """Test that the prediction type is pulled in properly."""
-        for line, mapping in enumerate(self.mappings, start=2):
-            pt = mapping.get("prediction_type", "".strip())
-            if not pt:
-                continue
-            self.assertTrue(
-                pt.startswith("semapv:"),
-                msg=f"Prediction type should be annotated with semapv on line {line}",
-            )
-            self.assertIn(pt[len("semapv:") :], semapv)
-            self.assertNotEqual(
-                "semapv:ManualMappingCuration",
-                pt,
-                msg="Prediction can not be annotated with manual curation",
-            )
-
         for label, line, mapping in self._iter_groups():
             mapping_justification = mapping["mapping_justification"]
             self.assertTrue(
                 mapping_justification.startswith("semapv:"),
-                msg=f"[{label}] The 'type' column should be annotated with semapv on line {line}",
+                msg=f"[{label}] The 'mapping_justification' column should be annotated with semapv on line {line}",
             )
             self.assertIn(mapping_justification[len("semapv:") :], semapv)
+
+    def test_prediction_not_manual(self) -> None:
+        """Test that predicted mappings don't use manual mapping justification."""
+        for _line, mapping in enumerate(self.predictions, start=2):
+            self.assertNotEqual(
+                "semapv:ManualMappingCuration",
+                mapping["mapping_justification"],
+                msg="Prediction can not be annotated with manual curation",
+            )
 
     def test_relations(self) -> None:
         """Test that the relation is a CURIE."""
@@ -135,10 +127,8 @@ class IntegrityTestCase(unittest.TestCase):
         :param line: The line number of the mapping
         """
         try:
-            check_valid_prefix_id(curie)
-        except InvalidNormIdentifier as e:
-            self.fail(f"[{label}:{line}] {e}")
-        except InvalidIdentifierPattern as e:
+            NormalizedReference.from_curie(curie)
+        except Exception as e:
             self.fail(f"[{label}:{line}] {e}")
 
     def test_contributors(self) -> None:

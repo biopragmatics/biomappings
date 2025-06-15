@@ -8,6 +8,7 @@ from typing import Optional, Union
 
 import pyobo
 import ssslm
+from curies import ReferenceTuple
 from tqdm import tqdm
 
 from biomappings.resources import PredictionTuple, append_prediction_tuples
@@ -57,7 +58,7 @@ def append_gilda_predictions(
     if custom_filter is not None:
         predictions = filter_custom(predictions, custom_filter)
     predictions = filter_existing_xrefs(predictions, [prefix, *target_prefixes])
-    predictions = sorted(predictions, key=lambda t: (t.subject_prefix, t.subject_label))
+    predictions = sorted(predictions, key=lambda t: (t.subject.prefix, t.subject_label))
     tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
     append_prediction_tuples(predictions, path=path)
 
@@ -126,9 +127,9 @@ def filter_custom(
     counter = 0
     for p in predictions:
         if (
-            custom_filter.get(p.subject_prefix, {})
-            .get(p.object_prefix, {})
-            .get(p.subject_identifier)
+            custom_filter.get(p.subject.prefix, {})
+            .get(p.object.prefix, {})
+            .get(p.subject.identifier)
         ):
             counter += 1
             continue
@@ -142,21 +143,17 @@ def filter_existing_xrefs(
     """Filter predictions that match xrefs already loaded through PyOBO."""
     prefixes = set(prefixes)
 
-    entity_to_mapped_prefixes = defaultdict(set)
+    entity_to_mapped_prefixes: defaultdict[ReferenceTuple, set[str]] = defaultdict(set)
     for subject_prefix in prefixes:
         for subject_id, target_prefix, object_id in pyobo.get_xrefs_df(subject_prefix).values:
-            entity_to_mapped_prefixes[subject_prefix, subject_id].add(target_prefix)
-            entity_to_mapped_prefixes[target_prefix, object_id].add(subject_prefix)
+            entity_to_mapped_prefixes[ReferenceTuple(subject_prefix, subject_id)].add(target_prefix)
+            entity_to_mapped_prefixes[ReferenceTuple(target_prefix, object_id)].add(subject_prefix)
 
     n_predictions = 0
     for prediction in tqdm(predictions, desc="filtering predictions"):
-        subject_id = prediction.subject_id
-        object_id = prediction.object_id
         if (
-            prediction.object_prefix
-            in entity_to_mapped_prefixes[prediction.subject_prefix, subject_id]
-            or prediction.subject_prefix
-            in entity_to_mapped_prefixes[prediction.object_prefix, object_id]
+            prediction.object.prefix in entity_to_mapped_prefixes[prediction.subject]
+            or prediction.subject.prefix in entity_to_mapped_prefixes[prediction.object]
         ):
             n_predictions += 1
             continue

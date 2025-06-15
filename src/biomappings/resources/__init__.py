@@ -65,9 +65,16 @@ class MappingTuple(NamedTuple):
     object_id: str
     object_label: str
     mapping_justification: str
+    """A `semapv <https://bioregistry.io/registry/semapv>`_ term describing the mapping type.
+
+    These are relatively high level, and can be any child of ``semapv:Matching``, including:
+
+    1. ``semapv:LexicalMatching``
+    2. ``semapv:LogicalReasoning``
+    """
+
     author_id: str
     mapping_tool: Optional[str]
-    confidence: Optional[float]
     predicate_modifier: Optional[str]
 
     def as_dict(self) -> dict[str, Any]:
@@ -105,6 +112,7 @@ class PredictionTuple(NamedTuple):
     1. ``semapv:LexicalMatching``
     2. ``semapv:LogicalReasoning``
     """
+
     confidence: float
     """An assessment of the confidence of the mapping, reported by the method used to generate it.
 
@@ -127,6 +135,7 @@ class PredictionTuple(NamedTuple):
     However, other variants are possible. For example, this confidence could reflect the loss function
     if a knowledge graph embedding model was used ot generate a mapping orediction.
     """
+
     mapping_tool: str
     """The script or process that generated this mapping.
 
@@ -135,7 +144,7 @@ class PredictionTuple(NamedTuple):
     """
 
     def as_dict(self) -> dict[str, Any]:
-        """Get the prediction tuple as a dictionary."""
+        """Get the mapping tuple as a dictionary."""
         return dict(zip(self._fields, self))  # type:ignore
 
     @classmethod
@@ -155,10 +164,10 @@ class PredictionTuple(NamedTuple):
         import pyobo
         import semra
 
-        s_name = pyobo.get_name(mapping.s)
+        s_name = mapping.s.name or pyobo.get_name(mapping.s)
         if not s_name:
             raise KeyError(f"could not look up name for {mapping.s.curie}")
-        o_name = pyobo.get_name(mapping.o)
+        o_name = mapping.o.name or pyobo.get_name(mapping.o)
         if not o_name:
             raise KeyError(f"could not look up name for {mapping.o.curie}")
         # Assume that each mapping has a single simple evidence with a mapping set annotation
@@ -181,19 +190,14 @@ class PredictionTuple(NamedTuple):
         )
 
     @property
-    def subject_prefix(self) -> str:
-        """Get the source's prefix."""
-        return self.subject_id.split(":")[0]
+    def subject(self) -> ReferenceTuple:
+        """Get the subject as a reference."""
+        return ReferenceTuple.from_curie(self.subject_id)
 
     @property
-    def subject_identifier(self) -> str:
-        """Get the source's identifier."""
-        return self.subject_id.split(":")[1]
-
-    @property
-    def object_prefix(self) -> str:
-        """Get the target's prefix."""
-        return self.object_id.split(":")[0]
+    def object(self) -> ReferenceTuple:
+        """Get the object as a reference."""
+        return ReferenceTuple.from_curie(self.object_id)
 
 
 PREDICTIONS_HEADER = PredictionTuple._fields

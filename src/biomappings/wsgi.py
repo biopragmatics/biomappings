@@ -8,9 +8,10 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Any, Literal, Optional, Union, get_args
 
-import bioregistry
 import flask
 import flask_bootstrap
+import pydantic
+from bioregistry import NormalizedNamableReference, NormalizedReference
 from curies import ReferenceTuple
 from flask import current_app
 from flask_wtf import FlaskForm
@@ -27,7 +28,7 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import check_valid_prefix_id, commit, get_branch, not_main, push
+from biomappings.utils import commit, get_branch, not_main, push
 
 Mark: TypeAlias = Literal["correct", "incorrect", "unsure", "broad", "narrow"]
 MARKS: set[Mark] = set(get_args(Mark))
@@ -92,6 +93,7 @@ def get_app(
     positives_path: Optional[Path] = None,
     negatives_path: Optional[Path] = None,
     unsure_path: Optional[Path] = None,
+    controller: Optional["Controller"] = None,
 ) -> flask.Flask:
     """Get a curation flask app."""
     app_ = flask.Flask(__name__)
@@ -99,13 +101,14 @@ def get_app(
     app_.config["SECRET_KEY"] = os.urandom(8)
     app_.config["SHOW_RELATIONS"] = True
     app_.config["SHOW_LINES"] = False
-    controller = Controller(
-        target_curies=target_curies,
-        predictions_path=predictions_path,
-        positives_path=positives_path,
-        negatives_path=negatives_path,
-        unsure_path=unsure_path,
-    )
+    if controller is None:
+        controller = Controller(
+            target_curies=target_curies,
+            predictions_path=predictions_path,
+            positives_path=positives_path,
+            negatives_path=negatives_path,
+            unsure_path=unsure_path,
+        )
     if not controller._predictions and predictions_path is not None:
         raise RuntimeError(f"There are no predictions to curate in {predictions_path}")
     app_.config["controller"] = controller
@@ -356,12 +359,6 @@ class Controller:
             if any(query in prediction[element].casefold() for element in elements):
                 yield line, prediction
 
-    @classmethod
-    def get_url(cls, curie: str) -> str:
-        """Return URL for a given prefix and identifier."""
-        prefix, identifier = ReferenceTuple.from_curie(curie)
-        return bioregistry.get_bioregistry_iri(prefix, identifier)
-
     @property
     def total_predictions(self) -> int:
         """Return the total number of yet unmarked predictions."""
@@ -374,49 +371,29 @@ class Controller:
         :param value: Value to mark the prediction with
         :raises ValueError: if an invalid value is used
         """
+        if line > len(self._predictions):
+            raise IndexError(
+                f"given line {line} is larger than the number of predictions {len(self._predictions):,}"
+            )
         if line not in self._marked:
             self.total_curated += 1
         if value not in MARKS:
-            raise ValueError
+            raise ValueError(f"illegal mark value given: {value}. Should be one of {MARKS}")
         self._marked[line] = value
 
     def add_mapping(
         self,
-        source_prefix: str,
-        source_id: str,
-        source_name: str,
-        target_prefix: str,
-        target_id: str,
-        target_name: str,
+        subject: NormalizedReference,
+        obj: NormalizedReference,
     ) -> None:
         """Add manually curated new mappings."""
-        subject_curie = f"{source_prefix}:{source_id}"
-        object_curie = f"{target_prefix}:{target_id}"
-        try:
-            check_valid_prefix_id(subject_curie)
-        except ValueError as e:
-            flask.flash(
-                f"Problem with source CURIE {subject_curie}: {e.__class__.__name__}",
-                category="warning",
-            )
-            return
-
-        try:
-            check_valid_prefix_id(object_curie)
-        except ValueError as e:
-            flask.flash(
-                f"Problem with target CURIE {object_curie}: {e.__class__.__name__}",
-                category="warning",
-            )
-            return
-
         self._added_mappings.append(
             {
-                "subject_id": subject_curie,
-                "subject_label": source_name,
+                "subject_id": subject.curie,
+                "subject_label": subject.name,
                 "predicate_id": "skos:exactMatch",
-                "object_id": object_curie,
-                "object_label": target_name,
+                "object_id": obj.curie,
+                "object_label": obj.name,
                 "author_id": _manual_source(),
                 "mapping_justification": "semapv:ManualMappingCuration",
                 "mapping_tool": None,
@@ -431,8 +408,12 @@ class Controller:
         entries = defaultdict(list)
 
         for line, value in sorted(self._marked.items(), reverse=True):
-            prediction = self._predictions.pop(line)
-            # prediction["prediction_type"] = prediction.pop("mapping_justification") # noqa:ERA001
+            try:
+                prediction = self._predictions.pop(line)
+            except IndexError:
+                raise IndexError(
+                    f"you tried popping the {line} element from the predictions list, which only has {len(self._predictions):,} elements"
+                ) from None
             prediction["mapping_tool"] = prediction.pop("mapping_tool")
             prediction["confidence"] = prediction.pop("confidence")
             prediction["author_id"] = _manual_source()
@@ -449,7 +430,7 @@ class Controller:
             if value != "incorrect":
                 prediction["predicate_modifier"] = ""
             else:
-                prediction["predicate_modifier"] = "NOT"
+                prediction["predicate_modifier"] = "Not"
 
             entries[value].append(prediction)
 
@@ -477,6 +458,22 @@ class MappingForm(FlaskForm):
     target_id = StringField("Target ID", id="target_id")
     target_name = StringField("Target Name", id="target_name")
     submit = SubmitField("Add")
+
+    def get_subject(self) -> NormalizedReference:
+        """Get the subject."""
+        return NormalizedNamableReference(
+            prefix=self.data["source_prefix"],
+            identifier=self.data["source_id"],
+            name=self.data["source_name"],
+        )
+
+    def get_object(self) -> NormalizedReference:
+        """Get the object."""
+        return NormalizedNamableReference(
+            prefix=self.data["target_prefix"],
+            identifier=self.data["target_id"],
+            name=self.data["target_name"],
+        )
 
 
 blueprint = flask.Blueprint("ui", __name__)
@@ -527,14 +524,19 @@ def add_mapping():
     """Add a new mapping manually."""
     form = MappingForm()
     if form.is_submitted():
-        CONTROLLER.add_mapping(
-            form.data["source_prefix"],
-            form.data["source_id"],
-            form.data["source_name"],
-            form.data["target_prefix"],
-            form.data["target_id"],
-            form.data["target_name"],
-        )
+        try:
+            subject = form.get_subject()
+        except pydantic.ValidationError as e:
+            flask.flash(f"Problem with source CURIE {e}", category="warning")
+            return _go_home()
+
+        try:
+            obj = form.get_object()
+        except pydantic.ValidationError as e:
+            flask.flash(f"Problem with source CURIE {e}", category="warning")
+            return _go_home()
+
+        CONTROLLER.add_mapping(subject, obj)
         CONTROLLER.persist()
     else:
         flask.flash("missing form data", category="warning")
