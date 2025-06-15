@@ -27,6 +27,7 @@ from biomappings.utils import (
     InvalidNormIdentifier,
     check_valid_prefix_id,
     get_canonical_tuple,
+    get_prefix,
 )
 
 __all__ = [
@@ -106,8 +107,8 @@ class IntegrityTestCase(unittest.TestCase):
         valid_prefixes = set(bioregistry.read_registry())
         for label, line, mapping in self._iter_groups():
             source_prefix, target_prefix = (
-                mapping["subject_id"].split(":")[0],
-                mapping["object_id"].split(":")[0],
+                get_prefix(mapping["subject_id"]),
+                get_prefix(mapping["object_id"]),
             )
             self.assertIn(
                 source_prefix,
