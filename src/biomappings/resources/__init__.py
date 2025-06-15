@@ -465,7 +465,8 @@ def _remove_redundant(mappings: Mappings, *, standardize: bool = False) -> Mappi
 
 def _strip_mappings(mappings: Mappings) -> Mappings:
     for mapping in mappings:
-        yield {k: v.strip() if v else None for k,v in mapping.items()}
+        yield {k: v.strip() if v else None for k, v in mapping.items()}
+
 
 def _replace_local_curation_source(mappings: Mappings) -> Mappings:
     """Find `web-` prefixed sources that can be replaced with ORCID CURIEs."""
