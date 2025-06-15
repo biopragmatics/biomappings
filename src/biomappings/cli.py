@@ -6,8 +6,8 @@ from pathlib import Path
 import click
 from more_click import run_app
 
-from .resources.export_sssom import sssom
 from .graph import charts
+from .resources.export_sssom import sssom
 from .summary import export
 from .upload_ndex import ndex
 from .utils import get_git_hash
