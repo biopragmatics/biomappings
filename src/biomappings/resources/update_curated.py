@@ -41,6 +41,13 @@ def update_curated(old_path: Path, new_path: Path, add_not: bool = False) -> Non
     """Run the update on a given curated file."""
     df = pd.read_csv(old_path, sep="\t")
     df = _shared_update(df)
+
+    # we're deleting prediction type and confidence since these
+    # don't have a proper place in the SSSOM data model and can
+    # be understood from the original script
+    del df["prediction_type"]
+    del df["prediction_confidence"]
+
     df = df.rename(
         columns={
             "source": "author_id",
@@ -48,9 +55,9 @@ def update_curated(old_path: Path, new_path: Path, add_not: bool = False) -> Non
             "prediction_confidence": "confidence",
         }
     )
-    del df["prediction_type"]
+
     if add_not:
-        df["predicate_modifier"] = "NOT"
+        df["predicate_modifier"] = "Not"
     else:
         df["predicate_modifier"] = ""
     df.to_csv(new_path, sep="\t", index=False)

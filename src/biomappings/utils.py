@@ -20,6 +20,7 @@ __all__ = [
     "get_canonical_tuple",
     "get_curie",
     "get_git_hash",
+    "get_prefix",
     "get_script_url",
 ]
 
@@ -234,3 +235,8 @@ CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
 def get_resource_file_path(fname) -> Path:
     """Get a resource by its file name."""
     return RESOURCE_PATH.joinpath(fname)
+
+
+def get_prefix(curie: str) -> str:
+    """Get a prefix from a CURIE string."""
+    return ReferenceTuple.from_curie(curie).prefix
