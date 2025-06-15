@@ -480,7 +480,8 @@ def _pick_best(mapping: Mapping[str, str]) -> int:
     - prediction methodology
     - date of prediction/curation (to keep the earliest)
     """
-    if mapping["author_id"].startswith("orcid:"):
+    author_id = mapping.get("author_id")
+    if author_id and author_id.startswith("orcid:"):
         return 1
     return 0
 
