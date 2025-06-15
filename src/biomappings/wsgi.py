@@ -318,13 +318,13 @@ class Controller:
         if source_query is not None:
             it = self._help_filter(source_query, it, {"subject_id", "subject_label"})
         if target_query is not None:
-            it = self._help_filter(target_query, it, {"object_id", "target_label"})
+            it = self._help_filter(target_query, it, {"object_id", "object_label"})
         if target_prefix is not None:
             it = self._help_filter(target_prefix, it, {"object_id"})
         if prefix is not None:
             it = self._help_filter(prefix, it, {"subject_id", "object_id"})
         if provenance is not None:
-            it = self._help_filter(provenance, it, {"source"})
+            it = self._help_filter(provenance, it, {"mapping_tool"})
 
         if sort is not None:
             if sort == "desc":
@@ -333,6 +333,8 @@ class Controller:
                 it = iter(sorted(it, key=lambda l_p: l_p[1]["confidence"], reverse=False))
             elif sort == "object":
                 it = iter(sorted(it, key=lambda l_p: l_p[1]["target_id"]))
+            else:
+                raise ValueError
 
         if same_text:
             it = (
