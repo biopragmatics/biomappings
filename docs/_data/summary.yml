@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 4611
+- count: 4635
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -262,7 +262,7 @@ positive:
 - count: 3371
   source: chebi
   target: mesh
-- count: 1464
+- count: 1488
   source: doid
   target: mesh
 - count: 905
@@ -607,7 +607,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 10786
+positive_mapping_count: 10810
 positive_prefix_count: 63
 predictions:
 - count: 22728
@@ -634,11 +634,11 @@ predictions:
 - count: 368
   source: hp
   target: mesh
-- count: 225
-  source: doid
-  target: mesh
 - count: 219
   source: fplx
+  target: mesh
+- count: 201
+  source: doid
   target: mesh
 - count: 85
   source: go
@@ -739,7 +739,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 54009
+predictions_mapping_count: 53985
 predictions_prefix_count: 32
 unsure:
 - count: 27
