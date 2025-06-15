@@ -1,5 +1,7 @@
 """Update biomappings internal format to SSSOM."""
 
+from __future__ import annotations
+
 from pathlib import Path
 
 import bioregistry

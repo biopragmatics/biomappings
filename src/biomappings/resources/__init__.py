@@ -1,17 +1,19 @@
 """Biomappings resources."""
 
+from __future__ import annotations
+
 import csv
 import itertools as itt
 import logging
 from collections import defaultdict
 from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, NamedTuple, Optional, Union
+from typing import TYPE_CHECKING, Any, NamedTuple
 
 import bioregistry
 from curies import ReferenceTuple
 from tqdm.auto import tqdm
-from typing_extensions import Literal
+from typing_extensions import Literal, TypeAlias
 
 from biomappings.utils import (
     CURATORS_PATH,
@@ -29,8 +31,8 @@ __all__ = [
     "MAPPINGS_HEADER",
     "PREDICTIONS_HEADER",
     "MappingTuple",
-    "Mappings",
     "PredictionTuple",
+    "SemanticMappings",
     "append_false_mappings",
     "append_prediction_tuples",
     "append_predictions",
@@ -74,21 +76,19 @@ class MappingTuple(NamedTuple):
     """
 
     author_id: str
-    mapping_tool: Optional[str]
-    predicate_modifier: Optional[str]
+    mapping_tool: str | None
+    predicate_modifier: str | None
 
     def as_dict(self) -> dict[str, Any]:
         """Get the mapping tuple as a dictionary."""
-        return dict(zip(self._fields, self))  # type:ignore
+        return dict(zip(self._fields, self))
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, Union[str, float, None]]) -> "MappingTuple":
+    def from_dict(cls, mapping: Mapping[str, str | None]) -> MappingTuple:
         """Get the mapping tuple from a dictionary."""
         values = []
         for key in cls._fields:
             value = mapping.get(key) or None
-            if key == "prediction_confidence" and value is not None:
-                value = float(value)  # type:ignore
             values.append(value)
         return cls(*values)  # type:ignore
 
@@ -148,7 +148,7 @@ class PredictionTuple(NamedTuple):
         return dict(zip(self._fields, self))  # type:ignore
 
     @classmethod
-    def from_dict(cls, mapping: Mapping[str, Union[str, float, None]]) -> "PredictionTuple":
+    def from_dict(cls, mapping: Mapping[str, str | float | None]) -> PredictionTuple:
         """Get the prediction tuple from a dictionary."""
         values = []
         for key in cls._fields:
@@ -159,7 +159,7 @@ class PredictionTuple(NamedTuple):
         return cls(*values)  # type:ignore
 
     @classmethod
-    def from_semra(cls, mapping: "semra.Mapping", confidence: float) -> "PredictionTuple":
+    def from_semra(cls, mapping: semra.Mapping, confidence: float) -> PredictionTuple:
         """Instantiate from a SeMRA mapping."""
         import pyobo
         import semra
@@ -202,10 +202,14 @@ class PredictionTuple(NamedTuple):
 
 PREDICTIONS_HEADER = PredictionTuple._fields
 
-Mappings = Iterable[dict[str, str]]
+SemanticMapping: TypeAlias = dict[str, str]
+SemanticMappings: TypeAlias = Iterable[SemanticMapping]
+
+SemanticMappingLoose: TypeAlias = Mapping[str, str | None]
+SemanticMappingsLoose: TypeAlias = Iterable[SemanticMappingLoose]
 
 
-def _load_table(path: Union[str, Path]) -> list[dict[str, str]]:
+def _load_table(path: str | Path) -> list[SemanticMapping]:
     path = Path(path).resolve()
     if not path.is_file():
         raise FileNotFoundError
@@ -221,7 +225,10 @@ def _clean(header, row):
 
 
 def _write_helper(
-    header: Sequence[str], mappings: Mappings, path: Union[str, Path], mode: Literal["w", "a"]
+    header: Sequence[str],
+    mappings: SemanticMappingsLoose,
+    path: str | Path,
+    mode: Literal["w", "a"],
 ) -> None:
     mappings = sorted(mappings, key=mapping_sort_key)
     with open(path, mode) as file:
@@ -231,18 +238,18 @@ def _write_helper(
             print(*[line[k] or "" for k in header], sep="\t", file=file)
 
 
-def mapping_sort_key(prediction: Mapping[str, str]) -> tuple[str, ...]:
+def mapping_sort_key(prediction: Mapping[str, str | None]) -> tuple[str, ...]:
     """Return a tuple for sorting mapping dictionaries."""
     return (
-        prediction["subject_id"],
-        prediction["predicate_id"],
-        prediction["object_id"],
-        prediction["mapping_justification"],
+        prediction["subject_id"] or "",
+        prediction["predicate_id"] or "",
+        prediction["object_id"] or "",
+        prediction["mapping_justification"] or "",
         prediction.get("mapping_tool") or "",
     )
 
 
-def load_mappings(*, path: Union[str, Path, None] = None) -> list[dict[str, str]]:
+def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
     """Load the mappings table."""
     return _load_table(path or POSITIVES_SSSOM_PATH)
 
@@ -257,10 +264,10 @@ def load_mappings_subset(source: str, target: str) -> Mapping[str, str]:
 
 
 def append_true_mappings(
-    mappings: Mappings,
+    mappings: SemanticMappingsLoose,
     *,
     sort: bool = True,
-    path: Optional[Path] = None,
+    path: Path | None = None,
 ) -> None:
     """Append new lines to the mappings table."""
     if path is None:
@@ -275,16 +282,16 @@ def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
     append_true_mappings(mapping.as_dict() for mapping in set(mappings))
 
 
-def write_true_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
+def write_true_mappings(mappings: SemanticMappings, *, path: Path | None = None) -> None:
     """Write mappigns to the true mappings file."""
     _write_curated(mappings=mappings, path=path or POSITIVES_SSSOM_PATH, mode="w")
 
 
-def _write_curated(mappings: Mappings, *, path: Path, mode: Literal["w", "a"]):
+def _write_curated(mappings: SemanticMappingsLoose, *, path: Path, mode: Literal["w", "a"]):
     _write_helper(MAPPINGS_HEADER, mappings, path, mode=mode)
 
 
-def lint_true_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
+def lint_true_mappings(*, standardize: bool = False, path: Path | None = None) -> None:
     """Lint the true mappings file."""
     _lint_curated_mappings(standardize=standardize, path=path or POSITIVES_SSSOM_PATH)
 
@@ -298,16 +305,16 @@ def _lint_curated_mappings(path: Path, *, standardize: bool = False) -> None:
     _write_helper(MAPPINGS_HEADER, mappings, path, mode="w")
 
 
-def load_false_mappings(*, path: Optional[Path] = None) -> list[dict[str, str]]:
+def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the false mappings table."""
     return _load_table(path or NEGATIVES_SSSOM_PATH)
 
 
 def append_false_mappings(
-    mappings: Mappings,
+    mappings: SemanticMappings,
     *,
     sort: bool = True,
-    path: Optional[Path] = None,
+    path: Path | None = None,
 ) -> None:
     """Append new lines to the false mappings table."""
     if path is None:
@@ -317,26 +324,26 @@ def append_false_mappings(
         lint_false_mappings(path=path)
 
 
-def write_false_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
+def write_false_mappings(mappings: SemanticMappings, *, path: Path | None = None) -> None:
     """Write mappings to the false mappings file."""
     _write_helper(MAPPINGS_HEADER, mappings, path or NEGATIVES_SSSOM_PATH, mode="w")
 
 
-def lint_false_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
+def lint_false_mappings(*, standardize: bool = False, path: Path | None = None) -> None:
     """Lint the false mappings file."""
     _lint_curated_mappings(standardize=standardize, path=path or NEGATIVES_SSSOM_PATH)
 
 
-def load_unsure(*, path: Optional[Path] = None) -> list[dict[str, str]]:
+def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the unsure table."""
     return _load_table(path or UNSURE_SSSOM_PATH)
 
 
 def append_unsure_mappings(
-    mappings: Mappings,
+    mappings: SemanticMappings,
     *,
     sort: bool = True,
-    path: Optional[Path] = None,
+    path: Path | None = None,
 ) -> None:
     """Append new lines to the "unsure" mappings table."""
     if path is None:
@@ -346,22 +353,22 @@ def append_unsure_mappings(
         lint_unsure_mappings(path=path)
 
 
-def write_unsure_mappings(mappings: Mappings, *, path: Optional[Path] = None) -> None:
+def write_unsure_mappings(mappings: SemanticMappings, *, path: Path | None = None) -> None:
     """Write mappings to the unsure mappings file."""
     _write_helper(MAPPINGS_HEADER, mappings, path or UNSURE_SSSOM_PATH, mode="w")
 
 
-def lint_unsure_mappings(*, standardize: bool = False, path: Optional[Path] = None) -> None:
+def lint_unsure_mappings(*, standardize: bool = False, path: Path | None = None) -> None:
     """Lint the unsure mappings file."""
     _lint_curated_mappings(standardize=standardize, path=path or UNSURE_SSSOM_PATH)
 
 
-def load_predictions(*, path: Union[str, Path, None] = None) -> list[dict[str, str]]:
+def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:
     """Load the predictions table."""
     return _load_table(path or PREDICTIONS_SSSOM_PATH)
 
 
-def write_predictions(mappings: Mappings, *, path: Optional[Path] = None) -> None:
+def write_predictions(mappings: SemanticMappings, *, path: Path | None = None) -> None:
     """Write new content to the predictions table."""
     _write_helper(PREDICTIONS_HEADER, mappings, path or PREDICTIONS_SSSOM_PATH, mode="w")
 
@@ -372,7 +379,7 @@ def append_prediction_tuples(
     deduplicate: bool = True,
     sort: bool = True,
     standardize: bool = True,
-    path: Optional[Path] = None,
+    path: Path | None = None,
 ) -> None:
     """Append new lines to the predictions table that come as canonical tuples."""
     append_predictions(
@@ -385,12 +392,12 @@ def append_prediction_tuples(
 
 
 def append_predictions(
-    mappings: Mappings,
+    mappings: SemanticMappings,
     *,
     deduplicate: bool = True,
     sort: bool = True,
     standardize: bool = True,
-    path: Optional[Path] = None,
+    path: Path | None = None,
 ) -> None:
     """Append new lines to the predictions table."""
     if standardize:
@@ -419,8 +426,8 @@ def append_predictions(
 def lint_predictions(
     *,
     standardize: bool = False,
-    path: Optional[Path] = None,
-    additional_curated_mappings: Optional[list[dict[str, str]]] = None,
+    path: Path | None = None,
+    additional_curated_mappings: list[SemanticMapping] | None = None,
 ) -> None:
     """Lint the predictions file.
 
@@ -448,13 +455,15 @@ def lint_predictions(
     write_predictions(mappings, path=path)
 
 
-def remove_mappings(mappings: Mappings, mappings_to_remove: Mappings) -> Mappings:
+def remove_mappings(
+    mappings: SemanticMappings, mappings_to_remove: SemanticMappings
+) -> SemanticMappings:
     """Remove the first set of mappings from the second."""
     skip_tuples = {get_canonical_tuple(mtr) for mtr in mappings_to_remove}
     return (mapping for mapping in mappings if get_canonical_tuple(mapping) not in skip_tuples)
 
 
-def _remove_redundant(mappings: Mappings, *, standardize: bool = False) -> Mappings:
+def _remove_redundant(mappings: SemanticMappings, *, standardize: bool = False) -> SemanticMappings:
     if standardize:
         mappings = _standardize_mappings(mappings)
     dd = defaultdict(list)
@@ -463,12 +472,12 @@ def _remove_redundant(mappings: Mappings, *, standardize: bool = False) -> Mappi
     return (max(mappings, key=_pick_best) for mappings in dd.values())
 
 
-def _strip_mappings(mappings: Mappings) -> Mappings:
+def _strip_mappings(mappings: SemanticMappings) -> SemanticMappings:
     for mapping in mappings:
-        yield {k: v.strip() if v else None for k, v in mapping.items()}
+        yield {k: v.strip() for k, v in mapping.items() if v}
 
 
-def _replace_local_curation_source(mappings: Mappings) -> Mappings:
+def _replace_local_curation_source(mappings: SemanticMappings) -> SemanticMappings:
     """Find `web-` prefixed sources that can be replaced with ORCID CURIEs."""
     user_to_contributors = {c["user"]: c["orcid"] for c in load_curators()}
     for mapping in mappings:
@@ -498,7 +507,7 @@ def _pick_best(mapping: Mapping[str, str]) -> int:
     return 0
 
 
-def _standardize_mappings(mappings: Mappings, *, progress: bool = True) -> Mappings:
+def _standardize_mappings(mappings: SemanticMappings, *, progress: bool = True) -> SemanticMappings:
     for mapping in tqdm(
         mappings,
         desc="Standardizing mappings",

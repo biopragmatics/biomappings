@@ -1,5 +1,7 @@
 """Export Biomappings as SSSOM."""
 
+from __future__ import annotations
+
 import importlib.metadata
 import pathlib
 from collections.abc import Collection
@@ -55,8 +57,8 @@ class SSSOMReturnTuple(NamedTuple):
 
     prefix_map: dict[str, str]
     creator_curies: list[str]
-    df: "pd.DataFrame"
-    msdf: "MappingSetDataFrame"
+    df: pd.DataFrame
+    msdf: MappingSetDataFrame
 
 
 def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:

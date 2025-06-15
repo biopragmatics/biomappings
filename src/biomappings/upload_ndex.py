@@ -3,6 +3,8 @@
 .. seealso:: https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf
 """
 
+from __future__ import annotations
+
 import bioregistry
 import click
 import pystow
@@ -17,7 +19,7 @@ BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
 @click.command()
 @click.option("--username")
 @click.option("--password")
-def ndex(username, password):
+def ndex(username: str | None, password: str | None) -> None:
     """Upload to NDEx."""
     try:
         from ndex2 import NiceCXBuilder

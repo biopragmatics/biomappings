@@ -1,5 +1,7 @@
 """The biomappings CLI."""
 
+from __future__ import annotations
+
 import sys
 from pathlib import Path
 
@@ -15,7 +17,7 @@ from .utils import get_git_hash
 
 @click.group()
 @click.version_option()
-def main():
+def main() -> None:
     """Run the biomappings CLI."""
 
 
@@ -31,7 +33,7 @@ if get_git_hash() is not None:
         positives_path: Path,
         negatives_path: Path,
         unsure_path: Path,
-    ):
+    ) -> None:
         """Run the biomappings web app."""
         from .wsgi import get_app
 
@@ -45,22 +47,24 @@ if get_git_hash() is not None:
 
     @main.command()
     @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
-    def curate(path):
+    def curate(path: Path) -> None:
         """Run a target curation web app."""
+        from curies import ReferenceTuple
+
         from .resources import _load_table
         from .wsgi import get_app
 
-        target_curies = []
+        target_references: list[ReferenceTuple] = []
         for mapping in _load_table(path):
-            target_curies.append((mapping["source prefix"], mapping["source identifier"]))
-            target_curies.append((mapping["target prefix"], mapping["target identifier"]))
-        app = get_app(target_curies=target_curies)
+            target_references.append(ReferenceTuple.from_curie(mapping["subject_id"]))
+            target_references.append(ReferenceTuple.from_curie(mapping["object_id"]))
+        app = get_app(target_references=target_references)
         run_app(app, with_gunicorn=False)
 
 else:
 
     @main.command()
-    def web():
+    def web() -> None:
         """Show an error for the web interface."""
         click.secho(
             "You are not running biomappings from a development installation.\n"
@@ -74,7 +78,7 @@ else:
 
 @main.command()
 @click.pass_context
-def update(ctx: click.Context):
+def update(ctx: click.Context) -> None:
     """Run all update functions."""
     click.secho("Building general exports", fg="green")
     ctx.invoke(export)
@@ -86,7 +90,7 @@ def update(ctx: click.Context):
 
 @main.command()
 @click.option("--standardize", is_flag=True)
-def lint(standardize: bool):
+def lint(standardize: bool) -> None:
     """Sort files and remove duplicates."""
     from .resources import (
         lint_false_mappings,
@@ -103,21 +107,21 @@ def lint(standardize: bool):
 
 @main.command()
 @click.argument("prefixes", nargs=-1)
-def prune(prefixes):
+def prune(prefixes: list[str]) -> None:
     """Prune inferred mappings between the given prefixes from the predictions."""
     from .mapping_graph import get_custom_filter
     from .resources import filter_predictions
 
     if len(prefixes) < 2:
         click.secho("Must give at least 2 prefixes", fg="red")
-        return sys.exit(0)
+        sys.exit(0)
 
     cf = get_custom_filter(prefixes[0], prefixes[1:])
     filter_predictions(cf)
 
 
 @main.command()
-def remove_curated():
+def remove_curated() -> None:
     """Remove curated mappings from the predicted mappings, use this if they get out of sync."""
     from .resources import filter_predictions, get_curated_filter
 

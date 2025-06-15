@@ -1,12 +1,14 @@
 """Load Biomappings as a graph."""
 
+from __future__ import annotations
+
 import itertools as itt
 import logging
 import os
 from collections import Counter
 from collections.abc import Collection, Iterable, Mapping, Sequence
 from operator import itemgetter
-from typing import Optional
+from typing import TYPE_CHECKING
 
 import click
 import networkx as nx
@@ -17,18 +19,21 @@ from tqdm import tqdm
 from biomappings.resources import load_false_mappings, load_mappings, load_predictions
 from biomappings.utils import DATA, IMG, get_prefix
 
+if TYPE_CHECKING:
+    import matplotlib.axes
+
 logger = logging.getLogger(__name__)
 
 
 def get_true_graph(
-    include: Optional[Sequence[str]] = None, exclude: Optional[Sequence[str]] = None
+    include: Sequence[str] | None = None, exclude: Sequence[str] | None = None
 ) -> nx.Graph:
     """Get a graph of the true mappings."""
     return _graph_from_mappings(load_mappings(), strata="correct", include=include, exclude=exclude)
 
 
 def get_false_graph(
-    include: Optional[Sequence[str]] = None, exclude: Optional[Sequence[str]] = None
+    include: Sequence[str] | None = None, exclude: Sequence[str] | None = None
 ) -> nx.Graph:
     """Get a graph of the false mappings."""
     return _graph_from_mappings(
@@ -37,7 +42,7 @@ def get_false_graph(
 
 
 def get_predictions_graph(
-    include: Optional[Collection[str]] = None, exclude: Optional[Collection[str]] = None
+    include: Collection[str] | None = None, exclude: Collection[str] | None = None
 ) -> nx.Graph:
     """Get a graph of the predicted mappings."""
     return _graph_from_mappings(
@@ -48,8 +53,8 @@ def get_predictions_graph(
 def _graph_from_mappings(
     mappings: Iterable[Mapping[str, str]],
     strata: str,
-    include: Optional[Collection[str]] = None,
-    exclude: Optional[Collection[str]] = None,
+    include: Collection[str] | None = None,
+    exclude: Collection[str] | None = None,
 ) -> nx.Graph:
     graph = nx.Graph()
 
@@ -96,7 +101,7 @@ def _graph_from_mappings(
 
 
 @click.command()
-def charts():
+def charts() -> None:
     """Make charts."""
     import matplotlib.pyplot as plt
     import seaborn as sns
@@ -244,7 +249,7 @@ def charts():
     plt.close(fig)
 
 
-def _countplot_list(data: list[int], ax):
+def _countplot_list(data: list[int], ax: matplotlib.axes.Axes) -> None:
     import pandas as pd
     import seaborn as sns
 

@@ -1,19 +1,23 @@
 """Validation tests for :mod:`biomappings`."""
 
+from __future__ import annotations
+
 import unittest
 from collections import defaultdict
+from collections.abc import Iterable
 from pathlib import Path
 from textwrap import dedent
-from typing import ClassVar, TypeVar, Union
+from typing import ClassVar, TypeVar
 
 import bioregistry
 from bioregistry import NormalizedReference
 
 from biomappings.resources import (
     CURATORS_PATH,
-    Mappings,
     MappingTuple,
     PredictionTuple,
+    SemanticMapping,
+    SemanticMappings,
     load_curators,
     load_mappings,
     load_predictions,
@@ -44,19 +48,19 @@ def _extract_redundant(counter: dict[X, list[Y]]) -> list[tuple[X, list[Y]]]:
     return [(key, values) for key, values in counter.items() if len(values) > 1]
 
 
-def _locations_str(locations):
+def _locations_str(locations) -> str:
     return ", ".join(f"{label}:{line}" for label, line in locations)
 
 
 class IntegrityTestCase(unittest.TestCase):
     """Data integrity tests."""
 
-    mappings: Mappings
-    predictions: Mappings
-    incorrect: Mappings
-    unsure: Mappings
+    mappings: SemanticMappings
+    predictions: SemanticMappings
+    incorrect: SemanticMappings
+    unsure: SemanticMappings
 
-    def _iter_groups(self):
+    def _iter_groups(self) -> Iterable[tuple[str, int, SemanticMapping]]:
         for group, label in [
             (self.mappings, "positive"),
             (self.incorrect, "negative"),
@@ -189,10 +193,10 @@ class IntegrityTestCase(unittest.TestCase):
             counter[get_canonical_tuple(mapping)][label].append(line)
 
         redundant = []
-        for mapping, label_to_lines in counter.items():
+        for mapping_key, label_to_lines in counter.items():
             if len(label_to_lines) <= 1:
                 continue
-            redundant.append((mapping, sorted(label_to_lines.items())))
+            redundant.append((mapping_key, sorted(label_to_lines.items())))
 
         if redundant:
             msg = "".join(
@@ -200,7 +204,9 @@ class IntegrityTestCase(unittest.TestCase):
             )
             raise ValueError(f"{len(redundant)} are redundant: {msg}")
 
-    def assert_no_internal_redundancies(self, mappings: Mappings, tuple_cls: type[TPL]) -> None:
+    def assert_no_internal_redundancies(
+        self, mappings: SemanticMappings, tuple_cls: type[TPL]
+    ) -> None:
         """Assert that the list of mappings doesn't have any redundancies."""
         counter: defaultdict[TPL, list[int]] = defaultdict(list)
         for line_number, mapping in enumerate(mappings, start=1):
@@ -270,10 +276,10 @@ class PathIntegrityTestCase(IntegrityTestCase):
             unsure_path = HERE.joinpath("unsure.tsv")
     """
 
-    predictions_path: ClassVar[Union[str, Path]]
-    positives_path: ClassVar[Union[str, Path]]
-    negatives_path: ClassVar[Union[str, Path]]
-    unsure_path: ClassVar[Union[str, Path]]
+    predictions_path: ClassVar[str | Path]
+    positives_path: ClassVar[str | Path]
+    negatives_path: ClassVar[str | Path]
+    unsure_path: ClassVar[str | Path]
 
     @classmethod
     def setUpClass(cls) -> None:
