@@ -124,7 +124,7 @@
     name: SJRH30
     prefix: ccle
   cellosaurus:0041:
-    identifier: CVCL_0041
+    identifier: '0041'
     link: https://bioregistry.io/cellosaurus:0041
     name: Rh30
     prefix: cellosaurus
@@ -134,12 +134,12 @@
     name: SJRH30
     prefix: efo
 - cl:0000101:
-    identifier: CL:0000101
+    identifier: '0000101'
     link: https://bioregistry.io/cl:0000101
     name: sensory neuron
     prefix: cl
   cl:0000197:
-    identifier: CL:0000197
+    identifier: 0000197
     link: https://bioregistry.io/cl:0000197
     name: sensory receptor cell
     prefix: cl
@@ -189,7 +189,7 @@
     name: BCG vaccine
     prefix: vo
 - doid:11263:
-    identifier: DOID:11263
+    identifier: '11263'
     link: https://bioregistry.io/doid:11263
     name: chlamydia
     prefix: doid
@@ -242,7 +242,7 @@
       Injection
     prefix: vo
 - chebi:33281:
-    identifier: CHEBI:33281
+    identifier: '33281'
     link: https://bioregistry.io/chebi:33281
     name: antimicrobial agent
     prefix: chebi
@@ -262,12 +262,12 @@
     name: antibiotic
     prefix: idomal
 - go:0032991:
-    identifier: GO:0032991
+    identifier: 0032991
     link: https://bioregistry.io/go:0032991
     name: protein-containing complex
     prefix: go
   go:0043234:
-    identifier: GO:0043234
+    identifier: '0043234'
     link: https://bioregistry.io/go:0043234
     name: protein complex
     prefix: go
@@ -277,12 +277,12 @@
     name: protein complex
     prefix: idomal
 - chebi:22063:
-    identifier: CHEBI:22063
+    identifier: '22063'
     link: https://bioregistry.io/chebi:22063
     name: sulfoxide
     prefix: chebi
   chebi:35813:
-    identifier: CHEBI:35813
+    identifier: '35813'
     link: https://bioregistry.io/chebi:35813
     name: sulfoxide
     prefix: chebi
@@ -567,17 +567,17 @@
     name: Toll-like receptor signaling pathway
     prefix: wikipathways
 - go:0033209:
-    identifier: GO:0033209
+    identifier: 0033209
     link: https://bioregistry.io/go:0033209
     name: tumor necrosis factor-mediated signaling pathway
     prefix: go
   go:0033210:
-    identifier: GO:0033210
+    identifier: '0033210'
     link: https://bioregistry.io/go:0033210
     name: leptin-mediated signaling pathway
     prefix: go
   go:0033211:
-    identifier: GO:0033211
+    identifier: '0033211'
     link: https://bioregistry.io/go:0033211
     name: adiponectin-activated signaling pathway
     prefix: go
@@ -587,12 +587,12 @@
     name: Adipocytokine signaling pathway
     prefix: kegg.pathway
 - doid:0080141:
-    identifier: DOID:0080141
+    identifier: 0080141
     link: https://bioregistry.io/doid:0080141
     name: mosaic variegated aneuploidy syndrome 1
     prefix: doid
   doid:0080688:
-    identifier: DOID:0080688
+    identifier: 0080688
     link: https://bioregistry.io/doid:0080688
     name: mosaic variegated aneuploidy syndrome
     prefix: doid
@@ -602,7 +602,7 @@
     name: Mosaic variegated aneuploidy syndrome
     prefix: mesh
 - doid:0050811:
-    identifier: DOID:0050811
+    identifier: 0050811
     link: https://bioregistry.io/doid:0050811
     name: congenital adrenal hyperplasia
     prefix: doid
@@ -617,7 +617,7 @@
     name: Adrenal Hyperplasia, Congenital
     prefix: mesh
 - doid:0060313:
-    identifier: DOID:0060313
+    identifier: '0060313'
     link: https://bioregistry.io/doid:0060313
     name: tracheomalacia
     prefix: doid
@@ -637,7 +637,7 @@
     name: tracheomalacia
     prefix: mondo
 - doid:9255:
-    identifier: DOID:9255
+    identifier: '9255'
     link: https://bioregistry.io/doid:9255
     name: frontotemporal dementia
     prefix: doid
@@ -657,12 +657,12 @@
     name: Frontotemporal Dementia
     prefix: ncit
 - doid:0002116:
-    identifier: DOID:0002116
+    identifier: '0002116'
     link: https://bioregistry.io/doid:0002116
     name: pterygium
     prefix: doid
   doid:10526:
-    identifier: DOID:10526
+    identifier: '10526'
     link: https://bioregistry.io/doid:10526
     name: conjunctival pterygium
     prefix: doid
@@ -672,12 +672,12 @@
     name: Pterygium
     prefix: mesh
 - doid:0050748:
-    identifier: DOID:0050748
+    identifier: 0050748
     link: https://bioregistry.io/doid:0050748
     name: marginal zone B-cell lymphoma
     prefix: doid
   doid:0050909:
-    identifier: DOID:0050909
+    identifier: 0050909
     link: https://bioregistry.io/doid:0050909
     name: MALT lymphoma
     prefix: doid

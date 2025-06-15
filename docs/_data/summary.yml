@@ -3,7 +3,7 @@ contributors:
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
   user: ben
-- count: 4612
+- count: 4611
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
   user: cthoyt
@@ -134,11 +134,11 @@ negative:
   source: doid
   target: efo
 - count: 7
-  source: ito
-  target: ncbitaxon
-- count: 7
   source: fplx
   target: wikipathways
+- count: 6
+  source: ito
+  target: ncbitaxon
 - count: 6
   source: uberon
   target: vo
@@ -256,7 +256,7 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1606
+negative_mapping_count: 1605
 negative_prefix_count: 45
 positive:
 - count: 3371

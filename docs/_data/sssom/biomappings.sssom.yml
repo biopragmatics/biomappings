@@ -21,7 +21,7 @@ curie_map:
   DRON: http://purl.obolibrary.org/obo/DRON_
   EFO: http://www.ebi.ac.uk/efo/EFO_
   ENVO: http://purl.obolibrary.org/obo/ENVO_
-  FMA: 'https://www.ebi.ac.uk/ols4/ontologies/fma/terms?obo_id=FMA:'
+  FMA: http://purl.obolibrary.org/obo/FMA_
   GO: http://purl.obolibrary.org/obo/GO_
   HP: http://purl.obolibrary.org/obo/HP_
   IAO: http://purl.obolibrary.org/obo/IAO_
@@ -49,7 +49,7 @@ curie_map:
   STATO: http://purl.obolibrary.org/obo/STATO_
   UBERON: http://purl.obolibrary.org/obo/UBERON_
   VO: http://purl.obolibrary.org/obo/VO_
-  agrovoc: http://aims.fao.org/aos/agrovoc/c_
+  agrovoc: http://aims.fao.org/aos/agrovoc/
   aio: https://w3id.org/aio/
   ccle: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
   cellosaurus: https://www.cellosaurus.org/CVCL_
@@ -60,29 +60,30 @@ curie_map:
   dc: http://purl.org/dc/elements/1.1/
   debio: https://biopragmatics.github.io/debio/
   depmap: https://depmap.org/portal/cell_line/
-  drugbank: http://www.drugbank.ca/drugs/
+  drugbank: https://go.drugbank.com/drugs/
   fplx: https://sorgerlab.github.io/famplex/
   hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
   idocovid19: http://purl.obolibrary.org/obo/COVIDO_
-  interpro: https://www.ebi.ac.uk/interpro/entry/InterPro/
+  interpro: http://purl.obolibrary.org/obo/IPR_
   ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
   kegg.pathway: https://www.kegg.jp/entry/
   kestrelo: http://purl.obolibrary.org/obo/kestrelo_
-  mesh: https://meshb.nlm.nih.gov/record/ui?ui=
-  ndfrt: https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NDFRT&code=
+  mesh: http://id.nlm.nih.gov/mesh/
+  ndfrt: http://purl.bioontology.org/ontology/NDFRT/
   obo: http://purl.obolibrary.org/obo/
   oboInOwl: http://www.geneontology.org/formats/oboInOwl#
   orcid: https://orcid.org/
   pfam: https://www.ebi.ac.uk/interpro/entry/pfam/
-  pubchem.compound: https://pubchem.ncbi.nlm.nih.gov/compound/
+  pubchem.compound: http://rdf.ncbi.nlm.nih.gov/pubchem/compound/CID
   reactome: https://reactome.org/content/detail/
+  semapv: https://w3id.org/semapv/vocab/
   skos: http://www.w3.org/2004/02/skos/core#
   umls: https://uts.nlm.nih.gov/uts/umls/concept/
   uniprot: http://purl.uniprot.org/uniprot/
   uniprot.chain: http://purl.uniprot.org/annotation/
   vido: http://purl.obolibrary.org/obo/VIDO_
   vsmo: http://purl.obolibrary.org/obo/VSMO_
-  wikipathways: http://www.wikipathways.org/instance/
+  wikipathways: http://identifiers.org/wikipathways/
 license: https://creativecommons.org/publicdomain/zero/1.0/
 mapping_provider: https://github.com/biopragmatics/biomappings
 mapping_set_description: Biomappings is a repository of community curated and predicted
