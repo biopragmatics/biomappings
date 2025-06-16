@@ -99,13 +99,13 @@ def get_script_url(fname: str) -> str:
     return f"https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}"
 
 
-def get_canonical_tuple(mapping: Mapping[str, Any]) -> tuple[str, str, str, str]:
+def get_canonical_tuple(mapping: "MappingTuple") -> tuple[str, str, str, str]:
     """Get the canonical tuple from a mapping entry."""
-    source = ReferenceTuple.from_curie(mapping["subject_id"])
-    target = ReferenceTuple.from_curie(mapping["object_id"])
+    source = mapping.subject
+    target = mapping.object
     if source > target:
         source, target = target, source
-    return (*source, *target)
+    return (*source.pair, *target.pair)
 
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier

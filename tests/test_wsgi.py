@@ -66,7 +66,7 @@ class TestFull(unittest.TestCase):
         negatives_path = directory.joinpath("negatives.tsv")
         unsure_path = directory.joinpath("unsure.tsv")
 
-        write_predictions([p.as_dict() for p in predictions], path=predictions_path)
+        write_predictions(predictions, path=predictions_path)
         _write_curated([], path=positives_path, mode="w")
         _write_curated([], path=negatives_path, mode="w")
         _write_curated([], path=unsure_path, mode="w")

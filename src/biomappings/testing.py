@@ -22,7 +22,7 @@ from biomappings.resources import (
     load_predictions,
     mapping_sort_key,
 )
-from biomappings.resources.semapv import get_semapv
+from biomappings.resources.semapv import get_semapv_id_to_name
 from biomappings.utils import (
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
@@ -36,7 +36,7 @@ __all__ = [
     "PathIntegrityTestCase",
 ]
 
-semapv = get_semapv()
+SEMAPV_ID_TO_NAME = get_semapv_id_to_name()
 
 TPL = TypeVar("TPL", MappingTuple, PredictionTuple)
 X = TypeVar("X")
@@ -54,10 +54,10 @@ def _locations_str(locations) -> str:
 class IntegrityTestCase(unittest.TestCase):
     """Data integrity tests."""
 
-    mappings: SemanticMappings
-    predictions: SemanticMappings
-    incorrect: SemanticMappings
-    unsure: SemanticMappings
+    mappings: list[MappingTuple]
+    predictions: list[MappingTuple]
+    incorrect: list[MappingTuple]
+    unsure: list[MappingTuple]
 
     def _iter_groups(self) -> Iterable[tuple[str, int, MappingTuple]]:
         for group, label in [
@@ -72,30 +72,22 @@ class IntegrityTestCase(unittest.TestCase):
     def test_mapping_justifications(self) -> None:
         """Test that the prediction type is pulled in properly."""
         for label, line, mapping in self._iter_groups():
-            mapping_justification = mapping["mapping_justification"]
-            self.assertTrue(
-                mapping_justification.startswith("semapv:"),
+            self.assertEqual(
+                "semapv",
+                mapping.mapping_justification,
                 msg=f"[{label}] The 'mapping_justification' column should be annotated with semapv on line {line}",
             )
-            self.assertIn(mapping_justification[len("semapv:") :], semapv)
+            self.assertIn(mapping.mapping_justification.identifier, SEMAPV_ID_TO_NAME)
 
     def test_prediction_not_manual(self) -> None:
         """Test that predicted mappings don't use manual mapping justification."""
         for _line, mapping in enumerate(self.predictions, start=2):
             self.assertNotEqual(
-                "semapv:ManualMappingCuration",
-                mapping["mapping_justification"],
+                "ManualMappingCuration",
+                mapping.mapping_justification.identifier,
                 msg="Prediction can not be annotated with manual curation",
             )
 
-    def test_relations(self) -> None:
-        """Test that the relation is a CURIE."""
-        for label, line, mapping in self._iter_groups():
-            parts = mapping["predicate_id"].split(":")
-            self.assertEqual(2, len(parts))
-            prefix, identifier = parts
-            if prefix != "RO":
-                self.assert_canonical_identifier(mapping["predicate_id"], label, line)
 
     def test_canonical_prefixes(self) -> None:
         """Test that all mappings use canonical bioregistry prefixes."""
@@ -116,24 +108,6 @@ class IntegrityTestCase(unittest.TestCase):
                 msg=f"Invalid prefix: {target_prefix} on {label}:{line}",
             )
 
-    def test_normalized_identifiers(self) -> None:
-        """Test that all identifiers have been normalized (based on bioregistry definition)."""
-        for label, line, mapping in self._iter_groups():
-            self.assert_canonical_identifier(mapping["subject_id"], label, line)
-            self.assert_canonical_identifier(mapping["object_id"], label, line)
-
-    def assert_canonical_identifier(self, curie: str, label: str, line: int) -> None:
-        """Assert a given identifier is canonical.
-
-        :param curie: The CURIE to check
-        :param label: The label of the mapping file
-        :param line: The line number of the mapping
-        """
-        try:
-            NormalizedReference.from_curie(curie)
-        except Exception as e:
-            self.fail(f"[{label}:{line}] {e}")
-
     def test_contributors(self) -> None:
         """Test all contributors have an entry in the curators.tsv file."""
         user_to_orcid = {row["user"]: row["orcid"] for row in load_curators()}
@@ -148,10 +122,10 @@ class IntegrityTestCase(unittest.TestCase):
         ]
         for path, mappings in files:
             for mapping in mappings:
-                author_curie = mapping["author_id"]
-                if not author_curie.startswith("orcid:"):
-                    self.assertTrue(author_curie.startswith("web-"))
-                    user = author_curie[len("web-") :]
+                author = mapping.author
+                if author.prefix != "orcid":
+                    self.assertTrue(author.startswith("web-"))
+                    user = author[len("web-") :]
                     orcid = user_to_orcid.get(user)
                     if orcid:
                         self.fail(
@@ -177,11 +151,11 @@ class IntegrityTestCase(unittest.TestCase):
                             1. Add a row to the curators.tsv file with your local machine's
                                username "{user}" in the first column, your ORCID in
                                the second column, and your full name in the third column
-                            2. Replace all instances of "{author_curie}" in {path}
+                            2. Replace all instances of "{author}" in {path}
                                with your ORCID, properly prefixed with `orcid:`
                             """).rstrip()
                         )
-                self.assertIn(author_curie[len("orcid:") :], contributor_orcids)
+                self.assertIn(author[len("orcid:") :], contributor_orcids)
 
     def test_cross_redundancy(self) -> None:
         """Test the redundancy of manually curated mappings and predicted mappings."""

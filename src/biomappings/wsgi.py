@@ -5,7 +5,7 @@ from __future__ import annotations
 import getpass
 import os
 from collections import Counter, defaultdict
-from collections.abc import Iterable, Iterator, Mapping
+from collections.abc import Iterable, Iterator
 from copy import deepcopy
 from pathlib import Path
 from typing import Any, Literal, cast, get_args
@@ -14,7 +14,7 @@ import flask
 import flask_bootstrap
 import pydantic
 import werkzeug
-from bioregistry import NormalizedNamableReference
+from bioregistry import NormalizedNamableReference, NormalizedNamedReference
 from curies import ReferenceTuple
 from flask import current_app
 from flask_wtf import FlaskForm
@@ -24,6 +24,7 @@ from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
 from biomappings.resources import (
+    MappingTuple,
     append_false_mappings,
     append_true_mappings,
     append_unsure_mappings,
@@ -35,8 +36,6 @@ from biomappings.utils import commit, get_branch, not_main, push
 
 Mark: TypeAlias = Literal["correct", "incorrect", "unsure", "broad", "narrow"]
 MARKS: set[Mark] = set(get_args(Mark))
-
-PredictionDict: TypeAlias = Mapping[str, Any]
 
 
 class State(BaseModel):
@@ -125,15 +124,12 @@ def get_app(
 
 
 # A mapping from your computer's user, returned by getuser.getpass()
-KNOWN_USERS = {record["user"]: record["orcid"] for record in load_curators()}
+KNOWN_USERS: dict[str, NormalizedNamedReference] = load_curators()
 
 
-def _manual_source() -> str:
-    usr = getpass.getuser()
-    known_user = KNOWN_USERS.get(usr)
-    if known_user:
-        return f"orcid:{known_user}"
-    return f"web-{usr}"
+# FIXME this will throw an error for new user, so ask them their ORCID and name if it's missing
+def _manual_source() -> NormalizedNamableReference:
+    return KNOWN_USERS[getpass.getuser()]
 
 
 class Controller:
@@ -142,7 +138,7 @@ class Controller:
     def __init__(
         self,
         *,
-        target_references: Iterable[ReferenceTuple] | None = None,
+        target_references: Iterable[NormalizedNamableReference] | None = None,
         predictions_path: Path | None = None,
         positives_path: Path | None = None,
         negatives_path: Path | None = None,
@@ -150,7 +146,8 @@ class Controller:
     ) -> None:
         """Instantiate the web controller.
 
-        :param target_references: Pairs of prefix, local unique identifiers that are the target
+        :param target_references:
+            Pairs of prefix, local unique identifiers that are the target
             of curation. If this is given, pre-filters will be made before on predictions
             to only show ones where either the source or target appears in this set
         :param predictions_path: A custom predictions file to curate from
@@ -167,10 +164,10 @@ class Controller:
 
         self._marked: dict[int, Mark] = {}
         self.total_curated = 0
-        self._added_mappings: list[dict[str, str | None]] = []
+        self._added_mappings: list[MappingTuple] = []
         self.target_references = set(target_references or [])
 
-    def predictions_from_state(self, state: State) -> Iterable[tuple[int, Mapping[str, Any]]]:
+    def predictions_from_state(self, state: State) -> Iterable[tuple[int, MappingTuple]]:
         """Iterate over predictions from a state instance."""
         return self.predictions(
             offset=state.offset,
@@ -200,7 +197,7 @@ class Controller:
         sort: str | None = None,
         same_text: bool | None = None,
         provenance: str | None = None,
-    ) -> Iterable[tuple[int, Mapping[str, Any]]]:
+    ) -> Iterable[tuple[int, MappingTuple]]:
         """Iterate over predictions.
 
         :param offset: If given, offset the iteration by this number
@@ -297,14 +294,13 @@ class Controller:
         sort: str | None = None,
         same_text: bool | None = None,
         provenance: str | None = None,
-    ) -> Iterator[tuple[int, PredictionDict]]:
-        it: Iterable[tuple[int, PredictionDict]] = enumerate(self._predictions)
+    ) -> Iterator[tuple[int, MappingTuple]]:
+        it: Iterable[tuple[int, MappingTuple]] = enumerate(self._predictions)
         if self.target_references:
             it = (
                 (line, p)
                 for (line, p) in it
-                if ReferenceTuple.from_curie(p["subject_id"]) in self.target_references
-                or ReferenceTuple.from_curie(p["object_id"]) in self.target_references
+                if p.subject in self.target_references or p.object in self.target_references
             )
 
         if query is not None:
@@ -346,8 +342,8 @@ class Controller:
             it = (
                 (line, prediction)
                 for line, prediction in it
-                if prediction["subject_label"].casefold() == prediction["object_label"].casefold()
-                and prediction["predicate_id"] == "skos:exactMatch"
+                if prediction.subject.name.casefold() == prediction.object.name.casefold()
+                and prediction.predicate.curie == "skos:exactMatch"
             )
 
         rv = ((line, prediction) for line, prediction in it if line not in self._marked)
@@ -355,8 +351,8 @@ class Controller:
 
     @staticmethod
     def _help_filter(
-        query: str, it: Iterable[tuple[int, PredictionDict]], elements: set[str]
-    ) -> Iterable[tuple[int, PredictionDict]]:
+        query: str, it: Iterable[tuple[int, MappingTuple]], elements: set[str]
+    ) -> Iterable[tuple[int, MappingTuple]]:
         query = query.casefold()
         for line, prediction in it:
             if any(query in prediction[element].casefold() for element in elements):
@@ -391,18 +387,17 @@ class Controller:
     ) -> None:
         """Add manually curated new mappings."""
         self._added_mappings.append(
-            {
-                "subject_id": subject.curie,
-                "subject_label": subject.name,
-                "predicate_id": "skos:exactMatch",
-                "object_id": obj.curie,
-                "object_label": obj.name,
-                "author_id": _manual_source(),
-                "mapping_justification": "semapv:ManualMappingCuration",
-                "mapping_tool": None,
-                "confidence": None,
-                "predicate_modifier": None,
-            }
+            MappingTuple.model_validate(
+                {
+                    "subject": subject,
+                    "predicate": NormalizedNamableReference.from_curie("skos:exactMatch"),
+                    "object": obj,
+                    "author": _manual_source(),
+                    "mapping_justification": NormalizedNamableReference.from_curie(
+                        "semapv:ManualMappingCuration"
+                    ),
+                }
+            )
         )
         self.total_curated += 1
 
@@ -419,7 +414,7 @@ class Controller:
                 ) from None
             prediction["mapping_tool"] = prediction.pop("mapping_tool")
             prediction["confidence"] = prediction.pop("confidence")
-            prediction["author_id"] = _manual_source()
+            prediction["author"] = _manual_source()
             prediction["mapping_justification"] = "semapv:ManualMappingCuration"
 
             # note these go backwards because of the way they are read

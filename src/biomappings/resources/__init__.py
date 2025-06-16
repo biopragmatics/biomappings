@@ -10,7 +10,7 @@ from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, NamedTuple
 
-from bioregistry import NormalizedNamableReference
+from bioregistry import NormalizedNamableReference, NormalizedNamedReference
 from pydantic import BaseModel, Field
 from tqdm.auto import tqdm
 from typing_extensions import Literal, Self, TypeAlias
@@ -154,10 +154,15 @@ class MappingTuple(BaseModel):
     @classmethod
     def from_row(cls, row: dict[str, str]) -> Self:
         """Construct from a dictionary."""
-        for k in ["subject", "object", "author"]:
+        for k in ["subject", "object", "predicate", "author"]:
             k1 = f"{k}_id"
+            v1 = row.pop(k1, None)
+            if v1 is None:
+                continue
             k2 = f"{k}_label"
-            row[k] = NormalizedNamableReference.from_curie(row.pop(k1), name=row.pop(k2, None))
+            row[k] = NormalizedNamableReference.from_curie(v1, name=row.pop(k2, None))
+        for k in ['mapping_justification']:
+            row[k] = NormalizedNamableReference.from_curie(row.pop(k))
         return cls.model_validate(row)
 
     def as_predicted_row(self) -> _PredictedTuple:
@@ -222,9 +227,6 @@ class PredictionTuple(MappingTuple):
         )
 
 
-PREDICTIONS_HEADER = PredictionTuple._fields
-
-SemanticMapping: TypeAlias = dict[str, str]
 SemanticMappings: TypeAlias = list[MappingTuple]
 
 SemanticMappingLoose: TypeAlias = Mapping[str, str | None]
@@ -278,7 +280,7 @@ def mapping_sort_key(prediction: MappingTuple) -> tuple[str, ...]:
     )
 
 
-def load_mappings(*, path: str | Path | None = None) -> SemanticMappings:
+def load_mappings(*, path: str | Path | None = None) -> list[MappingTuple]:
     """Load the mappings table."""
     return _load_table(path or POSITIVES_SSSOM_PATH, t="curated")
 
@@ -335,7 +337,7 @@ def _lint_curated_mappings(path: Path) -> None:
     _write_helper(mappings, path, mode="w", t="curated")
 
 
-def load_false_mappings(*, path: Path | None = None) -> SemanticMappings:
+def load_false_mappings(*, path: Path | None = None) -> list[MappingTuple]:
     """Load the false mappings table."""
     return _load_table(path or NEGATIVES_SSSOM_PATH, t="curated")
 
@@ -370,7 +372,7 @@ def load_unsure(*, path: Path | None = None) -> list[MappingTuple]:
 
 
 def append_unsure_mappings(
-    mappings: SemanticMappings,
+    mappings: Iterable[MappingTuple],
     *,
     sort: bool = True,
     path: Path | None = None,
@@ -446,7 +448,7 @@ def append_predictions(
 def lint_predictions(
     *,
     path: Path | None = None,
-    additional_curated_mappings: SemanticMappings | None = None,
+    additional_curated_mappings: Iterable[MappingTuple] | None = None,
 ) -> None:
     """Lint the predictions file.
 
@@ -472,21 +474,21 @@ def lint_predictions(
 
 
 def remove_mappings(
-    mappings: SemanticMappings, mappings_to_remove: SemanticMappings
-) -> SemanticMappings:
+    mappings: Iterable[MappingTuple], mappings_to_remove: Iterable[MappingTuple]
+) -> Iterable[MappingTuple]:
     """Remove the first set of mappings from the second."""
     skip_tuples = {get_canonical_tuple(mtr) for mtr in mappings_to_remove}
     return (mapping for mapping in mappings if get_canonical_tuple(mapping) not in skip_tuples)
 
 
-def _remove_redundant(mappings: SemanticMappings) -> SemanticMappings:
+def _remove_redundant(mappings: Iterable[MappingTuple]) -> Iterable[MappingTuple]:
     dd = defaultdict(list)
     for mapping in mappings:
         dd[get_canonical_tuple(mapping)].append(mapping)
     return (max(mappings, key=_pick_best) for mappings in dd.values())
 
 
-def _replace_local_curation_source(mappings: SemanticMappings) -> SemanticMappings:
+def _replace_local_curation_source(mappings: Iterable[MappingTuple]) -> Iterable[MappingTuple]:
     """Find `web-` prefixed sources that can be replaced with ORCID CURIEs."""
     # FIXME this whole thing doesn't work if there's data integrity from the start
     user_to_contributors = {c["user"]: c["orcid"] for c in load_curators()}
@@ -518,9 +520,15 @@ def _pick_best(mapping: MappingTuple) -> int:
     return 0
 
 
-def load_curators():
+def load_curators() -> dict[str, NormalizedNamedReference]:
     """Load the curators table."""
-    return _load_table(CURATORS_PATH)
+    with CURATORS_PATH.open("r") as fh:
+        return {
+            record["user"]: NormalizedNamedReference(
+                prefix="orcid", identifier=record["orcid"], name=record["name"]
+            )
+            for record in csv.DictReader(fh, delimiter="\t")
+        }
 
 
 def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:

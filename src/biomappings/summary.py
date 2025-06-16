@@ -77,10 +77,10 @@ def _get_counter(mappings: Iterable[Mapping[str, str]]):
 def _get_contributors(mappings: Iterable[Mapping[str, str]]) -> list[dict[str, str | int]]:
     from biomappings.resources import load_curators
 
-    curators = {record["orcid"]: record for record in load_curators()}
+    orcid_to_curator_reference = {record.identifier: record for record in load_curators().values()}
     counter = Counter(_get_source(mapping["author_id"]) for mapping in mappings)
     return [
-        dict(count=count, **curators[orcid]) if orcid else {"count": count}
+        dict(count=count, **orcid_to_curator_reference[orcid]) if orcid else {"count": count}
         for orcid, count in counter.most_common()
     ]
 
