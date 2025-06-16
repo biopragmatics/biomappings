@@ -16,7 +16,6 @@ from biomappings.resources import (
     CURATORS_PATH,
     MappingTuple,
     PredictionTuple,
-    SemanticMapping,
     SemanticMappings,
     load_curators,
     load_mappings,
@@ -60,7 +59,7 @@ class IntegrityTestCase(unittest.TestCase):
     incorrect: SemanticMappings
     unsure: SemanticMappings
 
-    def _iter_groups(self) -> Iterable[tuple[str, int, SemanticMapping]]:
+    def _iter_groups(self) -> Iterable[tuple[str, int, MappingTuple]]:
         for group, label in [
             (self.mappings, "positive"),
             (self.incorrect, "negative"),
@@ -210,7 +209,7 @@ class IntegrityTestCase(unittest.TestCase):
         """Assert that the list of mappings doesn't have any redundancies."""
         counter: defaultdict[TPL, list[int]] = defaultdict(list)
         for line_number, mapping in enumerate(mappings, start=1):
-            counter[tuple_cls.from_dict(mapping)].append(line_number)
+            counter[tuple_cls.model_validate(mapping)].append(line_number)
         redundant = _extract_redundant(counter)
         if redundant:
             msg = "".join(

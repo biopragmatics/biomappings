@@ -55,9 +55,9 @@ if get_git_hash() is not None:
         from .wsgi import get_app
 
         target_references: list[ReferenceTuple] = []
-        for mapping in _load_table(path):
-            target_references.append(ReferenceTuple.from_curie(mapping["subject_id"]))
-            target_references.append(ReferenceTuple.from_curie(mapping["object_id"]))
+        for mapping in _load_table(path, t="curated"):
+            target_references.append(mapping.subject)
+            target_references.append(mapping.object)
         app = get_app(target_references=target_references)
         run_app(app, with_gunicorn=False)
 
