@@ -15,6 +15,7 @@ import flask_bootstrap
 import pydantic
 import werkzeug
 from bioregistry import NormalizedNamableReference
+from curies import NamableReference
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
@@ -33,8 +34,15 @@ from biomappings.resources import (
 )
 from biomappings.utils import commit, get_branch, not_main, push
 
+__all__ = [
+    "get_app",
+]
+
 Mark: TypeAlias = Literal["correct", "incorrect", "unsure", "broad", "narrow"]
 MARKS: set[Mark] = set(get_args(Mark))
+
+NARROW_MATCH = NormalizedNamableReference.from_curie("skos:narrowMatch")
+BROAD_MATCH = NormalizedNamableReference.from_curie("skos:broadMatch")
 
 
 class State(BaseModel):
@@ -89,7 +97,7 @@ def url_for_state(endpoint, state: State, **kwargs: Any) -> str:
 
 
 def get_app(
-    target_references: Iterable[NormalizedNamableReference] | None = None,
+    target_references: Iterable[NamableReference] | None = None,
     predictions_path: Path | None = None,
     positives_path: Path | None = None,
     negatives_path: Path | None = None,
@@ -129,15 +137,17 @@ EXACT_MATCH = NormalizedNamableReference.from_curie("skos:exactMatch")
 class Controller:
     """A module for interacting with the predictions and mappings."""
 
+    _user: NamableReference
+
     def __init__(
         self,
         *,
-        target_references: Iterable[NormalizedNamableReference] | None = None,
+        target_references: Iterable[NamableReference] | None = None,
         predictions_path: Path | None = None,
         positives_path: Path | None = None,
         negatives_path: Path | None = None,
         unsure_path: Path | None = None,
-        user: NormalizedNamableReference | None = None,
+        user: NamableReference | None = None,
     ) -> None:
         """Instantiate the web controller.
 
@@ -168,7 +178,7 @@ class Controller:
             # FIXME this will throw an error for new user, so ask them their ORCID and name if it's missing
             self._current_author = load_curators()[getpass.getuser()]
 
-    def _get_current_author(self) -> NormalizedNamableReference:
+    def _get_current_author(self) -> NamableReference:
         return self._current_author
 
     def predictions_from_state(self, state: State) -> Iterable[tuple[int, SemanticMapping]]:
@@ -430,7 +440,7 @@ class Controller:
                     f"you tried popping the {line} element from the predictions list, which only has {len(self._predictions):,} elements"
                 ) from None
 
-            update: dict[str, str | NormalizedNamableReference] = {
+            update: dict[str, str | NamableReference] = {
                 "author": self._get_current_author(),
                 "mapping_justification": MANUAL_MAPPING_CURATION,
             }
@@ -438,10 +448,10 @@ class Controller:
             # note these go backwards because of the way they are read
             if value == "broad":
                 value = "correct"
-                update["predicate"] = NormalizedNamableReference.from_curie("skos:narrowMatch")
+                update["predicate"] = NARROW_MATCH
             elif value == "narrow":
                 value = "correct"
-                update["predicate"] = NormalizedNamableReference.from_curie("skos:broadMatch")
+                update["predicate"] = BROAD_MATCH
 
             if value == "incorrect":
                 update["predicate_modifier"] = "Not"

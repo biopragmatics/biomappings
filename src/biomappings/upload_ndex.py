@@ -13,6 +13,11 @@ from tqdm import tqdm
 from biomappings import load_mappings
 from biomappings.utils import get_git_hash
 
+__all__ = [
+    "BIOMAPPINGS_NDEX_UUID",
+    "ndex",
+]
+
 BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
 
 

@@ -16,7 +16,6 @@ from bioregistry import NormalizedNamableReference
 from biomappings.resources import (
     CURATORS_PATH,
     SemanticMapping,
-    SemanticMappings,
     _CuratedTuple,
     _PredictedTuple,
     load_mappings,
@@ -35,6 +34,8 @@ __all__ = [
     "IntegrityTestCase",
     "PathIntegrityTestCase",
 ]
+
+from curies import NamableReference
 
 SEMAPV_ID_TO_NAME = get_semapv_id_to_name()
 
@@ -153,11 +154,11 @@ class IntegrityTestCase(unittest.TestCase):
             )
             raise ValueError(f"{len(redundant)} are redundant: {msg}")
 
-    def assert_no_internal_redundancies(self, mappings: SemanticMappings, prediction: bool) -> None:
+    def assert_no_internal_redundancies(self, mappings: list[SemanticMapping]) -> None:
         """Assert that the list of mappings doesn't have any redundancies."""
-        counter: defaultdict[
-            tuple[NormalizedNamableReference, NormalizedNamableReference], list[int]
-        ] = defaultdict(list)
+        counter: defaultdict[tuple[NamableReference, NamableReference], list[int]] = defaultdict(
+            list
+        )
         for line_number, mapping in enumerate(mappings, start=1):
             counter[mapping.subject, mapping.object].append(line_number)
         redundant = _extract_redundant(counter)
@@ -175,7 +176,7 @@ class IntegrityTestCase(unittest.TestCase):
             sorted(self.predictions, key=mapping_sort_key),
             msg="Predictions are not sorted",
         )
-        self.assert_no_internal_redundancies(self.predictions, True)
+        self.assert_no_internal_redundancies(self.predictions)
 
     def test_curations_sorted(self) -> None:
         """Test the true curated mappings are in a canonical order."""
@@ -184,7 +185,7 @@ class IntegrityTestCase(unittest.TestCase):
             sorted(self.mappings, key=mapping_sort_key),
             msg="True curations are not sorted",
         )
-        self.assert_no_internal_redundancies(self.mappings, False)
+        self.assert_no_internal_redundancies(self.mappings)
 
     def test_false_mappings_sorted(self) -> None:
         """Test the false curated mappings are in a canonical order."""
@@ -193,7 +194,7 @@ class IntegrityTestCase(unittest.TestCase):
             sorted(self.incorrect, key=mapping_sort_key),
             msg="False curations are not sorted",
         )
-        self.assert_no_internal_redundancies(self.incorrect, False)
+        self.assert_no_internal_redundancies(self.incorrect)
 
     def test_unsure_sorted(self) -> None:
         """Test the unsure mappings are in a canonical order."""
@@ -202,7 +203,7 @@ class IntegrityTestCase(unittest.TestCase):
             sorted(self.unsure, key=mapping_sort_key),
             msg="Unsure curations are not sorted",
         )
-        self.assert_no_internal_redundancies(self.unsure, False)
+        self.assert_no_internal_redundancies(self.unsure)
 
 
 class PathIntegrityTestCase(IntegrityTestCase):

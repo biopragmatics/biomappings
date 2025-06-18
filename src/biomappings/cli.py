@@ -49,13 +49,13 @@ if get_git_hash() is not None:
     @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
     def curate(path: Path) -> None:
         """Run a target curation web app."""
-        from bioregistry import NormalizedNamableReference
+        from curies import NamableReference
 
         from .resources import _load_table
         from .wsgi import get_app
 
-        target_references: list[NormalizedNamableReference] = []
-        for mapping in _load_table(path, t="curated"):
+        target_references: list[NamableReference] = []
+        for mapping in _load_table(path):
             target_references.append(mapping.subject)
             target_references.append(mapping.object)
         app = get_app(target_references=target_references)

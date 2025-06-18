@@ -11,9 +11,10 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Callable, NamedTuple
 
 from bioregistry import NormalizedNamableReference, NormalizedNamedReference
+from curies import NamableReference, NamedReference
 from pydantic import BaseModel, ConfigDict, Field
 from tqdm.auto import tqdm
-from typing_extensions import Literal, Self, TypeAlias
+from typing_extensions import Literal, Self
 
 from biomappings.utils import (
     CURATORS_PATH,
@@ -29,7 +30,6 @@ if TYPE_CHECKING:
 
 __all__ = [
     "SemanticMapping",
-    "SemanticMappings",
     "append_false_mappings",
     "append_prediction_tuples",
     "append_predictions",
@@ -87,10 +87,10 @@ class SemanticMapping(BaseModel):
 
     model_config = ConfigDict(frozen=True)
 
-    subject: NormalizedNamableReference
-    predicate: NormalizedNamableReference
-    object: NormalizedNamableReference
-    mapping_justification: NormalizedNamableReference = Field(
+    subject: NamableReference
+    predicate: NamableReference
+    object: NamableReference
+    mapping_justification: NamableReference = Field(
         ...,
         description="""\
         A `semapv <https://bioregistry.io/registry/semapv>`_ term describing the mapping type.
@@ -101,7 +101,7 @@ class SemanticMapping(BaseModel):
         2. ``semapv:LogicalReasoning``
         """,
     )
-    author: NormalizedNamableReference | None = None
+    author: NamableReference | None = None
     mapping_tool: str | None = Field(
         None,
         description="""\
@@ -164,7 +164,7 @@ class SemanticMapping(BaseModel):
         )
 
     @classmethod
-    def from_row(cls, row: dict[str, str]) -> Self:
+    def from_row(cls, row: dict[str, str], reference_cls: type[NamableReference]) -> Self:
         """Construct from a dictionary."""
         for k in ["subject", "object", "predicate", "author"]:
             k1 = f"{k}_id"
@@ -175,9 +175,9 @@ class SemanticMapping(BaseModel):
                 raise TypeError
             k2 = f"{k}_label"
             # type ignore because properly typing the dict i/o is a pain
-            row[k] = NormalizedNamableReference.from_curie(v1, name=row.pop(k2, None))  # type:ignore[assignment]
+            row[k] = reference_cls.from_curie(v1, name=row.pop(k2, None))  # type:ignore[assignment]
         for k in ["mapping_justification"]:
-            row[k] = NormalizedNamableReference.from_curie(row.pop(k))  # type:ignore[assignment]
+            row[k] = reference_cls.from_curie(row.pop(k))  # type:ignore[assignment]
         return cls.model_validate(row)
 
     def as_predicted_row(self) -> _PredictedTuple:
@@ -194,26 +194,15 @@ class SemanticMapping(BaseModel):
         )
 
 
-SemanticMappings: TypeAlias = list[SemanticMapping]
-
-SemanticMappingLoose: TypeAlias = Mapping[str, str | None]
-SemanticMappingsLoose: TypeAlias = Iterable[SemanticMappingLoose]
-
-
-def _load_table(path: str | Path, *, t: Literal["curated", "predicted"]) -> list[SemanticMapping]:
-    path = Path(path).resolve()
-    if not path.is_file():
-        raise FileNotFoundError
-    with path.open("r") as fh:
-        reader = csv.reader(fh, delimiter="\t")
-        header = next(reader)
-        return [_clean(header, row) for row in reader]
-
-
-def _clean(header: Sequence[str], row: Sequence[str]) -> SemanticMapping:
-    d = dict(zip(header, row))
-    rr: dict[str, str] = {k: v for k, v in d.items() if k and v and v != "."}
-    return SemanticMapping.from_row(rr)
+def _load_table(path: str | Path) -> list[SemanticMapping]:
+    with Path(path).expanduser().resolve().open() as file:
+        return [
+            SemanticMapping.from_row(
+                {k: v for k, v in record.items() if v and v.strip() and v.strip() != "."},
+                NormalizedNamableReference,
+            )
+            for record in csv.DictReader(file, delimiter="\t")
+        ]
 
 
 def _write_helper(
@@ -251,7 +240,7 @@ def mapping_sort_key(prediction: SemanticMapping) -> tuple[str, ...]:
 
 def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
     """Load the mappings table."""
-    return _load_table(path or POSITIVES_SSSOM_PATH, t="curated")
+    return _load_table(path or POSITIVES_SSSOM_PATH)
 
 
 def load_mappings_subset(source: str, target: str) -> Mapping[str, str]:
@@ -283,7 +272,7 @@ def append_true_mapping_tuples(mappings: Iterable[SemanticMapping]) -> None:
     append_true_mappings(mappings)
 
 
-def write_true_mappings(mappings: SemanticMappings, *, path: Path | None = None) -> None:
+def write_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Write mappigns to the true mappings file."""
     _write_curated(mappings, path=path or POSITIVES_SSSOM_PATH, mode="w")
 
@@ -299,7 +288,7 @@ def lint_true_mappings(*, path: Path | None = None) -> None:
 
 def _lint_curated_mappings(path: Path) -> None:
     """Lint the true mappings file."""
-    mapping_list = _load_table(path, t="curated")
+    mapping_list = _load_table(path)
     mappings = _remove_redundant(mapping_list)
     mappings = _remove_redundant(mappings)
     _write_helper(mappings, path, mode="w", t="curated")
@@ -307,7 +296,7 @@ def _lint_curated_mappings(path: Path) -> None:
 
 def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the false mappings table."""
-    return _load_table(path or NEGATIVES_SSSOM_PATH, t="curated")
+    return _load_table(path or NEGATIVES_SSSOM_PATH)
 
 
 def append_false_mappings(
@@ -324,7 +313,7 @@ def append_false_mappings(
         lint_false_mappings(path=path)
 
 
-def write_false_mappings(mappings: SemanticMappings, *, path: Path | None = None) -> None:
+def write_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Write mappings to the false mappings file."""
     _write_helper(mappings, path or NEGATIVES_SSSOM_PATH, mode="w", t="curated")
 
@@ -336,7 +325,7 @@ def lint_false_mappings(*, path: Path | None = None) -> None:
 
 def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the unsure table."""
-    return _load_table(path or UNSURE_SSSOM_PATH, t="curated")
+    return _load_table(path or UNSURE_SSSOM_PATH)
 
 
 def append_unsure_mappings(
@@ -353,7 +342,7 @@ def append_unsure_mappings(
         lint_unsure_mappings(path=path)
 
 
-def write_unsure_mappings(mappings: SemanticMappings, *, path: Path | None = None) -> None:
+def write_unsure_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Write mappings to the unsure mappings file."""
     _write_helper(mappings, path or UNSURE_SSSOM_PATH, mode="w", t="curated")
 
@@ -365,10 +354,10 @@ def lint_unsure_mappings(*, path: Path | None = None) -> None:
 
 def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:
     """Load the predictions table."""
-    return _load_table(path or PREDICTIONS_SSSOM_PATH, t="predicted")
+    return _load_table(path or PREDICTIONS_SSSOM_PATH)
 
 
-def write_predictions(mappings: SemanticMappings, *, path: Path | None = None) -> None:
+def write_predictions(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Write new content to the predictions table."""
     _write_helper(mappings, path or PREDICTIONS_SSSOM_PATH, mode="w", t="predicted")
 
@@ -474,14 +463,14 @@ def _pick_best(mapping: SemanticMapping) -> int:
     return 0
 
 
-def load_curators() -> dict[str, NormalizedNamedReference]:
+def load_curators() -> dict[str, NamedReference]:
     """Load the curators table."""
-    with CURATORS_PATH.open("r") as fh:
+    with CURATORS_PATH.open() as file:
         return {
             record["user"]: NormalizedNamedReference(
                 prefix="orcid", identifier=record["orcid"], name=record["name"]
             )
-            for record in csv.DictReader(fh, delimiter="\t")
+            for record in csv.DictReader(file, delimiter="\t")
         }
 
 

@@ -11,14 +11,13 @@ from typing import Any, TypedDict
 
 import click
 import yaml
+from curies import NamableReference
 
 from biomappings.resources import SemanticMapping
 
 __all__ = [
     "export",
 ]
-
-from bioregistry import NormalizedNamableReference
 
 
 @click.command()
@@ -90,7 +89,7 @@ def _get_count_records(mappings: Iterable[SemanticMapping]) -> list[CountRecord]
 def _get_contributors(mappings: Iterable[SemanticMapping]) -> list[dict[str, str | int]]:
     from biomappings.resources import load_curators
 
-    orcid_to_curator_reference: dict[str, NormalizedNamableReference] = {
+    orcid_to_curator_reference: dict[str, NamableReference] = {
         record.identifier: record for record in load_curators().values()
     }
     counter = Counter(
