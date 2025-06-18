@@ -1,5 +1,6 @@
 """Test the web app."""
 
+import getpass
 import tempfile
 import unittest
 from pathlib import Path
@@ -8,7 +9,7 @@ from bioregistry import NormalizedNamableReference as Reference
 
 from biomappings import SemanticMapping
 from biomappings.resources import _write_curated, write_predictions
-from biomappings.wsgi import Controller, State, get_app
+from biomappings.wsgi import Controller, State, get_app, KNOWN_USERS
 
 
 class TestWeb(unittest.TestCase):
@@ -16,6 +17,9 @@ class TestWeb(unittest.TestCase):
 
     def setUp(self) -> None:
         """Set up the test case with a controller."""
+        if getpass.getuser() not in KNOWN_USERS:
+            KNOWN_USERS[getpass.getuser()] = Reference(prefix="orcid",identifier="0000-0000-0000-0000", name="Max Mustermann")
+
         self.controller = Controller()
 
     def test_query(self) -> None:
