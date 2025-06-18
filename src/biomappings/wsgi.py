@@ -14,7 +14,7 @@ import flask
 import flask_bootstrap
 import pydantic
 import werkzeug
-from bioregistry import NormalizedNamableReference, NormalizedNamedReference
+from bioregistry import NormalizedNamableReference
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
@@ -122,15 +122,6 @@ def get_app(
     return app_
 
 
-# A mapping from your computer's user, returned by getuser.getpass()
-KNOWN_USERS: dict[str, NormalizedNamedReference] = load_curators()
-
-
-# FIXME this will throw an error for new user, so ask them their ORCID and name if it's missing
-def _manual_source() -> NormalizedNamableReference:
-    return KNOWN_USERS[getpass.getuser()]
-
-
 MANUAL_MAPPING_CURATION = NormalizedNamableReference.from_curie("semapv:ManualMappingCuration")
 EXACT_MATCH = NormalizedNamableReference.from_curie("skos:exactMatch")
 
@@ -146,6 +137,7 @@ class Controller:
         positives_path: Path | None = None,
         negatives_path: Path | None = None,
         unsure_path: Path | None = None,
+        user: NormalizedNamableReference | None = None,
     ) -> None:
         """Instantiate the web controller.
 
@@ -169,6 +161,15 @@ class Controller:
         self.total_curated = 0
         self._added_mappings: list[SemanticMapping] = []
         self.target_references = set(target_references or [])
+
+        if user is not None:
+            self._current_author = user
+        else:
+            # FIXME this will throw an error for new user, so ask them their ORCID and name if it's missing
+            self._current_author = load_curators()[getpass.getuser()]
+
+    def _get_current_author(self) -> NormalizedNamableReference:
+        return self._current_author
 
     def predictions_from_state(self, state: State) -> Iterable[tuple[int, SemanticMapping]]:
         """Iterate over predictions from a state instance."""
@@ -410,7 +411,7 @@ class Controller:
                     "subject": subject,
                     "predicate": EXACT_MATCH,
                     "object": obj,
-                    "author": _manual_source(),
+                    "author": self._get_current_author(),
                     "mapping_justification": MANUAL_MAPPING_CURATION,
                 }
             )
@@ -430,7 +431,7 @@ class Controller:
                 ) from None
 
             update: dict[str, str | NormalizedNamableReference] = {
-                "author": _manual_source(),
+                "author": self._get_current_author(),
                 "mapping_justification": MANUAL_MAPPING_CURATION,
             }
 
