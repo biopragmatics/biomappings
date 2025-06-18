@@ -132,6 +132,7 @@ chebi:29388	trisulfur	skos:exactMatch	efo:0005838	S3	semapv:ManualMappingCuratio
 chebi:29806	fumarate(2-)	skos:exactMatch	mesh:D005650	Fumarates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
 chebi:30019	L-selenomethionine residue	skos:exactMatch	efo:0002326	SEM	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:30078	gold monochloride	skos:exactMatch	mesh:C038016	gold chloride	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
+chebi:30212	photon	skos:exactMatch	efo:0000568	light	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:30521	tungsten disulfide	skos:exactMatch	efo:0005158	Ws-2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:31013	cerotate	skos:exactMatch	mesh:C085095	Cerinate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:31739	josamycin	skos:exactMatch	mesh:D019169	Jurkat Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
@@ -161,15 +162,21 @@ chebi:50906	role	skos:exactMatch	mesh:D012380	Role	semapv:ManualMappingCuration	
 chebi:51117	nanocage	skos:exactMatch	efo:0008824	NanoCAGE	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:53311	sodium alginate	skos:exactMatch	mesh:D044646	Ascophyllum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:53621	chloromethylisothiazolinone	skos:exactMatch	efo:0022790	MC-1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:556075	radicicol	skos:exactMatch	efo:0002315	RD	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:566274	malonaldehyde	skos:exactMatch	efo:0008800	MDA	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:59113	3-heptadecylveratrole	skos:exactMatch	mesh:D003699	Hepatitis D	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:60411	bacteriopheophytin	skos:exactMatch	mesh:D011470	Prostatic Hyperplasia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:6446	levothyroxine sodium anhydrous	skos:exactMatch	mesh:D016422	Letter	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:6456	lidocaine	skos:exactMatch	mesh:C511998	Lidoderm	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		Not
 chebi:70255	(-)-epicatechin-3-O-gallate	skos:exactMatch	mesh:D004562	Electrocardiography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:75937	monooleoylglycerol	skos:exactMatch	mesh:C005953	monoolein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
+chebi:75958	solution	skos:exactMatch	efo:0002196	HOS	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:78037	polyhydroxyalkanoate	skos:exactMatch	mesh:D010381	Pelger-Huet Anomaly	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:79068	crocin-1	skos:exactMatch	mesh:D027622	Crocus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
+chebi:7956	penciclovir	skos:exactMatch	efo:0022887	PE2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:80552	NPC	skos:exactMatch	efo:0004041	NPC	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:8075	phenoxyacetic acid	skos:exactMatch	mesh:D031785	Poa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
+chebi:84123	advanced glycation end-product	skos:exactMatch	efo:0000246	age	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:8925	ryanodine	skos:exactMatch	mesh:D031309	Ryania	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chmo:0000026	fast-scan cyclic voltammetry	skos:exactMatch	ncbitaxon:11978	Feline calicivirus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	Not
 chmo:0000028	linear-sweep voltammetry	skos:exactMatch	ncbitaxon:12173	Lily symptomless virus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	Not

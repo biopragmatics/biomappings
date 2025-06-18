@@ -2691,6 +2691,7 @@ chebi:64355	posaconazole	skos:exactMatch	mesh:C101425	posaconazole	semapv:Manual
 chebi:6451	Licarin A	skos:exactMatch	mesh:C432503	licarin A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:6456	lidocaine	skos:exactMatch	mesh:D008012	Lidocaine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:64610	tenocyclidine	skos:exactMatch	mesh:C012058	tenocyclidine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+chebi:6495	lipoprotein	skos:exactMatch	efo:0003836	lipoprotein	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:65172	ximelagatran	skos:exactMatch	mesh:C426686	ximelagatran	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:65344	aclidinium bromide	skos:exactMatch	mesh:C542859	aclidinium bromide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:65347	carfilzomib	skos:exactMatch	mesh:C524865	carfilzomib	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -2810,9 +2811,12 @@ chebi:79699	Temsirolimus	skos:exactMatch	mesh:C401859	temsirolimus	semapv:Manual
 chebi:79997	GW 4064	skos:exactMatch	mesh:C412815	GW 4064	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:80068	Westiellamide	skos:exactMatch	mesh:C074972	westiellamide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:80122	Luzopeptin	skos:exactMatch	mesh:C083808	luzopeptin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
+chebi:80142	Neuromedin U	skos:exactMatch	efo:0003266	neuromedin U	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:80143	Nocistatin	skos:exactMatch	mesh:C111148	nocistatin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:80147	Katacalcin	skos:exactMatch	mesh:C037553	katacalcin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:80266	nociceptin	skos:exactMatch	mesh:C096012	nociceptin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+chebi:80295	Urocortin I	skos:exactMatch	efo:0002679	urocortin I	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
+chebi:80296	Urocortin II	skos:exactMatch	efo:0002680	urocortin II	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:80495	benzidine	skos:exactMatch	mesh:C029876	benzidine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:80566	Isophosphamide mustard	skos:exactMatch	mesh:C027061	isophosphamide mustard	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:8059	Phendimetrazine	skos:exactMatch	mesh:C100294	phendimetrazine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -2826,6 +2830,9 @@ chebi:81111	Pseudoprotodioscin	skos:exactMatch	mesh:C000606215	pseudo-protodiosc
 chebi:81216	Chrysanthetriol	skos:exactMatch	mesh:C076943	chrysanthetriol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:81395	10-Hydroxycamptothecin	skos:exactMatch	mesh:C028098	10-hydroxycamptothecin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:81503	1,2,3,6,7,8-Hexachlorodibenzodioxin	skos:exactMatch	mesh:C046838	1,2,3,6,7,8-hexachlorodibenzodioxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+chebi:81569	Follicle stimulating hormone	skos:exactMatch	efo:0003234	follicle stimulating hormone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
+chebi:81571	Leptin	skos:exactMatch	efo:0003199	leptin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
+chebi:81579	Erythropoietin	skos:exactMatch	efo:0003233	erythropoietin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:81715	Thiamine disulfide	skos:exactMatch	mesh:C013293	thiamine disulfide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:81781	tebuconazole	skos:exactMatch	mesh:C087114	tebuconazole	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:81927	enilconazole	skos:exactMatch	mesh:C017435	enilconazole	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -2871,6 +2878,7 @@ chebi:8695	quercetagetin	skos:exactMatch	mesh:C079163	quercetagetin	semapv:Manua
 chebi:86989	stattic	skos:exactMatch	mesh:C517409	stattic	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:87016	eslicarbazepine acetate	skos:exactMatch	mesh:C416835	eslicarbazepine acetate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:87159	SU5614	skos:exactMatch	mesh:C416849	SU 5614	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+chebi:87751	ocimene	skos:exactMatch	efo:0003191	ocimene	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:8803	Remikiren	skos:exactMatch	mesh:C065581	remikiren	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:8805	Repaglinide	skos:exactMatch	mesh:C072379	repaglinide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:88200	benazeprilat	skos:exactMatch	mesh:C052133	benazeprilat	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -2882,6 +2890,7 @@ chebi:8887	rofecoxib	skos:exactMatch	mesh:C116926	rofecoxib	semapv:ManualMapping
 chebi:88902	O-Desmethylangolensin	skos:exactMatch	mesh:C050052	O-desmethylangolensin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:89195	2-Methyl-4-heptanone	skos:exactMatch	mesh:C520062	2-methyl-4-heptanone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:89406	Norcotinine	skos:exactMatch	mesh:C066333	norcotinine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+chebi:89494	iberin	skos:exactMatch	efo:0002671	iberin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:8977	SB 206553	skos:exactMatch	mesh:C094868	SB 206553	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:8979	SB 228357	skos:exactMatch	mesh:C118947	SB 228357	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:8980	SB 243213	skos:exactMatch	mesh:C406343	SB 243213	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -2931,6 +2940,7 @@ chebi:9428	tectoridin	skos:exactMatch	mesh:C120040	tectoridin	semapv:ManualMappi
 chebi:9436	Temocaprilat	skos:exactMatch	mesh:C069156	temocaprilat	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:94575	Nifekalant	skos:exactMatch	mesh:C076259	nifekalant	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:9464	testosterone enanthate	skos:exactMatch	mesh:C004648	testosterone enanthate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+chebi:9574	Thrombin	skos:exactMatch	efo:0003183	thrombin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:9649	trandolapril	skos:exactMatch	mesh:C052035	trandolapril	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:9669	Triamcinolone diacetate	skos:exactMatch	mesh:C030262	triamcinolone diacetate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:9670	Triamcinolone hexacetonide	skos:exactMatch	mesh:C005900	triamcinolone hexacetonide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
