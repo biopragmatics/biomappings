@@ -2444,6 +2444,7 @@ chebi:32297	Vinpocetine	skos:exactMatch	mesh:C013983	vinpocetine	semapv:ManualMa
 chebi:32300	Voglibose	skos:exactMatch	mesh:C102817	voglibose	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:32325	beta-ionone	skos:exactMatch	mesh:C008157	beta-ionone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:32499	amineptine	skos:exactMatch	mesh:C011597	amineptin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+chebi:32988	amide	skos:exactMatch	efo:0004417	amide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:33135	pyrrolidine	skos:exactMatch	mesh:C032519	pyrrolidine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:33282	antibacterial agent	skos:exactMatch	mesh:D000900	Anti-Bacterial Agents	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:3330	Calpeptin	skos:exactMatch	mesh:C071482	calpeptin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -2485,6 +2486,7 @@ chebi:36624	naphthyridine	skos:exactMatch	mesh:D009287	Naphthyridines	semapv:Man
 chebi:3700	Cimicifugoside	skos:exactMatch	mesh:C031436	cimicifugoside	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:37386	aurantio-obtusin	skos:exactMatch	mesh:C000595611	aurantio-obtusin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:3746	clindamycin phosphate	skos:exactMatch	mesh:C007084	clindamycin phosphate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+chebi:37527	acid	skos:exactMatch	efo:0004416	acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:37527	acid	skos:exactMatch	mesh:D000143	Acids	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:37550	sphingosine 1-phosphate	skos:exactMatch	mesh:C060506	sphingosine 1-phosphate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:37965	2H-pyran-2-one	skos:exactMatch	mesh:C584017	2-pyrone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -2592,6 +2594,7 @@ chebi:47492	3-BROMO-7-NITROINDAZOLE	skos:exactMatch	mesh:C106731	3-bromo-7-nitro
 chebi:47564	mometasone furoate	skos:exactMatch	mesh:D000068656	Mometasone Furoate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:47619	piclamilast	skos:exactMatch	mesh:C087566	piclamilast	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:47657	roflumilast	skos:exactMatch	mesh:C424423	Roflumilast	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+chebi:47774	low-density lipoprotein cholesterol	skos:exactMatch	efo:0004195	LDL cholesterol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:47868	photosensitizing agent	skos:exactMatch	mesh:D017319	Photosensitizing Agents	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:4793	Enhydrin	skos:exactMatch	mesh:C521984	enhydrin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:47943	aniracetam	skos:exactMatch	mesh:C036466	aniracetam	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -2635,6 +2638,7 @@ chebi:52221	isothiocyanate	skos:exactMatch	mesh:D017879	Isothiocyanates	semapv:M
 chebi:52233	tin-116 atom	skos:exactMatch	mesh:C000615562	Tin-116	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:52593	nanowire	skos:exactMatch	mesh:D053770	Nanowires	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:52633	molybdenum-95	skos:exactMatch	mesh:C000615511	Molybdenum-95	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
+chebi:52673	Alexa Fluor 555	skos:exactMatch	efo:0004968	Alexa Fluor 555	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:53078	N(6)-(2,4-dinitrophenyl)lysine	skos:exactMatch	mesh:C007493	epsilon-dinitrophenyllysine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:53175	13-apo-beta-carotenone	skos:exactMatch	mesh:C071310	beta-apo-13-carotenone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:53457	glucuronoxylomannan	skos:exactMatch	mesh:C027478	glucuronoxylomannan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
