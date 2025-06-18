@@ -3808,6 +3808,8 @@ idomal:0000234	mefloquine	skos:exactMatch	ndfrt:N0000147900	MEFLOQUINE	semapv:Ma
 idomal:0000236	quinidine	skos:exactMatch	chebi:28593	quinidine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 idomal:0000270	cerebral malaria	skos:exactMatch	doid:14069	cerebral malaria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 idomal:0000302	zygote stage	skos:exactMatch	uberon:0000106	zygote stage	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+idomal:0000372	interferon-gamma	skos:broadMatch	pr:000024990	type II interferon	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0000372	interferon-gamma	skos:exactMatch	pr:000000017	interferon gamma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0000378	macrophage	skos:exactMatch	cl:0000235	macrophage	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 idomal:0000398	shivering	skos:exactMatch	hp:0025144	Shivering	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	mira	
 idomal:0000411	entomological inoculation rate	skos:exactMatch	vsmo:0000112	entomological inoculation rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -3836,6 +3838,7 @@ idomal:0000672	chemical compound	skos:exactMatch	vsmo:0000011	chemical compound	
 idomal:0000729	enzyme	skos:exactMatch	obi:0000427	enzyme	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0000732	protein complex	skos:exactMatch	go:0032991	protein-containing complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0000732	protein complex	skos:exactMatch	go:0043234	protein complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0000783	tumor necrosis factor-alpha	skos:exactMatch	pr:000000134	tumor necrosis factor	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0000873	piperonyl butoxide	skos:exactMatch	chebi:32687	piperonyl butoxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 idomal:0000886	triphenyl phosphate	skos:exactMatch	chebi:35033	triphenyl phosphate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 idomal:0000895	sulfoxide	skos:exactMatch	chebi:22063	sulfoxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
