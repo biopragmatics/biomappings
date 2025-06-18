@@ -32,7 +32,16 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import commit, get_branch, not_main, push
+from biomappings.utils import (
+    BROAD_MATCH,
+    EXACT_MATCH,
+    MANUAL_MAPPING_CURATION,
+    NARROW_MATCH,
+    commit,
+    get_branch,
+    not_main,
+    push,
+)
 
 __all__ = [
     "get_app",
@@ -40,9 +49,6 @@ __all__ = [
 
 Mark: TypeAlias = Literal["correct", "incorrect", "unsure", "broad", "narrow"]
 MARKS: set[Mark] = set(get_args(Mark))
-
-NARROW_MATCH = NormalizedNamableReference.from_curie("skos:narrowMatch")
-BROAD_MATCH = NormalizedNamableReference.from_curie("skos:broadMatch")
 
 
 class State(BaseModel):
@@ -128,10 +134,6 @@ def get_app(
         url_for_state=url_for_state,
     )
     return app_
-
-
-MANUAL_MAPPING_CURATION = NormalizedNamableReference.from_curie("semapv:ManualMappingCuration")
-EXACT_MATCH = NormalizedNamableReference.from_curie("skos:exactMatch")
 
 
 class Controller:

@@ -22,7 +22,7 @@ from biomappings.resources import (
     load_mappings,
     load_predictions,
 )
-from biomappings.utils import DATA, IMG
+from biomappings.utils import DATA, EXACT_MATCH, IMG
 
 if TYPE_CHECKING:
     import matplotlib.axes
@@ -95,14 +95,12 @@ def charts() -> None:
     import matplotlib.pyplot as plt
     import seaborn as sns
 
-    x = NormalizedReference.from_curie("skos:exactMatch")
-
     true_mappings = load_mappings()
-    true_graph = _graph_from_mappings(true_mappings, include=[x], strata="correct")
+    true_graph = _graph_from_mappings(true_mappings, include=[EXACT_MATCH], strata="correct")
     for u, v in true_graph.edges():
         true_graph.edges[u, v]["correct"] = True
     false_mappings = load_false_mappings()
-    false_graph = _graph_from_mappings(false_mappings, include=[x], strata="incorrect")
+    false_graph = _graph_from_mappings(false_mappings, include=[EXACT_MATCH], strata="incorrect")
     for u, v in false_graph.edges():
         false_graph.edges[u, v]["correct"] = False
 

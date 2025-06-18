@@ -10,11 +10,12 @@ from pathlib import Path
 import pyobo
 import ssslm
 from bioregistry import NormalizedNamedReference, NormalizedReference
+from curies import Reference
 from tqdm import tqdm
 
 from biomappings import SemanticMapping
 from biomappings.resources import append_prediction_tuples
-from biomappings.utils import CMapping
+from biomappings.utils import EXACT_MATCH, LEXICAL_MATCHING_PROCESS, CMapping
 
 __all__ = [
     "append_gilda_predictions",
@@ -31,7 +32,7 @@ def append_gilda_predictions(
     target_prefixes: str | Iterable[str],
     provenance: str,
     *,
-    relation: str | None | NormalizedNamedReference = None,
+    relation: str | None | Reference = None,
     custom_filter: CMapping | None = None,
     identifiers_are_names: bool = False,
     path: Path | None = None,
@@ -69,18 +70,17 @@ def iter_prediction_tuples(
     prefix: str,
     provenance: str,
     *,
-    predicate: str | NormalizedReference | None = None,
+    predicate: str | Reference | None = None,
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
 ) -> Iterable[SemanticMapping]:
     """Iterate over prediction tuples for a given prefix."""
     if predicate is None:
-        predicate = NormalizedReference.from_curie("skos:exactMatch")
+        predicate = EXACT_MATCH
     elif isinstance(predicate, str):
         predicate = NormalizedReference.from_curie(predicate)
 
-    j = NormalizedReference.from_curie("semapv:LexicalMatching")
     id_name_mapping = pyobo.get_id_name_mapping(prefix, strict=strict)
     it = tqdm(
         id_name_mapping.items(), desc=f"[{prefix}] lexical tuples", unit_scale=True, unit="name"
@@ -93,7 +93,7 @@ def iter_prediction_tuples(
                 subject=NormalizedNamedReference(prefix=prefix, identifier=identifier, name=name),
                 predicate=predicate,
                 object=scored_match.reference,
-                mapping_justification=j,
+                mapping_justification=LEXICAL_MATCHING_PROCESS,
                 confidence=round(scored_match.score, 3),
                 mapping_tool=provenance,
             )
@@ -114,7 +114,7 @@ def iter_prediction_tuples(
                     ),
                     predicate=predicate,
                     object=scored_match.reference,
-                    mapping_justification=j,
+                    mapping_justification=LEXICAL_MATCHING_PROCESS,
                     confidence=round(scored_match.score, 3),
                     mapping_tool=provenance,
                 )
@@ -147,7 +147,7 @@ def filter_existing_xrefs(
     """Filter predictions that match xrefs already loaded through PyOBO."""
     prefixes = set(prefixes)
 
-    entity_to_mapped_prefixes: defaultdict[NormalizedReference, set[str]] = defaultdict(set)
+    entity_to_mapped_prefixes: defaultdict[Reference, set[str]] = defaultdict(set)
     for subject_prefix in prefixes:
         for subject_id, target_prefix, object_id in pyobo.get_xrefs_df(subject_prefix).values:
             entity_to_mapped_prefixes[
