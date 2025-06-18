@@ -381,6 +381,88 @@ efo:0005262	mitral annular calcification	skos:exactMatch	ncbitaxon:120793	Mycoba
 efo:0006818	stricture	skos:exactMatch	ncbitaxon:513343	Stenosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	Not
 efo:0007128	actinomycosis	skos:exactMatch	ncbitaxon:1760	Actinomycetes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	Not
 efo:0007136	agnosia	skos:exactMatch	ncbitaxon:523289	Agnosia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	Not
+efo:0801241	lysophosphatidylcholine acyl C16:0 measurement	skos:exactMatch	chebi:64563	lysophosphatidylcholine 16:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801242	lysophosphatidylcholine acyl C17:0 measurement	skos:exactMatch	chebi:72737	lysophosphatidylcholine 17:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801243	lysophosphatidylcholine acyl C28:0 measurement	skos:exactMatch	chebi:85561	lysophosphatidylcholine 28:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801244	lysophosphatidylcholine acyl C28:1 measurement	skos:exactMatch	chebi:85562	lysophosphatidylcholine 28:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801245	phosphatidylcholine diacyl C24:0 measurement	skos:exactMatch	chebi:85564	phosphatidylcholine 24:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801246	phosphatidylcholine diacyl C28:1 measurement	skos:exactMatch	chebi:65293	phosphatidylcholine 28:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801247	phosphatidylcholine diacyl C30:0 measurement	skos:exactMatch	chebi:65303	phosphatidylcholine 30:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801248	phosphatidylcholine diacyl C32:0 measurement	skos:exactMatch	chebi:66850	phosphatidylcholine 32:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801249	phosphatidylcholine diacyl C32:1 measurement	skos:exactMatch	chebi:66849	phosphatidylcholine 32:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801250	phosphatidylcholine diacyl C32:2 measurement	skos:exactMatch	chebi:66848	phosphatidylcholine 32:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801251	phosphatidylcholine diacyl C32:3 measurement	skos:exactMatch	chebi:66847	phosphatidylcholine 32:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801252	phosphatidylcholine diacyl C34:1 measurement	skos:exactMatch	chebi:64517	phosphatidylcholine 34:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801253	phosphatidylcholine diacyl C34:2 measurement	skos:exactMatch	chebi:64516	phosphatidylcholine 34:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801254	phosphatidylcholine diacyl C34:3 measurement	skos:exactMatch	chebi:64424	phosphatidylcholine 34:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801255	phosphatidylcholine diacyl C34:4 measurement	skos:exactMatch	chebi:64423	phosphatidylcholine 34:4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801256	phosphatidylcholine diacyl C36:0 measurement	skos:exactMatch	chebi:66858	phosphatidylcholine 36:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801257	phosphatidylcholine diacyl C36:1 measurement	skos:exactMatch	chebi:66857	phosphatidylcholine 36:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801258	phosphatidylcholine diacyl C36:2 measurement	skos:exactMatch	chebi:64433	phosphatidylcholine 36:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801259	phosphatidylcholine diacyl C36:3 measurement	skos:exactMatch	chebi:64523	phosphatidylcholine 36:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801260	phosphatidylcholine diacyl C36:4 measurement	skos:exactMatch	chebi:64520	phosphatidylcholine 36:4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801261	phosphatidylcholine diacyl C36:5 measurement	skos:exactMatch	chebi:64504	phosphatidylcholine 36:5	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801262	phosphatidylcholine diacyl C36:6 measurement	skos:exactMatch	chebi:66856	phosphatidylcholine 36:6	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801263	phosphatidylcholine diacyl C38:0 measurement	skos:exactMatch	chebi:66861	phosphatidylcholine 38:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801264	phosphatidylcholine diacyl C38:1 measurement	skos:exactMatch	chebi:66860	phosphatidylcholine 38:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801265	phosphatidylcholine diacyl C38:3 measurement	skos:exactMatch	chebi:64446	phosphatidylcholine 38:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801266	phosphatidylcholine diacyl C38:4 measurement	skos:exactMatch	chebi:64526	phosphatidylcholine 38:4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801267	phosphatidylcholine diacyl C38:5 measurement	skos:exactMatch	chebi:64525	phosphatidylcholine 38:5	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801268	phosphatidylcholine diacyl C38:6 measurement	skos:exactMatch	chebi:64519	phosphatidylcholine 38:6	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801269	phosphatidylcholine diacyl C40:1 measurement	skos:exactMatch	chebi:66865	phosphatidylcholine 40:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801270	phosphatidylcholine diacyl C40:2 measurement	skos:exactMatch	chebi:66864	phosphatidylcholine 40:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801271	phosphatidylcholine diacyl C40:3 measurement	skos:exactMatch	chebi:66863	phosphatidylcholine 40:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801272	phosphatidylcholine diacyl C40:4 measurement	skos:exactMatch	chebi:66862	phosphatidylcholine 40:4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801273	phosphatidylcholine diacyl C40:5 measurement	skos:exactMatch	chebi:64524	phosphatidylcholine 40:5	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801274	phosphatidylcholine diacyl C40:6 measurement	skos:exactMatch	chebi:64431	phosphatidylcholine 40:6	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801275	phosphatidylcholine diacyl C42:0 measurement	skos:exactMatch	chebi:66971	phosphatidylcholine 42:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801276	phosphatidylcholine diacyl C42:1 measurement	skos:exactMatch	chebi:66970	phosphatidylcholine 42:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801277	phosphatidylcholine diacyl C42:2 measurement	skos:exactMatch	chebi:66969	phosphatidylcholine 42:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801278	phosphatidylcholine diacyl C42:4 measurement	skos:exactMatch	chebi:66967	phosphatidylcholine 42:4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801279	phosphatidylcholine diacyl C42:5 measurement	skos:exactMatch	chebi:66966	phosphatidylcholine 42:5	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801280	phosphatidylcholine diacyl C42:6 measurement	skos:exactMatch	chebi:66965	phosphatidylcholine 42:6	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801281	phosphatidylcholine acyl-alkyl C30:0 measurement	skos:exactMatch	chebi:85565	phosphatidylcholine O-30:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801282	phosphatidylcholine acyl-alkyl C32:1 measurement	skos:exactMatch	chebi:72347	phosphatidylcholine O-32:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801283	phosphatidylcholine acyl-alkyl C32:2 measurement	skos:exactMatch	chebi:85568	phosphatidylcholine O-32:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801284	phosphatidylcholine acyl-alkyl C34:0 measurement	skos:exactMatch	chebi:67077	phosphatidylcholine O-34:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801285	phosphatidylcholine acyl-alkyl C34:1 measurement	skos:exactMatch	chebi:67076	phosphatidylcholine O-34:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801286	phosphatidylcholine acyl-alkyl C34:2 measurement	skos:exactMatch	chebi:64544	phosphatidylcholine O-34:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801287	phosphatidylcholine acyl-alkyl C34:3 measurement	skos:exactMatch	chebi:64541	phosphatidylcholine O-34:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801288	phosphatidylcholine acyl-alkyl C36:0 measurement	skos:exactMatch	chebi:67067	phosphatidylcholine O-36:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801289	phosphatidylcholine acyl-alkyl C36:1 measurement	skos:exactMatch	chebi:67066	phosphatidylcholine O-36:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801290	phosphatidylcholine acyl-alkyl C36:2 measurement	skos:exactMatch	chebi:67065	phosphatidylcholine O-36:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801291	phosphatidylcholine acyl-alkyl C36:3 measurement	skos:exactMatch	chebi:64537	phosphatidylcholine O-36:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801292	phosphatidylcholine acyl-alkyl C36:4 measurement	skos:exactMatch	chebi:67064	phosphatidylcholine O-36:4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801293	phosphatidylcholine acyl-alkyl C36:5 measurement	skos:exactMatch	chebi:64540	phosphatidylcholine O-36:5	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801294	phosphatidylcholine acyl-alkyl C38:0 measurement	skos:exactMatch	chebi:67071	phosphatidylcholine O-38:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801295	phosphatidylcholine acyl-alkyl C38:1 measurement	skos:exactMatch	chebi:67070	phosphatidylcholine O-38:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801296	phosphatidylcholine acyl-alkyl C38:2 measurement	skos:exactMatch	chebi:67069	phosphatidylcholine O-38:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801297	phosphatidylcholine acyl-alkyl C38:3 measurement	skos:exactMatch	chebi:67068	phosphatidylcholine O-38:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801298	phosphatidylcholine acyl-alkyl C38:4 measurement	skos:exactMatch	chebi:64480	phosphatidylcholine O-38:4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801299	phosphatidylcholine acyl-alkyl C38:5 measurement	skos:exactMatch	chebi:64445	phosphatidylcholine O-38:5	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801300	phosphatidylcholine acyl-alkyl C38:6 measurement	skos:exactMatch	chebi:64536	phosphatidylcholine O-38:6	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801301	phosphatidylcholine acyl-alkyl C40:1 measurement	skos:exactMatch	chebi:85574	phosphatidylcholine O-40:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801302	phosphatidylcholine acyl-alkyl C40:2 measurement	skos:exactMatch	chebi:72348	phosphatidylcholine O-40:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801303	phosphatidylcholine acyl-alkyl C40:3 measurement	skos:exactMatch	chebi:85570	phosphatidylcholine O-40:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801304	phosphatidylcholine acyl-alkyl C40:4 measurement	skos:exactMatch	chebi:85571	phosphatidylcholine O-40:4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801305	phosphatidylcholine acyl-alkyl C40:5 measurement	skos:exactMatch	chebi:85573	phosphatidylcholine O-40:5	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801306	phosphatidylcholine acyl-alkyl C40:6 measurement	skos:exactMatch	chebi:64533	phosphatidylcholine O-40:6	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801307	phosphatidylcholine acyl-alkyl C42:0 measurement	skos:exactMatch	chebi:85582	phosphatidylcholine O-42:0	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801308	phosphatidylcholine acyl-alkyl C42:1 measurement	skos:exactMatch	chebi:85583	phosphatidylcholine O-42:1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801309	phosphatidylcholine acyl-alkyl C42:2 measurement	skos:exactMatch	chebi:85584	phosphatidylcholine O-42:2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801310	phosphatidylcholine acyl-alkyl C42:3 measurement	skos:exactMatch	chebi:85585	phosphatidylcholine O-42:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801311	phosphatidylcholine acyl-alkyl C42:4 measurement	skos:exactMatch	chebi:85588	phosphatidylcholine O-42:4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801312	phosphatidylcholine acyl-alkyl C42:5 measurement	skos:exactMatch	chebi:85590	phosphatidylcholine O-42:5	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801313	phosphatidylcholine acyl-alkyl C44:3 measurement	skos:exactMatch	chebi:67085	phosphatidylcholine O-44:3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801314	phosphatidylcholine acyl-alkyl C44:4 measurement	skos:exactMatch	chebi:67084	phosphatidylcholine O-44:4	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801315	phosphatidylcholine acyl-alkyl C44:5 measurement	skos:exactMatch	chebi:67083	phosphatidylcholine O-44:5	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0801316	phosphatidylcholine acyl-alkyl C44:6 measurement	skos:exactMatch	chebi:67082	phosphatidylcholine O-44:6	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0803357	25-hydroxyvitamin D3 measurement	skos:exactMatch	chebi:17933	calcidiol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0803404	bakers yeast extract measurement	skos:exactMatch	chebi:174614	11H-benzo[a]fluoren-11-ylacetic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0803466	retinoic acid measurement	skos:exactMatch	chebi:15367	all-trans-retinoic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0803476	3-methylthiopropanamine measurement	skos:exactMatch	chebi:16696	3-methylthiopropylamine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0803483	arg-vasopressin measurement	skos:exactMatch	chebi:34543	argipressin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
+efo:0803518	sulfoacetate measurement	skos:exactMatch	chebi:50519	sulfoacetic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_efo_chebi_mappings.py	Not
 efo:1001993	scleroderma	skos:exactMatch	ncbitaxon:386268	Sclerodermus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	Not
 efo:1001993	scleroderma	skos:exactMatch	ncbitaxon:68787	Scleroderma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	Not
 envo:00000016	sea	skos:exactMatch	ncbitaxon:2798467	Sea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	Not
