@@ -609,9 +609,3 @@ def mark(line: int, value: str) -> werkzeug.Response:
 def _go_home() -> werkzeug.Response:
     state = State.from_flask_globals()
     return flask.redirect(url_for_state(".home", state))
-
-
-app = get_app()
-
-if __name__ == "__main__":
-    app.run()
