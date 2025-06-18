@@ -12,8 +12,8 @@ import ssslm
 from bioregistry import NormalizedNamedReference, NormalizedReference
 from tqdm import tqdm
 
-from biomappings import MappingTuple
-from biomappings.resources import PredictionTuple, append_prediction_tuples
+from biomappings import SemanticMapping
+from biomappings.resources import append_prediction_tuples
 from biomappings.utils import CMapping
 
 __all__ = [
@@ -31,7 +31,7 @@ def append_gilda_predictions(
     target_prefixes: str | Iterable[str],
     provenance: str,
     *,
-    relation: str | None = None,
+    relation: str | None | NormalizedNamedReference = None,
     custom_filter: CMapping | None = None,
     identifiers_are_names: bool = False,
     path: Path | None = None,
@@ -60,7 +60,7 @@ def append_gilda_predictions(
     if custom_filter is not None:
         predictions = filter_custom(predictions, custom_filter)
     predictions = filter_existing_xrefs(predictions, [prefix, *target_prefixes])
-    predictions = sorted(predictions, key=lambda t: (t.subject.prefix, t.subject_label))
+    predictions = sorted(predictions, key=lambda t: (t.subject.prefix, t.subject.name))
     tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
     append_prediction_tuples(predictions, path=path)
 
@@ -69,14 +69,17 @@ def iter_prediction_tuples(
     prefix: str,
     provenance: str,
     *,
-    predicate: NormalizedReference | None = None,
+    predicate: str | NormalizedReference | None = None,
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
-) -> Iterable[PredictionTuple]:
+) -> Iterable[SemanticMapping]:
     """Iterate over prediction tuples for a given prefix."""
     if predicate is None:
         predicate = NormalizedReference.from_curie("skos:exactMatch")
+    elif isinstance(predicate, str):
+        predicate = NormalizedReference.from_curie(predicate)
+
     j = NormalizedReference.from_curie("semapv:LexicalMatching")
     id_name_mapping = pyobo.get_id_name_mapping(prefix, strict=strict)
     it = tqdm(
@@ -86,7 +89,7 @@ def iter_prediction_tuples(
     for identifier, name in it:
         for scored_match in grounder.get_matches(name):
             name_prediction_count += 1
-            yield MappingTuple(
+            yield SemanticMapping(
                 subject=NormalizedNamedReference(prefix=prefix, identifier=identifier, name=name),
                 predicate=predicate,
                 object=scored_match.reference,
@@ -105,7 +108,7 @@ def iter_prediction_tuples(
         for identifier in it:
             for scored_match in grounder.get_matches(identifier):
                 name_prediction_count += 1
-                yield PredictionTuple(
+                yield SemanticMapping(
                     subject=NormalizedNamedReference(
                         prefix=prefix, identifier=identifier, name=identifier
                     ),
@@ -121,26 +124,26 @@ def iter_prediction_tuples(
 
 
 def filter_custom(
-    predictions: Iterable[PredictionTuple],
+    mappings: Iterable[SemanticMapping],
     custom_filter: CMapping,
-) -> Iterable[PredictionTuple]:
+) -> Iterable[SemanticMapping]:
     """Filter out custom mappings."""
     counter = 0
-    for p in predictions:
+    for mapping in mappings:
         if (
-            custom_filter.get(p.subject.prefix, {})
-            .get(p.object.prefix, {})
-            .get(p.subject.identifier)
+            custom_filter.get(mapping.subject.prefix, {})
+            .get(mapping.object.prefix, {})
+            .get(mapping.subject.identifier)
         ):
             counter += 1
             continue
-        yield p
+        yield mapping
     logger.info("filtered out %d custom mapped matches", counter)
 
 
 def filter_existing_xrefs(
-    predictions: Iterable[PredictionTuple], prefixes: Iterable[str]
-) -> Iterable[PredictionTuple]:
+    mappings: Iterable[SemanticMapping], prefixes: Iterable[str]
+) -> Iterable[SemanticMapping]:
     """Filter predictions that match xrefs already loaded through PyOBO."""
     prefixes = set(prefixes)
 
@@ -155,14 +158,14 @@ def filter_existing_xrefs(
             ].add(subject_prefix)
 
     n_predictions = 0
-    for prediction in tqdm(predictions, desc="filtering predictions"):
+    for mapping in tqdm(mappings, desc="filtering predictions"):
         if (
-            prediction.object.prefix in entity_to_mapped_prefixes[prediction.subject]
-            or prediction.subject.prefix in entity_to_mapped_prefixes[prediction.object]
+            mapping.object.prefix in entity_to_mapped_prefixes[mapping.subject]
+            or mapping.subject.prefix in entity_to_mapped_prefixes[mapping.object]
         ):
             n_predictions += 1
             continue
-        yield prediction
+        yield mapping
 
     tqdm.write(
         f"filtered out {n_predictions:,} pre-mapped matches",

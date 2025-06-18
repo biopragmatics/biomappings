@@ -11,7 +11,7 @@ import pystow
 from tqdm import tqdm
 
 from biomappings import load_mappings
-from biomappings.utils import get_git_hash, get_prefix
+from biomappings.utils import get_git_hash
 
 BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
 
@@ -37,24 +37,24 @@ def ndex(username: str | None, password: str | None) -> None:
     cx.add_network_attribute("reference", "https://github.com/biomappings/biomappings")
     cx.add_network_attribute("rights", "Waiver-No rights reserved (CC0)")
 
-    prefixes = {
-        get_prefix(curie)
+    prefixes: set[str] = {
+        reference.prefix
         for mapping in positive_mappings
-        for curie in (mapping["subject_id"], mapping["object_id"])
+        for reference in (mapping.subject, mapping.object)
     }
     prefixes.add("orcid")
     prefixes.add("semapv")
     cx.set_context({prefix: bioregistry.get_uri_prefix(prefix) for prefix in prefixes})
 
     cx.add_network_attribute("version", get_git_hash())
-    authors = sorted(
+    author_orcid_ids = sorted(
         {
-            mapping["author_id"]
+            mapping.author.identifier
             for mapping in positive_mappings
-            if mapping["author_id"].startswith("orcid:")
+            if mapping.author and mapping.author.prefix == "orcid"
         }
     )
-    cx.add_network_attribute("author", authors, type="list_of_string")
+    cx.add_network_attribute("author", author_orcid_ids, type="list_of_string")
 
     for mapping in tqdm(positive_mappings, desc="Loading NiceCXBuilder"):
         source = cx.add_node(

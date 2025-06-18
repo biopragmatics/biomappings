@@ -4,7 +4,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from biomappings import PredictionTuple
+from bioregistry import NormalizedNamableReference as Reference
+
+from biomappings import SemanticMapping
 from biomappings.resources import _write_curated, write_predictions
 from biomappings.wsgi import Controller, State, get_app
 
@@ -49,12 +51,10 @@ class TestFull(unittest.TestCase):
         self.temporary_directory = tempfile.TemporaryDirectory()
 
         predictions = [
-            PredictionTuple(
-                subject_id="chebi:131408",
-                subject_label="glyoxime",
-                predicate_id="skos:exactMatch",
-                object_id="mesh:C018305",
-                object_label="glyoxal dioxime",
+            SemanticMapping(
+                subject=Reference.from_curie("chebi:131408", name="glyoxime"),
+                predicate="skos:exactMatch",
+                object=Reference.from_curie("mesh:C018305", name="glyoxal dioxime"),
                 mapping_justification="semapv:ManualMappingCuration",
                 confidence=0.95,
                 mapping_tool="test",

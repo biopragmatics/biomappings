@@ -49,12 +49,12 @@ if get_git_hash() is not None:
     @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
     def curate(path: Path) -> None:
         """Run a target curation web app."""
-        from curies import ReferenceTuple
+        from bioregistry import NormalizedNamableReference
 
         from .resources import _load_table
         from .wsgi import get_app
 
-        target_references: list[ReferenceTuple] = []
+        target_references: list[NormalizedNamableReference] = []
         for mapping in _load_table(path, t="curated"):
             target_references.append(mapping.subject)
             target_references.append(mapping.object)
@@ -89,20 +89,14 @@ def update(ctx: click.Context) -> None:
 
 
 @main.command()
-@click.option("--standardize", is_flag=True)
-def lint(standardize: bool) -> None:
+def lint() -> None:
     """Sort files and remove duplicates."""
-    from .resources import (
-        lint_false_mappings,
-        lint_predictions,
-        lint_true_mappings,
-        lint_unsure_mappings,
-    )
+    from . import resources
 
-    lint_true_mappings(standardize=standardize)
-    lint_false_mappings(standardize=standardize)
-    lint_unsure_mappings(standardize=standardize)
-    lint_predictions(standardize=standardize)
+    resources.lint_true_mappings()
+    resources.lint_false_mappings()
+    resources.lint_unsure_mappings()
+    resources.lint_predictions()
 
 
 @main.command()

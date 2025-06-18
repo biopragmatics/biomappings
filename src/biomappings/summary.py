@@ -6,14 +6,19 @@ import itertools as itt
 import os
 import typing
 from collections import Counter
-from collections.abc import Iterable, Mapping
+from collections.abc import Iterable
+from typing import Any, TypedDict
 
 import click
 import yaml
 
+from biomappings.resources import SemanticMapping
+
 __all__ = [
     "export",
 ]
+
+from bioregistry import NormalizedNamableReference
 
 
 @click.command()
@@ -32,63 +37,73 @@ def export() -> None:
     true_mappings = load_mappings()
     false_mappings = load_false_mappings()
     unsure_mappings = load_unsure()
-    rv = {
-        "positive": _get_counter(true_mappings),
-        "negative": _get_counter(false_mappings),
-        "unsure": _get_counter(unsure_mappings),
-        "predictions": _get_counter(load_predictions()),
+
+    rv: dict[str, Any] = {
         "contributors": _get_contributors(
             itt.chain(true_mappings, false_mappings, unsure_mappings)
         ),
     }
-    rv.update(
-        {
-            f"{k}_mapping_count": sum(e["count"] for e in rv[k])
-            for k in ("positive", "negative", "unsure", "predictions")
-        }
-    )
-    rv.update(
-        {
-            f"{k}_prefix_count": len(
-                set(itt.chain.from_iterable((e["source"], e["target"]) for e in rv[k]))
+
+    for key, mappings in [
+        ("positive", true_mappings),
+        ("negative", false_mappings),
+        ("unsure", unsure_mappings),
+        ("predictions", load_predictions()),
+    ]:
+        count_records = _get_count_records(mappings)
+        rv[key] = count_records
+        rv[f"{key}_mapping_count"] = sum(count_record["count"] for count_record in count_records)
+        rv[f"{key}_prefix_count"] = len(
+            set(
+                itt.chain.from_iterable(
+                    (count_record["source"], count_record["target"])
+                    for count_record in count_records
+                )
             )
-            for k in ("positive", "negative", "unsure", "predictions")
-        }
-    )
+        )
+
     with open(path, "w") as file:
         yaml.safe_dump(rv, file, indent=2)
 
 
-def _get_counter(mappings: Iterable[Mapping[str, str]]):
-    from biomappings.utils import get_prefix
+class CountRecord(TypedDict):
+    """A result from getting counter."""
 
+    source: str
+    target: str
+    count: int
+
+
+def _get_count_records(mappings: Iterable[SemanticMapping]) -> list[CountRecord]:
     counter: typing.Counter[tuple[str, str]] = Counter()
     for mapping in mappings:
-        subject_curie, target_curie = mapping["subject_id"], mapping["object_id"]
-        if subject_curie > target_curie:
-            subject_curie, target_curie = target_curie, subject_curie
-        counter[get_prefix(subject_curie), get_prefix(target_curie)] += 1
+        subject, target = mapping.subject, mapping.object
+        if subject > target:
+            subject, target = target, subject
+        counter[subject.prefix, target.prefix] += 1
     return [
         {"source": subject_prefix, "target": target_prefix, "count": count}
         for (subject_prefix, target_prefix), count in counter.most_common()
     ]
 
 
-def _get_contributors(mappings: Iterable[Mapping[str, str]]) -> list[dict[str, str | int]]:
+def _get_contributors(mappings: Iterable[SemanticMapping]) -> list[dict[str, str | int]]:
     from biomappings.resources import load_curators
 
-    orcid_to_curator_reference = {record.identifier: record for record in load_curators().values()}
-    counter = Counter(_get_source(mapping["author_id"]) for mapping in mappings)
+    orcid_to_curator_reference: dict[str, NormalizedNamableReference] = {
+        record.identifier: record for record in load_curators().values()
+    }
+    counter = Counter(
+        mapping.author.identifier
+        for mapping in mappings
+        if mapping.author and mapping.author.prefix == "orcid"
+    )
     return [
-        dict(count=count, **orcid_to_curator_reference[orcid]) if orcid else {"count": count}
+        dict(count=count, **orcid_to_curator_reference[orcid].model_dump(exclude_none=True))
+        if orcid
+        else {"count": count}
         for orcid, count in counter.most_common()
     ]
-
-
-def _get_source(source: str) -> str | None:
-    if source.startswith("orcid:"):
-        return source[len("orcid:") :]
-    return None
 
 
 if __name__ == "__main__":

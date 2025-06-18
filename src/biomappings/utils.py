@@ -6,16 +6,12 @@ import os
 from collections.abc import Mapping
 from pathlib import Path
 from subprocess import CalledProcessError, check_output
-from typing import Any
-
-from curies import ReferenceTuple
 
 __all__ = [
     "RESOURCE_PATH",
     "CMapping",
     "get_canonical_tuple",
     "get_git_hash",
-    "get_prefix",
     "get_script_url",
 ]
 
@@ -99,7 +95,7 @@ def get_script_url(fname: str) -> str:
     return f"https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}"
 
 
-def get_canonical_tuple(mapping: "MappingTuple") -> tuple[str, str, str, str]:
+def get_canonical_tuple(mapping) -> tuple[str, str, str, str]:
     """Get the canonical tuple from a mapping entry."""
     source = mapping.subject
     target = mapping.object
@@ -110,8 +106,3 @@ def get_canonical_tuple(mapping: "MappingTuple") -> tuple[str, str, str, str]:
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
 CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
-
-
-def get_prefix(curie: str) -> str:
-    """Get a prefix from a CURIE string."""
-    return ReferenceTuple.from_curie(curie).prefix

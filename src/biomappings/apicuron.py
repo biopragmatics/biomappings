@@ -79,15 +79,14 @@ def get_curation_payload() -> Submission:
 def iter_reports() -> Iterable[Report]:
     """Generate reports from the Biomappings for APICURON."""
     for mapping in load_mappings():
-        provenance = mapping["source"]
-        if not provenance.startswith("orcid:"):
+        if not mapping.author or mapping.author.prefix != "orcid":
             continue
 
-        source_curie = f"{mapping['source prefix']}:{mapping['source identifier']}"
-        target_curie = f"{mapping['target prefix']}:{mapping['target identifier']}"
+        source_curie = mapping.subject.curie
+        target_curie = mapping.object.curie
         entity_uri = f"{source_curie}-{target_curie}"
         yield Report(
-            curator_orcid=provenance[len("orcid:") :],
+            curator_orcid=mapping.author.identifier,
             activity_term="novel_curation",
             resource_uri=DESCRIPTION.resource_uri,
             entity_uri=entity_uri,
