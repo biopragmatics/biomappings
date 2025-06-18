@@ -102,18 +102,33 @@ chebi:10057	9H-xanthene	skos:exactMatch	mesh:C002563	xanthan gum	semapv:ManualMa
 chebi:134126	picrotoxin	skos:exactMatch	mesh:D031605	Cocculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:135025	rimazolium	skos:exactMatch	mesh:C100296	probon	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		Not
 chebi:135083	cibenzoline	skos:exactMatch	mesh:C032151	cifenline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		Not
+chebi:136542	(+)-sesamin monocatechol	skos:exactMatch	efo:0006481	SC-1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:141420	ganglioside GM2 (natural compound)	skos:exactMatch	efo:0005747	GM2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:142025	gibberellin A10	skos:exactMatch	efo:0002181	GA10	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:143126	(2E)-2-benzylidene-3-(cyclohexylamino)indan-1-one	skos:exactMatch	efo:0002044	BC-1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:145865	bencarbazone	skos:exactMatch	efo:0008809	MIDAS	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:15367	all-trans-retinoic acid	skos:exactMatch	mesh:D012160	Retina	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:15756	hexadecanoic acid	skos:exactMatch	mesh:D010169	Palmitic Acids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/indralab/panacea_indra/blob/master/panacea_indra/make_ctd_tests.py	Not
 chebi:15940	nicotinic acid	skos:exactMatch	mesh:D009539	Nicotinic Acids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
 chebi:16543	N(2)-acetyl-L-ornithine	skos:exactMatch	mesh:C021951	N(delta)-acetylornithine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
+chebi:16610	spermidine	skos:exactMatch	efo:0007027	SD	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:17050	3-phosphoglyceric acid	skos:exactMatch	efo:0010450	3-phosphoglyceric acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:17221	beta-myrcene	skos:exactMatch	mesh:C509595	myrcene	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	Not
 chebi:17544	hydrogencarbonate	skos:exactMatch	mesh:D001639	Bicarbonates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
 chebi:17883	hydrogen chloride	skos:exactMatch	mesh:D007943	Leukemia, Hairy Cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
+chebi:17997	dinitrogen	skos:exactMatch	efo:0004028	N2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:18132	phosphocholine	skos:exactMatch	efo:0022828	CHOP	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:204039	UK-1	skos:exactMatch	efo:0005161	Uk-1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:222262	CV-1	skos:exactMatch	efo:0022733	CV-1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:22927	bromine atom	skos:exactMatch	mesh:D031724	Bromus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:23888	drug	skos:exactMatch	mesh:D008511	Medicine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:24536	hexachlorocyclohexane	skos:exactMatch	mesh:D002819	Chorea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:27777	acetohydroxamic acid	skos:exactMatch	mesh:D000744	Anemia, Hemolytic, Autoimmune	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
 chebi:28201	rotenone	skos:exactMatch	mesh:D029866	Derris	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
+chebi:28598	(-)-(2R,3R)-2,3-dihydroxybutanamide	skos:exactMatch	efo:0022419	DBA	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:29298	ditritium	skos:exactMatch	efo:0022680	T2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:29387	disulfur	skos:exactMatch	efo:0001233	S2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
+chebi:29388	trisulfur	skos:exactMatch	efo:0005838	S3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	Not
 chebi:29806	fumarate(2-)	skos:exactMatch	mesh:D005650	Fumarates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
 chebi:30078	gold monochloride	skos:exactMatch	mesh:C038016	gold chloride	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
 chebi:31013	cerotate	skos:exactMatch	mesh:C085095	Cerinate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	Not
