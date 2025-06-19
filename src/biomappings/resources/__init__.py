@@ -204,7 +204,11 @@ def _load_table(path: str | Path, *, standardize: bool) -> list[SemanticMapping]
     with Path(path).expanduser().resolve().open() as file:
         return [
             SemanticMapping.from_row(
-                {k: v.strip() for k, v in record.items() if v and v.strip() and v.strip() != "."},
+                {
+                    key: value_stripped
+                    for key, value in record.items()
+                    if value and (value_stripped := value.strip()) and value_stripped != "."
+                },
                 reference_cls,
             )
             for record in csv.DictReader(file, delimiter="\t")
