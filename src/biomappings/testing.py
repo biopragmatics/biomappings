@@ -12,6 +12,7 @@ from typing import ClassVar, TypeVar, cast
 
 import bioregistry
 from bioregistry import NormalizedNamableReference
+from curies import NamableReference
 
 from biomappings.resources import (
     CURATORS_PATH,
@@ -35,7 +36,6 @@ __all__ = [
     "PathIntegrityTestCase",
 ]
 
-from curies import NamableReference
 
 SEMAPV_ID_TO_NAME = get_semapv_id_to_name()
 
