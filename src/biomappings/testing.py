@@ -89,20 +89,32 @@ class IntegrityTestCase(unittest.TestCase):
                 msg="Prediction can not be annotated with manual curation",
             )
 
-    def test_canonical_prefixes(self) -> None:
+    def test_valid_curies(self) -> None:
         """Test that all mappings use canonical bioregistry prefixes."""
-        valid_prefixes = set(bioregistry.read_registry())
         for label, line, mapping in self._iter_groups():
-            self.assertIn(
-                mapping.subject.prefix,
-                valid_prefixes,
-                msg=f"Invalid prefix: {mapping.subject.prefix} on {label}:{line}",
-            )
-            self.assertIn(
-                mapping.object.prefix,
-                valid_prefixes,
-                msg=f"Invalid prefix: {mapping.object.prefix} on {label}:{line}",
-            )
+            self.assert_valid(label, line, mapping.subject)
+            self.assert_valid(label, line, mapping.predicate)
+            self.assert_valid(label, line, mapping.object)
+            self.assert_valid(label, line, mapping.mapping_justification)
+            if mapping.author is not None:
+                self.assert_valid(label, line, mapping.author)
+
+    def assert_valid(self, label: str, line: int, reference: NamableReference) -> None:
+        """Assert a reference is valid and normalized to the Bioregistry."""
+        norm_prefix = bioregistry.normalize_prefix(reference.prefix)
+        self.assertIsNotNone(
+            norm_prefix, msg=f"Unknown prefix: {reference.prefix} on {label}:{line}"
+        )
+        self.assertEqual(
+            norm_prefix,
+            reference.prefix,
+            msg=f"Non-normalized prefix: {reference.prefix} on {label}:{line}",
+        )
+        self.assertEqual(
+            bioregistry.standardize_identifier(reference.prefix, reference.identifier),
+            reference.identifier,
+            msg=f"Invalid identifier: {reference.curie} on {label}:{line}",
+        )
 
     def test_contributors(self) -> None:
         """Test all contributors have an entry in the curators.tsv file."""

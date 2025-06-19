@@ -55,7 +55,7 @@ if get_git_hash() is not None:
         from .wsgi import get_app
 
         target_references: list[NamableReference] = []
-        for mapping in _load_table(path):
+        for mapping in _load_table(path, normalize=True):
             target_references.append(mapping.subject)
             target_references.append(mapping.object)
         app = get_app(target_references=target_references)

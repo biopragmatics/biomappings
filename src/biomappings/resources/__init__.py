@@ -194,12 +194,18 @@ class SemanticMapping(BaseModel):
         )
 
 
-def _load_table(path: str | Path) -> list[SemanticMapping]:
+def _load_table(path: str | Path, *, normalize: bool) -> list[SemanticMapping]:
+    reference_cls: type[NamableReference]
+    if normalize:
+        reference_cls = NormalizedNamableReference
+    else:
+        reference_cls = NamableReference
+
     with Path(path).expanduser().resolve().open() as file:
         return [
             SemanticMapping.from_row(
                 {k: v for k, v in record.items() if v and v.strip() and v.strip() != "."},
-                NormalizedNamableReference,
+                reference_cls,
             )
             for record in csv.DictReader(file, delimiter="\t")
         ]
@@ -238,9 +244,11 @@ def mapping_sort_key(mapping: SemanticMapping) -> tuple[str, ...]:
     )
 
 
-def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
+def load_mappings(
+    *, path: str | Path | None = None, normalize: bool = False
+) -> list[SemanticMapping]:
     """Load the mappings table."""
-    return _load_table(path or POSITIVES_SSSOM_PATH)
+    return _load_table(path or POSITIVES_SSSOM_PATH, normalize=normalize)
 
 
 def load_mappings_subset(source: str, target: str) -> Mapping[str, str]:
@@ -288,15 +296,17 @@ def lint_true_mappings(*, path: Path | None = None) -> None:
 
 def _lint_curated_mappings(path: Path) -> None:
     """Lint the true mappings file."""
-    mapping_list = _load_table(path)
+    mapping_list = _load_table(path, normalize=True)
     mappings = _remove_redundant(mapping_list)
     mappings = _remove_redundant(mappings)
     _write_helper(mappings, path, mode="w", t="curated")
 
 
-def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
+def load_false_mappings(
+    *, path: Path | None = None, normalize: bool = False
+) -> list[SemanticMapping]:
     """Load the false mappings table."""
-    return _load_table(path or NEGATIVES_SSSOM_PATH)
+    return _load_table(path or NEGATIVES_SSSOM_PATH, normalize=normalize)
 
 
 def append_false_mappings(
@@ -323,9 +333,9 @@ def lint_false_mappings(*, path: Path | None = None) -> None:
     _lint_curated_mappings(path=path or NEGATIVES_SSSOM_PATH)
 
 
-def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
+def load_unsure(*, path: Path | None = None, normalize: bool = False) -> list[SemanticMapping]:
     """Load the unsure table."""
-    return _load_table(path or UNSURE_SSSOM_PATH)
+    return _load_table(path or UNSURE_SSSOM_PATH, normalize=normalize)
 
 
 def append_unsure_mappings(
@@ -352,9 +362,11 @@ def lint_unsure_mappings(*, path: Path | None = None) -> None:
     _lint_curated_mappings(path=path or UNSURE_SSSOM_PATH)
 
 
-def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:
+def load_predictions(
+    *, path: str | Path | None = None, normalize: bool = False
+) -> list[SemanticMapping]:
     """Load the predictions table."""
-    return _load_table(path or PREDICTIONS_SSSOM_PATH)
+    return _load_table(path or PREDICTIONS_SSSOM_PATH, normalize=normalize)
 
 
 def write_predictions(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
@@ -417,11 +429,11 @@ def lint_predictions(
     :param additional_curated_mappings: A list of additional mappings
     """
     mappings = remove_mappings(
-        load_predictions(path=path),
+        load_predictions(path=path, normalize=True),
         itt.chain(
-            load_mappings(),
-            load_false_mappings(),
-            load_unsure(),
+            load_mappings(normalize=True),
+            load_false_mappings(normalize=True),
+            load_unsure(normalize=True),
             additional_curated_mappings or [],
         ),
     )
