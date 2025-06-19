@@ -1,13 +1,13 @@
-"""Generate mappings using Gilda from VO to MeSH."""
+"""Generate mappings from VO."""
 
 import bioontologies
 import pyobo
 import ssslm
 from bioontologies.obograph import Node
+from bioregistry import NormalizedNamableReference
 from tqdm import tqdm
 
-from biomappings import PredictionTuple
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import SemanticMapping, append_prediction_tuples
 from biomappings.utils import get_script_url
 
 
@@ -40,17 +40,21 @@ def main():
                             tqdm.write(f"No mesh name for vo:{node.name} mapped to mesh:{mesh_id}")
                             continue
                         rows.append(
-                            PredictionTuple(
-                                node.prefix,
-                                node.identifier,
-                                node.name,
-                                "skos:exactMatch",
-                                "mesh",
-                                mesh_id,
-                                mesh_name,
-                                "semapv:StructuralMatching",
-                                0.99,
-                                "vo",
+                            SemanticMapping(
+                                subject=NormalizedNamableReference(
+                                    prefix=node.prefix,
+                                    identifier=node.identifier,
+                                    name=node.name,
+                                ),
+                                predicate="skos:exactMatch",
+                                object=NormalizedNamableReference(
+                                    prefix="mesh",
+                                    identifier=mesh_id,
+                                    name=mesh_name,
+                                ),
+                                mapping_justification="semapv:StructuralMatching",
+                                confidence=0.99,
+                                mapping_tool=provenance,
                             )
                         )
                         found_mesh = True
@@ -81,7 +85,7 @@ def _ground(grounder: ssslm.Grounder, node: Node, rows, provenance):
     for text in [node.name, *(s.value for s in node.synonyms)]:
         for scored_match in grounder.get_matches(text):
             rows.append(
-                PredictionTuple(
+                SemanticMapping(
                     node.prefix,
                     node.identifier,
                     node.name,

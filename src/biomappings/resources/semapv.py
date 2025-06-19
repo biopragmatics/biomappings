@@ -7,7 +7,7 @@ from functools import lru_cache
 from pathlib import Path
 
 __all__ = [
-    "get_semapv",
+    "get_semapv_id_to_name",
 ]
 
 url = "https://raw.githubusercontent.com/mapping-commons/semantic-mapping-vocabulary/main/semapv-terms.tsv"
@@ -16,7 +16,7 @@ PATH = HERE.joinpath("semapv.json")
 
 
 @lru_cache(1)
-def get_semapv():
+def get_semapv_id_to_name() -> dict[str, str]:
     """Get a dictionary of semapv local unique identifier to labels."""
     if PATH.is_file():
         return json.loads(PATH.read_text())
@@ -39,4 +39,4 @@ def get_semapv():
 
 
 if __name__ == "__main__":
-    get_semapv()
+    get_semapv_id_to_name()

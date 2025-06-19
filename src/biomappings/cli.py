@@ -49,15 +49,15 @@ if get_git_hash() is not None:
     @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
     def curate(path: Path) -> None:
         """Run a target curation web app."""
-        from curies import ReferenceTuple
+        from curies import NamableReference
 
         from .resources import _load_table
         from .wsgi import get_app
 
-        target_references: list[ReferenceTuple] = []
-        for mapping in _load_table(path):
-            target_references.append(ReferenceTuple.from_curie(mapping["subject_id"]))
-            target_references.append(ReferenceTuple.from_curie(mapping["object_id"]))
+        target_references: list[NamableReference] = []
+        for mapping in _load_table(path, standardize=True):
+            target_references.append(mapping.subject)
+            target_references.append(mapping.object)
         app = get_app(target_references=target_references)
         run_app(app, with_gunicorn=False)
 
@@ -89,34 +89,28 @@ def update(ctx: click.Context) -> None:
 
 
 @main.command()
-@click.option("--standardize", is_flag=True)
-def lint(standardize: bool) -> None:
+def lint() -> None:
     """Sort files and remove duplicates."""
-    from .resources import (
-        lint_false_mappings,
-        lint_predictions,
-        lint_true_mappings,
-        lint_unsure_mappings,
-    )
+    from . import resources
 
-    lint_true_mappings(standardize=standardize)
-    lint_false_mappings(standardize=standardize)
-    lint_unsure_mappings(standardize=standardize)
-    lint_predictions(standardize=standardize)
+    resources.lint_true_mappings(standardize=True)
+    resources.lint_false_mappings(standardize=True)
+    resources.lint_unsure_mappings(standardize=True)
+    resources.lint_predictions(standardize=True)
 
 
 @main.command()
 @click.argument("prefixes", nargs=-1)
 def prune(prefixes: list[str]) -> None:
     """Prune inferred mappings between the given prefixes from the predictions."""
-    from .mapping_graph import get_custom_filter
+    from .mapping_graph import get_mutual_mapping_filter
     from .resources import filter_predictions
 
     if len(prefixes) < 2:
         click.secho("Must give at least 2 prefixes", fg="red")
         sys.exit(0)
 
-    cf = get_custom_filter(prefixes[0], prefixes[1:])
+    cf = get_mutual_mapping_filter(prefixes[0], prefixes[1:])
     filter_predictions(cf)
 
 

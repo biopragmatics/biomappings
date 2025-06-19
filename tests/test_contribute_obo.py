@@ -12,15 +12,19 @@ class TestContributeOBO(unittest.TestCase):
     def setUp(self) -> None:
         """Set up the test case with a specific mapping."""
         mappings = get_curated_mappings("uberon")
-        source_luids = {mapping["subject_id"].split(":", 1)[1] for mapping in mappings}
-        self.assertIn("0000018", source_luids, msg="Mappings are not loaded properly")
+        source_luids = {mapping.subject.identifier for mapping in mappings}
+        self.assertIn(
+            "0000018", source_luids, msg="this mapping was to IDOMAL where UBERON was the object"
+        )
+        self.assertIn(
+            "0000017", source_luids, msg="this mapping was to MeSH where UBERON was the subject"
+        )
 
         # cut the mappings down in case additional ones are curated later
         mappings = [
             mappings
             for mappings in mappings
-            if mappings["subject_id"].split(":", 1)[1] == "0000018"
-            and mappings["object_id"].split(":", 1)[0] == "idomal"
+            if mappings.subject.identifier == "0000018" and mappings.object.prefix == "idomal"
         ]
         self.assertEqual(1, len(mappings))
         self.mappings = mappings
