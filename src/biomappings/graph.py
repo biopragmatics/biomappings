@@ -156,12 +156,12 @@ def charts() -> None:
                     u, v = v, u
                 incomplete_components_edges.append(
                     {
-                        "source": {"reference": u.curie, **nodes_data[u.curie]},
-                        "target": {"reference": v.curie, **nodes_data[v.curie]},
+                        "source": {"curie": u.curie, **nodes_data[u.curie]},
+                        "target": {"curie": v.curie, **nodes_data[v.curie]},
                     }
                 )
             incomplete_components_edges = sorted(
-                incomplete_components_edges, key=lambda d: d["source"]["reference"]
+                incomplete_components_edges, key=lambda d: d["source"]["curie"]
             )
             incomplete_components.append(
                 {
