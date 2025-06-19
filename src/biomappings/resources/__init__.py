@@ -272,7 +272,7 @@ def append_true_mappings(
     """Append new lines to the mappings table."""
     if path is None:
         path = POSITIVES_SSSOM_PATH
-    _write_curated(mappings, path=path, mode="a")
+    _write_helper(mappings, path=path, mode="a", t="curated")
     if sort:
         lint_true_mappings(path=path, standardize=standardize)
 
@@ -284,11 +284,7 @@ def append_true_mapping_tuples(mappings: Iterable[SemanticMapping]) -> None:
 
 def write_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Write mappigns to the true mappings file."""
-    _write_curated(mappings, path=path or POSITIVES_SSSOM_PATH, mode="w")
-
-
-def _write_curated(mappings: Iterable[SemanticMapping], *, path: Path, mode: Literal["w", "a"]):
-    _write_helper(mappings, path, mode=mode, t="curated")
+    _write_helper(mappings, path=path or POSITIVES_SSSOM_PATH, mode="w", t="curated")
 
 
 def lint_true_mappings(*, path: Path | None = None, standardize: bool) -> None:
@@ -300,7 +296,6 @@ def _lint_curated_mappings(path: Path, *, standardize: bool) -> None:
     """Lint the true mappings file."""
     mapping_list = _load_table(path, standardize=standardize)
     mappings = _remove_redundant(mapping_list)
-    mappings = _remove_redundant(mappings)
     _write_helper(mappings, path, mode="w", t="curated")
 
 
@@ -321,7 +316,7 @@ def append_false_mappings(
     """Append new lines to the false mappings table."""
     if path is None:
         path = NEGATIVES_SSSOM_PATH
-    _write_curated(mappings=mappings, path=path, mode="a")
+    _write_helper(mappings=mappings, path=path, mode="a", t="curated")
     if sort:
         lint_false_mappings(path=path, standardize=standardize)
 
@@ -351,7 +346,7 @@ def append_unsure_mappings(
     """Append new lines to the "unsure" mappings table."""
     if path is None:
         path = UNSURE_SSSOM_PATH
-    _write_curated(mappings, path=path, mode="a")
+    _write_helper(mappings, path=path, mode="a", t="curated")
     if sort:
         lint_unsure_mappings(path=path, standardize=standardize)
 
