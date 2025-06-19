@@ -10,10 +10,11 @@ from typing import TYPE_CHECKING, NamedTuple
 import bioregistry
 import click
 import yaml
+from curies import ReferenceTuple
 from tqdm.auto import tqdm
 
 from biomappings.resources import NEGATIVES_SSSOM_PATH, POSITIVES_SSSOM_PATH, PREDICTIONS_SSSOM_PATH
-from biomappings.utils import DATA, get_prefix
+from biomappings.utils import DATA
 
 if TYPE_CHECKING:
     import pandas as pd
@@ -81,12 +82,12 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
     for _, mapping in tqdm(
         df.iterrows(), desc="tabulating prefixes & authors", disable=not use_tqdm
     ):
-        prefixes.add(get_prefix(mapping["subject_id"]))
-        prefixes.add(get_prefix(mapping["predicate_id"]))
-        prefixes.add(get_prefix(mapping["object_id"]))
+        prefixes.add(_get_prefix(mapping["subject_id"]))
+        prefixes.add(_get_prefix(mapping["predicate_id"]))
+        prefixes.add(_get_prefix(mapping["object_id"]))
         author_id = mapping["author_id"]
         if pd.notna(author_id) and any(author_id.startswith(x) for x in ["orcid:", "wikidata:"]):
-            prefixes.add(get_prefix(author_id))
+            prefixes.add(_get_prefix(author_id))
             creator_curies.add(author_id)
         # TODO add justification:
 
@@ -111,6 +112,11 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
             click.echo("")
 
     return SSSOMReturnTuple(prefix_map, sorted(creator_curies), df, msdf)
+
+
+def _get_prefix(curie: str) -> str:
+    """Get a prefix from a CURIE string."""
+    return ReferenceTuple.from_curie(curie).prefix
 
 
 def get_prefix_map(prefixes: Collection[str]) -> dict[str, str]:

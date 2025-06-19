@@ -1,12 +1,13 @@
-"""Generate mappings using Gilda from CL to MeSH."""
+"""Generate mappings from CL."""
 
 import re
 
 import gilda
 import obonet
+from bioregistry import NormalizedNamableReference
 from indra.databases import mesh_client
 
-from biomappings.resources import PredictionTuple, append_prediction_tuples
+from biomappings.resources import SemanticMapping, append_prediction_tuples
 
 g = obonet.read_obo(
     "https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-basic.obo"
@@ -48,22 +49,25 @@ for node, data in g.nodes(data=True):
         mesh_id = next(iter(mesh_ids))
         mappings[node] = mesh_id
 
-
 print(f"Found {len(mappings)} CL->MESH mappings.")
 
 predictions = []
 for cl_id, mesh_id in mappings.items():
-    pred = PredictionTuple(
-        source_prefix="cl",
-        source_id=cl_id,
-        source_name=g.nodes[cl_id]["name"],
-        relation="skos:exactMatch",
-        target_prefix="mesh",
-        target_identifier=mesh_id,
-        target_name=mesh_client.get_mesh_name(mesh_id),
-        type="semapv:LexicalMatching",
+    pred = SemanticMapping(
+        subject=NormalizedNamableReference(
+            prefix="cl",
+            identifier=cl_id,
+            name=g.nodes[cl_id]["name"],
+        ),
+        predicate="skos:exactMatch",
+        object=NormalizedNamableReference(
+            prefix="mesh",
+            identifier=mesh_id,
+            name=mesh_client.get_mesh_name(mesh_id),
+        ),
+        mapping_justification="semapv:LexicalMatching",
         confidence=0.9,
-        source="generate_cl_mesh_mappings.py",
+        mapping_tool="generate_cl_mesh_mappings.py",
     )
     predictions.append(pred)
 

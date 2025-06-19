@@ -6,16 +6,14 @@ import os
 from collections.abc import Mapping
 from pathlib import Path
 from subprocess import CalledProcessError, check_output
-from typing import Any
 
-from curies import ReferenceTuple
+from bioregistry import NormalizedNamableReference
 
 __all__ = [
     "RESOURCE_PATH",
     "CMapping",
     "get_canonical_tuple",
     "get_git_hash",
-    "get_prefix",
     "get_script_url",
 ]
 
@@ -99,19 +97,21 @@ def get_script_url(fname: str) -> str:
     return f"https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}"
 
 
-def get_canonical_tuple(mapping: Mapping[str, Any]) -> tuple[str, str, str, str]:
+def get_canonical_tuple(mapping) -> tuple[str, str, str, str]:
     """Get the canonical tuple from a mapping entry."""
-    source = ReferenceTuple.from_curie(mapping["subject_id"])
-    target = ReferenceTuple.from_curie(mapping["object_id"])
+    source = mapping.subject
+    target = mapping.object
     if source > target:
         source, target = target, source
-    return (*source, *target)
+    return (*source.pair, *target.pair)
 
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
 CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
 
+EXACT_MATCH = NormalizedNamableReference.from_curie("skos:exactMatch")
+NARROW_MATCH = NormalizedNamableReference.from_curie("skos:narrowMatch")
+BROAD_MATCH = NormalizedNamableReference.from_curie("skos:broadMatch")
 
-def get_prefix(curie: str) -> str:
-    """Get a prefix from a CURIE string."""
-    return ReferenceTuple.from_curie(curie).prefix
+LEXICAL_MATCHING_PROCESS = NormalizedNamableReference.from_curie("semapv:LexicalMatching")
+MANUAL_MAPPING_CURATION = NormalizedNamableReference.from_curie("semapv:ManualMappingCuration")

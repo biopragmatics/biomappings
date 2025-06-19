@@ -16,8 +16,8 @@ if TYPE_CHECKING:
     import semra
 
 __all__ = [
-    "get_custom_filter",
     "get_filter_from_semra",
+    "get_mutual_mapping_filter",
     "mutual_mapping_graph",
 ]
 
@@ -30,7 +30,7 @@ def get_filter_from_semra(mappings: list[semra.Mapping]) -> CMapping:
     return rv
 
 
-def get_custom_filter(prefix: str, targets: Iterable[str]) -> CMapping:
+def get_mutual_mapping_filter(prefix: str, targets: Iterable[str]) -> CMapping:
     """Get a custom filter dictionary induced over the mutual mapping graph with all target prefixes.
 
     :param prefix: The source prefix

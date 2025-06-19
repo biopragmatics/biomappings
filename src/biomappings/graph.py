@@ -6,34 +6,47 @@ import itertools as itt
 import logging
 import os
 from collections import Counter
-from collections.abc import Collection, Iterable, Mapping, Sequence
+from collections.abc import Collection, Iterable, Sequence
 from operator import itemgetter
 from typing import TYPE_CHECKING
 
 import click
 import networkx as nx
 import yaml
-from curies import ReferenceTuple
+from curies import Reference
 from tqdm import tqdm
 
-from biomappings.resources import load_false_mappings, load_mappings, load_predictions
-from biomappings.utils import DATA, IMG, get_prefix
+from biomappings.resources import (
+    SemanticMapping,
+    load_false_mappings,
+    load_mappings,
+    load_predictions,
+)
+from biomappings.utils import DATA, EXACT_MATCH, IMG
 
 if TYPE_CHECKING:
     import matplotlib.axes
+
+__all__ = [
+    "get_false_graph",
+    "get_predictions_graph",
+    "get_true_graph",
+]
 
 logger = logging.getLogger(__name__)
 
 
 def get_true_graph(
-    include: Sequence[str] | None = None, exclude: Sequence[str] | None = None
+    include: Sequence[Reference] | None = None,
+    exclude: Sequence[Reference] | None = None,
 ) -> nx.Graph:
     """Get a graph of the true mappings."""
     return _graph_from_mappings(load_mappings(), strata="correct", include=include, exclude=exclude)
 
 
 def get_false_graph(
-    include: Sequence[str] | None = None, exclude: Sequence[str] | None = None
+    include: Sequence[Reference] | None = None,
+    exclude: Sequence[Reference] | None = None,
 ) -> nx.Graph:
     """Get a graph of the false mappings."""
     return _graph_from_mappings(
@@ -42,7 +55,8 @@ def get_false_graph(
 
 
 def get_predictions_graph(
-    include: Collection[str] | None = None, exclude: Collection[str] | None = None
+    include: Collection[Reference] | None = None,
+    exclude: Collection[Reference] | None = None,
 ) -> nx.Graph:
     """Get a graph of the predicted mappings."""
     return _graph_from_mappings(
@@ -51,10 +65,10 @@ def get_predictions_graph(
 
 
 def _graph_from_mappings(
-    mappings: Iterable[Mapping[str, str]],
+    mappings: Iterable[SemanticMapping],
     strata: str,
-    include: Collection[str] | None = None,
-    exclude: Collection[str] | None = None,
+    include: Collection[Reference] | None = None,
+    exclude: Collection[Reference] | None = None,
 ) -> nx.Graph:
     graph = nx.Graph()
 
@@ -66,35 +80,16 @@ def _graph_from_mappings(
         logger.info("excluding %s", exclude)
 
     for mapping in mappings:
-        predicate_curie = mapping["predicate_id"]
-        if exclude and (predicate_curie in exclude):
+        if exclude and (mapping.predicate in exclude):
             continue
-        if include and (predicate_curie not in include):
+        if include and (mapping.predicate not in include):
             continue
-
-        source_curie = mapping["subject_id"]
-        source_reference = ReferenceTuple.from_curie(source_curie)
-        graph.add_node(
-            source_curie,
-            prefix=source_reference.prefix,
-            identifier=source_reference.identifier,
-            name=mapping["subject_label"],
-        )
-
-        target_curie = mapping["object_id"]
-        target_reference = ReferenceTuple.from_curie(target_curie)
-        graph.add_node(
-            target_curie,
-            prefix=target_reference.prefix,
-            identifier=target_reference.identifier,
-            name=mapping["object_label"],
-        )
         graph.add_edge(
-            source_curie,
-            target_curie,
-            relation=predicate_curie,
-            provenance=mapping["author_id"],
-            type=mapping["mapping_justification"],
+            mapping.subject,
+            mapping.object,
+            relation=mapping.predicate.curie,
+            provenance=mapping.author.name if mapping.author else None,
+            type=mapping.mapping_justification.curie,
             strata=strata,
         )
     return graph
@@ -107,13 +102,11 @@ def charts() -> None:
     import seaborn as sns
 
     true_mappings = load_mappings()
-    true_graph = _graph_from_mappings(true_mappings, include=["skos:exactMatch"], strata="correct")
+    true_graph = _graph_from_mappings(true_mappings, include=[EXACT_MATCH], strata="correct")
     for u, v in true_graph.edges():
         true_graph.edges[u, v]["correct"] = True
     false_mappings = load_false_mappings()
-    false_graph = _graph_from_mappings(
-        false_mappings, include=["skos:exactMatch"], strata="incorrect"
-    )
+    false_graph = _graph_from_mappings(false_mappings, include=[EXACT_MATCH], strata="incorrect")
     for u, v in false_graph.edges():
         false_graph.edges[u, v]["correct"] = False
 
@@ -136,11 +129,13 @@ def charts() -> None:
         edge_size = component.number_of_edges()
 
         nodes_data = {
-            curie: {
-                "link": f"https://bioregistry.io/{curie}",
-                **data,
+            reference.curie: {
+                "link": f"https://bioregistry.io/{reference.curie}",
+                "prefix": reference.prefix,
+                "identifier": reference.identifier,
+                "name": reference.name,
             }
-            for curie, data in sorted(component.nodes(data=True), key=itemgetter(0))
+            for reference in sorted(component.nodes, key=itemgetter(0))
         }
 
         unstable_edges = [
@@ -162,12 +157,12 @@ def charts() -> None:
                     u, v = v, u
                 incomplete_components_edges.append(
                     {
-                        "source": {"curie": u, **nodes_data[u]},
-                        "target": {"curie": v, **nodes_data[v]},
+                        "source": {"reference": u.curie, **nodes_data[u]},
+                        "target": {"reference": v.curie, **nodes_data[v]},
                     }
                 )
             incomplete_components_edges = sorted(
-                incomplete_components_edges, key=lambda d: d["source"]["curie"]
+                incomplete_components_edges, key=lambda d: d["source"]["reference"]
             )
             incomplete_components.append(
                 {
@@ -176,7 +171,7 @@ def charts() -> None:
                 }
             )
 
-        prefixes = [get_prefix(node) for node in component]
+        prefixes = [node.prefix for node in component]
         prefix_list.extend(prefixes)
         unique_prefixes = len(set(prefixes))
         component_number_prefixes.append(unique_prefixes)
@@ -234,7 +229,7 @@ def charts() -> None:
     axes[0].set_xlabel("Count")
     axes[0].set_title(f"Prefixes ({len(prefix_counter)})")
 
-    relations = [m["predicate_id"] for m in true_mappings]
+    relations = [m.predicate.curie for m in true_mappings]
     relation_counter = Counter(relations)
     sns.countplot(y=relations, ax=axes[1], order=[k for k, _ in relation_counter.most_common()])
     axes[1].set_xscale("log")

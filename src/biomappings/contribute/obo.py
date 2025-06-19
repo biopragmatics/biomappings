@@ -9,12 +9,12 @@ from __future__ import annotations
 
 from copy import deepcopy
 from pathlib import Path
-from typing import Any
 
 import bioregistry
 import click
 from tqdm.auto import tqdm
 
+from biomappings import SemanticMapping
 from biomappings.contribute.utils import get_curated_mappings
 
 
@@ -41,7 +41,7 @@ def update_obo(*, prefix: str, path: str | Path) -> None:
 
 
 def update_obo_lines(
-    *, lines: list[str], mappings: list[dict[str, Any]], progress: bool = True
+    *, lines: list[str], mappings: list[SemanticMapping], progress: bool = True
 ) -> list[str]:
     """Update the lines of an OBO file.
 
@@ -54,26 +54,25 @@ def update_obo_lines(
 
     for mapping in tqdm(mappings, unit="mapping", unit_scale=True, disable=not progress):
         subject_curie = bioregistry.normalize_curie(
-            mapping["subject_id"], use_preferred=True, strict=True
+            mapping.subject.curie, use_preferred=True, strict=True
         )
         if subject_curie is None:
             raise ValueError
         object_curie = bioregistry.normalize_curie(
-            mapping["object_id"], use_preferred=True, strict=True
+            mapping.object.curie, use_preferred=True, strict=True
         )
         if object_curie is None:
             raise ValueError
 
-        author_curie = mapping["author_id"]
-        if not author_curie.startswith("orcid:"):
+        if not mapping.author or mapping.author.prefix != "orcid":
             continue
 
         lines = add_xref(
             lines,
             node_curie=subject_curie,
             xref_curie=object_curie,
-            xref_name=mapping["object_label"],
-            author_orcid=author_curie[len("orcid:") :],
+            xref_name=mapping.object.name,
+            author_orcid=mapping.author.identifier,
         )
     return lines
 

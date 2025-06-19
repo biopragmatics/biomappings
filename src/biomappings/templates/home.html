@@ -81,23 +81,23 @@
                             <td class="text-right">{{ 1 + line }}</td>
                             {% endif %}
                             <td>
-                                <a href="https://bioregistry.io/{{ p['subject_id'] }}">
-                                    {{ p['subject_id'] }}
+                                <a href="https://bioregistry.io/{{ p.subject.curie }}">
+                                    {{ p.subject.curie }}
                                 </a>
                             </td>
-                            <td>{{ p['subject_label'] }}</td>
+                            <td>{{ p.subject.name }}</td>
                             {% if show_relations %}
-                                <td>{{ p['predicate_id'] }}</td>
+                                <td>{{ p.predicate.curie }}</td>
                             {% endif %}
                             <td>
-                                <a href="https://bioregistry.io/{{ p['object_id'] }}">
-                                    {{ p['object_id'] }}
+                                <a href="https://bioregistry.io/{{ p.object.curie }}">
+                                    {{ p.object.curie }}
                                 </a>
                             </td>
-                            <td>{{ p['object_label'] }}</td>
+                            <td>{{ p.object.name }}</td>
                             <td>
                                 <div class="progress" style="margin-bottom: 0">
-                                    {% set confidence = ((p['confidence'] | float) * 100) | int %}
+                                    {% set confidence = ((p.confidence | float) * 100) | int %}
                                     <div class="progress-bar progress-bar-striped {{ progress_color(confidence) }}"
                                          role="progressbar"
                                          aria-valuenow="{{ confidence }}" aria-valuemin="0"
@@ -108,28 +108,28 @@
                                 </div>
                             </td>
                             <td>
-                                <a data-toggle="tooltip" title="The {{ p['relation'] }} relationship is correct."
+                                <a data-toggle="tooltip" title="The {{ p.predicate.curie }} relationship is correct."
                                    href="{{ url_for_state('.mark', state, line=line, value='yup') }}">
                                     <i class="far fa-thumbs-up"></i>
                                 </a>
                             </td>
                             <td class="text-nowrap">
                                 <a data-toggle="tooltip"
-                                   title="{{ p['subject_label'] }} is broader than {{ p['object_label'] }}."
+                                   title="{{ p.subject.name }} is broader than {{ p.object.name }}."
                                    href="{{ url_for_state('.mark', state, line=line, value='broad') }}">
                                     -B-
                                 </a>
                             </td>
                             <td class="text-nowrap">
                                 <a data-toggle="tooltip"
-                                   title="{{ p['subject_label'] }} is narrower than {{ p['object_label'] }}."
+                                   title="{{ p.subject.name }} is narrower than {{ p.object.name }}."
                                    href="{{ url_for_state('.mark', state, line=line, value='narrow') }}">
                                     -N-
                                 </a>
                             </td>
                             <td>
                                 <a data-toggle="tooltip"
-                                   title="These two entities do not have the {{ p['relation'] }} relationship. You should still click this even if you think there could be a different relationship."
+                                   title="These two entities do not have the {{ p.predicate.curie }} relationship. You should still click this even if you think there could be a different relationship."
                                    href="{{ url_for_state('.mark', state, line=line, value='nope') }}">
                                     <i class="far fa-thumbs-down"></i>
                                 </a>

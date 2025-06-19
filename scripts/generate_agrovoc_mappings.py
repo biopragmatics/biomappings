@@ -6,10 +6,11 @@ Note: this script requires a minimum of PyOBO v0.7.0 to run.
 import time
 
 import pyobo
+from bioregistry import NormalizedNamableReference
 from pyobo.sources.agrovoc import ensure_agrovoc_graph
 from tqdm import tqdm
 
-from biomappings import PredictionTuple
+from biomappings import SemanticMapping
 from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
@@ -39,17 +40,17 @@ def main():
     for identifier, name in tqdm(graph.query(QUERY)):
         for scored_match in grounder.get_matches(name):
             rows.append(
-                PredictionTuple(
-                    "agrovoc",
-                    identifier,
-                    name,
-                    "skos:exactMatch",
-                    scored_match.prefix,
-                    scored_match.identifier,
-                    scored_match.name,
-                    "semapv:LexicalMatching",
-                    scored_match.score,
-                    provenance,
+                SemanticMapping(
+                    subject=NormalizedNamableReference(
+                        prefix="agrovoc", identifier=identifier, name=name
+                    ),
+                    predicate=NormalizedNamableReference.from_curie("skos:exactMatch"),
+                    object=scored_match.reference,
+                    mapping_justification=NormalizedNamableReference.from_curie(
+                        "semapv:LexicalMatching"
+                    ),
+                    confidence=scored_match.score,
+                    mapping_tool=provenance,
                 )
             )
     append_prediction_tuples(rows)

@@ -3,43 +3,42 @@
 import re
 from collections.abc import Iterable
 
-from indra.databases import hgnc_client, mesh_client
+import pyobo
+from bioregistry import NormalizedNamableReference
+from indra.databases import hgnc_client
 
-from biomappings.resources import PredictionTuple, append_prediction_tuples
-from biomappings.utils import get_script_url
+from biomappings.resources import SemanticMapping, append_prediction_tuples
+from biomappings.utils import EXACT_MATCH, LEXICAL_MATCHING_PROCESS, get_script_url
 
 MESH_PROTEIN_RE = re.compile(r"^(.+) protein, human$")
 
 
-def get_mappings() -> Iterable[PredictionTuple]:
+def get_mappings() -> Iterable[SemanticMapping]:
     """Iterate high-confidence lexical mappings between MeSH and UniProt human proteins."""
     url = get_script_url(__file__)
-    mapping_type = "semapv:LexicalMatching"
-    match_type = "skos:exactMatch"
-    confidence = 0.999
-    for mesh_name, mesh_id in mesh_client.mesh_name_to_id.items():
+    grounder = pyobo.get_grounder("hgnc")
+    for mesh_id, mesh_name in pyobo.get_id_name_mapping("mesh").items():
         match = MESH_PROTEIN_RE.match(mesh_name)
         if not match:
             continue
         gene_name = match.groups()[0]
-        hgnc_id = hgnc_client.get_hgnc_id(gene_name)
-        if not hgnc_id:
-            continue
-        uniprot_id = hgnc_client.get_uniprot_id(hgnc_id)
-        if not uniprot_id or "," in uniprot_id:
-            continue
-        yield PredictionTuple(
-            "mesh",
-            mesh_id,
-            mesh_name,
-            match_type,
-            "uniprot",
-            uniprot_id,
-            gene_name,
-            mapping_type,
-            confidence,
-            url,
-        )
+
+        for mm in grounder.get_matches(gene_name):
+            uniprot_id = hgnc_client.get_uniprot_id(mm.identifier)
+            if not uniprot_id or "," in uniprot_id:
+                continue
+            yield SemanticMapping(
+                subject=NormalizedNamableReference(
+                    prefix="mesh", identifier=mesh_id, name=mesh_name
+                ),
+                predicate=EXACT_MATCH,
+                object=NormalizedNamableReference(
+                    prefix="uniprot", identifier=uniprot_id, name=mm.name
+                ),
+                mapping_justification=LEXICAL_MATCHING_PROCESS,
+                confidence=mm.score,
+                mapping_tool=url,
+            )
 
 
 if __name__ == "__main__":

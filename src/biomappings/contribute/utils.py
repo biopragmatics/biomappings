@@ -2,28 +2,19 @@
 
 from __future__ import annotations
 
-from typing import Any
-
-from biomappings import load_mappings
+from biomappings import SemanticMapping, load_mappings
 
 __all__ = [
     "get_curated_mappings",
 ]
 
 
-def get_curated_mappings(prefix: str) -> list[dict[str, Any]]:
+def get_curated_mappings(prefix: str) -> list[SemanticMapping]:
     """Get mappings for a given prefix."""
     mappings = []
     for mapping in load_mappings():
-        if mapping["subject_id"].startswith(f"{prefix}:"):
+        if mapping.subject.prefix == prefix:
             mappings.append(mapping)
-        elif mapping["object_id"].startswith(f"{prefix}:"):
-            for key in ["_id", "_label"]:
-                mapping[f"subject{key}"], mapping[f"object{key}"] = (
-                    mapping[f"object{key}"],
-                    mapping[f"subject{key}"],
-                )
-            if mapping["predicate_id"] != "skos:exactMatch":
-                raise NotImplementedError
-            mappings.append(mapping)
+        elif mapping.object.prefix == prefix:
+            mappings.append(mapping.flip())
     return mappings

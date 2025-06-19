@@ -2,34 +2,33 @@
 
 from __future__ import annotations
 
+import getpass
 import unittest
 from collections import defaultdict
 from collections.abc import Iterable
 from pathlib import Path
 from textwrap import dedent
-from typing import ClassVar, TypeVar
+from typing import ClassVar, TypeVar, cast
 
 import bioregistry
-from bioregistry import NormalizedReference
+from bioregistry import NormalizedNamableReference
+from curies import NamableReference
 
 from biomappings.resources import (
     CURATORS_PATH,
-    MappingTuple,
-    PredictionTuple,
     SemanticMapping,
-    SemanticMappings,
-    load_curators,
+    _CuratedTuple,
+    _PredictedTuple,
     load_mappings,
     load_predictions,
     mapping_sort_key,
 )
-from biomappings.resources.semapv import get_semapv
+from biomappings.resources.semapv import get_semapv_id_to_name
 from biomappings.utils import (
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     UNSURE_SSSOM_PATH,
     get_canonical_tuple,
-    get_prefix,
 )
 
 __all__ = [
@@ -37,9 +36,10 @@ __all__ = [
     "PathIntegrityTestCase",
 ]
 
-semapv = get_semapv()
 
-TPL = TypeVar("TPL", MappingTuple, PredictionTuple)
+SEMAPV_ID_TO_NAME = get_semapv_id_to_name()
+
+TPL = TypeVar("TPL", _CuratedTuple, _PredictedTuple)
 X = TypeVar("X")
 Y = TypeVar("Y")
 
@@ -55,10 +55,10 @@ def _locations_str(locations) -> str:
 class IntegrityTestCase(unittest.TestCase):
     """Data integrity tests."""
 
-    mappings: SemanticMappings
-    predictions: SemanticMappings
-    incorrect: SemanticMappings
-    unsure: SemanticMappings
+    mappings: list[SemanticMapping]
+    predictions: list[SemanticMapping]
+    incorrect: list[SemanticMapping]
+    unsure: list[SemanticMapping]
 
     def _iter_groups(self) -> Iterable[tuple[str, int, SemanticMapping]]:
         for group, label in [
@@ -73,75 +73,51 @@ class IntegrityTestCase(unittest.TestCase):
     def test_mapping_justifications(self) -> None:
         """Test that the prediction type is pulled in properly."""
         for label, line, mapping in self._iter_groups():
-            mapping_justification = mapping["mapping_justification"]
-            self.assertTrue(
-                mapping_justification.startswith("semapv:"),
+            self.assertEqual(
+                "semapv",
+                mapping.mapping_justification.prefix,
                 msg=f"[{label}] The 'mapping_justification' column should be annotated with semapv on line {line}",
             )
-            self.assertIn(mapping_justification[len("semapv:") :], semapv)
+            self.assertIn(mapping.mapping_justification.identifier, SEMAPV_ID_TO_NAME)
 
     def test_prediction_not_manual(self) -> None:
         """Test that predicted mappings don't use manual mapping justification."""
         for _line, mapping in enumerate(self.predictions, start=2):
             self.assertNotEqual(
-                "semapv:ManualMappingCuration",
-                mapping["mapping_justification"],
+                "ManualMappingCuration",
+                mapping.mapping_justification.identifier,
                 msg="Prediction can not be annotated with manual curation",
             )
 
-    def test_relations(self) -> None:
-        """Test that the relation is a CURIE."""
-        for label, line, mapping in self._iter_groups():
-            parts = mapping["predicate_id"].split(":")
-            self.assertEqual(2, len(parts))
-            prefix, identifier = parts
-            if prefix != "RO":
-                self.assert_canonical_identifier(mapping["predicate_id"], label, line)
-
-    def test_canonical_prefixes(self) -> None:
+    def test_valid_curies(self) -> None:
         """Test that all mappings use canonical bioregistry prefixes."""
-        valid_prefixes = set(bioregistry.read_registry())
         for label, line, mapping in self._iter_groups():
-            source_prefix, target_prefix = (
-                get_prefix(mapping["subject_id"]),
-                get_prefix(mapping["object_id"]),
-            )
-            self.assertIn(
-                source_prefix,
-                valid_prefixes,
-                msg=f"Invalid prefix: {source_prefix} on {label}:{line}",
-            )
-            self.assertIn(
-                target_prefix,
-                valid_prefixes,
-                msg=f"Invalid prefix: {target_prefix} on {label}:{line}",
-            )
+            self.assert_valid(label, line, mapping.subject)
+            self.assert_valid(label, line, mapping.predicate)
+            self.assert_valid(label, line, mapping.object)
+            self.assert_valid(label, line, mapping.mapping_justification)
+            if mapping.author is not None:
+                self.assert_valid(label, line, mapping.author)
 
-    def test_normalized_identifiers(self) -> None:
-        """Test that all identifiers have been normalized (based on bioregistry definition)."""
-        for label, line, mapping in self._iter_groups():
-            self.assert_canonical_identifier(mapping["subject_id"], label, line)
-            self.assert_canonical_identifier(mapping["object_id"], label, line)
-
-    def assert_canonical_identifier(self, curie: str, label: str, line: int) -> None:
-        """Assert a given identifier is canonical.
-
-        :param curie: The CURIE to check
-        :param label: The label of the mapping file
-        :param line: The line number of the mapping
-        """
-        try:
-            NormalizedReference.from_curie(curie)
-        except Exception as e:
-            self.fail(f"[{label}:{line}] {e}")
+    def assert_valid(self, label: str, line: int, reference: NamableReference) -> None:
+        """Assert a reference is valid and normalized to the Bioregistry."""
+        norm_prefix = bioregistry.normalize_prefix(reference.prefix)
+        self.assertIsNotNone(
+            norm_prefix, msg=f"Unknown prefix: {reference.prefix} on {label}:{line}"
+        )
+        self.assertEqual(
+            norm_prefix,
+            reference.prefix,
+            msg=f"Non-normalized prefix: {reference.prefix} on {label}:{line}",
+        )
+        self.assertEqual(
+            bioregistry.standardize_identifier(reference.prefix, reference.identifier),
+            reference.identifier,
+            msg=f"Invalid identifier: {reference.curie} on {label}:{line}",
+        )
 
     def test_contributors(self) -> None:
         """Test all contributors have an entry in the curators.tsv file."""
-        user_to_orcid = {row["user"]: row["orcid"] for row in load_curators()}
-
-        # it's possible that the same ORCID appears twice
-        contributor_orcids = set(user_to_orcid.values())
-
         files = [
             (POSITIVES_SSSOM_PATH, self.mappings),
             (NEGATIVES_SSSOM_PATH, self.incorrect),
@@ -149,40 +125,26 @@ class IntegrityTestCase(unittest.TestCase):
         ]
         for path, mappings in files:
             for mapping in mappings:
-                author_curie = mapping["author_id"]
-                if not author_curie.startswith("orcid:"):
-                    self.assertTrue(author_curie.startswith("web-"))
-                    user = author_curie[len("web-") :]
-                    orcid = user_to_orcid.get(user)
-                    if orcid:
-                        self.fail(
-                            msg=dedent(f"""
+                self.assertIsNotNone(mapping.author)
+                author = cast(NormalizedNamableReference, mapping.author)
+                self.assertEqual(
+                    "orcid",
+                    author.prefix,
+                    msg=dedent(f"""
+                    There are some curations that don't have the right metadata.
+                    This probably happened because you are curating locally and
+                    haven't added the right metadata to the curators.tsv file at
+                    {CURATORS_PATH}.
 
-                            There are some curations that don't have the right metadata
-                            in {path}.
+                    You can fix this with the following steps:
 
-                            You can fix this by running `biomappings lint` from the console
-                            """).rstrip()
-                        )
-                    else:
-                        self.fail(
-                            msg=dedent(f"""
-
-                            There are some curations that don't have the right metadata.
-                            This probably happened because you are curating locally and
-                            haven't added the right metadata to the curators.tsv file at
-                            {CURATORS_PATH}.
-
-                            You can fix this with the following steps:
-
-                            1. Add a row to the curators.tsv file with your local machine's
-                               username "{user}" in the first column, your ORCID in
-                               the second column, and your full name in the third column
-                            2. Replace all instances of "{author_curie}" in {path}
-                               with your ORCID, properly prefixed with `orcid:`
-                            """).rstrip()
-                        )
-                self.assertIn(author_curie[len("orcid:") :], contributor_orcids)
+                    1. Add a row to the curators.tsv file with your local machine's
+                       username "{getpass.getuser()}" in the first column, your ORCID in
+                       the second column, and your full name in the third column
+                    2. Replace all instances of "{author.curie}" in {path}
+                       with your ORCID, properly prefixed with `orcid:`
+                    """).rstrip(),
+                )
 
     def test_cross_redundancy(self) -> None:
         """Test the redundancy of manually curated mappings and predicted mappings."""
@@ -204,18 +166,18 @@ class IntegrityTestCase(unittest.TestCase):
             )
             raise ValueError(f"{len(redundant)} are redundant: {msg}")
 
-    def assert_no_internal_redundancies(
-        self, mappings: SemanticMappings, tuple_cls: type[TPL]
-    ) -> None:
+    def assert_no_internal_redundancies(self, mappings: list[SemanticMapping]) -> None:
         """Assert that the list of mappings doesn't have any redundancies."""
-        counter: defaultdict[TPL, list[int]] = defaultdict(list)
+        counter: defaultdict[tuple[NamableReference, NamableReference], list[int]] = defaultdict(
+            list
+        )
         for line_number, mapping in enumerate(mappings, start=1):
-            counter[tuple_cls.from_dict(mapping)].append(line_number)
+            counter[mapping.subject, mapping.object].append(line_number)
         redundant = _extract_redundant(counter)
         if redundant:
             msg = "".join(
-                f"\n  {mapping.subject_id}/{mapping.object_id}: {locations}"
-                for mapping, locations in redundant
+                f"\n  {subject.curie}/{obj.curie}: {locations}"
+                for (subject, obj), locations in redundant
             )
             raise ValueError(f"{len(redundant)} are redundant: {msg}")
 
@@ -226,7 +188,7 @@ class IntegrityTestCase(unittest.TestCase):
             sorted(self.predictions, key=mapping_sort_key),
             msg="Predictions are not sorted",
         )
-        self.assert_no_internal_redundancies(self.predictions, PredictionTuple)
+        self.assert_no_internal_redundancies(self.predictions)
 
     def test_curations_sorted(self) -> None:
         """Test the true curated mappings are in a canonical order."""
@@ -235,7 +197,7 @@ class IntegrityTestCase(unittest.TestCase):
             sorted(self.mappings, key=mapping_sort_key),
             msg="True curations are not sorted",
         )
-        self.assert_no_internal_redundancies(self.mappings, MappingTuple)
+        self.assert_no_internal_redundancies(self.mappings)
 
     def test_false_mappings_sorted(self) -> None:
         """Test the false curated mappings are in a canonical order."""
@@ -244,7 +206,7 @@ class IntegrityTestCase(unittest.TestCase):
             sorted(self.incorrect, key=mapping_sort_key),
             msg="False curations are not sorted",
         )
-        self.assert_no_internal_redundancies(self.incorrect, MappingTuple)
+        self.assert_no_internal_redundancies(self.incorrect)
 
     def test_unsure_sorted(self) -> None:
         """Test the unsure mappings are in a canonical order."""
@@ -253,7 +215,7 @@ class IntegrityTestCase(unittest.TestCase):
             sorted(self.unsure, key=mapping_sort_key),
             msg="Unsure curations are not sorted",
         )
-        self.assert_no_internal_redundancies(self.unsure, MappingTuple)
+        self.assert_no_internal_redundancies(self.unsure)
 
 
 class PathIntegrityTestCase(IntegrityTestCase):
