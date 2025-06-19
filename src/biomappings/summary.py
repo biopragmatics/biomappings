@@ -7,7 +7,7 @@ import os
 import typing
 from collections import Counter
 from collections.abc import Iterable
-from typing import Any, TypedDict
+from typing import Any, TypedDict, cast
 
 import click
 import yaml
@@ -101,7 +101,7 @@ def _get_contributors(mappings: Iterable[SemanticMapping]) -> list[dict[str, str
         {
             "count": count,
             "orcid": reference.identifier,
-            "name": reference.name,
+            "name": cast(str, reference.name),
         }
         if (reference := orcid_to_curator_reference.get(orcid)) is not None
         else {"count": count}
