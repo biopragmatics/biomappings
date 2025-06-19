@@ -7,7 +7,7 @@ from collections.abc import Mapping
 from pathlib import Path
 from subprocess import CalledProcessError, check_output
 
-from bioregistry import NormalizedNamableReference, NormalizedReference
+from bioregistry import NormalizedNamableReference
 
 __all__ = [
     "RESOURCE_PATH",
@@ -109,9 +109,9 @@ def get_canonical_tuple(mapping) -> tuple[str, str, str, str]:
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
 CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
 
-EXACT_MATCH = NormalizedReference.from_curie("skos:exactMatch")
+EXACT_MATCH = NormalizedNamableReference.from_curie("skos:exactMatch")
 NARROW_MATCH = NormalizedNamableReference.from_curie("skos:narrowMatch")
 BROAD_MATCH = NormalizedNamableReference.from_curie("skos:broadMatch")
 
-LEXICAL_MATCHING_PROCESS = NormalizedReference.from_curie("semapv:LexicalMatching")
+LEXICAL_MATCHING_PROCESS = NormalizedNamableReference.from_curie("semapv:LexicalMatching")
 MANUAL_MAPPING_CURATION = NormalizedNamableReference.from_curie("semapv:ManualMappingCuration")
