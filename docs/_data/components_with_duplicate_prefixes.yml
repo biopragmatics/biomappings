@@ -671,6 +671,21 @@
     link: https://bioregistry.io/ncit:C84719
     name: Frontotemporal Dementia
     prefix: ncit
+- go:0001525:
+    identifier: '0001525'
+    link: https://bioregistry.io/go:0001525
+    name: angiogenesis
+    prefix: go
+  mesh:D000096482:
+    identifier: D000096482
+    link: https://bioregistry.io/mesh:D000096482
+    name: Angiogenesis
+    prefix: mesh
+  mesh:D018919:
+    identifier: D018919
+    link: https://bioregistry.io/mesh:D018919
+    name: Neovascularization, Physiologic
+    prefix: mesh
 - doid:0002116:
     identifier: '0002116'
     link: https://bioregistry.io/doid:0002116

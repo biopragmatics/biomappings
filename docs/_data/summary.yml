@@ -2,31 +2,24 @@ contributors:
 - count: 5783
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
-  user: ben
-- count: 4635
+- count: 4851
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
-  user: cthoyt
 - count: 1695
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
-  user: hoytfamily
 - count: 216
   name: Daniel Domingo-Fernandez
   orcid: 0000-0002-2046-6145
-  user: ddomingof
 - count: 162
   name: Krishna Udaiwal
   orcid: 0000-0002-2627-0696
-  user: KrishnaTO
 - count: 25
   name: Sumir Pandit
   orcid: 0000-0002-1216-4761
-  user: sumirpandit
 - count: 1
   name: Christopher Mungall
   orcid: 0000-0002-6601-2165
-  user: cmungall
 negative:
 - count: 218
   source: mesh
@@ -46,7 +39,7 @@ negative:
 - count: 77
   source: kegg.pathway
   target: mesh
-- count: 73
+- count: 74
   source: mesh
   target: vo
 - count: 59
@@ -256,13 +249,13 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1605
+negative_mapping_count: 1606
 negative_prefix_count: 45
 positive:
-- count: 3371
+- count: 3385
   source: chebi
   target: mesh
-- count: 1488
+- count: 1502
   source: doid
   target: mesh
 - count: 905
@@ -271,7 +264,7 @@ positive:
 - count: 570
   source: ccle
   target: efo
-- count: 435
+- count: 449
   source: go
   target: mesh
 - count: 387
@@ -280,8 +273,11 @@ positive:
 - count: 366
   source: go
   target: wikipathways
-- count: 294
+- count: 346
   source: hp
+  target: mesh
+- count: 267
+  source: efo
   target: mesh
 - count: 224
   source: mesh
@@ -292,12 +288,9 @@ positive:
 - count: 190
   source: doid
   target: umls
-- count: 170
+- count: 172
   source: mesh
   target: vo
-- count: 167
-  source: efo
-  target: mesh
 - count: 145
   source: dron
   target: vo
@@ -307,7 +300,7 @@ positive:
 - count: 131
   source: mesh
   target: uberon
-- count: 127
+- count: 129
   source: maxo
   target: mesh
 - count: 114
@@ -361,6 +354,9 @@ positive:
 - count: 23
   source: idomal
   target: vsmo
+- count: 23
+  source: fplx
+  target: mesh
 - count: 19
   source: cpt
   target: mesh
@@ -403,9 +399,6 @@ positive:
 - count: 9
   source: go
   target: idomal
-- count: 9
-  source: fplx
-  target: mesh
 - count: 8
   source: cpt
   target: vo
@@ -442,6 +435,9 @@ positive:
 - count: 4
   source: doid
   target: idomal
+- count: 4
+  source: idomal
+  target: pr
 - count: 4
   source: pr
   target: vo
@@ -546,9 +542,6 @@ positive:
   target: miro
 - count: 1
   source: idomal
-  target: pr
-- count: 1
-  source: idomal
   target: pco
 - count: 1
   source: caro
@@ -607,10 +600,10 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 10810
+positive_mapping_count: 11025
 positive_prefix_count: 63
 predictions:
-- count: 22728
+- count: 22714
   source: chebi
   target: mesh
 - count: 11733
@@ -628,28 +621,28 @@ predictions:
 - count: 1685
   source: wikipathways
   target: wikipathways
-- count: 592
+- count: 492
   source: efo
   target: mesh
-- count: 368
+- count: 316
   source: hp
   target: mesh
-- count: 219
+- count: 205
   source: fplx
   target: mesh
-- count: 201
+- count: 187
   source: doid
   target: mesh
-- count: 85
+- count: 71
   source: go
-  target: mesh
-- count: 68
-  source: maxo
   target: mesh
 - count: 68
   source: mesh
   target: uberon
-- count: 59
+- count: 66
+  source: maxo
+  target: mesh
+- count: 56
   source: mesh
   target: vo
 - count: 52
@@ -667,9 +660,6 @@ predictions:
 - count: 6
   source: cellosaurus
   target: clo
-- count: 6
-  source: idomal
-  target: pr
 - count: 5
   source: clo
   target: mesh
@@ -682,6 +672,9 @@ predictions:
 - count: 4
   source: idomal
   target: ncbitaxon
+- count: 3
+  source: idomal
+  target: pr
 - count: 2
   source: ido
   target: pato
@@ -739,7 +732,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 53985
+predictions_mapping_count: 53769
 predictions_prefix_count: 32
 unsure:
 - count: 27
