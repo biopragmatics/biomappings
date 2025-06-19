@@ -69,9 +69,9 @@ class TestFull(unittest.TestCase):
         unsure_path = directory.joinpath("unsure.tsv")
 
         write_predictions(predictions, path=predictions_path)
-        _write_helper([], path=positives_path, mode="w")
-        _write_helper([], path=negatives_path, mode="w")
-        _write_helper([], path=unsure_path, mode="w")
+        _write_helper([], path=positives_path, mode="w", t="curated")
+        _write_helper([], path=negatives_path, mode="w", t="curated")
+        _write_helper([], path=unsure_path, mode="w", t="curated")
 
         self.controller = Controller(
             predictions_path=predictions_path,
