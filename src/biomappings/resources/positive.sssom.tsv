@@ -4242,6 +4242,7 @@ maxo:0000970	gonioscopy	skos:exactMatch	mesh:D006068	Gonioscopy	semapv:ManualMap
 maxo:0001007	erythrocyte count	skos:exactMatch	mesh:D004906	Erythrocyte Count	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0001008	platelet count	skos:exactMatch	mesh:D010976	Platelet Count	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0001010	leukocyte count	skos:exactMatch	mesh:D007958	Leukocyte Count	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
+maxo:0001017	vaccination	skos:exactMatch	mesh:D014611	Vaccination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0001029	adenoidectomy	skos:exactMatch	mesh:D000233	Adenoidectomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0001030	adrenalectomy	skos:exactMatch	mesh:D000315	Adrenalectomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0001031	apicoectomy	skos:exactMatch	mesh:D001047	Apicoectomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
@@ -4278,6 +4279,7 @@ maxo:0001085	vitrectomy	skos:exactMatch	mesh:D014821	Vitrectomy	semapv:ManualMap
 maxo:0001086	vulvectomy	skos:exactMatch	mesh:D000074883	Vulvectomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0001104	endarterectomy	skos:exactMatch	mesh:D004691	Endarterectomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0001108	venous thrombosis	skos:exactMatch	mesh:D020246	Venous Thrombosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
+maxo:0001109	thrombosis	skos:exactMatch	mesh:D013927	Thrombosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0001161	urine specimen collection	skos:exactMatch	mesh:D059349	Urine Specimen Collection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0001175	liver transplantation	skos:exactMatch	mesh:D016031	Liver Transplantation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0001182	arthroscopy	skos:exactMatch	mesh:D001182	Arthroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
@@ -4328,10 +4330,12 @@ mesh:C000170	ferric ferrocyanide	skos:exactMatch	ncit:C47532	Ferric Ferrocyanide
 mesh:C000179	N-acetylaspartate	skos:exactMatch	ncit:C118887	N-Acetylaspartate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C000203	deoxyaminopteroic acid	skos:exactMatch	ncit:C157133	Deoxyaminopteroic Acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C000226	arglecin	skos:exactMatch	chebi:217141	Arglecin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
+mesh:C000229	tyrosine-4-azobenzenearsonate	skos:exactMatch	chebi:53697	tyrosine-4-azobenzenearsonate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000252	betalamic acid	skos:exactMatch	chebi:27483	betalamic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000265	beta-amyrin acetate	skos:exactMatch	chebi:190930	beta-amyrin acetate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000288	ritrosulfan	skos:exactMatch	ncit:C75294	Ritrosulfan	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C000400	chelocardin	skos:exactMatch	chebi:208167	Chelocardin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
+mesh:C000433	3-chloroperbenzoic acid	skos:exactMatch	chebi:52091	3-chloroperbenzoic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000451	chlorothricin	skos:exactMatch	chebi:201559	Chlorothricin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000458	N-acetyllactosamine	skos:exactMatch	chebi:16153	N-acetyllactosamine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000465	chainin	skos:exactMatch	chebi:214385	Chainin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
@@ -4416,6 +4420,7 @@ mesh:C000589878	ruthmycin	skos:exactMatch	chebi:198192	Ruthmycin	semapv:ManualMa
 mesh:C000589914	indothiazinone	skos:exactMatch	chebi:209925	Indothiazinone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000589915	hypoxylonol C	skos:exactMatch	chebi:225948	Hypoxylonol C	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000589997	aspongamide A	skos:exactMatch	chebi:188504	Aspongamide A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
+mesh:C000590072	(cyano(hydroxy)methyl)phosphonic acid	skos:exactMatch	chebi:217028	(cyano(hydroxy)methyl)phosphonic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000590073	penicillipyrone A	skos:exactMatch	chebi:202865	Penicillipyrone A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000590074	penicillipyrone B	skos:exactMatch	chebi:204638	Penicillipyrone B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000590075	dermacozine H	skos:exactMatch	chebi:205003	Dermacozine H	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
@@ -4464,6 +4469,10 @@ mesh:C000591286	coibacin B	skos:exactMatch	chebi:221533	Coibacin B	semapv:Manual
 mesh:C000591288	emodin-3-O-sulfate	skos:exactMatch	chebi:205853	Emodin-3-O-sulphate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000591289	citreorosein-3-O-sulfate	skos:exactMatch	chebi:222688	Citreorosein-3-O-sulphate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000591416	isotianil	skos:exactMatch	chebi:83657	isotianil	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
+mesh:C000591420	cyclo(L-Tyr-L-Pro-L-Phe-trans-4-hydroxy-L-Pro)	skos:exactMatch	chebi:199053	Cyclo(L-Tyr-L-Pro-L-Phe-trans-4-hydroxy-L-Pro)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:C000591436	isopterocarpolone	skos:exactMatch	chebi:220858	Isopterocarpolone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:C000591437	4-oxo-1,4-dihydroquinoline-3-carboxamide	skos:exactMatch	chebi:207725	4-oxo-1,4-dihydroquinoline-3-carboxamide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:C000591464	3-acetonylidene-7-prenylindolin-2-one	skos:exactMatch	chebi:215752	3-acetonylidene-7-prenylindolin-2-one	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000591492	3-cyano-2-pyridone	skos:exactMatch	chebi:189264	3-cyano-2-pyridone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000591504	aeruginaldehyde	skos:exactMatch	chebi:204446	Aeruginaldehyde	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000591518	oxirapentyn B	skos:exactMatch	chebi:223213	Oxirapentyn B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
@@ -4480,6 +4489,7 @@ mesh:C000591606	eleganketal A	skos:exactMatch	chebi:205922	Eleganketal A	semapv:
 mesh:C000591609	stemphylanthranol A	skos:exactMatch	chebi:208691	Stemphylanthranol A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000591610	stemphylanthranol B	skos:exactMatch	chebi:204637	Stemphylanthranol B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000591674	methylcyclopentane	skos:exactMatch	chebi:88429	methylcyclopentane	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
+mesh:C000591762	cyclo-(L-leucyl-trans-4-hydroxy-L-prolyl-D-leucyl-trans-4-hydroxy-L-proline)	skos:exactMatch	chebi:212817	Cyclo-(L-leucyl-trans-4-hydroxy-L-prolyl-D-leucyl-trans-4-hydroxy-L-proline)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000591777	pelopuradazole	skos:exactMatch	chebi:200699	Pelopuradazole	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000591865	inonotic acid A	skos:exactMatch	chebi:201587	Inonotic acid A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000591866	3-O-formyl inonotic acid A	skos:exactMatch	chebi:217922	3-O-formyl inonotic acid A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
@@ -4586,6 +4596,7 @@ mesh:C000595482	jiangolide	skos:exactMatch	chebi:208670	Jiangolide	semapv:Manual
 mesh:C000595483	shornephine A	skos:exactMatch	chebi:222141	Shornephine A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000595498	pheganomycin	skos:exactMatch	chebi:222202	Pheganomycin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000595530	erinarol A	skos:exactMatch	chebi:200973	Erinarol A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
+mesh:C000595534	(3Z,5E,7E,9E,11E,13Z,15E,17E)-18-methyl-19-oxoicosa-3,5,7,9,11,13,15,17-octaenoic acid	skos:exactMatch	chebi:220950	(3Z,5E,7E,9E,11E,13Z,15E,17E)-18-methyl-19-oxoicosa-3,5,7,9,11,13,15,17-octaenoic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000595539	anithiactin A	skos:exactMatch	chebi:198821	Anithiactin A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000595540	anithiactin B	skos:exactMatch	chebi:201062	Anithiactin B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000595541	anithiactin C	skos:exactMatch	chebi:217199	Anithiactin C	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
@@ -4699,7 +4710,12 @@ mesh:C000719029	anti-GFAP autoantibodies	skos:exactMatch	hp:5000013	Anti-GFAP an
 mesh:C000719042	anti-ryanodine receptor autoantibody	skos:exactMatch	hp:5000047	Anti-ryanodine receptor antibody	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_hp_mesh_mappings.py	
 mesh:C000719407	Midline brainstem cleft	skos:exactMatch	hp:0033645	Midline brainstem cleft	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:C000719531	misophonia	skos:exactMatch	hp:0025113	Misophonia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
+mesh:C000721269	paralytic ectropion	skos:exactMatch	hp:0500069	Paralytic ectropion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:C000721270	malar rash	skos:exactMatch	hp:0025300	Malar rash	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000721288	Cleft eyelid	skos:exactMatch	hp:0000625	Eyelid coloboma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_hp_mesh_mappings.py	
+mesh:C000721290	malar prominence	skos:exactMatch	hp:0010620	Malar prominence	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:C000721292	bipartite patella	skos:exactMatch	hp:0010498	Bipartite patella	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:C000721294	Hyperglycerolemia	skos:exactMatch	hp:0040302	Hyperglycerolemia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000721322	Coarse facial features	skos:exactMatch	hp:0000280	Coarse facial features	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:C000721349	Air crescent sign	skos:exactMatch	hp:0032172	Air crescent sign	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:C000721350	Silhouette sign	skos:exactMatch	hp:0033647	Silhouette sign	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
@@ -4712,6 +4728,8 @@ mesh:C000721848	hypoglycemic encephalopathy	skos:exactMatch	hp:0006929	Hypoglyce
 mesh:C000723468	Chapare hemorrhagic fever	skos:exactMatch	doid:0050198	Chapare hemorrhagic fever	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000723471	Lujo hemorrhagic fever	skos:exactMatch	doid:0050202	lujo hemorrhagic fever	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000726367	Bainbridge-Ropers syndrome	skos:exactMatch	doid:0080893	Bainbridge-Ropers syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:C000726607	photopsia	skos:exactMatch	hp:0030786	Photopsia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:C000726608	vitreous floaters	skos:exactMatch	hp:0100832	Vitreous floaters	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000726748	Schaaf-Yang syndrome	skos:exactMatch	doid:0111715	Schaaf-Yang syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000726750	Temple syndrome	skos:exactMatch	doid:0111713	Temple syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C000726751	Central precocious puberty 2	skos:exactMatch	doid:0112309	central precocious puberty 2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
@@ -4747,6 +4765,7 @@ mesh:C039128	miltefosine	skos:exactMatch	ncit:C1170	Miltefosine	semapv:ManualMap
 mesh:C042156	beryllium hydroxide	skos:exactMatch	ncit:C45878	Beryllium Hydroxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C042382	fludarabine phosphate	skos:exactMatch	ncit:C1102	Fludarabine Phosphate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C042705	pegaspargase	skos:exactMatch	ncit:C1200	Pegaspargase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:C047193	2,5-diketocamphane 1,2-monooxygenase	skos:exactMatch	go:0018684	2,5-diketocamphane 1,2-monooxygenase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C048844	anti-IgG	skos:exactMatch	efo:0005030	anti-IgG	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C051397	pyrazine-2-diazohydroxide	skos:exactMatch	ncit:C1207	Pyrazine Diazohydroxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C053001	adefovir	skos:exactMatch	ncit:C61526	Adefovir	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -5266,6 +5285,7 @@ mesh:C536260	Quebec platelet disorder	skos:exactMatch	doid:0111050	Quebec platel
 mesh:C536273	Ichthyosis with hypotrichosis, autosomal recessive	skos:exactMatch	doid:0060720	autosomal recessive congenital ichthyosis 11	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C536281	Idiopathic pulmonary hemosiderosis	skos:exactMatch	doid:12118	pulmonary hemosiderosis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C536288	Thymic aplasia	skos:exactMatch	doid:2012	Nezelof syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C536293	Agenesis of Cerebellar Vermis	skos:exactMatch	hp:0002335	Agenesis of cerebellar vermis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C536294	Joubert syndrome 2	skos:exactMatch	doid:0110988	Joubert syndrome 2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C536295	Joubert syndrome 3	skos:exactMatch	doid:0110998	Joubert syndrome 3	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C536296	Joubert syndrome 4	skos:exactMatch	doid:0110999	Joubert syndrome 4	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -5472,8 +5492,10 @@ mesh:C537362	Immunodeficiency syndrome, variable	skos:exactMatch	doid:0090007	im
 mesh:C537369	Muenke Syndrome	skos:exactMatch	doid:0060703	Muenke Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537372	Multi-centric Castleman's Disease	skos:exactMatch	doid:0111152	multicentric Castleman disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537377	Multiple pterygium syndrome	skos:exactMatch	doid:0080110	multiple pterygium syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C537380	Multiple synostoses syndrome 2	skos:exactMatch	doid:0081318	multiple synostoses syndrome 2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C537384	Muscular dystrophy congenital, merosin negative	skos:exactMatch	doid:0110636	congenital merosin-deficient muscular dystrophy 1A	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537393	Neurofibromatosis-Noonan syndrome	skos:exactMatch	doid:0111683	neurofibromatosis-Noonan syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C537395	Neuronal intranuclear inclusion disease	skos:exactMatch	doid:0081294	neuronal intranuclear inclusion disease	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C537396	Neuropathy ataxia and retinitis pigmentosa	skos:exactMatch	doid:0111273	NARP syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537403	Pitt-Hopkins syndrome	skos:exactMatch	doid:0060488	Pitt-Hopkins syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537404	Pituitary dwarfism 1	skos:exactMatch	doid:0060873	isolated growth hormone deficiency type IA	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -5493,6 +5515,7 @@ mesh:C537466	Microphthalmia, syndromic 7	skos:exactMatch	doid:0111808	linear ski
 mesh:C537470	Microvillus inclusion disease	skos:exactMatch	doid:0060775	microvillus inclusion disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537472	Miles-Carpenter x-linked mental retardation syndrome	skos:exactMatch	doid:0060815	Miles-Carpenter syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537475	Mitochondrial complex I deficiency	skos:exactMatch	doid:0060536	mitochondrial complex I deficiency	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C537503	Subcutaneous panniculitis-like T-cell lymphoma	skos:exactMatch	hp:0034403	Subcutaneous panniculitis-like T-cell lymphoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_hp_mesh_mappings.py	
 mesh:C537516	Pleuropulmonary blastoma	skos:exactMatch	doid:4769	pleuropulmonary blastoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537521	Scleroatonic muscular dystrophy	skos:exactMatch	doid:0050558	Ullrich congenital muscular dystrophy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537533	Seckel syndrome 1	skos:exactMatch	doid:0070007	Seckel syndrome 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -5687,6 +5710,7 @@ mesh:C562443	Weaver-Like Syndrome	skos:exactMatch	doid:14731	Weaver syndrome	sem
 mesh:C562465	Phobia, Specific	skos:exactMatch	efo:1001918	specific phobia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C562467	Lymphedema, Hereditary, II	skos:exactMatch	doid:0070213	hereditary lymphedema II	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C562485	Pili Torti	skos:exactMatch	hp:0003777	Pili torti	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:C562487	Eosinophilic Fasciitis	skos:exactMatch	hp:0045029	Eosinophilic fasciitis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C562489	Lymphoid Interstitial Pneumonia	skos:exactMatch	doid:0050159	lymphoid interstitial pneumonia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C562509	Popliteal Pterygium Syndrome	skos:exactMatch	doid:0060055	popliteal pterygium syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C562524	Fibrochondrogenesis	skos:exactMatch	doid:0060465	fibrochondrogenesis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -5709,6 +5733,7 @@ mesh:C562684	Hyper-Beta-Alaninemia	skos:exactMatch	hp:0012556	Hyperbeta-alaninem
 mesh:C562704	Isolated Growth Hormone Deficiency, Type II	skos:exactMatch	doid:0060872	isolated growth hormone deficiency type II	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C562717	Rh Deficiency Syndrome	skos:exactMatch	doid:0050641	Rh deficiency syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C562719	Tn Syndrome	skos:exactMatch	doid:0080520	Tn polyagglutination syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C562732	Euthyroid Goiter	skos:exactMatch	hp:0009798	Euthyroid goiter	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C562733	Fundus Albipunctatus	skos:exactMatch	doid:11105	fundus albipunctatus	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C562745	Corneal Dystrophy, Posterior Polymorphous, 1	skos:exactMatch	doid:0060457	posterior polymorphous corneal dystrophy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C562776	Hyperproinsulinemia	skos:exactMatch	efo:0009650	hyperproinsulinemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -5787,6 +5812,7 @@ mesh:C563469	Cone-Rod Dystrophy 1	skos:exactMatch	doid:0111009	cone-rod dystroph
 mesh:C563476	Inclusion Body Myopathy With Early-Onset Paget Disease And Frontotemporal Dementia	skos:exactMatch	doid:0050881	inclusion body myopathy with Paget disease of bone and frontotemporal dementia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C563491	Orofaciodigital Syndrome X	skos:exactMatch	doid:0060380	orofaciodigital syndrome X	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C563508	Oculopharyngodistal Myopathy	skos:exactMatch	doid:0081296	oculopharyngodistal myopathy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:C563514	Hypertension Resistant to Conventional Therapy	skos:exactMatch	hp:0430034	Hypertension resistant to conventional therapy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C563524	NF1 Microdeletion Syndrome	skos:exactMatch	doid:0060403	chromosome 17q11.2 deletion syndrome, 1.4Mb	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C563526	Retinitis Pigmentosa 27	skos:exactMatch	doid:0110397	retinitis pigmentosa 27	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C563540	Atrial Septal Defect 3	skos:exactMatch	doid:0110108	atrial heart septal defect 3	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -5965,6 +5991,7 @@ mesh:C565267	Deafness, Autosomal Dominant 18	skos:exactMatch	doid:0110549	autoso
 mesh:C565274	Holoprosencephaly 6	skos:exactMatch	doid:0110874	holoprosencephaly 6	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C565287	Deafness, Autosomal Recessive 27	skos:exactMatch	doid:0110485	autosomal recessive nonsyndromic deafness 27	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C565297	Exudative Vitreoretinopathy 3	skos:exactMatch	doid:0111409	exudative vitreoretinopathy 3	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C565302	Otosclerosis 2	skos:exactMatch	doid:0060921	otosclerosis 2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C565304	Multiple Mitochondrial Dysfunctions Syndrome	skos:exactMatch	doid:0070330	multiple mitochondrial dysfunctions syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C565309	Late-Onset Retinal Degeneration	skos:exactMatch	doid:0060869	late-onset retinal degeneration	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C565315	Diabetes Mellitus, Insulin-Dependent, 18	skos:exactMatch	doid:0110755	type 1 diabetes mellitus 18	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -5983,6 +6010,7 @@ mesh:C565393	3-Methylglutaconic Aciduria Type IV	skos:exactMatch	doid:0110006	3-
 mesh:C565409	MAST Syndrome	skos:exactMatch	doid:0060245	Mast syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C565452	Kniest-Like Dysplasia with Pursed Lips and Ectopia Lentis	skos:exactMatch	doid:0090005	Schwartz-Jampel syndrome 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C565460	Jejunal Atresia with Microcephaly and Ocular Anomalies	skos:exactMatch	doid:0110595	Stromme syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C565502	Hydroxylysinuria	skos:exactMatch	hp:0032414	Hydroxylysinuria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_hp_mesh_mappings.py	
 mesh:C565504	Hydrolethalus Syndrome 1	skos:exactMatch	doid:0111355	hydrolethalus syndrome 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C565533	Granulomatous Disease, Chronic, Autosomal Recessive, Cytochrome B-Negative	skos:exactMatch	doid:0070193	autosomal recessive chronic granulomatous disease cytochrome b-negative	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C565537	46,XY Gonadal Dysgenesis, Complete or Partial, DHH-Related	skos:exactMatch	doid:0111774	46,XY sex reversal 7	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -6123,6 +6151,8 @@ mesh:C566831	Paragangliomas with Sensorineural Hearing Loss	skos:exactMatch	efo:
 mesh:C566869	Night Blindness, Congenital Stationary, Autosomal Dominant 2	skos:exactMatch	doid:0110863	congenital stationary night blindness autosomal dominant 2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C566906	Cakut	skos:exactMatch	doid:0080205	CAKUT	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C566912	Muscular Dystrophy, Limb-Girdle, Type 2M	skos:exactMatch	doid:0110296	autosomal recessive limb-girdle muscular dystrophy type 2M	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C566913	Otosclerosis 7	skos:exactMatch	doid:0060925	otosclerosis 7	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:C566914	Otosclerosis 4	skos:exactMatch	doid:0060923	otosclerosis 4	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C566916	Joubert Syndrome 7	skos:exactMatch	doid:0111002	Joubert syndrome 7	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C566925	Arrhythmogenic Right Ventricular Dysplasia, Familial, 12	skos:exactMatch	doid:0110083	arrhythmogenic right ventricular dysplasia 12	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C566930	Nephronophthisis 7	skos:exactMatch	doid:0111116	nephronophthisis 7	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -6216,6 +6246,7 @@ mesh:C567403	Retinitis Pigmentosa 29	skos:exactMatch	doid:0110378	retinitis pigm
 mesh:C567407	Cardiomyopathy, Dilated, 1AA	skos:exactMatch	doid:0110428	dilated cardiomyopathy 1AA	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C567410	Orofacial Cleft 11	skos:exactMatch	doid:0080404	orofacial cleft 11	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C567416	Oculoauricular Syndrome	skos:exactMatch	doid:0060482	oculoauricular syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C567421	Otosclerosis 8	skos:exactMatch	doid:0060926	otosclerosis 8	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C567422	Retinitis Pigmentosa 41	skos:exactMatch	doid:0110376	retinitis pigmentosa 41	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C567429	Amyotrophic Lateral Sclerosis 10	skos:exactMatch	doid:0060201	amyotrophic lateral sclerosis type 10	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C567433	Spastic Paraplegia 39, Autosomal Recessive	skos:exactMatch	doid:0110790	hereditary spastic paraplegia 39	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -6286,6 +6317,7 @@ mesh:C567827	Generalized Epilepsy With Febrile Seizures Plus, 7	skos:exactMatch	
 mesh:C567831	Emery-Dreifuss Muscular Dystrophy 4	skos:exactMatch	doid:0070249	autosomal dominant Emery-Dreifuss muscular dystrophy 4	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C567832	Spermatogenic Failure 7	skos:exactMatch	doid:0070173	spermatogenic failure 7	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C567833	Optic Atrophy 7	skos:exactMatch	doid:0111437	optic atrophy 7	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C567839	Multiple Synostoses Syndrome 3	skos:exactMatch	doid:0081319	multiple synostoses syndrome 3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:C567847	Hypomyelination, Global Cerebral	skos:exactMatch	doid:0080349	early infantile epileptic encephalopathy 39	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C567854	Retinitis Pigmentosa 42	skos:exactMatch	doid:0110386	retinitis pigmentosa 42	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C567855	Cutis Laxa, Autosomal Recessive, Type IIB	skos:exactMatch	doid:0070137	autosomal recessive cutis laxa type IIB	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -6530,6 +6562,7 @@ mesh:D000069616	Simeprevir	skos:exactMatch	ncit:C129015	Simeprevir	semapv:Manual
 mesh:D000069856	Staghorn Calculi	skos:exactMatch	hp:0033591	Staghorn calculus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000070	Acebutolol	skos:exactMatch	chebi:2379	acebutolol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000070607	Morton Neuroma	skos:exactMatch	efo:0010582	Morton Neuroma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000070627	Chronic Traumatic Encephalopathy	skos:exactMatch	doid:0081291	chronic traumatic encephalopathy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000070779	Giant Cell Tumor of Tendon Sheath	skos:exactMatch	doid:314	tenosynovial giant cell tumor	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D000071017	Hyperekplexia	skos:exactMatch	doid:0060695	hyperekplexia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D000071040	Axon Initial Segment	skos:exactMatch	go:0043194	axon initial segment	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -6758,6 +6791,7 @@ mesh:D000078308	Tiagabine	skos:exactMatch	chebi:9586	tiagabine	semapv:ManualMapp
 mesh:D000078328	Felbamate	skos:exactMatch	chebi:4995	felbamate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000078330	Oxcarbazepine	skos:exactMatch	chebi:7824	oxcarbazepine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000078334	Lacosamide	skos:exactMatch	chebi:135939	lacosamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000078602	Sadness	skos:exactMatch	hp:5200273	Sadness	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000078604	Secretagogues	skos:exactMatch	chebi:90414	secretagogue	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000078622	Nutrients	skos:exactMatch	chebi:33284	nutrient	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000078764	Milnacipran	skos:exactMatch	chebi:135005	milnacipran	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -6776,16 +6810,20 @@ mesh:D000080084	Calicheamicins	skos:exactMatch	chebi:64068	calicheamicin	semapv:
 mesh:D000080242	8-Hydroxy-2'-Deoxyguanosine	skos:exactMatch	chebi:40304	8-hydroxy-2'-deoxyguanosine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000080282	Hormonal Contraception	skos:exactMatch	ncit:C92808	Hormonal Contraception	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000080309	Environmental DNA	skos:exactMatch	ncit:C169106	Environmental DNA	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000080311	Synesthesia	skos:exactMatch	hp:6000024	Synesthesia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000080344	Optic Nerve Hypoplasia	skos:exactMatch	hp:0000609	Optic nerve hypoplasia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000080345	Familial Exudative Vitreoretinopathies	skos:exactMatch	doid:0050535	exudative vitreoretinopathy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D000080362	Stargardt Disease	skos:exactMatch	doid:0050817	Stargardt disease	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000080485	Sudden Unexpected Death in Epilepsy	skos:exactMatch	hp:0033258	Sudden unexpected death in epilepsy	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000080549	Autophagic Cell Death	skos:exactMatch	go:0048102	autophagic cell death	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000080550	Macroautophagy	skos:exactMatch	go:0016236	macroautophagy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000080551	Microautophagy	skos:exactMatch	go:0016237	microautophagy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000080642	Chaperone-Mediated Autophagy	skos:exactMatch	go:0061684	chaperone-mediated autophagy	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000080874	Synucleinopathies	skos:exactMatch	doid:0050890	synucleinopathy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D000080883	Shoulder Dystocia	skos:exactMatch	hp:0011413	Shoulder dystocia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000080909	Carotid-Femoral Pulse Wave Velocity	skos:exactMatch	efo:0004724	carotid-femoral pulse wave velocity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000081	Acetamides	skos:exactMatch	chebi:22160	acetamides	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000081003	Shwachman-Diamond Syndrome	skos:exactMatch	doid:0060479	Shwachman-Diamond syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000081011	Hepatic Infarction	skos:exactMatch	hp:0033135	Hepatic infarction	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000081015	Ototoxicity	skos:exactMatch	efo:0006951	ototoxicity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000081026	Polyprenols	skos:exactMatch	chebi:26199	polyprenol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -6796,17 +6834,53 @@ mesh:D000082	Acetaminophen	skos:exactMatch	chebi:46195	paracetamol	semapv:Manual
 mesh:D000082843	Ovarian Torsion	skos:exactMatch	hp:0034503	Ovarian torsion	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000082902	Quadricuspid Aortic Valve	skos:exactMatch	hp:0031655	Quadricuspid aortic valve	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000082903	Aortico-Ventricular Tunnel	skos:exactMatch	hp:0011627	Aorto-ventricular tunnel	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
+mesh:D000083242	Ischemic Stroke	skos:exactMatch	hp:0002140	Ischemic stroke	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000083402	Persistent Left Superior Vena Cava	skos:exactMatch	hp:0005301	Persistent left superior vena cava	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000083942	Sexual Arousal	skos:exactMatch	efo:0009849	sexual arousal	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000086	Acetazolamide	skos:exactMatch	chebi:27690	acetazolamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000086382	COVID-19	skos:exactMatch	doid:0080600	COVID-19	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000086482	Viral Genome Packaging	skos:exactMatch	go:0019072	viral genome packaging	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000086722	Rhinorrhea	skos:exactMatch	hp:0031417	Rhinorrhea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000086942	Viral Envelope	skos:exactMatch	go:0019031	viral envelope	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000087002	Viral Transcription	skos:exactMatch	go:0019083	viral transcription	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000088242	Paraspeckles	skos:exactMatch	go:0042382	paraspeckles	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000088362	Opsonization	skos:exactMatch	go:0008228	opsonization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000088462	Microneme	skos:exactMatch	go:0020009	microneme	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000089083	Body Odor	skos:exactMatch	hp:0500001	Body odor	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
+mesh:D000089804	Shelterin Complex	skos:exactMatch	go:0070187	shelterin complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000089943	Sleep Quality	skos:exactMatch	efo:0005272	sleep quality	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000091489	Social Deprivation	skos:exactMatch	efo:0009696	social deprivation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000092	Acetohexamide	skos:exactMatch	chebi:28052	acetohexamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000092142	Pancreas Divisum	skos:exactMatch	hp:0030994	Pancreas divisum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092162	Crystalluria	skos:exactMatch	hp:0020074	Crystalluria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092163	Tympanosclerosis	skos:exactMatch	hp:0020123	Tympanosclerosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092164	Lagophthalmos	skos:exactMatch	hp:0030001	Lagophthalmos	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092182	Calcinosis Cutis	skos:exactMatch	hp:0025520	Calcinosis cutis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092183	Apical Hypertrophic Cardiomyopathy	skos:exactMatch	hp:0031992	Apical hypertrophic cardiomyopathy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092222	Focal Cortical Dysplasia	skos:exactMatch	hp:0032046	Focal cortical dysplasia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092223	Hippocampal Sclerosis	skos:exactMatch	hp:0033715	Hippocampal sclerosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092244	Isolated Systolic Hypertension	skos:exactMatch	hp:0500106	Isolated systolic hypertension	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092342	Polypoidal Choroidal Vasculopathy	skos:exactMatch	hp:0025569	Polypoidal choroidal vasculopathy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092423	Limbal Stem Cell Deficiency	skos:exactMatch	hp:0032107	Limbal stem cell deficiency	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092442	Kinesiophobia	skos:exactMatch	hp:4000009	Kinesiophobia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092470	Olecranon Fracture	skos:exactMatch	hp:6000002	Olecranon fracture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092522	Clinical Relevance	skos:exactMatch	hp:0045088	Clinical relevance	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000092542	Dust Mite Allergy	skos:exactMatch	hp:0410324	Dust mite allergy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000093	Acetoin	skos:exactMatch	chebi:15688	acetoin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000093663	Bicornuate Uterus	skos:exactMatch	hp:0000813	Bicornuate uterus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000094222	Dropped Head Syndrome	skos:exactMatch	doid:0060034	dropped head syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000094362	Sleep Duration	skos:exactMatch	efo:0005271	sleep duration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000094405	RNA Replication	skos:exactMatch	go:0039703	RNA replication	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000094628	Aortic Root Aneurysm	skos:exactMatch	hp:0002616	Aortic root aneurysm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000095747	Olivary Degeneration	skos:exactMatch	hp:0008303	Olivary degeneration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000096	Acetone	skos:exactMatch	chebi:15347	acetone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000096003	Hypertensive Crisis	skos:exactMatch	hp:0100735	Hypertensive crisis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000096482	Angiogenesis	skos:exactMatch	go:0001525	angiogenesis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000096703	Cold Urticaria	skos:exactMatch	hp:0410135	Cold urticaria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000096784	Neurexins	skos:exactMatch	fplx:Neurexins	Neurexins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000096822	Chronic Cough	skos:exactMatch	hp:0034315	Chronic cough	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000097906	RNA Methylation	skos:exactMatch	go:0001510	RNA methylation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000097908	Retrograde Ejaculation	skos:exactMatch	hp:0012877	Retrograde ejaculation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000098	Acetophenones	skos:exactMatch	chebi:22187	acetophenones	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000100	Acetrizoic Acid	skos:exactMatch	chebi:34521	Acetrizoic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000105	Acetyl Coenzyme A	skos:exactMatch	chebi:15351	acetyl-CoA	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -6857,6 +6931,7 @@ mesh:D000325	Adrenodoxin	skos:exactMatch	chebi:48962	adrenodoxin	semapv:ManualMa
 mesh:D000345	Affinity Labels	skos:exactMatch	chebi:60788	affinity label	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000347	Afibrinogenemia	skos:exactMatch	hp:0034287	Afibrinogenemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000348	Aflatoxins	skos:exactMatch	chebi:22271	aflatoxin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000370	Ageusia	skos:exactMatch	hp:0041051	Ageusia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000374	Aggression	skos:exactMatch	go:0002118	aggressive behavior	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D000376	Agmatine	skos:exactMatch	chebi:17431	agmatine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000377	Agnosia	skos:exactMatch	ncit:C84542	Agnosia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -6951,6 +7026,7 @@ mesh:D000777	Anesthetics	skos:exactMatch	chebi:38867	anaesthetic	semapv:ManualMa
 mesh:D000779	Anesthetics, Local	skos:exactMatch	chebi:36333	local anaesthetic	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000783	Aneurysm	skos:exactMatch	efo:0009659	aneurysm	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000783	Aneurysm	skos:exactMatch	ncit:C26693	Aneurysm	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000784	Aortic Dissection	skos:exactMatch	doid:0080685	aortic dissection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000784	Aneurysm, Dissecting	skos:exactMatch	ncit:C26694	Dissecting Aneurysm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D000787	Angina Pectoris	skos:exactMatch	efo:0003913	angina pectoris	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000793	Angioid Streaks	skos:exactMatch	doid:979	angioid streaks of choroid	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -7016,6 +7092,7 @@ mesh:D001058	Apomorphine	skos:exactMatch	chebi:48538	apomorphine	semapv:ManualMa
 mesh:D001059	Apoproteins	skos:exactMatch	chebi:13850	apoprotein	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D001062	Appendectomy	skos:exactMatch	efo:0600086	appendectomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D001062	Appendectomy	skos:exactMatch	ncit:C51687	Appendectomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D001064	Appendicitis	skos:exactMatch	hp:6000143	Appendicitis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D001064	Appendicitis	skos:exactMatch	ncit:C35145	Appendicitis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D001065	Appendix	skos:exactMatch	ncit:C12380	Appendix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D001072	Apraxias	skos:exactMatch	doid:0060135	apraxia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -7318,6 +7395,7 @@ mesh:D002746	Chlorpromazine	skos:exactMatch	chebi:3647	chlorpromazine	semapv:Man
 mesh:D002748	Chlorpropham	skos:exactMatch	chebi:34630	chlorpropham	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D002762	Cholecalciferol	skos:exactMatch	chebi:28940	calciol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D002762	Cholecalciferol	skos:exactMatch	ncit:C48194	Cholecalciferol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D002769	Cholelithiasis	skos:exactMatch	doid:10211	cholelithiasis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D002784	Cholesterol	skos:exactMatch	chebi:16113	cholesterol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D002794	Choline	skos:exactMatch	chebi:15354	choline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D002801	Cholinesterase Reactivators	skos:exactMatch	chebi:50241	cholinesterase reactivator	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -7343,6 +7421,7 @@ mesh:D002940	Circadian Rhythm	skos:exactMatch	go:0007623	circadian rhythm	semapv
 mesh:D002945	Cisplatin	skos:exactMatch	chebi:27899	cisplatin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D002952	Citric Acid Cycle	skos:exactMatch	go:0006099	tricarboxylic acid cycle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D002955	Leucovorin	skos:exactMatch	chebi:15640	5-formyltetrahydrofolic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D002966	Clathrin	skos:exactMatch	fplx:Clathrin	Clathrin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D002971	Cleft Lip	skos:exactMatch	hp:0410030	Cleft lip	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D002981	Clindamycin	skos:exactMatch	chebi:3745	clindamycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D002994	Clofibrate	skos:exactMatch	chebi:3750	clofibrate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -7441,7 +7520,9 @@ mesh:D003716	Dengue Virus	skos:exactMatch	ncit:C112036	Dengue Virus	semapv:Manua
 mesh:D003778	Dentures	skos:exactMatch	efo:0010078	dentures	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D003785	Dental Pulp Capping	skos:exactMatch	ncit:C63715	Dental Pulp Capping	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D003789	Dental Pulp Exposure	skos:exactMatch	efo:1001782	dental pulp exposure	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D003805	Dentin Dysplasia	skos:exactMatch	hp:0033784	Dentin dysplasia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D003810	Dentinogenesis	skos:exactMatch	go:0097187	dentinogenesis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D003861	Depersonalization	skos:exactMatch	hp:5200217	Depersonalization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D003865	Depressive Disorder, Major	skos:exactMatch	doid:1470	major depressive disorder	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D003877	Dermatitis, Contact	skos:exactMatch	hp:0032282	Contact dermatitis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	
 mesh:D003896	Desmosomes	skos:exactMatch	go:0030057	desmosome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -7530,6 +7611,7 @@ mesh:D005311	Fetal Hypoxia	skos:exactMatch	efo:1001793	fetal hypoxia	semapv:Manu
 mesh:D005316	Fetal Distress	skos:exactMatch	hp:0025116	Fetal distress	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D005331	Fetomaternal Transfusion	skos:exactMatch	efo:1001794	fetomaternal transfusion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D005335	Fever of Unknown Origin	skos:exactMatch	efo:0003952	fever of unknown origin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D005340	Fibrinogen	skos:exactMatch	fplx:Fibrinogen	Fibrinogen	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D005342	Fibrinolysis	skos:exactMatch	go:0042730	fibrinolysis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D005348	Fibrocystic Breast Disease	skos:exactMatch	doid:5998	microglandular adenosis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D005350	Fibroma	skos:exactMatch	doid:0050871	fibroma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -7666,6 +7748,7 @@ mesh:D006556	Heroin Dependence	skos:exactMatch	hp:0033517	Heroin addiction	semap
 mesh:D006560	Herpes Labialis	skos:exactMatch	efo:1001347	Herpes Labialis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D006561	Herpes Simplex	skos:exactMatch	doid:8566	herpes simplex	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D006570	Heterochromatin	skos:exactMatch	go:0000792	heterochromatin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D006593	Hexokinase	skos:exactMatch	fplx:Hexokinase	Hexokinase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D006605	Hibernation	skos:exactMatch	go:0042750	hibernation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D006616	Hip Contracture	skos:exactMatch	hp:0003273	Hip contracture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D006633	Histamine Antagonists	skos:exactMatch	chebi:37956	histamine antagonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -7679,6 +7762,7 @@ mesh:D006727	Hormone Antagonists	skos:exactMatch	chebi:49020	hormone antagonist	
 mesh:D006728	Hormones	skos:exactMatch	chebi:24621	hormone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D006791	Hostility	skos:exactMatch	hp:0031473	Hostility	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D006810	Humeral Fractures	skos:exactMatch	ncit:C26795	Humerus Fracture	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D006828	Hydatidiform Mole	skos:exactMatch	hp:0032192	Hydatidiform mole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_hp_mesh_mappings.py	
 mesh:D006833	Hydrarthrosis	skos:exactMatch	doid:528	hydrarthrosis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D006837	Hydroa Vacciniforme	skos:exactMatch	hp:0032381	Hydroa vacciniforme	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D006848	Testicular Hydrocele	skos:exactMatch	doid:9912	hydrocele	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -7710,6 +7794,7 @@ mesh:D007074	Immunoglobulin G	skos:exactMatch	go:0071735	IgG immunoglobulin comp
 mesh:D007078	Ileal Neoplasms	skos:exactMatch	doid:10153	ileum cancer	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D007079	Ileitis	skos:exactMatch	hp:0032564	Ileitis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D007081	Ileostomy	skos:exactMatch	efo:0010681	ileostomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D007088	Illusions	skos:exactMatch	hp:5200205	Illusions	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D007105	Immune Complex Diseases	skos:exactMatch	go:0001802	type III hypersensitivity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D007113	Immunity, Innate	skos:exactMatch	go:0045087	innate immune response	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D007119	Immunoblastic Lymphadenopathy	skos:exactMatch	efo:1001350	Immunoblastic Lymphadenopathy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
@@ -7732,6 +7817,7 @@ mesh:D007382	Intermediate Filaments	skos:exactMatch	go:0005882	intermediate fila
 mesh:D007399	Interphase	skos:exactMatch	go:0051325	interphase	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D007401	Interrenal Gland	skos:exactMatch	go:0030325	adrenal gland development	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D007408	Intestinal Absorption	skos:exactMatch	go:0050892	intestinal absorption	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D007416	Intestinal Perforation	skos:exactMatch	hp:0031368	Intestinal perforation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_hp_mesh_mappings.py	
 mesh:D007444	Inulin	skos:exactMatch	chebi:15443	inulin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D007451	Iodamide	skos:exactMatch	chebi:31703	iodamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D007472	Iohexol	skos:exactMatch	chebi:31709	iohexol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -7780,6 +7866,7 @@ mesh:D007698	Kinesis	skos:exactMatch	go:0042465	kinesis	semapv:ManualMappingCura
 mesh:D007699	Kinesthesis	skos:exactMatch	go:0019232	perception of rate of movement	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D007701	Kinetin	skos:exactMatch	chebi:27407	kinetin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D007735	Kynuramine	skos:exactMatch	chebi:73472	kynuramine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D007738	Kyphosis	skos:exactMatch	doid:4667	kyphosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D007741	Labetalol	skos:exactMatch	chebi:6343	labetalol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D007766	Lacrimal Apparatus Diseases	skos:exactMatch	doid:1400	lacrimal apparatus disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D007769	Lactams	skos:exactMatch	chebi:24995	lactam	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -7802,6 +7889,7 @@ mesh:D008169	Lung Abscess	skos:exactMatch	ncit:C99090	Lung Abscess	semapv:Manual
 mesh:D008178	Lupus Erythematosus, Cutaneous	skos:exactMatch	doid:0050169	cutaneous lupus erythematosus	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D008181	Lupus Nephritis	skos:exactMatch	hp:0033726	Lupus nephritis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D008200	Lymphangiectasis	skos:exactMatch	hp:0031842	Lymphangiectasis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D008204	Lymphangiosarcoma	skos:exactMatch	hp:6000004	Lymphangiosarcoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D008213	Lymphocyte Activation	skos:exactMatch	go:0046649	lymphocyte activation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D008223	Lymphoma	skos:exactMatch	ncit:C3208	Lymphoma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D008224	Lymphoma, Follicular	skos:exactMatch	hp:0033125	Follicular lymphoma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
@@ -7816,6 +7904,7 @@ mesh:D008277	Magnesium Oxide	skos:exactMatch	ncit:C29242	Magnesium Oxide	semapv:
 mesh:D008278	Magnesium Sulfate	skos:exactMatch	chebi:32599	magnesium sulfate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D008278	Magnesium Sulfate	skos:exactMatch	ncit:C623	Magnesium Sulfate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D008409	Mastication	skos:exactMatch	go:0071626	mastication	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D008413	Mastitis	skos:exactMatch	hp:0040407	Mastitis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D008425	Maternal Behavior	skos:exactMatch	go:0042711	maternal behavior	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D008428	Maternal Mortality	skos:exactMatch	ncit:C111860	Maternal Mortality	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D008451	Maximal Voluntary Ventilation	skos:exactMatch	efo:0008431	maximal voluntary ventilation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -7834,6 +7923,7 @@ mesh:D008593	Menopause	skos:exactMatch	go:0042697	menopause	semapv:ManualMapping
 mesh:D008597	Menstrual Cycle	skos:exactMatch	go:0044850	menstrual cycle	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D008598	Menstruation	skos:exactMatch	go:0042703	menstruation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D008660	Metabolism	skos:exactMatch	go:0008152	metabolic process	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D008668	Metallothionein	skos:exactMatch	fplx:Metallothionein	Metallothionein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D008677	Metaphase	skos:exactMatch	go:0051323	metaphase	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D008686	Metestrus	skos:exactMatch	go:0060210	metestrus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D008687	Metformin	skos:exactMatch	chebi:6801	metformin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -7844,6 +7934,7 @@ mesh:D008745	Methylation	skos:exactMatch	go:0032259	methylation	semapv:ManualMap
 mesh:D008774	Methylphenidate	skos:exactMatch	chebi:6887	methylphenidate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D008776	Methylprednisolone Hemisuccinate	skos:exactMatch	chebi:135765	methylprednisolone succinate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D008777	Methyltestosterone	skos:exactMatch	chebi:27436	methyltestosterone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D008780	Methyltransferases	skos:exactMatch	fplx:Methyltransferases	Methyltransferases	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D008787	Metoclopramide	skos:exactMatch	chebi:107736	metoclopramide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D008790	Metoprolol	skos:exactMatch	chebi:6904	metoprolol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D008795	Metronidazole	skos:exactMatch	chebi:6909	metronidazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -7902,6 +7993,7 @@ mesh:D009456	Neurofibromatosis 1	skos:exactMatch	doid:0111253	neurofibromatosis 
 mesh:D009463	Neuroma	skos:exactMatch	efo:0009619	neuroma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D009463	Neuroma	skos:exactMatch	ncit:C3275	Neuroma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D009469	Neuromuscular Junction	skos:exactMatch	go:0031594	neuromuscular junction	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D009479	Neuropeptides	skos:exactMatch	fplx:Neuropeptides	Neuropeptides	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D009503	Neutropenia	skos:exactMatch	hp:0001875	Neutropenia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D009525	Niacin	skos:exactMatch	chebi:15940	nicotinic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D009536	Niacinamide	skos:exactMatch	chebi:17154	nicotinamide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -7979,6 +8071,7 @@ mesh:D010858	Pigmentation	skos:exactMatch	go:0043473	pigmentation	semapv:ManualM
 mesh:D010863	Piloerection	skos:exactMatch	go:0097195	pilomotor reflex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D010873	Pinocytosis	skos:exactMatch	go:0006907	pinocytosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D010900	Pituitary Diseases	skos:exactMatch	doid:53	pituitary gland disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D010921	Placenta Accreta	skos:exactMatch	hp:0025654	Placenta accreta	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D010942	Plant Viruses	skos:exactMatch	ncit:C14257	Plant Virus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D010960	Plasminogen Activators	skos:exactMatch	ncit:C16996	Plasminogen Activator	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D010974	Platelet Aggregation	skos:exactMatch	go:0070527	platelet aggregation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8132,6 +8225,7 @@ mesh:D013075	Sperm Capacitation	skos:exactMatch	go:0048240	sperm capacitation	se
 mesh:D013077	Sperm Head	skos:exactMatch	go:0061827	sperm head	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D013081	Sperm Motility	skos:exactMatch	go:0097722	sperm motility	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D013082	Sperm Tail	skos:exactMatch	go:0036126	sperm flagellum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D013088	Spermatocele	skos:exactMatch	hp:0033808	Spermatocele	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D013091	Spermatogenesis	skos:exactMatch	go:0007283	spermatogenesis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D013122	Spinal Diseases	skos:exactMatch	doid:0060564	spinal disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D013148	Spironolactone	skos:exactMatch	chebi:9241	spironolactone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -8140,6 +8234,7 @@ mesh:D013159	Splenic Infarction	skos:exactMatch	hp:0034336	Splenic infarction	se
 mesh:D013166	Spondylitis	skos:exactMatch	hp:0033631	Spondylitis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D013203	Staphylococcal Infections	skos:exactMatch	efo:0005681	Staphylococcus aureus infection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D013216	Reflex, Startle	skos:exactMatch	go:0001964	startle response	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D013285	Strabismus	skos:exactMatch	doid:540	strabismus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D013342	Stuttering	skos:exactMatch	hp:0025268	Stuttering	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D013375	Substance Withdrawal Syndrome	skos:exactMatch	doid:0060001	withdrawal disorder	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D013394	Sucrase-Isomaltase Complex	skos:exactMatch	go:0070014	sucrase-isomaltase complex	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8192,8 +8287,11 @@ mesh:D014212	Tretinoin	skos:exactMatch	chebi:15367	all-trans-retinoic acid	semap
 mesh:D014221	Triamcinolone	skos:exactMatch	chebi:9667	triamcinolone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D014222	Triamcinolone Acetonide	skos:exactMatch	chebi:71418	triamcinolone acetonide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D014295	Trimethoprim	skos:exactMatch	chebi:45924	trimethoprim	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D014336	Troponin	skos:exactMatch	fplx:Troponin	Troponin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D014392	Tuberculosis, Ocular	skos:exactMatch	doid:0070344	ocular tuberculosis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D014397	Tuberculosis, Pulmonary	skos:exactMatch	hp:0032262	Pulmonary tuberculosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	
+mesh:D014402	Tuberous Sclerosis	skos:exactMatch	go:0033596	tuberous sclerosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D014404	Tubulin	skos:exactMatch	fplx:Tubulin	Tubulin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D014406	Tularemia	skos:exactMatch	doid:2123	tularemia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D014484	United States Environmental Protection Agency	skos:exactMatch	ncit:C17236	Environmental Protection Agency	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D014526	Urethritis	skos:exactMatch	hp:0500006	Urethritis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -8274,6 +8372,7 @@ mesh:D015870	Gene Expression	skos:exactMatch	go:0010467	gene expression	semapv:M
 mesh:D015874	Yukon Territory	skos:exactMatch	ncit:C89818	Yukon	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D015894	Genome, Human	skos:exactMatch	ncit:C16630	Human Genome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D015922	Complement C1q	skos:exactMatch	go:0062167	complement component C1q complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D016023	Integrins	skos:exactMatch	fplx:Integrins	Integrins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D016040	Lung Transplantation	skos:exactMatch	ncit:C15274	Lung Transplantation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D016049	Didanosine	skos:exactMatch	chebi:490877	didanosine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D016066	Pleural Effusion, Malignant	skos:exactMatch	ncit:C9432	Malignant Pleural Effusion	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8447,6 +8546,7 @@ mesh:D018224	Myofibromatosis	skos:exactMatch	hp:0020135	Myofibromatosis	semapv:M
 mesh:D018226	Fibroadenoma	skos:exactMatch	efo:1000254	Fibroadenoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D018253	Adenoma, Villous	skos:exactMatch	doid:0050869	villous adenoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D018271	Signal Recognition Particle	skos:exactMatch	go:0048500	signal recognition particle	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D018272	Porins	skos:exactMatch	fplx:Porins	Porins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D018275	Carcinoma, Lobular	skos:exactMatch	doid:0050938	breast lobular carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D018286	Carcinoma, Giant Cell	skos:exactMatch	ncit:C3779	Giant Cell Carcinoma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D018288	Carcinoma, Small Cell	skos:exactMatch	doid:0050685	small cell carcinoma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8619,6 +8719,7 @@ mesh:D024182	Uniparental Disomy	skos:exactMatch	hp:0032382	Uniparental disomy	se
 mesh:D024505	Tocopherols	skos:exactMatch	chebi:27013	tocopherol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D024508	Tocotrienols	skos:exactMatch	chebi:33235	tocotrienol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D024508	Tocotrienols	skos:exactMatch	ncit:C68318	Tocotrienol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D025801	Ubiquitin	skos:exactMatch	fplx:Ubiquitin	Ubiquitin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D026721	RNA 3' End Processing	skos:exactMatch	go:0031123	RNA 3'-end processing	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D026941	Sodium Channel Blockers	skos:exactMatch	chebi:38633	sodium channel blocker	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D029322	Norovirus	skos:exactMatch	ncit:C112362	Norovirus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8639,10 +8740,12 @@ mesh:D034861	Abdominal Wall	skos:exactMatch	ncit:C77608	Abdominal Wall	semapv:Ma
 mesh:D034881	Nuclear Lamina	skos:exactMatch	go:0005652	nuclear lamina	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D036801	Parturition	skos:exactMatch	go:0007567	parturition	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D036881	Long-Term Synaptic Depression	skos:exactMatch	go:0060292	long-term synaptic depression	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D039921	Neuropilins	skos:exactMatch	fplx:Neuropilins	Neuropilins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D042003	DNA Packaging	skos:exactMatch	go:0006323	DNA packaging	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D042583	Lymphangiogenesis	skos:exactMatch	go:0001946	lymphangiogenesis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D042863	Cyclin-Dependent Kinase 9	skos:exactMatch	hgnc:1780	CDK9	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D042882	Gallstones	skos:exactMatch	ncit:C34443	Gallbladder Stone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D043182	Carboxylesterase	skos:exactMatch	fplx:Carboxylesterase	Carboxylesterase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D043343	Testosterone Propionate	skos:exactMatch	chebi:9466	Testosterone propionate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D043371	Fatty Acids, Omega-6	skos:exactMatch	chebi:36009	omega-6 fatty acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D043762	Reproductive Behavior	skos:exactMatch	go:0019098	reproductive behavior	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8677,6 +8780,7 @@ mesh:D045782	Hemiterpenes	skos:exactMatch	chebi:35188	hemiterpene	semapv:ManualM
 mesh:D046148	Donor Selection	skos:exactMatch	go:0007535	donor selection	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D046249	Transfer RNA Aminoacylation	skos:exactMatch	go:0043039	tRNA aminoacylation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D046449	Hernia, Abdominal	skos:exactMatch	ncit:C98700	Abdominal Hernia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D046608	Synkinesis	skos:exactMatch	hp:0034980	Synkinesis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D046768	Nesidioblastosis	skos:exactMatch	hp:0034346	Nesidioblastosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D046934	Ginkgolides	skos:exactMatch	chebi:136909	ginkgolide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D047069	Pyrazolones	skos:exactMatch	chebi:83328	pyrazolone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -9287,6 +9391,7 @@ mesh:D063326	Exosome Multienzyme Ribonuclease Complex	skos:exactMatch	go:0000178
 mesh:D063386	Cannabinoid Receptor Agonists	skos:exactMatch	chebi:67072	cannabinoid receptor agonist	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D063387	Cannabinoid Receptor Antagonists	skos:exactMatch	chebi:73413	cannabinoid receptor antagonist	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D063388	Endocannabinoids	skos:exactMatch	chebi:67197	endocannabinoid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D063425	Binge Drinking	skos:exactMatch	hp:6000020	Binge drinking	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D063426	Human Migration	skos:exactMatch	ncit:C15422	Human Migration	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D063546	Apicoplasts	skos:exactMatch	go:0020011	apicoplast	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D063646	Carcinogenesis	skos:exactMatch	ncit:C18078	Carcinogenesis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -10353,6 +10458,7 @@ vo:0003112	Rudivax	skos:exactMatch	mesh:C112264	Rudivax	semapv:ManualMappingCura
 vo:0003120	MVA85A	skos:exactMatch	mesh:C549320	MVA 85A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	
 vo:0003131	VPM1002	skos:exactMatch	drugbank:DB15801	VPM1002	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	
 vo:0003131	VPM1002	skos:exactMatch	mesh:C000705187	VPM1002 recombinant BCG vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	
+vo:0003152	HEPLISAV-B	skos:exactMatch	mesh:C000726347	Heplisav-B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	
 vo:0003167	Oral Poliovirus vaccine	skos:exactMatch	mesh:D011055	Poliovirus Vaccine, Oral	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	
 vo:0003364	Neisseria meningitidis serogroup B strain NZ98/254 outer membrane vesicle	skos:exactMatch	drugbank:DB10786	Neisseria meningitidis serogroup B strain NZ98/254 outer membrane vesicle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	
 vo:0003366	Neisseria meningitidis serogroup B recombinant LP2086 A05 protein variant antigen	skos:exactMatch	drugbank:DB10284	Neisseria meningitidis serogroup B recombinant LP2086 A05 protein variant antigen	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	
@@ -10427,6 +10533,7 @@ vo:0005415	mRNA-1273.214	skos:exactMatch	mesh:C000722752	mRNA-1273.214 COVID-19 
 vo:0005445	immune globulin, intravenous	skos:exactMatch	mesh:D016756	Immunoglobulins, Intravenous	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	
 vo:0006001	botulinum antitoxin	skos:exactMatch	mesh:D001904	Botulinum Antitoxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	
 vo:0006005	diphtheria antitoxin	skos:exactMatch	mesh:D004166	Diphtheria Antitoxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	
+vo:0007054	VCL-CB01 Vaccine	skos:exactMatch	mesh:C547023	VCL-CB01 vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	
 vo:0007074	PR1 Leukemia Peptide Vaccine	skos:exactMatch	drugbank:DB15276	PR1 leukemia peptide vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	
 vo:0007193	Abagovomab	skos:exactMatch	drugbank:DB16077	Abagovomab	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	
 vo:0007193	Abagovomab	skos:exactMatch	mesh:C518318	abagovomab	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	
