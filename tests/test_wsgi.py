@@ -7,7 +7,7 @@ from pathlib import Path
 from bioregistry import NormalizedNamableReference as Reference
 
 from biomappings import SemanticMapping
-from biomappings.resources import _write_curated, write_predictions
+from biomappings.resources import _write_helper, write_predictions
 from biomappings.wsgi import Controller, State, get_app
 
 TEST_USER = Reference(prefix="orcid", identifier="0000-0000-0000-0000", name="Max Mustermann")
@@ -69,9 +69,9 @@ class TestFull(unittest.TestCase):
         unsure_path = directory.joinpath("unsure.tsv")
 
         write_predictions(predictions, path=predictions_path)
-        _write_curated([], path=positives_path, mode="w")
-        _write_curated([], path=negatives_path, mode="w")
-        _write_curated([], path=unsure_path, mode="w")
+        _write_helper([], path=positives_path, mode="w")
+        _write_helper([], path=negatives_path, mode="w")
+        _write_helper([], path=unsure_path, mode="w")
 
         self.controller = Controller(
             predictions_path=predictions_path,
