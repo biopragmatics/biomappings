@@ -1,4 +1,4 @@
-"""Generate mappings to Gilda from given PyOBO prefixes."""
+"""Generate mappings from DOID."""
 
 import click
 from more_click import verbose_option
@@ -15,25 +15,13 @@ def main():
     provenance = get_script_url(__file__)
 
     prefix = "doid"
-    targets = [
-        "umls",
-        "efo",
-        "mesh",
-        # MONDO and IDO both have the issue of
-        # mismatch of regex/banana
-        # "mondo",
-        # "ido",
-        # ORDO and CIDO can't be parsed
-        # "ordo",
-        # "cido"
-    ]
+    targets = ["umls", "efo", "mesh", "mondo", "ido", "ordo", "cido"]
 
     custom_filter = get_custom_filter(prefix, targets)
     append_gilda_predictions(
         prefix,
         targets,
         provenance=provenance,
-        relation="skos:exactMatch",
         custom_filter=custom_filter,
     )
 

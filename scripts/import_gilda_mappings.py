@@ -4,8 +4,10 @@ import csv
 import os
 from collections.abc import Iterable
 
+from bioregistry import NormalizedNamableReference
+
 from biomappings import load_false_mappings, load_mappings
-from biomappings.resources import PredictionTuple, append_prediction_tuples
+from biomappings.resources import SemanticMapping, append_prediction_tuples
 from biomappings.utils import get_script_url
 
 GILDA_PATH = os.environ.get("GILDA_PATH")
@@ -68,7 +70,7 @@ def get_curated_mappings():
     return curated_mappings
 
 
-def get_mappings() -> Iterable[PredictionTuple]:
+def get_mappings() -> Iterable[SemanticMapping]:
     """Iterate lexical mappings from Gilda."""
     url = get_script_url(__file__)
     mapping_type = "semapv:LexicalMatching"
@@ -85,17 +87,17 @@ def get_mappings() -> Iterable[PredictionTuple]:
                 db_id,
             ) in curated_mappings:
                 continue
-            yield PredictionTuple(
-                "mesh",
-                mesh_id,
-                mesh_name,
-                match_type,
-                db_ns_mappings[db_ns],
-                db_id,
-                db_name,
-                mapping_type,
-                confidence,
-                url,
+            yield SemanticMapping(
+                subject=NormalizedNamableReference(
+                    prefix="mesh", identifier=mesh_id, name=mesh_name
+                ),
+                predicate=match_type,
+                object=NormalizedNamableReference(
+                    prefix=db_ns_mappings[db_ns], identifier=db_id, name=db_name
+                ),
+                mapping_justification=mapping_type,
+                confidence=confidence,
+                mapping_tool=url,
             )
 
 

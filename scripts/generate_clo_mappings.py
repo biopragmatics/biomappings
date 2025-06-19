@@ -1,4 +1,4 @@
-"""Generate mappings to CLO from to MeSH."""
+"""Generate mappings from CLO."""
 
 import click
 from more_click import verbose_option
@@ -12,7 +12,7 @@ from biomappings.utils import get_script_url
 @click.command()
 @verbose_option
 def main():
-    """Generate CLO-MeSH mappings."""
+    """Generate mappings from CLO."""
     provenance = get_script_url(__file__)
 
     prefix = "clo"

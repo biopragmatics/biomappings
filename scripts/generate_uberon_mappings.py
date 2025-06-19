@@ -1,4 +1,4 @@
-"""Generate mappings using Gilda from UBERON to BTO."""
+"""Generate mappings from UBERON."""
 
 import click
 
@@ -10,7 +10,7 @@ from biomappings.utils import get_script_url
 def main():
     """Generate UBERON-BTO mappings."""
     provenance = get_script_url(__file__)
-    append_gilda_predictions("uberon", "bto", provenance=provenance)
+    append_gilda_predictions("uberon", ["bto", "mesh"], provenance=provenance)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-"""Generate mappings using Gilda from BTO."""
+"""Generate mappings from BTO."""
 
 import click
 

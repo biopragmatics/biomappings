@@ -1,4 +1,4 @@
-"""Generate mappings using Gilda from VO to DrugBank."""
+"""Generate mappings using from VO."""
 
 import click
 

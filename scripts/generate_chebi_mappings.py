@@ -1,4 +1,4 @@
-"""Generate mappings between ChEBI and MeSH from given PyOBO prefixes."""
+"""Generate mappings from ChEBI."""
 
 import click
 from more_click import verbose_option
@@ -13,7 +13,7 @@ def main() -> None:
     """Generate ChEBI mappings."""
     append_gilda_predictions(
         "chebi",
-        "mesh",
+        ["mesh", "efo"],
         provenance=get_script_url(__file__),
     )
 

@@ -227,14 +227,14 @@ def _write_helper(
             print(*to_row(mapping), sep="\t", file=file)
 
 
-def mapping_sort_key(prediction: SemanticMapping) -> tuple[str, ...]:
+def mapping_sort_key(mapping: SemanticMapping) -> tuple[str, ...]:
     """Return a tuple for sorting mapping dictionaries."""
     return (
-        prediction.subject.curie,
-        prediction.predicate.curie,
-        prediction.object.curie,
-        prediction.mapping_justification.curie,
-        prediction.mapping_tool or "",
+        mapping.subject.curie,
+        mapping.predicate.curie,
+        mapping.object.curie,
+        mapping.mapping_justification.curie,
+        mapping.mapping_tool or "",
     )
 
 

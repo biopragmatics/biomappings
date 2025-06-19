@@ -1,4 +1,4 @@
-"""Generate mappings to Gilda from given PyOBO prefixes."""
+"""Generate mappings from MAxO."""
 
 import click
 from more_click import verbose_option

@@ -1,4 +1,4 @@
-"""Generate mappings to Gilda from given PyOBO prefixes."""
+"""Generate mappings from MONDO."""
 
 import click
 from more_click import verbose_option
@@ -12,9 +12,7 @@ from biomappings.utils import get_script_url
 def main():
     """Generate MONDO mappings."""
     provenance = get_script_url(__file__)
-    append_gilda_predictions(
-        "mondo", ["doid", "efo"], provenance=provenance, relation="skos:exactMatch"
-    )
+    append_gilda_predictions("mondo", ["doid", "efo", "mesh"], provenance=provenance)
 
 
 if __name__ == "__main__":

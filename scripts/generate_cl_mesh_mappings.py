@@ -1,4 +1,4 @@
-"""Generate mappings using Gilda from CL to MeSH."""
+"""Generate mappings from CL."""
 
 import re
 

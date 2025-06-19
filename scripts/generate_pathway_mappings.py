@@ -1,4 +1,4 @@
-"""Generate mappings to Gilda from given PyOBO prefixes."""
+"""Generate mappings from Reactome, WikiPathways, and Pathway Ontology."""
 
 from biomappings.gilda_utils import append_gilda_predictions
 from biomappings.utils import get_script_url
