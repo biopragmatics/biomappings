@@ -294,8 +294,8 @@ def lint_true_mappings(*, path: Path | None = None, standardize: bool) -> None:
 
 def _lint_curated_mappings(path: Path, *, standardize: bool) -> None:
     """Lint the true mappings file."""
-    mappings = _load_table(path, standardize=standardize)
-    mappings = _remove_redundant(mappings)
+    mapping_list = _load_table(path, standardize=standardize)
+    mappings = _remove_redundant(mapping_list)
     _write_helper(mappings, path, mode="w", t="curated")
 
 
