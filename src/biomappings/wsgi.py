@@ -432,7 +432,13 @@ class Controller:
 
     def persist(self) -> None:
         """Save the current markings to the source files."""
-        entries = defaultdict(list)
+        if not self._marked:
+            # no need to persist if there are no marks
+            return None
+
+        entries: defaultdict[Literal["correct", "incorrect", "unsure"], list[SemanticMapping]] = (
+            defaultdict(list)
+        )
 
         for line, value in sorted(self._marked.items(), reverse=True):
             try:
@@ -447,31 +453,50 @@ class Controller:
                 "mapping_justification": MANUAL_MAPPING_CURATION,
             }
 
+            entry_key: Literal["correct", "incorrect", "unsure"]
             # note these go backwards because of the way they are read
             if value == "broad":
-                value = "correct"
+                entry_key = "correct"
                 update["predicate"] = NARROW_MATCH
             elif value == "narrow":
-                value = "correct"
+                entry_key = "correct"
                 update["predicate"] = BROAD_MATCH
-
-            if value == "incorrect":
+            elif value == "incorrect":
+                entry_key = "incorrect"
                 update["predicate_modifier"] = "Not"
+            elif value == "correct":
+                entry_key = "correct"
+            elif value == "unsure":
+                entry_key = "unsure"
+            else:
+                raise NotImplementedError
 
-            # replace some values
+            # replace some values using model_copy since the model is frozen
             new_mapping = mapping.model_copy(update=update)
 
-            entries[value].append(new_mapping)
+            entries[entry_key].append(new_mapping)
 
-        append_true_mappings(entries["correct"], path=self.positives_path)
-        append_false_mappings(entries["incorrect"], path=self.negatives_path)
-        append_unsure_mappings(entries["unsure"], path=self.unsure_path)
+        # no need to standardize since we assume everything was correct on load.
+        # only write files that have some valies to go in them!
+        if entries["correct"]:
+            append_true_mappings(
+                entries["correct"], path=self.positives_path, sort=True, standardize=False
+            )
+        if entries["incorrect"]:
+            append_false_mappings(
+                entries["incorrect"], path=self.negatives_path, sort=True, standardize=False
+            )
+        if entries["unsure"]:
+            append_unsure_mappings(
+                entries["unsure"], path=self.unsure_path, sort=True, standardize=False
+            )
         write_predictions(self._predictions, path=self.predictions_path)
         self._marked.clear()
 
-        # Now add manually curated mappings
-        append_true_mappings(self._added_mappings, path=self.positives_path)
-        self._added_mappings = []
+        # Now add manually curated mappings, if there are any
+        if self._added_mappings:
+            append_true_mappings(self._added_mappings, path=self.positives_path, standardize=False)
+            self._added_mappings = []
 
 
 CONTROLLER: Controller = cast(Controller, LocalProxy(lambda: current_app.config["controller"]))

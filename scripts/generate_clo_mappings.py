@@ -4,7 +4,7 @@ import click
 from more_click import verbose_option
 from semra.sources.clo import get_clo_mappings
 
-from biomappings.gilda_utils import append_gilda_predictions
+from biomappings.lexical import append_lexical_predictions
 from biomappings.mapping_graph import get_filter_from_semra
 from biomappings.utils import get_script_url
 
@@ -24,7 +24,7 @@ def main():
     clo_mappings = get_clo_mappings()
     custom_filter = get_filter_from_semra(clo_mappings)
 
-    append_gilda_predictions(
+    append_lexical_predictions(
         prefix,
         targets,
         provenance=provenance,

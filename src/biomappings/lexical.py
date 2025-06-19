@@ -7,27 +7,31 @@ from collections import defaultdict
 from collections.abc import Iterable
 from pathlib import Path
 
+import click
 import pyobo
 import ssslm
 from bioregistry import NormalizedNamedReference, NormalizedReference
 from curies import Reference
+from more_click import verbose_option
 from tqdm import tqdm
 
 from biomappings import SemanticMapping
+from biomappings.mapping_graph import get_mutual_mapping_filter
 from biomappings.resources import append_prediction_tuples
-from biomappings.utils import EXACT_MATCH, LEXICAL_MATCHING_PROCESS, CMapping
+from biomappings.utils import EXACT_MATCH, LEXICAL_MATCHING_PROCESS, CMapping, get_script_url
 
 __all__ = [
-    "append_gilda_predictions",
+    "append_lexical_predictions",
     "filter_custom",
     "filter_existing_xrefs",
-    "iter_prediction_tuples",
+    "lexical_prediction_cli",
+    "predict_lexical_mappings",
 ]
 
 logger = logging.getLogger(__name__)
 
 
-def append_gilda_predictions(
+def append_lexical_predictions(
     prefix: str,
     target_prefixes: str | Iterable[str],
     provenance: str,
@@ -50,8 +54,10 @@ def append_gilda_predictions(
     """
     if isinstance(target_prefixes, str):
         target_prefixes = [target_prefixes]
+    # by default, PyOBO wraps a gilda grounder, but
+    # can be configured to use other NER/NEN systems
     grounder = pyobo.get_grounder(target_prefixes)
-    predictions = iter_prediction_tuples(
+    predictions = predict_lexical_mappings(
         prefix,
         predicate=relation,
         grounder=grounder,
@@ -63,10 +69,12 @@ def append_gilda_predictions(
     predictions = filter_existing_xrefs(predictions, [prefix, *target_prefixes])
     predictions = sorted(predictions, key=lambda t: (t.subject.prefix, t.subject.name))
     tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
-    append_prediction_tuples(predictions, path=path)
+    # since the function that constructs the predictions already
+    # pre-standardizes, we don't have to worry about standardizing again
+    append_prediction_tuples(predictions, path=path, standardize=False)
 
 
-def iter_prediction_tuples(
+def predict_lexical_mappings(
     prefix: str,
     provenance: str,
     *,
@@ -170,3 +178,34 @@ def filter_existing_xrefs(
     tqdm.write(
         f"filtered out {n_predictions:,} pre-mapped matches",
     )
+
+
+def lexical_prediction_cli(
+    script: str,
+    prefix: str,
+    target: str | list[str],
+    *,
+    filter_mutual_mappings: bool = False,
+    identifiers_are_names: bool = False,
+) -> None:
+    """Construct a CLI and run it."""
+    tt = target if isinstance(target, str) else ", ".join(target)
+
+    @click.command(help=f"Generate mappings from {prefix} to {tt}")
+    @verbose_option
+    def main() -> None:
+        """Generate mappings."""
+        if filter_mutual_mappings:
+            mutual_mapping_filter = get_mutual_mapping_filter(prefix, target)
+        else:
+            mutual_mapping_filter = None
+
+        append_lexical_predictions(
+            prefix,
+            target,
+            custom_filter=mutual_mapping_filter,
+            provenance=get_script_url(script),
+            identifiers_are_names=identifiers_are_names,
+        )
+
+    main()

@@ -13,7 +13,7 @@ from typing import TYPE_CHECKING
 import click
 import networkx as nx
 import yaml
-from bioregistry import NormalizedReference
+from curies import Reference
 from tqdm import tqdm
 
 from biomappings.resources import (
@@ -31,16 +31,16 @@ logger = logging.getLogger(__name__)
 
 
 def get_true_graph(
-    include: Sequence[NormalizedReference] | None = None,
-    exclude: Sequence[NormalizedReference] | None = None,
+    include: Sequence[Reference] | None = None,
+    exclude: Sequence[Reference] | None = None,
 ) -> nx.Graph:
     """Get a graph of the true mappings."""
     return _graph_from_mappings(load_mappings(), strata="correct", include=include, exclude=exclude)
 
 
 def get_false_graph(
-    include: Sequence[NormalizedReference] | None = None,
-    exclude: Sequence[NormalizedReference] | None = None,
+    include: Sequence[Reference] | None = None,
+    exclude: Sequence[Reference] | None = None,
 ) -> nx.Graph:
     """Get a graph of the false mappings."""
     return _graph_from_mappings(
@@ -49,8 +49,8 @@ def get_false_graph(
 
 
 def get_predictions_graph(
-    include: Collection[NormalizedReference] | None = None,
-    exclude: Collection[NormalizedReference] | None = None,
+    include: Collection[Reference] | None = None,
+    exclude: Collection[Reference] | None = None,
 ) -> nx.Graph:
     """Get a graph of the predicted mappings."""
     return _graph_from_mappings(
@@ -61,8 +61,8 @@ def get_predictions_graph(
 def _graph_from_mappings(
     mappings: Iterable[SemanticMapping],
     strata: str,
-    include: Collection[NormalizedReference] | None = None,
-    exclude: Collection[NormalizedReference] | None = None,
+    include: Collection[Reference] | None = None,
+    exclude: Collection[Reference] | None = None,
 ) -> nx.Graph:
     graph = nx.Graph()
 

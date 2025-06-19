@@ -1,34 +1,11 @@
 """Generate mappings."""
 
-import click
-from more_click import verbose_option
-
-from biomappings.gilda_utils import append_gilda_predictions
-from biomappings.mapping_graph import get_custom_filter
-from biomappings.utils import get_script_url
-
-
-@click.command()
-@verbose_option
-def main():
-    """Generate mappings."""
-    provenance = get_script_url(__file__)
-
-    prefix = "hp"
-    targets = [
-        "umls",
-        "efo",
-        "mesh",
-    ]
-
-    custom_filter = get_custom_filter(prefix, targets)
-    append_gilda_predictions(
-        prefix,
-        targets,
-        provenance=provenance,
-        custom_filter=custom_filter,
-    )
-
+from biomappings.lexical import lexical_prediction_cli
 
 if __name__ == "__main__":
-    main()
+    lexical_prediction_cli(
+        __file__,
+        "hp",
+        ["umls", "efo", "mesh"],
+        filter_mutual_mappings=True,
+    )

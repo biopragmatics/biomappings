@@ -55,7 +55,7 @@ if get_git_hash() is not None:
         from .wsgi import get_app
 
         target_references: list[NamableReference] = []
-        for mapping in _load_table(path, normalize=True):
+        for mapping in _load_table(path, standardize=True):
             target_references.append(mapping.subject)
             target_references.append(mapping.object)
         app = get_app(target_references=target_references)
@@ -93,24 +93,24 @@ def lint() -> None:
     """Sort files and remove duplicates."""
     from . import resources
 
-    resources.lint_true_mappings()
-    resources.lint_false_mappings()
-    resources.lint_unsure_mappings()
-    resources.lint_predictions()
+    resources.lint_true_mappings(standardize=True)
+    resources.lint_false_mappings(standardize=True)
+    resources.lint_unsure_mappings(standardize=True)
+    resources.lint_predictions(standardize=True)
 
 
 @main.command()
 @click.argument("prefixes", nargs=-1)
 def prune(prefixes: list[str]) -> None:
     """Prune inferred mappings between the given prefixes from the predictions."""
-    from .mapping_graph import get_custom_filter
+    from .mapping_graph import get_mutual_mapping_filter
     from .resources import filter_predictions
 
     if len(prefixes) < 2:
         click.secho("Must give at least 2 prefixes", fg="red")
         sys.exit(0)
 
-    cf = get_custom_filter(prefixes[0], prefixes[1:])
+    cf = get_mutual_mapping_filter(prefixes[0], prefixes[1:])
     filter_predictions(cf)
 
 
