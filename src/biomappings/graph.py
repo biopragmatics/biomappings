@@ -130,7 +130,7 @@ def charts() -> None:
         nodes_data = {
             reference.curie: {
                 "link": f"https://bioregistry.io/{reference.curie}",
-                "prefix": reference.prefix,
+                "prefix": str(reference.prefix),
                 "identifier": reference.identifier,
                 "name": reference.name,
             }
@@ -156,8 +156,8 @@ def charts() -> None:
                     u, v = v, u
                 incomplete_components_edges.append(
                     {
-                        "source": {"reference": u.curie, **nodes_data[u]},
-                        "target": {"reference": v.curie, **nodes_data[v]},
+                        "source": {"reference": u.curie, **nodes_data[u.curie]},
+                        "target": {"reference": v.curie, **nodes_data[v.curie]},
                     }
                 )
             incomplete_components_edges = sorted(
