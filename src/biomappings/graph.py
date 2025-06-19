@@ -7,7 +7,6 @@ import logging
 import os
 from collections import Counter
 from collections.abc import Collection, Iterable, Sequence
-from operator import itemgetter
 from typing import TYPE_CHECKING
 
 import click
@@ -135,7 +134,7 @@ def charts() -> None:
                 "identifier": reference.identifier,
                 "name": reference.name,
             }
-            for reference in sorted(component.nodes, key=itemgetter(0))
+            for reference in component.nodes
         }
 
         unstable_edges = [
