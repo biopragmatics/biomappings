@@ -27,6 +27,12 @@ from biomappings.utils import DATA, EXACT_MATCH, IMG
 if TYPE_CHECKING:
     import matplotlib.axes
 
+__all__ = [
+    "get_true_graph",
+    "get_false_graph",
+    "get_predictions_graph",
+]
+
 logger = logging.getLogger(__name__)
 
 
