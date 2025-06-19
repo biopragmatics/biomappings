@@ -204,7 +204,7 @@ def _load_table(path: str | Path, *, standardize: bool) -> list[SemanticMapping]
     with Path(path).expanduser().resolve().open() as file:
         return [
             SemanticMapping.from_row(
-                {k: v for k, v in record.items() if v and v.strip() and v.strip() != "."},
+                {k: v.strip() for k, v in record.items() if v and v.strip() and v.strip() != "."},
                 reference_cls,
             )
             for record in csv.DictReader(file, delimiter="\t")
@@ -294,9 +294,8 @@ def lint_true_mappings(*, path: Path | None = None, standardize: bool) -> None:
 
 def _lint_curated_mappings(path: Path, *, standardize: bool) -> None:
     """Lint the true mappings file."""
-    mapping_list = _load_table(path, standardize=standardize)
-    mappings = _strip_mappings(mapping_list)
-    mappings = _remove_redundant(mappings, standardize=standardize)
+    mappings = _load_table(path, standardize=standardize)
+    mappings = _remove_redundant(mappings)
     _write_helper(mappings, path, mode="w", t="curated")
 
 
@@ -442,7 +441,6 @@ def lint_predictions(
             additional_curated_mappings or [],
         ),
     )
-    mappings = _strip_mappings(mappings)
     mappings = _remove_redundant(mappings)
     mappings = sorted(mappings, key=mapping_sort_key)
     write_predictions(mappings, path=path)
@@ -461,11 +459,6 @@ def _remove_redundant(mappings: Iterable[SemanticMapping]) -> Iterable[SemanticM
     for mapping in mappings:
         dd[get_canonical_tuple(mapping)].append(mapping)
     return (max(mappings, key=_pick_best) for mappings in dd.values())
-
-
-def _strip_mappings(mappings: Iterable[SemanticMapping]) -> Iterable[SemanticMapping]:
-    for mapping in mappings:
-        yield {k: v.strip() for k, v in mapping.items() if v}
 
 
 def _pick_best(mapping: SemanticMapping) -> int:
