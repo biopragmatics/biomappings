@@ -7,7 +7,6 @@ import logging
 import os
 from collections import Counter
 from collections.abc import Collection, Iterable, Sequence
-from operator import itemgetter
 from typing import TYPE_CHECKING
 
 import click
@@ -131,11 +130,11 @@ def charts() -> None:
         nodes_data = {
             reference.curie: {
                 "link": f"https://bioregistry.io/{reference.curie}",
-                "prefix": reference.prefix,
+                "prefix": str(reference.prefix),
                 "identifier": reference.identifier,
                 "name": reference.name,
             }
-            for reference in sorted(component.nodes, key=itemgetter(0))
+            for reference in component.nodes
         }
 
         unstable_edges = [
@@ -157,12 +156,12 @@ def charts() -> None:
                     u, v = v, u
                 incomplete_components_edges.append(
                     {
-                        "source": {"reference": u.curie, **nodes_data[u]},
-                        "target": {"reference": v.curie, **nodes_data[v]},
+                        "source": {"curie": u.curie, **nodes_data[u.curie]},
+                        "target": {"curie": v.curie, **nodes_data[v.curie]},
                     }
                 )
             incomplete_components_edges = sorted(
-                incomplete_components_edges, key=lambda d: d["source"]["reference"]
+                incomplete_components_edges, key=lambda d: d["source"]["curie"]
             )
             incomplete_components.append(
                 {

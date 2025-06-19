@@ -7,7 +7,7 @@ import os
 import typing
 from collections import Counter
 from collections.abc import Iterable
-from typing import Any, TypedDict
+from typing import Any, TypedDict, cast
 
 import click
 import yaml
@@ -79,7 +79,7 @@ def _get_count_records(mappings: Iterable[SemanticMapping]) -> list[CountRecord]
         subject, target = mapping.subject, mapping.object
         if subject > target:
             subject, target = target, subject
-        counter[subject.prefix, target.prefix] += 1
+        counter[str(subject.prefix), str(target.prefix)] += 1
     return [
         {"source": subject_prefix, "target": target_prefix, "count": count}
         for (subject_prefix, target_prefix), count in counter.most_common()
@@ -98,8 +98,12 @@ def _get_contributors(mappings: Iterable[SemanticMapping]) -> list[dict[str, str
         if mapping.author and mapping.author.prefix == "orcid"
     )
     return [
-        dict(count=count, **orcid_to_curator_reference[orcid].model_dump(exclude_none=True))
-        if orcid
+        {
+            "count": count,
+            "orcid": reference.identifier,
+            "name": cast(str, reference.name),
+        }
+        if (reference := orcid_to_curator_reference.get(orcid)) is not None
         else {"count": count}
         for orcid, count in counter.most_common()
     ]
