@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "biomappings"
-version = "0.3.8-dev"
+version = "0.4.0-dev"
 description = "Curated and predicted mappings between biomedical identifiers in different namespaces"
 readme = "README.md"
 authors = [
@@ -235,7 +235,7 @@ known-first-party = [
 docstring-code-format = true
 
 [tool.bumpversion]
-current_version = "0.3.8-dev"
+current_version = "0.4.0-dev"
 parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)(?:-(?P<release>[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*))?(?:\\+(?P<build>[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*))?"
 serialize = [
     "{major}.{minor}.{patch}-{release}+{build}",
