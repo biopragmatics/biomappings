@@ -13,7 +13,7 @@ import ssslm
 from bioregistry import NormalizedNamedReference, NormalizedReference
 from curies import Reference
 from more_click import verbose_option
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 from biomappings import SemanticMapping
 from biomappings.mapping_graph import get_mutual_mapping_filter

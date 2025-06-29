@@ -28,7 +28,7 @@ from biomappings.resources import (
     append_false_mappings,
     append_true_mappings,
     append_unsure_mappings,
-    load_curators,
+    get_current_curator,
     load_predictions,
     write_predictions,
 )
@@ -103,12 +103,14 @@ def url_for_state(endpoint, state: State, **kwargs: Any) -> str:
 
 
 def get_app(
+    *,
     target_references: Iterable[NamableReference] | None = None,
     predictions_path: Path | None = None,
     positives_path: Path | None = None,
     negatives_path: Path | None = None,
     unsure_path: Path | None = None,
     controller: Controller | None = None,
+    user: NormalizedNamableReference | None = None,
 ) -> flask.Flask:
     """Get a curation flask app."""
     app_ = flask.Flask(__name__)
@@ -123,6 +125,7 @@ def get_app(
             positives_path=positives_path,
             negatives_path=negatives_path,
             unsure_path=unsure_path,
+            user=user,
         )
     if not controller._predictions and predictions_path is not None:
         raise RuntimeError(f"There are no predictions to curate in {predictions_path}")
@@ -178,7 +181,7 @@ class Controller:
             self._current_author = user
         else:
             # FIXME this will throw an error for new user, so ask them their ORCID and name if it's missing
-            self._current_author = load_curators()[getpass.getuser()]
+            self._current_author = get_current_curator(strict=True)
 
     def _get_current_author(self) -> NamableReference:
         return self._current_author
