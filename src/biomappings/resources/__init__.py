@@ -3,15 +3,16 @@
 from __future__ import annotations
 
 import csv
+import getpass
 import itertools as itt
 import logging
 from collections import defaultdict
 from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import TYPE_CHECKING, Callable, NamedTuple
+from typing import TYPE_CHECKING, Callable, NamedTuple, overload
 
 from bioregistry import NormalizedNamableReference, NormalizedNamedReference
-from curies import NamableReference, NamedReference
+from curies import NamableReference
 from pydantic import BaseModel, ConfigDict, Field
 from tqdm.auto import tqdm
 from typing_extensions import Literal, Self
@@ -38,6 +39,7 @@ __all__ = [
     "append_unsure_mappings",
     "filter_predictions",
     "get_curated_filter",
+    "get_current_curator",
     "load_curators",
     "load_false_mappings",
     "load_mappings",
@@ -483,7 +485,7 @@ def _pick_best(mapping: SemanticMapping) -> int:
     return 0
 
 
-def load_curators() -> dict[str, NamedReference]:
+def load_curators() -> dict[str, NormalizedNamedReference]:
     """Load the curators table."""
     with CURATORS_PATH.open() as file:
         return {
@@ -492,6 +494,32 @@ def load_curators() -> dict[str, NamedReference]:
             )
             for record in csv.DictReader(file, delimiter="\t")
         }
+
+
+class MissingCuratorError(KeyError):
+    """Raised when the current user's login is not listed in the curators file."""
+
+
+# docstr-coverage:excused `overload`
+@overload
+def get_current_curator(*, strict: Literal[True] = True) -> NormalizedNamedReference: ...
+
+
+# docstr-coverage:excused `overload`
+@overload
+def get_current_curator(*, strict: Literal[False] = False) -> NormalizedNamedReference | None: ...
+
+
+def get_current_curator(*, strict: bool = True) -> NormalizedNamedReference | None:
+    """Get the current curator, based on the current user's login name."""
+    current_user = getpass.getuser()
+    curators = load_curators()
+    if current_user in curators:
+        return curators[current_user]
+    elif strict:
+        raise MissingCuratorError
+    else:
+        return None
 
 
 def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:

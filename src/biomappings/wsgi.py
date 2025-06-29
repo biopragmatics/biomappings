@@ -28,7 +28,7 @@ from biomappings.resources import (
     append_false_mappings,
     append_true_mappings,
     append_unsure_mappings,
-    load_curators,
+    get_current_curator,
     load_predictions,
     write_predictions,
 )
@@ -178,7 +178,7 @@ class Controller:
             self._current_author = user
         else:
             # FIXME this will throw an error for new user, so ask them their ORCID and name if it's missing
-            self._current_author = load_curators()[getpass.getuser()]
+            self._current_author = get_current_curator(strict=True)
 
     def _get_current_author(self) -> NamableReference:
         return self._current_author

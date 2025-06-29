@@ -10,7 +10,17 @@ from subprocess import CalledProcessError, check_output
 from bioregistry import NormalizedNamableReference
 
 __all__ = [
+    "BROAD_MATCH",
+    "CURATORS_PATH",
+    "EXACT_MATCH",
+    "LEXICAL_MATCHING_PROCESS",
+    "MANUAL_MAPPING_CURATION",
+    "NARROW_MATCH",
+    "NEGATIVES_SSSOM_PATH",
+    "POSITIVES_SSSOM_PATH",
+    "PREDICTIONS_SSSOM_PATH",
     "RESOURCE_PATH",
+    "UNSURE_SSSOM_PATH",
     "CMapping",
     "get_canonical_tuple",
     "get_git_hash",
