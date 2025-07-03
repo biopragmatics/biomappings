@@ -1,5 +1,5 @@
 contributors:
-- count: 5783
+- count: 5933
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
 - count: 4851
@@ -27,6 +27,9 @@ negative:
 - count: 198
   source: doid
   target: mesh
+- count: 129
+  source: chebi
+  target: efo
 - count: 102
   source: go
   target: mesh
@@ -249,10 +252,10 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1606
+negative_mapping_count: 1735
 negative_prefix_count: 45
 positive:
-- count: 3385
+- count: 3390
   source: chebi
   target: mesh
 - count: 1502
@@ -366,6 +369,9 @@ positive:
 - count: 17
   source: mesh
   target: pubchem.compound
+- count: 16
+  source: chebi
+  target: efo
 - count: 16
   source: chebi
   target: idomal
@@ -600,10 +606,10 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 11025
+positive_mapping_count: 11046
 positive_prefix_count: 63
 predictions:
-- count: 22714
+- count: 22709
   source: chebi
   target: mesh
 - count: 11733
@@ -732,7 +738,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 53769
+predictions_mapping_count: 53764
 predictions_prefix_count: 32
 unsure:
 - count: 27
