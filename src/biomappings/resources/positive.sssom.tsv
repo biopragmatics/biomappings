@@ -3910,6 +3910,15 @@ idomal:0002461	anatomical cluster	skos:exactMatch	uberon:0000477	anatomical clus
 idomal:6000017	quinoline alkaloid	skos:exactMatch	chebi:26509	quinoline alkaloid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 idomal:6000018	cinchona alkaloid	skos:exactMatch	chebi:51323	cinchona alkaloid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 idomal:6000032	maceration	skos:exactMatch	hp:0032007	Maceration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+isced2011:1	Primary education	skos:exactMatch	kim.educationlevel:1	Primary education	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+isced2011:2	Lower secondary education	skos:exactMatch	kim.educationlevel:2	Lower secondary education	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+isced2011:3	Upper secondary education	skos:exactMatch	kim.educationlevel:3	Upper secondary education	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+isced2011:6	Bachelor’s or equivalent level	skos:exactMatch	kim.educationlevel:6	Bachelor or equivalent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+isced2011:7	Master’s or equivalent level	skos:exactMatch	kim.educationlevel:7	Master or equivalent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+isced2011:8	Doctoral or equivalent level	skos:exactMatch	kim.educationlevel:8	Doctoral or equivalent	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+isced2013:n0533	Physics	skos:exactMatch	kim.hochschulfaechersystematik:n0128	Physics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+isced2013:n0542	Statistics	skos:exactMatch	kim.hochschulfaechersystematik:n312	Statistics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+isced2013:n0812	Horticulture	skos:exactMatch	kim.hochschulfaechersystematik:n060	Horticulture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
 ito:00141	Natural language processing	skos:exactMatch	aio:Natural_Language_Processing	Natural Language Processing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 ito:00476	One-shot learning	skos:exactMatch	aio:One-shot_Learning	One-shot Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 ito:00482	Zero-shot learning	skos:exactMatch	aio:Zero-shot_Learning	Zero-shot Learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
@@ -4214,6 +4223,11 @@ kegg.pathway:map04931	Insulin resistance	skos:exactMatch	mesh:D007333	Insulin Re
 kegg.pathway:map04971	Gastric acid secretion	skos:exactMatch	go:0001696	gastric acid secretion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 kegg.pathway:map04979	Cholesterol metabolism	skos:exactMatch	go:0008203	cholesterol metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 kestrelo:0000071	vaccine	skos:exactMatch	vo:0000001	vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+kim.hcrt:questionnaire	Questionnaire	skos:exactMatch	dalia:Questionnaire	questionnaire	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+kim.hcrt:textbook	Textbook	skos:exactMatch	mesh:D022923	Textbook	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+kim.hochschulfaechersystematik:n005	Classical Philology	skos:exactMatch	mesh:D010681	Philology, Classical	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+kim.hochschulfaechersystematik:n012	Archaeology	skos:exactMatch	mesh:D001106	Archaeology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
+kim.hochschulfaechersystematik:n025	Biochemistry	skos:exactMatch	mesh:D001671	Biochemistry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
 maxo:0000014	radiation therapy	skos:exactMatch	mesh:D011878	Radiotherapy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0000015	biologic therapy	skos:exactMatch	mesh:D001691	Biological Therapy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0000021	palliative care	skos:exactMatch	mesh:D010166	Palliative Care	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
@@ -8641,7 +8655,9 @@ mesh:D019379	Teriparatide	skos:exactMatch	chebi:135983	teriparatide	semapv:Manua
 mesh:D019386	Alendronate	ro:0018033	chebi:2567	alendronic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019438	Ritonavir	skos:exactMatch	chebi:45409	ritonavir	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019457	Chromosome Breakage	skos:exactMatch	go:0031052	chromosome breakage	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D019519	Poster	skos:exactMatch	dalia:Poster	poster	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
 mesh:D019522	Vaginal Discharge	skos:exactMatch	efo:0009365	vaginal discharge	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D019531	Lecture	skos:exactMatch	dalia:Lecture	lecture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
 mesh:D019584	Hot Flashes	skos:exactMatch	hp:0031217	Hot flashes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019591	Pseudophakia	skos:exactMatch	hp:0500081	Pseudophakia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019595	Severe Dengue	skos:exactMatch	doid:12206	dengue hemorrhagic fever	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -9043,6 +9059,7 @@ mesh:D055728	Primary Myelofibrosis	skos:exactMatch	ncit:C2862	Primary Myelofibro
 mesh:D055732	Pulmonary Aspergillosis	skos:exactMatch	doid:0050153	pulmonary aspergilloma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D055744	Invasive Pulmonary Aspergillosis	skos:exactMatch	hp:0020103	Invasive pulmonary aspergillosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D055752	Small Cell Lung Carcinoma	skos:exactMatch	ncit:C4917	Small Cell Lung Carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D055823	Cookbook	skos:exactMatch	dalia:Cookbook	cookbook	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	
 mesh:D055944	Magnetosomes	skos:exactMatch	go:0110143	magnetosome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D055948	Sarcopenia	skos:exactMatch	efo:1000653	sarcopenia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:D055949	Vasa Previa	skos:exactMatch	hp:0033991	Vasa previa	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	

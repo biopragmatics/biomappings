@@ -800,6 +800,7 @@ mesh:D000505	Alopecia	skos:exactMatch	doid:0050801	androgenic alopecia	semapv:Ma
 mesh:D000544	Alzheimer Disease	skos:exactMatch	efo:1001870	late-onset Alzheimers disease	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		Not
 mesh:D000650	Amnion	skos:exactMatch	efo:0003028	acute myeloblastic leukemia with maturation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		Not
 mesh:D000691	Anabasine	skos:exactMatch	chebi:74	(S)-anabasine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
+mesh:D000715	Anatomy	skos:exactMatch	obo:mesh#A	Anatomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	Not
 mesh:D001024	Aortic Valve Stenosis	skos:exactMatch	go:0004066	asparagine synthase (glutamine-hydrolyzing) activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		Not
 mesh:D001161	Arteriosclerosis	skos:exactMatch	ncit:C34398	Arteriosclerosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
 mesh:D001171	Arthritis, Juvenile	skos:exactMatch	doid:6776	breast myoepithelial carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
@@ -822,10 +823,12 @@ mesh:D002780	Cholestasis, Intrahepatic	skos:exactMatch	doid:0070227	intrahepatic
 mesh:D002822	Choriocarcinoma	skos:exactMatch	doid:5551	choriocarcinoma of the testis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D003231	Conjunctivitis	skos:exactMatch	doid:11213	acute contagious conjunctivitis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D003635	De Lange Syndrome	skos:exactMatch	doid:0080505	Cornelia de Lange syndrome 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
+mesh:D003695	Delivery of Health Care	skos:exactMatch	obo:mesh#N	Health Care	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	Not
 mesh:D003872	Dermatitis	skos:exactMatch	efo:1000636	inflammatory skin disease	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
 mesh:D003884	Dermoid Cyst	skos:exactMatch	doid:5117	dermoid cyst of ovary	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D003924	Diabetes Mellitus, Type 2	skos:exactMatch	doid:0050524	maturity-onset diabetes of the young	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D003925	Diabetic Angiopathies	skos:exactMatch	doid:10182	diabetic peripheral angiopathy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
+mesh:D004194	Disease	skos:exactMatch	obo:mesh#C	Diseases	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	Not
 mesh:D004407	Dysgerminoma	skos:exactMatch	doid:5511	dysgerminoma of ovary	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D004410	Dyslexia	skos:exactMatch	doid:13365	reading disorder	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D004697	Endocarditis, Bacterial	skos:exactMatch	doid:0060000	infective endocarditis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		Not
@@ -846,10 +849,12 @@ mesh:D006451	Hemoglobin, Sickle	skos:exactMatch	efo:0009223	Hemoglobin S Measure
 mesh:D006480	Hemorrhagic Fever with Renal Syndrome	skos:exactMatch	doid:0050200	Korean hemorrhagic fever	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D006593	Hexokinase	skos:exactMatch	go:0004396	hexokinase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		Not
 mesh:D006646	Histiocytosis, Langerhans-Cell	skos:exactMatch	doid:2571	Langerhans-cell histiocytosis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
+mesh:D006809	Humanities	skos:exactMatch	obo:mesh#K	Humanities	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	Not
 mesh:D006973	Hypertension	skos:exactMatch	hp:0032263	Increased blood pressure	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		Not
 mesh:D007014	Hypophosphatasia	skos:exactMatch	doid:0110915	childhood hypophosphatasia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D007018	Hypopituitarism	skos:exactMatch	doid:9410	panhypopituitarism	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D007161	Immunoproliferative Small Intestinal Disease	skos:exactMatch	doid:0060126	alpha chain disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
+mesh:D007254	Information Science	skos:exactMatch	obo:mesh#L	Information Science	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	Not
 mesh:D007319	Sleep Initiation and Maintenance Disorders	skos:exactMatch	doid:0111141	delayed sleep phase syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D007328	Insulin	skos:exactMatch	hgnc:6081	INS	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
 mesh:D007365	Intercellular Junctions	skos:exactMatch	go:0030054	cell junction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
@@ -863,6 +868,7 @@ mesh:D007762	Labyrinthitis	skos:exactMatch	doid:3930	otitis interna	semapv:Manua
 mesh:D007805	Language Development Disorders	skos:exactMatch	doid:0060244	specific language impairment	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D007938	Leukemia	skos:exactMatch	hp:0005558	Chronic leukemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	Not
 mesh:D007952	Leukemia, Plasma Cell	skos:exactMatch	doid:0070212	hereditary lymphedema I	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
+mesh:D008004	Licensure	skos:exactMatch	dalia:License	license	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	Not
 mesh:D008113	Liver Neoplasms	skos:exactMatch	doid:916	liver benign neoplasm	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D008180	Lupus Erythematosus, Systemic	skos:exactMatch	doid:8857	lupus erythematosus	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D008242	Lysogeny	skos:exactMatch	go:0075713	establishment of integrated proviral latency	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
@@ -905,6 +911,7 @@ mesh:D012915	Soaps	skos:exactMatch	ncit:C42983	Soap Dosage Form	semapv:ManualMap
 mesh:D013125	Spinal Neoplasms	skos:exactMatch	doid:14150	spinal cord lymphoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D013274	Stomach Neoplasms	skos:exactMatch	doid:5517	stomach carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D013577	Syndrome	skos:exactMatch	ncit:C53799	Adverse Event Associated with Syndromes	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		Not
+mesh:D013676	Technology, Industry, and Agriculture	skos:exactMatch	obo:mesh#J	Technology, Industry, and Agriculture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e4850c/scripts/educational_resources.py	Not
 mesh:D013700	Giant Cell Arteritis	skos:exactMatch	go:0033968	glutaryl-7-aminocephalosporanic-acid acylase activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		Not
 mesh:D013953	Thymus Neoplasms	skos:exactMatch	doid:3277	thymus cancer	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
 mesh:D013964	Thyroid Neoplasms	skos:exactMatch	doid:3963	thyroid gland carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		Not
