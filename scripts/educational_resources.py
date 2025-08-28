@@ -33,6 +33,7 @@ PREFIXES = [
     "mesh",
     "gsso",
     "edam",
+    "itsjointly.curriculum",
 ]
 
 ENGLISH_NAME_QUERY = """\
@@ -73,7 +74,12 @@ def main() -> None:
         click.echo("=========")
         click.echo(f"{prefix} {uri_prefix}")
 
-        if resource.get_download_owl() and resource.prefix != "kim.lp":
+        if resource.prefix == "mesh":
+            xxx = pyobo.get_literal_mappings(prefix, version="2025")
+            click.echo(f"got {len(xxx):,} literal mappings from MeSH {prefix}")
+            literal_mappings.extend(xxx)
+
+        elif resource.get_download_owl() and resource.prefix != "kim.lp":
             xxx = pyobo.get_literal_mappings(prefix)
             click.echo(f"got {len(xxx):,} literal mappings from OWL for {prefix}")
             literal_mappings.extend(xxx)

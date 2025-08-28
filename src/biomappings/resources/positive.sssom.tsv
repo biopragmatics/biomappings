@@ -3959,6 +3959,18 @@ ito:39395	random forest	skos:exactMatch	aio:Random_Forest	Random Forest	semapv:M
 ito:39650	NLP	skos:exactMatch	aio:Natural_Language_Processing	Natural Language Processing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 ito:41776	Linear Regression	skos:exactMatch	aio:Linear_Regression	Linear Regression	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 ito:60181	PCA	skos:exactMatch	aio:Principal_Component_Analysis	Principal Component Analysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+itsjointly.curriculum:00000001	curriculum	skos:exactMatch	kim.lp:0000438	Lehrplan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000005	competence	skos:exactMatch	kim.lp:0000013	Kompetenz	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000011	school graduation	skos:exactMatch	kim.lp:0000019	Schulabschluss	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000023	first foreign language	skos:exactMatch	kim.lp:0000541	Erste Fremdsprache	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000024	second foreign language	skos:exactMatch	kim.lp:0000542	Zweite Fremdsprache	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000025	third foreign language	skos:exactMatch	kim.lp:0000543	Dritte Fremdsprache	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000027	introductory phase	skos:exactMatch	kim.lp:0000056	Einführungsphase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000031	Thüringen	skos:exactMatch	kim.lp:3000031	Thüringen	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000033	qualification phase	skos:exactMatch	kim.lp:0000057	Qualifikationsphase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000048	Baden-Württemberg	skos:exactMatch	kim.lp:3000049	Baden-Württemberg	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000067	has part	skos:exactMatch	kim.lp:0000008	hat Teil	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
+itsjointly.curriculum:00000080	MINT subject	skos:exactMatch	kim.lp:0000002	MINT-Fach	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
 kegg.pathway:hsa00010	Glycolysis / Gluconeogenesis - Homo sapiens (human)	skos:exactMatch	wikipathways:WP534	Glycolysis and gluconeogenesis	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145		
 kegg.pathway:hsa00020	Citrate cycle (TCA cycle) - Homo sapiens (human)	skos:exactMatch	reactome:R-HSA-71403	Citric acid cycle (TCA cycle)	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145		
 kegg.pathway:hsa00020	Citrate cycle (TCA cycle) - Homo sapiens (human)	skos:exactMatch	wikipathways:WP78	TCA cycle (aka Krebs or citric acid cycle)	semapv:ManualMappingCuration	orcid:0000-0002-2046-6145		
@@ -7510,6 +7522,7 @@ mesh:D003408	Cresols	skos:exactMatch	chebi:25399	cresol	semapv:ManualMappingCura
 mesh:D003444	Crush Syndrome	skos:exactMatch	efo:1001299	Crush Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D003474	Curcumin	skos:exactMatch	chebi:3962	curcumin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D003475	Curettage	skos:exactMatch	efo:0010728	curettage	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D003479	Curriculum	skos:exactMatch	itsjointly.curriculum:00000001	curriculum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/80c607/scripts/educational_resources.py	
 mesh:D003484	Cyanamide	skos:exactMatch	chebi:16698	cyanamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D003485	Cyanates	skos:exactMatch	chebi:23420	cyanates	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D003486	Cyanides	skos:exactMatch	chebi:23424	cyanides	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
