@@ -5,10 +5,8 @@ import itertools
 import bioregistry
 import click
 import pyobo
-import rdflib
 import ssslm
-from curies import NamableReference
-from curies.vocabulary import exact_match, has_label, lexical_matching_process
+from curies.vocabulary import exact_match, lexical_matching_process
 
 from biomappings import SemanticMapping
 from biomappings.resources import append_predictions
@@ -33,6 +31,7 @@ PREFIXES = [
     "mesh",
     "gsso",
     "edam",
+    "vivo",
     "itsjointly.curriculum",
 ]
 
@@ -63,7 +62,7 @@ SYNONYM_QUERY = """\
 def main() -> None:
     """Generate mappings between educational resources."""
     mapping_tool = get_script_url(__file__)
-    literal_mappings = []
+    all_literal_mappings = []
     for prefix in PREFIXES:
         resource = bioregistry.get_resource(prefix, strict=True)
 
@@ -75,67 +74,34 @@ def main() -> None:
         click.echo(f"{prefix} {uri_prefix}")
 
         if resource.prefix == "mesh":
-            xxx = pyobo.get_literal_mappings(prefix, version="2025")
-            click.echo(f"got {len(xxx):,} literal mappings from MeSH {prefix}")
-            literal_mappings.extend(xxx)
+            literal_mappings = pyobo.get_literal_mappings(prefix, version="2025")
+            click.echo(f"got {len(literal_mappings):,} literal mappings from MeSH {prefix}")
+            all_literal_mappings.extend(literal_mappings)
 
         elif resource.get_download_owl() and resource.prefix != "kim.lp":
-            xxx = pyobo.get_literal_mappings(prefix)
-            click.echo(f"got {len(xxx):,} literal mappings from OWL for {prefix}")
-            literal_mappings.extend(xxx)
+            literal_mappings = pyobo.get_literal_mappings(prefix)
+            click.echo(f"got {len(literal_mappings):,} literal mappings from OWL for {prefix}")
+            all_literal_mappings.extend(literal_mappings)
 
         elif skos_url := (resource.get_download_skos() or resource.get_download_rdf()):
             click.echo(f"getting SKOS {skos_url}")
-            graph = rdflib.Graph()
-            graph.parse(skos_url)
-            names = {
-                uri.removeprefix(uri_prefix): str(name) for uri, name in graph.query(ENGLISH_NAME_QUERY)
-            }
-
-            for uri, name in graph.query(ALL_NAME_QUERY):
-                if not uri.startswith(uri_prefix):
-                    continue
-                identifier = uri.removeprefix(uri_prefix)
-                literal_mappings.append(
-                    ssslm.LiteralMapping(
-                        reference=NamableReference(
-                            prefix=resource.prefix,
-                            identifier=identifier,
-                            name=names.get(identifier) or str(name),
-                        ),
-                        text=str(name),
-                        language=name._language,
-                        predicate=has_label,
-                    )
-                )
-
-            for uri, synonym in graph.query(SYNONYM_QUERY):
-                if not uri.startswith(uri_prefix):
-                    continue
-                identifier = uri.removeprefix(uri_prefix)
-                literal_mappings.append(
-                    ssslm.LiteralMapping(
-                        reference=NamableReference(
-                            prefix=prefix, identifier=identifier, name=names.get(identifier)
-                        ),
-                        text=str(synonym),
-                        language=synonym._language,
-                    )
-                )
+            literal_mappings = ssslm.read_skos(skos_url)
+            click.echo(f"got {len(literal_mappings):,} literal mappings from SKOS for {prefix}")
+            all_literal_mappings.extend(literal_mappings)
 
         else:
             try:
-                xxx = pyobo.get_literal_mappings(prefix)
+                literal_mappings = pyobo.get_literal_mappings(prefix)
             except pyobo.getters.NoBuildError:
-                xxx = []
-            if xxx:
-                click.echo(f"got {len(xxx):,} literal mappings from {prefix}")
-                literal_mappings.extend(xxx)
+                literal_mappings = []
+            if literal_mappings:
+                click.echo(f"got {len(literal_mappings):,} literal mappings from {prefix}")
+                all_literal_mappings.extend(literal_mappings)
             else:
                 click.echo(f"no luck for {prefix}")
                 continue
 
-    grounder: ssslm.GildaGrounder = ssslm.make_grounder(literal_mappings)
+    grounder: ssslm.GildaGrounder = ssslm.make_grounder(all_literal_mappings)
     semantic_mappings = set()
     for _key, entries in grounder._grounder.entries.items():
         n = {(e.db, e.id) for e in entries}
