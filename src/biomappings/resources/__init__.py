@@ -399,7 +399,7 @@ def append_predictions(
     deduplicate: bool = True,
     sort: bool = True,
     path: Path | None = None,
-    standardize: bool,
+    standardize: bool = True,
 ) -> None:
     """Append new lines to the predictions table."""
     if deduplicate:
