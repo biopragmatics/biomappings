@@ -14,6 +14,7 @@ import ssslm
 from bioregistry import NormalizedNamedReference, NormalizedReference
 from curies import Reference
 from more_click import verbose_option
+from pyobo import get_grounder
 from tqdm.auto import tqdm
 
 from biomappings import SemanticMapping
@@ -67,7 +68,7 @@ def append_lexical_predictions(
     if method is None or method == "grounding":
         # by default, PyOBO wraps a gilda grounder, but
         # can be configured to use other NER/NEN systems
-        grounder = pyobo.get_grounder(targets)
+        grounder = get_grounder(targets)
         predictions = predict_lexical_mappings(
             prefix,
             predicate=relation,
@@ -85,36 +86,34 @@ def append_lexical_predictions(
         import pyobo.api.embedding
         import torch
 
-        if len(targets) != 1:
-            raise NotImplementedError("can't do embedding prediction with multiple targets")
         if cutoff is None:
             cutoff = 0.65
 
-        target = targets[0]
-
+        predictions = []
         model = pyobo.api.embedding.get_text_embedding_model()
         source_df = pyobo.get_text_embeddings_df(prefix, model=model)
-        target_df = pyobo.get_text_embeddings_df(target, model=model)
 
-        # TODO consider batching either source,target,or both to reduce memory requirements
-        similarity = model.similarity(source_df.to_numpy(), target_df.to_numpy())
+        for target in targets:
+            target_df = pyobo.get_text_embeddings_df(target, model=model)
 
-        coords = torch.nonzero(similarity >= cutoff, as_tuple=False)
+            # TODO consider batching either source,target,or both to reduce memory requirements
+            similarity = model.similarity(source_df.to_numpy(), target_df.to_numpy())
 
-        predictions = []
-        for x, y in coords:
-            source_id = source_df.index[x.item()]
-            target_id = target_df.index[y.item()]
-            predictions.append(
-                SemanticMapping(
-                    subject=_r(prefix=prefix, identifier=source_id),
-                    predicate=relation,
-                    object=_r(prefix=target, identifier=target_id),
-                    mapping_justification=LEXICAL_MATCHING_PROCESS,
-                    confidence=similarity[x, y].item(),
-                    mapping_tool=provenance,
+            coords = torch.nonzero(similarity >= cutoff, as_tuple=False)
+
+            for x, y in coords:
+                source_id = source_df.index[x.item()]
+                target_id = target_df.index[y.item()]
+                predictions.append(
+                    SemanticMapping(
+                        subject=_r(prefix=prefix, identifier=source_id),
+                        predicate=relation,
+                        object=_r(prefix=target, identifier=target_id),
+                        mapping_justification=LEXICAL_MATCHING_PROCESS,
+                        confidence=similarity[x, y].item(),
+                        mapping_tool=provenance,
+                    )
                 )
-            )
 
     else:
         raise ValueError(f"invalid lexical prediction method: {method}")
