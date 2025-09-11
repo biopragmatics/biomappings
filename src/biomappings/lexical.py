@@ -57,7 +57,7 @@ def append_lexical_predictions(
     :param identifiers_are_names: The source prefix's identifiers should be considered as names
     :param path: A custom path to predictions TSV file
     :param method: The lexical predication method to use
-    :param an optiona cutoff
+    :param cutoff: an optional cutoff
     """
     if isinstance(target_prefixes, str):
         targets = [target_prefixes]
