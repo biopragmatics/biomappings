@@ -6,6 +6,7 @@ import logging
 from collections import defaultdict
 from collections.abc import Iterable
 from pathlib import Path
+from typing import Literal, TypeAlias
 
 import click
 import pyobo
@@ -13,6 +14,7 @@ import ssslm
 from bioregistry import NormalizedNamedReference, NormalizedReference
 from curies import Reference
 from more_click import verbose_option
+from pyobo import get_grounder
 from tqdm.auto import tqdm
 
 from biomappings import SemanticMapping
@@ -30,6 +32,8 @@ __all__ = [
 
 logger = logging.getLogger(__name__)
 
+LexicalPredictionMethod: TypeAlias = Literal["grounding", "embedding"]
+
 
 def append_lexical_predictions(
     prefix: str,
@@ -40,6 +44,8 @@ def append_lexical_predictions(
     custom_filter: CMapping | None = None,
     identifiers_are_names: bool = False,
     path: Path | None = None,
+    method: LexicalPredictionMethod | None = None,
+    cutoff: float | None = None,
 ) -> None:
     """Add lexical matching-based predictions to the Biomappings predictions.tsv file.
 
@@ -51,27 +57,73 @@ def append_lexical_predictions(
         Any source prefix, target prefix, source id combinations in this dictionary will be filtered.
     :param identifiers_are_names: The source prefix's identifiers should be considered as names
     :param path: A custom path to predictions TSV file
+    :param method: The lexical predication method to use
+    :param cutoff: an optional minimum prediction confidence cutoff
     """
     if isinstance(target_prefixes, str):
-        target_prefixes = [target_prefixes]
-    # by default, PyOBO wraps a gilda grounder, but
-    # can be configured to use other NER/NEN systems
-    grounder = pyobo.get_grounder(target_prefixes)
-    predictions = predict_lexical_mappings(
-        prefix,
-        predicate=relation,
-        grounder=grounder,
-        provenance=provenance,
-        identifiers_are_names=identifiers_are_names,
-    )
-    if custom_filter is not None:
-        predictions = filter_custom(predictions, custom_filter)
-    predictions = filter_existing_xrefs(predictions, [prefix, *target_prefixes])
-    predictions = sorted(predictions, key=mapping_sort_key)
-    tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
+        targets = [target_prefixes]
+    else:
+        targets = list(target_prefixes)
+
+    if method is None or method == "grounding":
+        # by default, PyOBO wraps a gilda grounder, but
+        # can be configured to use other NER/NEN systems
+        grounder = get_grounder(targets)
+        predictions = predict_lexical_mappings(
+            prefix,
+            predicate=relation,
+            grounder=grounder,
+            provenance=provenance,
+            identifiers_are_names=identifiers_are_names,
+        )
+        if custom_filter is not None:
+            predictions = filter_custom(predictions, custom_filter)
+        predictions = filter_existing_xrefs(predictions, [prefix, *targets])
+        predictions = sorted(predictions, key=mapping_sort_key)
+        tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
+
+    elif method == "embedding":
+        import pyobo.api.embedding
+        import torch
+
+        if cutoff is None:
+            cutoff = 0.65
+
+        predictions = []
+        model = pyobo.api.embedding.get_text_embedding_model()
+        source_df = pyobo.get_text_embeddings_df(prefix, model=model)
+
+        for target in targets:
+            target_df = pyobo.get_text_embeddings_df(target, model=model)
+
+            # TODO consider batching either source,target,or both to reduce memory requirements
+            similarity = model.similarity(source_df.to_numpy(), target_df.to_numpy())
+
+            source_target_pairs = torch.nonzero(similarity >= cutoff, as_tuple=False)
+            for source_idx, target_idx in source_target_pairs:
+                source_id = source_df.index[source_idx.item()]
+                target_id = target_df.index[target_idx.item()]
+                predictions.append(
+                    SemanticMapping(
+                        subject=_r(prefix=prefix, identifier=source_id),
+                        predicate=relation,
+                        object=_r(prefix=target, identifier=target_id),
+                        mapping_justification=LEXICAL_MATCHING_PROCESS,
+                        confidence=similarity[source_idx, target_idx].item(),
+                        mapping_tool=provenance,
+                    )
+                )
+
+    else:
+        raise ValueError(f"invalid lexical prediction method: {method}")
+
     # since the function that constructs the predictions already
     # pre-standardizes, we don't have to worry about standardizing again
     append_prediction_tuples(predictions, path=path, standardize=False)
+
+
+def _r(prefix: str, identifier: str) -> Reference:
+    return Reference(prefix=prefix, identifier=identifier, name=pyobo.get_name(prefix, identifier))
 
 
 def predict_lexical_mappings(
@@ -187,6 +239,9 @@ def lexical_prediction_cli(
     *,
     filter_mutual_mappings: bool = False,
     identifiers_are_names: bool = False,
+    predicate: str | None | Reference = None,
+    method: LexicalPredictionMethod | None = None,
+    cutoff: float | None = None,
 ) -> None:
     """Construct a CLI and run it."""
     tt = target if isinstance(target, str) else ", ".join(target)
@@ -206,6 +261,9 @@ def lexical_prediction_cli(
             custom_filter=mutual_mapping_filter,
             provenance=get_script_url(script),
             identifiers_are_names=identifiers_are_names,
+            relation=predicate,
+            method=method,
+            cutoff=cutoff,
         )
 
     main()
