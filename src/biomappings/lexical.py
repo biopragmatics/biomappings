@@ -97,7 +97,9 @@ def append_lexical_predictions(
 
         model = pyobo.api.embedding.get_text_embedding_model()
         source_df = pyobo.get_text_embeddings_df(prefix, model=model)
-        target_df = pyobo.get_text_embeddings_df(target)
+        target_df = pyobo.get_text_embeddings_df(target, model=model)
+
+        # TODO consider batching either source,target,or both to reduce memory requirements
         similarity = model.similarity(source_df.to_numpy(), target_df.to_numpy())
 
         coords = torch.nonzero(similarity >= cutoff, as_tuple=False)
