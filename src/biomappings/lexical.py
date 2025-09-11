@@ -60,14 +60,16 @@ def append_lexical_predictions(
     :param an optiona cutoff
     """
     if isinstance(target_prefixes, str):
-        target_prefixes = [target_prefixes]
+        targets = [target_prefixes]
+    else:
+        targets = list(target_prefixes)
 
     if method is None or method == "grounding":
         import pyobo
 
         # by default, PyOBO wraps a gilda grounder, but
         # can be configured to use other NER/NEN systems
-        grounder = pyobo.get_grounder(target_prefixes)
+        grounder = pyobo.get_grounder(targets)
         predictions = predict_lexical_mappings(
             prefix,
             predicate=relation,
@@ -77,7 +79,7 @@ def append_lexical_predictions(
         )
         if custom_filter is not None:
             predictions = filter_custom(predictions, custom_filter)
-        predictions = filter_existing_xrefs(predictions, [prefix, *target_prefixes])
+        predictions = filter_existing_xrefs(predictions, [prefix, *targets])
         predictions = sorted(predictions, key=mapping_sort_key)
         tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
 
@@ -86,12 +88,12 @@ def append_lexical_predictions(
         import pyobo.api.embedding
         import torch
 
-        if len(target_prefixes) != 1:
+        if len(targets) != 1:
             raise NotImplementedError("can't do embedding prediction with multiple targets")
         if cutoff is None:
             cutoff = 0.65
 
-        target = target_prefixes[0]
+        target = targets[0]
 
         model = pyobo.api.embedding.get_text_embedding_model()
         source_df = pyobo.get_text_embeddings_df(prefix, model=model)
