@@ -104,13 +104,6 @@ def append_lexical_predictions(
 
         coords = torch.nonzero(similarity >= cutoff, as_tuple=False)
 
-        def _r(prefix: str, identifier: str) -> Reference:
-            import pyobo
-
-            return Reference(
-                prefix=prefix, identifier=identifier, name=pyobo.get_name(prefix, identifier)
-            )
-
         predictions = []
         for x, y in coords:
             source_id = source_df.index[x.item()]
@@ -132,6 +125,10 @@ def append_lexical_predictions(
     # since the function that constructs the predictions already
     # pre-standardizes, we don't have to worry about standardizing again
     append_prediction_tuples(predictions, path=path, standardize=False)
+
+
+def _r(prefix: str, identifier: str) -> Reference:
+    return Reference(prefix=prefix, identifier=identifier, name=pyobo.get_name(prefix, identifier))
 
 
 def predict_lexical_mappings(
