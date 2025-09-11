@@ -99,18 +99,17 @@ def append_lexical_predictions(
             # TODO consider batching either source,target,or both to reduce memory requirements
             similarity = model.similarity(source_df.to_numpy(), target_df.to_numpy())
 
-            coords = torch.nonzero(similarity >= cutoff, as_tuple=False)
-
-            for x, y in coords:
-                source_id = source_df.index[x.item()]
-                target_id = target_df.index[y.item()]
+            source_target_pairs = torch.nonzero(similarity >= cutoff, as_tuple=False)
+            for source_idx, target_idx in source_target_pairs:
+                source_id = source_df.index[source_idx.item()]
+                target_id = target_df.index[target_idx.item()]
                 predictions.append(
                     SemanticMapping(
                         subject=_r(prefix=prefix, identifier=source_id),
                         predicate=relation,
                         object=_r(prefix=target, identifier=target_id),
                         mapping_justification=LEXICAL_MATCHING_PROCESS,
-                        confidence=similarity[x, y].item(),
+                        confidence=similarity[source_idx, target_idx].item(),
                         mapping_tool=provenance,
                     )
                 )
