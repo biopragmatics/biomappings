@@ -65,8 +65,6 @@ def append_lexical_predictions(
         targets = list(target_prefixes)
 
     if method is None or method == "grounding":
-        import pyobo
-
         # by default, PyOBO wraps a gilda grounder, but
         # can be configured to use other NER/NEN systems
         grounder = pyobo.get_grounder(targets)
@@ -84,7 +82,6 @@ def append_lexical_predictions(
         tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
 
     elif method == "embedding":
-        import pyobo
         import pyobo.api.embedding
         import torch
 
