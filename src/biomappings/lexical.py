@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import itertools as itt
 import logging
 from collections import defaultdict
 from collections.abc import Iterable
@@ -17,7 +16,6 @@ import ssslm
 from bioregistry import NormalizedNamableReference, NormalizedNamedReference, NormalizedReference
 from more_click import verbose_option
 from pyobo import get_grounder
-from tqdm import trange
 from tqdm.auto import tqdm
 
 from biomappings import SemanticMapping
@@ -43,7 +41,7 @@ def append_lexical_predictions(
     target_prefixes: str | Iterable[str],
     provenance: str,
     *,
-    relation: str | None | curies.Reference = None,
+    relation: str | None | curies.NamableReference = None,
     custom_filter: CMapping | None = None,
     identifiers_are_names: bool = False,
     path: Path | None = None,
@@ -121,15 +119,6 @@ def append_lexical_predictions(
     # since the function that constructs the predictions already
     # pre-standardizes, we don't have to worry about standardizing again
     append_prediction_tuples(predictions, path=path, standardize=False)
-
-
-def _batched(df: pd.DataFrame, batch_size: int) -> Iterable[Iterable[int]]:
-    length = len(df)
-    if batch_size < length:
-        it = trange(length, unit_scale=True)
-    else:
-        it = range(length)
-    yield from itt.batched(it, batch_size)
 
 
 def _calculate_similarities(
@@ -216,7 +205,7 @@ def predict_lexical_mappings(
     prefix: str,
     provenance: str,
     *,
-    predicate: str | curies.Reference | None = None,
+    predicate: str | curies.NamableReference | None = None,
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
@@ -225,7 +214,7 @@ def predict_lexical_mappings(
     if predicate is None:
         predicate = EXACT_MATCH
     elif isinstance(predicate, str):
-        predicate = NormalizedReference.from_curie(predicate)
+        predicate = NormalizedNamableReference.from_curie(predicate)
 
     id_name_mapping = pyobo.get_id_name_mapping(prefix, strict=strict)
     it = tqdm(
@@ -325,7 +314,7 @@ def lexical_prediction_cli(
     *,
     filter_mutual_mappings: bool = False,
     identifiers_are_names: bool = False,
-    predicate: str | None | curies.Reference = None,
+    predicate: str | None | curies.NamableReference = None,
     method: LexicalPredictionMethod | None = None,
     cutoff: float | None = None,
 ) -> None:
