@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import itertools as itt
 import logging
 from collections import defaultdict
 from collections.abc import Iterable
@@ -9,12 +10,14 @@ from pathlib import Path
 from typing import Literal, TypeAlias
 
 import click
+import curies
+import pandas as pd
 import pyobo
 import ssslm
-from bioregistry import NormalizedNamedReference, NormalizedReference
-from curies import Reference
+from bioregistry import NormalizedNamableReference, NormalizedNamedReference, NormalizedReference
 from more_click import verbose_option
 from pyobo import get_grounder
+from tqdm import trange
 from tqdm.auto import tqdm
 
 from biomappings import SemanticMapping
@@ -40,12 +43,13 @@ def append_lexical_predictions(
     target_prefixes: str | Iterable[str],
     provenance: str,
     *,
-    relation: str | None | Reference = None,
+    relation: str | None | curies.Reference = None,
     custom_filter: CMapping | None = None,
     identifiers_are_names: bool = False,
     path: Path | None = None,
     method: LexicalPredictionMethod | None = None,
     cutoff: float | None = None,
+    batch_size: int | None = None,
 ) -> None:
     """Add lexical matching-based predictions to the Biomappings predictions.tsv file.
 
@@ -79,37 +83,31 @@ def append_lexical_predictions(
         if custom_filter is not None:
             predictions = filter_custom(predictions, custom_filter)
         predictions = filter_existing_xrefs(predictions, [prefix, *targets])
-        predictions = sorted(predictions, key=mapping_sort_key)
-        tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
 
     elif method == "embedding":
         import pyobo.api.embedding
-        import torch
 
         if cutoff is None:
             cutoff = 0.65
+        if batch_size is None:
+            batch_size = 10_000
 
-        predictions = []
         model = pyobo.api.embedding.get_text_embedding_model()
         source_df = pyobo.get_text_embeddings_df(prefix, model=model)
 
-        for target in targets:
+        predictions = []
+        for target in tqdm(targets, disable=len(targets) == 1):
             target_df = pyobo.get_text_embeddings_df(target, model=model)
-
-            # TODO consider batching either source,target,or both to reduce memory requirements
-            similarity = model.similarity(source_df.to_numpy(), target_df.to_numpy())
-
-            source_target_pairs = torch.nonzero(similarity >= cutoff, as_tuple=False)
-            for source_idx, target_idx in source_target_pairs:
-                source_id = source_df.index[source_idx.item()]
-                target_id = target_df.index[target_idx.item()]
+            for source_id, target_id, confidence in _calculate_similarities(
+                source_df, target_df, batch_size, cutoff
+            ):
                 predictions.append(
                     SemanticMapping(
                         subject=_r(prefix=prefix, identifier=source_id),
                         predicate=relation,
                         object=_r(prefix=target, identifier=target_id),
                         mapping_justification=LEXICAL_MATCHING_PROCESS,
-                        confidence=similarity[source_idx, target_idx].item(),
+                        confidence=confidence,
                         mapping_tool=provenance,
                     )
                 )
@@ -117,20 +115,108 @@ def append_lexical_predictions(
     else:
         raise ValueError(f"invalid lexical prediction method: {method}")
 
+    predictions = sorted(predictions, key=mapping_sort_key)
+    tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
+
     # since the function that constructs the predictions already
     # pre-standardizes, we don't have to worry about standardizing again
     append_prediction_tuples(predictions, path=path, standardize=False)
 
 
-def _r(prefix: str, identifier: str) -> Reference:
-    return Reference(prefix=prefix, identifier=identifier, name=pyobo.get_name(prefix, identifier))
+def _batched(df: pd.DataFrame, batch_size: int) -> Iterable[Iterable[int]]:
+    length = len(df)
+    if batch_size < length:
+        it = trange(length, unit_scale=True)
+    else:
+        it = range(length)
+    yield from itt.batched(it, batch_size)
+
+
+def _calculate_similarities(
+    source_df: pd.DataFrame,
+    target_df: pd.DataFrame,
+    batch_size: int | None,
+    cutoff: float,
+) -> list[tuple[str, str, float]]:
+    if batch_size is not None:
+        return _calculate_similarities_batched(
+            source_df, target_df, batch_size=batch_size, cutoff=cutoff
+        )
+    else:
+        return _calculate_similarities_unbatched(source_df, target_df, cutoff=cutoff)
+
+
+def _calculate_similarities_batched(
+    source_df: pd.DataFrame,
+    target_df: pd.DataFrame,
+    *,
+    batch_size: int,
+    cutoff: float,
+) -> list[tuple[str, str, float]]:
+    import torch
+    from sentence_transformers.util import cos_sim
+
+    similarities = []
+    source_df_numpy = source_df.to_numpy()
+    for target_start in tqdm(range(0, len(target_df), batch_size), unit="target batch"):
+        target_end = target_start + batch_size
+        tqdm.write(f"target batch from {target_start} to {target_end}")
+        target_batch_df = target_df.iloc[target_start:target_end]
+        similarity = cos_sim(
+            source_df_numpy,
+            target_batch_df.to_numpy(),
+        )
+        source_target_pairs = torch.nonzero(similarity >= cutoff, as_tuple=False)
+        for source_idx, target_idx in source_target_pairs:
+            source_id: str = source_df.index[source_idx.item()]
+            target_reindexed: int = target_start + target_idx.item()
+            target_id: str = target_batch_df.index[target_idx.item()]
+            tqdm.write(
+                f"local target idx: {target_idx.item()}, reindexed: {target_reindexed}, id: {target_id}, name: {pyobo.get_name('chmo', target_id)}"
+            )
+            similarities.append(
+                (
+                    source_id,
+                    target_id,
+                    similarity[source_idx, target_idx].item(),
+                )
+            )
+    return similarities
+
+
+def _calculate_similarities_unbatched(
+    source_df: pd.DataFrame, target_df: pd.DataFrame, *, cutoff: float
+) -> list[tuple[str, str, float]]:
+    import torch
+    from sentence_transformers.util import cos_sim
+
+    similarities = []
+    similarity = cos_sim(source_df.to_numpy(), target_df.to_numpy())
+    source_target_pairs = torch.nonzero(similarity >= cutoff, as_tuple=False)
+    for source_idx, target_idx in source_target_pairs:
+        source_id: str = source_df.index[source_idx.item()]
+        target_id: str = target_df.index[target_idx.item()]
+        similarities.append(
+            (
+                source_id,
+                target_id,
+                similarity[source_idx, target_idx].item(),
+            )
+        )
+    return similarities
+
+
+def _r(prefix: str, identifier: str) -> NormalizedNamableReference:
+    return NormalizedNamableReference(
+        prefix=prefix, identifier=identifier, name=pyobo.get_name(prefix, identifier)
+    )
 
 
 def predict_lexical_mappings(
     prefix: str,
     provenance: str,
     *,
-    predicate: str | Reference | None = None,
+    predicate: str | curies.Reference | None = None,
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
@@ -207,7 +293,7 @@ def filter_existing_xrefs(
     """Filter predictions that match xrefs already loaded through PyOBO."""
     prefixes = set(prefixes)
 
-    entity_to_mapped_prefixes: defaultdict[Reference, set[str]] = defaultdict(set)
+    entity_to_mapped_prefixes: defaultdict[curies.Reference, set[str]] = defaultdict(set)
     for subject_prefix in prefixes:
         for subject_id, target_prefix, object_id in pyobo.get_xrefs_df(subject_prefix).values:
             entity_to_mapped_prefixes[
@@ -239,7 +325,7 @@ def lexical_prediction_cli(
     *,
     filter_mutual_mappings: bool = False,
     identifiers_are_names: bool = False,
-    predicate: str | None | Reference = None,
+    predicate: str | None | curies.Reference = None,
     method: LexicalPredictionMethod | None = None,
     cutoff: float | None = None,
 ) -> None:
