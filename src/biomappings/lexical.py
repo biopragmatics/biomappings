@@ -158,7 +158,6 @@ def _calculate_similarities_batched(
         source_target_pairs = torch.nonzero(similarity >= cutoff, as_tuple=False)
         for source_idx, target_idx in source_target_pairs:
             source_id: str = source_df.index[source_idx.item()]
-            target_reindexed: int = target_start + target_idx.item()
             target_id: str = target_batch_df.index[target_idx.item()]
             similarities.append(
                 (
