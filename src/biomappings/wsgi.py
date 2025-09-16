@@ -111,6 +111,7 @@ def get_app(
     unsure_path: Path | None = None,
     controller: Controller | None = None,
     user: NormalizedNamableReference | None = None,
+    resolver_base: str | None = None,
 ) -> flask.Flask:
     """Get a curation flask app."""
     app_ = flask.Flask(__name__)
@@ -132,9 +133,14 @@ def get_app(
     app_.config["controller"] = controller
     flask_bootstrap.Bootstrap4(app_)
     app_.register_blueprint(blueprint)
+
+    if not resolver_base:
+        resolver_base = "https://bioregistry.io"
+
     app_.jinja_env.globals.update(
         controller=controller,
         url_for_state=url_for_state,
+        resolver_base=resolver_base,
     )
     return app_
 
