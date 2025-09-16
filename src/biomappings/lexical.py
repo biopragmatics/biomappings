@@ -160,9 +160,6 @@ def _calculate_similarities_batched(
             source_id: str = source_df.index[source_idx.item()]
             target_reindexed: int = target_start + target_idx.item()
             target_id: str = target_batch_df.index[target_idx.item()]
-            tqdm.write(
-                f"local target idx: {target_idx.item()}, reindexed: {target_reindexed}, id: {target_id}, name: {pyobo.get_name('chmo', target_id)}"
-            )
             similarities.append(
                 (
                     source_id,
