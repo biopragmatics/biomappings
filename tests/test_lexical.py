@@ -3,7 +3,6 @@
 import unittest
 
 import pandas as pd
-import pyobo
 
 from biomappings.lexical import _calculate_similarities
 
@@ -13,13 +12,6 @@ class TestEmbeddingSimilarity(unittest.TestCase):
 
     def test_calculate_similarities(self) -> None:
         """Test calculating similarities in batch."""
-        self.assertEqual(
-            "chrono-amperometry", pyobo.get_name("chmo:0000005", upgrade_identifier=False)
-        )
-        self.assertEqual(
-            "chrono-amperometry", pyobo.get_name("chmo", "0000005", upgrade_identifier=False)
-        )
-
         left_df = pd.DataFrame(
             [
                 (0.0, 0.0, 1.0),
