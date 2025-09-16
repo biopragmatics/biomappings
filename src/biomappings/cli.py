@@ -22,17 +22,23 @@ def main() -> None:
 
 
 if get_git_hash() is not None:
+    resolver_base_option = click.option(
+        "--resolver-base",
+        help="A custom resolver base URL, instead of the Bioregistry.",
+    )
 
     @main.command()
     @click.option("--predictions-path", type=click.Path(), help="A predictions TSV file path")
     @click.option("--positives-path", type=click.Path(), help="A positives curation TSV file path")
     @click.option("--negatives-path", type=click.Path(), help="A negatives curation TSV file path")
     @click.option("--unsure-path", type=click.Path(), help="An unsure curation TSV file path")
+    @resolver_base_option
     def web(
         predictions_path: Path,
         positives_path: Path,
         negatives_path: Path,
         unsure_path: Path,
+        resolver_base: str | None,
     ) -> None:
         """Run the biomappings web app."""
         from .wsgi import get_app
@@ -42,12 +48,17 @@ if get_git_hash() is not None:
             positives_path=positives_path,
             negatives_path=negatives_path,
             unsure_path=unsure_path,
+            resolver_base=resolver_base,
         )
         run_app(app, with_gunicorn=False)
 
     @main.command()
     @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
-    def curate(path: Path) -> None:
+    @resolver_base_option
+    def curate(
+        path: Path,
+        resolver_base: str | None,
+    ) -> None:
         """Run a target curation web app."""
         from curies import NamableReference
 
@@ -58,7 +69,7 @@ if get_git_hash() is not None:
         for mapping in _load_table(path, standardize=True):
             target_references.append(mapping.subject)
             target_references.append(mapping.object)
-        app = get_app(target_references=target_references)
+        app = get_app(target_references=target_references, resolver_base=resolver_base)
         run_app(app, with_gunicorn=False)
 
 else:

@@ -81,7 +81,7 @@
                             <td class="text-right">{{ 1 + line }}</td>
                             {% endif %}
                             <td>
-                                <a href="https://bioregistry.io/{{ p.subject.curie }}">
+                                <a href="{{ resolver_base }}/{{ p.subject.curie }}">
                                     {{ p.subject.curie }}
                                 </a>
                             </td>
@@ -90,7 +90,7 @@
                                 <td>{{ p.predicate.curie }}</td>
                             {% endif %}
                             <td>
-                                <a href="https://bioregistry.io/{{ p.object.curie }}">
+                                <a href="{{ resolver_base }}/{{ p.object.curie }}">
                                     {{ p.object.curie }}
                                 </a>
                             </td>
