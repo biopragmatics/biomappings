@@ -61,6 +61,7 @@ def append_lexical_predictions(
     :param path: A custom path to predictions TSV file
     :param method: The lexical predication method to use
     :param cutoff: an optional minimum prediction confidence cutoff
+    :param batch_size: The batch size for embeddings
     """
     if isinstance(target_prefixes, str):
         targets = [target_prefixes]
