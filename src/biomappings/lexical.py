@@ -3,10 +3,11 @@
 from __future__ import annotations
 
 import logging
+import typing
 from collections import defaultdict
 from collections.abc import Iterable
 from pathlib import Path
-from typing import Literal, TypeAlias
+from typing import Callable, Literal, TypeAlias, cast
 
 import click
 import curies
@@ -33,7 +34,8 @@ __all__ = [
 
 logger = logging.getLogger(__name__)
 
-LexicalPredictionMethod: TypeAlias = Literal["grounding", "embedding"]
+RecognitionMethod: TypeAlias = Literal["ner", "grounding"]
+PredictionMethod: TypeAlias = RecognitionMethod | Literal["embedding"]
 
 
 def append_lexical_predictions(
@@ -45,9 +47,10 @@ def append_lexical_predictions(
     custom_filter: CMapping | None = None,
     identifiers_are_names: bool = False,
     path: Path | None = None,
-    method: LexicalPredictionMethod | None = None,
+    method: PredictionMethod | None = None,
     cutoff: float | None = None,
     batch_size: int | None = None,
+    custom_filter_function: Callable[[SemanticMapping], bool] | None = None,
 ) -> None:
     """Add lexical matching-based predictions to the Biomappings predictions.tsv file.
 
@@ -65,13 +68,15 @@ def append_lexical_predictions(
     :param method: The lexical predication method to use
     :param cutoff: an optional minimum prediction confidence cutoff
     :param batch_size: The batch size for embeddings
+    :param custom_filter_function: A custom function that decides if semantic mappings
+        should be kept, applied after all other logic.
     """
     if isinstance(target_prefixes, str):
         targets = [target_prefixes]
     else:
         targets = list(target_prefixes)
 
-    if method is None or method == "grounding":
+    if method is None or method in typing.get_args(RecognitionMethod):
         # by default, PyOBO wraps a gilda grounder, but
         # can be configured to use other NER/NEN systems
         grounder = get_grounder(targets)
@@ -81,6 +86,7 @@ def append_lexical_predictions(
             grounder=grounder,
             provenance=provenance,
             identifiers_are_names=identifiers_are_names,
+            method=cast(RecognitionMethod | None, method),
         )
         if custom_filter is not None:
             predictions = filter_custom(predictions, custom_filter)
@@ -116,6 +122,9 @@ def append_lexical_predictions(
 
     else:
         raise ValueError(f"invalid lexical prediction method: {method}")
+
+    if custom_filter_function:
+        predictions = list(filter(custom_filter_function, predictions))
 
     predictions = sorted(predictions, key=mapping_sort_key)
     tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
@@ -209,6 +218,7 @@ def predict_lexical_mappings(
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
+    method: RecognitionMethod | None = None,
 ) -> Iterable[SemanticMapping]:
     """Iterate over prediction tuples for a given prefix."""
     if predicate is None:
@@ -220,9 +230,22 @@ def predict_lexical_mappings(
     it = tqdm(
         id_name_mapping.items(), desc=f"[{prefix}] lexical tuples", unit_scale=True, unit="name"
     )
+
+    if method is None or method == "nen":
+
+        def _get_matches(s: str) -> list[ssslm.Match]:
+            return grounder.get_matches(s)
+
+    elif method == "ner":
+
+        def _get_matches(s: str) -> list[ssslm.Match]:
+            return [a.match for a in grounder.annotate(s)]
+    else:
+        raise ValueError(f"invalid lexical method: {method}")
+
     name_prediction_count = 0
     for identifier, name in it:
-        for scored_match in grounder.get_matches(name):
+        for scored_match in _get_matches(name):
             name_prediction_count += 1
             yield SemanticMapping(
                 subject=NormalizedNamedReference(prefix=prefix, identifier=identifier, name=name),
@@ -241,7 +264,7 @@ def predict_lexical_mappings(
         )
         identifier_prediction_count = 0
         for identifier in it:
-            for scored_match in grounder.get_matches(identifier):
+            for scored_match in _get_matches(identifier):
                 name_prediction_count += 1
                 yield SemanticMapping(
                     subject=NormalizedNamedReference(
@@ -315,8 +338,9 @@ def lexical_prediction_cli(
     filter_mutual_mappings: bool = False,
     identifiers_are_names: bool = False,
     predicate: str | None | curies.NamableReference = None,
-    method: LexicalPredictionMethod | None = None,
+    method: PredictionMethod | None = None,
     cutoff: float | None = None,
+    custom_filter_function: Callable[[SemanticMapping], bool] | None = None,
 ) -> None:
     """Construct a CLI and run it."""
     tt = target if isinstance(target, str) else ", ".join(target)
@@ -339,6 +363,7 @@ def lexical_prediction_cli(
             relation=predicate,
             method=method,
             cutoff=cutoff,
+            custom_filter_function=custom_filter_function,
         )
 
     main()
