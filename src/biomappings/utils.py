@@ -45,9 +45,8 @@ DATA = DOCS.joinpath("_data")
 def get_git_hash() -> str | None:
     """Get the git hash.
 
-    :return:
-        The git hash, equals 'UNHASHED' if encountered CalledProcessError, signifying that the
-        code is not installed in development mode.
+    :returns: The git hash, equals 'UNHASHED' if encountered CalledProcessError,
+        signifying that the code is not installed in development mode.
     """
     rv = _git("rev-parse", "HEAD")
     if not rv:
@@ -100,7 +99,8 @@ def get_script_url(fname: str) -> str:
     """Get the source path for this script.
 
     :param fname: Pass ``__file__`` as the argument to this function.
-    :return: The script's URL to GitHub
+
+    :returns: The script's URL to GitHub
     """
     commit_hash = get_git_hash()
     script_name = os.path.basename(fname)

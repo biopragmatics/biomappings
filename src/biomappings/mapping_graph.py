@@ -35,7 +35,9 @@ def get_mutual_mapping_filter(prefix: str, targets: Iterable[str]) -> CMapping:
 
     :param prefix: The source prefix
     :param targets: All potential target prefixes
-    :returns: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
+
+    :returns: A filter 3-dictionary of source prefix to target prefix to source
+        identifier to target identifier
     """
     graph = mutual_mapping_graph([prefix, *targets])
     rv: defaultdict[str, dict[str, str]] = defaultdict(dict)
@@ -54,10 +56,13 @@ def mutual_mapping_graph(
 ) -> nx.Graph:
     """Get the undirected mapping graph between the given prefixes.
 
-    :param prefixes: A list of prefixes to use with :func:`pyobo.get_filtered_xrefs` to get xrefs.
+    :param prefixes: A list of prefixes to use with :func:`pyobo.get_filtered_xrefs` to
+        get xrefs.
     :param skip_sources: An optional list of prefixes to skip as the source for xrefs
     :param skip_targets: An optional list of prefixes to skip as the target for xrefs
-    :return: The undirected mapping graph containing mappings between entries in the given namespaces.
+
+    :returns: The undirected mapping graph containing mappings between entries in the
+        given namespaces.
     """
     prefixes = sorted(prefixes)
     skip_sources = set() if skip_sources is None else set(skip_sources)

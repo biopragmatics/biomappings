@@ -221,8 +221,8 @@ class IntegrityTestCase(unittest.TestCase):
 class PathIntegrityTestCase(IntegrityTestCase):
     """A test case that can be configured with paths.
 
-    For example, in this might be used in a custom instance of Biomappings
-    like in the following:
+    For example, in this might be used in a custom instance of Biomappings like in the
+    following:
 
     .. code-block:: python
 

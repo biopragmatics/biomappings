@@ -162,10 +162,10 @@ class Controller:
     ) -> None:
         """Instantiate the web controller.
 
-        :param target_references:
-            Pairs of prefix, local unique identifiers that are the target
-            of curation. If this is given, pre-filters will be made before on predictions
-            to only show ones where either the source or target appears in this set
+        :param target_references: Pairs of prefix, local unique identifiers that are the
+            target of curation. If this is given, pre-filters will be made before on
+            predictions to only show ones where either the source or target appears in
+            this set
         :param predictions_path: A custom predictions file to curate from
         :param positives_path: A custom positives file to curate to
         :param negatives_path: A custom negatives file to curate to
@@ -227,19 +227,23 @@ class Controller:
 
         :param offset: If given, offset the iteration by this number
         :param limit: If given, only iterate this number of predictions.
-        :param query: If given, show only equivalences that have it appearing as a substring in one of the source
-            or target fields.
-        :param source_query: If given, show only equivalences that have it appearing as a substring in one of the source
-            fields.
-        :param source_prefix: If given, show only mappings that have it appearing in the source prefix field
-        :param target_query: If given, show only equivalences that have it appearing as a substring in one of the target
-            fields.
-        :param target_prefix: If given, show only mappings that have it appearing in the target prefix field
-        :param prefix: If given, show only equivalences that have it appearing as a substring in one of the prefixes.
+        :param query: If given, show only equivalences that have it appearing as a
+            substring in one of the source or target fields.
+        :param source_query: If given, show only equivalences that have it appearing as
+            a substring in one of the source fields.
+        :param source_prefix: If given, show only mappings that have it appearing in the
+            source prefix field
+        :param target_query: If given, show only equivalences that have it appearing as
+            a substring in one of the target fields.
+        :param target_prefix: If given, show only mappings that have it appearing in the
+            target prefix field
+        :param prefix: If given, show only equivalences that have it appearing as a
+            substring in one of the prefixes.
         :param same_text: If true, filter to predictions with the same label
-        :param sort: If "desc", sorts in descending confidence order. If "asc", sorts in increasing confidence order.
-            Otherwise, do not sort.
+        :param sort: If "desc", sorts in descending confidence order. If "asc", sorts in
+            increasing confidence order. Otherwise, do not sort.
         :param provenance: If given, filters to provenance values matching this
+
         :yields: Pairs of positions and prediction dictionaries
         """
         if same_text is None:
@@ -408,6 +412,7 @@ class Controller:
 
         :param line: Position of the prediction
         :param value: Value to mark the prediction with
+
         :raises ValueError: if an invalid value is used
         """
         if line > len(self._predictions):

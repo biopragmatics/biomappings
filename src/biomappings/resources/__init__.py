@@ -471,10 +471,11 @@ def _pick_best(mapping: SemanticMapping) -> int:
     """Assign a value for this mapping.
 
     :param mapping: A mapping dictionary
+
     :returns: An integer, where higher means a better choice.
 
-    This function is currently simple, but can later be extended to
-    account for several other things including:
+    This function is currently simple, but can later be extended to account for several
+    other things including:
 
     - confidence in the curator
     - prediction methodology
@@ -525,8 +526,8 @@ def get_current_curator(*, strict: bool = True) -> NormalizedNamedReference | No
 def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:
     """Filter all the predictions by removing what's in the custom filter then re-write.
 
-    :param custom_filter: A filter 3-dictionary of source prefix to target prefix
-        to source identifier to target identifier
+    :param custom_filter: A filter 3-dictionary of source prefix to target prefix to
+        source identifier to target identifier
     """
     predictions = load_predictions()
     predictions = [

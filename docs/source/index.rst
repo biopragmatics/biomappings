@@ -1,11 +1,13 @@
 Biomappings |release| Documentation
 ===================================
+
 .. automodule:: biomappings
 
 Installation
 ------------
-The most recent release can be installed from
-`PyPI <https://pypi.org/project/biomappings>`_ with:
+
+The most recent release can be installed from `PyPI
+<https://pypi.org/project/biomappings>`_ with:
 
 .. code-block:: shell
 
@@ -27,18 +29,20 @@ To install in development mode, use the following:
 
 Table of Contents
 -----------------
-.. toctree::
-   :maxdepth: 2
-   :caption: Getting Started
-   :name: start
 
-   usage
-   cli
-   predict
-   custom
+.. toctree::
+    :maxdepth: 2
+    :caption: Getting Started
+    :name: start
+
+    usage
+    cli
+    predict
+    custom
 
 Indices and Tables
 ------------------
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+
+- :ref:`genindex`
+- :ref:`modindex`
+- :ref:`search`
