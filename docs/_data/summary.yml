@@ -2,7 +2,7 @@ contributors:
 - count: 5933
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
-- count: 4851
+- count: 4966
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
 - count: 1695
@@ -73,6 +73,9 @@ negative:
   source: envo
   target: ncbitaxon
 - count: 29
+  source: chebi
+  target: iconclass
+- count: 29
   source: efo
   target: mesh
 - count: 25
@@ -81,6 +84,9 @@ negative:
 - count: 21
   source: chmo
   target: ncbitaxon
+- count: 21
+  source: chmo
+  target: iconclass
 - count: 20
   source: agro
   target: agrovoc
@@ -252,10 +258,10 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1735
-negative_prefix_count: 45
+negative_mapping_count: 1785
+negative_prefix_count: 46
 positive:
-- count: 3390
+- count: 3391
   source: chebi
   target: mesh
 - count: 1502
@@ -348,6 +354,9 @@ positive:
 - count: 40
   source: drugbank
   target: vo
+- count: 37
+  source: chebi
+  target: iconclass
 - count: 26
   source: ncbiprotein
   target: uniprot.chain
@@ -387,9 +396,15 @@ positive:
 - count: 14
   source: cvx
   target: mesh
+- count: 14
+  source: iconclass
+  target: obi
 - count: 13
   source: apollosv
   target: ido
+- count: 13
+  source: chmo
+  target: iconclass
 - count: 13
   source: idomal
   target: ncbitaxon
@@ -606,10 +621,10 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 11046
-positive_prefix_count: 63
+positive_mapping_count: 11111
+positive_prefix_count: 65
 predictions:
-- count: 22709
+- count: 22708
   source: chebi
   target: mesh
 - count: 11733
@@ -738,7 +753,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 53764
+predictions_mapping_count: 53763
 predictions_prefix_count: 32
 unsure:
 - count: 27
