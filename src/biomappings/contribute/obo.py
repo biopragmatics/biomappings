@@ -1,8 +1,7 @@
 """Contribute Biomappings back to ontologies encoded in the OBO flat file format.
 
-Example ontologies using the OBO flat file format:
-- Uber Anatomy Ontology (UBERON)
-- Mondo Disease Ontology (MONDO)
+Example ontologies using the OBO flat file format: - Uber Anatomy Ontology (UBERON) -
+Mondo Disease Ontology (MONDO)
 """
 
 from __future__ import annotations
@@ -48,6 +47,7 @@ def update_obo_lines(
     :param mappings: Mappings to add
     :param lines: A list of lines of the file (still containing trailing newlines)
     :param progress: Show a progress bar
+
     :returns: New lines. Does not modify the original list.
     """
     lines = deepcopy(lines)

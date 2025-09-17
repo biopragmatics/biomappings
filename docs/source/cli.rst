@@ -1,8 +1,9 @@
 Command Line Interface
 ======================
-biomappings automatically installs the command :code:`biomappings`. See
-:code:`biomappings --help` for usage details.
+
+biomappings automatically installs the command ``biomappings``. See ``biomappings
+--help`` for usage details.
 
 .. click:: biomappings.cli:main
-   :prog: biomappings
-   :show-nested:
+    :prog: biomappings
+    :show-nested:

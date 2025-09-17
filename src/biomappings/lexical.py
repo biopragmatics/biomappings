@@ -53,11 +53,14 @@ def append_lexical_predictions(
 
     :param prefix: The source prefix
     :param target_prefixes: The target prefix or prefixes
-    :param provenance: The provenance text. Typically generated with ``biomappings.utils.get_script_url(__file__)``.
+    :param provenance: The provenance text. Typically generated with
+        ``biomappings.utils.get_script_url(__file__)``.
     :param relation: The relationship. Defaults to ``skos:exactMatch``.
-    :param custom_filter: A triple nested dictionary from source prefix to target prefix to source id to target id.
-        Any source prefix, target prefix, source id combinations in this dictionary will be filtered.
-    :param identifiers_are_names: The source prefix's identifiers should be considered as names
+    :param custom_filter: A triple nested dictionary from source prefix to target prefix
+        to source id to target id. Any source prefix, target prefix, source id
+        combinations in this dictionary will be filtered.
+    :param identifiers_are_names: The source prefix's identifiers should be considered
+        as names
     :param path: A custom path to predictions TSV file
     :param method: The lexical predication method to use
     :param cutoff: an optional minimum prediction confidence cutoff
