@@ -3793,15 +3793,15 @@ iconclass:34C1	feeding wild animals	skos:broadMatch	obi:0000694	animal feeding	s
 iconclass:41A774	container of glass: bottle, jar, vase	skos:narrowMatch	obi:0002681	glass bottle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e52731/scripts/culture_to_chemistry.py	
 iconclass:41B14	extinguishing a fire	skos:relatedMatch	chmo:0010008	fire extinguisher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/710f39/scripts/culture_to_chemistry.py	
 iconclass:41B52	fire-extinguishing equipment	skos:relatedMatch	chmo:0010008	fire extinguisher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/710f39/scripts/culture_to_chemistry.py	
-iconclass:41B524	chemical fire-extinguishing apparatus	obo:iconclass#depicts	chmo:0010008	fire extinguisher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+iconclass:41B524	chemical fire-extinguishing apparatus	skos:relatedMatch	chmo:0010008	fire extinguisher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 iconclass:41D2321	apron	skos:relatedMatch	obi:0002797	apron	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e52731/scripts/culture_to_chemistry.py	
-iconclass:46B33	weighing	obo:iconclass#depicts	chmo:0002827	weighing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+iconclass:46B33	weighing	skos:relatedMatch	chmo:0002827	weighing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 iconclass:46B331	weighing-instruments	skos:relatedMatch	chmo:0002827	weighing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/710f39/scripts/culture_to_chemistry.py	
 iconclass:46B331	weighing-instruments	skos:relatedMatch	obi:0001135	balance	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e52731/scripts/culture_to_chemistry.py	
 iconclass:46B332	weighing gold or money	skos:relatedMatch	chebi:29287	gold atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:46B332	weighing gold or money	skos:relatedMatch	chebi:30050	gold(0)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
-iconclass:47C1211	preparing of material by melting	obo:iconclass#depicts	chmo:0001682	sample melting	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
-iconclass:47C124	preparing of material by drying	obo:iconclass#depicts	chmo:0001549	sample drying	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+iconclass:47C1211	preparing of material by melting	skos:relatedMatch	chmo:0001682	sample melting	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+iconclass:47C124	preparing of material by drying	skos:relatedMatch	chmo:0001549	sample drying	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 iconclass:47C61	mixing (industrial process)	skos:relatedMatch	chmo:0001685	mixing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/710f39/scripts/culture_to_chemistry.py	
 iconclass:47C621	shaping in a mould (industrial process)	skos:relatedMatch	chmo:0001427	moulding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/710f39/scripts/culture_to_chemistry.py	
 iconclass:47I222	giving water, feeding (cattle)	skos:broadMatch	obi:0000694	animal feeding	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/e52731/scripts/culture_to_chemistry.py	
