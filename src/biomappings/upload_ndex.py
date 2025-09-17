@@ -1,6 +1,8 @@
 """Upload the Biomappings to NDEx.
 
-.. seealso:: https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf
+.. seealso::
+
+    https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf
 """
 
 from __future__ import annotations
