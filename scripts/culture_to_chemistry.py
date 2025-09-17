@@ -65,46 +65,5 @@ def match_chebi() -> None:
     )
 
 
-@main.command()
-def demo() -> None:
-    """Run the federation demo."""
-    import pystow
-    import rdflib
-    import sssom
-    from curies.dataframe import filter_df_by_prefixes
-    from tabulate import tabulate
-
-    from biomappings.resources import POSITIVES_SSSOM_PATH
-
-    path = pystow.join("nfdi", name="chem-culture.sssom.ttl")
-    msdf = sssom.parse_tsv(POSITIVES_SSSOM_PATH)
-
-    # only keep iconclass mappings
-    msdf.df = filter_df_by_prefixes(msdf.df, column="subject_id", prefixes=["iconclass"])
-
-    sssom.write_rdf(msdf, path)
-
-    graph = rdflib.Graph()
-    graph.parse(path)
-
-    # find things in the culture graph
-    sparql = """\
-        SELECT *
-        WHERE {
-            ?s skos:relatedMatch
-
-            SERVICE <https://nfdi4culture.de/sparq> {
-                ?biomodels_protein owl:sameAs ?uniprot_protein.
-            }
-            SERVICE <https://search.nfdi4chem.de/sparql> {
-
-            }
-        }
-    """
-
-    records = graph.query(sparql)
-    click.echo(tabulate(records))
-
-
 if __name__ == "__main__":
-    match_chebi()
+    main()
