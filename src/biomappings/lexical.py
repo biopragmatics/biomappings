@@ -21,7 +21,7 @@ from tqdm.auto import tqdm
 
 from biomappings import SemanticMapping
 from biomappings.mapping_graph import get_mutual_mapping_filter
-from biomappings.resources import append_prediction_tuples, mapping_sort_key
+from biomappings.resources import append_prediction_tuples
 from biomappings.utils import EXACT_MATCH, LEXICAL_MATCHING_PROCESS, CMapping, get_script_url
 
 __all__ = [
@@ -126,7 +126,7 @@ def append_lexical_predictions(
     if custom_filter_function:
         predictions = list(filter(custom_filter_function, predictions))
 
-    predictions = sorted(predictions, key=mapping_sort_key)
+    predictions = sorted(predictions)
     tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
 
     # since the function that constructs the predictions already

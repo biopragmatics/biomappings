@@ -9,7 +9,7 @@ import logging
 from collections import defaultdict
 from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import TYPE_CHECKING, Callable, NamedTuple, overload
+from typing import TYPE_CHECKING, Any, Callable, NamedTuple, overload
 
 from bioregistry import NormalizedNamableReference, NormalizedNamedReference
 from curies import NamableReference
@@ -140,17 +140,6 @@ class SemanticMapping(BaseModel):
     """,
     )
 
-    def flip(self) -> Self:
-        """Flip the mapping, if it's an exact match."""
-        if self.predicate.curie != "skos:exactMatch":
-            raise NotImplementedError
-        return self.model_copy(
-            update={
-                "subject": self.object,
-                "object": self.subject,
-            }
-        )
-
     def as_curated_row(self) -> _CuratedTuple:
         """Get a row for a curated SSSOM TSV."""
         return _CuratedTuple(
@@ -195,6 +184,21 @@ class SemanticMapping(BaseModel):
             self.mapping_tool or "",
         )
 
+    def __lt__(self, other: Any) -> bool:
+        if not isinstance(other, SemanticMapping):
+            raise TypeError
+        return self._sort_key() < other._sort_key()
+
+    def _sort_key(self: SemanticMapping) -> tuple[str, ...]:
+        """Return a tuple for sorting mapping dictionaries."""
+        return (
+            self.subject.curie,
+            self.predicate.curie,
+            self.object.curie,
+            self.mapping_justification.curie,
+            self.mapping_tool or "",
+        )
+
 
 def _load_table(path: str | Path, *, standardize: bool) -> list[SemanticMapping]:
     reference_cls: type[NamableReference]
@@ -223,7 +227,8 @@ def _write_helper(
     mode: Literal["w", "a"],
     t: Literal["curated", "predicted"],
 ) -> None:
-    mappings = sorted(set(mappings), key=mapping_sort_key)
+    mappings = _remove_redundant(mappings)
+    mappings = sorted(mappings)
     header: Sequence[str]
     to_row: Callable[[SemanticMapping], _PredictedTuple | _CuratedTuple]
     if t == "curated":
@@ -238,17 +243,6 @@ def _write_helper(
             print(*header, sep="\t", file=file)
         for mapping in mappings:
             print(*to_row(mapping), sep="\t", file=file)
-
-
-def mapping_sort_key(mapping: SemanticMapping) -> tuple[str, ...]:
-    """Return a tuple for sorting mapping dictionaries."""
-    return (
-        mapping.subject.curie,
-        mapping.predicate.curie,
-        mapping.object.curie,
-        mapping.mapping_justification.curie,
-        mapping.mapping_tool or "",
-    )
 
 
 def load_mappings(
@@ -448,7 +442,7 @@ def lint_predictions(
         ),
     )
     mappings = _remove_redundant(mappings)
-    mappings = sorted(mappings, key=mapping_sort_key)
+    mappings = sorted(mappings)
     write_predictions(mappings, path=path)
 
 
