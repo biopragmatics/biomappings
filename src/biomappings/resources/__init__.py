@@ -106,7 +106,8 @@ def _write_helper(
     path: str | Path,
     mode: Literal["w", "a"],
 ) -> None:
-    mappings = sorted(set(mappings))
+    mappings = _remove_redundant(mappings)
+    mappings = sorted(mappings)
     sssom_pydantic.write(mappings, path=path, mode=mode)
 
 
