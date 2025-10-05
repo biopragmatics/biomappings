@@ -149,6 +149,7 @@ class Controller:
     """A module for interacting with the predictions and mappings."""
 
     _user: NamableReference
+    _predictions: list[SemanticMapping]
 
     def __init__(
         self,
@@ -341,7 +342,7 @@ class Controller:
                     mapping.subject.name,
                     mapping.object.curie,
                     mapping.object.name,
-                    mapping.mapping_tool,
+                    mapping.mapping_tool.name if mapping.mapping_tool is not None else None,
                 ],
             )
         if source_prefix is not None:
@@ -361,7 +362,11 @@ class Controller:
                 prefix, it, lambda mapping: [mapping.subject.curie, mapping.object.curie]
             )
         if provenance is not None:
-            it = self._help_filter(provenance, it, lambda mapping: [mapping.mapping_tool])
+            it = self._help_filter(
+                provenance,
+                it,
+                lambda mapping: [mapping.mapping_tool.name if mapping.mapping_tool is not None else None]
+            )
 
         def _get_confidence(t: tuple[int, SemanticMapping]) -> float:
             return t[1].confidence or 0.0
@@ -437,8 +442,8 @@ class Controller:
                     "subject": subject,
                     "predicate": EXACT_MATCH,
                     "object": obj,
-                    "author": self._get_current_author(),
-                    "mapping_justification": MANUAL_MAPPING_CURATION,
+                    "authors": [self._get_current_author()],
+                    "justification": MANUAL_MAPPING_CURATION,
                 }
             )
         )
@@ -463,8 +468,8 @@ class Controller:
                 ) from None
 
             update: dict[str, str | NamableReference] = {
-                "author": self._get_current_author(),
-                "mapping_justification": MANUAL_MAPPING_CURATION,
+                "authors": [self._get_current_author()],
+                "justification": MANUAL_MAPPING_CURATION,
             }
 
             entry_key: Literal["correct", "incorrect", "unsure"]
@@ -491,7 +496,7 @@ class Controller:
             entries[entry_key].append(new_mapping)
 
         # no need to standardize since we assume everything was correct on load.
-        # only write files that have some valies to go in them!
+        # only write files that have some values to go in them!
         if entries["correct"]:
             append_true_mappings(
                 entries["correct"], path=self.positives_path, sort=True, standardize=False

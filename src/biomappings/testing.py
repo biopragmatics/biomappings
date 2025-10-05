@@ -21,7 +21,6 @@ from biomappings.resources import (
     _PredictedTuple,
     load_mappings,
     load_predictions,
-    mapping_sort_key,
 )
 from biomappings.resources.semapv import get_semapv_id_to_name
 from biomappings.utils import (
@@ -185,7 +184,7 @@ class IntegrityTestCase(unittest.TestCase):
         """Test the predictions are in a canonical order."""
         self.assertEqual(
             self.predictions,
-            sorted(self.predictions, key=mapping_sort_key),
+            sorted(self.predictions),
             msg="Predictions are not sorted",
         )
         self.assert_no_internal_redundancies(self.predictions)
@@ -194,7 +193,7 @@ class IntegrityTestCase(unittest.TestCase):
         """Test the true curated mappings are in a canonical order."""
         self.assertEqual(
             self.mappings,
-            sorted(self.mappings, key=mapping_sort_key),
+            sorted(self.mappings),
             msg="True curations are not sorted",
         )
         self.assert_no_internal_redundancies(self.mappings)
@@ -203,7 +202,7 @@ class IntegrityTestCase(unittest.TestCase):
         """Test the false curated mappings are in a canonical order."""
         self.assertEqual(
             self.incorrect,
-            sorted(self.incorrect, key=mapping_sort_key),
+            sorted(self.incorrect),
             msg="False curations are not sorted",
         )
         self.assert_no_internal_redundancies(self.incorrect)
@@ -212,7 +211,7 @@ class IntegrityTestCase(unittest.TestCase):
         """Test the unsure mappings are in a canonical order."""
         self.assertEqual(
             self.unsure,
-            sorted(self.unsure, key=mapping_sort_key),
+            sorted(self.unsure),
             msg="Unsure curations are not sorted",
         )
         self.assert_no_internal_redundancies(self.unsure)
