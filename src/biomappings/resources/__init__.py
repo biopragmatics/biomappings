@@ -227,7 +227,8 @@ def _write_helper(
     mode: Literal["w", "a"],
     t: Literal["curated", "predicted"],
 ) -> None:
-    mappings = sorted(set(mappings))
+    mappings = _remove_redundant(mappings)
+    mappings = sorted(mappings)
     header: Sequence[str]
     to_row: Callable[[SemanticMapping], _PredictedTuple | _CuratedTuple]
     if t == "curated":
