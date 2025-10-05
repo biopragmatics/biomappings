@@ -14,7 +14,6 @@ from typing import TYPE_CHECKING, NamedTuple, overload
 import bioregistry
 import sssom_pydantic
 from bioregistry import NormalizedNamedReference
-from curies import NamableReference
 from sssom_pydantic.api import CoreSemanticMapping as SemanticMapping
 from tqdm.auto import tqdm
 from typing_extensions import Literal
@@ -87,17 +86,15 @@ class _PredictedTuple(NamedTuple):
 
 
 def _load_table(path: str | Path, *, standardize: bool) -> list[SemanticMapping]:
+    path = Path(path).expanduser().resolve()
     mapping_set_id = f"https://w3id.org/biopragmatics/unresolvable/biomappings/{path.name}"
     rv, _converter = sssom_pydantic.read(
         path,
         metadata={"mapping_set_id": mapping_set_id},
         converter=bioregistry.get_default_converter(),
     )
-    reference_cls: type[NamableReference]
     if standardize:
         logger.warning("not implemented yet")
-    else:
-        pass
     return rv
 
 

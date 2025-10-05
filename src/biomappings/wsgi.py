@@ -469,7 +469,7 @@ class Controller:
                     f"you tried popping the {line} element from the predictions list, which only has {len(self._predictions):,} elements"
                 ) from None
 
-            update: dict[str, str | NamableReference] = {
+            update: dict[str, Any] = {
                 "authors": [self._get_current_author()],
                 "justification": MANUAL_MAPPING_CURATION,
             }
