@@ -365,7 +365,9 @@ class Controller:
             it = self._help_filter(
                 provenance,
                 it,
-                lambda mapping: [mapping.mapping_tool.name if mapping.mapping_tool is not None else None]
+                lambda mapping: [
+                    mapping.mapping_tool.name if mapping.mapping_tool is not None else None
+                ],
             )
 
         def _get_confidence(t: tuple[int, SemanticMapping]) -> float:
