@@ -140,17 +140,6 @@ class SemanticMapping(BaseModel):
     """,
     )
 
-    def flip(self) -> Self:
-        """Flip the mapping, if it's an exact match."""
-        if self.predicate.curie != "skos:exactMatch":
-            raise NotImplementedError
-        return self.model_copy(
-            update={
-                "subject": self.object,
-                "object": self.subject,
-            }
-        )
-
     def as_curated_row(self) -> _CuratedTuple:
         """Get a row for a curated SSSOM TSV."""
         return _CuratedTuple(
