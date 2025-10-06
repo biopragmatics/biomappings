@@ -12,13 +12,11 @@ from typing import ClassVar, TypeVar, cast
 
 import bioregistry
 from bioregistry import NormalizedNamableReference
-from curies import NamableReference
+from curies import Reference
 
 from biomappings.resources import (
     CURATORS_PATH,
     SemanticMapping,
-    _CuratedTuple,
-    _PredictedTuple,
     load_mappings,
     load_predictions,
 )
@@ -38,7 +36,6 @@ __all__ = [
 
 SEMAPV_ID_TO_NAME = get_semapv_id_to_name()
 
-TPL = TypeVar("TPL", _CuratedTuple, _PredictedTuple)
 X = TypeVar("X")
 Y = TypeVar("Y")
 
@@ -98,7 +95,7 @@ class IntegrityTestCase(unittest.TestCase):
             if mapping.author is not None:
                 self.assert_valid(label, line, mapping.author)
 
-    def assert_valid(self, label: str, line: int, reference: NamableReference) -> None:
+    def assert_valid(self, label: str, line: int, reference: Reference) -> None:
         """Assert a reference is valid and normalized to the Bioregistry."""
         norm_prefix = bioregistry.normalize_prefix(reference.prefix)
         self.assertIsNotNone(
@@ -167,9 +164,7 @@ class IntegrityTestCase(unittest.TestCase):
 
     def assert_no_internal_redundancies(self, mappings: list[SemanticMapping]) -> None:
         """Assert that the list of mappings doesn't have any redundancies."""
-        counter: defaultdict[tuple[NamableReference, NamableReference], list[int]] = defaultdict(
-            list
-        )
+        counter: defaultdict[tuple[Reference, Reference], list[int]] = defaultdict(list)
         for line_number, mapping in enumerate(mappings, start=1):
             counter[mapping.subject, mapping.object].append(line_number)
         redundant = _extract_redundant(counter)

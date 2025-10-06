@@ -56,6 +56,18 @@ __all__ = [
 
 logger = logging.getLogger(__name__)
 
+COLUMNS = [
+    "subject_id",
+    "subject_label",
+    "predicate_id",
+    "object_id",
+    "object_label",
+    "mapping_justification",
+    "author_id",
+    "mapping_tool",
+    "predicate_modifier",
+]
+
 
 class _CuratedTuple(NamedTuple):
     """A tuple for writing manual curations to SSSOM TSV."""
@@ -283,8 +295,8 @@ def append_true_mapping_tuples(mappings: Iterable[SemanticMapping]) -> None:
 
 
 def write_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
-    """Write mappigns to the true mappings file."""
-    _write_helper(mappings, path=path or POSITIVES_SSSOM_PATH, mode="w", t="curated")
+    """Write mappings to the true mappings file."""
+    _write_helper(mappings, path or POSITIVES_SSSOM_PATH, mode="w", t="curated")
 
 
 def lint_true_mappings(*, path: Path | None = None, standardize: bool) -> None:
@@ -316,7 +328,7 @@ def append_false_mappings(
     """Append new lines to the false mappings table."""
     if path is None:
         path = NEGATIVES_SSSOM_PATH
-    _write_helper(mappings=mappings, path=path, mode="a", t="curated")
+    _write_helper(mappings, path=path, mode="a", t="curated")
     if sort:
         lint_false_mappings(path=path, standardize=standardize)
 
@@ -412,7 +424,7 @@ def append_predictions(
 
     if path is None:
         path = PREDICTIONS_SSSOM_PATH
-    _write_helper(mappings, path, mode="a", t="predicted")
+    _write_helper(mappings, path=path, mode="a", t="predicted")
     if sort:
         lint_predictions(path=path, standardize=standardize)
 
@@ -441,8 +453,7 @@ def lint_predictions(
             additional_curated_mappings or [],
         ),
     )
-    mappings = _remove_redundant(mappings)
-    mappings = sorted(mappings)
+    mappings = _clean_mappings(mappings)
     write_predictions(mappings, path=path)
 
 
@@ -452,6 +463,11 @@ def remove_mappings(
     """Remove the first set of mappings from the second."""
     skip_tuples = {get_canonical_tuple(mtr) for mtr in mappings_to_remove}
     return (mapping for mapping in mappings if get_canonical_tuple(mapping) not in skip_tuples)
+
+
+def _clean_mappings(mappings: Iterable[SemanticMapping]):
+    m = sorted(mappings)
+    return _remove_redundant(m)
 
 
 def _remove_redundant(mappings: Iterable[SemanticMapping]) -> Iterable[SemanticMapping]:

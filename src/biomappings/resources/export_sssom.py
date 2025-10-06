@@ -70,9 +70,9 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
     prefixes: set[str] = {"semapv"}
 
     # NEW WAY: load all DFs, concat them, reorder columns
-    a = pd.read_csv(POSITIVES_SSSOM_PATH, sep="\t")
-    b = pd.read_csv(NEGATIVES_SSSOM_PATH, sep="\t")
-    c = pd.read_csv(PREDICTIONS_SSSOM_PATH, sep="\t")
+    a = pd.read_csv(POSITIVES_SSSOM_PATH, sep="\t", comment="#")
+    b = pd.read_csv(NEGATIVES_SSSOM_PATH, sep="\t", comment="#")
+    c = pd.read_csv(PREDICTIONS_SSSOM_PATH, sep="\t", comment="#")
     df = pd.concat([a, b, c])
     df = df[columns]
 
