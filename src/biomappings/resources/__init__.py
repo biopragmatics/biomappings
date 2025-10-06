@@ -61,12 +61,12 @@ COLUMNS = [
     "subject_id",
     "subject_label",
     "predicate_id",
-    "predicate_modifier",
     "object_id",
     "object_label",
     "mapping_justification",
     "author_id",
     "mapping_tool",
+    "predicate_modifier",
 ]
 
 
