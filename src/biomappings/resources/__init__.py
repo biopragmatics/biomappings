@@ -60,15 +60,14 @@ logger = logging.getLogger(__name__)
 
 def _load_table(path: str | Path, *, standardize: bool) -> list[SemanticMapping]:
     path = Path(path).expanduser().resolve()
-    mapping_set_id = f"https://w3id.org/biopragmatics/unresolvable/biomappings/{path.name}"
-    rv, _converter = sssom_pydantic.read(
+    mappings, _converter, _mapping_set = sssom_pydantic.read(
         path,
-        metadata={"mapping_set_id": mapping_set_id},
+        metadata={"mapping_set_id": f"https://w3id.org/biopragmatics/unresolvable/biomappings/{path.name}"},
         converter=bioregistry.get_default_converter(),
     )
     if standardize:
         logger.warning(f"standardization is not implemented yet for {path}")
-    return rv
+    return mappings
 
 
 def _write_helper(
@@ -76,9 +75,14 @@ def _write_helper(
     path: str | Path,
     mode: Literal["w", "a"],
 ) -> None:
-    mappings = _remove_redundant(mappings)
-    mappings = sorted(mappings)
-    sssom_pydantic.write(mappings, path=path, mode=mode, converter=bioregistry.get_default_converter())
+    mappings = _clean_mappings(mappings)
+    converter = bioregistry.get_default_converter()
+    if mode == "a":
+        sssom_pydantic.append(mappings, path, converter=converter)
+    elif mode == "w":
+        sssom_pydantic.write(mappings, path, converter=converter)
+    else:
+        raise ValueError(f'invalid mode: {mode}')
 
 
 def load_mappings(
@@ -119,8 +123,8 @@ def append_true_mapping_tuples(mappings: Iterable[SemanticMapping]) -> None:
 
 
 def write_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
-    """Write mappigns to the true mappings file."""
-    _write_helper(mappings, path=path or POSITIVES_SSSOM_PATH, mode="w")
+    """Write mappings to the true mappings file."""
+    _write_helper(mappings, path or POSITIVES_SSSOM_PATH, mode="w")
 
 
 def lint_true_mappings(*, path: Path | None = None, standardize: bool) -> None:
@@ -154,7 +158,7 @@ def append_false_mappings(
     """Append new lines to the false mappings table."""
     if path is None:
         path = NEGATIVES_SSSOM_PATH
-    _write_helper(mappings=mappings, path=path, mode="a")
+    _write_helper(mappings, path=path, mode="a")
     if sort:
         lint_false_mappings(path=path, standardize=standardize)
 
@@ -250,7 +254,7 @@ def append_predictions(
 
     if path is None:
         path = PREDICTIONS_SSSOM_PATH
-    _write_helper(mappings, path, mode="a")
+    _write_helper(mappings, path=path, mode="a")
     if sort:
         lint_predictions(path=path, standardize=standardize)
 
@@ -279,8 +283,7 @@ def lint_predictions(
             additional_curated_mappings or [],
         ),
     )
-    mappings = _remove_redundant(mappings)
-    mappings = sorted(mappings)
+    mappings = _clean_mappings(mappings)
     write_predictions(mappings, path=path)
 
 
@@ -290,6 +293,11 @@ def remove_mappings(
     """Remove the first set of mappings from the second."""
     skip_tuples = {get_canonical_tuple(mtr) for mtr in mappings_to_remove}
     return (mapping for mapping in mappings if get_canonical_tuple(mapping) not in skip_tuples)
+
+
+def _clean_mappings(mappings: Iterable[SemanticMapping]):
+    m = sorted(mappings)
+    return _remove_redundant(m)
 
 
 def _remove_redundant(mappings: Iterable[SemanticMapping]) -> Iterable[SemanticMapping]:
@@ -424,11 +432,12 @@ def _mapping_from_semra(mapping: semra.Mapping, confidence: float) -> SemanticMa
         raise TypeError
     if evidence.mapping_set is None:
         raise ValueError
+    # TODO what about negative?
     return SemanticMapping(  # type:ignore
         subject=mapping.subject,
         predicate=mapping.predicate,
         object=mapping.object,
-        mapping_justification=evidence.justification,
+        justification=evidence.justification,
         confidence=confidence,
         mapping_tool=evidence.mapping_set.name,
     )

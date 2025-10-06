@@ -61,7 +61,6 @@ class TestFull(unittest.TestCase):
                 justification="semapv:ManualMappingCuration",
                 confidence=0.95,
                 mapping_tool=MappingTool(name="test"),
-                mapping_set=MappingSet(id="test"),
             )
         ]
         directory = Path(self.temporary_directory.name)
