@@ -9,7 +9,7 @@ import logging
 from collections import defaultdict
 from collections.abc import Iterable, Mapping
 from pathlib import Path
-from typing import TYPE_CHECKING, NamedTuple, overload
+from typing import TYPE_CHECKING, overload
 
 import bioregistry
 import sssom_pydantic
@@ -57,12 +57,25 @@ __all__ = [
 
 logger = logging.getLogger(__name__)
 
+COLUMNS = [
+    "subject_id",
+    "subject_label",
+    "predicate_id",
+    "object_id",
+    "object_label",
+    "mapping_justification",
+    "author_id",
+    "mapping_tool",
+]
 
-def _load_table(path: str | Path, *, standardize: bool) -> list[SemanticMapping]:
+
+def _load_table(path: str | Path, *, standardize: bool) -> list[sssom_pydantic.SemanticMapping]:
     path = Path(path).expanduser().resolve()
     mappings, _converter, _mapping_set = sssom_pydantic.read(
         path,
-        metadata={"mapping_set_id": f"https://w3id.org/biopragmatics/unresolvable/biomappings/{path.name}"},
+        metadata={
+            "mapping_set_id": f"https://w3id.org/biopragmatics/unresolvable/biomappings/{path.name}"
+        },
         converter=bioregistry.get_default_converter(),
     )
     if standardize:
@@ -82,7 +95,7 @@ def _write_helper(
     elif mode == "w":
         sssom_pydantic.write(mappings, path, converter=converter)
     else:
-        raise ValueError(f'invalid mode: {mode}')
+        raise ValueError(f"invalid mode: {mode}")
 
 
 def load_mappings(
@@ -137,7 +150,7 @@ def _lint_curated_mappings(path: Path, *, standardize: bool) -> None:
     sssom_pydantic.lint(
         path,
         metadata={"mapping_set_id": f"https://w3id.org/biopragmatics/sssom/{path.name}"},
-        converter=bioregistry.get_default_converter()
+        converter=bioregistry.get_default_converter(),
     )
 
 

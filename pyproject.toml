@@ -62,7 +62,7 @@ dependencies = [
     "tqdm",
     "pystow>=0.2.7",
     "bioregistry>=0.10.43",
-    "sssom-pydantic",
+    "sssom-pydantic>=0.0.2",
 ]
 
 [project.optional-dependencies]

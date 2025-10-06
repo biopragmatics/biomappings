@@ -339,21 +339,21 @@ class Controller:
                 it,
                 lambda mapping: [
                     mapping.subject.curie,
-                    mapping.subject.name,
+                    mapping.subject_name,
                     mapping.object.curie,
-                    mapping.object.name,
-                    mapping.mapping_tool.name if mapping.mapping_tool is not None else None,
+                    mapping.object_name,
+                    mapping.mapping_tool_name,
                 ],
             )
         if source_prefix is not None:
             it = self._help_filter(source_prefix, it, lambda mapping: [mapping.subject.curie])
         if source_query is not None:
             it = self._help_filter(
-                source_query, it, lambda mapping: [mapping.subject.curie, mapping.subject.name]
+                source_query, it, lambda mapping: [mapping.subject.curie, mapping.subject_name]
             )
         if target_query is not None:
             it = self._help_filter(
-                target_query, it, lambda mapping: [mapping.object.curie, mapping.object.name]
+                target_query, it, lambda mapping: [mapping.object.curie, mapping.object_name]
             )
         if target_prefix is not None:
             it = self._help_filter(target_prefix, it, lambda mapping: [mapping.object.curie])
@@ -365,9 +365,7 @@ class Controller:
             it = self._help_filter(
                 provenance,
                 it,
-                lambda mapping: [
-                    mapping.mapping_tool.name if mapping.mapping_tool is not None else None
-                ],
+                lambda mapping: [mapping.mapping_tool_name],
             )
 
         def _get_confidence(t: tuple[int, SemanticMapping]) -> float:
@@ -389,9 +387,9 @@ class Controller:
             it = (
                 (line, mapping)
                 for line, mapping in it
-                if mapping.subject.name
-                and mapping.object.name
-                and mapping.subject.name.casefold() == mapping.object.name.casefold()
+                if mapping.subject_name
+                and mapping.object_name
+                and mapping.subject_name.casefold() == mapping.object_name.casefold()
                 and mapping.predicate.curie == "skos:exactMatch"
             )
 
@@ -472,6 +470,8 @@ class Controller:
             update: dict[str, Any] = {
                 "authors": [self._get_current_author()],
                 "justification": MANUAL_MAPPING_CURATION,
+                # throw the predicted confidence away, since it's been manually curated now
+                "confidence": None,
             }
 
             entry_key: Literal["correct", "incorrect", "unsure"]
