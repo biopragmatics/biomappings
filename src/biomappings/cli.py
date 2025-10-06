@@ -60,12 +60,12 @@ if get_git_hash() is not None:
         resolver_base: str | None,
     ) -> None:
         """Run a target curation web app."""
-        from curies import NamableReference
+        from curies import Reference
 
         from .resources import _load_table
         from .wsgi import get_app
 
-        target_references: list[NamableReference] = []
+        target_references: list[Reference] = []
         for mapping in _load_table(path, standardize=True):
             target_references.append(mapping.subject)
             target_references.append(mapping.object)
