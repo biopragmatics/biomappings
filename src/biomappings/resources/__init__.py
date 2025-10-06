@@ -58,33 +58,6 @@ __all__ = [
 logger = logging.getLogger(__name__)
 
 
-class _CuratedTuple(NamedTuple):
-    """A tuple for writing manual curations to SSSOM TSV."""
-
-    subject_id: str
-    subject_label: str
-    predicate_id: str
-    object_id: str
-    object_label: str
-    mapping_justification: str
-    author_id: str
-    mapping_tool: str
-    predicate_modifier: str
-
-
-class _PredictedTuple(NamedTuple):
-    """A tuple for writing predictions to SSSOM TSV."""
-
-    subject_id: str
-    subject_label: str
-    predicate_id: str
-    object_id: str
-    object_label: str
-    mapping_justification: str
-    confidence: str
-    mapping_tool: str
-
-
 def _load_table(path: str | Path, *, standardize: bool) -> list[SemanticMapping]:
     path = Path(path).expanduser().resolve()
     mapping_set_id = f"https://w3id.org/biopragmatics/unresolvable/biomappings/{path.name}"

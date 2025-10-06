@@ -17,8 +17,6 @@ from curies import NamableReference
 from biomappings.resources import (
     CURATORS_PATH,
     SemanticMapping,
-    _CuratedTuple,
-    _PredictedTuple,
     load_mappings,
     load_predictions,
 )
@@ -38,7 +36,6 @@ __all__ = [
 
 SEMAPV_ID_TO_NAME = get_semapv_id_to_name()
 
-TPL = TypeVar("TPL", _CuratedTuple, _PredictedTuple)
 X = TypeVar("X")
 Y = TypeVar("Y")
 
