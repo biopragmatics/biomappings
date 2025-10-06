@@ -15,7 +15,7 @@ import flask_bootstrap
 import pydantic
 import werkzeug
 from bioregistry import NormalizedNamableReference
-from curies import NamableReference
+from curies import NamableReference, Reference
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
@@ -104,7 +104,7 @@ def url_for_state(endpoint, state: State, **kwargs: Any) -> str:
 
 def get_app(
     *,
-    target_references: Iterable[NamableReference] | None = None,
+    target_references: Iterable[Reference] | None = None,
     predictions_path: Path | None = None,
     positives_path: Path | None = None,
     negatives_path: Path | None = None,
@@ -154,7 +154,7 @@ class Controller:
     def __init__(
         self,
         *,
-        target_references: Iterable[NamableReference] | None = None,
+        target_references: Iterable[Reference] | None = None,
         predictions_path: Path | None = None,
         positives_path: Path | None = None,
         negatives_path: Path | None = None,

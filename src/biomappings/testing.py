@@ -12,7 +12,7 @@ from typing import ClassVar, TypeVar, cast
 
 import bioregistry
 from bioregistry import NormalizedNamableReference
-from curies import NamableReference, Reference
+from curies import Reference
 
 from biomappings.resources import (
     CURATORS_PATH,
@@ -164,9 +164,7 @@ class IntegrityTestCase(unittest.TestCase):
 
     def assert_no_internal_redundancies(self, mappings: list[SemanticMapping]) -> None:
         """Assert that the list of mappings doesn't have any redundancies."""
-        counter: defaultdict[tuple[NamableReference, NamableReference], list[int]] = defaultdict(
-            list
-        )
+        counter: defaultdict[tuple[Reference, Reference], list[int]] = defaultdict(list)
         for line_number, mapping in enumerate(mappings, start=1):
             counter[mapping.subject, mapping.object].append(line_number)
         redundant = _extract_redundant(counter)
