@@ -94,7 +94,7 @@ def _load_table(path: str | Path, *, standardize: bool) -> list[SemanticMapping]
         converter=bioregistry.get_default_converter(),
     )
     if standardize:
-        logger.warning("not implemented yet")
+        logger.warning(f"standardization is not implemented yet for {path}")
     return rv
 
 
@@ -105,7 +105,7 @@ def _write_helper(
 ) -> None:
     mappings = _remove_redundant(mappings)
     mappings = sorted(mappings)
-    sssom_pydantic.write(mappings, path=path, mode=mode)
+    sssom_pydantic.write(mappings, path=path, mode=mode, converter=bioregistry.get_default_converter())
 
 
 def load_mappings(
@@ -157,9 +157,11 @@ def lint_true_mappings(*, path: Path | None = None, standardize: bool) -> None:
 
 def _lint_curated_mappings(path: Path, *, standardize: bool) -> None:
     """Lint the true mappings file."""
-    mapping_list = _load_table(path, standardize=standardize)
-    mappings = _remove_redundant(mapping_list)
-    _write_helper(mappings, path, mode="w")
+    sssom_pydantic.lint(
+        path,
+        metadata={"mapping_set_id": f"https://w3id.org/biopragmatics/sssom/{path.name}"},
+        converter=bioregistry.get_default_converter()
+    )
 
 
 def load_false_mappings(
