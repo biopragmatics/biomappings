@@ -61,8 +61,8 @@ dependencies = [
     "pyyaml",
     "tqdm",
     "pystow>=0.7.11",
-    "bioregistry>=0.12.42",
-    "sssom-pydantic>=0.0.3",
+    "bioregistry>=0.12.43",
+    "sssom-pydantic>=0.0.4",
 ]
 
 [project.optional-dependencies]
