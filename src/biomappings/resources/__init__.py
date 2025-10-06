@@ -14,7 +14,7 @@ from typing import TYPE_CHECKING, overload
 import bioregistry
 import sssom_pydantic
 from bioregistry import NormalizedNamedReference
-from sssom_pydantic.api import CoreSemanticMapping as SemanticMapping
+from sssom_pydantic.api import SemanticMapping
 from tqdm.auto import tqdm
 from typing_extensions import Literal
 

@@ -12,7 +12,7 @@ from typing import ClassVar, TypeVar, cast
 
 import bioregistry
 from bioregistry import NormalizedNamableReference
-from curies import NamableReference
+from curies import NamableReference, Reference
 
 from biomappings.resources import (
     CURATORS_PATH,
@@ -95,7 +95,7 @@ class IntegrityTestCase(unittest.TestCase):
             if mapping.author is not None:
                 self.assert_valid(label, line, mapping.author)
 
-    def assert_valid(self, label: str, line: int, reference: NamableReference) -> None:
+    def assert_valid(self, label: str, line: int, reference: Reference) -> None:
         """Assert a reference is valid and normalized to the Bioregistry."""
         norm_prefix = bioregistry.normalize_prefix(reference.prefix)
         self.assertIsNotNone(

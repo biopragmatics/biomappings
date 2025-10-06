@@ -87,7 +87,7 @@ def _graph_from_mappings(
             mapping.subject,
             mapping.object,
             relation=mapping.predicate.curie,
-            provenance=mapping.author.name if mapping.author else None,
+            provenance=mapping.author.curie if mapping.author else None,
             type=mapping.mapping_justification.curie,
             strata=strata,
         )

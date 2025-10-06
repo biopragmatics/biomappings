@@ -1,5 +1,5 @@
 [build-system]
-requires = ["uv_build>=0.6.6,<0.7"]
+requires = ["uv_build>=0.6.6,<1.0"]
 build-backend = "uv_build"
 
 [project]
@@ -60,9 +60,9 @@ dependencies = [
     "click",
     "pyyaml",
     "tqdm",
-    "pystow>=0.2.7",
-    "bioregistry>=0.10.43",
-    "sssom-pydantic>=0.0.2",
+    "pystow>=0.7.11",
+    "bioregistry>=0.12.42",
+    "sssom-pydantic>=0.0.3",
 ]
 
 [project.optional-dependencies]
@@ -92,10 +92,10 @@ web = [
     "flask-wtf",
 ]
 gilda = [
-    "pyobo[gilda]>=0.12.0",
+    "pyobo[gilda]>=0.12.8",
 ]
 gilda-slim = [
-    "pyobo[gilda-slim]>=0.12.0",
+    "pyobo[gilda-slim]>=0.12.8",
 ]
 ndex = [
     "ndex2",
