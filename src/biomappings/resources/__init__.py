@@ -14,6 +14,7 @@ from typing import TYPE_CHECKING, overload
 import bioregistry
 import sssom_pydantic
 from bioregistry import NormalizedNamedReference
+from sssom_pydantic import Metadata
 from sssom_pydantic.api import SemanticMapping
 from tqdm.auto import tqdm
 from typing_extensions import Literal
@@ -23,6 +24,7 @@ from biomappings.utils import (
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     PREDICTIONS_SSSOM_PATH,
+    PURL_BASE,
     UNSURE_SSSOM_PATH,
     get_canonical_tuple,
 )
@@ -74,9 +76,7 @@ def _load_table(path: str | Path, *, standardize: bool) -> list[sssom_pydantic.S
     path = Path(path).expanduser().resolve()
     mappings, _converter, _mapping_set = sssom_pydantic.read(
         path,
-        metadata={
-            "mapping_set_id": f"https://w3id.org/biopragmatics/unresolvable/biomappings/{path.name}"
-        },
+        metadata={"mapping_set_id": f"{PURL_BASE}/{path.name}"},
     )
     if standardize:
         logger.warning(f"standardization is not implemented yet for {path}")
@@ -87,12 +87,15 @@ def _write_helper(
     mappings: Iterable[SemanticMapping],
     path: str | Path,
     mode: Literal["w", "a"],
+    metadata: Metadata | None = None,
 ) -> None:
     mappings = _clean_mappings(mappings)
     if mode == "a":
         sssom_pydantic.append(mappings, path)
     elif mode == "w":
-        sssom_pydantic.write(mappings, path, converter=bioregistry.get_default_converter())
+        sssom_pydantic.write(
+            mappings, path, metadata=metadata, converter=bioregistry.get_default_converter()
+        )
     else:
         raise ValueError(f"invalid mode: {mode}")
 
@@ -148,7 +151,7 @@ def _lint_curated_mappings(path: Path, *, standardize: bool) -> None:
     """Lint the true mappings file."""
     sssom_pydantic.lint(
         path,
-        metadata={"mapping_set_id": f"https://w3id.org/biopragmatics/sssom/{path.name}"},
+        metadata={"mapping_set_id": f"{PURL_BASE}/{path.name}"},
     )
 
 
@@ -223,7 +226,14 @@ def load_predictions(
 
 def write_predictions(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Write new content to the predictions table."""
-    _write_helper(mappings, path or PREDICTIONS_SSSOM_PATH, mode="w")
+    if path is None:
+        path = PREDICTIONS_SSSOM_PATH
+    _write_helper(
+        mappings,
+        path,
+        mode="w",
+        metadata={"mapping_set_id": f"{PURL_BASE}/{path.name}"},
+    )
 
 
 def append_prediction_tuples(

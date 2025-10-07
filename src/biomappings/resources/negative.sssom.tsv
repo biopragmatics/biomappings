@@ -49,7 +49,7 @@
 #  uniprot.chain: http://purl.uniprot.org/annotation/
 #  vo: http://purl.obolibrary.org/obo/VO_
 #  wikipathways: http://www.wikipathways.org/instance/
-#mapping_set_id: https://w3id.org/biopragmatics/sssom/negative.sssom.tsv
+#mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/negative.sssom.tsv
 subject_id	subject_label	predicate_id	predicate_modifier	object_id	object_label	mapping_justification	author_id	mapping_tool
 agrovoc:10457	draught animals	skos:exactMatch	Not	agro:00002004	draft animal role	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696	
 agrovoc:15662	Mus	skos:exactMatch	Not	agro:00002067	methylene urea	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696	

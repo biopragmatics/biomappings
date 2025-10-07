@@ -32,7 +32,7 @@
 #  umls: https://uts.nlm.nih.gov/uts/umls/concept/
 #  vo: http://purl.obolibrary.org/obo/VO_
 #  vsmo: http://purl.obolibrary.org/obo/VSMO_
-#mapping_set_id: https://w3id.org/biopragmatics/sssom/unsure.sssom.tsv
+#mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/unsure.sssom.tsv
 subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	mapping_tool
 apollosv:00000195	target population	skos:exactMatch	ncit:C142728	Target Study Population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 apollosv:00000243	duration	skos:exactMatch	pato:0001309	duration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira
