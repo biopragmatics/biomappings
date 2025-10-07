@@ -72,6 +72,9 @@ class TestFull(unittest.TestCase):
         write_predictions(predictions, path=predictions_path)
         for path in [positives_path, negatives_path, unsure_path]:
             with path.open("w") as file:
+                print("#curie_map:", file=file)
+                print("#  chebi: http://purl.obolibrary.org/obo/CHEBI_", file=file)
+                print("#  mesh:  http://id.nlm.nih.gov/mesh/", file=file)
                 print(*COLUMNS, sep="\t", file=file)
 
         self.controller = Controller(
