@@ -1,3 +1,5 @@
+# type:ignore
+
 """This script adds newly inferred cross-references for UBERON.
 
 These are added directly to the version controlled UBERON OBO file.

@@ -10,7 +10,7 @@ URL = "https://github.com/ComPath/compath-resources/raw/master/docs/data/compath
 BLACKLIST = {"decopath", "pathbank"}
 
 
-def main():
+def main() -> None:
     """Import mappings from ComPath."""
     df = pd.read_csv(URL, sep="\t")
     df = df[df["relation"] == "skos:exactMatch"]

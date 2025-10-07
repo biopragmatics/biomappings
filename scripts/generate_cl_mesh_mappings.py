@@ -5,6 +5,7 @@ import re
 import gilda
 import obonet
 from bioregistry import NormalizedNamableReference
+from curies.vocabulary import lexical_matching_process
 from indra.databases import mesh_client
 
 from biomappings.resources import SemanticMapping, append_prediction_tuples
@@ -65,7 +66,7 @@ for cl_id, mesh_id in mappings.items():
             identifier=mesh_id,
             name=mesh_client.get_mesh_name(mesh_id),
         ),
-        mapping_justification="semapv:LexicalMatching",
+        justification=lexical_matching_process,
         confidence=0.9,
         mapping_tool="generate_cl_mesh_mappings.py",
     )

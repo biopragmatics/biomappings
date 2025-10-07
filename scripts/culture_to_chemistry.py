@@ -7,12 +7,12 @@ __all__ = ["main"]
 
 
 @click.group()
-def main():
+def main() -> None:
     """Run culture to chemistry workflows."""
 
 
 @main.command(name="chmo")
-def match_chmo():
+def match_chmo() -> None:
     """Get embedding matches to CHMO."""
     from pyobo.struct.vocabulary import related_match
 
@@ -28,7 +28,7 @@ def match_chmo():
 
 
 @main.command(name="chmo")
-def match_obi():
+def match_obi() -> None:
     """Get embedding matches to OBI."""
     from pyobo.struct.vocabulary import related_match
 
@@ -44,7 +44,7 @@ def match_obi():
 
 
 @main.command(name="chebi")
-@verbose_option
+@verbose_option  # type:ignore[misc]
 def match_chebi() -> None:
     """Get embedding matches to ChEBI."""
     from pyobo.struct.vocabulary import related_match
@@ -53,7 +53,7 @@ def match_chebi() -> None:
     from biomappings.lexical import lexical_prediction_cli
 
     def _custom_filter(m: SemanticMapping) -> bool:
-        return len(m.subject.name) < 60
+        return m.subject_name is not None and len(m.subject_name) < 60
 
     lexical_prediction_cli(
         __file__,

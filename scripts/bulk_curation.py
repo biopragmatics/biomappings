@@ -1,7 +1,9 @@
 """Utilities for automated curation."""
 
 import logging
-from collections.abc import Mapping
+
+from curies.vocabulary import exact_match, lexical_similarity_threshold_based_matching_process
+from sssom_pydantic import MappingTool, SemanticMapping
 
 from biomappings.resources import (
     append_true_mappings,
@@ -19,31 +21,38 @@ def bulk_accept_same_text(source: str, target: str) -> None:
     """Accept exact matches in bulk between these two resources if labels are the same."""
     accept = []
     leave = []
-    for p in load_predictions():
-        if _accept_same_name(source, target, p):
-            p["source"] = provenance
-            p["type"] = "semapv:LexicalSimilarityThresholdMatching"
-            accept.append(p)
+    for mapping in load_predictions():
+        if _accept_same_name(source, target, mapping):
+            update = {
+                "mapping_tool": MappingTool(name=provenance),
+                "justification": lexical_similarity_threshold_based_matching_process,
+            }
+            accept.append(mapping.model_copy(update=update))
         else:
-            leave.append(p)
+            leave.append(mapping)
 
     logger.info(f"Accepting {len(accept):,} exact text matches from {source} to {target}")
     write_predictions(leave)
     append_true_mappings(accept)
 
 
-def _accept_same_name(s, t, p: Mapping[str, str]) -> bool:
-    if not p["relation"] == "skos:exactMatch":
+def _accept_same_name(subject_prefix: str, object_prefix: str, mapping: SemanticMapping) -> bool:
+    if not mapping.predicate == exact_match:
         return False
     if not (
-        (p["source prefix"] == s and p["target prefix"] == t)
-        or (p["source prefix"] == t and p["target prefix"] == s)
+        (mapping.subject.prefix == subject_prefix and mapping.object.prefix == object_prefix)
+        or (mapping.subject.prefix == object_prefix and mapping.object.prefix == subject_prefix)
     ):
         return False
-    return p["source name"].casefold() == p["target name"].casefold()
+
+    return (
+        mapping.subject_name is not None
+        and mapping.object_name is not None
+        and mapping.subject_name.casefold() == mapping.object_name.casefold()
+    )
 
 
-def _main():
+def _main() -> None:
     bulk_accept_same_text("chebi", "mesh")
     bulk_accept_same_text("mesh", "ncit")
     bulk_accept_same_text("mesh", "umls")

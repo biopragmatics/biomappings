@@ -2,9 +2,11 @@
 
 import itertools as itt
 from collections.abc import Iterable
+from typing import cast
 
 import pyobo
 from bioregistry import NormalizedNamableReference
+from curies.vocabulary import lexical_matching_process
 from gilda.process import normalize
 from tqdm import tqdm
 
@@ -13,7 +15,7 @@ from biomappings.utils import get_script_url
 
 
 def _lexical_exact_match(name1: str, name2: str) -> bool:
-    return normalize(name1) == normalize(name2)
+    return cast(str, normalize(name1)) == cast(str, normalize(name2))
 
 
 def iterate_orthologous_lexical_matches(prefix: str = "wikipathways") -> Iterable[SemanticMapping]:
@@ -47,7 +49,7 @@ def iterate_orthologous_lexical_matches(prefix: str = "wikipathways") -> Iterabl
                     identifier=target_id,
                     name=target_name,
                 ),
-                mapping_justification="semapv:LexicalMatching",
+                justification=lexical_matching_process,
                 confidence=0.95,
                 mapping_tool=provenance,
             )

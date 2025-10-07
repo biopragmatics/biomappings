@@ -7,7 +7,9 @@ import time
 
 import pyobo
 from bioregistry import NormalizedNamableReference
+from curies.vocabulary import lexical_matching_process
 from pyobo.sources.agrovoc import ensure_agrovoc_graph
+from sssom_pydantic import MappingTool
 from tqdm import tqdm
 
 from biomappings import SemanticMapping
@@ -26,7 +28,7 @@ SELECT ?id ?label {
 """
 
 
-def main():
+def main() -> None:
     """Generate mappings from AGRO to AGROVOC."""
     provenance = get_script_url(__file__)
     grounder = pyobo.get_grounder("AGRO")
@@ -46,11 +48,9 @@ def main():
                     ),
                     predicate=NormalizedNamableReference.from_curie("skos:exactMatch"),
                     object=scored_match.reference,
-                    mapping_justification=NormalizedNamableReference.from_curie(
-                        "semapv:LexicalMatching"
-                    ),
+                    justification=lexical_matching_process,
                     confidence=scored_match.score,
-                    mapping_tool=provenance,
+                    mapping_tool=MappingTool(name=provenance),
                 )
             )
     append_prediction_tuples(rows)

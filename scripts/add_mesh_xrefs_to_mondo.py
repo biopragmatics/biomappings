@@ -1,3 +1,5 @@
+# type:ignore
+
 """This script adds newly inferred cross-references for MONDO.
 
 These are added directly to the version controlled MONDO OBO file.

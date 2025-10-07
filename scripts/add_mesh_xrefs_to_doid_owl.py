@@ -1,3 +1,5 @@
+# type:ignore
+
 """This script adds newly inferred cross-references for DOID.
 
 These are directly added to the version controlled DOID OWL file.

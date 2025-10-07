@@ -5,6 +5,7 @@ import os
 from collections.abc import Iterable
 
 from bioregistry import NormalizedNamableReference
+from curies.vocabulary import exact_match, lexical_matching_process
 
 from biomappings import load_false_mappings, load_mappings
 from biomappings.resources import SemanticMapping, append_prediction_tuples
@@ -32,7 +33,7 @@ db_ns_mappings = {
 }
 
 
-def get_primary_mappings():
+def get_primary_mappings() -> set[tuple[str, str, str, str]]:
     """Get mappings from primary sources."""
     from indra.resources import load_resource_json
 
@@ -48,33 +49,32 @@ def get_primary_mappings():
     return mappings
 
 
-def get_curated_mappings():
+def get_curated_mappings() -> set[tuple[str, str, str, str]]:
     """Get curated mappings."""
-    curated_mappings = set()
+    curated_mappings: set[tuple[str, str, str, str]] = set()
     for mapping in load_mappings() + load_false_mappings():
-        mapping_tuples = {
+        curated_mappings.add(
             (
-                mapping["source prefix"],
-                mapping["source identifier"],
-                mapping["target prefix"],
-                mapping["target identifier"],
-            ),
+                mapping.subject.prefix,
+                mapping.subject.identifier,
+                mapping.object.prefix,
+                mapping.object.identifier,
+            )
+        )
+        curated_mappings.add(
             (
-                mapping["target prefix"],
-                mapping["target identifier"],
-                mapping["source prefix"],
-                mapping["source identifier"],
-            ),
-        }
-        curated_mappings |= mapping_tuples
+                mapping.object.prefix,
+                mapping.object.identifier,
+                mapping.subject.prefix,
+                mapping.subject.identifier,
+            )
+        )
     return curated_mappings
 
 
 def get_mappings() -> Iterable[SemanticMapping]:
     """Iterate lexical mappings from Gilda."""
     url = get_script_url(__file__)
-    mapping_type = "semapv:LexicalMatching"
-    match_type = "skos:exactMatch"
     confidence = 0.95
     primary_mappings = get_primary_mappings()
     curated_mappings = get_curated_mappings()
@@ -91,11 +91,11 @@ def get_mappings() -> Iterable[SemanticMapping]:
                 subject=NormalizedNamableReference(
                     prefix="mesh", identifier=mesh_id, name=mesh_name
                 ),
-                predicate=match_type,
+                predicate=exact_match,
                 object=NormalizedNamableReference(
                     prefix=db_ns_mappings[db_ns], identifier=db_id, name=db_name
                 ),
-                mapping_justification=mapping_type,
+                justification=lexical_matching_process,
                 confidence=confidence,
                 mapping_tool=url,
             )

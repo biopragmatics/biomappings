@@ -5,13 +5,15 @@ import pyobo
 import ssslm
 from bioontologies.obograph import Node
 from bioregistry import NormalizedNamableReference
+from curies.vocabulary import exact_match, lexical_matching_process, structural_matching
+from sssom_pydantic import MappingTool
 from tqdm import tqdm
 
 from biomappings.resources import SemanticMapping, append_prediction_tuples
 from biomappings.utils import get_script_url
 
 
-def main():
+def main() -> None:
     """Generate mappings from between VO and MeSH."""
     mesh_grounder = pyobo.get_grounder("mesh")
     provenance = get_script_url(__file__)
@@ -52,9 +54,9 @@ def main():
                                     identifier=mesh_id,
                                     name=mesh_name,
                                 ),
-                                mapping_justification="semapv:StructuralMatching",
+                                justification=structural_matching,
                                 confidence=0.99,
-                                mapping_tool=provenance,
+                                mapping_tool=MappingTool(name=provenance),
                             )
                         )
                         found_mesh = True
@@ -68,7 +70,9 @@ def main():
     print(f"extracted {extracted_mesh} mesh mappings. should be about 65")
 
 
-def _ground(grounder: ssslm.Grounder, node: Node, rows, provenance):
+def _ground(
+    grounder: ssslm.Grounder, node: Node, rows: list[SemanticMapping], provenance: str
+) -> None:
     texts = [node.name]
     # VO doesn't store its synonyms using standard predicates,
     # so look in IAO_0000118 (alternate label) or IAO_0000116 (editor note)
@@ -83,19 +87,17 @@ def _ground(grounder: ssslm.Grounder, node: Node, rows, provenance):
                 texts.append(p.value_raw.removeprefix("synonym:").strip())
 
     for text in [node.name, *(s.value for s in node.synonyms)]:
+        if text is None:
+            continue
         for scored_match in grounder.get_matches(text):
             rows.append(
                 SemanticMapping(
-                    node.prefix,
-                    node.identifier,
-                    node.name,
-                    "skos:exactMatch",
-                    scored_match.prefix,
-                    scored_match.identifier,
-                    scored_match.name,
-                    "semapv:LexicalMatching",
-                    round(scored_match.score, 2),
-                    provenance,
+                    subject=node,
+                    predicate=exact_match,
+                    object=scored_match.reference,
+                    justification=lexical_matching_process,
+                    confidence=round(scored_match.score, 2),
+                    mapping_tool=MappingTool(name=provenance),
                 )
             )
 
