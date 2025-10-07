@@ -1659,6 +1659,7 @@ uberon:0022469	primary olfactory cortex	skos:exactMatch	Not	mesh:D066194	Olfacto
 uberon:2001977	pad	skos:exactMatch	Not	mesh:D058729	Peripheral Arterial Disease	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	
 umls:C0006142	Malignant neoplasm of breast	skos:exactMatch	Not	mesh:D001943	Breast Neoplasms	semapv:ManualMappingCuration	orcid:0000-0002-6601-2165	
 vo:0000189	colony forming unit	skos:exactMatch	Not	mesh:D013234	Stem Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py
+vo:0003105	Lymerix	skos:exactMatch	Not	mesh:C072045	OspA protein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py
 vo:0004075	PBT	skos:exactMatch	Not	mesh:D001803	Blood Transfusion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py
 vo:0004075	PBT	skos:exactMatch	Not	mesh:D013601	T-Lymphocytes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py
 vo:0004075	PBT	skos:exactMatch	Not	mesh:D061766	Proton Therapy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py
@@ -1836,4 +1837,3 @@ wikipathways:WP890	Osteoclast	debio:0000003	Not	mesh:D010010	Osteoclasts	semapv:
 wikipathways:WP914	NLR Proteins	debio:0000003	Not	mesh:D000070576	NLR Proteins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 wikipathways:WP942	Matrix Metalloproteinases	debio:0000003	Not	fplx:MMP	MMP	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 wikipathways:WP956	Osteoblast	debio:0000003	Not	mesh:D010006	Osteoblasts	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
-vo:0003105	Lymerix	skos:exactMatch	Not	mesh:C072045	OspA protein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py
