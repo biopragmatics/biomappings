@@ -27,6 +27,7 @@ from biomappings.utils import (
 )
 
 __all__ = [
+    "GetterIntegrityTestCase",
     "IntegrityTestCase",
     "MappingGetter",
     "PathIntegrityTestCase",
@@ -47,29 +48,17 @@ def _locations_str(locations: Iterable[tuple[Any, Any]]) -> str:
     return ", ".join(f"{label}:{line}" for label, line in locations)
 
 
+#: A function that gets mappings
 MappingGetter: TypeAlias = Callable[[], list[SemanticMapping]]
 
 
 class IntegrityTestCase(unittest.TestCase):
     """Data integrity tests."""
 
-    positive_mappings_getter: ClassVar[MappingGetter]
-    predictions_getter: ClassVar[MappingGetter]
-    negative_mappings_getter: ClassVar[MappingGetter]
-    unsure_mappings_getter: ClassVar[MappingGetter]
-
     mappings: ClassVar[list[SemanticMapping]]
     predictions: ClassVar[list[SemanticMapping]]
     incorrect: ClassVar[list[SemanticMapping]]
     unsure: ClassVar[list[SemanticMapping]]
-
-    @classmethod
-    def setUpClass(cls) -> None:
-        """Set up the test case."""
-        cls.mappings = cls.positive_mappings_getter()
-        cls.predictions = cls.predictions_getter()
-        cls.incorrect = cls.negative_mappings_getter()
-        cls.unsure = cls.unsure_mappings_getter()
 
     def _iter_groups(self) -> Iterable[tuple[str, int, SemanticMapping]]:
         for group, label in [
@@ -225,6 +214,23 @@ class IntegrityTestCase(unittest.TestCase):
             msg="Unsure curations are not sorted",
         )
         self.assert_no_internal_redundancies(self.unsure)
+
+
+class GetterIntegrityTestCase(IntegrityTestCase):
+    """Data integrity tests."""
+
+    positive_mappings_getter: ClassVar[MappingGetter]
+    predictions_getter: ClassVar[MappingGetter]
+    negative_mappings_getter: ClassVar[MappingGetter]
+    unsure_mappings_getter: ClassVar[MappingGetter]
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        """Set up the test case."""
+        cls.mappings = cls.positive_mappings_getter()
+        cls.predictions = cls.predictions_getter()
+        cls.incorrect = cls.negative_mappings_getter()
+        cls.unsure = cls.unsure_mappings_getter()
 
 
 class PathIntegrityTestCase(IntegrityTestCase):

@@ -11,7 +11,7 @@ from biomappings import (
 )
 
 
-class TestIntegrity(testing.IntegrityTestCase):
+class TestIntegrity(testing.GetterIntegrityTestCase):
     """Data integrity tests."""
 
     positive_mappings_getter: ClassVar[testing.MappingGetter] = load_mappings
