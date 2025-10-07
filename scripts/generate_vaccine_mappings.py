@@ -4,6 +4,7 @@ import click
 import pyobo
 from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.sources.cpt import iter_terms
+from sssom_pydantic import MappingTool
 
 from biomappings.lexical import append_lexical_predictions
 from biomappings.resources import SemanticMapping, append_prediction_tuples
@@ -29,7 +30,7 @@ def main() -> None:
                     object=scored_match.reference,
                     justification=lexical_matching_process,
                     confidence=0.9,
-                    mapping_tool=provenance,
+                    mapping_tool=MappingTool(name=provenance),
                 )
                 preds.append(pred)
     append_prediction_tuples(preds)

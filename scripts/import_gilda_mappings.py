@@ -6,6 +6,7 @@ from collections.abc import Iterable
 
 from bioregistry import NormalizedNamableReference
 from curies.vocabulary import exact_match, lexical_matching_process
+from sssom_pydantic import MappingTool
 
 from biomappings import load_false_mappings, load_mappings
 from biomappings.resources import SemanticMapping, append_prediction_tuples
@@ -97,7 +98,7 @@ def get_mappings() -> Iterable[SemanticMapping]:
                 ),
                 justification=lexical_matching_process,
                 confidence=confidence,
-                mapping_tool=url,
+                mapping_tool=MappingTool(name=url),
             )
 
 

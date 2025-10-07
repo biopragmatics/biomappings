@@ -7,8 +7,10 @@ import obonet
 from bioregistry import NormalizedNamableReference
 from curies.vocabulary import exact_match, lexical_matching_process
 from indra.databases import mesh_client
+from sssom_pydantic import MappingTool
 
 from biomappings.resources import SemanticMapping, append_prediction_tuples
+from biomappings.utils import get_script_url
 
 g = obonet.read_obo(
     "https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-basic.obo"
@@ -52,6 +54,8 @@ for node, data in g.nodes(data=True):
 
 print(f"Found {len(mappings)} CL->MESH mappings.")
 
+provenance = get_script_url(__file__)
+
 predictions = []
 for cl_id, mesh_id in mappings.items():
     pred = SemanticMapping(
@@ -68,7 +72,7 @@ for cl_id, mesh_id in mappings.items():
         ),
         justification=lexical_matching_process,
         confidence=0.9,
-        mapping_tool="generate_cl_mesh_mappings.py",
+        mapping_tool=MappingTool(name=provenance),
     )
     predictions.append(pred)
 

@@ -8,6 +8,7 @@ import pyobo
 from bioregistry import NormalizedNamableReference
 from curies.vocabulary import lexical_matching_process
 from gilda.process import normalize
+from sssom_pydantic import MappingTool
 from tqdm import tqdm
 
 from biomappings.resources import SemanticMapping, append_prediction_tuples
@@ -51,7 +52,7 @@ def iterate_orthologous_lexical_matches(prefix: str = "wikipathways") -> Iterabl
                 ),
                 justification=lexical_matching_process,
                 confidence=0.95,
-                mapping_tool=provenance,
+                mapping_tool=MappingTool(name=provenance),
             )
     tqdm.write(f"Identified {count:,} orthologs")
 

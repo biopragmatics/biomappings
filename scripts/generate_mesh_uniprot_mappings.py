@@ -7,6 +7,7 @@ import pyobo
 from bioregistry import NormalizedNamableReference
 from curies.vocabulary import exact_match, lexical_matching_process
 from indra.databases import hgnc_client
+from sssom_pydantic import MappingTool
 
 from biomappings.resources import SemanticMapping, append_prediction_tuples
 from biomappings.utils import get_script_url
@@ -38,7 +39,7 @@ def get_mappings() -> Iterable[SemanticMapping]:
                 ),
                 justification=lexical_matching_process,
                 confidence=mm.score,
-                mapping_tool=url,
+                mapping_tool=MappingTool(name=url),
             )
 
 
