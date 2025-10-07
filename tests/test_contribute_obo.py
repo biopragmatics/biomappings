@@ -29,7 +29,7 @@ class TestContributeOBO(unittest.TestCase):
         self.assertEqual(1, len(mappings))
         self.mappings = mappings
 
-    def test_no_addition(self):
+    def test_no_addition(self) -> None:
         """Test adding a non-redundant mapping."""
         original = dedent(
             """\
@@ -43,7 +43,7 @@ class TestContributeOBO(unittest.TestCase):
             update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
         )
 
-    def test_addition(self):
+    def test_addition(self) -> None:
         """Test adding a non-redundant mapping."""
         original = dedent(
             """\
@@ -85,7 +85,7 @@ class TestContributeOBO(unittest.TestCase):
             update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
         )
 
-    def test_addition_no_xrefs_with_def(self):
+    def test_addition_no_xrefs_with_def(self) -> None:
         """Test adding a non-redundant mapping."""
         original = dedent(
             """\
@@ -109,7 +109,7 @@ class TestContributeOBO(unittest.TestCase):
             update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
         )
 
-    def test_addition_no_xrefs(self):
+    def test_addition_no_xrefs(self) -> None:
         """Test adding a non-redundant mapping."""
         original = dedent(
             """\
@@ -131,7 +131,7 @@ class TestContributeOBO(unittest.TestCase):
             update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
         )
 
-    def test_skip_redundant_1(self):
+    def test_skip_redundant_1(self) -> None:
         """Test skipping adding a mapping that doesn't have metadata."""
         original = dedent(
             """\
@@ -155,7 +155,7 @@ class TestContributeOBO(unittest.TestCase):
             update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
         )
 
-    def test_skip_redundant_2(self):
+    def test_skip_redundant_2(self) -> None:
         """Test skipping adding a mapping that doesn't have metadata."""
         original = dedent(
             """\
@@ -179,7 +179,7 @@ class TestContributeOBO(unittest.TestCase):
             update_obo_lines(mappings=self.mappings, lines=original.splitlines(), progress=False),
         )
 
-    def test_skip_redundant_3(self):
+    def test_skip_redundant_3(self) -> None:
         """Test skipping where the xref just has meta-xrefs."""
         original = dedent(
             """\

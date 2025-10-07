@@ -8,6 +8,7 @@ from pathlib import Path
 from subprocess import CalledProcessError, check_output
 
 from bioregistry import NormalizedNamableReference
+from sssom_pydantic import SemanticMapping
 
 __all__ = [
     "BROAD_MATCH",
@@ -26,6 +27,7 @@ __all__ = [
     "get_git_hash",
     "get_script_url",
 ]
+
 
 HERE = Path(__file__).parent.resolve()
 ROOT = HERE.parent.parent.resolve()
@@ -108,7 +110,10 @@ def get_script_url(fname: str) -> str:
     return f"https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}"
 
 
-def get_canonical_tuple(mapping) -> tuple[str, str, str, str]:
+KKK = tuple[str, str, str, str]
+
+
+def get_canonical_tuple(mapping: SemanticMapping) -> KKK:
     """Get the canonical tuple from a mapping entry."""
     source = mapping.subject
     target = mapping.object

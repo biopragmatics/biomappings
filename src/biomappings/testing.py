@@ -8,20 +8,18 @@ from collections import defaultdict
 from collections.abc import Iterable
 from pathlib import Path
 from textwrap import dedent
-from typing import ClassVar, TypeVar, cast
+from typing import Any, Callable, ClassVar, TypeVar, cast
 
 import bioregistry
 from bioregistry import NormalizedNamableReference
 from curies import Reference
+from typing_extensions import TypeAlias
 
-from biomappings.resources import (
-    CURATORS_PATH,
-    SemanticMapping,
-    load_mappings,
-    load_predictions,
-)
+from biomappings.resources import SemanticMapping, load_mappings, load_predictions
 from biomappings.resources.semapv import get_semapv_id_to_name
 from biomappings.utils import (
+    CURATORS_PATH,
+    KKK,
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     UNSURE_SSSOM_PATH,
@@ -30,6 +28,7 @@ from biomappings.utils import (
 
 __all__ = [
     "IntegrityTestCase",
+    "MappingGetter",
     "PathIntegrityTestCase",
 ]
 
@@ -44,17 +43,33 @@ def _extract_redundant(counter: dict[X, list[Y]]) -> list[tuple[X, list[Y]]]:
     return [(key, values) for key, values in counter.items() if len(values) > 1]
 
 
-def _locations_str(locations) -> str:
+def _locations_str(locations: Iterable[tuple[Any, Any]]) -> str:
     return ", ".join(f"{label}:{line}" for label, line in locations)
+
+
+MappingGetter: TypeAlias = Callable[[], list[SemanticMapping]]
 
 
 class IntegrityTestCase(unittest.TestCase):
     """Data integrity tests."""
 
-    mappings: list[SemanticMapping]
-    predictions: list[SemanticMapping]
-    incorrect: list[SemanticMapping]
-    unsure: list[SemanticMapping]
+    positive_mappings_getter: ClassVar[MappingGetter]
+    predictions_getter: ClassVar[MappingGetter]
+    negative_mappings_getter: ClassVar[MappingGetter]
+    unsure_mappings_getter: ClassVar[MappingGetter]
+
+    mappings: ClassVar[list[SemanticMapping]]
+    predictions: ClassVar[list[SemanticMapping]]
+    incorrect: ClassVar[list[SemanticMapping]]
+    unsure: ClassVar[list[SemanticMapping]]
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        """Set up the test case."""
+        cls.mappings = cls.positive_mappings_getter()
+        cls.predictions = cls.predictions_getter()
+        cls.incorrect = cls.negative_mappings_getter()
+        cls.unsure = cls.unsure_mappings_getter()
 
     def _iter_groups(self) -> Iterable[tuple[str, int, SemanticMapping]]:
         for group, label in [
@@ -144,13 +159,13 @@ class IntegrityTestCase(unittest.TestCase):
 
     def test_cross_redundancy(self) -> None:
         """Test the redundancy of manually curated mappings and predicted mappings."""
-        counter: defaultdict[tuple[str, str, str, str], defaultdict[str, list[int]]] = defaultdict(
+        counter: defaultdict[KKK, defaultdict[str, list[int]]] = defaultdict(
             lambda: defaultdict(list)
         )
         for label, line, mapping in self._iter_groups():
             counter[get_canonical_tuple(mapping)][label].append(line)
 
-        redundant = []
+        redundant: list[tuple[KKK, list[tuple[str, list[int]]]]] = []
         for mapping_key, label_to_lines in counter.items():
             if len(label_to_lines) <= 1:
                 continue

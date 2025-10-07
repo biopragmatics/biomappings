@@ -13,8 +13,13 @@ import yaml
 from curies import ReferenceTuple
 from tqdm.auto import tqdm
 
-from biomappings.resources import NEGATIVES_SSSOM_PATH, POSITIVES_SSSOM_PATH, PREDICTIONS_SSSOM_PATH
-from biomappings.utils import DATA, PURL_BASE
+from biomappings.utils import (
+    DATA,
+    NEGATIVES_SSSOM_PATH,
+    POSITIVES_SSSOM_PATH,
+    PREDICTIONS_SSSOM_PATH,
+    PURL_BASE,
+)
 
 if TYPE_CHECKING:
     import pandas as pd

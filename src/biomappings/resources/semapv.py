@@ -5,10 +5,12 @@ from __future__ import annotations
 import json
 from functools import lru_cache
 from pathlib import Path
+from typing import cast
 
 __all__ = [
     "get_semapv_id_to_name",
 ]
+
 
 url = "https://raw.githubusercontent.com/mapping-commons/semantic-mapping-vocabulary/main/semapv-terms.tsv"
 HERE = Path(__file__).parent.resolve()
@@ -19,7 +21,7 @@ PATH = HERE.joinpath("semapv.json")
 def get_semapv_id_to_name() -> dict[str, str]:
     """Get a dictionary of semapv local unique identifier to labels."""
     if PATH.is_file():
-        return json.loads(PATH.read_text())
+        return cast(dict[str, str], json.loads(PATH.read_text()))
 
     import pystow
 
