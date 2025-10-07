@@ -77,7 +77,6 @@ def _load_table(path: str | Path, *, standardize: bool) -> list[sssom_pydantic.S
         metadata={
             "mapping_set_id": f"https://w3id.org/biopragmatics/unresolvable/biomappings/{path.name}"
         },
-        converter=bioregistry.get_default_converter(),
     )
     if standardize:
         logger.warning(f"standardization is not implemented yet for {path}")
@@ -90,11 +89,10 @@ def _write_helper(
     mode: Literal["w", "a"],
 ) -> None:
     mappings = _clean_mappings(mappings)
-    converter = bioregistry.get_default_converter()
     if mode == "a":
-        sssom_pydantic.append(mappings, path, converter=converter)
+        sssom_pydantic.append(mappings, path)
     elif mode == "w":
-        sssom_pydantic.write(mappings, path, converter=converter)
+        sssom_pydantic.write(mappings, path, converter=bioregistry.get_default_converter())
     else:
         raise ValueError(f"invalid mode: {mode}")
 
@@ -151,7 +149,6 @@ def _lint_curated_mappings(path: Path, *, standardize: bool) -> None:
     sssom_pydantic.lint(
         path,
         metadata={"mapping_set_id": f"https://w3id.org/biopragmatics/sssom/{path.name}"},
-        converter=bioregistry.get_default_converter(),
     )
 
 
