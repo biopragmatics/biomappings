@@ -66,7 +66,7 @@ if get_git_hash() is not None:
         from .wsgi import get_app
 
         target_references: list[Reference] = []
-        for mapping in _load_table(path, standardize=True):
+        for mapping in _load_table(path):
             target_references.append(mapping.subject)
             target_references.append(mapping.object)
         app = get_app(target_references=target_references, resolver_base=resolver_base)
@@ -104,10 +104,10 @@ def lint() -> None:
     """Sort files and remove duplicates."""
     from . import resources
 
-    resources.lint_true_mappings(standardize=True)
-    resources.lint_false_mappings(standardize=True)
-    resources.lint_unsure_mappings(standardize=True)
-    resources.lint_predictions(standardize=True)
+    resources.lint_true_mappings()
+    resources.lint_false_mappings()
+    resources.lint_unsure_mappings()
+    resources.lint_predictions()
 
 
 @main.command()

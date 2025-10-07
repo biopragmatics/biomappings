@@ -114,7 +114,7 @@ def append_lexical_predictions(
                         subject=_r(prefix=prefix, identifier=source_id),
                         predicate=relation,
                         object=_r(prefix=target, identifier=target_id),
-                        mapping_justification=LEXICAL_MATCHING_PROCESS,
+                        justification=LEXICAL_MATCHING_PROCESS,
                         confidence=confidence,
                         mapping_tool=provenance,
                     )
@@ -131,7 +131,7 @@ def append_lexical_predictions(
 
     # since the function that constructs the predictions already
     # pre-standardizes, we don't have to worry about standardizing again
-    append_prediction_tuples(predictions, path=path, standardize=False)
+    append_prediction_tuples(predictions, path=path)
 
 
 def _calculate_similarities(
@@ -251,7 +251,7 @@ def predict_lexical_mappings(
                 subject=NormalizedNamedReference(prefix=prefix, identifier=identifier, name=name),
                 predicate=predicate,
                 object=scored_match.reference,
-                mapping_justification=LEXICAL_MATCHING_PROCESS,
+                justification=LEXICAL_MATCHING_PROCESS,
                 confidence=round(scored_match.score, 3),
                 mapping_tool=provenance,
             )
@@ -272,7 +272,7 @@ def predict_lexical_mappings(
                     ),
                     predicate=predicate,
                     object=scored_match.reference,
-                    mapping_justification=LEXICAL_MATCHING_PROCESS,
+                    justification=LEXICAL_MATCHING_PROCESS,
                     confidence=round(scored_match.score, 3),
                     mapping_tool=provenance,
                 )

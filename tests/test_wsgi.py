@@ -5,6 +5,7 @@ import unittest
 from pathlib import Path
 
 from bioregistry import NormalizedNamableReference as Reference
+from sssom_pydantic import MappingTool
 
 from biomappings import SemanticMapping
 from biomappings.resources import COLUMNS, write_predictions
@@ -57,9 +58,9 @@ class TestFull(unittest.TestCase):
                 subject=Reference.from_curie("chebi:131408", name="glyoxime"),
                 predicate="skos:exactMatch",
                 object=Reference.from_curie("mesh:C018305", name="glyoxal dioxime"),
-                mapping_justification="semapv:ManualMappingCuration",
+                justification="semapv:ManualMappingCuration",
                 confidence=0.95,
-                mapping_tool="test",
+                mapping_tool=MappingTool(name="test"),
             )
         ]
         directory = Path(self.temporary_directory.name)
@@ -71,6 +72,9 @@ class TestFull(unittest.TestCase):
         write_predictions(predictions, path=predictions_path)
         for path in [positives_path, negatives_path, unsure_path]:
             with path.open("w") as file:
+                print("#curie_map:", file=file)
+                print("#  chebi: http://purl.obolibrary.org/obo/CHEBI_", file=file)
+                print("#  mesh:  http://id.nlm.nih.gov/mesh/", file=file)
                 print(*COLUMNS, sep="\t", file=file)
 
         self.controller = Controller(

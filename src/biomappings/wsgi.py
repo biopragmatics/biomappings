@@ -149,6 +149,7 @@ class Controller:
     """A module for interacting with the predictions and mappings."""
 
     _user: NamableReference
+    _predictions: list[SemanticMapping]
 
     def __init__(
         self,
@@ -338,21 +339,21 @@ class Controller:
                 it,
                 lambda mapping: [
                     mapping.subject.curie,
-                    mapping.subject.name,
+                    mapping.subject_name,
                     mapping.object.curie,
-                    mapping.object.name,
-                    mapping.mapping_tool,
+                    mapping.object_name,
+                    mapping.mapping_tool_name,
                 ],
             )
         if source_prefix is not None:
             it = self._help_filter(source_prefix, it, lambda mapping: [mapping.subject.curie])
         if source_query is not None:
             it = self._help_filter(
-                source_query, it, lambda mapping: [mapping.subject.curie, mapping.subject.name]
+                source_query, it, lambda mapping: [mapping.subject.curie, mapping.subject_name]
             )
         if target_query is not None:
             it = self._help_filter(
-                target_query, it, lambda mapping: [mapping.object.curie, mapping.object.name]
+                target_query, it, lambda mapping: [mapping.object.curie, mapping.object_name]
             )
         if target_prefix is not None:
             it = self._help_filter(target_prefix, it, lambda mapping: [mapping.object.curie])
@@ -361,7 +362,11 @@ class Controller:
                 prefix, it, lambda mapping: [mapping.subject.curie, mapping.object.curie]
             )
         if provenance is not None:
-            it = self._help_filter(provenance, it, lambda mapping: [mapping.mapping_tool])
+            it = self._help_filter(
+                provenance,
+                it,
+                lambda mapping: [mapping.mapping_tool_name],
+            )
 
         def _get_confidence(t: tuple[int, SemanticMapping]) -> float:
             return t[1].confidence or 0.0
@@ -382,9 +387,9 @@ class Controller:
             it = (
                 (line, mapping)
                 for line, mapping in it
-                if mapping.subject.name
-                and mapping.object.name
-                and mapping.subject.name.casefold() == mapping.object.name.casefold()
+                if mapping.subject_name
+                and mapping.object_name
+                and mapping.subject_name.casefold() == mapping.object_name.casefold()
                 and mapping.predicate.curie == "skos:exactMatch"
             )
 
@@ -437,8 +442,8 @@ class Controller:
                     "subject": subject,
                     "predicate": EXACT_MATCH,
                     "object": obj,
-                    "author": self._get_current_author(),
-                    "mapping_justification": MANUAL_MAPPING_CURATION,
+                    "authors": [self._get_current_author()],
+                    "justification": MANUAL_MAPPING_CURATION,
                 }
             )
         )
@@ -462,9 +467,11 @@ class Controller:
                     f"you tried popping the {line} element from the predictions list, which only has {len(self._predictions):,} elements"
                 ) from None
 
-            update: dict[str, str | NamableReference] = {
-                "author": self._get_current_author(),
-                "mapping_justification": MANUAL_MAPPING_CURATION,
+            update: dict[str, Any] = {
+                "authors": [self._get_current_author()],
+                "justification": MANUAL_MAPPING_CURATION,
+                # throw the predicted confidence away, since it's been manually curated now
+                "confidence": None,
             }
 
             entry_key: Literal["correct", "incorrect", "unsure"]
@@ -491,25 +498,19 @@ class Controller:
             entries[entry_key].append(new_mapping)
 
         # no need to standardize since we assume everything was correct on load.
-        # only write files that have some valies to go in them!
+        # only write files that have some values to go in them!
         if entries["correct"]:
-            append_true_mappings(
-                entries["correct"], path=self.positives_path, sort=True, standardize=False
-            )
+            append_true_mappings(entries["correct"], path=self.positives_path, sort=True)
         if entries["incorrect"]:
-            append_false_mappings(
-                entries["incorrect"], path=self.negatives_path, sort=True, standardize=False
-            )
+            append_false_mappings(entries["incorrect"], path=self.negatives_path, sort=True)
         if entries["unsure"]:
-            append_unsure_mappings(
-                entries["unsure"], path=self.unsure_path, sort=True, standardize=False
-            )
+            append_unsure_mappings(entries["unsure"], path=self.unsure_path, sort=True)
         write_predictions(self._predictions, path=self.predictions_path)
         self._marked.clear()
 
         # Now add manually curated mappings, if there are any
         if self._added_mappings:
-            append_true_mappings(self._added_mappings, path=self.positives_path, standardize=False)
+            append_true_mappings(self._added_mappings, path=self.positives_path)
             self._added_mappings = []
 
 

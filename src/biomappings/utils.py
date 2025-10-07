@@ -36,6 +36,7 @@ NEGATIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("negative.sssom.tsv")
 UNSURE_SSSOM_PATH = RESOURCE_PATH.joinpath("unsure.sssom.tsv")
 PREDICTIONS_SSSOM_PATH = RESOURCE_PATH.joinpath("predictions.sssom.tsv")
 CURATORS_PATH = RESOURCE_PATH.joinpath("curators.tsv")
+PURL_BASE = "https://w3id.org/biopragmatics/biomappings/sssom"
 
 DOCS = ROOT.joinpath("docs")
 IMG = DOCS.joinpath("img")
