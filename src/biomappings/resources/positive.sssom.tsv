@@ -2352,6 +2352,9 @@ chebi:145111	isopatulin	skos:exactMatch	mesh:C552375	isopatulin	semapv:ManualMap
 chebi:145155	Azaspiracid-2	skos:exactMatch	mesh:C520447	azaspiracid-2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py
 chebi:145156	Azaspiracid-3	skos:exactMatch	mesh:C520446	azaspiracid-3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py
 chebi:145170	13-desmethylspirolide C	skos:exactMatch	mesh:C517170	13-desmethylspirolide C	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py
+chebi:145172	Gambierone	skos:exactMatch	mesh:C000601927	gambierone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py
+chebi:145174	Silenoside A	skos:exactMatch	mesh:C120208	silenoside A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py
+chebi:145176	momordicoside A	skos:exactMatch	mesh:C478919	momordicoside A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py
 chebi:145705	prednisolone phosphate	skos:exactMatch	mesh:C009022	prednisolone phosphate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 chebi:145994	remdesivir	skos:exactMatch	mesh:C000606551	remdesivir	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	
 chebi:146244	HU-308	skos:exactMatch	mesh:C402416	HU 308	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	
@@ -3163,6 +3166,7 @@ clo:0036936	Somatic cell hybrid	skos:exactMatch	mesh:D006822	Hybrid Cells	semapv
 clo:0037116	LNCaP cell	skos:exactMatch	efo:0002071	LNCAP	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/b250ea/scripts/generate_clo_mesh_mappings.py
 clo:0037230	Ishikawa 3-H-12 cell	skos:exactMatch	cellosaurus:D199	Ishikawa 3-H-12	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	clo
 clo:0037291	MDAMB231 cell	skos:exactMatch	mesh:D000092302	MDA-MB-231 Cells	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py
+clo:0037292	SKMEL1	skos:exactMatch	efo:0002332	SKMEL1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	clo
 clo:0037300	BALL-1 cell	skos:exactMatch	cellosaurus:1075	BALL-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	clo
 clo:0037339	tissue donor	skos:exactMatch	mesh:D014019	Tissue Donors	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/746fde/scripts/generate_clo_mesh_mappings.py
 cpt:90287	botulinum antitoxin	skos:exactMatch	mesh:D001904	Botulinum Antitoxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/8d4bd2/scripts/generate_vaccine_mappings.py
@@ -11315,4 +11319,3 @@ wikipathways:WP987	Adipogenesis	debio:0000003	go:0060612	adipose tissue developm
 wikipathways:WP987	Adipogenesis	debio:0000003	mesh:D050156	Adipogenesis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 wikipathways:WP994	Oxidative phosphorylation	debio:0000003	go:0006119	oxidative phosphorylation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 wikipathways:WP999	TCA Cycle	debio:0000003	go:0006099	tricarboxylic acid cycle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
-clo:0037292	SKMEL1	skos:exactMatch	efo:0002332	SKMEL1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	clo
