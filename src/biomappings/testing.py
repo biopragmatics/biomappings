@@ -14,9 +14,10 @@ import bioregistry
 from bioregistry import NormalizedNamableReference
 from curies import Reference
 from curies.vocabulary import matching_processes
+from sssom_pydantic import SemanticMapping
 from typing_extensions import TypeAlias
 
-from biomappings.resources import SemanticMapping, load_mappings, load_predictions
+from biomappings.resources import load_mappings, load_predictions
 from biomappings.utils import (
     CURATORS_PATH,
     NEGATIVES_SSSOM_PATH,

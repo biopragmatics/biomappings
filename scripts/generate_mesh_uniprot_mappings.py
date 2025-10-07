@@ -7,9 +7,9 @@ import pyobo
 from bioregistry import NormalizedNamableReference
 from curies.vocabulary import exact_match, lexical_matching_process
 from indra.databases import hgnc_client
-from sssom_pydantic import MappingTool
+from sssom_pydantic import MappingTool, SemanticMapping
 
-from biomappings.resources import SemanticMapping, append_prediction_tuples
+from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
 MESH_PROTEIN_RE = re.compile(r"^(.+) protein, human$")

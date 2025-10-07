@@ -8,10 +8,10 @@ import pyobo
 from bioregistry import NormalizedNamableReference
 from curies.vocabulary import lexical_matching_process
 from gilda.process import normalize
-from sssom_pydantic import MappingTool
+from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm import tqdm
 
-from biomappings.resources import SemanticMapping, append_prediction_tuples
+from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
 

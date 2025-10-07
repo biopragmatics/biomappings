@@ -6,10 +6,10 @@ from collections.abc import Iterable
 
 from bioregistry import NormalizedNamableReference
 from curies.vocabulary import exact_match, lexical_matching_process
-from sssom_pydantic import MappingTool
+from sssom_pydantic import MappingTool, SemanticMapping
 
 from biomappings import load_false_mappings, load_mappings
-from biomappings.resources import SemanticMapping, append_prediction_tuples
+from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
 GILDA_PATH = os.environ.get("GILDA_PATH")

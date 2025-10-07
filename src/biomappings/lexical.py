@@ -18,9 +18,9 @@ from bioregistry import NormalizedNamableReference, NormalizedNamedReference, No
 from curies.vocabulary import exact_match, lexical_matching_process
 from more_click import verbose_option
 from pyobo import get_grounder
+from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm.auto import tqdm
 
-from biomappings import SemanticMapping
 from biomappings.mapping_graph import get_mutual_mapping_filter
 from biomappings.resources import append_prediction_tuples
 from biomappings.utils import CMapping, get_script_url
@@ -119,7 +119,7 @@ def append_lexical_predictions(
                         object=_r(prefix=target, identifier=target_id),
                         justification=lexical_matching_process,
                         confidence=confidence,
-                        mapping_tool=provenance,
+                        mapping_tool=MappingTool(name=provenance),
                     )
                 )
 
@@ -259,7 +259,7 @@ def predict_lexical_mappings(
                 object=scored_match.reference,
                 justification=lexical_matching_process,
                 confidence=round(scored_match.score, 3),
-                mapping_tool=provenance,
+                mapping_tool=MappingTool(name=provenance),
             )
 
     tqdm.write(f"[{prefix}] generated {name_prediction_count:,} predictions from names")
@@ -280,7 +280,7 @@ def predict_lexical_mappings(
                     object=scored_match.reference,
                     justification=lexical_matching_process,
                     confidence=round(scored_match.score, 3),
-                    mapping_tool=provenance,
+                    mapping_tool=MappingTool(name=provenance),
                 )
         tqdm.write(
             f"[{prefix}] generated {identifier_prediction_count:,} predictions from identifiers"

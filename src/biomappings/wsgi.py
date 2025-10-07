@@ -20,12 +20,12 @@ from curies.vocabulary import broad_match, exact_match, manual_mapping_curation,
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
+from sssom_pydantic import SemanticMapping
 from typing_extensions import TypeAlias
 from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
 from biomappings.resources import (
-    SemanticMapping,
     append_false_mappings,
     append_true_mappings,
     append_unsure_mappings,

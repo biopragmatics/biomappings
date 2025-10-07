@@ -12,10 +12,10 @@ from curies.vocabulary import (
     see_also,
     structural_matching,
 )
-from sssom_pydantic import MappingTool
+from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm import tqdm
 
-from biomappings.resources import SemanticMapping, append_prediction_tuples
+from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
 

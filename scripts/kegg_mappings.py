@@ -7,10 +7,10 @@ import pyobo
 from bioregistry import NormalizedNamableReference
 from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.sources.kegg.api import ensure_list_pathways
-from sssom_pydantic import MappingTool
+from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm import tqdm
 
-from biomappings.resources import SemanticMapping, append_prediction_tuples
+from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
 

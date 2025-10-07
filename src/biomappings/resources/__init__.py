@@ -14,8 +14,7 @@ from typing import TYPE_CHECKING, overload
 import bioregistry
 import sssom_pydantic
 from bioregistry import NormalizedNamedReference
-from sssom_pydantic import Metadata
-from sssom_pydantic.api import SemanticMapping
+from sssom_pydantic import MappingTool, Metadata, SemanticMapping
 from tqdm.auto import tqdm
 from typing_extensions import Literal
 
@@ -72,7 +71,7 @@ COLUMNS = [
 ]
 
 
-def _load_table(path: str | Path) -> list[sssom_pydantic.SemanticMapping]:
+def _load_table(path: str | Path) -> list[SemanticMapping]:
     path = Path(path).expanduser().resolve()
     mappings, _converter, _mapping_set = sssom_pydantic.read(
         path,
@@ -461,5 +460,5 @@ def _mapping_from_semra(mapping: semra.Mapping, confidence: float) -> SemanticMa
         object=mapping.object,
         justification=evidence.justification,
         confidence=confidence,
-        mapping_tool=evidence.mapping_set.name,
+        mapping_tool=MappingTool(name=evidence.mapping_set.name),
     )

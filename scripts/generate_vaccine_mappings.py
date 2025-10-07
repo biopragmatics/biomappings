@@ -4,10 +4,10 @@ import click
 import pyobo
 from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.sources.cpt import iter_terms
-from sssom_pydantic import MappingTool
+from sssom_pydantic import MappingTool, SemanticMapping
 
 from biomappings.lexical import append_lexical_predictions
-from biomappings.resources import SemanticMapping, append_prediction_tuples
+from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
 
