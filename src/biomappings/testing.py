@@ -13,10 +13,10 @@ from typing import Any, Callable, ClassVar, TypeVar, cast
 import bioregistry
 from bioregistry import NormalizedNamableReference
 from curies import Reference
+from curies.vocabulary import matching_processes
 from typing_extensions import TypeAlias
 
 from biomappings.resources import SemanticMapping, load_mappings, load_predictions
-from biomappings.resources.semapv import get_semapv_id_to_name
 from biomappings.utils import (
     CURATORS_PATH,
     NEGATIVES_SSSOM_PATH,
@@ -32,9 +32,6 @@ __all__ = [
     "MappingGetter",
     "PathIntegrityTestCase",
 ]
-
-
-SEMAPV_ID_TO_NAME = get_semapv_id_to_name()
 
 X = TypeVar("X")
 Y = TypeVar("Y")
@@ -78,7 +75,7 @@ class IntegrityTestCase(unittest.TestCase):
                 mapping.mapping_justification.prefix,
                 msg=f"[{label}] The 'mapping_justification' column should be annotated with semapv on line {line}",
             )
-            self.assertIn(mapping.mapping_justification.identifier, SEMAPV_ID_TO_NAME)
+            self.assertIn(mapping.mapping_justification, matching_processes)
 
     def test_prediction_not_manual(self) -> None:
         """Test that predicted mappings don't use manual mapping justification."""
