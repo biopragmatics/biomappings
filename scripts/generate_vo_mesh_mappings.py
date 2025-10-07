@@ -5,7 +5,7 @@ import pyobo
 import ssslm
 from bioontologies.obograph import Node
 from bioregistry import NormalizedNamableReference
-from curies.vocabulary import exact_match, lexical_matching_process, structural_matching
+from curies.vocabulary import exact_match, lexical_matching_process, see_also, structural_matching
 from sssom_pydantic import MappingTool
 from tqdm import tqdm
 
@@ -28,7 +28,7 @@ def main() -> None:
             for p in node.meta.properties or []:
                 if not p.predicate:
                     continue
-                if p.predicate.curie == "rdfs:seeAlso":
+                if p.predicate.curie == see_also.curie:
                     values = [
                         value.strip().replace(" ", "") for value in p.value_raw.strip().split(";")
                     ]
@@ -48,7 +48,7 @@ def main() -> None:
                                     identifier=node.identifier,
                                     name=node.name,
                                 ),
-                                predicate="skos:exactMatch",
+                                predicate=exact_match,
                                 object=NormalizedNamableReference(
                                     prefix="mesh",
                                     identifier=mesh_id,

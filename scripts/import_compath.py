@@ -2,6 +2,7 @@
 
 import pandas as pd
 import pyobo
+from curies.vocabulary import exact_match, manual_mapping_curation
 from tqdm import tqdm
 
 from biomappings.resources import append_true_mappings
@@ -13,10 +14,10 @@ BLACKLIST = {"decopath", "pathbank"}
 def main() -> None:
     """Import mappings from ComPath."""
     df = pd.read_csv(URL, sep="\t")
-    df = df[df["relation"] == "skos:exactMatch"]
+    df = df[df["relation"] == exact_match.curie]
     df = df[~df["source prefix"].isin(BLACKLIST)]
     df = df[~df["target prefix"].isin(BLACKLIST)]
-    df["type"] = "semapv:ManualMatchingCuration"
+    df["type"] = manual_mapping_curation.curie
     df["source"] = "orcid:0000-0002-2046-6145"  # ComPath is courtesy of Uncle Daniel
 
     # TODO check that species are the same

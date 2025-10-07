@@ -2,7 +2,7 @@
 
 import click
 import pyobo
-from curies.vocabulary import lexical_matching_process
+from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.sources.cpt import iter_terms
 
 from biomappings.lexical import append_lexical_predictions
@@ -25,7 +25,7 @@ def main() -> None:
             for scored_match in grounder.get_matches(text + " vaccine"):
                 pred = SemanticMapping(
                     subject=term.reference,
-                    predicate="skos:exactMatch",
+                    predicate=exact_match,
                     object=scored_match.reference,
                     justification=lexical_matching_process,
                     confidence=0.9,

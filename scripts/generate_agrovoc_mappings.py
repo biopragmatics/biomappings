@@ -7,7 +7,7 @@ import time
 
 import pyobo
 from bioregistry import NormalizedNamableReference
-from curies.vocabulary import lexical_matching_process
+from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.sources.agrovoc import ensure_agrovoc_graph
 from sssom_pydantic import MappingTool
 from tqdm import tqdm
@@ -46,7 +46,7 @@ def main() -> None:
                     subject=NormalizedNamableReference(
                         prefix="agrovoc", identifier=identifier, name=name
                     ),
-                    predicate=NormalizedNamableReference.from_curie("skos:exactMatch"),
+                    predicate=exact_match,
                     object=scored_match.reference,
                     justification=lexical_matching_process,
                     confidence=scored_match.score,

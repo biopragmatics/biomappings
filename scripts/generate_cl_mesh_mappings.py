@@ -5,7 +5,7 @@ import re
 import gilda
 import obonet
 from bioregistry import NormalizedNamableReference
-from curies.vocabulary import lexical_matching_process
+from curies.vocabulary import exact_match, lexical_matching_process
 from indra.databases import mesh_client
 
 from biomappings.resources import SemanticMapping, append_prediction_tuples
@@ -60,7 +60,7 @@ for cl_id, mesh_id in mappings.items():
             identifier=cl_id,
             name=g.nodes[cl_id]["name"],
         ),
-        predicate="skos:exactMatch",
+        predicate=exact_match,
         object=NormalizedNamableReference(
             prefix="mesh",
             identifier=mesh_id,
