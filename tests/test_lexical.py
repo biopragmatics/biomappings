@@ -37,9 +37,11 @@ class TestEmbeddingSimilarity(unittest.TestCase):
             (2, 0),
             (10, 0),
         ]:
-            unbatched = _calculate_similarities(left_df, right_df, batch_size=None, cutoff=cutoff)
+            unbatched = _calculate_similarities(
+                left_df, right_df, batch_size=None, cutoff=cutoff, progress=False
+            )
             batched_2 = _calculate_similarities(
-                left_df, right_df, batch_size=batch_size, cutoff=cutoff
+                left_df, right_df, batch_size=batch_size, cutoff=cutoff, progress=False
             )
             self.assertEqual(
                 sorted(unbatched),

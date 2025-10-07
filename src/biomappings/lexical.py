@@ -51,6 +51,7 @@ def append_lexical_predictions(
     cutoff: float | None = None,
     batch_size: int | None = None,
     custom_filter_function: Callable[[SemanticMapping], bool] | None = None,
+    progress: bool = True,
 ) -> None:
     """Add lexical matching-based predictions to the Biomappings predictions.tsv file.
 
@@ -70,6 +71,7 @@ def append_lexical_predictions(
     :param batch_size: The batch size for embeddings
     :param custom_filter_function: A custom function that decides if semantic mappings
         should be kept, applied after all other logic.
+    :param progress: Should progress be shown?
     """
     if isinstance(target_prefixes, str):
         targets = [target_prefixes]
@@ -107,7 +109,7 @@ def append_lexical_predictions(
         for target in tqdm(targets, disable=len(targets) == 1):
             target_df = pyobo.get_text_embeddings_df(target, model=model)
             for source_id, target_id, confidence in _calculate_similarities(
-                source_df, target_df, batch_size, cutoff
+                source_df, target_df, batch_size, cutoff, progress=progress
             ):
                 predictions.append(
                     SemanticMapping(
@@ -139,10 +141,11 @@ def _calculate_similarities(
     target_df: pd.DataFrame,
     batch_size: int | None,
     cutoff: float,
+    progress: bool = True,
 ) -> list[tuple[str, str, float]]:
     if batch_size is not None:
         return _calculate_similarities_batched(
-            source_df, target_df, batch_size=batch_size, cutoff=cutoff
+            source_df, target_df, batch_size=batch_size, cutoff=cutoff, progress=progress
         )
     else:
         return _calculate_similarities_unbatched(source_df, target_df, cutoff=cutoff)
@@ -154,15 +157,17 @@ def _calculate_similarities_batched(
     *,
     batch_size: int,
     cutoff: float,
+    progress: bool = True,
 ) -> list[tuple[str, str, float]]:
     import torch
     from sentence_transformers.util import cos_sim
 
     similarities = []
     source_df_numpy = source_df.to_numpy()
-    for target_start in tqdm(range(0, len(target_df), batch_size), unit="target batch"):
+    for target_start in tqdm(
+        range(0, len(target_df), batch_size), unit="target batch", disable=not progress
+    ):
         target_end = target_start + batch_size
-        tqdm.write(f"target batch from {target_start} to {target_end}")
         target_batch_df = target_df.iloc[target_start:target_end]
         similarity = cos_sim(
             source_df_numpy,
