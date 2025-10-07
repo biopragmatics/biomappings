@@ -5,7 +5,13 @@ import pyobo
 import ssslm
 from bioontologies.obograph import Node
 from bioregistry import NormalizedNamableReference
-from curies.vocabulary import exact_match, lexical_matching_process, see_also, structural_matching
+from curies.vocabulary import (
+    alternative_term,
+    exact_match,
+    lexical_matching_process,
+    see_also,
+    structural_matching,
+)
 from sssom_pydantic import MappingTool
 from tqdm import tqdm
 
@@ -73,6 +79,9 @@ def main() -> None:
 def _ground(
     grounder: ssslm.Grounder, node: Node, rows: list[SemanticMapping], provenance: str
 ) -> None:
+    if not node.reference:
+        return None
+
     texts = [node.name]
     # VO doesn't store its synonyms using standard predicates,
     # so look in IAO_0000118 (alternate label) or IAO_0000116 (editor note)
@@ -81,7 +90,7 @@ def _ground(
         for p in node.meta.properties or []:
             if not p.predicate:
                 continue
-            if p.predicate.curie == "iao:0000118":
+            if p.predicate.curie == alternative_term.curie.lower():
                 texts.append(p.value_raw)
             elif p.predicate.curie == "iao:0000116" and p.value_raw.startswith("synonym:"):
                 texts.append(p.value_raw.removeprefix("synonym:").strip())
@@ -92,7 +101,7 @@ def _ground(
         for scored_match in grounder.get_matches(text):
             rows.append(
                 SemanticMapping(
-                    subject=node,
+                    subject=node.reference,
                     predicate=exact_match,
                     object=scored_match.reference,
                     justification=lexical_matching_process,
