@@ -4,7 +4,7 @@ from biomappings.lexical import append_lexical_predictions
 from biomappings.utils import get_script_url
 
 
-def main():
+def main() -> None:
     """Make species specific groundings from reactome to wikipathways."""
     target_prefixes = ["reactome", "wikipathways", "pw"]
     provenance = get_script_url(__file__)

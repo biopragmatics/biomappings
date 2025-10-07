@@ -10,8 +10,8 @@ from biomappings.utils import get_script_url
 
 
 @click.command()
-@verbose_option
-def main():
+@verbose_option  # type:ignore[misc]
+def main() -> None:
     """Generate mappings from CLO."""
     provenance = get_script_url(__file__)
 

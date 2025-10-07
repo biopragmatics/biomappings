@@ -16,15 +16,16 @@ import pydantic
 import werkzeug
 from bioregistry import NormalizedNamableReference
 from curies import NamableReference, Reference
+from curies.vocabulary import broad_match, exact_match, manual_mapping_curation, narrow_match
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
+from sssom_pydantic import SemanticMapping
 from typing_extensions import TypeAlias
 from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
 from biomappings.resources import (
-    SemanticMapping,
     append_false_mappings,
     append_true_mappings,
     append_unsure_mappings,
@@ -32,16 +33,7 @@ from biomappings.resources import (
     load_predictions,
     write_predictions,
 )
-from biomappings.utils import (
-    BROAD_MATCH,
-    EXACT_MATCH,
-    MANUAL_MAPPING_CURATION,
-    NARROW_MATCH,
-    commit,
-    get_branch,
-    not_main,
-    push,
-)
+from biomappings.utils import commit, get_branch, not_main, push
 
 __all__ = [
     "get_app",
@@ -440,10 +432,10 @@ class Controller:
             SemanticMapping.model_validate(
                 {
                     "subject": subject,
-                    "predicate": EXACT_MATCH,
+                    "predicate": exact_match,
                     "object": obj,
                     "authors": [self._get_current_author()],
-                    "justification": MANUAL_MAPPING_CURATION,
+                    "justification": manual_mapping_curation,
                 }
             )
         )
@@ -469,7 +461,7 @@ class Controller:
 
             update: dict[str, Any] = {
                 "authors": [self._get_current_author()],
-                "justification": MANUAL_MAPPING_CURATION,
+                "justification": manual_mapping_curation,
                 # throw the predicted confidence away, since it's been manually curated now
                 "confidence": None,
             }
@@ -478,10 +470,10 @@ class Controller:
             # note these go backwards because of the way they are read
             if value == "broad":
                 entry_key = "correct"
-                update["predicate"] = NARROW_MATCH
+                update["predicate"] = narrow_match
             elif value == "narrow":
                 entry_key = "correct"
-                update["predicate"] = BROAD_MATCH
+                update["predicate"] = broad_match
             elif value == "incorrect":
                 entry_key = "incorrect"
                 update["predicate_modifier"] = "Not"

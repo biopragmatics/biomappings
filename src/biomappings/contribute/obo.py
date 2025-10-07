@@ -11,9 +11,9 @@ from pathlib import Path
 
 import bioregistry
 import click
+from sssom_pydantic import SemanticMapping
 from tqdm.auto import tqdm
 
-from biomappings import SemanticMapping
 from biomappings.contribute.utils import get_curated_mappings
 
 __all__ = [

@@ -12,8 +12,7 @@ from typing import Any, TypedDict, cast
 import click
 import yaml
 from curies import NamableReference
-
-from biomappings.resources import SemanticMapping
+from sssom_pydantic import SemanticMapping
 
 __all__ = [
     "export",

@@ -7,16 +7,10 @@ from collections.abc import Mapping
 from pathlib import Path
 from subprocess import CalledProcessError, check_output
 
-from bioregistry import NormalizedNamableReference
 from sssom_pydantic import SemanticMapping
 
 __all__ = [
-    "BROAD_MATCH",
     "CURATORS_PATH",
-    "EXACT_MATCH",
-    "LEXICAL_MATCHING_PROCESS",
-    "MANUAL_MAPPING_CURATION",
-    "NARROW_MATCH",
     "NEGATIVES_SSSOM_PATH",
     "POSITIVES_SSSOM_PATH",
     "PREDICTIONS_SSSOM_PATH",
@@ -124,10 +118,3 @@ def get_canonical_tuple(mapping: SemanticMapping) -> CanonicalMappingTuple:
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
 CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
-
-EXACT_MATCH = NormalizedNamableReference.from_curie("skos:exactMatch")
-NARROW_MATCH = NormalizedNamableReference.from_curie("skos:narrowMatch")
-BROAD_MATCH = NormalizedNamableReference.from_curie("skos:broadMatch")
-
-LEXICAL_MATCHING_PROCESS = NormalizedNamableReference.from_curie("semapv:LexicalMatching")
-MANUAL_MAPPING_CURATION = NormalizedNamableReference.from_curie("semapv:ManualMappingCuration")

@@ -5,10 +5,12 @@ from collections.abc import Iterable
 
 import pyobo
 from bioregistry import NormalizedNamableReference
+from curies.vocabulary import exact_match, lexical_matching_process
 from indra.databases import hgnc_client
+from sssom_pydantic import MappingTool, SemanticMapping
 
-from biomappings.resources import SemanticMapping, append_prediction_tuples
-from biomappings.utils import EXACT_MATCH, LEXICAL_MATCHING_PROCESS, get_script_url
+from biomappings.resources import append_prediction_tuples
+from biomappings.utils import get_script_url
 
 MESH_PROTEIN_RE = re.compile(r"^(.+) protein, human$")
 
@@ -31,13 +33,13 @@ def get_mappings() -> Iterable[SemanticMapping]:
                 subject=NormalizedNamableReference(
                     prefix="mesh", identifier=mesh_id, name=mesh_name
                 ),
-                predicate=EXACT_MATCH,
+                predicate=exact_match,
                 object=NormalizedNamableReference(
                     prefix="uniprot", identifier=uniprot_id, name=mm.name
                 ),
-                mapping_justification=LEXICAL_MATCHING_PROCESS,
+                justification=lexical_matching_process,
                 confidence=mm.score,
-                mapping_tool=url,
+                mapping_tool=MappingTool(name=url),
             )
 
 

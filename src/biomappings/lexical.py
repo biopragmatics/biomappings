@@ -15,14 +15,15 @@ import pandas as pd
 import pyobo
 import ssslm
 from bioregistry import NormalizedNamableReference, NormalizedNamedReference, NormalizedReference
+from curies.vocabulary import exact_match, lexical_matching_process
 from more_click import verbose_option
 from pyobo import get_grounder
+from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm.auto import tqdm
 
-from biomappings import SemanticMapping
 from biomappings.mapping_graph import get_mutual_mapping_filter
 from biomappings.resources import append_prediction_tuples
-from biomappings.utils import EXACT_MATCH, LEXICAL_MATCHING_PROCESS, CMapping, get_script_url
+from biomappings.utils import CMapping, get_script_url
 
 __all__ = [
     "append_lexical_predictions",
@@ -116,9 +117,9 @@ def append_lexical_predictions(
                         subject=_r(prefix=prefix, identifier=source_id),
                         predicate=relation,
                         object=_r(prefix=target, identifier=target_id),
-                        justification=LEXICAL_MATCHING_PROCESS,
+                        justification=lexical_matching_process,
                         confidence=confidence,
-                        mapping_tool=provenance,
+                        mapping_tool=MappingTool(name=provenance),
                     )
                 )
 
@@ -227,7 +228,7 @@ def predict_lexical_mappings(
 ) -> Iterable[SemanticMapping]:
     """Iterate over prediction tuples for a given prefix."""
     if predicate is None:
-        predicate = EXACT_MATCH
+        predicate = exact_match
     elif isinstance(predicate, str):
         predicate = NormalizedNamableReference.from_curie(predicate)
 
@@ -256,9 +257,9 @@ def predict_lexical_mappings(
                 subject=NormalizedNamedReference(prefix=prefix, identifier=identifier, name=name),
                 predicate=predicate,
                 object=scored_match.reference,
-                justification=LEXICAL_MATCHING_PROCESS,
+                justification=lexical_matching_process,
                 confidence=round(scored_match.score, 3),
-                mapping_tool=provenance,
+                mapping_tool=MappingTool(name=provenance),
             )
 
     tqdm.write(f"[{prefix}] generated {name_prediction_count:,} predictions from names")
@@ -277,9 +278,9 @@ def predict_lexical_mappings(
                     ),
                     predicate=predicate,
                     object=scored_match.reference,
-                    justification=LEXICAL_MATCHING_PROCESS,
+                    justification=lexical_matching_process,
                     confidence=round(scored_match.score, 3),
-                    mapping_tool=provenance,
+                    mapping_tool=MappingTool(name=provenance),
                 )
         tqdm.write(
             f"[{prefix}] generated {identifier_prediction_count:,} predictions from identifiers"

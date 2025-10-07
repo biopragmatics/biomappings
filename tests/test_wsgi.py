@@ -5,9 +5,8 @@ import unittest
 from pathlib import Path
 
 from bioregistry import NormalizedNamableReference as Reference
-from sssom_pydantic import MappingTool
+from sssom_pydantic import MappingTool, SemanticMapping
 
-from biomappings import SemanticMapping
 from biomappings.resources import COLUMNS, write_predictions
 from biomappings.wsgi import Controller, State, get_app
 

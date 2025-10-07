@@ -2,15 +2,17 @@
 
 import click
 import pyobo
+from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.sources.cpt import iter_terms
+from sssom_pydantic import MappingTool, SemanticMapping
 
 from biomappings.lexical import append_lexical_predictions
-from biomappings.resources import SemanticMapping, append_prediction_tuples
+from biomappings.resources import append_prediction_tuples
 from biomappings.utils import get_script_url
 
 
 @click.command()
-def main():
+def main() -> None:
     """Generate vaccine mappings."""
     provenance = get_script_url(__file__)
     append_lexical_predictions("cvx", ["mesh", "cpt", "vo"], provenance=provenance)
@@ -24,11 +26,11 @@ def main():
             for scored_match in grounder.get_matches(text + " vaccine"):
                 pred = SemanticMapping(
                     subject=term.reference,
-                    predicate="skos:exactMatch",
-                    object=scored_match.refeference,
-                    mapping_justification="semapv:LexicalMatching",
+                    predicate=exact_match,
+                    object=scored_match.reference,
+                    justification=lexical_matching_process,
                     confidence=0.9,
-                    mapping_tool=provenance,
+                    mapping_tool=MappingTool(name=provenance),
                 )
                 preds.append(pred)
     append_prediction_tuples(preds)

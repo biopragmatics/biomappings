@@ -4,6 +4,7 @@ These are directly added to the version controlled DOID OWL file.
 """
 
 import csv
+from collections.abc import Sequence
 
 import obonet
 
@@ -20,12 +21,12 @@ g = obonet.read_obo(
 )
 
 
-def add_xref(lines, node, xref):
+def add_xref(lines: list[str], node_curie: str, xref_curie: str) -> list[str]:
     """Add xrefs to an appropriate place in the OWL file."""
-    node_owl = node.replace(":", "_")
+    node_owl = node_curie.replace(":", "_")
     look_for_xref = False
     start_xref_idx = None
-    def_idx = None
+    def_idx: int | None = None
     xref_entries = []
     for idx, line in enumerate(lines):
         # First, find the class with the given ID and start looking for xrefs
@@ -57,10 +58,14 @@ def add_xref(lines, node, xref):
     # If we never found any existing xrefs then we will put the new xref
     # after the definition
     if start_xref_idx is None:
+        if def_idx is None:
+            raise ValueError
         start_xref_idx = def_idx + 1
     # We now have to render the xref string and sort xrefs alphabetically
     # to make sure we put the new one in the right place
-    xref_str = f'AnnotationAssertion(oboInOwl:hasDbXref obo:{node_owl} "{xref}"^^xsd:string)\n'
+    xref_str = (
+        f'AnnotationAssertion(oboInOwl:hasDbXref obo:{node_owl} "{xref_curie}"^^xsd:string)\n'
+    )
     xref_entries.append(xref_str)
     xref_entries = sorted(xref_entries)
     xr_idx = xref_entries.index(xref_str)
@@ -68,7 +73,8 @@ def add_xref(lines, node, xref):
     return lines
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Add curated cross-references to the DOID OWL file."""
     # There are some curations that are redundant since DOID already mapped
     # these nodes to MESH. We figure out what these are so we can avoid
     # adding them.
@@ -90,22 +96,22 @@ if __name__ == "__main__":
     # We now load mappings curated in Biomappings
     mappings = load_mappings()
     doid_mappings = [
-        (m["source identifier"], m["target identifier"], m)
-        for m in mappings
+        (mapping.subject.identifier, mapping.object.identifier, mapping)
+        for mapping in mappings
         if (
-            m["source prefix"] == "doid"
-            and m["target prefix"] == "mesh"
-            and m["source identifier"] not in doid_already_mapped
+            mapping.subject.prefix == "doid"
+            and mapping.object.prefix == "mesh"
+            and mapping.subject.identifier not in doid_already_mapped
         )
     ]
     # Make sure we get and standardize the order of mappings in both directions
     doid_mappings += [
-        (m["target identifier"], m["source identifier"], m)
-        for m in mappings
+        (mapping.object.identifier, mapping.subject.identifier, mapping)
+        for mapping in mappings
         if (
-            m["source prefix"] == "mesh"
-            and m["target prefix"] == "doid"
-            and m["target identifier"] not in doid_already_mapped
+            mapping.subject.prefix == "mesh"
+            and mapping.object.prefix == "doid"
+            and mapping.object.identifier not in doid_already_mapped
         )
     ]
 
@@ -124,11 +130,23 @@ if __name__ == "__main__":
         "type",
         "source",
     ]
-    review_rows = [review_cols]
+    review_rows: list[Sequence[str]] = [review_cols]
     # Add all the xrefs to the OWL, simultaneously add xrefs to a review TSV
     for do_id, mesh_id, mapping in doid_mappings:
         lines = add_xref(lines, do_id, "MESH:" + mesh_id)
-        review_rows.append([mapping[c] for c in review_cols])
+        review_rows.append(
+            (
+                str(mapping.subject.prefix),
+                mapping.subject.identifier,
+                mapping.subject_name or "",
+                mapping.predicate.curie,
+                str(mapping.object.prefix),
+                mapping.object.identifier,
+                mapping.object_name or "",
+                mapping.justification.curie,
+                mapping.mapping_tool_name or "",
+            )
+        )
 
     # Dump the new review TSV and OWL file
     with open(REVIEW_PATH, "w") as fh:
@@ -137,3 +155,7 @@ if __name__ == "__main__":
 
     with open(EDITABLE_OWL_PATH, "w") as fh:
         fh.writelines(lines)
+
+
+if __name__ == "__main__":
+    main()
