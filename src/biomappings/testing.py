@@ -19,10 +19,10 @@ from biomappings.resources import SemanticMapping, load_mappings, load_predictio
 from biomappings.resources.semapv import get_semapv_id_to_name
 from biomappings.utils import (
     CURATORS_PATH,
-    KKK,
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     UNSURE_SSSOM_PATH,
+    CanonicalMappingTuple,
     get_canonical_tuple,
 )
 
@@ -159,13 +159,13 @@ class IntegrityTestCase(unittest.TestCase):
 
     def test_cross_redundancy(self) -> None:
         """Test the redundancy of manually curated mappings and predicted mappings."""
-        counter: defaultdict[KKK, defaultdict[str, list[int]]] = defaultdict(
+        counter: defaultdict[CanonicalMappingTuple, defaultdict[str, list[int]]] = defaultdict(
             lambda: defaultdict(list)
         )
         for label, line, mapping in self._iter_groups():
             counter[get_canonical_tuple(mapping)][label].append(line)
 
-        redundant: list[tuple[KKK, list[tuple[str, list[int]]]]] = []
+        redundant: list[tuple[CanonicalMappingTuple, list[tuple[str, list[int]]]]] = []
         for mapping_key, label_to_lines in counter.items():
             if len(label_to_lines) <= 1:
                 continue

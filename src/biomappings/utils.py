@@ -28,7 +28,6 @@ __all__ = [
     "get_script_url",
 ]
 
-
 HERE = Path(__file__).parent.resolve()
 ROOT = HERE.parent.parent.resolve()
 RESOURCE_PATH = HERE.joinpath("resources")
@@ -110,10 +109,11 @@ def get_script_url(fname: str) -> str:
     return f"https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}"
 
 
-KKK = tuple[str, str, str, str]
+#: A canonical mapping tuple
+CanonicalMappingTuple = tuple[str, str, str, str]
 
 
-def get_canonical_tuple(mapping: SemanticMapping) -> KKK:
+def get_canonical_tuple(mapping: SemanticMapping) -> CanonicalMappingTuple:
     """Get the canonical tuple from a mapping entry."""
     source = mapping.subject
     target = mapping.object

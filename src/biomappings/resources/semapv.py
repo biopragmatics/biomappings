@@ -11,7 +11,6 @@ __all__ = [
     "get_semapv_id_to_name",
 ]
 
-
 url = "https://raw.githubusercontent.com/mapping-commons/semantic-mapping-vocabulary/main/semapv-terms.tsv"
 HERE = Path(__file__).parent.resolve()
 PATH = HERE.joinpath("semapv.json")
