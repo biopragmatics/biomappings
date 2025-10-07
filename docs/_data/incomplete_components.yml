@@ -216,11 +216,11 @@
       name: vaccination
       prefix: efo
     target:
-      curie: idomal:0001040
-      identifier: '0001040'
-      link: https://bioregistry.io/idomal:0001040
+      curie: vo:0000002
+      identifier: '0000002'
+      link: https://bioregistry.io/vo:0000002
       name: vaccination
-      prefix: idomal
+      prefix: vo
   - source:
       curie: efo:0004292
       identifier: 0004292
@@ -228,11 +228,11 @@
       name: vaccination
       prefix: efo
     target:
-      curie: vo:0000002
-      identifier: '0000002'
-      link: https://bioregistry.io/vo:0000002
+      curie: idomal:0001040
+      identifier: '0001040'
+      link: https://bioregistry.io/idomal:0001040
       name: vaccination
-      prefix: vo
+      prefix: idomal
   - source:
       curie: efo:0004292
       identifier: 0004292
@@ -1040,11 +1040,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: clo:0001601
-      identifier: '0001601'
-      link: https://bioregistry.io/clo:0001601
-      name: A549 cell
-      prefix: clo
+      curie: efo:0001086
+      identifier: 0001086
+      link: https://bioregistry.io/efo:0001086
+      name: A549
+      prefix: efo
   - source:
       curie: cellosaurus:0023
       identifier: '0023'
@@ -1052,11 +1052,11 @@
       name: A-549
       prefix: cellosaurus
     target:
-      curie: efo:0001086
-      identifier: 0001086
-      link: https://bioregistry.io/efo:0001086
-      name: A549
-      prefix: efo
+      curie: clo:0001601
+      identifier: '0001601'
+      link: https://bioregistry.io/clo:0001601
+      name: A549 cell
+      prefix: clo
   - source:
       curie: cellosaurus:0023
       identifier: '0023'
@@ -2072,11 +2072,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: cellosaurus:1334
-      identifier: '1334'
-      link: https://bioregistry.io/cellosaurus:1334
+      curie: efo:0006612
+      identifier: '0006612'
+      link: https://bioregistry.io/efo:0006612
       name: KMS-12-BM
-      prefix: cellosaurus
+      prefix: efo
   - source:
       curie: bto:0006459
       identifier: 0006459
@@ -2084,11 +2084,11 @@
       name: KMS-12-BM cell
       prefix: bto
     target:
-      curie: efo:0006612
-      identifier: '0006612'
-      link: https://bioregistry.io/efo:0006612
+      curie: cellosaurus:1334
+      identifier: '1334'
+      link: https://bioregistry.io/cellosaurus:1334
       name: KMS-12-BM
-      prefix: efo
+      prefix: cellosaurus
   - source:
       curie: cellosaurus:1334
       identifier: '1334'
@@ -2171,11 +2171,11 @@
       name: MDA-MB-231
       prefix: ccle
     target:
-      curie: clo:0037291
-      identifier: 0037291
-      link: https://bioregistry.io/clo:0037291
-      name: MDAMB231 cell
-      prefix: clo
+      curie: mesh:D000092302
+      identifier: D000092302
+      link: https://bioregistry.io/mesh:D000092302
+      name: MDA-MB-231 Cells
+      prefix: mesh
   - source:
       curie: ccle:MDAMB231_BREAST
       identifier: MDAMB231_BREAST
@@ -2183,11 +2183,11 @@
       name: MDA-MB-231
       prefix: ccle
     target:
-      curie: mesh:D000092302
-      identifier: D000092302
-      link: https://bioregistry.io/mesh:D000092302
-      name: MDA-MB-231 Cells
-      prefix: mesh
+      curie: clo:0037291
+      identifier: 0037291
+      link: https://bioregistry.io/clo:0037291
+      name: MDAMB231 cell
+      prefix: clo
   - source:
       curie: clo:0007634
       identifier: '0007634'
@@ -2345,11 +2345,11 @@
       name: RH-30
       prefix: ccle
     target:
-      curie: ccle:SJRH30_SOFT_TISSUE
-      identifier: SJRH30_SOFT_TISSUE
-      link: https://bioregistry.io/ccle:SJRH30_SOFT_TISSUE
+      curie: efo:0002329
+      identifier: 0002329
+      link: https://bioregistry.io/efo:0002329
       name: SJRH30
-      prefix: ccle
+      prefix: efo
   - source:
       curie: ccle:RH30_SOFT_TISSUE
       identifier: RH30_SOFT_TISSUE
@@ -2357,11 +2357,11 @@
       name: RH-30
       prefix: ccle
     target:
-      curie: efo:0002329
-      identifier: 0002329
-      link: https://bioregistry.io/efo:0002329
+      curie: ccle:SJRH30_SOFT_TISSUE
+      identifier: SJRH30_SOFT_TISSUE
+      link: https://bioregistry.io/ccle:SJRH30_SOFT_TISSUE
       name: SJRH30
-      prefix: efo
+      prefix: ccle
   - source:
       curie: cellosaurus:0041
       identifier: '0041'
@@ -2452,6 +2452,35 @@
       identifier: 0002379
       link: https://bioregistry.io/efo:0002379
       name: SiHa
+      prefix: efo
+- edges:
+  - source:
+      curie: ccle:SKMEL1_SKIN
+      identifier: SKMEL1_SKIN
+      link: https://bioregistry.io/ccle:SKMEL1_SKIN
+      name: SK-MEL-1
+      prefix: ccle
+    target:
+      curie: clo:0037292
+      identifier: 0037292
+      link: https://bioregistry.io/clo:0037292
+      name: SKMEL1
+      prefix: clo
+  nodes:
+    ccle:SKMEL1_SKIN:
+      identifier: SKMEL1_SKIN
+      link: https://bioregistry.io/ccle:SKMEL1_SKIN
+      name: SK-MEL-1
+      prefix: ccle
+    clo:0037292:
+      identifier: 0037292
+      link: https://bioregistry.io/clo:0037292
+      name: SKMEL1
+      prefix: clo
+    efo:0002332:
+      identifier: '0002332'
+      link: https://bioregistry.io/efo:0002332
+      name: SKMEL1
       prefix: efo
 - edges:
   - source:
@@ -3534,11 +3563,11 @@
       name: MCF7 cell
       prefix: clo
     target:
-      curie: efo:0001203
-      identifier: '0001203'
-      link: https://bioregistry.io/efo:0001203
-      name: MCF-7
-      prefix: efo
+      curie: ncit:C18096
+      identifier: C18096
+      link: https://bioregistry.io/ncit:C18096
+      name: MCF7
+      prefix: ncit
   - source:
       curie: clo:0007606
       identifier: '0007606'
@@ -3546,11 +3575,11 @@
       name: MCF7 cell
       prefix: clo
     target:
-      curie: ncit:C18096
-      identifier: C18096
-      link: https://bioregistry.io/ncit:C18096
-      name: MCF7
-      prefix: ncit
+      curie: efo:0001203
+      identifier: '0001203'
+      link: https://bioregistry.io/efo:0001203
+      name: MCF-7
+      prefix: efo
   - source:
       curie: efo:0001203
       identifier: '0001203'
@@ -3660,11 +3689,11 @@
       name: anthrax
       prefix: cpt
     target:
-      curie: cvx:24
-      identifier: '24'
-      link: https://bioregistry.io/cvx:24
-      name: anthrax vaccine
-      prefix: cvx
+      curie: vo:0000013
+      identifier: '0000013'
+      link: https://bioregistry.io/vo:0000013
+      name: Bacillus anthracis vaccine
+      prefix: vo
   - source:
       curie: cpt:90581
       identifier: '90581'
@@ -3672,11 +3701,11 @@
       name: anthrax
       prefix: cpt
     target:
-      curie: vo:0000013
-      identifier: '0000013'
-      link: https://bioregistry.io/vo:0000013
-      name: Bacillus anthracis vaccine
-      prefix: vo
+      curie: cvx:24
+      identifier: '24'
+      link: https://bioregistry.io/cvx:24
+      name: anthrax vaccine
+      prefix: cvx
   - source:
       curie: cvx:24
       identifier: '24'
@@ -3718,11 +3747,11 @@
       name: BCG
       prefix: cpt
     target:
-      curie: dron:00012890
-      identifier: 00012890
-      link: https://bioregistry.io/dron:00012890
-      name: BCG Vaccine
-      prefix: dron
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
   - source:
       curie: cpt:90585
       identifier: '90585'
@@ -3766,11 +3795,11 @@
       name: BCG
       prefix: cpt
     target:
-      curie: cvx:19
-      identifier: '19'
-      link: https://bioregistry.io/cvx:19
-      name: Bacillus Calmette-Guerin vaccine
-      prefix: cvx
+      curie: dron:00012890
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
+      name: BCG Vaccine
+      prefix: dron
   - source:
       curie: cpt:90728
       identifier: '90728'
@@ -3778,11 +3807,11 @@
       name: BCG
       prefix: cpt
     target:
-      curie: dron:00012890
-      identifier: 00012890
-      link: https://bioregistry.io/dron:00012890
-      name: BCG Vaccine
-      prefix: dron
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
   - source:
       curie: cpt:90728
       identifier: '90728'
@@ -3814,18 +3843,6 @@
       name: BCG
       prefix: cpt
     target:
-      curie: cvx:19
-      identifier: '19'
-      link: https://bioregistry.io/cvx:19
-      name: Bacillus Calmette-Guerin vaccine
-      prefix: cvx
-  - source:
-      curie: cvx:19
-      identifier: '19'
-      link: https://bioregistry.io/cvx:19
-      name: Bacillus Calmette-Guerin vaccine
-      prefix: cvx
-    target:
       curie: dron:00012890
       identifier: 00012890
       link: https://bioregistry.io/dron:00012890
@@ -3855,6 +3872,18 @@
       link: https://bioregistry.io/ncit:C298
       name: BCG Vaccine
       prefix: ncit
+  - source:
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
+    target:
+      curie: dron:00012890
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
+      name: BCG Vaccine
+      prefix: dron
   - source:
       curie: cvx:19
       identifier: '19'
@@ -4237,11 +4266,11 @@
       name: rubella
       prefix: cpt
     target:
-      curie: cvx:06
-      identifier: '06'
-      link: https://bioregistry.io/cvx:06
-      name: rubella virus vaccine
-      prefix: cvx
+      curie: dron:00012200
+      identifier: '00012200'
+      link: https://bioregistry.io/dron:00012200
+      name: Rubella virus vaccine
+      prefix: dron
   - source:
       curie: cpt:90706
       identifier: '90706'
@@ -4249,11 +4278,11 @@
       name: rubella
       prefix: cpt
     target:
-      curie: dron:00012200
-      identifier: '00012200'
-      link: https://bioregistry.io/dron:00012200
-      name: Rubella virus vaccine
-      prefix: dron
+      curie: cvx:06
+      identifier: '06'
+      link: https://bioregistry.io/cvx:06
+      name: rubella virus vaccine
+      prefix: cvx
   - source:
       curie: cpt:90706
       identifier: '90706'
@@ -4285,18 +4314,6 @@
       name: rubella virus vaccine
       prefix: cvx
     target:
-      curie: mesh:D012411
-      identifier: D012411
-      link: https://bioregistry.io/mesh:D012411
-      name: Rubella Vaccine
-      prefix: mesh
-  - source:
-      curie: cvx:06
-      identifier: '06'
-      link: https://bioregistry.io/cvx:06
-      name: rubella virus vaccine
-      prefix: cvx
-    target:
       curie: dron:00012200
       identifier: '00012200'
       link: https://bioregistry.io/dron:00012200
@@ -4315,11 +4332,11 @@
       name: Rubella virus vaccine
       prefix: drugbank
   - source:
-      curie: dron:00012200
-      identifier: '00012200'
-      link: https://bioregistry.io/dron:00012200
-      name: Rubella virus vaccine
-      prefix: dron
+      curie: cvx:06
+      identifier: '06'
+      link: https://bioregistry.io/cvx:06
+      name: rubella virus vaccine
+      prefix: cvx
     target:
       curie: mesh:D012411
       identifier: D012411
@@ -4338,6 +4355,18 @@
       link: https://bioregistry.io/drugbank:DB10317
       name: Rubella virus vaccine
       prefix: drugbank
+  - source:
+      curie: dron:00012200
+      identifier: '00012200'
+      link: https://bioregistry.io/dron:00012200
+      name: Rubella virus vaccine
+      prefix: dron
+    target:
+      curie: mesh:D012411
+      identifier: D012411
+      link: https://bioregistry.io/mesh:D012411
+      name: Rubella Vaccine
+      prefix: mesh
   - source:
       curie: drugbank:DB10317
       identifier: DB10317
@@ -4592,11 +4621,11 @@
       name: yellow fever vaccine
       prefix: cvx
     target:
-      curie: ncit:C96396
-      identifier: C96396
-      link: https://bioregistry.io/ncit:C96396
-      name: Yellow Fever Vaccine
-      prefix: ncit
+      curie: vo:0000123
+      identifier: '0000123'
+      link: https://bioregistry.io/vo:0000123
+      name: Yellow fever virus vaccine
+      prefix: vo
   - source:
       curie: cvx:37
       identifier: '37'
@@ -4604,11 +4633,11 @@
       name: yellow fever vaccine
       prefix: cvx
     target:
-      curie: vo:0000123
-      identifier: '0000123'
-      link: https://bioregistry.io/vo:0000123
-      name: Yellow fever virus vaccine
-      prefix: vo
+      curie: ncit:C96396
+      identifier: C96396
+      link: https://bioregistry.io/ncit:C96396
+      name: Yellow Fever Vaccine
+      prefix: ncit
   - source:
       curie: ncit:C96396
       identifier: C96396
@@ -6170,11 +6199,11 @@
       name: Lung abscess
       prefix: hp
     target:
-      curie: umls:C0024110
-      identifier: C0024110
-      link: https://bioregistry.io/umls:C0024110
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
       name: Lung Abscess
-      prefix: umls
+      prefix: ncit
   - source:
       curie: hp:0025044
       identifier: '0025044'
@@ -6182,11 +6211,11 @@
       name: Lung abscess
       prefix: hp
     target:
-      curie: ncit:C99090
-      identifier: C99090
-      link: https://bioregistry.io/ncit:C99090
+      curie: umls:C0024110
+      identifier: C0024110
+      link: https://bioregistry.io/umls:C0024110
       name: Lung Abscess
-      prefix: ncit
+      prefix: umls
   - source:
       curie: mesh:D008169
       identifier: D008169
@@ -7712,11 +7741,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: ncit:C3275
-      identifier: C3275
-      link: https://bioregistry.io/ncit:C3275
+      curie: mesh:D009463
+      identifier: D009463
+      link: https://bioregistry.io/mesh:D009463
       name: Neuroma
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: doid:2001
       identifier: '2001'
@@ -7724,11 +7753,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: mesh:D009463
-      identifier: D009463
-      link: https://bioregistry.io/mesh:D009463
+      curie: ncit:C3275
+      identifier: C3275
+      link: https://bioregistry.io/ncit:C3275
       name: Neuroma
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: efo:0009619
       identifier: 0009619
@@ -9387,10 +9416,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP3845
-      identifier: WP3845
-      link: https://bioregistry.io/wikipathways:WP3845
-      name: Canonical and non-canonical Notch signaling
+      curie: wikipathways:WP61
+      identifier: WP61
+      link: https://bioregistry.io/wikipathways:WP61
+      name: Notch signaling pathway (Netpath)
       prefix: wikipathways
   - source:
       curie: wikipathways:WP268
@@ -9399,10 +9428,10 @@
       name: Notch signaling
       prefix: wikipathways
     target:
-      curie: wikipathways:WP61
-      identifier: WP61
-      link: https://bioregistry.io/wikipathways:WP61
-      name: Notch signaling pathway (Netpath)
+      curie: wikipathways:WP3845
+      identifier: WP3845
+      link: https://bioregistry.io/wikipathways:WP3845
+      name: Canonical and non-canonical Notch signaling
       prefix: wikipathways
   nodes:
     kegg.pathway:hsa04330:
@@ -9513,10 +9542,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033211
-      identifier: '0033211'
-      link: https://bioregistry.io/go:0033211
-      name: adiponectin-activated signaling pathway
+      curie: go:0033210
+      identifier: '0033210'
+      link: https://bioregistry.io/go:0033210
+      name: leptin-mediated signaling pathway
       prefix: go
   - source:
       curie: go:0033209
@@ -9525,10 +9554,10 @@
       name: tumor necrosis factor-mediated signaling pathway
       prefix: go
     target:
-      curie: go:0033210
-      identifier: '0033210'
-      link: https://bioregistry.io/go:0033210
-      name: leptin-mediated signaling pathway
+      curie: go:0033211
+      identifier: '0033211'
+      link: https://bioregistry.io/go:0033211
+      name: adiponectin-activated signaling pathway
       prefix: go
   - source:
       curie: go:0033210
@@ -10772,11 +10801,11 @@
       name: Congenital tracheomalacia
       prefix: mesh
     target:
-      curie: mesh:D055090
-      identifier: D055090
-      link: https://bioregistry.io/mesh:D055090
-      name: Tracheomalacia
-      prefix: mesh
+      curie: mondo:0019804
+      identifier: 0019804
+      link: https://bioregistry.io/mondo:0019804
+      name: tracheomalacia
+      prefix: mondo
   - source:
       curie: mesh:C557675
       identifier: C557675
@@ -10784,11 +10813,11 @@
       name: Congenital tracheomalacia
       prefix: mesh
     target:
-      curie: mondo:0019804
-      identifier: 0019804
-      link: https://bioregistry.io/mondo:0019804
-      name: tracheomalacia
-      prefix: mondo
+      curie: mesh:D055090
+      identifier: D055090
+      link: https://bioregistry.io/mesh:D055090
+      name: Tracheomalacia
+      prefix: mesh
   nodes:
     doid:0060313:
       identifier: '0060313'
@@ -11688,11 +11717,11 @@
       name: cone dystrophy
       prefix: doid
     target:
-      curie: mondo:0000455
-      identifier: '0000455'
-      link: https://bioregistry.io/mondo:0000455
-      name: cone dystrophy
-      prefix: mondo
+      curie: hp:0008020
+      identifier: 0008020
+      link: https://bioregistry.io/hp:0008020
+      name: Cone dystrophy
+      prefix: hp
   - source:
       curie: doid:0050795
       identifier: 0050795
@@ -11700,11 +11729,11 @@
       name: cone dystrophy
       prefix: doid
     target:
-      curie: hp:0008020
-      identifier: 0008020
-      link: https://bioregistry.io/hp:0008020
-      name: Cone dystrophy
-      prefix: hp
+      curie: mondo:0000455
+      identifier: '0000455'
+      link: https://bioregistry.io/mondo:0000455
+      name: cone dystrophy
+      prefix: mondo
   - source:
       curie: hp:0008020
       identifier: 0008020
@@ -14588,11 +14617,11 @@
       name: urolithiasis
       prefix: doid
     target:
-      curie: mondo:0024647
-      identifier: '0024647'
-      link: https://bioregistry.io/mondo:0024647
-      name: urolithiasis
-      prefix: mondo
+      curie: hp:0034368
+      identifier: 0034368
+      link: https://bioregistry.io/hp:0034368
+      name: Urolithiasis
+      prefix: hp
   - source:
       curie: doid:0080653
       identifier: 0080653
@@ -14600,11 +14629,11 @@
       name: urolithiasis
       prefix: doid
     target:
-      curie: hp:0034368
-      identifier: 0034368
-      link: https://bioregistry.io/hp:0034368
-      name: Urolithiasis
-      prefix: hp
+      curie: mondo:0024647
+      identifier: '0024647'
+      link: https://bioregistry.io/mondo:0024647
+      name: urolithiasis
+      prefix: mondo
   - source:
       curie: hp:0034368
       identifier: 0034368
