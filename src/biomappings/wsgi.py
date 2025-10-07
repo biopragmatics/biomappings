@@ -517,7 +517,8 @@ class Controller:
 CONTROLLER: Controller = cast(Controller, LocalProxy(lambda: current_app.config["controller"]))
 
 
-class MappingForm(FlaskForm):
+# TODO how to get types for flask-wtf
+class MappingForm(FlaskForm):  # type:ignore[misc]
     """Form for entering new mappings."""
 
     source_prefix = StringField("Source Prefix", id="source_prefix")

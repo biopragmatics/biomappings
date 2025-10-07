@@ -16,6 +16,11 @@ from tqdm.auto import tqdm
 from biomappings import SemanticMapping
 from biomappings.contribute.utils import get_curated_mappings
 
+__all__ = [
+    "get_curated_mappings",
+    "update_obo_lines",
+]
+
 
 def update_obo(*, prefix: str, path: str | Path) -> None:
     """Update an OBO flat file.
