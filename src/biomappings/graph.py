@@ -132,7 +132,7 @@ def charts() -> None:
                 "link": f"https://bioregistry.io/{reference.curie}",
                 "prefix": str(reference.prefix),
                 "identifier": reference.identifier,
-                "name": reference.name,
+                "name": getattr(reference, "name", None),
             }
             for reference in component.nodes
         }
