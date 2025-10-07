@@ -95,7 +95,7 @@ def iter_reports() -> Iterable[Report]:
 
 @click.command()
 @click.option("--token")
-def main(token):
+def main(token: str | None) -> None:
     """Submit the payload."""
     sub = get_curation_payload()
     res = resubmit_curations(sub, token=token)

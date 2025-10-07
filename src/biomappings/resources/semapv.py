@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 from functools import lru_cache
 from pathlib import Path
+from typing import cast
 
 __all__ = [
     "get_semapv_id_to_name",
@@ -19,7 +20,7 @@ PATH = HERE.joinpath("semapv.json")
 def get_semapv_id_to_name() -> dict[str, str]:
     """Get a dictionary of semapv local unique identifier to labels."""
     if PATH.is_file():
-        return json.loads(PATH.read_text())
+        return cast(dict[str, str], json.loads(PATH.read_text()))
 
     import pystow
 

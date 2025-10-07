@@ -236,7 +236,7 @@ def predict_lexical_mappings(
         id_name_mapping.items(), desc=f"[{prefix}] lexical tuples", unit_scale=True, unit="name"
     )
 
-    if method is None or method == "nen":
+    if method is None or method == "grounding":
 
         def _get_matches(s: str) -> list[ssslm.Match]:
             return grounder.get_matches(s)
@@ -351,7 +351,7 @@ def lexical_prediction_cli(
     tt = target if isinstance(target, str) else ", ".join(target)
 
     @click.command(help=f"Generate mappings from {prefix} to {tt}")
-    @verbose_option
+    @verbose_option  # type:ignore[misc]
     def main() -> None:
         """Generate mappings."""
         if filter_mutual_mappings:

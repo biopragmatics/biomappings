@@ -1,5 +1,7 @@
 """Validation tests for :mod:`biomappings`."""
 
+from typing import ClassVar
+
 from biomappings import (
     load_false_mappings,
     load_mappings,
@@ -9,10 +11,10 @@ from biomappings import (
 )
 
 
-class TestIntegrity(testing.IntegrityTestCase):
+class TestIntegrity(testing.GetterIntegrityTestCase):
     """Data integrity tests."""
 
-    mappings = load_mappings()
-    predictions = load_predictions()
-    incorrect = load_false_mappings()
-    unsure = load_unsure()
+    positive_mappings_getter: ClassVar[testing.MappingGetter] = load_mappings
+    predictions_getter: ClassVar[testing.MappingGetter] = load_predictions
+    negative_mappings_getter: ClassVar[testing.MappingGetter] = load_false_mappings
+    unsure_mappings_getter: ClassVar[testing.MappingGetter] = load_unsure

@@ -95,7 +95,7 @@ def _get_bool_arg(name: str) -> bool | None:
     return None
 
 
-def url_for_state(endpoint, state: State, **kwargs: Any) -> str:
+def url_for_state(endpoint: str, state: State, **kwargs: Any) -> str:
     """Get the URL for an endpoint based on the state class."""
     vv = state.model_dump(exclude_none=True, exclude_defaults=True)
     vv.update(kwargs)  # make sure stuff explicitly set overrides state
@@ -517,7 +517,8 @@ class Controller:
 CONTROLLER: Controller = cast(Controller, LocalProxy(lambda: current_app.config["controller"]))
 
 
-class MappingForm(FlaskForm):
+# TODO how to get types for flask-wtf
+class MappingForm(FlaskForm):  # type:ignore[misc]
     """Form for entering new mappings."""
 
     source_prefix = StringField("Source Prefix", id="source_prefix")

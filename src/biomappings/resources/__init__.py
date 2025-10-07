@@ -317,7 +317,7 @@ def remove_mappings(
     return (mapping for mapping in mappings if get_canonical_tuple(mapping) not in skip_tuples)
 
 
-def _clean_mappings(mappings: Iterable[SemanticMapping]):
+def _clean_mappings(mappings: Iterable[SemanticMapping]) -> Iterable[SemanticMapping]:
     m = sorted(mappings)
     return _remove_redundant(m)
 
@@ -455,7 +455,7 @@ def _mapping_from_semra(mapping: semra.Mapping, confidence: float) -> SemanticMa
     if evidence.mapping_set is None:
         raise ValueError
     # TODO what about negative?
-    return SemanticMapping(  # type:ignore
+    return SemanticMapping(
         subject=mapping.subject,
         predicate=mapping.predicate,
         object=mapping.object,
