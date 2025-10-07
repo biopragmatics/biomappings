@@ -72,14 +72,12 @@ COLUMNS = [
 ]
 
 
-def _load_table(path: str | Path, *, standardize: bool) -> list[sssom_pydantic.SemanticMapping]:
+def _load_table(path: str | Path) -> list[sssom_pydantic.SemanticMapping]:
     path = Path(path).expanduser().resolve()
     mappings, _converter, _mapping_set = sssom_pydantic.read(
         path,
         metadata={"mapping_set_id": f"{PURL_BASE}/{path.name}"},
     )
-    if standardize:
-        logger.warning(f"standardization is not implemented yet for {path}")
     return mappings
 
 
@@ -100,11 +98,9 @@ def _write_helper(
         raise ValueError(f"invalid mode: {mode}")
 
 
-def load_mappings(
-    *, path: str | Path | None = None, standardize: bool = False
-) -> list[SemanticMapping]:
+def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
     """Load the mappings table."""
-    return _load_table(path or POSITIVES_SSSOM_PATH, standardize=standardize)
+    return _load_table(path or POSITIVES_SSSOM_PATH)
 
 
 def load_mappings_subset(source: str, target: str) -> Mapping[str, str]:
@@ -122,14 +118,13 @@ def append_true_mappings(
     *,
     sort: bool = True,
     path: Path | None = None,
-    standardize: bool = False,
 ) -> None:
     """Append new lines to the mappings table."""
     if path is None:
         path = POSITIVES_SSSOM_PATH
     _write_helper(mappings, path=path, mode="a")
     if sort:
-        lint_true_mappings(path=path, standardize=standardize)
+        lint_true_mappings(path=path)
 
 
 def append_true_mapping_tuples(mappings: Iterable[SemanticMapping]) -> None:
@@ -142,12 +137,12 @@ def write_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | Non
     _write_helper(mappings, path or POSITIVES_SSSOM_PATH, mode="w")
 
 
-def lint_true_mappings(*, path: Path | None = None, standardize: bool) -> None:
+def lint_true_mappings(*, path: Path | None = None) -> None:
     """Lint the true mappings file."""
-    _lint_curated_mappings(path=path or POSITIVES_SSSOM_PATH, standardize=standardize)
+    _lint_curated_mappings(path=path or POSITIVES_SSSOM_PATH)
 
 
-def _lint_curated_mappings(path: Path, *, standardize: bool) -> None:
+def _lint_curated_mappings(path: Path) -> None:
     """Lint the true mappings file."""
     sssom_pydantic.lint(
         path,
@@ -155,11 +150,9 @@ def _lint_curated_mappings(path: Path, *, standardize: bool) -> None:
     )
 
 
-def load_false_mappings(
-    *, path: Path | None = None, standardize: bool = False
-) -> list[SemanticMapping]:
+def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the false mappings table."""
-    return _load_table(path or NEGATIVES_SSSOM_PATH, standardize=standardize)
+    return _load_table(path or NEGATIVES_SSSOM_PATH)
 
 
 def append_false_mappings(
@@ -167,14 +160,15 @@ def append_false_mappings(
     *,
     sort: bool = True,
     path: Path | None = None,
-    standardize: bool = False,
 ) -> None:
     """Append new lines to the false mappings table."""
     if path is None:
         path = NEGATIVES_SSSOM_PATH
     _write_helper(mappings, path=path, mode="a")
     if sort:
-        lint_false_mappings(path=path, standardize=standardize)
+        lint_false_mappings(
+            path=path,
+        )
 
 
 def write_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
@@ -182,14 +176,18 @@ def write_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | No
     _write_helper(mappings, path or NEGATIVES_SSSOM_PATH, mode="w")
 
 
-def lint_false_mappings(*, path: Path | None = None, standardize: bool) -> None:
+def lint_false_mappings(*, path: Path | None = None) -> None:
     """Lint the false mappings file."""
-    _lint_curated_mappings(path=path or NEGATIVES_SSSOM_PATH, standardize=standardize)
+    _lint_curated_mappings(
+        path=path or NEGATIVES_SSSOM_PATH,
+    )
 
 
-def load_unsure(*, path: Path | None = None, standardize: bool = False) -> list[SemanticMapping]:
+def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the unsure table."""
-    return _load_table(path or UNSURE_SSSOM_PATH, standardize=standardize)
+    return _load_table(
+        path or UNSURE_SSSOM_PATH,
+    )
 
 
 def append_unsure_mappings(
@@ -197,14 +195,13 @@ def append_unsure_mappings(
     *,
     sort: bool = True,
     path: Path | None = None,
-    standardize: bool = False,
 ) -> None:
     """Append new lines to the "unsure" mappings table."""
     if path is None:
         path = UNSURE_SSSOM_PATH
     _write_helper(mappings, path=path, mode="a")
     if sort:
-        lint_unsure_mappings(path=path, standardize=standardize)
+        lint_unsure_mappings(path=path)
 
 
 def write_unsure_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
@@ -212,16 +209,16 @@ def write_unsure_mappings(mappings: Iterable[SemanticMapping], *, path: Path | N
     _write_helper(mappings, path or UNSURE_SSSOM_PATH, mode="w")
 
 
-def lint_unsure_mappings(*, standardize: bool, path: Path | None = None) -> None:
+def lint_unsure_mappings(*, path: Path | None = None) -> None:
     """Lint the unsure mappings file."""
-    _lint_curated_mappings(path=path or UNSURE_SSSOM_PATH, standardize=standardize)
+    _lint_curated_mappings(
+        path=path or UNSURE_SSSOM_PATH,
+    )
 
 
-def load_predictions(
-    *, path: str | Path | None = None, standardize: bool = False
-) -> list[SemanticMapping]:
+def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:
     """Load the predictions table."""
-    return _load_table(path or PREDICTIONS_SSSOM_PATH, standardize=standardize)
+    return _load_table(path or PREDICTIONS_SSSOM_PATH)
 
 
 def write_predictions(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
@@ -242,11 +239,13 @@ def append_prediction_tuples(
     deduplicate: bool = True,
     sort: bool = True,
     path: Path | None = None,
-    standardize: bool = False,
 ) -> None:
     """Append new lines to the predictions table that come as canonical tuples."""
     append_predictions(
-        prediction_tuples, deduplicate=deduplicate, sort=sort, path=path, standardize=standardize
+        prediction_tuples,
+        deduplicate=deduplicate,
+        sort=sort,
+        path=path,
     )
 
 
@@ -256,7 +255,6 @@ def append_predictions(
     deduplicate: bool = True,
     sort: bool = True,
     path: Path | None = None,
-    standardize: bool = True,
 ) -> None:
     """Append new lines to the predictions table."""
     if deduplicate:
@@ -277,14 +275,15 @@ def append_predictions(
         path = PREDICTIONS_SSSOM_PATH
     _write_helper(mappings, path=path, mode="a")
     if sort:
-        lint_predictions(path=path, standardize=standardize)
+        lint_predictions(
+            path=path,
+        )
 
 
 def lint_predictions(
     *,
     path: Path | None = None,
     additional_curated_mappings: Iterable[SemanticMapping] | None = None,
-    standardize: bool,
 ) -> None:
     """Lint the predictions file.
 
@@ -296,11 +295,13 @@ def lint_predictions(
     :param additional_curated_mappings: A list of additional mappings
     """
     mappings = remove_mappings(
-        load_predictions(path=path, standardize=standardize),
+        load_predictions(
+            path=path,
+        ),
         itt.chain(
-            load_mappings(standardize=standardize),
-            load_false_mappings(standardize=standardize),
-            load_unsure(standardize=standardize),
+            load_mappings(),
+            load_false_mappings(),
+            load_unsure(),
             additional_curated_mappings or [],
         ),
     )

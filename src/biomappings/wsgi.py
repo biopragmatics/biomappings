@@ -500,23 +500,17 @@ class Controller:
         # no need to standardize since we assume everything was correct on load.
         # only write files that have some values to go in them!
         if entries["correct"]:
-            append_true_mappings(
-                entries["correct"], path=self.positives_path, sort=True, standardize=False
-            )
+            append_true_mappings(entries["correct"], path=self.positives_path, sort=True)
         if entries["incorrect"]:
-            append_false_mappings(
-                entries["incorrect"], path=self.negatives_path, sort=True, standardize=False
-            )
+            append_false_mappings(entries["incorrect"], path=self.negatives_path, sort=True)
         if entries["unsure"]:
-            append_unsure_mappings(
-                entries["unsure"], path=self.unsure_path, sort=True, standardize=False
-            )
+            append_unsure_mappings(entries["unsure"], path=self.unsure_path, sort=True)
         write_predictions(self._predictions, path=self.predictions_path)
         self._marked.clear()
 
         # Now add manually curated mappings, if there are any
         if self._added_mappings:
-            append_true_mappings(self._added_mappings, path=self.positives_path, standardize=False)
+            append_true_mappings(self._added_mappings, path=self.positives_path)
             self._added_mappings = []
 
 

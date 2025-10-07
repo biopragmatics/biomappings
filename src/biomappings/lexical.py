@@ -131,7 +131,7 @@ def append_lexical_predictions(
 
     # since the function that constructs the predictions already
     # pre-standardizes, we don't have to worry about standardizing again
-    append_prediction_tuples(predictions, path=path, standardize=False)
+    append_prediction_tuples(predictions, path=path)
 
 
 def _calculate_similarities(
