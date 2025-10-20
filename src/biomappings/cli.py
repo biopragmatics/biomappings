@@ -9,14 +9,14 @@ from collections import Counter
 from pathlib import Path
 
 import click
+import matplotlib.axes
 import networkx as nx
 import yaml
 from curies.vocabulary import exact_match
 from more_click import run_app
 from tqdm import tqdm
 
-from .graph import _countplot_list, _graph_from_mappings
-from .resources import load_false_mappings, load_mappings
+from .resources import _graph_from_mappings, load_false_mappings, load_mappings
 from .resources.export_sssom import sssom
 from .summary import export
 from .utils import DATA, IMG, get_git_hash
@@ -321,3 +321,15 @@ main.add_command(sssom)
 
 if __name__ == "__main__":
     main()
+
+
+def _countplot_list(data: list[int], ax: matplotlib.axes.Axes) -> None:
+    import pandas as pd
+    import seaborn as sns
+
+    counter = Counter(data)
+    for size in range(min(counter), max(counter)):
+        if size not in counter:
+            counter[size] = 0
+    df = pd.DataFrame(counter.items(), columns=["size", "count"]).sort_values("size").reset_index()
+    sns.barplot(data=df, x="size", y="count", ax=ax)
