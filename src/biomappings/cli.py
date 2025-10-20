@@ -11,7 +11,6 @@ from more_click import run_app
 from .graph import charts
 from .resources.export_sssom import sssom
 from .summary import export
-from .upload_ndex import ndex
 from .utils import get_git_hash
 
 
@@ -133,8 +132,36 @@ def remove_curated() -> None:
     filter_predictions(get_curated_filter())
 
 
+@main.command()
+@click.option("--username", help="NDEx username")
+@click.option("--password", help="NDEx password")
+def ndex(username: str | None, password: str | None) -> None:
+    """Upload to NDEx, see https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf."""
+    from sssom_pydantic import MappingSet
+    from sssom_pydantic.ndex_io import update_ndex
+
+    from biomappings import load_mappings
+    from biomappings.utils import BIOMAPPINGS_NDEX_UUID, get_git_hash
+
+    mappings = load_mappings()
+    metadata = MappingSet(
+        mapping_set_id="https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv",
+        mapping_set_title="Biomappings",
+        mapping_set_description="Manually curated semantic mappings (e.g., skos:exactMatch) between biological entities",
+        license="CC0",
+        mapping_set_version=get_git_hash(),
+    )
+    update_ndex(
+        uuid=BIOMAPPINGS_NDEX_UUID,
+        mappings=mappings,
+        metadata=metadata,
+        username=username,
+        password=password,
+    )
+    click.echo(f"Uploaded to https://bioregistry.io/ndex:{BIOMAPPINGS_NDEX_UUID}")
+
+
 main.add_command(export)
-main.add_command(ndex)
 main.add_command(charts)
 main.add_command(sssom)
 

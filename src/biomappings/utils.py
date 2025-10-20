@@ -10,6 +10,7 @@ from subprocess import CalledProcessError, check_output
 from sssom_pydantic import SemanticMapping
 
 __all__ = [
+    "BIOMAPPINGS_NDEX_UUID",
     "CURATORS_PATH",
     "NEGATIVES_SSSOM_PATH",
     "POSITIVES_SSSOM_PATH",
@@ -118,3 +119,6 @@ def get_canonical_tuple(mapping: SemanticMapping) -> CanonicalMappingTuple:
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
 CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
+
+#: THe NDEx UUID
+BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
