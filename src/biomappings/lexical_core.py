@@ -24,7 +24,6 @@ if TYPE_CHECKING:
     import pandas as pd
 
 __all__ = [
-    "CMapping",
     "PredictionMethod",
     "RecognitionMethod",
     "filter_custom",
@@ -40,7 +39,7 @@ RecognitionMethod: TypeAlias = Literal["ner", "grounding"]
 PredictionMethod: TypeAlias = RecognitionMethod | Literal["embedding"]
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
-CMapping: TypeAlias = Mapping[str, Mapping[str, Mapping[str, str]]]
+NestedMappingDict: TypeAlias = Mapping[str, Mapping[str, Mapping[str, str]]]
 
 
 def get_predictions(
@@ -326,7 +325,7 @@ def predict_lexical_mappings(
 
 def filter_custom(
     mappings: Iterable[SemanticMapping],
-    custom_filter: CMapping,
+    custom_filter: NestedMappingDict,
 ) -> Iterable[SemanticMapping]:
     """Filter out custom mappings."""
     counter = 0
@@ -373,7 +372,7 @@ def filter_existing_xrefs(
     )
 
 
-def get_mutual_mapping_filter(prefix: str, targets: str | Iterable[str]) -> CMapping:
+def get_mutual_mapping_filter(prefix: str, targets: str | Iterable[str]) -> NestedMappingDict:
     """Get a custom filter dictionary induced over the mutual mapping graph with all target prefixes.
 
     :param prefix: The source prefix
