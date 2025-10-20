@@ -138,7 +138,7 @@ def remove_curated() -> None:
 def ndex(username: str | None, password: str | None) -> None:
     """Upload to NDEx, see https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf."""
     from sssom_pydantic import MappingSet
-    from sssom_pydantic.ndex_io import update_ndex
+    from sssom_pydantic.contrib.ndex import update_ndex
 
     from biomappings import load_mappings
     from biomappings.utils import BIOMAPPINGS_NDEX_UUID, get_git_hash
