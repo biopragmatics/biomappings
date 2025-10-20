@@ -176,7 +176,7 @@ There are three places where curators of Biomappings are credited:
 1. ORCiD identifiers of curators are stored in each mapping
 2. The [summary website](https://biopragmatics.github.io/biomappings) groups
    and counts contributions curator
-3. A curation leaderboard is automatically uploaded to [APICURON](https://apicuron.org/database?resource_uri=https:%2F%2Fbiomappings.github.io%2Fbiomappings%2F).
+3. A curation leaderboard is under construction at [APICURON](https://apicuron.org/database?resource_uri=https:%2F%2Fbiomappings.github.io%2Fbiomappings%2F), though note that this is not up-to-date.
 
 ## 🚀 Installation
 
