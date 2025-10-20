@@ -28,6 +28,9 @@ def main() -> None:
     """Run the biomappings CLI."""
 
 
+main.add_command(export)
+main.add_command(sssom)
+
 if get_git_hash() is not None:
     resolver_base_option = click.option(
         "--resolver-base",
@@ -35,10 +38,10 @@ if get_git_hash() is not None:
     )
 
     @main.command()
-    @click.option("--predictions-path", type=click.Path(), help="A predictions TSV file path")
-    @click.option("--positives-path", type=click.Path(), help="A positives curation TSV file path")
-    @click.option("--negatives-path", type=click.Path(), help="A negatives curation TSV file path")
-    @click.option("--unsure-path", type=click.Path(), help="An unsure curation TSV file path")
+    @click.option("--predictions-path", type=Path, help="A predictions TSV file path")
+    @click.option("--positives-path", type=Path, help="A positives curation TSV file path")
+    @click.option("--negatives-path", type=Path, help="A negatives curation TSV file path")
+    @click.option("--unsure-path", type=Path, help="An unsure curation TSV file path")
     @resolver_base_option
     def web(
         predictions_path: Path,
@@ -60,7 +63,7 @@ if get_git_hash() is not None:
         run_app(app, with_gunicorn=False)
 
     @main.command()
-    @click.option("--path", required=True, type=click.Path(), help="A predictions TSV file path")
+    @click.option("--path", required=True, type=Path, help="A predictions TSV file path")
     @resolver_base_option
     def curate(
         path: Path,
@@ -316,13 +319,6 @@ def charts() -> None:
     plt.close(fig)
 
 
-main.add_command(export)
-main.add_command(sssom)
-
-if __name__ == "__main__":
-    main()
-
-
 def _countplot_list(data: list[int], ax: matplotlib.axes.Axes) -> None:
     import pandas as pd
     import seaborn as sns
@@ -333,3 +329,7 @@ def _countplot_list(data: list[int], ax: matplotlib.axes.Axes) -> None:
             counter[size] = 0
     df = pd.DataFrame(counter.items(), columns=["size", "count"]).sort_values("size").reset_index()
     sns.barplot(data=df, x="size", y="count", ax=ax)
+
+
+if __name__ == "__main__":
+    main()
