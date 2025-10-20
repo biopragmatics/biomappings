@@ -113,7 +113,7 @@ def lint() -> None:
 @click.argument("prefixes", nargs=-1)
 def prune(prefixes: list[str]) -> None:
     """Prune inferred mappings between the given prefixes from the predictions."""
-    from .mapping_graph import get_mutual_mapping_filter
+    from .lexical import get_mutual_mapping_filter
     from .resources import filter_predictions
 
     if len(prefixes) < 2:

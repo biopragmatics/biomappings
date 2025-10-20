@@ -11,7 +11,7 @@ from gilda.process import normalize
 from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm import tqdm
 
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 
 
@@ -58,4 +58,4 @@ def iterate_orthologous_lexical_matches(prefix: str = "wikipathways") -> Iterabl
 
 
 if __name__ == "__main__":
-    append_prediction_tuples(iterate_orthologous_lexical_matches())
+    append_predictions(iterate_orthologous_lexical_matches())

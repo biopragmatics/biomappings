@@ -3,9 +3,9 @@
 from __future__ import annotations
 
 import os
-from collections.abc import Mapping
 from pathlib import Path
 from subprocess import CalledProcessError, check_output
+from typing import TypeAlias
 
 from sssom_pydantic import SemanticMapping
 
@@ -17,7 +17,6 @@ __all__ = [
     "PREDICTIONS_SSSOM_PATH",
     "RESOURCE_PATH",
     "UNSURE_SSSOM_PATH",
-    "CMapping",
     "get_canonical_tuple",
     "get_git_hash",
     "get_script_url",
@@ -105,7 +104,7 @@ def get_script_url(fname: str) -> str:
 
 
 #: A canonical mapping tuple
-CanonicalMappingTuple = tuple[str, str, str, str]
+CanonicalMappingTuple: TypeAlias = tuple[str, str, str, str]
 
 
 def get_canonical_tuple(mapping: SemanticMapping) -> CanonicalMappingTuple:
@@ -116,9 +115,6 @@ def get_canonical_tuple(mapping: SemanticMapping) -> CanonicalMappingTuple:
         source, target = target, source
     return (*source.pair, *target.pair)
 
-
-#: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
-CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
 
 #: THe NDEx UUID
 BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"

@@ -34,7 +34,7 @@ if TYPE_CHECKING:
 __all__ = [
     "SemanticMapping",
     "append_false_mappings",
-    "append_prediction_tuples",
+    "append_predictions",
     "append_predictions",
     "append_true_mapping_tuples",
     "append_true_mappings",
@@ -229,22 +229,6 @@ def write_predictions(mappings: Iterable[SemanticMapping], *, path: Path | None 
         path,
         mode="w",
         metadata={"mapping_set_id": f"{PURL_BASE}/{path.name}"},
-    )
-
-
-def append_prediction_tuples(
-    prediction_tuples: Iterable[SemanticMapping],
-    *,
-    deduplicate: bool = True,
-    sort: bool = True,
-    path: Path | None = None,
-) -> None:
-    """Append new lines to the predictions table that come as canonical tuples."""
-    append_predictions(
-        prediction_tuples,
-        deduplicate=deduplicate,
-        sort=sort,
-        path=path,
     )
 
 

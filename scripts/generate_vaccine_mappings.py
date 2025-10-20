@@ -7,7 +7,7 @@ from pyobo.sources.cpt import iter_terms
 from sssom_pydantic import MappingTool, SemanticMapping
 
 from biomappings.lexical import append_lexical_predictions
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 
 
@@ -33,7 +33,7 @@ def main() -> None:
                     mapping_tool=MappingTool(name=provenance),
                 )
                 preds.append(pred)
-    append_prediction_tuples(preds)
+    append_predictions(preds)
 
 
 if __name__ == "__main__":

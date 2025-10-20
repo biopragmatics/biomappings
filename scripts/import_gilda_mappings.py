@@ -9,7 +9,7 @@ from curies.vocabulary import exact_match, lexical_matching_process
 from sssom_pydantic import MappingTool, SemanticMapping
 
 from biomappings import load_false_mappings, load_mappings
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 
 GILDA_PATH = os.environ.get("GILDA_PATH")
@@ -103,4 +103,4 @@ def get_mappings() -> Iterable[SemanticMapping]:
 
 
 if __name__ == "__main__":
-    append_prediction_tuples(get_mappings())
+    append_predictions(get_mappings())
