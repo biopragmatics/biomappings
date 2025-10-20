@@ -84,9 +84,6 @@ charts = [
 pyobo = [
     "pyobo>=0.12.8",
 ]
-apicuron = [
-    "apicuron_client",
-]
 web = [
     "flask",
     "bootstrap-flask",
