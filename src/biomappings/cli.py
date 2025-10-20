@@ -133,8 +133,8 @@ def remove_curated() -> None:
 
 
 @main.command()
-@click.option("--username", help="NDEx username")
-@click.option("--password", help="NDEx password")
+@click.option("--username", help="NDEx username, also looks in pystow configuration")
+@click.option("--password", help="NDEx password, also looks in pystow configuration")
 def ndex(username: str | None, password: str | None) -> None:
     """Upload to NDEx, see https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf."""
     from sssom_pydantic import MappingSet
