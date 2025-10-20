@@ -5,9 +5,10 @@ from __future__ import annotations
 import os
 from pathlib import Path
 from subprocess import CalledProcessError, check_output
-from typing import TypeAlias
+from typing import TYPE_CHECKING, TypeAlias
 
-from sssom_pydantic import SemanticMapping
+if TYPE_CHECKING:
+    from sssom_pydantic import SemanticMapping
 
 __all__ = [
     "BIOMAPPINGS_NDEX_UUID",

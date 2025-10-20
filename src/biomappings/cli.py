@@ -7,19 +7,16 @@ import os
 import sys
 from collections import Counter
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 import click
-import matplotlib.axes
-import networkx as nx
-import yaml
-from curies.vocabulary import exact_match
-from more_click import run_app
-from tqdm import tqdm
 
-from .resources import _graph_from_mappings, load_false_mappings, load_mappings
-from .resources.export_sssom import sssom
+from .resources.export_sssom import export_sssom
 from .summary import export
 from .utils import DATA, IMG, get_git_hash
+
+if TYPE_CHECKING:
+    import matplotlib.axes
 
 
 @click.group()
@@ -29,7 +26,7 @@ def main() -> None:
 
 
 main.add_command(export)
-main.add_command(sssom)
+main.add_command(export_sssom)
 
 if get_git_hash() is not None:
     resolver_base_option = click.option(
@@ -51,6 +48,8 @@ if get_git_hash() is not None:
         resolver_base: str | None,
     ) -> None:
         """Run the biomappings web app."""
+        from more_click import run_app
+
         from .wsgi import get_app
 
         app = get_app(
@@ -71,6 +70,7 @@ if get_git_hash() is not None:
     ) -> None:
         """Run a target curation web app."""
         from curies import Reference
+        from more_click import run_app
 
         from .resources import _load_table
         from .wsgi import get_app
@@ -104,7 +104,7 @@ def update(ctx: click.Context) -> None:
     click.secho("Building general exports", fg="green")
     ctx.invoke(export)
     click.secho("Building SSSOM export", fg="green")
-    ctx.invoke(sssom)
+    ctx.invoke(export_sssom)
     click.secho("Generating charts", fg="green")
     ctx.invoke(charts)
 
@@ -176,7 +176,13 @@ def ndex(username: str | None, password: str | None) -> None:
 def charts() -> None:
     """Make charts."""
     import matplotlib.pyplot as plt
+    import networkx as nx
     import seaborn as sns
+    import yaml
+    from curies.vocabulary import exact_match
+    from tqdm import tqdm
+
+    from .resources import _graph_from_mappings, load_false_mappings, load_mappings
 
     true_mappings = load_mappings()
     true_graph = _graph_from_mappings(true_mappings, include=[exact_match], strata="correct")
