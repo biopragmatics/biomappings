@@ -6,10 +6,9 @@ import logging
 import typing
 from collections import defaultdict
 from collections.abc import Iterable, Mapping
-from typing import Callable, Literal, TypeAlias, cast
+from typing import TYPE_CHECKING, Callable, Literal, TypeAlias, cast
 
 import curies
-import pandas as pd
 import pyobo
 import ssslm
 from bioregistry import NormalizedNamableReference, NormalizedNamedReference, NormalizedReference
@@ -18,6 +17,9 @@ from pyobo import get_grounder
 from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm.auto import tqdm
 
+if TYPE_CHECKING:
+    import pandas as pd
+
 __all__ = [
     "CMapping",
     "PredictionMethod",
@@ -25,6 +27,7 @@ __all__ = [
     "filter_custom",
     "filter_existing_xrefs",
     "get_predictions",
+    "predict_embedding_mappings",
     "predict_lexical_mappings",
 ]
 
@@ -75,6 +78,9 @@ def get_predictions(
     else:
         targets = list(target_prefixes)
 
+    if isinstance(mapping_tool, str):
+        mapping_tool = MappingTool(name=mapping_tool)
+
     if method is None or method in typing.get_args(RecognitionMethod):
         # by default, PyOBO wraps a gilda grounder, but
         # can be configured to use other NER/NEN systems
@@ -87,48 +93,75 @@ def get_predictions(
             identifiers_are_names=identifiers_are_names,
             method=cast(RecognitionMethod | None, method),
         )
-        if custom_filter is not None:
-            predictions = filter_custom(predictions, custom_filter)
-        predictions = filter_existing_xrefs(predictions, [prefix, *targets])
-
     elif method == "embedding":
-        import pyobo.api.embedding
-
-        if cutoff is None:
-            cutoff = 0.65
-        if batch_size is None:
-            batch_size = 10_000
-
-        model = pyobo.api.embedding.get_text_embedding_model()
-        source_df = pyobo.get_text_embeddings_df(prefix, model=model)
-
-        if isinstance(mapping_tool, str):
-            mapping_tool = MappingTool(name=mapping_tool)
-
-        predictions = []
-        for target in tqdm(targets, disable=len(targets) == 1):
-            target_df = pyobo.get_text_embeddings_df(target, model=model)
-            for source_id, target_id, confidence in _calculate_similarities(
-                source_df, target_df, batch_size, cutoff, progress=progress
-            ):
-                predictions.append(
-                    SemanticMapping(
-                        subject=_r(prefix=prefix, identifier=source_id),
-                        predicate=relation,
-                        object=_r(prefix=target, identifier=target_id),
-                        justification=lexical_matching_process,
-                        confidence=confidence,
-                        mapping_tool=mapping_tool,
-                    )
-                )
-
+        predictions = predict_embedding_mappings(
+            prefix,
+            target_prefixes,
+            mapping_tool=mapping_tool,
+            relation=relation,
+            cutoff=cutoff,
+            batch_size=batch_size,
+            progress=progress,
+        )
     else:
         raise ValueError(f"invalid lexical prediction method: {method}")
+
+    if custom_filter is not None:
+        predictions = filter_custom(predictions, custom_filter)
+
+    predictions = filter_existing_xrefs(predictions, [prefix, *targets])
 
     if custom_filter_function:
         predictions = list(filter(custom_filter_function, predictions))
 
     predictions = sorted(predictions)
+    return predictions
+
+
+def predict_embedding_mappings(
+    prefix: str,
+    target_prefixes: str | Iterable[str],
+    mapping_tool: str | MappingTool,
+    *,
+    relation: str | None | curies.NamableReference = None,
+    cutoff: float | None = None,
+    batch_size: int | None = None,
+    progress: bool = True,
+) -> list[SemanticMapping]:
+    """Predict semantic mappings with embeddings."""
+    import pyobo.api.embedding
+
+    if isinstance(target_prefixes, str):
+        targets = [target_prefixes]
+    else:
+        targets = list(target_prefixes)
+    if cutoff is None:
+        cutoff = 0.65
+    if batch_size is None:
+        batch_size = 10_000
+
+    model = pyobo.api.embedding.get_text_embedding_model()
+    source_df = pyobo.get_text_embeddings_df(prefix, model=model)
+
+    if isinstance(mapping_tool, str):
+        mapping_tool = MappingTool(name=mapping_tool)
+
+    predictions = []
+    for target in tqdm(targets, disable=len(targets) == 1):
+        target_df = pyobo.get_text_embeddings_df(target, model=model)
+        for source_id, target_id, confidence in _calculate_similarities(
+            source_df, target_df, batch_size, cutoff, progress=progress
+        ):
+            predictions.append(
+                SemanticMapping(
+                    subject=_r(prefix=prefix, identifier=source_id),
+                    predicate=relation,
+                    object=_r(prefix=target, identifier=target_id),
+                    justification=lexical_matching_process,
+                    confidence=confidence,
+                    mapping_tool=mapping_tool,
+                )
+            )
     return predictions
 
 
