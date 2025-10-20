@@ -48,7 +48,7 @@ __all__ = [
     "load_mappings_subset",
     "load_predictions",
     "load_unsure",
-    "prediction_tuples_from_semra",
+    "mappings_from_semra",
     "remove_mappings",
     "write_false_mappings",
     "write_predictions",
@@ -401,7 +401,7 @@ def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:
     return {k: dict(v) for k, v in d.items()}
 
 
-def prediction_tuples_from_semra(
+def mappings_from_semra(
     mappings: Iterable[semra.Mapping],
     *,
     confidence: float,
