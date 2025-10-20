@@ -15,7 +15,7 @@ from curies.vocabulary import (
 from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm import tqdm
 
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 
 
@@ -72,7 +72,7 @@ def main() -> None:
 
         _ground(mesh_grounder, node, rows, provenance)
 
-    append_prediction_tuples(rows)
+    append_predictions(rows)
     print(f"extracted {extracted_mesh} mesh mappings. should be about 65")
 
 

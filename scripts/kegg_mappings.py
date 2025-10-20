@@ -10,7 +10,7 @@ from pyobo.sources.kegg.api import ensure_list_pathways
 from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm import tqdm
 
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 
 
@@ -37,4 +37,4 @@ def iterate_kegg_matches() -> Iterable[SemanticMapping]:
 
 
 if __name__ == "__main__":
-    append_prediction_tuples(iterate_kegg_matches())
+    append_predictions(iterate_kegg_matches())

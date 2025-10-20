@@ -139,8 +139,8 @@ def get_prefix_map(prefixes: Collection[str]) -> dict[str, str]:
     return prefix_map
 
 
-@click.command()
-def sssom() -> None:
+@click.command(name="sssom")
+def export_sssom() -> None:
     """Export SSSOM."""
     from sssom.writers import write_json, write_owl
 
@@ -167,4 +167,4 @@ def sssom() -> None:
 
 
 if __name__ == "__main__":
-    sssom()
+    export_sssom()

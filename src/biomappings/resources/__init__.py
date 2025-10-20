@@ -7,18 +7,20 @@ import getpass
 import itertools as itt
 import logging
 from collections import defaultdict
-from collections.abc import Iterable, Mapping
+from collections.abc import Collection, Iterable, Mapping, Sequence
 from pathlib import Path
 from typing import TYPE_CHECKING, overload
 
 import bioregistry
+import networkx as nx
 import sssom_pydantic
 from bioregistry import NormalizedNamedReference
+from curies import Reference
 from sssom_pydantic import MappingTool, Metadata, SemanticMapping
 from tqdm.auto import tqdm
 from typing_extensions import Literal
 
-from biomappings.utils import (
+from ..utils import (
     CURATORS_PATH,
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
@@ -34,7 +36,7 @@ if TYPE_CHECKING:
 __all__ = [
     "SemanticMapping",
     "append_false_mappings",
-    "append_prediction_tuples",
+    "append_predictions",
     "append_predictions",
     "append_true_mapping_tuples",
     "append_true_mappings",
@@ -42,13 +44,16 @@ __all__ = [
     "filter_predictions",
     "get_curated_filter",
     "get_current_curator",
+    "get_false_graph",
+    "get_predictions_graph",
+    "get_true_graph",
     "load_curators",
     "load_false_mappings",
     "load_mappings",
     "load_mappings_subset",
     "load_predictions",
     "load_unsure",
-    "prediction_tuples_from_semra",
+    "mappings_from_semra",
     "remove_mappings",
     "write_false_mappings",
     "write_predictions",
@@ -232,22 +237,6 @@ def write_predictions(mappings: Iterable[SemanticMapping], *, path: Path | None 
     )
 
 
-def append_prediction_tuples(
-    prediction_tuples: Iterable[SemanticMapping],
-    *,
-    deduplicate: bool = True,
-    sort: bool = True,
-    path: Path | None = None,
-) -> None:
-    """Append new lines to the predictions table that come as canonical tuples."""
-    append_predictions(
-        prediction_tuples,
-        deduplicate=deduplicate,
-        sort=sort,
-        path=path,
-    )
-
-
 def append_predictions(
     mappings: Iterable[SemanticMapping],
     *,
@@ -417,7 +406,7 @@ def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:
     return {k: dict(v) for k, v in d.items()}
 
 
-def prediction_tuples_from_semra(
+def mappings_from_semra(
     mappings: Iterable[semra.Mapping],
     *,
     confidence: float,
@@ -462,3 +451,62 @@ def _mapping_from_semra(mapping: semra.Mapping, confidence: float) -> SemanticMa
         confidence=confidence,
         mapping_tool=MappingTool(name=evidence.mapping_set.name),
     )
+
+
+def get_true_graph(
+    include: Sequence[Reference] | None = None,
+    exclude: Sequence[Reference] | None = None,
+) -> nx.Graph:
+    """Get a graph of the true mappings."""
+    return _graph_from_mappings(load_mappings(), strata="correct", include=include, exclude=exclude)
+
+
+def get_false_graph(
+    include: Sequence[Reference] | None = None,
+    exclude: Sequence[Reference] | None = None,
+) -> nx.Graph:
+    """Get a graph of the false mappings."""
+    return _graph_from_mappings(
+        load_false_mappings(), strata="incorrect", include=include, exclude=exclude
+    )
+
+
+def get_predictions_graph(
+    include: Collection[Reference] | None = None,
+    exclude: Collection[Reference] | None = None,
+) -> nx.Graph:
+    """Get a graph of the predicted mappings."""
+    return _graph_from_mappings(
+        load_predictions(), strata="predicted", include=include, exclude=exclude
+    )
+
+
+def _graph_from_mappings(
+    mappings: Iterable[SemanticMapping],
+    strata: str,
+    include: Collection[Reference] | None = None,
+    exclude: Collection[Reference] | None = None,
+) -> nx.Graph:
+    graph = nx.Graph()
+
+    if include is not None:
+        include = set(include)
+        logger.info("only including %s", include)
+    if exclude is not None:
+        exclude = set(exclude)
+        logger.info("excluding %s", exclude)
+
+    for mapping in mappings:
+        if exclude and (mapping.predicate in exclude):
+            continue
+        if include and (mapping.predicate not in include):
+            continue
+        graph.add_edge(
+            mapping.subject,
+            mapping.object,
+            relation=mapping.predicate.curie,
+            provenance=mapping.author.curie if mapping.author else None,
+            type=mapping.justification.curie,
+            strata=strata,
+        )
+    return graph

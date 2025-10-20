@@ -12,7 +12,7 @@ from pyobo.sources.agrovoc import ensure_agrovoc_graph
 from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm import tqdm
 
-from biomappings.resources import append_prediction_tuples
+from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 
 AGROVOC_VERSION = "2021-12-02"
@@ -52,7 +52,7 @@ def main() -> None:
                     mapping_tool=MappingTool(name=provenance),
                 )
             )
-    append_prediction_tuples(rows)
+    append_predictions(rows)
 
 
 if __name__ == "__main__":

@@ -75,9 +75,7 @@ class CountRecord(TypedDict):
 def _get_count_records(mappings: Iterable[SemanticMapping]) -> list[CountRecord]:
     counter: typing.Counter[tuple[str, str]] = Counter()
     for mapping in mappings:
-        subject, target = mapping.subject, mapping.object
-        if subject > target:
-            subject, target = target, subject
+        subject, target = sorted([mapping.subject, mapping.object])
         counter[str(subject.prefix), str(target.prefix)] += 1
     return [
         {"source": subject_prefix, "target": target_prefix, "count": count}
@@ -91,10 +89,12 @@ def _get_contributors(mappings: Iterable[SemanticMapping]) -> list[dict[str, str
     orcid_to_curator_reference: dict[str, NamableReference] = {
         record.identifier: record for record in load_curators().values()
     }
-    counter = Counter(
-        mapping.author.identifier
+    orcid_counter = Counter(
+        author.identifier
         for mapping in mappings
-        if mapping.author and mapping.author.prefix == "orcid"
+        if mapping.authors
+        for author in mapping.authors
+        if author.prefix == "orcid"
     )
     return [
         {
@@ -104,7 +104,7 @@ def _get_contributors(mappings: Iterable[SemanticMapping]) -> list[dict[str, str
         }
         if (reference := orcid_to_curator_reference.get(orcid)) is not None
         else {"count": count}
-        for orcid, count in counter.most_common()
+        for orcid, count in orcid_counter.most_common()
     ]
 
 
