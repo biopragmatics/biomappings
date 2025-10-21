@@ -52,40 +52,37 @@ def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
     return mappings
 
 
-def _append_helper(
-    mappings: Iterable[SemanticMapping], path: Path | None, default_path: Path
-) -> None:
-    if path is None:
-        path = default_path
-    insert(path, converter=bioregistry.get_converter(), include_mappings=mappings)
-
-
-def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
-    """Append new lines to the mappings table."""
-    _append_helper(mappings, path, POSITIVES_SSSOM_PATH)
-
-
-def append_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
-    """Append new lines to the false mappings table."""
-    _append_helper(mappings, path, NEGATIVES_SSSOM_PATH)
-
-
 def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the false mappings table."""
-    mappings, _converter, _mapping_set = sssom_pydantic.read(path or NEGATIVES_SSSOM_PATH)
-    return mappings
+    return sssom_pydantic.read(path or NEGATIVES_SSSOM_PATH)[0]
 
 
 def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the unsure table."""
-    mappings, _converter, _mapping_set = sssom_pydantic.read(path or UNSURE_SSSOM_PATH)
-    return mappings
+    return sssom_pydantic.read(path or UNSURE_SSSOM_PATH)[0]
 
 
 def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:
     """Load the predictions table."""
-    mappings, _converter, _mapping_set = sssom_pydantic.read(path or PREDICTIONS_SSSOM_PATH)
-    return mappings
+    return sssom_pydantic.read(path or PREDICTIONS_SSSOM_PATH)[0]
+
+
+def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
+    """Append new lines to the mappings table."""
+    insert(
+        path or POSITIVES_SSSOM_PATH,
+        converter=bioregistry.get_converter(),
+        include_mappings=mappings,
+    )
+
+
+def append_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
+    """Append new lines to the false mappings table."""
+    insert(
+        path or NEGATIVES_SSSOM_PATH,
+        converter=bioregistry.get_converter(),
+        include_mappings=mappings,
+    )
 
 
 def append_predictions(
