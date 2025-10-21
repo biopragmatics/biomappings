@@ -2,15 +2,15 @@
 
 import logging
 
+import sssom_pydantic
 from curies.vocabulary import exact_match, lexical_similarity_threshold_based_matching_process
 from sssom_pydantic import MappingTool, SemanticMapping
 
 from biomappings.resources import (
     append_true_mappings,
     load_predictions,
-    write_predictions,
 )
-from biomappings.utils import get_script_url
+from biomappings.utils import PREDICTIONS_SSSOM_PATH, get_script_url
 
 logger = logging.getLogger(__name__)
 
@@ -32,7 +32,12 @@ def bulk_accept_same_text(source: str, target: str) -> None:
             leave.append(mapping)
 
     logger.info(f"Accepting {len(accept):,} exact text matches from {source} to {target}")
-    write_predictions(leave)
+    sssom_pydantic.write(
+        leave,
+        PREDICTIONS_SSSOM_PATH,
+        drop_duplicates=True,
+        sort=True,
+    )
     append_true_mappings(accept)
 
 

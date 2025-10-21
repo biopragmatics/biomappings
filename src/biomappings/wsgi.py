@@ -10,9 +10,12 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Any, Literal, TypeAlias, cast, get_args
 
+import bioregistry
+import curies
 import flask
 import flask_bootstrap
 import pydantic
+import sssom_pydantic
 import werkzeug
 from bioregistry import NormalizedNamableReference
 from curies import NamableReference, Reference
@@ -20,19 +23,11 @@ from curies.vocabulary import broad_match, exact_match, manual_mapping_curation,
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
-from sssom_pydantic import MappingSet, SemanticMapping
+from sssom_pydantic import SemanticMapping
 from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
-from biomappings.resources import (
-    append_false_mappings,
-    append_true_mappings,
-    append_unsure_mappings,
-    get_current_curator,
-    load_predictions,
-    write_predictions,
-)
-from biomappings.utils import commit, get_branch, not_main, push
+from .wsgi_utils import commit, get_branch, insert, not_main, push
 
 __all__ = [
     "get_app",
@@ -111,6 +106,14 @@ def get_app(
     app_.config["SHOW_RELATIONS"] = True
     app_.config["SHOW_LINES"] = False
     if controller is None:
+        if (
+            predictions_path is None
+            or positives_path is None
+            or negatives_path is None
+            or unsure_path is None
+            or user is None
+        ):
+            raise ValueError
         controller = Controller(
             target_references=target_references,
             predictions_path=predictions_path,
@@ -141,16 +144,18 @@ class Controller:
 
     _user: NamableReference
     _predictions: list[SemanticMapping]
+    converter: curies.Converter
 
     def __init__(
         self,
         *,
         target_references: Iterable[Reference] | None = None,
-        predictions_path: Path | None = None,
-        positives_path: Path | None = None,
-        negatives_path: Path | None = None,
-        unsure_path: Path | None = None,
-        user: NamableReference | None = None,
+        predictions_path: Path,
+        positives_path: Path,
+        negatives_path: Path,
+        unsure_path: Path,
+        user: NamableReference,
+        converter: curies.Converter | None = None,
     ) -> None:
         """Instantiate the web controller.
 
@@ -164,7 +169,9 @@ class Controller:
         :param unsure_path: A custom unsure file to curate to
         """
         self.predictions_path = predictions_path
-        self._predictions = load_predictions(path=self.predictions_path)
+        self._predictions, _, self._predictions_metadata = sssom_pydantic.read(
+            self.predictions_path
+        )
 
         self.positives_path = positives_path
         self.negatives_path = negatives_path
@@ -175,15 +182,12 @@ class Controller:
         self._added_mappings: list[SemanticMapping] = []
         self.target_references = set(target_references or [])
 
-        self._predictions_metadata = MappingSet(
-            mapping_set_id="https://w3id.org/biopragmatics/biomappings/sssom/predictions.sssom.tsv",
-        )
-
-        if user is not None:
-            self._current_author = user
+        if converter:
+            self.converter = converter
         else:
-            # FIXME this will throw an error for new user, so ask them their ORCID and name if it's missing
-            self._current_author = get_current_curator(strict=True)
+            self.converter = bioregistry.get_converter()
+
+        self._current_author = user
 
     def _get_current_author(self) -> NamableReference:
         return self._current_author
@@ -444,6 +448,9 @@ class Controller:
         )
         self.total_curated += 1
 
+    def _insert(self, mappings: Iterable[SemanticMapping], path: Path) -> None:
+        insert(path=path, converter=self.converter, include_mappings=mappings)
+
     def persist(self) -> None:
         """Save the current markings to the source files."""
         if not self._marked:
@@ -495,20 +502,28 @@ class Controller:
         # no need to standardize since we assume everything was correct on load.
         # only write files that have some values to go in them!
         if entries["correct"]:
-            append_true_mappings(entries["correct"], path=self.positives_path, sort=True)
+            self._insert(entries["correct"], path=self.positives_path)
         if entries["incorrect"]:
-            append_false_mappings(entries["incorrect"], path=self.negatives_path, sort=True)
+            self._insert(entries["incorrect"], path=self.negatives_path)
         if entries["unsure"]:
-            append_unsure_mappings(entries["unsure"], path=self.unsure_path, sort=True)
-        write_predictions(
-            self._predictions, path=self.predictions_path, metadata=self._predictions_metadata
+            self._insert(entries["unsure"], path=self.unsure_path)
+
+        sssom_pydantic.write(
+            self._predictions,
+            self.predictions_path,
+            metadata=self._predictions_metadata,
+            converter=self.converter,
+            drop_duplicates=True,
+            sort=True,
         )
         self._marked.clear()
 
         # Now add manually curated mappings, if there are any
         if self._added_mappings:
-            append_true_mappings(self._added_mappings, path=self.positives_path)
+            self._insert(self._added_mappings, path=self.positives_path)
             self._added_mappings = []
+
+        return None
 
 
 CONTROLLER: Controller = cast(Controller, LocalProxy(lambda: current_app.config["controller"]))

@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-from subprocess import CalledProcessError, check_output
+from typing import NamedTuple
+
+from ._git_utils import _git
 
 __all__ = [
     "BIOMAPPINGS_NDEX_UUID",
@@ -37,6 +39,23 @@ IMG = DOCS.joinpath("img")
 DATA = DOCS.joinpath("_data")
 
 
+class Repository(NamedTuple):
+    """A quadruple of paths."""
+
+    predictions_path: Path
+    positives_path: Path
+    negatives_path: Path
+    unsure_path: Path
+
+
+DEFAULT_REPO = Repository(
+    predictions_path=PREDICTIONS_SSSOM_PATH,
+    positives_path=POSITIVES_SSSOM_PATH,
+    negatives_path=NEGATIVES_SSSOM_PATH,
+    unsure_path=UNSURE_SSSOM_PATH,
+)
+
+
 def get_git_hash() -> str | None:
     """Get the git hash.
 
@@ -47,47 +66,6 @@ def get_git_hash() -> str | None:
     if not rv:
         return None
     return rv[:6]
-
-
-def commit(message: str) -> str | None:
-    """Make a commit with the following message."""
-    return _git("commit", "-m", message, "-a")
-
-
-def push(branch_name: str | None = None) -> str | None:
-    """Push the git repo."""
-    if branch_name is not None:
-        return _git("push", "origin", branch_name)
-    else:
-        return _git("push")
-
-
-def not_main() -> bool:
-    """Return if on the master branch."""
-    return "master" != _git("rev-parse", "--abbrev-ref", "HEAD")
-
-
-def get_branch() -> str:
-    """Return current git branch."""
-    rv = _git("branch", "--show-current")
-    if rv is None:
-        raise RuntimeError
-    return rv
-
-
-def _git(*args: str) -> str | None:
-    with open(os.devnull, "w") as devnull:
-        try:
-            ret = check_output(  # noqa: S603
-                ["git", *args],  # noqa:S607
-                cwd=os.path.dirname(__file__),
-                stderr=devnull,
-            )
-        except CalledProcessError as e:
-            print(e)  # noqa:T201
-            return None
-        else:
-            return ret.strip().decode("utf-8")
 
 
 def get_script_url(fname: str) -> str:

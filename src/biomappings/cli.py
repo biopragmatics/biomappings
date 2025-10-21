@@ -13,7 +13,16 @@ import click
 from . import lexical_core
 from .resources.export_sssom import export_sssom
 from .summary import export
-from .utils import CURATED_PATHS, DATA, IMG, PREDICTIONS_SSSOM_PATH, get_git_hash
+from .utils import (
+    CURATED_PATHS,
+    DATA,
+    IMG,
+    NEGATIVES_SSSOM_PATH,
+    POSITIVES_SSSOM_PATH,
+    PREDICTIONS_SSSOM_PATH,
+    UNSURE_SSSOM_PATH,
+    get_git_hash,
+)
 
 if TYPE_CHECKING:
     import matplotlib.axes
@@ -41,10 +50,30 @@ if get_git_hash() is not None:
     )
 
     @main.command()
-    @click.option("--predictions-path", type=Path, help="A predictions TSV file path")
-    @click.option("--positives-path", type=Path, help="A positives curation TSV file path")
-    @click.option("--negatives-path", type=Path, help="A negatives curation TSV file path")
-    @click.option("--unsure-path", type=Path, help="An unsure curation TSV file path")
+    @click.option(
+        "--predictions-path",
+        type=Path,
+        help="A predictions TSV file path",
+        default=PREDICTIONS_SSSOM_PATH,
+    )
+    @click.option(
+        "--positives-path",
+        type=Path,
+        help="A positives curation TSV file path",
+        default=POSITIVES_SSSOM_PATH,
+    )
+    @click.option(
+        "--negatives-path",
+        type=Path,
+        help="A negatives curation TSV file path",
+        default=NEGATIVES_SSSOM_PATH,
+    )
+    @click.option(
+        "--unsure-path",
+        type=Path,
+        help="An unsure curation TSV file path",
+        default=UNSURE_SSSOM_PATH,
+    )
     @resolver_base_option
     def web(
         predictions_path: Path,
@@ -58,7 +87,10 @@ if get_git_hash() is not None:
 
         from more_click import run_app
 
+        from .resources import get_current_curator
         from .wsgi import get_app
+
+        user = get_current_curator(strict=True)
 
         app = get_app(
             predictions_path=predictions_path,
@@ -66,6 +98,7 @@ if get_git_hash() is not None:
             negatives_path=negatives_path,
             unsure_path=unsure_path,
             resolver_base=resolver_base,
+            user=user,
         )
 
         webbrowser.open_new_tab("http://localhost:5000")
@@ -84,6 +117,7 @@ if get_git_hash() is not None:
         from curies import Reference
         from more_click import run_app
 
+        from .resources import get_current_curator
         from .wsgi import get_app
 
         mappings, _, _ = sssom_pydantic.read(path)
@@ -92,7 +126,8 @@ if get_git_hash() is not None:
         for mapping in mappings:
             target_references.append(mapping.subject)
             target_references.append(mapping.object)
-        app = get_app(target_references=target_references, resolver_base=resolver_base)
+        user = get_current_curator(strict=True)
+        app = get_app(target_references=target_references, resolver_base=resolver_base, user=user)
         run_app(app, with_gunicorn=False)
 
 else:
@@ -125,12 +160,27 @@ def update(ctx: click.Context) -> None:
 @main.command()
 def lint() -> None:
     """Sort files and remove duplicates."""
-    from . import resources
+    import bioregistry
+    import sssom_pydantic
 
-    resources.lint_true_mappings()
-    resources.lint_false_mappings()
-    resources.lint_unsure_mappings()
-    resources.lint_predictions()
+    from .utils import CURATED_PATHS, PREDICTIONS_SSSOM_PATH
+
+    # use the full bioregistry converter instead of re-using the
+    # prefix maps inside since this makes sure we cover everything.
+    # it automatically contracts the prefix map to what's relevant
+    # at the end
+    converter = bioregistry.get_converter()
+
+    exclude_mappings = []
+    for path in CURATED_PATHS:
+        sssom_pydantic.lint(path, converter=converter)
+        exclude_mappings.extend(sssom_pydantic.read(path)[0])
+
+    sssom_pydantic.lint(
+        PREDICTIONS_SSSOM_PATH,
+        exclude_mappings=exclude_mappings,
+        drop_duplicates=True,
+    )
 
 
 @main.command()
