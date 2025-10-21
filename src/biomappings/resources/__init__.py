@@ -105,7 +105,7 @@ def write_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | Non
 
 def lint_true_mappings(*, path: Path | None = None) -> None:
     """Lint the true mappings file."""
-    sssom_pydantic.lint(path or POSITIVES_SSSOM_PATH)
+    sssom_pydantic.lint(path or POSITIVES_SSSOM_PATH, converter=bioregistry.get_converter())
 
 
 def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
@@ -125,9 +125,7 @@ def append_false_mappings(
         path = NEGATIVES_SSSOM_PATH
     _write_helper(mappings, path=path, mode="a")
     if sort:
-        lint_false_mappings(
-            path=path,
-        )
+        lint_false_mappings(path=path)
 
 
 def write_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
@@ -137,7 +135,7 @@ def write_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | No
 
 def lint_false_mappings(*, path: Path | None = None) -> None:
     """Lint the false mappings file."""
-    sssom_pydantic.lint(path or NEGATIVES_SSSOM_PATH)
+    sssom_pydantic.lint(path or NEGATIVES_SSSOM_PATH, converter=bioregistry.get_converter())
 
 
 def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
@@ -167,7 +165,7 @@ def write_unsure_mappings(mappings: Iterable[SemanticMapping], *, path: Path | N
 
 def lint_unsure_mappings(*, path: Path | None = None) -> None:
     """Lint the unsure mappings file."""
-    sssom_pydantic.lint(path or UNSURE_SSSOM_PATH)
+    sssom_pydantic.lint(path or UNSURE_SSSOM_PATH, converter=bioregistry.get_converter())
 
 
 def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:

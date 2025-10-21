@@ -20,7 +20,7 @@ from curies.vocabulary import broad_match, exact_match, manual_mapping_curation,
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
-from sssom_pydantic import SemanticMapping
+from sssom_pydantic import SemanticMapping, MappingSet
 from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
@@ -174,6 +174,10 @@ class Controller:
         self.total_curated = 0
         self._added_mappings: list[SemanticMapping] = []
         self.target_references = set(target_references or [])
+
+        self._predictions_metadata = MappingSet(
+            mapping_set_id="https://w3id.org/biopragmatics/biomappings/sssom/predictions.sssom.tsv",
+        )
 
         if user is not None:
             self._current_author = user
@@ -496,7 +500,7 @@ class Controller:
             append_false_mappings(entries["incorrect"], path=self.negatives_path, sort=True)
         if entries["unsure"]:
             append_unsure_mappings(entries["unsure"], path=self.unsure_path, sort=True)
-        write_predictions(self._predictions, path=self.predictions_path)
+        write_predictions(self._predictions, path=self.predictions_path, metadata=self._predictions_metadata)
         self._marked.clear()
 
         # Now add manually curated mappings, if there are any
