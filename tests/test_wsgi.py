@@ -7,7 +7,7 @@ from pathlib import Path
 from bioregistry import NormalizedNamableReference as Reference
 from sssom_pydantic import MappingTool, SemanticMapping
 
-from biomappings.resources import COLUMNS, write_predictions
+from biomappings.resources import write_predictions
 from biomappings.wsgi import Controller, State, get_app
 
 TEST_USER = Reference(prefix="orcid", identifier="0000-0000-0000-0000", name="Max Mustermann")
@@ -43,6 +43,19 @@ class TestWeb(unittest.TestCase):
         self.controller.count_predictions_from_state(State(limit=5_000_000))
         self.controller.count_predictions_from_state(State(offset=0))
         self.controller.count_predictions_from_state(State(offset=5_000_000))
+
+
+COLUMNS = [
+    "subject_id",
+    "subject_label",
+    "predicate_id",
+    "object_id",
+    "object_label",
+    "mapping_justification",
+    "author_id",
+    "mapping_tool",
+    "predicate_modifier",
+]
 
 
 class TestFull(unittest.TestCase):

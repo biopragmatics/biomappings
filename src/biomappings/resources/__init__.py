@@ -4,20 +4,16 @@ from __future__ import annotations
 
 import csv
 import getpass
-import itertools as itt
 import logging
-from collections import defaultdict
-from collections.abc import Collection, Iterable, Mapping, Sequence
+from collections.abc import Collection, Iterable, Sequence
 from pathlib import Path
 from typing import TYPE_CHECKING, Literal, overload
 
 import bioregistry
-import networkx as nx
 import sssom_pydantic
 from bioregistry import NormalizedNamedReference
 from curies import Reference
-from sssom_pydantic import MappingTool, Metadata, SemanticMapping
-from tqdm.auto import tqdm
+from sssom_pydantic import Metadata, SemanticMapping
 
 from ..lexical_utils import drop_duplicates, remove_redundant_external
 from ..utils import (
@@ -30,7 +26,7 @@ from ..utils import (
 )
 
 if TYPE_CHECKING:
-    import semra
+    import networkx
 
 __all__ = [
     "SemanticMapping",
@@ -39,7 +35,6 @@ __all__ = [
     "append_predictions",
     "append_true_mappings",
     "append_unsure_mappings",
-    "get_curated_filter",
     "get_current_curator",
     "get_false_graph",
     "get_predictions_graph",
@@ -47,7 +42,6 @@ __all__ = [
     "load_curators",
     "load_false_mappings",
     "load_mappings",
-    "load_mappings_subset",
     "load_predictions",
     "load_unsure",
     "mappings_from_semra",
@@ -58,18 +52,6 @@ __all__ = [
 ]
 
 logger = logging.getLogger(__name__)
-
-COLUMNS = [
-    "subject_id",
-    "subject_label",
-    "predicate_id",
-    "object_id",
-    "object_label",
-    "mapping_justification",
-    "author_id",
-    "mapping_tool",
-    "predicate_modifier",
-]
 
 
 def _load_table(path: str | Path) -> list[SemanticMapping]:
@@ -105,16 +87,6 @@ def _write_helper(
 def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
     """Load the mappings table."""
     return _load_table(path or POSITIVES_SSSOM_PATH)
-
-
-def load_mappings_subset(source: str, target: str) -> Mapping[str, str]:
-    """Get a dictionary of 1-1 mappings from the source prefix to the target prefix."""
-    # TODO replace with SeMRA functionality?
-    return {
-        mapping.subject.identifier: mapping.object.identifier
-        for mapping in load_mappings()
-        if mapping.subject.prefix == source and mapping.object.prefix == target
-    }
 
 
 def append_true_mappings(
@@ -314,65 +286,10 @@ def get_current_curator(*, strict: bool = True) -> NormalizedNamedReference | No
         return None
 
 
-def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:
-    """Get a filter over all curated mappings."""
-    d: defaultdict[str, defaultdict[str, dict[str, str]]] = defaultdict(lambda: defaultdict(dict))
-    for m in itt.chain(load_mappings(), load_false_mappings(), load_unsure()):
-        d[m.subject.prefix][m.object.prefix][m.subject.identifier] = m.object.identifier
-    return {k: dict(v) for k, v in d.items()}
-
-
-def mappings_from_semra(
-    mappings: Iterable[semra.Mapping],
-    *,
-    confidence: float,
-) -> list[SemanticMapping]:
-    """Get prediction tuples from SeMRA mappings."""
-    rows = []
-    for mapping in mappings:
-        try:
-            row = _mapping_from_semra(mapping, confidence)
-        except KeyError as e:
-            tqdm.write(str(e))
-            continue
-        rows.append(row)
-    return rows
-
-
-def _mapping_from_semra(mapping: semra.Mapping, confidence: float) -> SemanticMapping:
-    """Instantiate from a SeMRA mapping."""
-    import pyobo
-    import semra
-
-    s_name = mapping.s.name or pyobo.get_name(mapping.s)
-    if not s_name:
-        raise KeyError(f"could not look up name for {mapping.s.curie}")
-    o_name = mapping.o.name or pyobo.get_name(mapping.o)
-    if not o_name:
-        raise KeyError(f"could not look up name for {mapping.o.curie}")
-    # Assume that each mapping has a single simple evidence with a mapping set annotation
-    if len(mapping.evidence) != 1:
-        raise ValueError
-    evidence = mapping.evidence[0]
-    if not isinstance(evidence, semra.SimpleEvidence):
-        raise TypeError
-    if evidence.mapping_set is None:
-        raise ValueError
-    # TODO what about negative?
-    return SemanticMapping(
-        subject=mapping.subject,
-        predicate=mapping.predicate,
-        object=mapping.object,
-        justification=evidence.justification,
-        confidence=confidence,
-        mapping_tool=MappingTool(name=evidence.mapping_set.name),
-    )
-
-
 def get_true_graph(
     include: Sequence[Reference] | None = None,
     exclude: Sequence[Reference] | None = None,
-) -> nx.Graph:
+) -> networkx.Graph:
     """Get a graph of the true mappings."""
     return _graph_from_mappings(load_mappings(), strata="correct", include=include, exclude=exclude)
 
@@ -380,7 +297,7 @@ def get_true_graph(
 def get_false_graph(
     include: Sequence[Reference] | None = None,
     exclude: Sequence[Reference] | None = None,
-) -> nx.Graph:
+) -> networkx.Graph:
     """Get a graph of the false mappings."""
     return _graph_from_mappings(
         load_false_mappings(), strata="incorrect", include=include, exclude=exclude
@@ -390,7 +307,7 @@ def get_false_graph(
 def get_predictions_graph(
     include: Collection[Reference] | None = None,
     exclude: Collection[Reference] | None = None,
-) -> nx.Graph:
+) -> networkx.Graph:
     """Get a graph of the predicted mappings."""
     return _graph_from_mappings(
         load_predictions(), strata="predicted", include=include, exclude=exclude
@@ -402,7 +319,9 @@ def _graph_from_mappings(
     strata: str,
     include: Collection[Reference] | None = None,
     exclude: Collection[Reference] | None = None,
-) -> nx.Graph:
+) -> networkx.Graph:
+    import networkx as nx
+
     graph = nx.Graph()
 
     if include is not None:
