@@ -3,8 +3,9 @@ layout: page
 title: Download
 permalink: /download/
 ---
-The biomappings database can be downloaded directly
-from [GitHub](https://github.com/biopragmatics/biomappings/tree/master/src/biomappings/resources).
+
+The biomappings database can be downloaded directly from
+[GitHub](https://github.com/biopragmatics/biomappings/tree/master/src/biomappings/resources).
 
 ## License
 
@@ -13,8 +14,8 @@ The manually curated portions of these data are available under the
 
 ## Programmatic Access
 
-
-There are three main functions exposed from `biomappings`. Each loads a list of dictionaries with the mappings in each.
+There are three main functions exposed from `biomappings`. Each loads a list of
+dictionaries with the mappings in each.
 
 ```python
 import biomappings
@@ -26,10 +27,11 @@ false_mappings = biomappings.load_false_mappings()
 predictions = biomappings.load_predictions()
 ```
 
-Alternatively, you can use the above links to the TSVs on GitHub in with the library or programming language of your
-choice.
+Alternatively, you can use the above links to the TSVs on GitHub in with the
+library or programming language of your choice.
 
-The data can also be loaded as [networkx](https://networkx.org/) graphs with the following functions:
+The data can also be loaded as [networkx](https://networkx.org/) graphs with the
+following functions:
 
 ```python
 import biomappings

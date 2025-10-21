@@ -5,17 +5,16 @@ from __future__ import annotations
 import getpass
 import unittest
 from collections import defaultdict
-from collections.abc import Iterable
+from collections.abc import Callable, Iterable
 from pathlib import Path
 from textwrap import dedent
-from typing import Any, Callable, ClassVar, TypeVar, cast
+from typing import Any, ClassVar, TypeAlias, TypeVar, cast
 
 import bioregistry
 from bioregistry import NormalizedNamableReference
 from curies import Reference
 from curies.vocabulary import matching_processes
 from sssom_pydantic import SemanticMapping
-from typing_extensions import TypeAlias
 
 from biomappings.resources import load_mappings, load_predictions
 from biomappings.utils import (

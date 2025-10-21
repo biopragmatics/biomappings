@@ -3,6 +3,7 @@ layout: page
 title: Duplicate Prefixes
 permalink: /duplicates/
 ---
+
 If two concepts with the same prefix appear in the same equivalence component,
 there is typically an error in curation. One prominent place where this happens
 is WikiPathways, where multiple curators may have their own entry for the same
