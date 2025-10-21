@@ -7,12 +7,7 @@ import pathlib
 from collections.abc import Collection
 from typing import TYPE_CHECKING, NamedTuple
 
-import bioregistry
 import click
-import yaml
-from curies import ReferenceTuple
-from curies.vocabulary import charlie
-from tqdm.auto import tqdm
 
 from biomappings.utils import DATA_DIRECTORY, DEFAULT_REPO, PURL_BASE
 
@@ -63,7 +58,10 @@ class SSSOMReturnTuple(NamedTuple):
 
 def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
     """Get an SSSOM dataframe."""
+    import bioregistry
     import pandas as pd
+    from curies.utils import _prefix_from_curie
+    from tqdm.auto import tqdm
 
     prefixes: set[str] = {"semapv"}
 
@@ -81,12 +79,12 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
     for _, mapping in tqdm(
         df.iterrows(), desc="tabulating prefixes & authors", disable=not use_tqdm
     ):
-        prefixes.add(_get_prefix(mapping["subject_id"]))
-        prefixes.add(_get_prefix(mapping["predicate_id"]))
-        prefixes.add(_get_prefix(mapping["object_id"]))
+        prefixes.add(_prefix_from_curie(mapping["subject_id"]))
+        prefixes.add(_prefix_from_curie(mapping["predicate_id"]))
+        prefixes.add(_prefix_from_curie(mapping["object_id"]))
         author_id = mapping["author_id"]
         if pd.notna(author_id) and any(author_id.startswith(x) for x in ["orcid:", "wikidata:"]):
-            prefixes.add(_get_prefix(author_id))
+            prefixes.add(_prefix_from_curie(author_id))
         # TODO add justification:
 
     from sssom.constants import DEFAULT_VALIDATION_TYPES
@@ -112,13 +110,10 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
     return SSSOMReturnTuple(prefix_map, df, msdf)
 
 
-def _get_prefix(curie: str) -> str:
-    """Get a prefix from a CURIE string."""
-    return ReferenceTuple.from_curie(curie).prefix
-
-
 def get_prefix_map(prefixes: Collection[str]) -> dict[str, str]:
     """Get a CURIE map containing only the relevant prefixes."""
+    import bioregistry
+
     prefix_map = {}
     for prefix in sorted(prefixes, key=str.casefold):
         resource = bioregistry.get_resource(prefix)
@@ -135,6 +130,8 @@ def get_prefix_map(prefixes: Collection[str]) -> dict[str, str]:
 @click.command(name="sssom")
 def export_sssom() -> None:
     """Export SSSOM."""
+    import yaml
+    from curies.vocabulary import charlie
     from sssom.writers import write_json, write_owl
 
     prefix_map, df, msdf = get_sssom_df()

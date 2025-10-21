@@ -4,17 +4,18 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from pathlib import Path
-from typing import Any, NamedTuple
+from typing import TYPE_CHECKING, Any, NamedTuple
 
 import click
-import curies
-from sssom_pydantic import MappingTool
+
+if TYPE_CHECKING:
+    import curies
+    from sssom_pydantic import MappingTool
 
 __all__ = [
     "Repository",
     "resolver_base_option",
 ]
-
 
 resolver_base_option = click.option(
     "--resolver-base",
@@ -87,8 +88,6 @@ class Repository(NamedTuple):
 
     def get_lint_command(self, converter: curies.Converter | None = None) -> click.Command:
         """Get the lint command."""
-        import sssom_pydantic
-
         if converter is None:
             import bioregistry
 
@@ -101,6 +100,8 @@ class Repository(NamedTuple):
         @click.command()
         def lint() -> None:
             """Sort files and remove duplicates."""
+            import sssom_pydantic
+
             exclude_mappings = []
             for path in self.curated_paths:
                 sssom_pydantic.lint(path, converter=converter)
@@ -114,34 +115,49 @@ class Repository(NamedTuple):
 
         return lint
 
-    def get_web_command(self) -> click.Command:
+    def get_web_command(self, *, enable: bool = True) -> click.Command:
         """Get the web command."""
+        if enable:
 
-        @click.command()
-        @resolver_base_option
-        @click.option("--orcid", required=True)
-        def web(resolver_base: str | None, orcid: str) -> None:
-            """Run the semantic mappings curation app."""
-            import webbrowser
+            @click.command()
+            @resolver_base_option
+            @click.option("--orcid", required=True)
+            def web(resolver_base: str | None, orcid: str) -> None:
+                """Run the semantic mappings curation app."""
+                import webbrowser
 
-            from bioregistry import NormalizedNamedReference
-            from more_click import run_app
+                from bioregistry import NormalizedNamedReference
+                from more_click import run_app
 
-            from .wsgi import get_app
+                from .wsgi import get_app
 
-            user = NormalizedNamedReference(prefix="orcid", identifier=orcid)
+                user = NormalizedNamedReference(prefix="orcid", identifier=orcid)
 
-            app = get_app(
-                predictions_path=self.predictions_path,
-                positives_path=self.positives_path,
-                negatives_path=self.negatives_path,
-                unsure_path=self.unsure_path,
-                resolver_base=resolver_base,
-                user=user,
-            )
+                app = get_app(
+                    predictions_path=self.predictions_path,
+                    positives_path=self.positives_path,
+                    negatives_path=self.negatives_path,
+                    unsure_path=self.unsure_path,
+                    resolver_base=resolver_base,
+                    user=user,
+                )
 
-            webbrowser.open_new_tab("http://localhost:5000")
+                webbrowser.open_new_tab("http://localhost:5000")
 
-            run_app(app, with_gunicorn=False)
+                run_app(app, with_gunicorn=False)
+
+        else:
+
+            @click.command()
+            def web() -> None:
+                """Show an error for the web interface."""
+                click.secho(
+                    "You are not running biomappings from a development installation.\n"
+                    "Please run the following to install in development mode:\n"
+                    "  $ git clone https://github.com/biomappings/biomappings.git\n"
+                    "  $ cd biomappings\n"
+                    "  $ pip install -e .[web]",
+                    fg="red",
+                )
 
         return web

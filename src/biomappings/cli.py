@@ -5,18 +5,19 @@ from __future__ import annotations
 import itertools as itt
 import os
 from collections import Counter
-from pathlib import Path
 from typing import TYPE_CHECKING
 
 import click
 
-from .curator.repo import resolver_base_option
+from .curator.wsgi_utils import get_git_hash
 from .resources.export_sssom import export_sssom
 from .summary import export
-from .utils import DATA_DIRECTORY, DEFAULT_REPO, IMG_DIRECTORY, get_git_hash
+from .utils import DATA_DIRECTORY, DEFAULT_REPO, IMG_DIRECTORY
 
 if TYPE_CHECKING:
     import matplotlib.axes
+
+GIT_HASH = get_git_hash()
 
 
 @click.group()
@@ -29,48 +30,7 @@ main.add_command(export)
 main.add_command(export_sssom)
 main.add_command(DEFAULT_REPO.get_predict_command())
 main.add_command(DEFAULT_REPO.get_lint_command())
-
-if get_git_hash() is not None:
-    main.add_command(DEFAULT_REPO.get_web_command())
-
-    @main.command()
-    @click.option("--path", required=True, type=Path, help="A predictions TSV file path")
-    @resolver_base_option
-    def curate(
-        path: Path,
-        resolver_base: str | None,
-    ) -> None:
-        """Run a target curation web app."""
-        import sssom_pydantic
-        from curies import Reference
-        from more_click import run_app
-
-        from .resources import get_current_curator
-        from .wsgi import get_app
-
-        mappings, _, _ = sssom_pydantic.read(path)
-
-        target_references: list[Reference] = []
-        for mapping in mappings:
-            target_references.append(mapping.subject)
-            target_references.append(mapping.object)
-        user = get_current_curator(strict=True)
-        app = get_app(target_references=target_references, resolver_base=resolver_base, user=user)
-        run_app(app, with_gunicorn=False)
-
-else:
-
-    @main.command()
-    def web() -> None:
-        """Show an error for the web interface."""
-        click.secho(
-            "You are not running biomappings from a development installation.\n"
-            "Please run the following to install in development mode:\n"
-            "  $ git clone https://github.com/biomappings/biomappings.git\n"
-            "  $ cd biomappings\n"
-            "  $ pip install -e .[web]",
-            fg="red",
-        )
+main.add_command(DEFAULT_REPO.get_web_command(enable=GIT_HASH is not None))
 
 
 @main.command()
@@ -94,7 +54,7 @@ def ndex(username: str | None, password: str | None) -> None:
     from sssom_pydantic.contrib.ndex import update_ndex
 
     from biomappings import load_mappings
-    from biomappings.utils import BIOMAPPINGS_NDEX_UUID, get_git_hash
+    from biomappings.utils import BIOMAPPINGS_NDEX_UUID
 
     mappings = load_mappings()
     metadata = MappingSet(
@@ -102,7 +62,7 @@ def ndex(username: str | None, password: str | None) -> None:
         mapping_set_title="Biomappings",
         mapping_set_description="Manually curated semantic mappings (e.g., skos:exactMatch) between biological entities",
         license="CC0",
-        mapping_set_version=get_git_hash(),
+        mapping_set_version=GIT_HASH,
     )
     update_ndex(
         uuid=BIOMAPPINGS_NDEX_UUID,

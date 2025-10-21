@@ -6,13 +6,15 @@ import itertools as itt
 import os
 import typing
 from collections import Counter
-from collections.abc import Iterable
-from typing import Any, TypedDict, cast
+from typing import TYPE_CHECKING, Any, TypedDict, cast
 
 import click
-import yaml
-from curies import NamableReference
-from sssom_pydantic import SemanticMapping
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
+    from curies import NamableReference
+    from sssom_pydantic import SemanticMapping
 
 __all__ = [
     "export",
@@ -22,19 +24,23 @@ __all__ = [
 @click.command()
 def export() -> None:
     """Create export data file."""
+    import yaml
+
     from biomappings.resources import (
         load_false_mappings,
         load_mappings,
         load_predictions,
         load_unsure,
     )
-    from biomappings.utils import DATA_DIRECTORY
 
-    path = os.path.join(DATA_DIRECTORY, "summary.yml")
+    from .utils import DATA_DIRECTORY
+
+    output = os.path.join(DATA_DIRECTORY, "summary.yml")
 
     true_mappings = load_mappings()
     false_mappings = load_false_mappings()
     unsure_mappings = load_unsure()
+    predicted_mappings = load_predictions()
 
     rv: dict[str, Any] = {
         "contributors": _get_contributors(
@@ -46,7 +52,7 @@ def export() -> None:
         ("positive", true_mappings),
         ("negative", false_mappings),
         ("unsure", unsure_mappings),
-        ("predictions", load_predictions()),
+        ("predictions", predicted_mappings),
     ]:
         count_records = _get_count_records(mappings)
         rv[key] = count_records
@@ -60,7 +66,7 @@ def export() -> None:
             )
         )
 
-    with open(path, "w") as file:
+    with open(output, "w") as file:
         yaml.safe_dump(rv, file, indent=2)
 
 

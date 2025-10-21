@@ -5,8 +5,8 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-from .curator._git_utils import _git
 from .curator.repo import Repository
+from .curator.wsgi_utils import get_git_hash
 
 __all__ = [
     "BIOMAPPINGS_NDEX_UUID",
@@ -21,7 +21,6 @@ __all__ = [
     "PURL_BASE",
     "RESOURCE_PATH",
     "UNSURE_SSSOM_PATH",
-    "get_git_hash",
     "get_script_url",
 ]
 
@@ -40,18 +39,6 @@ PURL_BASE = "https://w3id.org/biopragmatics/biomappings/sssom"
 DOCS_DIRECTORY = ROOT.joinpath("docs")
 IMG_DIRECTORY = DOCS_DIRECTORY.joinpath("img")
 DATA_DIRECTORY = DOCS_DIRECTORY.joinpath("_data")
-
-
-def get_git_hash() -> str | None:
-    """Get the git hash.
-
-    :returns: The git hash, equals 'UNHASHED' if encountered CalledProcessError,
-        signifying that the code is not installed in development mode.
-    """
-    rv = _git("rev-parse", "HEAD")
-    if not rv:
-        return None
-    return rv[:6]
 
 
 def get_script_url(fname: str) -> str:

@@ -4,17 +4,18 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from pathlib import Path
-from typing import TypeVar
-
-import curies
-import sssom_pydantic
-from sssom_pydantic import SemanticMapping
+from typing import TYPE_CHECKING, TypeVar
 
 from ._git_utils import _git
+
+if TYPE_CHECKING:
+    import curies
+    from sssom_pydantic import SemanticMapping
 
 __all__ = [
     "commit",
     "get_branch",
+    "get_git_hash",
     "insert",
     "not_main",
     "push",
@@ -57,6 +58,8 @@ def insert(
     include_mappings: Iterable[SemanticMapping] | None = None,
 ) -> None:
     """Append eagerly with linting at the same time."""
+    import sssom_pydantic
+
     mappings, converter_processed, metadata = sssom_pydantic.read(path, converter=converter)
 
     if include_mappings is not None:
@@ -77,3 +80,15 @@ def insert(
         sort=True,
         drop_duplicates=True,
     )
+
+
+def get_git_hash() -> str | None:
+    """Get the git hash.
+
+    :returns: The git hash, equals 'UNHASHED' if encountered CalledProcessError,
+        signifying that the code is not installed in development mode.
+    """
+    rv = _git("rev-parse", "HEAD")
+    if not rv:
+        return None
+    return rv[:6]
