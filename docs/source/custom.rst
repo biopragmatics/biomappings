@@ -79,7 +79,7 @@ Running Tests
 
 Biomappings implements a generic testing suite inside
 :class:`biomappings.testing.PathIntegrityTestCase`, which itself is based on
-:class:`unittest.TestCase` and is paremetrized by the paths to the curation files.
+:class:`unittest.TestCase` and is parameterized by the paths to the curation files.
 
 This means that this file can also be run by any test runnier that can discover test
 cases such as :class:`unittest` itself, :mod:`pytest`, or others. Therefore you can run

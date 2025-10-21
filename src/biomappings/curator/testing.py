@@ -2,20 +2,11 @@
 
 from __future__ import annotations
 
-import getpass
 import unittest
 from collections import defaultdict
 from collections.abc import Callable, Iterable
 from pathlib import Path
-from textwrap import dedent
 from typing import TYPE_CHECKING, Any, ClassVar, TypeAlias, TypeVar, cast
-
-from biomappings.utils import (
-    CURATORS_PATH,
-    NEGATIVES_SSSOM_PATH,
-    POSITIVES_SSSOM_PATH,
-    UNSURE_SSSOM_PATH,
-)
 
 if TYPE_CHECKING:
     from curies import Reference
@@ -89,7 +80,7 @@ class IntegrityTestCase(unittest.TestCase):
             self.assert_valid(label, line, mapping.subject)
             self.assert_valid(label, line, mapping.predicate)
             self.assert_valid(label, line, mapping.object)
-            self.assert_valid(label, line, mapping.mapping_justification)
+            self.assert_valid(label, line, mapping.justification)
             if mapping.author is not None:
                 self.assert_valid(label, line, mapping.author)
 
@@ -117,31 +108,18 @@ class IntegrityTestCase(unittest.TestCase):
         from bioregistry import NormalizedNamableReference
 
         files = [
-            (POSITIVES_SSSOM_PATH, self.mappings),
-            (NEGATIVES_SSSOM_PATH, self.incorrect),
-            (UNSURE_SSSOM_PATH, self.unsure),
+            ("positive", self.mappings),
+            ("negative", self.incorrect),
+            ("unsure", self.unsure),
         ]
-        for path, mappings in files:
+        for label, mappings in files:
             for mapping in mappings:
                 self.assertIsNotNone(mapping.author)
                 author = cast(NormalizedNamableReference, mapping.author)
                 self.assertEqual(
                     "orcid",
                     author.prefix,
-                    msg=dedent(f"""
-                    There are some curations that don't have the right metadata.
-                    This probably happened because you are curating locally and
-                    haven't added the right metadata to the curators.tsv file at
-                    {CURATORS_PATH}.
-
-                    You can fix this with the following steps:
-
-                    1. Add a row to the curators.tsv file with your local machine's
-                       username "{getpass.getuser()}" in the first column, your ORCID in
-                       the second column, and your full name in the third column
-                    2. Replace all instances of "{author.curie}" in {path}
-                       with your ORCID, properly prefixed with `orcid:`
-                    """).rstrip(),
+                    msg=f"ORCID prefixes are required for authors in the {label} group",
                 )
 
     def test_cross_redundancy(self) -> None:
@@ -177,7 +155,7 @@ class IntegrityTestCase(unittest.TestCase):
                 f"\n  {subject.curie}/{obj.curie}: {locations}"
                 for (subject, obj), locations in redundant
             )
-            raise ValueError(f"{len(redundant)} are redundant: {msg}")
+            self.fail(f"{len(redundant)} are redundant: {msg}")
 
     def test_predictions_sorted(self) -> None:
         """Test the predictions are in a canonical order."""
