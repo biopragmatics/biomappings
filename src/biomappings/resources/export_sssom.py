@@ -11,6 +11,7 @@ import bioregistry
 import click
 import yaml
 from curies import ReferenceTuple
+from curies.vocabulary import charlie
 from tqdm.auto import tqdm
 
 from biomappings.utils import (
@@ -62,7 +63,6 @@ class SSSOMReturnTuple(NamedTuple):
     """A package for SSSOM coalation."""
 
     prefix_map: dict[str, str]
-    creator_curies: list[str]
     df: pd.DataFrame
     msdf: MappingSetDataFrame
 
@@ -71,7 +71,6 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
     """Get an SSSOM dataframe."""
     import pandas as pd
 
-    creator_curies: set[str] = set()
     prefixes: set[str] = {"semapv"}
 
     # NEW WAY: load all DFs, concat them, reorder columns
@@ -93,7 +92,6 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
         author_id = mapping["author_id"]
         if pd.notna(author_id) and any(author_id.startswith(x) for x in ["orcid:", "wikidata:"]):
             prefixes.add(_get_prefix(author_id))
-            creator_curies.add(author_id)
         # TODO add justification:
 
     from sssom.constants import DEFAULT_VALIDATION_TYPES
@@ -116,7 +114,7 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
                 click.secho(f"- {result}", fg="red")
             click.echo("")
 
-    return SSSOMReturnTuple(prefix_map, sorted(creator_curies), df, msdf)
+    return SSSOMReturnTuple(prefix_map, df, msdf)
 
 
 def _get_prefix(curie: str) -> str:
@@ -144,9 +142,12 @@ def export_sssom() -> None:
     """Export SSSOM."""
     from sssom.writers import write_json, write_owl
 
-    prefix_map, creator_curies, df, msdf = get_sssom_df()
+    prefix_map, df, msdf = get_sssom_df()
 
-    tsv_meta = {**META, "creator_id": creator_curies, "curie_map": prefix_map}
+    # the creator_id slot corresponds to the person who puts the mapping
+    # set together, not the authors/creators of the individual mappings
+    # themselves
+    tsv_meta = {**META, "creator_id": [charlie.curie], "curie_map": prefix_map}
 
     with TSV_PATH.open("w") as file:
         for line in yaml.safe_dump(tsv_meta).splitlines():
