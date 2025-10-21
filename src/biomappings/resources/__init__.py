@@ -37,7 +37,6 @@ __all__ = [
     "append_false_mappings",
     "append_predictions",
     "append_predictions",
-    "append_true_mapping_tuples",
     "append_true_mappings",
     "append_unsure_mappings",
     "get_curated_filter",
@@ -130,11 +129,6 @@ def append_true_mappings(
     _write_helper(mappings, path=path, mode="a")
     if sort:
         lint_true_mappings(path=path)
-
-
-def append_true_mapping_tuples(mappings: Iterable[SemanticMapping]) -> None:
-    """Append new lines to the mappings table."""
-    append_true_mappings(mappings)
 
 
 def write_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
