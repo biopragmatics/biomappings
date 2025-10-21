@@ -3,9 +3,11 @@ layout: page
 title: Incomplete Triangles
 permalink: /triangles/
 ---
-Incomplete triangles are components within the graph such that `A skos:exactMatch B`, `B skos:exactMatch C`, but it is
-not explicitly curated that `A skos:exactMatch C`. Curating the relationship between `A` and `C` relation is an
-opportunity to make the other relations much higher confidence.
+
+Incomplete triangles are components within the graph such that
+`A skos:exactMatch B`, `B skos:exactMatch C`, but it is not explicitly curated
+that `A skos:exactMatch C`. Curating the relationship between `A` and `C`
+relation is an opportunity to make the other relations much higher confidence.
 
 <ol>
 {% for entry in site.data.incomplete_components %}
