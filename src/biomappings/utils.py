@@ -5,10 +5,6 @@ from __future__ import annotations
 import os
 from pathlib import Path
 from subprocess import CalledProcessError, check_output
-from typing import TYPE_CHECKING, TypeAlias
-
-if TYPE_CHECKING:
-    from sssom_pydantic import SemanticMapping
 
 __all__ = [
     "BIOMAPPINGS_NDEX_UUID",
@@ -16,9 +12,9 @@ __all__ = [
     "NEGATIVES_SSSOM_PATH",
     "POSITIVES_SSSOM_PATH",
     "PREDICTIONS_SSSOM_PATH",
+    "PURL_BASE",
     "RESOURCE_PATH",
     "UNSURE_SSSOM_PATH",
-    "get_canonical_tuple",
     "get_git_hash",
     "get_script_url",
 ]
@@ -102,19 +98,6 @@ def get_script_url(fname: str) -> str:
     commit_hash = get_git_hash()
     script_name = os.path.basename(fname)
     return f"https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}"
-
-
-#: A canonical mapping tuple
-CanonicalMappingTuple: TypeAlias = tuple[str, str, str, str]
-
-
-def get_canonical_tuple(mapping: SemanticMapping) -> CanonicalMappingTuple:
-    """Get the canonical tuple from a mapping entry."""
-    source = mapping.subject
-    target = mapping.object
-    if source > target:
-        source, target = target, source
-    return (*source.pair, *target.pair)
 
 
 #: THe NDEx UUID

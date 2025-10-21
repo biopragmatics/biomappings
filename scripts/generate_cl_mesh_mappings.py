@@ -76,4 +76,4 @@ for cl_id, mesh_id in mappings.items():
     )
     predictions.append(pred)
 
-append_predictions(predictions, deduplicate=True, sort=True)
+append_predictions(predictions)
