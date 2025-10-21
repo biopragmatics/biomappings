@@ -5,10 +5,10 @@ import unittest
 from pathlib import Path
 
 import curies
+import sssom_pydantic
 from bioregistry import NormalizedNamableReference as Reference
 from sssom_pydantic import MappingTool, SemanticMapping
 
-from biomappings.resources import write_predictions
 from biomappings.utils import (
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
@@ -94,7 +94,7 @@ class TestFull(unittest.TestCase):
         negatives_path = directory.joinpath("negatives.tsv")
         unsure_path = directory.joinpath("unsure.tsv")
 
-        write_predictions(
+        sssom_pydantic.write(
             predictions,
             path=predictions_path,
             metadata={"mapping_set_id": f"https://example.org/{predictions_path.name}"},

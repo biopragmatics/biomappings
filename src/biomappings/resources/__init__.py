@@ -33,7 +33,6 @@ __all__ = [
     "append_false_mappings",
     "append_predictions",
     "append_true_mappings",
-    "append_unsure_mappings",
     "get_current_curator",
     "get_false_graph",
     "get_predictions_graph",
@@ -43,10 +42,7 @@ __all__ = [
     "load_mappings",
     "load_predictions",
     "load_unsure",
-    "write_false_mappings",
     "write_predictions",
-    "write_true_mappings",
-    "write_unsure_mappings",
 ]
 
 logger = logging.getLogger(__name__)
@@ -76,56 +72,16 @@ def append_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | N
     _append_helper(mappings, path, NEGATIVES_SSSOM_PATH)
 
 
-def append_unsure_mappings(
-    mappings: Iterable[SemanticMapping], *, path: Path | None = None
-) -> None:
-    """Append new lines to the "unsure" mappings table."""
-    _append_helper(mappings, path, UNSURE_SSSOM_PATH)
-
-
-def write_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
-    """Write mappings to the true mappings file."""
-    sssom_pydantic.write(
-        mappings,
-        path or POSITIVES_SSSOM_PATH,
-        converter=bioregistry.get_converter(),
-        drop_duplicates=True,
-        sort=True,
-    )
-
-
 def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the false mappings table."""
     mappings, _converter, _mapping_set = sssom_pydantic.read(path or NEGATIVES_SSSOM_PATH)
     return mappings
 
 
-def write_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
-    """Write mappings to the false mappings file."""
-    sssom_pydantic.write(
-        mappings,
-        path or NEGATIVES_SSSOM_PATH,
-        converter=bioregistry.get_converter(),
-        drop_duplicates=True,
-        sort=True,
-    )
-
-
 def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the unsure table."""
     mappings, _converter, _mapping_set = sssom_pydantic.read(path or UNSURE_SSSOM_PATH)
     return mappings
-
-
-def write_unsure_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
-    """Write mappings to the unsure mappings file."""
-    sssom_pydantic.write(
-        mappings,
-        path or UNSURE_SSSOM_PATH,
-        converter=bioregistry.get_converter(),
-        drop_duplicates=True,
-        sort=True,
-    )
 
 
 def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:
