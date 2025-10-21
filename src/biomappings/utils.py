@@ -8,6 +8,7 @@ from subprocess import CalledProcessError, check_output
 
 __all__ = [
     "BIOMAPPINGS_NDEX_UUID",
+    "CURATED_PATHS",
     "CURATORS_PATH",
     "NEGATIVES_SSSOM_PATH",
     "POSITIVES_SSSOM_PATH",
@@ -26,6 +27,7 @@ RESOURCE_PATH = HERE.joinpath("resources")
 POSITIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("positive.sssom.tsv")
 NEGATIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("negative.sssom.tsv")
 UNSURE_SSSOM_PATH = RESOURCE_PATH.joinpath("unsure.sssom.tsv")
+CURATED_PATHS = [POSITIVES_SSSOM_PATH, NEGATIVES_SSSOM_PATH, UNSURE_SSSOM_PATH]
 PREDICTIONS_SSSOM_PATH = RESOURCE_PATH.joinpath("predictions.sssom.tsv")
 CURATORS_PATH = RESOURCE_PATH.joinpath("curators.tsv")
 PURL_BASE = "https://w3id.org/biopragmatics/biomappings/sssom"

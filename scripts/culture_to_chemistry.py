@@ -16,14 +16,14 @@ def match_chmo() -> None:
     """Get embedding matches to CHMO."""
     from pyobo.struct.vocabulary import related_match
 
-    from biomappings.lexical import lexical_prediction_cli
+    from biomappings import lexical_prediction_cli
 
     lexical_prediction_cli(
-        __file__,
         "iconclass",
         "chmo",
         predicate=related_match,
         method="embedding",
+        script=__file__,
     )
 
 
@@ -32,36 +32,35 @@ def match_obi() -> None:
     """Get embedding matches to OBI."""
     from pyobo.struct.vocabulary import related_match
 
-    from biomappings.lexical import lexical_prediction_cli
+    from biomappings import lexical_prediction_cli
 
     lexical_prediction_cli(
-        __file__,
         "iconclass",
         "obi",
         predicate=related_match,
         method="embedding",
+        script=__file__,
     )
 
 
 @main.command(name="chebi")
-@verbose_option  # type:ignore[misc]
+@verbose_option
 def match_chebi() -> None:
     """Get embedding matches to ChEBI."""
     from pyobo.struct.vocabulary import related_match
 
-    from biomappings import SemanticMapping
-    from biomappings.lexical import lexical_prediction_cli
+    from biomappings import SemanticMapping, lexical_prediction_cli
 
     def _custom_filter(m: SemanticMapping) -> bool:
         return m.subject_name is not None and len(m.subject_name) < 60
 
     lexical_prediction_cli(
-        __file__,
         "iconclass",
         "chebi",
         predicate=related_match,
         method="ner",
         custom_filter_function=_custom_filter,
+        script=__file__,
     )
 
 

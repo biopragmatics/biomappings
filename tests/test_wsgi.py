@@ -81,12 +81,17 @@ class TestFull(unittest.TestCase):
         negatives_path = directory.joinpath("negatives.tsv")
         unsure_path = directory.joinpath("unsure.tsv")
 
-        write_predictions(predictions, path=predictions_path)
+        write_predictions(
+            predictions,
+            path=predictions_path,
+            metadata={"mapping_set_id": f"https://example.org/{predictions_path.name}"},
+        )
         for path in [positives_path, negatives_path, unsure_path]:
             with path.open("w") as file:
                 print("#curie_map:", file=file)
                 print("#  chebi: http://purl.obolibrary.org/obo/CHEBI_", file=file)
                 print("#  mesh:  http://id.nlm.nih.gov/mesh/", file=file)
+                print(f"#mapping_set_id: https://example.org/{path.name}", file=file)
                 print(*COLUMNS, sep="\t", file=file)
 
         self.controller = Controller(

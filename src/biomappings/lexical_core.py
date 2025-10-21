@@ -2,18 +2,23 @@
 
 from __future__ import annotations
 
+import itertools as itt
 import logging
 import typing
 from collections import defaultdict
 from collections.abc import Callable, Iterable, Mapping
+from pathlib import Path
 from typing import TYPE_CHECKING, Literal, TypeAlias, cast
 
+import click
 import curies
 import networkx as nx
 import pyobo
 import ssslm
+import sssom_pydantic
 from bioregistry import NormalizedNamableReference, NormalizedNamedReference, NormalizedReference
 from curies.vocabulary import exact_match, lexical_matching_process
+from more_click import verbose_option
 from pyobo import get_grounder
 from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm.auto import tqdm
@@ -22,11 +27,16 @@ if TYPE_CHECKING:
     import pandas as pd
 
 __all__ = [
+    "TOOL_NAME",
     "PredictionMethod",
     "RecognitionMethod",
+    "append_lexical_predictions",
+    "append_predictions",
     "filter_custom",
     "filter_existing_xrefs",
+    "get_predict_command",
     "get_predictions",
+    "lexical_prediction_cli",
     "predict_embedding_mappings",
     "predict_lexical_mappings",
 ]
@@ -39,11 +49,21 @@ PredictionMethod: TypeAlias = Literal["ner", "grounding", "embedding"]
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
 NestedMappingDict: TypeAlias = Mapping[str, Mapping[str, Mapping[str, str]]]
 
+#: The name of the lexical mapping tool
+TOOL_NAME = "biomappings"
+
+
+def _resolve_tool(mapping_tool: str | MappingTool | None) -> MappingTool:
+    if mapping_tool is None:
+        return MappingTool(name=TOOL_NAME, version=None)
+    if isinstance(mapping_tool, str):
+        return MappingTool(name=mapping_tool, version=None)
+    return mapping_tool
+
 
 def get_predictions(
     prefix: str,
     target_prefixes: str | Iterable[str],
-    mapping_tool: str | MappingTool,
     *,
     relation: str | None | curies.NamableReference = None,
     identifiers_are_names: bool = False,
@@ -53,13 +73,13 @@ def get_predictions(
     custom_filter_function: Callable[[SemanticMapping], bool] | None = None,
     progress: bool = True,
     filter_mutual_mappings: bool = False,
+    mapping_tool: str | MappingTool | None = None,
 ) -> list[SemanticMapping]:
     """Add lexical matching-based predictions to the Biomappings predictions.tsv file.
 
     :param prefix: The source prefix
     :param target_prefixes: The target prefix or prefixes
-    :param mapping_tool: The provenance text. Typically generated with
-        ``biomappings.utils.get_script_url(__file__)``.
+    :param mapping_tool: The name of the mapping tool. Defaults to :data:``
     :param relation: The relationship. Defaults to ``skos:exactMatch``.
     :param identifiers_are_names: The source prefix's identifiers should be considered
         as names
@@ -77,8 +97,7 @@ def get_predictions(
     else:
         targets = list(target_prefixes)
 
-    if isinstance(mapping_tool, str):
-        mapping_tool = MappingTool(name=mapping_tool)
+    mapping_tool = _resolve_tool(mapping_tool)
 
     if method is None or method in typing.get_args(RecognitionMethod):
         # by default, PyOBO wraps a gilda grounder, but
@@ -143,8 +162,7 @@ def predict_embedding_mappings(
     model = pyobo.api.embedding.get_text_embedding_model()
     source_df = pyobo.get_text_embeddings_df(prefix, model=model)
 
-    if isinstance(mapping_tool, str):
-        mapping_tool = MappingTool(name=mapping_tool)
+    mapping_tool = _resolve_tool(mapping_tool)
 
     predictions = []
     for target in tqdm(targets, disable=len(targets) == 1):
@@ -246,13 +264,13 @@ def _r(prefix: str, identifier: str) -> NormalizedNamableReference:
 
 def predict_lexical_mappings(
     prefix: str,
-    mapping_tool: str | MappingTool,
     *,
     predicate: str | curies.Reference | None = None,
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
     method: RecognitionMethod | None = None,
+    mapping_tool: str | MappingTool | None = None,
 ) -> Iterable[SemanticMapping]:
     """Iterate over prediction tuples for a given prefix."""
     if predicate is None:
@@ -280,8 +298,7 @@ def predict_lexical_mappings(
     else:
         raise ValueError(f"invalid lexical method: {method}")
 
-    if isinstance(mapping_tool, str):
-        mapping_tool = MappingTool(name=mapping_tool)
+    mapping_tool = _resolve_tool(mapping_tool)
 
     name_prediction_count = 0
     for identifier, name in it:
@@ -346,6 +363,7 @@ def filter_existing_xrefs(
 
     :param mappings: Semantic mappings to filter
     :param prefixes: Prefixes for resources to check for existing mappings
+
     :yields: Filtered semantic mappings
     """
     entity_to_mapped_prefixes = _get_entity_to_mapped_prefixes(prefixes)
@@ -402,6 +420,7 @@ def _mutual_mapping_graph(prefixes: Iterable[str]) -> nx.Graph:
 
     :param prefixes: A list of prefixes to use with :func:`pyobo.get_filtered_xrefs` to
         get xrefs.
+
     :returns: The undirected mapping graph containing mappings between entries in the
         given namespaces.
     """
@@ -417,3 +436,196 @@ def _mutual_mapping_graph(prefixes: Iterable[str]) -> nx.Graph:
 
 def _upgrade_set(values: Iterable[str] | None = None) -> set[str]:
     return set() if values is None else set(values)
+
+
+def append_predictions(
+    new_mappings: Iterable[SemanticMapping],
+    *,
+    path: Path,
+    curated_paths: list[Path] | None = None,
+) -> None:
+    """Append new lines to the predictions table."""
+    mappings, converter, metadata = sssom_pydantic.read(path)
+
+    prefixes: set[str] = set()
+    for mapping in new_mappings:
+        prefixes.update(mapping.get_prefixes())
+        mappings.append(mapping)
+
+    for prefix in prefixes:
+        if not converter.standardize_prefix(prefix):
+            raise NotImplementedError("amending prefixes not yet implemented")
+
+    if curated_paths is not None:
+        exclude_mappings = itt.chain.from_iterable(
+            sssom_pydantic.read(path)[0] for path in curated_paths
+        )
+    else:
+        exclude_mappings = None
+
+    sssom_pydantic.write(
+        mappings,
+        path,
+        metadata=metadata,
+        converter=converter,
+        drop_duplicates=True,
+        sort=True,
+        exclude_mappings=exclude_mappings,
+    )
+
+
+def append_lexical_predictions(
+    prefix: str,
+    target_prefixes: str | Iterable[str],
+    *,
+    relation: str | None | curies.NamableReference = None,
+    identifiers_are_names: bool = False,
+    path: Path,
+    method: PredictionMethod | None = None,
+    cutoff: float | None = None,
+    batch_size: int | None = None,
+    custom_filter_function: Callable[[SemanticMapping], bool] | None = None,
+    progress: bool = True,
+    filter_mutual_mappings: bool = False,
+    curated_paths: list[Path] | None = None,
+    mapping_tool: str | MappingTool | None = None,
+) -> None:
+    """Add lexical matching-based predictions to the Biomappings predictions.tsv file.
+
+    :param prefix: The source prefix
+    :param target_prefixes: The target prefix or prefixes
+    :param relation: The relationship. Defaults to ``skos:exactMatch``.
+    :param identifiers_are_names: The source prefix's identifiers should be considered
+        as names
+    :param path: A custom path to predictions TSV file
+    :param method: The lexical predication method to use
+    :param cutoff: an optional minimum prediction confidence cutoff
+    :param batch_size: The batch size for embeddings
+    :param custom_filter_function: A custom function that decides if semantic mappings
+        should be kept, applied after all other logic.
+    :param progress: Should progress be shown?
+    :param filter_mutual_mappings: Should mappings between entities in the given
+        namespaces be filtered out?
+    :param mapping_tool: The name of the mapping tool
+    :param curated_paths: The paths to curated documents that are used to remove zombie
+        mappings (i.e., predictions that were already curated)
+    """
+    predictions = get_predictions(
+        prefix,
+        target_prefixes,
+        mapping_tool=mapping_tool,
+        relation=relation,
+        identifiers_are_names=identifiers_are_names,
+        method=method,
+        cutoff=cutoff,
+        batch_size=batch_size,
+        custom_filter_function=custom_filter_function,
+        progress=progress,
+        filter_mutual_mappings=filter_mutual_mappings,
+    )
+    tqdm.write(f"[{prefix}] generated {len(predictions):,} predictions")
+
+    # since the function that constructs the predictions already
+    # pre-standardizes, we don't have to worry about standardizing again
+    append_predictions(predictions, path=path, curated_paths=curated_paths)
+
+
+def lexical_prediction_cli(
+    prefix: str,
+    target: str | list[str],
+    *,
+    path: Path,
+    curated_paths: list[Path] | None = None,
+    filter_mutual_mappings: bool = False,
+    identifiers_are_names: bool = False,
+    predicate: str | None | curies.NamableReference = None,
+    method: PredictionMethod | None = None,
+    cutoff: float | None = None,
+    custom_filter_function: Callable[[SemanticMapping], bool] | None = None,
+    mapping_tool: str | MappingTool | None = None,
+) -> None:
+    """Construct a CLI and run it."""
+    tt = target if isinstance(target, str) else ", ".join(target)
+
+    @click.command(help=f"Generate mappings from {prefix} to {tt}")
+    @verbose_option
+    def main() -> None:
+        """Generate mappings."""
+        append_lexical_predictions(
+            prefix,
+            target,
+            path=path,
+            curated_paths=curated_paths,
+            filter_mutual_mappings=filter_mutual_mappings,
+            identifiers_are_names=identifiers_are_names,
+            relation=predicate,
+            method=method,
+            cutoff=cutoff,
+            custom_filter_function=custom_filter_function,
+            mapping_tool=mapping_tool,
+        )
+
+    main()
+
+
+def get_predict_command(
+    *,
+    source_prefix: str | None = None,
+    target_prefix: str | None | list[str] = None,
+    path: Path,
+    curated_paths: list[Path] | None = None,
+) -> click.Command:
+    """Create a prediction command."""
+    if source_prefix is None:
+        source_prefix_argument = click.argument("source_prefix")
+    else:
+        source_prefix_argument = click.option("--source-prefix", default=source_prefix)
+
+    if target_prefix is None:
+        target_prefix_argument = click.argument("target_prefix", nargs=-1)
+    else:
+        target_prefix_argument = click.option(
+            "--target-prefix", multiple=True, default=[target_prefix]
+        )
+
+    @click.command()
+    @verbose_option
+    @source_prefix_argument
+    @target_prefix_argument
+    @click.option("--relation", help="the predicate to assign to semantic mappings")
+    @click.option(
+        "--method",
+        type=click.Choice(list(typing.get_args(PredictionMethod))),
+        help="The prediction method to use",
+    )
+    @click.option(
+        "--cutoff",
+        type=float,
+        help="The cosine similarity cutoff to use for calling mappings when using embedding predictions",
+    )
+    @click.option(
+        "--filter-mutual-mappings",
+        is_flag=True,
+        help="Remove predictions that correspond to already existing mappings in either the subject or object resource",
+    )
+    def predict(
+        source_prefix: str,
+        target_prefix: str,
+        relation: str | None,
+        method: PredictionMethod | None,
+        cutoff: float | None,
+        filter_mutual_mappings: bool,
+    ) -> None:
+        """Predict semantic mapping between the source and target prefixes."""
+        append_lexical_predictions(
+            source_prefix,
+            target_prefix,
+            path=path,
+            curated_paths=curated_paths,
+            filter_mutual_mappings=filter_mutual_mappings,
+            relation=relation,
+            method=method,
+            cutoff=cutoff,
+        )
+
+    return predict

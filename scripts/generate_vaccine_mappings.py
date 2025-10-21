@@ -6,7 +6,7 @@ from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.sources.cpt import iter_terms
 from sssom_pydantic import MappingTool, SemanticMapping
 
-from biomappings.lexical import append_lexical_predictions
+from biomappings import append_lexical_predictions
 from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 

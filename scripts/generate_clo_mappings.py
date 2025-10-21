@@ -3,12 +3,12 @@
 import click
 from more_click import verbose_option
 
-from biomappings.get_lexical import append_lexical_predictions
+from biomappings import append_lexical_predictions
 from biomappings.utils import get_script_url
 
 
 @click.command()
-@verbose_option  # type:ignore[misc]
+@verbose_option
 def main() -> None:
     """Generate mappings from CLO."""
     provenance = get_script_url(__file__)

@@ -3,6 +3,7 @@
 #  agrovoc: http://aims.fao.org/aos/agrovoc/c_
 #  apollosv: http://purl.obolibrary.org/obo/APOLLO_SV_
 #  bto: http://purl.obolibrary.org/obo/BTO_
+#  caro: http://purl.obolibrary.org/obo/CARO_
 #  ccle: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
 #  cellosaurus: https://www.cellosaurus.org/CVCL_
 #  chebi: http://purl.obolibrary.org/obo/CHEBI_
@@ -37,6 +38,7 @@
 #  ncit: http://purl.obolibrary.org/obo/NCIT_
 #  oae: http://purl.obolibrary.org/obo/OAE_
 #  obi: http://purl.obolibrary.org/obo/OBI_
+#  ogms: http://purl.obolibrary.org/obo/OGMS_
 #  orcid: https://orcid.org/
 #  pato: http://purl.obolibrary.org/obo/PATO_
 #  pfam: https://www.ebi.ac.uk/interpro/entry/pfam/
@@ -652,6 +654,7 @@ iconclass:94E231	gold is found in Palamedes' tent	skos:relatedMatch	Not	chebi:59
 iconclass:94G42	Hector's body is weighed in gold (Aeschylus)	skos:relatedMatch	Not	chebi:59965	glyoxal-lysine dimer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py
 ido:0000636	sepsis	skos:exactMatch	Not	ncbitaxon:137507	Sepsis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings
 idomal:0000222	enzyme-linked immunosorbent assay	skos:exactMatch	Not	maxo:0000610	clinical ELISA testing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira
+idomal:0001015	relapse	skos:exactMatch	Not	ogms:0000105	relapse	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira
 idomal:0001019	mouse	skos:exactMatch	Not	ncbitaxon:10090	Mus musculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira
 idomal:0001083	Trap	skos:exactMatch	Not	pr:000001937	tartrate-resistant acid phosphatase type 5	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira
 idomal:0001083	Trap	skos:exactMatch	Not	pr:Q05117	tartrate-resistant acid phosphatase type 5 (mouse)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira
@@ -659,6 +662,7 @@ idomal:0001123	RAP-1	skos:exactMatch	Not	vo:0011026	RAP-1	semapv:ManualMappingCu
 idomal:0001143	MSP-1	skos:exactMatch	Not	doid:0111385	inclusion body myopathy with early-onset Paget disease of bone with or without frontotemporal dementia 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira
 idomal:0001144	MSP-2	skos:exactMatch	Not	doid:0111384	inclusion body myopathy with early-onset Paget disease of bone with or without frontotemporal dementia 2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira
 idomal:0001145	MSP-3	skos:exactMatch	Not	doid:0111386	inclusion body myopathy with early-onset Paget disease of bone with or without frontotemporal dementia 3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira
+idomal:0002461	anatomical cluster	skos:exactMatch	Not	caro:0020001	multi organ part structure	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira
 interpro:IPR000225	Armadillo	skos:exactMatch	Not	ncbitaxon:9359	Dasypodidae	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings
 interpro:IPR000225	Armadillo	skos:exactMatch	Not	ncbitaxon:96820	Armadillo	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings
 interpro:IPR007273	SCAMP	skos:exactMatch	Not	ncbitaxon:160730	Mycteroperca phenax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings

@@ -4,24 +4,24 @@ from __future__ import annotations
 
 import csv
 import getpass
+import itertools as itt
 import logging
 from collections.abc import Collection, Iterable, Sequence
 from pathlib import Path
 from typing import TYPE_CHECKING, Literal, overload
 
 import bioregistry
+import curies
 import sssom_pydantic
 from bioregistry import NormalizedNamedReference
 from curies import Reference
-from sssom_pydantic import Metadata, SemanticMapping
+from sssom_pydantic import MappingSet, Metadata, SemanticMapping
 
-from ..lexical_utils import drop_duplicates, remove_redundant_external
 from ..utils import (
     CURATORS_PATH,
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     PREDICTIONS_SSSOM_PATH,
-    PURL_BASE,
     UNSURE_SSSOM_PATH,
 )
 
@@ -31,7 +31,6 @@ if TYPE_CHECKING:
 __all__ = [
     "SemanticMapping",
     "append_false_mappings",
-    "append_predictions",
     "append_predictions",
     "append_true_mappings",
     "append_unsure_mappings",
@@ -53,31 +52,27 @@ __all__ = [
 logger = logging.getLogger(__name__)
 
 
-def _load_table(path: str | Path) -> list[SemanticMapping]:
-    path = Path(path).expanduser().resolve()
-    mappings, _converter, _mapping_set = sssom_pydantic.read(
-        path,
-        metadata={"mapping_set_id": f"{PURL_BASE}/{path.name}"},
-    )
-    return mappings
-
-
 def _write_helper(
     mappings: Iterable[SemanticMapping],
     path: str | Path,
     mode: Literal["w", "a"],
-    metadata: Metadata | None = None,
+    metadata: Metadata | MappingSet | None = None,
     exclude_mappings: Iterable[SemanticMapping] | None = None,
+    converter: curies.Converter | None = None,
 ) -> None:
-    if exclude_mappings is not None:
-        mappings = remove_redundant_external(mappings, exclude_mappings)
-    mappings = drop_duplicates(mappings)
-    mappings = sorted(mappings)
     if mode == "a":
         sssom_pydantic.append(mappings, path)
     elif mode == "w":
+        if converter is None:
+            converter = bioregistry.get_default_converter()
         sssom_pydantic.write(
-            mappings, path, metadata=metadata, converter=bioregistry.get_default_converter()
+            mappings,
+            path,
+            metadata=metadata,
+            converter=converter,
+            exclude_mappings=exclude_mappings,
+            drop_duplicates=True,
+            sort=True,
         )
     else:
         raise ValueError(f"invalid mode: {mode}")
@@ -85,7 +80,8 @@ def _write_helper(
 
 def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
     """Load the mappings table."""
-    return _load_table(path or POSITIVES_SSSOM_PATH)
+    mappings, _converter, _mapping_set = sssom_pydantic.read(path or POSITIVES_SSSOM_PATH)
+    return mappings
 
 
 def append_true_mappings(
@@ -109,20 +105,13 @@ def write_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | Non
 
 def lint_true_mappings(*, path: Path | None = None) -> None:
     """Lint the true mappings file."""
-    _lint_curated_mappings(path=path or POSITIVES_SSSOM_PATH)
-
-
-def _lint_curated_mappings(path: Path) -> None:
-    """Lint the true mappings file."""
-    sssom_pydantic.lint(
-        path,
-        metadata={"mapping_set_id": f"{PURL_BASE}/{path.name}"},
-    )
+    sssom_pydantic.lint(path or POSITIVES_SSSOM_PATH, converter=bioregistry.get_converter())
 
 
 def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the false mappings table."""
-    return _load_table(path or NEGATIVES_SSSOM_PATH)
+    mappings, _converter, _mapping_set = sssom_pydantic.read(path or NEGATIVES_SSSOM_PATH)
+    return mappings
 
 
 def append_false_mappings(
@@ -136,9 +125,7 @@ def append_false_mappings(
         path = NEGATIVES_SSSOM_PATH
     _write_helper(mappings, path=path, mode="a")
     if sort:
-        lint_false_mappings(
-            path=path,
-        )
+        lint_false_mappings(path=path)
 
 
 def write_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
@@ -148,16 +135,13 @@ def write_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | No
 
 def lint_false_mappings(*, path: Path | None = None) -> None:
     """Lint the false mappings file."""
-    _lint_curated_mappings(
-        path=path or NEGATIVES_SSSOM_PATH,
-    )
+    sssom_pydantic.lint(path or NEGATIVES_SSSOM_PATH, converter=bioregistry.get_converter())
 
 
 def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
     """Load the unsure table."""
-    return _load_table(
-        path or UNSURE_SSSOM_PATH,
-    )
+    mappings, _converter, _mapping_set = sssom_pydantic.read(path or UNSURE_SSSOM_PATH)
+    return mappings
 
 
 def append_unsure_mappings(
@@ -181,14 +165,13 @@ def write_unsure_mappings(mappings: Iterable[SemanticMapping], *, path: Path | N
 
 def lint_unsure_mappings(*, path: Path | None = None) -> None:
     """Lint the unsure mappings file."""
-    _lint_curated_mappings(
-        path=path or UNSURE_SSSOM_PATH,
-    )
+    sssom_pydantic.lint(path or UNSURE_SSSOM_PATH, converter=bioregistry.get_converter())
 
 
 def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:
     """Load the predictions table."""
-    return _load_table(path or PREDICTIONS_SSSOM_PATH)
+    mappings, _converter, _mapping_set = sssom_pydantic.read(path or PREDICTIONS_SSSOM_PATH)
+    return mappings
 
 
 def write_predictions(
@@ -196,6 +179,8 @@ def write_predictions(
     *,
     path: Path | None = None,
     exclude_mappings: Iterable[SemanticMapping] | None = None,
+    metadata: Metadata | MappingSet | None = None,
+    converter: curies.Converter | None = None,
 ) -> None:
     """Write new content to the predictions table."""
     if path is None:
@@ -203,14 +188,15 @@ def write_predictions(
     _write_helper(
         mappings,
         path,
+        metadata=metadata,
+        converter=converter,
         mode="w",
-        metadata={"mapping_set_id": f"{PURL_BASE}/{path.name}"},
         exclude_mappings=exclude_mappings,
     )
 
 
 def append_predictions(
-    mappings: Iterable[SemanticMapping],
+    new_mappings: Iterable[SemanticMapping],
     *,
     path: Path | None = None,
 ) -> None:
@@ -218,33 +204,44 @@ def append_predictions(
     if path is None:
         path = PREDICTIONS_SSSOM_PATH
 
-    existing_predicted_mappings = load_predictions(path=path)
+    mappings, converter, metadata = sssom_pydantic.read(path)
 
-    # This line is the only difference from the lint_predictions function
-    existing_predicted_mappings.extend(mappings)
+    prefixes: set[str] = set()
+    for mapping in new_mappings:
+        prefixes.update(mapping.get_prefixes())
+        mappings.append(mapping)
 
-    write_predictions(
-        existing_predicted_mappings,
-        path=path,
-        exclude_mappings=[
-            *load_mappings(),
-            *load_false_mappings(),
-            *load_unsure(),
-        ],
+    for prefix in prefixes:
+        if not converter.standardize_prefix(prefix):
+            raise NotImplementedError("amending prefixes not yet implemented")
+
+    curated_paths = [POSITIVES_SSSOM_PATH, NEGATIVES_SSSOM_PATH, UNSURE_SSSOM_PATH]
+
+    exclude_mappings = itt.chain.from_iterable(
+        sssom_pydantic.read(path)[0] for path in curated_paths
+    )
+
+    sssom_pydantic.write(
+        mappings,
+        path,
+        metadata=metadata,
+        converter=converter,
+        drop_duplicates=True,
+        sort=True,
+        exclude_mappings=exclude_mappings,
     )
 
 
 def lint_predictions(*, path: Path | None = None) -> None:
     """Lint the predictions file, excluding mappings appearing in any curated files."""
-    existing_predicted_mappings = load_predictions(path=path)
-    write_predictions(
-        existing_predicted_mappings,
-        path=path,
+    sssom_pydantic.lint(
+        path or PREDICTIONS_SSSOM_PATH,
         exclude_mappings=[
             *load_mappings(),
             *load_false_mappings(),
             *load_unsure(),
         ],
+        drop_duplicates=True,
     )
 
 
