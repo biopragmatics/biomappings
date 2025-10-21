@@ -39,9 +39,9 @@ class Repository(NamedTuple):
 
     def get_predict_command(self) -> click.Command:
         """Get the predict command."""
-        from . import lexical_core
+        from . import lexical
 
-        return lexical_core.get_predict_command(
+        return lexical.get_predict_command(
             path=self.predictions_path,
             curated_paths=self.curated_paths,
         )
@@ -56,9 +56,9 @@ class Repository(NamedTuple):
         **kwargs: Any,
     ) -> None:
         """Run the lexical predictions CLI."""
-        from . import lexical_core
+        from . import lexical
 
-        return lexical_core.lexical_prediction_cli(
+        return lexical.lexical_prediction_cli(
             prefix,
             target,
             mapping_tool=mapping_tool,
@@ -76,9 +76,9 @@ class Repository(NamedTuple):
         **kwargs: Any,
     ) -> None:
         """Append lexical predictions."""
-        from . import lexical_core
+        from . import lexical
 
-        return lexical_core.append_lexical_predictions(
+        return lexical.append_lexical_predictions(
             prefix,
             target_prefixes,
             mapping_tool=mapping_tool,
