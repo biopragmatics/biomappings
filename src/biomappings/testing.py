@@ -15,8 +15,8 @@ from bioregistry import NormalizedNamableReference
 from curies import Reference
 from curies.vocabulary import matching_processes
 from sssom_pydantic import SemanticMapping
+from sssom_pydantic.process import CanonicalMappingTuple, get_canonical_tuple
 
-from biomappings.lexical_utils import CanonicalMappingTuple, get_canonical_tuple
 from biomappings.resources import load_mappings, load_predictions
 from biomappings.utils import (
     CURATORS_PATH,
