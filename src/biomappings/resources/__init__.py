@@ -10,23 +10,22 @@ from collections.abc import Collection, Iterable, Sequence
 from pathlib import Path
 from typing import TYPE_CHECKING, Literal, overload
 
-import bioregistry
 import sssom_pydantic
-from bioregistry import NormalizedNamedReference
-from curies import Reference
-from sssom_pydantic import SemanticMapping
 
 from ..utils import (
     CURATORS_PATH,
+    DEFAULT_REPO,
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     PREDICTIONS_SSSOM_PATH,
     UNSURE_SSSOM_PATH,
 )
-from ..wsgi_utils import insert
 
 if TYPE_CHECKING:
     import networkx
+    from bioregistry import NormalizedNamedReference
+    from curies import Reference
+    from sssom_pydantic import SemanticMapping
 
 __all__ = [
     "append_false_mappings",
@@ -68,6 +67,10 @@ def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]
 
 def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Append new lines to the positive mappings document."""
+    import bioregistry
+
+    from ..curator.wsgi_utils import insert
+
     insert(
         path or POSITIVES_SSSOM_PATH,
         converter=bioregistry.get_converter(),
@@ -77,6 +80,10 @@ def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | No
 
 def append_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Append new lines to the negative mappings document."""
+    import bioregistry
+
+    from ..curator.wsgi_utils import insert
+
     insert(
         path or NEGATIVES_SSSOM_PATH,
         converter=bioregistry.get_converter(),
@@ -86,12 +93,9 @@ def append_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | N
 
 def append_predictions(
     new_mappings: Iterable[SemanticMapping],
-    *,
-    path: Path | None = None,
 ) -> None:
     """Append new lines to the predicted mappings document."""
-    if path is None:
-        path = PREDICTIONS_SSSOM_PATH
+    path = DEFAULT_REPO.predictions_path
 
     mappings, converter, metadata = sssom_pydantic.read(path)
 
@@ -104,10 +108,8 @@ def append_predictions(
         if not converter.standardize_prefix(prefix):
             raise NotImplementedError("amending prefixes not yet implemented")
 
-    curated_paths = [POSITIVES_SSSOM_PATH, NEGATIVES_SSSOM_PATH, UNSURE_SSSOM_PATH]
-
     exclude_mappings = itt.chain.from_iterable(
-        sssom_pydantic.read(path)[0] for path in curated_paths
+        sssom_pydantic.read(path)[0] for path in DEFAULT_REPO.curated_paths
     )
 
     sssom_pydantic.write(
@@ -123,6 +125,8 @@ def append_predictions(
 
 def load_curators() -> dict[str, NormalizedNamedReference]:
     """Load the curators table."""
+    from bioregistry import NormalizedNamedReference
+
     with CURATORS_PATH.open() as file:
         return {
             record["user"]: NormalizedNamedReference(

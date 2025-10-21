@@ -3,7 +3,7 @@
 from pathlib import Path
 from typing import ClassVar
 
-from biomappings import testing
+from biomappings.curator import testing
 from biomappings.utils import (
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,

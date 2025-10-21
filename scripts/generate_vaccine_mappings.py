@@ -15,8 +15,8 @@ from biomappings.utils import get_script_url
 def main() -> None:
     """Generate vaccine mappings."""
     provenance = get_script_url(__file__)
-    append_lexical_predictions("cvx", ["mesh", "cpt", "vo"], provenance=provenance)
-    append_lexical_predictions("cpt", ["mesh", "vo"], provenance=provenance)
+    append_lexical_predictions("cvx", ["mesh", "cpt", "vo"], mapping_tool=provenance)
+    append_lexical_predictions("cpt", ["mesh", "vo"], mapping_tool=provenance)
 
     preds = []
     grounder = pyobo.get_grounder(["mesh", "vo"], versions=["2023", None])

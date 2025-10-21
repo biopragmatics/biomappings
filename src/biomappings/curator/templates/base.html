@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+
+            <!-- default footer CSS -->
+            <style>
+                html, body {
+                    height: 100%;
+                }
+
+                body {
+                    display: flex;
+                    flex-flow: column;
+                }
+
+                .footer {
+                    margin-top: auto;
+                    padding-top: 1em;
+                    background-color: #f5f5f5;
+                }
+            </style>
+        {% endblock %}
+
+        <script src="https://kit.fontawesome.com/4c86883252.js" crossorigin="anonymous"></script>
+
+        <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+<!-- Your page content -->
+{% block content %}{% endblock %}
+
+<footer class="footer">
+    <p class="small text-center text-muted">
+        Developed with ❤️ by the <a href="https://gyorilab.github.io">Gyori Lab</a> at
+        <a href="https://www.northeastern.edu/">Northeastern University</a>.<br/>
+        Funded by the DARPA awards W911NF2010255 and HR00112220036.<br/>
+        Points of contact: <a href="https://github.com/cthoyt">@cthoyt</a> and 
+        <a href="https://github.com/bgyori">@bgyori</a>.
+        (<a href="https://github.com/biopragmatics/biomappings">Source code</a>)
+    </p>
+</footer>
+
+{% block scripts %}
+    <!-- Optional JavaScript -->
+    {{ bootstrap.load_js() }}
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+{% endblock %}
+</body>
+</html>

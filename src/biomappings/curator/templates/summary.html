@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% import "bootstrap4/form.html" as wtf %}
+{% import "bootstrap4/utils.html" as util %}
+
+{% block title %}Biomappings Summary{% endblock %}
+
+{% block content %}
+    <div class="container" style="margin-top: 50px; margin-bottom: 50px">
+        {{ util.render_messages(dismissible=True, container=False) }}
+        <div class="row justify-content-md-center">
+            <div class="col-lg-6">
+                <div class="card">
+                    <h5 class="card-header text-center">Biomappings Summary</h5>
+                    <div class="card-body">
+                        <p>
+                            This page creates a top-level summary of the current query,
+                            broken down by source and target prefixes.
+                        </p>
+                    </div>
+                    <table class="table table-hover">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Source Prefix</th>
+                            <th scope="col">Target Prefix</th>
+                            <th scope="col">Count</th>
+                            <th scope="col">Link</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for source_prefix, target_prefix, count, link in rows %}
+                            <tr>
+                                <td>{{ source_prefix }}</td>
+                                <td>{{ target_prefix }}</td>
+                                <td style="text-align: right;">{{ "{:,d}".format(count) }}</td>
+                                <td><a href="{{ link }}">Go!</a></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -14,11 +14,13 @@ from .resources import (
     load_predictions,
     load_unsure,
 )
+from .utils import DEFAULT_REPO, get_script_url
 
 if TYPE_CHECKING:
     from sssom_pydantic import MappingTool
 
 __all__ = [
+    "DEFAULT_REPO",
     "get_false_graph",
     "get_predictions_graph",
     "get_true_graph",
@@ -39,34 +41,19 @@ def lexical_prediction_cli(
     **kwargs: Any,
 ) -> None:
     """Run the lexical predictions CLI."""
-    from . import lexical_core
-    from .utils import CURATED_PATHS, PREDICTIONS_SSSOM_PATH, get_script_url
-
-    return lexical_core.lexical_prediction_cli(
-        prefix,
-        target,
-        mapping_tool=MappingTool(name=get_script_url(script), version=None),
-        path=PREDICTIONS_SSSOM_PATH,
-        curated_paths=CURATED_PATHS,
-        **kwargs,
+    return DEFAULT_REPO.lexical_prediction_cli(
+        prefix, target, mapping_tool=get_script_url(script), **kwargs
     )
 
 
 def append_lexical_predictions(
     prefix: str,
     target_prefixes: str | Iterable[str],
-    provenance: str | MappingTool,
+    *,
+    mapping_tool: str | MappingTool | None = None,
     **kwargs: Any,
 ) -> None:
     """Append lexical predictions."""
-    from . import lexical_core
-    from .utils import CURATED_PATHS, PREDICTIONS_SSSOM_PATH
-
-    return lexical_core.append_lexical_predictions(
-        prefix,
-        target_prefixes,
-        mapping_tool=provenance,
-        path=PREDICTIONS_SSSOM_PATH,
-        curated_paths=CURATED_PATHS,
-        **kwargs,
+    return DEFAULT_REPO.append_lexical_predictions(
+        prefix, target_prefixes, mapping_tool=mapping_tool, **kwargs
     )

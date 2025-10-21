@@ -5,27 +5,20 @@ from __future__ import annotations
 import itertools as itt
 import os
 from collections import Counter
-from pathlib import Path
 from typing import TYPE_CHECKING
 
 import click
 
-from . import lexical_core
+from .curator.wsgi_utils import get_git_hash
+from .resources import get_current_curator
 from .resources.export_sssom import export_sssom
 from .summary import export
-from .utils import (
-    CURATED_PATHS,
-    DATA,
-    IMG,
-    NEGATIVES_SSSOM_PATH,
-    POSITIVES_SSSOM_PATH,
-    PREDICTIONS_SSSOM_PATH,
-    UNSURE_SSSOM_PATH,
-    get_git_hash,
-)
+from .utils import DATA_DIRECTORY, DEFAULT_REPO, IMG_DIRECTORY
 
 if TYPE_CHECKING:
     import matplotlib.axes
+
+GIT_HASH = get_git_hash()
 
 
 @click.group()
@@ -36,151 +29,23 @@ def main() -> None:
 
 main.add_command(export)
 main.add_command(export_sssom)
+main.add_command(DEFAULT_REPO.get_predict_command())
+main.add_command(DEFAULT_REPO.get_lint_command())
 main.add_command(
-    lexical_core.get_predict_command(
-        path=PREDICTIONS_SSSOM_PATH,
-        curated_paths=CURATED_PATHS,
-    )
+    DEFAULT_REPO.get_web_command(enable=GIT_HASH is not None, get_user=get_current_curator)
 )
-
-if get_git_hash() is not None:
-    resolver_base_option = click.option(
-        "--resolver-base",
-        help="A custom resolver base URL, instead of the Bioregistry.",
-    )
-
-    @main.command()
-    @click.option(
-        "--predictions-path",
-        type=Path,
-        help="A predictions TSV file path",
-        default=PREDICTIONS_SSSOM_PATH,
-    )
-    @click.option(
-        "--positives-path",
-        type=Path,
-        help="A positives curation TSV file path",
-        default=POSITIVES_SSSOM_PATH,
-    )
-    @click.option(
-        "--negatives-path",
-        type=Path,
-        help="A negatives curation TSV file path",
-        default=NEGATIVES_SSSOM_PATH,
-    )
-    @click.option(
-        "--unsure-path",
-        type=Path,
-        help="An unsure curation TSV file path",
-        default=UNSURE_SSSOM_PATH,
-    )
-    @resolver_base_option
-    def web(
-        predictions_path: Path,
-        positives_path: Path,
-        negatives_path: Path,
-        unsure_path: Path,
-        resolver_base: str | None,
-    ) -> None:
-        """Run the biomappings web app."""
-        import webbrowser
-
-        from more_click import run_app
-
-        from .resources import get_current_curator
-        from .wsgi import get_app
-
-        user = get_current_curator(strict=True)
-
-        app = get_app(
-            predictions_path=predictions_path,
-            positives_path=positives_path,
-            negatives_path=negatives_path,
-            unsure_path=unsure_path,
-            resolver_base=resolver_base,
-            user=user,
-        )
-
-        webbrowser.open_new_tab("http://localhost:5000")
-
-        run_app(app, with_gunicorn=False)
-
-    @main.command()
-    @click.option("--path", required=True, type=Path, help="A predictions TSV file path")
-    @resolver_base_option
-    def curate(
-        path: Path,
-        resolver_base: str | None,
-    ) -> None:
-        """Run a target curation web app."""
-        import sssom_pydantic
-        from curies import Reference
-        from more_click import run_app
-
-        from .resources import get_current_curator
-        from .wsgi import get_app
-
-        mappings, _, _ = sssom_pydantic.read(path)
-
-        target_references: list[Reference] = []
-        for mapping in mappings:
-            target_references.append(mapping.subject)
-            target_references.append(mapping.object)
-        user = get_current_curator(strict=True)
-        app = get_app(target_references=target_references, resolver_base=resolver_base, user=user)
-        run_app(app, with_gunicorn=False)
-
-else:
-
-    @main.command()
-    def web() -> None:
-        """Show an error for the web interface."""
-        click.secho(
-            "You are not running biomappings from a development installation.\n"
-            "Please run the following to install in development mode:\n"
-            "  $ git clone https://github.com/biomappings/biomappings.git\n"
-            "  $ cd biomappings\n"
-            "  $ pip install -e .[web]",
-            fg="red",
-        )
 
 
 @main.command()
 @click.pass_context
 def update(ctx: click.Context) -> None:
-    """Run all update functions."""
+    """Run all export, sssom, and chart functions."""
     click.secho("Building general exports", fg="green")
     ctx.invoke(export)
     click.secho("Building SSSOM export", fg="green")
     ctx.invoke(export_sssom)
     click.secho("Generating charts", fg="green")
     ctx.invoke(charts)
-
-
-@main.command()
-def lint() -> None:
-    """Sort files and remove duplicates."""
-    import bioregistry
-    import sssom_pydantic
-
-    from .utils import CURATED_PATHS, PREDICTIONS_SSSOM_PATH
-
-    # use the full bioregistry converter instead of re-using the
-    # prefix maps inside since this makes sure we cover everything.
-    # it automatically contracts the prefix map to what's relevant
-    # at the end
-    converter = bioregistry.get_converter()
-
-    exclude_mappings = []
-    for path in CURATED_PATHS:
-        sssom_pydantic.lint(path, converter=converter)
-        exclude_mappings.extend(sssom_pydantic.read(path)[0])
-
-    sssom_pydantic.lint(
-        PREDICTIONS_SSSOM_PATH,
-        exclude_mappings=exclude_mappings,
-        drop_duplicates=True,
-    )
 
 
 @main.command()
@@ -192,7 +57,7 @@ def ndex(username: str | None, password: str | None) -> None:
     from sssom_pydantic.contrib.ndex import update_ndex
 
     from biomappings import load_mappings
-    from biomappings.utils import BIOMAPPINGS_NDEX_UUID, get_git_hash
+    from biomappings.utils import BIOMAPPINGS_NDEX_UUID
 
     mappings = load_mappings()
     metadata = MappingSet(
@@ -200,7 +65,7 @@ def ndex(username: str | None, password: str | None) -> None:
         mapping_set_title="Biomappings",
         mapping_set_description="Manually curated semantic mappings (e.g., skos:exactMatch) between biological entities",
         license="CC0",
-        mapping_set_version=get_git_hash(),
+        mapping_set_version=GIT_HASH,
     )
     update_ndex(
         uuid=BIOMAPPINGS_NDEX_UUID,
@@ -301,11 +166,11 @@ def charts() -> None:
         if _n_duplicates:
             components_with_duplicate_prefixes.append(nodes_data)
 
-    with open(os.path.join(DATA, "incomplete_components.yml"), "w") as file:
+    with open(os.path.join(DATA_DIRECTORY, "incomplete_components.yml"), "w") as file:
         yaml.safe_dump(incomplete_components, file)
-    with open(os.path.join(DATA, "components_with_duplicate_prefixes.yml"), "w") as file:
+    with open(os.path.join(DATA_DIRECTORY, "components_with_duplicate_prefixes.yml"), "w") as file:
         yaml.safe_dump(components_with_duplicate_prefixes, file)
-    with open(os.path.join(DATA, "unstable_components.yml"), "w") as file:
+    with open(os.path.join(DATA_DIRECTORY, "unstable_components.yml"), "w") as file:
         yaml.safe_dump(unstable_components, file)
 
     fig, axes = plt.subplots(2, 3, figsize=(10.5, 6.5))
@@ -336,11 +201,11 @@ def charts() -> None:
 
     axes[1][2].axis("off")
 
-    path = os.path.join(IMG, "components.png")
+    path = os.path.join(IMG_DIRECTORY, "components.png")
     click.echo(f"saving to {path}")
     plt.tight_layout()
     plt.savefig(path, dpi=300)
-    plt.savefig(os.path.join(IMG, "components.svg"))
+    plt.savefig(os.path.join(IMG_DIRECTORY, "components.svg"))
     plt.close(fig)
 
     prefix_counter = Counter(prefix_list)
@@ -357,11 +222,11 @@ def charts() -> None:
     axes[1].set_xlabel("Count")
     axes[1].set_title(f"Relations ({len(relation_counter)})")
 
-    path = os.path.join(IMG, "summary.png")
+    path = os.path.join(IMG_DIRECTORY, "summary.png")
     click.echo(f"saving to {path}")
     plt.tight_layout()
     plt.savefig(path, dpi=300)
-    plt.savefig(os.path.join(IMG, "summary.svg"))
+    plt.savefig(os.path.join(IMG_DIRECTORY, "summary.svg"))
     plt.close(fig)
 
 
