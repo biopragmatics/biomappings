@@ -363,6 +363,7 @@ def filter_existing_xrefs(
 
     :param mappings: Semantic mappings to filter
     :param prefixes: Prefixes for resources to check for existing mappings
+
     :yields: Filtered semantic mappings
     """
     entity_to_mapped_prefixes = _get_entity_to_mapped_prefixes(prefixes)
@@ -419,6 +420,7 @@ def _mutual_mapping_graph(prefixes: Iterable[str]) -> nx.Graph:
 
     :param prefixes: A list of prefixes to use with :func:`pyobo.get_filtered_xrefs` to
         get xrefs.
+
     :returns: The undirected mapping graph containing mappings between entries in the
         given namespaces.
     """
@@ -505,8 +507,8 @@ def append_lexical_predictions(
     :param filter_mutual_mappings: Should mappings between entities in the given
         namespaces be filtered out?
     :param mapping_tool: The name of the mapping tool
-    :param curated_paths: The paths to curated documents that are used to remove
-        zombie mappings (i.e., predictions that were already curated)
+    :param curated_paths: The paths to curated documents that are used to remove zombie
+        mappings (i.e., predictions that were already curated)
     """
     predictions = get_predictions(
         prefix,
