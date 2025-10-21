@@ -37,7 +37,7 @@ def main() -> None:
     ]
     df = df.drop_duplicates()
     mappings = (mapping for _, mapping in df.iterrows())
-    append_true_mappings(mappings, sort=True)
+    append_true_mappings(mappings)
 
 
 if __name__ == "__main__":

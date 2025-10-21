@@ -4,10 +4,17 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import curies
 from bioregistry import NormalizedNamableReference as Reference
 from sssom_pydantic import MappingTool, SemanticMapping
 
 from biomappings.resources import write_predictions
+from biomappings.utils import (
+    NEGATIVES_SSSOM_PATH,
+    POSITIVES_SSSOM_PATH,
+    PREDICTIONS_SSSOM_PATH,
+    UNSURE_SSSOM_PATH,
+)
 from biomappings.wsgi import Controller, State, get_app
 
 TEST_USER = Reference(prefix="orcid", identifier="0000-0000-0000-0000", name="Max Mustermann")
@@ -18,7 +25,13 @@ class TestWeb(unittest.TestCase):
 
     def setUp(self) -> None:
         """Set up the test case with a controller."""
-        self.controller = Controller(user=TEST_USER)
+        self.controller = Controller(
+            user=TEST_USER,
+            positives_path=POSITIVES_SSSOM_PATH,
+            negatives_path=NEGATIVES_SSSOM_PATH,
+            unsure_path=UNSURE_SSSOM_PATH,
+            predictions_path=PREDICTIONS_SSSOM_PATH,
+        )
 
     def test_query(self) -> None:
         """Test making a query."""
@@ -72,7 +85,7 @@ class TestFull(unittest.TestCase):
                 object=Reference.from_curie("mesh:C018305", name="glyoxal dioxime"),
                 justification="semapv:ManualMappingCuration",
                 confidence=0.95,
-                mapping_tool=MappingTool(name="test"),
+                mapping_tool=MappingTool(name="test", version=None),
             )
         ]
         directory = Path(self.temporary_directory.name)
@@ -85,6 +98,12 @@ class TestFull(unittest.TestCase):
             predictions,
             path=predictions_path,
             metadata={"mapping_set_id": f"https://example.org/{predictions_path.name}"},
+            converter=curies.Converter.from_prefix_map({
+                "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+                "mesh": "http://id.nlm.nih.gov/mesh/",
+                "semapv": "https://w3id.org/semapv/vocab/",
+                "skos": "http://www.w3.org/2004/02/skos/core#",
+            }),
         )
         for path in [positives_path, negatives_path, unsure_path]:
             with path.open("w") as file:

@@ -11,13 +11,13 @@ from textwrap import dedent
 from typing import Any, ClassVar, TypeAlias, TypeVar, cast
 
 import bioregistry
+import sssom_pydantic
 from bioregistry import NormalizedNamableReference
 from curies import Reference
 from curies.vocabulary import matching_processes
 from sssom_pydantic import SemanticMapping
 from sssom_pydantic.process import CanonicalMappingTuple, get_canonical_tuple
 
-from biomappings.resources import load_mappings, load_predictions
 from biomappings.utils import (
     CURATORS_PATH,
     NEGATIVES_SSSOM_PATH,
@@ -257,7 +257,7 @@ class PathIntegrityTestCase(IntegrityTestCase):
     @classmethod
     def setUpClass(cls) -> None:
         """Set up the test case."""
-        cls.predictions = load_predictions(path=cls.predictions_path)
-        cls.mappings = load_mappings(path=cls.positives_path)
-        cls.incorrect = load_mappings(path=cls.negatives_path)
-        cls.unsure = load_mappings(path=cls.unsure_path)
+        cls.predictions = sssom_pydantic.read(cls.predictions_path)[0]
+        cls.mappings = sssom_pydantic.read(cls.positives_path)[0]
+        cls.incorrect = sssom_pydantic.read(cls.negatives_path)[0]
+        cls.unsure = sssom_pydantic.read(cls.unsure_path)[0]
