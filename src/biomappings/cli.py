@@ -27,9 +27,8 @@ def main() -> None:
 
 main.add_command(export)
 main.add_command(export_sssom)
-
 main.add_command(
-    lexical_core.get_predict_cli(
+    lexical_core.get_predict_command(
         path=PREDICTIONS_SSSOM_PATH,
         curated_paths=CURATED_PATHS,
     )

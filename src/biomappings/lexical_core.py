@@ -34,7 +34,7 @@ __all__ = [
     "append_predictions",
     "filter_custom",
     "filter_existing_xrefs",
-    "get_predict_cli",
+    "get_predict_command",
     "get_predictions",
     "lexical_prediction_cli",
     "predict_embedding_mappings",
@@ -568,14 +568,14 @@ def lexical_prediction_cli(
     main()
 
 
-def get_predict_cli(
+def get_predict_command(
     *,
     source_prefix: str | None = None,
     target_prefix: str | None | list[str] = None,
     path: Path,
     curated_paths: list[Path] | None = None,
 ) -> click.Command:
-    """Create a prediction CLI."""
+    """Create a prediction command."""
     if source_prefix is None:
         source_prefix_argument = click.argument("source_prefix")
     else:
