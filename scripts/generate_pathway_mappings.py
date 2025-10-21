@@ -1,6 +1,6 @@
 """Generate mappings from Reactome, WikiPathways, and Pathway Ontology."""
 
-from biomappings.lexical import append_lexical_predictions
+from biomappings import append_lexical_predictions
 from biomappings.utils import get_script_url
 
 

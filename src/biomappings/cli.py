@@ -10,10 +10,10 @@ from typing import TYPE_CHECKING
 
 import click
 
-from .lexical import get_predict_cli
+from . import lexical_workflow
 from .resources.export_sssom import export_sssom
 from .summary import export
-from .utils import DATA, IMG, get_git_hash
+from .utils import CURATED_PATHS, DATA, IMG, PREDICTIONS_SSSOM_PATH, get_git_hash
 
 if TYPE_CHECKING:
     import matplotlib.axes
@@ -27,7 +27,13 @@ def main() -> None:
 
 main.add_command(export)
 main.add_command(export_sssom)
-main.add_command(get_predict_cli())
+
+main.add_command(
+    lexical_workflow.get_predict_cli(
+        path=PREDICTIONS_SSSOM_PATH,
+        curated_paths=CURATED_PATHS,
+    )
+)
 
 if get_git_hash() is not None:
     resolver_base_option = click.option(

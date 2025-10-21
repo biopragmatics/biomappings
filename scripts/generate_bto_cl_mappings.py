@@ -1,6 +1,6 @@
 """Generate mappings from BTO."""
 
-from biomappings.lexical import lexical_prediction_cli
+from biomappings import lexical_prediction_cli
 
 if __name__ == "__main__":
-    lexical_prediction_cli(__file__, "bto", ["cl"])
+    lexical_prediction_cli("bto", "cl", script=__file__)

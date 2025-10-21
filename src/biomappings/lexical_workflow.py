@@ -55,9 +55,9 @@ TOOL_NAME = "biomappings"
 
 def _resolve_tool(mapping_tool: str | MappingTool | None) -> MappingTool:
     if mapping_tool is None:
-        return MappingTool(name=TOOL_NAME)
+        return MappingTool(name=TOOL_NAME, version=None)
     if isinstance(mapping_tool, str):
-        return MappingTool(name=mapping_tool)
+        return MappingTool(name=mapping_tool, version=None)
     return mapping_tool
 
 
@@ -505,6 +505,8 @@ def append_lexical_predictions(
     :param filter_mutual_mappings: Should mappings between entities in the given
         namespaces be filtered out?
     :param mapping_tool: The name of the mapping tool
+    :param curated_paths: The paths to curated documents that are used to remove
+        zombie mappings (i.e., predictions that were already curated)
     """
     predictions = get_predictions(
         prefix,
@@ -527,7 +529,6 @@ def append_lexical_predictions(
 
 
 def lexical_prediction_cli(
-    script: str,
     prefix: str,
     target: str | list[str],
     *,
@@ -539,6 +540,7 @@ def lexical_prediction_cli(
     method: PredictionMethod | None = None,
     cutoff: float | None = None,
     custom_filter_function: Callable[[SemanticMapping], bool] | None = None,
+    mapping_tool: str | MappingTool | None = None,
 ) -> None:
     """Construct a CLI and run it."""
     tt = target if isinstance(target, str) else ", ".join(target)
@@ -558,6 +560,7 @@ def lexical_prediction_cli(
             method=method,
             cutoff=cutoff,
             custom_filter_function=custom_filter_function,
+            mapping_tool=mapping_tool,
         )
 
     main()

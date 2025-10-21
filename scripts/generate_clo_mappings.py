@@ -3,7 +3,7 @@
 import click
 from more_click import verbose_option
 
-from biomappings.lexical import append_lexical_predictions
+from biomappings import append_lexical_predictions
 from biomappings.utils import get_script_url
 
 
