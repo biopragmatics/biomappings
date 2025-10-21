@@ -41,10 +41,10 @@ def lexical_prediction_cli(
     **kwargs: Any,
 ) -> None:
     """Run the lexical predictions CLI."""
-    from . import lexical_workflow
+    from . import lexical_core
     from .utils import CURATED_PATHS, PREDICTIONS_SSSOM_PATH, get_script_url
 
-    return lexical_workflow.lexical_prediction_cli(
+    return lexical_core.lexical_prediction_cli(
         prefix,
         target,
         mapping_tool=MappingTool(name=get_script_url(script), version=None),
@@ -61,10 +61,10 @@ def append_lexical_predictions(
     **kwargs: Any,
 ) -> None:
     """Append lexical predictions."""
-    from . import lexical_workflow
+    from . import lexical_core
     from .utils import CURATED_PATHS, PREDICTIONS_SSSOM_PATH
 
-    return lexical_workflow.append_lexical_predictions(
+    return lexical_core.append_lexical_predictions(
         prefix,
         target_prefixes,
         mapping_tool=provenance,

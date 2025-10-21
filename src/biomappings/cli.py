@@ -10,7 +10,7 @@ from typing import TYPE_CHECKING
 
 import click
 
-from . import lexical_workflow
+from . import lexical_core
 from .resources.export_sssom import export_sssom
 from .summary import export
 from .utils import CURATED_PATHS, DATA, IMG, PREDICTIONS_SSSOM_PATH, get_git_hash
@@ -29,7 +29,7 @@ main.add_command(export)
 main.add_command(export_sssom)
 
 main.add_command(
-    lexical_workflow.get_predict_cli(
+    lexical_core.get_predict_cli(
         path=PREDICTIONS_SSSOM_PATH,
         curated_paths=CURATED_PATHS,
     )
