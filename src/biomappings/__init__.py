@@ -6,7 +6,6 @@ from collections.abc import Iterable
 from typing import TYPE_CHECKING, Any
 
 from .resources import (
-    SemanticMapping,
     get_false_graph,
     get_predictions_graph,
     get_true_graph,
@@ -20,7 +19,6 @@ if TYPE_CHECKING:
     from sssom_pydantic import MappingTool
 
 __all__ = [
-    "SemanticMapping",
     "get_false_graph",
     "get_predictions_graph",
     "get_true_graph",

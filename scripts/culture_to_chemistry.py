@@ -48,8 +48,9 @@ def match_obi() -> None:
 def match_chebi() -> None:
     """Get embedding matches to ChEBI."""
     from pyobo.struct.vocabulary import related_match
+    from sssom_pydantic import SemanticMapping
 
-    from biomappings import SemanticMapping, lexical_prediction_cli
+    from biomappings import lexical_prediction_cli
 
     def _custom_filter(m: SemanticMapping) -> bool:
         return m.subject_name is not None and len(m.subject_name) < 60

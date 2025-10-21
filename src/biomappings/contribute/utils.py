@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
-from biomappings import SemanticMapping, load_mappings
+from sssom_pydantic import SemanticMapping
+
+from biomappings import load_mappings
 
 __all__ = [
     "get_curated_mappings",
