@@ -11,11 +11,10 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Literal, overload
 
 import bioregistry
-import curies
 import sssom_pydantic
 from bioregistry import NormalizedNamedReference
 from curies import Reference
-from sssom_pydantic import MappingSet, Metadata, SemanticMapping
+from sssom_pydantic import SemanticMapping
 
 from ..utils import (
     CURATORS_PATH,
@@ -42,7 +41,6 @@ __all__ = [
     "load_mappings",
     "load_predictions",
     "load_unsure",
-    "write_predictions",
 ]
 
 logger = logging.getLogger(__name__)
@@ -88,26 +86,6 @@ def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]
     """Load the predictions table."""
     mappings, _converter, _mapping_set = sssom_pydantic.read(path or PREDICTIONS_SSSOM_PATH)
     return mappings
-
-
-def write_predictions(
-    mappings: Iterable[SemanticMapping],
-    *,
-    path: Path | None = None,
-    exclude_mappings: Iterable[SemanticMapping] | None = None,
-    metadata: Metadata | MappingSet | None = None,
-    converter: curies.Converter | None = None,
-) -> None:
-    """Write new content to the predictions table."""
-    sssom_pydantic.write(
-        mappings,
-        path or PREDICTIONS_SSSOM_PATH,
-        metadata=metadata,
-        converter=converter,
-        exclude_mappings=exclude_mappings,
-        drop_duplicates=True,
-        sort=True,
-    )
 
 
 def append_predictions(
