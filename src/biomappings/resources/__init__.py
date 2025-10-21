@@ -29,7 +29,6 @@ if TYPE_CHECKING:
     import networkx
 
 __all__ = [
-    "SemanticMapping",
     "append_false_mappings",
     "append_predictions",
     "append_true_mappings",

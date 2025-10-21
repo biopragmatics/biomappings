@@ -7,9 +7,9 @@ import obonet
 from bioregistry import NormalizedNamableReference
 from curies.vocabulary import exact_match, lexical_matching_process
 from indra.databases import mesh_client
-from sssom_pydantic import MappingTool
+from sssom_pydantic import MappingTool, SemanticMapping
 
-from biomappings.resources import SemanticMapping, append_predictions
+from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 
 g = obonet.read_obo(
