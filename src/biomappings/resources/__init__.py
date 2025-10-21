@@ -44,7 +44,6 @@ __all__ = [
     "load_mappings",
     "load_predictions",
     "load_unsure",
-    "mappings_from_semra",
     "write_false_mappings",
     "write_predictions",
     "write_true_mappings",
