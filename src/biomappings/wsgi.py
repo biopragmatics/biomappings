@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any, Literal, TypeAlias, cast, get_args
 
 import bioregistry
+import curies
 import flask
 import flask_bootstrap
 import pydantic
@@ -143,6 +144,7 @@ class Controller:
 
     _user: NamableReference
     _predictions: list[SemanticMapping]
+    converter: curies.Converter
 
     def __init__(
         self,
@@ -153,6 +155,7 @@ class Controller:
         negatives_path: Path,
         unsure_path: Path,
         user: NamableReference,
+        converter: curies.Converter | None = None,
     ) -> None:
         """Instantiate the web controller.
 
@@ -179,7 +182,10 @@ class Controller:
         self._added_mappings: list[SemanticMapping] = []
         self.target_references = set(target_references or [])
 
-        self.converter = bioregistry.get_converter()
+        if converter:
+            self.converter = converter
+        else:
+            self.converter = bioregistry.get_converter()
 
         self._current_author = user
 

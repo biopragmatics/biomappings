@@ -98,12 +98,14 @@ class TestFull(unittest.TestCase):
             predictions,
             path=predictions_path,
             metadata={"mapping_set_id": f"https://example.org/{predictions_path.name}"},
-            converter=curies.Converter.from_prefix_map({
-                "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
-                "mesh": "http://id.nlm.nih.gov/mesh/",
-                "semapv": "https://w3id.org/semapv/vocab/",
-                "skos": "http://www.w3.org/2004/02/skos/core#",
-            }),
+            converter=curies.Converter.from_prefix_map(
+                {
+                    "chebi": "http://purl.obolibrary.org/obo/CHEBI_",
+                    "mesh": "http://id.nlm.nih.gov/mesh/",
+                    "semapv": "https://w3id.org/semapv/vocab/",
+                    "skos": "http://www.w3.org/2004/02/skos/core#",
+                }
+            ),
         )
         for path in [positives_path, negatives_path, unsure_path]:
             with path.open("w") as file:

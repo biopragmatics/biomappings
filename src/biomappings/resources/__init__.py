@@ -61,11 +61,9 @@ def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
 def _append_helper(
     mappings: Iterable[SemanticMapping], path: Path | None, default_path: Path
 ) -> None:
-    insert(
-        path=path or default_path,
-        converter=bioregistry.get_converter(),
-        include_mappings=mappings,
-    )
+    if path is None:
+        path = default_path
+    insert(path, converter=bioregistry.get_converter(), include_mappings=mappings)
 
 
 def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:

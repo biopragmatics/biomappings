@@ -8,8 +8,7 @@ from typing import TypeVar
 
 import curies
 import sssom_pydantic
-from sssom_pydantic import MappingSet, Metadata, SemanticMapping
-from sssom_pydantic.process import Hasher
+from sssom_pydantic import SemanticMapping
 
 from ._git_utils import _git
 
@@ -54,19 +53,11 @@ def get_branch() -> str:
 def insert(
     path: Path,
     *,
-    metadata_path: str | Path | None = None,
-    metadata: MappingSet | Metadata | None = None,
     converter: curies.Converter | None = None,
     include_mappings: Iterable[SemanticMapping] | None = None,
-    exclude_mappings: Iterable[SemanticMapping] | None = None,
-    exclude_mappings_key: Hasher[SemanticMapping, X] | None = None,
-    drop_duplicates: bool = False,
-    drop_duplicates_key: Hasher[SemanticMapping, Y] | None = None,
 ) -> None:
     """Append eagerly with linting at the same time."""
-    mappings, converter_processed, _mapping_set = sssom_pydantic.read(
-        path, metadata_path=metadata_path, metadata=metadata, converter=converter
-    )
+    mappings, converter_processed, metadata = sssom_pydantic.read(path, converter=converter)
 
     if include_mappings is not None:
         prefixes: set[str] = set()
@@ -83,9 +74,6 @@ def insert(
         path,
         converter=converter_processed,
         metadata=metadata,
-        exclude_mappings=exclude_mappings,
-        exclude_mappings_key=exclude_mappings_key,
-        drop_duplicates=drop_duplicates,
-        drop_duplicates_key=drop_duplicates_key,
         sort=True,
+        drop_duplicates=True,
     )
