@@ -12,7 +12,7 @@ import curies
 import networkx as nx
 import pyobo
 import ssslm
-from bioregistry import NormalizedNamableReference, NormalizedNamedReference
+from bioregistry import NormalizedNamableReference, NormalizedNamedReference, NormalizedReference
 from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo import get_grounder
 from sssom_pydantic import MappingTool, SemanticMapping
@@ -248,7 +248,7 @@ def predict_lexical_mappings(
     prefix: str,
     mapping_tool: str | MappingTool,
     *,
-    predicate: str | curies.NamableReference | None = None,
+    predicate: str | curies.Reference | None = None,
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
@@ -258,7 +258,10 @@ def predict_lexical_mappings(
     if predicate is None:
         predicate = exact_match
     elif isinstance(predicate, str):
-        predicate = NormalizedNamableReference.from_curie(predicate)
+        predicate = NormalizedReference.from_curie(predicate)
+
+    # throw away name so we don't make a label column
+    predicate = NormalizedReference(prefix=predicate.prefix, identifier=predicate.identifier)
 
     id_name_mapping = pyobo.get_id_name_mapping(prefix, strict=strict)
     it = tqdm(
