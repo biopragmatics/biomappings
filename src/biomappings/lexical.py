@@ -29,7 +29,7 @@ def append_lexical_predictions(
     return lexical_core.append_lexical_predictions(
         prefix,
         target_prefixes,
-        provenance,
+        mapping_tool=provenance,
         path=PREDICTIONS_SSSOM_PATH,
         curated_paths=CURATED_PATHS,
         **kwargs,
