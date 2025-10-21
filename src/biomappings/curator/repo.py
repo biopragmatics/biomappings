@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Callable, Iterable
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, NamedTuple
 
@@ -10,6 +10,7 @@ import click
 
 if TYPE_CHECKING:
     import curies
+    from bioregistry import NormalizedNamedReference
     from sssom_pydantic import MappingTool
 
 __all__ = [
@@ -88,19 +89,21 @@ class Repository(NamedTuple):
 
     def get_lint_command(self, converter: curies.Converter | None = None) -> click.Command:
         """Get the lint command."""
-        if converter is None:
-            import bioregistry
-
-            # use the full bioregistry converter instead of re-using the
-            # prefix maps inside since this makes sure we cover everything.
-            # it automatically contracts the prefix map to what's relevant
-            # at the end
-            converter = bioregistry.get_converter()
 
         @click.command()
         def lint() -> None:
             """Sort files and remove duplicates."""
             import sssom_pydantic
+
+            nonlocal converter
+            if converter is None:
+                import bioregistry
+
+                # use the full bioregistry converter instead of re-using the
+                # prefix maps inside since this makes sure we cover everything.
+                # it automatically contracts the prefix map to what's relevant
+                # at the end
+                converter = bioregistry.get_converter()
 
             exclude_mappings = []
             for path in self.curated_paths:
@@ -115,13 +118,15 @@ class Repository(NamedTuple):
 
         return lint
 
-    def get_web_command(self, *, enable: bool = True) -> click.Command:
+    def get_web_command(
+        self, *, enable: bool = True, get_user: Callable[[], NormalizedNamedReference] | None = None
+    ) -> click.Command:
         """Get the web command."""
         if enable:
 
             @click.command()
             @resolver_base_option
-            @click.option("--orcid", required=True)
+            @click.option("--orcid")
             def web(resolver_base: str | None, orcid: str) -> None:
                 """Run the semantic mappings curation app."""
                 import webbrowser
@@ -131,7 +136,10 @@ class Repository(NamedTuple):
 
                 from .wsgi import get_app
 
-                user = NormalizedNamedReference(prefix="orcid", identifier=orcid)
+                if orcid is not None:
+                    user = NormalizedNamedReference(prefix="orcid", identifier=orcid)
+                else:
+                    user = get_user()
 
                 app = get_app(
                     predictions_path=self.predictions_path,

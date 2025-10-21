@@ -10,6 +10,7 @@ from typing import TYPE_CHECKING
 import click
 
 from .curator.wsgi_utils import get_git_hash
+from .resources import get_current_curator
 from .resources.export_sssom import export_sssom
 from .summary import export
 from .utils import DATA_DIRECTORY, DEFAULT_REPO, IMG_DIRECTORY
@@ -30,13 +31,15 @@ main.add_command(export)
 main.add_command(export_sssom)
 main.add_command(DEFAULT_REPO.get_predict_command())
 main.add_command(DEFAULT_REPO.get_lint_command())
-main.add_command(DEFAULT_REPO.get_web_command(enable=GIT_HASH is not None))
+main.add_command(
+    DEFAULT_REPO.get_web_command(enable=GIT_HASH is not None, get_user=get_current_curator)
+)
 
 
 @main.command()
 @click.pass_context
 def update(ctx: click.Context) -> None:
-    """Run all update functions."""
+    """Run all export, sssom, and chart functions."""
     click.secho("Building general exports", fg="green")
     ctx.invoke(export)
     click.secho("Building SSSOM export", fg="green")

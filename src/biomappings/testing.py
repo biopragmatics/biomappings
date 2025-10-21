@@ -8,15 +8,7 @@ from collections import defaultdict
 from collections.abc import Callable, Iterable
 from pathlib import Path
 from textwrap import dedent
-from typing import Any, ClassVar, TypeAlias, TypeVar, cast
-
-import bioregistry
-import sssom_pydantic
-from bioregistry import NormalizedNamableReference
-from curies import Reference
-from curies.vocabulary import matching_processes
-from sssom_pydantic import SemanticMapping
-from sssom_pydantic.process import CanonicalMappingTuple, get_canonical_tuple
+from typing import TYPE_CHECKING, Any, ClassVar, TypeAlias, TypeVar, cast
 
 from biomappings.utils import (
     CURATORS_PATH,
@@ -24,6 +16,11 @@ from biomappings.utils import (
     POSITIVES_SSSOM_PATH,
     UNSURE_SSSOM_PATH,
 )
+
+if TYPE_CHECKING:
+    from bioregistry import NormalizedNamableReference
+    from curies import Reference
+    from sssom_pydantic import SemanticMapping
 
 __all__ = [
     "GetterIntegrityTestCase",
@@ -68,20 +65,22 @@ class IntegrityTestCase(unittest.TestCase):
 
     def test_mapping_justifications(self) -> None:
         """Test that the prediction type is pulled in properly."""
+        from curies.vocabulary import matching_processes
+
         for label, line, mapping in self._iter_groups():
             self.assertEqual(
                 "semapv",
-                mapping.mapping_justification.prefix,
+                mapping.justification.prefix,
                 msg=f"[{label}] The 'mapping_justification' column should be annotated with semapv on line {line}",
             )
-            self.assertIn(mapping.mapping_justification, matching_processes)
+            self.assertIn(mapping.justification, matching_processes)
 
     def test_prediction_not_manual(self) -> None:
         """Test that predicted mappings don't use manual mapping justification."""
         for _line, mapping in enumerate(self.predictions, start=2):
             self.assertNotEqual(
                 "ManualMappingCuration",
-                mapping.mapping_justification.identifier,
+                mapping.justification.identifier,
                 msg="Prediction can not be annotated with manual curation",
             )
 
@@ -97,6 +96,8 @@ class IntegrityTestCase(unittest.TestCase):
 
     def assert_valid(self, label: str, line: int, reference: Reference) -> None:
         """Assert a reference is valid and normalized to the Bioregistry."""
+        import bioregistry
+
         norm_prefix = bioregistry.normalize_prefix(reference.prefix)
         self.assertIsNotNone(
             norm_prefix, msg=f"Unknown prefix: {reference.prefix} on {label}:{line}"
@@ -144,6 +145,8 @@ class IntegrityTestCase(unittest.TestCase):
 
     def test_cross_redundancy(self) -> None:
         """Test the redundancy of manually curated mappings and predicted mappings."""
+        from sssom_pydantic.process import CanonicalMappingTuple, get_canonical_tuple
+
         counter: defaultdict[CanonicalMappingTuple, defaultdict[str, list[int]]] = defaultdict(
             lambda: defaultdict(list)
         )
@@ -257,6 +260,8 @@ class PathIntegrityTestCase(IntegrityTestCase):
     @classmethod
     def setUpClass(cls) -> None:
         """Set up the test case."""
+        import sssom_pydantic
+
         cls.predictions = sssom_pydantic.read(cls.predictions_path)[0]
         cls.mappings = sssom_pydantic.read(cls.positives_path)[0]
         cls.incorrect = sssom_pydantic.read(cls.negatives_path)[0]

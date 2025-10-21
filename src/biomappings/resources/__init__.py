@@ -10,13 +10,8 @@ from collections.abc import Collection, Iterable, Sequence
 from pathlib import Path
 from typing import TYPE_CHECKING, Literal, overload
 
-import bioregistry
 import sssom_pydantic
-from bioregistry import NormalizedNamedReference
-from curies import Reference
-from sssom_pydantic import SemanticMapping
 
-from ..curator.wsgi_utils import insert
 from ..utils import (
     CURATORS_PATH,
     DEFAULT_REPO,
@@ -28,6 +23,9 @@ from ..utils import (
 
 if TYPE_CHECKING:
     import networkx
+    from bioregistry import NormalizedNamedReference
+    from curies import Reference
+    from sssom_pydantic import SemanticMapping
 
 __all__ = [
     "append_false_mappings",
@@ -69,6 +67,10 @@ def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]
 
 def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Append new lines to the positive mappings document."""
+    import bioregistry
+
+    from ..curator.wsgi_utils import insert
+
     insert(
         path or POSITIVES_SSSOM_PATH,
         converter=bioregistry.get_converter(),
@@ -78,6 +80,10 @@ def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | No
 
 def append_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Append new lines to the negative mappings document."""
+    import bioregistry
+
+    from ..curator.wsgi_utils import insert
+
     insert(
         path or NEGATIVES_SSSOM_PATH,
         converter=bioregistry.get_converter(),
@@ -119,6 +125,8 @@ def append_predictions(
 
 def load_curators() -> dict[str, NormalizedNamedReference]:
     """Load the curators table."""
+    from bioregistry import NormalizedNamedReference
+
     with CURATORS_PATH.open() as file:
         return {
             record["user"]: NormalizedNamedReference(
