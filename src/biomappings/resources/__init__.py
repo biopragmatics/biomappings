@@ -19,11 +19,7 @@ from curies import Reference
 from sssom_pydantic import MappingTool, Metadata, SemanticMapping
 from tqdm.auto import tqdm
 
-from ..lexical_utils import (
-    get_canonical_tuple,
-    remove_redundant_external,
-    remove_redundant_internal,
-)
+from ..lexical_utils import remove_redundant_external, remove_redundant_internal
 from ..utils import (
     CURATORS_PATH,
     NEGATIVES_SSSOM_PATH,
