@@ -42,7 +42,7 @@ def _locations_str(locations: Iterable[tuple[Any, Any]]) -> str:
 
 
 #: A function that gets mappings
-MappingGetter: TypeAlias = Callable[[], list[SemanticMapping]]
+MappingGetter: TypeAlias = Callable[[], list["SemanticMapping"]]
 
 
 class IntegrityTestCase(unittest.TestCase):
