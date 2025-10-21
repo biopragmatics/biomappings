@@ -9,7 +9,7 @@ import logging
 from collections import defaultdict
 from collections.abc import Collection, Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import TYPE_CHECKING, overload
+from typing import TYPE_CHECKING, Literal, overload
 
 import bioregistry
 import networkx as nx
@@ -18,7 +18,6 @@ from bioregistry import NormalizedNamedReference
 from curies import Reference
 from sssom_pydantic import MappingTool, Metadata, SemanticMapping
 from tqdm.auto import tqdm
-from typing_extensions import Literal
 
 from ..utils import (
     CURATORS_PATH,
