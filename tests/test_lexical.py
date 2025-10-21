@@ -4,7 +4,7 @@ import unittest
 
 import pandas as pd
 
-from biomappings.curator.lexical_core import _calculate_similarities
+from biomappings.curator.lexical import _calculate_similarities
 
 
 class TestEmbeddingSimilarity(unittest.TestCase):
