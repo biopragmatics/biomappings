@@ -350,8 +350,11 @@ def filter_existing_xrefs(
     n_predictions = 0
     for mapping in tqdm(mappings, desc="filtering predictions"):
         if (
-            mapping.object.prefix in entity_to_mapped_prefixes[mapping.subject]
-            or mapping.subject.prefix in entity_to_mapped_prefixes[mapping.object]
+            mapping.subject in entity_to_mapped_prefixes
+            and mapping.object.prefix in entity_to_mapped_prefixes[mapping.subject]
+        ) or (
+            mapping.object in entity_to_mapped_prefixes
+            and mapping.subject.prefix in entity_to_mapped_prefixes[mapping.object]
         ):
             n_predictions += 1
             continue

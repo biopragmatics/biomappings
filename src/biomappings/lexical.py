@@ -152,6 +152,7 @@ def get_predict_cli(
         is_flag=True,
         help="Remove predictions that correspond to already existing mappings in either the subject or object resource",
     )
+    @click.option("--mapping-tool", default="biomappings")
     def predict(
         source_prefix: str,
         target_prefix: str,
@@ -159,19 +160,14 @@ def get_predict_cli(
         method: PredictionMethod | None,
         cutoff: float | None,
         filter_mutual_mappings: bool,
+        mapping_tool: str,
     ) -> None:
         """Predict semantic mapping between the source and target prefixes."""
-        from sssom_pydantic import MappingTool
-
-        from biomappings.version import get_version
-
-        tool = MappingTool(name="biomappings", version=get_version())
-
         append_lexical_predictions(
             source_prefix,
             target_prefix,
             filter_mutual_mappings=filter_mutual_mappings,
-            provenance=tool,
+            provenance=mapping_tool,
             relation=relation,
             method=method,
             cutoff=cutoff,
