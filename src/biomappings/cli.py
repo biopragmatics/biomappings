@@ -10,6 +10,7 @@ from typing import TYPE_CHECKING
 
 import click
 
+from .lexical import get_predict_cli
 from .resources.export_sssom import export_sssom
 from .summary import export
 from .utils import DATA, IMG, get_git_hash
@@ -26,6 +27,7 @@ def main() -> None:
 
 main.add_command(export)
 main.add_command(export_sssom)
+main.add_command(get_predict_cli())
 
 if get_git_hash() is not None:
     resolver_base_option = click.option(
@@ -73,14 +75,16 @@ if get_git_hash() is not None:
         resolver_base: str | None,
     ) -> None:
         """Run a target curation web app."""
+        import sssom_pydantic
         from curies import Reference
         from more_click import run_app
 
-        from .resources import _load_table
         from .wsgi import get_app
 
+        mappings, _, _ = sssom_pydantic.read(path)
+
         target_references: list[Reference] = []
-        for mapping in _load_table(path):
+        for mapping in mappings:
             target_references.append(mapping.subject)
             target_references.append(mapping.object)
         app = get_app(target_references=target_references, resolver_base=resolver_base)
@@ -96,7 +100,7 @@ else:
             "Please run the following to install in development mode:\n"
             "  $ git clone https://github.com/biomappings/biomappings.git\n"
             "  $ cd biomappings\n"
-            "  $ pip install -e .",
+            "  $ pip install -e .[web]",
             fg="red",
         )
 

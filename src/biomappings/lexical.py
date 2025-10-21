@@ -2,13 +2,14 @@
 
 from __future__ import annotations
 
+import typing
 from collections.abc import Callable, Iterable
 from pathlib import Path
 
 import click
 import curies
 from more_click import verbose_option
-from sssom_pydantic import SemanticMapping
+from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm.asyncio import tqdm
 
 from biomappings.lexical_core import PredictionMethod, get_predictions
@@ -24,7 +25,7 @@ __all__ = [
 def append_lexical_predictions(
     prefix: str,
     target_prefixes: str | Iterable[str],
-    provenance: str,
+    provenance: str | MappingTool,
     *,
     relation: str | None | curies.NamableReference = None,
     identifiers_are_names: bool = False,
@@ -107,3 +108,77 @@ def lexical_prediction_cli(
         )
 
     main()
+
+
+def run_predict_cli() -> None:
+    """Create and run a prediction CLI."""
+    cli = get_predict_cli()
+    cli()
+
+
+def get_predict_cli(
+    source_prefix: str | None = None, target_prefix: str | None | list[str] = None
+) -> click.Command:
+    """Create a prediction CLI."""
+    if source_prefix is None:
+        source_prefix_argument = click.argument("source_prefix")
+    else:
+        source_prefix_argument = click.option("--source-prefix", default=source_prefix)
+
+    if target_prefix is None:
+        target_prefix_argument = click.argument("target_prefix", nargs=-1)
+    else:
+        target_prefix_argument = click.option(
+            "--target-prefix", multiple=True, default=[target_prefix]
+        )
+
+    @click.command()
+    @verbose_option  # type:ignore[misc]
+    @source_prefix_argument
+    @target_prefix_argument
+    @click.option("--relation", help="the predicate to assign to semantic mappings")
+    @click.option(
+        "--method",
+        type=click.Choice(list(typing.get_args(PredictionMethod))),
+        help="The prediction method to use",
+    )
+    @click.option(
+        "--cutoff",
+        type=float,
+        help="The cosine similarity cutoff to use for calling mappings when using embedding predictions",
+    )
+    @click.option(
+        "--filter-mutual-mappings",
+        is_flag=True,
+        help="Remove predictions that correspond to already existing mappings in either the subject or object resource",
+    )
+    def predict(
+        source_prefix: str,
+        target_prefix: str,
+        relation: str | None,
+        method: PredictionMethod | None,
+        cutoff: float | None,
+        filter_mutual_mappings: bool,
+    ) -> None:
+        """Predict semantic mapping between the source and target prefixes."""
+        from sssom_pydantic import MappingTool
+
+        from biomappings.version import get_version
+
+        tool = MappingTool(name="biomappings", version=get_version())
+
+        append_lexical_predictions(
+            source_prefix,
+            target_prefix,
+            filter_mutual_mappings=filter_mutual_mappings,
+            provenance=tool,
+            relation=relation,
+            method=method,
+            cutoff=cutoff,
+        )
+
+    return predict
+
+
+if __name__ == "__main__":
+    run_predict_cli()

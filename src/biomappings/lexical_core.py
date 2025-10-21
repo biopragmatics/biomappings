@@ -34,7 +34,7 @@ __all__ = [
 logger = logging.getLogger(__name__)
 
 RecognitionMethod: TypeAlias = Literal["ner", "grounding"]
-PredictionMethod: TypeAlias = RecognitionMethod | Literal["embedding"]
+PredictionMethod: TypeAlias = Literal["ner", "grounding", "embedding"]
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
 NestedMappingDict: TypeAlias = Mapping[str, Mapping[str, Mapping[str, str]]]
