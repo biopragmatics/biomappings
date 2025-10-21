@@ -4,13 +4,13 @@ from __future__ import annotations
 
 import itertools as itt
 import os
-import sys
 from collections import Counter
 from pathlib import Path
 from typing import TYPE_CHECKING
 
 import click
 
+from .lexical import get_predict_cli
 from .resources.export_sssom import export_sssom
 from .summary import export
 from .utils import DATA, IMG, get_git_hash
@@ -27,6 +27,7 @@ def main() -> None:
 
 main.add_command(export)
 main.add_command(export_sssom)
+main.add_command(get_predict_cli())
 
 if get_git_hash() is not None:
     resolver_base_option = click.option(
@@ -48,6 +49,8 @@ if get_git_hash() is not None:
         resolver_base: str | None,
     ) -> None:
         """Run the biomappings web app."""
+        import webbrowser
+
         from more_click import run_app
 
         from .wsgi import get_app
@@ -59,6 +62,9 @@ if get_git_hash() is not None:
             unsure_path=unsure_path,
             resolver_base=resolver_base,
         )
+
+        webbrowser.open_new_tab("http://localhost:5000")
+
         run_app(app, with_gunicorn=False)
 
     @main.command()
@@ -69,14 +75,16 @@ if get_git_hash() is not None:
         resolver_base: str | None,
     ) -> None:
         """Run a target curation web app."""
+        import sssom_pydantic
         from curies import Reference
         from more_click import run_app
 
-        from .resources import _load_table
         from .wsgi import get_app
 
+        mappings, _, _ = sssom_pydantic.read(path)
+
         target_references: list[Reference] = []
-        for mapping in _load_table(path):
+        for mapping in mappings:
             target_references.append(mapping.subject)
             target_references.append(mapping.object)
         app = get_app(target_references=target_references, resolver_base=resolver_base)
@@ -92,7 +100,7 @@ else:
             "Please run the following to install in development mode:\n"
             "  $ git clone https://github.com/biomappings/biomappings.git\n"
             "  $ cd biomappings\n"
-            "  $ pip install -e .",
+            "  $ pip install -e .[web]",
             fg="red",
         )
 
@@ -118,29 +126,6 @@ def lint() -> None:
     resources.lint_false_mappings()
     resources.lint_unsure_mappings()
     resources.lint_predictions()
-
-
-@main.command()
-@click.argument("prefixes", nargs=-1)
-def prune(prefixes: list[str]) -> None:
-    """Prune inferred mappings between the given prefixes from the predictions."""
-    from .lexical_core import get_mutual_mapping_filter
-    from .resources import filter_predictions
-
-    if len(prefixes) < 2:
-        click.secho("Must give at least 2 prefixes", fg="red")
-        sys.exit(0)
-
-    cf = get_mutual_mapping_filter(prefixes[0], prefixes[1:])
-    filter_predictions(cf)
-
-
-@main.command()
-def remove_curated() -> None:
-    """Remove curated mappings from the predicted mappings, use this if they get out of sync."""
-    from .resources import filter_predictions, get_curated_filter
-
-    filter_predictions(get_curated_filter())
 
 
 @main.command()

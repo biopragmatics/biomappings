@@ -12,7 +12,7 @@ import curies
 import networkx as nx
 import pyobo
 import ssslm
-from bioregistry import NormalizedNamableReference, NormalizedNamedReference
+from bioregistry import NormalizedNamableReference, NormalizedNamedReference, NormalizedReference
 from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo import get_grounder
 from sssom_pydantic import MappingTool, SemanticMapping
@@ -34,7 +34,7 @@ __all__ = [
 logger = logging.getLogger(__name__)
 
 RecognitionMethod: TypeAlias = Literal["ner", "grounding"]
-PredictionMethod: TypeAlias = RecognitionMethod | Literal["embedding"]
+PredictionMethod: TypeAlias = Literal["ner", "grounding", "embedding"]
 
 #: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
 NestedMappingDict: TypeAlias = Mapping[str, Mapping[str, Mapping[str, str]]]
@@ -106,7 +106,7 @@ def get_predictions(
         raise ValueError(f"invalid lexical prediction method: {method}")
 
     if filter_mutual_mappings:
-        mutual_mapping_filter = get_mutual_mapping_filter(prefix, target_prefixes)
+        mutual_mapping_filter = _get_mutual_mapping_filter(prefix, target_prefixes)
         predictions = filter_custom(predictions, mutual_mapping_filter)
 
     predictions = filter_existing_xrefs(predictions, [prefix, *targets])
@@ -248,7 +248,7 @@ def predict_lexical_mappings(
     prefix: str,
     mapping_tool: str | MappingTool,
     *,
-    predicate: str | curies.NamableReference | None = None,
+    predicate: str | curies.Reference | None = None,
     grounder: ssslm.Grounder,
     identifiers_are_names: bool = False,
     strict: bool = False,
@@ -258,7 +258,10 @@ def predict_lexical_mappings(
     if predicate is None:
         predicate = exact_match
     elif isinstance(predicate, str):
-        predicate = NormalizedNamableReference.from_curie(predicate)
+        predicate = NormalizedReference.from_curie(predicate)
+
+    # throw away name so we don't make a label column
+    predicate = NormalizedReference(prefix=predicate.prefix, identifier=predicate.identifier)
 
     id_name_mapping = pyobo.get_id_name_mapping(prefix, strict=strict)
     it = tqdm(
@@ -348,18 +351,20 @@ def filter_existing_xrefs(
     entity_to_mapped_prefixes = _get_entity_to_mapped_prefixes(prefixes)
 
     n_predictions = 0
-    for mapping in tqdm(mappings, desc="filtering predictions"):
+    for mapping in tqdm(mappings, desc="filtering predictions", leave=False):
         if (
-            mapping.object.prefix in entity_to_mapped_prefixes[mapping.subject]
-            or mapping.subject.prefix in entity_to_mapped_prefixes[mapping.object]
+            mapping.subject in entity_to_mapped_prefixes
+            and mapping.object.prefix in entity_to_mapped_prefixes[mapping.subject]
+        ) or (
+            mapping.object in entity_to_mapped_prefixes
+            and mapping.subject.prefix in entity_to_mapped_prefixes[mapping.object]
         ):
             n_predictions += 1
             continue
         yield mapping
 
-    tqdm.write(
-        f"filtered out {n_predictions:,} pre-mapped matches",
-    )
+    if n_predictions:
+        tqdm.write(f"filtered out {n_predictions:,} pre-mapped matches")
 
 
 def _get_entity_to_mapped_prefixes(prefixes: Iterable[str]) -> dict[curies.Reference, set[str]]:
@@ -371,7 +376,7 @@ def _get_entity_to_mapped_prefixes(prefixes: Iterable[str]) -> dict[curies.Refer
     return dict(entity_to_mapped_prefixes)
 
 
-def get_mutual_mapping_filter(prefix: str, targets: str | Iterable[str]) -> NestedMappingDict:
+def _get_mutual_mapping_filter(prefix: str, targets: str | Iterable[str]) -> NestedMappingDict:
     """Get a custom filter dictionary induced over the mutual mapping graph with all target prefixes.
 
     :param prefix: The source prefix

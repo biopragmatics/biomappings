@@ -7,7 +7,6 @@ from .resources import (
     get_true_graph,
     load_false_mappings,
     load_mappings,
-    load_mappings_subset,
     load_predictions,
     load_unsure,
 )
@@ -19,7 +18,6 @@ __all__ = [
     "get_true_graph",
     "load_false_mappings",
     "load_mappings",
-    "load_mappings_subset",
     "load_predictions",
     "load_unsure",
 ]

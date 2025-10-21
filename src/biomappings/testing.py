@@ -16,14 +16,13 @@ from curies import Reference
 from curies.vocabulary import matching_processes
 from sssom_pydantic import SemanticMapping
 
+from biomappings.lexical_utils import CanonicalMappingTuple, get_canonical_tuple
 from biomappings.resources import load_mappings, load_predictions
 from biomappings.utils import (
     CURATORS_PATH,
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     UNSURE_SSSOM_PATH,
-    CanonicalMappingTuple,
-    get_canonical_tuple,
 )
 
 __all__ = [
