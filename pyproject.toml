@@ -70,6 +70,7 @@ dependencies = [
 tests = [
     "pytest",
     "coverage[toml]",
+    "biomappings[web,pyobo]",
 ]
 docs = [
     "sphinx>=8",
@@ -82,7 +83,7 @@ charts = [
     "seaborn",
 ]
 pyobo = [
-    "pyobo>=0.12.8",
+    "pyobo>=0.12.11",
 ]
 web = [
     "flask",

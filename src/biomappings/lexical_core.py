@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import itertools as itt
 import logging
 import typing
 from collections import defaultdict
@@ -13,8 +12,7 @@ import curies
 import networkx as nx
 import pyobo
 import ssslm
-from bioregistry import NormalizedNamableReference, NormalizedNamedReference, NormalizedReference
-from curies import ReferenceTuple
+from bioregistry import NormalizedNamableReference, NormalizedNamedReference
 from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo import get_grounder
 from sssom_pydantic import MappingTool, SemanticMapping
@@ -63,9 +61,6 @@ def get_predictions(
     :param mapping_tool: The provenance text. Typically generated with
         ``biomappings.utils.get_script_url(__file__)``.
     :param relation: The relationship. Defaults to ``skos:exactMatch``.
-    :param custom_filter: A triple nested dictionary from source prefix to target prefix
-        to source id to target id. Any source prefix, target prefix, source id
-        combinations in this dictionary will be filtered.
     :param identifiers_are_names: The source prefix's identifiers should be considered
         as names
     :param method: The lexical predication method to use
@@ -344,18 +339,13 @@ def filter_custom(
 def filter_existing_xrefs(
     mappings: Iterable[SemanticMapping], prefixes: Iterable[str]
 ) -> Iterable[SemanticMapping]:
-    """Filter predictions that match xrefs already loaded through PyOBO."""
-    prefixes = set(prefixes)
+    """Filter predictions that match xrefs already loaded through PyOBO.
 
-    entity_to_mapped_prefixes: defaultdict[curies.Reference, set[str]] = defaultdict(set)
-    for subject_prefix in prefixes:
-        for subject_id, target_prefix, object_id in pyobo.get_xrefs_df(subject_prefix).values:
-            entity_to_mapped_prefixes[
-                NormalizedReference(prefix=subject_prefix, identifier=subject_id)
-            ].add(target_prefix)
-            entity_to_mapped_prefixes[
-                NormalizedReference(prefix=target_prefix, identifier=object_id)
-            ].add(subject_prefix)
+    :param mappings: Semantic mappings to filter
+    :param prefixes: Prefixes for resources to check for existing mappings
+    :yields: Filtered semantic mappings
+    """
+    entity_to_mapped_prefixes = _get_entity_to_mapped_prefixes(prefixes)
 
     n_predictions = 0
     for mapping in tqdm(mappings, desc="filtering predictions"):
@@ -370,6 +360,15 @@ def filter_existing_xrefs(
     tqdm.write(
         f"filtered out {n_predictions:,} pre-mapped matches",
     )
+
+
+def _get_entity_to_mapped_prefixes(prefixes: Iterable[str]) -> dict[curies.Reference, set[str]]:
+    entity_to_mapped_prefixes: defaultdict[curies.Reference, set[str]] = defaultdict(set)
+    for prefix in prefixes:
+        for mapping in pyobo.get_semantic_mappings(prefix):
+            entity_to_mapped_prefixes[mapping.subject].add(mapping.object.prefix)
+            entity_to_mapped_prefixes[mapping.object].add(mapping.subject.prefix)
+    return dict(entity_to_mapped_prefixes)
 
 
 def get_mutual_mapping_filter(prefix: str, targets: str | Iterable[str]) -> NestedMappingDict:
@@ -393,30 +392,21 @@ def get_mutual_mapping_filter(prefix: str, targets: str | Iterable[str]) -> Nest
     return {prefix: dict(rv)}
 
 
-def _mutual_mapping_graph(
-    prefixes: Iterable[str],
-    skip_sources: Iterable[str] | None = None,
-    skip_targets: Iterable[str] | None = None,
-) -> nx.Graph:
+def _mutual_mapping_graph(prefixes: Iterable[str]) -> nx.Graph:
     """Get the undirected mapping graph between the given prefixes.
 
     :param prefixes: A list of prefixes to use with :func:`pyobo.get_filtered_xrefs` to
         get xrefs.
-    :param skip_sources: An optional list of prefixes to skip as the source for xrefs
-    :param skip_targets: An optional list of prefixes to skip as the target for xrefs
-
     :returns: The undirected mapping graph containing mappings between entries in the
         given namespaces.
     """
-    prefixes = sorted(prefixes)
-    skip_sources = _upgrade_set(skip_sources)
-    skip_targets = _upgrade_set(skip_targets)
+    prefixes = set(prefixes)
     graph = nx.Graph()
-    for source, target in itt.product(prefixes, repeat=2):
-        if source == target or source in skip_sources or target in skip_targets:
-            continue
-        for source_id, target_id in pyobo.get_filtered_xrefs(source, target).items():
-            graph.add_edge(ReferenceTuple(source, source_id), ReferenceTuple(target, target_id))
+    for prefix in sorted(prefixes):
+        for mapping in pyobo.get_semantic_mappings(prefix):
+            if mapping.object.prefix not in prefixes:
+                continue
+            graph.add_edge(mapping.subject, mapping.object)
     return graph
 
 
