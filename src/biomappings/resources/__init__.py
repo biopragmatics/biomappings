@@ -47,28 +47,27 @@ logger = logging.getLogger(__name__)
 
 
 def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
-    """Load the mappings table."""
-    mappings, _converter, _mapping_set = sssom_pydantic.read(path or POSITIVES_SSSOM_PATH)
-    return mappings
+    """Load the positive mappings."""
+    return sssom_pydantic.read(path or POSITIVES_SSSOM_PATH)[0]
 
 
 def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
-    """Load the false mappings table."""
+    """Load the negative mappings."""
     return sssom_pydantic.read(path or NEGATIVES_SSSOM_PATH)[0]
 
 
 def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
-    """Load the unsure table."""
+    """Load the unsure mappings."""
     return sssom_pydantic.read(path or UNSURE_SSSOM_PATH)[0]
 
 
 def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:
-    """Load the predictions table."""
+    """Load the predicted mappings."""
     return sssom_pydantic.read(path or PREDICTIONS_SSSOM_PATH)[0]
 
 
 def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
-    """Append new lines to the mappings table."""
+    """Append new lines to the positive mappings document."""
     insert(
         path or POSITIVES_SSSOM_PATH,
         converter=bioregistry.get_converter(),
@@ -77,7 +76,7 @@ def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | No
 
 
 def append_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
-    """Append new lines to the false mappings table."""
+    """Append new lines to the negative mappings document."""
     insert(
         path or NEGATIVES_SSSOM_PATH,
         converter=bioregistry.get_converter(),
@@ -90,7 +89,7 @@ def append_predictions(
     *,
     path: Path | None = None,
 ) -> None:
-    """Append new lines to the predictions table."""
+    """Append new lines to the predicted mappings document."""
     if path is None:
         path = PREDICTIONS_SSSOM_PATH
 
