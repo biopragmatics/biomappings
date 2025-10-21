@@ -18,7 +18,6 @@ from biomappings.utils import (
 )
 
 if TYPE_CHECKING:
-    from bioregistry import NormalizedNamableReference
     from curies import Reference
     from sssom_pydantic import SemanticMapping
 
@@ -115,6 +114,8 @@ class IntegrityTestCase(unittest.TestCase):
 
     def test_contributors(self) -> None:
         """Test all contributors have an entry in the curators.tsv file."""
+        from bioregistry import NormalizedNamableReference
+
         files = [
             (POSITIVES_SSSOM_PATH, self.mappings),
             (NEGATIVES_SSSOM_PATH, self.incorrect),
