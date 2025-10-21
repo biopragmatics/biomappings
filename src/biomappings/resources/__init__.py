@@ -19,7 +19,7 @@ from curies import Reference
 from sssom_pydantic import MappingTool, Metadata, SemanticMapping
 from tqdm.auto import tqdm
 
-from ..lexical_utils import remove_redundant_external, remove_redundant_internal
+from ..lexical_utils import drop_duplicates, remove_redundant_external
 from ..utils import (
     CURATORS_PATH,
     NEGATIVES_SSSOM_PATH,
@@ -91,7 +91,7 @@ def _write_helper(
 ) -> None:
     if exclude_mappings is not None:
         mappings = remove_redundant_external(mappings, exclude_mappings)
-    mappings = remove_redundant_internal(mappings)
+    mappings = drop_duplicates(mappings)
     mappings = sorted(mappings)
     if mode == "a":
         sssom_pydantic.append(mappings, path)

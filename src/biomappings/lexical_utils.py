@@ -15,9 +15,9 @@ if TYPE_CHECKING:
 __all__ = [
     "CanonicalMappingTuple",
     "SemanticMappingHasher",
+    "drop_duplicates",
     "get_canonical_tuple",
     "remove_redundant_external",
-    "remove_redundant_internal",
 ]
 
 #: A canonical mapping tuple
@@ -32,13 +32,26 @@ SemanticMappingHasher: TypeAlias = Callable[[SemanticMapping], X]
 SemanticMappingScorer: TypeAlias = Callable[[SemanticMapping], "SupportsRichComparison"]
 
 
-def remove_redundant_internal(
+def drop_duplicates(
     mappings: Iterable[SemanticMapping],
     *,
     key: SemanticMappingHasher[X] | None = None,
     scorer: SemanticMappingScorer | None = None,
 ) -> list[SemanticMapping]:
-    """Remove redundant mappings based on their subject/object pair."""
+    """Remove redundant mappings.
+
+    :param mappings: An iterable of mappings
+    :param key: A function that hashes the mappings. If not given, will
+        only use the subject/object to has the mapping.
+    :param scorer: A function that gives a score to a given mapping,
+        where a higher score means it's more likely to be kept.
+        Any function returning a comparable value can be used, but
+        int/float are the easiest to understand.
+
+    :returns: A list of mappings that have had duplicates dropped. This
+        does not necessarily maintain order, since dictionary-based
+        aggregation happens in the implementation.
+    """
     if key is None:
         key = cast(SemanticMappingHasher[X], get_canonical_tuple)
 
