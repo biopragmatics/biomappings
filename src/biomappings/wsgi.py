@@ -5,10 +5,10 @@ from __future__ import annotations
 import getpass
 import os
 from collections import Counter, defaultdict
-from collections.abc import Iterable, Iterator
+from collections.abc import Callable, Iterable, Iterator
 from copy import deepcopy
 from pathlib import Path
-from typing import Any, Callable, Literal, cast, get_args
+from typing import Any, Literal, TypeAlias, cast, get_args
 
 import flask
 import flask_bootstrap
@@ -21,7 +21,6 @@ from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
 from sssom_pydantic import SemanticMapping
-from typing_extensions import TypeAlias
 from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
@@ -263,7 +262,7 @@ class Controller:
         if limit is None:
             yield from it
         else:
-            for line_prediction, _ in zip(it, range(limit)):
+            for line_prediction, _ in zip(it, range(limit), strict=False):
                 yield line_prediction
 
     def count_predictions_from_state(self, state: State) -> int:

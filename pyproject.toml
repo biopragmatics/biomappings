@@ -20,6 +20,7 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Console",
     "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Framework :: Pytest",
@@ -27,7 +28,6 @@ classifiers = [
     "Framework :: Sphinx",
     "Natural Language :: English",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -53,7 +53,7 @@ license-files = [
     "LICENSE",
 ]
 
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = [
     "networkx",
     "requests",
@@ -66,24 +66,71 @@ dependencies = [
     "sssom-pydantic>=0.0.7",
 ]
 
-[project.optional-dependencies]
+# see https://peps.python.org/pep-0735/ and https://docs.astral.sh/uv/concepts/dependencies/#dependency-groups
+[dependency-groups]
 tests = [
     "pytest",
     "coverage[toml]",
-    "biomappings[web,pyobo]",
+    "biomappings[web,exports,pyobo,embedding]",
 ]
 docs = [
     "sphinx>=8",
     "sphinx-rtd-theme>=3.0",
     "sphinx-click",
     "sphinx_automodapi",
+    "biomappings[gilda-slim]",
 ]
+lint = [
+    "ruff",
+]
+typing = [
+    { include-group = "tests" },
+    "mypy",
+    "pydantic",
+    "click-types",
+    "types-PyYAML",
+    "types-tabulate",
+    "types-flask",
+    "types-wtforms",
+]
+docs-lint = [
+    { include-group = "docs" },
+    "doc8",
+]
+format-docs = [
+    { include-group = "docs" },
+    "docstrfmt",
+]
+doctests = [
+    "xdoctest",
+    "pygments",
+]
+pyroma = [
+    "pyroma",
+    "pygments",
+]
+# follow https://github.com/astral-sh/uv/issues/6298 for switching to a uv-based version bump workflow
+bump = [
+    "bump-my-version",
+]
+build = [
+    "uv",
+    "uv-build",
+]
+release = [
+    { include-group = "build" },
+    "uv",
+    "keyring",
+]
+
+# see https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#dependencies-optional-dependencies
+[project.optional-dependencies]
 charts = [
     "matplotlib",
     "seaborn",
 ]
 pyobo = [
-    "pyobo>=0.12.11",
+    "pyobo>=0.12.8",
 ]
 web = [
     "flask",
@@ -115,7 +162,7 @@ embedding = [
 Homepage = "https://github.com/biopragmatics/biomappings"
 Repository = "https://github.com/biopragmatics/biomappings.git"
 Documentation = "https://biomappings.readthedocs.io"
-Funding = "https://github.com/sponsors/"
+Funding = "https://github.com/sponsors/cthoyt"
 
 [project.scripts]
 biomappings = "biomappings.cli:main"
@@ -151,6 +198,9 @@ source = [
 omit = [
     "tests/*",
     "docs/*",
+    "src/biomappings/version.py",
+    "src/biomappings/__main__.py",
+    "src/biomappings/cli.py",
 ]
 
 [tool.coverage.paths]
@@ -221,6 +271,7 @@ ignore = [
 # Commented code in paper analysis might be useful later
 "src/biomappings/paper_analysis.py" = ["ERA001", "S301"]
 
+
 [tool.ruff.lint.pydocstyle]
 convention = "pep257"
 
@@ -267,3 +318,13 @@ replace = "version = \"{new_version}\""
 filename = "docs/source/conf.py"
 search = "release = \"{current_version}\""
 replace = "release = \"{new_version}\""
+
+[[tool.bumpversion.files]]
+filename = "src/biomappings/version.py"
+search = "VERSION = \"{current_version}\""
+replace = "VERSION = \"{new_version}\""
+
+[[tool.bumpversion.files]]
+filename = "CITATION.cff"
+search = "version: {current_version}"
+replace = "version: {new_version}"

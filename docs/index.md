@@ -1,15 +1,17 @@
 ---
 layout: home
 ---
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/biopragmatics/biomappings/master/docs/source/logo.png" height="150">
 </p>
 
-This site summarizes the `biomappings` resources. They can be downloaded under the CC0-1.0 License from the open-source
-repository on [GitHub](https://github.com/biopragmatics/biomappings).
+This site summarizes the `biomappings` resources. They can be downloaded under
+the CC0-1.0 License from the open-source repository on
+[GitHub](https://github.com/biopragmatics/biomappings).
 
-| Type      |                                             Count | 
-|-----------|--------------------------------------------------:|
+| Type      |                                             Count |
+| --------- | ------------------------------------------------: |
 | Positive  |    {{ site.data.summary.positive_mapping_count }} |
 | Negative  |    {{ site.data.summary.negative_mapping_count }} |
 | Unsure    |      {{ site.data.summary.unsure_mapping_count }} |

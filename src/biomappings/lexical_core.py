@@ -5,8 +5,8 @@ from __future__ import annotations
 import logging
 import typing
 from collections import defaultdict
-from collections.abc import Iterable, Mapping
-from typing import TYPE_CHECKING, Callable, Literal, TypeAlias, cast
+from collections.abc import Callable, Iterable, Mapping
+from typing import TYPE_CHECKING, Literal, TypeAlias, cast
 
 import curies
 import networkx as nx
