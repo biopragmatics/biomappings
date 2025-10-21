@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import getpass
+import itertools as itt
 import logging
 from collections.abc import Collection, Iterable, Sequence
 from pathlib import Path
@@ -15,7 +16,6 @@ import sssom_pydantic
 from bioregistry import NormalizedNamedReference
 from curies import Reference
 from sssom_pydantic import MappingSet, Metadata, SemanticMapping
-from sssom_pydantic.process import remove_redundant_external, remove_redundant_internal
 
 from ..utils import (
     CURATORS_PATH,
@@ -31,7 +31,6 @@ if TYPE_CHECKING:
 __all__ = [
     "SemanticMapping",
     "append_false_mappings",
-    "append_predictions",
     "append_predictions",
     "append_true_mappings",
     "append_unsure_mappings",
@@ -61,16 +60,20 @@ def _write_helper(
     exclude_mappings: Iterable[SemanticMapping] | None = None,
     converter: curies.Converter | None = None,
 ) -> None:
-    if exclude_mappings is not None:
-        mappings = remove_redundant_external(mappings, exclude_mappings)
-    mappings = remove_redundant_internal(mappings)
-    mappings = sorted(mappings)
     if mode == "a":
         sssom_pydantic.append(mappings, path)
     elif mode == "w":
         if converter is None:
             converter = bioregistry.get_default_converter()
-        sssom_pydantic.write(mappings, path, metadata=metadata, converter=converter)
+        sssom_pydantic.write(
+            mappings,
+            path,
+            metadata=metadata,
+            converter=converter,
+            exclude_mappings=exclude_mappings,
+            drop_duplicates=True,
+            sort=True,
+        )
     else:
         raise ValueError(f"invalid mode: {mode}")
 
@@ -203,22 +206,31 @@ def append_predictions(
     if path is None:
         path = PREDICTIONS_SSSOM_PATH
 
-    mappings, converter, metadata = sssom_pydantic.read(path or PREDICTIONS_SSSOM_PATH)
+    mappings, converter, metadata = sssom_pydantic.read(path)
 
-    # This line is the only difference from the lint_predictions function
-    mappings.extend(new_mappings)
+    prefixes: set[str] = set()
+    for mapping in new_mappings:
+        prefixes.update(mapping.get_prefixes())
+        mappings.append(mapping)
 
-    _write_helper(
+    for prefix in prefixes:
+        if not converter.standardize_prefix(prefix):
+            raise NotImplementedError("amending prefixes not yet implemented")
+
+    curated_paths = [POSITIVES_SSSOM_PATH, NEGATIVES_SSSOM_PATH, UNSURE_SSSOM_PATH]
+
+    exclude_mappings = itt.chain.from_iterable(
+        sssom_pydantic.read(path)[0] for path in curated_paths
+    )
+
+    sssom_pydantic.write(
         mappings,
         path,
-        mode="w",
-        converter=converter,
         metadata=metadata,
-        exclude_mappings=[
-            *load_mappings(),
-            *load_false_mappings(),
-            *load_unsure(),
-        ],
+        converter=converter,
+        drop_duplicates=True,
+        sort=True,
+        exclude_mappings=exclude_mappings,
     )
 
 

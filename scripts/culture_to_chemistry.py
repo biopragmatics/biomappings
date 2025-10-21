@@ -44,7 +44,7 @@ def match_obi() -> None:
 
 
 @main.command(name="chebi")
-@verbose_option  # type:ignore[misc]
+@verbose_option
 def match_chebi() -> None:
     """Get embedding matches to ChEBI."""
     from pyobo.struct.vocabulary import related_match
