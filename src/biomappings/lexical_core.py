@@ -348,7 +348,7 @@ def filter_existing_xrefs(
     entity_to_mapped_prefixes = _get_entity_to_mapped_prefixes(prefixes)
 
     n_predictions = 0
-    for mapping in tqdm(mappings, desc="filtering predictions"):
+    for mapping in tqdm(mappings, desc="filtering predictions", leave=False):
         if (
             mapping.subject in entity_to_mapped_prefixes
             and mapping.object.prefix in entity_to_mapped_prefixes[mapping.subject]
@@ -360,9 +360,8 @@ def filter_existing_xrefs(
             continue
         yield mapping
 
-    tqdm.write(
-        f"filtered out {n_predictions:,} pre-mapped matches",
-    )
+    if n_predictions:
+        tqdm.write(f"filtered out {n_predictions:,} pre-mapped matches")
 
 
 def _get_entity_to_mapped_prefixes(prefixes: Iterable[str]) -> dict[curies.Reference, set[str]]:
