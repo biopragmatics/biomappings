@@ -106,7 +106,7 @@ def get_predictions(
         raise ValueError(f"invalid lexical prediction method: {method}")
 
     if filter_mutual_mappings:
-        mutual_mapping_filter = get_mutual_mapping_filter(prefix, target_prefixes)
+        mutual_mapping_filter = _get_mutual_mapping_filter(prefix, target_prefixes)
         predictions = filter_custom(predictions, mutual_mapping_filter)
 
     predictions = filter_existing_xrefs(predictions, [prefix, *targets])
@@ -371,7 +371,7 @@ def _get_entity_to_mapped_prefixes(prefixes: Iterable[str]) -> dict[curies.Refer
     return dict(entity_to_mapped_prefixes)
 
 
-def get_mutual_mapping_filter(prefix: str, targets: str | Iterable[str]) -> NestedMappingDict:
+def _get_mutual_mapping_filter(prefix: str, targets: str | Iterable[str]) -> NestedMappingDict:
     """Get a custom filter dictionary induced over the mutual mapping graph with all target prefixes.
 
     :param prefix: The source prefix
