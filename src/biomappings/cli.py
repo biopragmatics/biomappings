@@ -48,6 +48,8 @@ if get_git_hash() is not None:
         resolver_base: str | None,
     ) -> None:
         """Run the biomappings web app."""
+        import webbrowser
+
         from more_click import run_app
 
         from .wsgi import get_app
@@ -59,6 +61,9 @@ if get_git_hash() is not None:
             unsure_path=unsure_path,
             resolver_base=resolver_base,
         )
+
+        webbrowser.open_new_tab("http://localhost:5000")
+
         run_app(app, with_gunicorn=False)
 
     @main.command()
