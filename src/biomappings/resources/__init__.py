@@ -40,7 +40,6 @@ __all__ = [
     "append_true_mapping_tuples",
     "append_true_mappings",
     "append_unsure_mappings",
-    "filter_predictions",
     "get_curated_filter",
     "get_current_curator",
     "get_false_graph",
@@ -319,31 +318,6 @@ def get_current_curator(*, strict: bool = True) -> NormalizedNamedReference | No
         raise MissingCuratorError
     else:
         return None
-
-
-def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:
-    """Filter all the predictions by removing what's in the custom filter then re-write.
-
-    :param custom_filter: A filter 3-dictionary of source prefix to target prefix to
-        source identifier to target identifier
-    """
-    predictions = load_predictions()
-    predictions = [
-        prediction for prediction in predictions if _check_filter(prediction, custom_filter)
-    ]
-    write_predictions(predictions)
-
-
-def _check_filter(
-    prediction: SemanticMapping,
-    custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]],
-) -> bool:
-    v = (
-        custom_filter.get(prediction.subject.prefix, {})
-        .get(prediction.object.prefix, {})
-        .get(prediction.subject.identifier)
-    )
-    return prediction.object.identifier != v
 
 
 def get_curated_filter() -> Mapping[str, Mapping[str, Mapping[str, str]]]:

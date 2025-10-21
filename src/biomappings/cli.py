@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import itertools as itt
 import os
-import sys
 from collections import Counter
 from pathlib import Path
 from typing import TYPE_CHECKING
@@ -123,29 +122,6 @@ def lint() -> None:
     resources.lint_false_mappings()
     resources.lint_unsure_mappings()
     resources.lint_predictions()
-
-
-@main.command()
-@click.argument("prefixes", nargs=-1)
-def prune(prefixes: list[str]) -> None:
-    """Prune inferred mappings between the given prefixes from the predictions."""
-    from .lexical_core import get_mutual_mapping_filter
-    from .resources import filter_predictions
-
-    if len(prefixes) < 2:
-        click.secho("Must give at least 2 prefixes", fg="red")
-        sys.exit(0)
-
-    cf = get_mutual_mapping_filter(prefixes[0], prefixes[1:])
-    filter_predictions(cf)
-
-
-@main.command()
-def remove_curated() -> None:
-    """Remove curated mappings from the predicted mappings, use this if they get out of sync."""
-    from .resources import filter_predictions, get_curated_filter
-
-    filter_predictions(get_curated_filter())
 
 
 @main.command()
