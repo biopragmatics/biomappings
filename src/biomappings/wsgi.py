@@ -20,7 +20,7 @@ from curies.vocabulary import broad_match, exact_match, manual_mapping_curation,
 from flask import current_app
 from flask_wtf import FlaskForm
 from pydantic import BaseModel
-from sssom_pydantic import SemanticMapping, MappingSet
+from sssom_pydantic import MappingSet, SemanticMapping
 from werkzeug.local import LocalProxy
 from wtforms import StringField, SubmitField
 
@@ -500,7 +500,9 @@ class Controller:
             append_false_mappings(entries["incorrect"], path=self.negatives_path, sort=True)
         if entries["unsure"]:
             append_unsure_mappings(entries["unsure"], path=self.unsure_path, sort=True)
-        write_predictions(self._predictions, path=self.predictions_path, metadata=self._predictions_metadata)
+        write_predictions(
+            self._predictions, path=self.predictions_path, metadata=self._predictions_metadata
+        )
         self._marked.clear()
 
         # Now add manually curated mappings, if there are any
