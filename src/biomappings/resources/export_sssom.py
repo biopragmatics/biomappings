@@ -14,19 +14,13 @@ from curies import ReferenceTuple
 from curies.vocabulary import charlie
 from tqdm.auto import tqdm
 
-from biomappings.utils import (
-    DATA,
-    NEGATIVES_SSSOM_PATH,
-    POSITIVES_SSSOM_PATH,
-    PREDICTIONS_SSSOM_PATH,
-    PURL_BASE,
-)
+from biomappings.utils import DATA_DIRECTORY, DEFAULT_REPO, PURL_BASE
 
 if TYPE_CHECKING:
     import pandas as pd
     from sssom import MappingSetDataFrame
 
-DIRECTORY = pathlib.Path(DATA).joinpath("sssom")
+DIRECTORY = pathlib.Path(DATA_DIRECTORY).joinpath("sssom")
 DIRECTORY.mkdir(exist_ok=True, parents=True)
 TSV_PATH = DIRECTORY.joinpath("biomappings.sssom.tsv")
 JSON_PATH = DIRECTORY.joinpath("biomappings.sssom.json")
@@ -74,9 +68,10 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
     prefixes: set[str] = {"semapv"}
 
     # NEW WAY: load all DFs, concat them, reorder columns
-    a = pd.read_csv(POSITIVES_SSSOM_PATH, sep="\t", comment="#")
-    b = pd.read_csv(NEGATIVES_SSSOM_PATH, sep="\t", comment="#")
-    c = pd.read_csv(PREDICTIONS_SSSOM_PATH, sep="\t", comment="#")
+
+    a = pd.read_csv(DEFAULT_REPO.positives_path, sep="\t", comment="#")
+    b = pd.read_csv(DEFAULT_REPO.negatives_path, sep="\t", comment="#")
+    c = pd.read_csv(DEFAULT_REPO.predictions_path, sep="\t", comment="#")
     df = pd.concat([a, b, c])
     df = df[columns]
 

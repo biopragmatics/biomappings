@@ -28,9 +28,9 @@ def export() -> None:
         load_predictions,
         load_unsure,
     )
-    from biomappings.utils import DATA
+    from biomappings.utils import DATA_DIRECTORY
 
-    path = os.path.join(DATA, "summary.yml")
+    path = os.path.join(DATA_DIRECTORY, "summary.yml")
 
     true_mappings = load_mappings()
     false_mappings = load_false_mappings()

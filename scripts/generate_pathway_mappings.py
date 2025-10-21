@@ -10,7 +10,7 @@ def main() -> None:
     provenance = get_script_url(__file__)
     for prefix in ["reactome", "wikipathways"]:
         append_lexical_predictions(
-            prefix, target_prefixes, provenance=provenance, relation="speciesSpecific"
+            prefix, target_prefixes, mapping_tool=provenance, relation="speciesSpecific"
         )
 
 

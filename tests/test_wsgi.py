@@ -9,13 +9,13 @@ import sssom_pydantic
 from bioregistry import NormalizedNamableReference as Reference
 from sssom_pydantic import MappingTool, SemanticMapping
 
+from biomappings.curator.wsgi import Controller, State, get_app
 from biomappings.utils import (
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     PREDICTIONS_SSSOM_PATH,
     UNSURE_SSSOM_PATH,
 )
-from biomappings.wsgi import Controller, State, get_app
 
 TEST_USER = Reference(prefix="orcid", identifier="0000-0000-0000-0000", name="Max Mustermann")
 

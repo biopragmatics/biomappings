@@ -16,14 +16,15 @@ from bioregistry import NormalizedNamedReference
 from curies import Reference
 from sssom_pydantic import SemanticMapping
 
+from ..curator.wsgi_utils import insert
 from ..utils import (
     CURATORS_PATH,
+    DEFAULT_REPO,
     NEGATIVES_SSSOM_PATH,
     POSITIVES_SSSOM_PATH,
     PREDICTIONS_SSSOM_PATH,
     UNSURE_SSSOM_PATH,
 )
-from ..wsgi_utils import insert
 
 if TYPE_CHECKING:
     import networkx
@@ -86,12 +87,9 @@ def append_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | N
 
 def append_predictions(
     new_mappings: Iterable[SemanticMapping],
-    *,
-    path: Path | None = None,
 ) -> None:
     """Append new lines to the predicted mappings document."""
-    if path is None:
-        path = PREDICTIONS_SSSOM_PATH
+    path = DEFAULT_REPO.predictions_path
 
     mappings, converter, metadata = sssom_pydantic.read(path)
 
@@ -104,10 +102,8 @@ def append_predictions(
         if not converter.standardize_prefix(prefix):
             raise NotImplementedError("amending prefixes not yet implemented")
 
-    curated_paths = [POSITIVES_SSSOM_PATH, NEGATIVES_SSSOM_PATH, UNSURE_SSSOM_PATH]
-
     exclude_mappings = itt.chain.from_iterable(
-        sssom_pydantic.read(path)[0] for path in curated_paths
+        sssom_pydantic.read(path)[0] for path in DEFAULT_REPO.curated_paths
     )
 
     sssom_pydantic.write(

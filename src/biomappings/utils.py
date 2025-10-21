@@ -4,14 +4,17 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-from typing import NamedTuple
 
-from ._git_utils import _git
+from .curator._git_utils import _git
+from .curator.repo import Repository
 
 __all__ = [
     "BIOMAPPINGS_NDEX_UUID",
     "CURATED_PATHS",
     "CURATORS_PATH",
+    "DATA_DIRECTORY",
+    "DEFAULT_REPO",
+    "IMG_DIRECTORY",
     "NEGATIVES_SSSOM_PATH",
     "POSITIVES_SSSOM_PATH",
     "PREDICTIONS_SSSOM_PATH",
@@ -34,26 +37,9 @@ PREDICTIONS_SSSOM_PATH = RESOURCE_PATH.joinpath("predictions.sssom.tsv")
 CURATORS_PATH = RESOURCE_PATH.joinpath("curators.tsv")
 PURL_BASE = "https://w3id.org/biopragmatics/biomappings/sssom"
 
-DOCS = ROOT.joinpath("docs")
-IMG = DOCS.joinpath("img")
-DATA = DOCS.joinpath("_data")
-
-
-class Repository(NamedTuple):
-    """A quadruple of paths."""
-
-    predictions_path: Path
-    positives_path: Path
-    negatives_path: Path
-    unsure_path: Path
-
-
-DEFAULT_REPO = Repository(
-    predictions_path=PREDICTIONS_SSSOM_PATH,
-    positives_path=POSITIVES_SSSOM_PATH,
-    negatives_path=NEGATIVES_SSSOM_PATH,
-    unsure_path=UNSURE_SSSOM_PATH,
-)
+DOCS_DIRECTORY = ROOT.joinpath("docs")
+IMG_DIRECTORY = DOCS_DIRECTORY.joinpath("img")
+DATA_DIRECTORY = DOCS_DIRECTORY.joinpath("_data")
 
 
 def get_git_hash() -> str | None:
@@ -82,3 +68,10 @@ def get_script_url(fname: str) -> str:
 
 #: THe NDEx UUID
 BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
+
+DEFAULT_REPO = Repository(
+    predictions_path=PREDICTIONS_SSSOM_PATH,
+    positives_path=POSITIVES_SSSOM_PATH,
+    negatives_path=NEGATIVES_SSSOM_PATH,
+    unsure_path=UNSURE_SSSOM_PATH,
+)
