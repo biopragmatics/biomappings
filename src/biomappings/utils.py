@@ -79,4 +79,5 @@ DEFAULT_REPO = Repository(
     basename="biomappings",
     purl_base=PURL_BASE,
     mapping_set=META,
+    ndex_uuid=BIOMAPPINGS_NDEX_UUID,
 )
