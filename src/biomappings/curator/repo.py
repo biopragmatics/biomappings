@@ -62,6 +62,40 @@ class Repository:
         """Load the predicted mappings."""
         return sssom_pydantic.read(self.predictions_path)[0]
 
+    def append_positive_mappings(
+        self, mappings: Iterable[SemanticMapping], *, converter: curies.Converter | None = None
+    ) -> None:
+        """Append new lines to the positive mappings document."""
+        from .wsgi_utils import insert
+
+        if converter is None:
+            import bioregistry
+
+            converter = bioregistry.get_converter()
+
+        insert(
+            self.positives_path,
+            converter=converter,
+            include_mappings=mappings,
+        )
+
+    def append_negative_mappings(
+        self, mappings: Iterable[SemanticMapping], *, converter: curies.Converter | None = None
+    ) -> None:
+        """Append new lines to the negative mappings document."""
+        from .wsgi_utils import insert
+
+        if converter is None:
+            import bioregistry
+
+            converter = bioregistry.get_converter()
+
+        insert(
+            self.negatives_path,
+            converter=converter,
+            include_mappings=mappings,
+        )
+
     def get_cli(
         self,
         *,

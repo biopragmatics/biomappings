@@ -2,14 +2,12 @@
 
 from __future__ import annotations
 
-from .curator.wsgi_utils import get_git_hash
 from .resources import get_curator_names, get_current_curator
 from .utils import DATA_DIRECTORY, DEFAULT_REPO, IMG_DIRECTORY
-
-GIT_HASH = get_git_hash()
+from .version import get_git_hash
 
 main = DEFAULT_REPO.get_cli(
-    enable_web=GIT_HASH is not None,
+    enable_web=get_git_hash() is not None,
     get_user=get_current_curator,
     output_directory=DATA_DIRECTORY,
     sssom_directory=DATA_DIRECTORY.joinpath("sssom"),

@@ -10,7 +10,7 @@ from curies.vocabulary import charlie
 from sssom_pydantic import MappingSet
 
 from .curator.repo import Repository
-from .curator.wsgi_utils import get_git_hash
+from .version import get_git_hash
 
 __all__ = [
     "BIOMAPPINGS_NDEX_UUID",
