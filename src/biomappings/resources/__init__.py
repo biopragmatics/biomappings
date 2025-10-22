@@ -11,21 +11,14 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Literal, overload
 
 import sssom_pydantic
+from curies import Reference
+from sssom_pydantic import SemanticMapping
 
-from ..utils import (
-    CURATORS_PATH,
-    DEFAULT_REPO,
-    NEGATIVES_SSSOM_PATH,
-    POSITIVES_SSSOM_PATH,
-    PREDICTIONS_SSSOM_PATH,
-    UNSURE_SSSOM_PATH,
-)
+from ..utils import CURATORS_PATH, DEFAULT_REPO, NEGATIVES_SSSOM_PATH, POSITIVES_SSSOM_PATH
 
 if TYPE_CHECKING:
     import networkx
     from bioregistry import NormalizedNamedReference
-    from curies import Reference
-    from sssom_pydantic import SemanticMapping
 
 __all__ = [
     "append_false_mappings",
@@ -45,24 +38,24 @@ __all__ = [
 logger = logging.getLogger(__name__)
 
 
-def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
+def load_mappings() -> list[SemanticMapping]:
     """Load the positive mappings."""
-    return sssom_pydantic.read(path or POSITIVES_SSSOM_PATH)[0]
+    return DEFAULT_REPO.read_positive_mappings()
 
 
-def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
+def load_false_mappings() -> list[SemanticMapping]:
     """Load the negative mappings."""
-    return sssom_pydantic.read(path or NEGATIVES_SSSOM_PATH)[0]
+    return DEFAULT_REPO.read_negative_mappings()
 
 
-def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
+def load_unsure() -> list[SemanticMapping]:
     """Load the unsure mappings."""
-    return sssom_pydantic.read(path or UNSURE_SSSOM_PATH)[0]
+    return DEFAULT_REPO.read_unsure_mappings()
 
 
-def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:
+def load_predictions() -> list[SemanticMapping]:
     """Load the predicted mappings."""
-    return sssom_pydantic.read(path or PREDICTIONS_SSSOM_PATH)[0]
+    return DEFAULT_REPO.read_predicted_mappings()
 
 
 def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:

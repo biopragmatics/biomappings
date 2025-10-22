@@ -8,11 +8,12 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any, TypeAlias
 
 import click
+import sssom_pydantic
 
 if TYPE_CHECKING:
     import curies
     from bioregistry import NormalizedNamedReference
-    from sssom_pydantic import MappingSet, MappingTool
+    from sssom_pydantic import MappingSet, MappingTool, SemanticMapping
 
 __all__ = [
     "Repository",
@@ -42,6 +43,22 @@ class Repository:
     def curated_paths(self) -> list[Path]:
         """Get curated paths."""
         return [self.positives_path, self.negatives_path, self.unsure_path]
+
+    def read_positive_mappings(self) -> list[SemanticMapping]:
+        """Load the positive mappings."""
+        return sssom_pydantic.read(self.positives_path)[0]
+
+    def read_negative_mappings(self) -> list[SemanticMapping]:
+        """Load the negative mappings."""
+        return sssom_pydantic.read(self.negatives_path)[0]
+
+    def read_unsure_mappings(self) -> list[SemanticMapping]:
+        """Load the unsure mappings."""
+        return sssom_pydantic.read(self.unsure_path)[0]
+
+    def read_predicted_mappings(self) -> list[SemanticMapping]:
+        """Load the predicted mappings."""
+        return sssom_pydantic.read(self.predictions_path)[0]
 
     def get_cli(
         self,
