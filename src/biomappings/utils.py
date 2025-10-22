@@ -6,9 +6,9 @@ import os
 from pathlib import Path
 
 from curies.vocabulary import charlie
+from sssom_curator import Repository
 from sssom_pydantic import MappingSet
 
-from .curator.repo import Repository
 from .version import get_git_hash, get_version
 
 __all__ = [

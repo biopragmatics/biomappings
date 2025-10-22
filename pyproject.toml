@@ -64,6 +64,7 @@ dependencies = [
     "pystow>=0.7.11",
     "bioregistry>=0.12.43",
     "sssom-pydantic>=0.0.9",
+    "sssom-curator",
 ]
 
 # see https://peps.python.org/pep-0735/ and https://docs.astral.sh/uv/concepts/dependencies/#dependency-groups

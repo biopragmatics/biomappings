@@ -1,6 +1,8 @@
 Deploying a Custom Biomappings Instance
 =======================================
 
+.. todo:: Update!
+
 While it's preferred that curations using the Biomappings workflow are contributed back
 to the `upstream repository <https://github.com/biopragmatics/biomappings>`_, custom
 instances can be deployed, e.g., within a company that wants to curate mappings to its
