@@ -16,15 +16,16 @@ if TYPE_CHECKING:
     from sssom_pydantic import MappingSet, MappingTool, SemanticMapping
 
 __all__ = [
+    "OrcidNameGetter",
     "Repository",
-    "resolver_base_option",
+    "UserGetter",
 ]
 
-resolver_base_option = click.option(
-    "--resolver-base",
-    help="A custom resolver base URL, instead of the Bioregistry.",
-)
+#: A function that returns the current user
 UserGetter: TypeAlias = Callable[[], "NormalizedNamedReference"]
+
+#: A function that returns a dictionary from ORCID to name
+OrcidNameGetter: TypeAlias = Callable[[], dict[str, str]]
 
 
 @dataclasses.dataclass
@@ -69,7 +70,7 @@ class Repository:
         output_directory: Path | None = None,
         sssom_directory: Path | None = None,
         image_directory: Path | None = None,
-        get_orcid_to_name: Callable[[], dict[str, str]] | None = None,
+        get_orcid_to_name: OrcidNameGetter | None = None,
     ) -> click.Group:
         """Get a CLI."""
 
@@ -131,7 +132,7 @@ class Repository:
     def get_summary_command(
         self,
         output_directory: Path | None = None,
-        get_orcid_to_name: Callable[[], dict[str, str]] | None = None,
+        get_orcid_to_name: OrcidNameGetter | None = None,
     ) -> click.Command:
         """Get the summary command."""
         from .summary import get_summary_command
@@ -237,13 +238,16 @@ class Repository:
         return lint
 
     def get_web_command(
-        self, *, enable: bool = True, get_user: Callable[[], NormalizedNamedReference] | None = None
+        self, *, enable: bool = True, get_user: UserGetter | None = None
     ) -> click.Command:
         """Get the web command."""
         if enable:
 
             @click.command()
-            @resolver_base_option
+            @click.option(
+                "--resolver-base",
+                help="A custom resolver base URL, instead of the Bioregistry.",
+            )
             @click.option("--orcid")
             def web(resolver_base: str | None, orcid: str) -> None:
                 """Run the semantic mappings curation app."""
