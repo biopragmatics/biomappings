@@ -4,9 +4,10 @@ from __future__ import annotations
 
 from collections.abc import Collection
 from pathlib import Path
-from typing import TYPE_CHECKING, NamedTuple
+from typing import TYPE_CHECKING, Any, NamedTuple
 
 import click
+from sssom_pydantic import MappingSet
 
 if TYPE_CHECKING:
     import pandas as pd
@@ -40,6 +41,15 @@ class SSSOMReturnTuple(NamedTuple):
     msdf: MappingSetDataFrame
 
 
+def _sssom_dump(mapping_set: MappingSet) -> dict[str, Any]:
+    metadata = mapping_set.model_dump(exclude_none=True, exclude_unset=True)
+    # fix dumping
+    metadata["creator_id"] = [
+        creator["prefix"] + ":" + creator["identifier"] for creator in metadata["creator_id"]
+    ]
+    return metadata
+
+
 def merge(repository: Repository, directory: Path) -> None:
     """Merge the SSSOM files together and output to a directory."""
     import yaml
@@ -47,10 +57,7 @@ def merge(repository: Repository, directory: Path) -> None:
 
     prefix_map, df, msdf = get_merged_sssom(repository)
 
-    # the creator_id slot corresponds to the person who puts the mapping
-    # set together, not the authors/creators of the individual mappings
-    # themselves
-    tsv_meta = {**repository.mapping_set.model_dump(), "curie_map": prefix_map}
+    tsv_meta = {**_sssom_dump(repository.mapping_set), "curie_map": prefix_map}
 
     if repository.basename:
         fname = repository.basename
@@ -122,7 +129,7 @@ def get_merged_sssom(repository: Repository, *, use_tqdm: bool = False) -> SSSOM
 
     try:
         msdf = from_sssom_dataframe(
-            df, prefix_map=prefix_map, meta=repository.mapping_set.model_dump()
+            df, prefix_map=prefix_map, meta=_sssom_dump(repository.mapping_set)
         )
     except Exception as e:
         click.secho(f"SSSOM Export failed...\n{e}", fg="red")

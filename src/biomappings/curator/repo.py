@@ -24,7 +24,7 @@ resolver_base_option = click.option(
     "--resolver-base",
     help="A custom resolver base URL, instead of the Bioregistry.",
 )
-UserGetter: TypeAlias = Callable[[], NormalizedNamedReference]
+UserGetter: TypeAlias = Callable[[], "NormalizedNamedReference"]
 
 
 @dataclasses.dataclass
@@ -67,6 +67,7 @@ class Repository:
         enable_web: bool = True,
         get_user: UserGetter | None = None,
         output_directory: Path | None = None,
+        image_directory: Path | None = None,
         get_orcid_to_name: Callable[[], dict[str, str]] | None = None,
     ) -> click.Group:
         """Get a CLI."""
@@ -85,7 +86,46 @@ class Repository:
                 output_directory=output_directory, get_orcid_to_name=get_orcid_to_name
             )
         )
+        main.add_command(
+            self.get_charts_command(
+                output_directory=output_directory, image_directory=image_directory
+            )
+        )
+
+        @main.command()
+        @click.pass_context
+        def update(ctx: click.Context) -> None:
+            """Run all summary, merge, and chart exports."""
+            click.secho("Building general exports", fg="green")
+            ctx.invoke(main.commands["summary"])
+            click.secho("Building SSSOM export", fg="green")
+            ctx.invoke(main.commands["merge"])
+            click.secho("Generating charts", fg="green")
+            ctx.invoke(main.commands["charts"])
+
         return main
+
+    def get_charts_command(
+        self, output_directory: Path | None = None, image_directory: Path | None = None
+    ) -> click.Command:
+        """Get the charts command."""
+
+        @click.command()
+        @click.option(
+            "--directory", type=click.Path(dir_okay=True, file_okay=False), default=output_directory
+        )
+        @click.option(
+            "--image-directory",
+            type=click.Path(dir_okay=True, file_okay=False),
+            default=image_directory,
+        )
+        def charts(directory: Path, image_directory: Path) -> None:
+            """Make charts."""
+            from .charts import make_charts
+
+            make_charts(self, directory, image_directory)
+
+        return charts
 
     def get_summary_command(
         self,
@@ -110,7 +150,7 @@ class Repository:
             """Merge files together to a single SSSOM."""
             from .merge import merge
 
-            merge(self, directory=directory)
+            merge(self, directory=directory.joinpath("sssom"))
 
         return main
 
