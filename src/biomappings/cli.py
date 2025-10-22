@@ -11,7 +11,6 @@ import click
 
 from .curator.wsgi_utils import get_git_hash
 from .resources import get_current_curator
-from .resources.export_sssom import export_sssom
 from .summary import export
 from .utils import DATA_DIRECTORY, DEFAULT_REPO, IMG_DIRECTORY
 
@@ -20,20 +19,13 @@ if TYPE_CHECKING:
 
 GIT_HASH = get_git_hash()
 
-
-@click.group()
-@click.version_option()
-def main() -> None:
-    """Run the biomappings CLI."""
-
+main = DEFAULT_REPO.get_cli(
+    enable_web=GIT_HASH is not None,
+    get_user=get_current_curator,
+    output_directory=DATA_DIRECTORY.joinpath("sssom"),
+)
 
 main.add_command(export)
-main.add_command(export_sssom)
-main.add_command(DEFAULT_REPO.get_predict_command())
-main.add_command(DEFAULT_REPO.get_lint_command())
-main.add_command(
-    DEFAULT_REPO.get_web_command(enable=GIT_HASH is not None, get_user=get_current_curator)
-)
 
 
 @main.command()
@@ -43,7 +35,7 @@ def update(ctx: click.Context) -> None:
     click.secho("Building general exports", fg="green")
     ctx.invoke(export)
     click.secho("Building SSSOM export", fg="green")
-    ctx.invoke(export_sssom)
+    ctx.invoke(main.commands["merge"])
     click.secho("Generating charts", fg="green")
     ctx.invoke(charts)
 

@@ -2,7 +2,7 @@
 
 import unittest
 
-from biomappings.resources.export_sssom import get_sssom_df
+from biomappings.resources.export_sssom import get_merged_ssom
 
 
 class TestExport(unittest.TestCase):
@@ -10,4 +10,4 @@ class TestExport(unittest.TestCase):
 
     def test_sssom_merge(self) -> None:
         """Test merging SSSOM files."""
-        get_sssom_df(use_tqdm=False)
+        get_merged_ssom(use_tqdm=False)

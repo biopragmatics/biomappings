@@ -2,16 +2,17 @@
 
 from __future__ import annotations
 
+import dataclasses
 from collections.abc import Callable, Iterable
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, NamedTuple
+from typing import TYPE_CHECKING, Any, TypeAlias
 
 import click
 
 if TYPE_CHECKING:
     import curies
     from bioregistry import NormalizedNamedReference
-    from sssom_pydantic import MappingTool
+    from sssom_pydantic import MappingSet, MappingTool
 
 __all__ = [
     "Repository",
@@ -22,20 +23,59 @@ resolver_base_option = click.option(
     "--resolver-base",
     help="A custom resolver base URL, instead of the Bioregistry.",
 )
+UserGetter: TypeAlias = Callable[[], NormalizedNamedReference]
 
 
-class Repository(NamedTuple):
+@dataclasses.dataclass
+class Repository:
     """A quadruple of paths."""
 
     predictions_path: Path
     positives_path: Path
     negatives_path: Path
     unsure_path: Path
+    purl_base: str
+    basename: str | None
+    mapping_set: MappingSet
 
     @property
     def curated_paths(self) -> list[Path]:
         """Get curated paths."""
         return [self.positives_path, self.negatives_path, self.unsure_path]
+
+    def get_cli(
+        self,
+        *,
+        enable_web: bool = True,
+        get_user: UserGetter | None = None,
+        output_directory: Path | None = None,
+    ) -> click.Group:
+        """Get a CLI."""
+
+        @click.group()
+        def main() -> None:
+            """Run the CLI."""
+
+        main.add_command(self.get_predict_command())
+        main.add_command(self.get_lint_command())
+        main.add_command(self.get_web_command(enable=enable_web, get_user=get_user))
+        main.add_command(self.get_merge_command(output_directory=output_directory))
+        return main
+
+    def get_merge_command(self, output_directory: Path | None = None) -> click.Command:
+        """Get the merge command."""
+
+        @click.command(name="merge")
+        @click.option(
+            "--directory", type=click.Path(dir_okay=True, file_okay=False), default=output_directory
+        )
+        def main(directory: Path) -> None:
+            """Merge files together to a single SSSOM."""
+            from .merge import merge
+
+            merge(self, directory=directory)
+
+        return main
 
     def get_predict_command(self) -> click.Command:
         """Get the predict command."""

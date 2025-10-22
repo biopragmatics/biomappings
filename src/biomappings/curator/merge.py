@@ -2,37 +2,21 @@
 
 from __future__ import annotations
 
-import importlib.metadata
-import pathlib
 from collections.abc import Collection
+from pathlib import Path
 from typing import TYPE_CHECKING, NamedTuple
 
 import click
-
-from biomappings.utils import DATA_DIRECTORY, DEFAULT_REPO, PURL_BASE
 
 if TYPE_CHECKING:
     import pandas as pd
     from sssom import MappingSetDataFrame
 
-DIRECTORY = pathlib.Path(DATA_DIRECTORY).joinpath("sssom")
-DIRECTORY.mkdir(exist_ok=True, parents=True)
-TSV_PATH = DIRECTORY.joinpath("biomappings.sssom.tsv")
-JSON_PATH = DIRECTORY.joinpath("biomappings.sssom.json")
-OWL_PATH = DIRECTORY.joinpath("biomappings.sssom.owl")
-META_PATH = DIRECTORY.joinpath("biomappings.sssom.yml")
+    from biomappings.curator.repo import Repository
 
-CC0_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
-META = {
-    "license": CC0_URL,
-    "mapping_provider": "https://github.com/biopragmatics/biomappings",
-    "mapping_set_description": "Biomappings is a repository of community curated and predicted equivalences and "
-    "related mappings between named biological entities that are not available from primary sources. It's also a "
-    "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
-    "mapping_set_id": f"{PURL_BASE}/biomappings.sssom.tsv",
-    "mapping_set_title": "Biomappings",
-    "mapping_set_version": importlib.metadata.version("biomappings"),
-}
+__all__ = [
+    "merge",
+]
 
 columns = [
     "subject_id",
@@ -56,7 +40,50 @@ class SSSOMReturnTuple(NamedTuple):
     msdf: MappingSetDataFrame
 
 
-def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
+def merge(repository: Repository, directory: Path) -> None:
+    """Merge the SSSOM files together and output to a directory."""
+    import yaml
+    from sssom.writers import write_json, write_owl
+
+    prefix_map, df, msdf = get_merged_sssom(repository)
+
+    # the creator_id slot corresponds to the person who puts the mapping
+    # set together, not the authors/creators of the individual mappings
+    # themselves
+    tsv_meta = {**repository.mapping_set.model_dump(), "curie_map": prefix_map}
+
+    if repository.basename:
+        fname = repository.basename
+    elif repository.mapping_set.mapping_set_title is not None:
+        fname = repository.mapping_set.mapping_set_title.lower().replace(" ", "-")
+    else:
+        raise ValueError("basename or mapping set title must be se")
+
+    stub = directory.joinpath(fname)
+    tsv_path = stub.with_suffix(".sssom.tsv")
+    json_path = stub.with_suffix(".sssom.json")
+    owl_path = stub.with_suffix(".sssom.owl")
+    metadata_path = stub.with_suffix(".sssom.yml")
+
+    with tsv_path.open("w") as file:
+        for line in yaml.safe_dump(tsv_meta).splitlines():
+            print(f"# {line}", file=file)
+        df.to_csv(file, sep="\t", index=False)
+
+    with open(metadata_path, "w") as file:
+        yaml.safe_dump(tsv_meta, file)
+
+    click.echo("Writing JSON")
+    with json_path.open("w") as file:
+        msdf.metadata["mapping_set_id"] = f"{repository.purl_base}/{fname}.sssom.json"
+        write_json(msdf, file)
+    click.echo("Writing OWL")
+    with owl_path.open("w") as file:
+        msdf.metadata["mapping_set_id"] = f"{repository.purl_base}/{fname}.sssom.owl"
+        write_owl(msdf, file)
+
+
+def get_merged_sssom(repository: Repository, *, use_tqdm: bool = False) -> SSSOMReturnTuple:
     """Get an SSSOM dataframe."""
     import bioregistry
     import pandas as pd
@@ -67,9 +94,9 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
 
     # NEW WAY: load all DFs, concat them, reorder columns
 
-    a = pd.read_csv(DEFAULT_REPO.positives_path, sep="\t", comment="#")
-    b = pd.read_csv(DEFAULT_REPO.negatives_path, sep="\t", comment="#")
-    c = pd.read_csv(DEFAULT_REPO.predictions_path, sep="\t", comment="#")
+    a = pd.read_csv(repository.positives_path, sep="\t", comment="#")
+    b = pd.read_csv(repository.negatives_path, sep="\t", comment="#")
+    c = pd.read_csv(repository.predictions_path, sep="\t", comment="#")
     df = pd.concat([a, b, c])
     df = df[columns]
 
@@ -94,7 +121,9 @@ def get_sssom_df(*, use_tqdm: bool = False) -> SSSOMReturnTuple:
     prefix_map = get_prefix_map(prefixes)
 
     try:
-        msdf = from_sssom_dataframe(df, prefix_map=prefix_map, meta=META)
+        msdf = from_sssom_dataframe(
+            df, prefix_map=prefix_map, meta=repository.mapping_set.model_dump()
+        )
     except Exception as e:
         click.secho(f"SSSOM Export failed...\n{e}", fg="red")
         raise
@@ -125,39 +154,3 @@ def get_prefix_map(prefixes: Collection[str]) -> dict[str, str]:
         preferred_prefix = resource.get_preferred_prefix() or prefix
         prefix_map[preferred_prefix] = uri_prefix
     return prefix_map
-
-
-@click.command(name="sssom")
-def export_sssom() -> None:
-    """Export SSSOM."""
-    import yaml
-    from curies.vocabulary import charlie
-    from sssom.writers import write_json, write_owl
-
-    prefix_map, df, msdf = get_sssom_df()
-
-    # the creator_id slot corresponds to the person who puts the mapping
-    # set together, not the authors/creators of the individual mappings
-    # themselves
-    tsv_meta = {**META, "creator_id": [charlie.curie], "curie_map": prefix_map}
-
-    with TSV_PATH.open("w") as file:
-        for line in yaml.safe_dump(tsv_meta).splitlines():
-            print(f"# {line}", file=file)
-        df.to_csv(file, sep="\t", index=False)
-
-    with open(META_PATH, "w") as file:
-        yaml.safe_dump(tsv_meta, file)
-
-    click.echo("Writing JSON")
-    with JSON_PATH.open("w") as file:
-        msdf.metadata["mapping_set_id"] = f"{PURL_BASE}/biomappings.sssom.json"
-        write_json(msdf, file)
-    click.echo("Writing OWL")
-    with OWL_PATH.open("w") as file:
-        msdf.metadata["mapping_set_id"] = f"{PURL_BASE}/biomappings.sssom.owl"
-        write_owl(msdf, file)
-
-
-if __name__ == "__main__":
-    export_sssom()
