@@ -55,16 +55,12 @@ license-files = [
 
 requires-python = ">=3.10"
 dependencies = [
-    "networkx",
-    "requests",
     "click",
-    "pyyaml",
     "tqdm",
     "curies>=0.12.1",
-    "pystow>=0.7.11",
     "bioregistry>=0.12.43",
     "sssom-pydantic>=0.0.9",
-    "sssom-curator",
+    "sssom-curator[web]>=0.0.2",
 ]
 
 # see https://peps.python.org/pep-0735/ and https://docs.astral.sh/uv/concepts/dependencies/#dependency-groups
@@ -72,14 +68,12 @@ dependencies = [
 tests = [
     "pytest",
     "coverage[toml]",
-    "biomappings[web,exports,pyobo,embedding]",
 ]
 docs = [
     "sphinx>=8",
     "sphinx-rtd-theme>=3.0",
     "sphinx-click",
     "sphinx_automodapi",
-    "biomappings[gilda-slim]",
 ]
 lint = [
     "ruff",
@@ -89,10 +83,6 @@ typing = [
     "mypy",
     "pydantic",
     "click-types",
-    "types-PyYAML",
-    "types-tabulate",
-    "types-flask",
-    "types-wtforms",
 ]
 docs-lint = [
     { include-group = "docs" },
@@ -126,34 +116,21 @@ release = [
 
 # see https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#dependencies-optional-dependencies
 [project.optional-dependencies]
-charts = [
-    "matplotlib",
-    "seaborn",
-]
-pyobo = [
-    "pyobo>=0.12.11",
-]
 web = [
-    "flask",
-    "bootstrap-flask",
-    "flask-wtf",
+    "sssom-curator[web]"
 ]
-gilda = [
-    "pyobo[gilda]>=0.12.8",
+charts = [
+    "sssom-curator[charts]",
 ]
-gilda-slim = [
-    "pyobo[gilda-slim]>=0.12.8",
-]
-ndex = [
-    "ndex2",
+lexical = [
+    "sssom-curator[gilda-slim]"
 ]
 exports = [
-    "sssom",
+    "sssom-curator[charts,exports,ndex]",
     "pandas",
 ]
 embedding = [
-    "sentence-transformers",
-    "torch",
+    "sssom-curator[embedding]",
 ]
 
 # See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#urls
