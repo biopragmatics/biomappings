@@ -67,6 +67,7 @@ class Repository:
         enable_web: bool = True,
         get_user: UserGetter | None = None,
         output_directory: Path | None = None,
+        sssom_directory: Path | None = None,
         image_directory: Path | None = None,
         get_orcid_to_name: Callable[[], dict[str, str]] | None = None,
     ) -> click.Group:
@@ -79,7 +80,7 @@ class Repository:
         main.add_command(self.get_predict_command())
         main.add_command(self.get_lint_command())
         main.add_command(self.get_web_command(enable=enable_web, get_user=get_user))
-        main.add_command(self.get_merge_command(output_directory=output_directory))
+        main.add_command(self.get_merge_command(sssom_directory=sssom_directory))
         main.add_command(self.get_ndex_cli())
         main.add_command(
             self.get_summary_command(
@@ -139,18 +140,18 @@ class Repository:
             self, output_directory=output_directory, get_orcid_to_name=get_orcid_to_name
         )
 
-    def get_merge_command(self, output_directory: Path | None = None) -> click.Command:
+    def get_merge_command(self, sssom_directory: Path | None = None) -> click.Command:
         """Get the merge command."""
 
         @click.command(name="merge")
         @click.option(
-            "--directory", type=click.Path(dir_okay=True, file_okay=False), default=output_directory
+            "--directory", type=click.Path(dir_okay=True, file_okay=False), default=sssom_directory
         )
-        def main(directory: Path) -> None:
+        def main(sssom_directory: Path) -> None:
             """Merge files together to a single SSSOM."""
             from .merge import merge
 
-            merge(self, directory=directory.joinpath("sssom"))
+            merge(self, directory=sssom_directory)
 
         return main
 

@@ -24,6 +24,7 @@ __all__ = [
     "append_false_mappings",
     "append_predictions",
     "append_true_mappings",
+    "get_curator_names",
     "get_current_curator",
     "get_false_graph",
     "get_predictions_graph",
