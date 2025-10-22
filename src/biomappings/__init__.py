@@ -6,13 +6,13 @@ from collections.abc import Iterable
 from typing import TYPE_CHECKING, Any
 
 from .resources import (
+    append_predictions,
     get_false_graph,
     get_predictions_graph,
     get_true_graph,
     load_false_mappings,
     load_mappings,
     load_predictions,
-append_predictions,
     load_unsure,
 )
 from .utils import DEFAULT_REPO, get_script_url
@@ -22,15 +22,15 @@ if TYPE_CHECKING:
 
 __all__ = [
     "DEFAULT_REPO",
+    "append_lexical_predictions",
+    "append_predictions",
     "get_false_graph",
     "get_predictions_graph",
+    "get_script_url",
     "get_true_graph",
     "lexical_prediction_cli",
-    "append_lexical_predictions",
-    "get_script_url",
     "load_false_mappings",
     "load_mappings",
-    "append_predictions",
     "load_predictions",
     "load_unsure",
 ]

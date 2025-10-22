@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import ClassVar
 
 from sssom_curator import testing
+
 from biomappings.utils import DEFAULT_REPO
 
 
