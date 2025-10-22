@@ -12,6 +12,7 @@ from .resources import (
     load_false_mappings,
     load_mappings,
     load_predictions,
+append_predictions,
     load_unsure,
 )
 from .utils import DEFAULT_REPO, get_script_url
@@ -25,8 +26,11 @@ __all__ = [
     "get_predictions_graph",
     "get_true_graph",
     "lexical_prediction_cli",
+    "append_lexical_predictions",
+    "get_script_url",
     "load_false_mappings",
     "load_mappings",
+    "append_predictions",
     "load_predictions",
     "load_unsure",
 ]
