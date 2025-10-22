@@ -18,13 +18,17 @@ if TYPE_CHECKING:
 
 def get_summary_command(
     repository: Repository,
-    output_directory: Path,
+    output_directory: Path | None = None,
     get_orcid_to_name: typing.Callable[[], dict[str, str]] | None = None,
 ) -> click.Command:
     """Get the export command."""
 
     @click.command()
-    @click.option("--output", type=Path, default=output_directory.joinpath("summary.yml"))
+    @click.option(
+        "--output",
+        type=Path,
+        default=output_directory.joinpath("summary.yml") if output_directory else None,
+    )
     def summary(output: Path) -> None:
         """Create export data file."""
         import yaml

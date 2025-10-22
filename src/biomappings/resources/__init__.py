@@ -8,7 +8,7 @@ import itertools as itt
 import logging
 from collections.abc import Collection, Iterable, Sequence
 from pathlib import Path
-from typing import TYPE_CHECKING, Literal, overload
+from typing import TYPE_CHECKING, Literal, cast, overload
 
 import sssom_pydantic
 from curies import Reference
@@ -131,7 +131,7 @@ def load_curators() -> dict[str, NormalizedNamedReference]:
 
 def get_curator_names() -> dict[str, str]:
     """Get ORCID to name."""
-    return {r.identifier: r.name for r in load_curators().values()}
+    return {r.identifier: cast(str, r.name) for r in load_curators().values()}
 
 
 class MissingCuratorError(KeyError):
