@@ -2,7 +2,7 @@
 
 import unittest
 
-from biomappings.curator.merge import get_merged_sssom
+from sssom_curator.export.merge import get_merged_sssom
 from biomappings.utils import DEFAULT_REPO
 
 

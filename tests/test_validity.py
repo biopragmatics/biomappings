@@ -3,7 +3,7 @@
 from pathlib import Path
 from typing import ClassVar
 
-from biomappings.curator import testing
+from sssom_curator import testing
 from biomappings.utils import DEFAULT_REPO
 
 
