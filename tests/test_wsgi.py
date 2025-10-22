@@ -10,12 +10,7 @@ from bioregistry import NormalizedNamableReference as Reference
 from sssom_pydantic import MappingTool, SemanticMapping
 
 from biomappings.curator.wsgi import Controller, State, get_app
-from biomappings.utils import (
-    NEGATIVES_SSSOM_PATH,
-    POSITIVES_SSSOM_PATH,
-    PREDICTIONS_SSSOM_PATH,
-    UNSURE_SSSOM_PATH,
-)
+from biomappings.utils import DEFAULT_REPO
 
 TEST_USER = Reference(prefix="orcid", identifier="0000-0000-0000-0000", name="Max Mustermann")
 
@@ -27,10 +22,10 @@ class TestWeb(unittest.TestCase):
         """Set up the test case with a controller."""
         self.controller = Controller(
             user=TEST_USER,
-            positives_path=POSITIVES_SSSOM_PATH,
-            negatives_path=NEGATIVES_SSSOM_PATH,
-            unsure_path=UNSURE_SSSOM_PATH,
-            predictions_path=PREDICTIONS_SSSOM_PATH,
+            positives_path=DEFAULT_REPO.positives_path,
+            negatives_path=DEFAULT_REPO.negatives_path,
+            unsure_path=DEFAULT_REPO.unsure_path,
+            predictions_path=DEFAULT_REPO.predictions_path,
         )
 
     def test_query(self) -> None:

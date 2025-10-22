@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import importlib.metadata
 import os
 from pathlib import Path
 
@@ -10,11 +9,10 @@ from curies.vocabulary import charlie
 from sssom_pydantic import MappingSet
 
 from .curator.repo import Repository
-from .version import get_git_hash
+from .version import get_git_hash, get_version
 
 __all__ = [
     "BIOMAPPINGS_NDEX_UUID",
-    "CURATED_PATHS",
     "CURATORS_PATH",
     "DATA_DIRECTORY",
     "DEFAULT_REPO",
@@ -35,7 +33,6 @@ RESOURCE_PATH = HERE.joinpath("resources")
 POSITIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("positive.sssom.tsv")
 NEGATIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("negative.sssom.tsv")
 UNSURE_SSSOM_PATH = RESOURCE_PATH.joinpath("unsure.sssom.tsv")
-CURATED_PATHS = [POSITIVES_SSSOM_PATH, NEGATIVES_SSSOM_PATH, UNSURE_SSSOM_PATH]
 PREDICTIONS_SSSOM_PATH = RESOURCE_PATH.joinpath("predictions.sssom.tsv")
 CURATORS_PATH = RESOURCE_PATH.joinpath("curators.tsv")
 PURL_BASE = "https://w3id.org/biopragmatics/biomappings/sssom"
@@ -69,7 +66,7 @@ META = MappingSet.model_validate(
         "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
         "mapping_set_id": f"{PURL_BASE}/biomappings.sssom.tsv",
         "mapping_set_title": "Biomappings",
-        "mapping_set_version": importlib.metadata.version("biomappings"),
+        "mapping_set_version": get_version(with_git_hash=True),
         "creator_id": [charlie],
     }
 )
