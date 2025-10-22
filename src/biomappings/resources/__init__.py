@@ -8,18 +8,9 @@ import itertools as itt
 import logging
 from collections.abc import Collection, Iterable, Sequence
 from pathlib import Path
-from typing import TYPE_CHECKING, Literal, overload
+from typing import TYPE_CHECKING, Literal, cast, overload
 
-import sssom_pydantic
-
-from ..utils import (
-    CURATORS_PATH,
-    DEFAULT_REPO,
-    NEGATIVES_SSSOM_PATH,
-    POSITIVES_SSSOM_PATH,
-    PREDICTIONS_SSSOM_PATH,
-    UNSURE_SSSOM_PATH,
-)
+from ..utils import CURATORS_PATH, DEFAULT_REPO
 
 if TYPE_CHECKING:
     import networkx
@@ -31,6 +22,7 @@ __all__ = [
     "append_false_mappings",
     "append_predictions",
     "append_true_mappings",
+    "get_curator_names",
     "get_current_curator",
     "get_false_graph",
     "get_predictions_graph",
@@ -45,56 +37,42 @@ __all__ = [
 logger = logging.getLogger(__name__)
 
 
-def load_mappings(*, path: str | Path | None = None) -> list[SemanticMapping]:
+def load_mappings() -> list[SemanticMapping]:
     """Load the positive mappings."""
-    return sssom_pydantic.read(path or POSITIVES_SSSOM_PATH)[0]
+    return DEFAULT_REPO.read_positive_mappings()
 
 
-def load_false_mappings(*, path: Path | None = None) -> list[SemanticMapping]:
+def load_false_mappings() -> list[SemanticMapping]:
     """Load the negative mappings."""
-    return sssom_pydantic.read(path or NEGATIVES_SSSOM_PATH)[0]
+    return DEFAULT_REPO.read_negative_mappings()
 
 
-def load_unsure(*, path: Path | None = None) -> list[SemanticMapping]:
+def load_unsure() -> list[SemanticMapping]:
     """Load the unsure mappings."""
-    return sssom_pydantic.read(path or UNSURE_SSSOM_PATH)[0]
+    return DEFAULT_REPO.read_unsure_mappings()
 
 
-def load_predictions(*, path: str | Path | None = None) -> list[SemanticMapping]:
+def load_predictions() -> list[SemanticMapping]:
     """Load the predicted mappings."""
-    return sssom_pydantic.read(path or PREDICTIONS_SSSOM_PATH)[0]
+    return DEFAULT_REPO.read_predicted_mappings()
 
 
 def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Append new lines to the positive mappings document."""
-    import bioregistry
-
-    from ..curator.wsgi_utils import insert
-
-    insert(
-        path or POSITIVES_SSSOM_PATH,
-        converter=bioregistry.get_converter(),
-        include_mappings=mappings,
-    )
+    DEFAULT_REPO.append_positive_mappings(mappings)
 
 
 def append_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
     """Append new lines to the negative mappings document."""
-    import bioregistry
-
-    from ..curator.wsgi_utils import insert
-
-    insert(
-        path or NEGATIVES_SSSOM_PATH,
-        converter=bioregistry.get_converter(),
-        include_mappings=mappings,
-    )
+    DEFAULT_REPO.append_negative_mappings(mappings)
 
 
 def append_predictions(
     new_mappings: Iterable[SemanticMapping],
 ) -> None:
     """Append new lines to the predicted mappings document."""
+    import sssom_pydantic
+
     path = DEFAULT_REPO.predictions_path
 
     mappings, converter, metadata = sssom_pydantic.read(path)
@@ -134,6 +112,11 @@ def load_curators() -> dict[str, NormalizedNamedReference]:
             )
             for record in csv.DictReader(file, delimiter="\t")
         }
+
+
+def get_curator_names() -> dict[str, str]:
+    """Get ORCID to name."""
+    return {r.identifier: cast(str, r.name) for r in load_curators().values()}
 
 
 class MissingCuratorError(KeyError):

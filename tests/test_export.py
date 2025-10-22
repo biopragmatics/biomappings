@@ -2,7 +2,8 @@
 
 import unittest
 
-from biomappings.resources.export_sssom import get_sssom_df
+from biomappings.curator.merge import get_merged_sssom
+from biomappings.utils import DEFAULT_REPO
 
 
 class TestExport(unittest.TestCase):
@@ -10,4 +11,4 @@ class TestExport(unittest.TestCase):
 
     def test_sssom_merge(self) -> None:
         """Test merging SSSOM files."""
-        get_sssom_df(use_tqdm=False)
+        get_merged_sssom(DEFAULT_REPO, use_tqdm=False)
