@@ -129,6 +129,11 @@ def load_curators() -> dict[str, NormalizedNamedReference]:
         }
 
 
+def get_curator_names() -> dict[str, str]:
+    """Get ORCID to name."""
+    return {r.identifier: r.name for r in load_curators().values()}
+
+
 class MissingCuratorError(KeyError):
     """Raised when the current user's login is not listed in the curators file."""
 

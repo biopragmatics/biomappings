@@ -10,8 +10,7 @@ from typing import TYPE_CHECKING
 import click
 
 from .curator.wsgi_utils import get_git_hash
-from .resources import get_current_curator
-from .summary import export
+from .resources import get_curator_names, get_current_curator
 from .utils import DATA_DIRECTORY, DEFAULT_REPO, IMG_DIRECTORY
 
 if TYPE_CHECKING:
@@ -23,9 +22,8 @@ main = DEFAULT_REPO.get_cli(
     enable_web=GIT_HASH is not None,
     get_user=get_current_curator,
     output_directory=DATA_DIRECTORY.joinpath("sssom"),
+    get_orcid_to_name=get_curator_names,
 )
-
-main.add_command(export)
 
 
 @main.command()
@@ -33,40 +31,11 @@ main.add_command(export)
 def update(ctx: click.Context) -> None:
     """Run all export, sssom, and chart functions."""
     click.secho("Building general exports", fg="green")
-    ctx.invoke(export)
+    ctx.invoke(main.commands["summary"])
     click.secho("Building SSSOM export", fg="green")
     ctx.invoke(main.commands["merge"])
     click.secho("Generating charts", fg="green")
     ctx.invoke(charts)
-
-
-@main.command()
-@click.option("--username", help="NDEx username, also looks in pystow configuration")
-@click.option("--password", help="NDEx password, also looks in pystow configuration")
-def ndex(username: str | None, password: str | None) -> None:
-    """Upload to NDEx, see https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf."""
-    from sssom_pydantic import MappingSet
-    from sssom_pydantic.contrib.ndex import update_ndex
-
-    from biomappings import load_mappings
-    from biomappings.utils import BIOMAPPINGS_NDEX_UUID
-
-    mappings = load_mappings()
-    metadata = MappingSet(
-        mapping_set_id="https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv",
-        mapping_set_title="Biomappings",
-        mapping_set_description="Manually curated semantic mappings (e.g., skos:exactMatch) between biological entities",
-        license="CC0",
-        mapping_set_version=GIT_HASH,
-    )
-    update_ndex(
-        uuid=BIOMAPPINGS_NDEX_UUID,
-        mappings=mappings,
-        metadata=metadata,
-        username=username,
-        password=password,
-    )
-    click.echo(f"Uploaded to https://bioregistry.io/ndex:{BIOMAPPINGS_NDEX_UUID}")
 
 
 @main.command()

@@ -36,8 +36,9 @@ class Repository:
     negatives_path: Path
     unsure_path: Path
     purl_base: str
-    basename: str | None
     mapping_set: MappingSet
+    basename: str | None = None
+    ndex_uuid: str | None = None
 
     @property
     def curated_paths(self) -> list[Path]:
@@ -66,6 +67,7 @@ class Repository:
         enable_web: bool = True,
         get_user: UserGetter | None = None,
         output_directory: Path | None = None,
+        get_orcid_to_name: Callable[[], dict[str, str]] | None = None,
     ) -> click.Group:
         """Get a CLI."""
 
@@ -77,7 +79,25 @@ class Repository:
         main.add_command(self.get_lint_command())
         main.add_command(self.get_web_command(enable=enable_web, get_user=get_user))
         main.add_command(self.get_merge_command(output_directory=output_directory))
+        main.add_command(self.get_ndex_cli())
+        main.add_command(
+            self.get_summary_command(
+                output_directory=output_directory, get_orcid_to_name=get_orcid_to_name
+            )
+        )
         return main
+
+    def get_summary_command(
+        self,
+        output_directory: Path | None = None,
+        get_orcid_to_name: Callable[[], dict[str, str]] | None = None,
+    ) -> click.Command:
+        """Get the summary command."""
+        from .summary import get_summary_command
+
+        return get_summary_command(
+            self, output_directory=output_directory, get_orcid_to_name=get_orcid_to_name
+        )
 
     def get_merge_command(self, output_directory: Path | None = None) -> click.Command:
         """Get the merge command."""
@@ -226,3 +246,33 @@ class Repository:
                 )
 
         return web
+
+    def get_ndex_cli(self) -> click.Command:
+        """Get a CLI for uploading to NDEx."""
+
+        @click.command()
+        @click.option("--username", help="NDEx username, also looks in pystow configuration")
+        @click.option("--password", help="NDEx password, also looks in pystow configuration")
+        def ndex(username: str | None, password: str | None) -> None:
+            """Upload to NDEx, see https://www.ndexbio.org/viewer/networks/402d1fd6-49d6-11eb-9e72-0ac135e8bacf."""
+            if not self.ndex_uuid:
+                import sys
+
+                click.secho(
+                    "can not upload to NDEx, no NDEx UUID is set in the curator configuration."
+                )
+                raise sys.exit(1)
+
+            from sssom_pydantic.contrib.ndex import update_ndex
+
+            mappings = self.read_positive_mappings()
+            update_ndex(
+                uuid=self.ndex_uuid,
+                mappings=mappings,
+                metadata=self.mapping_set,
+                username=username,
+                password=password,
+            )
+            click.echo(f"Uploaded to https://bioregistry.io/ndex:{self.ndex_uuid}")
+
+        return ndex
