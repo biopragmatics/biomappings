@@ -97,9 +97,7 @@ four lines:
 .. code-block:: python
 
     # generate_chebi_mesh_example.py
-
-    from biomappings.lexical import append_lexical_predictions
-    from biomappings.utils import get_script_url
+    from biomappings import append_lexical_predictions, get_script_url
 
     provenance = get_script_url(__file__)
     append_lexical_predictions("chebi", "mesh", provenance=provenance)
@@ -161,11 +159,9 @@ called ``predictions.tsv``.
 .. code-block:: python
 
     # generate_chebi_mesh_example.py
-
     from pathlib import Path
 
-    from biomappings.lexical import append_lexical_predictions
-    from biomappings.utils import get_script_url
+    from biomappings import append_lexical_predictions, get_script_url
 
     HERE = Path(__file__).parent.resolve()
     PREDICTIONS_PATH = HERE.joinpath("predictions.tsv")
