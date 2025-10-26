@@ -1,15 +1,12 @@
 Adding Predictions
 ==================
 
-.. todo:: Update!
+Biomappings is built on top of :class:`sssom_curator` and can be extended with any
+semantic mapping prediction workflow. Several examples can be found in the
+`scripts/ <https://github.com/biopragmatics/biomappings/tree/master/scripts>`_ directory of the
+upstream Biomappings repository.
 
-The Biomappings workflow is generic and allows for any mapping prediction workflow to be
-used. You can see several examples in the `scripts/
-<https://github.com/biopragmatics/biomappings/tree/master/scripts>`_ directory of the
-canonical Biomappings repository.
-
-Most are built using a lexical matching workflow based on `Gilda
-<https://github.com/gyorilab/gilda>`_. This approach is fast, simple, and interpretable
+Most are built using a lexical matching workflow from SSSOM Curator. This approach is fast, simple, and interpretable
 since it relies on the labels and synonyms for concepts appearing in ontologies and
 other controlled vocabularies (e.g., MeSH). It takes the following steps:
 
@@ -28,20 +25,13 @@ The following examples have already been used to predict mappings
 
 1. `generate_mondo_mappings.py
    <https://github.com/biopragmatics/biomappings/blob/master/scripts/generate_mondo_mappings.py>`_
-   uses a pre-configured workflow based on the :mod:`gilda` and :mod:`pyobo`
-   integrations
-2. `generate_ccle_mappings.py
-   <https://github.com/biopragmatics/biomappings/blob/master/scripts/generate_ccle_mappings.py>`_
-   uses same pre-configured workflow with a custom filter to include additional mappings
-3. `generate_cl_mesh_mappings
-   <https://github.com/biopragmatics/biomappings/blob/master/scripts/generate_cl_mesh_mappings.py>`_
-   implements a fully custom matching workflow, also built on Gilda (in case you want to
-   roll your own)
-4. `generate_mesh_uniprot_mappings
+   uses a pre-configured lexical matching workflow exposed through :meth:`sssom_curator.Repository.lexical_prediction_cli`
+2. `generate_mesh_uniprot_mappings
    <https://github.com/biopragmatics/biomappings/blob/master/scripts/generate_mesh_uniprot_mappings.py>`_
-   uses rule-based matching between MeSH and UniProt proteins that relies on the fact
-   that the MeSH terms were generated from UniProt names.
-5. `generate_wikipathways_orthologs
+    implements a fully custom lexical matching workflow that uses rule-based matching between
+    MeSH and UniProt proteins that relies on the fact that the MeSH terms were generated from UniProt names.
+    Use this as inspiration for rolling your own workflow.
+3. `generate_wikipathways_orthologs
    <https://github.com/biopragmatics/biomappings/blob/master/scripts/generate_wikipathways_orthologs.py>`_
    uses a rule-based method for matching orthologous pathways in WikiPathways that
    relies on the fact that the names are procedurally generated with a certain template
@@ -63,7 +53,7 @@ Clone the Repository
 1. Fork the `upstream Biomappings repository
    <https://github.com/biopragmatics/biomappings>`_
 2. Clone your fork, make a branch, and install it. Note that we're including the ``web``
-   and ``gilda`` extras, so we can run the curation interface locally as well as get all
+   and ``predict-lexical`` extras, so we can run the curation interface locally as well as get all
    the tools we need for generating predictions.
 
        .. code-block:: console
@@ -71,7 +61,7 @@ Clone the Repository
            $ git clone https://github.com/<your namespace>/biomappings
            $ cd biomappings
            $ git checkout -b tutorial
-           $ python -m pip install -e .[web,gilda]
+           $ python -m pip install -e .[web,predict-lexical]
 
 3. Go into the `scripts/` directory
 
@@ -89,7 +79,7 @@ Clone the Repository
 Preparing the Mapping Script
 ----------------------------
 
-Biomappings has a lot of first-party support for Gilda prediction workflows, so
+Biomappings has a lot of first-party support for lexical prediction workflows, so
 generating mappings can be quite easy using a pre-defined workflow. Open your newly
 created ``generate_chebi_mesh_example.py`` in your favorite editor and add the following
 four lines:
@@ -159,6 +149,7 @@ called ``predictions.tsv``.
 .. code-block:: python
 
     # generate_chebi_mesh_example.py
+
     from pathlib import Path
 
     from biomappings import append_lexical_predictions, get_script_url

@@ -119,18 +119,14 @@ release = [
 web = [
     "sssom-curator[web]"
 ]
-charts = [
-    "sssom-curator[charts]",
-]
-lexical = [
-    "sssom-curator[gilda-slim]"
+predict-lexical = [
+    "sssom-curator[predict-lexical]"
 ]
 exports = [
-    "sssom-curator[charts,exports,ndex]",
-    "pandas",
+    "sssom-curator[exports]",
 ]
-embedding = [
-    "sssom-curator[embedding]",
+predict-embeddings = [
+    "sssom-curator[predict-embeddings]",
 ]
 
 # See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#urls
