@@ -58,18 +58,16 @@ def get_script_url(fname: str) -> str:
 #: THe NDEx UUID
 BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
 
-META = MappingSet.model_validate(
-    {
-        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "mapping_provider": "https://github.com/biopragmatics/biomappings",
-        "mapping_set_description": "Biomappings is a repository of community curated and predicted equivalences and "
-        "related mappings between named biological entities that are not available from primary sources. It's also a "
-        "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
-        "mapping_set_id": f"{PURL_BASE}/biomappings.sssom.tsv",
-        "mapping_set_title": "Biomappings",
-        "mapping_set_version": get_version(with_git_hash=True),
-        "creator_id": [charlie],
-    }
+META = MappingSet(
+    license="https://creativecommons.org/publicdomain/zero/1.0/",
+    description="Biomappings is a repository of community curated and predicted equivalences and "
+    "related mappings between named biological entities that are not available from primary sources. It's also a "
+    "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
+    id=f"{PURL_BASE}/biomappings.sssom.tsv",
+    title="Biomappings",
+    version=get_version(with_git_hash=True),
+    creators=[charlie],
+    issue_tracker="https://github.com/biopragmatics/bioregistry/issues",
 )
 
 DEFAULT_REPO = Repository(
