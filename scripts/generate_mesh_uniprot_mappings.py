@@ -12,9 +12,7 @@ from sssom_pydantic import MappingTool, SemanticMapping
 MESH_PROTEIN_RE = re.compile(r"^(.+) protein, human$")
 
 
-def append_mesh_uniprot(
-    repository: Repository, mapping_tool: MappingTool | None = None
-) -> list[SemanticMapping]:
+def append_mesh_uniprot(repository: Repository, mapping_tool: MappingTool | None = None) -> None:
     """Iterate high-confidence lexical mappings between MeSH and UniProt human proteins."""
     grounder = pyobo.get_grounder("hgnc")
     hgnc_id_to_uniprot_id = pyobo.get_relation_mapping(
