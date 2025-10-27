@@ -4,11 +4,12 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
+from textwrap import dedent
 
 from curies.vocabulary import charlie
+from sssom_curator import Repository
 from sssom_pydantic import MappingSet
 
-from .curator.repo import Repository
 from .version import get_git_hash, get_version
 
 __all__ = [
@@ -57,18 +58,16 @@ def get_script_url(fname: str) -> str:
 #: THe NDEx UUID
 BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
 
-META = MappingSet.model_validate(
-    {
-        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "mapping_provider": "https://github.com/biopragmatics/biomappings",
-        "mapping_set_description": "Biomappings is a repository of community curated and predicted equivalences and "
-        "related mappings between named biological entities that are not available from primary sources. It's also a "
-        "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
-        "mapping_set_id": f"{PURL_BASE}/biomappings.sssom.tsv",
-        "mapping_set_title": "Biomappings",
-        "mapping_set_version": get_version(with_git_hash=True),
-        "creator_id": [charlie],
-    }
+META = MappingSet(
+    license="https://creativecommons.org/publicdomain/zero/1.0/",
+    description="Biomappings is a repository of community curated and predicted equivalences and "
+    "related mappings between named biological entities that are not available from primary sources. It's also a "
+    "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
+    id=f"{PURL_BASE}/biomappings.sssom.tsv",
+    title="Biomappings",
+    version=get_version(with_git_hash=True),
+    creators=[charlie],
+    issue_tracker="https://github.com/biopragmatics/bioregistry/issues",
 )
 
 DEFAULT_REPO = Repository(
@@ -79,4 +78,21 @@ DEFAULT_REPO = Repository(
     basename="biomappings",
     purl_base=PURL_BASE,
     mapping_set=META,
+    ndex_uuid=BIOMAPPINGS_NDEX_UUID,
+    web_title="Biomappings",
+    web_disabled_message=(
+        "You are not running biomappings from a development installation.\n"
+        "Please run the following to install in development mode:\n"
+        "  $ git clone https://github.com/biomappings/biomappings.git\n"
+        "  $ cd biomappings\n"
+        "  $ pip install -e .[web]"
+    ),
+    web_footer=dedent("""\
+        Developed by the <a href="https://www.chemie.uni-bonn.de/ac/en">Institute of
+        Inorganic Chemistry</a> at
+        <a href="https://www.rwth-aachen.de">RWTH Aachen University</a>
+        and the <a href="https://gyorilab.github.io">Gyori Lab</a> at
+        <a href="https://www.northeastern.edu/">Northeastern University</a>.<br/>
+        Funded by DARPA awards W911NF2010255 and HR00112220036.
+    """),
 )
