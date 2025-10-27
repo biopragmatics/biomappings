@@ -7,8 +7,6 @@ from typing import TYPE_CHECKING, Any
 
 from .resources import (
     append_predictions,
-    get_false_graph,
-    get_predictions_graph,
     get_true_graph,
     load_false_mappings,
     load_mappings,
@@ -24,8 +22,6 @@ __all__ = [
     "DEFAULT_REPO",
     "append_lexical_predictions",
     "append_predictions",
-    "get_false_graph",
-    "get_predictions_graph",
     "get_script_url",
     "get_true_graph",
     "lexical_prediction_cli",

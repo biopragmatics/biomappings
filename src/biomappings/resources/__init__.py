@@ -6,7 +6,8 @@ import csv
 import getpass
 import itertools as itt
 import logging
-from collections.abc import Collection, Iterable, Sequence
+import warnings
+from collections.abc import Iterable, Sequence
 from pathlib import Path
 from typing import TYPE_CHECKING, Literal, cast, overload
 
@@ -24,8 +25,6 @@ __all__ = [
     "append_true_mappings",
     "get_curator_names",
     "get_current_curator",
-    "get_false_graph",
-    "get_predictions_graph",
     "get_true_graph",
     "load_curators",
     "load_false_mappings",
@@ -150,57 +149,12 @@ def get_true_graph(
     exclude: Sequence[Reference] | None = None,
 ) -> networkx.Graph:
     """Get a graph of the true mappings."""
+    warnings.warn(
+        "this function is deprecated, please construct the mappings graph yourself",
+        DeprecationWarning,
+        stacklevel=2,
+    )
+
+    from sssom_curator.export.charts import _graph_from_mappings
+
     return _graph_from_mappings(load_mappings(), strata="correct", include=include, exclude=exclude)
-
-
-def get_false_graph(
-    include: Sequence[Reference] | None = None,
-    exclude: Sequence[Reference] | None = None,
-) -> networkx.Graph:
-    """Get a graph of the false mappings."""
-    return _graph_from_mappings(
-        load_false_mappings(), strata="incorrect", include=include, exclude=exclude
-    )
-
-
-def get_predictions_graph(
-    include: Collection[Reference] | None = None,
-    exclude: Collection[Reference] | None = None,
-) -> networkx.Graph:
-    """Get a graph of the predicted mappings."""
-    return _graph_from_mappings(
-        load_predictions(), strata="predicted", include=include, exclude=exclude
-    )
-
-
-def _graph_from_mappings(
-    mappings: Iterable[SemanticMapping],
-    strata: str,
-    include: Collection[Reference] | None = None,
-    exclude: Collection[Reference] | None = None,
-) -> networkx.Graph:
-    import networkx as nx
-
-    graph = nx.Graph()
-
-    if include is not None:
-        include = set(include)
-        logger.info("only including %s", include)
-    if exclude is not None:
-        exclude = set(exclude)
-        logger.info("excluding %s", exclude)
-
-    for mapping in mappings:
-        if exclude and (mapping.predicate in exclude):
-            continue
-        if include and (mapping.predicate not in include):
-            continue
-        graph.add_edge(
-            mapping.subject,
-            mapping.object,
-            relation=mapping.predicate.curie,
-            provenance=mapping.author.curie if mapping.author else None,
-            type=mapping.justification.curie,
-            strata=strata,
-        )
-    return graph

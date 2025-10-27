@@ -52,7 +52,7 @@ repository.
 | Curated | Description                                                  | Link                                                                                                                                                         |
 | ------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Yes     | Human-curated true mappings                                  | [`src/biomappings/resources/positive.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/positive.sssom.tsv)       |
-| Yes     | Human-curated _non-trivial_ false (i.e., incorrect) mappings | [`src/biomappings/resources/negative.ssom..tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/negative.sssom.tsv)       |
+| Yes     | Human-curated _non-trivial_ false (i.e., incorrect) mappings | [`src/biomappings/resources/negative.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/negative.sssom.tsv)       |
 | Yes     | Mappings that have been checked but not yet decided          | [`src/biomappings/resources/unsure.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/unsure.sssom.tsv)           |
 | No      | Automatically predicted mappings                             | [`src/biomappings/resources/predictions.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/predictions.sssom.tsv) |
 
@@ -95,27 +95,9 @@ dictionaries with the mappings in each.
 ```python
 import biomappings
 
-true_mappings = biomappings.load_mappings()
-
-false_mappings = biomappings.load_false_mappings()
-
-predictions = biomappings.load_predictions()
-```
-
-Alternatively, you can use the above links to the TSVs on GitHub in with the
-library or programming language of your choice.
-
-The data can also be loaded as [networkx](https://networkx.org/) graphs with the
-following functions:
-
-```python
-import biomappings
-
-true_graph = biomappings.get_true_graph()
-
-false_graph = biomappings.get_false_graph()
-
-predictions_graph = biomappings.get_predictions_graph()
+positive_mappings = biomappings.load_mappings()
+negative_mappings = biomappings.load_false_mappings()
+predicted_mappings = biomappings.load_predictions()
 ```
 
 Full documentation can be found on
@@ -187,10 +169,10 @@ care of creating a branch for you and creating a pull request. After logging
 into GitHub, click one of the following links to be brought to the editing
 interface:
 
-- [True Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/positive.sssom.tsv)
-- [False Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/negative.sssom.tsv)
+- [Positive Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/positive.sssom.tsv)
+- [Negative Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/negative.sssom.tsv)
 - [Unsure Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/unsure.sssom.tsv)
-- [Predictions](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/predictions.sssom.tsv)
+- [Predicted Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/predictions.sssom.tsv)
 
 This has the caveat that you can only edit one file at a time. It's possible to
 navigate to your own forked version of the repository after, to the correct
