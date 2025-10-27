@@ -6,14 +6,16 @@ import pyobo
 from curies import NamedReference
 from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.struct import has_gene_product
-from sssom_curator import Repository
 from sssom_pydantic import MappingTool, SemanticMapping
+
+from biomappings import append_predictions, get_script_url
 
 MESH_PROTEIN_RE = re.compile(r"^(.+) protein, human$")
 
 
-def append_mesh_uniprot(repository: Repository, mapping_tool: MappingTool | None = None) -> None:
+def append_mesh_uniprot() -> None:
     """Iterate high-confidence lexical mappings between MeSH and UniProt human proteins."""
+    mapping_tool = MappingTool(name=get_script_url(__file__))
     grounder = pyobo.get_grounder("hgnc")
     hgnc_id_to_uniprot_id = pyobo.get_relation_mapping(
         "hgnc", relation=has_gene_product, target_prefix="uniprot"
@@ -40,10 +42,8 @@ def append_mesh_uniprot(repository: Repository, mapping_tool: MappingTool | None
                     mapping_tool=mapping_tool,
                 )
             )
-    repository.append_predicted_mappings(mappings)
+    append_predictions(mappings)
 
 
 if __name__ == "__main__":
-    from biomappings.utils import DEFAULT_REPO, get_script_url
-
-    append_mesh_uniprot(DEFAULT_REPO, mapping_tool=MappingTool(name=get_script_url(__file__)))
+    append_mesh_uniprot()
