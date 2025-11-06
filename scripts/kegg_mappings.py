@@ -5,10 +5,12 @@ from collections.abc import Iterable
 import bioversions
 import pyobo
 from bioregistry import NormalizedNamableReference
+from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.sources.kegg.api import ensure_list_pathways
+from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm import tqdm
 
-from biomappings.resources import SemanticMapping, append_prediction_tuples
+from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 
 
@@ -19,20 +21,20 @@ def iterate_kegg_matches() -> Iterable[SemanticMapping]:
     grounder = pyobo.get_grounder({"go", "mesh"})
     for identifier, name in tqdm(id_name_mapping.items(), desc="Mapping KEGG Pathways"):
         for match in grounder.get_matches(name):
-            if match.term.db.lower() not in {"go", "mesh"}:
+            if match.prefix not in {"go", "mesh"}:
                 continue
 
             yield SemanticMapping(
                 subject=NormalizedNamableReference(
                     prefix="kegg.pathway", identifier=identifier, name=name
                 ),
-                predicate="skos:exactMatch",
+                predicate=exact_match,
                 object=match.reference,
-                mapping_justification="semapv:LexicalMatching",
+                justification=lexical_matching_process,
                 confidence=match.score,
-                mapping_tool=provenance,
+                mapping_tool=MappingTool(name=provenance),
             )
 
 
 if __name__ == "__main__":
-    append_prediction_tuples(iterate_kegg_matches())
+    append_predictions(iterate_kegg_matches())

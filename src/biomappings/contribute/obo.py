@@ -1,8 +1,7 @@
 """Contribute Biomappings back to ontologies encoded in the OBO flat file format.
 
-Example ontologies using the OBO flat file format:
-- Uber Anatomy Ontology (UBERON)
-- Mondo Disease Ontology (MONDO)
+Example ontologies using the OBO flat file format: - Uber Anatomy Ontology (UBERON) -
+Mondo Disease Ontology (MONDO)
 """
 
 from __future__ import annotations
@@ -12,10 +11,15 @@ from pathlib import Path
 
 import bioregistry
 import click
+from sssom_pydantic import SemanticMapping
 from tqdm.auto import tqdm
 
-from biomappings import SemanticMapping
 from biomappings.contribute.utils import get_curated_mappings
+
+__all__ = [
+    "get_curated_mappings",
+    "update_obo_lines",
+]
 
 
 def update_obo(*, prefix: str, path: str | Path) -> None:
@@ -48,6 +52,7 @@ def update_obo_lines(
     :param mappings: Mappings to add
     :param lines: A list of lines of the file (still containing trailing newlines)
     :param progress: Show a progress bar
+
     :returns: New lines. Does not modify the original list.
     """
     lines = deepcopy(lines)

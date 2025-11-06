@@ -3,27 +3,27 @@
 from __future__ import annotations
 
 import os
-from collections.abc import Mapping
 from pathlib import Path
-from subprocess import CalledProcessError, check_output
+from textwrap import dedent
 
-from bioregistry import NormalizedNamableReference
+from curies.vocabulary import charlie
+from sssom_curator import Repository
+from sssom_pydantic import MappingSet
+
+from .version import get_git_hash, get_version
 
 __all__ = [
-    "BROAD_MATCH",
+    "BIOMAPPINGS_NDEX_UUID",
     "CURATORS_PATH",
-    "EXACT_MATCH",
-    "LEXICAL_MATCHING_PROCESS",
-    "MANUAL_MAPPING_CURATION",
-    "NARROW_MATCH",
+    "DATA_DIRECTORY",
+    "DEFAULT_REPO",
+    "IMG_DIRECTORY",
     "NEGATIVES_SSSOM_PATH",
     "POSITIVES_SSSOM_PATH",
     "PREDICTIONS_SSSOM_PATH",
+    "PURL_BASE",
     "RESOURCE_PATH",
     "UNSURE_SSSOM_PATH",
-    "CMapping",
-    "get_canonical_tuple",
-    "get_git_hash",
     "get_script_url",
 ]
 
@@ -36,92 +36,63 @@ NEGATIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("negative.sssom.tsv")
 UNSURE_SSSOM_PATH = RESOURCE_PATH.joinpath("unsure.sssom.tsv")
 PREDICTIONS_SSSOM_PATH = RESOURCE_PATH.joinpath("predictions.sssom.tsv")
 CURATORS_PATH = RESOURCE_PATH.joinpath("curators.tsv")
+PURL_BASE = "https://w3id.org/biopragmatics/biomappings/sssom"
 
-DOCS = ROOT.joinpath("docs")
-IMG = DOCS.joinpath("img")
-DATA = DOCS.joinpath("_data")
-
-
-def get_git_hash() -> str | None:
-    """Get the git hash.
-
-    :return:
-        The git hash, equals 'UNHASHED' if encountered CalledProcessError, signifying that the
-        code is not installed in development mode.
-    """
-    rv = _git("rev-parse", "HEAD")
-    if not rv:
-        return None
-    return rv[:6]
-
-
-def commit(message: str) -> str | None:
-    """Make a commit with the following message."""
-    return _git("commit", "-m", message, "-a")
-
-
-def push(branch_name: str | None = None) -> str | None:
-    """Push the git repo."""
-    if branch_name is not None:
-        return _git("push", "origin", branch_name)
-    else:
-        return _git("push")
-
-
-def not_main() -> bool:
-    """Return if on the master branch."""
-    return "master" != _git("rev-parse", "--abbrev-ref", "HEAD")
-
-
-def get_branch() -> str:
-    """Return current git branch."""
-    rv = _git("branch", "--show-current")
-    if rv is None:
-        raise RuntimeError
-    return rv
-
-
-def _git(*args: str) -> str | None:
-    with open(os.devnull, "w") as devnull:
-        try:
-            ret = check_output(  # noqa: S603
-                ["git", *args],  # noqa:S607
-                cwd=os.path.dirname(__file__),
-                stderr=devnull,
-            )
-        except CalledProcessError as e:
-            print(e)  # noqa:T201
-            return None
-        else:
-            return ret.strip().decode("utf-8")
+DOCS_DIRECTORY = ROOT.joinpath("docs")
+IMG_DIRECTORY = DOCS_DIRECTORY.joinpath("img")
+DATA_DIRECTORY = DOCS_DIRECTORY.joinpath("_data")
 
 
 def get_script_url(fname: str) -> str:
     """Get the source path for this script.
 
     :param fname: Pass ``__file__`` as the argument to this function.
-    :return: The script's URL to GitHub
+
+    :returns: The script's URL to GitHub
     """
     commit_hash = get_git_hash()
     script_name = os.path.basename(fname)
     return f"https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}"
 
 
-def get_canonical_tuple(mapping) -> tuple[str, str, str, str]:
-    """Get the canonical tuple from a mapping entry."""
-    source = mapping.subject
-    target = mapping.object
-    if source > target:
-        source, target = target, source
-    return (*source.pair, *target.pair)
+#: THe NDEx UUID
+BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
 
+META = MappingSet(
+    license="https://creativecommons.org/publicdomain/zero/1.0/",
+    description="Biomappings is a repository of community curated and predicted equivalences and "
+    "related mappings between named biological entities that are not available from primary sources. It's also a "
+    "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
+    id=f"{PURL_BASE}/biomappings.sssom.tsv",
+    title="Biomappings",
+    version=get_version(with_git_hash=True),
+    creators=[charlie],
+    issue_tracker="https://github.com/biopragmatics/bioregistry/issues",
+)
 
-#: A filter 3-dictionary of source prefix to target prefix to source identifier to target identifier
-CMapping = Mapping[str, Mapping[str, Mapping[str, str]]]
-
-EXACT_MATCH = NormalizedNamableReference.from_curie("skos:exactMatch")
-NARROW_MATCH = NormalizedNamableReference.from_curie("skos:narrowMatch")
-BROAD_MATCH = NormalizedNamableReference.from_curie("skos:broadMatch")
-
-LEXICAL_MATCHING_PROCESS = NormalizedNamableReference.from_curie("semapv:LexicalMatching")
-MANUAL_MAPPING_CURATION = NormalizedNamableReference.from_curie("semapv:ManualMappingCuration")
+DEFAULT_REPO = Repository(
+    predictions_path=PREDICTIONS_SSSOM_PATH,
+    positives_path=POSITIVES_SSSOM_PATH,
+    negatives_path=NEGATIVES_SSSOM_PATH,
+    unsure_path=UNSURE_SSSOM_PATH,
+    basename="biomappings",
+    purl_base=PURL_BASE,
+    mapping_set=META,
+    ndex_uuid=BIOMAPPINGS_NDEX_UUID,
+    web_title="Biomappings",
+    web_disabled_message=(
+        "You are not running biomappings from a development installation.\n"
+        "Please run the following to install in development mode:\n"
+        "  $ git clone https://github.com/biomappings/biomappings.git\n"
+        "  $ cd biomappings\n"
+        "  $ pip install -e .[web]"
+    ),
+    web_footer=dedent("""\
+        Developed by the <a href="https://www.chemie.uni-bonn.de/ac/en">Institute of
+        Inorganic Chemistry</a> at
+        <a href="https://www.rwth-aachen.de">RWTH Aachen University</a>
+        and the <a href="https://gyorilab.github.io">Gyori Lab</a> at
+        <a href="https://www.northeastern.edu/">Northeastern University</a>.<br/>
+        Funded by DARPA awards W911NF2010255 and HR00112220036.
+    """),
+)

@@ -2,7 +2,7 @@ contributors:
 - count: 5933
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
-- count: 4851
+- count: 5104
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
 - count: 1695
@@ -42,7 +42,7 @@ negative:
 - count: 77
   source: kegg.pathway
   target: mesh
-- count: 74
+- count: 75
   source: mesh
   target: vo
 - count: 59
@@ -73,6 +73,9 @@ negative:
   source: envo
   target: ncbitaxon
 - count: 29
+  source: chebi
+  target: iconclass
+- count: 29
   source: efo
   target: mesh
 - count: 25
@@ -81,6 +84,9 @@ negative:
 - count: 21
   source: chmo
   target: ncbitaxon
+- count: 21
+  source: chmo
+  target: iconclass
 - count: 20
   source: agro
   target: agrovoc
@@ -252,16 +258,16 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1735
-negative_prefix_count: 45
+negative_mapping_count: 1786
+negative_prefix_count: 46
 positive:
-- count: 3390
+- count: 3394
   source: chebi
   target: mesh
 - count: 1502
   source: doid
   target: mesh
-- count: 905
+- count: 922
   source: mesh
   target: ncit
 - count: 570
@@ -273,14 +279,14 @@ positive:
 - count: 387
   source: mesh
   target: uniprot
+- count: 383
+  source: efo
+  target: mesh
 - count: 366
   source: go
   target: wikipathways
 - count: 346
   source: hp
-  target: mesh
-- count: 267
-  source: efo
   target: mesh
 - count: 224
   source: mesh
@@ -348,6 +354,9 @@ positive:
 - count: 40
   source: drugbank
   target: vo
+- count: 37
+  source: chebi
+  target: iconclass
 - count: 26
   source: ncbiprotein
   target: uniprot.chain
@@ -387,9 +396,15 @@ positive:
 - count: 14
   source: cvx
   target: mesh
+- count: 14
+  source: iconclass
+  target: obi
 - count: 13
   source: apollosv
   target: ido
+- count: 13
+  source: chmo
+  target: iconclass
 - count: 13
   source: idomal
   target: ncbitaxon
@@ -427,6 +442,9 @@ positive:
   source: ncit
   target: vo
 - count: 5
+  source: clo
+  target: efo
+- count: 5
   source: hp
   target: ido
 - count: 5
@@ -435,9 +453,6 @@ positive:
 - count: 4
   source: ccle
   target: depmap
-- count: 4
-  source: clo
-  target: efo
 - count: 4
   source: doid
   target: idomal
@@ -606,13 +621,13 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 11046
-positive_prefix_count: 63
+positive_mapping_count: 11248
+positive_prefix_count: 65
 predictions:
-- count: 22709
+- count: 22705
   source: chebi
   target: mesh
-- count: 11733
+- count: 11716
   source: mesh
   target: ncit
 - count: 10961
@@ -627,7 +642,7 @@ predictions:
 - count: 1685
   source: wikipathways
   target: wikipathways
-- count: 492
+- count: 376
   source: efo
   target: mesh
 - count: 316
@@ -648,7 +663,7 @@ predictions:
 - count: 66
   source: maxo
   target: mesh
-- count: 56
+- count: 55
   source: mesh
   target: vo
 - count: 52
@@ -657,7 +672,7 @@ predictions:
 - count: 39
   source: doid
   target: efo
-- count: 30
+- count: 29
   source: clo
   target: efo
 - count: 9
@@ -738,7 +753,7 @@ predictions:
 - count: 1
   source: doid
   target: vido
-predictions_mapping_count: 53764
+predictions_mapping_count: 53625
 predictions_prefix_count: 32
 unsure:
 - count: 27

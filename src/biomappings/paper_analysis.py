@@ -1,3 +1,5 @@
+# type:ignore
+
 """Code for the paper analysis."""
 
 from __future__ import annotations

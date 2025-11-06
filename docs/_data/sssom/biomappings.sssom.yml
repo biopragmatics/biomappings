@@ -1,10 +1,4 @@
 creator_id:
-- orcid:0000-0001-9439-5346
-- orcid:0000-0002-1216-4761
-- orcid:0000-0002-2046-6145
-- orcid:0000-0002-2627-0696
-- orcid:0000-0002-6601-2165
-- orcid:0000-0003-1307-2508
 - orcid:0000-0003-4423-4370
 curie_map:
   AGRO: http://purl.obolibrary.org/obo/AGRO_
@@ -63,10 +57,11 @@ curie_map:
   drugbank: https://go.drugbank.com/drugs/
   fplx: https://sorgerlab.github.io/famplex/
   hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
+  iconclass: https://iconclass.org/
   idocovid19: http://purl.obolibrary.org/obo/COVIDO_
   interpro: http://purl.obolibrary.org/obo/IPR_
   ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
-  kegg.pathway: https://www.kegg.jp/entry/
+  kegg.pathway: https://www.kegg.jp/pathway/
   kestrelo: http://purl.obolibrary.org/obo/kestrelo_
   mesh: http://id.nlm.nih.gov/mesh/
   ndfrt: http://purl.bioontology.org/ontology/NDFRT/
@@ -92,4 +87,4 @@ mapping_set_description: Biomappings is a repository of community curated and pr
   of predicted mappings or their own novel mappings.
 mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv
 mapping_set_title: Biomappings
-mapping_set_version: 0.4.2.dev0
+mapping_set_version: 0.4.3.dev0

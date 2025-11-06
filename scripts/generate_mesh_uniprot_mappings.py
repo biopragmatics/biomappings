@@ -1,45 +1,49 @@
 """Append lexical mappings between MeSH and UniProt."""
 
 import re
-from collections.abc import Iterable
 
 import pyobo
-from bioregistry import NormalizedNamableReference
-from indra.databases import hgnc_client
+from curies import NamedReference
+from curies.vocabulary import exact_match, lexical_matching_process
+from pyobo.struct import has_gene_product
+from sssom_pydantic import MappingTool, SemanticMapping
 
-from biomappings.resources import SemanticMapping, append_prediction_tuples
-from biomappings.utils import EXACT_MATCH, LEXICAL_MATCHING_PROCESS, get_script_url
+from biomappings import append_predictions, get_script_url
 
 MESH_PROTEIN_RE = re.compile(r"^(.+) protein, human$")
 
 
-def get_mappings() -> Iterable[SemanticMapping]:
+def append_mesh_uniprot() -> None:
     """Iterate high-confidence lexical mappings between MeSH and UniProt human proteins."""
-    url = get_script_url(__file__)
+    mapping_tool = MappingTool(name=get_script_url(__file__))
     grounder = pyobo.get_grounder("hgnc")
+    hgnc_id_to_uniprot_id = pyobo.get_relation_mapping(
+        "hgnc", relation=has_gene_product, target_prefix="uniprot"
+    )
+    mappings = []
     for mesh_id, mesh_name in pyobo.get_id_name_mapping("mesh").items():
         match = MESH_PROTEIN_RE.match(mesh_name)
         if not match:
             continue
         gene_name = match.groups()[0]
-
-        for mm in grounder.get_matches(gene_name):
-            uniprot_id = hgnc_client.get_uniprot_id(mm.identifier)
+        for gene_reference in grounder.get_matches(gene_name):
+            uniprot_id = hgnc_id_to_uniprot_id.get(gene_reference.identifier)
             if not uniprot_id or "," in uniprot_id:
                 continue
-            yield SemanticMapping(
-                subject=NormalizedNamableReference(
-                    prefix="mesh", identifier=mesh_id, name=mesh_name
-                ),
-                predicate=EXACT_MATCH,
-                object=NormalizedNamableReference(
-                    prefix="uniprot", identifier=uniprot_id, name=mm.name
-                ),
-                mapping_justification=LEXICAL_MATCHING_PROCESS,
-                confidence=mm.score,
-                mapping_tool=url,
+            mappings.append(
+                SemanticMapping(
+                    subject=NamedReference(prefix="mesh", identifier=mesh_id, name=mesh_name),
+                    predicate=exact_match.curie,
+                    object=NamedReference(
+                        prefix="uniprot", identifier=uniprot_id, name=gene_reference.name
+                    ),
+                    justification=lexical_matching_process,
+                    confidence=gene_reference.score,
+                    mapping_tool=mapping_tool,
+                )
             )
+    append_predictions(mappings)
 
 
 if __name__ == "__main__":
-    append_prediction_tuples(get_mappings())
+    append_mesh_uniprot()
