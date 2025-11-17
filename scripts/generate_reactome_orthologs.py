@@ -18,7 +18,9 @@ def iterate_orthologs() -> Iterable[SemanticMapping]:
     get_script_url(__file__)
     names = pyobo.get_id_name_mapping("reactome")
     parent_identifier_to_species_identifier = _get_species_to_identifiers(names)
-    orthologous_to = NamableReference(prefix="ro", identifier="HOM0000017", name="in orthology relationship with")
+    orthologous_to = NamableReference(
+        prefix="ro", identifier="HOM0000017", name="in orthology relationship with"
+    )
     for identifiers in tqdm(parent_identifier_to_species_identifier.values()):
         for source_id, target_id in itt.product(identifiers, repeat=2):
             if source_id >= target_id:
