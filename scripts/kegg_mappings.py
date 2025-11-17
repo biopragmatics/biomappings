@@ -1,40 +1,40 @@
-# -*- coding: utf-8 -*-
+"""Generate mappings."""
 
-"""Generate mappings to Gilda from given PyOBO prefixes."""
+from collections.abc import Iterable
 
-from typing import Iterable
-
-import gilda
-import gilda.grounder
+import bioversions
+import pyobo
+from bioregistry import NormalizedNamableReference
+from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.sources.kegg.api import ensure_list_pathways
+from sssom_pydantic import MappingTool, SemanticMapping
 from tqdm import tqdm
 
-from biomappings.resources import PredictionTuple, append_prediction_tuples
+from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 
 
-def iterate_kegg_matches() -> Iterable[PredictionTuple]:
+def iterate_kegg_matches() -> Iterable[SemanticMapping]:
     """Iterate over predictions from KEGG Pathways to GO and MeSH."""
     provenance = get_script_url(__file__)
-    id_name_mapping = ensure_list_pathways()
+    id_name_mapping = ensure_list_pathways(bioversions.get_version("kegg", strict=True))
+    grounder = pyobo.get_grounder({"go", "mesh"})
     for identifier, name in tqdm(id_name_mapping.items(), desc="Mapping KEGG Pathways"):
-        for scored_match in gilda.ground(name):
-            if scored_match.term.db.lower() not in {"go", "mesh"}:
+        for match in grounder.get_matches(name):
+            if match.prefix not in {"go", "mesh"}:
                 continue
 
-            yield (
-                "kegg.pathway",
-                identifier,
-                name,
-                "skos:exactMatch",
-                scored_match.term.db.lower(),
-                scored_match.term.id,
-                scored_match.term.entry_name,
-                "lexical",
-                scored_match.score,
-                provenance,
+            yield SemanticMapping(
+                subject=NormalizedNamableReference(
+                    prefix="kegg.pathway", identifier=identifier, name=name
+                ),
+                predicate=exact_match,
+                object=match.reference,
+                justification=lexical_matching_process,
+                confidence=match.score,
+                mapping_tool=MappingTool(name=provenance),
             )
 
 
 if __name__ == "__main__":
-    append_prediction_tuples(iterate_kegg_matches())
+    append_predictions(iterate_kegg_matches())

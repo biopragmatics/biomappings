@@ -1,0 +1,4 @@
+# see https://docs.codecov.com/v4.6/docs/codecov-yaml
+ignore:
+  - "src/biomappings/__main__.py"
+  - "src/biomappings/cli.py"

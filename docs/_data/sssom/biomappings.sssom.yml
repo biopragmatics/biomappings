@@ -1,27 +1,90 @@
+creator_id:
+- orcid:0000-0003-4423-4370
 curie_map:
-  bto: 'http://purl.bioontology.org/ontology/BTO/BTO:'
-  ccle.cell: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
-  cellosaurus: https://web.expasy.org/cellosaurus/
-  chebi: 'https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:'
+  AGRO: http://purl.obolibrary.org/obo/AGRO_
+  APOLLO_SV: http://purl.obolibrary.org/obo/APOLLO_SV_
+  BFO: http://purl.obolibrary.org/obo/BFO_
+  BTO: http://purl.obolibrary.org/obo/BTO_
+  CARO: http://purl.obolibrary.org/obo/CARO_
+  CHEBI: http://purl.obolibrary.org/obo/CHEBI_
+  CHMO: http://purl.obolibrary.org/obo/CHMO_
+  CIDO: http://purl.obolibrary.org/obo/CIDO_
+  CL: http://purl.obolibrary.org/obo/CL_
+  CLO: http://purl.obolibrary.org/obo/CLO_
+  DOID: http://purl.obolibrary.org/obo/DOID_
+  DRON: http://purl.obolibrary.org/obo/DRON_
+  EFO: http://www.ebi.ac.uk/efo/EFO_
+  ENVO: http://purl.obolibrary.org/obo/ENVO_
+  FMA: http://purl.obolibrary.org/obo/FMA_
+  GO: http://purl.obolibrary.org/obo/GO_
+  HP: http://purl.obolibrary.org/obo/HP_
+  IAO: http://purl.obolibrary.org/obo/IAO_
+  IDO: http://purl.obolibrary.org/obo/IDO_
+  IDOMAL: http://purl.obolibrary.org/obo/IDOMAL_
+  MAXO: http://purl.obolibrary.org/obo/MAXO_
+  MI: http://purl.obolibrary.org/obo/MI_
+  MIAPA: http://purl.obolibrary.org/obo/MIAPA_
+  MIRO: http://purl.obolibrary.org/obo/MIRO_
+  MONDO: http://purl.obolibrary.org/obo/MONDO_
+  MPATH: http://purl.obolibrary.org/obo/MPATH_
+  NBO: http://purl.obolibrary.org/obo/NBO_
+  NCBIProtein: https://www.ncbi.nlm.nih.gov/protein/
+  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+  OAE: http://purl.obolibrary.org/obo/OAE_
+  OBI: http://purl.obolibrary.org/obo/OBI_
+  OGG: http://purl.obolibrary.org/obo/OGG_
+  OGMS: http://purl.obolibrary.org/obo/OGMS_
+  OPMI: http://purl.obolibrary.org/obo/OPMI_
+  PATO: http://purl.obolibrary.org/obo/PATO_
+  PCO: http://purl.obolibrary.org/obo/PCO_
+  PR: http://purl.obolibrary.org/obo/PR_
+  RO: http://purl.obolibrary.org/obo/RO_
+  STATO: http://purl.obolibrary.org/obo/STATO_
+  UBERON: http://purl.obolibrary.org/obo/UBERON_
+  VO: http://purl.obolibrary.org/obo/VO_
+  agrovoc: http://aims.fao.org/aos/agrovoc/
+  aio: https://w3id.org/aio/
+  ccle: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
+  cellosaurus: https://www.cellosaurus.org/CVCL_
+  cemo: https://biopragmatics.github.io/providers/cemo/
+  commoncoreontology: http://www.ontologyrepository.com/CommonCoreOntologies/
+  cpt: https://www.aapc.com/codes/cpt-codes/
+  cvx: https://biopragmatics.github.io/providers/cvx/
+  dc: http://purl.org/dc/elements/1.1/
+  debio: https://biopragmatics.github.io/debio/
   depmap: https://depmap.org/portal/cell_line/
-  doid: 'https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:'
-  efo: https://www.ebi.ac.uk/efo/EFO_
-  go: 'http://amigo.geneontology.org/amigo/term/GO:'
+  drugbank: https://go.drugbank.com/drugs/
+  fplx: https://sorgerlab.github.io/famplex/
   hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
-  hp: 'https://hpo.jax.org/app/browse/term/HP:'
-  kegg.pathway: https://www.kegg.jp/entry/
-  mesh: https://meshb.nlm.nih.gov/record/ui?ui=
-  ncbiprotein: https://www.ncbi.nlm.nih.gov/protein/
-  ncit: https://www.ebi.ac.uk/ols/ontologies/ncit/terms?short_form=NCIT_
-  pfam: https://pfam.xfam.org/family/
-  pr: 'https://www.ebi.ac.uk/ols/ontologies/pr/terms?obo_id=PR:'
+  iconclass: https://iconclass.org/
+  idocovid19: http://purl.obolibrary.org/obo/COVIDO_
+  interpro: http://purl.obolibrary.org/obo/IPR_
+  ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
+  kegg.pathway: https://www.kegg.jp/pathway/
+  kestrelo: http://purl.obolibrary.org/obo/kestrelo_
+  mesh: http://id.nlm.nih.gov/mesh/
+  ndfrt: http://purl.bioontology.org/ontology/NDFRT/
+  obo: http://purl.obolibrary.org/obo/
+  oboInOwl: http://www.geneontology.org/formats/oboInOwl#
+  orcid: https://orcid.org/
+  pfam: https://www.ebi.ac.uk/interpro/entry/pfam/
+  pubchem.compound: http://rdf.ncbi.nlm.nih.gov/pubchem/compound/CID
   reactome: https://reactome.org/content/detail/
-  umls: http://linkedlifedata.com/resource/umls/id/
+  semapv: https://w3id.org/semapv/vocab/
+  skos: http://www.w3.org/2004/02/skos/core#
+  umls: https://uts.nlm.nih.gov/uts/umls/concept/
   uniprot: http://purl.uniprot.org/uniprot/
   uniprot.chain: http://purl.uniprot.org/annotation/
-  wikipathways: http://www.wikipathways.org/instance/
+  vido: http://purl.obolibrary.org/obo/VIDO_
+  vsmo: http://purl.obolibrary.org/obo/VSMO_
+  wikipathways: http://identifiers.org/wikipathways/
 license: https://creativecommons.org/publicdomain/zero/1.0/
-mapping_provider: https://github.com/biomappings/biomappings
-mapping_set_group: biomappings
-mapping_set_id: biomappings
+mapping_provider: https://github.com/biopragmatics/biomappings
+mapping_set_description: Biomappings is a repository of community curated and predicted
+  equivalences and related mappings between named biological entities that are not
+  available from primary sources. It's also a place where anyone can contribute curations
+  of predicted mappings or their own novel mappings.
+mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv
 mapping_set_title: Biomappings
+mapping_set_version: 0.4.3.dev0

@@ -1,295 +1,798 @@
+- agro:00000116:
+    identifier: '00000116'
+    link: https://bioregistry.io/agro:00000116
+    name: draft animal
+    prefix: agro
+  agrovoc:10457:
+    identifier: '10457'
+    link: https://bioregistry.io/agrovoc:10457
+    name: draught animals
+    prefix: agrovoc
+  agrovoc:8446:
+    identifier: '8446'
+    link: https://bioregistry.io/agrovoc:8446
+    name: working animals
+    prefix: agrovoc
+- agro:00000229:
+    identifier: 00000229
+    link: https://bioregistry.io/agro:00000229
+    name: plant transplanting process
+    prefix: agro
+  agrovoc:13811:
+    identifier: '13811'
+    link: https://bioregistry.io/agrovoc:13811
+    name: replanting
+    prefix: agrovoc
+  agrovoc:7873:
+    identifier: '7873'
+    link: https://bioregistry.io/agrovoc:7873
+    name: transplanting
+    prefix: agrovoc
+- agro:00000540:
+    identifier: '00000540'
+    link: https://bioregistry.io/agro:00000540
+    name: forage harvester
+    prefix: agro
+  agrovoc:24001:
+    identifier: '24001'
+    link: https://bioregistry.io/agrovoc:24001
+    name: choppers
+    prefix: agrovoc
+  agrovoc:25763:
+    identifier: '25763'
+    link: https://bioregistry.io/agrovoc:25763
+    name: forage harvesters
+    prefix: agrovoc
+- agro:00002042:
+    identifier: '00002042'
+    link: https://bioregistry.io/agro:00002042
+    name: vermicompost
+    prefix: agro
+  agrovoc:24262:
+    identifier: '24262'
+    link: https://bioregistry.io/agrovoc:24262
+    name: vermiculture
+    prefix: agrovoc
+  agrovoc:c319a4d3:
+    identifier: c319a4d3
+    link: https://bioregistry.io/agrovoc:c319a4d3
+    name: vermicomposts
+    prefix: agrovoc
+- agro:00000051:
+    identifier: '00000051'
+    link: https://bioregistry.io/agro:00000051
+    name: seed dressing
+    prefix: agro
+  agrovoc:26820:
+    identifier: '26820'
+    link: https://bioregistry.io/agrovoc:26820
+    name: seed dressing
+    prefix: agrovoc
+  agrovoc:6940:
+    identifier: '6940'
+    link: https://bioregistry.io/agrovoc:6940
+    name: seed treatment
+    prefix: agrovoc
+- agro:00000022:
+    identifier: '00000022'
+    link: https://bioregistry.io/agro:00000022
+    name: biological pest control process
+    prefix: agro
+  agrovoc:330635:
+    identifier: '330635'
+    link: https://bioregistry.io/agrovoc:330635
+    name: biological pest control
+    prefix: agrovoc
+  agrovoc:918:
+    identifier: '918'
+    link: https://bioregistry.io/agrovoc:918
+    name: biological control
+    prefix: agrovoc
+- ccle:MDAMB231_BREAST:
+    identifier: MDAMB231_BREAST
+    link: https://bioregistry.io/ccle:MDAMB231_BREAST
+    name: MDA-MB-231
+    prefix: ccle
+  clo:0007634:
+    identifier: '0007634'
+    link: https://bioregistry.io/clo:0007634
+    name: MDA-MB-231 cell
+    prefix: clo
+  clo:0037291:
+    identifier: 0037291
+    link: https://bioregistry.io/clo:0037291
+    name: MDAMB231 cell
+    prefix: clo
+  efo:0001209:
+    identifier: 0001209
+    link: https://bioregistry.io/efo:0001209
+    name: MDAMB231
+    prefix: efo
+  mesh:D000092302:
+    identifier: D000092302
+    link: https://bioregistry.io/mesh:D000092302
+    name: MDA-MB-231 Cells
+    prefix: mesh
+- ccle:RH30_SOFT_TISSUE:
+    identifier: RH30_SOFT_TISSUE
+    link: https://bioregistry.io/ccle:RH30_SOFT_TISSUE
+    name: RH-30
+    prefix: ccle
+  ccle:SJRH30_SOFT_TISSUE:
+    identifier: SJRH30_SOFT_TISSUE
+    link: https://bioregistry.io/ccle:SJRH30_SOFT_TISSUE
+    name: SJRH30
+    prefix: ccle
+  cellosaurus:0041:
+    identifier: '0041'
+    link: https://bioregistry.io/cellosaurus:0041
+    name: Rh30
+    prefix: cellosaurus
+  efo:0002329:
+    identifier: 0002329
+    link: https://bioregistry.io/efo:0002329
+    name: SJRH30
+    prefix: efo
+- cl:0000101:
+    identifier: '0000101'
+    link: https://bioregistry.io/cl:0000101
+    name: sensory neuron
+    prefix: cl
+  cl:0000197:
+    identifier: 0000197
+    link: https://bioregistry.io/cl:0000197
+    name: sensory receptor cell
+    prefix: cl
+  mesh:D011984:
+    identifier: D011984
+    link: https://bioregistry.io/mesh:D011984
+    name: Sensory Receptor Cells
+    prefix: mesh
+- cpt:90585:
+    identifier: '90585'
+    link: https://bioregistry.io/cpt:90585
+    name: BCG
+    prefix: cpt
+  cpt:90728:
+    identifier: '90728'
+    link: https://bioregistry.io/cpt:90728
+    name: BCG
+    prefix: cpt
+  cvx:19:
+    identifier: '19'
+    link: https://bioregistry.io/cvx:19
+    name: Bacillus Calmette-Guerin vaccine
+    prefix: cvx
+  dron:00012890:
+    identifier: 00012890
+    link: https://bioregistry.io/dron:00012890
+    name: BCG Vaccine
+    prefix: dron
+  drugbank:DB12768:
+    identifier: DB12768
+    link: https://bioregistry.io/drugbank:DB12768
+    name: BCG vaccine
+    prefix: drugbank
+  mesh:D001500:
+    identifier: D001500
+    link: https://bioregistry.io/mesh:D001500
+    name: BCG Vaccine
+    prefix: mesh
+  ncit:C298:
+    identifier: C298
+    link: https://bioregistry.io/ncit:C298
+    name: BCG Vaccine
+    prefix: ncit
+  vo:0000771:
+    identifier: '0000771'
+    link: https://bioregistry.io/vo:0000771
+    name: BCG vaccine
+    prefix: vo
+- doid:11263:
+    identifier: '11263'
+    link: https://bioregistry.io/doid:11263
+    name: chlamydia
+    prefix: doid
+  mesh:D002689:
+    identifier: D002689
+    link: https://bioregistry.io/mesh:D002689
+    name: Chlamydia
+    prefix: mesh
+  mesh:D002690:
+    identifier: D002690
+    link: https://bioregistry.io/mesh:D002690
+    name: Chlamydia Infections
+    prefix: mesh
+- dron:00017235:
+    identifier: '00017235'
+    link: https://bioregistry.io/dron:00017235
+    name: Smallpox Vaccine
+    prefix: dron
+  mesh:D012900:
+    identifier: D012900
+    link: https://bioregistry.io/mesh:D012900
+    name: Smallpox Vaccine
+    prefix: mesh
+  vo:0000651:
+    identifier: '0000651'
+    link: https://bioregistry.io/vo:0000651
+    name: Smallpox virus vaccine
+    prefix: vo
+  vo:0004613:
+    identifier: '0004613'
+    link: https://bioregistry.io/vo:0004613
+    name: smallpox vaccine
+    prefix: vo
+- dron:00771506:
+    identifier: '00771506'
+    link: https://bioregistry.io/dron:00771506
+    name: 0.65 ML Varicella-Zoster Virus Vaccine Live (Oka-Merck) strain 29800 UNT/ML
+      Injection
+    prefix: dron
+  vo:0003272:
+    identifier: '0003272'
+    link: https://bioregistry.io/vo:0003272
+    name: 0.65 ML Varicella-Zoster Virus Vaccine Live (Oka-Merck) strain 29800 UNT/ML
+      Injection
+    prefix: vo
+  vo:0003280:
+    identifier: 0003280
+    link: https://bioregistry.io/vo:0003280
+    name: 0.65 ML Varicella-Zoster Virus Vaccine Live (Oka-Merck) strain 29800 UNT/ML
+      Injection
+    prefix: vo
+- chebi:33281:
+    identifier: '33281'
+    link: https://bioregistry.io/chebi:33281
+    name: antimicrobial agent
+    prefix: chebi
+  ido:0000558:
+    identifier: 0000558
+    link: https://bioregistry.io/ido:0000558
+    name: antimicrobial
+    prefix: ido
+  ido:0000563:
+    identifier: '0000563'
+    link: https://bioregistry.io/ido:0000563
+    name: microbicide
+    prefix: ido
+  idomal:0000643:
+    identifier: '0000643'
+    link: https://bioregistry.io/idomal:0000643
+    name: antibiotic
+    prefix: idomal
+- go:0032991:
+    identifier: 0032991
+    link: https://bioregistry.io/go:0032991
+    name: protein-containing complex
+    prefix: go
+  go:0043234:
+    identifier: '0043234'
+    link: https://bioregistry.io/go:0043234
+    name: protein complex
+    prefix: go
+  idomal:0000732:
+    identifier: '0000732'
+    link: https://bioregistry.io/idomal:0000732
+    name: protein complex
+    prefix: idomal
+- chebi:22063:
+    identifier: '22063'
+    link: https://bioregistry.io/chebi:22063
+    name: sulfoxide
+    prefix: chebi
+  chebi:35813:
+    identifier: '35813'
+    link: https://bioregistry.io/chebi:35813
+    name: sulfoxide
+    prefix: chebi
+  idomal:0000895:
+    identifier: 0000895
+    link: https://bioregistry.io/idomal:0000895
+    name: sulfoxide
+    prefix: idomal
+- aio:Natural_Language_Processing:
+    identifier: Natural_Language_Processing
+    link: https://bioregistry.io/aio:Natural_Language_Processing
+    name: Natural Language Processing
+    prefix: aio
+  ito:00141:
+    identifier: '00141'
+    link: https://bioregistry.io/ito:00141
+    name: Natural language processing
+    prefix: ito
+  ito:39650:
+    identifier: '39650'
+    link: https://bioregistry.io/ito:39650
+    name: NLP
+    prefix: ito
+- aio:Continual_Learning:
+    identifier: Continual_Learning
+    link: https://bioregistry.io/aio:Continual_Learning
+    name: Continual Learning
+    prefix: aio
+  ito:01486:
+    identifier: 01486
+    link: https://bioregistry.io/ito:01486
+    name: Continual learning
+    prefix: ito
+  ito:17479:
+    identifier: '17479'
+    link: https://bioregistry.io/ito:17479
+    name: Incremental learning
+    prefix: ito
+  ito:23552:
+    identifier: '23552'
+    link: https://bioregistry.io/ito:23552
+    name: Incremental learning
+    prefix: ito
+- aio:LSTM:
+    identifier: LSTM
+    link: https://bioregistry.io/aio:LSTM
+    name: Long Short Term Memory
+    prefix: aio
+  ito:18262:
+    identifier: '18262'
+    link: https://bioregistry.io/ito:18262
+    name: LSTM
+    prefix: ito
+  ito:19480:
+    identifier: '19480'
+    link: https://bioregistry.io/ito:19480
+    name: lstm
+    prefix: ito
+- aio:Random_Forest:
+    identifier: Random_Forest
+    link: https://bioregistry.io/aio:Random_Forest
+    name: Random Forest
+    prefix: aio
+  ito:28410:
+    identifier: '28410'
+    link: https://bioregistry.io/ito:28410
+    name: Random Forest
+    prefix: ito
+  ito:39395:
+    identifier: '39395'
+    link: https://bioregistry.io/ito:39395
+    name: random forest
+    prefix: ito
+- aio:Logistic_Regression:
+    identifier: Logistic_Regression
+    link: https://bioregistry.io/aio:Logistic_Regression
+    name: Logistic Regression
+    prefix: aio
+  ito:29161:
+    identifier: '29161'
+    link: https://bioregistry.io/ito:29161
+    name: Logistic Regression
+    prefix: ito
+  ito:31970:
+    identifier: '31970'
+    link: https://bioregistry.io/ito:31970
+    name: Logistic regression
+    prefix: ito
 - kegg.pathway:hsa00100:
     identifier: hsa00100
-    link: https://www.kegg.jp/entry/hsa00100
+    link: https://bioregistry.io/kegg.pathway:hsa00100
     name: Steroid biosynthesis - Homo sapiens (human)
     prefix: kegg.pathway
   kegg.pathway:hsa00140:
     identifier: hsa00140
-    link: https://www.kegg.jp/entry/hsa00140
+    link: https://bioregistry.io/kegg.pathway:hsa00140
     name: Steroid hormone biosynthesis - Homo sapiens (human)
     prefix: kegg.pathway
   wikipathways:WP496:
     identifier: WP496
-    link: http://www.wikipathways.org/instance/WP496
+    link: https://bioregistry.io/wikipathways:WP496
     name: Steroid biosynthesis
-    prefix: wikipathways
-- kegg.pathway:hsa00350:
-    identifier: hsa00350
-    link: https://www.kegg.jp/entry/hsa00350
-    name: Tyrosine metabolism - Homo sapiens (human)
-    prefix: kegg.pathway
-  kegg.pathway:hsa01100:
-    identifier: hsa01100
-    link: https://www.kegg.jp/entry/hsa01100
-    name: Metabolic pathways - Homo sapiens (human)
-    prefix: kegg.pathway
-  reactome:R-HSA-1430728:
-    identifier: R-HSA-1430728
-    link: https://reactome.org/content/detail/R-HSA-1430728
-    name: Metabolism
-    prefix: reactome
-  wikipathways:WP4506:
-    identifier: WP4506
-    link: http://www.wikipathways.org/instance/WP4506
-    name: Tyrosine metabolism
     prefix: wikipathways
 - kegg.pathway:hsa02010:
     identifier: hsa02010
-    link: https://www.kegg.jp/entry/hsa02010
+    link: https://bioregistry.io/kegg.pathway:hsa02010
     name: ABC transporters - Homo sapiens (human)
     prefix: kegg.pathway
   reactome:R-HSA-1369007:
     identifier: R-HSA-1369007
-    link: https://reactome.org/content/detail/R-HSA-1369007
+    link: https://bioregistry.io/reactome:R-HSA-1369007
     name: Mitochondrial ABC transporters
     prefix: reactome
   reactome:R-HSA-382556:
     identifier: R-HSA-382556
-    link: https://reactome.org/content/detail/R-HSA-382556
+    link: https://bioregistry.io/reactome:R-HSA-382556
     name: ABC-family proteins mediated transport
     prefix: reactome
 - kegg.pathway:hsa04010:
     identifier: hsa04010
-    link: https://www.kegg.jp/entry/hsa04010
+    link: https://bioregistry.io/kegg.pathway:hsa04010
     name: MAPK signaling pathway - Homo sapiens (human)
     prefix: kegg.pathway
   reactome:R-HSA-5683057:
     identifier: R-HSA-5683057
-    link: https://reactome.org/content/detail/R-HSA-5683057
+    link: https://bioregistry.io/reactome:R-HSA-5683057
     name: MAPK family signaling cascades
     prefix: reactome
   wikipathways:WP382:
     identifier: WP382
-    link: http://www.wikipathways.org/instance/WP382
+    link: https://bioregistry.io/wikipathways:WP382
     name: MAPK signaling pathway
     prefix: wikipathways
   wikipathways:WP422:
     identifier: WP422
-    link: http://www.wikipathways.org/instance/WP422
+    link: https://bioregistry.io/wikipathways:WP422
     name: MAPK cascade
     prefix: wikipathways
 - kegg.pathway:hsa04210:
     identifier: hsa04210
-    link: https://www.kegg.jp/entry/hsa04210
+    link: https://bioregistry.io/kegg.pathway:hsa04210
     name: Apoptosis - Homo sapiens (human)
     prefix: kegg.pathway
   kegg.pathway:hsa04215:
     identifier: hsa04215
-    link: https://www.kegg.jp/entry/hsa04215
+    link: https://bioregistry.io/kegg.pathway:hsa04215
     name: Apoptosis - multiple species - Homo sapiens (human)
     prefix: kegg.pathway
   reactome:R-HSA-109581:
     identifier: R-HSA-109581
-    link: https://reactome.org/content/detail/R-HSA-109581
+    link: https://bioregistry.io/reactome:R-HSA-109581
     name: Apoptosis
     prefix: reactome
   wikipathways:WP254:
     identifier: WP254
-    link: http://www.wikipathways.org/instance/WP254
+    link: https://bioregistry.io/wikipathways:WP254
     name: Apoptosis
     prefix: wikipathways
 - kegg.pathway:hsa04310:
     identifier: hsa04310
-    link: https://www.kegg.jp/entry/hsa04310
+    link: https://bioregistry.io/kegg.pathway:hsa04310
     name: Wnt signaling pathway - Homo sapiens (human)
     prefix: kegg.pathway
   reactome:R-HSA-195721:
     identifier: R-HSA-195721
-    link: https://reactome.org/content/detail/R-HSA-195721
+    link: https://bioregistry.io/reactome:R-HSA-195721
     name: Signaling by WNT
     prefix: reactome
   wikipathways:WP363:
     identifier: WP363
-    link: http://www.wikipathways.org/instance/WP363
+    link: https://bioregistry.io/wikipathways:WP363
     name: Wnt signaling pathway
     prefix: wikipathways
   wikipathways:WP399:
     identifier: WP399
-    link: http://www.wikipathways.org/instance/WP399
+    link: https://bioregistry.io/wikipathways:WP399
     name: Wnt signaling pathway and pluripotency
     prefix: wikipathways
   wikipathways:WP428:
     identifier: WP428
-    link: http://www.wikipathways.org/instance/WP428
+    link: https://bioregistry.io/wikipathways:WP428
     name: Wnt signaling
     prefix: wikipathways
 - kegg.pathway:hsa04330:
     identifier: hsa04330
-    link: https://www.kegg.jp/entry/hsa04330
+    link: https://bioregistry.io/kegg.pathway:hsa04330
     name: Notch signaling pathway - Homo sapiens (human)
     prefix: kegg.pathway
   reactome:R-HSA-157118:
     identifier: R-HSA-157118
-    link: https://reactome.org/content/detail/R-HSA-157118
+    link: https://bioregistry.io/reactome:R-HSA-157118
     name: Signaling by NOTCH
     prefix: reactome
   wikipathways:WP268:
     identifier: WP268
-    link: http://www.wikipathways.org/instance/WP268
+    link: https://bioregistry.io/wikipathways:WP268
     name: Notch signaling
     prefix: wikipathways
   wikipathways:WP3845:
     identifier: WP3845
-    link: http://www.wikipathways.org/instance/WP3845
+    link: https://bioregistry.io/wikipathways:WP3845
     name: Canonical and non-canonical Notch signaling
     prefix: wikipathways
   wikipathways:WP61:
     identifier: WP61
-    link: http://www.wikipathways.org/instance/WP61
+    link: https://bioregistry.io/wikipathways:WP61
     name: Notch signaling pathway (Netpath)
     prefix: wikipathways
 - kegg.pathway:hsa04340:
     identifier: hsa04340
-    link: https://www.kegg.jp/entry/hsa04340
+    link: https://bioregistry.io/kegg.pathway:hsa04340
     name: Hedgehog signaling pathway - Homo sapiens (human)
     prefix: kegg.pathway
   reactome:R-HSA-5358351:
     identifier: R-HSA-5358351
-    link: https://reactome.org/content/detail/R-HSA-5358351
+    link: https://bioregistry.io/reactome:R-HSA-5358351
     name: Signaling by Hedgehog
     prefix: reactome
   wikipathways:WP4249:
     identifier: WP4249
-    link: http://www.wikipathways.org/instance/WP4249
+    link: https://bioregistry.io/wikipathways:WP4249
     name: Hedgehog signaling pathway
     prefix: wikipathways
   wikipathways:WP47:
     identifier: WP47
-    link: http://www.wikipathways.org/instance/WP47
+    link: https://bioregistry.io/wikipathways:WP47
     name: Hedgehog signaling pathway Netpath
     prefix: wikipathways
 - kegg.pathway:hsa04350:
     identifier: hsa04350
-    link: https://www.kegg.jp/entry/hsa04350
+    link: https://bioregistry.io/kegg.pathway:hsa04350
     name: TGF-beta signaling pathway - Homo sapiens (human)
     prefix: kegg.pathway
   reactome:R-HSA-9006936:
     identifier: R-HSA-9006936
-    link: https://reactome.org/content/detail/R-HSA-9006936
+    link: https://bioregistry.io/reactome:R-HSA-9006936
     name: Signaling by TGFB family members
     prefix: reactome
   wikipathways:WP366:
     identifier: WP366
-    link: http://www.wikipathways.org/instance/WP366
+    link: https://bioregistry.io/wikipathways:WP366
     name: TGF-beta signaling pathway
     prefix: wikipathways
   wikipathways:WP560:
     identifier: WP560
-    link: http://www.wikipathways.org/instance/WP560
+    link: https://bioregistry.io/wikipathways:WP560
     name: TGF-beta receptor signaling
     prefix: wikipathways
 - kegg.pathway:hsa04390:
     identifier: hsa04390
-    link: https://www.kegg.jp/entry/hsa04390
+    link: https://bioregistry.io/kegg.pathway:hsa04390
     name: Hippo signaling pathway - Homo sapiens (human)
     prefix: kegg.pathway
   kegg.pathway:hsa04392:
     identifier: hsa04392
-    link: https://www.kegg.jp/entry/hsa04392
+    link: https://bioregistry.io/kegg.pathway:hsa04392
     name: Hippo signaling pathway - multiple species - Homo sapiens (human)
     prefix: kegg.pathway
   reactome:R-HSA-2028269:
     identifier: R-HSA-2028269
-    link: https://reactome.org/content/detail/R-HSA-2028269
+    link: https://bioregistry.io/reactome:R-HSA-2028269
     name: Signaling by Hippo
     prefix: reactome
 - kegg.pathway:hsa04620:
     identifier: hsa04620
-    link: https://www.kegg.jp/entry/hsa04620
+    link: https://bioregistry.io/kegg.pathway:hsa04620
     name: Toll-like receptor signaling pathway - Homo sapiens (human)
     prefix: kegg.pathway
   reactome:R-HSA-168898:
     identifier: R-HSA-168898
-    link: https://reactome.org/content/detail/R-HSA-168898
+    link: https://bioregistry.io/reactome:R-HSA-168898
     name: Toll-like Receptor Cascades
     prefix: reactome
   wikipathways:WP3858:
     identifier: WP3858
-    link: http://www.wikipathways.org/instance/WP3858
+    link: https://bioregistry.io/wikipathways:WP3858
     name: Toll-like receptor signaling related to MyD88
     prefix: wikipathways
   wikipathways:WP75:
     identifier: WP75
-    link: http://www.wikipathways.org/instance/WP75
+    link: https://bioregistry.io/wikipathways:WP75
     name: Toll-like receptor signaling pathway
     prefix: wikipathways
-- GO:0033209:
-    identifier: GO:0033209
-    link: http://amigo.geneontology.org/amigo/term/GO:GO:0033209
+- go:0033209:
+    identifier: 0033209
+    link: https://bioregistry.io/go:0033209
     name: tumor necrosis factor-mediated signaling pathway
     prefix: go
-  GO:0033210:
-    identifier: GO:0033210
-    link: http://amigo.geneontology.org/amigo/term/GO:GO:0033210
+  go:0033210:
+    identifier: '0033210'
+    link: https://bioregistry.io/go:0033210
     name: leptin-mediated signaling pathway
     prefix: go
-  GO:0033211:
-    identifier: GO:0033211
-    link: http://amigo.geneontology.org/amigo/term/GO:GO:0033211
+  go:0033211:
+    identifier: '0033211'
+    link: https://bioregistry.io/go:0033211
     name: adiponectin-activated signaling pathway
     prefix: go
   kegg.pathway:map04920:
     identifier: map04920
-    link: https://www.kegg.jp/entry/map04920
+    link: https://bioregistry.io/kegg.pathway:map04920
     name: Adipocytokine signaling pathway
     prefix: kegg.pathway
-- DOID:0080600:
-    identifier: DOID:0080600
-    link: https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:DOID:0080600
-    name: COVID-19
+- doid:14731:
+    identifier: '14731'
+    link: https://bioregistry.io/doid:14731
+    name: Weaver syndrome
     prefix: doid
-  mesh:C000657245:
-    identifier: C000657245
-    link: https://meshb.nlm.nih.gov/record/ui?ui=C000657245
-    name: COVID-19
+  mesh:C536687:
+    identifier: C536687
+    link: https://bioregistry.io/mesh:C536687
+    name: Weaver syndrome
     prefix: mesh
-  mesh:D000086382:
-    identifier: D000086382
-    link: https://meshb.nlm.nih.gov/record/ui?ui=D000086382
-    name: COVID-19
+  mesh:C562443:
+    identifier: C562443
+    link: https://bioregistry.io/mesh:C562443
+    name: Weaver-Like Syndrome
     prefix: mesh
-- DOID:0111154:
-    identifier: DOID:0111154
-    link: https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:DOID:0111154
-    name: postural orthostatic tachycardia syndrome
+- doid:0080141:
+    identifier: 0080141
+    link: https://bioregistry.io/doid:0080141
+    name: mosaic variegated aneuploidy syndrome 1
     prefix: doid
-  mesh:C531763:
-    identifier: C531763
-    link: https://meshb.nlm.nih.gov/record/ui?ui=C531763
-    name: Irritable heart
+  doid:0080688:
+    identifier: 0080688
+    link: https://bioregistry.io/doid:0080688
+    name: mosaic variegated aneuploidy syndrome
+    prefix: doid
+  mesh:C536987:
+    identifier: C536987
+    link: https://bioregistry.io/mesh:C536987
+    name: Mosaic variegated aneuploidy syndrome
     prefix: mesh
-  mesh:D054972:
-    identifier: D054972
-    link: https://meshb.nlm.nih.gov/record/ui?ui=D054972
-    name: Postural Orthostatic Tachycardia Syndrome
-    prefix: mesh
-- DOID:0050811:
-    identifier: DOID:0050811
-    link: https://www.ebi.ac.uk/ols/ontologies/doid/terms?obo_id=DOID:DOID:0050811
+- doid:0050811:
+    identifier: 0050811
+    link: https://bioregistry.io/doid:0050811
     name: congenital adrenal hyperplasia
     prefix: doid
   mesh:C537027:
     identifier: C537027
-    link: https://meshb.nlm.nih.gov/record/ui?ui=C537027
+    link: https://bioregistry.io/mesh:C537027
     name: Lipoid congenital adrenal hyperplasia
     prefix: mesh
   mesh:D000312:
     identifier: D000312
-    link: https://meshb.nlm.nih.gov/record/ui?ui=D000312
+    link: https://bioregistry.io/mesh:D000312
     name: Adrenal Hyperplasia, Congenital
     prefix: mesh
+- doid:0060313:
+    identifier: '0060313'
+    link: https://bioregistry.io/doid:0060313
+    name: tracheomalacia
+    prefix: doid
+  mesh:C557675:
+    identifier: C557675
+    link: https://bioregistry.io/mesh:C557675
+    name: Congenital tracheomalacia
+    prefix: mesh
+  mesh:D055090:
+    identifier: D055090
+    link: https://bioregistry.io/mesh:D055090
+    name: Tracheomalacia
+    prefix: mesh
+  mondo:0019804:
+    identifier: 0019804
+    link: https://bioregistry.io/mondo:0019804
+    name: tracheomalacia
+    prefix: mondo
+- doid:9255:
+    identifier: '9255'
+    link: https://bioregistry.io/doid:9255
+    name: frontotemporal dementia
+    prefix: doid
+  mesh:C563003:
+    identifier: C563003
+    link: https://bioregistry.io/mesh:C563003
+    name: Pallidopontonigral Degeneration
+    prefix: mesh
+  mesh:D057180:
+    identifier: D057180
+    link: https://bioregistry.io/mesh:D057180
+    name: Frontotemporal Dementia
+    prefix: mesh
+  ncit:C84719:
+    identifier: C84719
+    link: https://bioregistry.io/ncit:C84719
+    name: Frontotemporal Dementia
+    prefix: ncit
+- go:0001525:
+    identifier: '0001525'
+    link: https://bioregistry.io/go:0001525
+    name: angiogenesis
+    prefix: go
+  mesh:D000096482:
+    identifier: D000096482
+    link: https://bioregistry.io/mesh:D000096482
+    name: Angiogenesis
+    prefix: mesh
+  mesh:D018919:
+    identifier: D018919
+    link: https://bioregistry.io/mesh:D018919
+    name: Neovascularization, Physiologic
+    prefix: mesh
+- doid:0002116:
+    identifier: '0002116'
+    link: https://bioregistry.io/doid:0002116
+    name: pterygium
+    prefix: doid
+  doid:10526:
+    identifier: '10526'
+    link: https://bioregistry.io/doid:10526
+    name: conjunctival pterygium
+    prefix: doid
+  mesh:D011625:
+    identifier: D011625
+    link: https://bioregistry.io/mesh:D011625
+    name: Pterygium
+    prefix: mesh
+- doid:0050748:
+    identifier: 0050748
+    link: https://bioregistry.io/doid:0050748
+    name: marginal zone B-cell lymphoma
+    prefix: doid
+  doid:0050909:
+    identifier: 0050909
+    link: https://bioregistry.io/doid:0050909
+    name: MALT lymphoma
+    prefix: doid
+  mesh:D018442:
+    identifier: D018442
+    link: https://bioregistry.io/mesh:D018442
+    name: Lymphoma, B-Cell, Marginal Zone
+    prefix: mesh
+- mesh:D015164:
+    identifier: D015164
+    link: https://bioregistry.io/mesh:D015164
+    name: Vaccines, Inactivated
+    prefix: mesh
+  vo:0000017:
+    identifier: '0000017'
+    link: https://bioregistry.io/vo:0000017
+    name: killed vaccine
+    prefix: vo
+  vo:0000315:
+    identifier: '0000315'
+    link: https://bioregistry.io/vo:0000315
+    name: inactivated vaccine
+    prefix: vo
+- mesh:D000087507:
+    identifier: D000087507
+    link: https://bioregistry.io/mesh:D000087507
+    name: Vaccine Efficacy
+    prefix: mesh
+  vo:0000247:
+    identifier: '0000247'
+    link: https://bioregistry.io/vo:0000247
+    name: vaccine efficacy
+    prefix: vo
+  vo:0000860:
+    identifier: 0000860
+    link: https://bioregistry.io/vo:0000860
+    name: vaccine effectiveness
+    prefix: vo
+- mesh:D007252:
+    identifier: D007252
+    link: https://bioregistry.io/mesh:D007252
+    name: Influenza Vaccines
+    prefix: mesh
+  vo:0000642:
+    identifier: '0000642'
+    link: https://bioregistry.io/vo:0000642
+    name: Influenza virus vaccine
+    prefix: vo
+  vo:0003495:
+    identifier: 0003495
+    link: https://bioregistry.io/vo:0003495
+    name: influenza vaccines
+    prefix: vo
+- drugbank:DB10276:
+    identifier: DB10276
+    link: https://bioregistry.io/drugbank:DB10276
+    name: Rotavirus vaccine
+    prefix: drugbank
+  mesh:D022243:
+    identifier: D022243
+    link: https://bioregistry.io/mesh:D022243
+    name: Rotavirus Vaccines
+    prefix: mesh
+  vo:0000658:
+    identifier: 0000658
+    link: https://bioregistry.io/vo:0000658
+    name: Rotavirus vaccine
+    prefix: vo
+  vo:0010738:
+    identifier: 0010738
+    link: https://bioregistry.io/vo:0010738
+    name: Rotarix
+    prefix: vo
 - reactome:R-HSA-8937144:
     identifier: R-HSA-8937144
-    link: https://reactome.org/content/detail/R-HSA-8937144
+    link: https://bioregistry.io/reactome:R-HSA-8937144
     name: Aryl hydrocarbon receptor signalling
     prefix: reactome
   wikipathways:WP2586:
     identifier: WP2586
-    link: http://www.wikipathways.org/instance/WP2586
+    link: https://bioregistry.io/wikipathways:WP2586
     name: Aryl hydrocarbon receptor Netpath
     prefix: wikipathways
   wikipathways:WP2873:
     identifier: WP2873
-    link: http://www.wikipathways.org/instance/WP2873
+    link: https://bioregistry.io/wikipathways:WP2873
     name: Aryl hydrocarbon receptor pathway
     prefix: wikipathways

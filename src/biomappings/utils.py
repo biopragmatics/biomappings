@@ -1,142 +1,98 @@
-# -*- coding: utf-8 -*-
-
 """Utilities."""
 
+from __future__ import annotations
+
 import os
-import re
-from subprocess import CalledProcessError, check_output  # noqa: S404
-from typing import Any, Mapping, Optional, Tuple
+from pathlib import Path
+from textwrap import dedent
 
-import bioregistry
-from bioregistry.external import get_miriam
+from curies.vocabulary import charlie
+from sssom_curator import Repository
+from sssom_pydantic import MappingSet
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-RESOURCE_PATH = os.path.abspath(os.path.join(HERE, "resources"))
-DOCS = os.path.abspath(os.path.join(HERE, os.pardir, os.pardir, "docs"))
-IMG = os.path.join(DOCS, "img")
-DATA = os.path.join(DOCS, "_data")
+from .version import get_git_hash, get_version
 
+__all__ = [
+    "BIOMAPPINGS_NDEX_UUID",
+    "CURATORS_PATH",
+    "DATA_DIRECTORY",
+    "DEFAULT_REPO",
+    "IMG_DIRECTORY",
+    "NEGATIVES_SSSOM_PATH",
+    "POSITIVES_SSSOM_PATH",
+    "PREDICTIONS_SSSOM_PATH",
+    "PURL_BASE",
+    "RESOURCE_PATH",
+    "UNSURE_SSSOM_PATH",
+    "get_script_url",
+]
 
-def get_git_hash() -> Optional[str]:
-    """Get the git hash.
+HERE = Path(__file__).parent.resolve()
+ROOT = HERE.parent.parent.resolve()
+RESOURCE_PATH = HERE.joinpath("resources")
 
-    :return:
-        The git hash, equals 'UNHASHED' if encountered CalledProcessError, signifying that the
-        code is not installed in development mode.
-    """
-    rv = _git("rev-parse", "HEAD")
-    if rv:
-        return rv[:6]
+POSITIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("positive.sssom.tsv")
+NEGATIVES_SSSOM_PATH = RESOURCE_PATH.joinpath("negative.sssom.tsv")
+UNSURE_SSSOM_PATH = RESOURCE_PATH.joinpath("unsure.sssom.tsv")
+PREDICTIONS_SSSOM_PATH = RESOURCE_PATH.joinpath("predictions.sssom.tsv")
+CURATORS_PATH = RESOURCE_PATH.joinpath("curators.tsv")
+PURL_BASE = "https://w3id.org/biopragmatics/biomappings/sssom"
 
-
-def commit(message: str) -> Optional[str]:
-    """Make a commit with the following message."""
-    return _git("commit", "-m", message, "-a")
-
-
-def push(branch_name: str = None) -> Optional[str]:
-    """Push the git repo."""
-    if branch_name:
-        return _git("push", "origin", branch_name)
-    else:
-        return _git("push")
-
-
-def not_main() -> bool:
-    """Return if on the master branch."""
-    return "master" != _git("rev-parse", "--abbrev-ref", "HEAD")
-
-
-def get_branch() -> str:
-    """Return current git branch."""
-    return _git("branch", "--show-current")
-
-
-def _git(*args: str) -> Optional[str]:
-    with open(os.devnull, "w") as devnull:
-        try:
-            ret = check_output(  # noqa: S603,S607
-                ["git", *args],
-                cwd=os.path.dirname(__file__),
-                stderr=devnull,
-            )
-        except CalledProcessError as e:
-            print(e)
-            return
-        else:
-            return ret.strip().decode("utf-8")
+DOCS_DIRECTORY = ROOT.joinpath("docs")
+IMG_DIRECTORY = DOCS_DIRECTORY.joinpath("img")
+DATA_DIRECTORY = DOCS_DIRECTORY.joinpath("_data")
 
 
 def get_script_url(fname: str) -> str:
     """Get the source path for this script.
 
     :param fname: Pass ``__file__`` as the argument to this function.
-    :return: The script's URL to GitHub
+
+    :returns: The script's URL to GitHub
     """
     commit_hash = get_git_hash()
     script_name = os.path.basename(fname)
     return f"https://github.com/biomappings/biomappings/blob/{commit_hash}/scripts/{script_name}"
 
 
-def get_canonical_tuple(mapping: Mapping[str, Any]) -> Tuple[str, str, str, str]:
-    """Get the canonical tuple from a mapping entry."""
-    source = mapping["source prefix"], mapping["source identifier"]
-    target = mapping["target prefix"], mapping["target identifier"]
-    if source > target:
-        source, target = target, source
-    return (*source, *target)
+#: THe NDEx UUID
+BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
 
+META = MappingSet(
+    license="https://creativecommons.org/publicdomain/zero/1.0/",
+    description="Biomappings is a repository of community curated and predicted equivalences and "
+    "related mappings between named biological entities that are not available from primary sources. It's also a "
+    "place where anyone can contribute curations of predicted mappings or their own novel mappings.",
+    id=f"{PURL_BASE}/biomappings.sssom.tsv",
+    title="Biomappings",
+    version=get_version(with_git_hash=True),
+    creators=[charlie],
+    issue_tracker="https://github.com/biopragmatics/bioregistry/issues",
+)
 
-class InvalidPrefix(ValueError):
-    """Raised for an invalid prefix."""
-
-
-class InvalidIdentifier(ValueError):
-    """Raised for an invalid identifier."""
-
-
-class MiriamValidator:
-    """Validate prefix/identifier pairs based on the MIRIAM database."""
-
-    def __init__(self, force_download: bool = False):  # noqa: D107
-        self.entries = self._load_identifiers_entries(force_download=force_download)
-
-    @staticmethod
-    def _load_identifiers_entries(force_download: bool = False):
-        return {
-            prefix: {
-                "pattern": re.compile(entry["pattern"]),
-                "namespace_embedded": entry["namespaceEmbeddedInLui"],
-            }
-            for prefix, entry in get_miriam(force_download=force_download).items()
-        }
-
-    def namespace_embedded(self, prefix: str) -> bool:
-        """Return True if the namespace is embedded for the given prefix."""
-        if prefix in self.entries:
-            return self.entries[prefix]["namespace_embedded"]
-        return bioregistry.namespace_in_lui(prefix)
-
-    def check_valid_prefix_id(self, prefix, identifier):
-        """Check the prefix/identifier pair is valid."""
-        if prefix in self.entries:
-            entry = self.entries[prefix]
-            if not re.match(entry["pattern"], identifier):
-                raise InvalidIdentifier(prefix, identifier)
-        elif bioregistry.get_resource(prefix) is None:
-            raise InvalidPrefix(prefix)
-        elif bioregistry.get_pattern(prefix) is None:
-            if bioregistry.validate(prefix, identifier):
-                raise InvalidIdentifier(prefix, identifier)
-
-    def get_curie(self, prefix: str, identifier: str) -> str:
-        """Return CURIE for a given prefix and identifier."""
-        if self.namespace_embedded(prefix):
-            return identifier
-        else:
-            return f"{prefix}:{identifier}"
-
-    @staticmethod
-    def get_url(prefix: str, identifier: str) -> str:
-        """Return URL for a given prefix and identifier."""
-        return bioregistry.get_link(prefix, identifier, use_bioregistry_io=False)
+DEFAULT_REPO = Repository(
+    predictions_path=PREDICTIONS_SSSOM_PATH,
+    positives_path=POSITIVES_SSSOM_PATH,
+    negatives_path=NEGATIVES_SSSOM_PATH,
+    unsure_path=UNSURE_SSSOM_PATH,
+    basename="biomappings",
+    purl_base=PURL_BASE,
+    mapping_set=META,
+    ndex_uuid=BIOMAPPINGS_NDEX_UUID,
+    web_title="Biomappings",
+    web_disabled_message=(
+        "You are not running biomappings from a development installation.\n"
+        "Please run the following to install in development mode:\n"
+        "  $ git clone https://github.com/biomappings/biomappings.git\n"
+        "  $ cd biomappings\n"
+        "  $ pip install -e .[web]"
+    ),
+    web_footer=dedent("""\
+        Developed by the <a href="https://www.chemie.uni-bonn.de/ac/en">Institute of
+        Inorganic Chemistry</a> at
+        <a href="https://www.rwth-aachen.de">RWTH Aachen University</a>
+        and the <a href="https://gyorilab.github.io">Gyori Lab</a> at
+        <a href="https://www.northeastern.edu/">Northeastern University</a>.<br/>
+        Funded by DARPA awards W911NF2010255 and HR00112220036.
+    """),
+)

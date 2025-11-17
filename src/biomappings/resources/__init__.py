@@ -1,275 +1,160 @@
-# -*- coding: utf-8 -*-
-
 """Biomappings resources."""
 
+from __future__ import annotations
+
 import csv
+import getpass
 import itertools as itt
-import os
-from typing import Any, Dict, Iterable, List, Mapping, NamedTuple, Sequence, Tuple
+import logging
+import warnings
+from collections.abc import Iterable, Sequence
+from pathlib import Path
+from typing import TYPE_CHECKING, Literal, cast, overload
 
-from biomappings.utils import RESOURCE_PATH, get_canonical_tuple
+from ..utils import CURATORS_PATH, DEFAULT_REPO
 
-MAPPINGS_HEADER = [
-    "source prefix",
-    "source identifier",
-    "source name",
-    "relation",
-    "target prefix",
-    "target identifier",
-    "target name",
-    "type",
-    "source",
+if TYPE_CHECKING:
+    import networkx
+    from bioregistry import NormalizedNamedReference
+    from curies import Reference
+    from sssom_pydantic import SemanticMapping
+
+__all__ = [
+    "append_false_mappings",
+    "append_predictions",
+    "append_true_mappings",
+    "get_curator_names",
+    "get_current_curator",
+    "get_true_graph",
+    "load_curators",
+    "load_false_mappings",
+    "load_mappings",
+    "load_predictions",
+    "load_unsure",
 ]
-PREDICTIONS_HEADER = [
-    "source prefix",
-    "source identifier",
-    "source name",
-    "relation",
-    "target prefix",
-    "target identifier",
-    "target name",
-    "type",
-    "confidence",
-    "source",
-]
+
+logger = logging.getLogger(__name__)
 
 
-class MappingTuple(NamedTuple):
-    """A named tuple class for mappings."""
-
-    source_prefix: str
-    source_id: str
-    source_name: str
-    relation: str
-    target_prefix: str
-    target_identifier: str
-    target_name: str
-    type: str
-    source: str
-
-    def as_dict(self) -> Mapping[str, str]:
-        """Get the mapping tuple as a dictionary."""
-        return dict(zip(MAPPINGS_HEADER, self))
-
-    @classmethod
-    def from_dict(cls, mapping: Mapping[str, str]) -> "MappingTuple":
-        """Get the mapping tuple from a dictionary."""
-        return cls(*[mapping[key] for key in MAPPINGS_HEADER])
+def load_mappings() -> list[SemanticMapping]:
+    """Load the positive mappings."""
+    return DEFAULT_REPO.read_positive_mappings()
 
 
-class PredictionTuple(NamedTuple):
-    """A named tuple class for predictions."""
-
-    source_prefix: str
-    source_id: str
-    source_name: str
-    relation: str
-    target_prefix: str
-    target_identifier: str
-    target_name: str
-    type: str
-    confidence: float
-    source: str
-
-    def as_dict(self) -> Mapping[str, Any]:
-        """Get the prediction tuple as a dictionary."""
-        return dict(zip(PREDICTIONS_HEADER, self))
-
-    @classmethod
-    def from_dict(cls, mapping: Mapping[str, str]) -> "PredictionTuple":
-        """Get the prediction tuple from a dictionary."""
-        return cls(*[mapping[key] for key in PREDICTIONS_HEADER])
+def load_false_mappings() -> list[SemanticMapping]:
+    """Load the negative mappings."""
+    return DEFAULT_REPO.read_negative_mappings()
 
 
-def get_resource_file_path(fname) -> str:
-    """Get a resource by its file name."""
-    return os.path.join(RESOURCE_PATH, fname)
+def load_unsure() -> list[SemanticMapping]:
+    """Load the unsure mappings."""
+    return DEFAULT_REPO.read_unsure_mappings()
 
 
-def _load_table(fname) -> List[Dict[str, str]]:
-    with open(fname, "r") as fh:
-        reader = csv.reader(fh, delimiter="\t")
-        header = next(reader)
-        return [dict(zip(header, row)) for row in reader]
+def load_predictions() -> list[SemanticMapping]:
+    """Load the predicted mappings."""
+    return DEFAULT_REPO.read_predicted_mappings()
 
 
-def _write_helper(
-    header: Sequence[str], lod: Iterable[Mapping[str, str]], path: str, mode: str
-) -> None:
-    lod = sorted(lod, key=mapping_sort_key)
-    with open(path, mode) as file:
-        if mode == "w":
-            print(*header, sep="\t", file=file)
-        for line in lod:
-            print(*[line[k] for k in header], sep="\t", file=file)
+def append_true_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
+    """Append new lines to the positive mappings document."""
+    DEFAULT_REPO.append_positive_mappings(mappings)
 
 
-def mapping_sort_key(prediction: Mapping[str, str]) -> Tuple[str, ...]:
-    """Return a tuple for sorting mapping dictionaries."""
-    return (
-        prediction["source prefix"],
-        prediction["source identifier"],
-        prediction["relation"],
-        prediction["target prefix"],
-        prediction["target identifier"],
-        prediction["type"],
-        prediction["source"],
-    )
-
-
-TRUE_MAPPINGS_PATH = get_resource_file_path("mappings.tsv")
-
-
-def load_mappings() -> List[Dict[str, str]]:
-    """Load the mappings table."""
-    return _load_table(TRUE_MAPPINGS_PATH)
-
-
-def append_true_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
-    """Append new lines to the mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "a")
-    if sort:
-        lint_true_mappings()
-
-
-def append_true_mapping_tuples(mappings: Iterable[MappingTuple]) -> None:
-    """Append new lines to the mappings table."""
-    append_true_mappings(mapping.as_dict() for mapping in set(mappings))
-
-
-def write_true_mappings(m: Iterable[Mapping[str, str]]) -> None:
-    """Write mappigns to the true mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, TRUE_MAPPINGS_PATH, "w")
-
-
-def lint_true_mappings() -> None:
-    """Lint the true mappings file."""
-    write_true_mappings(sorted(load_mappings(), key=mapping_sort_key))
-
-
-FALSE_MAPPINGS_PATH = get_resource_file_path("incorrect.tsv")
-
-
-def load_false_mappings() -> List[Dict[str, str]]:
-    """Load the false mappings table."""
-    return _load_table(FALSE_MAPPINGS_PATH)
-
-
-def append_false_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
-    """Append new lines to the false mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "a")
-    if sort:
-        lint_false_mappings()
-
-
-def write_false_mappings(m: Iterable[Mapping[str, str]]) -> None:
-    """Write mappings to the false mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, FALSE_MAPPINGS_PATH, "w")
-
-
-def lint_false_mappings() -> None:
-    """Lint the false mappings file."""
-    write_false_mappings(sorted(load_false_mappings(), key=mapping_sort_key))
-
-
-UNSURE_PATH = get_resource_file_path("unsure.tsv")
-
-
-def load_unsure() -> List[Dict[str, str]]:
-    """Load the unsure table."""
-    return _load_table(UNSURE_PATH)
-
-
-def append_unsure_mappings(m: Iterable[Mapping[str, str]], sort: bool = True) -> None:
-    """Append new lines to the "unsure" mappings table."""
-    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "a")
-    if sort:
-        lint_unsure_mappings()
-
-
-def write_unsure_mappings(m: Iterable[Mapping[str, str]]) -> None:
-    """Write mappings to the unsure mappings file."""
-    _write_helper(MAPPINGS_HEADER, m, UNSURE_PATH, "w")
-
-
-def lint_unsure_mappings() -> None:
-    """Lint the unsure mappings file."""
-    write_unsure_mappings(sorted(load_unsure(), key=mapping_sort_key))
-
-
-PREDICTIONS_PATH = get_resource_file_path("predictions.tsv")
-
-
-def load_predictions() -> List[Dict[str, str]]:
-    """Load the predictions table."""
-    return _load_table(PREDICTIONS_PATH)
-
-
-def write_predictions(m: Iterable[Mapping[str, str]]) -> None:
-    """Write new content to the predictions table."""
-    _write_helper(PREDICTIONS_HEADER, m, PREDICTIONS_PATH, "w")
-
-
-def append_prediction_tuples(
-    prediction_tuples: Iterable[PredictionTuple], deduplicate: bool = True, sort: bool = True
-) -> None:
-    """Append new lines to the predictions table that come as canonical tuples."""
-    append_predictions(
-        (prediction_tuple.as_dict() for prediction_tuple in set(prediction_tuples)),
-        deduplicate=deduplicate,
-        sort=sort,
-    )
+def append_false_mappings(mappings: Iterable[SemanticMapping], *, path: Path | None = None) -> None:
+    """Append new lines to the negative mappings document."""
+    DEFAULT_REPO.append_negative_mappings(mappings)
 
 
 def append_predictions(
-    mappings: Iterable[Mapping[str, str]], deduplicate: bool = True, sort: bool = True
+    new_mappings: Iterable[SemanticMapping],
 ) -> None:
-    """Append new lines to the predictions table."""
-    if deduplicate:
-        existing_mappings = {
-            get_canonical_tuple(existing_mapping)
-            for existing_mapping in itt.chain(
-                load_mappings(),
-                load_false_mappings(),
-                load_predictions(),
-            )
-        }
-        mappings = (
-            mapping for mapping in mappings if get_canonical_tuple(mapping) not in existing_mappings
-        )
+    """Append new lines to the predicted mappings document."""
+    import sssom_pydantic
 
-    _write_helper(PREDICTIONS_HEADER, mappings, PREDICTIONS_PATH, "a")
-    if sort:
-        lint_predictions()
+    path = DEFAULT_REPO.predictions_path
+
+    mappings, converter, metadata = sssom_pydantic.read(path)
+
+    prefixes: set[str] = set()
+    for mapping in new_mappings:
+        prefixes.update(mapping.get_prefixes())
+        mappings.append(mapping)
+
+    for prefix in prefixes:
+        if not converter.standardize_prefix(prefix):
+            raise NotImplementedError("amending prefixes not yet implemented")
+
+    exclude_mappings = itt.chain.from_iterable(
+        sssom_pydantic.read(path)[0] for path in DEFAULT_REPO.curated_paths
+    )
+
+    sssom_pydantic.write(
+        mappings,
+        path,
+        metadata=metadata,
+        converter=converter,
+        drop_duplicates=True,
+        sort=True,
+        exclude_mappings=exclude_mappings,
+    )
 
 
-def lint_predictions() -> None:
-    """Lint the predictions file."""
-    write_predictions(sorted(load_predictions(), key=mapping_sort_key))
-
-
-def load_curators():
+def load_curators() -> dict[str, NormalizedNamedReference]:
     """Load the curators table."""
-    return _load_table(get_resource_file_path("curators.tsv"))
+    from bioregistry import NormalizedNamedReference
+
+    with CURATORS_PATH.open() as file:
+        return {
+            record["user"]: NormalizedNamedReference(
+                prefix="orcid", identifier=record["orcid"], name=record["name"]
+            )
+            for record in csv.DictReader(file, delimiter="\t")
+        }
 
 
-def filter_predictions(custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]]) -> None:
-    """Filter all of the predictions by removing what's in the custom filter then re-write.
-
-    :param custom_filter: A filter 3-dictionary of source prefix to target prefix
-        to source identifier to target identifier
-    """
-    predictions = load_predictions()
-    predictions = [
-        prediction for prediction in predictions if _check_filter(prediction, custom_filter)
-    ]
-    write_predictions(predictions)
+def get_curator_names() -> dict[str, str]:
+    """Get ORCID to name."""
+    return {r.identifier: cast(str, r.name) for r in load_curators().values()}
 
 
-def _check_filter(
-    prediction: Mapping[str, str],
-    custom_filter: Mapping[str, Mapping[str, Mapping[str, str]]],
-) -> bool:
-    source_prefix, target_prefix = prediction["source prefix"], prediction["target prefix"]
-    source_id, target_id = prediction["source identifier"], prediction["target identifier"]
-    return target_id != custom_filter.get(source_prefix, {}).get(target_prefix, {}).get(source_id)
+class MissingCuratorError(KeyError):
+    """Raised when the current user's login is not listed in the curators file."""
+
+
+# docstr-coverage:excused `overload`
+@overload
+def get_current_curator(*, strict: Literal[True] = True) -> NormalizedNamedReference: ...
+
+
+# docstr-coverage:excused `overload`
+@overload
+def get_current_curator(*, strict: Literal[False] = False) -> NormalizedNamedReference | None: ...
+
+
+def get_current_curator(*, strict: bool = True) -> NormalizedNamedReference | None:
+    """Get the current curator, based on the current user's login name."""
+    current_user = getpass.getuser()
+    curators = load_curators()
+    if current_user in curators:
+        return curators[current_user]
+    elif strict:
+        raise MissingCuratorError
+    else:
+        return None
+
+
+def get_true_graph(
+    include: Sequence[Reference] | None = None,
+    exclude: Sequence[Reference] | None = None,
+) -> networkx.Graph:
+    """Get a graph of the true mappings."""
+    warnings.warn(
+        "this function is deprecated, please construct the mappings graph yourself",
+        DeprecationWarning,
+        stacklevel=2,
+    )
+
+    from sssom_curator.export.charts import _graph_from_mappings
+
+    return _graph_from_mappings(load_mappings(), strata="correct", include=include, exclude=exclude)

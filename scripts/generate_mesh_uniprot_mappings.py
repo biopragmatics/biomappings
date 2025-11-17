@@ -1,48 +1,49 @@
-# -*- coding: utf-8 -*-
-
 """Append lexical mappings between MeSH and UniProt."""
 
 import re
-from typing import Iterable
 
-from indra.databases import hgnc_client, mesh_client
+import pyobo
+from curies import NamedReference
+from curies.vocabulary import exact_match, lexical_matching_process
+from pyobo.struct import has_gene_product
+from sssom_pydantic import MappingTool, SemanticMapping
 
-from biomappings.resources import PredictionTuple, append_prediction_tuples
-from biomappings.utils import get_script_url
+from biomappings import append_predictions, get_script_url
 
 MESH_PROTEIN_RE = re.compile(r"^(.+) protein, human$")
 
 
-def get_mappings() -> Iterable[PredictionTuple]:
+def append_mesh_uniprot() -> None:
     """Iterate high-confidence lexical mappings between MeSH and UniProt human proteins."""
-    url = get_script_url(__file__)
-    mapping_type = "lexical"
-    match_type = "skos:exactMatch"
-    confidence = 0.999
-    for mesh_name, mesh_id in mesh_client.mesh_name_to_id.items():
+    mapping_tool = MappingTool(name=get_script_url(__file__))
+    grounder = pyobo.get_grounder("hgnc")
+    hgnc_id_to_uniprot_id = pyobo.get_relation_mapping(
+        "hgnc", relation=has_gene_product, target_prefix="uniprot"
+    )
+    mappings = []
+    for mesh_id, mesh_name in pyobo.get_id_name_mapping("mesh").items():
         match = MESH_PROTEIN_RE.match(mesh_name)
         if not match:
             continue
         gene_name = match.groups()[0]
-        hgnc_id = hgnc_client.get_hgnc_id(gene_name)
-        if not hgnc_id:
-            continue
-        uniprot_id = hgnc_client.get_uniprot_id(hgnc_id)
-        if not uniprot_id or "," in uniprot_id:
-            continue
-        yield PredictionTuple(
-            "mesh",
-            mesh_id,
-            mesh_name,
-            match_type,
-            "uniprot",
-            uniprot_id,
-            gene_name,
-            mapping_type,
-            confidence,
-            url,
-        )
+        for gene_reference in grounder.get_matches(gene_name):
+            uniprot_id = hgnc_id_to_uniprot_id.get(gene_reference.identifier)
+            if not uniprot_id or "," in uniprot_id:
+                continue
+            mappings.append(
+                SemanticMapping(
+                    subject=NamedReference(prefix="mesh", identifier=mesh_id, name=mesh_name),
+                    predicate=exact_match.curie,
+                    object=NamedReference(
+                        prefix="uniprot", identifier=uniprot_id, name=gene_reference.name
+                    ),
+                    justification=lexical_matching_process,
+                    confidence=gene_reference.score,
+                    mapping_tool=mapping_tool,
+                )
+            )
+    append_predictions(mappings)
 
 
 if __name__ == "__main__":
-    append_prediction_tuples(get_mappings())
+    append_mesh_uniprot()

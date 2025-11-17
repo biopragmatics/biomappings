@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
-
 """Import mappings from ComPath."""
 
 import pandas as pd
 import pyobo
+from curies.vocabulary import exact_match, manual_mapping_curation
 from tqdm import tqdm
 
 from biomappings.resources import append_true_mappings
@@ -12,13 +11,13 @@ URL = "https://github.com/ComPath/compath-resources/raw/master/docs/data/compath
 BLACKLIST = {"decopath", "pathbank"}
 
 
-def main():
+def main() -> None:
     """Import mappings from ComPath."""
     df = pd.read_csv(URL, sep="\t")
-    df = df[df["relation"] == "skos:exactMatch"]
+    df = df[df["relation"] == exact_match.curie]
     df = df[~df["source prefix"].isin(BLACKLIST)]
     df = df[~df["target prefix"].isin(BLACKLIST)]
-    df["type"] = "manual"
+    df["type"] = manual_mapping_curation.curie
     df["source"] = "orcid:0000-0002-2046-6145"  # ComPath is courtesy of Uncle Daniel
 
     # TODO check that species are the same
@@ -38,7 +37,7 @@ def main():
     ]
     df = df.drop_duplicates()
     mappings = (mapping for _, mapping in df.iterrows())
-    append_true_mappings(mappings, sort=True)
+    append_true_mappings(mappings)
 
 
 if __name__ == "__main__":
