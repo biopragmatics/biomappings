@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterable
-from typing import TYPE_CHECKING, Any
+from typing import Any
 
 from .resources import (
     append_predictions,
@@ -14,9 +14,6 @@ from .resources import (
     load_unsure,
 )
 from .utils import DEFAULT_REPO, get_script_url
-
-if TYPE_CHECKING:
-    from sssom_pydantic import MappingTool
 
 __all__ = [
     "DEFAULT_REPO",
@@ -46,14 +43,6 @@ def lexical_prediction_cli(
     )
 
 
-def append_lexical_predictions(
-    prefix: str,
-    target_prefixes: str | Iterable[str],
-    *,
-    mapping_tool: str | MappingTool | None = None,
-    **kwargs: Any,
-) -> None:
+def append_lexical_predictions(prefix: str, target_prefixes: str | Iterable[str], **kwargs: Any) -> None:
     """Append lexical predictions."""
-    return DEFAULT_REPO.append_lexical_predictions(
-        prefix, target_prefixes, mapping_tool=mapping_tool, **kwargs
-    )
+    return DEFAULT_REPO.append_lexical_predictions(prefix, target_prefixes, **kwargs)
