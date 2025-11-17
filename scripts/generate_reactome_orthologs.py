@@ -6,7 +6,7 @@ from collections.abc import Iterable, Mapping
 
 import pyobo
 from curies import NamableReference
-from curies.vocabulary import orthologous_to, structural_matching
+from curies.vocabulary import structural_matching
 from sssom_pydantic import SemanticMapping
 from tqdm import tqdm
 
@@ -18,12 +18,11 @@ def iterate_orthologs() -> Iterable[SemanticMapping]:
     get_script_url(__file__)
     names = pyobo.get_id_name_mapping("reactome")
     parent_identifier_to_species_identifier = _get_species_to_identifiers(names)
-    count = 0
+    orthologous_to = NamableReference(prefix="ro", identifier="HOM0000017", name="in orthology relationship with")
     for identifiers in tqdm(parent_identifier_to_species_identifier.values()):
         for source_id, target_id in itt.product(identifiers, repeat=2):
             if source_id >= target_id:
                 continue
-            count += 1
             yield SemanticMapping(
                 subject=NamableReference(
                     prefix="reactome", identifier=source_id, name=names[source_id]
