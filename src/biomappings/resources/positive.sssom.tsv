@@ -27,6 +27,7 @@
 #  fma: 'https://www.ebi.ac.uk/ols4/ontologies/fma/terms?obo_id=FMA:'
 #  fplx: https://sorgerlab.github.io/famplex/
 #  go: http://purl.obolibrary.org/obo/GO_
+#  goldbook: https://goldbook.iupac.org/terms/view/
 #  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
 #  hp: http://purl.obolibrary.org/obo/HP_
 #  iao: http://purl.obolibrary.org/obo/IAO_
@@ -3060,6 +3061,7 @@ chebi:9969	Verruculotoxin	skos:exactMatch	mesh:C011563	verruculotoxin	semapv:Man
 chebi:9970	Verticine	skos:exactMatch	mesh:C014242	verticine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	
 chebi:9973	vibriobactin	skos:exactMatch	mesh:C040227	vibriobactin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	
 chebi:9976	Vicine	skos:exactMatch	mesh:C009661	vicine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	
+chmo:0000004	amperometry	skos:exactMatch	goldbook:09128	amperometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	SSSOM Curator
 cido:0000152	COVID-19 pandemic	skos:exactMatch	idocovid19:0001388	COVID-19 pandemic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 cido:0000154	COVID-19 epidemic	skos:exactMatch	idocovid19:0001391	COVID-19 epidemic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 cido:0000366	protective clothing	skos:exactMatch	idomal:0001031	protective clothing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
