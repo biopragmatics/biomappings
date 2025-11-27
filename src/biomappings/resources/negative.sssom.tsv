@@ -38,6 +38,7 @@
 #  ncit: http://purl.obolibrary.org/obo/NCIT_
 #  oae: http://purl.obolibrary.org/obo/OAE_
 #  obi: http://purl.obolibrary.org/obo/OBI_
+#  oeo: https://openenergyplatform.org/ontology/oeo/OEO_
 #  ogms: http://purl.obolibrary.org/obo/OGMS_
 #  orcid: https://orcid.org/
 #  pato: http://purl.obolibrary.org/obo/PATO_
@@ -1149,6 +1150,9 @@ obi:0400064	laser	skos:exactMatch	Not	ncbitaxon:62990	Laser	semapv:ManualMapping
 obi:0400168	microtome	skos:exactMatch	Not	ncbitaxon:1766024	Microtome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings
 obi:0600052	dialysis	skos:exactMatch	Not	ncbitaxon:124307	Dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings
 obi:1110053	cancer	skos:exactMatch	Not	ncbitaxon:6754	Cancer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings
+oeo:00000117	dam	skos:exactMatch	Not	envo:00000500	beaver dam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+oeo:00000449	wood	skos:exactMatch	Not	envo:00000118	coconut plantation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+oeo:00000449	wood	skos:exactMatch	Not	envo:00000193	olive grove	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 pfam:PF00292	PAX	skos:exactMatch	Not	ncbitaxon:2033138	Pax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings
 pfam:PF00302	CAT	skos:exactMatch	Not	ncbitaxon:9685	Felis catus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings
 pfam:PF00377	Prion	skos:exactMatch	Not	ncbitaxon:36469	prion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings
