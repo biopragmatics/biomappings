@@ -36,6 +36,7 @@
 #  ido: http://purl.obolibrary.org/obo/IDO_
 #  idocovid19: http://purl.obolibrary.org/obo/COVIDO_
 #  idomal: http://purl.obolibrary.org/obo/IDOMAL_
+#  isced2013: https://w3id.org/kim/isced-2013/
 #  ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
 #  kegg.pathway: https://www.kegg.jp/pathway/
 #  kestrelo: http://purl.obolibrary.org/obo/kestrelo_
@@ -76,8 +77,15 @@
 subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	mapping_tool
 adcad:00003	Archaeology	skos:exactMatch	gsso:007360	archaeology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 adcad:00003	Archaeology	skos:exactMatch	kim.hochschulfaechersystematik:n012	Archaeology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+adcad:00004	Social Science	skos:exactMatch	gsso:003852	social science	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+adcad:00005	Education	skos:exactMatch	isced2013:n011	Education	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+adcad:00006	Psychology	skos:exactMatch	gsso:006201	psychology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+adcad:00006	Psychology	skos:exactMatch	isced2013:n0313	Psychology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 adcad:00006	Psychology	skos:exactMatch	kim.hochschulfaechersystematik:n132	Psychology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 adcad:00006	Psychology	skos:exactMatch	kim.hochschulfaechersystematik:n32	Psychology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+adcad:00009	Economics	skos:exactMatch	gsso:006210	economics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+adcad:00013	Biochemistry	skos:exactMatch	gsso:008403	biochemistry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+adcad:00013	Biochemistry	skos:exactMatch	isced2013:n0512	Biochemistry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 agrovoc:0619dd9e	chain harrows	skos:exactMatch	agro:00000137	chain harrow	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696	
 agrovoc:0a9fbc47	scythes	skos:exactMatch	agro:00000456	scythe	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696	
 agrovoc:1012	border irrigation	skos:exactMatch	agro:00000066	border irrigation process	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696	
