@@ -1,4 +1,5 @@
 #curie_map:
+#  adcad: https://purl.dataone.org/odo/ADCAD_
 #  agro: http://purl.obolibrary.org/obo/AGRO_
 #  agrovoc: http://aims.fao.org/aos/agrovoc/c_
 #  aio: https://w3id.org/aio/
@@ -27,6 +28,7 @@
 #  fma: 'https://www.ebi.ac.uk/ols4/ontologies/fma/terms?obo_id=FMA:'
 #  fplx: https://sorgerlab.github.io/famplex/
 #  go: http://purl.obolibrary.org/obo/GO_
+#  gsso: http://purl.obolibrary.org/obo/GSSO_
 #  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
 #  hp: http://purl.obolibrary.org/obo/HP_
 #  iao: http://purl.obolibrary.org/obo/IAO_
@@ -37,6 +39,7 @@
 #  ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
 #  kegg.pathway: https://www.kegg.jp/pathway/
 #  kestrelo: http://purl.obolibrary.org/obo/kestrelo_
+#  kim.hochschulfaechersystematik: https://w3id.org/kim/hochschulfaechersystematik/
 #  maxo: http://purl.obolibrary.org/obo/MAXO_
 #  mesh: https://meshb.nlm.nih.gov/record/ui?ui=
 #  miro: http://purl.obolibrary.org/obo/MIRO_
@@ -71,6 +74,10 @@
 #  wikipathways: http://www.wikipathways.org/instance/
 #mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/positive.sssom.tsv
 subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	mapping_tool
+adcad:00003	Archaeology	skos:exactMatch	gsso:007360	archaeology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+adcad:00003	Archaeology	skos:exactMatch	kim.hochschulfaechersystematik:n012	Archaeology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+adcad:00006	Psychology	skos:exactMatch	kim.hochschulfaechersystematik:n132	Psychology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
+adcad:00006	Psychology	skos:exactMatch	kim.hochschulfaechersystematik:n32	Psychology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	
 agrovoc:0619dd9e	chain harrows	skos:exactMatch	agro:00000137	chain harrow	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696	
 agrovoc:0a9fbc47	scythes	skos:exactMatch	agro:00000456	scythe	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696	
 agrovoc:1012	border irrigation	skos:exactMatch	agro:00000066	border irrigation process	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696	
