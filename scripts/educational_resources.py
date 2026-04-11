@@ -1,21 +1,11 @@
 # /// script
 # requires-python = ">=3.14"
 # dependencies = [
-#     "biomappings",
-#     "bioregistry",
-#     "curies-processing",
-#     "pyobo[gilda-slim]",
-#     "sssom-curator",
-#     "sssom-pydantic",
+#     "biomappings[predict-lexical]",
 # ]
 #
 # [tool.uv.sources]
 # biomappings = { path = "../", editable = true }
-# sssom-curator = { path = "../../sssom-curator", editable = true }
-# sssom-pydantic = { path = "../../sssom-pydantic", editable = true }
-# pyobo = { path = "../../pyobo", editable = true }
-# bioregistry = { path = "../../bioregistry", editable = true }
-# curies-processing = { path = "../../curies-processing" }
 # ///
 
 """Generate mappings between educational resources."""
