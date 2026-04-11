@@ -88,7 +88,7 @@ DEFAULT_REPO = Repository(
         "  $ pip install -e .[web]"
     ),
     web_footer=dedent("""\
-        Developed by the <a href="https://www.chemie.uni-bonn.de/ac/en">Institute of
+        Developed by the <a href="https://www.iac.rwth-aachen.de">Institute of
         Inorganic Chemistry</a> at
         <a href="https://www.rwth-aachen.de">RWTH Aachen University</a>
         and the <a href="https://gyorilab.github.io">Gyori Lab</a> at
