@@ -21,6 +21,7 @@
 """Generate mappings between educational resources."""
 
 import bioregistry
+
 from biomappings import append_lexical_predictions
 
 SKIP = {"kim.lp", "unesco.thesaurus"}
@@ -31,8 +32,10 @@ NEEDS_PYOBO = {
 PREFIXES = bioregistry.get_collection_prefixes("0000018", strict=True)
 PREFIXES = [p for p in PREFIXES if p not in SKIP and p not in NEEDS_PYOBO]
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     for i in range(len(PREFIXES) - 1):
         prefix = PREFIXES[i]
-        rest = PREFIXES[i + 1:]
-        append_lexical_predictions(prefix, rest, cache=False, force=True, identifiers_are_names=True)
+        rest = PREFIXES[i + 1 :]
+        append_lexical_predictions(
+            prefix, rest, cache=False, force=True, identifiers_are_names=True
+        )
