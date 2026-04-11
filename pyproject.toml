@@ -32,6 +32,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Programming Language :: Python :: 3 :: Only",
     "Typing :: Typed",
     "Topic :: Scientific/Engineering :: Chemistry",
@@ -57,10 +58,10 @@ requires-python = ">=3.10"
 dependencies = [
     "click",
     "tqdm",
-    "curies>=0.12.5",
-    "bioregistry>=0.12.43",
-    "sssom-pydantic>=0.1.5",
-    "sssom-curator[web]>=0.2.0",
+    "curies>=0.13.0",
+    "bioregistry>=0.13.0",
+    "sssom-pydantic>=0.4.1",
+    "sssom-curator[web]>=0.3.0",
 ]
 
 # see https://peps.python.org/pep-0735/ and https://docs.astral.sh/uv/concepts/dependencies/#dependency-groups
@@ -82,7 +83,7 @@ typing = [
     { include-group = "tests" },
     "mypy",
     "pydantic",
-    "click-types",
+    "types-click",
 ]
 docs-lint = [
     { include-group = "docs" },
