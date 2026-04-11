@@ -89,8 +89,9 @@ https://biopragmatics.github.io/biomappings.
 
 ## 💪 Getting Started
 
-There are three main functions exposed from `biomappings`. Each loads a list of
-dictionaries with the mappings in each.
+There are four main functions exposed from `biomappings`. Each loads a list of
+[`sssom_pydantic.SemanticMapping`](https://sssom-pydantic.readthedocs.io)
+objects.
 
 ```python
 import biomappings
@@ -98,6 +99,7 @@ import biomappings
 positive_mappings = biomappings.load_mappings()
 negative_mappings = biomappings.load_false_mappings()
 predicted_mappings = biomappings.load_predictions()
+unsure_mappings = biomappings.load_unsure_mappings()
 ```
 
 Full documentation can be found on
@@ -169,10 +171,10 @@ care of creating a branch for you and creating a pull request. After logging
 into GitHub, click one of the following links to be brought to the editing
 interface:
 
-- [Positive Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/positive.sssom.tsv)
-- [Negative Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/negative.sssom.tsv)
-- [Unsure Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/unsure.sssom.tsv)
-- [Predicted Mappings](https://github.com/biopragmatics/biomappings/edit/master/src/biomappings/resources/predictions.sssom.tsv)
+- [Positive Mappings](https://github.com/biopragmatics/biomappings/edit/main/src/biomappings/resources/positive.sssom.tsv)
+- [Negative Mappings](https://github.com/biopragmatics/biomappings/edit/main/src/biomappings/resources/negative.sssom.tsv)
+- [Unsure Mappings](https://github.com/biopragmatics/biomappings/edit/main/src/biomappings/resources/unsure.sssom.tsv)
+- [Predicted Mappings](https://github.com/biopragmatics/biomappings/edit/main/src/biomappings/resources/predictions.sssom.tsv)
 
 This has the caveat that you can only edit one file at a time. It's possible to
 navigate to your own forked version of the repository after, to the correct
@@ -199,7 +201,7 @@ curation interface. Install the code in development mode with the `web` option
 $ git clone https://github.com/biopragmatics/biomappings.git
 $ cd biomappings
 $ git checkout -b your-branch-name
-$ python3 -m pip install -e .[web]
+$ python -m pip install -e .[web]
 ```
 
 The web application can be run with:
