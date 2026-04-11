@@ -33,7 +33,7 @@ for node, data in g.nodes(data=True):
     if has_mesh_id:
         continue
 
-    matches = gilda.ground(data["name"])
+    matches = gilda.ground(data["name"])  # type:ignore[no-untyped-call]
     if not matches:
         if data["name"].endswith(" cells"):
             matches = gilda.ground(data["name"].replace(" cells", ""))  # type:ignore[no-untyped-call]
