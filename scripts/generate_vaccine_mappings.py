@@ -2,6 +2,7 @@
 
 import click
 import pyobo
+import ssslm
 from curies.vocabulary import exact_match, lexical_matching_process
 from pyobo.sources.cpt import iter_terms
 from sssom_pydantic import MappingTool, SemanticMapping
@@ -19,7 +20,7 @@ def main() -> None:
     append_lexical_predictions("cpt", ["mesh", "vo"], mapping_tool=provenance)
 
     preds = []
-    grounder = pyobo.get_grounder(["mesh", "vo"], versions=["2023", None])
+    grounder: ssslm.Grounder = pyobo.get_grounder(["mesh", "vo"], versions=["2023", None])
     for term in iter_terms():
         texts = [term.name, *(s.name for s in term.synonyms)]
         for text in texts:
