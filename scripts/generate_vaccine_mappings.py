@@ -23,7 +23,7 @@ def main() -> None:
     for term in iter_terms():
         texts = [term.name, *(s.name for s in term.synonyms)]
         for text in texts:
-            for scored_match in grounder.get_matches(text + " vaccine"):
+            for scored_match in grounder.get_matches(text + " vaccine"):  # type:ignore[no-untyped-call]
                 pred = SemanticMapping(
                     subject=term.reference,
                     predicate=exact_match,

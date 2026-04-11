@@ -61,7 +61,7 @@ dependencies = [
     "curies>=0.13.0",
     "bioregistry>=0.13.0",
     "sssom-pydantic>=0.4.1",
-    "sssom-curator[web]>=0.3.0",
+    "sssom-curator[web]>=0.3.1",
 ]
 
 # see https://peps.python.org/pep-0735/ and https://docs.astral.sh/uv/concepts/dependencies/#dependency-groups

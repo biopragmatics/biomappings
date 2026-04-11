@@ -16,7 +16,7 @@ from biomappings.utils import get_script_url
 
 
 def _lexical_exact_match(name1: str, name2: str) -> bool:
-    return cast(str, normalize(name1)) == cast(str, normalize(name2))
+    return cast(str, normalize(name1)) == cast(str, normalize(name2))  # type:ignore[no-untyped-call]
 
 
 def iterate_orthologous_lexical_matches(prefix: str = "wikipathways") -> Iterable[SemanticMapping]:
