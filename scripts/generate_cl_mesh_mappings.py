@@ -33,7 +33,7 @@ for node, data in g.nodes(data=True):
     if has_mesh_id:
         continue
 
-    matches = gilda.ground(data["name"])
+    matches = gilda.ground(data["name"])  # type:ignore[no-untyped-call]
     if not matches:
         if data["name"].endswith(" cells"):
             matches = gilda.ground(data["name"].replace(" cells", ""))  # type:ignore[no-untyped-call]
@@ -44,7 +44,7 @@ for node, data in g.nodes(data=True):
 
     mesh_ids = set()
     for match in matches:
-        groundings = match.get_groundings()  # type:ignore[no-untyped-call]
+        groundings = match.get_groundings()
         mesh_ids |= {id for ns, id in groundings if ns == "MESH"}
     if len(mesh_ids) > 1:
         print(f"Multiple MESH IDs for {node}")
