@@ -52,6 +52,7 @@
 #  schema: https://schema.org/
 #  semapv: https://w3id.org/semapv/vocab/
 #  skos: http://www.w3.org/2004/02/skos/core#
+#  t4fs: http://purl.obolibrary.org/obo/T4FS_
 #  uberon: http://purl.obolibrary.org/obo/UBERON_
 #  umls: https://uts.nlm.nih.gov/uts/umls/concept/
 #  uniprot.chain: http://purl.uniprot.org/annotation/
@@ -668,6 +669,7 @@ iconclass:94G42	Hector's body is weighed in gold (Aeschylus)	skos:relatedMatch	N
 ido:0000629	host role	skos:exactMatch	Not	obi:0000725	host role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 ido:0000636	sepsis	skos:exactMatch	Not	ncbitaxon:137507	Sepsis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 idomal:0000222	enzyme-linked immunosorbent assay	skos:exactMatch	Not	maxo:0000610	clinical ELISA testing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0000822	antibody	skos:exactMatch	Not	go:0042571	immunoglobulin complex, circulating	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 idomal:0001015	relapse	skos:exactMatch	Not	ogms:0000105	relapse	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0001019	mouse	skos:exactMatch	Not	ncbitaxon:10090	Mus musculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0001083	Trap	skos:exactMatch	Not	pr:000001937	tartrate-resistant acid phosphatase type 5	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
@@ -804,6 +806,7 @@ mesh:C019963	cyclomaltodextrin glucanotransferase	skos:exactMatch	Not	go:0043895
 mesh:C020622	hemoglobin B	skos:exactMatch	Not	efo:0009213	Hemoglobin B Measurement	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C020659	glutaminyl-tRNA synthetase	skos:exactMatch	Not	go:0004819	glutamine-tRNA ligase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C020947	trophoblastin	skos:exactMatch	Not	go:0004167	dopachrome isomerase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:C021019	eIF-6	skos:exactMatch	Not	hgnc:6159	EIF6	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C021380	L-2-hydroxyacid oxidase	skos:exactMatch	Not	go:0003973	(S)-2-hydroxy-acid oxidase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C021464	3-keto-5-aminohexanoate cleavage enzyme	skos:exactMatch	Not	go:0043720	3-keto-5-aminohexanoate cleavage activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C021928	2-oxoaldehyde dehydrogenase (NAD+)	skos:exactMatch	Not	go:0047551	2-oxoaldehyde dehydrogenase (NAD+) activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -819,6 +822,7 @@ mesh:C029757	phosphogluconate dehydrogenase (decarboxylating)	skos:exactMatch	No
 mesh:C031570	2-hydroxybutyric acid	skos:exactMatch	Not	efo:0010458	alpha-hydroxybutyric acid measurement	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C031616	high density lipoprotein receptors	skos:exactMatch	Not	go:0070506	high-density lipoprotein particle receptor activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C031729	3-chloro-D-alanine dehydrochlorinase	skos:exactMatch	Not	go:0019149	3-chloro-D-alanine dehydrochlorinase activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:C031799	eIF-4B	skos:exactMatch	Not	hgnc:3285	EIF4B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C034544	D-malate dehydrogenase (decarboxylating)	skos:exactMatch	Not	go:0046553	D-malate dehydrogenase (decarboxylating) activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C035571	endodeoxyribonuclease VII	skos:exactMatch	Not	go:0008855	exodeoxyribonuclease VII activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C036053	VLDL receptor	skos:exactMatch	Not	go:0030229	very-low-density lipoprotein particle receptor activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -833,6 +837,7 @@ mesh:C055160	sphingomyelin phosphodiesterase D	skos:exactMatch	Not	go:0050290	sp
 mesh:C055755	2'-(2-hydroxyphenyl)-2'-thiazoline-4'-carboxylic acid	skos:exactMatch	Not	go:0120212	sperm head-tail coupling apparatus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C056957	1-(4-carbethoxyphenyl)-3-hydroxymethyl-3-methyltriazene	skos:exactMatch	Not	go:0033802	isoliquiritigenin 2'-O-methyltransferase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C063522	NAD+ synthase (glutamine-hydrolysing)	skos:exactMatch	Not	go:0003952	NAD+ synthase (glutamine-hydrolyzing) activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:C064554	loricrin	skos:exactMatch	Not	hgnc:6663	LORICRIN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C066234	enterobactin synthetase	skos:exactMatch	Not	go:0009239	enterobactin biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C068195	methylarginyl-lysyl-prolyl-tryptophyl-tert-leucyl-leucyl-ethyl ester	skos:exactMatch	Not	efo:0002707	NT-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C071543	cytochrome P450 CYP3A10 (hamster)	skos:exactMatch	Not	go:0033777	lithocholate 6beta-hydroxylase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -842,6 +847,7 @@ mesh:C078267	2,3-dihydroxy-4-cumate-3,4-dioxygenase	skos:exactMatch	Not	go:00185
 mesh:C081975	protein kinase C eta	skos:exactMatch	Not	go:0004697	protein kinase C activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C082662	phosphopantetheinyl transferase	skos:exactMatch	Not	go:0008897	holo-[acyl-carrier-protein] synthase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C084023	2-hydroxyhepta-2,4-diene-1,7-dioate isomerase	skos:exactMatch	Not	go:0008704	5-carboxymethyl-2-hydroxymuconate delta-isomerase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:C085344	SERPIN-B5	skos:exactMatch	Not	hgnc:8949	SERPINB5	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C087831	triaosylceramide 1,4-galactosyltransferase	skos:exactMatch	Not	go:0047275	glucosaminylgalactosylglucosylceramide beta-galactosyltransferase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C092119	Hoxa10 protein, mouse	skos:exactMatch	Not	ncit:C26309	Homeobox Protein Hox-A10	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C092274	melanin-concentrating hormone receptor	skos:exactMatch	Not	go:0030273	melanin-concentrating hormone receptor activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -855,14 +861,19 @@ mesh:C110804	mycophenolic adenine dinucleotide	skos:exactMatch	Not	go:0072671	mi
 mesh:C115412	cytochrome P-450 CYP81E1 (Glycyrrhiza echinata)	skos:exactMatch	Not	go:0033773	isoflavone 2'-hydroxylase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C116435	lipoic acid synthase	skos:exactMatch	Not	go:0016992	lipoate synthase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C120640	DNA ligase (NAD)	skos:exactMatch	Not	go:0003911	DNA ligase (NAD+) activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:C407343	septin 3	skos:exactMatch	Not	hgnc:10750	SEPTIN3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C415368	interleukin-22	skos:exactMatch	Not	efo:0003810	interleukin-22 (Homo sapiens)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C415369	interleukin-22 receptor	skos:exactMatch	Not	go:0042018	interleukin-22 receptor activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C416670	N-acetylgalactosamine 4-sulfate 6-O-sulfotransferase	skos:exactMatch	Not	go:0050659	N-acetylgalactosamine 4-sulfate 6-O-sulfotransferase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C419642	NRH - quinone oxidoreductase2	skos:exactMatch	Not	go:0001512	dihydronicotinamide riboside quinone reductase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C422042	interleukin 20	skos:exactMatch	Not	efo:0003803	interleukin-20 (Homo sapiens)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C422952	telomerase RNA	skos:exactMatch	Not	go:0000332	template for synthesis of G-rich strand of telomere DNA activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:C425287	sharpin	skos:exactMatch	Not	hgnc:25321	SHARPIN	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:C425967	eIF-5A2	skos:exactMatch	Not	hgnc:3301	EIF5A2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C427385	4-hydroxyacetophenone monooxygenase	skos:exactMatch	Not	go:0033767	4-hydroxyacetophenone monooxygenase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:C427545	RELT	skos:exactMatch	Not	hgnc:13764	RELT	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C428384	MLK-like mitogen-activated protein triple kinase	skos:exactMatch	Not	go:0004709	MAP kinase kinase kinase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:C429463	NUDT9	skos:exactMatch	Not	hgnc:8056	NUDT9	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C434124	Palmd protein, mouse	skos:exactMatch	Not	ncit:C105939	Palmdelphin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C445314	malonyl-CoA anthocyanin 5-O-glucoside-6'''-O-malonyltransferase	skos:exactMatch	Not	go:0033810	anthocyanin 5-O-glucoside 6'''-O-malonyltransferase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C449880	O-GlcNAc transferase	skos:exactMatch	Not	go:0097363	protein O-GlcNAc transferase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -886,6 +897,7 @@ mesh:C537519	Schwartz-Lelek syndrome	skos:exactMatch	Not	doid:0080033	craniometa
 mesh:C537996	Dysgnathia complex	skos:exactMatch	Not	doid:0060341	agnathia-otocephaly complex	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C538618	Donath-Landsteiner hemolytic anemia	skos:exactMatch	Not	doid:10507	Dressler's syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C548841	Parasitic infection caused by Dracunculus medinensis	skos:exactMatch	Not	go:0050521	alpha-glucan, water dikinase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:C549824	Mid1ip1	skos:exactMatch	Not	hgnc:20715	MID1IP1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C562584	Xanthinuria, Type I	skos:exactMatch	Not	doid:0060236	xanthinuria	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C562601	Lactose Intolerance, Adult Type	skos:exactMatch	Not	doid:10604	lactose intolerance	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C562680	Cystathionase Deficiency	skos:exactMatch	Not	doid:0090142	cystathioninuria	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -899,6 +911,7 @@ mesh:C567484	Mental Retardation, X-Linked, Syndromic, Christianson Type	skos:exa
 mesh:C567738	Neuropathy, Hereditary Sensory And Autonomic, Type IIB	skos:exactMatch	Not	doid:0070150	hereditary sensory and autonomic neuropathy type 2B	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C579934	Autosomal Recessive Cerebellar Ataxia Type 1	skos:exactMatch	Not	doid:0111618	autosomal recessive spinocerebellar ataxia 8	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C580473	Succinate-Coa Ligase Deficiency	skos:exactMatch	Not	doid:0080124	mitochondrial DNA depletion syndrome 5	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C582471	Itgb1bp2	skos:exactMatch	Not	hgnc:6154	ITGB1BP2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C584135	endotrophin	skos:exactMatch	Not	ncit:C165979	Pro-C6 Measurement	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000068256	Darbepoetin alfa	skos:exactMatch	Not	hgnc:4392	GNAS	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D000068437	Pemetrexed	skos:exactMatch	Not	chebi:17509	5'-S-methyl-5'-thioadenosine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -1069,6 +1082,7 @@ mesh:D020182	Sleep Apnea, Central	skos:exactMatch	Not	doid:0060731	congenital ce
 mesh:D020386	Isaacs Syndrome	skos:exactMatch	Not	doid:963	episodic ataxia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D020425	Radial Neuropathy	skos:exactMatch	Not	doid:12170	radial nerve lesion	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D020521	Stroke	skos:exactMatch	Not	hp:0002140	Ischemic stroke	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D020666	ras-GRF1	skos:exactMatch	Not	hgnc:9875	RASGRF1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020747	Calcium Channels, T-Type	skos:exactMatch	Not	go:0008332	low voltage-gated calcium channel activity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D020751	Alcohol-Induced Disorders	skos:exactMatch	Not	doid:0050741	alcohol dependence	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D020821	Dystonic Disorders	skos:exactMatch	Not	doid:0090056	dystonia 12	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -1119,6 +1133,7 @@ mesh:D054818	Hexosaminidase A	skos:exactMatch	Not	go:0004563	beta-N-acetylhexosa
 mesh:D055607	Receptors, Natural Killer Cell	skos:exactMatch	Not	hgnc:6378	KLRD1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:D055752	Small Cell Lung Carcinoma	skos:exactMatch	Not	doid:5411	lung oat cell carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D057135	Wet Macular Degeneration	skos:exactMatch	Not	doid:10873	Kuhnt-Junius degeneration	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D058258	Serpin E2	skos:exactMatch	Not	hgnc:8951	SERPINE2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D058494	Walker-Warburg Syndrome	skos:exactMatch	Not	doid:0111237	congenital muscular dystrophy-dystroglycanopathy type A1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D058570	TOR Serine-Threonine Kinases	skos:exactMatch	Not	hgnc:3942	MTOR	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D063807	Dandruff	skos:exactMatch	Not	doid:8941	seborrheic infantile dermatitis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -1672,6 +1687,7 @@ reactome:R-XTR-8877627	Vitamin E	skos:exactMatch	Not	chebi:46430	(-)-alpha-tocop
 reactome:R-XTR-8877627	Vitamin E	skos:exactMatch	Not	mesh:D014810	Vitamin E	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 reactome:R-XTR-9664873	Pexophagy	debio:0000003	Not	go:0030242	autophagy of peroxisome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 reactome:R-XTR-983189	Kinesins	debio:0000003	Not	fplx:Kinesin	Kinesin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+schema:dataset	dataset	skos:exactMatch	Not	t4fs:0000347	dataset	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 uberon:0000104	life cycle	skos:exactMatch	Not	mesh:D008018	Life Cycle Stages	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 uberon:0000353	parenchyma	skos:exactMatch	Not	bto:0000999	plant parenchyma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	
 uberon:0001263	pancreatic acinus	skos:exactMatch	Not	bto:0000028	pancreatic acinar cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	

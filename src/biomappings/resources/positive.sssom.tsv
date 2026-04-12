@@ -3,6 +3,7 @@
 #  agro: http://purl.obolibrary.org/obo/AGRO_
 #  agrovoc: http://aims.fao.org/aos/agrovoc/c_
 #  aio: https://w3id.org/aio/
+#  ans.educationlevel: http://purl.org/ASN/scheme/ASNEducationLevel/
 #  apollosv: http://purl.obolibrary.org/obo/APOLLO_SV_
 #  bto: http://purl.obolibrary.org/obo/BTO_
 #  caro: http://purl.obolibrary.org/obo/CARO_
@@ -54,6 +55,7 @@
 #  oae: http://purl.obolibrary.org/obo/OAE_
 #  obi: http://purl.obolibrary.org/obo/OBI_
 #  oboinowl: http://www.geneontology.org/formats/oboInOwl#
+#  oeo: https://openenergyplatform.org/ontology/oeo/OEO_
 #  ogg: http://purl.obolibrary.org/obo/OGG_
 #  opmi: http://purl.obolibrary.org/obo/OPMI_
 #  orcid: https://orcid.org/
@@ -63,6 +65,7 @@
 #  pubchem.compound: https://pubchem.ncbi.nlm.nih.gov/compound/
 #  reactome: https://reactome.org/content/detail/
 #  ro: http://purl.obolibrary.org/obo/RO_
+#  schema: https://schema.org/
 #  semapv: https://w3id.org/semapv/vocab/
 #  skos: http://www.w3.org/2004/02/skos/core#
 #  stato: http://purl.obolibrary.org/obo/STATO_
@@ -72,6 +75,7 @@
 #  uniprot: http://purl.uniprot.org/uniprot/
 #  uniprot.chain: http://purl.uniprot.org/annotation/
 #  vido: http://purl.obolibrary.org/obo/VIDO_
+#  vivo: http://vivoweb.org/ontology/core#
 #  vo: http://purl.obolibrary.org/obo/VO_
 #  vsmo: http://purl.obolibrary.org/obo/VSMO_
 #  wikipathways: http://www.wikipathways.org/instance/
@@ -241,6 +245,9 @@ agrovoc:d2c183d0	compost mulches	skos:exactMatch	agro:00000102	compost mulch	sem
 agrovoc:e7505488	tine harrows	skos:exactMatch	agro:00000138	tine harrow	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696		
 agrovoc:ea23424c	alpha lattice design	skos:exactMatch	agro:00000337	alpha lattice design	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696		
 agrovoc:eb7af602	raised beds	skos:exactMatch	agro:00002021	raised seedbed	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696		
+ans.educationlevel:ElementarySchool	ElementarySchool	skos:exactMatch	schema:ElementarySchool	ElementarySchool	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ans.educationlevel:HighSchool	HighSchool	skos:exactMatch	schema:HighSchool	HighSchool	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ans.educationlevel:MiddleSchool	MiddleSchool	skos:exactMatch	schema:MiddleSchool	MiddleSchool	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 apollosv:00000097	ecosystem	skos:exactMatch	envo:01001110	ecosystem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 apollosv:00000114	infection	skos:exactMatch	ido:0000586	infection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 apollosv:00000142	vaccination	skos:exactMatch	idomal:0001040	vaccination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -1034,7 +1041,20 @@ ccle:ZR751_BREAST	ZR-75-1	skos:exactMatch	cellosaurus:0588	ZR-75-1	semapv:Manual
 ccle:ZR751_BREAST	ZR-75-1	skos:exactMatch	efo:0001262	ZR751	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 ccle:ZR7530_BREAST	ZR-75-30	skos:exactMatch	cellosaurus:1661	ZR-75-30	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 ccle:ZR7530_BREAST	ZR-75-30	skos:exactMatch	efo:0001263	ZR7530	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccso:Certificate	Certificate	skos:exactMatch	vivo:Certificate	Certificate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:Course	Course	skos:exactMatch	schema:Course	Course	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:Course	Course	skos:exactMatch	vivo:Course	Course	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:Department	Department	skos:exactMatch	vivo:Department	Department	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 ccso:Discipline	Discipline	skos:exactMatch	modalia:Discipline	discipline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:Event	Event	skos:exactMatch	schema:Event	Event	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:Institute	Institute	skos:exactMatch	vivo:Institute	Institute	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:Researcher	Researcher	skos:exactMatch	modalia:Researcher	researcher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:Researcher	Researcher	skos:exactMatch	t4fs:0000220	researcher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:School	School	skos:exactMatch	schema:School	School	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:School	School	skos:exactMatch	vivo:School	School	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:Student	Student	skos:exactMatch	vivo:Student	Student	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:University	University	skos:exactMatch	gsso:004553	university	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+ccso:University	University	skos:exactMatch	vivo:University	University	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 cemo:case_fatality_rate	case fatality rate	skos:exactMatch	ncit:C173779	Case Fatality Rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 cemo:infection_fatality_rate	infection fatality rate	skos:exactMatch	ncit:C173780	Infection Fatality Rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:10001	Visnadin	skos:exactMatch	mesh:C067604	visnadin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -1981,6 +2001,7 @@ chebi:135926	udenafil	skos:exactMatch	mesh:C419664	udenafil	semapv:ManualMapping
 chebi:135929	silodosin	skos:exactMatch	mesh:C095285	silodosin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:135930	lercanidipine	skos:exactMatch	mesh:C060343	lercanidipine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:135931	dexlansoprazole	skos:exactMatch	ncit:C73192	Dexlansoprazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+chebi:135932	Padimate O	skos:exactMatch	mesh:C041981	padimate-O	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:135937	enzacamene	skos:exactMatch	mesh:C038939	enzacamene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:135938	lasofoxifene	skos:exactMatch	mesh:C111332	Lasofoxifene	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:135940	olaflur	skos:exactMatch	mesh:C495399	Olaflur	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -2060,6 +2081,7 @@ chebi:137394	Alexa Fluor 647	skos:exactMatch	efo:0004967	Alexa Fluor 647	semapv:
 chebi:1374	3,4-dihydro-7-methoxy-2-methylene-3-oxo-2H-1,4-benzoxazine-5-carboxylic acid	skos:exactMatch	mesh:C069646	3,4-dihydro-7-methoxy-2-methylene-3-oxo-2H-1,4-benzoxazine-5-carboxylic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:137404	5-hydroxybenzimidazole	skos:exactMatch	mesh:C036435	5-hydroxybenzimidazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:137426	dehydroacetic acid	skos:exactMatch	mesh:C027493	dehydroacetic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+chebi:137439	homocysteine sulfinic acid	skos:exactMatch	mesh:C010982	homocysteinesulfinic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:137443	furanochromone	skos:exactMatch	mesh:C477662	furanochromone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:137452	Engeletin	skos:exactMatch	mesh:C522936	engeletin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:137472	tetrahydroxy-1,4-benzoquinone	skos:exactMatch	mesh:C105931	tetrahydroxy-1,4-benzoquinone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -2132,6 +2154,7 @@ chebi:139162	oleuropein aglycone	skos:exactMatch	mesh:C000625725	oleuropein agly
 chebi:139177	bryostatin 2	skos:exactMatch	mesh:C054557	bryostatin 2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:139215	cochalic acid	skos:exactMatch	mesh:C013891	cochalic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:139241	Salirepin	skos:exactMatch	mesh:C525285	salirepin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+chebi:139271	6beta-hydroxycortisol	skos:exactMatch	mesh:C001380	6 beta-hydroxycortisol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:139330	N-(6-hydroxyindol-3-ylacetyl)-valine	skos:exactMatch	mesh:C523338	N-(6-hydroxyindol-3-ylacetyl)-valine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:139334	nepicastat	skos:exactMatch	mesh:C109487	nepicastat	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:139380	galactopinitol A	skos:exactMatch	mesh:C119541	galactopinitol A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -2146,6 +2169,7 @@ chebi:139545	maradolipid	skos:exactMatch	mesh:C568414	maradolipid	semapv:ManualM
 chebi:139557	antalarmin	skos:exactMatch	mesh:C103016	antalarmin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:140078	Eruberin A	skos:exactMatch	mesh:C000607823	eruberin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:140079	itasetron	skos:exactMatch	mesh:C070191	itasetron	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+chebi:140081	5,4'-dihydroxy-3,3'-dimethoxy-6,7-methylenedioxyflavone	skos:exactMatch	mesh:C448741	5,4'-dihydroxy-3,3'-dimethoxy-6,7-methylenedioxyflavone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:140104	Salvianolic acid C	skos:exactMatch	mesh:C000597819	salvianolic acid C	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:140105	Euphornin	skos:exactMatch	mesh:C530235	euphornin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:140111	Sumarotene	skos:exactMatch	mesh:C069613	sumarotene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
@@ -2176,6 +2200,7 @@ chebi:141057	validoxylamine B	skos:exactMatch	mesh:C052533	validoxylamine B	sema
 chebi:141063	rubimaillin	skos:exactMatch	mesh:C046245	rubimaillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:141126	polymatin B	skos:exactMatch	mesh:C000605835	polymatin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:141145	grandiflorolic acid	skos:exactMatch	mesh:C528608	grandiflorolic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
+chebi:141204	cholestane-3,7,12,25-tetrol-3-glucuronide	skos:exactMatch	mesh:C028298	cholestane-3,7,12,25-tetrol-3-glucuronide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:141213	isoxaflutole	skos:exactMatch	mesh:C415327	isoxaflutole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:141217	3,5-dimethoxytoluene	skos:exactMatch	mesh:C465201	3,5-dimethoxytoluene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:141221	elemol	skos:exactMatch	mesh:C033011	elemol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
@@ -2183,6 +2208,7 @@ chebi:141284	3-acetylbenzamide	skos:exactMatch	mesh:C000629298	3-acetylbenzamide
 chebi:141335	4-hydroxymellein	skos:exactMatch	mesh:C000600633	4-hydroxymellein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:141337	botrallin	skos:exactMatch	mesh:C000598261	botrallin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:141338	sporothriolide	skos:exactMatch	mesh:C086157	sporothriolide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
+chebi:141354	5-hydroxy-8-methoxy-4-phenylisoquinolin-1(2H)-one	skos:exactMatch	mesh:C000619396	5-hydroxy-8-methoxy-4-phenylisoquinolin-1(2H)-one	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:141359	fusarithioamide A	skos:exactMatch	mesh:C000620294	fusarithioamide A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:141360	helvolic acid methyl ester	skos:exactMatch	mesh:C000617377	helvolic acid methyl ester	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:141361	aigialone	skos:exactMatch	mesh:C484838	aigialone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
@@ -2292,7 +2318,12 @@ chebi:143197	culmorin	skos:exactMatch	mesh:C013900	culmorin	semapv:ManualMapping
 chebi:143205	2,3,3,3-tetrafluoro-2-(heptafluoropropoxy)propanoic acid	skos:exactMatch	mesh:C000608800	2,3,3,3-tetrafluoro-2-(heptafluoropropoxy)propanoic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:143212	thienopyrimidine	skos:exactMatch	mesh:C476003	thienopyrimidine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:143225	azumolene	skos:exactMatch	mesh:C061387	azumolene	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
+chebi:143240	3-amino-5-morpholinomethyl-2-oxazolidinone	skos:exactMatch	mesh:C504349	3-amino-5-morpholinomethyl-2-oxazolidinone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:143242	adhumulone	skos:exactMatch	mesh:C442488	adhumulone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
+chebi:143243	cysteineglutathione disulfide	skos:exactMatch	mesh:C031586	cysteine-glutathione disulfide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:143268	N-(2-hydroxyethyl)iminodiacetic acid	skos:exactMatch	mesh:C008021	N-(2-hydroxyethyl)iminodiacetic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:143288	7-Hydroxyamoxapine	skos:exactMatch	mesh:C041917	7-hydroxyamoxapine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:143289	8-Hydroxyamoxapine	skos:exactMatch	mesh:C035234	8-hydroxyamoxapine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:143291	4-Hydroxysulfinpyrazone	skos:exactMatch	mesh:C025186	4-hydroxysulfinpyrazone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
 chebi:143298	4-chlorobenzenesulfonamide	skos:exactMatch	mesh:C047440	4-chlorobenzenesulfonamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
 chebi:143311	N-desmethylnizatidine	skos:exactMatch	mesh:C066301	N-desmethylnizatidine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
@@ -2307,6 +2338,7 @@ chebi:143460	hydroxyitraconazole	skos:exactMatch	mesh:C084794	hydroxyitraconazol
 chebi:143467	N4-Acetylsulfaphenazole	skos:exactMatch	mesh:C068642	N4-acetylsulfaphenazole	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
 chebi:143473	3-O-methyltolcapone	skos:exactMatch	mesh:C108735	3-O-methyltolcapone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
 chebi:143509	N-Desmethyllevomepromazine	skos:exactMatch	mesh:C044467	N-desmethyllevomepromazine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
+chebi:143539	2-Imidazolidone-4-carboxylic acid	skos:exactMatch	mesh:C560753	2-imidazolidone-4-carboxylic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:143579	methyl myristoleate	skos:exactMatch	mesh:C000609422	methyl myristoleate	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
 chebi:143848	3-methylhexane	skos:exactMatch	mesh:C000604282	3-methylhexane	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
 chebi:143863	butafenacil	skos:exactMatch	mesh:C487162	butafenacil	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
@@ -2385,9 +2417,63 @@ chebi:145170	13-desmethylspirolide C	skos:exactMatch	mesh:C517170	13-desmethylsp
 chebi:145172	Gambierone	skos:exactMatch	mesh:C000601927	gambierone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:145174	Silenoside A	skos:exactMatch	mesh:C120208	silenoside A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:145176	momordicoside A	skos:exactMatch	mesh:C478919	momordicoside A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
+chebi:145365	crenolanib	skos:exactMatch	mesh:C577197	crenolanib	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145371	binimetinib	skos:exactMatch	mesh:C581313	binimetinib	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145372	gilteritinib	skos:exactMatch	mesh:C000609080	gilteritinib	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145373	pexidartinib	skos:exactMatch	mesh:C000600259	pexidartinib	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145374	enasidenib	skos:exactMatch	mesh:C000605269	enasidenib	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145407	sulfaethoxypyridazine	skos:exactMatch	mesh:C009345	sulfaethoxypyridazine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145428	glasdegib	skos:exactMatch	mesh:C000592580	glasdegib	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145429	sapacitabine	skos:exactMatch	mesh:C117959	sapacitabine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145430	ivosidenib	skos:exactMatch	mesh:C000627630	ivosidenib	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145535	pevonedistat	skos:exactMatch	mesh:C539933	pevonedistat	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145653	carpronium	skos:exactMatch	mesh:C001817	carpronium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145656	galactoxylomannan	skos:exactMatch	mesh:C043689	galactoxylomannan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145673	tandospirone	skos:exactMatch	mesh:C055267	tandospirone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145682	6-hydroxydeoxybrevianamide E	skos:exactMatch	mesh:C569086	6-hydroxydeoxybrevianamide E	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145683	notoamide S	skos:exactMatch	mesh:C000596573	notoamide S	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145684	notoamide E	skos:exactMatch	mesh:C541224	notoamide E	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145698	amezinium	skos:exactMatch	mesh:C027784	amezinium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:145705	prednisolone phosphate	skos:exactMatch	mesh:C009022	prednisolone phosphate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+chebi:145723	trifluoroacetamide	skos:exactMatch	mesh:C030688	trifluoroacetamide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145736	9-methylhypoxanthine	skos:exactMatch	mesh:C513119	9-methylhypoxanthine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145761	indolylacryloylglycine	skos:exactMatch	mesh:C001807	indolylacryloylglycine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145762	19-hydroxydeoxycorticosterone	skos:exactMatch	mesh:C027855	19-hydroxydeoxycorticosterone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145778	sesaminol	skos:exactMatch	mesh:C066016	sesaminol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145829	trilobatin	skos:exactMatch	mesh:C000598619	trilobatin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145892	4-iodophenylalanine	skos:exactMatch	mesh:C049181	4-iodophenylalanine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145922	monapinone A	skos:exactMatch	mesh:C560369	monapinone A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145923	dinapinone A	skos:exactMatch	mesh:C560368	dinapinone A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145950	nigerone	skos:exactMatch	mesh:C518566	nigerone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:145970	13,16-docosadienoic acid	skos:exactMatch	mesh:C078401	13,16-docosadienoic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:145994	remdesivir	skos:exactMatch	mesh:C000606551	remdesivir	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+chebi:145999	cinanserin	skos:exactMatch	mesh:D002928	Cinanserin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:146151	marinobufagenin	skos:exactMatch	mesh:C093896	marinobufagenin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:146171	fumigatin	skos:exactMatch	mesh:C018067	fumigatin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:146174	benzyl cinnamate	skos:exactMatch	mesh:C526327	benzyl cinnamate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:146206	N-oleoyltaurine	skos:exactMatch	mesh:C581016	N-oleoyl taurine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:146207	palytoxin	skos:exactMatch	mesh:C010272	palytoxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:146244	HU-308	skos:exactMatch	mesh:C402416	HU 308	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+chebi:146256	10-hydroxycoronaridine	skos:exactMatch	mesh:C407862	10-hydroxycoronaridine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:146372	3-methylorsellinate	skos:exactMatch	mesh:C008478	3-methylorsellinate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:146784	8beta-epoxyangeloyloxy-9alpha-ethoxy-14-oxo-acanthospermolide	skos:exactMatch	mesh:C527218	8beta-epoxyangeloyloxy-9alpha-ethoxy-14-oxo-acanthospermolide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:146785	polymatin A	skos:exactMatch	mesh:C587733	polymatin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:146848	selaginose	skos:exactMatch	mesh:C505610	selaginose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147280	uvedalin	skos:exactMatch	mesh:C000605836	uvedalin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147302	CGP-42112A	skos:exactMatch	mesh:C060894	CGP 42112A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147305	2,3,5-tricaffeoylaltraric acid	skos:exactMatch	mesh:C514547	2,3,5-tricaffeoylaltraric acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147308	triarachidonin	skos:exactMatch	mesh:C055297	Triarachidonin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147331	2-propylphenol	skos:exactMatch	mesh:C080638	2-propylphenol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147332	3-propylcatechol	skos:exactMatch	mesh:C080639	3-propylcatechol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147347	tilorone	skos:exactMatch	mesh:D013994	Tilorone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147397	thyrsiferyl 23-acetate	skos:exactMatch	mesh:C091148	thyrsiferyl 23-acetate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147402	ammonium thiosulfate	skos:exactMatch	mesh:C035309	ammonium thiosulfate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147425	glutathione sulfonate	skos:exactMatch	mesh:C040136	glutathione sulfonate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:14750	acetylacetone	skos:exactMatch	mesh:C008790	acetylacetone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:147787	isofloridoside	skos:exactMatch	mesh:C025100	isofloridoside	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:149433	mannotetraose	skos:exactMatch	mesh:C039922	mannotetraose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:149478	2-(3-benzoylphenyl)-3,5,7-trihydroxychromen-4-one	skos:exactMatch	mesh:C470026	2-(3-benzoylphenyl)-3,5,7-trihydroxychromen-4-one	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chebi:149493	neurotensin (1-8)	skos:exactMatch	mesh:C041968	neurotensin (1-8)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:156429	tabtoxin	skos:exactMatch	mesh:C003854	tabtoxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:156430	tabtoxinine beta-lactam	skos:exactMatch	mesh:C051368	tabtoxinine beta-lactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:15771	loganin	skos:exactMatch	mesh:C059516	loganin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -2755,6 +2841,7 @@ chebi:52593	nanowire	skos:exactMatch	mesh:D053770	Nanowires	semapv:ManualMapping
 chebi:52633	molybdenum-95	skos:exactMatch	mesh:C000615511	Molybdenum-95	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_chebi_mesh_mappings.py	
 chebi:52673	Alexa Fluor 555	skos:exactMatch	efo:0004968	Alexa Fluor 555	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
 chebi:53078	N(6)-(2,4-dinitrophenyl)lysine	skos:exactMatch	mesh:C007493	epsilon-dinitrophenyllysine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+chebi:53088	alizarin complexone	skos:exactMatch	mesh:C070804	alizarin complexone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:53175	13-apo-beta-carotenone	skos:exactMatch	mesh:C071310	beta-apo-13-carotenone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:53457	glucuronoxylomannan	skos:exactMatch	mesh:C027478	glucuronoxylomannan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:5355	Ginkgolide A	skos:exactMatch	mesh:C477042	ginkgolide A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -3090,6 +3177,35 @@ chebi:9970	Verticine	skos:exactMatch	mesh:C014242	verticine	semapv:ManualMapping
 chebi:9973	vibriobactin	skos:exactMatch	mesh:C040227	vibriobactin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chebi:9976	Vicine	skos:exactMatch	mesh:C009661	vicine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 chmo:0000004	amperometry	skos:exactMatch	goldbook:09128	amperometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	SSSOM Curator	
+chmo:0000005	chrono-amperometry	skos:exactMatch	goldbook:09129	chronoamperometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000010	conductometry	skos:exactMatch	goldbook:09166	conductometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000012	coulometry	skos:exactMatch	goldbook:09159	coulometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000014	chrono-coulometry	skos:exactMatch	goldbook:09156	chronocoulometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000016	potentiometry	skos:exactMatch	goldbook:09127	potentiometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000017	chrono-potentiometry	skos:exactMatch	goldbook:09126	chronopotentiometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000024	voltammetry	skos:exactMatch	goldbook:09148	voltammetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000025	cyclic voltammetry	skos:exactMatch	goldbook:09134	cyclic voltammetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000027	hydrodynamic voltammetry	skos:exactMatch	goldbook:09138	hydrodynamic voltammetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000030	differential pulse voltammetry	skos:exactMatch	goldbook:09136	differential pulse voltammetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000031	normal pulse voltammetry	skos:exactMatch	goldbook:09142	normal pulse voltammetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000032	polarography	skos:exactMatch	goldbook:P04716	polarography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000040	square-wave voltammetry	skos:exactMatch	goldbook:09147	square-wave voltammetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000041	stripping voltammetry	skos:exactMatch	goldbook:09155	stripping voltammetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000042	anodic stripping voltammetry	skos:exactMatch	goldbook:09152	anodic stripping voltammetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000046	adsorptive stripping voltammetry	skos:exactMatch	goldbook:09151	adsorptive stripping voltammetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000047	cathodic stripping voltammetry	skos:exactMatch	goldbook:09153	cathodic stripping voltammetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000053	imaging mass spectrometry	skos:exactMatch	goldbook:12431	imaging mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000061	flow cytometry	skos:exactMatch	goldbook:13152	flow cytometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000064	fluorescence resonance energy transfer	skos:exactMatch	goldbook:FT07378	fluorescence resonance energy transfer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000073	scanning electron microscopy	skos:exactMatch	goldbook:S05484	scanning electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000080	transmission electron microscopy	skos:exactMatch	goldbook:T06481	transmission electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000086	scanning transmission electron microscopy	skos:exactMatch	goldbook:S05486	scanning transmission electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000097	ion microscopy	skos:exactMatch	goldbook:I03221	ion microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000113	atomic force microscopy	skos:exactMatch	goldbook:09452	atomic force microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000120	scanning near-field optical microscopy	skos:exactMatch	goldbook:09202	scanning near-field optical microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000145	transmission high energy electron diffraction	skos:exactMatch	goldbook:T06483	transmission high energy electron diffraction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000146	reflection high energy electron diffraction	skos:exactMatch	goldbook:R05238	reflection high energy electron diffraction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+chmo:0000147	low energy electron diffraction	skos:exactMatch	goldbook:L03631	low energy electron diffraction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 cido:0000152	COVID-19 pandemic	skos:exactMatch	idocovid19:0001388	COVID-19 pandemic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 cido:0000154	COVID-19 epidemic	skos:exactMatch	idocovid19:0001391	COVID-19 epidemic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 cido:0000366	protective clothing	skos:exactMatch	idomal:0001031	protective clothing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -3449,6 +3565,7 @@ doid:0050690	brachyolmia	skos:exactMatch	umls:C0432228	Brachyolmia	semapv:Manual
 doid:0050692	Brody myopathy	skos:exactMatch	umls:C1832918	Brody myopathy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 doid:0050694	Brown-Vialetto-Van Laere syndrome	skos:exactMatch	umls:C4551777	Brown-Vialetto-Van Laere syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 doid:0050696	fetal alcohol spectrum disorder	skos:exactMatch	mesh:D063647	Fetal Alcohol Spectrum Disorders	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+doid:0050768	mitochondrial complex V (ATP synthase) deficiency, nuclear type 1	skos:exactMatch	umls:C3276276	MITOCHONDRIAL COMPLEX V (ATP SYNTHASE) DEFICIENCY, NUCLEAR TYPE 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 doid:0050853	chronic venous insufficiency	skos:exactMatch	efo:0007940	chronic venous insufficiency	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 doid:0050855	renal fibrosis	skos:exactMatch	umls:C0151650	Renal fibrosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 doid:0050933	ovarian serous carcinoma	skos:exactMatch	efo:1001516	ovarian serous carcinoma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -3461,6 +3578,7 @@ doid:0060317	lung abscess	skos:exactMatch	mesh:D008169	Lung Abscess	semapv:Manua
 doid:0060317	lung abscess	skos:exactMatch	umls:C0024110	Lung Abscess	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 doid:0060319	cardiac arrest	skos:exactMatch	efo:0009492	cardiac arrest	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 doid:0060325	cervical polyp	skos:exactMatch	efo:0009475	cervical polyp	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+doid:0060537	mitochondrial complex II deficiency	skos:exactMatch	umls:C1855008	Mitochondrial Complex II Deficiency	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 doid:0060538	purpura fulminans	skos:exactMatch	efo:1001913	Purpura Fulminans	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 doid:0060601	alpha-2-plasmin inhibitor deficiency	skos:exactMatch	umls:C2752081	ALPHA-2-PLASMIN INHIBITOR DEFICIENCY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py	
 doid:0060602	alpha-methylacyl-CoA racemase deficiency	skos:exactMatch	mesh:C565768	Alpha-Methylacyl-CoA Racemase Deficiency	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -3579,6 +3697,7 @@ doid:0111079	birdshot chorioretinopathy	skos:exactMatch	umls:C1853959	Birdshot C
 doid:0111086	Fanconi anemia complementation group G	skos:exactMatch	efo:0009046	Fanconi anemia complementation group G	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 doid:0111088	Fanconi anemia complementation group F	skos:exactMatch	efo:0009045	Fanconi anemia complementation group F	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 doid:0111095	Fanconi anemia complementation group A	skos:exactMatch	efo:0009044	Fanconi anemia complementation group A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+doid:0111139	mitochondrial complex III deficiency	skos:exactMatch	umls:C1852372	MITOCHONDRIAL COMPLEX III DEFICIENCY (disorder)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 doid:0111162	epidermal nevus	skos:exactMatch	mesh:C580062	Epidermal Nevus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 doid:0111165	molybdenum cofactor deficiency	skos:exactMatch	mesh:C535811	Molybdenum cofactor deficiency	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 doid:0111167	Dyggve-Melchior-Clausen disease	skos:exactMatch	mesh:C535726	Dyggve-Melchior-Clausen syndrome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -3880,7 +3999,26 @@ go:0005816	spindle pole body	skos:exactMatch	ncit:C13365	Spindle Pole Body	semap
 go:0070266	necroptotic process	skos:exactMatch	mesh:D000079302	Necroptosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 goldbook:08331	distortionless enhancement by polarization transfer	skos:exactMatch	chmo:0000596	distortionless enhancement with polarization transfer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-11
 goldbook:08335	double-quantum filtered correlation spectroscopy	skos:exactMatch	chmo:0002382	double-quantum-filtered correlation spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-11
+goldbook:08367	incredible natural-abundance double-quantum transfer experiment	skos:exactMatch	chmo:0002543	incredible natural abundance double quantum transfer experiment	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 goldbook:08397	pulsed-field gradient	skos:exactMatch	chmo:0001883	pulsed field gradient	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-11
+goldbook:08490	inductively-coupled plasma mass spectrometry	skos:exactMatch	chmo:0000538	inductively coupled plasma mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:08494	inductively-coupled plasma torch	skos:exactMatch	chmo:0000956	inductively coupled plasma torch	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:08605	Fourier-transform infrared spectroscopy	skos:exactMatch	chmo:0000636	Fourier transform infrared spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:08606	Fourier-transform Raman spectroscopy	skos:exactMatch	chmo:0000665	Fourier transform Raman spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:08613	hyper-Raman spectroscopy	skos:exactMatch	chmo:0000666	hyper Raman spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:09183	dynamic secondary-ion mass spectrometry	skos:exactMatch	chmo:0000561	dynamic secondary ion mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:09192	secondary-ion mass spectrometry	skos:exactMatch	chmo:0000560	secondary ion mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:09518	scanning-probe lithography	skos:exactMatch	chmo:0001456	scanning probe lithography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:09788	two-dimensional gel electrophoresis	skos:exactMatch	chmo:0001029	two dimensional gel electrophoresis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:10280	hollow-fibre liquid-phase microextraction	skos:exactMatch	chmo:0002364	hollow fibre liquid-phase micro-extraction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:12419	Fourier-transform mass spectrometry	skos:exactMatch	chmo:0002925	Fourier transform mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:15415	pulsed-laser polymerisation	skos:exactMatch	chmo:0002552	pulsed laser polymerisation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:B00696	bomb-digestion	skos:exactMatch	chmo:0001492	bomb digestion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+goldbook:P04962	pyrolysis-gas chromatography	skos:exactMatch	chmo:0001260	pyrolysis gas chromatography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+gsso:004224	museum	skos:exactMatch	vivo:Museum	Museum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+gsso:004553	university	skos:exactMatch	vivo:University	University	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+gsso:008470	newsletter	skos:exactMatch	vivo:Newsletter	Newsletter	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+gsso:010256	undergraduate student	skos:exactMatch	vivo:UndergraduateStudent	Undergraduate Student	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	chebi:29287	gold atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	chebi:30050	gold(0)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:22C4%28GOLD%29	colours, pigments, and paints: gold	skos:relatedMatch	chebi:29287	gold atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
@@ -4039,6 +4177,7 @@ idomal:0000729	enzyme	skos:exactMatch	obi:0000427	enzyme	semapv:ManualMappingCur
 idomal:0000732	protein complex	skos:exactMatch	go:0032991	protein-containing complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0000732	protein complex	skos:exactMatch	go:0043234	protein complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0000783	tumor necrosis factor-alpha	skos:exactMatch	pr:000000134	tumor necrosis factor	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0000822	antibody	skos:exactMatch	go:0019814	immunoglobulin complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 idomal:0000873	piperonyl butoxide	skos:exactMatch	chebi:32687	piperonyl butoxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 idomal:0000886	triphenyl phosphate	skos:exactMatch	chebi:35033	triphenyl phosphate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 idomal:0000895	sulfoxide	skos:exactMatch	chebi:22063	sulfoxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -5287,6 +5426,7 @@ mesh:C531747	Congenital facial diplegia	skos:exactMatch	hp:0007188	Congenital fa
 mesh:C535274	Prieto X-linked mental retardation syndrome	skos:exactMatch	doid:0060805	Prieto syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C535288	Rapadilino syndrome	skos:exactMatch	doid:0050774	rapadilino syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C535289	Rapp-Hodgkin syndrome	skos:exactMatch	doid:0060330	Rapp-Hodgkin syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C535300	Autosomal dominant compelling helio ophthalmic outburst syndrome	skos:exactMatch	efo:0007887	autosomal dominant compelling helio-ophthalmic outburst syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C535302	Charcot-Marie-Tooth disease, X-linked recessive, 2	skos:exactMatch	doid:0110208	Charcot-Marie-Tooth disease X-linked recessive 2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C535303	Charcot-Marie-Tooth disease, X-linked recessive, 3	skos:exactMatch	doid:0110211	Charcot-Marie-Tooth disease X-linked recessive 3	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C535308	3-methylcrotonyl CoA carboxylase 1 deficiency	skos:exactMatch	doid:0050710	3-Methylcrotonyl-CoA carboxylase deficiency	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -5725,6 +5865,7 @@ mesh:C537577	Microcephalic osteodysplastic primordial dwarfism, type 1	skos:exac
 mesh:C537582	Sennetsu Fever	skos:exactMatch	doid:0050485	sennetsu fever	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537583	Sensory ataxic neuropathy, dysarthria, and ophthalmoparesis	skos:exactMatch	doid:0111276	sensory ataxic neuropathy, dysarthria, and ophthalmoparesis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537589	Severe combined immunodeficiency with sensitivity to ionizing radiation	skos:exactMatch	doid:0090012	severe combined immunodeficiency with sensitivity to ionizing radiation	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:C537596	Short chain Acyl CoA dehydrogenase deficiency	skos:exactMatch	doid:0080154	short chain acyl-CoA dehydrogenase deficiency	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C537599	Short rib-polydactyly syndrome, Beemer type	skos:exactMatch	doid:9249	Beemer-Langer syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537605	Rhabdomyosarcoma of the orbit	skos:exactMatch	doid:3259	orbit rhabdomyosarcoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C537607	Rhizomelic chondrodysplasia punctata, type 2	skos:exactMatch	doid:0110852	rhizomelic chondrodysplasia punctata type 2	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -6660,6 +6801,7 @@ mesh:D000067128	Extracellular Vesicles	skos:exactMatch	go:1903561	extracellular 
 mesh:D000067208	Shellfish Hypersensitivity	skos:exactMatch	doid:0060495	shellfish allergy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D000067269	Diet, Vegan	skos:exactMatch	hp:4000172	Vegan diet	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000067269	Diet, Vegan	skos:exactMatch	ncit:C15630	Vegan Diet	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D000067617	Telopodes	skos:exactMatch	go:0120327	telopode	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D000067836	Hoarding Disorder	skos:exactMatch	efo:0803361	hoarding disorder	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000067877	Autism Spectrum Disorder	skos:exactMatch	ncit:C88412	Autism Spectrum Disorder	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D000068180	Aripiprazole	skos:exactMatch	chebi:31236	aripiprazole	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -6710,6 +6852,7 @@ mesh:D000069059	Atorvastatin	skos:exactMatch	chebi:39548	atorvastatin	semapv:Man
 mesh:D000069076	Fractures, Multiple	skos:exactMatch	ncit:C26778	Multiple Fractures	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000069078	Seroconversion	skos:exactMatch	efo:0007851	seroconversion	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000069079	Radiation Exposure	skos:exactMatch	efo:0020980	radiation exposure	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000069261	Podosomes	skos:exactMatch	go:0002102	podosome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D000069283	Rituximab	skos:exactMatch	chebi:64357	rituximab	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000069286	Bortezomib	skos:exactMatch	chebi:52717	bortezomib	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000069287	Capecitabine	skos:exactMatch	chebi:31348	capecitabine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -7041,12 +7184,15 @@ mesh:D000086482	Viral Genome Packaging	skos:exactMatch	go:0019072	viral genome p
 mesh:D000086722	Rhinorrhea	skos:exactMatch	hp:0031417	Rhinorrhea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000086942	Viral Envelope	skos:exactMatch	go:0019031	viral envelope	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000087002	Viral Transcription	skos:exactMatch	go:0019083	viral transcription	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000088203	Nuclear Speckles	skos:exactMatch	go:0016607	nuclear speck	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D000088242	Paraspeckles	skos:exactMatch	go:0042382	paraspeckles	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000088362	Opsonization	skos:exactMatch	go:0008228	opsonization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000088462	Microneme	skos:exactMatch	go:0020009	microneme	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000088502	Lamellar Bodies	skos:exactMatch	go:0042599	lamellar body	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D000089083	Body Odor	skos:exactMatch	hp:0500001	Body odor	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D000089804	Shelterin Complex	skos:exactMatch	go:0070187	shelterin complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000089943	Sleep Quality	skos:exactMatch	efo:0005272	sleep quality	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000090683	Hippo Signaling Pathway	skos:exactMatch	go:0035329	hippo signaling	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D000091489	Social Deprivation	skos:exactMatch	efo:0009696	social deprivation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000092	Acetohexamide	skos:exactMatch	chebi:28052	acetohexamide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D000092142	Pancreas Divisum	skos:exactMatch	hp:0030994	Pancreas divisum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
@@ -7077,6 +7223,7 @@ mesh:D000096482	Angiogenesis	skos:exactMatch	go:0001525	angiogenesis	semapv:Manu
 mesh:D000096703	Cold Urticaria	skos:exactMatch	hp:0410135	Cold urticaria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000096784	Neurexins	skos:exactMatch	fplx:Neurexins	Neurexins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000096822	Chronic Cough	skos:exactMatch	hp:0034315	Chronic cough	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D000096823	Cough-Variant Asthma	skos:exactMatch	doid:12323	cough variant asthma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D000097906	RNA Methylation	skos:exactMatch	go:0001510	RNA methylation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000097908	Retrograde Ejaculation	skos:exactMatch	hp:0012877	Retrograde ejaculation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D000098	Acetophenones	skos:exactMatch	chebi:22187	acetophenones	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -7546,6 +7693,7 @@ mesh:D002454	Cell Differentiation	skos:exactMatch	go:0030154	cell differentiatio
 mesh:D002455	Cell Division	skos:exactMatch	go:0051301	cell division	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D002462	Cell Membrane	skos:exactMatch	go:0005886	plasma membrane	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D002465	Cell Movement	skos:exactMatch	go:0048870	cell motility	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D002467	Cell Nucleus	skos:exactMatch	go:0005634	nucleus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D002473	Cell Wall	skos:exactMatch	go:0005618	cell wall	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D002475	Cellobiose	skos:exactMatch	chebi:17057	cellobiose	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D002479	Inclusion Bodies	skos:exactMatch	go:0016234	inclusion body	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8031,6 +8179,7 @@ mesh:D007488	Iprindole	skos:exactMatch	chebi:135177	iprindole	semapv:ManualMappi
 mesh:D007490	Iproniazid	skos:exactMatch	chebi:5958	Iproniazid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D007501	Iron	skos:exactMatch	chebi:18248	iron atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D007502	Iron Chelating Agents	skos:exactMatch	chebi:38157	iron chelator	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D007505	Iron-Dextran Complex	skos:exactMatch	ncit:C44394	Iron Dextran Complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D007506	Iron-Sulfur Proteins	skos:exactMatch	chebi:35135	iron-sulfur protein	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D007510	Isatin	skos:exactMatch	chebi:27539	isatin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D007516	Adenoma, Islet Cell	skos:exactMatch	doid:1799	islet cell tumor	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -8350,6 +8499,7 @@ mesh:D011597	Psychomotor Performance	skos:exactMatch	efo:0004362	psychomotor per
 mesh:D011618	Psychotic Disorders	skos:exactMatch	doid:2468	psychotic disorder	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D011625	Pterygium	skos:exactMatch	doid:0002116	pterygium	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D011625	Pterygium	skos:exactMatch	doid:10526	conjunctival pterygium	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D011627	Puberty	skos:exactMatch	efo:0001382	puberty	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D011654	Pulmonary Edema	skos:exactMatch	ncit:C26868	Pulmonary Edema	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D011658	Pulmonary Fibrosis	skos:exactMatch	ncit:C26869	Pulmonary Fibrosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D011722	Pyrethrins	skos:exactMatch	chebi:39098	pyrethrins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	
@@ -8360,6 +8510,7 @@ mesh:D011860	Radiography, Abdominal	skos:exactMatch	ncit:C38102	Abdominal Radiog
 mesh:D011885	Radius Fractures	skos:exactMatch	ncit:C99039	Radius Fracture	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D011900	Ranula	skos:exactMatch	doid:12904	mucocele of salivary gland	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D011906	Rat-Bite Fever	skos:exactMatch	doid:13238	Haverhill fever	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D011932	Reading	skos:exactMatch	efo:0005229	reading	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D011941	Receptors, Adrenergic	skos:exactMatch	ncit:C105824	Adrenergic Receptor	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D011972	Receptor, Insulin	skos:exactMatch	ncit:C17072	Insulin Receptor	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D011992	Endosomes	skos:exactMatch	go:0005768	endosome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8420,6 +8571,7 @@ mesh:D012728	Sex Chromatin	skos:exactMatch	go:0001739	sex chromatin	semapv:Manua
 mesh:D012730	Sex Chromosomes	skos:exactMatch	go:0000803	sex chromosome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D012733	Sex Differentiation	skos:exactMatch	go:0007548	sex differentiation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D012738	Sex Hormone-Binding Globulin	skos:exactMatch	efo:0003941	sex hormone-binding globulin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D012744	Sex Ratio	skos:exactMatch	efo:0004820	sex ratio	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D012768	Shivering	skos:exactMatch	hp:0025144	Shivering	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D012769	Shock	skos:exactMatch	hp:0031273	Shock	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D012772	Shock, Septic	skos:exactMatch	ncit:C35018	Septic Shock	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8583,6 +8735,7 @@ mesh:D014796	Visual Perception	skos:exactMatch	go:0007601	visual perception	sema
 mesh:D014797	Vital Capacity	skos:exactMatch	efo:0004312	vital capacity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D014801	Vitamin A	skos:exactMatch	chebi:17336	all-trans-retinol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D014803	Vitamin B Complex	skos:exactMatch	chebi:75782	vitamin B complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D014803	Vitamin B Complex	skos:exactMatch	ncit:C940	Vitamin B Complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D014806	Vitamin B 12 Deficiency	skos:exactMatch	doid:0050731	vitamin B12 deficiency	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D014807	Vitamin D	skos:exactMatch	chebi:27300	vitamin D	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D014808	Vitamin D Deficiency	skos:exactMatch	efo:0003762	vitamin D deficiency	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
@@ -8611,6 +8764,7 @@ mesh:D015242	Ofloxacin	skos:exactMatch	chebi:7731	ofloxacin	semapv:ManualMapping
 mesh:D015251	Epirubicin	skos:exactMatch	chebi:47898	4'-epidoxorubicin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D015255	Idarubicin	skos:exactMatch	chebi:42068	idarubicin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D015266	Carcinoma, Merkel Cell	skos:exactMatch	doid:3965	Merkel cell carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D015269	Mycobacterium avium Complex	skos:exactMatch	ncit:C76368	Mycobacterium avium complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D015275	Tumor Lysis Syndrome	skos:exactMatch	efo:1001479	Tumor Lysis Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D015282	Octreotide	skos:exactMatch	chebi:7726	octreotide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D015283	Citalopram	skos:exactMatch	chebi:3723	citalopram	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -8657,6 +8811,7 @@ mesh:D016066	Pleural Effusion, Malignant	skos:exactMatch	ncit:C9432	Malignant Pl
 mesh:D016084	Bronchoconstriction	skos:exactMatch	efo:0009836	bronchoconstriction	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D016084	Bronchoconstriction	skos:exactMatch	hp:4000007	Bronchoconstriction	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D016084	Bronchoconstriction	skos:exactMatch	ncit:C40942	Bronchoconstriction	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D016182	Visna	skos:exactMatch	efo:0007542	visna	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D016190	Carboplatin	skos:exactMatch	chebi:31355	carboplatin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D016193	G1 Phase	skos:exactMatch	go:0051318	G1 phase	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D016195	G2 Phase	skos:exactMatch	go:0051319	G2 phase	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8858,6 +9013,7 @@ mesh:D018296	Pilomatrixoma	skos:exactMatch	efo:0009082	Pilomatrixoma	semapv:Manu
 mesh:D018303	Ganglioglioma	skos:exactMatch	hp:0033664	Ganglioglioma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D018308	Papilloma, Inverted	skos:exactMatch	ncit:C3793	Inverted Papilloma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D018312	Sex Cord-Gonadal Stromal Tumors	skos:exactMatch	doid:192	sex cord-gonadal stromal tumor	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D018322	Angiofibroma	skos:exactMatch	efo:1001761	Angiofibroma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D018329	Nevus, Blue	skos:exactMatch	ncit:C3803	Blue Nevus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D018335	Rhabdoid Tumor	skos:exactMatch	hp:0034557	Rhabdoid tumor	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D018335	Rhabdoid Tumor	skos:exactMatch	ncit:C3808	Rhabdoid Tumor	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -8877,6 +9033,7 @@ mesh:D018492	Dopamine Antagonists	skos:exactMatch	chebi:48561	dopaminergic antag
 mesh:D018522	Gravitropism	skos:exactMatch	go:0009630	gravitropism	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D018523	Tropism	skos:exactMatch	go:0009606	tropism	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D018524	Phototropism	skos:exactMatch	go:0009638	phototropism	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D018572	Disease-Free Survival	skos:exactMatch	efo:0000409	disease free survival	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D018655	Lymphocyte Count	skos:exactMatch	efo:0004587	lymphocyte count	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D018674	Adrenergic Antagonists	skos:exactMatch	chebi:37887	adrenergic antagonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D018674	Adrenergic Antagonists	skos:exactMatch	ncit:C72900	Adrenergic Antagonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -8891,12 +9048,17 @@ mesh:D018721	Muscarinic Agonists	skos:exactMatch	chebi:38325	muscarinic agonist	
 mesh:D018722	Nicotinic Agonists	skos:exactMatch	ncit:C73579	Nicotinic Agonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D018727	Muscarinic Antagonists	skos:exactMatch	chebi:48876	muscarinic antagonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D018733	Nicotinic Antagonists	skos:exactMatch	chebi:48878	nicotinic antagonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D018746	Systemic Inflammatory Response Syndrome	skos:exactMatch	efo:1001478	systemic inflammatory response syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D018755	GABA Agonists	skos:exactMatch	chebi:51373	GABA agonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D018756	GABA Antagonists	skos:exactMatch	chebi:65259	GABA antagonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D018757	GABA Modulators	skos:exactMatch	chebi:50268	GABA modulator	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D018784	Abdominal Abscess	skos:exactMatch	efo:1001753	abdominal abscess	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D018798	Anemia, Iron-Deficiency	skos:exactMatch	doid:11758	iron deficiency anemia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D018827	Carcinoma, Lewis Lung	skos:exactMatch	efo:1001770	Carcinoma, Lewis Lung	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D018869	Heat-Shock Response	skos:exactMatch	efo:0022044	heat shock response	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D018870	Endoplasmic Reticulum, Rough	skos:exactMatch	go:0005791	rough endoplasmic reticulum	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D018871	Endoplasmic Reticulum, Smooth	skos:exactMatch	go:0005790	smooth endoplasmic reticulum	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D018883	Heat Stroke	skos:exactMatch	efo:1001340	Heat Stroke	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D018919	Neovascularization, Physiologic	skos:exactMatch	go:0001525	angiogenesis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D018928	Immunity, Mucosal	skos:exactMatch	ncit:C17889	Mucosal Immunity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D018965	Frameshifting, Ribosomal	skos:exactMatch	go:0006452	translational frameshifting	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -8906,7 +9068,9 @@ mesh:D019047	Phantoms, Imaging	skos:exactMatch	ncit:C17892	Imaging Phantoms	sema
 mesh:D019065	Virus Assembly	skos:exactMatch	go:0019068	virion assembly	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019069	Cell Respiration	skos:exactMatch	go:0045333	cellular respiration	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D019108	Tight Junctions	skos:exactMatch	go:0070160	tight junction	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D019121	Burkholderia Infections	skos:exactMatch	efo:1001280	Burkholderia Infections	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D019145	Rehabilitation Nursing	skos:exactMatch	ncit:C17959	Rehabilitation Nursing	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D019152	Paracentesis	skos:exactMatch	efo:0030079	paracentesis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D019154	Protein Splicing	skos:exactMatch	go:0030908	protein splicing	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D019175	DNA Methylation	skos:exactMatch	go:0006306	DNA methylation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D019213	Rubulavirus	skos:exactMatch	ncit:C14326	Rubulavirus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8914,6 +9078,7 @@ mesh:D019251	Nucleocapsid	skos:exactMatch	go:0019013	viral nucleocapsid	semapv:M
 mesh:D019259	Lamivudine	skos:exactMatch	chebi:63577	lamivudine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019274	Botulinum Toxins, Type A	skos:exactMatch	chebi:3160	Botulinum toxin type A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019276	Glycocalyx	skos:exactMatch	go:0030112	glycocalyx	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D019315	Retrobulbar Hemorrhage	skos:exactMatch	efo:1001414	Retrobulbar Hemorrhage	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D019320	Embolism, Paradoxical	skos:exactMatch	hp:0033520	Paradoxical embolism	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D019346	Sodium Acetate	skos:exactMatch	chebi:32954	sodium acetate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019346	Sodium Acetate	skos:exactMatch	ncit:C47720	Sodium Acetate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -8924,6 +9089,9 @@ mesh:D019386	Alendronate	ro:0018033	chebi:2567	alendronic acid	semapv:ManualMapp
 mesh:D019438	Ritonavir	skos:exactMatch	chebi:45409	ritonavir	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019457	Chromosome Breakage	skos:exactMatch	go:0031052	chromosome breakage	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D019522	Vaginal Discharge	skos:exactMatch	efo:0009365	vaginal discharge	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D019545	Intuition	skos:exactMatch	efo:0004334	intuition	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D019557	Dermatitis, Perioral	skos:exactMatch	efo:1001305	Dermatitis, Perioral	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D019562	Viral Load	skos:exactMatch	efo:0010125	viral load	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D019584	Hot Flashes	skos:exactMatch	hp:0031217	Hot flashes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019591	Pseudophakia	skos:exactMatch	hp:0500081	Pseudophakia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019595	Severe Dengue	skos:exactMatch	doid:12206	dengue hemorrhagic fever	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
@@ -8932,6 +9100,7 @@ mesh:D019599	Mossy Fibers, Hippocampal	skos:exactMatch	go:0097457	hippocampal mo
 mesh:D019653	Myeloablative Agonists	skos:exactMatch	ncit:C1711	Myeloablative Agonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019706	Excitatory Postsynaptic Potentials	skos:exactMatch	go:0060079	excitatory postsynaptic potential	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D019772	Topotecan	skos:exactMatch	chebi:63632	topotecan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D019781	Corneal Topography	skos:exactMatch	efo:0004345	corneal topography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D019787	Linoleic Acid	skos:exactMatch	ncit:C615	Linoleic Acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019788	Fluorodeoxyglucose F18	skos:exactMatch	chebi:49134	2-deoxy-2-((18)F)fluoro-D-glucose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D019793	Fluorescein	skos:exactMatch	chebi:31624	fluorescein	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8952,20 +9121,29 @@ mesh:D019897	Periplasm	skos:exactMatch	go:0042597	periplasmic space	semapv:Manua
 mesh:D019898	Autocrine Communication	skos:exactMatch	go:0035425	autocrine signaling	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D019899	Paracrine Communication	skos:exactMatch	go:0038001	paracrine signaling	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D019905	Benzyl Alcohol	skos:exactMatch	chebi:17987	benzyl alcohol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D019954	Neurobehavioral Manifestations	skos:exactMatch	efo:0004364	neurobehavioral manifestations	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020018	Sexual Dysfunctions, Psychological	skos:exactMatch	doid:10132	psychosexual disorder	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D020024	Leukotriene Antagonists	skos:exactMatch	chebi:49159	leukotriene antagonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D020047	Rectocele	skos:exactMatch	efo:1001837	rectocele	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020090	Chromosome Segregation	skos:exactMatch	go:0007059	chromosome segregation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D020101	Acrosome Reaction	skos:exactMatch	go:0007340	acrosome reaction	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D020123	Sirolimus	skos:exactMatch	chebi:9168	sirolimus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D020151	Protein C Deficiency	skos:exactMatch	efo:0009316	protein c deficiency	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020160	Sodium Benzoate	skos:exactMatch	ncit:C66541	Sodium Benzoate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D020162	Hyperargininemia	skos:exactMatch	hp:0500153	Hyperargininemia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D020169	Caspases	skos:exactMatch	ncit:C18153	Caspase	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D020170	Caspase 1	skos:exactMatch	hgnc:1499	CASP1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D020176	Tyrosinemias	skos:exactMatch	doid:9275	tyrosinemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D020183	Nocturnal Paroxysmal Dystonia	skos:exactMatch	efo:1001381	Nocturnal Paroxysmal Dystonia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020188	Sleep Paralysis	skos:exactMatch	hp:0025233	Sleep paralysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D020203	Brain Stem Hemorrhage, Traumatic	skos:exactMatch	efo:1001276	Brain Stem Hemorrhage, Traumatic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D020210	Central Cord Syndrome	skos:exactMatch	efo:1001772	Central Cord Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D020211	Autonomic Dysreflexia	skos:exactMatch	efo:1001762	autonomic dysreflexia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020219	Chondrogenesis	skos:exactMatch	go:0051216	cartilage development	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D020237	Alexia, Pure	skos:exactMatch	doid:0060156	visual verbal agnosia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D020246	Venous Thrombosis	skos:exactMatch	efo:0003907	deep vein thrombosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D020249	Hormone Replacement Therapy	skos:exactMatch	efo:0003961	hormone replacement therapy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D020250	Postoperative Nausea and Vomiting	skos:exactMatch	efo:0004888	post operative nausea and vomiting	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020254	Tooth Ankylosis	skos:exactMatch	hp:0033791	Tooth ankylosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D020256	Choroidal Neovascularization	skos:exactMatch	hp:0011506	Choroidal neovascularization	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D020280	Sertraline	skos:exactMatch	chebi:9123	sertraline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -8974,6 +9152,7 @@ mesh:D020315	Latex Hypersensitivity	skos:exactMatch	hp:0500094	Latex allergy	sem
 mesh:D020323	Tics	skos:exactMatch	hp:0100033	Tics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D020358	Sodium Cholate	skos:exactMatch	chebi:26711	sodium cholate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D020423	Median Neuropathy	skos:exactMatch	doid:571	median neuropathy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D020430	Cubital Tunnel Syndrome	skos:exactMatch	efo:1001301	Cubital Tunnel Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020433	Trigeminal Nerve Diseases	skos:exactMatch	doid:561	trigeminal nerve disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D020435	Glossopharyngeal Nerve Diseases	skos:exactMatch	doid:3418	glossopharyngeal nerve disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D020439	Growth Cones	skos:exactMatch	go:0030426	growth cone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8982,9 +9161,16 @@ mesh:D020460	Melanosomes	skos:exactMatch	go:0042470	melanosome	semapv:ManualMapp
 mesh:D020522	Lymphoma, Mantle-Cell	skos:exactMatch	ncit:C4337	Mantle Cell Lymphoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D020524	Thylakoids	skos:exactMatch	go:0009579	thylakoid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D020541	Coiled Bodies	skos:exactMatch	go:0015030	Cajal body	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D020543	Proteome	skos:exactMatch	efo:0010579	proteome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D020567	Fetal Weight	skos:exactMatch	efo:0011045	fetal weight	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020675	Peroxisomes	skos:exactMatch	go:0005777	peroxisome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D020676	Glyoxysomes	skos:exactMatch	go:0009514	glyoxysome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D020786	Hemangioma, Cavernous, Central Nervous System	skos:exactMatch	efo:1001343	Hemangioma, Cavernous, Central Nervous System	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D020787	Central Nervous System Venous Angioma	skos:exactMatch	efo:1001774	central nervous system venous angioma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020799	Pancrelipase	skos:exactMatch	ncit:C29345	Pancrelipase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D020804	Encephalitis, Varicella Zoster	skos:exactMatch	efo:1001310	Encephalitis, Varicella Zoster	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D020809	Central Nervous System Helminthiasis	skos:exactMatch	efo:1001773	Central Nervous System Helminthiasis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D020819	Perimeningeal Infections	skos:exactMatch	efo:1001392	Perimeningeal Infections	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D020845	Selective Estrogen Receptor Modulators	skos:exactMatch	ncit:C1821	Selective Estrogen Receptor Modulator	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D020847	Estrogen Receptor Modulators	skos:exactMatch	chebi:50739	estrogen receptor modulator	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D020868	Gene Silencing	skos:exactMatch	go:0016458	gene silencing	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -8994,6 +9180,7 @@ mesh:D020910	Ketorolac	skos:exactMatch	chebi:6129	ketorolac	semapv:ManualMapping
 mesh:D020911	Ketorolac Tromethamine	skos:exactMatch	chebi:6130	ketorolac tromethamine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D020927	Dexmedetomidine	skos:exactMatch	chebi:4466	dexmedetomidine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D020942	Shiitake Mushrooms	skos:exactMatch	ncit:C72008	Shiitake Mushroom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D020945	Lupus Vasculitis, Central Nervous System	skos:exactMatch	efo:1001363	Lupus Vasculitis, Central Nervous System	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D021181	Egg Hypersensitivity	skos:exactMatch	hp:0410328	Egg allergy	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	
 mesh:D021184	Nut Hypersensitivity	skos:exactMatch	hp:0410331	Nut food product allergy	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py	
 mesh:D021381	Protein Transport	skos:exactMatch	go:0015031	protein transport	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -9030,6 +9217,7 @@ mesh:D029597	Romano-Ward Syndrome	skos:exactMatch	doid:0110644	long QT syndrome 
 mesh:D030361	Papillomavirus Infections	skos:exactMatch	efo:0001668	human papilloma virus infection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D030762	Estrous Cycle	skos:exactMatch	go:0044849	estrous cycle	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D031300	Retinal Vasculitis	skos:exactMatch	hp:0025188	Retinal vasculitis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D031368	Zoster Sine Herpete	skos:exactMatch	efo:1001453	Zoster Sine Herpete	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D031425	Plasmodesmata	skos:exactMatch	go:0009506	plasmodesma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D032961	Sperm Midpiece	skos:exactMatch	go:0097225	sperm midpiece	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D033461	Hyperuricemia	skos:exactMatch	efo:0009104	hyperuricemia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -9038,12 +9226,19 @@ mesh:D034381	Hearing Loss	skos:exactMatch	ncit:C35731	Hearing Loss	semapv:Manual
 mesh:D034443	RNA Transport	skos:exactMatch	go:0050658	RNA transport	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D034461	Luteinization	skos:exactMatch	go:0001553	luteinization	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D034622	RNA Interference	skos:exactMatch	go:0016246	RNA interference	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D034743	RNA-Induced Silencing Complex	skos:exactMatch	go:0016442	RISC complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D034801	Mastocytoma	skos:exactMatch	doid:3664	mast cell neoplasm	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D034861	Abdominal Wall	skos:exactMatch	ncit:C77608	Abdominal Wall	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D034881	Nuclear Lamina	skos:exactMatch	go:0005652	nuclear lamina	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D036801	Parturition	skos:exactMatch	go:0007567	parturition	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D036881	Long-Term Synaptic Depression	skos:exactMatch	go:0060292	long-term synaptic depression	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D037061	Metatarsalgia	skos:exactMatch	efo:1001370	metatarsalgia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D037801	Hammer Toe Syndrome	skos:exactMatch	efo:1001336	Hammer Toe Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D038223	Post-Concussion Syndrome	skos:exactMatch	efo:1001827	post-concussion syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D038642	Shaken Baby Syndrome	skos:exactMatch	efo:1001423	Shaken Baby Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+mesh:D039682	HIV-Associated Lipodystrophy Syndrome	skos:exactMatch	efo:1001348	HIV-Associated Lipodystrophy Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D039921	Neuropilins	skos:exactMatch	fplx:Neuropilins	Neuropilins	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
+mesh:D041881	Cholecystitis, Acute	skos:exactMatch	efo:1001289	Cholecystitis, Acute	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D042003	DNA Packaging	skos:exactMatch	go:0006323	DNA packaging	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D042583	Lymphangiogenesis	skos:exactMatch	go:0001946	lymphangiogenesis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D042863	Cyclin-Dependent Kinase 9	skos:exactMatch	hgnc:1780	CDK9	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -9059,6 +9254,7 @@ mesh:D043963	Diverticulosis, Colonic	skos:exactMatch	ncit:C34551	Colonic Diverti
 mesh:D044004	Xanthones	skos:exactMatch	chebi:51149	xanthones	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D044045	Lipoxins	skos:exactMatch	chebi:6497	lipoxin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D044062	Prostaglandins I	skos:exactMatch	chebi:26345	prostaglandins I	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D044225	Piscirickettsiaceae Infections	skos:exactMatch	efo:1001397	Piscirickettsiaceae Infections	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D044243	Linoleic Acids, Conjugated	skos:exactMatch	chebi:61159	conjugated linoleic acid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D044262	Prostaglandin H2	skos:exactMatch	chebi:15554	prostaglandin H2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D044503	5-Methylcytosine	skos:exactMatch	chebi:27551	5-methylcytosine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -9073,6 +9269,7 @@ mesh:D045331	Photosystem I Protein Complex	skos:exactMatch	go:0009538	photosyste
 mesh:D045332	Photosystem II Protein Complex	skos:exactMatch	go:0009539	photosystem II reaction center	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D045346	Cytochrome b6f Complex	skos:exactMatch	go:0009512	cytochrome b6f complex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D045403	Henipavirus	skos:exactMatch	ncit:C112290	Henipavirus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D045422	Continuous Positive Airway Pressure	skos:exactMatch	efo:0010719	continuous positive airway pressure	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D045473	SARS Virus	skos:exactMatch	ncit:C112432	SARS Coronavirus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D045524	Phycobilisomes	skos:exactMatch	go:0030089	phycobilisome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D045586	Intranuclear Inclusion Bodies	skos:exactMatch	go:0042405	nuclear inclusion body	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -9080,9 +9277,12 @@ mesh:D045663	Quantum Dots	skos:exactMatch	ncit:C62378	Quantum Dot	semapv:ManualM
 mesh:D045725	Tetrapyrroles	skos:exactMatch	chebi:26932	tetrapyrrole	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D045728	Corrinoids	skos:exactMatch	chebi:33913	corrinoid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D045782	Hemiterpenes	skos:exactMatch	chebi:35188	hemiterpene	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D045826	Flavobacteriaceae Infections	skos:exactMatch	efo:1001327	Flavobacteriaceae Infections	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D046148	Donor Selection	skos:exactMatch	go:0007535	donor selection	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D046151	Lingual Thyroid	skos:exactMatch	efo:1001803	lingual thyroid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D046249	Transfer RNA Aminoacylation	skos:exactMatch	go:0043039	tRNA aminoacylation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D046449	Hernia, Abdominal	skos:exactMatch	ncit:C98700	Abdominal Hernia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D046548	Pubic Symphysis Diastasis	skos:exactMatch	efo:1001833	Pubic Symphysis Diastasis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D046608	Synkinesis	skos:exactMatch	hp:0034980	Synkinesis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D046768	Nesidioblastosis	skos:exactMatch	hp:0034346	Nesidioblastosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D046934	Ginkgolides	skos:exactMatch	chebi:136909	ginkgolide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -9098,6 +9298,7 @@ mesh:D047428	Protein Kinase Inhibitors	skos:exactMatch	chebi:37699	protein kinas
 mesh:D047630	Depsipeptides	skos:exactMatch	chebi:23643	depsipeptide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D047708	Myofibroma	skos:exactMatch	ncit:C7052	Myofibroma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D047728	Myopia, Degenerative	skos:exactMatch	doid:11829	degenerative myopia	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
+mesh:D047928	Premature Birth	skos:exactMatch	efo:0003917	premature birth	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D047928	Premature Birth	skos:exactMatch	ncit:C92861	Preterm Birth	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D048271	Chitosan	skos:exactMatch	chebi:16261	chitosan	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D048288	Imidazolines	skos:exactMatch	chebi:53095	imidazolines	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -9120,12 +9321,15 @@ mesh:D049109	Cell Proliferation	skos:exactMatch	go:0008283	cell population proli
 mesh:D049229	Dendritic Spines	skos:exactMatch	go:0043197	dendritic spine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D049309	Acanthoma	skos:exactMatch	hp:0025432	Acanthoma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D049469	Meiotic Prophase I	skos:exactMatch	go:0007128	meiotic prophase I	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D049629	Waist-Hip Ratio	skos:exactMatch	efo:0004343	waist-hip ratio	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D049934	Isocoumarins	skos:exactMatch	chebi:38758	isocoumarins	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D049970	Graves Ophthalmopathy	skos:exactMatch	efo:1001466	Graves ophthalmopathy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D049971	Thiazides	skos:exactMatch	chebi:50264	thiazide	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D049990	Membrane Transport Modulators	skos:exactMatch	chebi:38632	membrane transport modulator	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D050071	Bone Density Conservation Agents	skos:exactMatch	chebi:50646	bone density conservation agent	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D050177	Overweight	skos:exactMatch	hp:0025502	Overweight	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D050197	Atherosclerosis	skos:exactMatch	ncit:C35768	Atherosclerosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D050218	Body Fat Distribution	skos:exactMatch	efo:0004341	body fat distribution	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D050256	Antimitotic Agents	skos:exactMatch	chebi:64911	antimitotic	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D050257	Tubulin Modulators	skos:exactMatch	chebi:60832	tubulin modulator	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D050261	Glycogenolysis	skos:exactMatch	go:0005980	glycogen catabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
@@ -9163,13 +9367,16 @@ mesh:D052578	Ionic Liquids	skos:exactMatch	chebi:63895	ionic liquid	semapv:Manua
 mesh:D052858	Cystocele	skos:exactMatch	hp:0100645	Cystocele	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D052878	Urolithiasis	skos:exactMatch	doid:0080653	urolithiasis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D052878	Urolithiasis	skos:exactMatch	hp:0034368	Urolithiasis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
+mesh:D052879	Subacute Combined Degeneration	skos:exactMatch	efo:1001428	Subacute Combined Degeneration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D052958	Tarlov Cysts	skos:exactMatch	hp:0025643	Tarlov cyst	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
 mesh:D052998	Microcystins	skos:exactMatch	chebi:48041	microcystin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D053038	Quorum Sensing	skos:exactMatch	go:0009372	quorum sensing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:D053040	Nephrolithiasis	skos:exactMatch	doid:585	nephrolithiasis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:D053119	Benzophenanthridines	skos:exactMatch	chebi:38518	benzophenanthridine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D053120	Respiratory Aspiration	skos:exactMatch	efo:1001839	respiratory aspiration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D053139	Oseltamivir	skos:exactMatch	chebi:7798	oseltamivir	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D053148	Caspase 3	skos:exactMatch	hgnc:1504	CASP3	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D053159	Dysuria	skos:exactMatch	efo:0003901	dysuria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D053178	Caspase 6	skos:exactMatch	hgnc:1507	CASP6	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D053179	Caspase 7	skos:exactMatch	hgnc:1508	CASP7	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D053181	Caspase 8	skos:exactMatch	hgnc:1509	CASP8	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -9286,10 +9493,13 @@ mesh:D054876	Prenylation	skos:exactMatch	go:0097354	prenylation	semapv:ManualMap
 mesh:D054883	Oxylipins	skos:exactMatch	chebi:61121	oxylipin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D054972	Postural Orthostatic Tachycardia Syndrome	skos:exactMatch	doid:0111154	postural orthostatic tachycardia syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:D054974	Costameres	skos:exactMatch	go:0043034	costamere	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:D054989	Nephrogenic Fibrosing Dermopathy	skos:exactMatch	efo:1001814	nephrogenic fibrosing dermopathy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D054990	Idiopathic Pulmonary Fibrosis	skos:exactMatch	ncit:C35716	Idiopathic Pulmonary Fibrosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D054992	Immunological Synapses	skos:exactMatch	go:0001772	immunological synapse	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D055008	Anthracosis	skos:exactMatch	hp:0033375	Anthracosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	generate_hp_mesh_mappings.py	
+mesh:D055035	Spinal Osteochondrosis	skos:exactMatch	efo:0008576	Spinal Osteochondrosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D055049	Salt Tolerance	skos:exactMatch	go:0042538	hyperosmotic salinity response	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+mesh:D055070	Resistance Training	skos:exactMatch	efo:0600037	resistance training	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:D055090	Tracheomalacia	skos:exactMatch	doid:0060313	tracheomalacia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:D055092	Laryngomalacia	skos:exactMatch	ncit:C98971	Laryngomalacia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D055105	Waist Circumference	skos:exactMatch	efo:0004342	waist circumference	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346	https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
@@ -9865,7 +10075,9 @@ mesh:D066270	Social Capital	skos:exactMatch	ncit:C93209	Social Capital	semapv:Ma
 mesh:D066271	External Capsule	skos:exactMatch	ncit:C32550	External Capsule	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D066292	Lipid Droplets	skos:exactMatch	go:0005811	lipid droplet	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D066293	Renshaw Cells	skos:exactMatch	ncit:C33463	Renshaw Cell	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+modalia:License	license	skos:exactMatch	vivo:License	License	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 modalia:Researcher	researcher	skos:exactMatch	t4fs:0000220	researcher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+modalia:hasTranslation	has translation	skos:exactMatch	vivo:hasTranslation	has translation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mondo:0000158	developmental dysplasia of the hip	skos:exactMatch	mesh:D000082602	Developmental Dysplasia of the Hip	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mondo:0000239	adiaspiromycosis	skos:exactMatch	mesh:C000656784	adiaspiromycosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mondo:0000242	tinea barbae	skos:exactMatch	mesh:C000656825	tinea barbae	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -10103,6 +10315,16 @@ oae:0002495	dialysis	skos:exactMatch	obi:0600052	dialysis	semapv:ManualMappingCu
 oae:0004232	physical examination	skos:exactMatch	maxo:0000527	physical examination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 oae:0004372	ulcer	skos:exactMatch	mpath:579	ulcer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 obi:0000719	vaccine preparation	skos:exactMatch	vo:0000590	vaccine preparation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+oeo:00000007	chemical energy	skos:exactMatch	envo:2000023	chemical energy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000031	power plant	skos:exactMatch	envo:00002214	power plant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000042	waste role	skos:exactMatch	envo:01000665	waste role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000054	air	skos:exactMatch	envo:00002005	air	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000055	air pollution	skos:exactMatch	envo:02500037	air pollution	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000074	biogas	skos:exactMatch	envo:01000556	biogas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000084	charcoal	skos:exactMatch	envo:01000560	charcoal	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000088	coal	skos:exactMatch	envo:02000091	coal	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000089	coal power plant	skos:exactMatch	envo:2000038	coal power plant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000117	dam	skos:exactMatch	envo:00000074	dam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 pfam:PF01391	Collagen	skos:exactMatch	mesh:D003094	Collagen	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 pr:000001757	nuclear factor NF-kappa-B p50 subunit	skos:exactMatch	uniprot.chain:PRO_0000030311	Nuclear factor NF-kappa-B p50 subunit	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 pr:000002439	BH3-interacting domain death agonist isoform 1 cleaved 1	skos:exactMatch	uniprot.chain:PRO_0000223233	BH3-interacting domain death agonist p15	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -10436,6 +10658,8 @@ reactome:R-SCE-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go
 reactome:R-SPO-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 reactome:R-SSC-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 reactome:R-XTR-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+schema:Book	Book	skos:exactMatch	t4fs:0000305	book	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+schema:Dataset	Dataset	skos:exactMatch	t4fs:0000347	dataset	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 uberon:0000017	exocrine pancreas	skos:exactMatch	mesh:D046790	Pancreas, Exocrine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 uberon:0000076	external ectoderm	skos:exactMatch	bto:0006242	external ectoderm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_uberon_bto_mappings.py	
 uberon:0000105	life cycle stage	skos:exactMatch	mesh:D008018	Life Cycle Stages	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
