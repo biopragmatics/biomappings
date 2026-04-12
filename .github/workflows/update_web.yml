@@ -3,19 +3,19 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - main
     paths:
-      - 'src/biomappings/resources/*.sssom.tsv'
+      - "src/biomappings/resources/*.sssom.tsv"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
           python-version: "3.14"
       - name: Install dependencies
@@ -23,13 +23,16 @@ jobs:
           pip install tox tox-uv
       - name: Create local changes
         run: tox -e update
+        env:
+          NDEX_USERNAME: ${{ secrets.NDEX_USERNAME }}
+          NDEX_PASSWORD: ${{ secrets.NDEX_PASSWORD }}
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "🗺️ Update summaries" -a
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@4cc74773234f74829a8c21bc4d69dd4be9cfa599 # v1.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}

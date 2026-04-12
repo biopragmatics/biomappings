@@ -49,12 +49,12 @@ The data are available through the following four files on the
 [biopragmatics/biomappings](https://github.com/biopragmatics/biomappings) GitHub
 repository.
 
-| Curated | Description                                                  | Link                                                                                                                                                         |
-| ------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Yes     | Human-curated true mappings                                  | [`src/biomappings/resources/positive.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/positive.sssom.tsv)       |
-| Yes     | Human-curated _non-trivial_ false (i.e., incorrect) mappings | [`src/biomappings/resources/negative.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/negative.sssom.tsv)       |
-| Yes     | Mappings that have been checked but not yet decided          | [`src/biomappings/resources/unsure.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/unsure.sssom.tsv)           |
-| No      | Automatically predicted mappings                             | [`src/biomappings/resources/predictions.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/master/src/biomappings/resources/predictions.sssom.tsv) |
+| Curated | Description                                                  | Link                                                                                                                                                       |
+| ------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Yes     | Human-curated true mappings                                  | [`src/biomappings/resources/positive.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/main/src/biomappings/resources/positive.sssom.tsv)       |
+| Yes     | Human-curated _non-trivial_ false (i.e., incorrect) mappings | [`src/biomappings/resources/negative.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/main/src/biomappings/resources/negative.sssom.tsv)       |
+| Yes     | Mappings that have been checked but not yet decided          | [`src/biomappings/resources/unsure.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/main/src/biomappings/resources/unsure.sssom.tsv)           |
+| No      | Automatically predicted mappings                             | [`src/biomappings/resources/predictions.sssom.tsv`](https://github.com/biopragmatics/biomappings/raw/main/src/biomappings/resources/predictions.sssom.tsv) |
 
 The primary and derived data in this repository are both available under the
 [CC0 1.0 Universal License](https://github.com/biopragmatics/biomappings/blob/master/LICENSE).

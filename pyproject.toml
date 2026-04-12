@@ -60,7 +60,7 @@ dependencies = [
     "tqdm",
     "curies>=0.13.0",
     "bioregistry>=0.13.0",
-    "sssom-pydantic>=0.4.1",
+    "sssom-pydantic>=0.4.2",
     "sssom-curator[web]>=0.3.1",
 ]
 
