@@ -17,6 +17,7 @@ curie_map:
   ENVO: http://purl.obolibrary.org/obo/ENVO_
   FMA: http://purl.obolibrary.org/obo/FMA_
   GO: http://purl.obolibrary.org/obo/GO_
+  GSSO: http://purl.obolibrary.org/obo/GSSO_
   HP: http://purl.obolibrary.org/obo/HP_
   IAO: http://purl.obolibrary.org/obo/IAO_
   IDO: http://purl.obolibrary.org/obo/IDO_
@@ -33,6 +34,7 @@ curie_map:
   NCIT: http://purl.obolibrary.org/obo/NCIT_
   OAE: http://purl.obolibrary.org/obo/OAE_
   OBI: http://purl.obolibrary.org/obo/OBI_
+  OEO: https://openenergyplatform.org/ontology/oeo/OEO_
   OGG: http://purl.obolibrary.org/obo/OGG_
   OGMS: http://purl.obolibrary.org/obo/OGMS_
   OPMI: http://purl.obolibrary.org/obo/OPMI_
@@ -41,11 +43,15 @@ curie_map:
   PR: http://purl.obolibrary.org/obo/PR_
   RO: http://purl.obolibrary.org/obo/RO_
   STATO: http://purl.obolibrary.org/obo/STATO_
+  T4FS: http://purl.obolibrary.org/obo/T4FS_
   UBERON: http://purl.obolibrary.org/obo/UBERON_
   VO: http://purl.obolibrary.org/obo/VO_
+  adcad: https://purl.dataone.org/odo/ADCAD_
   agrovoc: http://aims.fao.org/aos/agrovoc/
   aio: https://w3id.org/aio/
+  ans.educationlevel: http://purl.org/ASN/scheme/ASNEducationLevel/
   ccle: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
+  ccso: https://w3id.org/ccso/ccso#
   cellosaurus: https://www.cellosaurus.org/CVCL_
   cemo: https://biopragmatics.github.io/providers/cemo/
   commoncoreontology: http://www.ontologyrepository.com/CommonCoreOntologies/
@@ -58,13 +64,20 @@ curie_map:
   fplx: https://sorgerlab.github.io/famplex/
   goldbook: http://dx.doi.org/10.1351/goldbook.
   hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
+  iana.mediatype: https://www.iana.org/assignments/media-types/
   iconclass: https://iconclass.org/
   idocovid19: http://purl.obolibrary.org/obo/COVIDO_
   interpro: http://purl.obolibrary.org/obo/IPR_
+  isced2013: https://w3id.org/kim/isced-2013/
   ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
   kegg.pathway: https://www.kegg.jp/pathway/
   kestrelo: http://purl.obolibrary.org/obo/kestrelo_
+  kim.educationlevel: https://w3id.org/kim/educationalLevel/level_
+  kim.esv: https://w3id.org/class/sectors/
+  kim.hcrt: https://w3id.org/kim/hcrt/
+  lrmi: http://purl.org/dcx/lrmi-terms/
   mesh: http://id.nlm.nih.gov/mesh/
+  modalia: https://purl.org/ontology/modalia#
   ndfrt: http://purl.bioontology.org/ontology/NDFRT/
   obo: http://purl.obolibrary.org/obo/
   oboInOwl: http://www.geneontology.org/formats/oboInOwl#
@@ -72,13 +85,16 @@ curie_map:
   pfam: https://www.ebi.ac.uk/interpro/entry/pfam/
   pubchem.compound: http://rdf.ncbi.nlm.nih.gov/pubchem/compound/CID
   reactome: https://reactome.org/content/detail/
+  schema: https://schema.org/
   semapv: https://w3id.org/semapv/vocab/
   skos: http://www.w3.org/2004/02/skos/core#
   umls: https://uts.nlm.nih.gov/uts/umls/concept/
   uniprot: http://purl.uniprot.org/uniprot/
   uniprot.chain: http://purl.uniprot.org/annotation/
   vido: http://purl.obolibrary.org/obo/VIDO_
+  vivo: http://vivoweb.org/ontology/core#
   vsmo: http://purl.obolibrary.org/obo/VSMO_
+  wikidata: http://www.wikidata.org/entity/
   wikipathways: http://identifiers.org/wikipathways/
 issue_tracker: https://github.com/biopragmatics/bioregistry/issues
 license: https://creativecommons.org/publicdomain/zero/1.0/
@@ -88,4 +104,4 @@ mapping_set_description: Biomappings is a repository of community curated and pr
   of predicted mappings or their own novel mappings.
 mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv
 mapping_set_title: Biomappings
-mapping_set_version: 0.5.0-dev-528eae3f
+mapping_set_version: 0.5.0-dev-217c1d14

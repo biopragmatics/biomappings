@@ -1,11 +1,11 @@
 contributors:
-- count: 5933
+- count: 5922
   name: Ben Gyori
   orcid: 0000-0001-9439-5346
-- count: 5111
+- count: 5321
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
-- count: 1695
+- count: 1670
   name: Amelia Hoyt
   orcid: 0000-0003-1307-2508
 - count: 216
@@ -14,7 +14,7 @@ contributors:
 - count: 162
   name: Krishna Udaiwal
   orcid: 0000-0002-2627-0696
-- count: 25
+- count: 20
   name: Sumir Pandit
   orcid: 0000-0002-1216-4761
 - count: 1
@@ -64,6 +64,9 @@ negative:
   source: cl
   target: mesh
 - count: 38
+  source: hgnc
+  target: mesh
+- count: 38
   source: ncbitaxon
   target: pfam
 - count: 36
@@ -77,9 +80,6 @@ negative:
   target: iconclass
 - count: 29
   source: efo
-  target: mesh
-- count: 25
-  source: hgnc
   target: mesh
 - count: 21
   source: chmo
@@ -159,6 +159,9 @@ negative:
 - count: 4
   source: cvx
   target: vo
+- count: 4
+  source: iana.mediatype
+  target: schema
 - count: 3
   source: bto
   target: cl
@@ -168,6 +171,9 @@ negative:
 - count: 3
   source: ito
   target: mi
+- count: 3
+  source: envo
+  target: oeo
 - count: 3
   source: doid
   target: reactome
@@ -189,6 +195,9 @@ negative:
 - count: 2
   source: cvx
   target: mesh
+- count: 2
+  source: chmo
+  target: goldbook
 - count: 2
   source: hp
   target: ncbitaxon
@@ -220,6 +229,9 @@ negative:
   source: ccle
   target: depmap
 - count: 1
+  source: ccso
+  target: gsso
+- count: 1
   source: cl
   target: ncbitaxon
 - count: 1
@@ -241,6 +253,9 @@ negative:
   source: idomal
   target: maxo
 - count: 1
+  source: go
+  target: idomal
+- count: 1
   source: idomal
   target: ogms
 - count: 1
@@ -259,6 +274,9 @@ negative:
   source: ito
   target: pfam
 - count: 1
+  source: schema
+  target: t4fs
+- count: 1
   source: mesh
   target: umls
 - count: 1
@@ -267,30 +285,30 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1789
-negative_prefix_count: 48
+negative_mapping_count: 1814
+negative_prefix_count: 55
 positive:
-- count: 3395
+- count: 3462
   source: chebi
   target: mesh
-- count: 1502
+- count: 1504
   source: doid
   target: mesh
-- count: 922
+- count: 925
   source: mesh
   target: ncit
 - count: 570
   source: ccle
   target: efo
-- count: 449
+- count: 456
   source: go
+  target: mesh
+- count: 442
+  source: efo
   target: mesh
 - count: 387
   source: mesh
   target: uniprot
-- count: 383
-  source: efo
-  target: mesh
 - count: 366
   source: go
   target: wikipathways
@@ -303,7 +321,7 @@ positive:
 - count: 222
   source: go
   target: reactome
-- count: 190
+- count: 193
   source: doid
   target: umls
 - count: 172
@@ -354,6 +372,9 @@ positive:
 - count: 54
   source: bto
   target: uberon
+- count: 48
+  source: chmo
+  target: goldbook
 - count: 47
   source: cvx
   target: vo
@@ -378,6 +399,9 @@ positive:
 - count: 23
   source: fplx
   target: mesh
+- count: 22
+  source: adcad
+  target: gsso
 - count: 19
   source: cpt
   target: mesh
@@ -421,20 +445,26 @@ positive:
   source: idomal
   target: vo
 - count: 10
+  source: go
+  target: idomal
+- count: 10
+  source: envo
+  target: oeo
+- count: 10
   source: wikipathways
   target: wikipathways
 - count: 9
   source: chebi
   target: ido
-- count: 9
-  source: go
-  target: idomal
 - count: 8
   source: cpt
   target: vo
 - count: 8
   source: mesh
   target: reactome
+- count: 7
+  source: ccso
+  target: vivo
 - count: 6
   source: apollosv
   target: idomal
@@ -463,6 +493,9 @@ positive:
   source: ccle
   target: depmap
 - count: 4
+  source: gsso
+  target: vivo
+- count: 4
   source: doid
   target: idomal
 - count: 4
@@ -471,6 +504,12 @@ positive:
 - count: 4
   source: pr
   target: vo
+- count: 3
+  source: ans.educationlevel
+  target: schema
+- count: 3
+  source: ccso
+  target: schema
 - count: 3
   source: cellosaurus
   target: clo
@@ -496,6 +535,9 @@ positive:
   source: bto
   target: ccle
 - count: 2
+  source: ccso
+  target: modalia
+- count: 2
   source: cemo
   target: ncit
 - count: 2
@@ -511,8 +553,14 @@ positive:
   source: idomal
   target: obi
 - count: 2
+  source: modalia
+  target: vivo
+- count: 2
   source: hp
   target: oae
+- count: 2
+  source: schema
+  target: t4fs
 - count: 2
   source: chebi
   target: vo
@@ -535,8 +583,11 @@ positive:
   source: apollosv
   target: oboinowl
 - count: 1
-  source: chmo
-  target: goldbook
+  source: ccso
+  target: t4fs
+- count: 1
+  source: ccso
+  target: gsso
 - count: 1
   source: cido
   target: idomal
@@ -585,6 +636,9 @@ positive:
 - count: 1
   source: kestrelo
   target: vo
+- count: 1
+  source: modalia
+  target: t4fs
 - count: 1
   source: dron
   target: oae
@@ -636,31 +690,31 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 11251
-positive_prefix_count: 66
+positive_mapping_count: 11498
+positive_prefix_count: 75
 predictions:
-- count: 22704
+- count: 22637
   source: chebi
   target: mesh
-- count: 11716
+- count: 11713
   source: mesh
   target: ncit
 - count: 10961
   source: mesh
   target: uniprot
-- count: 2692
+- count: 2679
   source: hgnc
   target: mesh
-- count: 2339
+- count: 2336
   source: doid
   target: umls
 - count: 1685
   source: wikipathways
   target: wikipathways
-- count: 533
+- count: 483
   source: chmo
   target: goldbook
-- count: 376
+- count: 317
   source: efo
   target: mesh
 - count: 316
@@ -669,17 +723,20 @@ predictions:
 - count: 205
   source: fplx
   target: mesh
-- count: 187
+- count: 185
   source: doid
   target: mesh
-- count: 71
-  source: go
-  target: mesh
+- count: 93
+  source: envo
+  target: oeo
 - count: 68
   source: mesh
   target: uberon
 - count: 66
   source: maxo
+  target: mesh
+- count: 64
+  source: go
   target: mesh
 - count: 55
   source: mesh
@@ -693,15 +750,27 @@ predictions:
 - count: 29
   source: clo
   target: efo
-- count: 9
+- count: 25
+  source: schema
+  target: vivo
+- count: 7
+  source: gsso
+  target: schema
+- count: 7
   source: go
   target: idomal
 - count: 6
   source: cellosaurus
   target: clo
+- count: 6
+  source: gsso
+  target: iana.mediatype
 - count: 5
   source: clo
   target: mesh
+- count: 5
+  source: gsso
+  target: vivo
 - count: 5
   source: doid
   target: idomal
@@ -711,9 +780,21 @@ predictions:
 - count: 4
   source: idomal
   target: ncbitaxon
+- count: 4
+  source: kim.hcrt
+  target: vivo
+- count: 4
+  source: kim.hcrt
+  target: schema
+- count: 3
+  source: gsso
+  target: modalia
 - count: 3
   source: idomal
   target: pr
+- count: 3
+  source: isced2013
+  target: schema
 - count: 2
   source: ido
   target: pato
@@ -729,6 +810,30 @@ predictions:
 - count: 2
   source: idomal
   target: obo
+- count: 2
+  source: kim.hcrt
+  target: t4fs
+- count: 2
+  source: lrmi
+  target: schema
+- count: 2
+  source: modalia
+  target: schema
+- count: 2
+  source: t4fs
+  target: vivo
+- count: 1
+  source: ccso
+  target: gsso
+- count: 1
+  source: gsso
+  target: t4fs
+- count: 1
+  source: iana.mediatype
+  target: modalia
+- count: 1
+  source: iana.mediatype
+  target: vivo
 - count: 1
   source: go
   target: ido
@@ -756,8 +861,17 @@ predictions:
 - count: 1
   source: idomal
   target: ncit
-predictions_mapping_count: 54150
-predictions_prefix_count: 31
+- count: 1
+  source: kim.educationlevel
+  target: vivo
+- count: 1
+  source: kim.esv
+  target: schema
+- count: 1
+  source: kim.esv
+  target: vivo
+predictions_mapping_count: 54109
+predictions_prefix_count: 45
 unsure:
 - count: 27
   source: doid
@@ -835,6 +949,9 @@ unsure:
   source: envo
   target: ncbitaxon
 - count: 1
+  source: chmo
+  target: goldbook
+- count: 1
   source: doid
   target: ido
 - count: 1
@@ -850,6 +967,9 @@ unsure:
   source: hgnc
   target: mesh
 - count: 1
+  source: modalia
+  target: vivo
+- count: 1
   source: drugbank
   target: vo
 - count: 1
@@ -858,5 +978,5 @@ unsure:
 - count: 1
   source: pr
   target: vo
-unsure_mapping_count: 103
-unsure_prefix_count: 30
+unsure_mapping_count: 105
+unsure_prefix_count: 34
