@@ -5,6 +5,7 @@
 #  bto: http://purl.obolibrary.org/obo/BTO_
 #  caro: http://purl.obolibrary.org/obo/CARO_
 #  ccle: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
+#  ccso: https://w3id.org/ccso/ccso#
 #  cellosaurus: https://www.cellosaurus.org/CVCL_
 #  chebi: http://purl.obolibrary.org/obo/CHEBI_
 #  chmo: http://purl.obolibrary.org/obo/CHMO_
@@ -21,8 +22,10 @@
 #  fplx: https://sorgerlab.github.io/famplex/
 #  go: http://purl.obolibrary.org/obo/GO_
 #  goldbook: https://goldbook.iupac.org/terms/view/
+#  gsso: http://purl.obolibrary.org/obo/GSSO_
 #  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
 #  hp: http://purl.obolibrary.org/obo/HP_
+#  iana.mediatype: https://www.iana.org/assignments/media-types/
 #  iconclass: https://iconclass.org/
 #  ido: http://purl.obolibrary.org/obo/IDO_
 #  idomal: http://purl.obolibrary.org/obo/IDOMAL_
@@ -46,6 +49,7 @@
 #  pfam: https://www.ebi.ac.uk/interpro/entry/pfam/
 #  pr: http://purl.obolibrary.org/obo/PR_
 #  reactome: https://reactome.org/content/detail/
+#  schema: https://schema.org/
 #  semapv: https://w3id.org/semapv/vocab/
 #  skos: http://www.w3.org/2004/02/skos/core#
 #  uberon: http://purl.obolibrary.org/obo/UBERON_
@@ -154,6 +158,7 @@ ccle:SH4_SKIN	SH-4	skos:exactMatch	Not	cellosaurus:C724	SSMUe004-A	semapv:Manual
 ccle:TC71_BONE	TC-71	skos:exactMatch	Not	cellosaurus:S882	TC71	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 ccle:TE15_OESOPHAGUS	TE-15	skos:exactMatch	Not	cellosaurus:F780	TE15	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 ccle:WM239A	WM239A	skos:exactMatch	Not	cellosaurus:RN56	WM239B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccso:Discipline	Discipline	skos:exactMatch	Not	gsso:001304	discipline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 chebi:10057	9H-xanthene	skos:exactMatch	Not	mesh:C002563	xanthan gum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:134126	picrotoxin	skos:exactMatch	Not	mesh:D031605	Cocculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_chebi_mesh_mappings.py	
 chebi:135025	rimazolium	skos:exactMatch	Not	mesh:C100296	probon	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -606,6 +611,10 @@ goldbook:S05965	stem	skos:exactMatch	Not	chmo:0000086	scanning transmission elec
 goldbook:S05965	stem	skos:exactMatch	Not	chmo:0002649	scanning transmission electron microscope	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-11
 hp:0000001	All	skos:exactMatch	Not	ncbitaxon:1	root	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 hp:0000039	Epispadias	skos:exactMatch	Not	ncbitaxon:2865123	Epispadias	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+iana.mediatype:font/collection	collection	skos:exactMatch	Not	schema:Collection	Collection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+iana.mediatype:message	message	skos:exactMatch	Not	schema:Message	Message	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+iana.mediatype:multipart/report	report	skos:exactMatch	Not	schema:Report	Report	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+iana.mediatype:text	text	skos:exactMatch	Not	schema:Text	Text	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	Not	chebi:141393	Ser-Thr	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	Not	chebi:59965	glyoxal-lysine dimer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:11H%28ELOI%2911	St. Eloi as patron of blacksmiths and goldsmiths	skos:relatedMatch	Not	chebi:141393	Ser-Thr	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
