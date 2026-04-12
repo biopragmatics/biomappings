@@ -1,4 +1,5 @@
 #curie_map:
+#  adcad: https://purl.dataone.org/odo/ADCAD_
 #  agro: http://purl.obolibrary.org/obo/AGRO_
 #  agrovoc: http://aims.fao.org/aos/agrovoc/c_
 #  aio: https://w3id.org/aio/
@@ -6,6 +7,7 @@
 #  bto: http://purl.obolibrary.org/obo/BTO_
 #  caro: http://purl.obolibrary.org/obo/CARO_
 #  ccle: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
+#  ccso: https://w3id.org/ccso/ccso#
 #  cellosaurus: https://www.cellosaurus.org/CVCL_
 #  cemo: https://biopragmatics.github.io/providers/cemo/
 #  chebi: http://purl.obolibrary.org/obo/CHEBI_
@@ -28,6 +30,7 @@
 #  fplx: https://sorgerlab.github.io/famplex/
 #  go: http://purl.obolibrary.org/obo/GO_
 #  goldbook: https://goldbook.iupac.org/terms/view/
+#  gsso: http://purl.obolibrary.org/obo/GSSO_
 #  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
 #  hp: http://purl.obolibrary.org/obo/HP_
 #  iao: http://purl.obolibrary.org/obo/IAO_
@@ -41,6 +44,7 @@
 #  maxo: http://purl.obolibrary.org/obo/MAXO_
 #  mesh: https://meshb.nlm.nih.gov/record/ui?ui=
 #  miro: http://purl.obolibrary.org/obo/MIRO_
+#  modalia: https://purl.org/ontology/modalia#
 #  mondo: http://purl.obolibrary.org/obo/MONDO_
 #  mpath: http://purl.obolibrary.org/obo/MPATH_
 #  ncbiprotein: https://www.ncbi.nlm.nih.gov/protein/
@@ -62,6 +66,7 @@
 #  semapv: https://w3id.org/semapv/vocab/
 #  skos: http://www.w3.org/2004/02/skos/core#
 #  stato: http://purl.obolibrary.org/obo/STATO_
+#  t4fs: http://purl.obolibrary.org/obo/T4FS_
 #  uberon: http://purl.obolibrary.org/obo/UBERON_
 #  umls: https://uts.nlm.nih.gov/uts/umls/concept/
 #  uniprot: http://purl.uniprot.org/uniprot/
@@ -72,6 +77,28 @@
 #  wikipathways: http://www.wikipathways.org/instance/
 #mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/positive.sssom.tsv
 subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	mapping_tool	mapping_date
+adcad:00003	Archaeology	skos:exactMatch	gsso:007360	archaeology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00004	Social Science	skos:exactMatch	gsso:003852	social science	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00006	Psychology	skos:exactMatch	gsso:006201	psychology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00009	Economics	skos:exactMatch	gsso:006210	economics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00013	Biochemistry	skos:exactMatch	gsso:008403	biochemistry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00015	Cell Biology	skos:exactMatch	gsso:008398	cell biology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00019	Bioinformatics	skos:exactMatch	gsso:011177	bioinformatics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00020	Anatomy	skos:exactMatch	gsso:008387	anatomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00022	Zoology	skos:exactMatch	gsso:008384	zoology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00025	Microbiology	skos:exactMatch	gsso:008371	microbiology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00027	Epidemiology	skos:exactMatch	gsso:008366	epidemiology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00028	Neuroscience	skos:exactMatch	gsso:008376	neuroscience	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00034	Chemistry	skos:exactMatch	gsso:006207	chemistry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00037	Mathematics	skos:exactMatch	gsso:009387	mathematics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00057	Computer Science	skos:exactMatch	gsso:011170	computer science	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00063	Data science	skos:exactMatch	gsso:011173	data science	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00064	Statistics	skos:exactMatch	gsso:009389	statistics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00065	Anthropology	skos:exactMatch	gsso:006208	anthropology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00067	Natural Science	skos:exactMatch	gsso:003851	natural science	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00068	Formal Science	skos:exactMatch	gsso:009049	formal science	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00071	Ethnology	skos:exactMatch	gsso:010235	ethnology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+adcad:00077	Sociology	skos:exactMatch	gsso:006202	sociology	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 agrovoc:0619dd9e	chain harrows	skos:exactMatch	agro:00000137	chain harrow	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696		
 agrovoc:0a9fbc47	scythes	skos:exactMatch	agro:00000456	scythe	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696		
 agrovoc:1012	border irrigation	skos:exactMatch	agro:00000066	border irrigation process	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696		
@@ -1007,6 +1034,7 @@ ccle:ZR751_BREAST	ZR-75-1	skos:exactMatch	cellosaurus:0588	ZR-75-1	semapv:Manual
 ccle:ZR751_BREAST	ZR-75-1	skos:exactMatch	efo:0001262	ZR751	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 ccle:ZR7530_BREAST	ZR-75-30	skos:exactMatch	cellosaurus:1661	ZR-75-30	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 ccle:ZR7530_BREAST	ZR-75-30	skos:exactMatch	efo:0001263	ZR7530	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+ccso:Discipline	Discipline	skos:exactMatch	modalia:Discipline	discipline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 cemo:case_fatality_rate	case fatality rate	skos:exactMatch	ncit:C173779	Case Fatality Rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 cemo:infection_fatality_rate	infection fatality rate	skos:exactMatch	ncit:C173780	Infection Fatality Rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 chebi:10001	Visnadin	skos:exactMatch	mesh:C067604	visnadin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -9837,6 +9865,7 @@ mesh:D066270	Social Capital	skos:exactMatch	ncit:C93209	Social Capital	semapv:Ma
 mesh:D066271	External Capsule	skos:exactMatch	ncit:C32550	External Capsule	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D066292	Lipid Droplets	skos:exactMatch	go:0005811	lipid droplet	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:D066293	Renshaw Cells	skos:exactMatch	ncit:C33463	Renshaw Cell	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+modalia:Researcher	researcher	skos:exactMatch	t4fs:0000220	researcher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mondo:0000158	developmental dysplasia of the hip	skos:exactMatch	mesh:D000082602	Developmental Dysplasia of the Hip	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mondo:0000239	adiaspiromycosis	skos:exactMatch	mesh:C000656784	adiaspiromycosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mondo:0000242	tinea barbae	skos:exactMatch	mesh:C000656825	tinea barbae	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
