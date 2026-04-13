@@ -4948,6 +4948,7 @@ mesh:C000603632	sodium glycididazole	skos:exactMatch	ncit:C77889	Sodium Glycidid
 mesh:C000604573	AZD9496	skos:exactMatch	ncit:C122834	Selective Estrogen Receptor Degrader AZD9496	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C000606551	remdesivir	skos:exactMatch	ncit:C152185	Remdesivir	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C000607229	Solitomab	skos:exactMatch	ncit:C77854	Solitomab	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:C000607938	DOCK6 protein, human	skos:exactMatch	uniprot:Q96HP0	DOCK6	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C000608559	Miransertib	skos:exactMatch	ncit:C99172	Miransertib	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C000608607	Alexa Fluor 555	skos:exactMatch	efo:0004968	Alexa Fluor 555	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C000608854	Bilateral Optic Nerve Meningioma	skos:exactMatch	ncit:C5304	Bilateral Optic Nerve Meningioma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -4960,6 +4961,7 @@ mesh:C000620181	PF-04136309	skos:exactMatch	ncit:C97507	CCR2 Antagonist PF-04136
 mesh:C000620255	GOT1 protein, human	skos:exactMatch	uniprot:P17174	GOT1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C000621508	F2RL1 protein, human	skos:exactMatch	uniprot:P55085	F2RL1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 mesh:C000622468	TMEM65 protein, human	skos:exactMatch	uniprot:Q6PI78	TMEM65	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mesh:C000622653	MOSPD2 protein, human	skos:exactMatch	uniprot:Q8NHP6	MOSPD2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 mesh:C000623728	Rhinovirus C	skos:exactMatch	ncit:C112409	Rhinovirus C	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C000623735	Rhinovirus B	skos:exactMatch	ncit:C112408	Rhinovirus B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C000623787	Rhinovirus A	skos:exactMatch	ncit:C112407	Rhinovirus A	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
@@ -10320,11 +10322,69 @@ oeo:00000031	power plant	skos:exactMatch	envo:00002214	power plant	semapv:Manual
 oeo:00000042	waste role	skos:exactMatch	envo:01000665	waste role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 oeo:00000054	air	skos:exactMatch	envo:00002005	air	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 oeo:00000055	air pollution	skos:exactMatch	envo:02500037	air pollution	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000058	anthracite	skos:exactMatch	envo:2000011	anthracite	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 oeo:00000074	biogas	skos:exactMatch	envo:01000556	biogas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 oeo:00000084	charcoal	skos:exactMatch	envo:01000560	charcoal	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 oeo:00000088	coal	skos:exactMatch	envo:02000091	coal	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 oeo:00000089	coal power plant	skos:exactMatch	envo:2000038	coal power plant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 oeo:00000117	dam	skos:exactMatch	envo:00000074	dam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000150	energy	skos:exactMatch	envo:2000015	energy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000183	gasoline	skos:exactMatch	envo:03510007	gasoline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000191	geothermal energy	skos:exactMatch	envo:2000034	geothermal energy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000192	geothermal power plant	skos:exactMatch	envo:00002215	geothermal power plant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000207	thermal energy	skos:exactMatch	envo:2000032	thermal energy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000251	lignite	skos:exactMatch	envo:2000008	lignite	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000252	lignite power plant	skos:exactMatch	envo:2000040	lignite power plant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000292	natural gas	skos:exactMatch	envo:01000552	natural gas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000303	nuclear power plant	skos:exactMatch	envo:00002271	nuclear power plant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000447	wind farm	skos:exactMatch	envo:03501241	wind farm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00000449	wood	skos:exactMatch	envo:00002040	wood	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010023	vehicle	skos:exactMatch	envo:01000604	vehicle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010032	motor	skos:exactMatch	envo:01000610	motor	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010084	reservoir	skos:exactMatch	envo:00000025	reservoir	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010090	pump	skos:exactMatch	envo:03501266	pump	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010093	river	skos:exactMatch	envo:00000022	river	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010104	water body	skos:exactMatch	envo:00000063	water body	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010105	ocean	skos:exactMatch	envo:00000015	ocean	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010107	ocean current	skos:exactMatch	envo:00000147	ocean current	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010237	liquefied natural gas	skos:exactMatch	envo:01000557	liquefied natural gas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010242	diesel fuel	skos:exactMatch	envo:03510006	diesel fuel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010276	car	skos:exactMatch	envo:01000605	car	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010277	bus	skos:exactMatch	envo:01000611	bus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010278	truck	skos:exactMatch	envo:01000602	truck	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010279	bicycle	skos:exactMatch	envo:01000614	bicycle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010280	train	skos:exactMatch	envo:03501107	train	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010282	passenger train	skos:exactMatch	envo:03501108	passenger train	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010284	motorcycle	skos:exactMatch	envo:01000615	motorcycle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010285	watercraft	skos:exactMatch	envo:01000613	watercraft	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010292	aircraft	skos:exactMatch	envo:01001488	aircraft	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00010293	airplane	skos:exactMatch	envo:03501349	airplane	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00020037	radiation	skos:exactMatch	envo:01001023	radiation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00020045	potential energy	skos:exactMatch	envo:2000016	potential energy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00020058	rock	skos:exactMatch	envo:00001995	rock	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00020252	climate system	skos:exactMatch	envo:01001364	climate system	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00050000	manufacturing process	skos:exactMatch	envo:01000993	manufacturing process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00110000	liquid water	skos:exactMatch	envo:00002006	liquid water	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00230020	kinetic energy	skos:exactMatch	envo:2000017	kinetic energy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00240022	protected area	skos:exactMatch	envo:01001567	protected area	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00240034	steel	skos:exactMatch	envo:03501354	steel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00290001	slope	skos:exactMatch	envo:00002000	slope	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00310001	sewage plant	skos:exactMatch	envo:00003043	sewage plant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00310035	adsorption	skos:exactMatch	envo:06105021	adsorption	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00310041	evaporation	skos:exactMatch	envo:02500034	evaporation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00310042	melting	skos:exactMatch	envo:01000723	melting	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00320011	liquefied petroleum gas	skos:exactMatch	envo:01000553	liquefied petroleum gas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00320012	compressed natural gas	skos:exactMatch	envo:01000555	compressed natural gas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00320022	road	skos:exactMatch	envo:00000064	road	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00320023	bridge	skos:exactMatch	envo:00000075	bridge	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00320024	tunnel	skos:exactMatch	envo:00000068	tunnel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00320025	railway	skos:exactMatch	envo:00000065	railway	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00320026	canal	skos:exactMatch	envo:00000014	canal	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00320027	transport hub	skos:exactMatch	envo:03501117	transport hub	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00320035	airport	skos:exactMatch	envo:03501122	airport	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00410015	biosphere reserve	skos:exactMatch	envo:00000376	biosphere reserve	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00410023	floodplain	skos:exactMatch	envo:00000255	flood plain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+oeo:00410036	arable land	skos:exactMatch	envo:01001177	arable land	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 pfam:PF01391	Collagen	skos:exactMatch	mesh:D003094	Collagen	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 pr:000001757	nuclear factor NF-kappa-B p50 subunit	skos:exactMatch	uniprot.chain:PRO_0000030311	Nuclear factor NF-kappa-B p50 subunit	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 pr:000002439	BH3-interacting domain death agonist isoform 1 cleaved 1	skos:exactMatch	uniprot.chain:PRO_0000223233	BH3-interacting domain death agonist p15	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
