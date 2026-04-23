@@ -28,6 +28,7 @@ __all__ = [
     "get_true_graph",
     "load_curators",
     "load_false_mappings",
+    "load_mappings",
     "load_positive_mappings",
     "load_predictions",
     "load_unsure",
