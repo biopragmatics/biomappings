@@ -20,7 +20,7 @@ dictionaries with the mappings in each.
 ```python
 import biomappings
 
-true_mappings = biomappings.load_mappings()
+true_mappings = biomappings.load_positive_mappings()
 
 false_mappings = biomappings.load_false_mappings()
 

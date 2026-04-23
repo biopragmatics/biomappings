@@ -3,7 +3,7 @@
 These are added directly to the version controlled MONDO OBO file.
 """
 
-from biomappings import load_mappings
+from biomappings import load_positive_mappings
 
 EDITABLE_OBO_PATH = "/home/ben/src/mondo/src/ontology/mondo-edit.obo"
 
@@ -60,7 +60,7 @@ def add_xref(lines: list[str], node: str, xref: str) -> list[str]:
 
 def main() -> None:
     """Add curated cross-references to the MONDO OBO file."""
-    mappings = load_mappings()
+    mappings = load_positive_mappings()
     mondo_mappings = [m for m in mappings if m.subject.prefix == "mondo"]
 
     with open(EDITABLE_OBO_PATH) as fh:

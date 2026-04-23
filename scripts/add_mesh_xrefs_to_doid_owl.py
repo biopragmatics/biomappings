@@ -8,7 +8,7 @@ from collections.abc import Sequence
 
 import obonet
 
-from biomappings import load_mappings
+from biomappings import load_positive_mappings
 
 EDITABLE_OWL_PATH = "/Users/ben/src/HumanDiseaseOntology/src/ontology/doid-edit.owl"
 OBO_PATH = "/Users/ben/src/HumanDiseaseOntology/src/ontology/HumanDO.obo"
@@ -94,7 +94,7 @@ def main() -> None:
             doid_already_mapped.add(node)
 
     # We now load mappings curated in Biomappings
-    mappings = load_mappings()
+    mappings = load_positive_mappings()
     doid_mappings = [
         (mapping.subject.identifier, mapping.object.identifier, mapping)
         for mapping in mappings

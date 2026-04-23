@@ -3,7 +3,7 @@
 These are added directly to the version controlled UBERON OBO file.
 """
 
-from biomappings import load_mappings
+from biomappings import load_positive_mappings
 
 EDITABLE_OBO_PATH = "/Users/ben/src/uberon/src/ontology/uberon-edit.obo"
 
@@ -39,7 +39,7 @@ def add_xref(lines: list[str], node: str, xref_curie: str) -> list[str]:
 
 def main() -> None:
     """Add curated cross-references to the UBERON OBO file."""
-    mappings = load_mappings()
+    mappings = load_positive_mappings()
     uberon_mappings = [m for m in mappings if m.subject.prefix == "uberon"]
 
     with open(EDITABLE_OBO_PATH) as fh:

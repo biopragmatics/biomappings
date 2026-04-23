@@ -96,7 +96,7 @@ objects.
 ```python
 import biomappings
 
-positive_mappings = biomappings.load_mappings()
+positive_mappings = biomappings.load_positive_mappings()
 negative_mappings = biomappings.load_false_mappings()
 predicted_mappings = biomappings.load_predictions()
 unsure_mappings = biomappings.load_unsure_mappings()

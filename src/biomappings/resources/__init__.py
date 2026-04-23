@@ -28,15 +28,36 @@ __all__ = [
     "get_true_graph",
     "load_curators",
     "load_false_mappings",
-    "load_mappings",
+    "load_positive_mappings",
     "load_predictions",
     "load_unsure",
+    "read_mappings",
 ]
 
 logger = logging.getLogger(__name__)
 
 
+def read_mappings() -> list[SemanticMapping]:
+    """Read all mappings."""
+    return [
+        *load_positive_mappings(),
+        *load_false_mappings(),
+        *load_unsure(),
+        *load_predictions(),
+    ]
+
+
 def load_mappings() -> list[SemanticMapping]:
+    """Load the positive mappings."""
+    warnings.warn(
+        "load_mappings() is deprecated, use load_positive_mappings instead",
+        DeprecationWarning,
+        stacklevel=2,
+    )
+    return load_positive_mappings()
+
+
+def load_positive_mappings() -> list[SemanticMapping]:
     """Load the positive mappings."""
     return DEFAULT_REPO.read_positive_mappings()
 
@@ -157,4 +178,6 @@ def get_true_graph(
 
     from sssom_curator.export.charts import _graph_from_mappings
 
-    return _graph_from_mappings(load_mappings(), strata="correct", include=include, exclude=exclude)
+    return _graph_from_mappings(
+        load_positive_mappings(), strata="correct", include=include, exclude=exclude
+    )

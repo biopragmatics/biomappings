@@ -3,7 +3,7 @@
 These are directly added to the version controlled CL OWL file.
 """
 
-from biomappings import load_mappings
+from biomappings import load_positive_mappings
 
 EDITABLE_OWL_PATH = "/Users/ben/src/cell-ontology/src/ontology/cl-edit.owl"
 
@@ -43,7 +43,7 @@ def add_xref(lines: list[str], node_curie: str, xref_curie: str) -> list[str]:
 
 def main() -> None:
     """Add curated cross-references to the CL OBO file."""
-    mappings = load_mappings()
+    mappings = load_positive_mappings()
     cl_mappings = [m for m in mappings if m.subject.prefix == "cl" and m.object.prefix == "mesh"]
 
     with open(EDITABLE_OWL_PATH) as fh:

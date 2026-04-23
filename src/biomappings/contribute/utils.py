@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from sssom_pydantic import SemanticMapping
 
-from biomappings import load_mappings
+from biomappings import load_positive_mappings
 
 __all__ = [
     "get_curated_mappings",
@@ -14,7 +14,7 @@ __all__ = [
 def get_curated_mappings(prefix: str) -> list[SemanticMapping]:
     """Get mappings for a given prefix."""
     mappings = []
-    for mapping in load_mappings():
+    for mapping in load_positive_mappings():
         if mapping.subject.prefix == prefix:
             mappings.append(mapping)
         elif mapping.object.prefix == prefix:

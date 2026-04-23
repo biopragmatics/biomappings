@@ -8,7 +8,7 @@ from bioregistry import NormalizedNamableReference
 from curies.vocabulary import exact_match, lexical_matching_process
 from sssom_pydantic import MappingTool, SemanticMapping
 
-from biomappings import load_false_mappings, load_mappings
+from biomappings import load_false_mappings, load_positive_mappings
 from biomappings.resources import append_predictions
 from biomappings.utils import get_script_url
 
@@ -53,7 +53,7 @@ def get_primary_mappings() -> set[tuple[str, str, str, str]]:
 def get_curated_mappings() -> set[tuple[str, str, str, str]]:
     """Get curated mappings."""
     curated_mappings: set[tuple[str, str, str, str]] = set()
-    for mapping in load_mappings() + load_false_mappings():
+    for mapping in load_positive_mappings() + load_false_mappings():
         curated_mappings.add(
             (
                 mapping.subject.prefix,
