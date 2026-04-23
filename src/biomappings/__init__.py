@@ -12,6 +12,7 @@ from .resources import (
     load_positive_mappings,
     load_predictions,
     load_unsure,
+    read_mappings,
 )
 from .utils import DEFAULT_REPO, get_script_url
 
@@ -29,6 +30,7 @@ __all__ = [
     "load_positive_mappings",
     "load_predictions",
     "load_unsure",
+    "read_mappings",
 ]
 
 
