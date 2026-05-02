@@ -15,7 +15,7 @@ from .resources import (
     load_unsure,
     read_mappings,
 )
-from .utils import DEFAULT_REPO, get_script_url
+from .utils import DEFAULT_REPO, get_script_url, METADATA
 
 if TYPE_CHECKING:
     from sssom_pydantic import MappingTool
@@ -33,6 +33,7 @@ __all__ = [
     "load_predictions",
     "load_unsure",
     "read_mappings",
+    "METADATA",
 ]
 
 

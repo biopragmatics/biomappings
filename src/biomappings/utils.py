@@ -25,6 +25,7 @@ __all__ = [
     "RESOURCE_PATH",
     "UNSURE_SSSOM_PATH",
     "get_script_url",
+    "METADATA",
 ]
 
 HERE = Path(__file__).parent.resolve()
@@ -58,7 +59,7 @@ def get_script_url(fname: str) -> str:
 #: THe NDEx UUID
 BIOMAPPINGS_NDEX_UUID = "402d1fd6-49d6-11eb-9e72-0ac135e8bacf"
 
-META = MappingSet(
+METADATA = META = MappingSet(
     license="https://creativecommons.org/publicdomain/zero/1.0/",
     description="Biomappings is a repository of community curated and predicted equivalences and "
     "related mappings between named biological entities that are not available from primary sources. It's also a "
@@ -68,6 +69,7 @@ META = MappingSet(
     version=get_version(with_git_hash=True),
     creators=[charlie],
     issue_tracker="https://github.com/biopragmatics/bioregistry/issues",
+    confidence=0.99,
 )
 
 DEFAULT_REPO = Repository(
@@ -77,7 +79,7 @@ DEFAULT_REPO = Repository(
     unsure_path=UNSURE_SSSOM_PATH,
     basename="biomappings",
     purl_base=PURL_BASE,
-    mapping_set=META,
+    mapping_set=METADATA,
     ndex_uuid=BIOMAPPINGS_NDEX_UUID,
     web_title="Biomappings",
     web_disabled_message=(
