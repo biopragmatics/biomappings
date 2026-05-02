@@ -15,13 +15,14 @@ from .resources import (
     load_unsure,
     read_mappings,
 )
-from .utils import DEFAULT_REPO, get_script_url
+from .utils import DEFAULT_REPO, METADATA, get_script_url
 
 if TYPE_CHECKING:
     from sssom_pydantic import MappingTool
 
 __all__ = [
     "DEFAULT_REPO",
+    "METADATA",
     "append_lexical_predictions",
     "append_predictions",
     "get_script_url",

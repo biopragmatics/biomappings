@@ -70,6 +70,8 @@
 #  skos: http://www.w3.org/2004/02/skos/core#
 #  stato: http://purl.obolibrary.org/obo/STATO_
 #  t4fs: http://purl.obolibrary.org/obo/T4FS_
+#  taxrank: http://purl.obolibrary.org/obo/TAXRANK_
+#  tdwg.taxonrank: http://rs.tdwg.org/ontology/voc/TaxonRank#
 #  uberon: http://purl.obolibrary.org/obo/UBERON_
 #  umls: https://uts.nlm.nih.gov/uts/umls/concept/
 #  uniprot: http://purl.uniprot.org/uniprot/
@@ -10722,6 +10724,8 @@ reactome:R-SSC-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go
 reactome:R-XTR-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 schema:Book	Book	skos:exactMatch	t4fs:0000305	book	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 schema:Dataset	Dataset	skos:exactMatch	t4fs:0000347	dataset	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+taxrank:0000001	phylum	skos:exactMatch	tdwg.taxonrank:Phylum	Phylum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-05-02
+tdwg.taxonrank:Phylum	Phylum	skos:exactMatch	taxrank:0000001	phylum	semapv:MappingInversion	orcid:0000-0003-4423-4370		2026-05-02
 uberon:0000017	exocrine pancreas	skos:exactMatch	mesh:D046790	Pancreas, Exocrine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 uberon:0000076	external ectoderm	skos:exactMatch	bto:0006242	external ectoderm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	generate_uberon_bto_mappings.py	
 uberon:0000105	life cycle stage	skos:exactMatch	mesh:D008018	Life Cycle Stages	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
