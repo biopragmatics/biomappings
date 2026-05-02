@@ -18,6 +18,7 @@ __all__ = [
     "DATA_DIRECTORY",
     "DEFAULT_REPO",
     "IMG_DIRECTORY",
+    "METADATA",
     "NEGATIVES_SSSOM_PATH",
     "POSITIVES_SSSOM_PATH",
     "PREDICTIONS_SSSOM_PATH",
@@ -25,7 +26,6 @@ __all__ = [
     "RESOURCE_PATH",
     "UNSURE_SSSOM_PATH",
     "get_script_url",
-    "METADATA",
 ]
 
 HERE = Path(__file__).parent.resolve()
