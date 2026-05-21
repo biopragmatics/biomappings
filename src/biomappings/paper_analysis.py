@@ -10,6 +10,7 @@ from collections import defaultdict
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Self
 
 import bioontologies
 import bioregistry
@@ -18,7 +19,6 @@ import pystow
 from bioregistry import NormalizedReference
 from tabulate import tabulate
 from tqdm.auto import tqdm
-from typing_extensions import Self
 
 __all__ = [
     "Result",
