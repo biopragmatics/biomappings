@@ -77,7 +77,10 @@ def main() -> None:
 
 
 def _ground(
-    grounder: ssslm.Grounder, node: Node, rows: list[SemanticMapping], provenance: str
+    grounder: ssslm.Grounder[NormalizedNamableReference],
+    node: Node,
+    rows: list[SemanticMapping],
+    provenance: str,
 ) -> None:
     if not node.reference:
         return None
