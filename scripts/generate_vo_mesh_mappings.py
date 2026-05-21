@@ -21,7 +21,7 @@ from biomappings.utils import get_script_url
 
 def main() -> None:
     """Generate mappings from between VO and MeSH."""
-    mesh_grounder = pyobo.get_grounder("mesh")
+    mesh_grounder: ssslm.Grounder[NormalizedNamableReference] = pyobo.get_grounder("mesh")
     provenance = get_script_url(__file__)
     graph = bioontologies.get_obograph_by_prefix("vo", check=False).guess("vo").standardize()
     rows = []
