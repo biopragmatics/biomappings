@@ -27,6 +27,7 @@
 #  drugbank: https://go.drugbank.com/drugs/
 #  efo: http://www.ebi.ac.uk/efo/EFO_
 #  envo: http://purl.obolibrary.org/obo/ENVO_
+#  fbbi: http://purl.obolibrary.org/obo/FBbi_
 #  fma: 'https://www.ebi.ac.uk/ols4/ontologies/fma/terms?obo_id=FMA:'
 #  fplx: https://sorgerlab.github.io/famplex/
 #  go: http://purl.obolibrary.org/obo/GO_
@@ -3201,15 +3202,34 @@ chmo:0000047	cathodic stripping voltammetry	skos:exactMatch	goldbook:09153	catho
 chmo:0000053	imaging mass spectrometry	skos:exactMatch	goldbook:12431	imaging mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 chmo:0000061	flow cytometry	skos:exactMatch	goldbook:13152	flow cytometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 chmo:0000064	fluorescence resonance energy transfer	skos:exactMatch	goldbook:FT07378	fluorescence resonance energy transfer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+chmo:0000067	microscopy	skos:exactMatch	fbbi:00000241	microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0000068	electron microscopy	skos:exactMatch	fbbi:00000256	electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
 chmo:0000073	scanning electron microscopy	skos:exactMatch	goldbook:S05484	scanning electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+chmo:0000080	transmission electron microscopy	skos:exactMatch	fbbi:00000258	transmission electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
 chmo:0000080	transmission electron microscopy	skos:exactMatch	goldbook:T06481	transmission electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+chmo:0000081	cryogenic transmission electron microscopy	skos:exactMatch	fbbi:00100014	cryogenic transmission electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
 chmo:0000086	scanning transmission electron microscopy	skos:exactMatch	goldbook:S05486	scanning transmission electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+chmo:0000091	fluorescence lifetime imaging microscopy	skos:exactMatch	fbbi:00000368	fluorescence lifetime imaging microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
 chmo:0000097	ion microscopy	skos:exactMatch	goldbook:I03221	ion microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+chmo:0000103	confocal microscopy	skos:exactMatch	fbbi:00000251	confocal microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0000104	bright-field microscopy	skos:exactMatch	fbbi:00000243	bright-field microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0000107	differential interference contrast microscopy	skos:exactMatch	fbbi:00000245	differential interference contrast microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0000110	phase contrast microscopy	skos:exactMatch	fbbi:00000247	phase contrast microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0000112	scanning probe microscopy	skos:exactMatch	fbbi:00000344	scanning probe microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0000113	atomic force microscopy	skos:exactMatch	fbbi:00000259	atomic force microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
 chmo:0000113	atomic force microscopy	skos:exactMatch	goldbook:09452	atomic force microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 chmo:0000120	scanning near-field optical microscopy	skos:exactMatch	goldbook:09202	scanning near-field optical microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 chmo:0000145	transmission high energy electron diffraction	skos:exactMatch	goldbook:T06483	transmission high energy electron diffraction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 chmo:0000146	reflection high energy electron diffraction	skos:exactMatch	goldbook:R05238	reflection high energy electron diffraction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 chmo:0000147	low energy electron diffraction	skos:exactMatch	goldbook:L03631	low energy electron diffraction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+chmo:0001074	time-lapse microscopy	skos:exactMatch	fbbi:00000249	time lapse microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0001103	recorded image	skos:exactMatch	fbbi:00000265	recorded image	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0001709	detection method	skos:exactMatch	fbbi:00000269	detection method	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0002177	dark-field microscopy	skos:exactMatch	fbbi:00000244	dark-field microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0002312	X-ray microscopy	skos:exactMatch	fbbi:00000260	X-ray microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0002413	cryogenic electron microscopy	skos:exactMatch	fbbi:00100014	cryogenic transmission electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0002519	two-photon laser scanning microscopy	skos:exactMatch	fbbi:00000254	two-photon laser scanning microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0002589	cryogenic scanning electron microscopy	skos:exactMatch	fbbi:00100016	cryogenic scanning electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
 cido:0000152	COVID-19 pandemic	skos:exactMatch	idocovid19:0001388	COVID-19 pandemic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 cido:0000154	COVID-19 epidemic	skos:exactMatch	idocovid19:0001391	COVID-19 epidemic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 cido:0000366	protective clothing	skos:exactMatch	idomal:0001031	protective clothing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
