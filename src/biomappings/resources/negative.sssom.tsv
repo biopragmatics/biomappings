@@ -1169,8 +1169,18 @@ mondo:0015053	hereditary angioedema type 1	skos:exactMatch	Not	mesh:D056829	Here
 mondo:0020320	acute myeloblastic leukemia with maturation	skos:exactMatch	Not	mesh:D000650	Amnion	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mondo:0021248	nervous system neoplasm	skos:exactMatch	Not	mesh:D009380	Neoplasms, Nerve Tissue	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761	generate_mondo_mesh_mappings.py	
 mondo:0021661	coronary atherosclerosis	skos:exactMatch	Not	mesh:D003324	Coronary Artery Disease	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mondo:0024296	vascular neoplasm	skos:exactMatch	Not	mesh:D009383	Neoplasms, Vascular Tissue	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		2026-07-16
+mondo:0024880	metastatic malignant neoplasm	skos:exactMatch	Not	mesh:D009362	Neoplasm Metastasis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		2026-07-16
+mondo:0024883	metastatic neoplasm	skos:narrowMatch	Not	mesh:D009362	Neoplasm Metastasis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		2026-07-16
 mondo:0044346	echinococcus granulosus infectious disease	skos:exactMatch	Not	mesh:D048209	Echinococcus granulosus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mondo:0045035	opportunistic infectious	skos:exactMatch	Not	mesh:D009894	Opportunistic Infections	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		2026-07-16
+mondo:0100047	basal cell carcinoma, susceptibility to	skos:exactMatch	Not	mesh:C567789	Basal Cell Carcinoma, Nonsyndromic	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		2026-07-16
 mondo:0100073	methicillin-resistant staphylococcus aureus infectious disease	skos:exactMatch	Not	mesh:D055624	Methicillin-Resistant Staphylococcus aureus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
+mondo:0100170	restless legs syndrome, susceptibility to	skos:narrowMatch	Not	mesh:C538360	Restless legs syndrome 2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		2026-07-16
+mondo:0100178	dermatitis, atopic, susceptibility to	skos:exactMatch	Not	mesh:C566404	Dermatitis, Atopic, 1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		2026-07-16
+mondo:0100179	Hirschsprung disease, susceptibility to	skos:exactMatch	Not	mesh:C538540	Hirschsprung disease 1	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		2026-07-16
+mondo:0600011	mild hypophosphatasia	skos:exactMatch	Not	mesh:C562647	Hypophosphatasia, Adult	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		2026-07-16
+mondo:0800268	atrioventricular septal defect, susceptibility to, 1	skos:exactMatch	Not	mesh:C562831	Atrioventricular Septal Defect	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		2026-07-16
 oae:0002495	dialysis	skos:exactMatch	Not	ncbitaxon:124307	Dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 obi:0000758	Roche	skos:exactMatch	Not	ncbitaxon:2506334	Roche	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 obi:0400064	laser	skos:exactMatch	Not	ncbitaxon:62990	Laser	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
