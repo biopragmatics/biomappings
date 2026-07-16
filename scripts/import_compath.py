@@ -24,13 +24,13 @@ def main() -> None:
 
     # Make sure nomenclature is correct
     df["source name"] = [
-        name if prefix == "kegg.pathway" else pyobo.get_name(prefix, identifier)
+        name if prefix == "kegg.pathway" else pyobo.get_name(f"{prefix}:{identifier}")
         for prefix, identifier, name in tqdm(
             df[["source prefix", "source identifier", "source name"]].values
         )
     ]
     df["target name"] = [
-        name if prefix == "kegg.pathway" else pyobo.get_name(prefix, identifier)
+        name if prefix == "kegg.pathway" else pyobo.get_name(f"{prefix}:{identifier}")
         for prefix, identifier, name in tqdm(
             df[["target prefix", "target identifier", "target name"]].values
         )

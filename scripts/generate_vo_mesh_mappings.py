@@ -43,7 +43,7 @@ def main() -> None:
                         if not value.lower().startswith("mesh:"):
                             continue
                         mesh_id = value.split(":", 1)[1].strip()
-                        mesh_name = pyobo.get_name("mesh", mesh_id)
+                        mesh_name = pyobo.get_name(f"mesh:{mesh_id}")
                         if not mesh_name:
                             tqdm.write(f"No mesh name for vo:{node.name} mapped to mesh:{mesh_id}")
                             continue
