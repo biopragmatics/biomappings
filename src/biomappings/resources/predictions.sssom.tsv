@@ -12287,51 +12287,22 @@ gsso:010273	seat	skos:exactMatch	schema:Seat	Seat	semapv:LexicalMatching			sssom
 iana.mediatype:multipart	multipart	skos:exactMatch	modalia:Multipart	multipart	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
 iana.mediatype:video	video	skos:exactMatch	vivo:Video	Video	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
 icd10:A00	Cholera	skos:exactMatch	mesh:D002771	Cholera	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A01.0	Typhoid fever	skos:exactMatch	mesh:D014435	Typhoid Fever	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A02.0	Salmonella enteritis	skos:exactMatch	mesh:D012480	Salmonella Infections	semapv:LexicalMatching			generate_gilda_icd10_mesh_mappings.py				0.95
 icd10:A02.9	Salmonella infection, unspecified	skos:closeMatch	mesh:D012480	Salmonella Infections	semapv:SemanticSimilarity			generate_leonmap_icd10_mesh_mappings.py				0.906571
 icd10:A03	Shigellosis	skos:closeMatch	mesh:D004405	Dysentery, Bacillary	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A04.4	Other intestinal Escherichia coli infections	skos:closeMatch	mesh:D004927	Escherichia coli Infections	semapv:SemanticSimilarity			generate_leonmap_icd10_mesh_mappings.py				0.905408
-icd10:A05.1	Botulism	skos:exactMatch	mesh:D001906	Botulism	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A06	Amoebiasis	skos:closeMatch	mesh:D000562	Amebiasis	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A06.4	Amoebic liver abscess	skos:closeMatch	mesh:D008101	Liver Abscess, Amebic	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A07.0	Balantidiasis	skos:exactMatch	mesh:D001447	Balantidiasis	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A07.2	Cryptosporidiosis	skos:exactMatch	mesh:D003457	Cryptosporidiosis	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A07.3	Isosporiasis	skos:exactMatch	mesh:D021865	Isosporiasis	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A07.8	Other specified protozoal intestinal diseases	skos:exactMatch	mesh:D012523	Sarcocystosis	semapv:LexicalMatching			generate_gilda_icd10_mesh_mappings.py				0.95
 icd10:A15-A19	Tuberculosis	skos:exactMatch	mesh:D014376	Tuberculosis	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A17.0	Tuberculous meningitis	skos:closeMatch	mesh:D014390	Tuberculosis, Meningeal	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A19	Miliary tuberculosis	skos:exactMatch	mesh:D014391	Tuberculosis, Miliary	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A20	Plague	skos:exactMatch	mesh:D010930	Plague	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A22	Anthrax	skos:exactMatch	mesh:D000881	Anthrax	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A22.0	Cutaneous anthrax	skos:exactMatch	mesh:C531621	Cutaneous anthrax	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A22.1	Pulmonary anthrax	skos:exactMatch	mesh:C571912	Inhalation anthrax	semapv:LexicalMatching			generate_gilda_icd10_mesh_mappings.py				0.95
-icd10:A22.2	Gastrointestinal anthrax	skos:exactMatch	mesh:C571911	Gastrointestinal anthrax	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A23	Brucellosis	skos:exactMatch	mesh:D002006	Brucellosis	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A24.0	Glanders	skos:exactMatch	mesh:D005896	Glanders	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A24.4	Melioidosis, unspecified	skos:closeMatch	mesh:D008554	Melioidosis	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A25	Rat-bite fevers	skos:exactMatch	mesh:D011906	Rat-Bite Fever	semapv:LexicalMatching			generate_gilda_icd10_mesh_mappings.py				1.0
 icd10:A25.1	Streptobacillosis	skos:closeMatch	mesh:D011906	Rat-Bite Fever	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A26	Erysipeloid	skos:exactMatch	mesh:D004887	Erysipeloid	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A26.9	Erysipeloid, unspecified	skos:closeMatch	mesh:D004889	Erysipelothrix Infections	semapv:SemanticSimilarity			generate_leonmap_icd10_mesh_mappings.py				0.905466
-icd10:A27	Leptospirosis	skos:exactMatch	mesh:D007922	Leptospirosis	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A28.0	Pasteurellosis	skos:closeMatch	mesh:D010326	Pasteurella Infections	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A28.1	Cat-scratch disease	skos:exactMatch	mesh:D002372	Cat-Scratch Disease	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A30-A49	Other bacterial diseases	skos:closeMatch	mesh:D001424	Bacterial Infections	semapv:SemanticSimilarity			generate_leonmap_icd10_mesh_mappings.py				0.907049
-icd10:A30.1	Tuberculoid leprosy	skos:exactMatch	mesh:D015441	Leprosy, Tuberculoid	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A30.3	Borderline leprosy	skos:exactMatch	mesh:D015439	Leprosy, Borderline	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A30.5	Lepromatous leprosy	skos:exactMatch	mesh:D015440	Leprosy, Lepromatous	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A31.1	Cutaneous mycobacterial infection	skos:exactMatch	mesh:D054312	Buruli Ulcer	semapv:LexicalMatching			generate_gilda_icd10_mesh_mappings.py				0.95
 icd10:A31.9	Mycobacterial infection, unspecified	skos:closeMatch	mesh:D009164	Mycobacterium Infections	semapv:SemanticSimilarity			generate_leonmap_icd10_mesh_mappings.py				0.916002
-icd10:A32	Listeriosis	skos:exactMatch	mesh:D008088	Listeriosis	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A36	Diphtheria	skos:exactMatch	mesh:D004165	Diphtheria	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A37	Whooping cough	skos:exactMatch	mesh:D014917	Whooping Cough	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A38	Scarlet fever	skos:exactMatch	mesh:D012541	Scarlet Fever	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A39	Meningococcal infection	skos:closeMatch	mesh:D008589	Meningococcal Infections	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A39.0	Meningococcal meningitis	skos:exactMatch	mesh:D008585	Meningitis, Meningococcal	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A39.1	Waterhouse-Friderichsen syndrome	skos:exactMatch	mesh:D014884	Waterhouse-Friderichsen Syndrome	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A42	Actinomycosis	skos:exactMatch	mesh:D000196	Actinomycosis	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
-icd10:A42.2	Cervicofacial actinomycosis	skos:exactMatch	mesh:D000197	Actinomycosis, Cervicofacial	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A43	Nocardiosis	skos:exactMatch	mesh:D009617	Nocardia Infections	semapv:LexicalMatching			generate_gilda_icd10_mesh_mappings.py				1.0
 icd10:A43.0	Pulmonary nocardiosis	skos:closeMatch	mesh:D009617	Nocardia Infections	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0
 icd10:A44	Bartonellosis	skos:closeMatch	mesh:D001474	Bartonella Infections	semapv:LexicalMatching			generate_leonmap_icd10_mesh_mappings.py				1.0

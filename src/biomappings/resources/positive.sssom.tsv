@@ -36,6 +36,7 @@
 #  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
 #  hp: http://purl.obolibrary.org/obo/HP_
 #  iao: http://purl.obolibrary.org/obo/IAO_
+#  icd10: https://icd.who.int/browse10/2019/en#/
 #  iconclass: https://iconclass.org/
 #  ido: http://purl.obolibrary.org/obo/IDO_
 #  idocovid19: http://purl.obolibrary.org/obo/COVIDO_
@@ -4060,6 +4061,35 @@ gsso:004224	museum	skos:exactMatch	vivo:Museum	Museum	semapv:ManualMappingCurati
 gsso:004553	university	skos:exactMatch	vivo:University	University	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 gsso:008470	newsletter	skos:exactMatch	vivo:Newsletter	Newsletter	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 gsso:010256	undergraduate student	skos:exactMatch	vivo:UndergraduateStudent	Undergraduate Student	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+icd10:A01.0	Typhoid fever	skos:exactMatch	mesh:D014435	Typhoid Fever	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A05.1	Botulism	skos:exactMatch	mesh:D001906	Botulism	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A07.0	Balantidiasis	skos:exactMatch	mesh:D001447	Balantidiasis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A07.2	Cryptosporidiosis	skos:exactMatch	mesh:D003457	Cryptosporidiosis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A07.3	Isosporiasis	skos:exactMatch	mesh:D021865	Isosporiasis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A17.0	Tuberculous meningitis	skos:closeMatch	mesh:D014390	Tuberculosis, Meningeal	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A19	Miliary tuberculosis	skos:exactMatch	mesh:D014391	Tuberculosis, Miliary	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A20	Plague	skos:exactMatch	mesh:D010930	Plague	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A22	Anthrax	skos:exactMatch	mesh:D000881	Anthrax	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A22.0	Cutaneous anthrax	skos:exactMatch	mesh:C531621	Cutaneous anthrax	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A22.1	Pulmonary anthrax	skos:exactMatch	mesh:C571912	Inhalation anthrax	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A22.2	Gastrointestinal anthrax	skos:exactMatch	mesh:C571911	Gastrointestinal anthrax	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A23	Brucellosis	skos:exactMatch	mesh:D002006	Brucellosis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A24.0	Glanders	skos:exactMatch	mesh:D005896	Glanders	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A26	Erysipeloid	skos:exactMatch	mesh:D004887	Erysipeloid	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A27	Leptospirosis	skos:exactMatch	mesh:D007922	Leptospirosis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A28.1	Cat-scratch disease	skos:exactMatch	mesh:D002372	Cat-Scratch Disease	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A30.1	Tuberculoid leprosy	skos:exactMatch	mesh:D015441	Leprosy, Tuberculoid	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A30.3	Borderline leprosy	skos:exactMatch	mesh:D015439	Leprosy, Borderline	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A30.5	Lepromatous leprosy	skos:exactMatch	mesh:D015440	Leprosy, Lepromatous	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A32	Listeriosis	skos:exactMatch	mesh:D008088	Listeriosis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A36	Diphtheria	skos:exactMatch	mesh:D004165	Diphtheria	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A37	Whooping cough	skos:exactMatch	mesh:D014917	Whooping Cough	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A38	Scarlet fever	skos:exactMatch	mesh:D012541	Scarlet Fever	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A39	Meningococcal infection	skos:closeMatch	mesh:D008589	Meningococcal Infections	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A39.0	Meningococcal meningitis	skos:exactMatch	mesh:D008585	Meningitis, Meningococcal	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A39.1	Waterhouse-Friderichsen syndrome	skos:exactMatch	mesh:D014884	Waterhouse-Friderichsen Syndrome	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A42	Actinomycosis	skos:exactMatch	mesh:D000196	Actinomycosis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
+icd10:A42.2	Cervicofacial actinomycosis	skos:exactMatch	mesh:D000197	Actinomycosis, Cervicofacial	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598				2026-07-25
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	chebi:29287	gold atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	chebi:30050	gold(0)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:22C4%28GOLD%29	colours, pigments, and paints: gold	skos:relatedMatch	chebi:29287	gold atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
