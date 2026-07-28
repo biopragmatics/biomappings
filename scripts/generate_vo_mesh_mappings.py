@@ -83,7 +83,7 @@ def _ground(
     provenance: str,
 ) -> None:
     if not node.reference:
-        return None
+        return
 
     texts = [node.name]
     # VO doesn't store its synonyms using standard predicates,
