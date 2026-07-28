@@ -42,7 +42,7 @@ def bulk_accept_same_text(source: str, target: str) -> None:
 
 
 def _accept_same_name(subject_prefix: str, object_prefix: str, mapping: SemanticMapping) -> bool:
-    if not mapping.predicate == exact_match:
+    if mapping.predicate != exact_match:
         return False
     if not (
         (mapping.subject.prefix == subject_prefix and mapping.object.prefix == object_prefix)
