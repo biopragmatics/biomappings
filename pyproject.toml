@@ -224,6 +224,7 @@ ignore = [
     "E501", # FIXME
     "N818",
     "C901",
+    "DTZ011",
 ]
 
 # See https://docs.astral.sh/ruff/settings/#per-file-ignores
