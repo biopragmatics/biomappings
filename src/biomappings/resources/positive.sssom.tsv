@@ -36,6 +36,7 @@
 #  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
 #  hp: http://purl.obolibrary.org/obo/HP_
 #  iao: http://purl.obolibrary.org/obo/IAO_
+#  icd10: https://icd.who.int/browse10/2019/en#/
 #  iconclass: https://iconclass.org/
 #  ido: http://purl.obolibrary.org/obo/IDO_
 #  idocovid19: http://purl.obolibrary.org/obo/COVIDO_
@@ -4060,6 +4061,32 @@ gsso:004224	museum	skos:exactMatch	vivo:Museum	Museum	semapv:ManualMappingCurati
 gsso:004553	university	skos:exactMatch	vivo:University	University	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 gsso:008470	newsletter	skos:exactMatch	vivo:Newsletter	Newsletter	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 gsso:010256	undergraduate student	skos:exactMatch	vivo:UndergraduateStudent	Undergraduate Student	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+icd10:A07.0	Balantidiasis	skos:exactMatch	mesh:D001447	Balantidiasis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A20	Plague	skos:exactMatch	mesh:D010930	Plague	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A22.0	Cutaneous anthrax	skos:exactMatch	mesh:C531621	Cutaneous anthrax	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A22.1	Pulmonary anthrax	skos:exactMatch	mesh:C571912	Inhalation anthrax	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019			2026-08-04
+icd10:A22.2	Gastrointestinal anthrax	skos:exactMatch	mesh:C571911	Gastrointestinal anthrax	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A37	Whooping cough	skos:exactMatch	mesh:D014917	Whooping Cough	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A48.1	Legionnaires disease	skos:exactMatch	mesh:D007877	Legionnaires' Disease	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A50	Congenital syphilis	skos:exactMatch	mesh:D013590	Syphilis, Congenital	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A81.0	Creutzfeldt-Jakob disease	skos:closeMatch	mesh:D007562	Creutzfeldt-Jakob Syndrome	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A81.1	Subacute sclerosing panencephalitis	skos:exactMatch	mesh:D013344	Subacute Sclerosing Panencephalitis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A96.2	Lassa fever	skos:exactMatch	mesh:D007835	Lassa Fever	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A97	Dengue	skos:exactMatch	mesh:D003715	Dengue	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:A98.3	Marburg virus disease	skos:exactMatch	mesh:D008379	Marburg Virus Disease	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B03	Smallpox	skos:exactMatch	mesh:D012899	Smallpox	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B04	Monkeypox	skos:closeMatch	mesh:D045908	Mpox, Monkeypox	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B21.0	HIV disease resulting in Kaposi sarcoma	skos:closeMatch	mesh:C554498	AIDS-related Kaposi sarcoma	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B27	Infectious mononucleosis	skos:exactMatch	mesh:D007244	Infectious Mononucleosis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B35-B49	Mycoses	skos:exactMatch	mesh:D009181	Mycoses	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B36.1	Tinea nigra	skos:exactMatch	mesh:C000656904	tinea nigra	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B48.3	Geotrichosis	skos:exactMatch	mesh:D005847	Geotrichosis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B65-B83	Helminthiases	skos:closeMatch	mesh:D006373	Helminthiasis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B66.0	Opisthorchiasis	skos:exactMatch	mesh:D009889	Opisthorchiasis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B66.1	Clonorchiasis	skos:exactMatch	mesh:D003003	Clonorchiasis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B66.2	Dicrocoeliasis	skos:exactMatch	mesh:D004011	Dicrocoeliasis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B66.3	Fascioliasis	skos:exactMatch	mesh:D005211	Fascioliasis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
+icd10:B66.4	Paragonimiasis	skos:exactMatch	mesh:D010237	Paragonimiasis	semapv:ManualMappingCuration	orcid:0009-0007-1189-4598	2019	2025		2026-08-04
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	chebi:29287	gold atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	chebi:30050	gold(0)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:22C4%28GOLD%29	colours, pigments, and paints: gold	skos:relatedMatch	chebi:29287	gold atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
