@@ -17,7 +17,6 @@ from .resources import (
 )
 from .utils import DEFAULT_REPO, METADATA, get_script_url
 
-
 __all__ = [
     "DEFAULT_REPO",
     "METADATA",
@@ -55,6 +54,4 @@ def append_lexical_predictions(
     **kwargs: Any,
 ) -> None:
     """Append lexical predictions."""
-    return DEFAULT_REPO.append_lexical_predictions(
-        prefix, target_prefixes, **kwargs
-    )
+    return DEFAULT_REPO.append_lexical_predictions(prefix, target_prefixes, **kwargs)
