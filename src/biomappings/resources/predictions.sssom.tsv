@@ -17,13 +17,11 @@
 #  ncit: http://purl.obolibrary.org/obo/NCIT_
 #  oeo: https://openenergyplatform.org/ontology/oeo/OEO_
 #  ro: http://purl.obolibrary.org/obo/RO_
-#  schema: https://schema.org/
 #  semapv: https://w3id.org/semapv/vocab/
 #  skos: http://www.w3.org/2004/02/skos/core#
 #  uberon: http://purl.obolibrary.org/obo/UBERON_
 #  umls: https://uts.nlm.nih.gov/uts/umls/concept/
 #  uniprot: http://purl.uniprot.org/uniprot/
-#  vivo: http://vivoweb.org/ontology/core#
 #  vo: http://purl.obolibrary.org/obo/VO_
 #  wikidata: http://www.wikidata.org/entity/
 #  wikipathways: http://www.wikipathways.org/instance/
@@ -52985,31 +52983,6 @@ oeo:00320026	canal	skos:exactMatch	envo:00000139	irrigation ditch	semapv:Lexical
 oeo:00320026	canal	skos:exactMatch	envo:00000140	drainage ditch	semapv:LexicalMatching			sssom-curator				0.556
 oeo:00320026	canal	skos:exactMatch	envo:00000525	canalized stream	semapv:LexicalMatching			sssom-curator				0.556
 oeo:00410025	forest	skos:exactMatch	envo:00000111	forested area	semapv:LexicalMatching			sssom-curator				0.556
-schema:Blog	Blog	skos:exactMatch	vivo:Blog	Blog	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:Consortium	Consortium	skos:exactMatch	vivo:Consortium	Consortium	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:Continent	Continent	skos:exactMatch	vivo:Continent	Continent	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:Country	Country	skos:exactMatch	vivo:Country	Country	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:Course	Course	skos:exactMatch	vivo:Course	Course	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:Dataset	Dataset	skos:exactMatch	vivo:Dataset	Dataset	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:Hospital	Hospital	skos:exactMatch	vivo:Hospital	Hospital	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:Library	Library	skos:exactMatch	vivo:Library	Library	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:Museum	Museum	skos:exactMatch	vivo:Museum	Museum	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:Review	Review	skos:exactMatch	vivo:Review	Review	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:Room	Room	skos:exactMatch	vivo:Room	Room	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:School	School	skos:exactMatch	vivo:School	School	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:catalog	catalog	skos:exactMatch	vivo:Catalog	Catalog	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-schema:contributor	contributor	skos:exactMatch	vivo:contributingRole	contributor	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:course	course	skos:exactMatch	vivo:Course	Course	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-schema:dataset	dataset	skos:exactMatch	vivo:Dataset	Dataset	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-schema:department	department	skos:exactMatch	vivo:Department	Department	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-schema:license	license	skos:exactMatch	vivo:License	License	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-schema:location	location	skos:exactMatch	vivo:Location	Location	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-schema:offers	offers	skos:exactMatch	vivo:offers	offers	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:publisher	publisher	skos:exactMatch	vivo:Publisher	Publisher	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-schema:publisher	publisher	skos:exactMatch	vivo:publisher	publisher	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-schema:review	review	skos:exactMatch	vivo:Review	Review	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-schema:reviews	reviews	skos:exactMatch	vivo:Review	Review	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-schema:video	video	skos:exactMatch	vivo:Video	Video	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
 uberon:0000016	endocrine pancreas	skos:exactMatch	mesh:D007515	Islets of Langerhans	semapv:LexicalMatching			generate_uberon_mesh_mappings.py				0.9
 uberon:0000044	dorsal root ganglion	skos:exactMatch	mesh:D005727	Ganglia, Spinal	semapv:LexicalMatching			generate_uberon_mesh_mappings.py				0.9
 uberon:0000081	metanephros	skos:exactMatch	mesh:C000729049	metanephroi	semapv:LexicalMatching	2026-04-01	2026	sssom-curator	wikidata:Q138902949	0.5.1-dev	2026-05-21	0.556

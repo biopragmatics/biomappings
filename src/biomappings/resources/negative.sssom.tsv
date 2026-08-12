@@ -60,6 +60,7 @@
 #  uberon: http://purl.obolibrary.org/obo/UBERON_
 #  umls: https://uts.nlm.nih.gov/uts/umls/concept/
 #  uniprot.chain: http://purl.uniprot.org/annotation/
+#  vivo: http://vivoweb.org/ontology/core#
 #  vo: http://purl.obolibrary.org/obo/VO_
 #  vsmo: http://purl.obolibrary.org/obo/VSMO_
 #  wikipathways: http://www.wikipathways.org/instance/
@@ -1732,7 +1733,17 @@ reactome:R-XTR-8877627	Vitamin E	skos:exactMatch	Not	chebi:46430	(-)-alpha-tocop
 reactome:R-XTR-8877627	Vitamin E	skos:exactMatch	Not	mesh:D014810	Vitamin E	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 reactome:R-XTR-9664873	Pexophagy	debio:0000003	Not	go:0030242	autophagy of peroxisome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 reactome:R-XTR-983189	Kinesins	debio:0000003	Not	fplx:Kinesin	Kinesin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+schema:catalog	catalog	skos:exactMatch	Not	vivo:Catalog	Catalog	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+schema:contributor	contributor	skos:exactMatch	Not	vivo:contributingRole	contributor	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+schema:course	course	skos:exactMatch	Not	vivo:Course	Course	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 schema:dataset	dataset	skos:exactMatch	Not	t4fs:0000347	dataset	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
+schema:dataset	dataset	skos:exactMatch	Not	vivo:Dataset	Dataset	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+schema:department	department	skos:exactMatch	Not	vivo:Department	Department	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+schema:license	license	skos:exactMatch	Not	vivo:License	License	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+schema:location	location	skos:exactMatch	Not	vivo:Location	Location	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+schema:publisher	publisher	skos:exactMatch	Not	vivo:Publisher	Publisher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+schema:review	review	skos:exactMatch	Not	vivo:Review	Review	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+schema:reviews	reviews	skos:exactMatch	Not	vivo:Review	Review	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 uberon:0000104	life cycle	skos:exactMatch	Not	mesh:D008018	Life Cycle Stages	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 uberon:0000353	parenchyma	skos:exactMatch	Not	bto:0000999	plant parenchyma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	
 uberon:0001263	pancreatic acinus	skos:exactMatch	Not	bto:0000028	pancreatic acinar cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/530a1b/scripts/generate_uberon_bto_mappings.py	
