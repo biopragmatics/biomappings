@@ -46,6 +46,7 @@
 #  nbo: http://purl.obolibrary.org/obo/NBO_
 #  ncbitaxon: http://purl.obolibrary.org/obo/NCBITaxon_
 #  ncit: http://purl.obolibrary.org/obo/NCIT_
+#  nomen: http://purl.obolibrary.org/obo/NOMEN_
 #  oae: http://purl.obolibrary.org/obo/OAE_
 #  obi: http://purl.obolibrary.org/obo/OBI_
 #  oeo: https://openenergyplatform.org/ontology/oeo/OEO_
@@ -56,6 +57,7 @@
 #  pfam: https://www.ebi.ac.uk/interpro/entry/pfam/
 #  pr: http://purl.obolibrary.org/obo/PR_
 #  reactome: https://reactome.org/content/detail/
+#  ro: http://purl.obolibrary.org/obo/RO_
 #  schema: https://schema.org/
 #  semapv: https://w3id.org/semapv/vocab/
 #  skos: http://www.w3.org/2004/02/skos/core#
@@ -1230,6 +1232,12 @@ mondo:0100179	Hirschsprung disease, susceptibility to	skos:exactMatch	Not	mesh:C
 mondo:0600011	mild hypophosphatasia	skos:exactMatch	Not	mesh:C562647	Hypophosphatasia, Adult	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				2026-07-16
 mondo:0800268	atrioventricular septal defect, susceptibility to, 1	skos:exactMatch	Not	mesh:C562831	Atrioventricular Septal Defect	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				2026-07-16
 ms:1000179	neptune	skos:exactMatch	Not	mesh:D018541	Neptune	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	4.1.257	2026		2026-08-12
+ms:1000242	blackbody infrared radiative dissociation	skos:exactMatch	Not	mesh:D001717	Birds	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	4.1.257	2026		2026-08-12
+ms:1000285	total ion current	skos:exactMatch	Not	mesh:D020323	Tics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	4.1.257	2026		2026-08-12
+ms:1001303	Arg-C	skos:exactMatch	Not	mesh:C019913	clostripain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	4.1.257	2026		2026-08-12
+ms:1002974	LipiDex	skos:exactMatch	Not	mesh:C010599	lipidex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	4.1.257	2026		2026-08-12
+ms:1003983	hydroxylamine	skos:exactMatch	Not	mesh:D006898	Hydroxylamines	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	4.1.257	2026		2026-08-12
+nomen:0001018	family	skos:exactMatch	Not	mesh:D005190	Family	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026		2026-08-12
 oae:0002495	dialysis	skos:exactMatch	Not	ncbitaxon:124307	Dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 obi:0000758	Roche	skos:exactMatch	Not	ncbitaxon:2506334	Roche	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 obi:0400064	laser	skos:exactMatch	Not	ncbitaxon:62990	Laser	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
@@ -1239,6 +1247,7 @@ obi:1110053	cancer	skos:exactMatch	Not	ncbitaxon:6754	Cancer	semapv:ManualMappin
 oeo:00000117	dam	skos:exactMatch	Not	envo:00000500	beaver dam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 oeo:00000449	wood	skos:exactMatch	Not	envo:00000118	coconut plantation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 oeo:00000449	wood	skos:exactMatch	Not	envo:00000193	olive grove	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
+ontoavida:00000102	buffer	skos:exactMatch	Not	mesh:D002021	Buffers	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2022-03-15	2026		2026-08-12
 ontoavida:00000106	head	skos:exactMatch	Not	mesh:D006257	Head	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2022-03-15	2026		2026-08-12
 pfam:PF00292	PAX	skos:exactMatch	Not	ncbitaxon:2033138	Pax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 pfam:PF00302	CAT	skos:exactMatch	Not	ncbitaxon:9685	Felis catus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
@@ -1747,6 +1756,8 @@ reactome:R-XTR-8877627	Vitamin E	skos:exactMatch	Not	chebi:46430	(-)-alpha-tocop
 reactome:R-XTR-8877627	Vitamin E	skos:exactMatch	Not	mesh:D014810	Vitamin E	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 reactome:R-XTR-9664873	Pexophagy	debio:0000003	Not	go:0030242	autophagy of peroxisome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 reactome:R-XTR-983189	Kinesins	debio:0000003	Not	fplx:Kinesin	Kinesin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
+ro:HOM0000010	in syntenic homology relationship with	skos:exactMatch	Not	mesh:D026801	Synteny	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-12-17	2026		2026-08-12
+ro:HOM0000016	in non functional homology relationship with	skos:exactMatch	Not	mesh:D011544	Pseudogenes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-12-17	2026		2026-08-12
 schema:catalog	catalog	skos:exactMatch	Not	vivo:Catalog	Catalog	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 schema:contributor	contributor	skos:exactMatch	Not	vivo:contributingRole	contributor	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 schema:course	course	skos:exactMatch	Not	vivo:Course	Course	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
