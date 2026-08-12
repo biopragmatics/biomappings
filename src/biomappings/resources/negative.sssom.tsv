@@ -36,6 +36,7 @@
 #  mesh: https://meshb.nlm.nih.gov/record/ui?ui=
 #  mi: http://purl.obolibrary.org/obo/MI_
 #  miapa: http://purl.obolibrary.org/obo/MIAPA_
+#  modalia: https://purl.org/ontology/modalia#
 #  mondo: http://purl.obolibrary.org/obo/MONDO_
 #  nbo: http://purl.obolibrary.org/obo/NBO_
 #  ncbitaxon: http://purl.obolibrary.org/obo/NCBITaxon_
@@ -57,6 +58,7 @@
 #  umls: https://uts.nlm.nih.gov/uts/umls/concept/
 #  uniprot.chain: http://purl.uniprot.org/annotation/
 #  vo: http://purl.obolibrary.org/obo/VO_
+#  vsmo: http://purl.obolibrary.org/obo/VSMO_
 #  wikipathways: http://www.wikipathways.org/instance/
 #mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/negative.sssom.tsv
 subject_id	subject_label	predicate_id	predicate_modifier	object_id	object_label	mapping_justification	author_id	mapping_tool	mapping_date
@@ -610,6 +612,9 @@ envo:03501173	post-anesthesia care unit facility	skos:exactMatch	Not	ncbitaxon:4
 envo:03501219	window	skos:exactMatch	Not	ncbitaxon:183654	Scophthalmus aquosus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 goldbook:S05965	stem	skos:exactMatch	Not	chmo:0000086	scanning transmission electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-11
 goldbook:S05965	stem	skos:exactMatch	Not	chmo:0002649	scanning transmission electron microscope	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-11
+gsso:001304	discipline	skos:exactMatch	Not	modalia:Discipline	discipline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+gsso:004944	code	skos:exactMatch	Not	modalia:Code	code	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+gsso:004944	code	skos:exactMatch	Not	schema:Code	Code	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 hp:0000001	All	skos:exactMatch	Not	ncbitaxon:1	root	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 hp:0000039	Epispadias	skos:exactMatch	Not	ncbitaxon:2865123	Epispadias	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 iana.mediatype:font/collection	collection	skos:exactMatch	Not	schema:Collection	Collection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
@@ -669,6 +674,7 @@ iconclass:94G42	Hector's body is weighed in gold (Aeschylus)	skos:relatedMatch	N
 ido:0000629	host role	skos:exactMatch	Not	obi:0000725	host role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 ido:0000636	sepsis	skos:exactMatch	Not	ncbitaxon:137507	Sepsis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 idomal:0000222	enzyme-linked immunosorbent assay	skos:exactMatch	Not	maxo:0000610	clinical ELISA testing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0000355	incubation period	skos:exactMatch	Not	vsmo:0000499	intrinsic incubation period	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 idomal:0000822	antibody	skos:exactMatch	Not	go:0042571	immunoglobulin complex, circulating	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 idomal:0001015	relapse	skos:exactMatch	Not	ogms:0000105	relapse	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0001019	mouse	skos:exactMatch	Not	ncbitaxon:10090	Mus musculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	

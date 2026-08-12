@@ -16,7 +16,7 @@
 #  cido: http://purl.obolibrary.org/obo/CIDO_
 #  cl: http://purl.obolibrary.org/obo/CL_
 #  clo: http://purl.obolibrary.org/obo/CLO_
-#  commoncoreontology: http://www.ontologyrepository.com/CommonCoreOntologies/
+#  commoncoreontology: https://www.commoncoreontologies.org/ont
 #  cpt: https://www.aapc.com/codes/cpt-codes/
 #  cvx: https://biopragmatics.github.io/providers/cvx/
 #  dc: http://purl.org/dc/elements/1.1/
@@ -35,6 +35,7 @@
 #  gsso: http://purl.obolibrary.org/obo/GSSO_
 #  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
 #  hp: http://purl.obolibrary.org/obo/HP_
+#  iana.mediatype: https://www.iana.org/assignments/media-types/
 #  iao: http://purl.obolibrary.org/obo/IAO_
 #  iconclass: https://iconclass.org/
 #  ido: http://purl.obolibrary.org/obo/IDO_
@@ -43,12 +44,16 @@
 #  ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
 #  kegg.pathway: https://www.kegg.jp/pathway/
 #  kestrelo: http://purl.obolibrary.org/obo/kestrelo_
+#  kim.educationlevel: https://w3id.org/kim/educationalLevel/level_
+#  kim.esv: https://w3id.org/class/sectors/
+#  lrmi: http://purl.org/dcx/lrmi-terms/
 #  maxo: http://purl.obolibrary.org/obo/MAXO_
 #  mesh: https://meshb.nlm.nih.gov/record/ui?ui=
 #  miro: http://purl.obolibrary.org/obo/MIRO_
 #  modalia: https://purl.org/ontology/modalia#
 #  mondo: http://purl.obolibrary.org/obo/MONDO_
 #  mpath: http://purl.obolibrary.org/obo/MPATH_
+#  nbo: http://purl.obolibrary.org/obo/NBO_
 #  ncbiprotein: https://www.ncbi.nlm.nih.gov/protein/
 #  ncbitaxon: http://purl.obolibrary.org/obo/NCBITaxon_
 #  ncit: http://purl.obolibrary.org/obo/NCIT_
@@ -1050,6 +1055,7 @@ ccso:Course	Course	skos:exactMatch	schema:Course	Course	semapv:ManualMappingCura
 ccso:Course	Course	skos:exactMatch	vivo:Course	Course	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 ccso:Department	Department	skos:exactMatch	vivo:Department	Department	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 ccso:Discipline	Discipline	skos:exactMatch	modalia:Discipline	discipline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+ccso:Employee	Employee	skos:exactMatch	gsso:003800	employed person	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 ccso:Event	Event	skos:exactMatch	schema:Event	Event	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 ccso:Institute	Institute	skos:exactMatch	vivo:Institute	Institute	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 ccso:Researcher	Researcher	skos:exactMatch	modalia:Researcher	researcher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
@@ -4056,10 +4062,17 @@ goldbook:12419	Fourier-transform mass spectrometry	skos:exactMatch	chmo:0002925	
 goldbook:15415	pulsed-laser polymerisation	skos:exactMatch	chmo:0002552	pulsed laser polymerisation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 goldbook:B00696	bomb-digestion	skos:exactMatch	chmo:0001492	bomb digestion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 goldbook:P04962	pyrolysis-gas chromatography	skos:exactMatch	chmo:0001260	pyrolysis gas chromatography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+gsso:000232	organization	skos:exactMatch	schema:Organization	Organization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
+gsso:000972	festival	skos:exactMatch	schema:Festival	Festival	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
+gsso:004224	museum	skos:exactMatch	schema:Museum	Museum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 gsso:004224	museum	skos:exactMatch	vivo:Museum	Museum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+gsso:004225	library	skos:exactMatch	schema:Library	Library	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 gsso:004553	university	skos:exactMatch	vivo:University	University	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+gsso:008079	nightclub	skos:exactMatch	schema:NightClub	NightClub	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 gsso:008470	newsletter	skos:exactMatch	vivo:Newsletter	Newsletter	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+gsso:009603	podcast	skos:exactMatch	modalia:Podcast	podcast	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 gsso:010256	undergraduate student	skos:exactMatch	vivo:UndergraduateStudent	Undergraduate Student	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+iana.mediatype:multipart	multipart	skos:exactMatch	modalia:Multipart	multipart	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	chebi:29287	gold atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	chebi:30050	gold(0)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:22C4%28GOLD%29	colours, pigments, and paints: gold	skos:relatedMatch	chebi:29287	gold atom	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
@@ -4191,6 +4204,7 @@ idomal:0000372	interferon-gamma	skos:broadMatch	pr:000024990	type II interferon	
 idomal:0000372	interferon-gamma	skos:exactMatch	pr:000000017	interferon gamma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			mira	
 idomal:0000378	macrophage	skos:exactMatch	cl:0000235	macrophage	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 idomal:0000398	shivering	skos:exactMatch	hp:0025144	Shivering	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			mira	
+idomal:0000398	shivering	skos:narrowMatch	nbo:0000589	tremor	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 idomal:0000411	entomological inoculation rate	skos:exactMatch	vsmo:0000112	entomological inoculation rate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 idomal:0000428	measure relating to aggregate of arthropods	skos:exactMatch	vsmo:0000264	measure relating to aggregate of arthropods	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 idomal:0000430	measure relating to aggregate of vertebrates	skos:exactMatch	vsmo:0002028	measure relating to aggregate of vertebrates	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
@@ -4241,6 +4255,7 @@ idomal:0001228	Plasmodium knowlesi	skos:exactMatch	vsmo:0001269	Plasmodium knowl
 idomal:0001229	Plasmodium berghei	skos:exactMatch	ncbitaxon:5821	Plasmodium berghei	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 idomal:0001230	Plasmodium gallinaceum	skos:exactMatch	vsmo:0001253	Plasmodium gallinaceum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 idomal:0001231	Plasmodium yoelii	skos:exactMatch	ncbitaxon:5861	Plasmodium yoelii	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
+idomal:0001254	population	skos:exactMatch	ncit:C17005	Population Group	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 idomal:0001254	population	skos:exactMatch	obi:0000181	population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			mira	
 idomal:0001254	population	skos:exactMatch	pco:0000001	population	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			mira	
 idomal:0001288	ovalocytosis	skos:exactMatch	doid:2373	hereditary elliptocytosis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			mira	
@@ -4568,6 +4583,10 @@ kegg.pathway:map04931	Insulin resistance	skos:exactMatch	mesh:D007333	Insulin Re
 kegg.pathway:map04971	Gastric acid secretion	skos:exactMatch	go:0001696	gastric acid secretion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 kegg.pathway:map04979	Cholesterol metabolism	skos:exactMatch	go:0008203	cholesterol metabolic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 kestrelo:0000071	vaccine	skos:exactMatch	vo:0000001	vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
+kim.educationlevel:A	University	skos:exactMatch	vivo:University	University	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
+kim.esv:school	school	skos:exactMatch	vivo:School	School	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
+lrmi:AlignmentObject	AlignmentObject	skos:exactMatch	schema:AlignmentObject	AlignmentObject	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
+lrmi:EducationalAudience	EducationalAudience	skos:exactMatch	schema:EducationalAudience	EducationalAudience	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 maxo:0000014	radiation therapy	skos:exactMatch	mesh:D011878	Radiotherapy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0000015	biologic therapy	skos:exactMatch	mesh:D001691	Biological Therapy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0000021	palliative care	skos:exactMatch	mesh:D010166	Palliative Care	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
@@ -10117,9 +10136,11 @@ mesh:D066270	Social Capital	skos:exactMatch	ncit:C93209	Social Capital	semapv:Ma
 mesh:D066271	External Capsule	skos:exactMatch	ncit:C32550	External Capsule	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D066292	Lipid Droplets	skos:exactMatch	go:0005811	lipid droplet	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D066293	Renshaw Cells	skos:exactMatch	ncit:C33463	Renshaw Cell	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+modalia:Code	code	skos:exactMatch	schema:Code	Code	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 modalia:License	license	skos:exactMatch	vivo:License	License	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 modalia:Researcher	researcher	skos:exactMatch	t4fs:0000220	researcher	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 modalia:hasTranslation	has translation	skos:exactMatch	vivo:hasTranslation	has translation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+modalia:userLikes	userLikes	skos:exactMatch	schema:UserLikes	UserLikes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 mondo:0000045	hypothyroidism, congenital, nongoitrous	skos:exactMatch	mesh:C000603735	Congenital Nongoitrous Hypothyroidism	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				2026-07-16
 mondo:0000158	developmental dysplasia of the hip	skos:exactMatch	mesh:D000082602	Developmental Dysplasia of the Hip	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mondo:0000239	adiaspiromycosis	skos:exactMatch	mesh:C000656784	adiaspiromycosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
@@ -10859,6 +10880,8 @@ reactome:R-SSC-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go
 reactome:R-XTR-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 schema:Book	Book	skos:exactMatch	t4fs:0000305	book	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 schema:Dataset	Dataset	skos:exactMatch	t4fs:0000347	dataset	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+t4fs:0000347	dataset	skos:exactMatch	vivo:Dataset	Dataset	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
+t4fs:0000397	database	skos:exactMatch	vivo:Database	Database	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 taxrank:0000001	phylum	skos:exactMatch	ncit:C45277	Phylum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-05-06
 taxrank:0000001	phylum	skos:exactMatch	snomedct:31891000009101	Phylum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-05-06
 taxrank:0000001	phylum	skos:exactMatch	tdwg.taxonrank:Phylum	Phylum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-05-02
