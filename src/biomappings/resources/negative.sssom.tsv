@@ -28,10 +28,13 @@
 #  iana.mediatype: https://www.iana.org/assignments/media-types/
 #  iconclass: https://iconclass.org/
 #  ido: http://purl.obolibrary.org/obo/IDO_
+#  idocovid19: http://purl.obolibrary.org/obo/COVIDO_
 #  idomal: http://purl.obolibrary.org/obo/IDOMAL_
 #  interpro: https://www.ebi.ac.uk/interpro/entry/InterPro/
+#  isced2013: https://w3id.org/kim/isced-2013/
 #  ito: https://bioportal.bioontology.org/ontologies/ITO/?p=classes&conceptid=https://identifiers.org/ito:ITO_
 #  kegg.pathway: https://www.kegg.jp/pathway/
+#  kim.hcrt: https://w3id.org/kim/hcrt/
 #  maxo: http://purl.obolibrary.org/obo/MAXO_
 #  mesh: https://meshb.nlm.nih.gov/record/ui?ui=
 #  mi: http://purl.obolibrary.org/obo/MI_
@@ -615,6 +618,12 @@ goldbook:S05965	stem	skos:exactMatch	Not	chmo:0002649	scanning transmission elec
 gsso:001304	discipline	skos:exactMatch	Not	modalia:Discipline	discipline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 gsso:004944	code	skos:exactMatch	Not	modalia:Code	code	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 gsso:004944	code	skos:exactMatch	Not	schema:Code	Code	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+gsso:005147	index	skos:exactMatch	Not	iana.mediatype:application/index	index	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+gsso:005414	haptics	skos:exactMatch	Not	iana.mediatype:haptics	haptics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+gsso:005860	model	skos:exactMatch	Not	iana.mediatype:model	model	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+gsso:008181	passport	skos:exactMatch	Not	iana.mediatype:application/passport	passport	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+gsso:009300	red	skos:exactMatch	Not	iana.mediatype:audio/RED	RED	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+gsso:009300	red	skos:exactMatch	Not	iana.mediatype:text/RED	RED	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 hp:0000001	All	skos:exactMatch	Not	ncbitaxon:1	root	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 hp:0000039	Epispadias	skos:exactMatch	Not	ncbitaxon:2865123	Epispadias	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 iana.mediatype:font/collection	collection	skos:exactMatch	Not	schema:Collection	Collection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
@@ -673,18 +682,33 @@ iconclass:94E231	gold is found in Palamedes' tent	skos:relatedMatch	Not	chebi:59
 iconclass:94G42	Hector's body is weighed in gold (Aeschylus)	skos:relatedMatch	Not	chebi:59965	glyoxal-lysine dimer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 ido:0000629	host role	skos:exactMatch	Not	obi:0000725	host role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 ido:0000636	sepsis	skos:exactMatch	Not	ncbitaxon:137507	Sepsis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+ido:0001126	asymptomatic carrier	skos:exactMatch	Not	idomal:0000056	carrier	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+idocovid19:0001141	COVID-19	skos:exactMatch	Not	ncit:C171133	COVID-19 Infection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+idocovid19:0001287	SARS-COV-2 Infection	skos:exactMatch	Not	doid:0080600	COVID-19	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 idomal:0000222	enzyme-linked immunosorbent assay	skos:exactMatch	Not	maxo:0000610	clinical ELISA testing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0000272	induced malaria	skos:exactMatch	Not	doid:12365	malaria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 idomal:0000355	incubation period	skos:exactMatch	Not	vsmo:0000499	intrinsic incubation period	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+idomal:0000363	dormancy	skos:exactMatch	Not	go:0030431	sleep	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+idomal:0000443	gravid	skos:exactMatch	Not	uberon:0009097	gravid organism	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 idomal:0000822	antibody	skos:exactMatch	Not	go:0042571	immunoglobulin complex, circulating	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-04-12
 idomal:0001015	relapse	skos:exactMatch	Not	ogms:0000105	relapse	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0001019	mouse	skos:exactMatch	Not	ncbitaxon:10090	Mus musculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0001072	P28	skos:exactMatch	Not	pr:000030597	transmembrane emp24 domain-containing protein 5	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 idomal:0001083	Trap	skos:exactMatch	Not	pr:000001937	tartrate-resistant acid phosphatase type 5	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0001083	Trap	skos:exactMatch	Not	pr:Q05117	tartrate-resistant acid phosphatase type 5 (mouse)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0001095	SPECT	skos:exactMatch	Not	maxo:0009070	single-photon emission computed tomography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+idomal:0001106	HAP	skos:exactMatch	Not	pr:000014432	scaffold attachment factor B1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 idomal:0001123	RAP-1	skos:exactMatch	Not	vo:0011026	RAP-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 idomal:0001143	MSP-1	skos:exactMatch	Not	doid:0111385	inclusion body myopathy with early-onset Paget disease of bone with or without frontotemporal dementia 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0001144	MSP-2	skos:exactMatch	Not	doid:0111384	inclusion body myopathy with early-onset Paget disease of bone with or without frontotemporal dementia 2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
 idomal:0001145	MSP-3	skos:exactMatch	Not	doid:0111386	inclusion body myopathy with early-onset Paget disease of bone with or without frontotemporal dementia 3	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0001238	haemoglobin C	skos:exactMatch	Not	hp:0032146	HbC hemoglobin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+idomal:0002131	vision	skos:exactMatch	Not	go:0007601	visual perception	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+idomal:0002133	hearing	skos:exactMatch	Not	go:0007605	sensory perception of sound	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+idomal:0002146	respiration	skos:exactMatch	Not	go:0007585	respiratory gaseous exchange by respiratory system	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+idomal:0002173	diapause	skos:exactMatch	Not	go:0030431	sleep	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 idomal:0002461	anatomical cluster	skos:exactMatch	Not	caro:0020001	multi organ part structure	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	mira	
+idomal:0002461	anatomical cluster	skos:exactMatch	Not	uberon:0034921	multi organ part structure	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 interpro:IPR000225	Armadillo	skos:exactMatch	Not	ncbitaxon:9359	Dasypodidae	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 interpro:IPR000225	Armadillo	skos:exactMatch	Not	ncbitaxon:96820	Armadillo	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 interpro:IPR007273	SCAMP	skos:exactMatch	Not	ncbitaxon:160730	Mycteroperca phenax	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
@@ -694,6 +718,9 @@ interpro:IPR010777	PipA	skos:exactMatch	Not	ncbitaxon:191479	Pipa	semapv:ManualM
 interpro:IPR012975	NOPS	skos:exactMatch	Not	ncbitaxon:1956867	Nops	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 interpro:IPR016860	Cerberus	skos:exactMatch	Not	ncbitaxon:46266	Cerberus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 interpro:IPR022773	Siva	skos:exactMatch	Not	ncbitaxon:2183855	Siva	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
+isced2013:n023	Languages	skos:exactMatch	Not	schema:Language	Language	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+isced2013:n0916	Pharmacy	skos:exactMatch	Not	schema:Pharmacy	Pharmacy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
+isced2013:n10	Services	skos:exactMatch	Not	schema:Service	Service	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 ito:00089	Undetermined	skos:exactMatch	Not	mi:0339	undetermined sequence position	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 ito:01623	Vector	skos:exactMatch	Not	ncbitaxon:2873985	Vector	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
 ito:09422	All	skos:exactMatch	Not	ncbitaxon:1	root	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	kestrel-mappings	
@@ -796,6 +823,7 @@ kegg.pathway:map07037	Antiarrhythmic drugs	skos:exactMatch	Not	mesh:D000889	Anti
 kegg.pathway:map07039	Opioid analgesics	skos:exactMatch	Not	mesh:D000701	Analgesics, Opioid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 kegg.pathway:map07044	Antiviral agents	skos:exactMatch	Not	mesh:D000998	Antiviral Agents	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
 kegg.pathway:map07057	Antiparkinsonian agents	skos:exactMatch	Not	mesh:D000978	Antiparkinson Agents	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		
+kim.hcrt:assessment	Assessment	skos:exactMatch	Not	t4fs:0000126	assessment	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		2026-08-12
 mesh:C000591739	Familial gynecomastia, due to increased aromatase activity	skos:exactMatch	Not	doid:0090122	aromatase excess syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508		
 mesh:C000632245	steapsin	skos:exactMatch	Not	go:0004806	triglyceride lipase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346		
 mesh:C000705167	viroporins	skos:exactMatch	Not	go:0039707	pore formation by virus in membrane of host cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370		

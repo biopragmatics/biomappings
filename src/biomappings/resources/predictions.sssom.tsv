@@ -1,5 +1,4 @@
 #curie_map:
-#  bfo: http://purl.obolibrary.org/obo/BFO_
 #  cellosaurus: https://www.cellosaurus.org/CVCL_
 #  chebi: http://purl.obolibrary.org/obo/CHEBI_
 #  chmo: http://purl.obolibrary.org/obo/CHMO_
@@ -10,31 +9,17 @@
 #  fplx: https://sorgerlab.github.io/famplex/
 #  go: http://purl.obolibrary.org/obo/GO_
 #  goldbook: https://goldbook.iupac.org/terms/view/
-#  gsso: http://purl.obolibrary.org/obo/GSSO_
 #  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
 #  hp: http://purl.obolibrary.org/obo/HP_
-#  iana.mediatype: https://www.iana.org/assignments/media-types/
-#  ido: http://purl.obolibrary.org/obo/IDO_
-#  idocovid19: http://purl.obolibrary.org/obo/COVIDO_
-#  idomal: http://purl.obolibrary.org/obo/IDOMAL_
-#  isced2013: https://w3id.org/kim/isced-2013/
-#  kim.esv: https://w3id.org/class/sectors/
-#  kim.hcrt: https://w3id.org/kim/hcrt/
 #  maxo: http://purl.obolibrary.org/obo/MAXO_
 #  mesh: https://meshb.nlm.nih.gov/record/ui?ui=
 #  mondo: http://purl.obolibrary.org/obo/MONDO_
-#  ncbitaxon: http://purl.obolibrary.org/obo/NCBITaxon_
 #  ncit: http://purl.obolibrary.org/obo/NCIT_
-#  obi: http://purl.obolibrary.org/obo/OBI_
-#  obo: http://purl.obolibrary.org/obo/
 #  oeo: https://openenergyplatform.org/ontology/oeo/OEO_
-#  pato: http://purl.obolibrary.org/obo/PATO_
-#  pr: http://purl.obolibrary.org/obo/PR_
 #  ro: http://purl.obolibrary.org/obo/RO_
 #  schema: https://schema.org/
 #  semapv: https://w3id.org/semapv/vocab/
 #  skos: http://www.w3.org/2004/02/skos/core#
-#  t4fs: http://purl.obolibrary.org/obo/T4FS_
 #  uberon: http://purl.obolibrary.org/obo/UBERON_
 #  umls: https://uts.nlm.nih.gov/uts/umls/concept/
 #  uniprot: http://purl.uniprot.org/uniprot/
@@ -12254,70 +12239,6 @@ goldbook:S05917	standard hydrogen electrode	skos:exactMatch	chmo:0002348	hydroge
 goldbook:S06068	sublation	skos:exactMatch	chmo:0001599	gas–liquid extraction	semapv:LexicalMatching			sssom-curator				0.556
 goldbook:ST07151	sol-gel process	skos:exactMatch	chmo:0001313	sol–gel method	semapv:LexicalMatching			sssom-curator				0.556
 goldbook:W06686	working electrode	skos:exactMatch	chmo:0002346	indicator electrode	semapv:LexicalMatching			sssom-curator				0.556
-gsso:000717	relationship	skos:exactMatch	vivo:Relationship	Relationship	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-gsso:000960	meeting	skos:exactMatch	vivo:Meeting	Meeting	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-gsso:003119	facility	skos:exactMatch	vivo:Facility	Facility	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-gsso:004225	library	skos:exactMatch	vivo:Library	Library	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-gsso:004441	project	skos:exactMatch	vivo:Project	Project	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-gsso:005147	index	skos:exactMatch	iana.mediatype:application/index	index	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-gsso:005414	haptics	skos:exactMatch	iana.mediatype:haptics	haptics	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-gsso:005758	scientist	skos:exactMatch	t4fs:0000454	scientist	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-gsso:005860	model	skos:exactMatch	iana.mediatype:model	model	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-gsso:008181	passport	skos:exactMatch	iana.mediatype:application/passport	passport	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-gsso:009300	red	skos:exactMatch	iana.mediatype:audio/RED	RED	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.707
-gsso:009300	red	skos:exactMatch	iana.mediatype:text/RED	RED	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.707
-iana.mediatype:video	video	skos:exactMatch	vivo:Video	Video	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-ido:0000466	virulence	skos:exactMatch	go:0016032	viral process	semapv:LexicalMatching			mira				0.5555555555555556
-ido:0000466	virulence	skos:exactMatch	pato:0002146	virulence	semapv:LexicalMatching			mira				0.7777777777777778
-ido:0000467	susceptibility	skos:exactMatch	pato:0001043	susceptibility toward	semapv:LexicalMatching			mira				0.5555555555555556
-ido:0001126	asymptomatic carrier	skos:exactMatch	idomal:0000056	carrier	semapv:LexicalMatching			mira				0.549371263656978
-idocovid19:0001141	COVID-19	skos:exactMatch	doid:0080600	COVID-19	semapv:LexicalMatching			mira				0.7777777777777778
-idocovid19:0001141	COVID-19	skos:exactMatch	ncit:C171133	COVID-19 Infection	semapv:LexicalMatching			mira				0.5555555555555556
-idocovid19:0001287	SARS-COV-2 Infection	skos:exactMatch	doid:0080600	COVID-19	semapv:LexicalMatching			mira				0.5301999587713874
-idocovid19:0001287	SARS-COV-2 Infection	skos:exactMatch	ncit:C171133	COVID-19 Infection	semapv:LexicalMatching			mira				0.5301999587713874
-idomal:0000016	CD36	skos:exactMatch	pr:000014493	scavenger receptor class B member 1	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0000191	falciparum malaria	skos:exactMatch	doid:14067	Plasmodium falciparum malaria	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0000192	vivax malaria	skos:exactMatch	doid:12978	Plasmodium vivax malaria	semapv:LexicalMatching			mira				0.5400948258091115
-idomal:0000193	ovale malaria	skos:exactMatch	doid:12919	Plasmodium ovale malaria	semapv:LexicalMatching			mira				0.549371263656978
-idomal:0000194	quartan malaria	skos:exactMatch	doid:14324	Plasmodium malariae malaria	semapv:LexicalMatching			mira				0.5400948258091115
-idomal:0000272	induced malaria	skos:exactMatch	doid:12365	malaria	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0000349	insecticide resistance	skos:exactMatch	go:0017085	response to insecticide	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0000363	dormancy	skos:exactMatch	go:0030431	sleep	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0000427	site	skos:exactMatch	bfo:0000029	site	semapv:LexicalMatching			mira				0.7777777777777778
-idomal:0000427	site	skos:exactMatch	obo:snap_Site	site	semapv:LexicalMatching			mira				0.7777777777777778
-idomal:0000443	gravid	skos:exactMatch	uberon:0009097	gravid organism	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0000551	staining	skos:exactMatch	obi:0302887	staining	semapv:LexicalMatching			mira				0.7777777777777778
-idomal:0000816	activation-induced cell death	skos:exactMatch	go:0071888	macrophage apoptotic process	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0001072	P28	skos:exactMatch	pr:000030597	transmembrane emp24 domain-containing protein 5	semapv:LexicalMatching			mira				0.5023706452277881
-idomal:0001095	SPECT	skos:exactMatch	maxo:0009070	single-photon emission computed tomography	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0001106	HAP	skos:exactMatch	pr:000014432	scaffold attachment factor B1	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0001219	monkey	skos:exactMatch	ncbitaxon:9479	Platyrrhini	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0001238	haemoglobin C	skos:exactMatch	hp:0032146	HbC hemoglobin	semapv:LexicalMatching			mira				0.549371263656978
-idomal:0001253	adult stage	skos:exactMatch	uberon:0000066	fully formed stage	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0001253	adult stage	skos:exactMatch	uberon:0000113	post-juvenile adult stage	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0001272	nematode	skos:exactMatch	ncbitaxon:6231	Nematoda	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0001275	fish	skos:exactMatch	ncbitaxon:117565	Myxini	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0001275	fish	skos:exactMatch	ncbitaxon:7898	Actinopterygii	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0002126	visceral nervous system	skos:exactMatch	uberon:0002410	autonomic nervous system	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0002131	vision	skos:exactMatch	go:0007601	visual perception	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0002133	hearing	skos:exactMatch	go:0007605	sensory perception of sound	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0002146	respiration	skos:exactMatch	go:0007585	respiratory gaseous exchange by respiratory system	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0002173	diapause	skos:exactMatch	go:0030431	sleep	semapv:LexicalMatching			mira				0.5555555555555556
-idomal:0002461	anatomical cluster	skos:exactMatch	uberon:0034921	multi organ part structure	semapv:LexicalMatching			mira				0.5555555555555556
-isced2013:n023	Languages	skos:exactMatch	schema:Language	Language	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-isced2013:n0916	Pharmacy	skos:exactMatch	schema:Pharmacy	Pharmacy	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-isced2013:n10	Services	skos:exactMatch	schema:Service	Service	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-kim.esv:school	school	skos:exactMatch	schema:School	School	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-kim.hcrt:assessment	Assessment	skos:exactMatch	t4fs:0000126	assessment	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-kim.hcrt:case_study	Case Study	skos:exactMatch	vivo:CaseStudy	Case Study	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-kim.hcrt:course	Course	skos:exactMatch	schema:Course	Course	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-kim.hcrt:course	Course	skos:exactMatch	vivo:Course	Course	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-kim.hcrt:data	Data	skos:exactMatch	t4fs:0000430	data	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.762
-kim.hcrt:educational_game	Game	skos:exactMatch	schema:Game	Game	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-kim.hcrt:map	Map	skos:exactMatch	schema:Map	Map	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-kim.hcrt:slide	Presentation	skos:exactMatch	vivo:Presentation	Presentation	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-kim.hcrt:text	Text	skos:exactMatch	schema:Text	Text	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
-kim.hcrt:video	Video	skos:exactMatch	vivo:Video	Video	semapv:LexicalMatching			sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	0.778
 maxo:0000004	surgical procedure	skos:exactMatch	mesh:D013514	Surgical Procedures, Operative	semapv:LexicalMatching			https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py				0.54
 maxo:0000011	physical therapy	skos:exactMatch	mesh:D026741	Physical Therapy Modalities	semapv:LexicalMatching			https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py				0.54
 maxo:0000028	ultrasound therapy	skos:exactMatch	mesh:D014464	Ultrasonic Therapy	semapv:LexicalMatching			https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py				0.54
