@@ -16,6 +16,7 @@
 #  envo: http://purl.obolibrary.org/obo/ENVO_
 #  go: http://purl.obolibrary.org/obo/GO_
 #  goldbook: https://goldbook.iupac.org/terms/view/
+#  gsso: http://purl.obolibrary.org/obo/GSSO_
 #  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
 #  ido: http://purl.obolibrary.org/obo/IDO_
 #  idomal: http://purl.obolibrary.org/obo/IDOMAL_
@@ -83,12 +84,15 @@ doid:7173	cloacogenic carcinoma	skos:exactMatch	mesh:C563020	Anal Canal Carcinom
 doid:7474	malignant pleural mesothelioma	skos:exactMatch	mesh:D000086002	Mesothelioma, Malignant	semapv:LexicalMatching	orcid:0000-0001-9439-5346							0.0
 envo:06105012	biota	skos:exactMatch	ncbitaxon:131567	cellular organisms	semapv:LexicalMatching	orcid:0000-0003-4423-4370	kestrel-mappings						0.0
 goldbook:M03709	mass	skos:exactMatch	chmo:0000291	spectrophotometry	semapv:LexicalMatching	orcid:0000-0003-4423-4370	sssom-curator				2026-04-11	0.484	0.0
+gsso:000717	relationship	skos:exactMatch	vivo:Relationship	Relationship	semapv:LexicalMatching	orcid:0000-0003-4423-4370	sssom-curator	wikidata:Q138902949	0.3.2-dev	2026-04-12	2026-08-12	0.762	0.0
 ido:0000436	infectious disease	skos:exactMatch	doid:0050117	disease by infectious agent	semapv:LexicalMatching	orcid:0000-0003-4423-4370							0.0
 idomal:0000002	quality	skos:exactMatch	pato:0000001	quality	semapv:LexicalMatching	orcid:0000-0003-4423-4370	mira						0.0
 idomal:0000655	adult	skos:exactMatch	ncit:C17600	Adult	semapv:LexicalMatching	orcid:0000-0003-4423-4370	mira						0.0
 idomal:0000655	adult	skos:exactMatch	uberon:0007023	adult organism	semapv:LexicalMatching	orcid:0000-0003-4423-4370	mira						0.0
 idomal:0000672	chemical compound	skos:exactMatch	chebi:37577	heteroatomic molecular entity	semapv:LexicalMatching	orcid:0000-0003-4423-4370	mira						0.0
 idomal:0001067	protein	skos:exactMatch	chebi:16541	protein polypeptide chain	semapv:LexicalMatching	orcid:0000-0003-4423-4370	mira						0.0
+idomal:0001253	adult stage	skos:exactMatch	uberon:0000066	fully formed stage	semapv:LexicalMatching	orcid:0000-0003-4423-4370	mira				2026-08-12	0.5555555555555556	0.0
+idomal:0001253	adult stage	skos:exactMatch	uberon:0000113	post-juvenile adult stage	semapv:LexicalMatching	orcid:0000-0003-4423-4370	mira				2026-08-12	0.5555555555555556	0.0
 ito:07816	CNN	skos:exactMatch	aio:DCN	Deep Convolutional Network	semapv:LexicalMatching	orcid:0000-0003-4423-4370	kestrel-mappings						0.0
 ito:17424	Selection bias	skos:exactMatch	aio:Selection_And_Sampling_Bias	Selection And Sampling Bias	semapv:LexicalMatching	orcid:0000-0003-4423-4370	kestrel-mappings						0.0
 mesh:C000613429	FluMist	skos:exactMatch	ncit:C101094	Trivalent Live-Attenuated Influenza Vaccine	semapv:LexicalMatching	orcid:0000-0003-4423-4370							0.0
