@@ -57,10 +57,10 @@ requires-python = ">=3.11"
 dependencies = [
     "click",
     "tqdm",
-    "curies>=0.13.0",
-    "bioregistry>=0.13.0",
-    "sssom-pydantic>=0.5.1",
-    "sssom-curator[predict-lexical,web]>=0.5.0",
+    "curies>=0.15.0",
+    "bioregistry>=0.14.0",
+    "sssom-pydantic>=0.6.1",
+    "sssom-curator[predict-lexical,web]>=0.6.0",
 ]
 
 # see https://peps.python.org/pep-0735/ and https://docs.astral.sh/uv/concepts/dependencies/#dependency-groups
