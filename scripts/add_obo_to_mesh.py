@@ -38,5 +38,5 @@ if __name__ == "__main__":
         "mesh",
         prefixes,
         filter_mutual_mappings=True,
-        script=__file__,
+        flip=True,
     )
