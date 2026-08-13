@@ -172,33 +172,17 @@
 subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	license	subject_source_version	object_source_version	mapping_tool	mapping_tool_id	mapping_tool_version	mapping_date	confidence
 ado:0000001	cognitive symptom	skos:exactMatch	mesh:D019954	Neurobehavioral Manifestations	semapv:LexicalMatching		2023-09-20	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 ado:0000055	Boston Naming Test	skos:exactMatch	mesh:D007807	Language Tests	semapv:LexicalMatching		2023-09-20	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-ado:0000079	tobacco consumption	skos:exactMatch	mesh:D064424	Tobacco Use	semapv:LexicalMatching		2023-09-20	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-ado:0000082	traumatic brain injury	skos:exactMatch	mesh:D000070642	Brain Injuries, Traumatic	semapv:LexicalMatching		2023-09-20	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 ado:0000086	Neurobehavioral Cognitive Status Examination	skos:exactMatch	mesh:D000073216	Mental Status and Dementia Tests	semapv:LexicalMatching		2023-09-20	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 afpo:0000064	Susu	skos:exactMatch	mesh:D004289	Dolphins	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 afpo:0000071	Dinka	skos:exactMatch	mesh:C000725820	Dinka people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 afpo:0000136	Ga-Adangbe	skos:exactMatch	mesh:C000725694	Ga-Adangbe	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-afpo:0000188	Eastern African	skos:exactMatch	mesh:D000094846	East African People	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-afpo:0000199	Kalenjin	skos:exactMatch	mesh:C000725919	Kalenjin people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-afpo:0000209	Ari	skos:exactMatch	mesh:C003771	Amberlite XAD-2 resin	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.742
 afpo:0000249	Betsimisaraka	skos:exactMatch	mesh:C000725422	Betsimisaraka	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-afpo:0000274	Central African	skos:exactMatch	mesh:D000094845	Central African People	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-afpo:0000275	Northern African	skos:exactMatch	mesh:D000094843	North African People	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-afpo:0000276	Southern African	skos:exactMatch	mesh:D000094847	Southern African People	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-afpo:0000277	Western African	skos:exactMatch	mesh:D000094848	West African People	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-afpo:0000280	Masa	skos:exactMatch	mesh:C042762	methyl N-acetylsibirosaminide	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-afpo:0000325	Afrikaner	skos:exactMatch	mesh:C000725415	Afrikaner people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-afpo:0000344	Tonga	skos:exactMatch	mesh:C000725667	Tonga people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-afpo:0000344	Tonga	skos:exactMatch	mesh:D014058	Tonga	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-afpo:0000355	Andalusian	skos:exactMatch	mesh:C000724499	Andalusian people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 afpo:0000357	Copt	skos:exactMatch	mesh:C000724805	Copt people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 afpo:0000365	Egyptian	skos:exactMatch	mesh:C000724806	Egyptian people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-afpo:0000384	Agaw	skos:exactMatch	mesh:C071743	N-acetyl-gamma-glutamyl-4'-aminowarfarin	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 afpo:0000386	Bilen	skos:exactMatch	mesh:C000725813	Bilen people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 afpo:0000416	Dogon	skos:exactMatch	mesh:C000725685	Dogon people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 afpo:0000420	Esan	skos:exactMatch	mesh:C000725690	Esan people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 afpo:0000427	Urhobo	skos:exactMatch	mesh:C000725859	Urhobo people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-afpo:0000463	Hema	skos:exactMatch	mesh:C005044	hydroxyethyl methacrylate	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 afpo:0000546	Krahn	skos:exactMatch	mesh:C000725720	Krahn people	semapv:LexicalMatching		2024-03-21	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 agro:00000022	biological pest control process	skos:exactMatch	mesh:D010572	Pest Control, Biological	semapv:LexicalMatching		2022-11-02	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 agro:00000023	pest control process	skos:exactMatch	mesh:D010571	Pest Control	semapv:LexicalMatching		2022-11-02	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
@@ -209,20 +193,13 @@ agro:00000373	researcher	skos:exactMatch	mesh:D012108	Research Personnel	semapv:
 agro:00000374	student	skos:exactMatch	mesh:D013334	Students	semapv:LexicalMatching		2022-11-02	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 agro:00000469	crop rotation process	skos:exactMatch	mesh:D012399	Rotation	semapv:LexicalMatching		2022-11-02	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 agro:00000548	seedling	skos:exactMatch	mesh:D036226	Seedlings	semapv:LexicalMatching		2022-11-02	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-agro:00002067	methylene urea	skos:exactMatch	mesh:D051379	Mice	semapv:LexicalMatching		2022-11-02	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 agro:01000000	agronomic fertilization process	skos:exactMatch	mesh:D005306	Fertilization	semapv:LexicalMatching		2022-11-02	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 aism:0000001	resilin	skos:exactMatch	mesh:C030951	resilin	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aism:0000004	conjunctiva	skos:exactMatch	mesh:D003228	Conjunctiva	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aism:0000004	conjunctiva	skos:exactMatch	mesh:D008566	Membranes	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 aism:0000041	cuticular scale	skos:exactMatch	mesh:D000075342	Animal Scales	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 aism:0000075	tibia	skos:exactMatch	mesh:D013977	Tibia	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aism:0000076	femur	skos:exactMatch	mesh:D005269	Femur	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aism:0000077	coxa	skos:exactMatch	mesh:D006615	Hip	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-aism:0000093	hypopharynx	skos:exactMatch	mesh:D007013	Hypopharynx	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aism:0004130	sternum	skos:exactMatch	mesh:D013249	Sternum	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aism:0004168	trochanter	skos:exactMatch	mesh:D005269	Femur	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 aism:0004169	tarsus	skos:exactMatch	mesh:D000842	Ankle	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-aism:0004188	metatarsus	skos:exactMatch	mesh:D008684	Metatarsus	semapv:LexicalMatching		2026-02-14	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 amphx:0000019	adult	skos:exactMatch	mesh:D000328	Adult	semapv:LexicalMatching		2020-12-18	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 amphx:0000057	adult-A stage	skos:exactMatch	mesh:D000328	Adult	semapv:LexicalMatching		2020-12-18	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 amphx:1000002	blastomere	skos:exactMatch	mesh:D001757	Blastomeres	semapv:LexicalMatching		2020-12-18	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
@@ -233,49 +210,24 @@ amphx:1000265	anus	skos:exactMatch	mesh:D001003	Anal Canal	semapv:LexicalMatchin
 amphx:1000271	lamellar body	skos:exactMatch	mesh:D000088502	Lamellar Bodies	semapv:LexicalMatching		2020-12-18	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apo:0000030	lifespan	skos:exactMatch	mesh:D008136	Longevity	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 apo:0000033	cell fusion	skos:exactMatch	mesh:D002459	Cell Fusion	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000039	meiosis	skos:exactMatch	mesh:D008540	Meiosis	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apo:0000048	virulence	skos:exactMatch	mesh:D014774	Virulence	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000051	cell shape	skos:exactMatch	mesh:D048430	Cell Shape	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000052	cell size	skos:exactMatch	mesh:D048429	Cell Size	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000065	flocculation	skos:exactMatch	mesh:D005427	Flocculation	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apo:0000070	cell cycle arrest	skos:exactMatch	mesh:D059447	Cell Cycle Checkpoints	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-apo:0000071	cytokinesis	skos:exactMatch	mesh:D048749	Cytokinesis	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000074	autophagy	skos:exactMatch	mesh:D001343	Autophagy	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000075	endocytosis	skos:exactMatch	mesh:D004705	Endocytosis	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apo:0000077	nuclear transport	skos:exactMatch	mesh:D021581	Active Transport, Cell Nucleus	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 apo:0000078	protein secretion	skos:exactMatch	mesh:D005089	Exocytosis	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-apo:0000088	drug resistance	skos:exactMatch	mesh:D004351	Drug Resistance	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000093	thermotolerance	skos:exactMatch	mesh:D000071436	Thermotolerance	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apo:0000126	nuclear import	skos:exactMatch	mesh:D021581	Active Transport, Cell Nucleus	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 apo:0000127	nuclear export	skos:exactMatch	mesh:D021581	Active Transport, Cell Nucleus	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-apo:0000129	protein transport	skos:exactMatch	mesh:D021381	Protein Transport	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000145	oxidative phosphorylation	skos:exactMatch	mesh:D010085	Oxidative Phosphorylation	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000145	oxidative phosphorylation	skos:exactMatch	mesh:D012119	Respiration	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-apo:0000155	apoptosis	skos:exactMatch	mesh:D017209	Apoptosis	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000161	multiple	skos:exactMatch	mesh:C088513	poly(lactic acid-ethylene glycol)	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.771
 apo:0000183	Synthetic Lethality	skos:exactMatch	mesh:D000072020	Synthetic Lethal Mutations	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-apo:0000188	Affinity Chromatography	skos:exactMatch	mesh:D002846	Chromatography, Affinity	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 apo:0000198	mutation frequency	skos:exactMatch	mesh:D059645	Mutation Rate	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-apo:0000208	chromosome segregation	skos:exactMatch	mesh:D020090	Chromosome Segregation	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apo:0000210	anaerobic metabolism	skos:exactMatch	mesh:D000693	Anaerobiosis	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 apo:0000239	pexophagy	skos:exactMatch	mesh:D000080550	Macroautophagy	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-apo:0000240	mitophagy	skos:exactMatch	mesh:D063306	Mitophagy	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apo:0000242	lipid particle morphology	skos:exactMatch	mesh:D066292	Lipid Droplets	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 apo:0000244	PCA	skos:exactMatch	mesh:D010323	Passive Cutaneous Anaphylaxis	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-apo:0000312	cell death	skos:exactMatch	mesh:D016923	Cell Death	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000313	autolysis	skos:exactMatch	mesh:D001329	Autolysis	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000336	aneuploidy	skos:exactMatch	mesh:D000782	Aneuploidy	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apo:0000337	polyploidy	skos:exactMatch	mesh:D011123	Polyploidy	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apo:0000339	ribophagy	skos:exactMatch	mesh:D001343	Autophagy	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 apo:0000340	reticulophagy	skos:exactMatch	mesh:D001343	Autophagy	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 apo:0000341	nucleophagy	skos:exactMatch	mesh:D001343	Autophagy	semapv:LexicalMatching		2026-06-16	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-apollosv:00000002	basic reproduction number	skos:exactMatch	mesh:D050936	Basic Reproduction Number	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apollosv:00000036	normal distribution	skos:exactMatch	mesh:D016011	Normal Distribution	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apollosv:00000094	community	skos:exactMatch	mesh:D012111	Residence Characteristics	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-apollosv:00000097	ecosystem	skos:exactMatch	mesh:D017753	Ecosystem	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apollosv:00000107	atmosphere	skos:exactMatch	mesh:D001272	Atmosphere	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apollosv:00000114	infection	skos:exactMatch	mesh:D007239	Infections	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apollosv:00000142	vaccination	skos:exactMatch	mesh:D014611	Vaccination	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apollosv:00000173	census	skos:exactMatch	mesh:D019352	Censuses	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apollosv:00000195	target population	skos:exactMatch	mesh:D006301	Health Services Needs and Demand	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 apollosv:00000239	infectious disease	skos:exactMatch	mesh:D003141	Communicable Diseases	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
@@ -287,148 +239,48 @@ apollosv:00000422	confidence interval	skos:exactMatch	mesh:D016001	Confidence In
 apollosv:00000429	date	skos:exactMatch	mesh:D002910	Chronology as Topic	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 apollosv:00000445	mortality rate	skos:exactMatch	mesh:D009026	Mortality	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 apollosv:00000455	prodromal period	skos:exactMatch	mesh:D062706	Prodromal Symptoms	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-apollosv:00000470	probability	skos:exactMatch	mesh:D011336	Probability	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apollosv:00000500	schedule	skos:exactMatch	mesh:D001071	Appointments and Schedules	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-apollosv:00000550	contact tracing	skos:exactMatch	mesh:D016358	Contact Tracing	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-apollosv:00000596	symbiosis	skos:exactMatch	mesh:D013559	Symbiosis	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 apollosv:00000651	reproduction	skos:exactMatch	mesh:D012098	Reproduction	semapv:LexicalMatching		2026-07-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000001	fluoroquinolone antibiotic	skos:exactMatch	mesh:D015363	Quinolones	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 aro:0000001	fluoroquinolone antibiotic	skos:exactMatch	mesh:D024841	Fluoroquinolones	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 aro:0000003	astromicin	skos:exactMatch	mesh:C023384	fortimicin A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
 aro:0000004	monobactam	skos:exactMatch	mesh:D008997	Monobactams	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000005	neomycin	skos:exactMatch	mesh:D005601	Framycetin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-aro:0000005	neomycin	skos:exactMatch	mesh:D009355	Neomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000006	erythromycin	skos:exactMatch	mesh:C040981	N-methylerythromycin A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
-aro:0000006	erythromycin	skos:exactMatch	mesh:D004917	Erythromycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000007	dibekacin	skos:exactMatch	mesh:D003982	Dibekacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000008	cefoxitin	skos:exactMatch	mesh:D002440	Cefoxitin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000008	cefoxitin	skos:exactMatch	mesh:D005589	Foxes	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-aro:0000009	tunicamycin	skos:exactMatch	mesh:D014415	Tunicamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000011	cloxacillin	skos:exactMatch	mesh:D003023	Cloxacillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000012	streptothricin	skos:exactMatch	mesh:C003657	yazumycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
 aro:0000012	streptothricin	skos:exactMatch	mesh:C009156	streptothricin F	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
 aro:0000012	streptothricin	skos:exactMatch	mesh:C019594	racemomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
 aro:0000012	streptothricin	skos:exactMatch	mesh:D013309	Streptothricins	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000013	amikacin	skos:exactMatch	mesh:D000583	Amikacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000014	gentamicin C	skos:exactMatch	mesh:C030159	gentamicin-polymethylmethacrylate bead	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-aro:0000014	gentamicin C	skos:exactMatch	mesh:C100093	gentamicin C	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:0000014	gentamicin C	skos:exactMatch	mesh:D005839	Gentamicins	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
-aro:0000015	methicillin	skos:exactMatch	mesh:D008712	Methicillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000017	lincosamide antibiotic	skos:exactMatch	mesh:D055231	Lincosamides	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-aro:0000018	viomycin	skos:exactMatch	mesh:D014756	Viomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000020	carbapenem	skos:exactMatch	mesh:D015780	Carbapenems	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000021	ribostamycin	skos:exactMatch	mesh:D012271	Ribostamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000023	enoxacin	skos:exactMatch	mesh:D015365	Enoxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000024	butirosin	skos:exactMatch	mesh:D002076	Butirosin Sulfate	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-aro:0000025	fosfomycin	skos:exactMatch	mesh:D005578	Fosfomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000027	roxithromycin	skos:exactMatch	mesh:D015575	Roxithromycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000028	vancomycin	skos:exactMatch	mesh:D014640	Vancomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000029	teicoplanin	skos:exactMatch	mesh:D017334	Teicoplanin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000030	tigecycline	skos:exactMatch	mesh:D000078304	Tigecycline	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000032	cephalosporin	skos:exactMatch	mesh:D002511	Cephalosporins	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000035	sisomicin	skos:exactMatch	mesh:D012853	Sisomicin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000036	ciprofloxacin	skos:exactMatch	mesh:D002939	Ciprofloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000037	apramycin	skos:exactMatch	mesh:C011666	apramycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:0000038	netilmicin	skos:exactMatch	mesh:D009428	Netilmicin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000039	spectinomycin	skos:exactMatch	mesh:D000198	Spectinomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000040	streptomycin	skos:exactMatch	mesh:D013307	Streptomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000041	bacitracin	skos:exactMatch	mesh:D001414	Bacitracin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000042	glycylcycline	skos:exactMatch	mesh:C087533	CL 331002	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-aro:0000043	carbenicillin	skos:exactMatch	mesh:D001336	Automobiles	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-aro:0000043	carbenicillin	skos:exactMatch	mesh:D002228	Carbenicillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000045	acriflavine	skos:exactMatch	mesh:C026620	3,6-diamino-10-methylacridinium	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-aro:0000045	acriflavine	skos:exactMatch	mesh:D000167	Acriflavine	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000046	lincomycin	skos:exactMatch	mesh:D008034	Lincomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000047	puromycin	skos:exactMatch	mesh:D011691	Puromycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000049	kanamycin A	skos:exactMatch	mesh:C001495	bekanamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 aro:0000049	kanamycin A	skos:exactMatch	mesh:D007612	Kanamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 aro:0000051	tetracycline	skos:exactMatch	mesh:D013752	Tetracycline	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000051	tetracycline	skos:exactMatch	mesh:D013754	Tetracyclines	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000052	tobramycin	skos:exactMatch	mesh:D014031	Tobramycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000053	bleomycin	skos:exactMatch	mesh:D001761	Bleomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000055	bicyclomycin	skos:exactMatch	mesh:C024504	bicozamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-aro:0000056	oxacillin	skos:exactMatch	mesh:D010068	Oxacillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000057	telithromycin	skos:exactMatch	mesh:C106791	telithromycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:0000058	cefazolin	skos:exactMatch	mesh:D002437	Cefazolin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000059	cefepime	skos:exactMatch	mesh:D000077723	Cefepime	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000059	cefepime	skos:exactMatch	mesh:D011138	Polytetrafluoroethylene	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-aro:0000060	ceftazidime	skos:exactMatch	mesh:D002442	Ceftazidime	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000061	ceftobiprole	skos:exactMatch	mesh:C443755	ceftobiprole	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:0000061	ceftobiprole	skos:exactMatch	mesh:C505439	ceftobiprole medocaril	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.549
-aro:0000062	ceftriaxone	skos:exactMatch	mesh:D002443	Ceftriaxone	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000063	cefuroxime	skos:exactMatch	mesh:D002444	Cefuroxime	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000064	amoxicillin	skos:exactMatch	mesh:D000658	Amoxicillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000065	clarithromycin	skos:exactMatch	mesh:D017291	Clarithromycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000066	clindamycin	skos:exactMatch	mesh:D002981	Clindamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000067	colistin	skos:exactMatch	mesh:D003091	Colistin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000068	daptomycin	skos:exactMatch	mesh:D017576	Daptomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000069	doxycycline	skos:exactMatch	mesh:D004318	Doxycycline	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000070	ertapenem	skos:exactMatch	mesh:D000077727	Ertapenem	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000071	levofloxacin	skos:exactMatch	mesh:D064704	Levofloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000072	linezolid	skos:exactMatch	mesh:D000069349	Linezolid	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000073	meropenem	skos:exactMatch	mesh:D000077731	Meropenem	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000074	moxifloxacin	skos:exactMatch	mesh:D000077266	Moxifloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000075	nitrofurantoin	skos:exactMatch	mesh:D009582	Nitrofurantoin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000077	tazobactam	skos:exactMatch	mesh:D000077725	Piperacillin, Tazobactam Drug Combination	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-aro:0000077	tazobactam	skos:exactMatch	mesh:D000078142	Tazobactam	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000078	piperacillin	skos:exactMatch	mesh:D010878	Piperacillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:0000079	clavulanic acid	skos:exactMatch	mesh:D002969	Clavulanic Acids	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:0000079	clavulanic acid	skos:exactMatch	mesh:D019818	Clavulanic Acid	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000001	beta-lactamase	skos:exactMatch	mesh:D001618	beta-Lactamases	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.772
 aro:3000007	beta-lactam antibiotic	skos:exactMatch	mesh:D000097902	beta Lactam Antibiotics	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
-aro:3000022	ristocetin	skos:exactMatch	mesh:D012310	Ristocetin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000026	mepA	skos:exactMatch	mesh:C027800	adenosine 5'-(O-methylphosphate)	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.743
 aro:3000042	beta-lactamase inhibitor	skos:exactMatch	mesh:D065093	beta-Lactamase Inhibitors	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.772
 aro:3000076	class C beta-lactamase	skos:exactMatch	mesh:C048795	AmpC beta-lactamases	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
-aro:3000111	novobiocin	skos:exactMatch	mesh:D009675	Novobiocin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000119	edeine	skos:exactMatch	mesh:D004486	Edeine	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000120	balhimycin	skos:exactMatch	mesh:C087127	balhimycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000123	gramicidin	skos:exactMatch	mesh:D006096	Gramicidin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000127	APH(3'')	skos:exactMatch	mesh:C022679	streptomycin 3''-kinase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 aro:3000128	APH(2'')	skos:exactMatch	mesh:C048564	aminoglycoside 2''-phosphotransferase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-aro:3000130	edeine A	skos:exactMatch	mesh:C039319	edeine A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000132	clorobiocin	skos:exactMatch	mesh:C006260	clorobiocin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000134	edeine B	skos:exactMatch	mesh:C039320	edeine B	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000135	edeine D	skos:exactMatch	mesh:C039534	edeine D	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000136	edeine F	skos:exactMatch	mesh:C040034	edeine F	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000145	tylosin	skos:exactMatch	mesh:D015645	Tylosin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000150	coumermycin A1	skos:exactMatch	mesh:C004628	coumermycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-aro:3000152	minocycline	skos:exactMatch	mesh:D008911	Minocycline	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000156	spiramycin	skos:exactMatch	mesh:D015572	Spiramycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000158	azithromycin	skos:exactMatch	mesh:D017963	Azithromycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000168	tet(D)	skos:exactMatch	mesh:C051665	10-thiirane-4-estrene-3,17-dione	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.521
-aro:3000169	rifampin	skos:exactMatch	mesh:D012293	Rifampin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000170	imipenem	skos:exactMatch	mesh:D015378	Imipenem	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000176	dirithromycin	skos:exactMatch	mesh:C053853	dirithromycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000184	chloroeremomycin	skos:exactMatch	mesh:C112142	chloroeremomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000188	trimethoprim	skos:exactMatch	mesh:D014295	Trimethoprim	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000189	oritavancin	skos:exactMatch	mesh:C100708	oritavancin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000199	gramicidin D	skos:exactMatch	mesh:D006096	Gramicidin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 aro:3000200	gramicidin S	skos:exactMatch	mesh:D006096	Gramicidin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
-aro:3000214	hygromycin B	skos:exactMatch	mesh:D006921	Hygromycin B	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.772
 aro:3000222	gramicidin A	skos:exactMatch	mesh:D006096	Gramicidin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 aro:3000223	gramicidin B	skos:exactMatch	mesh:D006096	Gramicidin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 aro:3000224	gramicidin C	skos:exactMatch	mesh:D006096	Gramicidin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 aro:3000226	antibiotic resistant folP	skos:exactMatch	mesh:D004094	Dihydropteroate Synthase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-aro:3000227	tyrothricin	skos:exactMatch	mesh:D014449	Tyrothricin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000269	brodimoprim	skos:exactMatch	mesh:C037079	brodimoprim	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000284	tetroxoprim	skos:exactMatch	mesh:C023507	tetroxoprim	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000316	mphA	skos:exactMatch	mesh:C061369	macrolide 2'-kinase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 aro:3000318	mphB	skos:exactMatch	mesh:C061369	macrolide 2'-kinase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-aro:3000324	sulfadiazine	skos:exactMatch	mesh:D013411	Sulfadiazine	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000325	sulfadimidine	skos:exactMatch	mesh:D013418	Sulfamethazine	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-aro:3000327	sulfadoxine	skos:exactMatch	mesh:D013413	Sulfadoxine	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000329	sulfamethoxazole	skos:exactMatch	mesh:D013420	Sulfamethoxazole	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000330	sulfisoxazole	skos:exactMatch	mesh:D013444	Sulfisoxazole	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000337	iclaprim	skos:exactMatch	mesh:C486448	iclaprim	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000341	AAC(2')	skos:exactMatch	mesh:C443113	aminoglycoside 2'-N-acetyltransferase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-aro:3000385	chloramphenicol	skos:exactMatch	mesh:D002701	Chloramphenicol	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000454	polymyxin B	skos:exactMatch	mesh:D011112	Polymyxin B	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.772
-aro:3000456	thiamphenicol	skos:exactMatch	mesh:D013839	Thiamphenicol	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000458	macrolide glycosyltransferase	skos:exactMatch	mesh:C075034	macrolide glycosyltransferase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000461	florfenicol	skos:exactMatch	mesh:C035534	florfenicol	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000466	dalbavancin	skos:exactMatch	mesh:C469289	dalbavancin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000488	telavancin	skos:exactMatch	mesh:C487637	telavancin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000490	tuberactinomycin	skos:exactMatch	mesh:C015563	tuberactinomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000497	ethambutol	skos:exactMatch	mesh:D004977	Ethambutol	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000517	rifaximin	skos:exactMatch	mesh:D000078262	Rifaximin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
@@ -452,60 +304,19 @@ aro:3000588	avibactam	skos:exactMatch	mesh:C543519	avibactam	semapv:LexicalMatch
 aro:3000617	mecA	skos:exactMatch	mesh:C046756	5'-N-methylcarboxamideadenosine	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.743
 aro:3000625	polymyxin B1	skos:exactMatch	mesh:C121746	polymyxin B(1)	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 aro:3000626	polymyxin B2	skos:exactMatch	mesh:C571510	polymyxin B2	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000629	bacitracin A	skos:exactMatch	mesh:C026461	bacitracin A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000630	bacitracin B	skos:exactMatch	mesh:C086283	bacitracin B	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000631	bacitracin F	skos:exactMatch	mesh:C037039	bacitracin F	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000632	benzylpenicillin	skos:exactMatch	mesh:D010400	Penicillin G	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
 aro:3000633	phenoxymethylpenicillin	skos:exactMatch	mesh:D010404	Penicillin V	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.549
-aro:3000634	propicillin	skos:exactMatch	mesh:C100135	propicillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000635	dicloxacillin	skos:exactMatch	mesh:D004009	Dicloxacillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000636	flucloxacillin	skos:exactMatch	mesh:D005436	Floxacillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 aro:3000637	ampicillin	skos:exactMatch	mesh:D000249	Adenosine Monophosphate	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-aro:3000637	ampicillin	skos:exactMatch	mesh:D000667	Ampicillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000638	azlocillin	skos:exactMatch	mesh:D001390	Azlocillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000639	mezlocillin	skos:exactMatch	mesh:D008802	Mezlocillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000640	doripenem	skos:exactMatch	mesh:D000077726	Doripenem	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000641	cefalexin	skos:exactMatch	mesh:D002506	Cephalexin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-aro:3000642	cefadroxil	skos:exactMatch	mesh:D002434	Cefadroxil	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000643	cefotiam	skos:exactMatch	mesh:D015310	Cefotiam	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000644	cefaclor	skos:exactMatch	mesh:D002433	Cefaclor	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000645	cefotaxime	skos:exactMatch	mesh:D002439	Cefotaxime	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000646	cefixime	skos:exactMatch	mesh:D020682	Cefixime	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000647	cefpodoxime	skos:exactMatch	mesh:D000097623	Cefpodoxime	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000648	ceftibuten	skos:exactMatch	mesh:D000077722	Ceftibuten	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000649	cefditoren	skos:exactMatch	mesh:C073460	cefditoren	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000650	cefdinir	skos:exactMatch	mesh:D000077525	Cefdinir	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000651	ceftaroline	skos:exactMatch	mesh:C000708228	2-cyclohexylidenhydrazo-4-phenyl-thiazole	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-aro:3000651	ceftaroline	skos:exactMatch	mesh:D000097583	Ceftaroline	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000652	isepamicin	skos:exactMatch	mesh:C016927	isepamicin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000653	G418	skos:exactMatch	mesh:C010680	antibiotic G 418	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-aro:3000654	arbekacin	skos:exactMatch	mesh:C031986	arbekacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000655	gentamicin B	skos:exactMatch	mesh:C023804	gentamicin B	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000657	paromomycin	skos:exactMatch	mesh:D010303	Paromomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000658	lividomycin	skos:exactMatch	mesh:C100306	lividomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000659	gatifloxacin	skos:exactMatch	mesh:D000077734	Gatifloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000660	lomefloxacin	skos:exactMatch	mesh:C053091	lomefloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000661	nalidixic acid	skos:exactMatch	mesh:D009268	Nalidixic Acid	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000662	norfloxacin	skos:exactMatch	mesh:D009643	Norfloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000663	ofloxacin	skos:exactMatch	mesh:D015242	Ofloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000664	trovafloxacin	skos:exactMatch	mesh:C080163	trovafloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000664	trovafloxacin	skos:exactMatch	mesh:C106856	alatrofloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
-aro:3000665	grepafloxacin	skos:exactMatch	mesh:C075375	grepafloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000666	sparfloxacin	skos:exactMatch	mesh:C061363	sparfloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000667	demeclocycline	skos:exactMatch	mesh:D003707	Demeclocycline	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000668	oxytetracycline	skos:exactMatch	mesh:D010118	Oxytetracycline	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000669	virginiamycin M1	skos:exactMatch	mesh:D025364	Streptogramin A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 aro:3000670	pleuromutilin antibiotic	skos:exactMatch	mesh:D000097567	Pleuromutilins	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-aro:3000671	tiamulin	skos:exactMatch	mesh:C014224	tiamulin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000672	madumycin II	skos:exactMatch	mesh:C000623388	madumycin II	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000672	madumycin II	skos:exactMatch	mesh:C014278	A2315A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
-aro:3000673	griseoviridin	skos:exactMatch	mesh:C010583	griseoviridin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000674	dalfopristin	skos:exactMatch	mesh:C113826	dalfopristin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000675	pristinamycin IB	skos:exactMatch	mesh:C418083	virginiamycin factor S1	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
 aro:3000678	pristinamycin IC	skos:exactMatch	mesh:C418083	virginiamycin factor S1	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
-aro:3000683	sulfacetamide	skos:exactMatch	mesh:D013409	Sulfacetamide	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000684	mafenide	skos:exactMatch	mesh:D008272	Mafenide	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000686	thiostrepton	skos:exactMatch	mesh:D013883	Thiostrepton	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000687	moenomycin antibiotic	skos:exactMatch	mesh:D001455	Bambermycins	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 aro:3000688	furazolidone	skos:exactMatch	mesh:D005664	Furazolidone	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000689	metronidazole	skos:exactMatch	mesh:D008795	Metronidazole	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
@@ -517,71 +328,33 @@ aro:3000694	magainin	skos:exactMatch	mesh:D054806	Magainins	semapv:LexicalMatchi
 aro:3000695	actinomycin	skos:exactMatch	mesh:D003609	Dactinomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 aro:3000696	Dactinomycin	skos:exactMatch	mesh:D003609	Dactinomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000698	sulfasalazine	skos:exactMatch	mesh:D012460	Sulfasalazine	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000699	sulfamethizole	skos:exactMatch	mesh:D013419	Sulfamethizole	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000704	cefalotin	skos:exactMatch	mesh:D002512	Cephalothin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 aro:3000730	elongation factor G	skos:exactMatch	mesh:D020653	Peptide Elongation Factor G	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 aro:3000731	elongation factor Tu	skos:exactMatch	mesh:D010444	Peptide Elongation Factor Tu	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 aro:3000738	deoxyribonucleic acid	skos:exactMatch	mesh:D004247	DNA	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
 aro:3000740	ribonucleic acid	skos:exactMatch	mesh:D012313	RNA	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
-aro:3000743	1-deoxy-D-xylulose 5-phosphate reductoisomerase	skos:exactMatch	mesh:C114231	1-deoxy-D-xylulose 5-phosphate reductoisomerase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000758	fosmidomycin	skos:exactMatch	mesh:C024640	fosmidomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3000759	fusidic acid	skos:exactMatch	mesh:D005672	Fusidic Acid	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000760	cycloserine	skos:exactMatch	mesh:D003523	Cycloserine	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000761	mecillinam	skos:exactMatch	mesh:D000560	Amdinocillin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 aro:3000761	mecillinam	skos:exactMatch	mesh:D000561	Amdinocillin Pivoxil	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-aro:3000762	pefloxacin	skos:exactMatch	mesh:D015366	Pefloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000767	avoparcin	skos:exactMatch	mesh:C016249	avoparcin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3000785	cmeC	skos:exactMatch	mesh:D003028	CME-Carbodiimide	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.743
 aro:3000791	mdsC	skos:exactMatch	mesh:D000072737	Myeloid-Derived Suppressor Cells	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.743
 aro:3000794	mdtC	skos:exactMatch	mesh:C053510	monodansylthiacadaverine	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.743
-aro:3000867	oleandomycin	skos:exactMatch	mesh:D009827	Oleandomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3000870	triclosan	skos:exactMatch	mesh:D014260	Triclosan	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3000884	TEM-12	skos:exactMatch	mesh:C583997	4-(3-hydroxy-4-methoxyphenyl)-3-(4-hydroxyphenyl)-1-(3,4,5-trimethoxyphenyl)azetidin-2-one	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 aro:3000919	TEM-50	skos:exactMatch	mesh:C053450	4-des-dimethylaminotetracycline	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 aro:3000935	TEM-68	skos:exactMatch	mesh:C117157	tetracycline CMT-2	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 aro:3000956	TEM-89	skos:exactMatch	mesh:C117155	tetracycline CMT-3	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 aro:3001209	mecC	skos:exactMatch	mesh:D020374	Chromatography, Micellar Electrokinetic Capillary	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.743
-aro:3001220	factumycin	skos:exactMatch	mesh:C037260	factumycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001221	josamycin	skos:exactMatch	mesh:D015570	Josamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3001222	chalcomycin	skos:exactMatch	mesh:C002018	chalcomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001223	midecamycin	skos:exactMatch	mesh:C026483	midecamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3001224	mycinamicin	skos:exactMatch	mesh:C026686	mycinamicins	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001226	narbomycin	skos:exactMatch	mesh:C010488	narbomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001227	kitasamycin	skos:exactMatch	mesh:D015939	Kitasamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3001228	carbomycin	skos:exactMatch	mesh:C059423	carbomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001229	rosaramicin	skos:exactMatch	mesh:C060286	rosaramicin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001230	niddamycin	skos:exactMatch	mesh:C012454	niddamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3001231	celesticetin	skos:exactMatch	mesh:C004650	celesticetin A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-aro:3001232	methymycin	skos:exactMatch	mesh:C008517	methymycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3001233	pikromycin	skos:exactMatch	mesh:C003145	picromycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 aro:3001234	kirromycin	skos:exactMatch	mesh:C008536	mocimycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
 aro:3001235	aurodox	skos:exactMatch	mesh:C008536	mocimycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
-aro:3001235	aurodox	skos:exactMatch	mesh:D000899	Aurodox	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3001236	efrotomycin	skos:exactMatch	mesh:C012954	efrotomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3001237	GE2270A	skos:exactMatch	mesh:C068122	GE 2270 A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 aro:3001242	enacyloxin IIa	skos:exactMatch	mesh:C072734	enacyloxin IIa	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3001246	kirrothricin	skos:exactMatch	mesh:C035937	kirrothricin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001249	phenelfamycin A	skos:exactMatch	mesh:C058737	phenelfamycin A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001250	phenelfamycin B	skos:exactMatch	mesh:C058739	phenelfamycin B	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001251	phenelfamycin C	skos:exactMatch	mesh:C058740	phenelfamycin C	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001253	phenelfamycin E	skos:exactMatch	mesh:C058741	phenelfamycin E	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001256	phenelfamycin F	skos:exactMatch	mesh:C058743	phenelfamycin F	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001257	unphenelfamycin	skos:exactMatch	mesh:C058742	unphenelfamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3001258	L-681,217	skos:exactMatch	mesh:C050682	L 681217	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-aro:3001260	amythiamicin A	skos:exactMatch	mesh:C088498	amythiamicin A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001264	heneicomycin	skos:exactMatch	mesh:C020623	heneicomycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001294	verdamicin	skos:exactMatch	mesh:C010523	verdamicin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001296	kasugamycin	skos:exactMatch	mesh:C100305	kasugamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3001303	ErmO-srmA	skos:exactMatch	mesh:C075534	sporeamicin A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
-aro:3001314	retapamulin	skos:exactMatch	mesh:C508887	retapamulin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001315	valnemulin	skos:exactMatch	mesh:C117845	valnemulin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001316	azamulin	skos:exactMatch	mesh:C489644	azamulin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3001317	pleuromutilin	skos:exactMatch	mesh:D000097567	Pleuromutilins	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3001319	fidaxomicin	skos:exactMatch	mesh:C487655	OPT 80	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-aro:3001319	fidaxomicin	skos:exactMatch	mesh:D000077732	Fidaxomicin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3001320	SB22484	skos:exactMatch	mesh:C066792	SB 22484	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-aro:3001322	phenelfamycin G	skos:exactMatch	mesh:C558371	phenelfamycin G	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3001323	phenelfamycin H	skos:exactMatch	mesh:C558372	phenelfamycin H	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3001328	Escherichia coli mdfA	skos:exactMatch	mesh:C059236	chlormadinol acetate	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.521
 aro:3001405	OXA-10	skos:exactMatch	mesh:C055187	beta-lactamase PSE-2	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 aro:3001409	OXA-14	skos:exactMatch	mesh:C096781	beta-lactamase OXA-14	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
@@ -605,32 +378,19 @@ aro:3002647	APH(3')-IIIa	skos:exactMatch	mesh:D019868	Kanamycin Kinase	semapv:Le
 aro:3002660	APH(6)-Id	skos:exactMatch	mesh:C022680	streptomycin 6-kinase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 aro:3002670	cat	skos:exactMatch	mesh:D002415	Cats	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 aro:3002684	catII	skos:exactMatch	mesh:C412454	phenylalanyl-glycyl-NHO-Bz	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.742
-aro:3002688	catS	skos:exactMatch	mesh:D002415	Cats	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.744
 aro:3002877	BcI	skos:exactMatch	mesh:C543522	2-benzylidene-3-(cyclohexylamino)-2,3-dihydro-1H-inden-1-one	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.743
 aro:3002884	iri	skos:exactMatch	mesh:D007498	Iris	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3002980	aspergillomarasmine A	skos:exactMatch	mesh:C069862	aspergillomarasmine A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3003035	mfpA	skos:exactMatch	mesh:C074250	4-(2-methoxyphenyl)-2-carboxy-3-pyrrolidineacetic acid	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.743
-aro:3003048	rosA	skos:exactMatch	mesh:D027826	Rosa	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.744
 aro:3003080	daptomycin resistant pgsA	skos:exactMatch	mesh:C020676	CDP-diacylglycerol-glycerol-3-phosphate 3-phosphatidyltransferase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 aro:3003231	Lipid II	skos:exactMatch	mesh:C069249	muramyl-NAc-(pentapeptide)pyrophosphoryl-undecaprenol	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 aro:3003232	Lipid III	skos:exactMatch	mesh:C032403	Lipid III	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3003241	teixobactin	skos:exactMatch	mesh:C000594838	teixobactin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3003251	undecaprenyl pyrophosphate	skos:exactMatch	mesh:C088139	undecaprenyl pyrophosphate	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3003272	daptomycin resistant cls	skos:exactMatch	mesh:C100091	cardiolipin synthetase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
 aro:3003276	antibiotic resistant rpoB	skos:exactMatch	mesh:C105078	RNA polymerase beta subunit	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
-aro:3003412	dapsone	skos:exactMatch	mesh:D003622	Dapsone	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3003413	pyrazinamide	skos:exactMatch	mesh:D011718	Pyrazinamide	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3003414	LFF571	skos:exactMatch	mesh:C573298	LFF571	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3003418	Pyrazinamide resistant pncA	skos:exactMatch	mesh:D009535	Nicotinamidase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 aro:3003419	antibiotic-resistant rpsL	skos:exactMatch	mesh:C034212	ribosomal protein S12	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.549
 aro:3003420	antibiotic resistant pgsA	skos:exactMatch	mesh:C020676	CDP-diacylglycerol-glycerol-3-phosphate 3-phosphatidyltransferase	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-aro:3003474	ethionamide	skos:exactMatch	mesh:D005000	Ethionamide	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
-aro:3003567	magainin A	skos:exactMatch	mesh:C067773	magainin A	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-aro:3003568	Magainin B	skos:exactMatch	mesh:C066945	magainin B	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.772
-aro:3003569	Magainin G	skos:exactMatch	mesh:C066946	magainin G	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.772
-aro:3003570	Magainin H	skos:exactMatch	mesh:C066947	magainin H	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.772
 aro:3003571	magainin 1	skos:exactMatch	mesh:C000631670	magainin I	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.753
-aro:3003583	basS	skos:exactMatch	mesh:D001492	Bass	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.744
 aro:3003675	plazomicin	skos:exactMatch	mesh:C550938	plazomicin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3003690	sitafloxacin	skos:exactMatch	mesh:C076246	sitafloxacin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 aro:3003701	rokitamycin	skos:exactMatch	mesh:C033383	rokitamycin	semapv:LexicalMatching		2025-05-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
@@ -1036,32 +796,18 @@ bmont:0000167	cortical thinning	skos:exactMatch	mesh:D000082643	Cerebral Cortica
 bto:0000007	HEK-293 cell	skos:exactMatch	mesh:D057809	HEK293 Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.549
 bto:0000011	3T3-L1 cell	skos:exactMatch	mesh:D041721	3T3-L1 Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.549
 bto:0000018	A-549 cell	skos:exactMatch	mesh:D000072283	A549 Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.549
-bto:0000020	abdomen	skos:exactMatch	mesh:D000005	Abdomen	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000023	pectoral muscle	skos:exactMatch	mesh:D010369	Pectoralis Muscles	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000024	abomasum	skos:exactMatch	mesh:D000018	Abomasum	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000040	adenohypophysis	skos:exactMatch	mesh:D010903	Pituitary Gland, Anterior	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000041	medulla oblongata	skos:exactMatch	mesh:D008526	Medulla Oblongata	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000042	animal	skos:exactMatch	mesh:D000818	Animals	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000043	cerebellar cortex	skos:exactMatch	mesh:D002525	Cerebellar Cortex	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000044	tear gland	skos:exactMatch	mesh:D007765	Lacrimal Apparatus	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-bto:0000045	adrenal cortex	skos:exactMatch	mesh:D000302	Adrenal Cortex	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000047	adrenal gland	skos:exactMatch	mesh:D000311	Adrenal Glands	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000048	zona glomerulosa	skos:exactMatch	mesh:D015384	Zona Glomerulosa	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000049	adrenal medulla	skos:exactMatch	mesh:D000313	Adrenal Medulla	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000050	zona fasciculata	skos:exactMatch	mesh:D015383	Zona Fasciculata	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000057	aleurone layer	skos:exactMatch	mesh:C000624173	aleurone	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.556
-bto:0000065	amnion	skos:exactMatch	mesh:D000650	Amnion	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000068	amniotic fluid	skos:exactMatch	mesh:D000653	Amniotic Fluid	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000072	carpel	skos:exactMatch	mesh:D035264	Flowers	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-bto:0000078	microglia	skos:exactMatch	mesh:D017628	Microglia	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000081	reproductive system	skos:exactMatch	mesh:D005835	Genitalia	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000082	male reproductive system	skos:exactMatch	mesh:D005837	Genitalia, Male	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000083	female reproductive system	skos:exactMatch	mesh:D005836	Genitalia, Female	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000084	vermiform appendix	skos:exactMatch	mesh:D001065	Appendix	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000088	cardiovascular system	skos:exactMatch	mesh:D002319	Cardiovascular System	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000089	blood	skos:exactMatch	mesh:D001769	Blood	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000090	ascidian	skos:exactMatch	mesh:D014561	Urochordata	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000091	ascites	skos:exactMatch	mesh:D001201	Ascites	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000093	MCF-7 cell	skos:exactMatch	mesh:D061986	MCF-7 Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.549
 bto:0000095	F-9 cell	skos:exactMatch	mesh:D054278	Embryonal Carcinoma Stem Cells	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
 bto:0000099	astrocyte	skos:exactMatch	mesh:D001253	Astrocytes	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
@@ -1070,58 +816,34 @@ bto:0000108	olfactory epithelium	skos:exactMatch	mesh:D009297	Nasal Mucosa	semap
 bto:0000108	olfactory epithelium	skos:exactMatch	mesh:D009831	Olfactory Mucosa	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000114	basidiocarp	skos:exactMatch	mesh:D048690	Fruiting Bodies, Fungal	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000116	plant epidermis	skos:exactMatch	mesh:D004817	Epidermis	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-bto:0000116	plant epidermis	skos:exactMatch	mesh:D019441	Plant Epidermis	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000119	berry	skos:exactMatch	mesh:D005638	Fruit	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000121	bile	skos:exactMatch	mesh:D001646	Bile	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000122	bile duct	skos:exactMatch	mesh:D001652	Bile Ducts	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000123	bladder	skos:exactMatch	mesh:D001743	Urinary Bladder	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000126	blastoderm	skos:exactMatch	mesh:D001756	Blastoderm	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000128	blastula	skos:exactMatch	mesh:D036703	Blastula	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000129	basophil	skos:exactMatch	mesh:D001491	Basophils	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000130	neutrophil	skos:exactMatch	mesh:D009504	Neutrophils	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000131	blood plasma	skos:exactMatch	mesh:D010949	Plasma	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000132	blood platelet	skos:exactMatch	mesh:D001792	Blood Platelets	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000133	blood serum	skos:exactMatch	mesh:D044967	Serum	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000135	aorta	skos:exactMatch	mesh:D001011	Aorta	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000138	midbrain	skos:exactMatch	mesh:D008636	Mesencephalon	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000140	bone	skos:exactMatch	mesh:D001842	Bone and Bones	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000141	bone marrow	skos:exactMatch	mesh:D001853	Bone Marrow	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000142	brain	skos:exactMatch	mesh:D001921	Brain	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000143	substantia nigra	skos:exactMatch	mesh:D013378	Substantia Nigra	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000146	brain stem	skos:exactMatch	mesh:D001933	Brain Stem	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000147	microgametophyte	skos:exactMatch	mesh:D011058	Pollen	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-bto:0000149	breast	skos:exactMatch	mesh:D001940	Breast	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000155	bronchoalveolar lavage fluid	skos:exactMatch	mesh:D001992	Bronchoalveolar Lavage Fluid	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000155	bronchoalveolar lavage fluid	skos:exactMatch	mesh:D018893	Bronchoalveolar Lavage	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 bto:0000156	brown adipose tissue	skos:exactMatch	mesh:D002001	Adipose Tissue, Brown	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000166	cecum	skos:exactMatch	mesh:D002432	Cecum	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000168	carotid artery	skos:exactMatch	mesh:D002339	Carotid Arteries	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000170	cambium	skos:exactMatch	mesh:D058506	Cambium	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000173	fruit capsule	skos:exactMatch	mesh:D005638	Fruit	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 bto:0000174	embryonic structure	skos:exactMatch	mesh:D004628	Embryonic Structures	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000175	epithalamus	skos:exactMatch	mesh:D019261	Epithalamus	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000182	HT-29 cell	skos:exactMatch	mesh:D019073	HT29 Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.549
 bto:0000187	myeloblast	skos:exactMatch	mesh:D042381	Granulocyte Precursor Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000195	CACO-2 cell	skos:exactMatch	mesh:D018938	Caco-2 Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.549
-bto:0000198	cardia	skos:exactMatch	mesh:D002299	Cardia	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000199	cardiac muscle	skos:exactMatch	mesh:D009206	Myocardium	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000201	pheochromocytoma cell line	skos:exactMatch	mesh:D016716	PC12 Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000202	sense organ	skos:exactMatch	mesh:D012679	Sense Organs	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000203	respiratory system	skos:exactMatch	mesh:D012137	Respiratory System	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000204	carotid body	skos:exactMatch	mesh:D002344	Carotid Body	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000206	cartilage	skos:exactMatch	mesh:D002356	Cartilage	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000211	caudate nucleus	skos:exactMatch	mesh:D002421	Caudate Nucleus	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000212	caudate putamen	skos:exactMatch	mesh:D011699	Putamen	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 bto:0000214	cell culture	skos:exactMatch	mesh:D018929	Cell Culture Techniques	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000222	myoblast	skos:exactMatch	mesh:D032446	Myoblasts	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000227	central nervous system	skos:exactMatch	mesh:D002490	Central Nervous System	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000230	subarachnoid space	skos:exactMatch	mesh:D013346	Subarachnoid Space	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000231	cerebral hemisphere	skos:exactMatch	mesh:D054022	Cerebrum	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0000232	cerebellum	skos:exactMatch	mesh:D002531	Cerebellum	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0000233	cerebral cortex	skos:exactMatch	mesh:D002540	Cerebral Cortex	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000234	vein	skos:exactMatch	mesh:D014680	Veins	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000236	cerebral white matter	skos:exactMatch	mesh:D066127	White Matter	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-bto:0000237	cerebrospinal fluid	skos:exactMatch	mesh:D002555	Cerebrospinal Fluid	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000239	telencephalon	skos:exactMatch	mesh:D013687	Telencephalon	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0000242	cervical mucus	skos:exactMatch	mesh:D002582	Cervix Mucus	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0000243	vagina	skos:exactMatch	mesh:D014621	Vagina	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
@@ -1492,21 +1214,10 @@ bto:0001274	spermatid	skos:exactMatch	mesh:D013087	Spermatids	semapv:LexicalMatc
 bto:0001275	spermatocyte	skos:exactMatch	mesh:D013090	Spermatocytes	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001276	pollen tube	skos:exactMatch	mesh:D053205	Pollen Tube	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001277	spermatozoon	skos:exactMatch	mesh:D013094	Spermatozoa	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001279	spinal cord	skos:exactMatch	mesh:D013116	Spinal Cord	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001281	spleen	skos:exactMatch	mesh:D013154	Spleen	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001284	femur	skos:exactMatch	mesh:D005269	Femur	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001287	sporangium	skos:exactMatch	mesh:D058432	Sporangia	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001292	sporozoite	skos:exactMatch	mesh:D034101	Sporozoites	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001295	cranium	skos:exactMatch	mesh:D012886	Skull	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001297	sputum	skos:exactMatch	mesh:D013183	Sputum	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001300	stem	skos:exactMatch	mesh:D017348	Microscopy, Electron, Scanning Transmission	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001302	sternum	skos:exactMatch	mesh:D013249	Sternum	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001307	stomach	skos:exactMatch	mesh:D013270	Stomach	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001308	gastric mucosa	skos:exactMatch	mesh:D005753	Gastric Mucosa	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001311	corpus striatum	skos:exactMatch	mesh:D003342	Corpus Striatum	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001315	sublingual gland	skos:exactMatch	mesh:D013361	Sublingual Gland	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001316	submandibular gland	skos:exactMatch	mesh:D013363	Submandibular Gland	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001325	superior cervical ganglion	skos:exactMatch	mesh:D017783	Superior Cervical Ganglion	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001328	calvarium	skos:exactMatch	mesh:D012886	Skull	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001331	sweat gland	skos:exactMatch	mesh:D013545	Sweat Glands	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001333	sympathetic ganglion	skos:exactMatch	mesh:D005728	Ganglia, Sympathetic	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
@@ -1516,73 +1227,40 @@ bto:0001340	bronchus	skos:exactMatch	mesh:D001980	Bronchi	semapv:LexicalMatching
 bto:0001347	tadpole	skos:exactMatch	mesh:D007814	Larva	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001348	tail	skos:exactMatch	mesh:D013623	Tail	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001351	vomeronasal nerve	skos:exactMatch	mesh:D019147	Vomeronasal Organ	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001355	temporal lobe	skos:exactMatch	mesh:D013702	Temporal Lobe	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001356	tendon	skos:exactMatch	mesh:D013710	Tendons	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001360	decidua	skos:exactMatch	mesh:D003656	Decidua	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001362	olfactory lobe	skos:exactMatch	mesh:D066194	Olfactory Cortex	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001363	testis	skos:exactMatch	mesh:D013737	Testis	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001365	thalamus	skos:exactMatch	mesh:D013788	Thalamus	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001368	thorax	skos:exactMatch	mesh:D013909	Thorax	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001370	THP-1 cell	skos:exactMatch	mesh:D000074084	THP-1 Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.549
 bto:0001372	thymocyte	skos:exactMatch	mesh:D060168	Thymocytes	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001374	thymus	skos:exactMatch	mesh:D013950	Thymus Gland	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001375	mandibular nerve	skos:exactMatch	mesh:D008340	Mandibular Nerve	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001376	thigh	skos:exactMatch	mesh:D013848	Thigh	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001378	maxillary nerve	skos:exactMatch	mesh:D008442	Maxillary Nerve	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001379	thyroid gland	skos:exactMatch	mesh:D013961	Thyroid Gland	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001380	mesentery	skos:exactMatch	mesh:D008643	Mesentery	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001385	tongue	skos:exactMatch	mesh:D014059	Tongue	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001387	tonsil	skos:exactMatch	mesh:D014066	Palatine Tonsil	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001388	trachea	skos:exactMatch	mesh:D014132	Trachea	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001393	mesenchyme	skos:exactMatch	mesh:D008648	Mesoderm	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001395	trichome	skos:exactMatch	mesh:D064201	Trichomes	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001397	trophozoite	skos:exactMatch	mesh:D053058	Trophozoites	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001403	gastrula	skos:exactMatch	mesh:D005775	Gastrula	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001408	locus ceruleus	skos:exactMatch	mesh:D008125	Locus Coeruleus	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001409	ureter	skos:exactMatch	mesh:D014513	Ureter	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001412	U-937 cell	skos:exactMatch	mesh:D020298	U937 Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.549
-bto:0001415	umbilical cord	skos:exactMatch	mesh:D014470	Umbilical Cord	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001418	urinary bladder	skos:exactMatch	mesh:D001743	Urinary Bladder	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001419	urine	skos:exactMatch	mesh:D014556	Urine	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001421	uterine cervix	skos:exactMatch	mesh:D002584	Cervix Uteri	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001424	uterus	skos:exactMatch	mesh:D014599	Uterus	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001426	urethra	skos:exactMatch	mesh:D014521	Urethra	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001427	vas deferens	skos:exactMatch	mesh:D014649	Vas Deferens	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001431	vascular smooth muscle	skos:exactMatch	mesh:D009131	Muscle, Smooth, Vascular	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001435	arm	skos:exactMatch	mesh:D001132	Arm	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001436	mycelium	skos:exactMatch	mesh:D025282	Mycelium	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001439	venom	skos:exactMatch	mesh:D014688	Venoms	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001444	Vero cell	skos:exactMatch	mesh:D014709	Vero Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.549
-bto:0001446	olfactory cortex	skos:exactMatch	mesh:D066194	Olfactory Cortex	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001447	forearm	skos:exactMatch	mesh:D005542	Forearm	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001450	vitelline membrane	skos:exactMatch	mesh:D014817	Vitelline Membrane	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001451	vitreous humor	skos:exactMatch	mesh:D014822	Vitreous Body	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001456	white adipose tissue	skos:exactMatch	mesh:D052436	Adipose Tissue, White	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001457	hip	skos:exactMatch	mesh:D006615	Hip	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001468	xylem	skos:exactMatch	mesh:D052584	Xylem	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001470	epidermal cell	skos:exactMatch	mesh:D000078404	Epidermal Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001471	yolk sac	skos:exactMatch	mesh:D015017	Yolk Sac	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001472	peritoneum	skos:exactMatch	mesh:D010537	Peritoneum	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001473	blastomere	skos:exactMatch	mesh:D001757	Blastomeres	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001481	plant	skos:exactMatch	mesh:D010944	Plants	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001481	plant	skos:exactMatch	mesh:D057948	Viridiplantae	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-bto:0001484	nervous system	skos:exactMatch	mesh:D009420	Nervous System	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001486	skeletal system	skos:exactMatch	mesh:D012863	Skeleton	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-bto:0001487	adipose tissue	skos:exactMatch	mesh:D000273	Adipose Tissue	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001488	endocrine gland	skos:exactMatch	mesh:D004702	Endocrine Glands	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001492	limb	skos:exactMatch	mesh:D005121	Extremities	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001493	trunk	skos:exactMatch	mesh:D060726	Torso	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 bto:0001494	fungus	skos:exactMatch	mesh:D005658	Fungi	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001499	tear	skos:exactMatch	mesh:D013666	Tears	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001501	hair	skos:exactMatch	mesh:D006197	Hair	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001502	hip joint	skos:exactMatch	mesh:D006621	Hip Joint	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001504	blastodisc	skos:exactMatch	mesh:D054239	Blastodisc	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001508	morula	skos:exactMatch	mesh:D009028	Morula	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001509	umbilical vein	skos:exactMatch	mesh:D014471	Umbilical Veins	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001511	tooth germ	skos:exactMatch	mesh:D014083	Tooth Germ	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001538	COS-1 cell	skos:exactMatch	mesh:D019556	COS Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.549
 bto:0001540	goblet cell	skos:exactMatch	mesh:D020397	Goblet Cells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001541	pronephros	skos:exactMatch	mesh:D060910	Pronephros	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001558	somite	skos:exactMatch	mesh:D019170	Somites	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001563	vastus lateralis	skos:exactMatch	mesh:D052097	Quadriceps Muscle	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001564	rectus femoris	skos:exactMatch	mesh:D052097	Quadriceps Muscle	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
@@ -1590,22 +1268,14 @@ bto:0001571	erythroblast	skos:exactMatch	mesh:D004900	Erythroblasts	semapv:Lexic
 bto:0001572	articular cartilage	skos:exactMatch	mesh:D002358	Cartilage, Articular	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001579	extraocular muscle	skos:exactMatch	mesh:D009801	Oculomotor Muscles	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001580	ejaculatory duct	skos:exactMatch	mesh:D004543	Ejaculatory Ducts	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001592	meniscus	skos:exactMatch	mesh:D000072600	Meniscus	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001593	osteoblast	skos:exactMatch	mesh:D010006	Osteoblasts	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001606	sclera	skos:exactMatch	mesh:D012590	Sclera	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001607	swim bladder	skos:exactMatch	mesh:D000400	Air Sacs	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-bto:0001624	femoral artery	skos:exactMatch	mesh:D005263	Femoral Artery	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001626	laryngeal muscle	skos:exactMatch	mesh:D007821	Laryngeal Muscles	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001627	glottis	skos:exactMatch	mesh:D005931	Glottis	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
-bto:0001628	epiglottis	skos:exactMatch	mesh:D004825	Epiglottis	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001629	left ventricle	skos:exactMatch	mesh:D006352	Heart Ventricles	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001630	right ventricle	skos:exactMatch	mesh:D006352	Heart Ventricles	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001635	pia mater	skos:exactMatch	mesh:D010841	Pia Mater	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001636	arachnoid mater	skos:exactMatch	mesh:D001099	Arachnoid	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001637	dura mater	skos:exactMatch	mesh:D004388	Dura Mater	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001640	limb bud	skos:exactMatch	mesh:D018878	Limb Buds	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001643	lung bud	skos:exactMatch	mesh:C000728149	tracheal diverticulum, embryonic	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.556
-bto:0001646	ureteric bud	skos:exactMatch	mesh:C000729068	ureteric bud	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.778
 bto:0001646	ureteric bud	skos:exactMatch	mesh:D004240	Diverticulum	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 bto:0001647	lip	skos:exactMatch	mesh:D008046	Lip	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001654	female cone	skos:exactMatch	mesh:D000090342	Plant Cone	semapv:LexicalMatching		2021-10-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
@@ -1617,11 +1287,9 @@ bto:0001681	anal sac	skos:exactMatch	mesh:D000695	Anal Sacs	semapv:LexicalMatchi
 bto:0001684	antler	skos:exactMatch	mesh:D000999	Antlers	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001686	joint	skos:exactMatch	mesh:D007596	Joints	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001691	spiral organ	skos:exactMatch	mesh:D009925	Organ of Corti	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001692	cochlear duct	skos:exactMatch	mesh:D003053	Cochlear Duct	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001695	blastopore	skos:exactMatch	mesh:D005775	Gastrula	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001696	archenteron	skos:exactMatch	mesh:D005775	Gastrula	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001698	bulbourethral gland	skos:exactMatch	mesh:D002030	Bulbourethral Glands	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
-bto:0001699	bursa of Fabricius	skos:exactMatch	mesh:D002060	Bursa of Fabricius	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.772
 bto:0001700	cancellous bone	skos:exactMatch	mesh:D000071556	Cancellous Bone	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.762
 bto:0001701	carapace	skos:exactMatch	mesh:D060105	Animal Shells	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
 bto:0001702	left atrium	skos:exactMatch	mesh:D006325	Heart Atria	semapv:LexicalMatching		2021-10-26	2026	https://github.com/biomappings/biomappings/blob/8434326e/scripts/generate_bto_cl_mappings.py			2026-08-12	0.54
@@ -73350,7 +73018,6 @@ mesh:D016314	Ethylketocyclazocine	skos:exactMatch	chebi:4901	Ethylketocyclazocin
 mesh:D016316	Guanfacine	skos:exactMatch	chebi:5558	Guanfacine	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D016318	Quisqualic Acid	skos:exactMatch	chebi:8734	Quisqualic acid	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D016324	Sequence Tagged Sites	skos:exactMatch	ncit:C17396	Sequence Tagged Site	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
-mesh:D016328	NF-kappa B	skos:exactMatch	fplx:NFkappaB	NFkappaB	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py				0.95
 mesh:D016329	Sp1 Transcription Factor	skos:exactMatch	hgnc:11205	SP1	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py				0.95
 mesh:D016329	Sp1 Transcription Factor	skos:exactMatch	ncit:C20637	Transcription Factor Sp1	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D016334	Genes, vpr	skos:exactMatch	ncit:C19124	VPR Gene	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
@@ -82724,7 +82391,6 @@ opmi:0000160	body weight	skos:exactMatch	mesh:D001835	Body Weight	semapv:Lexical
 opmi:0000161	birth weight	skos:exactMatch	mesh:D001724	Birth Weight	semapv:LexicalMatching		2026-06-20	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 opmi:0000217	self	skos:exactMatch	mesh:D004532	Ego	semapv:LexicalMatching		2026-06-20	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 opmi:0000229	health care	skos:exactMatch	mesh:D003695	Delivery of Health Care	semapv:LexicalMatching		2026-06-20	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-opmi:0000229	health care	skos:exactMatch	obo:mesh#N	Health Care	semapv:LexicalMatching		2026-06-20	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 opmi:0000230	patient care	skos:exactMatch	mesh:D005791	Patient Care	semapv:LexicalMatching		2026-06-20	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 opmi:0000231	primary care	skos:exactMatch	mesh:D011320	Primary Health Care	semapv:LexicalMatching		2026-06-20	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 opmi:0000232	secondary care	skos:exactMatch	mesh:D063127	Secondary Health Care	semapv:LexicalMatching		2026-06-20	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
@@ -97716,7 +97382,6 @@ wbbt:0005733	hypodermis	skos:exactMatch	mesh:D040521	Subcutaneous Tissue	semapv:
 wbbt:0005738	body region	skos:exactMatch	mesh:D001829	Body Regions	semapv:LexicalMatching		2025-08-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 wbbt:0005765	Time	skos:exactMatch	mesh:D013995	Time	semapv:LexicalMatching		2025-08-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 wbbt:0005766	Anatomy	skos:exactMatch	mesh:D000715	Anatomy	semapv:LexicalMatching		2025-08-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
-wbbt:0005766	Anatomy	skos:exactMatch	obo:mesh#A	Anatomy	semapv:LexicalMatching		2025-08-19	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 wbbt:0005767	pharyngeal-intestinal valve	skos:exactMatch	mesh:D002299	Cardia	semapv:LexicalMatching		2025-08-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 wbbt:0005773	rectum	skos:exactMatch	mesh:D012007	Rectum	semapv:LexicalMatching		2025-08-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 wbbt:0005774	cloaca	skos:exactMatch	mesh:D002988	Cloaca	semapv:LexicalMatching		2025-08-19	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
