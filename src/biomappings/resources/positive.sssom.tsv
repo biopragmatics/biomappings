@@ -42,6 +42,7 @@
 #  envo: http://purl.obolibrary.org/obo/ENVO_
 #  fao: http://purl.obolibrary.org/obo/FAO_
 #  fbbi: http://purl.obolibrary.org/obo/FBbi_
+#  fbcv: http://purl.obolibrary.org/obo/FBcv_
 #  fideo: http://purl.obolibrary.org/obo/FIDEO_
 #  fix: http://purl.obolibrary.org/obo/FIX_
 #  fma: 'https://www.ebi.ac.uk/ols4/ontologies/fma/terms?obo_id=FMA:'
@@ -100,6 +101,7 @@
 #  pubchem.compound: https://pubchem.ncbi.nlm.nih.gov/compound/
 #  reactome: https://reactome.org/content/detail/
 #  ro: http://purl.obolibrary.org/obo/RO_
+#  scdo: http://purl.obolibrary.org/obo/SCDO_
 #  schema: https://schema.org/
 #  semapv: https://w3id.org/semapv/vocab/
 #  sibo: http://purl.obolibrary.org/obo/SIBO_
@@ -3312,24 +3314,87 @@ chmo:0000145	transmission high energy electron diffraction	skos:exactMatch	goldb
 chmo:0000146	reflection high energy electron diffraction	skos:exactMatch	goldbook:R05238	reflection high energy electron diffraction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 chmo:0000147	low energy electron diffraction	skos:exactMatch	goldbook:L03631	low energy electron diffraction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 chmo:0000167	dynamic light scattering	skos:exactMatch	mesh:D000067493	Dynamic Light Scattering	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000228	spectroscopy	skos:exactMatch	goldbook:S05848	spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000233	atomic spectroscopy	skos:exactMatch	goldbook:08216	atomic spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000234	atomic absorption spectroscopy	skos:exactMatch	goldbook:08451	atomic absorption spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000251	atomic emission spectroscopy	skos:exactMatch	goldbook:08452	atomic emission spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000258	laser-induced breakdown spectroscopy	skos:exactMatch	goldbook:08500	laser induced breakdown spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0000291	spectrophotometry	skos:exactMatch	mesh:D013053	Spectrophotometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000297	X-ray spectroscopy	skos:exactMatch	goldbook:X06718	X-ray spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0000298	X-ray absorption spectroscopy	skos:exactMatch	mesh:D056928	X-Ray Absorption Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000299	X-ray absorption fine structure spectroscopy	skos:exactMatch	goldbook:09212	X-ray absorption fine structure spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000300	extended X-ray absorption fine structure spectroscopy	skos:exactMatch	goldbook:09198	extended X-ray absorption fine structure spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000303	surface extended X-ray absorption fine structure spectroscopy	skos:exactMatch	goldbook:09206	surface extended X-ray absorption fine structure spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000307	X-ray emission spectroscopy	skos:exactMatch	mesh:D013052	Spectrometry, X-Ray Emission	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000309	energy-dispersive X-ray emission spectroscopy	skos:narrowMatch	mesh:D013052	Spectrometry, X-Ray Emission	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000311	particle-induced X-ray emission spectroscopy	skos:narrowMatch	mesh:D013052	Spectrometry, X-Ray Emission	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
 chmo:0000328	electron spin resonance spectroscopy	skos:exactMatch	mesh:D004578	Electron Spin Resonance Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000339	Auger electron spectroscopy	skos:exactMatch	goldbook:A00522	Auger electron spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000356	Auger-photoelectron coincidence spectroscopy	skos:exactMatch	goldbook:09173	Auger photoelectron coincidence spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000366	electron energy loss spectroscopy	skos:exactMatch	goldbook:08593	electron energy loss spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000366	electron energy loss spectroscopy	skos:exactMatch	mesh:D046590	Spectroscopy, Electron Energy-Loss	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000387	photoelectron spectroscopy	skos:exactMatch	goldbook:P04609	photoelectron spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0000387	photoelectron spectroscopy	skos:exactMatch	mesh:D056951	Photoelectron Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000404	X-ray photoelectron spectroscopy	skos:exactMatch	goldbook:X06716	X-ray photoelectron spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000414	gamma-ray spectroscopy	skos:exactMatch	mesh:D013051	Spectrometry, Gamma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000417	Mossbauer spectroscopy	skos:exactMatch	mesh:D015204	Spectroscopy, Mossbauer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000430	ion mobility spectroscopy	skos:exactMatch	mesh:D000075663	Ion Mobility Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000461	laser micro emission spectroscopy	skos:exactMatch	goldbook:L03473	laser micro emission spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000470	mass spectrometry	skos:exactMatch	goldbook:M03746	mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0000470	mass spectrometry	skos:exactMatch	mesh:D013058	Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000482	electrospray ionisation mass spectrometry	skos:exactMatch	mesh:D021241	Spectrometry, Mass, Electrospray Ionization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000497	gas chromatography-mass spectrometry	skos:exactMatch	goldbook:12421	gas chromatography-mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0000497	gas chromatography-mass spectrometry	skos:exactMatch	mesh:D008401	Gas Chromatography-Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000506	isotope ratio mass spectrometry	skos:exactMatch	goldbook:12453	isotope ratio mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000510	isotope dilution mass spectrometry	skos:exactMatch	goldbook:12451	isotope dilution mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000516	laser microprobe mass spectrometry	skos:exactMatch	goldbook:12464	laser microprobe mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000519	matrix-assisted laser desorption-ionisation mass spectrometry	skos:exactMatch	mesh:D019032	Spectrometry, Mass, Matrix-Assisted Laser Desorption-Ionization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000524	liquid chromatography-mass spectrometry	skos:exactMatch	goldbook:12466	liquid chromatography-mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0000524	liquid chromatography-mass spectrometry	skos:exactMatch	mesh:D000097922	Liquid Chromatography-Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000560	secondary ion mass spectrometry	skos:exactMatch	mesh:D018629	Spectrometry, Mass, Secondary Ion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000563	fast-atom bombardment mass spectrometry	skos:exactMatch	goldbook:F02328	fast-atom bombardment mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000563	fast-atom bombardment mass spectrometry	skos:exactMatch	mesh:D016339	Spectrometry, Mass, Fast Atom Bombardment	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
 chmo:0000575	tandem mass spectrometry	skos:exactMatch	mesh:D053719	Tandem Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0000582	microspectrophotometry	skos:exactMatch	mesh:D015591	Microspectrophotometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000591	nuclear magnetic resonance spectroscopy	skos:exactMatch	goldbook:08218	nuclear magnetic resonance spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000591	nuclear magnetic resonance spectroscopy	skos:exactMatch	mesh:D009682	Magnetic Resonance Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000593	1H nuclear magnetic resonance spectroscopy	skos:exactMatch	mesh:D066244	Proton Magnetic Resonance Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000595	13C nuclear magnetic resonance spectroscopy	skos:exactMatch	mesh:D066241	Carbon-13 Magnetic Resonance Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
+chmo:0000598	two-dimensional nuclear magnetic resonance spectroscopy	skos:exactMatch	goldbook:08439	two-dimensional nuclear magnetic resonance spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000599	correlation spectroscopy	skos:exactMatch	goldbook:08323	correlation spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000605	total correlation spectroscopy	skos:exactMatch	goldbook:08435	total correlation spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000607	nuclear Overhauser enhancement spectroscopy	skos:exactMatch	goldbook:08387	nuclear Overhauser effect spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000614	solid-state nuclear magnetic resonance spectroscopy	skos:exactMatch	goldbook:08415	solid-state nuclear magnetic resonance spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000616	combined rotation and multiple pulse spectroscopy	skos:exactMatch	goldbook:08321	combined rotation and multiple pulse spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000619	photoacoustic spectroscopy	skos:exactMatch	goldbook:P04576	photoacoustic spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000622	photothermal spectroscopy	skos:exactMatch	goldbook:08659	photothermal spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000656	Raman spectroscopy	skos:exactMatch	goldbook:08669	Raman spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000678	tip-enhanced Raman spectroscopy	skos:exactMatch	goldbook:08699	tip-enhanced Raman spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000678	tip-enhanced Raman spectroscopy	skos:exactMatch	goldbook:09210	tip enhanced raman spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0000682	calorimetry	skos:exactMatch	mesh:D002151	Calorimetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0000687	differential thermal analysis	skos:exactMatch	mesh:D004055	Differential Thermal Analysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0000690	thermogravimetry	skos:exactMatch	mesh:D013818	Thermogravimetry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0000698	neutron diffraction	skos:exactMatch	mesh:D033363	Neutron Diffraction	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000733	diffusion-ordered spectroscopy	skos:exactMatch	goldbook:08329	diffusion ordered spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0000782	neutron activation analysis	skos:exactMatch	mesh:D009501	Neutron Activation Analysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0000785	optical rotatory dispersion	skos:exactMatch	mesh:D009905	Optical Rotatory Dispersion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000800	spectrum	skos:exactMatch	goldbook:08291	spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000801	absorption spectrum	skos:exactMatch	goldbook:A00043	absorption spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000806	mass spectrum	skos:exactMatch	goldbook:M03749	mass spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000810	electron energy-loss spectrum	skos:exactMatch	goldbook:09326	electron energy loss spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000813	emission spectrum	skos:exactMatch	goldbook:E02060	emission spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000814	corrected emission spectrum	skos:exactMatch	goldbook:C01343	corrected emission spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000823	Raman spectrum	skos:exactMatch	goldbook:08670	Raman spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000831	action spectrum	skos:exactMatch	goldbook:A00088	action spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0000831	action spectrum	skos:exactMatch	mesh:D000067549	Action Spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000832	conversion spectrum	skos:exactMatch	goldbook:C01319	conversion spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000833	excitation spectrum	skos:exactMatch	goldbook:E02253	excitation spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000835	nuclear magnetic resonance spectrum	skos:exactMatch	goldbook:08384	nuclear magnetic resonance spectrum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0000924	magnetometry	skos:exactMatch	mesh:D060306	Magnetometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0000946	optical tweezers	skos:exactMatch	mesh:D052898	Optical Tweezers	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0000981	time-of-flight mass spectrometer	skos:exactMatch	goldbook:T06382	time-of-flight mass spectrometer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000982	mass spectrometer	skos:exactMatch	goldbook:M03732	mass spectrometer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
+chmo:0000982	mass spectrometer	skos:exactMatch	goldbook:M03733	mass spectrometer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0001000	chromatography	skos:exactMatch	mesh:D002845	Chromatography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0001019	electrophoresis	skos:exactMatch	mesh:D004586	Electrophoresis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0001025	isotachophoresis	skos:exactMatch	mesh:D057625	Isotachophoresis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
@@ -3337,10 +3402,12 @@ chmo:0001026	isoelectric focusing	skos:exactMatch	mesh:D007525	Isoelectric Focus
 chmo:0001033	capillary isoelectric focusing	skos:exactMatch	mesh:D000094542	Capillary Isoelectric Focusing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0001038	capillary electrochromatography	skos:exactMatch	mesh:D053801	Capillary Electrochromatography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0001042	denaturing gradient gel electrophoresis	skos:exactMatch	mesh:D058645	Denaturing Gradient Gel Electrophoresis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
+chmo:0001055	double-focusing mass spectrometer	skos:exactMatch	goldbook:D01845	double-focusing mass spectrometer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0001074	time-lapse microscopy	skos:exactMatch	fbbi:00000249	time lapse microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
 chmo:0001082	osmometry	skos:exactMatch	mesh:D061286	Osmometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0001102	autoradiography	skos:exactMatch	mesh:D001345	Autoradiography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0001103	recorded image	skos:exactMatch	fbbi:00000265	recorded image	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0001253	ultraviolet spectrophotometry	skos:exactMatch	mesh:D013056	Spectrophotometry, Ultraviolet	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-13
 chmo:0001502	pyrolysis	skos:exactMatch	mesh:D000077319	Pyrolysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0001522	dialysis	skos:exactMatch	mesh:D003956	Dialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0001524	micro-dialysis	skos:exactMatch	mesh:D017551	Microdialysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
@@ -3371,7 +3438,9 @@ chmo:0002312	X-ray microscopy	skos:exactMatch	fbbi:00000260	X-ray microscopy	sem
 chmo:0002413	cryogenic electron microscopy	skos:exactMatch	fbbi:00100014	cryogenic transmission electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
 chmo:0002433	interferometry	skos:exactMatch	mesh:D007368	Interferometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0002519	two-photon laser scanning microscopy	skos:exactMatch	fbbi:00000254	two-photon laser scanning microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0002562	nuclear Overhauser effect difference spectroscopy	skos:exactMatch	goldbook:08386	nuclear Overhauser effect difference spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0002589	cryogenic scanning electron microscopy	skos:exactMatch	fbbi:00100016	cryogenic scanning electron microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-10-21	2026-03-30		2026-05-31
+chmo:0002657	ion trap mass spectrometer	skos:exactMatch	goldbook:I03249	ion trap mass spectrometer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 chmo:0002782	silica gel	skos:exactMatch	mesh:D058428	Silica Gel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0002801	limit of detection	skos:exactMatch	mesh:D057230	Limit of Detection	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
 chmo:0002815	solubility	skos:exactMatch	mesh:D012995	Solubility	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-05-28	2026		2026-08-12
@@ -3746,6 +3815,7 @@ doid:0050662	bestrophinopathy	skos:exactMatch	umls:C2678493	BESTROPHINOPATHY	sem
 doid:0050664	Bietti crystalline corneoretinal dystrophy	skos:exactMatch	umls:C1859486	BIETTI CRYSTALLINE CORNEORETINAL DYSTROPHY	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 doid:0050665	fetal alcohol syndrome	skos:exactMatch	umls:C0015923	Fetal Alcohol Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 doid:0050666	partial fetal alcohol syndrome	skos:exactMatch	umls:C3661483	Partial Fetal Alcohol Syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
+doid:0050668	alcohol-related birth defects	skos:broadMatch	mesh:D063647	Fetal Alcohol Spectrum Disorders	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-31	2026		2026-08-13
 doid:0050669	spastic cerebral palsy	skos:exactMatch	umls:C0338596	Spastic cerebral palsy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 doid:0050670	ataxic cerebral palsy	skos:exactMatch	umls:C0394005	Ataxic cerebral palsy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 doid:0050678	Blau syndrome	skos:exactMatch	mesh:C538157	Blau syndrome	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
@@ -3758,6 +3828,7 @@ doid:0050690	brachyolmia	skos:exactMatch	umls:C0432228	Brachyolmia	semapv:Manual
 doid:0050692	Brody myopathy	skos:exactMatch	umls:C1832918	Brody myopathy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 doid:0050694	Brown-Vialetto-Van Laere syndrome	skos:exactMatch	umls:C4551777	Brown-Vialetto-Van Laere syndrome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 doid:0050696	fetal alcohol spectrum disorder	skos:exactMatch	mesh:D063647	Fetal Alcohol Spectrum Disorders	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+doid:0050696	fetal alcohol spectrum disorder	skos:exactMatch	umls:C2985290	Fetal Alcohol Spectrum Disorders	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 doid:0050768	mitochondrial complex V (ATP synthase) deficiency, nuclear type 1	skos:exactMatch	umls:C3276276	MITOCHONDRIAL COMPLEX V (ATP SYNTHASE) DEFICIENCY, NUCLEAR TYPE 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 doid:0050853	chronic venous insufficiency	skos:exactMatch	efo:0007940	chronic venous insufficiency	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 doid:0050855	renal fibrosis	skos:exactMatch	umls:C0151650	Renal fibrosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
@@ -4222,19 +4293,27 @@ envo:01001078	weather	skos:exactMatch	mesh:D014887	Weather	semapv:ManualMappingC
 envo:01001248	animal husbandry	skos:exactMatch	mesh:D000822	Animal Husbandry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
 envo:01003000	spacecraft	skos:exactMatch	mesh:D018531	Spacecraft	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
 envo:02000047	animal feed	skos:exactMatch	mesh:D000821	Animal Feed	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
+envo:21001215	visible spectrum radiation	skos:exactMatch	mesh:D008027	Light	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-13
 fao:0000011	mycelium	skos:exactMatch	mesh:D025282	Mycelium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-07-15	2026		2026-08-12
 fao:0000019	spore	skos:narrowMatch	mesh:D013170	Spores	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-07-15	2026		2026-08-12
+fbcv:0003218	mass spectrometry	skos:exactMatch	mesh:D013058	Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-10	2026		2026-08-13
 fideo:00000182	contrast media	skos:exactMatch	mesh:D003287	Contrast Media	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2023-12-18	2026		2026-08-12
 fix:0000004	crystallography	skos:exactMatch	mesh:D003461	Crystallography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000005	microscopy	skos:exactMatch	mesh:D008853	Microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000012	magnetic resonance spectroscopy	skos:exactMatch	mesh:D009682	Magnetic Resonance Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
+fix:0000028	fluorescence spectroscopy	skos:exactMatch	mesh:D013050	Spectrometry, Fluorescence	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-13
 fix:0000047	mass spectrometry	skos:exactMatch	mesh:D013058	Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
+fix:0000050	Mossbauer spectroscopy	skos:exactMatch	mesh:D015204	Spectroscopy, Mossbauer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-13
 fix:0000052	cryo-electron microscopy	skos:exactMatch	mesh:D020285	Cryoelectron Microscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000053	chromatography	skos:exactMatch	mesh:D002845	Chromatography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000084	tandem mass spectrometry	skos:exactMatch	mesh:D053719	Tandem Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
+fix:0000086	fast atom bombardment mass spectrometry	skos:exactMatch	mesh:D016339	Spectrometry, Mass, Fast Atom Bombardment	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-13
 fix:0000097	electrophoresis	skos:exactMatch	mesh:D004586	Electrophoresis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
+fix:0000100	X-ray emission spectroscopy	skos:exactMatch	mesh:D013052	Spectrometry, X-Ray Emission	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-13
 fix:0000105	electron probe microanalysis	skos:exactMatch	mesh:D004577	Electron Probe Microanalysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000107	X-ray absorption spectroscopy	skos:exactMatch	mesh:D056928	X-Ray Absorption Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
+fix:0000110	Fourier transform infrared spectroscopy	skos:exactMatch	mesh:D017550	Spectroscopy, Fourier Transform Infrared	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-13
+fix:0000122	secondary ion mass spectrometry	skos:exactMatch	mesh:D018629	Spectrometry, Mass, Secondary Ion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-13
 fix:0000134	proton magnetic resonance spectroscopy	skos:exactMatch	mesh:D066244	Proton Magnetic Resonance Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000135	carbon-13 magnetic resonance spectroscopy	skos:exactMatch	mesh:D066241	Carbon-13 Magnetic Resonance Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000214	crystallization	skos:exactMatch	mesh:D003460	Crystallization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
@@ -4243,9 +4322,11 @@ fix:0000260	ultracentrifugation	skos:exactMatch	mesh:D014461	Ultracentrifugation
 fix:0000293	amino acid sequence	skos:exactMatch	mesh:D000595	Amino Acid Sequence	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000298	cell membrane permeability	skos:exactMatch	mesh:D002463	Cell Membrane Permeability	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000305	molecular structure	skos:exactMatch	mesh:D015394	Molecular Structure	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
+fix:0000321	near-infrared spectroscopy	skos:exactMatch	mesh:D019265	Spectroscopy, Near-Infrared	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-13
 fix:0000472	fluorescence resonance energy transfer	skos:exactMatch	mesh:D031541	Fluorescence Resonance Energy Transfer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000625	isoelectric focusing	skos:exactMatch	mesh:D007525	Isoelectric Focusing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000636	immunoelectrophoresis	skos:exactMatch	mesh:D007122	Immunoelectrophoresis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
+fix:0000663	electron energy loss spectroscopy	skos:exactMatch	mesh:D046590	Spectroscopy, Electron Energy-Loss	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-13
 fix:0000722	peptide mapping	skos:exactMatch	mesh:D010449	Peptide Mapping	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000770	conductometry	skos:exactMatch	mesh:D003217	Conductometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000775	potentiometry	skos:exactMatch	mesh:D011199	Potentiometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
@@ -4253,6 +4334,7 @@ fix:0000794	polarography	skos:exactMatch	mesh:D011048	Polarography	semapv:Manual
 fix:0000867	fluorescence recovery after photobleaching	skos:exactMatch	mesh:D036681	Fluorescence Recovery After Photobleaching	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000921	gas chromatography-mass spectrometry	skos:exactMatch	mesh:D008401	Gas Chromatography-Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
 fix:0000924	liquid chromatography-mass spectrometry	skos:exactMatch	mesh:D000097922	Liquid Chromatography-Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-12
+fix:0000960	SIMS microscopy	skos:exactMatch	mesh:D018629	Spectrometry, Mass, Secondary Ion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-03-31	2026		2026-08-13
 genepio:0001838	PubMed	skos:exactMatch	mesh:D039781	PubMed	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-04-13	2026		2026-08-12
 genepio:0100032	bronchoalveolar lavage	skos:exactMatch	mesh:D018893	Bronchoalveolar Lavage	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-04-13	2026		2026-08-12
 go:0005816	spindle pole body	skos:exactMatch	ncit:C13365	Spindle Pole Body	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
@@ -8953,6 +9035,7 @@ mesh:D013009	Somnambulism	skos:exactMatch	hp:0025236	Somnambulism	semapv:ManualM
 mesh:D013014	SOS Response (Genetics)	skos:exactMatch	go:0009432	SOS response	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D013036	Spasms, Infantile	skos:exactMatch	doid:0050562	West syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D013049	Spectrin	skos:exactMatch	go:0008091	spectrin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+mesh:D013058	Mass Spectrometry	skos:exactMatch	ncit:C17156	Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 mesh:D013067	Speech Perception	skos:exactMatch	efo:0004336	speech perception	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D013075	Sperm Capacitation	skos:exactMatch	go:0048240	sperm capacitation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D013077	Sperm Head	skos:exactMatch	go:0061827	sperm head	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
@@ -9372,6 +9455,7 @@ mesh:D018522	Gravitropism	skos:exactMatch	go:0009630	gravitropism	semapv:ManualM
 mesh:D018523	Tropism	skos:exactMatch	go:0009606	tropism	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D018524	Phototropism	skos:exactMatch	go:0009638	phototropism	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D018572	Disease-Free Survival	skos:exactMatch	efo:0000409	disease free survival	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+mesh:D018629	Spectrometry, Mass, Secondary Ion	skos:exactMatch	ncit:C154790	Secondary Ion Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 mesh:D018655	Lymphocyte Count	skos:exactMatch	efo:0004587	lymphocyte count	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D018674	Adrenergic Antagonists	skos:exactMatch	chebi:37887	adrenergic antagonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D018674	Adrenergic Antagonists	skos:exactMatch	ncit:C72900	Adrenergic Antagonist	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
@@ -9402,6 +9486,7 @@ mesh:D018928	Immunity, Mucosal	skos:exactMatch	ncit:C17889	Mucosal Immunity	sema
 mesh:D018965	Frameshifting, Ribosomal	skos:exactMatch	go:0006452	translational frameshifting	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D018967	Risperidone	skos:exactMatch	chebi:8871	risperidone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D019005	Cystic Fibrosis Transmembrane Conductance Regulator	skos:exactMatch	ncit:C111927	Cystic Fibrosis Transmembrane Conductance Regulator	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+mesh:D019032	Spectrometry, Mass, Matrix-Assisted Laser Desorption-Ionization	skos:exactMatch	ncit:C48040	Matrix-Assisted Laser Desorption Ionization Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 mesh:D019047	Phantoms, Imaging	skos:exactMatch	ncit:C17892	Imaging Phantoms	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D019065	Virus Assembly	skos:exactMatch	go:0019068	virion assembly	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D019069	Cell Respiration	skos:exactMatch	go:0045333	cellular respiration	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
@@ -9749,6 +9834,7 @@ mesh:D053716	Female Athlete Triad Syndrome	skos:exactMatch	efo:1001790	female at
 mesh:D053717	Pneumonia, Ventilator-Associated	skos:exactMatch	efo:1001865	ventilator-associated pneumonia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:D053718	Scleromyxedema	skos:exactMatch	ncit:C85061	Scleromyxedema	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D053719	Tandem Mass Spectrometry	skos:exactMatch	efo:0030056	tandem mass spectrometry	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
+mesh:D053719	Tandem Mass Spectrometry	skos:exactMatch	ncit:C18142	Tandem Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-13
 mesh:D053759	Interleukin-23	skos:exactMatch	fplx:IL23	IL23	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:D053767	Glucagon-Like Peptide 2	skos:exactMatch	chebi:80271	Glucagon-like peptide 2	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D053771	Glicentin	skos:exactMatch	chebi:80272	Glicentin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
@@ -10495,6 +10581,7 @@ mmo:0000680	chromatin immunoprecipitation	skos:exactMatch	mesh:D047369	Chromatin
 mmo:0000682	immunoprecipitation	skos:exactMatch	mesh:D047468	Immunoprecipitation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-29	2026		2026-08-12
 mmo:0000698	comprehensive metabolic panel	skos:exactMatch	mesh:D000093182	Comprehensive Metabolic Panel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-29	2026		2026-08-12
 mmo:0000704	photometry	skos:exactMatch	mesh:D010783	Photometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-29	2026		2026-08-12
+mmo:0000709	nuclear magnetic resonance spectroscopy	skos:exactMatch	mesh:D009682	Magnetic Resonance Spectroscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-29	2026		2026-08-13
 mmo:0000712	centrifugation	skos:exactMatch	mesh:D002498	Centrifugation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-29	2026		2026-08-12
 mmo:0000759	autoradiography	skos:exactMatch	mesh:D001345	Autoradiography	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-29	2026		2026-08-12
 mmo:0000783	laparotomy	skos:exactMatch	mesh:D007813	Laparotomy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-29	2026		2026-08-12
@@ -10861,6 +10948,9 @@ oae:0002495	dialysis	skos:exactMatch	obi:0600052	dialysis	semapv:ManualMappingCu
 oae:0004232	physical examination	skos:exactMatch	maxo:0000527	physical examination	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 oae:0004372	ulcer	skos:exactMatch	mpath:579	ulcer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 obi:0000719	vaccine preparation	skos:exactMatch	vo:0000590	vaccine preparation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
+obi:0003097	liquid chromatography mass spectrometry assay	skos:exactMatch	mesh:D000097922	Liquid Chromatography-Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-27	2026		2026-08-13
+obi:0003110	gas chromatography mass spectrometry assay	skos:exactMatch	mesh:D008401	Gas Chromatography-Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-27	2026		2026-08-13
+obi:0200199	gas chromatography mass spectrometry	skos:exactMatch	mesh:D008401	Gas Chromatography-Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-27	2026		2026-08-13
 oeo:00000007	chemical energy	skos:exactMatch	envo:2000023	chemical energy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 oeo:00000031	power plant	skos:exactMatch	envo:00002214	power plant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 oeo:00000042	waste role	skos:exactMatch	envo:01000665	waste role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
@@ -11273,6 +11363,7 @@ reactome:R-SCE-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go
 reactome:R-SPO-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 reactome:R-SSC-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 reactome:R-XTR-73843	5-Phosphoribose 1-diphosphate biosynthesis	debio:0000003	go:0006015	5-phosphoribose 1-diphosphate biosynthetic process	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
+scdo:1000142	Spectrophotometry	skos:exactMatch	mesh:D013053	Spectrophotometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-04-15	2026		2026-08-13
 schema:Blog	Blog	skos:exactMatch	vivo:Blog	Blog	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
 schema:Book	Book	skos:exactMatch	t4fs:0000305	book	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 schema:Consortium	Consortium	skos:exactMatch	vivo:Consortium	Consortium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12

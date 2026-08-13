@@ -22621,84 +22621,31 @@ chmo:0000204	small-angle X-ray scattering	skos:exactMatch	goldbook:09203	small-a
 chmo:0000219	X-ray reflectometry	skos:exactMatch	goldbook:09214	X-ray reflectometry	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000220	diffuse X-ray reflectometry	skos:exactMatch	goldbook:09200	off-specular X-ray reflectometry	semapv:LexicalMatching				SSSOM Curator				0.556
 chmo:0000223	ellipsometry	skos:exactMatch	goldbook:09197	ellipsometry	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000228	spectroscopy	skos:exactMatch	goldbook:S05848	spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000228	spectroscopy	skos:exactMatch	mesh:D013057	Spectrum Analysis	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-chmo:0000233	atomic spectroscopy	skos:exactMatch	goldbook:08216	atomic spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000234	atomic absorption spectroscopy	skos:exactMatch	goldbook:08451	atomic absorption spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000251	atomic emission spectroscopy	skos:exactMatch	goldbook:08452	atomic emission spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000258	laser-induced breakdown spectroscopy	skos:exactMatch	goldbook:08500	laser induced breakdown spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.762
-chmo:0000258	laser-induced breakdown spectroscopy	skos:exactMatch	mesh:D008046	Lip	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 chmo:0000267	inductively-coupled plasma atomic emission spectroscopy	skos:exactMatch	mesh:D013054	Spectrophotometry, Atomic	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 chmo:0000279	atomic fluorescence spectroscopy	skos:exactMatch	goldbook:08454	atomic fluorescence spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000287	fluorescence spectroscopy	skos:exactMatch	mesh:D005470	Fluorometry	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 chmo:0000287	fluorescence spectroscopy	skos:exactMatch	mesh:D013050	Spectrometry, Fluorescence	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 chmo:0000290	fluorescence anisotropy	skos:exactMatch	mesh:D005454	Fluorescence Polarization	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-chmo:0000297	X-ray spectroscopy	skos:exactMatch	goldbook:X06718	X-ray spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000299	X-ray absorption fine structure spectroscopy	skos:exactMatch	goldbook:09212	X-ray absorption fine structure spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000300	extended X-ray absorption fine structure spectroscopy	skos:exactMatch	goldbook:09198	extended X-ray absorption fine structure spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000303	surface extended X-ray absorption fine structure spectroscopy	skos:exactMatch	goldbook:09206	surface extended X-ray absorption fine structure spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000305	near-edge X-ray absorption fine structure spectroscopy	skos:exactMatch	mesh:D056928	X-Ray Absorption Spectroscopy	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 chmo:0000306	X-ray microprobe spectroscopy	skos:exactMatch	mesh:D004577	Electron Probe Microanalysis	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
-chmo:0000307	X-ray emission spectroscopy	skos:exactMatch	mesh:D013052	Spectrometry, X-Ray Emission	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
-chmo:0000309	energy-dispersive X-ray emission spectroscopy	skos:exactMatch	mesh:D013052	Spectrometry, X-Ray Emission	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
-chmo:0000311	particle-induced X-ray emission spectroscopy	skos:exactMatch	mesh:D013052	Spectrometry, X-Ray Emission	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
 chmo:0000313	electron probe X-ray microanalysis	skos:exactMatch	goldbook:E02007	electron probe X-ray microanalysis	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000313	electron probe X-ray microanalysis	skos:exactMatch	mesh:D004577	Electron Probe Microanalysis	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 chmo:0000314	wavelength dispersive X-ray spectroscopy	skos:exactMatch	mesh:D013052	Spectrometry, X-Ray Emission	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
 chmo:0000320	total reflection X-ray fluorescence spectroscopy	skos:exactMatch	goldbook:09211	total reflection X-ray fluorescence spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000325	magnetic circular dichroism spectroscopy	skos:exactMatch	mesh:C537834	Macular dystrophy, corneal type 1	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 chmo:0000327	vibrational circular dichroism spectroscopy	skos:exactMatch	mesh:D002942	Circular Dichroism	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-chmo:0000334	disappearance potential spectroscopy	skos:exactMatch	mesh:C041756	alpha,beta-diacryloxypropionic acid	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-chmo:0000339	Auger electron spectroscopy	skos:exactMatch	goldbook:09172	Auger spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.556
-chmo:0000339	Auger electron spectroscopy	skos:exactMatch	goldbook:A00522	Auger electron spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000348	proton-induced Auger electron spectroscopy	skos:exactMatch	mesh:C039557	phenyl-2-aminoethyl sulfide	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-chmo:0000356	Auger-photoelectron coincidence spectroscopy	skos:exactMatch	goldbook:09173	Auger photoelectron coincidence spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.762
-chmo:0000366	electron energy loss spectroscopy	skos:exactMatch	goldbook:08593	electron energy loss spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000366	electron energy loss spectroscopy	skos:exactMatch	mesh:D046590	Spectroscopy, Electron Energy-Loss	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 chmo:0000370	high-resolution energy loss spectroscopy	skos:exactMatch	goldbook:R05236	reflection electron energy loss spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.54
-chmo:0000370	high-resolution energy loss spectroscopy	skos:exactMatch	mesh:D006365	Heel	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 chmo:0000373	transmission electron energy loss spectroscopy	skos:exactMatch	goldbook:T06480	transmission electron energy loss spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000387	photoelectron spectroscopy	skos:exactMatch	goldbook:P04609	photoelectron spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000392	photoelectron microspectroscopy	skos:exactMatch	mesh:C057213	3-(2-phenylethyl)-4-methylsydnone	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 chmo:0000401	ultraviolet photoelectron spectroscopy	skos:exactMatch	mesh:D056951	Photoelectron Spectroscopy	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-chmo:0000404	X-ray photoelectron spectroscopy	skos:exactMatch	goldbook:X06716	X-ray photoelectron spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000404	X-ray photoelectron spectroscopy	skos:exactMatch	mesh:D056951	Photoelectron Spectroscopy	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
-chmo:0000414	gamma-ray spectroscopy	skos:exactMatch	mesh:D013051	Spectrometry, Gamma	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-chmo:0000417	Mossbauer spectroscopy	skos:exactMatch	mesh:D015204	Spectroscopy, Mossbauer	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 chmo:0000420	nuclear activation analysis	skos:exactMatch	goldbook:A00096	activation analysis	semapv:LexicalMatching				SSSOM Curator				0.556
 chmo:0000421	impedance spectroscopy	skos:exactMatch	mesh:D058266	Dielectric Spectroscopy	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 chmo:0000423	electrochemical-induced impedance spectroscopy	skos:exactMatch	mesh:D058266	Dielectric Spectroscopy	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 chmo:0000427	direct recoil spectroscopy	skos:exactMatch	goldbook:09175	direct recoil spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000430	ion mobility spectroscopy	skos:exactMatch	mesh:D000075663	Ion Mobility Spectrometry	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-chmo:0000451	concentration modulated absorption spectroscopy	skos:exactMatch	mesh:D003128	Coma	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-chmo:0000461	laser micro emission spectroscopy	skos:exactMatch	goldbook:L03473	laser micro emission spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000470	mass spectrometry	skos:exactMatch	goldbook:M03746	mass spectrometry	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000482	electrospray ionisation mass spectrometry	skos:exactMatch	mesh:D021241	Spectrometry, Mass, Electrospray Ionization	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-chmo:0000497	gas chromatography-mass spectrometry	skos:exactMatch	goldbook:12421	gas chromatography-mass spectrometry	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000506	isotope ratio mass spectrometry	skos:exactMatch	goldbook:12453	isotope ratio mass spectrometry	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000510	isotope dilution mass spectrometry	skos:exactMatch	goldbook:12451	isotope dilution mass spectrometry	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000516	laser microprobe mass spectrometry	skos:exactMatch	goldbook:12464	laser microprobe mass spectrometry	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000519	matrix-assisted laser desorption-ionisation mass spectrometry	skos:exactMatch	mesh:D019032	Spectrometry, Mass, Matrix-Assisted Laser Desorption-Ionization	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-chmo:0000524	liquid chromatography-mass spectrometry	skos:exactMatch	goldbook:12466	liquid chromatography-mass spectrometry	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000560	secondary ion mass spectrometry	skos:exactMatch	mesh:D018629	Spectrometry, Mass, Secondary Ion	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-chmo:0000563	fast-atom bombardment mass spectrometry	skos:exactMatch	goldbook:F02328	fast-atom bombardment mass spectrometry	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000563	fast-atom bombardment mass spectrometry	skos:exactMatch	mesh:D016339	Spectrometry, Mass, Fast Atom Bombardment	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 chmo:0000575	tandem mass spectrometry	skos:exactMatch	goldbook:12485	mass spectrometry/mass spectrometry	semapv:LexicalMatching				SSSOM Curator				0.556
-chmo:0000591	nuclear magnetic resonance spectroscopy	skos:exactMatch	goldbook:08218	nuclear magnetic resonance spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000591	nuclear magnetic resonance spectroscopy	skos:exactMatch	mesh:D009682	Magnetic Resonance Spectroscopy	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
-chmo:0000593	1H nuclear magnetic resonance spectroscopy	skos:exactMatch	mesh:D066244	Proton Magnetic Resonance Spectroscopy	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-chmo:0000595	13C nuclear magnetic resonance spectroscopy	skos:exactMatch	mesh:D066241	Carbon-13 Magnetic Resonance Spectroscopy	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-chmo:0000598	two-dimensional nuclear magnetic resonance spectroscopy	skos:exactMatch	goldbook:08439	two-dimensional nuclear magnetic resonance spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000599	correlation spectroscopy	skos:exactMatch	goldbook:08323	correlation spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000603	heteronuclear multiple quantum coherence	skos:exactMatch	mesh:C051329	factor III, vitamin B 12	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 chmo:0000604	heteronuclear single quantum coherence	skos:exactMatch	goldbook:08358	heteronuclear single quantum correlation	semapv:LexicalMatching				SSSOM Curator				0.556
-chmo:0000605	total correlation spectroscopy	skos:exactMatch	goldbook:08435	total correlation spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000607	nuclear Overhauser enhancement spectroscopy	skos:exactMatch	goldbook:08387	nuclear Overhauser effect spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.556
 chmo:0000613	pulsed nuclear magnetic resonance spectroscopy	skos:exactMatch	mesh:D009682	Magnetic Resonance Spectroscopy	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
-chmo:0000614	solid-state nuclear magnetic resonance spectroscopy	skos:exactMatch	goldbook:08415	solid-state nuclear magnetic resonance spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000616	combined rotation and multiple pulse spectroscopy	skos:exactMatch	goldbook:08321	combined rotation and multiple pulse spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000619	photoacoustic spectroscopy	skos:exactMatch	goldbook:P04576	photoacoustic spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000622	photothermal spectroscopy	skos:exactMatch	goldbook:08659	photothermal spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000624	surface plasmon resonance spectroscopy	skos:exactMatch	mesh:C047668	sperm releasing substance	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 chmo:0000624	surface plasmon resonance spectroscopy	skos:exactMatch	mesh:D020349	Surface Plasmon Resonance	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 chmo:0000628	vibrational spectroscopy	skos:exactMatch	goldbook:08708	vibrational spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
@@ -22709,14 +22656,11 @@ chmo:0000638	near-infrared absorption spectroscopy	skos:exactMatch	mesh:D019265	
 chmo:0000645	diffuse reflectance infrared Fourier transform spectroscopy	skos:exactMatch	goldbook:09196	diffuse reflection-absorption infrared spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.556
 chmo:0000647	reflection–absorption infrared spectroscopy	skos:exactMatch	goldbook:09201	reflection-absorption infrared spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000650	flame infrared emission spectroscopy	skos:exactMatch	mesh:D005390	Fires	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-chmo:0000656	Raman spectroscopy	skos:exactMatch	goldbook:08669	Raman spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000656	Raman spectroscopy	skos:exactMatch	mesh:D013059	Spectrum Analysis, Raman	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 chmo:0000661	coherent anti-Stokes Raman spectroscopy	skos:exactMatch	goldbook:08579	coherent anti-Stokes Raman spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000670	surface-enhanced resonance Raman spectroscopy	skos:exactMatch	goldbook:08690	surface-enhanced resonance Raman spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000674	spatially-offset Raman spectroscopy	skos:exactMatch	goldbook:08679	spatially offset Raman spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.762
 chmo:0000677	surface-enhanced Raman spectroscopy	skos:exactMatch	goldbook:08689	surface-enhanced Raman spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000678	tip-enhanced Raman spectroscopy	skos:exactMatch	goldbook:08699	tip-enhanced Raman spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000678	tip-enhanced Raman spectroscopy	skos:exactMatch	goldbook:09210	tip enhanced raman spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.762
 chmo:0000681	thermal analysis	skos:exactMatch	goldbook:T06295	thermal analysis	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000682	calorimetry	skos:exactMatch	goldbook:C00786	calorimetry	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000684	differential scanning calorimetry	skos:exactMatch	goldbook:D01708	differential scanning calorimetry	semapv:LexicalMatching				SSSOM Curator				0.778
@@ -22731,31 +22675,16 @@ chmo:0000692	thermoptometry	skos:exactMatch	goldbook:T06336	thermoptometry	semap
 chmo:0000693	thermoluminescence	skos:exactMatch	goldbook:T06325	thermoluminescence	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000697	thermosonimetry	skos:exactMatch	goldbook:T06337	thermosonimetry	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000699	neutron powder diffraction	skos:exactMatch	mesh:C042235	neodymium pyrocatechin disulfonate	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-chmo:0000702	capillary electrophoresis-mass spectrometry	skos:exactMatch	mesh:C064671	2-chloroethyl methyl sulfide	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 chmo:0000715	ultra-performance liquid chromatography-mass spectrometry	skos:exactMatch	mesh:D000097922	Liquid Chromatography-Mass Spectrometry	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-chmo:0000733	diffusion-ordered spectroscopy	skos:exactMatch	goldbook:08329	diffusion ordered spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.762
-chmo:0000744	electron–electron double resonance spectroscopy	skos:exactMatch	mesh:D003670	Deer	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 chmo:0000747	electron nuclear double resonance spectroscopy	skos:exactMatch	mesh:D004578	Electron Spin Resonance Spectroscopy	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 chmo:0000771	multiphoton fluorescence microscopy	skos:exactMatch	mesh:D036641	Microscopy, Fluorescence, Multiphoton	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
 chmo:0000782	neutron activation analysis	skos:exactMatch	goldbook:08739	neutron activation analysis	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000783	infrared dichroism spectroscopy	skos:exactMatch	mesh:D007060	Id	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 chmo:0000785	optical rotatory dispersion	skos:exactMatch	goldbook:08654	optical rotatory dispersion	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000795	ultra high performance liquid chromatography	skos:exactMatch	mesh:D002851	Chromatography, High Pressure Liquid	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 chmo:0000796	high-performance liquid chromatography-mass spectrometry	skos:exactMatch	mesh:D000097922	Liquid Chromatography-Mass Spectrometry	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-chmo:0000800	spectrum	skos:exactMatch	goldbook:08291	spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000801	absorption spectrum	skos:exactMatch	goldbook:A00043	absorption spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000806	mass spectrum	skos:exactMatch	goldbook:M03749	mass spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000810	electron energy-loss spectrum	skos:exactMatch	goldbook:09326	electron energy loss spectrum	semapv:LexicalMatching				SSSOM Curator				0.762
-chmo:0000813	emission spectrum	skos:exactMatch	goldbook:E02060	emission spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000814	corrected emission spectrum	skos:exactMatch	goldbook:C01343	corrected emission spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000818	infrared spectrum	skos:exactMatch	mesh:D013055	Spectrophotometry, Infrared	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
-chmo:0000823	Raman spectrum	skos:exactMatch	goldbook:08670	Raman spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000829	vibrational spectrum	skos:exactMatch	goldbook:08291	spectrum	semapv:LexicalMatching				SSSOM Curator				0.556
-chmo:0000831	action spectrum	skos:exactMatch	goldbook:A00088	action spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000832	conversion spectrum	skos:exactMatch	goldbook:C01319	conversion spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000833	excitation spectrum	skos:exactMatch	goldbook:E02253	excitation spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000834	excitation-emission spectrum	skos:exactMatch	goldbook:E02249	excitation-emission spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000835	nuclear magnetic resonance spectrum	skos:exactMatch	goldbook:08384	nuclear magnetic resonance spectrum	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000869	surface-enhanced laser desorption–ionisation time-of-flight mass spectrometry	skos:exactMatch	mesh:D019032	Spectrometry, Mass, Matrix-Assisted Laser Desorption-Ionization	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 chmo:0000897	saturation transfer difference nuclear magnetic resonance spectroscopy	skos:exactMatch	mesh:D012749	Sexually Transmitted Diseases	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 chmo:0000915	rheometry	skos:exactMatch	mesh:D012212	Rheology	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
@@ -22771,9 +22700,6 @@ chmo:0000973	wall-coated open-tubular column	skos:exactMatch	goldbook:W06654	wal
 chmo:0000974	open-tubular column	skos:exactMatch	goldbook:O04297	open-tubular column	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000975	packed column	skos:exactMatch	goldbook:P04393	packed column	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000979	reflectron	skos:exactMatch	goldbook:11544	reflectron	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000981	time-of-flight mass spectrometer	skos:exactMatch	goldbook:T06382	time-of-flight mass spectrometer	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000982	mass spectrometer	skos:exactMatch	goldbook:M03732	mass spectrometer	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0000982	mass spectrometer	skos:exactMatch	goldbook:M03733	mass spectrometer	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000986	stationary phase	skos:exactMatch	goldbook:S05948	stationary phase	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000986	stationary phase	skos:exactMatch	goldbook:S05949	stationary phase	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0000987	capillary column	skos:exactMatch	goldbook:C00793	capillary column	semapv:LexicalMatching				SSSOM Curator				0.778
@@ -22829,7 +22755,6 @@ chmo:0001050	reversed-phase liquid chromatography	skos:exactMatch	mesh:D056148	C
 chmo:0001053	magnetic sector	skos:exactMatch	goldbook:12473	magnetic sector	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0001054	electric sector	skos:exactMatch	goldbook:12405	electrostatic energy analyser	semapv:LexicalMatching				SSSOM Curator				0.556
 chmo:0001054	electric sector	skos:exactMatch	goldbook:E01938	electric sector	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0001055	double-focusing mass spectrometer	skos:exactMatch	goldbook:D01845	double-focusing mass spectrometer	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0001063	Daly detector	skos:exactMatch	goldbook:12380	Daly detector	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0001070	three-dimensional nuclear magnetic resonance spectroscopy	skos:exactMatch	goldbook:08432	three-dimensional nuclear magnetic resonance spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0001077	quartz crystal microbalance	skos:exactMatch	mesh:D058525	Quartz Crystal Microbalance Techniques	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
@@ -22857,7 +22782,6 @@ chmo:0001229	catalymetric titration	skos:exactMatch	goldbook:C00872	catalymetric
 chmo:0001234	spectrometer	skos:exactMatch	goldbook:S05837	spectrometer	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0001239	inversion recovery	skos:exactMatch	goldbook:08370	inversion recovery sequence	semapv:LexicalMatching				SSSOM Curator				0.556
 chmo:0001241	elastic recoil detection analysis	skos:exactMatch	goldbook:09175	direct recoil spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.556
-chmo:0001253	ultraviolet spectrophotometry	skos:exactMatch	mesh:D013056	Spectrophotometry, Ultraviolet	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 chmo:0001265	pyrolysis mass spectrometry	skos:exactMatch	goldbook:12538	pyrolysis mass spectrometry	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0001285	gravimetric analysis	skos:exactMatch	goldbook:09043	gravimetric analysis	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0001288	sum-frequency generation spectroscopy	skos:exactMatch	goldbook:09205	sum frequency generation spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.762
@@ -22998,7 +22922,6 @@ chmo:0001882	presaturation	skos:exactMatch	goldbook:08395	presaturation	semapv:L
 chmo:0001891	chemical map	skos:exactMatch	goldbook:09236	chemical map	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0001930	directed self-assembly	skos:exactMatch	goldbook:09470	directed self-assembly	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0001938	collision-induced dissociation	skos:exactMatch	goldbook:C01167	collision-induced dissociation	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0001943	higher-order Raman spectral excitation spectroscopy	skos:exactMatch	mesh:D006736	Horses	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 chmo:0001945	gas antisolvent technique	skos:exactMatch	mesh:D005740	Gases	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 chmo:0001947	precipitation with compressed antisolvent	skos:exactMatch	mesh:D010323	Passive Cutaneous Anaphylaxis	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 chmo:0001963	time-correlated single photon counting	skos:exactMatch	goldbook:T06377	time-correlated single photon counting	semapv:LexicalMatching				SSSOM Curator				0.778
@@ -23077,14 +23000,11 @@ chmo:0002550	emulsion polymerisation	skos:exactMatch	goldbook:14329	emulsion pol
 chmo:0002551	microemulsion polymerisation	skos:exactMatch	goldbook:14342	micro-emulsion polymerisation	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0002556	HNCO	skos:exactMatch	goldbook:08364	HNCO	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0002557	HNCA	skos:exactMatch	goldbook:08363	HNCA	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0002562	nuclear Overhauser effect difference spectroscopy	skos:exactMatch	goldbook:08386	nuclear Overhauser effect difference spectroscopy	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0002592	carbon electrode	skos:exactMatch	goldbook:C00829	carbon electrode	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0002606	suspension polymerisation	skos:exactMatch	goldbook:14354	suspension polymerisation	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0002642	dilatometry	skos:exactMatch	goldbook:12761	dilatometry	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0002644	dispersion polymerisation	skos:exactMatch	goldbook:14348	dispersion polymerisation	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0002649	scanning transmission electron microscope	skos:exactMatch	mesh:D017348	Microscopy, Electron, Scanning Transmission	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-chmo:0002657	ion trap mass spectrometer	skos:exactMatch	goldbook:I03249	ion trap mass spectrometer	semapv:LexicalMatching				SSSOM Curator				0.778
-chmo:0002673	thermal desorption spectroscopy	skos:exactMatch	mesh:C076628	tyramine-deoxysorbitol	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 chmo:0002677	coulometer	skos:exactMatch	goldbook:09157	coulometer	semapv:LexicalMatching				SSSOM Curator				0.778
 chmo:0002698	chiral chromatography	skos:exactMatch	goldbook:09888	enantioselective chromatography	semapv:LexicalMatching				SSSOM Curator				0.556
 chmo:0002727	multiple isomorphous replacement with anomalous scattering	skos:exactMatch	mesh:C579922	Ataxia Neuropathy Spectrum	semapv:LexicalMatching		2026-05-28	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
@@ -23767,7 +23687,6 @@ doid:0050660	Beare-Stevenson cutis gyrata syndrome	skos:exactMatch	umls:C1852406
 doid:0050663	Bethlem myopathy	skos:exactMatch	umls:C1834674	BETHLEM MYOPATHY 1	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.5555555555555556
 doid:0050665	fetal alcohol syndrome	skos:exactMatch	umls:C1542327	Fetus or newborn affected by alcohol transmitted via placenta or breast milk	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.549371263656978
 doid:0050667	alcohol-related neurodevelopmental disorder	skos:exactMatch	umls:C0814154	Alcohol Related Neurodevelopmental Disorder	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.7623170480313337
-doid:0050668	alcohol-related birth defects	skos:exactMatch	mesh:D063647	Fetal Alcohol Spectrum Disorders	semapv:LexicalMatching		2026-07-31	2026	https://github.com/biomappings/biomappings/blob/bbf2ec47/scripts/generate_doid_mappings.py			2026-08-12	0.54
 doid:0050668	alcohol-related birth defect	skos:exactMatch	umls:C3146244	Alcohol Related Birth Defect	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.7623170480313337
 doid:0050671	female breast cancer	skos:exactMatch	umls:C0007104	Female Breast Carcinoma	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.5400948258091115
 doid:0050671	female breast cancer	skos:exactMatch	umls:C0235653	Malignant neoplasm of female breast	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.5555555555555556
@@ -23783,7 +23702,6 @@ doid:0050688	anal canal cancer	skos:exactMatch	umls:C0563211	Carcinoma of anal c
 doid:0050691	branchiooculofacial syndrome	skos:exactMatch	umls:C0376524	Branchio-Oculo-Facial Syndrome	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.7621109049680478
 doid:0050693	Brooke-Spiegler syndrome	skos:exactMatch	mesh:C536611	Familial cylindromatosis	semapv:LexicalMatching		2026-07-31	2026	https://github.com/biomappings/biomappings/blob/bbf2ec47/scripts/generate_doid_mappings.py			2026-08-12	0.556
 doid:0050694	Brown-Vialetto-Van Laere syndrome	skos:exactMatch	umls:C0796274	Brown-Vialetto-Van Laere Syndrome 1	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.5555555555555556
-doid:0050696	fetal alcohol spectrum disorder	skos:exactMatch	umls:C2985290	Fetal Alcohol Spectrum Disorders	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.5400948258091115
 doid:0050697	chorioamnionitis	skos:exactMatch	umls:C0008495	Chorioamnionitis	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.7623170480313337
 doid:0050698	funisitis	skos:exactMatch	umls:C1275592	Funisitis (disorder)	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.5400948258091115
 doid:0050709	early infantile epileptic encephalopathy	skos:exactMatch	umls:C4552072	X-linked infantile spasms	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/f293d0/scripts/generate_doid_mappings.py				0.5400948258091115
@@ -28472,7 +28390,6 @@ envo:2000025	nuclear energy	skos:exactMatch	mesh:D009678	Nuclear Energy	semapv:L
 envo:2000034	geothermal energy	skos:exactMatch	mesh:D059207	Geothermal Energy	semapv:LexicalMatching		2026-06-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 envo:2000044	coke	skos:exactMatch	mesh:D003077	Coke	semapv:LexicalMatching		2026-06-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 envo:21001212	microwave radiation	skos:exactMatch	mesh:D008872	Microwaves	semapv:LexicalMatching		2026-06-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-envo:21001215	visible spectrum radiation	skos:exactMatch	mesh:D008027	Light	semapv:LexicalMatching		2026-06-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 envo:21001216	ultraviolet radiation	skos:exactMatch	mesh:D014466	Ultraviolet Rays	semapv:LexicalMatching		2026-06-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 envo:21001217	X-ray radiation	skos:exactMatch	mesh:D014965	X-Rays	semapv:LexicalMatching		2026-06-26	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.549
 envo:21001219	ionizing radiation	skos:exactMatch	mesh:D011839	Radiation, Ionizing	semapv:LexicalMatching		2026-06-26	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
@@ -29177,7 +29094,6 @@ fbcv:0003170	cell isolation	skos:exactMatch	mesh:D002469	Cell Separation	semapv:
 fbcv:0003197	DNase	skos:exactMatch	mesh:D003851	Deoxyribonucleases	semapv:LexicalMatching		2026-07-10	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 fbcv:0003211	high-throughput sequencing	skos:exactMatch	mesh:D059014	High-Throughput Nucleotide Sequencing	semapv:LexicalMatching		2026-07-10	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fbcv:0003213	Illumina sequencing	skos:exactMatch	mesh:D059014	High-Throughput Nucleotide Sequencing	semapv:LexicalMatching		2026-07-10	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
-fbcv:0003218	mass spectrometry	skos:exactMatch	mesh:D013058	Mass Spectrometry	semapv:LexicalMatching		2026-07-10	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 fbcv:0003239	ZFN	skos:exactMatch	mesh:D000075804	Zinc Finger Nucleases	semapv:LexicalMatching		2026-07-10	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 fbcv:0005007	green fluorescent protein	skos:exactMatch	mesh:D049452	Green Fluorescent Proteins	semapv:LexicalMatching		2026-07-10	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 fbcv:0005009	cyan fluorescent protein	skos:exactMatch	mesh:C485182	Cyan Fluorescent Protein	semapv:LexicalMatching		2026-07-10	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
@@ -29217,29 +29133,20 @@ fix:0000003	spectroscopy	skos:exactMatch	mesh:D013057	Spectrum Analysis	semapv:L
 fix:0000007	X-ray crystallography	skos:exactMatch	mesh:D018360	Crystallography, X-Ray	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.771
 fix:0000023	electron paramagnetic resonance spectroscopy	skos:exactMatch	mesh:D004578	Electron Spin Resonance Spectroscopy	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 fix:0000024	electron-nuclear double resonance spectroscopy	skos:exactMatch	mesh:D004578	Electron Spin Resonance Spectroscopy	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-fix:0000028	fluorescence spectroscopy	skos:exactMatch	mesh:D013050	Spectrometry, Fluorescence	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000040	photoelectron emission spectroscopy	skos:exactMatch	mesh:D056951	Photoelectron Spectroscopy	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 fix:0000041	X-ray photoelectron spectroscopy	skos:exactMatch	mesh:D056951	Photoelectron Spectroscopy	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 fix:0000042	ultraviolet photoelectron spectroscopy	skos:exactMatch	mesh:D056951	Photoelectron Spectroscopy	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-fix:0000044	magnetic circular dichroism spectroscopy	skos:exactMatch	mesh:C537834	Macular dystrophy, corneal type 1	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-fix:0000050	Mossbauer spectroscopy	skos:exactMatch	mesh:D015204	Spectroscopy, Mossbauer	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 fix:0000051	electron microscopy	skos:exactMatch	mesh:D008854	Microscopy, Electron	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000058	Raman spectroscopy	skos:exactMatch	mesh:D013059	Spectrum Analysis, Raman	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
-fix:0000075	coherent anti-Stokes Raman spectroscopy	skos:exactMatch	mesh:D001336	Automobiles	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 fix:0000081	matrix-assisted laser desorption/ionization mass spectrometry	skos:exactMatch	mesh:D019032	Spectrometry, Mass, Matrix-Assisted Laser Desorption-Ionization	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-fix:0000086	fast atom bombardment mass spectrometry	skos:exactMatch	mesh:D016339	Spectrometry, Mass, Fast Atom Bombardment	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000098	gas chromatography	skos:exactMatch	mesh:D002849	Chromatography, Gas	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-fix:0000100	X-ray emission spectroscopy	skos:exactMatch	mesh:D013052	Spectrometry, X-Ray Emission	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
-fix:0000110	Fourier transform infrared spectroscopy	skos:exactMatch	mesh:D017550	Spectroscopy, Fourier Transform Infrared	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.555
 fix:0000112	scanning tunneling microscopy	skos:exactMatch	mesh:D016252	Microscopy, Scanning Tunneling	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000113	optical microscopy	skos:exactMatch	mesh:D008853	Microscopy	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000114	atomic force microscopy	skos:exactMatch	mesh:D018625	Microscopy, Atomic Force	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000121	scanning probe microscopy	skos:exactMatch	mesh:D020527	Microscopy, Scanning Probe	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-fix:0000122	secondary ion mass spectrometry	skos:exactMatch	mesh:D018629	Spectrometry, Mass, Secondary Ion	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000123	fluorescence microscopy	skos:exactMatch	mesh:D008856	Microscopy, Fluorescence	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000124	scanning electron microscopy	skos:exactMatch	mesh:D008855	Microscopy, Electron, Scanning	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000126	transmission electron microscopy	skos:exactMatch	mesh:D046529	Microscopy, Electron, Transmission	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-fix:0000149	heteronuclear multiple quantum correlation spectroscopy	skos:exactMatch	mesh:C051329	factor III, vitamin B 12	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 fix:0000187	dipole-dipole coupling	skos:exactMatch	mesh:C007792	Fumigant 93	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.555
 fix:0000222	multiple wavelength anomalous diffraction	skos:exactMatch	mesh:C110804	mycophenolic adenine dinucleotide	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 fix:0000247	multiple isomorphous replacement with anomalous scattering	skos:exactMatch	mesh:C579922	Ataxia Neuropathy Spectrum	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
@@ -29250,7 +29157,6 @@ fix:0000312	nucleotide sequence	skos:exactMatch	mesh:D001483	Base Sequence	semap
 fix:0000313	DNA sequence	skos:exactMatch	mesh:D001483	Base Sequence	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 fix:0000314	RNA sequence	skos:exactMatch	mesh:D001483	Base Sequence	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 fix:0000319	alpha-helix	skos:exactMatch	mesh:D000072756	Protein Conformation, alpha-Helical	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
-fix:0000321	near-infrared spectroscopy	skos:exactMatch	mesh:D019265	Spectroscopy, Near-Infrared	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000343	protein hydrolysis	skos:exactMatch	mesh:D059748	Proteolysis	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 fix:0000355	cell membrane structure	skos:exactMatch	mesh:D021961	Cell Membrane Structures	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 fix:0000387	differential scanning calorimetry	skos:exactMatch	mesh:D002152	Calorimetry, Differential Scanning	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
@@ -29269,8 +29175,6 @@ fix:0000631	gas-liquid chromatography	skos:exactMatch	mesh:D002849	Chromatograph
 fix:0000638	Western blotting	skos:exactMatch	mesh:D015153	Blotting, Western	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 fix:0000639	Southern blotting	skos:exactMatch	mesh:D015139	Blotting, Southern	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 fix:0000640	Northern blotting	skos:exactMatch	mesh:D015152	Blotting, Northern	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
-fix:0000646	high resolution electron energy loss spectroscopy	skos:exactMatch	mesh:D006365	Heel	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-fix:0000663	electron energy loss spectroscopy	skos:exactMatch	mesh:D046590	Spectroscopy, Electron Energy-Loss	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000673	X-ray fluorescence spectroscopy	skos:exactMatch	mesh:D013052	Spectrometry, X-Ray Emission	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 fix:0000771	conductometric titration	skos:exactMatch	mesh:D003217	Conductometry	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000836	capillary electrophoresis	skos:exactMatch	mesh:D019075	Electrophoresis, Capillary	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
@@ -29280,9 +29184,6 @@ fix:0000873	DNA sequencing	skos:exactMatch	mesh:D017422	Sequence Analysis, DNA	s
 fix:0000874	RNA sequencing	skos:exactMatch	mesh:D017423	Sequence Analysis, RNA	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 fix:0000883	polyacrylamide gel electrophoresis	skos:exactMatch	mesh:D004591	Electrophoresis, Polyacrylamide Gel	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 fix:0000884	SDS polyacrylamide gel electrophoresis	skos:exactMatch	mesh:D004591	Electrophoresis, Polyacrylamide Gel	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-fix:0000908	atmospheric pressure ionization mass spectrometry	skos:exactMatch	mesh:D001516	Bees	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
-fix:0000908	atmospheric pressure ionization mass spectrometry	skos:exactMatch	mesh:D018808	Transcription Factor AP-1	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.53
-fix:0000960	SIMS microscopy	skos:exactMatch	mesh:D018629	Spectrometry, Mass, Secondary Ion	semapv:LexicalMatching		2026-03-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
 flopo:0900000	inflorescence type	skos:exactMatch	mesh:D056626	Inflorescence	semapv:LexicalMatching		2026-07-31	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 flopo:0900005	inflorescence type head	skos:exactMatch	mesh:D006257	Head	semapv:LexicalMatching		2026-07-31	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 flopo:0900012	fruit type capsule	skos:exactMatch	mesh:D002214	Capsules	semapv:LexicalMatching		2026-07-31	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
@@ -71820,7 +71721,6 @@ mesh:D013043	Specialties, Surgical	skos:exactMatch	ncit:C17154	Surgical Specialt
 mesh:D013046	Specific Gravity	skos:exactMatch	ncit:C64832	Specific Gravity	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D013052	Spectrometry, X-Ray Emission	skos:exactMatch	ncit:C85830	X-Ray Fluorescence Spectrometry	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D013053	Spectrophotometry	skos:exactMatch	ncit:C116701	Spectrophotometry	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
-mesh:D013058	Mass Spectrometry	skos:exactMatch	ncit:C17156	Mass Spectrometry	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D013059	Spectrum Analysis, Raman	skos:exactMatch	ncit:C17157	Raman Spectroscopy	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D013060	Speech	skos:exactMatch	ncit:C38025	Speech	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D013064	Speech Disorders	skos:exactMatch	ncit:C5041	Speech Disorder	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
@@ -74252,7 +74152,6 @@ mesh:D018608	Ultrasonography, Doppler	skos:exactMatch	ncit:C62781	Doppler Ultras
 mesh:D018613	Microscopy, Confocal	skos:exactMatch	ncit:C17753	Confocal Microscopy	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D018619	Echocardiography, Doppler, Pulsed	skos:exactMatch	efo:0003962	pulsed doppler echocardiography	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py				0.95
 mesh:D018625	Microscopy, Atomic Force	skos:exactMatch	ncit:C17754	Atomic Force Microscopy	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
-mesh:D018629	Spectrometry, Mass, Secondary Ion	skos:exactMatch	ncit:C154790	Secondary Ion Mass Spectrometry	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D018631	ras Proteins	skos:exactMatch	fplx:RAS	RAS	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py				0.95
 mesh:D018632	Mice, Inbred SENCAR	skos:exactMatch	ncit:C14314	SENCAR Mouse	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D018633	Pulmonary Atresia	skos:exactMatch	hp:0004935	Pulmonary artery atresia	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py				0.95
@@ -74433,7 +74332,6 @@ mesh:D019017	Eritrea	skos:exactMatch	ncit:C16558	Eritrea	semapv:LexicalMatching	
 mesh:D019018	Imagery, Psychotherapy	skos:exactMatch	ncit:C15375	Imagery Therapy	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D019021	Natural History	skos:exactMatch	ncit:C16147	Natural History	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D019029	Palau	skos:exactMatch	ncit:C17733	Palau	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
-mesh:D019032	Spectrometry, Mass, Matrix-Assisted Laser Desorption-Ionization	skos:exactMatch	ncit:C48040	Matrix-Assisted Laser Desorption Ionization Mass Spectrometry	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D019034	CD-I	skos:exactMatch	ncit:C19541	Compact Disc-Interactive	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D019040	E-Selectin	skos:exactMatch	hgnc:10718	SELE	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py				0.95
 mesh:D019040	E-Selectin	skos:exactMatch	ncit:C17491	E-Selectin	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
@@ -76849,7 +76747,6 @@ mesh:D053707	Receptors, Interleukin-12	skos:exactMatch	ncit:C38915	Interleukin 1
 mesh:D053709	Interleukin-10 Receptor alpha Subunit	skos:exactMatch	ncit:C107586	Interleukin-10 Receptor Subunit Alpha	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D053710	Interleukin-10 Receptor beta Subunit	skos:exactMatch	ncit:C26270	Interleukin-10 Receptor Subunit Beta	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D053714	Aspermia	skos:exactMatch	ncit:C80076	Azoospermia	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
-mesh:D053719	Tandem Mass Spectrometry	skos:exactMatch	ncit:C18142	Tandem Mass Spectrometry	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D053727	Interleukin-18 Receptor alpha Subunit	skos:exactMatch	hgnc:5988	IL18R1	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py				0.95
 mesh:D053727	Interleukin-18 Receptor alpha Subunit	skos:exactMatch	ncit:C124084	Interleukin-18 Receptor 1	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
 mesh:D053728	Interleukin-18 Receptor beta Subunit	skos:exactMatch	hgnc:5989	IL18RAP	semapv:LexicalMatching				https://github.com/biomappings/biomappings/blob/a80ed2/scripts/import_gilda_mappings.py				0.95
@@ -77890,7 +77787,6 @@ mmo:0000684	gel filtration chromatography	skos:exactMatch	mesh:D002850	Chromatog
 mmo:0000685	confocal microscopy	skos:exactMatch	mesh:D018613	Microscopy, Confocal	semapv:LexicalMatching		2026-07-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 mmo:0000695	optical coherence tomography	skos:exactMatch	mesh:D041623	Tomography, Optical Coherence	semapv:LexicalMatching		2026-07-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 mmo:0000696	optical coherence tomography	skos:exactMatch	mesh:D041623	Tomography, Optical Coherence	semapv:LexicalMatching		2026-07-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
-mmo:0000709	nuclear magnetic resonance spectroscopy	skos:exactMatch	mesh:D009682	Magnetic Resonance Spectroscopy	semapv:LexicalMatching		2026-07-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 mmo:0000710	electron paramagnetic resonance spectroscopy	skos:exactMatch	mesh:D004578	Electron Spin Resonance Spectroscopy	semapv:LexicalMatching		2026-07-29	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 mmo:0000713	enzyme immunoassay	skos:exactMatch	mesh:D007124	Immunoenzyme Techniques	semapv:LexicalMatching		2026-07-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 mmo:0000718	Dynamic Contrast-Enhanced Magnetic Resonance Imaging	skos:exactMatch	mesh:D000098543	Dynamic Contrast Enhanced Magnetic Resonance Imaging	semapv:LexicalMatching		2026-07-29	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
@@ -82508,8 +82404,6 @@ obi:0002798	surgical gown	skos:exactMatch	mesh:D058257	Surgical Attire	semapv:Le
 obi:0002830	catheter	skos:exactMatch	mesh:D057785	Catheters	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 obi:0002987	positron emission tomography imaging assay	skos:exactMatch	mesh:D049268	Positron-Emission Tomography	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
 obi:0003094	fluorescence in-situ hybridization assay	skos:exactMatch	mesh:D005399	Fishes	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
-obi:0003097	liquid chromatography mass spectrometry assay	skos:exactMatch	mesh:D000097922	Liquid Chromatography-Mass Spectrometry	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
-obi:0003110	gas chromatography mass spectrometry assay	skos:exactMatch	mesh:D008401	Gas Chromatography-Mass Spectrometry	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.555
 obi:0003231	leukapheresis	skos:exactMatch	mesh:D007937	Leukapheresis	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 obi:0003250	biomedical laboratory organization	skos:exactMatch	mesh:D007753	Laboratories	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
 obi:0003547	liquid chromatography	skos:exactMatch	mesh:D002853	Chromatography, Liquid	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
@@ -82523,7 +82417,6 @@ obi:0003653	fasting	skos:exactMatch	mesh:D005215	Fasting	semapv:LexicalMatching	
 obi:0003688	sand bath	skos:exactMatch	mesh:D000646	Ammotherapy	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 obi:0003699	clinical trial	skos:exactMatch	mesh:D016430	Clinical Trial	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 obi:0003700	phase I clinical trial	skos:exactMatch	mesh:D017321	Clinical Trials, Phase I as Topic	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.772
-obi:0003741	capillary electrophoresis mass spectrometry assay	skos:exactMatch	mesh:C064671	2-chloroethyl methyl sulfide	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.555
 obi:0003755	micronucleus assay	skos:exactMatch	mesh:D015162	Micronucleus Tests	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 obi:0003779	chemiluminescent assay	skos:exactMatch	mesh:D008163	Luminescent Measurements	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 obi:0003798	viral plaque assay	skos:exactMatch	mesh:D010948	Viral Plaque Assay	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
@@ -82542,7 +82435,6 @@ obi:0200106	discriminant analysis	skos:exactMatch	mesh:D016002	Discriminant Anal
 obi:0200111	data visualization	skos:exactMatch	mesh:D000078326	Data Visualization	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 obi:0200125	data combination	skos:exactMatch	mesh:D000098302	Pooled Testing	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54
 obi:0200195	proportional hazards model estimation	skos:exactMatch	mesh:D016016	Proportional Hazards Models	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549
-obi:0200199	gas chromatography mass spectrometry	skos:exactMatch	mesh:D008401	Gas Chromatography-Mass Spectrometry	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762
 obi:0200200	chi square test	skos:exactMatch	mesh:D016009	Chi-Square Distribution	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 obi:0200201	ANOVA	skos:exactMatch	mesh:D000704	Analysis of Variance	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 obi:0302731	buffer role	skos:exactMatch	mesh:D002021	Buffers	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54
@@ -93533,7 +93425,6 @@ scdo:1000089	Hemoglobin Lepore Boston	skos:exactMatch	mesh:C039800	hemoglobin Le
 scdo:1000097	Human Subject	skos:exactMatch	mesh:D035842	Research Subjects	semapv:LexicalMatching		2021-04-15	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 scdo:1000106	Sickle Cell Disease	skos:exactMatch	mesh:D000755	Anemia, Sickle Cell	semapv:LexicalMatching		2021-04-15	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
 scdo:1000123	Kalenjin	skos:exactMatch	mesh:C000725919	Kalenjin people	semapv:LexicalMatching		2021-04-15	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.778
-scdo:1000142	Spectrophotometry	skos:exactMatch	mesh:D013053	Spectrophotometry	semapv:LexicalMatching		2021-04-15	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778
 scdo:1000143	Disease Management Guideline	skos:exactMatch	mesh:D017065	Practice Guideline	semapv:LexicalMatching		2021-04-15	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
 scdo:1000194	measures	skos:exactMatch	mesh:D014894	Weights and Measures	semapv:LexicalMatching		2021-04-15	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762
 scdo:1000198	HIV Nucleic Acid Test	skos:exactMatch	mesh:C041665	N-acetyltalosaminuronic acid	semapv:LexicalMatching		2021-04-15	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.556
