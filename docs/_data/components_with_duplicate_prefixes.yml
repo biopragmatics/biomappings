@@ -133,6 +133,21 @@
     link: https://bioregistry.io/efo:0002329
     name: SJRH30
     prefix: efo
+- chmo:0000081:
+    identifier: 0000081
+    link: https://bioregistry.io/chmo:0000081
+    name: cryogenic transmission electron microscopy
+    prefix: chmo
+  chmo:0002413:
+    identifier: '0002413'
+    link: https://bioregistry.io/chmo:0002413
+    name: cryogenic electron microscopy
+    prefix: chmo
+  fbbi:00100014:
+    identifier: '00100014'
+    link: https://bioregistry.io/fbbi:00100014
+    name: cryogenic transmission electron microscopy
+    prefix: fbbi
 - cl:0000101:
     identifier: '0000101'
     link: https://bioregistry.io/cl:0000101
@@ -671,6 +686,26 @@
     link: https://bioregistry.io/ncit:C84719
     name: Frontotemporal Dementia
     prefix: ncit
+- chebi:15384:
+    identifier: '15384'
+    link: https://bioregistry.io/chebi:15384
+    name: limonene
+    prefix: chebi
+  mesh:D000077222:
+    identifier: D000077222
+    link: https://bioregistry.io/mesh:D000077222
+    name: Limonene
+    prefix: mesh
+  sibo:0000223:
+    identifier: '0000223'
+    link: https://bioregistry.io/sibo:0000223
+    name: Limonene
+    prefix: sibo
+  sibo:0000359:
+    identifier: 0000359
+    link: https://bioregistry.io/sibo:0000359
+    name: limonene
+    prefix: sibo
 - go:0001525:
     identifier: '0001525'
     link: https://bioregistry.io/go:0001525
@@ -686,6 +721,46 @@
     link: https://bioregistry.io/mesh:D018919
     name: Neovascularization, Physiologic
     prefix: mesh
+- chebi:15956:
+    identifier: '15956'
+    link: https://bioregistry.io/chebi:15956
+    name: biotin
+    prefix: chebi
+  mesh:D001710:
+    identifier: D001710
+    link: https://bioregistry.io/mesh:D001710
+    name: Biotin
+    prefix: mesh
+  xlmod:00051:
+    identifier: '00051'
+    link: https://bioregistry.io/xlmod:00051
+    name: biotin
+    prefix: xlmod
+  xlmod:00152:
+    identifier: '00152'
+    link: https://bioregistry.io/xlmod:00152
+    name: Biotin
+    prefix: xlmod
+- mesh:D002264:
+    identifier: D002264
+    link: https://bioregistry.io/mesh:D002264
+    name: Carboxylic Acids
+    prefix: mesh
+  ncit:C345:
+    identifier: C345
+    link: https://bioregistry.io/ncit:C345
+    name: Carboxylic Acids
+    prefix: ncit
+  sibo:0000033:
+    identifier: '0000033'
+    link: https://bioregistry.io/sibo:0000033
+    name: Carboxylic acids
+    prefix: sibo
+  sibo:0000159:
+    identifier: 0000159
+    link: https://bioregistry.io/sibo:0000159
+    name: Carboxylic acids
+    prefix: sibo
 - doid:0002116:
     identifier: '0002116'
     link: https://bioregistry.io/doid:0002116
@@ -716,6 +791,21 @@
     link: https://bioregistry.io/mesh:D018442
     name: Lymphoma, B-Cell, Marginal Zone
     prefix: mesh
+- mesh:C038892:
+    identifier: C038892
+    link: https://bioregistry.io/mesh:C038892
+    name: methyl anthranilate
+    prefix: mesh
+  sibo:0000042:
+    identifier: '0000042'
+    link: https://bioregistry.io/sibo:0000042
+    name: Methyl anthranilate
+    prefix: sibo
+  sibo:0000264:
+    identifier: '0000264'
+    link: https://bioregistry.io/sibo:0000264
+    name: methyl anthranilate
+    prefix: sibo
 - mesh:D015164:
     identifier: D015164
     link: https://bioregistry.io/mesh:D015164

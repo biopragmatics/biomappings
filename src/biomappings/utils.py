@@ -42,6 +42,7 @@ PURL_BASE = "https://w3id.org/biopragmatics/biomappings/sssom"
 DOCS_DIRECTORY = ROOT.joinpath("docs")
 IMG_DIRECTORY = DOCS_DIRECTORY.joinpath("img")
 DATA_DIRECTORY = DOCS_DIRECTORY.joinpath("_data")
+SSSOM_EXPORT_DIRECTORY = ROOT.joinpath("export")
 
 
 def get_script_url(fname: str) -> str:
