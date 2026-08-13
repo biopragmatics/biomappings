@@ -1,6 +1,7 @@
 creator_id:
 - orcid:0000-0003-4423-4370
 curie_map:
+  ADO: http://purl.obolibrary.org/obo/ADO_
   AGRO: http://purl.obolibrary.org/obo/AGRO_
   AISM: http://purl.obolibrary.org/obo/AISM_
   AMPHX: http://purl.obolibrary.org/obo/AMPHX_
@@ -24,6 +25,7 @@ curie_map:
   CLO: http://purl.obolibrary.org/obo/CLO_
   CLYH: http://purl.obolibrary.org/obo/CLYH_
   CMO: http://purl.obolibrary.org/obo/CMO_
+  COB: http://purl.obolibrary.org/obo/COB_
   COLAO: http://purl.obolibrary.org/obo/COLAO_
   CTENO: http://purl.obolibrary.org/obo/CTENO_
   CTO: http://purl.obolibrary.org/obo/CTO_
@@ -54,9 +56,11 @@ curie_map:
   FLOPO: http://purl.obolibrary.org/obo/FLOPO_
   FMA: http://purl.obolibrary.org/obo/FMA_
   FYPO: http://purl.obolibrary.org/obo/FYPO_
+  GALLONT: http://purl.obolibrary.org/obo/GALLONT_
   GECKO: http://purl.obolibrary.org/obo/GECKO_
   GENEPIO: http://purl.obolibrary.org/obo/GENEPIO_
   GENO: http://purl.obolibrary.org/obo/GENO_
+  GNO: http://purl.obolibrary.org/obo/GNO_
   GO: http://purl.obolibrary.org/obo/GO_
   GSSO: http://purl.obolibrary.org/obo/GSSO_
   HANCESTRO: http://purl.obolibrary.org/obo/HANCESTRO_
@@ -87,6 +91,7 @@ curie_map:
   MPATH: http://purl.obolibrary.org/obo/MPATH_
   MRO: http://purl.obolibrary.org/obo/MRO_
   MS: http://purl.obolibrary.org/obo/MS_
+  MmusDv: http://purl.obolibrary.org/obo/MmusDv_
   NBO: http://purl.obolibrary.org/obo/NBO_
   NCBIProtein: https://www.ncbi.nlm.nih.gov/protein/
   NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
@@ -103,6 +108,7 @@ curie_map:
   OGG: http://purl.obolibrary.org/obo/OGG_
   OGMS: http://purl.obolibrary.org/obo/OGMS_
   OHMI: http://purl.obolibrary.org/obo/OHMI_
+  OHPI: http://purl.obolibrary.org/obo/OHPI_
   OMP: http://purl.obolibrary.org/obo/OMP_
   ONS: http://purl.obolibrary.org/obo/ONS_
   ONTOAVIDA: http://purl.obolibrary.org/obo/ONTOAVIDA_
@@ -121,6 +127,7 @@ curie_map:
   PR: http://purl.obolibrary.org/obo/PR_
   PREFER: http://purl.obolibrary.org/obo/PREFER_
   PROCO: http://purl.obolibrary.org/obo/PROCO_
+  PSDO: http://purl.obolibrary.org/obo/PSDO_
   PSO: http://purl.obolibrary.org/obo/PSO_
   PW: http://purl.obolibrary.org/obo/PW_
   RBO: http://purl.obolibrary.org/obo/RBO_
@@ -139,6 +146,7 @@ curie_map:
   T4FS: http://purl.obolibrary.org/obo/T4FS_
   TAXRANK: http://purl.obolibrary.org/obo/TAXRANK_
   TO: http://purl.obolibrary.org/obo/TO_
+  TRANS: http://purl.obolibrary.org/obo/TRANS_
   TTO: http://purl.obolibrary.org/obo/TTO_
   TXPO: http://purl.obolibrary.org/obo/TXPO_
   UBERON: http://purl.obolibrary.org/obo/UBERON_
@@ -154,6 +162,7 @@ curie_map:
   XAO: http://purl.obolibrary.org/obo/XAO_
   XCO: http://purl.obolibrary.org/obo/XCO_
   XLMOD: http://purl.obolibrary.org/obo/XLMOD_
+  XPO: http://purl.obolibrary.org/obo/XPO_
   ZECO: http://purl.obolibrary.org/obo/ZECO_
   ZFA: http://purl.obolibrary.org/obo/ZFA_
   ZFS: http://purl.obolibrary.org/obo/ZFS_
@@ -219,4 +228,4 @@ mapping_set_description: Biomappings is a repository of community curated and pr
   of predicted mappings or their own novel mappings.
 mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv
 mapping_set_title: Biomappings
-mapping_set_version: 0.5.6-dev-cc80edff
+mapping_set_version: 0.6.1-dev-c84a9aa4
