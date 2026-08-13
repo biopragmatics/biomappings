@@ -1,3 +1,18 @@
+- afpo:0000344:
+    identifier: '0000344'
+    link: https://bioregistry.io/afpo:0000344
+    name: Tonga
+    prefix: afpo
+  mesh:C000725667:
+    identifier: C000725667
+    link: https://bioregistry.io/mesh:C000725667
+    name: Tonga people
+    prefix: mesh
+  mesh:D014058:
+    identifier: D014058
+    link: https://bioregistry.io/mesh:D014058
+    name: Tonga
+    prefix: mesh
 - agro:00000116:
     identifier: '00000116'
     link: https://bioregistry.io/agro:00000116
@@ -148,6 +163,101 @@
     link: https://bioregistry.io/fbbi:00100014
     name: cryogenic transmission electron microscopy
     prefix: fbbi
+- chmo:0000497:
+    identifier: 0000497
+    link: https://bioregistry.io/chmo:0000497
+    name: gas chromatography-mass spectrometry
+    prefix: chmo
+  fix:0000921:
+    identifier: 0000921
+    link: https://bioregistry.io/fix:0000921
+    name: gas chromatography-mass spectrometry
+    prefix: fix
+  goldbook:12421:
+    identifier: '12421'
+    link: https://bioregistry.io/goldbook:12421
+    name: gas chromatography-mass spectrometry
+    prefix: goldbook
+  mesh:D008401:
+    identifier: D008401
+    link: https://bioregistry.io/mesh:D008401
+    name: Gas Chromatography-Mass Spectrometry
+    prefix: mesh
+  mmo:0000536:
+    identifier: '0000536'
+    link: https://bioregistry.io/mmo:0000536
+    name: gas chromatography-mass spectrometry
+    prefix: mmo
+  obi:0003110:
+    identifier: '0003110'
+    link: https://bioregistry.io/obi:0003110
+    name: gas chromatography mass spectrometry assay
+    prefix: obi
+  obi:0200199:
+    identifier: 0200199
+    link: https://bioregistry.io/obi:0200199
+    name: gas chromatography mass spectrometry
+    prefix: obi
+- chmo:0000560:
+    identifier: '0000560'
+    link: https://bioregistry.io/chmo:0000560
+    name: secondary ion mass spectrometry
+    prefix: chmo
+  fix:0000122:
+    identifier: '0000122'
+    link: https://bioregistry.io/fix:0000122
+    name: secondary ion mass spectrometry
+    prefix: fix
+  fix:0000960:
+    identifier: 0000960
+    link: https://bioregistry.io/fix:0000960
+    name: SIMS microscopy
+    prefix: fix
+  goldbook:09192:
+    identifier: 09192
+    link: https://bioregistry.io/goldbook:09192
+    name: secondary-ion mass spectrometry
+    prefix: goldbook
+  mesh:D018629:
+    identifier: D018629
+    link: https://bioregistry.io/mesh:D018629
+    name: Spectrometry, Mass, Secondary Ion
+    prefix: mesh
+  ncit:C154790:
+    identifier: C154790
+    link: https://bioregistry.io/ncit:C154790
+    name: Secondary Ion Mass Spectrometry
+    prefix: ncit
+- chmo:0000678:
+    identifier: 0000678
+    link: https://bioregistry.io/chmo:0000678
+    name: tip-enhanced Raman spectroscopy
+    prefix: chmo
+  goldbook:08699:
+    identifier: 08699
+    link: https://bioregistry.io/goldbook:08699
+    name: tip-enhanced Raman spectroscopy
+    prefix: goldbook
+  goldbook:09210:
+    identifier: 09210
+    link: https://bioregistry.io/goldbook:09210
+    name: tip enhanced raman spectroscopy
+    prefix: goldbook
+- chmo:0000982:
+    identifier: 0000982
+    link: https://bioregistry.io/chmo:0000982
+    name: mass spectrometer
+    prefix: chmo
+  goldbook:M03732:
+    identifier: M03732
+    link: https://bioregistry.io/goldbook:M03732
+    name: mass spectrometer
+    prefix: goldbook
+  goldbook:M03733:
+    identifier: M03733
+    link: https://bioregistry.io/goldbook:M03733
+    name: mass spectrometer
+    prefix: goldbook
 - cl:0000101:
     identifier: '0000101'
     link: https://bioregistry.io/cl:0000101

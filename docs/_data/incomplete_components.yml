@@ -1,5 +1,63 @@
 - edges:
   - source:
+      curie: ado:0000079
+      identifier: 0000079
+      link: https://bioregistry.io/ado:0000079
+      name: tobacco consumption
+      prefix: ado
+    target:
+      curie: ncit:C18059
+      identifier: C18059
+      link: https://bioregistry.io/ncit:C18059
+      name: Tobacco Use
+      prefix: ncit
+  nodes:
+    ado:0000079:
+      identifier: 0000079
+      link: https://bioregistry.io/ado:0000079
+      name: tobacco consumption
+      prefix: ado
+    mesh:D064424:
+      identifier: D064424
+      link: https://bioregistry.io/mesh:D064424
+      name: Tobacco Use
+      prefix: mesh
+    ncit:C18059:
+      identifier: C18059
+      link: https://bioregistry.io/ncit:C18059
+      name: Tobacco Use
+      prefix: ncit
+- edges:
+  - source:
+      curie: mesh:C000725667
+      identifier: C000725667
+      link: https://bioregistry.io/mesh:C000725667
+      name: Tonga people
+      prefix: mesh
+    target:
+      curie: mesh:D014058
+      identifier: D014058
+      link: https://bioregistry.io/mesh:D014058
+      name: Tonga
+      prefix: mesh
+  nodes:
+    afpo:0000344:
+      identifier: '0000344'
+      link: https://bioregistry.io/afpo:0000344
+      name: Tonga
+      prefix: afpo
+    mesh:C000725667:
+      identifier: C000725667
+      link: https://bioregistry.io/mesh:C000725667
+      name: Tonga people
+      prefix: mesh
+    mesh:D014058:
+      identifier: D014058
+      link: https://bioregistry.io/mesh:D014058
+      name: Tonga
+      prefix: mesh
+- edges:
+  - source:
       curie: agrovoc:10457
       identifier: '10457'
       link: https://bioregistry.io/agrovoc:10457
@@ -174,6 +232,151 @@
       prefix: agrovoc
 - edges:
   - source:
+      curie: aism:0000004
+      identifier: '0000004'
+      link: https://bioregistry.io/aism:0000004
+      name: conjunctiva
+      prefix: aism
+    target:
+      curie: clao:0001026
+      identifier: '0001026'
+      link: https://bioregistry.io/clao:0001026
+      name: conjunctiva
+      prefix: clao
+  nodes:
+    aism:0000004:
+      identifier: '0000004'
+      link: https://bioregistry.io/aism:0000004
+      name: conjunctiva
+      prefix: aism
+    clao:0001026:
+      identifier: '0001026'
+      link: https://bioregistry.io/clao:0001026
+      name: conjunctiva
+      prefix: clao
+    mesh:D003228:
+      identifier: D003228
+      link: https://bioregistry.io/mesh:D003228
+      name: Conjunctiva
+      prefix: mesh
+- edges:
+  - source:
+      curie: aism:0000076
+      identifier: '0000076'
+      link: https://bioregistry.io/aism:0000076
+      name: femur
+      prefix: aism
+    target:
+      curie: clao:0000967
+      identifier: 0000967
+      link: https://bioregistry.io/clao:0000967
+      name: femur
+      prefix: clao
+  - source:
+      curie: aism:0000076
+      identifier: '0000076'
+      link: https://bioregistry.io/aism:0000076
+      name: femur
+      prefix: aism
+    target:
+      curie: bto:0001284
+      identifier: 0001284
+      link: https://bioregistry.io/bto:0001284
+      name: femur
+      prefix: bto
+  - source:
+      curie: bto:0001284
+      identifier: 0001284
+      link: https://bioregistry.io/bto:0001284
+      name: femur
+      prefix: bto
+    target:
+      curie: clao:0000967
+      identifier: 0000967
+      link: https://bioregistry.io/clao:0000967
+      name: femur
+      prefix: clao
+  nodes:
+    aism:0000076:
+      identifier: '0000076'
+      link: https://bioregistry.io/aism:0000076
+      name: femur
+      prefix: aism
+    bto:0001284:
+      identifier: 0001284
+      link: https://bioregistry.io/bto:0001284
+      name: femur
+      prefix: bto
+    clao:0000967:
+      identifier: 0000967
+      link: https://bioregistry.io/clao:0000967
+      name: femur
+      prefix: clao
+    mesh:D005269:
+      identifier: D005269
+      link: https://bioregistry.io/mesh:D005269
+      name: Femur
+      prefix: mesh
+- edges:
+  - source:
+      curie: aism:0004130
+      identifier: '0004130'
+      link: https://bioregistry.io/aism:0004130
+      name: sternum
+      prefix: aism
+    target:
+      curie: bto:0001302
+      identifier: '0001302'
+      link: https://bioregistry.io/bto:0001302
+      name: sternum
+      prefix: bto
+  - source:
+      curie: aism:0004130
+      identifier: '0004130'
+      link: https://bioregistry.io/aism:0004130
+      name: sternum
+      prefix: aism
+    target:
+      curie: clao:0001061
+      identifier: '0001061'
+      link: https://bioregistry.io/clao:0001061
+      name: sternum
+      prefix: clao
+  - source:
+      curie: bto:0001302
+      identifier: '0001302'
+      link: https://bioregistry.io/bto:0001302
+      name: sternum
+      prefix: bto
+    target:
+      curie: clao:0001061
+      identifier: '0001061'
+      link: https://bioregistry.io/clao:0001061
+      name: sternum
+      prefix: clao
+  nodes:
+    aism:0004130:
+      identifier: '0004130'
+      link: https://bioregistry.io/aism:0004130
+      name: sternum
+      prefix: aism
+    bto:0001302:
+      identifier: '0001302'
+      link: https://bioregistry.io/bto:0001302
+      name: sternum
+      prefix: bto
+    clao:0001061:
+      identifier: '0001061'
+      link: https://bioregistry.io/clao:0001061
+      name: sternum
+      prefix: clao
+    mesh:D013249:
+      identifier: D013249
+      link: https://bioregistry.io/mesh:D013249
+      name: Sternum
+      prefix: mesh
+- edges:
+  - source:
       curie: amphx:0000002
       identifier: '0000002'
       link: https://bioregistry.io/amphx:0000002
@@ -229,6 +432,35 @@
       identifier: D013091
       link: https://bioregistry.io/mesh:D013091
       name: Spermatogenesis
+      prefix: mesh
+- edges:
+  - source:
+      curie: amphx:1000006
+      identifier: '1000006'
+      link: https://bioregistry.io/amphx:1000006
+      name: central nervous system
+      prefix: amphx
+    target:
+      curie: bto:0000227
+      identifier: '0000227'
+      link: https://bioregistry.io/bto:0000227
+      name: central nervous system
+      prefix: bto
+  nodes:
+    amphx:1000006:
+      identifier: '1000006'
+      link: https://bioregistry.io/amphx:1000006
+      name: central nervous system
+      prefix: amphx
+    bto:0000227:
+      identifier: '0000227'
+      link: https://bioregistry.io/bto:0000227
+      name: central nervous system
+      prefix: bto
+    mesh:D002490:
+      identifier: D002490
+      link: https://bioregistry.io/mesh:D002490
+      name: Central Nervous System
       prefix: mesh
 - edges:
   - source:
@@ -290,17 +522,491 @@
       prefix: mesh
 - edges:
   - source:
-      curie: apollosv:00000142
-      identifier: '00000142'
-      link: https://bioregistry.io/apollosv:00000142
-      name: vaccination
+      curie: apo:0000065
+      identifier: '0000065'
+      link: https://bioregistry.io/apo:0000065
+      name: flocculation
+      prefix: apo
+    target:
+      curie: go:0000128
+      identifier: 0000128
+      link: https://bioregistry.io/go:0000128
+      name: flocculation
+      prefix: go
+  nodes:
+    apo:0000065:
+      identifier: '0000065'
+      link: https://bioregistry.io/apo:0000065
+      name: flocculation
+      prefix: apo
+    go:0000128:
+      identifier: 0000128
+      link: https://bioregistry.io/go:0000128
+      name: flocculation
+      prefix: go
+    mesh:D005427:
+      identifier: D005427
+      link: https://bioregistry.io/mesh:D005427
+      name: Flocculation
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000071
+      identifier: '0000071'
+      link: https://bioregistry.io/apo:0000071
+      name: cytokinesis
+      prefix: apo
+    target:
+      curie: go:0000910
+      identifier: 0000910
+      link: https://bioregistry.io/go:0000910
+      name: cytokinesis
+      prefix: go
+  nodes:
+    apo:0000071:
+      identifier: '0000071'
+      link: https://bioregistry.io/apo:0000071
+      name: cytokinesis
+      prefix: apo
+    go:0000910:
+      identifier: 0000910
+      link: https://bioregistry.io/go:0000910
+      name: cytokinesis
+      prefix: go
+    mesh:D048749:
+      identifier: D048749
+      link: https://bioregistry.io/mesh:D048749
+      name: Cytokinesis
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000074
+      identifier: '0000074'
+      link: https://bioregistry.io/apo:0000074
+      name: autophagy
+      prefix: apo
+    target:
+      curie: go:0006914
+      identifier: 0006914
+      link: https://bioregistry.io/go:0006914
+      name: autophagy
+      prefix: go
+  nodes:
+    apo:0000074:
+      identifier: '0000074'
+      link: https://bioregistry.io/apo:0000074
+      name: autophagy
+      prefix: apo
+    go:0006914:
+      identifier: 0006914
+      link: https://bioregistry.io/go:0006914
+      name: autophagy
+      prefix: go
+    mesh:D001343:
+      identifier: D001343
+      link: https://bioregistry.io/mesh:D001343
+      name: Autophagy
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000075
+      identifier: '0000075'
+      link: https://bioregistry.io/apo:0000075
+      name: endocytosis
+      prefix: apo
+    target:
+      curie: go:0006897
+      identifier: 0006897
+      link: https://bioregistry.io/go:0006897
+      name: endocytosis
+      prefix: go
+  - source:
+      curie: apo:0000075
+      identifier: '0000075'
+      link: https://bioregistry.io/apo:0000075
+      name: endocytosis
+      prefix: apo
+    target:
+      curie: kegg.pathway:map04144
+      identifier: map04144
+      link: https://bioregistry.io/kegg.pathway:map04144
+      name: Endocytosis
+      prefix: kegg.pathway
+  nodes:
+    apo:0000075:
+      identifier: '0000075'
+      link: https://bioregistry.io/apo:0000075
+      name: endocytosis
+      prefix: apo
+    go:0006897:
+      identifier: 0006897
+      link: https://bioregistry.io/go:0006897
+      name: endocytosis
+      prefix: go
+    kegg.pathway:map04144:
+      identifier: map04144
+      link: https://bioregistry.io/kegg.pathway:map04144
+      name: Endocytosis
+      prefix: kegg.pathway
+    mesh:D004705:
+      identifier: D004705
+      link: https://bioregistry.io/mesh:D004705
+      name: Endocytosis
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000088
+      identifier: 0000088
+      link: https://bioregistry.io/apo:0000088
+      name: drug resistance
+      prefix: apo
+    target:
+      curie: txpo:0004958
+      identifier: 0004958
+      link: https://bioregistry.io/txpo:0004958
+      name: drug resistance
+      prefix: txpo
+  nodes:
+    apo:0000088:
+      identifier: 0000088
+      link: https://bioregistry.io/apo:0000088
+      name: drug resistance
+      prefix: apo
+    mesh:D004351:
+      identifier: D004351
+      link: https://bioregistry.io/mesh:D004351
+      name: Drug Resistance
+      prefix: mesh
+    txpo:0004958:
+      identifier: 0004958
+      link: https://bioregistry.io/txpo:0004958
+      name: drug resistance
+      prefix: txpo
+- edges:
+  - source:
+      curie: apo:0000093
+      identifier: 0000093
+      link: https://bioregistry.io/apo:0000093
+      name: thermotolerance
+      prefix: apo
+    target:
+      curie: go:0010286
+      identifier: 0010286
+      link: https://bioregistry.io/go:0010286
+      name: heat acclimation
+      prefix: go
+  nodes:
+    apo:0000093:
+      identifier: 0000093
+      link: https://bioregistry.io/apo:0000093
+      name: thermotolerance
+      prefix: apo
+    go:0010286:
+      identifier: 0010286
+      link: https://bioregistry.io/go:0010286
+      name: heat acclimation
+      prefix: go
+    mesh:D000071436:
+      identifier: D000071436
+      link: https://bioregistry.io/mesh:D000071436
+      name: Thermotolerance
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000129
+      identifier: 0000129
+      link: https://bioregistry.io/apo:0000129
+      name: protein transport
+      prefix: apo
+    target:
+      curie: go:0015031
+      identifier: '0015031'
+      link: https://bioregistry.io/go:0015031
+      name: protein transport
+      prefix: go
+  nodes:
+    apo:0000129:
+      identifier: 0000129
+      link: https://bioregistry.io/apo:0000129
+      name: protein transport
+      prefix: apo
+    go:0015031:
+      identifier: '0015031'
+      link: https://bioregistry.io/go:0015031
+      name: protein transport
+      prefix: go
+    mesh:D021381:
+      identifier: D021381
+      link: https://bioregistry.io/mesh:D021381
+      name: Protein Transport
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000145
+      identifier: '0000145'
+      link: https://bioregistry.io/apo:0000145
+      name: oxidative phosphorylation
+      prefix: apo
+    target:
+      curie: go:0006119
+      identifier: 0006119
+      link: https://bioregistry.io/go:0006119
+      name: oxidative phosphorylation
+      prefix: go
+  - source:
+      curie: apo:0000145
+      identifier: '0000145'
+      link: https://bioregistry.io/apo:0000145
+      name: oxidative phosphorylation
+      prefix: apo
+    target:
+      curie: kegg.pathway:map00190
+      identifier: map00190
+      link: https://bioregistry.io/kegg.pathway:map00190
+      name: Oxidative phosphorylation
+      prefix: kegg.pathway
+  nodes:
+    apo:0000145:
+      identifier: '0000145'
+      link: https://bioregistry.io/apo:0000145
+      name: oxidative phosphorylation
+      prefix: apo
+    go:0006119:
+      identifier: 0006119
+      link: https://bioregistry.io/go:0006119
+      name: oxidative phosphorylation
+      prefix: go
+    kegg.pathway:map00190:
+      identifier: map00190
+      link: https://bioregistry.io/kegg.pathway:map00190
+      name: Oxidative phosphorylation
+      prefix: kegg.pathway
+    mesh:D010085:
+      identifier: D010085
+      link: https://bioregistry.io/mesh:D010085
+      name: Oxidative Phosphorylation
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000155
+      identifier: '0000155'
+      link: https://bioregistry.io/apo:0000155
+      name: apoptosis
+      prefix: apo
+    target:
+      curie: go:0006915
+      identifier: 0006915
+      link: https://bioregistry.io/go:0006915
+      name: apoptotic process
+      prefix: go
+  - source:
+      curie: apo:0000155
+      identifier: '0000155'
+      link: https://bioregistry.io/apo:0000155
+      name: apoptosis
+      prefix: apo
+    target:
+      curie: kegg.pathway:map04210
+      identifier: map04210
+      link: https://bioregistry.io/kegg.pathway:map04210
+      name: Apoptosis
+      prefix: kegg.pathway
+  nodes:
+    apo:0000155:
+      identifier: '0000155'
+      link: https://bioregistry.io/apo:0000155
+      name: apoptosis
+      prefix: apo
+    go:0006915:
+      identifier: 0006915
+      link: https://bioregistry.io/go:0006915
+      name: apoptotic process
+      prefix: go
+    kegg.pathway:map04210:
+      identifier: map04210
+      link: https://bioregistry.io/kegg.pathway:map04210
+      name: Apoptosis
+      prefix: kegg.pathway
+    mesh:D017209:
+      identifier: D017209
+      link: https://bioregistry.io/mesh:D017209
+      name: Apoptosis
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000208
+      identifier: 0000208
+      link: https://bioregistry.io/apo:0000208
+      name: chromosome segregation
+      prefix: apo
+    target:
+      curie: go:0007059
+      identifier: 0007059
+      link: https://bioregistry.io/go:0007059
+      name: chromosome segregation
+      prefix: go
+  nodes:
+    apo:0000208:
+      identifier: 0000208
+      link: https://bioregistry.io/apo:0000208
+      name: chromosome segregation
+      prefix: apo
+    go:0007059:
+      identifier: 0007059
+      link: https://bioregistry.io/go:0007059
+      name: chromosome segregation
+      prefix: go
+    mesh:D020090:
+      identifier: D020090
+      link: https://bioregistry.io/mesh:D020090
+      name: Chromosome Segregation
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000312
+      identifier: '0000312'
+      link: https://bioregistry.io/apo:0000312
+      name: cell death
+      prefix: apo
+    target:
+      curie: go:0008219
+      identifier: 0008219
+      link: https://bioregistry.io/go:0008219
+      name: cell death
+      prefix: go
+  nodes:
+    apo:0000312:
+      identifier: '0000312'
+      link: https://bioregistry.io/apo:0000312
+      name: cell death
+      prefix: apo
+    go:0008219:
+      identifier: 0008219
+      link: https://bioregistry.io/go:0008219
+      name: cell death
+      prefix: go
+    mesh:D016923:
+      identifier: D016923
+      link: https://bioregistry.io/mesh:D016923
+      name: Cell Death
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000313
+      identifier: '0000313'
+      link: https://bioregistry.io/apo:0000313
+      name: autolysis
+      prefix: apo
+    target:
+      curie: go:0001896
+      identifier: 0001896
+      link: https://bioregistry.io/go:0001896
+      name: autolysis
+      prefix: go
+  nodes:
+    apo:0000313:
+      identifier: '0000313'
+      link: https://bioregistry.io/apo:0000313
+      name: autolysis
+      prefix: apo
+    go:0001896:
+      identifier: 0001896
+      link: https://bioregistry.io/go:0001896
+      name: autolysis
+      prefix: go
+    mesh:D001329:
+      identifier: D001329
+      link: https://bioregistry.io/mesh:D001329
+      name: Autolysis
+      prefix: mesh
+- edges:
+  - source:
+      curie: apo:0000336
+      identifier: '0000336'
+      link: https://bioregistry.io/apo:0000336
+      name: aneuploidy
+      prefix: apo
+    target:
+      curie: mondo:0700064
+      identifier: '0700064'
+      link: https://bioregistry.io/mondo:0700064
+      name: aneuploidy
+      prefix: mondo
+  nodes:
+    apo:0000336:
+      identifier: '0000336'
+      link: https://bioregistry.io/apo:0000336
+      name: aneuploidy
+      prefix: apo
+    mesh:D000782:
+      identifier: D000782
+      link: https://bioregistry.io/mesh:D000782
+      name: Aneuploidy
+      prefix: mesh
+    mondo:0700064:
+      identifier: '0700064'
+      link: https://bioregistry.io/mondo:0700064
+      name: aneuploidy
+      prefix: mondo
+- edges:
+  - source:
+      curie: envo:01001110
+      identifier: '01001110'
+      link: https://bioregistry.io/envo:01001110
+      name: ecosystem
+      prefix: envo
+    target:
+      curie: mesh:D017753
+      identifier: D017753
+      link: https://bioregistry.io/mesh:D017753
+      name: Ecosystem
+      prefix: mesh
+  nodes:
+    apollosv:00000097:
+      identifier: 00000097
+      link: https://bioregistry.io/apollosv:00000097
+      name: ecosystem
+      prefix: apollosv
+    envo:01001110:
+      identifier: '01001110'
+      link: https://bioregistry.io/envo:01001110
+      name: ecosystem
+      prefix: envo
+    mesh:D017753:
+      identifier: D017753
+      link: https://bioregistry.io/mesh:D017753
+      name: Ecosystem
+      prefix: mesh
+- edges:
+  - source:
+      curie: apollosv:00000107
+      identifier: '00000107'
+      link: https://bioregistry.io/apollosv:00000107
+      name: atmosphere
       prefix: apollosv
     target:
-      curie: maxo:0001017
-      identifier: '0001017'
-      link: https://bioregistry.io/maxo:0001017
-      name: vaccination
-      prefix: maxo
+      curie: efo:0000273
+      identifier: '0000273'
+      link: https://bioregistry.io/efo:0000273
+      name: atmosphere
+      prefix: efo
+  nodes:
+    apollosv:00000107:
+      identifier: '00000107'
+      link: https://bioregistry.io/apollosv:00000107
+      name: atmosphere
+      prefix: apollosv
+    efo:0000273:
+      identifier: '0000273'
+      link: https://bioregistry.io/efo:0000273
+      name: atmosphere
+      prefix: efo
+    mesh:D001272:
+      identifier: D001272
+      link: https://bioregistry.io/mesh:D001272
+      name: Atmosphere
+      prefix: mesh
+- edges:
   - source:
       curie: apollosv:00000142
       identifier: '00000142'
@@ -320,11 +1026,11 @@
       name: vaccination
       prefix: apollosv
     target:
-      curie: mesh:D014611
-      identifier: D014611
-      link: https://bioregistry.io/mesh:D014611
-      name: Vaccination
-      prefix: mesh
+      curie: maxo:0001017
+      identifier: '0001017'
+      link: https://bioregistry.io/maxo:0001017
+      name: vaccination
+      prefix: maxo
   - source:
       curie: efo:0004292
       identifier: 0004292
@@ -544,6 +1250,1937 @@
       link: https://bioregistry.io/oboinowl:date
       name: date
       prefix: oboinowl
+- edges:
+  - source:
+      curie: apollosv:00000596
+      identifier: 00000596
+      link: https://bioregistry.io/apollosv:00000596
+      name: symbiosis
+      prefix: apollosv
+    target:
+      curie: ecocore:00000022
+      identifier: '00000022'
+      link: https://bioregistry.io/ecocore:00000022
+      name: symbiosis
+      prefix: ecocore
+  - source:
+      curie: apollosv:00000596
+      identifier: 00000596
+      link: https://bioregistry.io/apollosv:00000596
+      name: symbiosis
+      prefix: apollosv
+    target:
+      curie: go:0044403
+      identifier: '0044403'
+      link: https://bioregistry.io/go:0044403
+      name: symbiotic process
+      prefix: go
+  - source:
+      curie: ecocore:00000022
+      identifier: '00000022'
+      link: https://bioregistry.io/ecocore:00000022
+      name: symbiosis
+      prefix: ecocore
+    target:
+      curie: go:0044403
+      identifier: '0044403'
+      link: https://bioregistry.io/go:0044403
+      name: symbiotic process
+      prefix: go
+  nodes:
+    apollosv:00000596:
+      identifier: 00000596
+      link: https://bioregistry.io/apollosv:00000596
+      name: symbiosis
+      prefix: apollosv
+    ecocore:00000022:
+      identifier: '00000022'
+      link: https://bioregistry.io/ecocore:00000022
+      name: symbiosis
+      prefix: ecocore
+    go:0044403:
+      identifier: '0044403'
+      link: https://bioregistry.io/go:0044403
+      name: symbiotic process
+      prefix: go
+    mesh:D013559:
+      identifier: D013559
+      link: https://bioregistry.io/mesh:D013559
+      name: Symbiosis
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000008
+      identifier: 0000008
+      link: https://bioregistry.io/aro:0000008
+      name: cefoxitin
+      prefix: aro
+    target:
+      curie: chebi:209807
+      identifier: '209807'
+      link: https://bioregistry.io/chebi:209807
+      name: cefoxitin
+      prefix: chebi
+  nodes:
+    aro:0000008:
+      identifier: 0000008
+      link: https://bioregistry.io/aro:0000008
+      name: cefoxitin
+      prefix: aro
+    chebi:209807:
+      identifier: '209807'
+      link: https://bioregistry.io/chebi:209807
+      name: cefoxitin
+      prefix: chebi
+    mesh:D002440:
+      identifier: D002440
+      link: https://bioregistry.io/mesh:D002440
+      name: Cefoxitin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000011
+      identifier: '0000011'
+      link: https://bioregistry.io/aro:0000011
+      name: cloxacillin
+      prefix: aro
+    target:
+      curie: chebi:49566
+      identifier: '49566'
+      link: https://bioregistry.io/chebi:49566
+      name: cloxacillin
+      prefix: chebi
+  nodes:
+    aro:0000011:
+      identifier: '0000011'
+      link: https://bioregistry.io/aro:0000011
+      name: cloxacillin
+      prefix: aro
+    chebi:49566:
+      identifier: '49566'
+      link: https://bioregistry.io/chebi:49566
+      name: cloxacillin
+      prefix: chebi
+    mesh:D003023:
+      identifier: D003023
+      link: https://bioregistry.io/mesh:D003023
+      name: Cloxacillin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000013
+      identifier: '0000013'
+      link: https://bioregistry.io/aro:0000013
+      name: amikacin
+      prefix: aro
+    target:
+      curie: chebi:2637
+      identifier: '2637'
+      link: https://bioregistry.io/chebi:2637
+      name: amikacin
+      prefix: chebi
+  nodes:
+    aro:0000013:
+      identifier: '0000013'
+      link: https://bioregistry.io/aro:0000013
+      name: amikacin
+      prefix: aro
+    chebi:2637:
+      identifier: '2637'
+      link: https://bioregistry.io/chebi:2637
+      name: amikacin
+      prefix: chebi
+    mesh:D000583:
+      identifier: D000583
+      link: https://bioregistry.io/mesh:D000583
+      name: Amikacin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000028
+      identifier: 0000028
+      link: https://bioregistry.io/aro:0000028
+      name: vancomycin
+      prefix: aro
+    target:
+      curie: chebi:28001
+      identifier: '28001'
+      link: https://bioregistry.io/chebi:28001
+      name: vancomycin
+      prefix: chebi
+  nodes:
+    aro:0000028:
+      identifier: 0000028
+      link: https://bioregistry.io/aro:0000028
+      name: vancomycin
+      prefix: aro
+    chebi:28001:
+      identifier: '28001'
+      link: https://bioregistry.io/chebi:28001
+      name: vancomycin
+      prefix: chebi
+    mesh:D014640:
+      identifier: D014640
+      link: https://bioregistry.io/mesh:D014640
+      name: Vancomycin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000036
+      identifier: '0000036'
+      link: https://bioregistry.io/aro:0000036
+      name: ciprofloxacin
+      prefix: aro
+    target:
+      curie: chebi:100241
+      identifier: '100241'
+      link: https://bioregistry.io/chebi:100241
+      name: ciprofloxacin
+      prefix: chebi
+  nodes:
+    aro:0000036:
+      identifier: '0000036'
+      link: https://bioregistry.io/aro:0000036
+      name: ciprofloxacin
+      prefix: aro
+    chebi:100241:
+      identifier: '100241'
+      link: https://bioregistry.io/chebi:100241
+      name: ciprofloxacin
+      prefix: chebi
+    mesh:D002939:
+      identifier: D002939
+      link: https://bioregistry.io/mesh:D002939
+      name: Ciprofloxacin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000039
+      identifier: 0000039
+      link: https://bioregistry.io/aro:0000039
+      name: spectinomycin
+      prefix: aro
+    target:
+      curie: chebi:9215
+      identifier: '9215'
+      link: https://bioregistry.io/chebi:9215
+      name: spectinomycin
+      prefix: chebi
+  nodes:
+    aro:0000039:
+      identifier: 0000039
+      link: https://bioregistry.io/aro:0000039
+      name: spectinomycin
+      prefix: aro
+    chebi:9215:
+      identifier: '9215'
+      link: https://bioregistry.io/chebi:9215
+      name: spectinomycin
+      prefix: chebi
+    mesh:D000198:
+      identifier: D000198
+      link: https://bioregistry.io/mesh:D000198
+      name: Spectinomycin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000041
+      identifier: '0000041'
+      link: https://bioregistry.io/aro:0000041
+      name: bacitracin
+      prefix: aro
+    target:
+      curie: chebi:28669
+      identifier: '28669'
+      link: https://bioregistry.io/chebi:28669
+      name: bacitracin
+      prefix: chebi
+  nodes:
+    aro:0000041:
+      identifier: '0000041'
+      link: https://bioregistry.io/aro:0000041
+      name: bacitracin
+      prefix: aro
+    chebi:28669:
+      identifier: '28669'
+      link: https://bioregistry.io/chebi:28669
+      name: bacitracin
+      prefix: chebi
+    mesh:D001414:
+      identifier: D001414
+      link: https://bioregistry.io/mesh:D001414
+      name: Bacitracin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000057
+      identifier: '0000057'
+      link: https://bioregistry.io/aro:0000057
+      name: telithromycin
+      prefix: aro
+    target:
+      curie: chebi:29688
+      identifier: '29688'
+      link: https://bioregistry.io/chebi:29688
+      name: telithromycin
+      prefix: chebi
+  nodes:
+    aro:0000057:
+      identifier: '0000057'
+      link: https://bioregistry.io/aro:0000057
+      name: telithromycin
+      prefix: aro
+    chebi:29688:
+      identifier: '29688'
+      link: https://bioregistry.io/chebi:29688
+      name: telithromycin
+      prefix: chebi
+    mesh:C106791:
+      identifier: C106791
+      link: https://bioregistry.io/mesh:C106791
+      name: telithromycin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000058
+      identifier: 0000058
+      link: https://bioregistry.io/aro:0000058
+      name: cefazolin
+      prefix: aro
+    target:
+      curie: chebi:474053
+      identifier: '474053'
+      link: https://bioregistry.io/chebi:474053
+      name: cefazolin
+      prefix: chebi
+  nodes:
+    aro:0000058:
+      identifier: 0000058
+      link: https://bioregistry.io/aro:0000058
+      name: cefazolin
+      prefix: aro
+    chebi:474053:
+      identifier: '474053'
+      link: https://bioregistry.io/chebi:474053
+      name: cefazolin
+      prefix: chebi
+    mesh:D002437:
+      identifier: D002437
+      link: https://bioregistry.io/mesh:D002437
+      name: Cefazolin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000059
+      identifier: 0000059
+      link: https://bioregistry.io/aro:0000059
+      name: cefepime
+      prefix: aro
+    target:
+      curie: chebi:478164
+      identifier: '478164'
+      link: https://bioregistry.io/chebi:478164
+      name: cefepime
+      prefix: chebi
+  nodes:
+    aro:0000059:
+      identifier: 0000059
+      link: https://bioregistry.io/aro:0000059
+      name: cefepime
+      prefix: aro
+    chebi:478164:
+      identifier: '478164'
+      link: https://bioregistry.io/chebi:478164
+      name: cefepime
+      prefix: chebi
+    mesh:D000077723:
+      identifier: D000077723
+      link: https://bioregistry.io/mesh:D000077723
+      name: Cefepime
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000061
+      identifier: '0000061'
+      link: https://bioregistry.io/aro:0000061
+      name: ceftobiprole
+      prefix: aro
+    target:
+      curie: chebi:140407
+      identifier: '140407'
+      link: https://bioregistry.io/chebi:140407
+      name: ceftobiprole
+      prefix: chebi
+  nodes:
+    aro:0000061:
+      identifier: '0000061'
+      link: https://bioregistry.io/aro:0000061
+      name: ceftobiprole
+      prefix: aro
+    chebi:140407:
+      identifier: '140407'
+      link: https://bioregistry.io/chebi:140407
+      name: ceftobiprole
+      prefix: chebi
+    mesh:C443755:
+      identifier: C443755
+      link: https://bioregistry.io/mesh:C443755
+      name: ceftobiprole
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000062
+      identifier: '0000062'
+      link: https://bioregistry.io/aro:0000062
+      name: ceftriaxone
+      prefix: aro
+    target:
+      curie: chebi:29007
+      identifier: '29007'
+      link: https://bioregistry.io/chebi:29007
+      name: ceftriaxone
+      prefix: chebi
+  nodes:
+    aro:0000062:
+      identifier: '0000062'
+      link: https://bioregistry.io/aro:0000062
+      name: ceftriaxone
+      prefix: aro
+    chebi:29007:
+      identifier: '29007'
+      link: https://bioregistry.io/chebi:29007
+      name: ceftriaxone
+      prefix: chebi
+    mesh:D002443:
+      identifier: D002443
+      link: https://bioregistry.io/mesh:D002443
+      name: Ceftriaxone
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000063
+      identifier: '0000063'
+      link: https://bioregistry.io/aro:0000063
+      name: cefuroxime
+      prefix: aro
+    target:
+      curie: chebi:3515
+      identifier: '3515'
+      link: https://bioregistry.io/chebi:3515
+      name: cefuroxime
+      prefix: chebi
+  nodes:
+    aro:0000063:
+      identifier: '0000063'
+      link: https://bioregistry.io/aro:0000063
+      name: cefuroxime
+      prefix: aro
+    chebi:3515:
+      identifier: '3515'
+      link: https://bioregistry.io/chebi:3515
+      name: cefuroxime
+      prefix: chebi
+    mesh:D002444:
+      identifier: D002444
+      link: https://bioregistry.io/mesh:D002444
+      name: Cefuroxime
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000064
+      identifier: '0000064'
+      link: https://bioregistry.io/aro:0000064
+      name: amoxicillin
+      prefix: aro
+    target:
+      curie: chebi:2676
+      identifier: '2676'
+      link: https://bioregistry.io/chebi:2676
+      name: amoxicillin
+      prefix: chebi
+  nodes:
+    aro:0000064:
+      identifier: '0000064'
+      link: https://bioregistry.io/aro:0000064
+      name: amoxicillin
+      prefix: aro
+    chebi:2676:
+      identifier: '2676'
+      link: https://bioregistry.io/chebi:2676
+      name: amoxicillin
+      prefix: chebi
+    mesh:D000658:
+      identifier: D000658
+      link: https://bioregistry.io/mesh:D000658
+      name: Amoxicillin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000065
+      identifier: '0000065'
+      link: https://bioregistry.io/aro:0000065
+      name: clarithromycin
+      prefix: aro
+    target:
+      curie: chebi:3732
+      identifier: '3732'
+      link: https://bioregistry.io/chebi:3732
+      name: clarithromycin
+      prefix: chebi
+  nodes:
+    aro:0000065:
+      identifier: '0000065'
+      link: https://bioregistry.io/aro:0000065
+      name: clarithromycin
+      prefix: aro
+    chebi:3732:
+      identifier: '3732'
+      link: https://bioregistry.io/chebi:3732
+      name: clarithromycin
+      prefix: chebi
+    mesh:D017291:
+      identifier: D017291
+      link: https://bioregistry.io/mesh:D017291
+      name: Clarithromycin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000066
+      identifier: '0000066'
+      link: https://bioregistry.io/aro:0000066
+      name: clindamycin
+      prefix: aro
+    target:
+      curie: chebi:3745
+      identifier: '3745'
+      link: https://bioregistry.io/chebi:3745
+      name: clindamycin
+      prefix: chebi
+  nodes:
+    aro:0000066:
+      identifier: '0000066'
+      link: https://bioregistry.io/aro:0000066
+      name: clindamycin
+      prefix: aro
+    chebi:3745:
+      identifier: '3745'
+      link: https://bioregistry.io/chebi:3745
+      name: clindamycin
+      prefix: chebi
+    mesh:D002981:
+      identifier: D002981
+      link: https://bioregistry.io/mesh:D002981
+      name: Clindamycin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000069
+      identifier: 0000069
+      link: https://bioregistry.io/aro:0000069
+      name: doxycycline
+      prefix: aro
+    target:
+      curie: chebi:50845
+      identifier: '50845'
+      link: https://bioregistry.io/chebi:50845
+      name: doxycycline
+      prefix: chebi
+  nodes:
+    aro:0000069:
+      identifier: 0000069
+      link: https://bioregistry.io/aro:0000069
+      name: doxycycline
+      prefix: aro
+    chebi:50845:
+      identifier: '50845'
+      link: https://bioregistry.io/chebi:50845
+      name: doxycycline
+      prefix: chebi
+    mesh:D004318:
+      identifier: D004318
+      link: https://bioregistry.io/mesh:D004318
+      name: Doxycycline
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000070
+      identifier: '0000070'
+      link: https://bioregistry.io/aro:0000070
+      name: ertapenem
+      prefix: aro
+    target:
+      curie: chebi:404903
+      identifier: '404903'
+      link: https://bioregistry.io/chebi:404903
+      name: ertapenem
+      prefix: chebi
+  nodes:
+    aro:0000070:
+      identifier: '0000070'
+      link: https://bioregistry.io/aro:0000070
+      name: ertapenem
+      prefix: aro
+    chebi:404903:
+      identifier: '404903'
+      link: https://bioregistry.io/chebi:404903
+      name: ertapenem
+      prefix: chebi
+    mesh:D000077727:
+      identifier: D000077727
+      link: https://bioregistry.io/mesh:D000077727
+      name: Ertapenem
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000071
+      identifier: '0000071'
+      link: https://bioregistry.io/aro:0000071
+      name: levofloxacin
+      prefix: aro
+    target:
+      curie: chebi:63598
+      identifier: '63598'
+      link: https://bioregistry.io/chebi:63598
+      name: levofloxacin
+      prefix: chebi
+  - source:
+      curie: aro:0000071
+      identifier: '0000071'
+      link: https://bioregistry.io/aro:0000071
+      name: levofloxacin
+      prefix: aro
+    target:
+      curie: ncit:C1586
+      identifier: C1586
+      link: https://bioregistry.io/ncit:C1586
+      name: Levofloxacin
+      prefix: ncit
+  nodes:
+    aro:0000071:
+      identifier: '0000071'
+      link: https://bioregistry.io/aro:0000071
+      name: levofloxacin
+      prefix: aro
+    chebi:63598:
+      identifier: '63598'
+      link: https://bioregistry.io/chebi:63598
+      name: levofloxacin
+      prefix: chebi
+    mesh:D064704:
+      identifier: D064704
+      link: https://bioregistry.io/mesh:D064704
+      name: Levofloxacin
+      prefix: mesh
+    ncit:C1586:
+      identifier: C1586
+      link: https://bioregistry.io/ncit:C1586
+      name: Levofloxacin
+      prefix: ncit
+- edges:
+  - source:
+      curie: aro:0000072
+      identifier: '0000072'
+      link: https://bioregistry.io/aro:0000072
+      name: linezolid
+      prefix: aro
+    target:
+      curie: chebi:63607
+      identifier: '63607'
+      link: https://bioregistry.io/chebi:63607
+      name: linezolid
+      prefix: chebi
+  nodes:
+    aro:0000072:
+      identifier: '0000072'
+      link: https://bioregistry.io/aro:0000072
+      name: linezolid
+      prefix: aro
+    chebi:63607:
+      identifier: '63607'
+      link: https://bioregistry.io/chebi:63607
+      name: linezolid
+      prefix: chebi
+    mesh:D000069349:
+      identifier: D000069349
+      link: https://bioregistry.io/mesh:D000069349
+      name: Linezolid
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000073
+      identifier: '0000073'
+      link: https://bioregistry.io/aro:0000073
+      name: meropenem
+      prefix: aro
+    target:
+      curie: chebi:43968
+      identifier: '43968'
+      link: https://bioregistry.io/chebi:43968
+      name: meropenem
+      prefix: chebi
+  nodes:
+    aro:0000073:
+      identifier: '0000073'
+      link: https://bioregistry.io/aro:0000073
+      name: meropenem
+      prefix: aro
+    chebi:43968:
+      identifier: '43968'
+      link: https://bioregistry.io/chebi:43968
+      name: meropenem
+      prefix: chebi
+    mesh:D000077731:
+      identifier: D000077731
+      link: https://bioregistry.io/mesh:D000077731
+      name: Meropenem
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000074
+      identifier: '0000074'
+      link: https://bioregistry.io/aro:0000074
+      name: moxifloxacin
+      prefix: aro
+    target:
+      curie: chebi:63611
+      identifier: '63611'
+      link: https://bioregistry.io/chebi:63611
+      name: moxifloxacin
+      prefix: chebi
+  nodes:
+    aro:0000074:
+      identifier: '0000074'
+      link: https://bioregistry.io/aro:0000074
+      name: moxifloxacin
+      prefix: aro
+    chebi:63611:
+      identifier: '63611'
+      link: https://bioregistry.io/chebi:63611
+      name: moxifloxacin
+      prefix: chebi
+    mesh:D000077266:
+      identifier: D000077266
+      link: https://bioregistry.io/mesh:D000077266
+      name: Moxifloxacin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:0000077
+      identifier: '0000077'
+      link: https://bioregistry.io/aro:0000077
+      name: tazobactam
+      prefix: aro
+    target:
+      curie: chebi:9421
+      identifier: '9421'
+      link: https://bioregistry.io/chebi:9421
+      name: tazobactam
+      prefix: chebi
+  nodes:
+    aro:0000077:
+      identifier: '0000077'
+      link: https://bioregistry.io/aro:0000077
+      name: tazobactam
+      prefix: aro
+    chebi:9421:
+      identifier: '9421'
+      link: https://bioregistry.io/chebi:9421
+      name: tazobactam
+      prefix: chebi
+    mesh:D000078142:
+      identifier: D000078142
+      link: https://bioregistry.io/mesh:D000078142
+      name: Tazobactam
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000152
+      identifier: '3000152'
+      link: https://bioregistry.io/aro:3000152
+      name: minocycline
+      prefix: aro
+    target:
+      curie: chebi:50694
+      identifier: '50694'
+      link: https://bioregistry.io/chebi:50694
+      name: minocycline
+      prefix: chebi
+  nodes:
+    aro:3000152:
+      identifier: '3000152'
+      link: https://bioregistry.io/aro:3000152
+      name: minocycline
+      prefix: aro
+    chebi:50694:
+      identifier: '50694'
+      link: https://bioregistry.io/chebi:50694
+      name: minocycline
+      prefix: chebi
+    mesh:D008911:
+      identifier: D008911
+      link: https://bioregistry.io/mesh:D008911
+      name: Minocycline
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000158
+      identifier: '3000158'
+      link: https://bioregistry.io/aro:3000158
+      name: azithromycin
+      prefix: aro
+    target:
+      curie: chebi:2955
+      identifier: '2955'
+      link: https://bioregistry.io/chebi:2955
+      name: azithromycin
+      prefix: chebi
+  nodes:
+    aro:3000158:
+      identifier: '3000158'
+      link: https://bioregistry.io/aro:3000158
+      name: azithromycin
+      prefix: aro
+    chebi:2955:
+      identifier: '2955'
+      link: https://bioregistry.io/chebi:2955
+      name: azithromycin
+      prefix: chebi
+    mesh:D017963:
+      identifier: D017963
+      link: https://bioregistry.io/mesh:D017963
+      name: Azithromycin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000169
+      identifier: '3000169'
+      link: https://bioregistry.io/aro:3000169
+      name: rifampin
+      prefix: aro
+    target:
+      curie: chebi:28077
+      identifier: '28077'
+      link: https://bioregistry.io/chebi:28077
+      name: rifampicin
+      prefix: chebi
+  - source:
+      curie: aro:3000169
+      identifier: '3000169'
+      link: https://bioregistry.io/aro:3000169
+      name: rifampin
+      prefix: aro
+    target:
+      curie: txpo:0005145
+      identifier: '0005145'
+      link: https://bioregistry.io/txpo:0005145
+      name: rifampin
+      prefix: txpo
+  - source:
+      curie: chebi:28077
+      identifier: '28077'
+      link: https://bioregistry.io/chebi:28077
+      name: rifampicin
+      prefix: chebi
+    target:
+      curie: txpo:0005145
+      identifier: '0005145'
+      link: https://bioregistry.io/txpo:0005145
+      name: rifampin
+      prefix: txpo
+  nodes:
+    aro:3000169:
+      identifier: '3000169'
+      link: https://bioregistry.io/aro:3000169
+      name: rifampin
+      prefix: aro
+    chebi:28077:
+      identifier: '28077'
+      link: https://bioregistry.io/chebi:28077
+      name: rifampicin
+      prefix: chebi
+    mesh:D012293:
+      identifier: D012293
+      link: https://bioregistry.io/mesh:D012293
+      name: Rifampin
+      prefix: mesh
+    txpo:0005145:
+      identifier: '0005145'
+      link: https://bioregistry.io/txpo:0005145
+      name: rifampin
+      prefix: txpo
+- edges:
+  - source:
+      curie: aro:3000176
+      identifier: '3000176'
+      link: https://bioregistry.io/aro:3000176
+      name: dirithromycin
+      prefix: aro
+    target:
+      curie: chebi:474014
+      identifier: '474014'
+      link: https://bioregistry.io/chebi:474014
+      name: dirithromycin
+      prefix: chebi
+  nodes:
+    aro:3000176:
+      identifier: '3000176'
+      link: https://bioregistry.io/aro:3000176
+      name: dirithromycin
+      prefix: aro
+    chebi:474014:
+      identifier: '474014'
+      link: https://bioregistry.io/chebi:474014
+      name: dirithromycin
+      prefix: chebi
+    mesh:C053853:
+      identifier: C053853
+      link: https://bioregistry.io/mesh:C053853
+      name: dirithromycin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000188
+      identifier: '3000188'
+      link: https://bioregistry.io/aro:3000188
+      name: trimethoprim
+      prefix: aro
+    target:
+      curie: chebi:45924
+      identifier: '45924'
+      link: https://bioregistry.io/chebi:45924
+      name: trimethoprim
+      prefix: chebi
+  nodes:
+    aro:3000188:
+      identifier: '3000188'
+      link: https://bioregistry.io/aro:3000188
+      name: trimethoprim
+      prefix: aro
+    chebi:45924:
+      identifier: '45924'
+      link: https://bioregistry.io/chebi:45924
+      name: trimethoprim
+      prefix: chebi
+    mesh:D014295:
+      identifier: D014295
+      link: https://bioregistry.io/mesh:D014295
+      name: Trimethoprim
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000189
+      identifier: '3000189'
+      link: https://bioregistry.io/aro:3000189
+      name: oritavancin
+      prefix: aro
+    target:
+      curie: chebi:82699
+      identifier: '82699'
+      link: https://bioregistry.io/chebi:82699
+      name: oritavancin
+      prefix: chebi
+  nodes:
+    aro:3000189:
+      identifier: '3000189'
+      link: https://bioregistry.io/aro:3000189
+      name: oritavancin
+      prefix: aro
+    chebi:82699:
+      identifier: '82699'
+      link: https://bioregistry.io/chebi:82699
+      name: oritavancin
+      prefix: chebi
+    mesh:C100708:
+      identifier: C100708
+      link: https://bioregistry.io/mesh:C100708
+      name: oritavancin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000284
+      identifier: '3000284'
+      link: https://bioregistry.io/aro:3000284
+      name: tetroxoprim
+      prefix: aro
+    target:
+      curie: chebi:135420
+      identifier: '135420'
+      link: https://bioregistry.io/chebi:135420
+      name: tetroxoprim
+      prefix: chebi
+  nodes:
+    aro:3000284:
+      identifier: '3000284'
+      link: https://bioregistry.io/aro:3000284
+      name: tetroxoprim
+      prefix: aro
+    chebi:135420:
+      identifier: '135420'
+      link: https://bioregistry.io/chebi:135420
+      name: tetroxoprim
+      prefix: chebi
+    mesh:C023507:
+      identifier: C023507
+      link: https://bioregistry.io/mesh:C023507
+      name: tetroxoprim
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000327
+      identifier: '3000327'
+      link: https://bioregistry.io/aro:3000327
+      name: sulfadoxine
+      prefix: aro
+    target:
+      curie: chebi:9329
+      identifier: '9329'
+      link: https://bioregistry.io/chebi:9329
+      name: sulfadoxine
+      prefix: chebi
+  nodes:
+    aro:3000327:
+      identifier: '3000327'
+      link: https://bioregistry.io/aro:3000327
+      name: sulfadoxine
+      prefix: aro
+    chebi:9329:
+      identifier: '9329'
+      link: https://bioregistry.io/chebi:9329
+      name: sulfadoxine
+      prefix: chebi
+    mesh:D013413:
+      identifier: D013413
+      link: https://bioregistry.io/mesh:D013413
+      name: Sulfadoxine
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000329
+      identifier: '3000329'
+      link: https://bioregistry.io/aro:3000329
+      name: sulfamethoxazole
+      prefix: aro
+    target:
+      curie: chebi:9332
+      identifier: '9332'
+      link: https://bioregistry.io/chebi:9332
+      name: sulfamethoxazole
+      prefix: chebi
+  nodes:
+    aro:3000329:
+      identifier: '3000329'
+      link: https://bioregistry.io/aro:3000329
+      name: sulfamethoxazole
+      prefix: aro
+    chebi:9332:
+      identifier: '9332'
+      link: https://bioregistry.io/chebi:9332
+      name: sulfamethoxazole
+      prefix: chebi
+    mesh:D013420:
+      identifier: D013420
+      link: https://bioregistry.io/mesh:D013420
+      name: Sulfamethoxazole
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000337
+      identifier: '3000337'
+      link: https://bioregistry.io/aro:3000337
+      name: iclaprim
+      prefix: aro
+    target:
+      curie: chebi:131724
+      identifier: '131724'
+      link: https://bioregistry.io/chebi:131724
+      name: iclaprim
+      prefix: chebi
+  nodes:
+    aro:3000337:
+      identifier: '3000337'
+      link: https://bioregistry.io/aro:3000337
+      name: iclaprim
+      prefix: aro
+    chebi:131724:
+      identifier: '131724'
+      link: https://bioregistry.io/chebi:131724
+      name: iclaprim
+      prefix: chebi
+    mesh:C486448:
+      identifier: C486448
+      link: https://bioregistry.io/mesh:C486448
+      name: iclaprim
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000385
+      identifier: '3000385'
+      link: https://bioregistry.io/aro:3000385
+      name: chloramphenicol
+      prefix: aro
+    target:
+      curie: chebi:17698
+      identifier: '17698'
+      link: https://bioregistry.io/chebi:17698
+      name: chloramphenicol
+      prefix: chebi
+  nodes:
+    aro:3000385:
+      identifier: '3000385'
+      link: https://bioregistry.io/aro:3000385
+      name: chloramphenicol
+      prefix: aro
+    chebi:17698:
+      identifier: '17698'
+      link: https://bioregistry.io/chebi:17698
+      name: chloramphenicol
+      prefix: chebi
+    mesh:D002701:
+      identifier: D002701
+      link: https://bioregistry.io/mesh:D002701
+      name: Chloramphenicol
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000466
+      identifier: '3000466'
+      link: https://bioregistry.io/aro:3000466
+      name: dalbavancin
+      prefix: aro
+    target:
+      curie: chebi:82721
+      identifier: '82721'
+      link: https://bioregistry.io/chebi:82721
+      name: dalbavancin
+      prefix: chebi
+  nodes:
+    aro:3000466:
+      identifier: '3000466'
+      link: https://bioregistry.io/aro:3000466
+      name: dalbavancin
+      prefix: aro
+    chebi:82721:
+      identifier: '82721'
+      link: https://bioregistry.io/chebi:82721
+      name: dalbavancin
+      prefix: chebi
+    mesh:C469289:
+      identifier: C469289
+      link: https://bioregistry.io/mesh:C469289
+      name: dalbavancin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000488
+      identifier: '3000488'
+      link: https://bioregistry.io/aro:3000488
+      name: telavancin
+      prefix: aro
+    target:
+      curie: chebi:71229
+      identifier: '71229'
+      link: https://bioregistry.io/chebi:71229
+      name: telavancin
+      prefix: chebi
+  nodes:
+    aro:3000488:
+      identifier: '3000488'
+      link: https://bioregistry.io/aro:3000488
+      name: telavancin
+      prefix: aro
+    chebi:71229:
+      identifier: '71229'
+      link: https://bioregistry.io/chebi:71229
+      name: telavancin
+      prefix: chebi
+    mesh:C487637:
+      identifier: C487637
+      link: https://bioregistry.io/mesh:C487637
+      name: telavancin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000637
+      identifier: '3000637'
+      link: https://bioregistry.io/aro:3000637
+      name: ampicillin
+      prefix: aro
+    target:
+      curie: chebi:28971
+      identifier: '28971'
+      link: https://bioregistry.io/chebi:28971
+      name: ampicillin
+      prefix: chebi
+  nodes:
+    aro:3000637:
+      identifier: '3000637'
+      link: https://bioregistry.io/aro:3000637
+      name: ampicillin
+      prefix: aro
+    chebi:28971:
+      identifier: '28971'
+      link: https://bioregistry.io/chebi:28971
+      name: ampicillin
+      prefix: chebi
+    mesh:D000667:
+      identifier: D000667
+      link: https://bioregistry.io/mesh:D000667
+      name: Ampicillin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000638
+      identifier: '3000638'
+      link: https://bioregistry.io/aro:3000638
+      name: azlocillin
+      prefix: aro
+    target:
+      curie: chebi:2956
+      identifier: '2956'
+      link: https://bioregistry.io/chebi:2956
+      name: azlocillin
+      prefix: chebi
+  nodes:
+    aro:3000638:
+      identifier: '3000638'
+      link: https://bioregistry.io/aro:3000638
+      name: azlocillin
+      prefix: aro
+    chebi:2956:
+      identifier: '2956'
+      link: https://bioregistry.io/chebi:2956
+      name: azlocillin
+      prefix: chebi
+    mesh:D001390:
+      identifier: D001390
+      link: https://bioregistry.io/mesh:D001390
+      name: Azlocillin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000640
+      identifier: '3000640'
+      link: https://bioregistry.io/aro:3000640
+      name: doripenem
+      prefix: aro
+    target:
+      curie: chebi:135928
+      identifier: '135928'
+      link: https://bioregistry.io/chebi:135928
+      name: doripenem
+      prefix: chebi
+  nodes:
+    aro:3000640:
+      identifier: '3000640'
+      link: https://bioregistry.io/aro:3000640
+      name: doripenem
+      prefix: aro
+    chebi:135928:
+      identifier: '135928'
+      link: https://bioregistry.io/chebi:135928
+      name: doripenem
+      prefix: chebi
+    mesh:D000077726:
+      identifier: D000077726
+      link: https://bioregistry.io/mesh:D000077726
+      name: Doripenem
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000644
+      identifier: '3000644'
+      link: https://bioregistry.io/aro:3000644
+      name: cefaclor
+      prefix: aro
+    target:
+      curie: chebi:3478
+      identifier: '3478'
+      link: https://bioregistry.io/chebi:3478
+      name: cefaclor
+      prefix: chebi
+  nodes:
+    aro:3000644:
+      identifier: '3000644'
+      link: https://bioregistry.io/aro:3000644
+      name: cefaclor
+      prefix: aro
+    chebi:3478:
+      identifier: '3478'
+      link: https://bioregistry.io/chebi:3478
+      name: cefaclor
+      prefix: chebi
+    mesh:D002433:
+      identifier: D002433
+      link: https://bioregistry.io/mesh:D002433
+      name: Cefaclor
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000650
+      identifier: '3000650'
+      link: https://bioregistry.io/aro:3000650
+      name: cefdinir
+      prefix: aro
+    target:
+      curie: chebi:3485
+      identifier: '3485'
+      link: https://bioregistry.io/chebi:3485
+      name: cefdinir
+      prefix: chebi
+  nodes:
+    aro:3000650:
+      identifier: '3000650'
+      link: https://bioregistry.io/aro:3000650
+      name: cefdinir
+      prefix: aro
+    chebi:3485:
+      identifier: '3485'
+      link: https://bioregistry.io/chebi:3485
+      name: cefdinir
+      prefix: chebi
+    mesh:D000077525:
+      identifier: D000077525
+      link: https://bioregistry.io/mesh:D000077525
+      name: Cefdinir
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000659
+      identifier: '3000659'
+      link: https://bioregistry.io/aro:3000659
+      name: gatifloxacin
+      prefix: aro
+    target:
+      curie: chebi:5280
+      identifier: '5280'
+      link: https://bioregistry.io/chebi:5280
+      name: gatifloxacin
+      prefix: chebi
+  nodes:
+    aro:3000659:
+      identifier: '3000659'
+      link: https://bioregistry.io/aro:3000659
+      name: gatifloxacin
+      prefix: aro
+    chebi:5280:
+      identifier: '5280'
+      link: https://bioregistry.io/chebi:5280
+      name: gatifloxacin
+      prefix: chebi
+    mesh:D000077734:
+      identifier: D000077734
+      link: https://bioregistry.io/mesh:D000077734
+      name: Gatifloxacin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000660
+      identifier: '3000660'
+      link: https://bioregistry.io/aro:3000660
+      name: lomefloxacin
+      prefix: aro
+    target:
+      curie: chebi:116278
+      identifier: '116278'
+      link: https://bioregistry.io/chebi:116278
+      name: lomefloxacin
+      prefix: chebi
+  nodes:
+    aro:3000660:
+      identifier: '3000660'
+      link: https://bioregistry.io/aro:3000660
+      name: lomefloxacin
+      prefix: aro
+    chebi:116278:
+      identifier: '116278'
+      link: https://bioregistry.io/chebi:116278
+      name: lomefloxacin
+      prefix: chebi
+    mesh:C053091:
+      identifier: C053091
+      link: https://bioregistry.io/mesh:C053091
+      name: lomefloxacin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000663
+      identifier: '3000663'
+      link: https://bioregistry.io/aro:3000663
+      name: ofloxacin
+      prefix: aro
+    target:
+      curie: chebi:7731
+      identifier: '7731'
+      link: https://bioregistry.io/chebi:7731
+      name: ofloxacin
+      prefix: chebi
+  nodes:
+    aro:3000663:
+      identifier: '3000663'
+      link: https://bioregistry.io/aro:3000663
+      name: ofloxacin
+      prefix: aro
+    chebi:7731:
+      identifier: '7731'
+      link: https://bioregistry.io/chebi:7731
+      name: ofloxacin
+      prefix: chebi
+    mesh:D015242:
+      identifier: D015242
+      link: https://bioregistry.io/mesh:D015242
+      name: Ofloxacin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000664
+      identifier: '3000664'
+      link: https://bioregistry.io/aro:3000664
+      name: trovafloxacin
+      prefix: aro
+    target:
+      curie: chebi:9763
+      identifier: '9763'
+      link: https://bioregistry.io/chebi:9763
+      name: trovafloxacin
+      prefix: chebi
+  nodes:
+    aro:3000664:
+      identifier: '3000664'
+      link: https://bioregistry.io/aro:3000664
+      name: trovafloxacin
+      prefix: aro
+    chebi:9763:
+      identifier: '9763'
+      link: https://bioregistry.io/chebi:9763
+      name: trovafloxacin
+      prefix: chebi
+    mesh:C080163:
+      identifier: C080163
+      link: https://bioregistry.io/mesh:C080163
+      name: trovafloxacin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000666
+      identifier: '3000666'
+      link: https://bioregistry.io/aro:3000666
+      name: sparfloxacin
+      prefix: aro
+    target:
+      curie: chebi:9212
+      identifier: '9212'
+      link: https://bioregistry.io/chebi:9212
+      name: sparfloxacin
+      prefix: chebi
+  nodes:
+    aro:3000666:
+      identifier: '3000666'
+      link: https://bioregistry.io/aro:3000666
+      name: sparfloxacin
+      prefix: aro
+    chebi:9212:
+      identifier: '9212'
+      link: https://bioregistry.io/chebi:9212
+      name: sparfloxacin
+      prefix: chebi
+    mesh:C061363:
+      identifier: C061363
+      link: https://bioregistry.io/mesh:C061363
+      name: sparfloxacin
+      prefix: mesh
+- edges:
+  - source:
+      curie: aro:3000759
+      identifier: '3000759'
+      link: https://bioregistry.io/aro:3000759
+      name: fusidic acid
+      prefix: aro
+    target:
+      curie: ncit:C65793
+      identifier: C65793
+      link: https://bioregistry.io/ncit:C65793
+      name: Fusidic Acid
+      prefix: ncit
+  nodes:
+    aro:3000759:
+      identifier: '3000759'
+      link: https://bioregistry.io/aro:3000759
+      name: fusidic acid
+      prefix: aro
+    mesh:D005672:
+      identifier: D005672
+      link: https://bioregistry.io/mesh:D005672
+      name: Fusidic Acid
+      prefix: mesh
+    ncit:C65793:
+      identifier: C65793
+      link: https://bioregistry.io/ncit:C65793
+      name: Fusidic Acid
+      prefix: ncit
+- edges:
+  - source:
+      curie: aro:3001221
+      identifier: '3001221'
+      link: https://bioregistry.io/aro:3001221
+      name: josamycin
+      prefix: aro
+    target:
+      curie: chebi:31739
+      identifier: '31739'
+      link: https://bioregistry.io/chebi:31739
+      name: josamycin
+      prefix: chebi
+  - source:
+      curie: aro:3001221
+      identifier: '3001221'
+      link: https://bioregistry.io/aro:3001221
+      name: josamycin
+      prefix: aro
+    target:
+      curie: ncit:C83851
+      identifier: C83851
+      link: https://bioregistry.io/ncit:C83851
+      name: Josamycin
+      prefix: ncit
+  - source:
+      curie: chebi:31739
+      identifier: '31739'
+      link: https://bioregistry.io/chebi:31739
+      name: josamycin
+      prefix: chebi
+    target:
+      curie: ncit:C83851
+      identifier: C83851
+      link: https://bioregistry.io/ncit:C83851
+      name: Josamycin
+      prefix: ncit
+  nodes:
+    aro:3001221:
+      identifier: '3001221'
+      link: https://bioregistry.io/aro:3001221
+      name: josamycin
+      prefix: aro
+    chebi:31739:
+      identifier: '31739'
+      link: https://bioregistry.io/chebi:31739
+      name: josamycin
+      prefix: chebi
+    mesh:D015570:
+      identifier: D015570
+      link: https://bioregistry.io/mesh:D015570
+      name: Josamycin
+      prefix: mesh
+    ncit:C83851:
+      identifier: C83851
+      link: https://bioregistry.io/ncit:C83851
+      name: Josamycin
+      prefix: ncit
+- edges:
+  - source:
+      curie: aro:3001319
+      identifier: '3001319'
+      link: https://bioregistry.io/aro:3001319
+      name: fidaxomicin
+      prefix: aro
+    target:
+      curie: chebi:68590
+      identifier: '68590'
+      link: https://bioregistry.io/chebi:68590
+      name: fidaxomicin
+      prefix: chebi
+  nodes:
+    aro:3001319:
+      identifier: '3001319'
+      link: https://bioregistry.io/aro:3001319
+      name: fidaxomicin
+      prefix: aro
+    chebi:68590:
+      identifier: '68590'
+      link: https://bioregistry.io/chebi:68590
+      name: fidaxomicin
+      prefix: chebi
+    mesh:D000077732:
+      identifier: D000077732
+      link: https://bioregistry.io/mesh:D000077732
+      name: Fidaxomicin
+      prefix: mesh
+- edges:
+  - source:
+      curie: bto:0000135
+      identifier: '0000135'
+      link: https://bioregistry.io/bto:0000135
+      name: aorta
+      prefix: bto
+    target:
+      curie: lepao:0000026
+      identifier: '0000026'
+      link: https://bioregistry.io/lepao:0000026
+      name: aorta
+      prefix: lepao
+  nodes:
+    bto:0000135:
+      identifier: '0000135'
+      link: https://bioregistry.io/bto:0000135
+      name: aorta
+      prefix: bto
+    lepao:0000026:
+      identifier: '0000026'
+      link: https://bioregistry.io/lepao:0000026
+      name: aorta
+      prefix: lepao
+    mesh:D001011:
+      identifier: D001011
+      link: https://bioregistry.io/mesh:D001011
+      name: Aorta
+      prefix: mesh
+- edges:
+  - source:
+      curie: bto:0000206
+      identifier: '0000206'
+      link: https://bioregistry.io/bto:0000206
+      name: cartilage
+      prefix: bto
+    target:
+      curie: efo:0000949
+      identifier: 0000949
+      link: https://bioregistry.io/efo:0000949
+      name: cartilage
+      prefix: efo
+  nodes:
+    bto:0000206:
+      identifier: '0000206'
+      link: https://bioregistry.io/bto:0000206
+      name: cartilage
+      prefix: bto
+    efo:0000949:
+      identifier: 0000949
+      link: https://bioregistry.io/efo:0000949
+      name: cartilage
+      prefix: efo
+    mesh:D002356:
+      identifier: D002356
+      link: https://bioregistry.io/mesh:D002356
+      name: Cartilage
+      prefix: mesh
+- edges:
+  - source:
+      curie: bto:0001308
+      identifier: 0001308
+      link: https://bioregistry.io/bto:0001308
+      name: gastric mucosa
+      prefix: bto
+    target:
+      curie: ncit:C32656
+      identifier: C32656
+      link: https://bioregistry.io/ncit:C32656
+      name: Gastric Mucosa
+      prefix: ncit
+  nodes:
+    bto:0001308:
+      identifier: 0001308
+      link: https://bioregistry.io/bto:0001308
+      name: gastric mucosa
+      prefix: bto
+    mesh:D005753:
+      identifier: D005753
+      link: https://bioregistry.io/mesh:D005753
+      name: Gastric Mucosa
+      prefix: mesh
+    ncit:C32656:
+      identifier: C32656
+      link: https://bioregistry.io/ncit:C32656
+      name: Gastric Mucosa
+      prefix: ncit
+- edges:
+  - source:
+      curie: bto:0001368
+      identifier: 0001368
+      link: https://bioregistry.io/bto:0001368
+      name: thorax
+      prefix: bto
+    target:
+      curie: clao:0000956
+      identifier: 0000956
+      link: https://bioregistry.io/clao:0000956
+      name: thorax
+      prefix: clao
+  nodes:
+    bto:0001368:
+      identifier: 0001368
+      link: https://bioregistry.io/bto:0001368
+      name: thorax
+      prefix: bto
+    clao:0000956:
+      identifier: 0000956
+      link: https://bioregistry.io/clao:0000956
+      name: thorax
+      prefix: clao
+    mesh:D013909:
+      identifier: D013909
+      link: https://bioregistry.io/mesh:D013909
+      name: Thorax
+      prefix: mesh
+- edges:
+  - source:
+      curie: bto:0001375
+      identifier: '0001375'
+      link: https://bioregistry.io/bto:0001375
+      name: mandibular nerve
+      prefix: bto
+    target:
+      curie: clao:0000113
+      identifier: '0000113'
+      link: https://bioregistry.io/clao:0000113
+      name: mandibular nerve
+      prefix: clao
+  nodes:
+    bto:0001375:
+      identifier: '0001375'
+      link: https://bioregistry.io/bto:0001375
+      name: mandibular nerve
+      prefix: bto
+    clao:0000113:
+      identifier: '0000113'
+      link: https://bioregistry.io/clao:0000113
+      name: mandibular nerve
+      prefix: clao
+    mesh:D008340:
+      identifier: D008340
+      link: https://bioregistry.io/mesh:D008340
+      name: Mandibular Nerve
+      prefix: mesh
+- edges:
+  - source:
+      curie: bto:0001378
+      identifier: 0001378
+      link: https://bioregistry.io/bto:0001378
+      name: maxillary nerve
+      prefix: bto
+    target:
+      curie: lepao:0000096
+      identifier: 0000096
+      link: https://bioregistry.io/lepao:0000096
+      name: maxillary nerve
+      prefix: lepao
+  nodes:
+    bto:0001378:
+      identifier: 0001378
+      link: https://bioregistry.io/bto:0001378
+      name: maxillary nerve
+      prefix: bto
+    lepao:0000096:
+      identifier: 0000096
+      link: https://bioregistry.io/lepao:0000096
+      name: maxillary nerve
+      prefix: lepao
+    mesh:D008442:
+      identifier: D008442
+      link: https://bioregistry.io/mesh:D008442
+      name: Maxillary Nerve
+      prefix: mesh
+- edges:
+  - source:
+      curie: bto:0001436
+      identifier: '0001436'
+      link: https://bioregistry.io/bto:0001436
+      name: mycelium
+      prefix: bto
+    target:
+      curie: fao:0000011
+      identifier: '0000011'
+      link: https://bioregistry.io/fao:0000011
+      name: mycelium
+      prefix: fao
+  nodes:
+    bto:0001436:
+      identifier: '0001436'
+      link: https://bioregistry.io/bto:0001436
+      name: mycelium
+      prefix: bto
+    fao:0000011:
+      identifier: '0000011'
+      link: https://bioregistry.io/fao:0000011
+      name: mycelium
+      prefix: fao
+    mesh:D025282:
+      identifier: D025282
+      link: https://bioregistry.io/mesh:D025282
+      name: Mycelium
+      prefix: mesh
+- edges:
+  - source:
+      curie: bto:0001446
+      identifier: '0001446'
+      link: https://bioregistry.io/bto:0001446
+      name: olfactory cortex
+      prefix: bto
+    target:
+      curie: uberon:0002894
+      identifier: 0002894
+      link: https://bioregistry.io/uberon:0002894
+      name: olfactory cortex
+      prefix: uberon
+  nodes:
+    bto:0001446:
+      identifier: '0001446'
+      link: https://bioregistry.io/bto:0001446
+      name: olfactory cortex
+      prefix: bto
+    mesh:D066194:
+      identifier: D066194
+      link: https://bioregistry.io/mesh:D066194
+      name: Olfactory Cortex
+      prefix: mesh
+    uberon:0002894:
+      identifier: 0002894
+      link: https://bioregistry.io/uberon:0002894
+      name: olfactory cortex
+      prefix: uberon
+- edges:
+  - source:
+      curie: bto:0001504
+      identifier: '0001504'
+      link: https://bioregistry.io/bto:0001504
+      name: blastodisc
+      prefix: bto
+    target:
+      curie: uberon:0004749
+      identifier: 0004749
+      link: https://bioregistry.io/uberon:0004749
+      name: blastodisc
+      prefix: uberon
+  nodes:
+    bto:0001504:
+      identifier: '0001504'
+      link: https://bioregistry.io/bto:0001504
+      name: blastodisc
+      prefix: bto
+    mesh:D054239:
+      identifier: D054239
+      link: https://bioregistry.io/mesh:D054239
+      name: Blastodisc
+      prefix: mesh
+    uberon:0004749:
+      identifier: 0004749
+      link: https://bioregistry.io/uberon:0004749
+      name: blastodisc
+      prefix: uberon
+- edges:
+  - source:
+      curie: bto:0001541
+      identifier: '0001541'
+      link: https://bioregistry.io/bto:0001541
+      name: pronephros
+      prefix: bto
+    target:
+      curie: ncit:C34280
+      identifier: C34280
+      link: https://bioregistry.io/ncit:C34280
+      name: Pronephros
+      prefix: ncit
+  - source:
+      curie: bto:0001541
+      identifier: '0001541'
+      link: https://bioregistry.io/bto:0001541
+      name: pronephros
+      prefix: bto
+    target:
+      curie: uberon:0002120
+      identifier: '0002120'
+      link: https://bioregistry.io/uberon:0002120
+      name: pronephros
+      prefix: uberon
+  - source:
+      curie: ncit:C34280
+      identifier: C34280
+      link: https://bioregistry.io/ncit:C34280
+      name: Pronephros
+      prefix: ncit
+    target:
+      curie: uberon:0002120
+      identifier: '0002120'
+      link: https://bioregistry.io/uberon:0002120
+      name: pronephros
+      prefix: uberon
+  nodes:
+    bto:0001541:
+      identifier: '0001541'
+      link: https://bioregistry.io/bto:0001541
+      name: pronephros
+      prefix: bto
+    mesh:D060910:
+      identifier: D060910
+      link: https://bioregistry.io/mesh:D060910
+      name: Pronephros
+      prefix: mesh
+    ncit:C34280:
+      identifier: C34280
+      link: https://bioregistry.io/ncit:C34280
+      name: Pronephros
+      prefix: ncit
+    uberon:0002120:
+      identifier: '0002120'
+      link: https://bioregistry.io/uberon:0002120
+      name: pronephros
+      prefix: uberon
+- edges:
+  - source:
+      curie: bto:0001592
+      identifier: 0001592
+      link: https://bioregistry.io/bto:0001592
+      name: meniscus
+      prefix: bto
+    target:
+      curie: uberon:0000387
+      identifier: 0000387
+      link: https://bioregistry.io/uberon:0000387
+      name: meniscus
+      prefix: uberon
+  nodes:
+    bto:0001592:
+      identifier: 0001592
+      link: https://bioregistry.io/bto:0001592
+      name: meniscus
+      prefix: bto
+    mesh:D000072600:
+      identifier: D000072600
+      link: https://bioregistry.io/mesh:D000072600
+      name: Meniscus
+      prefix: mesh
+    uberon:0000387:
+      identifier: 0000387
+      link: https://bioregistry.io/uberon:0000387
+      name: meniscus
+      prefix: uberon
+- edges:
+  - source:
+      curie: bto:0001646
+      identifier: '0001646'
+      link: https://bioregistry.io/bto:0001646
+      name: ureteric bud
+      prefix: bto
+    target:
+      curie: uberon:0000084
+      identifier: 0000084
+      link: https://bioregistry.io/uberon:0000084
+      name: ureteric bud
+      prefix: uberon
+  nodes:
+    bto:0001646:
+      identifier: '0001646'
+      link: https://bioregistry.io/bto:0001646
+      name: ureteric bud
+      prefix: bto
+    mesh:C000729068:
+      identifier: C000729068
+      link: https://bioregistry.io/mesh:C000729068
+      name: ureteric bud
+      prefix: mesh
+    uberon:0000084:
+      identifier: 0000084
+      link: https://bioregistry.io/uberon:0000084
+      name: ureteric bud
+      prefix: uberon
 - edges:
   - source:
       curie: bto:0002319
@@ -1161,17 +3798,29 @@
       name: A549
       prefix: ccle
     target:
-      curie: clo:0001601
-      identifier: '0001601'
-      link: https://bioregistry.io/clo:0001601
-      name: A549 cell
-      prefix: clo
+      curie: mesh:D000072283
+      identifier: D000072283
+      link: https://bioregistry.io/mesh:D000072283
+      name: A549 Cells
+      prefix: mesh
   - source:
       curie: ccle:A549_LUNG
       identifier: A549_LUNG
       link: https://bioregistry.io/ccle:A549_LUNG
       name: A549
       prefix: ccle
+    target:
+      curie: clo:0001601
+      identifier: '0001601'
+      link: https://bioregistry.io/clo:0001601
+      name: A549 cell
+      prefix: clo
+  - source:
+      curie: cellosaurus:0023
+      identifier: '0023'
+      link: https://bioregistry.io/cellosaurus:0023
+      name: A-549
+      prefix: cellosaurus
     target:
       curie: mesh:D000072283
       identifier: D000072283
@@ -1202,18 +3851,6 @@
       link: https://bioregistry.io/efo:0001086
       name: A549
       prefix: efo
-  - source:
-      curie: cellosaurus:0023
-      identifier: '0023'
-      link: https://bioregistry.io/cellosaurus:0023
-      name: A-549
-      prefix: cellosaurus
-    target:
-      curie: mesh:D000072283
-      identifier: D000072283
-      link: https://bioregistry.io/mesh:D000072283
-      name: A549 Cells
-      prefix: mesh
   - source:
       curie: clo:0001601
       identifier: '0001601'
@@ -1956,11 +4593,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000003
-      identifier: ACH-000003
-      link: https://bioregistry.io/depmap:ACH-000003
-      name: CACO2
-      prefix: depmap
+      curie: efo:0001099
+      identifier: 0001099
+      link: https://bioregistry.io/efo:0001099
+      name: Caco-2
+      prefix: efo
   - source:
       curie: cellosaurus:0025
       identifier: '0025'
@@ -1968,11 +4605,11 @@
       name: Caco-2
       prefix: cellosaurus
     target:
-      curie: efo:0001099
-      identifier: 0001099
-      link: https://bioregistry.io/efo:0001099
-      name: Caco-2
-      prefix: efo
+      curie: depmap:ACH-000003
+      identifier: ACH-000003
+      link: https://bioregistry.io/depmap:ACH-000003
+      name: CACO2
+      prefix: depmap
   - source:
       curie: depmap:ACH-000003
       identifier: ACH-000003
@@ -2304,6 +4941,18 @@
       name: MDA-MB-231
       prefix: ccle
     target:
+      curie: clo:0007634
+      identifier: '0007634'
+      link: https://bioregistry.io/clo:0007634
+      name: MDA-MB-231 cell
+      prefix: clo
+  - source:
+      curie: ccle:MDAMB231_BREAST
+      identifier: MDAMB231_BREAST
+      link: https://bioregistry.io/ccle:MDAMB231_BREAST
+      name: MDA-MB-231
+      prefix: ccle
+    target:
       curie: clo:0037291
       identifier: 0037291
       link: https://bioregistry.io/clo:0037291
@@ -2321,18 +4970,6 @@
       link: https://bioregistry.io/mesh:D000092302
       name: MDA-MB-231 Cells
       prefix: mesh
-  - source:
-      curie: ccle:MDAMB231_BREAST
-      identifier: MDAMB231_BREAST
-      link: https://bioregistry.io/ccle:MDAMB231_BREAST
-      name: MDA-MB-231
-      prefix: ccle
-    target:
-      curie: clo:0007634
-      identifier: '0007634'
-      link: https://bioregistry.io/clo:0007634
-      name: MDA-MB-231 cell
-      prefix: clo
   - source:
       curie: clo:0007634
       identifier: '0007634'
@@ -2490,11 +5127,11 @@
       name: RH-30
       prefix: ccle
     target:
-      curie: ccle:SJRH30_SOFT_TISSUE
-      identifier: SJRH30_SOFT_TISSUE
-      link: https://bioregistry.io/ccle:SJRH30_SOFT_TISSUE
+      curie: efo:0002329
+      identifier: 0002329
+      link: https://bioregistry.io/efo:0002329
       name: SJRH30
-      prefix: ccle
+      prefix: efo
   - source:
       curie: ccle:RH30_SOFT_TISSUE
       identifier: RH30_SOFT_TISSUE
@@ -2502,11 +5139,11 @@
       name: RH-30
       prefix: ccle
     target:
-      curie: efo:0002329
-      identifier: 0002329
-      link: https://bioregistry.io/efo:0002329
+      curie: ccle:SJRH30_SOFT_TISSUE
+      identifier: SJRH30_SOFT_TISSUE
+      link: https://bioregistry.io/ccle:SJRH30_SOFT_TISSUE
       name: SJRH30
-      prefix: efo
+      prefix: ccle
   - source:
       curie: cellosaurus:0041
       identifier: '0041'
@@ -2548,11 +5185,11 @@
       name: SiHa
       prefix: cellosaurus
     target:
-      curie: depmap:ACH-000556
-      identifier: ACH-000556
-      link: https://bioregistry.io/depmap:ACH-000556
-      name: SIHA
-      prefix: depmap
+      curie: efo:0002379
+      identifier: 0002379
+      link: https://bioregistry.io/efo:0002379
+      name: SiHa
+      prefix: efo
   - source:
       curie: cellosaurus:0032
       identifier: '0032'
@@ -2560,11 +5197,11 @@
       name: SiHa
       prefix: cellosaurus
     target:
-      curie: efo:0002379
-      identifier: 0002379
-      link: https://bioregistry.io/efo:0002379
-      name: SiHa
-      prefix: efo
+      curie: depmap:ACH-000556
+      identifier: ACH-000556
+      link: https://bioregistry.io/depmap:ACH-000556
+      name: SIHA
+      prefix: depmap
   - source:
       curie: depmap:ACH-000556
       identifier: ACH-000556
@@ -4286,11 +6923,11 @@
       name: fluorescence recovery after photobleaching
       prefix: chmo
     target:
-      curie: fix:0000867
-      identifier: 0000867
-      link: https://bioregistry.io/fix:0000867
+      curie: mi:1016
+      identifier: '1016'
+      link: https://bioregistry.io/mi:1016
       name: fluorescence recovery after photobleaching
-      prefix: fix
+      prefix: mi
   - source:
       curie: chmo:0000065
       identifier: '0000065'
@@ -4298,11 +6935,11 @@
       name: fluorescence recovery after photobleaching
       prefix: chmo
     target:
-      curie: mi:1016
-      identifier: '1016'
-      link: https://bioregistry.io/mi:1016
+      curie: fix:0000867
+      identifier: 0000867
+      link: https://bioregistry.io/fix:0000867
       name: fluorescence recovery after photobleaching
-      prefix: mi
+      prefix: fix
   - source:
       curie: fix:0000867
       identifier: 0000867
@@ -4523,6 +7160,30 @@
       link: https://bioregistry.io/mmo:0000173
       name: spectrophotometry
       prefix: mmo
+  - source:
+      curie: chmo:0000291
+      identifier: 0000291
+      link: https://bioregistry.io/chmo:0000291
+      name: spectrophotometry
+      prefix: chmo
+    target:
+      curie: scdo:1000142
+      identifier: '1000142'
+      link: https://bioregistry.io/scdo:1000142
+      name: Spectrophotometry
+      prefix: scdo
+  - source:
+      curie: mmo:0000173
+      identifier: '0000173'
+      link: https://bioregistry.io/mmo:0000173
+      name: spectrophotometry
+      prefix: mmo
+    target:
+      curie: scdo:1000142
+      identifier: '1000142'
+      link: https://bioregistry.io/scdo:1000142
+      name: Spectrophotometry
+      prefix: scdo
   nodes:
     chmo:0000291:
       identifier: 0000291
@@ -4539,6 +7200,11 @@
       link: https://bioregistry.io/mmo:0000173
       name: spectrophotometry
       prefix: mmo
+    scdo:1000142:
+      identifier: '1000142'
+      link: https://bioregistry.io/scdo:1000142
+      name: Spectrophotometry
+      prefix: scdo
 - edges:
   - source:
       curie: chmo:0000298
@@ -4570,6 +7236,192 @@
       prefix: mesh
 - edges:
   - source:
+      curie: chmo:0000307
+      identifier: '0000307'
+      link: https://bioregistry.io/chmo:0000307
+      name: X-ray emission spectroscopy
+      prefix: chmo
+    target:
+      curie: fix:0000100
+      identifier: '0000100'
+      link: https://bioregistry.io/fix:0000100
+      name: X-ray emission spectroscopy
+      prefix: fix
+  nodes:
+    chmo:0000307:
+      identifier: '0000307'
+      link: https://bioregistry.io/chmo:0000307
+      name: X-ray emission spectroscopy
+      prefix: chmo
+    fix:0000100:
+      identifier: '0000100'
+      link: https://bioregistry.io/fix:0000100
+      name: X-ray emission spectroscopy
+      prefix: fix
+    mesh:D013052:
+      identifier: D013052
+      link: https://bioregistry.io/mesh:D013052
+      name: Spectrometry, X-Ray Emission
+      prefix: mesh
+- edges:
+  - source:
+      curie: chmo:0000366
+      identifier: '0000366'
+      link: https://bioregistry.io/chmo:0000366
+      name: electron energy loss spectroscopy
+      prefix: chmo
+    target:
+      curie: fix:0000663
+      identifier: '0000663'
+      link: https://bioregistry.io/fix:0000663
+      name: electron energy loss spectroscopy
+      prefix: fix
+  - source:
+      curie: fix:0000663
+      identifier: '0000663'
+      link: https://bioregistry.io/fix:0000663
+      name: electron energy loss spectroscopy
+      prefix: fix
+    target:
+      curie: goldbook:08593
+      identifier: 08593
+      link: https://bioregistry.io/goldbook:08593
+      name: electron energy loss spectroscopy
+      prefix: goldbook
+  - source:
+      curie: goldbook:08593
+      identifier: 08593
+      link: https://bioregistry.io/goldbook:08593
+      name: electron energy loss spectroscopy
+      prefix: goldbook
+    target:
+      curie: mesh:D046590
+      identifier: D046590
+      link: https://bioregistry.io/mesh:D046590
+      name: Spectroscopy, Electron Energy-Loss
+      prefix: mesh
+  nodes:
+    chmo:0000366:
+      identifier: '0000366'
+      link: https://bioregistry.io/chmo:0000366
+      name: electron energy loss spectroscopy
+      prefix: chmo
+    fix:0000663:
+      identifier: '0000663'
+      link: https://bioregistry.io/fix:0000663
+      name: electron energy loss spectroscopy
+      prefix: fix
+    goldbook:08593:
+      identifier: 08593
+      link: https://bioregistry.io/goldbook:08593
+      name: electron energy loss spectroscopy
+      prefix: goldbook
+    mesh:D046590:
+      identifier: D046590
+      link: https://bioregistry.io/mesh:D046590
+      name: Spectroscopy, Electron Energy-Loss
+      prefix: mesh
+- edges:
+  - source:
+      curie: goldbook:P04609
+      identifier: P04609
+      link: https://bioregistry.io/goldbook:P04609
+      name: photoelectron spectroscopy
+      prefix: goldbook
+    target:
+      curie: mesh:D056951
+      identifier: D056951
+      link: https://bioregistry.io/mesh:D056951
+      name: Photoelectron Spectroscopy
+      prefix: mesh
+  nodes:
+    chmo:0000387:
+      identifier: 0000387
+      link: https://bioregistry.io/chmo:0000387
+      name: photoelectron spectroscopy
+      prefix: chmo
+    goldbook:P04609:
+      identifier: P04609
+      link: https://bioregistry.io/goldbook:P04609
+      name: photoelectron spectroscopy
+      prefix: goldbook
+    mesh:D056951:
+      identifier: D056951
+      link: https://bioregistry.io/mesh:D056951
+      name: Photoelectron Spectroscopy
+      prefix: mesh
+- edges:
+  - source:
+      curie: chmo:0000417
+      identifier: '0000417'
+      link: https://bioregistry.io/chmo:0000417
+      name: Mossbauer spectroscopy
+      prefix: chmo
+    target:
+      curie: fix:0000050
+      identifier: '0000050'
+      link: https://bioregistry.io/fix:0000050
+      name: Mossbauer spectroscopy
+      prefix: fix
+  nodes:
+    chmo:0000417:
+      identifier: '0000417'
+      link: https://bioregistry.io/chmo:0000417
+      name: Mossbauer spectroscopy
+      prefix: chmo
+    fix:0000050:
+      identifier: '0000050'
+      link: https://bioregistry.io/fix:0000050
+      name: Mossbauer spectroscopy
+      prefix: fix
+    mesh:D015204:
+      identifier: D015204
+      link: https://bioregistry.io/mesh:D015204
+      name: Spectroscopy, Mossbauer
+      prefix: mesh
+- edges:
+  - source:
+      curie: chmo:0000430
+      identifier: '0000430'
+      link: https://bioregistry.io/chmo:0000430
+      name: ion mobility spectroscopy
+      prefix: chmo
+    target:
+      curie: ms:1000261
+      identifier: '1000261'
+      link: https://bioregistry.io/ms:1000261
+      name: ion mobility spectrometry
+      prefix: ms
+  nodes:
+    chmo:0000430:
+      identifier: '0000430'
+      link: https://bioregistry.io/chmo:0000430
+      name: ion mobility spectroscopy
+      prefix: chmo
+    mesh:D000075663:
+      identifier: D000075663
+      link: https://bioregistry.io/mesh:D000075663
+      name: Ion Mobility Spectrometry
+      prefix: mesh
+    ms:1000261:
+      identifier: '1000261'
+      link: https://bioregistry.io/ms:1000261
+      name: ion mobility spectrometry
+      prefix: ms
+- edges:
+  - source:
+      curie: chmo:0000470
+      identifier: '0000470'
+      link: https://bioregistry.io/chmo:0000470
+      name: mass spectrometry
+      prefix: chmo
+    target:
+      curie: fbcv:0003218
+      identifier: 0003218
+      link: https://bioregistry.io/fbcv:0003218
+      name: mass spectrometry
+      prefix: fbcv
+  - source:
       curie: chmo:0000470
       identifier: '0000470'
       link: https://bioregistry.io/chmo:0000470
@@ -4606,6 +7458,90 @@
       name: mass spectrometry
       prefix: ms
   - source:
+      curie: chmo:0000470
+      identifier: '0000470'
+      link: https://bioregistry.io/chmo:0000470
+      name: mass spectrometry
+      prefix: chmo
+    target:
+      curie: ncit:C17156
+      identifier: C17156
+      link: https://bioregistry.io/ncit:C17156
+      name: Mass Spectrometry
+      prefix: ncit
+  - source:
+      curie: fbcv:0003218
+      identifier: 0003218
+      link: https://bioregistry.io/fbcv:0003218
+      name: mass spectrometry
+      prefix: fbcv
+    target:
+      curie: mmo:0000534
+      identifier: '0000534'
+      link: https://bioregistry.io/mmo:0000534
+      name: mass spectrometry
+      prefix: mmo
+  - source:
+      curie: fbcv:0003218
+      identifier: 0003218
+      link: https://bioregistry.io/fbcv:0003218
+      name: mass spectrometry
+      prefix: fbcv
+    target:
+      curie: fix:0000047
+      identifier: '0000047'
+      link: https://bioregistry.io/fix:0000047
+      name: mass spectrometry
+      prefix: fix
+  - source:
+      curie: fbcv:0003218
+      identifier: 0003218
+      link: https://bioregistry.io/fbcv:0003218
+      name: mass spectrometry
+      prefix: fbcv
+    target:
+      curie: goldbook:M03746
+      identifier: M03746
+      link: https://bioregistry.io/goldbook:M03746
+      name: mass spectrometry
+      prefix: goldbook
+  - source:
+      curie: fbcv:0003218
+      identifier: 0003218
+      link: https://bioregistry.io/fbcv:0003218
+      name: mass spectrometry
+      prefix: fbcv
+    target:
+      curie: ms:1000268
+      identifier: '1000268'
+      link: https://bioregistry.io/ms:1000268
+      name: mass spectrometry
+      prefix: ms
+  - source:
+      curie: fbcv:0003218
+      identifier: 0003218
+      link: https://bioregistry.io/fbcv:0003218
+      name: mass spectrometry
+      prefix: fbcv
+    target:
+      curie: ncit:C17156
+      identifier: C17156
+      link: https://bioregistry.io/ncit:C17156
+      name: Mass Spectrometry
+      prefix: ncit
+  - source:
+      curie: fix:0000047
+      identifier: '0000047'
+      link: https://bioregistry.io/fix:0000047
+      name: mass spectrometry
+      prefix: fix
+    target:
+      curie: goldbook:M03746
+      identifier: M03746
+      link: https://bioregistry.io/goldbook:M03746
+      name: mass spectrometry
+      prefix: goldbook
+  - source:
       curie: fix:0000047
       identifier: '0000047'
       link: https://bioregistry.io/fix:0000047
@@ -4630,6 +7566,66 @@
       name: mass spectrometry
       prefix: ms
   - source:
+      curie: fix:0000047
+      identifier: '0000047'
+      link: https://bioregistry.io/fix:0000047
+      name: mass spectrometry
+      prefix: fix
+    target:
+      curie: ncit:C17156
+      identifier: C17156
+      link: https://bioregistry.io/ncit:C17156
+      name: Mass Spectrometry
+      prefix: ncit
+  - source:
+      curie: goldbook:M03746
+      identifier: M03746
+      link: https://bioregistry.io/goldbook:M03746
+      name: mass spectrometry
+      prefix: goldbook
+    target:
+      curie: mesh:D013058
+      identifier: D013058
+      link: https://bioregistry.io/mesh:D013058
+      name: Mass Spectrometry
+      prefix: mesh
+  - source:
+      curie: goldbook:M03746
+      identifier: M03746
+      link: https://bioregistry.io/goldbook:M03746
+      name: mass spectrometry
+      prefix: goldbook
+    target:
+      curie: mmo:0000534
+      identifier: '0000534'
+      link: https://bioregistry.io/mmo:0000534
+      name: mass spectrometry
+      prefix: mmo
+  - source:
+      curie: goldbook:M03746
+      identifier: M03746
+      link: https://bioregistry.io/goldbook:M03746
+      name: mass spectrometry
+      prefix: goldbook
+    target:
+      curie: ms:1000268
+      identifier: '1000268'
+      link: https://bioregistry.io/ms:1000268
+      name: mass spectrometry
+      prefix: ms
+  - source:
+      curie: goldbook:M03746
+      identifier: M03746
+      link: https://bioregistry.io/goldbook:M03746
+      name: mass spectrometry
+      prefix: goldbook
+    target:
+      curie: ncit:C17156
+      identifier: C17156
+      link: https://bioregistry.io/ncit:C17156
+      name: Mass Spectrometry
+      prefix: ncit
+  - source:
       curie: mmo:0000534
       identifier: '0000534'
       link: https://bioregistry.io/mmo:0000534
@@ -4641,17 +7637,51 @@
       link: https://bioregistry.io/ms:1000268
       name: mass spectrometry
       prefix: ms
+  - source:
+      curie: mmo:0000534
+      identifier: '0000534'
+      link: https://bioregistry.io/mmo:0000534
+      name: mass spectrometry
+      prefix: mmo
+    target:
+      curie: ncit:C17156
+      identifier: C17156
+      link: https://bioregistry.io/ncit:C17156
+      name: Mass Spectrometry
+      prefix: ncit
+  - source:
+      curie: ms:1000268
+      identifier: '1000268'
+      link: https://bioregistry.io/ms:1000268
+      name: mass spectrometry
+      prefix: ms
+    target:
+      curie: ncit:C17156
+      identifier: C17156
+      link: https://bioregistry.io/ncit:C17156
+      name: Mass Spectrometry
+      prefix: ncit
   nodes:
     chmo:0000470:
       identifier: '0000470'
       link: https://bioregistry.io/chmo:0000470
       name: mass spectrometry
       prefix: chmo
+    fbcv:0003218:
+      identifier: 0003218
+      link: https://bioregistry.io/fbcv:0003218
+      name: mass spectrometry
+      prefix: fbcv
     fix:0000047:
       identifier: '0000047'
       link: https://bioregistry.io/fix:0000047
       name: mass spectrometry
       prefix: fix
+    goldbook:M03746:
+      identifier: M03746
+      link: https://bioregistry.io/goldbook:M03746
+      name: mass spectrometry
+      prefix: goldbook
     mesh:D013058:
       identifier: D013058
       link: https://bioregistry.io/mesh:D013058
@@ -4667,6 +7697,11 @@
       link: https://bioregistry.io/ms:1000268
       name: mass spectrometry
       prefix: ms
+    ncit:C17156:
+      identifier: C17156
+      link: https://bioregistry.io/ncit:C17156
+      name: Mass Spectrometry
+      prefix: ncit
 - edges:
   - source:
       curie: chmo:0000497
@@ -4687,11 +7722,47 @@
       name: gas chromatography-mass spectrometry
       prefix: chmo
     target:
+      curie: obi:0200199
+      identifier: 0200199
+      link: https://bioregistry.io/obi:0200199
+      name: gas chromatography mass spectrometry
+      prefix: obi
+  - source:
+      curie: chmo:0000497
+      identifier: 0000497
+      link: https://bioregistry.io/chmo:0000497
+      name: gas chromatography-mass spectrometry
+      prefix: chmo
+    target:
       curie: fix:0000921
       identifier: 0000921
       link: https://bioregistry.io/fix:0000921
       name: gas chromatography-mass spectrometry
       prefix: fix
+  - source:
+      curie: chmo:0000497
+      identifier: 0000497
+      link: https://bioregistry.io/chmo:0000497
+      name: gas chromatography-mass spectrometry
+      prefix: chmo
+    target:
+      curie: obi:0003110
+      identifier: '0003110'
+      link: https://bioregistry.io/obi:0003110
+      name: gas chromatography mass spectrometry assay
+      prefix: obi
+  - source:
+      curie: fix:0000921
+      identifier: 0000921
+      link: https://bioregistry.io/fix:0000921
+      name: gas chromatography-mass spectrometry
+      prefix: fix
+    target:
+      curie: goldbook:12421
+      identifier: '12421'
+      link: https://bioregistry.io/goldbook:12421
+      name: gas chromatography-mass spectrometry
+      prefix: goldbook
   - source:
       curie: fix:0000921
       identifier: 0000921
@@ -4704,6 +7775,114 @@
       link: https://bioregistry.io/mmo:0000536
       name: gas chromatography-mass spectrometry
       prefix: mmo
+  - source:
+      curie: fix:0000921
+      identifier: 0000921
+      link: https://bioregistry.io/fix:0000921
+      name: gas chromatography-mass spectrometry
+      prefix: fix
+    target:
+      curie: obi:0003110
+      identifier: '0003110'
+      link: https://bioregistry.io/obi:0003110
+      name: gas chromatography mass spectrometry assay
+      prefix: obi
+  - source:
+      curie: fix:0000921
+      identifier: 0000921
+      link: https://bioregistry.io/fix:0000921
+      name: gas chromatography-mass spectrometry
+      prefix: fix
+    target:
+      curie: obi:0200199
+      identifier: 0200199
+      link: https://bioregistry.io/obi:0200199
+      name: gas chromatography mass spectrometry
+      prefix: obi
+  - source:
+      curie: goldbook:12421
+      identifier: '12421'
+      link: https://bioregistry.io/goldbook:12421
+      name: gas chromatography-mass spectrometry
+      prefix: goldbook
+    target:
+      curie: mmo:0000536
+      identifier: '0000536'
+      link: https://bioregistry.io/mmo:0000536
+      name: gas chromatography-mass spectrometry
+      prefix: mmo
+  - source:
+      curie: goldbook:12421
+      identifier: '12421'
+      link: https://bioregistry.io/goldbook:12421
+      name: gas chromatography-mass spectrometry
+      prefix: goldbook
+    target:
+      curie: obi:0200199
+      identifier: 0200199
+      link: https://bioregistry.io/obi:0200199
+      name: gas chromatography mass spectrometry
+      prefix: obi
+  - source:
+      curie: goldbook:12421
+      identifier: '12421'
+      link: https://bioregistry.io/goldbook:12421
+      name: gas chromatography-mass spectrometry
+      prefix: goldbook
+    target:
+      curie: mesh:D008401
+      identifier: D008401
+      link: https://bioregistry.io/mesh:D008401
+      name: Gas Chromatography-Mass Spectrometry
+      prefix: mesh
+  - source:
+      curie: goldbook:12421
+      identifier: '12421'
+      link: https://bioregistry.io/goldbook:12421
+      name: gas chromatography-mass spectrometry
+      prefix: goldbook
+    target:
+      curie: obi:0003110
+      identifier: '0003110'
+      link: https://bioregistry.io/obi:0003110
+      name: gas chromatography mass spectrometry assay
+      prefix: obi
+  - source:
+      curie: mmo:0000536
+      identifier: '0000536'
+      link: https://bioregistry.io/mmo:0000536
+      name: gas chromatography-mass spectrometry
+      prefix: mmo
+    target:
+      curie: obi:0200199
+      identifier: 0200199
+      link: https://bioregistry.io/obi:0200199
+      name: gas chromatography mass spectrometry
+      prefix: obi
+  - source:
+      curie: mmo:0000536
+      identifier: '0000536'
+      link: https://bioregistry.io/mmo:0000536
+      name: gas chromatography-mass spectrometry
+      prefix: mmo
+    target:
+      curie: obi:0003110
+      identifier: '0003110'
+      link: https://bioregistry.io/obi:0003110
+      name: gas chromatography mass spectrometry assay
+      prefix: obi
+  - source:
+      curie: obi:0003110
+      identifier: '0003110'
+      link: https://bioregistry.io/obi:0003110
+      name: gas chromatography mass spectrometry assay
+      prefix: obi
+    target:
+      curie: obi:0200199
+      identifier: 0200199
+      link: https://bioregistry.io/obi:0200199
+      name: gas chromatography mass spectrometry
+      prefix: obi
   nodes:
     chmo:0000497:
       identifier: 0000497
@@ -4715,6 +7894,11 @@
       link: https://bioregistry.io/fix:0000921
       name: gas chromatography-mass spectrometry
       prefix: fix
+    goldbook:12421:
+      identifier: '12421'
+      link: https://bioregistry.io/goldbook:12421
+      name: gas chromatography-mass spectrometry
+      prefix: goldbook
     mesh:D008401:
       identifier: D008401
       link: https://bioregistry.io/mesh:D008401
@@ -4725,6 +7909,45 @@
       link: https://bioregistry.io/mmo:0000536
       name: gas chromatography-mass spectrometry
       prefix: mmo
+    obi:0003110:
+      identifier: '0003110'
+      link: https://bioregistry.io/obi:0003110
+      name: gas chromatography mass spectrometry assay
+      prefix: obi
+    obi:0200199:
+      identifier: 0200199
+      link: https://bioregistry.io/obi:0200199
+      name: gas chromatography mass spectrometry
+      prefix: obi
+- edges:
+  - source:
+      curie: chmo:0000519
+      identifier: 0000519
+      link: https://bioregistry.io/chmo:0000519
+      name: matrix-assisted laser desorption-ionisation mass spectrometry
+      prefix: chmo
+    target:
+      curie: ncit:C48040
+      identifier: C48040
+      link: https://bioregistry.io/ncit:C48040
+      name: Matrix-Assisted Laser Desorption Ionization Mass Spectrometry
+      prefix: ncit
+  nodes:
+    chmo:0000519:
+      identifier: 0000519
+      link: https://bioregistry.io/chmo:0000519
+      name: matrix-assisted laser desorption-ionisation mass spectrometry
+      prefix: chmo
+    mesh:D019032:
+      identifier: D019032
+      link: https://bioregistry.io/mesh:D019032
+      name: Spectrometry, Mass, Matrix-Assisted Laser Desorption-Ionization
+      prefix: mesh
+    ncit:C48040:
+      identifier: C48040
+      link: https://bioregistry.io/ncit:C48040
+      name: Matrix-Assisted Laser Desorption Ionization Mass Spectrometry
+      prefix: ncit
 - edges:
   - source:
       curie: chmo:0000524
@@ -4751,6 +7974,42 @@
       name: liquid chromatography-mass spectrometry
       prefix: mmo
   - source:
+      curie: chmo:0000524
+      identifier: '0000524'
+      link: https://bioregistry.io/chmo:0000524
+      name: liquid chromatography-mass spectrometry
+      prefix: chmo
+    target:
+      curie: obi:0003097
+      identifier: 0003097
+      link: https://bioregistry.io/obi:0003097
+      name: liquid chromatography mass spectrometry assay
+      prefix: obi
+  - source:
+      curie: fix:0000924
+      identifier: 0000924
+      link: https://bioregistry.io/fix:0000924
+      name: liquid chromatography-mass spectrometry
+      prefix: fix
+    target:
+      curie: obi:0003097
+      identifier: 0003097
+      link: https://bioregistry.io/obi:0003097
+      name: liquid chromatography mass spectrometry assay
+      prefix: obi
+  - source:
+      curie: fix:0000924
+      identifier: 0000924
+      link: https://bioregistry.io/fix:0000924
+      name: liquid chromatography-mass spectrometry
+      prefix: fix
+    target:
+      curie: goldbook:12466
+      identifier: '12466'
+      link: https://bioregistry.io/goldbook:12466
+      name: liquid chromatography-mass spectrometry
+      prefix: goldbook
+  - source:
       curie: fix:0000924
       identifier: 0000924
       link: https://bioregistry.io/fix:0000924
@@ -4762,6 +8021,54 @@
       link: https://bioregistry.io/mmo:0000535
       name: liquid chromatography-mass spectrometry
       prefix: mmo
+  - source:
+      curie: goldbook:12466
+      identifier: '12466'
+      link: https://bioregistry.io/goldbook:12466
+      name: liquid chromatography-mass spectrometry
+      prefix: goldbook
+    target:
+      curie: mesh:D000097922
+      identifier: D000097922
+      link: https://bioregistry.io/mesh:D000097922
+      name: Liquid Chromatography-Mass Spectrometry
+      prefix: mesh
+  - source:
+      curie: goldbook:12466
+      identifier: '12466'
+      link: https://bioregistry.io/goldbook:12466
+      name: liquid chromatography-mass spectrometry
+      prefix: goldbook
+    target:
+      curie: mmo:0000535
+      identifier: '0000535'
+      link: https://bioregistry.io/mmo:0000535
+      name: liquid chromatography-mass spectrometry
+      prefix: mmo
+  - source:
+      curie: goldbook:12466
+      identifier: '12466'
+      link: https://bioregistry.io/goldbook:12466
+      name: liquid chromatography-mass spectrometry
+      prefix: goldbook
+    target:
+      curie: obi:0003097
+      identifier: 0003097
+      link: https://bioregistry.io/obi:0003097
+      name: liquid chromatography mass spectrometry assay
+      prefix: obi
+  - source:
+      curie: mmo:0000535
+      identifier: '0000535'
+      link: https://bioregistry.io/mmo:0000535
+      name: liquid chromatography-mass spectrometry
+      prefix: mmo
+    target:
+      curie: obi:0003097
+      identifier: 0003097
+      link: https://bioregistry.io/obi:0003097
+      name: liquid chromatography mass spectrometry assay
+      prefix: obi
   nodes:
     chmo:0000524:
       identifier: '0000524'
@@ -4773,6 +8080,11 @@
       link: https://bioregistry.io/fix:0000924
       name: liquid chromatography-mass spectrometry
       prefix: fix
+    goldbook:12466:
+      identifier: '12466'
+      link: https://bioregistry.io/goldbook:12466
+      name: liquid chromatography-mass spectrometry
+      prefix: goldbook
     mesh:D000097922:
       identifier: D000097922
       link: https://bioregistry.io/mesh:D000097922
@@ -4783,6 +8095,221 @@
       link: https://bioregistry.io/mmo:0000535
       name: liquid chromatography-mass spectrometry
       prefix: mmo
+    obi:0003097:
+      identifier: 0003097
+      link: https://bioregistry.io/obi:0003097
+      name: liquid chromatography mass spectrometry assay
+      prefix: obi
+- edges:
+  - source:
+      curie: chmo:0000560
+      identifier: '0000560'
+      link: https://bioregistry.io/chmo:0000560
+      name: secondary ion mass spectrometry
+      prefix: chmo
+    target:
+      curie: fix:0000122
+      identifier: '0000122'
+      link: https://bioregistry.io/fix:0000122
+      name: secondary ion mass spectrometry
+      prefix: fix
+  - source:
+      curie: chmo:0000560
+      identifier: '0000560'
+      link: https://bioregistry.io/chmo:0000560
+      name: secondary ion mass spectrometry
+      prefix: chmo
+    target:
+      curie: fix:0000960
+      identifier: 0000960
+      link: https://bioregistry.io/fix:0000960
+      name: SIMS microscopy
+      prefix: fix
+  - source:
+      curie: chmo:0000560
+      identifier: '0000560'
+      link: https://bioregistry.io/chmo:0000560
+      name: secondary ion mass spectrometry
+      prefix: chmo
+    target:
+      curie: ncit:C154790
+      identifier: C154790
+      link: https://bioregistry.io/ncit:C154790
+      name: Secondary Ion Mass Spectrometry
+      prefix: ncit
+  - source:
+      curie: fix:0000122
+      identifier: '0000122'
+      link: https://bioregistry.io/fix:0000122
+      name: secondary ion mass spectrometry
+      prefix: fix
+    target:
+      curie: fix:0000960
+      identifier: 0000960
+      link: https://bioregistry.io/fix:0000960
+      name: SIMS microscopy
+      prefix: fix
+  - source:
+      curie: fix:0000122
+      identifier: '0000122'
+      link: https://bioregistry.io/fix:0000122
+      name: secondary ion mass spectrometry
+      prefix: fix
+    target:
+      curie: goldbook:09192
+      identifier: 09192
+      link: https://bioregistry.io/goldbook:09192
+      name: secondary-ion mass spectrometry
+      prefix: goldbook
+  - source:
+      curie: fix:0000122
+      identifier: '0000122'
+      link: https://bioregistry.io/fix:0000122
+      name: secondary ion mass spectrometry
+      prefix: fix
+    target:
+      curie: ncit:C154790
+      identifier: C154790
+      link: https://bioregistry.io/ncit:C154790
+      name: Secondary Ion Mass Spectrometry
+      prefix: ncit
+  - source:
+      curie: fix:0000960
+      identifier: 0000960
+      link: https://bioregistry.io/fix:0000960
+      name: SIMS microscopy
+      prefix: fix
+    target:
+      curie: goldbook:09192
+      identifier: 09192
+      link: https://bioregistry.io/goldbook:09192
+      name: secondary-ion mass spectrometry
+      prefix: goldbook
+  - source:
+      curie: fix:0000960
+      identifier: 0000960
+      link: https://bioregistry.io/fix:0000960
+      name: SIMS microscopy
+      prefix: fix
+    target:
+      curie: ncit:C154790
+      identifier: C154790
+      link: https://bioregistry.io/ncit:C154790
+      name: Secondary Ion Mass Spectrometry
+      prefix: ncit
+  - source:
+      curie: goldbook:09192
+      identifier: 09192
+      link: https://bioregistry.io/goldbook:09192
+      name: secondary-ion mass spectrometry
+      prefix: goldbook
+    target:
+      curie: mesh:D018629
+      identifier: D018629
+      link: https://bioregistry.io/mesh:D018629
+      name: Spectrometry, Mass, Secondary Ion
+      prefix: mesh
+  - source:
+      curie: goldbook:09192
+      identifier: 09192
+      link: https://bioregistry.io/goldbook:09192
+      name: secondary-ion mass spectrometry
+      prefix: goldbook
+    target:
+      curie: ncit:C154790
+      identifier: C154790
+      link: https://bioregistry.io/ncit:C154790
+      name: Secondary Ion Mass Spectrometry
+      prefix: ncit
+  nodes:
+    chmo:0000560:
+      identifier: '0000560'
+      link: https://bioregistry.io/chmo:0000560
+      name: secondary ion mass spectrometry
+      prefix: chmo
+    fix:0000122:
+      identifier: '0000122'
+      link: https://bioregistry.io/fix:0000122
+      name: secondary ion mass spectrometry
+      prefix: fix
+    fix:0000960:
+      identifier: 0000960
+      link: https://bioregistry.io/fix:0000960
+      name: SIMS microscopy
+      prefix: fix
+    goldbook:09192:
+      identifier: 09192
+      link: https://bioregistry.io/goldbook:09192
+      name: secondary-ion mass spectrometry
+      prefix: goldbook
+    mesh:D018629:
+      identifier: D018629
+      link: https://bioregistry.io/mesh:D018629
+      name: Spectrometry, Mass, Secondary Ion
+      prefix: mesh
+    ncit:C154790:
+      identifier: C154790
+      link: https://bioregistry.io/ncit:C154790
+      name: Secondary Ion Mass Spectrometry
+      prefix: ncit
+- edges:
+  - source:
+      curie: chmo:0000563
+      identifier: '0000563'
+      link: https://bioregistry.io/chmo:0000563
+      name: fast-atom bombardment mass spectrometry
+      prefix: chmo
+    target:
+      curie: fix:0000086
+      identifier: 0000086
+      link: https://bioregistry.io/fix:0000086
+      name: fast atom bombardment mass spectrometry
+      prefix: fix
+  - source:
+      curie: fix:0000086
+      identifier: 0000086
+      link: https://bioregistry.io/fix:0000086
+      name: fast atom bombardment mass spectrometry
+      prefix: fix
+    target:
+      curie: goldbook:F02328
+      identifier: F02328
+      link: https://bioregistry.io/goldbook:F02328
+      name: fast-atom bombardment mass spectrometry
+      prefix: goldbook
+  - source:
+      curie: goldbook:F02328
+      identifier: F02328
+      link: https://bioregistry.io/goldbook:F02328
+      name: fast-atom bombardment mass spectrometry
+      prefix: goldbook
+    target:
+      curie: mesh:D016339
+      identifier: D016339
+      link: https://bioregistry.io/mesh:D016339
+      name: Spectrometry, Mass, Fast Atom Bombardment
+      prefix: mesh
+  nodes:
+    chmo:0000563:
+      identifier: '0000563'
+      link: https://bioregistry.io/chmo:0000563
+      name: fast-atom bombardment mass spectrometry
+      prefix: chmo
+    fix:0000086:
+      identifier: 0000086
+      link: https://bioregistry.io/fix:0000086
+      name: fast atom bombardment mass spectrometry
+      prefix: fix
+    goldbook:F02328:
+      identifier: F02328
+      link: https://bioregistry.io/goldbook:F02328
+      name: fast-atom bombardment mass spectrometry
+      prefix: goldbook
+    mesh:D016339:
+      identifier: D016339
+      link: https://bioregistry.io/mesh:D016339
+      name: Spectrometry, Mass, Fast Atom Bombardment
+      prefix: mesh
 - edges:
   - source:
       curie: chmo:0000575
@@ -4809,6 +8336,18 @@
       name: tandem mass spectrometry
       prefix: fix
   - source:
+      curie: chmo:0000575
+      identifier: '0000575'
+      link: https://bioregistry.io/chmo:0000575
+      name: tandem mass spectrometry
+      prefix: chmo
+    target:
+      curie: ncit:C18142
+      identifier: C18142
+      link: https://bioregistry.io/ncit:C18142
+      name: Tandem Mass Spectrometry
+      prefix: ncit
+  - source:
       curie: efo:0030056
       identifier: '0030056'
       link: https://bioregistry.io/efo:0030056
@@ -4820,6 +8359,30 @@
       link: https://bioregistry.io/fix:0000084
       name: tandem mass spectrometry
       prefix: fix
+  - source:
+      curie: efo:0030056
+      identifier: '0030056'
+      link: https://bioregistry.io/efo:0030056
+      name: tandem mass spectrometry
+      prefix: efo
+    target:
+      curie: ncit:C18142
+      identifier: C18142
+      link: https://bioregistry.io/ncit:C18142
+      name: Tandem Mass Spectrometry
+      prefix: ncit
+  - source:
+      curie: fix:0000084
+      identifier: 0000084
+      link: https://bioregistry.io/fix:0000084
+      name: tandem mass spectrometry
+      prefix: fix
+    target:
+      curie: ncit:C18142
+      identifier: C18142
+      link: https://bioregistry.io/ncit:C18142
+      name: Tandem Mass Spectrometry
+      prefix: ncit
   nodes:
     chmo:0000575:
       identifier: '0000575'
@@ -4841,6 +8404,250 @@
       link: https://bioregistry.io/mesh:D053719
       name: Tandem Mass Spectrometry
       prefix: mesh
+    ncit:C18142:
+      identifier: C18142
+      link: https://bioregistry.io/ncit:C18142
+      name: Tandem Mass Spectrometry
+      prefix: ncit
+- edges:
+  - source:
+      curie: chmo:0000591
+      identifier: 0000591
+      link: https://bioregistry.io/chmo:0000591
+      name: nuclear magnetic resonance spectroscopy
+      prefix: chmo
+    target:
+      curie: fix:0000012
+      identifier: '0000012'
+      link: https://bioregistry.io/fix:0000012
+      name: magnetic resonance spectroscopy
+      prefix: fix
+  - source:
+      curie: chmo:0000591
+      identifier: 0000591
+      link: https://bioregistry.io/chmo:0000591
+      name: nuclear magnetic resonance spectroscopy
+      prefix: chmo
+    target:
+      curie: maxo:0020033
+      identifier: '0020033'
+      link: https://bioregistry.io/maxo:0020033
+      name: magnetic resonance spectroscopy
+      prefix: maxo
+  - source:
+      curie: chmo:0000591
+      identifier: 0000591
+      link: https://bioregistry.io/chmo:0000591
+      name: nuclear magnetic resonance spectroscopy
+      prefix: chmo
+    target:
+      curie: mmo:0000709
+      identifier: 0000709
+      link: https://bioregistry.io/mmo:0000709
+      name: nuclear magnetic resonance spectroscopy
+      prefix: mmo
+  - source:
+      curie: fix:0000012
+      identifier: '0000012'
+      link: https://bioregistry.io/fix:0000012
+      name: magnetic resonance spectroscopy
+      prefix: fix
+    target:
+      curie: goldbook:08218
+      identifier: 08218
+      link: https://bioregistry.io/goldbook:08218
+      name: nuclear magnetic resonance spectroscopy
+      prefix: goldbook
+  - source:
+      curie: fix:0000012
+      identifier: '0000012'
+      link: https://bioregistry.io/fix:0000012
+      name: magnetic resonance spectroscopy
+      prefix: fix
+    target:
+      curie: maxo:0020033
+      identifier: '0020033'
+      link: https://bioregistry.io/maxo:0020033
+      name: magnetic resonance spectroscopy
+      prefix: maxo
+  - source:
+      curie: fix:0000012
+      identifier: '0000012'
+      link: https://bioregistry.io/fix:0000012
+      name: magnetic resonance spectroscopy
+      prefix: fix
+    target:
+      curie: mmo:0000709
+      identifier: 0000709
+      link: https://bioregistry.io/mmo:0000709
+      name: nuclear magnetic resonance spectroscopy
+      prefix: mmo
+  - source:
+      curie: goldbook:08218
+      identifier: 08218
+      link: https://bioregistry.io/goldbook:08218
+      name: nuclear magnetic resonance spectroscopy
+      prefix: goldbook
+    target:
+      curie: maxo:0020033
+      identifier: '0020033'
+      link: https://bioregistry.io/maxo:0020033
+      name: magnetic resonance spectroscopy
+      prefix: maxo
+  - source:
+      curie: goldbook:08218
+      identifier: 08218
+      link: https://bioregistry.io/goldbook:08218
+      name: nuclear magnetic resonance spectroscopy
+      prefix: goldbook
+    target:
+      curie: mesh:D009682
+      identifier: D009682
+      link: https://bioregistry.io/mesh:D009682
+      name: Magnetic Resonance Spectroscopy
+      prefix: mesh
+  - source:
+      curie: goldbook:08218
+      identifier: 08218
+      link: https://bioregistry.io/goldbook:08218
+      name: nuclear magnetic resonance spectroscopy
+      prefix: goldbook
+    target:
+      curie: mmo:0000709
+      identifier: 0000709
+      link: https://bioregistry.io/mmo:0000709
+      name: nuclear magnetic resonance spectroscopy
+      prefix: mmo
+  - source:
+      curie: maxo:0020033
+      identifier: '0020033'
+      link: https://bioregistry.io/maxo:0020033
+      name: magnetic resonance spectroscopy
+      prefix: maxo
+    target:
+      curie: mmo:0000709
+      identifier: 0000709
+      link: https://bioregistry.io/mmo:0000709
+      name: nuclear magnetic resonance spectroscopy
+      prefix: mmo
+  nodes:
+    chmo:0000591:
+      identifier: 0000591
+      link: https://bioregistry.io/chmo:0000591
+      name: nuclear magnetic resonance spectroscopy
+      prefix: chmo
+    fix:0000012:
+      identifier: '0000012'
+      link: https://bioregistry.io/fix:0000012
+      name: magnetic resonance spectroscopy
+      prefix: fix
+    goldbook:08218:
+      identifier: 08218
+      link: https://bioregistry.io/goldbook:08218
+      name: nuclear magnetic resonance spectroscopy
+      prefix: goldbook
+    maxo:0020033:
+      identifier: '0020033'
+      link: https://bioregistry.io/maxo:0020033
+      name: magnetic resonance spectroscopy
+      prefix: maxo
+    mesh:D009682:
+      identifier: D009682
+      link: https://bioregistry.io/mesh:D009682
+      name: Magnetic Resonance Spectroscopy
+      prefix: mesh
+    mmo:0000709:
+      identifier: 0000709
+      link: https://bioregistry.io/mmo:0000709
+      name: nuclear magnetic resonance spectroscopy
+      prefix: mmo
+- edges:
+  - source:
+      curie: chmo:0000593
+      identifier: 0000593
+      link: https://bioregistry.io/chmo:0000593
+      name: 1H nuclear magnetic resonance spectroscopy
+      prefix: chmo
+    target:
+      curie: fix:0000134
+      identifier: '0000134'
+      link: https://bioregistry.io/fix:0000134
+      name: proton magnetic resonance spectroscopy
+      prefix: fix
+  nodes:
+    chmo:0000593:
+      identifier: 0000593
+      link: https://bioregistry.io/chmo:0000593
+      name: 1H nuclear magnetic resonance spectroscopy
+      prefix: chmo
+    fix:0000134:
+      identifier: '0000134'
+      link: https://bioregistry.io/fix:0000134
+      name: proton magnetic resonance spectroscopy
+      prefix: fix
+    mesh:D066244:
+      identifier: D066244
+      link: https://bioregistry.io/mesh:D066244
+      name: Proton Magnetic Resonance Spectroscopy
+      prefix: mesh
+- edges:
+  - source:
+      curie: chmo:0000595
+      identifier: 0000595
+      link: https://bioregistry.io/chmo:0000595
+      name: 13C nuclear magnetic resonance spectroscopy
+      prefix: chmo
+    target:
+      curie: fix:0000135
+      identifier: '0000135'
+      link: https://bioregistry.io/fix:0000135
+      name: carbon-13 magnetic resonance spectroscopy
+      prefix: fix
+  nodes:
+    chmo:0000595:
+      identifier: 0000595
+      link: https://bioregistry.io/chmo:0000595
+      name: 13C nuclear magnetic resonance spectroscopy
+      prefix: chmo
+    fix:0000135:
+      identifier: '0000135'
+      link: https://bioregistry.io/fix:0000135
+      name: carbon-13 magnetic resonance spectroscopy
+      prefix: fix
+    mesh:D066241:
+      identifier: D066241
+      link: https://bioregistry.io/mesh:D066241
+      name: Carbon-13 Magnetic Resonance Spectroscopy
+      prefix: mesh
+- edges:
+  - source:
+      curie: goldbook:08699
+      identifier: 08699
+      link: https://bioregistry.io/goldbook:08699
+      name: tip-enhanced Raman spectroscopy
+      prefix: goldbook
+    target:
+      curie: goldbook:09210
+      identifier: 09210
+      link: https://bioregistry.io/goldbook:09210
+      name: tip enhanced raman spectroscopy
+      prefix: goldbook
+  nodes:
+    chmo:0000678:
+      identifier: 0000678
+      link: https://bioregistry.io/chmo:0000678
+      name: tip-enhanced Raman spectroscopy
+      prefix: chmo
+    goldbook:08699:
+      identifier: 08699
+      link: https://bioregistry.io/goldbook:08699
+      name: tip-enhanced Raman spectroscopy
+      prefix: goldbook
+    goldbook:09210:
+      identifier: 09210
+      link: https://bioregistry.io/goldbook:09210
+      name: tip enhanced raman spectroscopy
+      prefix: goldbook
 - edges:
   - source:
       curie: chmo:0000682
@@ -4872,6 +8679,35 @@
       prefix: mmo
 - edges:
   - source:
+      curie: goldbook:A00088
+      identifier: A00088
+      link: https://bioregistry.io/goldbook:A00088
+      name: action spectrum
+      prefix: goldbook
+    target:
+      curie: mesh:D000067549
+      identifier: D000067549
+      link: https://bioregistry.io/mesh:D000067549
+      name: Action Spectrum
+      prefix: mesh
+  nodes:
+    chmo:0000831:
+      identifier: 0000831
+      link: https://bioregistry.io/chmo:0000831
+      name: action spectrum
+      prefix: chmo
+    goldbook:A00088:
+      identifier: A00088
+      link: https://bioregistry.io/goldbook:A00088
+      name: action spectrum
+      prefix: goldbook
+    mesh:D000067549:
+      identifier: D000067549
+      link: https://bioregistry.io/mesh:D000067549
+      name: Action Spectrum
+      prefix: mesh
+- edges:
+  - source:
       curie: chmo:0000946
       identifier: 0000946
       link: https://bioregistry.io/chmo:0000946
@@ -4901,17 +8737,34 @@
       prefix: mi
 - edges:
   - source:
-      curie: chmo:0001000
-      identifier: '0001000'
-      link: https://bioregistry.io/chmo:0001000
-      name: chromatography
-      prefix: chmo
+      curie: goldbook:M03732
+      identifier: M03732
+      link: https://bioregistry.io/goldbook:M03732
+      name: mass spectrometer
+      prefix: goldbook
     target:
-      curie: mmo:0000288
-      identifier: 0000288
-      link: https://bioregistry.io/mmo:0000288
-      name: chromatography
-      prefix: mmo
+      curie: goldbook:M03733
+      identifier: M03733
+      link: https://bioregistry.io/goldbook:M03733
+      name: mass spectrometer
+      prefix: goldbook
+  nodes:
+    chmo:0000982:
+      identifier: 0000982
+      link: https://bioregistry.io/chmo:0000982
+      name: mass spectrometer
+      prefix: chmo
+    goldbook:M03732:
+      identifier: M03732
+      link: https://bioregistry.io/goldbook:M03732
+      name: mass spectrometer
+      prefix: goldbook
+    goldbook:M03733:
+      identifier: M03733
+      link: https://bioregistry.io/goldbook:M03733
+      name: mass spectrometer
+      prefix: goldbook
+- edges:
   - source:
       curie: chmo:0001000
       identifier: '0001000'
@@ -4924,6 +8777,18 @@
       link: https://bioregistry.io/fix:0000053
       name: chromatography
       prefix: fix
+  - source:
+      curie: chmo:0001000
+      identifier: '0001000'
+      link: https://bioregistry.io/chmo:0001000
+      name: chromatography
+      prefix: chmo
+    target:
+      curie: mmo:0000288
+      identifier: 0000288
+      link: https://bioregistry.io/mmo:0000288
+      name: chromatography
+      prefix: mmo
   - source:
       curie: chmo:0001000
       identifier: '0001000'
@@ -5209,11 +9074,11 @@
       name: laser capture micro-dissection
       prefix: chmo
     target:
-      curie: ncit:C19263
-      identifier: C19263
-      link: https://bioregistry.io/ncit:C19263
-      name: Laser Capture Microdissection
-      prefix: ncit
+      curie: efo:0009111
+      identifier: 0009111
+      link: https://bioregistry.io/efo:0009111
+      name: laser capture microdissection
+      prefix: efo
   - source:
       curie: chmo:0001531
       identifier: '0001531'
@@ -5221,11 +9086,11 @@
       name: laser capture micro-dissection
       prefix: chmo
     target:
-      curie: efo:0009111
-      identifier: 0009111
-      link: https://bioregistry.io/efo:0009111
-      name: laser capture microdissection
-      prefix: efo
+      curie: ncit:C19263
+      identifier: C19263
+      link: https://bioregistry.io/ncit:C19263
+      name: Laser Capture Microdissection
+      prefix: ncit
   - source:
       curie: efo:0009111
       identifier: 0009111
@@ -5615,11 +9480,11 @@
       name: chitin
       prefix: chebi
     target:
-      curie: clao:0001184
-      identifier: 0001184
-      link: https://bioregistry.io/clao:0001184
+      curie: lepao:0000016
+      identifier: '0000016'
+      link: https://bioregistry.io/lepao:0000016
       name: chitin
-      prefix: clao
+      prefix: lepao
   - source:
       curie: chebi:17029
       identifier: '17029'
@@ -5627,11 +9492,11 @@
       name: chitin
       prefix: chebi
     target:
-      curie: lepao:0000016
-      identifier: '0000016'
-      link: https://bioregistry.io/lepao:0000016
+      curie: clao:0001184
+      identifier: 0001184
+      link: https://bioregistry.io/clao:0001184
       name: chitin
-      prefix: lepao
+      prefix: clao
   - source:
       curie: clao:0001184
       identifier: 0001184
@@ -5702,11 +9567,11 @@
       name: MCF7 cell
       prefix: clo
     target:
-      curie: ncit:C18096
-      identifier: C18096
-      link: https://bioregistry.io/ncit:C18096
-      name: MCF7
-      prefix: ncit
+      curie: efo:0001203
+      identifier: '0001203'
+      link: https://bioregistry.io/efo:0001203
+      name: MCF-7
+      prefix: efo
   - source:
       curie: clo:0007606
       identifier: '0007606'
@@ -5714,11 +9579,11 @@
       name: MCF7 cell
       prefix: clo
     target:
-      curie: efo:0001203
-      identifier: '0001203'
-      link: https://bioregistry.io/efo:0001203
-      name: MCF-7
-      prefix: efo
+      curie: ncit:C18096
+      identifier: C18096
+      link: https://bioregistry.io/ncit:C18096
+      name: MCF7
+      prefix: ncit
   - source:
       curie: efo:0001203
       identifier: '0001203'
@@ -5958,6 +9823,18 @@
       name: BCG
       prefix: cpt
     target:
+      curie: dron:00012890
+      identifier: 00012890
+      link: https://bioregistry.io/dron:00012890
+      name: BCG Vaccine
+      prefix: dron
+  - source:
+      curie: cpt:90728
+      identifier: '90728'
+      link: https://bioregistry.io/cpt:90728
+      name: BCG
+      prefix: cpt
+    target:
       curie: drugbank:DB12768
       identifier: DB12768
       link: https://bioregistry.io/drugbank:DB12768
@@ -5976,11 +9853,11 @@
       name: BCG Vaccine
       prefix: ncit
   - source:
-      curie: cpt:90728
-      identifier: '90728'
-      link: https://bioregistry.io/cpt:90728
-      name: BCG
-      prefix: cpt
+      curie: cvx:19
+      identifier: '19'
+      link: https://bioregistry.io/cvx:19
+      name: Bacillus Calmette-Guerin vaccine
+      prefix: cvx
     target:
       curie: dron:00012890
       identifier: 00012890
@@ -6011,18 +9888,6 @@
       link: https://bioregistry.io/ncit:C298
       name: BCG Vaccine
       prefix: ncit
-  - source:
-      curie: cvx:19
-      identifier: '19'
-      link: https://bioregistry.io/cvx:19
-      name: Bacillus Calmette-Guerin vaccine
-      prefix: cvx
-    target:
-      curie: dron:00012890
-      identifier: 00012890
-      link: https://bioregistry.io/dron:00012890
-      name: BCG Vaccine
-      prefix: dron
   - source:
       curie: cvx:19
       identifier: '19'
@@ -6289,11 +10154,11 @@
       name: mumps
       prefix: cpt
     target:
-      curie: cvx:07
-      identifier: '07'
-      link: https://bioregistry.io/cvx:07
-      name: mumps virus vaccine
-      prefix: cvx
+      curie: vo:0000656
+      identifier: '0000656'
+      link: https://bioregistry.io/vo:0000656
+      name: Mumps virus vaccine
+      prefix: vo
   - source:
       curie: cpt:90704
       identifier: '90704'
@@ -6301,11 +10166,11 @@
       name: mumps
       prefix: cpt
     target:
-      curie: vo:0000656
-      identifier: '0000656'
-      link: https://bioregistry.io/vo:0000656
-      name: Mumps virus vaccine
-      prefix: vo
+      curie: cvx:07
+      identifier: '07'
+      link: https://bioregistry.io/cvx:07
+      name: mumps virus vaccine
+      prefix: cvx
   - source:
       curie: cvx:07
       identifier: '07'
@@ -6405,11 +10270,11 @@
       name: rubella
       prefix: cpt
     target:
-      curie: dron:00012200
-      identifier: '00012200'
-      link: https://bioregistry.io/dron:00012200
-      name: Rubella virus vaccine
-      prefix: dron
+      curie: cvx:06
+      identifier: '06'
+      link: https://bioregistry.io/cvx:06
+      name: rubella virus vaccine
+      prefix: cvx
   - source:
       curie: cpt:90706
       identifier: '90706'
@@ -6417,11 +10282,11 @@
       name: rubella
       prefix: cpt
     target:
-      curie: cvx:06
-      identifier: '06'
-      link: https://bioregistry.io/cvx:06
-      name: rubella virus vaccine
-      prefix: cvx
+      curie: dron:00012200
+      identifier: '00012200'
+      link: https://bioregistry.io/dron:00012200
+      name: Rubella virus vaccine
+      prefix: dron
   - source:
       curie: cpt:90706
       identifier: '90706'
@@ -7787,11 +11652,11 @@
       name: Alopecia universalis
       prefix: hp
     target:
-      curie: umls:C0263505
-      identifier: C0263505
-      link: https://bioregistry.io/umls:C0263505
-      name: Alopecia universalis
-      prefix: umls
+      curie: mondo:0800198
+      identifier: 0800198
+      link: https://bioregistry.io/mondo:0800198
+      name: alopecia universalis
+      prefix: mondo
   - source:
       curie: hp:0002289
       identifier: 0002289
@@ -7799,11 +11664,11 @@
       name: Alopecia universalis
       prefix: hp
     target:
-      curie: mondo:0800198
-      identifier: 0800198
-      link: https://bioregistry.io/mondo:0800198
-      name: alopecia universalis
-      prefix: mondo
+      curie: umls:C0263505
+      identifier: C0263505
+      link: https://bioregistry.io/umls:C0263505
+      name: Alopecia universalis
+      prefix: umls
   - source:
       curie: mesh:C537055
       identifier: C537055
@@ -8291,6 +12156,35 @@
       prefix: umls
 - edges:
   - source:
+      curie: mesh:D063647
+      identifier: D063647
+      link: https://bioregistry.io/mesh:D063647
+      name: Fetal Alcohol Spectrum Disorders
+      prefix: mesh
+    target:
+      curie: umls:C2985290
+      identifier: C2985290
+      link: https://bioregistry.io/umls:C2985290
+      name: Fetal Alcohol Spectrum Disorders
+      prefix: umls
+  nodes:
+    doid:0050696:
+      identifier: 0050696
+      link: https://bioregistry.io/doid:0050696
+      name: fetal alcohol spectrum disorder
+      prefix: doid
+    mesh:D063647:
+      identifier: D063647
+      link: https://bioregistry.io/mesh:D063647
+      name: Fetal Alcohol Spectrum Disorders
+      prefix: mesh
+    umls:C2985290:
+      identifier: C2985290
+      link: https://bioregistry.io/umls:C2985290
+      name: Fetal Alcohol Spectrum Disorders
+      prefix: umls
+- edges:
+  - source:
       curie: doid:0060046
       identifier: '0060046'
       link: https://bioregistry.io/doid:0060046
@@ -8379,11 +12273,11 @@
       name: Lung abscess
       prefix: hp
     target:
-      curie: ncit:C99090
-      identifier: C99090
-      link: https://bioregistry.io/ncit:C99090
+      curie: umls:C0024110
+      identifier: C0024110
+      link: https://bioregistry.io/umls:C0024110
       name: Lung Abscess
-      prefix: ncit
+      prefix: umls
   - source:
       curie: hp:0025044
       identifier: '0025044'
@@ -8391,11 +12285,11 @@
       name: Lung abscess
       prefix: hp
     target:
-      curie: umls:C0024110
-      identifier: C0024110
-      link: https://bioregistry.io/umls:C0024110
+      curie: ncit:C99090
+      identifier: C99090
+      link: https://bioregistry.io/ncit:C99090
       name: Lung Abscess
-      prefix: umls
+      prefix: ncit
   - source:
       curie: mesh:D008169
       identifier: D008169
@@ -9950,11 +13844,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: mondo:0002012
-      identifier: '0002012'
-      link: https://bioregistry.io/mondo:0002012
-      name: methylmalonic acidemia
-      prefix: mondo
+      curie: hp:0002912
+      identifier: 0002912
+      link: https://bioregistry.io/hp:0002912
+      name: Methylmalonic acidemia
+      prefix: hp
   - source:
       curie: doid:14749
       identifier: '14749'
@@ -9962,11 +13856,11 @@
       name: methylmalonic acidemia
       prefix: doid
     target:
-      curie: hp:0002912
-      identifier: 0002912
-      link: https://bioregistry.io/hp:0002912
-      name: Methylmalonic acidemia
-      prefix: hp
+      curie: mondo:0002012
+      identifier: '0002012'
+      link: https://bioregistry.io/mondo:0002012
+      name: methylmalonic acidemia
+      prefix: mondo
   - source:
       curie: hp:0002912
       identifier: 0002912
@@ -10037,11 +13931,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: mesh:D009463
-      identifier: D009463
-      link: https://bioregistry.io/mesh:D009463
+      curie: ncit:C3275
+      identifier: C3275
+      link: https://bioregistry.io/ncit:C3275
       name: Neuroma
-      prefix: mesh
+      prefix: ncit
   - source:
       curie: doid:2001
       identifier: '2001'
@@ -10049,11 +13943,11 @@
       name: neuroma
       prefix: doid
     target:
-      curie: ncit:C3275
-      identifier: C3275
-      link: https://bioregistry.io/ncit:C3275
+      curie: mesh:D009463
+      identifier: D009463
+      link: https://bioregistry.io/mesh:D009463
       name: Neuroma
-      prefix: ncit
+      prefix: mesh
   - source:
       curie: efo:0009619
       identifier: 0009619
@@ -10674,35 +14568,6 @@
       prefix: vo
 - edges:
   - source:
-      curie: ecocore:00000022
-      identifier: '00000022'
-      link: https://bioregistry.io/ecocore:00000022
-      name: symbiosis
-      prefix: ecocore
-    target:
-      curie: go:0044403
-      identifier: '0044403'
-      link: https://bioregistry.io/go:0044403
-      name: symbiotic process
-      prefix: go
-  nodes:
-    ecocore:00000022:
-      identifier: '00000022'
-      link: https://bioregistry.io/ecocore:00000022
-      name: symbiosis
-      prefix: ecocore
-    go:0044403:
-      identifier: '0044403'
-      link: https://bioregistry.io/go:0044403
-      name: symbiotic process
-      prefix: go
-    mesh:D013559:
-      identifier: D013559
-      link: https://bioregistry.io/mesh:D013559
-      name: Symbiosis
-      prefix: mesh
-- edges:
-  - source:
       curie: ecto:0000001
       identifier: '0000001'
       link: https://bioregistry.io/ecto:0000001
@@ -10875,35 +14740,6 @@
       link: https://bioregistry.io/slso:0000032
       name: spacecraft
       prefix: slso
-- edges:
-  - source:
-      curie: fix:0000012
-      identifier: '0000012'
-      link: https://bioregistry.io/fix:0000012
-      name: magnetic resonance spectroscopy
-      prefix: fix
-    target:
-      curie: maxo:0020033
-      identifier: '0020033'
-      link: https://bioregistry.io/maxo:0020033
-      name: magnetic resonance spectroscopy
-      prefix: maxo
-  nodes:
-    fix:0000012:
-      identifier: '0000012'
-      link: https://bioregistry.io/fix:0000012
-      name: magnetic resonance spectroscopy
-      prefix: fix
-    maxo:0020033:
-      identifier: '0020033'
-      link: https://bioregistry.io/maxo:0020033
-      name: magnetic resonance spectroscopy
-      prefix: maxo
-    mesh:D009682:
-      identifier: D009682
-      link: https://bioregistry.io/mesh:D009682
-      name: Magnetic Resonance Spectroscopy
-      prefix: mesh
 - edges:
   - source:
       curie: fix:0000259
@@ -12534,11 +16370,11 @@
       name: Collagen
       prefix: chebi
     target:
-      curie: lepao:0000067
-      identifier: '0000067'
-      link: https://bioregistry.io/lepao:0000067
-      name: collagen
-      prefix: lepao
+      curie: pfam:PF01391
+      identifier: PF01391
+      link: https://bioregistry.io/pfam:PF01391
+      name: Collagen
+      prefix: pfam
   - source:
       curie: chebi:3815
       identifier: '3815'
@@ -12546,11 +16382,11 @@
       name: Collagen
       prefix: chebi
     target:
-      curie: pfam:PF01391
-      identifier: PF01391
-      link: https://bioregistry.io/pfam:PF01391
-      name: Collagen
-      prefix: pfam
+      curie: lepao:0000067
+      identifier: '0000067'
+      link: https://bioregistry.io/lepao:0000067
+      name: collagen
+      prefix: lepao
   - source:
       curie: lepao:0000067
       identifier: '0000067'
@@ -12824,11 +16660,11 @@
       name: reticulocyte count
       prefix: efo
     target:
-      curie: maxo:0000825
-      identifier: 0000825
-      link: https://bioregistry.io/maxo:0000825
-      name: reticulocyte count
-      prefix: maxo
+      curie: ncit:C51947
+      identifier: C51947
+      link: https://bioregistry.io/ncit:C51947
+      name: Reticulocyte Count
+      prefix: ncit
   - source:
       curie: efo:0007986
       identifier: 0007986
@@ -12836,11 +16672,11 @@
       name: reticulocyte count
       prefix: efo
     target:
-      curie: ncit:C51947
-      identifier: C51947
-      link: https://bioregistry.io/ncit:C51947
-      name: Reticulocyte Count
-      prefix: ncit
+      curie: maxo:0000825
+      identifier: 0000825
+      link: https://bioregistry.io/maxo:0000825
+      name: reticulocyte count
+      prefix: maxo
   - source:
       curie: maxo:0000825
       identifier: 0000825
@@ -13996,11 +17832,11 @@
       name: Congenital tracheomalacia
       prefix: mesh
     target:
-      curie: mesh:D055090
-      identifier: D055090
-      link: https://bioregistry.io/mesh:D055090
-      name: Tracheomalacia
-      prefix: mesh
+      curie: mondo:0019804
+      identifier: 0019804
+      link: https://bioregistry.io/mondo:0019804
+      name: tracheomalacia
+      prefix: mondo
   - source:
       curie: mesh:C557675
       identifier: C557675
@@ -14008,11 +17844,11 @@
       name: Congenital tracheomalacia
       prefix: mesh
     target:
-      curie: mondo:0019804
-      identifier: 0019804
-      link: https://bioregistry.io/mondo:0019804
-      name: tracheomalacia
-      prefix: mondo
+      curie: mesh:D055090
+      identifier: D055090
+      link: https://bioregistry.io/mesh:D055090
+      name: Tracheomalacia
+      prefix: mesh
   nodes:
     doid:0060313:
       identifier: '0060313'
@@ -16072,9 +19908,9 @@
       name: Carboxylic Acids
       prefix: ncit
     target:
-      curie: sibo:0000159
-      identifier: 0000159
-      link: https://bioregistry.io/sibo:0000159
+      curie: sibo:0000033
+      identifier: '0000033'
+      link: https://bioregistry.io/sibo:0000033
       name: Carboxylic acids
       prefix: sibo
   - source:
@@ -16084,9 +19920,9 @@
       name: Carboxylic Acids
       prefix: ncit
     target:
-      curie: sibo:0000033
-      identifier: '0000033'
-      link: https://bioregistry.io/sibo:0000033
+      curie: sibo:0000159
+      identifier: 0000159
+      link: https://bioregistry.io/sibo:0000159
       name: Carboxylic acids
       prefix: sibo
   - source:
@@ -16594,11 +20430,11 @@
       name: frostbite
       prefix: efo
     target:
-      curie: mondo:0800177
-      identifier: 0800177
-      link: https://bioregistry.io/mondo:0800177
-      name: frostbite
-      prefix: mondo
+      curie: ncit:C34627
+      identifier: C34627
+      link: https://bioregistry.io/ncit:C34627
+      name: Frostbite
+      prefix: ncit
   - source:
       curie: efo:0009527
       identifier: 0009527
@@ -16606,11 +20442,11 @@
       name: frostbite
       prefix: efo
     target:
-      curie: ncit:C34627
-      identifier: C34627
-      link: https://bioregistry.io/ncit:C34627
-      name: Frostbite
-      prefix: ncit
+      curie: mondo:0800177
+      identifier: 0800177
+      link: https://bioregistry.io/mondo:0800177
+      name: frostbite
+      prefix: mondo
   - source:
       curie: mondo:0800177
       identifier: 0800177
@@ -17674,11 +21510,11 @@
       name: phenotype
       prefix: mi
     target:
-      curie: ogms:0000023
-      identifier: '0000023'
-      link: https://bioregistry.io/ogms:0000023
+      curie: phipo:0000505
+      identifier: '0000505'
+      link: https://bioregistry.io/phipo:0000505
       name: phenotype
-      prefix: ogms
+      prefix: phipo
   - source:
       curie: mi:2261
       identifier: '2261'
@@ -17686,11 +21522,11 @@
       name: phenotype
       prefix: mi
     target:
-      curie: phipo:0000505
-      identifier: '0000505'
-      link: https://bioregistry.io/phipo:0000505
+      curie: ogms:0000023
+      identifier: '0000023'
+      link: https://bioregistry.io/ogms:0000023
       name: phenotype
-      prefix: phipo
+      prefix: ogms
   - source:
       curie: ogms:0000023
       identifier: '0000023'
@@ -17874,35 +21710,6 @@
       link: https://bioregistry.io/ncit:C34990
       name: Rib Fracture
       prefix: ncit
-- edges:
-  - source:
-      curie: chebi:28077
-      identifier: '28077'
-      link: https://bioregistry.io/chebi:28077
-      name: rifampicin
-      prefix: chebi
-    target:
-      curie: txpo:0005145
-      identifier: '0005145'
-      link: https://bioregistry.io/txpo:0005145
-      name: rifampin
-      prefix: txpo
-  nodes:
-    chebi:28077:
-      identifier: '28077'
-      link: https://bioregistry.io/chebi:28077
-      name: rifampicin
-      prefix: chebi
-    mesh:D012293:
-      identifier: D012293
-      link: https://bioregistry.io/mesh:D012293
-      name: Rifampin
-      prefix: mesh
-    txpo:0005145:
-      identifier: '0005145'
-      link: https://bioregistry.io/txpo:0005145
-      name: rifampin
-      prefix: txpo
 - edges:
   - source:
       curie: chebi:33697
@@ -18398,35 +22205,6 @@
       prefix: ncit
 - edges:
   - source:
-      curie: chebi:31739
-      identifier: '31739'
-      link: https://bioregistry.io/chebi:31739
-      name: josamycin
-      prefix: chebi
-    target:
-      curie: ncit:C83851
-      identifier: C83851
-      link: https://bioregistry.io/ncit:C83851
-      name: Josamycin
-      prefix: ncit
-  nodes:
-    chebi:31739:
-      identifier: '31739'
-      link: https://bioregistry.io/chebi:31739
-      name: josamycin
-      prefix: chebi
-    mesh:D015570:
-      identifier: D015570
-      link: https://bioregistry.io/mesh:D015570
-      name: Josamycin
-      prefix: mesh
-    ncit:C83851:
-      identifier: C83851
-      link: https://bioregistry.io/ncit:C83851
-      name: Josamycin
-      prefix: ncit
-- edges:
-  - source:
       curie: chebi:6636
       identifier: '6636'
       link: https://bioregistry.io/chebi:6636
@@ -18491,11 +22269,11 @@
       name: bronchoconstriction
       prefix: efo
     target:
-      curie: ncit:C40942
-      identifier: C40942
-      link: https://bioregistry.io/ncit:C40942
+      curie: hp:4000007
+      identifier: '4000007'
+      link: https://bioregistry.io/hp:4000007
       name: Bronchoconstriction
-      prefix: ncit
+      prefix: hp
   - source:
       curie: efo:0009836
       identifier: 0009836
@@ -18503,11 +22281,11 @@
       name: bronchoconstriction
       prefix: efo
     target:
-      curie: hp:4000007
-      identifier: '4000007'
-      link: https://bioregistry.io/hp:4000007
+      curie: ncit:C40942
+      identifier: C40942
+      link: https://bioregistry.io/ncit:C40942
       name: Bronchoconstriction
-      prefix: hp
+      prefix: ncit
   - source:
       curie: hp:4000007
       identifier: '4000007'
@@ -20573,35 +24351,6 @@
       prefix: ncit
 - edges:
   - source:
-      curie: ncit:C34280
-      identifier: C34280
-      link: https://bioregistry.io/ncit:C34280
-      name: Pronephros
-      prefix: ncit
-    target:
-      curie: uberon:0002120
-      identifier: '0002120'
-      link: https://bioregistry.io/uberon:0002120
-      name: pronephros
-      prefix: uberon
-  nodes:
-    mesh:D060910:
-      identifier: D060910
-      link: https://bioregistry.io/mesh:D060910
-      name: Pronephros
-      prefix: mesh
-    ncit:C34280:
-      identifier: C34280
-      link: https://bioregistry.io/ncit:C34280
-      name: Pronephros
-      prefix: ncit
-    uberon:0002120:
-      identifier: '0002120'
-      link: https://bioregistry.io/uberon:0002120
-      name: pronephros
-      prefix: uberon
-- edges:
-  - source:
       curie: efo:1002004
       identifier: '1002004'
       link: https://bioregistry.io/efo:1002004
@@ -22360,11 +26109,11 @@
       name: gelatin
       prefix: chebi
     target:
-      curie: drugbank:DB11242
-      identifier: DB11242
-      link: https://bioregistry.io/drugbank:DB11242
+      curie: mesh:D005780
+      identifier: D005780
+      link: https://bioregistry.io/mesh:D005780
       name: Gelatin
-      prefix: drugbank
+      prefix: mesh
   - source:
       curie: chebi:5291
       identifier: '5291'
@@ -22372,11 +26121,11 @@
       name: gelatin
       prefix: chebi
     target:
-      curie: mesh:D005780
-      identifier: D005780
-      link: https://bioregistry.io/mesh:D005780
+      curie: drugbank:DB11242
+      identifier: DB11242
+      link: https://bioregistry.io/drugbank:DB11242
       name: Gelatin
-      prefix: mesh
+      prefix: drugbank
   - source:
       curie: drugbank:DB11242
       identifier: DB11242

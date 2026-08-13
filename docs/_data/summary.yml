@@ -1,5 +1,5 @@
 contributors:
-- count: 6210
+- count: 6654
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
 - count: 6049
@@ -106,17 +106,26 @@ negative:
   source: drugbank
   target: vo
 - count: 12
+  source: chmo
+  target: mesh
+- count: 12
   source: mi
   target: ncbitaxon
 - count: 11
   source: hgnc
   target: reactome
 - count: 10
+  source: aro
+  target: mesh
+- count: 10
   source: ccle
   target: efo
 - count: 10
   source: schema
   target: vivo
+- count: 9
+  source: fix
+  target: mesh
 - count: 9
   source: interpro
   target: ncbitaxon
@@ -166,6 +175,9 @@ negative:
   source: chebi
   target: vo
 - count: 4
+  source: afpo
+  target: mesh
+- count: 4
   source: cellosaurus
   target: clo
 - count: 4
@@ -184,8 +196,8 @@ negative:
   source: bto
   target: cl
 - count: 3
-  source: fix
-  target: mesh
+  source: chmo
+  target: goldbook
 - count: 3
   source: isced2013
   target: schema
@@ -208,6 +220,9 @@ negative:
   source: hgnc
   target: wikipathways
 - count: 2
+  source: apo
+  target: mesh
+- count: 2
   source: apollosv
   target: ncit
 - count: 2
@@ -216,9 +231,6 @@ negative:
 - count: 2
   source: cvx
   target: mesh
-- count: 2
-  source: chmo
-  target: goldbook
 - count: 2
   source: gsso
   target: modalia
@@ -264,6 +276,12 @@ negative:
 - count: 2
   source: mesh
   target: xlmod
+- count: 1
+  source: agro
+  target: mesh
+- count: 1
+  source: aism
+  target: mesh
 - count: 1
   source: apollosv
   target: pato
@@ -334,6 +352,9 @@ negative:
   source: ncbitaxon
   target: oae
 - count: 1
+  source: mesh
+  target: obi
+- count: 1
   source: ito
   target: pfam
 - count: 1
@@ -351,16 +372,16 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1887
-negative_prefix_count: 70
+negative_mapping_count: 1925
+negative_prefix_count: 74
 positive:
 - count: 3484
   source: chebi
   target: mesh
-- count: 1504
+- count: 1505
   source: doid
   target: mesh
-- count: 925
+- count: 929
   source: mesh
   target: ncit
 - count: 570
@@ -387,9 +408,12 @@ positive:
 - count: 222
   source: go
   target: reactome
-- count: 193
+- count: 194
   source: doid
   target: umls
+- count: 184
+  source: aro
+  target: mesh
 - count: 172
   source: mesh
   target: vo
@@ -417,9 +441,18 @@ positive:
 - count: 111
   source: hgnc
   target: mesh
+- count: 100
+  source: chmo
+  target: goldbook
 - count: 96
   source: doid
   target: efo
+- count: 92
+  source: bto
+  target: mesh
+- count: 83
+  source: chmo
+  target: mesh
 - count: 81
   source: cl
   target: mesh
@@ -439,9 +472,6 @@ positive:
   source: kegg.pathway
   target: wikipathways
 - count: 68
-  source: chmo
-  target: mesh
-- count: 68
   source: envo
   target: oeo
 - count: 61
@@ -453,21 +483,18 @@ positive:
 - count: 55
   source: bto
   target: uberon
-- count: 48
-  source: chmo
-  target: goldbook
 - count: 47
   source: cvx
   target: vo
 - count: 46
   source: mesh
   target: mi
+- count: 41
+  source: mesh
+  target: mmo
 - count: 40
   source: aio
   target: ito
-- count: 40
-  source: mesh
-  target: mmo
 - count: 40
   source: mesh
   target: so
@@ -475,29 +502,32 @@ positive:
   source: drugbank
   target: vo
 - count: 37
-  source: chebi
-  target: iconclass
-- count: 28
   source: fix
   target: mesh
+- count: 37
+  source: chebi
+  target: iconclass
 - count: 26
   source: ncbiprotein
   target: uniprot.chain
 - count: 25
   source: kegg.pathway
   target: mesh
+- count: 24
+  source: fplx
+  target: mesh
 - count: 23
   source: idomal
   target: vsmo
-- count: 23
-  source: fplx
-  target: mesh
 - count: 22
   source: adcad
   target: gsso
 - count: 21
   source: mesh
   target: ms
+- count: 19
+  source: apo
+  target: mesh
 - count: 19
   source: chmo
   target: fbbi
@@ -508,11 +538,11 @@ positive:
   source: chebi
   target: efo
 - count: 18
-  source: mesh
-  target: wikipathways
-- count: 17
   source: envo
   target: mesh
+- count: 18
+  source: mesh
+  target: wikipathways
 - count: 17
   source: idomal
   target: ncbitaxon
@@ -559,6 +589,9 @@ positive:
   source: idomal
   target: vo
 - count: 10
+  source: afpo
+  target: mesh
+- count: 10
   source: wikipathways
   target: wikipathways
 - count: 9
@@ -579,6 +612,9 @@ positive:
 - count: 8
   source: mesh
   target: reactome
+- count: 7
+  source: apollosv
+  target: mesh
 - count: 7
   source: ccso
   target: vivo
@@ -607,7 +643,7 @@ positive:
   source: ncit
   target: vo
 - count: 5
-  source: aro
+  source: aism
   target: mesh
 - count: 5
   source: clo
@@ -659,10 +695,16 @@ positive:
   target: kegg.pathway
 - count: 3
   source: mesh
+  target: obi
+- count: 3
+  source: mesh
   target: umls
 - count: 3
   source: mesh
   target: vt
+- count: 2
+  source: ado
+  target: mesh
 - count: 2
   source: apollosv
   target: vsmo
@@ -790,6 +832,9 @@ positive:
   source: dron
   target: efo
 - count: 1
+  source: fbcv
+  target: mesh
+- count: 1
   source: fideo
   target: mesh
 - count: 1
@@ -904,6 +949,9 @@ positive:
   source: obi
   target: vo
 - count: 1
+  source: obo
+  target: opmi
+- count: 1
   source: mesh
   target: pfam
 - count: 1
@@ -912,6 +960,9 @@ positive:
 - count: 1
   source: mesh
   target: ppo
+- count: 1
+  source: mesh
+  target: scdo
 - count: 1
   source: ncit
   target: taxrank
@@ -946,10 +997,13 @@ positive:
   source: ogg
   target: vo
 - count: 1
+  source: obo
+  target: wbbt
+- count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 12441
-positive_prefix_count: 120
+positive_mapping_count: 12847
+positive_prefix_count: 127
 predictions:
 - count: 32670
   source: chebi
@@ -957,7 +1011,7 @@ predictions:
 - count: 13686
   source: mesh
   target: uniprot
-- count: 11713
+- count: 11709
   source: mesh
   target: ncit
 - count: 9958
@@ -969,7 +1023,7 @@ predictions:
 - count: 2431
   source: hp
   target: mesh
-- count: 2336
+- count: 2335
   source: doid
   target: umls
 - count: 1685
@@ -990,28 +1044,25 @@ predictions:
 - count: 1114
   source: go
   target: mesh
-- count: 1106
-  source: bto
-  target: mesh
 - count: 1069
   source: mesh
   target: vbo
 - count: 1020
   source: mesh
   target: mp
+- count: 1014
+  source: bto
+  target: mesh
 - count: 994
   source: ccle
   target: cellosaurus
-- count: 723
-  source: aro
-  target: mesh
 - count: 623
   source: mesh
   target: xco
-- count: 483
-  source: chmo
-  target: goldbook
-- count: 480
+- count: 534
+  source: aro
+  target: mesh
+- count: 479
   source: envo
   target: mesh
 - count: 462
@@ -1023,6 +1074,9 @@ predictions:
 - count: 446
   source: mesh
   target: mod
+- count: 430
+  source: chmo
+  target: goldbook
 - count: 396
   source: mesh
   target: mpath
@@ -1044,7 +1098,7 @@ predictions:
 - count: 317
   source: efo
   target: mesh
-- count: 308
+- count: 307
   source: doid
   target: mesh
 - count: 304
@@ -1071,7 +1125,7 @@ predictions:
 - count: 216
   source: hancestro
   target: mesh
-- count: 205
+- count: 204
   source: fplx
   target: mesh
 - count: 203
@@ -1080,7 +1134,7 @@ predictions:
 - count: 200
   source: ma
   target: mesh
-- count: 199
+- count: 195
   source: mesh
   target: obi
 - count: 188
@@ -1089,19 +1143,19 @@ predictions:
 - count: 184
   source: mesh
   target: txpo
-- count: 176
-  source: chmo
-  target: mesh
 - count: 160
   source: maxo
   target: mesh
-- count: 157
+- count: 156
   source: fbcv
+  target: mesh
+- count: 149
+  source: chmo
   target: mesh
 - count: 133
   source: hao
   target: mesh
-- count: 127
+- count: 126
   source: mesh
   target: scdo
 - count: 107
@@ -1143,24 +1197,24 @@ predictions:
 - count: 72
   source: mesh
   target: occo
-- count: 70
-  source: fix
-  target: mesh
 - count: 60
   source: doid
   target: efo
 - count: 60
   source: mesh
-  target: mmo
-- count: 60
-  source: mesh
   target: sibo
+- count: 59
+  source: mesh
+  target: mmo
 - count: 58
   source: mesh
   target: vario
 - count: 57
   source: mesh
   target: sbo
+- count: 55
+  source: fix
+  target: mesh
 - count: 52
   source: mesh
   target: vt
@@ -1182,9 +1236,6 @@ predictions:
 - count: 43
   source: mesh
   target: po
-- count: 38
-  source: apo
-  target: mesh
 - count: 38
   source: mesh
   target: zeco
@@ -1239,18 +1290,12 @@ predictions:
 - count: 26
   source: mesh
   target: mfoem
-- count: 25
-  source: afpo
-  target: mesh
 - count: 24
   source: gno
   target: mesh
 - count: 24
   source: mesh
   target: poro
-- count: 23
-  source: apollosv
-  target: mesh
 - count: 21
   source: cvdo
   target: mesh
@@ -1270,11 +1315,17 @@ predictions:
   source: mesh
   target: pbpko
 - count: 17
+  source: apo
+  target: mesh
+- count: 17
   source: ino
   target: mesh
 - count: 17
   source: mesh
   target: mf
+- count: 16
+  source: apollosv
+  target: mesh
 - count: 16
   source: ecocore
   target: mesh
@@ -1300,13 +1351,10 @@ predictions:
   source: lepao
   target: mesh
 - count: 12
-  source: aism
-  target: mesh
-- count: 12
   source: mesh
   target: pso
 - count: 11
-  source: agro
+  source: afpo
   target: mesh
 - count: 11
   source: chebi
@@ -1314,6 +1362,9 @@ predictions:
 - count: 11
   source: mesh
   target: ohmi
+- count: 10
+  source: agro
+  target: mesh
 - count: 10
   source: cdno
   target: mesh
@@ -1366,11 +1417,11 @@ predictions:
   source: mesh
   target: taxrank
 - count: 6
+  source: aism
+  target: mesh
+- count: 6
   source: cellosaurus
   target: clo
-- count: 5
-  source: ado
-  target: mesh
 - count: 5
   source: cdao
   target: mesh
@@ -1398,6 +1449,9 @@ predictions:
 - count: 4
   source: mesh
   target: ro
+- count: 3
+  source: ado
+  target: mesh
 - count: 3
   source: bfo
   target: mesh
@@ -1437,9 +1491,6 @@ predictions:
 - count: 2
   source: mesh
   target: rxno
-- count: 2
-  source: obo
-  target: wbbt
 - count: 1
   source: ccle
   target: cl
@@ -1493,9 +1544,6 @@ predictions:
   target: ohpi
 - count: 1
   source: obo
-  target: opmi
-- count: 1
-  source: obo
   target: pw
 - count: 1
   source: mesh
@@ -1506,7 +1554,10 @@ predictions:
 - count: 1
   source: obo
   target: uberon
-predictions_mapping_count: 100871
+- count: 1
+  source: obo
+  target: wbbt
+predictions_mapping_count: 100427
 predictions_prefix_count: 166
 unsure:
 - count: 27
