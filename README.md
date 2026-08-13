@@ -67,7 +67,7 @@ interact with the mappings files, e.g., to add predictions.
 
 An aggregation of positive, negative, and predicted mappings are collated in the
 SSSOM
-([here](https://github.com/biopragmatics/biomappings/blob/master/docs/_data/sssom))
+([here](https://github.com/biopragmatics/biomappings/blob/main/export))
 and can be referenced by PURL such as
 https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv. The
 positive mappings are also available as a network through
