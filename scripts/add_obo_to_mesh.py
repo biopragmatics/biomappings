@@ -10,7 +10,7 @@
 # ]
 #
 # [tool.uv.sources]
-# biomappings = { path = "../" }
+# biomappings = { path = "../", editable = true }
 # sssom-curator = { path = "../../sssom-curator" }
 # pyobo = { path = "../../pyobo" }
 # ///
@@ -25,18 +25,19 @@ from biomappings import lexical_prediction_cli
 
 if __name__ == "__main__":
     skip = {"ncit", "ncbitaxon", "interpro", "chebi", "omit", "gaz"}
-    prefixes = sorted(
+    extras = {"icd10", "icd11"}
+    prefixes = {
         resource.prefix
         for resource in bioregistry.resources()
         if resource.get_obofoundry_prefix()
         and not resource.is_deprecated()
         and not resource.no_own_terms
         and resource.prefix not in skip
-    )
+    }
     logging.getLogger("pyobo").setLevel(logging.ERROR)
     lexical_prediction_cli(
         "mesh",
-        prefixes,
+        sorted(prefixes | extras),
         filter_mutual_mappings=True,
         flip=True,
     )
