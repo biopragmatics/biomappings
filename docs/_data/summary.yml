@@ -1014,6 +1014,9 @@ predictions:
 - count: 11709
   source: mesh
   target: ncit
+- count: 10359
+  source: icd11
+  target: mesh
 - count: 9958
   source: mesh
   target: pr
@@ -1160,6 +1163,9 @@ predictions:
   target: scdo
 - count: 107
   source: clao
+  target: mesh
+- count: 107
+  source: icd10
   target: mesh
 - count: 106
   source: fbbi
@@ -1557,8 +1563,8 @@ predictions:
 - count: 1
   source: obo
   target: wbbt
-predictions_mapping_count: 100427
-predictions_prefix_count: 166
+predictions_mapping_count: 110893
+predictions_prefix_count: 168
 unsure:
 - count: 27
   source: doid

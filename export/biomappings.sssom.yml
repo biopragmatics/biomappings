@@ -186,6 +186,8 @@ curie_map:
   goldbook: http://dx.doi.org/10.1351/goldbook.
   hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
   iana.mediatype: https://www.iana.org/assignments/media-types/
+  icd10: https://icd.who.int/browse10/2019/en#/
+  icd11: http://id.who.int/icd/entity/
   iconclass: https://iconclass.org/
   idocovid19: http://purl.obolibrary.org/obo/COVIDO_
   interpro: http://purl.obolibrary.org/obo/IPR_
@@ -228,4 +230,4 @@ mapping_set_description: Biomappings is a repository of community curated and pr
   of predicted mappings or their own novel mappings.
 mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv
 mapping_set_title: Biomappings
-mapping_set_version: 0.6.1-dev-82487976
+mapping_set_version: 0.6.1-dev-903edd7c
