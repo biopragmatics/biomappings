@@ -41,6 +41,7 @@
 #  kegg.pathway: https://www.kegg.jp/pathway/
 #  kim.hcrt: https://w3id.org/kim/hcrt/
 #  maxo: http://purl.obolibrary.org/obo/MAXO_
+#  mco: http://purl.obolibrary.org/obo/MCO_
 #  mesh: https://meshb.nlm.nih.gov/record/ui?ui=
 #  mi: http://purl.obolibrary.org/obo/MI_
 #  miapa: http://purl.obolibrary.org/obo/MIAPA_
@@ -879,6 +880,8 @@ kegg.pathway:map07039	Opioid analgesics	skos:exactMatch	Not	mesh:D000701	Analges
 kegg.pathway:map07044	Antiviral agents	skos:exactMatch	Not	mesh:D000998	Antiviral Agents	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 kegg.pathway:map07057	Antiparkinsonian agents	skos:exactMatch	Not	mesh:D000978	Antiparkinson Agents	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 kim.hcrt:assessment	Assessment	skos:exactMatch	Not	t4fs:0000126	assessment	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-12
+mco:00000000	mco	skos:exactMatch	Not	mesh:C013050	MCO	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019-05-15	2026		2026-08-22
+mco:0000866	treatment	skos:exactMatch	Not	mesh:D013812	Therapeutics	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019-05-15	2026		2026-08-22
 mesh:C000591739	Familial gynecomastia, due to increased aromatase activity	skos:exactMatch	Not	doid:0090122	aromatase excess syndrome	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:C000632245	steapsin	skos:exactMatch	Not	go:0004806	triglyceride lipase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:C000705167	viroporins	skos:exactMatch	Not	go:0039707	pore formation by virus in membrane of host cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				

@@ -74,6 +74,7 @@
 #  lepao: http://purl.obolibrary.org/obo/LEPAO_
 #  lrmi: http://purl.org/dcx/lrmi-terms/
 #  maxo: http://purl.obolibrary.org/obo/MAXO_
+#  mco: http://purl.obolibrary.org/obo/MCO_
 #  mesh: https://meshb.nlm.nih.gov/record/ui?ui=
 #  mi: http://purl.obolibrary.org/obo/MI_
 #  miro: http://purl.obolibrary.org/obo/MIRO_
@@ -5716,6 +5717,11 @@ maxo:0035039	defecography	skos:exactMatch	mesh:D019841	Defecography	semapv:Manua
 maxo:0035042	duodenoscopy	skos:exactMatch	mesh:D004384	Duodenoscopy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0035106	paracentesis	skos:exactMatch	mesh:D019152	Paracentesis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
 maxo:0035118	cardiac catheterization	skos:exactMatch	mesh:D006328	Cardiac Catheterization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/3acffb/scripts/generate_maxo_mesh_mappings.py	
+mco:0000013	equipment and supplies	skos:exactMatch	mesh:D004864	Equipment and Supplies	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019-05-15	2026		2026-08-22
+mco:0000017	conditioned culture medium	skos:exactMatch	mesh:D017077	Culture Media, Conditioned	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019-05-15	2026		2026-08-22
+mco:0000167	nitrosative stress	skos:exactMatch	mesh:D000073039	Nitrosative Stress	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019-05-15	2026		2026-08-22
+mco:0000188	dessication	skos:exactMatch	mesh:D003890	Desiccation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019-05-15	2026		2026-08-22
+mco:0000383	genotype	skos:exactMatch	mesh:D005838	Genotype	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019-05-15	2026		2026-08-22
 mesh:C000082	alanosine	skos:exactMatch	ncit:C994	Alanosine	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:C000089	ammeline	skos:exactMatch	chebi:28646	ammeline	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
 mesh:C000123	bendazac	skos:exactMatch	chebi:31257	bendazac	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			https://github.com/biomappings/biomappings/blob/5c44c0/scripts/import_gilda_mappings.py	
