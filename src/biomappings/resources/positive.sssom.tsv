@@ -344,6 +344,7 @@ apo:0000313	autolysis	skos:exactMatch	mesh:D001329	Autolysis	semapv:ManualMappin
 apo:0000336	aneuploidy	skos:exactMatch	mesh:D000782	Aneuploidy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-16	2026		2026-08-13
 apo:0000337	polyploidy	skos:exactMatch	mesh:D011123	Polyploidy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-16	2026		2026-08-13
 apollosv:00000002	basic reproduction number	skos:exactMatch	mesh:D050936	Basic Reproduction Number	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-19	2026		2026-08-13
+apollosv:00000036	normal distribution	skos:exactMatch	mesh:D016011	Normal Distribution	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-19	2026		2026-08-22
 apollosv:00000097	ecosystem	skos:exactMatch	envo:01001110	ecosystem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 apollosv:00000097	ecosystem	skos:exactMatch	mesh:D017753	Ecosystem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-19	2026		2026-08-13
 apollosv:00000107	atmosphere	skos:exactMatch	mesh:D001272	Atmosphere	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-19	2026		2026-08-13
@@ -407,6 +408,7 @@ aro:0000043	carbenicillin	skos:exactMatch	mesh:D002228	Carbenicillin	semapv:Manu
 aro:0000045	acriflavine	skos:exactMatch	mesh:D000167	Acriflavine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:0000046	lincomycin	skos:exactMatch	mesh:D008034	Lincomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:0000047	puromycin	skos:exactMatch	mesh:D011691	Puromycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
+aro:0000051	tetracycline	skos:exactMatch	mesh:D013752	Tetracycline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 aro:0000052	tobramycin	skos:exactMatch	mesh:D014031	Tobramycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:0000053	bleomycin	skos:exactMatch	mesh:D001761	Bleomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:0000055	bicyclomycin	skos:exactMatch	mesh:C024504	bicozamycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
@@ -469,6 +471,21 @@ aro:3000458	macrolide glycosyltransferase	skos:exactMatch	mesh:C075034	macrolide
 aro:3000461	florfenicol	skos:exactMatch	mesh:C035534	florfenicol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000466	dalbavancin	skos:exactMatch	mesh:C469289	dalbavancin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000488	telavancin	skos:exactMatch	mesh:C487637	telavancin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
+aro:3000490	tuberactinomycin	skos:exactMatch	mesh:C015563	tuberactinomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000497	ethambutol	skos:exactMatch	mesh:D004977	Ethambutol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000517	rifaximin	skos:exactMatch	mesh:D000078262	Rifaximin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000520	isoniazid	skos:exactMatch	mesh:D007538	Isoniazid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000528	chlortetracycline	skos:exactMatch	mesh:D002751	Chlortetracycline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000530	rifabutin	skos:exactMatch	mesh:D017828	Rifabutin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000534	rifapentine	skos:exactMatch	mesh:C018421	rifapentine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000550	aztreonam	skos:exactMatch	mesh:D001398	Aztreonam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000552	arsphenamine	skos:exactMatch	mesh:D001153	Arsphenamine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000554	mupirocin	skos:exactMatch	mesh:D016712	Mupirocin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000584	quinupristin	skos:exactMatch	mesh:C113825	quinupristin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000586	pulvomycin	skos:exactMatch	mesh:C012521	pulvomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000587	sulbactam	skos:exactMatch	mesh:D013407	Sulbactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000588	avibactam	skos:exactMatch	mesh:C543519	avibactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000626	polymyxin B2	skos:exactMatch	mesh:C571510	polymyxin B2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 aro:3000629	bacitracin A	skos:exactMatch	mesh:C026461	bacitracin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000630	bacitracin B	skos:exactMatch	mesh:C086283	bacitracin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000631	bacitracin F	skos:exactMatch	mesh:C037039	bacitracin F	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
@@ -510,6 +527,11 @@ aro:3000674	dalfopristin	skos:exactMatch	mesh:C113826	dalfopristin	semapv:Manual
 aro:3000683	sulfacetamide	skos:exactMatch	mesh:D013409	Sulfacetamide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000684	mafenide	skos:exactMatch	mesh:D008272	Mafenide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000686	thiostrepton	skos:exactMatch	mesh:D013883	Thiostrepton	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
+aro:3000688	furazolidone	skos:exactMatch	mesh:D005664	Furazolidone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000689	metronidazole	skos:exactMatch	mesh:D008795	Metronidazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000690	bleomycinic acid	skos:exactMatch	mesh:C006784	bleomycinic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000696	Dactinomycin	skos:exactMatch	mesh:D003609	Dactinomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000698	sulfasalazine	skos:exactMatch	mesh:D012460	Sulfasalazine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 aro:3000699	sulfamethizole	skos:exactMatch	mesh:D013419	Sulfamethizole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000743	1-deoxy-D-xylulose 5-phosphate reductoisomerase	skos:exactMatch	mesh:C114231	1-deoxy-D-xylulose 5-phosphate reductoisomerase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000758	fosmidomycin	skos:exactMatch	mesh:C024640	fosmidomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
@@ -531,6 +553,9 @@ aro:3001230	niddamycin	skos:exactMatch	mesh:C012454	niddamycin	semapv:ManualMapp
 aro:3001232	methymycin	skos:exactMatch	mesh:C008517	methymycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3001235	aurodox	skos:exactMatch	mesh:D000899	Aurodox	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3001236	efrotomycin	skos:exactMatch	mesh:C012954	efrotomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
+aro:3001237	GE2270A	skos:exactMatch	mesh:C068122	GE 2270 A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3001242	enacyloxin IIa	skos:exactMatch	mesh:C072734	enacyloxin IIa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3001246	kirrothricin	skos:exactMatch	mesh:C035937	kirrothricin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 aro:3001249	phenelfamycin A	skos:exactMatch	mesh:C058737	phenelfamycin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3001250	phenelfamycin B	skos:exactMatch	mesh:C058739	phenelfamycin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3001251	phenelfamycin C	skos:exactMatch	mesh:C058740	phenelfamycin C	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
@@ -549,6 +574,8 @@ aro:3001320	SB22484	skos:exactMatch	mesh:C066792	SB 22484	semapv:ManualMappingCu
 aro:3001322	phenelfamycin G	skos:exactMatch	mesh:C558371	phenelfamycin G	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3001323	phenelfamycin H	skos:exactMatch	mesh:C558372	phenelfamycin H	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3002980	aspergillomarasmine A	skos:exactMatch	mesh:C069862	aspergillomarasmine A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
+aro:3003232	Lipid III	skos:exactMatch	mesh:C032403	Lipid III	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003241	teixobactin	skos:exactMatch	mesh:C000594838	teixobactin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 aro:3003251	undecaprenyl pyrophosphate	skos:exactMatch	mesh:C088139	undecaprenyl pyrophosphate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3003412	dapsone	skos:exactMatch	mesh:D003622	Dapsone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3003413	pyrazinamide	skos:exactMatch	mesh:D011718	Pyrazinamide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
@@ -558,11 +585,306 @@ aro:3003567	magainin A	skos:exactMatch	mesh:C067773	magainin A	semapv:ManualMapp
 aro:3003568	Magainin B	skos:exactMatch	mesh:C066945	magainin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3003569	Magainin G	skos:exactMatch	mesh:C066946	magainin G	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3003570	Magainin H	skos:exactMatch	mesh:C066947	magainin H	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
+aro:3003675	plazomicin	skos:exactMatch	mesh:C550938	plazomicin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003690	sitafloxacin	skos:exactMatch	mesh:C076246	sitafloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003701	rokitamycin	skos:exactMatch	mesh:C033383	rokitamycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003708	panipenem	skos:exactMatch	mesh:C039536	panipenem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003780	nybomycin	skos:exactMatch	mesh:C005316	nybomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003821	BAL30072	skos:exactMatch	mesh:C552042	BAL 30072	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003831	temocillin	skos:exactMatch	mesh:C031367	temocillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003832	ticarcillin	skos:exactMatch	mesh:D013982	Ticarcillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003897	tedizolid	skos:exactMatch	mesh:C546016	tedizolid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003898	lugdunin	skos:exactMatch	mesh:C000609985	lugdunin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003915	Lysocin E	skos:exactMatch	mesh:C000597008	lysocin E	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003927	ceftolozane	skos:exactMatch	mesh:C519491	ceftolozane	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003933	Berberine	skos:exactMatch	mesh:D001599	Berberine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003936	Omadacycline	skos:exactMatch	mesh:C000591640	omadacycline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003957	palmitic acid	skos:exactMatch	mesh:D019308	Palmitic Acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003958	oleic acid	skos:exactMatch	mesh:D019301	Oleic Acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003959	linoleic acid	skos:exactMatch	mesh:D019787	Linoleic Acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003972	Solithromycin	skos:exactMatch	mesh:C547755	solithromycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003975	pactamycin	skos:exactMatch	mesh:D010142	Pactamycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003979	Eravacycline	skos:exactMatch	mesh:C571179	eravacycline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003993	capreomycin	skos:exactMatch	mesh:D002207	Capreomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3003999	cefamandole	skos:exactMatch	mesh:D002435	Cefamandole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004000	cefetamet	skos:exactMatch	mesh:C047444	cefetamet	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004001	cefmetazole	skos:exactMatch	mesh:D015311	Cefmetazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004002	cefonicid	skos:exactMatch	mesh:D015790	Cefonicid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004003	cefoperazone	skos:exactMatch	mesh:D002438	Cefoperazone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004004	cefotetan	skos:exactMatch	mesh:D015313	Cefotetan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004005	cefprozil	skos:exactMatch	mesh:D000097670	Cefprozil	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004006	ceftiofur	skos:exactMatch	mesh:C053503	ceftiofur	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004007	ceftizoxime	skos:exactMatch	mesh:D015296	Ceftizoxime	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004008	cephapirin	skos:exactMatch	mesh:D002514	Cephapirin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004010	cinoxacin	skos:exactMatch	mesh:D002937	Cinoxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004011	clinafloxacin	skos:exactMatch	mesh:C057477	clinafloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004012	clofazimine	skos:exactMatch	mesh:D002991	Clofazimine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004013	fleroxacin	skos:exactMatch	mesh:D016576	Fleroxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004014	flomoxef	skos:exactMatch	mesh:C045693	flomoxef	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004015	gentamicin A	skos:exactMatch	mesh:C030880	gentamicin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004016	loracarbef	skos:exactMatch	mesh:C054920	loracarbef	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004017	moxalactam	skos:exactMatch	mesh:D009070	Moxalactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004018	nafcillin	skos:exactMatch	mesh:D009254	Nafcillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004022	quinupristin-dalfopristin	skos:exactMatch	mesh:C062940	quinupristin-dalfopristin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004023	ticarcillin-clavulanic acid	skos:exactMatch	mesh:C043215	ticarcillin-clavulanic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004025	prothionamide	skos:exactMatch	mesh:D011515	Prothionamide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004026	tinidazole	skos:exactMatch	mesh:D014011	Tinidazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004088	lefamulin	skos:exactMatch	mesh:C000591018	lefamulin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004129	cephaloridine	skos:exactMatch	mesh:D002509	Cephaloridine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004130	balofloxacin	skos:exactMatch	mesh:C077155	balofloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004295	lassomycin	skos:exactMatch	mesh:C000595674	lassomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004296	bulgecin A	skos:exactMatch	mesh:C405349	bulgecin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004306	methicillin-resistant Staphylococcus aureus	skos:exactMatch	mesh:D055624	Methicillin-Resistant Staphylococcus aureus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004380	vaborbactam	skos:exactMatch	mesh:C000626994	vaborbactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004462	delafloxacin	skos:exactMatch	mesh:C477891	delafloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004473	tebipenem	skos:exactMatch	mesh:C500135	tebipenem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004474	cefiderocol	skos:exactMatch	mesh:D000097602	Cefiderocol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004492	bedaquiline	skos:exactMatch	mesh:C493870	bedaquiline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004499	Tosufloxacin	skos:exactMatch	mesh:C055185	tosufloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004567	Ramoplanin	skos:exactMatch	mesh:C041438	ramoplanin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004726	cefpirome	skos:exactMatch	mesh:D000097572	Cefpirome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004727	cefsulodin	skos:exactMatch	mesh:D002441	Cefsulodin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004728	carumonam	skos:exactMatch	mesh:C044145	carumonam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004731	Zabofloxacin	skos:exactMatch	mesh:C480202	zabofloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004732	Finafloxacin	skos:exactMatch	mesh:C560572	finafloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004733	Nemonoxacin	skos:exactMatch	mesh:C543520	nemonoxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004760	BRO Beta-lactamase	skos:exactMatch	mesh:C408134	BRO beta-lactamase	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004852	SYN-1012	skos:exactMatch	mesh:C106756	SYN 1012	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004858	Zoliflodacin	skos:exactMatch	mesh:C000599190	zoliflodacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3004952	thioacetazone	skos:exactMatch	mesh:D013828	Thioacetazone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3005026	venturicidin A	skos:exactMatch	mesh:C068161	venturicidin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3005070	complestatin	skos:exactMatch	mesh:C023490	complestatin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3005071	corbomycin	skos:exactMatch	mesh:C000708275	corbomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3005120	levonadifloxacin	skos:exactMatch	mesh:C000706771	levonadifloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3005175	perchlozone	skos:exactMatch	mesh:C000717727	perchlozone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007022	Prulifloxacin	skos:exactMatch	mesh:C074191	prulifloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007024	Lascufloxacin	skos:exactMatch	mesh:C000626327	lascufloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007025	Sarecycline	skos:exactMatch	mesh:C000629276	sarecycline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007031	relebactam	skos:exactMatch	mesh:C568736	relebactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007035	tetracenomycin C	skos:exactMatch	mesh:C020938	tetracenomycin C	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007036	tetracenomycin X	skos:exactMatch	mesh:C059963	tetracenomycin X	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007037	tetracenomycin A2	skos:exactMatch	mesh:C090681	tetracenomycin A2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007039	chlorhexidine	skos:exactMatch	mesh:D002710	Chlorhexidine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007045	enrofloxacin	skos:exactMatch	mesh:D000077422	Enrofloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007046	marbofloxacin	skos:exactMatch	mesh:C080260	marbofloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007063	cilastatin	skos:exactMatch	mesh:D015377	Cilastatin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007078	Luteolin	skos:exactMatch	mesh:D047311	Luteolin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007079	Pellitorine	skos:exactMatch	mesh:C008778	pellitorine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007080	Piperic acid	skos:exactMatch	mesh:C017637	piperic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007082	Sesamin	skos:exactMatch	mesh:C054125	sesamin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007083	biapenem	skos:exactMatch	mesh:C065257	biapenem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007088	murepavadin	skos:exactMatch	mesh:C000629572	murepavadin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007090	albendazole	skos:exactMatch	mesh:D015766	Albendazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007091	diflunisal	skos:exactMatch	mesh:D004061	Diflunisal	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007092	gepotidacin	skos:exactMatch	mesh:C000612856	gepotidacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007094	fisetin	skos:exactMatch	mesh:C017875	fisetin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007096	methotrexate	skos:exactMatch	mesh:D008727	Methotrexate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007114	ornidazole	skos:exactMatch	mesh:D009950	Ornidazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007138	S02030	skos:exactMatch	mesh:C000612852	S02030	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007139	cordycepin	skos:exactMatch	mesh:C058120	cordycepin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007140	unithiol	skos:exactMatch	mesh:D014494	Unithiol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007141	BLI-489	skos:exactMatch	mesh:C539934	BLI-489	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007143	sulopenem	skos:exactMatch	mesh:C082897	sulopenem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007147	taniborbactam	skos:exactMatch	mesh:C000707821	taniborbactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007165	gemifloxacin	skos:exactMatch	mesh:D000077735	Gemifloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007167	evernimicin	skos:exactMatch	mesh:C001202	evernimicin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007169	pirlimycin	skos:exactMatch	mesh:C034093	pirlimycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007171	enmetazobactam	skos:exactMatch	mesh:C000656730	enmetazobactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007172	methimazole	skos:exactMatch	mesh:D008713	Methimazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007174	scutellarin	skos:exactMatch	mesh:C484876	scutellarin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007175	TP0586532	skos:exactMatch	mesh:C000722661	TP0586532	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007178	nitazoxanide	skos:exactMatch	mesh:C041747	nitazoxanide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007197	enramycin	skos:exactMatch	mesh:C044447	enramycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007293	durlobactam	skos:exactMatch	mesh:C000626193	durlobactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007295	nacubactam	skos:exactMatch	mesh:C000608518	nacubactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007296	zidebactam	skos:exactMatch	mesh:C000624484	zidebactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007302	thiorphan	skos:exactMatch	mesh:D015244	Thiorphan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007303	tiopronin	skos:exactMatch	mesh:D008625	Tiopronin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007304	dimercaprol	skos:exactMatch	mesh:D004112	Dimercaprol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007305	ME1071	skos:exactMatch	mesh:C587494	ME1071	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007309	quercetin	skos:exactMatch	mesh:D011794	Quercetin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007310	aranorosin	skos:exactMatch	mesh:C058281	aranorosin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007311	pterostilbene	skos:exactMatch	mesh:C107773	pterostilbene	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007312	SPR741	skos:exactMatch	mesh:C000634255	SPR741	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007314	pentamidine	skos:exactMatch	mesh:D010419	Pentamidine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007316	liproxstatin-1	skos:exactMatch	mesh:C000595890	liproxstatin-1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007318	metformin	skos:exactMatch	mesh:D008687	Metformin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007329	baicalin	skos:exactMatch	mesh:C038044	baicalin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007330	reserpine	skos:exactMatch	mesh:D012110	Reserpine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007331	piperine	skos:exactMatch	mesh:C008922	piperine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007332	piperidine	skos:exactMatch	mesh:C032727	piperidine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007333	verapamil	skos:exactMatch	mesh:D014700	Verapamil	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007334	norverapamil	skos:exactMatch	mesh:C016904	norverapamil	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007335	chlorpromazine	skos:exactMatch	mesh:D002746	Chlorpromazine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007336	amitriptyline	skos:exactMatch	mesh:D000639	Amitriptyline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007337	thioridazine	skos:exactMatch	mesh:D013881	Thioridazine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007338	biochanin A	skos:exactMatch	mesh:C004541	biochanin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007339	phloretin	skos:exactMatch	mesh:D010693	Phloretin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007340	epigallocatechin gallate	skos:exactMatch	mesh:C045651	epigallocatechin gallate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007341	hesperetin	skos:exactMatch	mesh:C013015	hesperetin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007342	naringenin	skos:exactMatch	mesh:C005273	naringenin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007344	chrysoeriol	skos:exactMatch	mesh:C007054	chrysoeriol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007345	sideroxylin	skos:exactMatch	mesh:C561549	sideroxylin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007346	6-desmethylsideroxylin	skos:exactMatch	mesh:C561550	6-desmethyl-sideroxylin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007347	8-desmethylsideroxylin	skos:exactMatch	mesh:C561551	8-desmethyl-sideroxylin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007348	diosmetin	skos:exactMatch	mesh:C039602	diosmetin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007349	chrysosplenetin	skos:exactMatch	mesh:C570121	chrysosplenetin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007350	galangin	skos:exactMatch	mesh:C037032	galangin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007351	kaempferol	skos:exactMatch	mesh:C006552	kaempferol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007353	myricitrin	skos:exactMatch	mesh:C008577	myricitrin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007354	penduletin	skos:exactMatch	mesh:C570122	penduletin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007355	tiliroside	skos:exactMatch	mesh:C052083	tiliroside	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007356	daidzein	skos:exactMatch	mesh:C004742	daidzein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007357	genistein	skos:exactMatch	mesh:D019833	Genistein	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007358	orobol	skos:exactMatch	mesh:C059811	orobol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007359	MBX-2319	skos:exactMatch	mesh:C000591634	MBX2319	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007360	capsaicin	skos:exactMatch	mesh:D002211	Capsaicin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007361	rutin	skos:exactMatch	mesh:D012431	Rutin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007362	citral	skos:exactMatch	mesh:C007076	citral	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007455	cethromycin	skos:exactMatch	mesh:C405499	cethromycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007457	carrimycin	skos:exactMatch	mesh:C423662	carrimycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007458	cefovecin	skos:exactMatch	mesh:C516253	cefovecin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007467	sulbactam-durlobactam	skos:exactMatch	mesh:C000714947	sulbactam-durlobactam	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007468	sulfanilamide	skos:exactMatch	mesh:D000077145	Sulfanilamide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007469	sulfamerazine	skos:exactMatch	mesh:D013416	Sulfamerazine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007471	narasin	skos:exactMatch	mesh:C013612	narasin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007472	tilmicosin	skos:exactMatch	mesh:C052319	tilmicosin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007474	contezolid	skos:exactMatch	mesh:C000590780	contezolid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007481	pseudouridimycin	skos:exactMatch	mesh:C000630206	pseudouridimycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007484	monensin	skos:exactMatch	mesh:D008985	Monensin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007485	nigericin	skos:exactMatch	mesh:D009550	Nigericin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007488	wychimicin C	skos:exactMatch	mesh:C000731127	wychimicin C	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007501	caspofungin	skos:exactMatch	mesh:D000077336	Caspofungin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007502	micafungin	skos:exactMatch	mesh:D000077551	Micafungin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007503	anidulafungin	skos:exactMatch	mesh:D000077612	Anidulafungin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007504	amphotericin B	skos:exactMatch	mesh:D000666	Amphotericin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007505	nystatin	skos:exactMatch	mesh:D009761	Nystatin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007506	naftifine	skos:exactMatch	mesh:C029178	naftifine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007507	terbinafine	skos:exactMatch	mesh:D000077291	Terbinafine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007508	fluconazole	skos:exactMatch	mesh:D015725	Fluconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007511	itraconazole	skos:exactMatch	mesh:D017964	Itraconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007512	voriconazole	skos:exactMatch	mesh:D065819	Voriconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007513	posaconazole	skos:exactMatch	mesh:C101425	posaconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007514	isavuconazole	skos:exactMatch	mesh:C508735	isavuconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007516	clotrimazole	skos:exactMatch	mesh:D003022	Clotrimazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007517	ketoconazole	skos:exactMatch	mesh:D007654	Ketoconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007518	miconazole	skos:exactMatch	mesh:D008825	Miconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007519	econazole	skos:exactMatch	mesh:D004464	Econazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007520	oxiconazole	skos:exactMatch	mesh:C022155	oxiconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007521	flumequine	skos:exactMatch	mesh:C012976	flumequine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007525	norvancomycin	skos:exactMatch	mesh:C511195	norvancomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007528	gallic acid	skos:exactMatch	mesh:D005707	Gallic Acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007532	proflavine	skos:exactMatch	mesh:D011370	Proflavine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007534	arsinothricin	skos:exactMatch	mesh:C000719071	arsinothricin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007535	pretomanid	skos:exactMatch	mesh:C410767	pretomanid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007538	chenodeoxycholic acid	skos:exactMatch	mesh:D002635	Chenodeoxycholic Acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007541	cyclomarin A	skos:exactMatch	mesh:C459019	cyclomarin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007547	salinomycin	skos:exactMatch	mesh:C010327	salinomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007570	Mycaminosyltylonolide	skos:exactMatch	mesh:C032964	mycaminosyltylonolide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007571	cefquinome	skos:exactMatch	mesh:C068212	cefquinome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007572	cinnamaldehyde	skos:exactMatch	mesh:C012843	cinnamaldehyde	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007575	fasamycin A	skos:exactMatch	mesh:C573598	fasamycin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007576	fasamycin B	skos:exactMatch	mesh:C573599	fasamycin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007578	fasamycin H	skos:exactMatch	mesh:C000730462	fasamycin H	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007599	propolis	skos:exactMatch	mesh:D011429	Propolis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007603	cervimycin C	skos:exactMatch	mesh:C501538	cervimycin C	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007611	sarafloxacin	skos:exactMatch	mesh:C047224	sarafloxacin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007613	totarol	skos:exactMatch	mesh:C078548	totarol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007614	resveratrol	skos:exactMatch	mesh:D000077185	Resveratrol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007616	pyrrolomycin A	skos:exactMatch	mesh:C032959	pyrrolomycin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007617	pyrrolomycin B	skos:exactMatch	mesh:C032960	pyrrolomycin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007618	pyrrolomycin C	skos:exactMatch	mesh:C034690	pyrrolomycin C	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007619	pyrrolomycin D	skos:exactMatch	mesh:C034691	pyrrolomycin D	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007620	pyrrolomycin E	skos:exactMatch	mesh:C039863	pyrrolomycin E	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007621	pyrrolomycin F	skos:exactMatch	mesh:C040035	pyrrolomycin F	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007636	iboxamycin	skos:exactMatch	mesh:C000722214	iboxamycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007638	hygromycin A	skos:exactMatch	mesh:C026273	hygromycin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007639	A201A	skos:exactMatch	mesh:C046076	A 201A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007652	lipoxin A4	skos:exactMatch	mesh:C040527	lipoxin A4	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007653	ascorbic acid	skos:exactMatch	mesh:D001205	Ascorbic Acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007655	nifuroxazide	skos:exactMatch	mesh:C013150	nifuroxazide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007658	albicidin	skos:exactMatch	mesh:C046156	albicidin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007660	clerocidin	skos:exactMatch	mesh:C039027	clerocidin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007675	famotidine	skos:exactMatch	mesh:D015738	Famotidine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007679	chrysomycin A	skos:exactMatch	mesh:C035075	chrysomycin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007680	2,4-diacetylphloroglucinol	skos:exactMatch	mesh:C059817	2,4-diacetylphloroglucinol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007685	nifuratel	skos:exactMatch	mesh:D009545	Nifuratel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007687	zidovudine	skos:exactMatch	mesh:D015215	Zidovudine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007689	selamectin	skos:exactMatch	mesh:C414354	selamectin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007736	dexrazoxane	skos:exactMatch	mesh:D064730	Dexrazoxane	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007746	embelin	skos:exactMatch	mesh:C010945	embelin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007747	candesartan cilexetil	skos:exactMatch	mesh:C077793	candesartan cilexetil	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007748	oncocin	skos:exactMatch	mesh:C551620	oncocin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007750	betaxolol	skos:exactMatch	mesh:D015784	Betaxolol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007755	Calcimycin	skos:exactMatch	mesh:D000001	Calcimycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007756	ophiobolin A	skos:exactMatch	mesh:C040764	ophiobolin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007757	sphaeropsidin A	skos:exactMatch	mesh:C570422	sphaeropsidin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007758	fengycin	skos:exactMatch	mesh:C049972	fengycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007760	tulathromycin	skos:exactMatch	mesh:C485204	tulathromycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007761	gamithromycin	skos:exactMatch	mesh:C552399	gamithromycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007764	Marinomycin A	skos:exactMatch	mesh:C509125	marinomycin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007765	Marinomycin B	skos:exactMatch	mesh:C509126	marinomycin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007766	Marinomycin C	skos:exactMatch	mesh:C509121	marinomycin C	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007767	Marinomycin D	skos:exactMatch	mesh:C509127	marinomycin D	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007768	tetronomycin	skos:exactMatch	mesh:C034612	tetronomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007769	cezomycin	skos:exactMatch	mesh:C036715	cezomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007772	valinomycin	skos:exactMatch	mesh:D014634	Valinomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 aro:3007774	dragmacidin A	skos:exactMatch	mesh:C414902	dragmacidin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-12
 aro:3007775	dragmacidin B	skos:exactMatch	mesh:C415663	dragmacidin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-12
 aro:3007776	dragmacidin D	skos:exactMatch	mesh:C470335	dragmacidin D	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-12
 aro:3007777	dragmacidin E	skos:exactMatch	mesh:C512386	dragmacidin E	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-12
 aro:3007778	dragmacidin F	skos:exactMatch	mesh:C492392	dragmacidin F	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-12
+aro:3007787	tartrolon A	skos:exactMatch	mesh:C092169	tartrolon A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007788	tartrolon B	skos:exactMatch	mesh:C092170	tartrolon B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007789	tartrolon D	skos:exactMatch	mesh:C546306	tartrolon D	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007792	aplasmomycin	skos:exactMatch	mesh:C013401	aplasmomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007793	boromycin	skos:exactMatch	mesh:C000302	boromycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007795	Azalomycin F	skos:exactMatch	mesh:C000232	azalomycin-F	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3007796	tylvalosin	skos:exactMatch	mesh:C545430	tylvalosin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009110	cefazedone	skos:exactMatch	mesh:C021341	cefazedone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009111	cefatrizine	skos:exactMatch	mesh:D002436	Cefatrizine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009113	cefroxadine	skos:exactMatch	mesh:C012671	cefroxadine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009114	ceftezole	skos:exactMatch	mesh:C012811	ceftezole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009115	ceforanide	skos:exactMatch	mesh:C012653	ceforanide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009116	cefminox	skos:exactMatch	mesh:C046079	cefminox	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009117	cefbuperazone	skos:exactMatch	mesh:C035978	cefbuperazone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009118	cefmenoxime	skos:exactMatch	mesh:D015281	Cefmenoxime	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009119	cefodizime	skos:exactMatch	mesh:C033356	cefodizime	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009120	cefpiramide	skos:exactMatch	mesh:C036666	cefpiramide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009121	cefteram	skos:exactMatch	mesh:C049493	cefteram	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009122	cefozopran	skos:exactMatch	mesh:D000097586	Cefozopran	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009126	azidocillin	skos:exactMatch	mesh:C100243	azidocillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009127	Phenethicillin	skos:exactMatch	mesh:C100209	phenethicillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009128	penamecillin	skos:exactMatch	mesh:C016646	penamecillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009130	pivampicillin	skos:exactMatch	mesh:D010917	Pivampicillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009131	epicillin	skos:exactMatch	mesh:C100212	epicillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009132	hetacillin	skos:exactMatch	mesh:C100115	hetacillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009133	aspoxicillin	skos:exactMatch	mesh:C037485	aspoxicillin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009155	atovaquone	skos:exactMatch	mesh:D053626	Atovaquone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009159	Bifonazole	skos:exactMatch	mesh:C036596	bifonazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009161	benomyl	skos:exactMatch	mesh:D001542	Benomyl	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009163	pyrimethamine	skos:exactMatch	mesh:D011739	Pyrimethamine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009164	pyrifenox	skos:exactMatch	mesh:C501582	pyrifenox	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009166	fluxapyroxad	skos:exactMatch	mesh:C000591719	fluxapyroxad	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009171	oxpoconazole	skos:exactMatch	mesh:C481307	oxpoconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009172	arborcandin C	skos:exactMatch	mesh:C481669	arborcandin C	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009173	butenafine	skos:exactMatch	mesh:C067594	butenafine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009174	tolnaftate	skos:exactMatch	mesh:D014047	Tolnaftate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009175	carbendazim	skos:exactMatch	mesh:C006698	carbendazim	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009176	brefeldin A	skos:exactMatch	mesh:D020126	Brefeldin A	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009177	cerulenin	skos:exactMatch	mesh:D002569	Cerulenin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009178	diamide	skos:exactMatch	mesh:D003958	Diamide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009179	diethofencarb	skos:exactMatch	mesh:C070961	diethofencarb	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009180	hexaconazole	skos:exactMatch	mesh:C409722	hexaconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009181	tebuconazole	skos:exactMatch	mesh:C087114	tebuconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009182	propiconazole	skos:exactMatch	mesh:C045950	propiconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009183	tricyclazole	skos:exactMatch	mesh:C041191	tricyclazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009184	mebendazole	skos:exactMatch	mesh:D008463	Mebendazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009185	azoxystrobin	skos:exactMatch	mesh:C087670	azoxystrobin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009187	bromuconazole	skos:exactMatch	mesh:C573694	bromuconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009189	cyproconazole	skos:exactMatch	mesh:C093628	cyproconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009190	difenoconazole	skos:exactMatch	mesh:C115058	difenoconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3009191	epoxiconazole	skos:exactMatch	mesh:C109476	epoxiconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 bco:0000059	museum	skos:exactMatch	mesh:D009144	Museums	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-11-14	2026		2026-08-12
 biomodels.kisao:0000319	Monte Carlo method	skos:exactMatch	mesh:D009010	Monte Carlo Method	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2.34	2026		2026-08-12
 bto:0000020	abdomen	skos:exactMatch	mesh:D000005	Abdomen	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
