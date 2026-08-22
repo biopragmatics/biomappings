@@ -447,6 +447,7 @@ aro:3000134	edeine B	skos:exactMatch	mesh:C039320	edeine B	semapv:ManualMappingC
 aro:3000135	edeine D	skos:exactMatch	mesh:C039534	edeine D	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000136	edeine F	skos:exactMatch	mesh:C040034	edeine F	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000145	tylosin	skos:exactMatch	mesh:D015645	Tylosin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
+aro:3000150	coumermycin A1	skos:exactMatch	mesh:C004628	coumermycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 aro:3000152	minocycline	skos:exactMatch	mesh:D008911	Minocycline	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000156	spiramycin	skos:exactMatch	mesh:D015572	Spiramycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000158	azithromycin	skos:exactMatch	mesh:D017963	Azithromycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
@@ -456,7 +457,12 @@ aro:3000176	dirithromycin	skos:exactMatch	mesh:C053853	dirithromycin	semapv:Manu
 aro:3000184	chloroeremomycin	skos:exactMatch	mesh:C112142	chloroeremomycin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000188	trimethoprim	skos:exactMatch	mesh:D014295	Trimethoprim	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000189	oritavancin	skos:exactMatch	mesh:C100708	oritavancin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
+aro:3000199	gramicidin D	skos:narrowMatch	mesh:D006096	Gramicidin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000200	gramicidin S	skos:narrowMatch	mesh:D006096	Gramicidin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 aro:3000214	hygromycin B	skos:exactMatch	mesh:D006921	Hygromycin B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
+aro:3000222	gramicidin A	skos:narrowMatch	mesh:D006096	Gramicidin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000223	gramicidin B	skos:narrowMatch	mesh:D006096	Gramicidin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
+aro:3000224	gramicidin C	skos:narrowMatch	mesh:D006096	Gramicidin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 aro:3000227	tyrothricin	skos:exactMatch	mesh:D014449	Tyrothricin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000269	brodimoprim	skos:exactMatch	mesh:C037079	brodimoprim	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
 aro:3000284	tetroxoprim	skos:exactMatch	mesh:C023507	tetroxoprim	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-13
@@ -926,6 +932,23 @@ bto:0000230	subarachnoid space	skos:exactMatch	mesh:D013346	Subarachnoid Space	s
 bto:0000232	cerebellum	skos:exactMatch	mesh:D002531	Cerebellum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
 bto:0000233	cerebral cortex	skos:exactMatch	mesh:D002540	Cerebral Cortex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
 bto:0000237	cerebrospinal fluid	skos:exactMatch	mesh:D002555	Cerebrospinal Fluid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
+bto:0000717	pericardium	skos:exactMatch	mesh:D010496	Pericardium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000721	leg	skos:exactMatch	mesh:D007866	Leg	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000753	lymphoid tissue	skos:exactMatch	mesh:D008221	Lymphoid Tissue	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000757	plasmodium	skos:exactMatch	mesh:D010961	Plasmodium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000758	myelencephalon	skos:exactMatch	mesh:D054024	Myelencephalon	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000759	liver	skos:exactMatch	mesh:D008099	Liver	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000763	lung	skos:exactMatch	mesh:D008168	Lung	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000770	oligodendroglia	skos:exactMatch	mesh:D009836	Oligodendroglia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000778	pulmonary artery	skos:exactMatch	mesh:D011651	Pulmonary Artery	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000800	endoderm	skos:exactMatch	mesh:D004707	Endoderm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000808	interrenal gland	skos:exactMatch	mesh:D007401	Interrenal Gland	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000838	meconium	skos:exactMatch	mesh:D008470	Meconium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000839	mesoderm	skos:exactMatch	mesh:D008648	Mesoderm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000840	nose	skos:exactMatch	mesh:D009666	Nose	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000852	meristem	skos:exactMatch	mesh:D018519	Meristem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000854	zygote	skos:exactMatch	mesh:D015053	Zygote	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000855	lymph	skos:exactMatch	mesh:D008196	Lymph	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
 bto:0001025	peripheral blood mononuclear cell	skos:exactMatch	cl:2000001	peripheral blood mononuclear cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	
 bto:0001279	spinal cord	skos:exactMatch	mesh:D013116	Spinal Cord	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
 bto:0001281	spleen	skos:exactMatch	mesh:D013154	Spleen	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
