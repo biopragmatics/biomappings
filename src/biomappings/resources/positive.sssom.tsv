@@ -4956,6 +4956,11 @@ ecocore:00000104	cannibalism	skos:exactMatch	mesh:D002190	Cannibalism	semapv:Man
 ecto:0000001	exposure to radiation	skos:exactMatch	mesh:D000069079	Radiation Exposure	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-28	2026		2026-08-12
 ecto:6000001	exposure to violence	skos:exactMatch	mesh:D000069581	Exposure to Violence	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-28	2026		2026-08-12
 efo:0002669	ENBREL	skos:exactMatch	chebi:4875	etanercept	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			https://github.com/gyorilab/mapnet/blob/main/scripts/generate_efo_chebi_mappings.py	
+envo:00000015	ocean	skos:narrowMatch	mesh:D009792	Oceans and Seas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00000016	sea	skos:narrowMatch	mesh:D009792	Oceans and Seas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00000019	saline lake	skos:narrowMatch	mesh:D060106	Lakes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00000020	lake	skos:exactMatch	mesh:D060106	Lakes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00000022	river	skos:exactMatch	mesh:D045483	Rivers	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00000032	bay	skos:exactMatch	mesh:D061006	Bays	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00000033	pond	skos:exactMatch	mesh:D061005	Ponds	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00000045	estuary	skos:exactMatch	mesh:D063366	Estuaries	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
@@ -4969,41 +4974,88 @@ envo:00002008	dust	skos:exactMatch	mesh:D004391	Dust	semapv:ManualMappingCuratio
 envo:00002011	fresh water	skos:exactMatch	mesh:D005618	Fresh Water	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
 envo:00002018	sewage	skos:exactMatch	mesh:D012722	Sewage	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
 envo:00002040	wood	skos:exactMatch	mesh:D014934	Wood	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00002059	biosolids	skos:exactMatch	mesh:D000080803	Biosolids	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00002149	sea water	skos:exactMatch	mesh:D012623	Seawater	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
+envo:00002173	hospital	skos:exactMatch	mesh:D006761	Hospitals	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00002872	bagasse	skos:exactMatch	mesh:C027433	bagasse	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00002982	clay	skos:exactMatch	mesh:D000077215	Clay	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00002984	petroleum	skos:exactMatch	mesh:D010578	Petroleum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00003030	silage	skos:exactMatch	mesh:D012820	Silage	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00003044	brine	skos:exactMatch	mesh:C017082	brine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00003064	drinking water	skos:exactMatch	mesh:D060766	Drinking Water	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00005801	rhizosphere	skos:exactMatch	mesh:D058441	Rhizosphere	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000017	sand	skos:exactMatch	mesh:D000080463	Sand	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000236	basalt	skos:exactMatch	mesh:C060346	basalt	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000267	atmosphere	skos:exactMatch	mesh:D001272	Atmosphere	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000308	extraterrestrial environment	skos:exactMatch	mesh:D005118	Extraterrestrial Environment	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000356	granite	skos:exactMatch	mesh:C007886	granite	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000406	snow	skos:exactMatch	mesh:D012914	Snow	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000460	asphalt	skos:exactMatch	mesh:C006647	asphalt	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000480	glass	skos:exactMatch	mesh:D005898	Glass	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000481	silica-based glass	skos:narrowMatch	mesh:D005898	Glass	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000482	soda-lime glass	skos:narrowMatch	mesh:D005898	Glass	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000552	natural gas	skos:exactMatch	mesh:D059206	Natural Gas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
 envo:01000560	charcoal	skos:exactMatch	mesh:D002606	Charcoal	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000580	telephone	skos:exactMatch	mesh:D013689	Telephone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000581	mobile phone	skos:exactMatch	mesh:D040421	Cell Phone	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000601	motor vehicle	skos:exactMatch	mesh:D018986	Motor Vehicles	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000602	truck	skos:narrowMatch	mesh:D018986	Motor Vehicles	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000608	boat	skos:narrowMatch	mesh:D012767	Ships	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000611	bus	skos:narrowMatch	mesh:D018986	Motor Vehicles	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000615	motorcycle	skos:exactMatch	mesh:D009049	Motorcycles	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000629	climate change	skos:exactMatch	mesh:D057231	Climate Change	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
 envo:01000631	ocean acidification	skos:exactMatch	mesh:D000094404	Ocean Acidification	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
 envo:01000663	pumice	skos:exactMatch	mesh:C005144	pumice	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000677	earthquake	skos:exactMatch	mesh:D055866	Earthquakes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000689	tsunami	skos:exactMatch	mesh:D057192	Tsunamis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000691	avalanche	skos:exactMatch	mesh:D055875	Avalanches	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000706	soil erosion	skos:exactMatch	mesh:D000085902	Soil Erosion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
+envo:01000710	flood	skos:exactMatch	mesh:D055868	Floods	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000786	fire	skos:exactMatch	mesh:D005390	Fires	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000787	wildfire	skos:exactMatch	mesh:D000075923	Wildfires	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000791	forest fire	skos:narrowMatch	mesh:D000075923	Wildfires	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000838	smoke	skos:exactMatch	mesh:D012906	Smoke	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000841	pyrolysis	skos:exactMatch	mesh:D000077319	Pyrolysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
 envo:01000842	smog	skos:exactMatch	mesh:D012905	Smog	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000925	abattoir	skos:exactMatch	mesh:D000003	Abattoirs	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000932	nursing home	skos:closeMatch	mesh:D012866	Skilled Nursing Facilities	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000932	nursing home	skos:exactMatch	mesh:D009735	Nursing Homes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000934	restaurant	skos:exactMatch	mesh:D012147	Restaurants	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000962	diatomite	skos:exactMatch	mesh:C033787	diatomite	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000965	constructed swimming pool	skos:narrowMatch	mesh:D013551	Swimming Pools	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000966	private swimming pool	skos:narrowMatch	mesh:D013551	Swimming Pools	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01000967	public swimming pool	skos:narrowMatch	mesh:D013551	Swimming Pools	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01001004	groundwater	skos:exactMatch	mesh:D060587	Groundwater	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
+envo:01001023	radiation	skos:exactMatch	mesh:D011827	Radiation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01001026	electromagnetic radiation	skos:exactMatch	mesh:D060733	Electromagnetic Radiation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
 envo:01001078	weather	skos:exactMatch	mesh:D014887	Weather	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
+envo:01001082	climate	skos:exactMatch	mesh:D002980	Climate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01001110	ecosystem	skos:exactMatch	mesh:D017753	Ecosystem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01001125	ice	skos:closeMatch	mesh:D007053	Ice	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01001248	animal husbandry	skos:exactMatch	mesh:D000822	Animal Husbandry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
+envo:01001432	forestry	skos:exactMatch	mesh:D016468	Forestry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01001437	mining	skos:exactMatch	mesh:D008906	Mining	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01001440	coal mining	skos:exactMatch	mesh:D003032	Coal Mining	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01001442	agriculture	skos:exactMatch	mesh:D000383	Agriculture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01001488	aircraft	skos:exactMatch	mesh:D000401	Aircraft	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01001548	freezing	skos:exactMatch	mesh:D005615	Freezing	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:01001564	rain	skos:closeMatch	mesh:D011891	Rain	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01003000	spacecraft	skos:exactMatch	mesh:D018531	Spacecraft	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
+envo:02000000	hypodermic needle	skos:narrowMatch	mesh:D009339	Needles	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:02000047	animal feed	skos:exactMatch	mesh:D000821	Animal Feed	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-12
+envo:02000081	letter	skos:exactMatch	mesh:D016422	Letter	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:02000091	coal	skos:exactMatch	mesh:D003031	Coal	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:02000123	paint	skos:exactMatch	mesh:D010150	Paint	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:02000125	transportation	skos:exactMatch	mesh:D014186	Transportation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:02000127	coal ash	skos:exactMatch	mesh:D060729	Coal Ash	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:02500004	greenhouse effect	skos:exactMatch	mesh:D017752	Greenhouse Effect	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:02500036	environmental pollution	skos:exactMatch	mesh:D004787	Environmental Pollution	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:02500037	air pollution	skos:exactMatch	mesh:D000397	Air Pollution	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:02500039	water pollution	skos:exactMatch	mesh:D014876	Water Pollution	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:02500041	environmental monitoring	skos:exactMatch	mesh:D004784	Environmental Monitoring	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:03000021	soot	skos:exactMatch	mesh:D053260	Soot	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:03501103	ambulance	skos:exactMatch	mesh:D000552	Ambulances	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:03501122	airport	skos:exactMatch	mesh:D059028	Airports	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:03501193	pharmacy	skos:closeMatch	mesh:D010604	Pharmacy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:03501216	stainless steel	skos:exactMatch	mesh:D013193	Stainless Steel	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:03501300	manure	skos:exactMatch	mesh:D008372	Manure	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
@@ -5018,9 +5070,11 @@ envo:03510023	shellac	skos:exactMatch	mesh:C003934	shellac	semapv:ManualMappingC
 envo:03510024	lacquer	skos:exactMatch	mesh:D007764	Lacquer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:03510034	turpentine	skos:exactMatch	mesh:D014425	Turpentine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:03510035	naphtha	skos:exactMatch	mesh:C004544	naphtha	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:03600049	smokeless tobacco	skos:exactMatch	mesh:D014030	Tobacco, Smokeless	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:06105012	biota	skos:exactMatch	mesh:D058448	Biota	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:06105021	adsorption	skos:exactMatch	mesh:D000327	Adsorption	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:06105023	biofouling	skos:exactMatch	mesh:D057219	Biofouling	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:06105122	biopolymer	skos:exactMatch	mesh:D001704	Biopolymers	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:2000001	creosote	skos:exactMatch	mesh:D003407	Creosote	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-22
 envo:2000007	biochar	skos:exactMatch	mesh:C540010	biochar	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-22
 envo:2000025	nuclear energy	skos:exactMatch	mesh:D009678	Nuclear Energy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-22
