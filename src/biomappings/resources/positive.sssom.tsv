@@ -14,6 +14,7 @@
 #  bco: http://purl.obolibrary.org/obo/BCO_
 #  bfo: http://purl.obolibrary.org/obo/BFO_
 #  biomodels.kisao: http://purl.obolibrary.org/obo/KISAO_
+#  bmont: http://purl.obolibrary.org/obo/BMONT_
 #  bto: http://purl.obolibrary.org/obo/BTO_
 #  caro: http://purl.obolibrary.org/obo/CARO_
 #  ccle: https://www.cbioportal.org/patient?studyId=ccle_broad_2019&caseId=
@@ -909,6 +910,9 @@ aro:3009190	difenoconazole	skos:exactMatch	mesh:C115058	difenoconazole	semapv:Ma
 aro:3009191	epoxiconazole	skos:exactMatch	mesh:C109476	epoxiconazole	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-05-29	2026		2026-08-22
 bco:0000059	museum	skos:exactMatch	mesh:D009144	Museums	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-11-14	2026		2026-08-12
 biomodels.kisao:0000319	Monte Carlo method	skos:exactMatch	mesh:D009010	Monte Carlo Method	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2.34	2026		2026-08-12
+biomodels.kisao:0000839	temperature	skos:exactMatch	mesh:D013696	Temperature	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2.34	2026		2026-08-23
+bmont:0000093	gait analysis	skos:exactMatch	mesh:D000077107	Gait Analysis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-06-20	2026		2026-08-23
+bmont:0000110	cerebral blood volume	skos:exactMatch	mesh:D000071937	Cerebral Blood Volume	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2025-06-20	2026		2026-08-23
 bto:0000020	abdomen	skos:exactMatch	mesh:D000005	Abdomen	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
 bto:0000024	abomasum	skos:exactMatch	mesh:D000018	Abomasum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
 bto:0000041	medulla oblongata	skos:exactMatch	mesh:D008526	Medulla Oblongata	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
@@ -947,6 +951,68 @@ bto:0000230	subarachnoid space	skos:exactMatch	mesh:D013346	Subarachnoid Space	s
 bto:0000232	cerebellum	skos:exactMatch	mesh:D002531	Cerebellum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
 bto:0000233	cerebral cortex	skos:exactMatch	mesh:D002540	Cerebral Cortex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
 bto:0000237	cerebrospinal fluid	skos:exactMatch	mesh:D002555	Cerebrospinal Fluid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
+bto:0000239	telencephalon	skos:exactMatch	mesh:D013687	Telencephalon	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000243	vagina	skos:exactMatch	mesh:D014621	Vagina	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000252	chorion	skos:exactMatch	mesh:D002823	Chorion	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000258	choroid plexus	skos:exactMatch	mesh:D002831	Choroid Plexus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000260	ciliary body	skos:exactMatch	mesh:D002924	Ciliary Body	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000267	cochlea	skos:exactMatch	mesh:D003051	Cochlea	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000269	colon	skos:exactMatch	mesh:D003106	Colon	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000275	colonocyte	skos:exactMatch	cl:1000347	colonocyte	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026-06-08		2026-08-23
+bto:0000341	diaphragm	skos:exactMatch	mesh:D003964	Diaphragm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000342	diencephalon	skos:exactMatch	mesh:D004027	Diencephalon	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000347	reticulum	skos:exactMatch	mesh:D012159	Reticulum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000348	omasum	skos:exactMatch	mesh:D009851	Omasum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000365	duodenum	skos:exactMatch	mesh:D004386	Duodenum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000368	ear	skos:exactMatch	mesh:D004423	Ear	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000370	egg white	skos:exactMatch	mesh:D004529	Egg White	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000371	egg yolk	skos:exactMatch	mesh:D004530	Egg Yolk	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000376	electric organ	skos:exactMatch	mesh:D004557	Electric Organ	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000387	endocardium	skos:exactMatch	mesh:D004699	Endocardium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000390	endosperm	skos:exactMatch	mesh:D056625	Endosperm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000393	endothelium	skos:exactMatch	mesh:D004727	Endothelium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000397	tooth	skos:exactMatch	mesh:D014070	Tooth	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000404	epidermis	skos:exactMatch	mesh:D004817	Epidermis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000405	penis	skos:exactMatch	mesh:D010413	Penis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000408	epididymis	skos:exactMatch	mesh:D004822	Epididymis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000416	epithelium	skos:exactMatch	mesh:D004848	Epithelium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000418	neostriatum	skos:exactMatch	mesh:D017072	Neostriatum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000420	neck	skos:exactMatch	mesh:D009333	Neck	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000421	connective tissue	skos:exactMatch	mesh:D003238	Connective Tissue	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000439	eye	skos:exactMatch	mesh:D005123	Eye	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000440	feces	skos:exactMatch	mesh:D005243	Feces	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000449	fetus	skos:exactMatch	mesh:D005333	Fetus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000474	allantois	skos:exactMatch	mesh:D000482	Allantois	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000475	ovarian follicle	skos:exactMatch	mesh:D006080	Ovarian Follicle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000476	foot	skos:exactMatch	mesh:D005528	Foot	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000484	frontal lobe	skos:exactMatch	mesh:D005625	Frontal Lobe	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000486	fruit	skos:exactMatch	mesh:D005638	Fruit	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000501	gastric juice	skos:exactMatch	mesh:D005750	Gastric Juice	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000502	gastric fundus	skos:exactMatch	mesh:D005748	Gastric Fundus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000504	pancreatic juice	skos:exactMatch	mesh:D010189	Pancreatic Juice	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000511	gastrointestinal tract	skos:exactMatch	mesh:D041981	Gastrointestinal Tract	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000519	gingiva	skos:exactMatch	mesh:D005881	Gingiva	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000536	gracilis muscle	skos:exactMatch	mesh:D000071976	Gracilis Muscle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000554	hair follicle	skos:exactMatch	mesh:D018859	Hair Follicle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000557	harderian gland	skos:exactMatch	mesh:D006243	Harderian Gland	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000562	heart	skos:exactMatch	mesh:D006321	Heart	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000570	hematopoietic system	skos:exactMatch	mesh:D006413	Hematopoietic System	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000572	hemolymph	skos:exactMatch	mesh:D006458	Hemolymph	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000597	hepatopancreas	skos:exactMatch	mesh:D043143	Hepatopancreas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000601	hippocampus	skos:exactMatch	mesh:D006624	Hippocampus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000605	honey	skos:exactMatch	mesh:D006722	Honey	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000613	hypocotyl	skos:exactMatch	mesh:D018546	Hypocotyl	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000614	hypothalamus	skos:exactMatch	mesh:D007031	Hypothalamus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000615	corpus callosum	skos:exactMatch	mesh:D003337	Corpus Callosum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000620	ileum	skos:exactMatch	mesh:D007082	Ileum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000628	inflorescence	skos:exactMatch	mesh:D056626	Inflorescence	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000642	intestinal mucosa	skos:exactMatch	mesh:D007413	Intestinal Mucosa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000653	iris	skos:exactMatch	mesh:D007498	Iris	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000657	jejunum	skos:exactMatch	mesh:D007583	Jejunum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000662	nasopharynx	skos:exactMatch	mesh:D009305	Nasopharynx	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000671	kidney	skos:exactMatch	mesh:D007668	Kidney	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000673	metencephalon	skos:exactMatch	mesh:D020540	Metencephalon	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000707	larva	skos:exactMatch	mesh:D007814	Larva	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
 bto:0000717	pericardium	skos:exactMatch	mesh:D010496	Pericardium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
 bto:0000721	leg	skos:exactMatch	mesh:D007866	Leg	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
 bto:0000753	lymphoid tissue	skos:exactMatch	mesh:D008221	Lymphoid Tissue	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
@@ -964,7 +1030,44 @@ bto:0000840	nose	skos:exactMatch	mesh:D009666	Nose	semapv:ManualMappingCuration	
 bto:0000852	meristem	skos:exactMatch	mesh:D018519	Meristem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
 bto:0000854	zygote	skos:exactMatch	mesh:D015053	Zygote	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
 bto:0000855	lymph	skos:exactMatch	mesh:D008196	Lymph	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-22
+bto:0000900	myelin sheath	skos:exactMatch	mesh:D009186	Myelin Sheath	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000901	myocardium	skos:exactMatch	mesh:D009206	Myocardium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000907	myometrium	skos:exactMatch	mesh:D009215	Myometrium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000912	nasal mucosa	skos:exactMatch	mesh:D009297	Nasal Mucosa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000918	nematocyst	skos:exactMatch	mesh:D058894	Nematocyst	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000920	neocortex	skos:exactMatch	mesh:D019579	Neocortex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000926	ophthalmic nerve	skos:exactMatch	mesh:D009882	Ophthalmic Nerve	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000928	limbic system	skos:exactMatch	mesh:D008032	Limbic System	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000954	nymph	skos:exactMatch	mesh:D009758	Nymph	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000959	esophagus	skos:exactMatch	mesh:D004947	Esophagus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000961	olfactory bulb	skos:exactMatch	mesh:D009830	Olfactory Bulb	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000966	optic nerve	skos:exactMatch	mesh:D009900	Optic Nerve	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000973	respiratory mucosa	skos:exactMatch	mesh:D020545	Respiratory Mucosa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000975	ovary	skos:exactMatch	mesh:D010053	Ovary	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0000988	pancreas	skos:exactMatch	mesh:D010179	Pancreas	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001001	parietal lobe	skos:exactMatch	mesh:D010296	Parietal Lobe	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001004	parotid gland	skos:exactMatch	mesh:D010306	Parotid Gland	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001006	pelvis	skos:exactMatch	mesh:D010388	Pelvis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001016	pericardial fluid	skos:exactMatch	mesh:D000069236	Pericardial Fluid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001020	periodontal ligament	skos:exactMatch	mesh:D010513	Periodontal Ligament	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001021	periodontium	skos:exactMatch	mesh:D010519	Periodontium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001022	periosteum	skos:exactMatch	mesh:D010521	Periosteum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
 bto:0001025	peripheral blood mononuclear cell	skos:exactMatch	cl:2000001	peripheral blood mononuclear cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	
+bto:0001028	peripheral nervous system	skos:exactMatch	mesh:D017933	Peripheral Nervous System	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001042	amygdala	skos:exactMatch	mesh:D000679	Amygdala	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001049	pharynx	skos:exactMatch	mesh:D010614	Pharynx	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001057	neural tube	skos:exactMatch	mesh:D054259	Neural Tube	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001058	phloem	skos:exactMatch	mesh:D052585	Phloem	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001063	phrenic nerve	skos:exactMatch	mesh:D010791	Phrenic Nerve	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001067	pineal gland	skos:exactMatch	mesh:D010870	Pineal Gland	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001072	trigeminal nerve	skos:exactMatch	mesh:D014276	Trigeminal Nerve	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001078	placenta	skos:exactMatch	mesh:D010920	Placenta	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001090	mouth	skos:exactMatch	mesh:D009055	Mouth	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001091	axenic culture	skos:exactMatch	mesh:D061245	Axenic Culture	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001099	blastocyst	skos:exactMatch	mesh:D001755	Blastocyst	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001105	insular cortex	skos:exactMatch	mesh:D000087623	Insular Cortex	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001136	proventriculus	skos:exactMatch	mesh:D011531	Proventriculus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
+bto:0001158	rectum	skos:exactMatch	mesh:D012007	Rectum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-23
 bto:0001279	spinal cord	skos:exactMatch	mesh:D013116	Spinal Cord	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
 bto:0001281	spleen	skos:exactMatch	mesh:D013154	Spleen	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2021-10-26	2026		2026-08-13
 bto:0001283	mitral cell	skos:exactMatch	cl:1001502	mitral cell	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/cc126c/scripts/generate_bto_cl_mappings.py	
