@@ -3,6 +3,7 @@
 #  agro: http://purl.obolibrary.org/obo/AGRO_
 #  agrovoc: http://aims.fao.org/aos/agrovoc/c_
 #  aism: http://purl.obolibrary.org/obo/AISM_
+#  amphx: http://purl.obolibrary.org/obo/AMPHX_
 #  apo: http://purl.obolibrary.org/obo/APO_
 #  apollosv: http://purl.obolibrary.org/obo/APOLLO_SV_
 #  aro: http://purl.obolibrary.org/obo/ARO_
@@ -85,6 +86,7 @@ afpo:0000209	Ari	skos:exactMatch	Not	mesh:C003771	Amberlite XAD-2 resin	semapv:M
 afpo:0000280	Masa	skos:exactMatch	Not	mesh:C042762	methyl N-acetylsibirosaminide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2024-03-21	2026		2026-08-13
 afpo:0000384	Agaw	skos:exactMatch	Not	mesh:C071743	N-acetyl-gamma-glutamyl-4'-aminowarfarin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2024-03-21	2026		2026-08-13
 afpo:0000463	Hema	skos:exactMatch	Not	mesh:C005044	hydroxyethyl methacrylate	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2024-03-21	2026		2026-08-13
+agro:00000469	crop rotation process	skos:exactMatch	Not	mesh:D012399	Rotation	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2022-11-02	2026		2026-08-23
 agro:00002067	methylene urea	skos:exactMatch	Not	mesh:D051379	Mice	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2022-11-02	2026		2026-08-13
 agrovoc:10457	draught animals	skos:exactMatch	Not	agro:00002004	draft animal role	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696				
 agrovoc:15662	Mus	skos:exactMatch	Not	agro:00002067	methylene urea	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696				
@@ -107,6 +109,7 @@ agrovoc:7b960f69	rainwater harvesting	skos:exactMatch	Not	agro:00000589	water ha
 agrovoc:8446	working animals	skos:exactMatch	Not	agro:00002004	draft animal role	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696				
 agrovoc:fdfbb37f	parcels	skos:exactMatch	Not	agro:00000301	agricultural experimental plot	semapv:ManualMappingCuration	orcid:0000-0002-2627-0696				
 aism:0000004	conjunctiva	skos:exactMatch	Not	mesh:D008566	Membranes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-02-14	2026		2026-08-13
+amphx:0000057	adult-A stage	skos:exactMatch	Not	mesh:D000328	Adult	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2020-12-18	2026		2026-08-23
 apo:0000145	oxidative phosphorylation	skos:exactMatch	Not	mesh:D012119	Respiration	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-16	2026		2026-08-13
 apo:0000161	multiple	skos:exactMatch	Not	mesh:C088513	poly(lactic acid-ethylene glycol)	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-16	2026		2026-08-13
 apollosv:00000094	community	skos:exactMatch	Not	ncit:C16453	Community	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
@@ -631,6 +634,11 @@ envo:00000016	sea	skos:exactMatch	Not	ncbitaxon:2798467	Sea	semapv:ManualMapping
 envo:00000019	saline lake	skos:exactMatch	Not	ncbitaxon:33337	Salina	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:00000029	watercourse	skos:exactMatch	Not	ncbitaxon:1725053	Barranca	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:00000032	bay	skos:exactMatch	Not	ncbitaxon:41489	Bahia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
+envo:00000033	pond	skos:exactMatch	Not	mesh:D060106	Lakes	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00000034	rapids	skos:exactMatch	Not	mesh:D002386	Cataract	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00000045	estuary	skos:exactMatch	Not	mesh:D009055	Mouth	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00000045	estuary	skos:exactMatch	Not	mesh:D061006	Bays	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
+envo:00000068	tunnel	skos:exactMatch	Not	mesh:D059552	Caves	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00000080	mountain range	skos:exactMatch	Not	ncbitaxon:2893724	Cordillera	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:00000101	delta	skos:exactMatch	Not	ncbitaxon:998453	Delta	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:00000104	undersea feature	skos:exactMatch	Not	ncbitaxon:138334	Allium tricoccum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
@@ -644,13 +652,16 @@ envo:00000260	prairie	skos:exactMatch	Not	ncbitaxon:2678135	Pampa	semapv:ManualM
 envo:00000262	steppe	skos:exactMatch	Not	ncbitaxon:2678135	Pampa	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:00000283	ridge	skos:exactMatch	Not	ncbitaxon:2518551	Arete	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:00000309	depressed landform	skos:exactMatch	Not	ncbitaxon:9596	Pan	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
+envo:00000393	sound	skos:exactMatch	Not	mesh:D013016	Sound	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00000429	arete	skos:exactMatch	Not	ncbitaxon:2518551	Arete	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
+envo:00000479	mouth	skos:exactMatch	Not	mesh:D009055	Mouth	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:00000550	range of seamounts	skos:exactMatch	Not	ncbitaxon:2893724	Cordillera	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:00002046	activated sludge	skos:exactMatch	Not	ncbitaxon:942017	activated sludge metagenome	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:01000258	fluid cline	skos:exactMatch	Not	ncbitaxon:57788	Clinitrachus argentatus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:01000579	television set	skos:exactMatch	Not	ncbitaxon:2844102	Drosophila melanogaster nudivirus B	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:01000605	car	skos:exactMatch	Not	ncbitaxon:201850	Car	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:01000750	Mohorovicic discontinuity	skos:exactMatch	Not	ncbitaxon:572097	Moho	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
+envo:01000798	plasma	skos:exactMatch	Not	mesh:D010949	Plasma	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-26	2026		2026-08-23
 envo:01000806	nebula	skos:exactMatch	Not	ncbitaxon:987027	Nebula	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:01000837	virga	skos:exactMatch	Not	ncbitaxon:509515	Virga	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
 envo:01000969	cafeteria	skos:exactMatch	Not	ncbitaxon:33652	Cafeteria	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			kestrel-mappings	
