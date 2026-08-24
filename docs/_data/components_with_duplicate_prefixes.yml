@@ -103,6 +103,31 @@
     link: https://bioregistry.io/agrovoc:918
     name: biological control
     prefix: agrovoc
+- bto:0001368:
+    identifier: 0001368
+    link: https://bioregistry.io/bto:0001368
+    name: thorax
+    prefix: bto
+  clao:0000956:
+    identifier: 0000956
+    link: https://bioregistry.io/clao:0000956
+    name: thorax
+    prefix: clao
+  hao:0001015:
+    identifier: '0001015'
+    link: https://bioregistry.io/hao:0001015
+    name: thorax
+    prefix: hao
+  hao:0001970:
+    identifier: 0001970
+    link: https://bioregistry.io/hao:0001970
+    name: thorax
+    prefix: hao
+  mesh:D013909:
+    identifier: D013909
+    link: https://bioregistry.io/mesh:D013909
+    name: Thorax
+    prefix: mesh
 - ccle:MDAMB231_BREAST:
     identifier: MDAMB231_BREAST
     link: https://bioregistry.io/ccle:MDAMB231_BREAST
@@ -273,6 +298,26 @@
     link: https://bioregistry.io/mesh:D011984
     name: Sensory Receptor Cells
     prefix: mesh
+- clao:0000984:
+    identifier: 0000984
+    link: https://bioregistry.io/clao:0000984
+    name: mandibular condyle
+    prefix: clao
+  hao:0000508:
+    identifier: 0000508
+    link: https://bioregistry.io/hao:0000508
+    name: mandibular condyle
+    prefix: hao
+  hao:0001390:
+    identifier: 0001390
+    link: https://bioregistry.io/hao:0001390
+    name: mandibular condyle
+    prefix: hao
+  mesh:D008335:
+    identifier: D008335
+    link: https://bioregistry.io/mesh:D008335
+    name: Mandibular Condyle
+    prefix: mesh
 - cpt:90585:
     identifier: '90585'
     link: https://bioregistry.io/cpt:90585
@@ -366,6 +411,21 @@
     name: 0.65 ML Varicella-Zoster Virus Vaccine Live (Oka-Merck) strain 29800 UNT/ML
       Injection
     prefix: vo
+- hao:0000222:
+    identifier: '0000222'
+    link: https://bioregistry.io/hao:0000222
+    name: corbicula
+    prefix: hao
+  hao:0001476:
+    identifier: '0001476'
+    link: https://bioregistry.io/hao:0001476
+    name: corbicula
+    prefix: hao
+  mesh:D049874:
+    identifier: D049874
+    link: https://bioregistry.io/mesh:D049874
+    name: Corbicula
+    prefix: mesh
 - chebi:33281:
     identifier: '33281'
     link: https://bioregistry.io/chebi:33281
@@ -886,6 +946,31 @@
     link: https://bioregistry.io/mesh:D011625
     name: Pterygium
     prefix: mesh
+- mesh:D016010:
+    identifier: D016010
+    link: https://bioregistry.io/mesh:D016010
+    name: Binomial Distribution
+    prefix: mesh
+  ncit:C53208:
+    identifier: C53208
+    link: https://bioregistry.io/ncit:C53208
+    name: Binomial Distribution
+    prefix: ncit
+  obcs:0000044:
+    identifier: '0000044'
+    link: https://bioregistry.io/obcs:0000044
+    name: binomial distribution
+    prefix: obcs
+  stato:0000262:
+    identifier: '0000262'
+    link: https://bioregistry.io/stato:0000262
+    name: Bernoulli distribution
+    prefix: stato
+  stato:0000276:
+    identifier: '0000276'
+    link: https://bioregistry.io/stato:0000276
+    name: binomial distribution
+    prefix: stato
 - doid:0050748:
     identifier: 0050748
     link: https://bioregistry.io/doid:0050748

@@ -54,7 +54,7 @@ curie_map:
   FIDEO: http://purl.obolibrary.org/obo/FIDEO_
   FIX: http://purl.obolibrary.org/obo/FIX_
   FLOPO: http://purl.obolibrary.org/obo/FLOPO_
-  FMA: http://purl.obolibrary.org/obo/FMA_
+  FMA: http://purl.org/sig/ont/fma/
   FYPO: http://purl.obolibrary.org/obo/FYPO_
   GALLONT: http://purl.obolibrary.org/obo/GALLONT_
   GECKO: http://purl.obolibrary.org/obo/GECKO_
@@ -230,4 +230,4 @@ mapping_set_description: Biomappings is a repository of community curated and pr
   of predicted mappings or their own novel mappings.
 mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv
 mapping_set_title: Biomappings
-mapping_set_version: 0.6.1-dev-903edd7c
+mapping_set_version: 0.6.1-dev-14fd4c99
