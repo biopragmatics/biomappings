@@ -1,1 +1,19 @@
-[]
+- nodes:
+    apollosv:00000172:
+      identifier: '00000172'
+      link: https://bioregistry.io/apollosv:00000172
+      name: susceptibility
+      prefix: apollosv
+    ido:0000467:
+      identifier: '0000467'
+      link: https://bioregistry.io/ido:0000467
+      name: susceptibility
+      prefix: ido
+    pato:0001043:
+      identifier: '0001043'
+      link: https://bioregistry.io/pato:0001043
+      name: susceptibility toward
+      prefix: pato
+  unstable_edges:
+  - - pato:0001043
+    - apollosv:00000172

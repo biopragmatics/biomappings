@@ -42,6 +42,7 @@ PURL_BASE = "https://w3id.org/biopragmatics/biomappings/sssom"
 DOCS_DIRECTORY = ROOT.joinpath("docs")
 IMG_DIRECTORY = DOCS_DIRECTORY.joinpath("img")
 DATA_DIRECTORY = DOCS_DIRECTORY.joinpath("_data")
+SSSOM_EXPORT_DIRECTORY = ROOT.joinpath("export")
 
 
 def get_script_url(fname: str) -> str:
@@ -95,6 +96,7 @@ DEFAULT_REPO = Repository(
         <a href="https://www.rwth-aachen.de">RWTH Aachen University</a>
         and the <a href="https://gyorilab.github.io">Gyori Lab</a> at
         <a href="https://www.northeastern.edu/">Northeastern University</a>.<br/>
-        Funded by DARPA awards W911NF2010255 and HR00112220036.
+        Funded by NFDI4Chem (DFG project <a href="https://gepris.dfg.de/project/441958208?lang=en">441958208</a>)
+        and DARPA awards W911NF2010255 and HR00112220036.
     """),
 )
