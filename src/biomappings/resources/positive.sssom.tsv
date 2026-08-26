@@ -50,7 +50,7 @@
 #  fbcv: http://purl.obolibrary.org/obo/FBcv_
 #  fideo: http://purl.obolibrary.org/obo/FIDEO_
 #  fix: http://purl.obolibrary.org/obo/FIX_
-#  fma: 'https://www.ebi.ac.uk/ols4/ontologies/fma/terms?obo_id=FMA:'
+#  fma: http://purl.org/sig/ont/fma/
 #  fplx: https://sorgerlab.github.io/famplex/
 #  genepio: http://purl.obolibrary.org/obo/GENEPIO_
 #  go: http://purl.obolibrary.org/obo/GO_
@@ -11570,6 +11570,7 @@ mondo:0007547	epidermoid cysts	skos:exactMatch	mesh:D004814	Epidermal Cyst	semap
 mondo:0007578	esterase B	skos:exactMatch	mesh:C049262	esterase B	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mondo:0007608	desmoid tumor	skos:exactMatch	mesh:D018222	Fibromatosis, Aggressive	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761			generate_mondo_mesh_mappings.py	
 mondo:0007614	congenital fibrosis of extraocular muscles	skos:exactMatch	mesh:C580012	Congenital Fibrosis of the Extraocular Muscles	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761			generate_mondo_mesh_mappings.py	
+mondo:0007758	epidermolytic palmoplantar keratoderma, 1	skos:narrowMatch	mesh:D053546	Keratoderma, Palmoplantar, Epidermolytic	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-08-26
 mondo:0007767	hyperparathyroidism 1	skos:exactMatch	mesh:C564166	Hyperparathyroidism 1	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mondo:0007794	hypogonadotropic hypogonadism 7 with or without anosmia	skos:exactMatch	mesh:C562785	Idiopathic Hypogonadotropic Hypogonadism	semapv:ManualMappingCuration	orcid:0000-0002-1216-4761			generate_mondo_mesh_mappings.py	
 mondo:0007817	IgE responsiveness, atopic	skos:exactMatch	mesh:C564133	Ige Responsiveness, Atopic	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				

@@ -1,5 +1,5 @@
 [build-system]
-requires = ["uv_build>=0.9.6,<1.0"]
+requires = ["uv_build>=0.12.6,<1.0"]
 build-backend = "uv_build"
 
 [project]
@@ -59,8 +59,8 @@ dependencies = [
     "tqdm",
     "curies>=0.15.0",
     "bioregistry>=0.14.0",
-    "sssom-pydantic>=0.6.1",
-    "sssom-curator[predict-lexical,web]>=0.6.1",
+    "sssom-pydantic>=0.6.3",
+    "sssom-curator[predict-lexical,web]>=0.6.2",
 ]
 
 # see https://peps.python.org/pep-0735/ and https://docs.astral.sh/uv/concepts/dependencies/#dependency-groups
@@ -105,8 +105,8 @@ bump = [
     "bump-my-version",
 ]
 build = [
-    "uv>=0.9.6",
-    "uv-build>=0.9.6",
+    "uv>=0.12.6",
+    "uv-build>=0.12.6",
 ]
 release = [
     { include-group = "build" },
