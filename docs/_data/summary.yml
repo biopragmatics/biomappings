@@ -1,5 +1,5 @@
 contributors:
-- count: 7381
+- count: 7382
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
 - count: 6049
@@ -417,7 +417,7 @@ positive:
 - count: 346
   source: hp
   target: mesh
-- count: 323
+- count: 324
   source: mesh
   target: mondo
 - count: 222
@@ -1044,7 +1044,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 13526
+positive_mapping_count: 13527
 positive_prefix_count: 133
 predictions:
 - count: 32670
@@ -1074,7 +1074,7 @@ predictions:
 - count: 1685
   source: wikipathways
   target: wikipathways
-- count: 1328
+- count: 1329
   source: mesh
   target: mondo
 - count: 1305
@@ -1602,7 +1602,7 @@ predictions:
 - count: 1
   source: obo
   target: wbbt
-predictions_mapping_count: 110164
+predictions_mapping_count: 110165
 predictions_prefix_count: 167
 unsure:
 - count: 27
