@@ -1,5 +1,5 @@
 contributors:
-- count: 7382
+- count: 7402
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
 - count: 6049
@@ -17,6 +17,9 @@ contributors:
 - count: 20
   name: Sumir Pandit
   orcid: 0000-0002-1216-4761
+- count: 13
+  name: Harshit Soni
+  orcid: 0009-0007-1189-4598
 - count: 1
   name: Christopher Mungall
   orcid: 0000-0002-6601-2165
@@ -96,6 +99,9 @@ negative:
 - count: 20
   source: agro
   target: agrovoc
+- count: 20
+  source: icd10
+  target: mesh
 - count: 17
   source: doid
   target: ncbitaxon
@@ -384,8 +390,8 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1973
-negative_prefix_count: 77
+negative_mapping_count: 1993
+negative_prefix_count: 78
 positive:
 - count: 3484
   source: chebi
@@ -597,6 +603,9 @@ positive:
 - count: 13
   source: apollosv
   target: ido
+- count: 13
+  source: icd10
+  target: mesh
 - count: 13
   source: chmo
   target: iconclass
@@ -1044,8 +1053,8 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 13527
-positive_prefix_count: 133
+positive_mapping_count: 13540
+positive_prefix_count: 134
 predictions:
 - count: 32670
   source: chebi
@@ -1088,6 +1097,9 @@ predictions:
   target: mesh
 - count: 1114
   source: go
+  target: mesh
+- count: 1106
+  source: icd10
   target: mesh
 - count: 1069
   source: mesh
@@ -1202,9 +1214,6 @@ predictions:
   target: scdo
 - count: 107
   source: clao
-  target: mesh
-- count: 107
-  source: icd10
   target: mesh
 - count: 106
   source: fbbi
@@ -1602,7 +1611,7 @@ predictions:
 - count: 1
   source: obo
   target: wbbt
-predictions_mapping_count: 110165
+predictions_mapping_count: 111164
 predictions_prefix_count: 167
 unsure:
 - count: 27
