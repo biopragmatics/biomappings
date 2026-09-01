@@ -32,6 +32,7 @@
 #  hgnc: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
 #  hp: http://purl.obolibrary.org/obo/HP_
 #  iana.mediatype: https://www.iana.org/assignments/media-types/
+#  icd10: https://icd.who.int/browse10/2019/en#/
 #  iconclass: https://iconclass.org/
 #  ido: http://purl.obolibrary.org/obo/IDO_
 #  idocovid19: http://purl.obolibrary.org/obo/COVIDO_
@@ -731,6 +732,26 @@ iana.mediatype:font/collection	collection	skos:exactMatch	Not	schema:Collection	
 iana.mediatype:message	message	skos:exactMatch	Not	schema:Message	Message	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 iana.mediatype:multipart/report	report	skos:exactMatch	Not	schema:Report	Report	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 iana.mediatype:text	text	skos:exactMatch	Not	schema:Text	Text	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
+icd10:C05.0	Hard palate	skos:exactMatch	Not	mesh:D021362	Palate, Hard	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C05.1	Soft palate	skos:exactMatch	Not	mesh:D010160	Palate, Soft	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C05.2	Uvula	skos:exactMatch	Not	mesh:D014609	Uvula	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C08.0	Submandibular gland	skos:exactMatch	Not	mesh:D013363	Submandibular Gland	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C17.2	Ileum	skos:exactMatch	Not	mesh:D007082	Ileum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C17.3	Meckel diverticulum	skos:exactMatch	Not	mesh:D008467	Meckel Diverticulum	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C18.1	Appendix	skos:exactMatch	Not	mesh:D001065	Appendix	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C18.2	Ascending colon	skos:exactMatch	Not	mesh:D044682	Colon, Ascending	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C18.3	Hepatic flexure	skos:exactMatch	Not	mesh:D044682	Colon, Ascending	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019			2026-09-01
+icd10:C18.6	Descending colon	skos:exactMatch	Not	mesh:D044683	Colon, Descending	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C21.1	Anal canal	skos:exactMatch	Not	mesh:D001003	Anal Canal	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C24.1	Ampulla of Vater	skos:exactMatch	Not	mesh:D014670	Ampulla of Vater	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C25.3	Pancreatic duct	skos:exactMatch	Not	mesh:D010183	Pancreatic Ducts	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019			2026-09-01
+icd10:C26.1	Spleen	skos:exactMatch	Not	mesh:D013154	Spleen	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C30.0	Nasal cavity	skos:exactMatch	Not	mesh:D009296	Nasal Cavity	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C30.1	Middle ear	skos:exactMatch	Not	mesh:D004432	Ear, Middle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C31.0	Maxillary sinus	skos:exactMatch	Not	mesh:D008443	Maxillary Sinus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C31.2	Frontal sinus	skos:exactMatch	Not	mesh:D005626	Frontal Sinus	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C32.0	Glottis	skos:exactMatch	Not	mesh:D005931	Glottis	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019	2025		2026-09-01
+icd10:C32.3	Laryngeal cartilage	skos:exactMatch	Not	mesh:D007817	Laryngeal Cartilages	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2019			2026-09-01
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	Not	chebi:141393	Ser-Thr	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:11H%28ANTONY%20ABBOT%29411	St. Antony Abbot finds a nugget of gold in the desert	skos:relatedMatch	Not	chebi:59965	glyoxal-lysine dimer	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
 iconclass:11H%28ELOI%2911	St. Eloi as patron of blacksmiths and goldsmiths	skos:relatedMatch	Not	chebi:141393	Ser-Thr	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/0cd002/scripts/culture_to_chemistry.py	
