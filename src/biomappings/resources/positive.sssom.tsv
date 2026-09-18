@@ -28,7 +28,6 @@
 #  cl: http://purl.obolibrary.org/obo/CL_
 #  clao: http://purl.obolibrary.org/obo/CLAO_
 #  clo: http://purl.obolibrary.org/obo/CLO_
-#  commoncoreontology: https://www.commoncoreontologies.org/ont
 #  cpt: https://www.aapc.com/codes/cpt-codes/
 #  cteno: http://purl.obolibrary.org/obo/CTENO_
 #  cto: http://purl.obolibrary.org/obo/CTO_
@@ -13038,7 +13037,6 @@ vo:0007406	Inalimarev	skos:exactMatch	drugbank:DB17332	Inalimarev	semapv:ManualM
 vo:0007420	MUC-2-KLH Vaccine	skos:exactMatch	mesh:C502357	MUC-2-KLH vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/28ac41/scripts/generate_vo_mesh_mappings.py	
 vo:0007564	Golnerminogene Pradenovec	skos:exactMatch	drugbank:DB17245	Golnerminogene pradenovec	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	
 vo:0007591	Canvaxin	skos:exactMatch	mesh:C464842	Canvaxin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-06-12	2026		2026-08-22
-vo:0010632	country	skos:exactMatch	commoncoreontology:Country	country	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 vo:0010637	Rubella virus vaccine	skos:exactMatch	drugbank:DB10317	Rubella virus vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/d19431/scripts/generate_vo_drugbank.py	
 vo:0010637	Rubella virus vaccine	skos:exactMatch	mesh:D012411	Rubella Vaccine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			vo	
 vo:0010710	Dukoral	skos:exactMatch	mesh:C586175	Dukoral	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/4b2628/scripts/generate_vo_mesh_mappings.py	
