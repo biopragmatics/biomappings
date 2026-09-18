@@ -28,6 +28,7 @@
 #  cl: http://purl.obolibrary.org/obo/CL_
 #  clao: http://purl.obolibrary.org/obo/CLAO_
 #  clo: http://purl.obolibrary.org/obo/CLO_
+#  commoncoreontology: https://www.commoncoreontologies.org/ont
 #  cpt: https://www.aapc.com/codes/cpt-codes/
 #  cteno: http://purl.obolibrary.org/obo/CTENO_
 #  cto: http://purl.obolibrary.org/obo/CTO_
@@ -8667,6 +8668,7 @@ mesh:D000447	Aldehydes	skos:exactMatch	chebi:17478	aldehyde	semapv:ManualMapping
 mesh:D000448	Aldicarb	skos:exactMatch	chebi:2555	aldicarb	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D000450	Aldosterone	skos:exactMatch	chebi:27584	aldosterone	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D000463	Algestone Acetophenide	skos:exactMatch	chebi:49327	algestone acetophenide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
+mesh:D000465	Algorithms	skos:exactMatch	commoncoreontology:00000653	Algorithm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D000466	Alkadienes	skos:exactMatch	chebi:33646	alkadiene	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D000470	Alkaloids	skos:exactMatch	chebi:22315	alkaloid	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D000473	Alkanes	skos:exactMatch	chebi:18310	alkane	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
@@ -8682,6 +8684,7 @@ mesh:D000523	Algestone	skos:exactMatch	chebi:763	algestone	semapv:ManualMappingC
 mesh:D000524	Alphavirus	skos:exactMatch	ncit:C112030	Alphavirus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D000525	Alprazolam	skos:exactMatch	chebi:2611	alprazolam	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D000526	Alprenolol	skos:exactMatch	chebi:51211	alprenolol	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
+mesh:D000531	Altitude	skos:exactMatch	commoncoreontology:00000787	Altitude	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D000536	Aluminum Hydroxide	skos:exactMatch	chebi:33130	aluminium hydroxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D000536	Aluminum Hydroxide	skos:exactMatch	ncit:C39707	Aluminum Hydroxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D000537	Aluminum Oxide	skos:exactMatch	chebi:30187	aluminium oxide	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
@@ -8844,6 +8847,7 @@ mesh:D001310	Auranofin	skos:exactMatch	chebi:2922	auranofin	semapv:ManualMapping
 mesh:D001312	Aurintricarboxylic Acid	skos:exactMatch	chebi:87397	aurintricarboxylic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D001327	Autoimmune Diseases	skos:exactMatch	doid:417	autoimmune hypersensitivity disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D001329	Autolysis	skos:exactMatch	go:0001896	autolysis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+mesh:D001336	Automobiles	skos:exactMatch	commoncoreontology:00001011	Automobile	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D001342	Autonomic Nervous System Diseases	skos:exactMatch	doid:11465	autonomic nervous system disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D001343	Autophagy	skos:exactMatch	go:0006914	autophagy	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D001355	Alpharetrovirus	skos:exactMatch	ncit:C14186	Alpharetrovirus	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
@@ -9134,6 +9138,7 @@ mesh:D002934	Cinnamates	skos:exactMatch	chebi:36091	cinnamates	semapv:ManualMapp
 mesh:D002939	Ciprofloxacin	skos:exactMatch	chebi:100241	ciprofloxacin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D002940	Circadian Rhythm	skos:exactMatch	go:0007623	circadian rhythm	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D002945	Cisplatin	skos:exactMatch	chebi:27899	cisplatin	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+mesh:D002947	Cities	skos:exactMatch	commoncoreontology:00000887	City	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D002952	Citric Acid Cycle	skos:exactMatch	go:0006099	tricarboxylic acid cycle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D002955	Leucovorin	skos:exactMatch	chebi:15640	5-formyltetrahydrofolic acid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D002966	Clathrin	skos:exactMatch	fplx:Clathrin	Clathrin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
@@ -9159,6 +9164,7 @@ mesh:D003071	Cognition	skos:exactMatch	go:0050890	cognition	semapv:ManualMapping
 mesh:D003084	Colestipol	skos:exactMatch	chebi:3814	colestipol	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D003094	Collagen	skos:exactMatch	chebi:3815	Collagen	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D003111	Colonic Polyps	skos:exactMatch	ncit:C2954	Colon Polyp	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+mesh:D003116	Color	skos:exactMatch	commoncoreontology:00000378	Color	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D003141	Communicable Diseases	skos:exactMatch	doid:0050117	disease by infectious agent	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D003167	Complement Activation	skos:exactMatch	go:0006956	complement activation	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D003214	Conditioning, Classical	skos:exactMatch	go:0008306	associative learning	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
@@ -9332,6 +9338,9 @@ mesh:D005342	Fibrinolysis	skos:exactMatch	go:0042730	fibrinolysis	semapv:ManualM
 mesh:D005348	Fibrocystic Breast Disease	skos:exactMatch	doid:5998	microglandular adenosis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D005350	Fibroma	skos:exactMatch	doid:0050871	fibroma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D005355	Fibrosis	skos:exactMatch	efo:0006890	fibrosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+mesh:D005389	Firearms	skos:broadMatch	commoncoreontology:00000015	Shotgun	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
+mesh:D005389	Firearms	skos:broadMatch	commoncoreontology:00000204	Rifle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
+mesh:D005389	Firearms	skos:exactMatch	commoncoreontology:00000088	Firearm	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D005407	Flagella	skos:exactMatch	go:0005929	cilium	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D005408	Flagellin	skos:exactMatch	efo:0003241	flagellin	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D005414	Flatulence	skos:exactMatch	efo:0009669	flatulence	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
@@ -9692,6 +9701,7 @@ mesh:D009026	Mortality	skos:exactMatch	ncit:C16880	Mortality	semapv:ManualMappin
 mesh:D009041	Motion Sickness	skos:exactMatch	efo:0006928	motion sickness	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D009041	Motion Sickness	skos:exactMatch	ncit:C34824	Motion Sickness	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D009043	Motor Activity	skos:exactMatch	go:0003774	motor activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+mesh:D009049	Motorcycles	skos:exactMatch	commoncoreontology:00001061	Motorcycle	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D009079	Mucociliary Clearance	skos:exactMatch	go:0120197	mucociliary clearance	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D009081	Mucolipidoses	skos:exactMatch	doid:0080488	mucolipidosis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D009101	Multiple Myeloma	skos:exactMatch	ncit:C3242	Multiple Myeloma	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
@@ -9753,6 +9763,7 @@ mesh:D009878	Ophthalmia Neonatorum	skos:exactMatch	doid:9699	ophthalmia neonator
 mesh:D009894	Opportunistic Infections	skos:exactMatch	hp:0031690	Opportunistic infection	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346			https://github.com/biomappings/biomappings/blob/492ede/scripts/import_gilda_mappings.py	
 mesh:D009917	Orbital Fractures	skos:exactMatch	efo:0009611	orbital fracture	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D009917	Orbital Fractures	skos:exactMatch	ncit:C118744	Orbital Fracture	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+mesh:D009938	Organizations	skos:exactMatch	commoncoreontology:00001180	Organization	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D009975	Orthomyxoviridae	skos:exactMatch	ncit:C53453	Orthomyxoviridae	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D010012	Osteogenesis	skos:exactMatch	go:0001503	ossification	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D010018	Osteomalacia	skos:exactMatch	hp:0002749	Osteomalacia	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
@@ -9927,6 +9938,7 @@ mesh:D012518	Sarcomeres	skos:exactMatch	go:0030017	sarcomere	semapv:ManualMappin
 mesh:D012519	Sarcoplasmic Reticulum	skos:exactMatch	go:0016529	sarcoplasmic reticulum	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D012555	Schistosomiasis mansoni	skos:exactMatch	efo:1001420	Schistosomiasis mansoni	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370			https://github.com/biomappings/biomappings/blob/4324c1/scripts/import_gilda_mappings.py	
 mesh:D012559	Schizophrenia	skos:exactMatch	ncit:C3362	Schizophrenia	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+mesh:D012574	Schools	skos:exactMatch	commoncoreontology:00001358	School	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D012592	Scleredema Adultorum	skos:exactMatch	ncit:C85057	Scleredema Adultorum	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D012598	Sclerosis	skos:exactMatch	ncit:C69309	Sclerosis	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
 mesh:D012625	Sebaceous Gland Diseases	skos:exactMatch	doid:9098	sebaceous gland disease	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
@@ -11934,6 +11946,8 @@ obi:0003097	liquid chromatography mass spectrometry assay	skos:exactMatch	mesh:D
 obi:0003110	gas chromatography mass spectrometry assay	skos:exactMatch	mesh:D008401	Gas Chromatography-Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-27	2026		2026-08-13
 obi:0200199	gas chromatography mass spectrometry	skos:exactMatch	mesh:D008401	Gas Chromatography-Mass Spectrometry	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-27	2026		2026-08-13
 obi:0200200	chi square test	skos:exactMatch	mesh:D016009	Chi-Square Distribution	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026-07-27	2026		2026-08-22
+obo:mesh#B	Organisms	skos:closeMatch	commoncoreontology:00000551	Organism	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
+obo:mesh#C	Diseases	skos:exactMatch	commoncoreontology:00000318	Disease	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 oeo:00000007	chemical energy	skos:exactMatch	envo:2000023	chemical energy	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 oeo:00000031	power plant	skos:exactMatch	envo:00002214	power plant	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12
 oeo:00000042	waste role	skos:exactMatch	envo:01000665	waste role	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				2026-04-12

@@ -16,6 +16,7 @@
 #  chmo: http://purl.obolibrary.org/obo/CHMO_
 #  cl: http://purl.obolibrary.org/obo/CL_
 #  clo: http://purl.obolibrary.org/obo/CLO_
+#  commoncoreontology: https://www.commoncoreontologies.org/ont
 #  cpt: https://www.aapc.com/codes/cpt-codes/
 #  cvx: https://biopragmatics.github.io/providers/cvx/
 #  debio: https://biopragmatics.github.io/debio/
@@ -1083,6 +1084,7 @@ mesh:D000074767	Diapause	skos:exactMatch	Not	go:0030431	sleep	semapv:ManualMappi
 mesh:D000077190	Interferon alpha-2	skos:exactMatch	Not	hgnc:5423	IFNA2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D000077212	Ropivacaine	skos:exactMatch	Not	chebi:8890	(S)-ropivacaine	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D000077324	Crystalloid Solutions	skos:exactMatch	Not	go:0044312	crystalloid	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
+mesh:D000095223	White	skos:exactMatch	Not	commoncoreontology:00000528	White	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D000203	Activities of Daily Living	skos:exactMatch	Not	efo:0008451	activities of daily living score measurement	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D000309	Adrenal Insufficiency	skos:exactMatch	Not	doid:10493	adrenal cortical hypofunction	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D000371	Agglutination	skos:exactMatch	Not	go:0007157	heterophilic cell-cell adhesion via plasma membrane cell adhesion molecules	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
@@ -1101,6 +1103,7 @@ mesh:D001249	Asthma	skos:exactMatch	Not	efo:0009759	Chronic Obstructive Asthma	s
 mesh:D001254	Astrocytoma	skos:exactMatch	Not	doid:3078	grade III astrocytoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D001661	Biliary Tract Neoplasms	skos:exactMatch	Not	doid:0050625	biliary tract benign neoplasm	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D001731	Bisphosphoglycerate Mutase	skos:exactMatch	Not	go:0004619	phosphoglycerate mutase activity	semapv:ManualMappingCuration	orcid:0000-0001-9439-5346				
+mesh:D001741	Black or African American	skos:exactMatch	Not	commoncoreontology:00000439	Black	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D001749	Urinary Bladder Neoplasms	skos:exactMatch	Not	doid:4007	bladder carcinoma	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D001761	Bleomycin	skos:exactMatch	Not	chebi:3139	bleomycin A2	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
 mesh:D001792	Blood Platelets	skos:exactMatch	Not	efo:0009237	Estimated Platelets Measurement	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
@@ -1112,6 +1115,7 @@ mesh:D002222	Carbamoyl-Phosphate Synthase (Ammonia)	skos:exactMatch	Not	go:00040
 mesh:D002607	Charcot-Marie-Tooth Disease	skos:exactMatch	Not	doid:0110152	Charcot-Marie-Tooth disease type 1B	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D002780	Cholestasis, Intrahepatic	skos:exactMatch	Not	doid:0070227	intrahepatic cholestasis of pregnancy	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D002822	Choriocarcinoma	skos:exactMatch	Not	doid:5551	choriocarcinoma of the testis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
+mesh:D002947	Cities	skos:exactMatch	Not	commoncoreontology:00000071	Town	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370	2026	2024-11-06		2026-09-18
 mesh:D003231	Conjunctivitis	skos:exactMatch	Not	doid:11213	acute contagious conjunctivitis	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D003635	De Lange Syndrome	skos:exactMatch	Not	doid:0080505	Cornelia de Lange syndrome 1	semapv:ManualMappingCuration	orcid:0000-0003-1307-2508				
 mesh:D003872	Dermatitis	skos:exactMatch	Not	efo:1000636	inflammatory skin disease	semapv:ManualMappingCuration	orcid:0000-0003-4423-4370				
