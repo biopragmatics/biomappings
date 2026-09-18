@@ -208,7 +208,7 @@ curie_map:
   pfam: http://pfam.janelia.org/family/#
   pubchem.compound: http://rdf.ncbi.nlm.nih.gov/pubchem/compound/CID
   reactome: https://reactome.org/content/detail/
-  schema: http://mimi.case.edu/ontologies/2009/1/SDO.owl#
+  schema: https://schema.org/
   semapv: https://w3id.org/semapv/vocab/
   skos: http://www.w3.org/2004/02/skos/core#
   snomedct: http://snomed.info/id/
@@ -230,4 +230,4 @@ mapping_set_description: Biomappings is a repository of community curated and pr
   of predicted mappings or their own novel mappings.
 mapping_set_id: https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv
 mapping_set_title: Biomappings
-mapping_set_version: 0.6.1-dev-5d3d419d
+mapping_set_version: 0.6.1-dev-ed12b9f4

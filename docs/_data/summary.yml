@@ -1,5 +1,5 @@
 contributors:
-- count: 7402
+- count: 7417
   name: Charles Tapley Hoyt
   orcid: 0000-0003-4423-4370
 - count: 6049
@@ -214,6 +214,9 @@ negative:
   source: ito
   target: mi
 - count: 3
+  source: commoncoreontology
+  target: mesh
+- count: 3
   source: envo
   target: oeo
 - count: 3
@@ -390,8 +393,8 @@ negative:
 - count: 1
   source: reactome
   target: wikipathways
-negative_mapping_count: 1993
-negative_prefix_count: 78
+negative_mapping_count: 1996
+negative_prefix_count: 79
 positive:
 - count: 3484
   source: chebi
@@ -616,6 +619,9 @@ positive:
   source: idomal
   target: vo
 - count: 11
+  source: commoncoreontology
+  target: mesh
+- count: 11
   source: mesh
   target: oae
 - count: 10
@@ -825,6 +831,9 @@ positive:
 - count: 2
   source: hp
   target: oae
+- count: 2
+  source: commoncoreontology
+  target: obo
 - count: 2
   source: schema
   target: t4fs
@@ -1042,9 +1051,6 @@ positive:
   source: idocovid19
   target: vo
 - count: 1
-  source: commoncoreontology
-  target: vo
-- count: 1
   source: ogg
   target: vo
 - count: 1
@@ -1053,7 +1059,7 @@ positive:
 - count: 1
   source: efo
   target: wikipathways
-positive_mapping_count: 13540
+positive_mapping_count: 13552
 positive_prefix_count: 134
 predictions:
 - count: 32670
@@ -1233,6 +1239,9 @@ predictions:
 - count: 89
   source: mesh
   target: pw
+- count: 86
+  source: commoncoreontology
+  target: mesh
 - count: 85
   source: ecao
   target: mesh
@@ -1611,8 +1620,8 @@ predictions:
 - count: 1
   source: obo
   target: wbbt
-predictions_mapping_count: 111164
-predictions_prefix_count: 167
+predictions_mapping_count: 111250
+predictions_prefix_count: 168
 unsure:
 - count: 27
   source: doid
