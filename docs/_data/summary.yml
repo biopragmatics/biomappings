@@ -1420,6 +1420,9 @@ predictions:
   source: chebi
   target: efo
 - count: 11
+  source: aio
+  target: obi
+- count: 11
   source: mesh
   target: ohmi
 - count: 10
@@ -1620,8 +1623,8 @@ predictions:
 - count: 1
   source: obo
   target: wbbt
-predictions_mapping_count: 111250
-predictions_prefix_count: 168
+predictions_mapping_count: 111261
+predictions_prefix_count: 169
 unsure:
 - count: 27
   source: doid
