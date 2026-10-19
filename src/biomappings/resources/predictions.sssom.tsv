@@ -2,6 +2,7 @@
 #  ado: http://purl.obolibrary.org/obo/ADO_
 #  afpo: http://purl.obolibrary.org/obo/AfPO_
 #  agro: http://purl.obolibrary.org/obo/AGRO_
+#  aio: https://w3id.org/aio/
 #  aism: http://purl.obolibrary.org/obo/AISM_
 #  amphx: http://purl.obolibrary.org/obo/AMPHX_
 #  apo: http://purl.obolibrary.org/obo/APO_
@@ -92853,8 +92854,11 @@ obi:0000659	specimen collection process	skos:exactMatch	mesh:D013048	Specimen Ha
 obi:0000661	enzyme-linked immunosorbent assay	skos:exactMatch	mesh:D004797	Enzyme-Linked Immunosorbent Assay	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
 obi:0000690	immunoprecipitation	skos:exactMatch	mesh:D047468	Immunoprecipitation	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
 obi:0000698	obsolete_DNA ligase	skos:exactMatch	mesh:D008025	Ligases	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54	
+obi:0000700	support vector machine	skos:exactMatch	aio:SupportVectorMachine	Support Vector Machine	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.556	
 obi:0000700	support vector machine	skos:exactMatch	mesh:D060388	Support Vector Machine	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
+obi:0000701	self-organizing map	skos:exactMatch	aio:KohonenNetwork	Kohonen Network	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.556	
 obi:0000721	glucose tolerance test	skos:exactMatch	mesh:D005951	Glucose Tolerance Test	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
+obi:0000727	k-nearest neighbors	skos:exactMatch	aio:KnearestNeighborAlgorithm	K-nearest Neighbor Algorithm	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.549	
 obi:0000737	cloning vector	skos:exactMatch	mesh:D005822	Genetic Vectors	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762	
 obi:0000789	survival rate	skos:exactMatch	mesh:D015996	Survival Rate	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
 obi:0000814	guar gum	skos:exactMatch	mesh:C007894	guar gum	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.778	
@@ -92870,6 +92874,7 @@ obi:0000954	subcutaneous injection	skos:exactMatch	mesh:D007279	Injections, Subc
 obi:0000982	computed tomography scanner	skos:exactMatch	mesh:D015898	Tomography Scanners, X-Ray Computed	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.549	
 obi:0000994	intravenous injection	skos:exactMatch	mesh:D007275	Injections, Intravenous	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762	
 obi:0001000	questionnaire	skos:exactMatch	mesh:D011795	Surveys and Questionnaires	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762	
+obi:0001028	feature extraction	skos:exactMatch	aio:FeatureExtraction	Feature Extraction	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.762	
 obi:0001046	bioreactor	skos:exactMatch	mesh:D019149	Bioreactors	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
 obi:0001070	scintillation counter	skos:exactMatch	mesh:D012588	Scintillation Counting	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762	
 obi:0001148	gene knock out	skos:exactMatch	mesh:D055786	Gene Knockout Techniques	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762	
@@ -92881,6 +92886,7 @@ obi:0001185	selectively maintained organism	skos:exactMatch	mesh:D013180	Sprains
 obi:0001185	selectively maintained organism	skos:exactMatch	mesh:D060146	Ecotype	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54	
 obi:0001498	atmosphere	skos:exactMatch	mesh:D001272	Atmosphere	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
 obi:0001504	dissection	skos:exactMatch	mesh:D004210	Dissection	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
+obi:0001505	purification	skos:exactMatch	aio:Distillation	Distillation	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.54	
 obi:0001636	grant	skos:exactMatch	mesh:D005381	Financing, Organized	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762	
 obi:0001671	electrophoretic mobility shift assay	skos:exactMatch	mesh:D024202	Electrophoretic Mobility Shift Assay	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
 obi:0001686	in-situ hybridization assay	skos:exactMatch	mesh:D017403	In Situ Hybridization	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54	
@@ -92903,6 +92909,7 @@ obi:0002186	electroencephalography	skos:exactMatch	mesh:D004569	Electroencephalo
 obi:0002393	pregnancy history	skos:exactMatch	mesh:D017584	Reproductive History	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762	
 obi:0002447	suppression subtractive hybridization	skos:exactMatch	mesh:D066251	Subtractive Hybridization Techniques	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.54	
 obi:0002567	sequence alignment	skos:exactMatch	mesh:D016415	Sequence Alignment	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
+obi:0002587	machine learning	skos:exactMatch	aio:MachineLearningTask	Machine Learning Task	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.54	
 obi:0002587	machine learning	skos:exactMatch	mesh:D000069550	Machine Learning	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
 obi:0002588	supervised machine learning	skos:exactMatch	mesh:D000069553	Supervised Machine Learning	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
 obi:0002589	unsupervised machine learning	skos:exactMatch	mesh:D000069558	Unsupervised Machine Learning	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
@@ -92958,8 +92965,13 @@ obi:0100014	chimera	skos:exactMatch	mesh:D002678	Chimera	semapv:LexicalMatching	
 obi:0100016	blood plasma specimen	skos:exactMatch	mesh:D010949	Plasma	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54	
 obi:0100058	xenograft	skos:exactMatch	mesh:D064593	Heterografts	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.2-dev	2026-08-13	0.762	
 obi:0100061	primary cultured cell population	skos:exactMatch	mesh:D061251	Primary Cell Culture	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54	
+obi:0200000	data transformation	skos:exactMatch	aio:DataPreparation	Data Preparation	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.54	
 obi:0200000	data transformation	skos:exactMatch	mesh:D000078332	Data Analysis	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54	
+obi:0200042	hierarchical clustering	skos:exactMatch	aio:HierarchicalClustering	Hierarchical Clustering	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.762	
+obi:0200050	dimensionality reduction	skos:exactMatch	aio:DimensionalityReduction	Dimensionality Reduction	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.762	
 obi:0200050	dimensionality reduction	skos:exactMatch	mesh:D000098405	Dimensionality Reduction	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
+obi:0200061	data imputation	skos:exactMatch	aio:DataImputation	Data Imputation	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.762	
+obi:0200083	survival analysis objective	skos:exactMatch	aio:SurvivalAnalysis	Survival Analysis	semapv:LexicalMatching		2026-07-27	2024-11-11	sssom-curator	wikidata:Q138902949	0.6.3-dev	2026-09-25	0.762	
 obi:0200083	survival analysis objective	skos:exactMatch	mesh:D016019	Survival Analysis	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.54	
 obi:0200106	discriminant analysis	skos:exactMatch	mesh:D016002	Discriminant Analysis	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
 obi:0200111	data visualization	skos:exactMatch	mesh:D000078326	Data Visualization	semapv:LexicalMatching		2026-07-27	2026	sssom-curator	wikidata:Q138902949	0.6.1-dev	2026-08-12	0.762	
